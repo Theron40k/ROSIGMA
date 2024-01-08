@@ -8780,6 +8780,264 @@ research:
       - STR_NURGLE_BLIGHTED
       - STR_SLAANESH_SISDEVOTED
 
+##########################################SMCR
+# FACTION: SPACE MARINES
+# SECTION: CRAFTS
+##########################################
+  - name: STR_SPEEDR
+    cost: 150
+    points: 10
+    dependencies:
+      - STR_GENERALLOCK
+    unlocks:
+      - STR_SPEEDC
+
+  - name: STR_SPEEDC
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_CRATED_RHINO
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_CRATED_LANDSPEEDER
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_SKYRANGER
+    requires:
+      - STR_CRATED_DROPPODS
+
+  - name: STR_STORMEAGLE_INTERCEPTOR
+    cost: 600
+    points: 25
+    listOrder: 5050
+    dependencies:
+      - STR_MARINES_AND_ADEPTAS
+      - STR_MIDTIER_PREREQ
+      - STR_BATTLESHIP
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_HARVESTER
+      - STR_SUPPLY_SHIP
+
+  - name: STR_CRATED_DROPPODS
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_STORMHAWKR
+    cost: 150
+    points: 10
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_NEW_FIGHTER_CRAFT #Stormraven
+    cost: 600
+    points: 30
+    dependencies:
+      - STR_UFO_CONSTRUCTION
+      - STR_MARINES_AND_ADEPTAS
+
+  - name: STR_THUNDERHAWKTYPE1
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_THUNDERHAWKTYPE2
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+##########################################INQCR
+# FACTION: CHAMBER MILITANT
+# SECTION: CRAFTS
+##########################################
+  - name: STR_ARVUS_GK
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_CHAMBERMILITANT
+
+  - name: STR_STORMRAVEN_GK #Stormraven
+    dependencies:
+      - STR_UFO_CONSTRUCTION
+      # - STR_GREYKNIGHTS
+      - STR_CHAMBERMILITANT
+
+  - name: STR_THUNDERHAWK_GK_REQ # GREYKNIGHTS
+    cost: 900
+    points: 30
+    dependencies:
+      # - STR_GK_HIGHTIER
+      # - STR_GREYKNIGHTS
+      # - STR_HIGHTIER_PREREQ
+      - STR_ELERIUM_115
+      - STR_MIDTIER_PREREQ
+      - STR_CHAMBERMILITANT
+
+  - name: STR_STORMEAGLE_INTERCEPTOR_GK
+    cost: 600
+    points: 25
+    listOrder: 5050
+    dependencies:
+      # - STR_GK_HIGHTIER
+      # - STR_GREYKNIGHTS
+      # - STR_HIGHTIER_PREREQ
+      - STR_CHAMBERMILITANT
+      - STR_MIDTIER_PREREQ
+      - STR_ELERIUM_115
+
+  - name: STR_CORVUS_RESEARCH
+    cost: 0
+    points: 10
+    dependencies:
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MIDTIER
+##########################################DWCR
+# FACTION: DEATHWATCH
+# SECTION: CRAFTS
+##########################################
+  - name: STR_STORMEAGLE_INTERCEPTOR_DW
+    cost: 600
+    points: 25
+    listOrder: 5050
+    dependencies:
+      - STR_DEATHWATCH
+      - STR_MIDTIER_PREREQ
+      - STR_ELERIUM_115
+      #- STR_BATTLESHIP
+      #- STR_ABDUCTOR
+      #- STR_TERROR_SHIP
+      #- STR_HARVESTER
+      #- STR_SUPPLY_SHIP
+    getOneFree:
+      - STR_STORMEAGLE_INTERCEPTOR
+
+  - name: STR_THUNDERHAWK_DW_REQ # DEATHWATCH
+    cost: 900
+    points: 30
+    dependencies:
+      #- STR_DW_HIGHTIER
+      - STR_DEATHWATCH
+      #- STR_HIGHTIER_PREREQ
+      - STR_ELERIUM_115
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_LANDRAIDER_DW #DW Manufacturing requirement tech
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_DEATHWATCH
+      #- STR_HIGHTIER_PREREQ
+      #- STR_STORMEAGLE_INTERCEPTOR
+      - STR_UFO_CONSTRUCTION
+##########################################GKCR
+# FACTION: GREY KNIGHTS
+# SECTION: CRAFTS
+##########################################
+  - name: STR_XIPHON
+    dependencies:
+      - STR_GENERALLOCK
+##########################################AACR
+# FACTION: ADEPTUS ARBITES
+# SECTION: CRAFTS
+##########################################
+  - name: STR_LANDRAIDER_ARBITES #ARBITES
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_ARBITES
+      - STR_HIGHTIER_PREREQ
+
+  - name: STR_NEW_TRANSPORT_PD
+    cost: 300
+    points: 75
+    dependencies:
+      - STR_ARBITES_MIDTIER
+
+  - name: STR_MANTICORE_REQUISITION
+    cost: 300
+    points: 75
+    dependencies:
+      - STR_UFO_CONSTRUCTION
+      - STR_ARBITES
+
+  - name: STR_VULTURE_ARBITES_REQUISITION
+    cost: 200
+    points: 50
+    dependencies:
+      - STR_ARBITES
+      - STR_ARBITES_MIDTIER
+##########################################ASCR
+# FACTION: ADEPTA SORORITAS
+# SECTION: CRAFTS
+##########################################
+  - name: STR_ADEPTAS_DROPPOD_RESEARCH
+    cost: 0
+    points: 10
+    dependencies:
+      - STR_ADEPTAS
+      - STR_NORMAL_STRATEGY_ADEPTAS
+      - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_ADEPTAS_MIDTIER_NOVICE
+      - STR_CERAMITE_TIER_REPENTIA
+
+  - name: STR_TTA_RESEARCH
+    cost: 100
+    points: 10
+    dependencies:
+      - STR_ADEPTAS
+      - STR_UFO_CONSTRUCTION
+      - STR_ELITE_STRATEGY_ADEPTAS
+
+  - name: STR_LANDRAIDER_ADEPTAS
+    cost: 100
+    points: 10
+    dependencies:
+      - STR_ADEPTAS
+      - STR_UFO_CONSTRUCTION
+
+  - name: STR_ADEPTAS_CASTIGATOR_AC_RESEARCH
+    cost: 500
+    points: 10
+    dependencies:
+      - STR_ADEPTAS
+      - STR_NORMAL_STRATEGY_ADEPTAS
+      - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_ADEPTAS_MIDTIER_NOVICE
+      - STR_CERAMITE_TIER_REPENTIA
+
+  - name: STR_ARVUS_ADEPTAS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ADEPTAS
+##########################################IGCR
+# FACTION: IMPERIAL GUARD
+# SECTION: CRAFTS
+##########################################
+  - name: STR_TAUROX_IG
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
+
+  - name: STR_CHIMERA_IG
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
+
+  - name: STR_CHIMERA_LIGHT_IG
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
+
+  - name: STR_VALKYRIE_GRAV_DROP_IG
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
 ##########################################SMAR
 # FACTION: SPACE MARINES
 # SECTION: ARMOR
@@ -9239,261 +9497,3 @@ research:
     points: 25
     dependencies:
       - STR_IMPERIAL_GUARD_MISSION_BULLGRYN_RIOT_COMPLETE
-##########################################SMCR
-# FACTION: SPACE MARINES
-# SECTION: CRAFTS
-##########################################
-  - name: STR_SPEEDR
-    cost: 150
-    points: 10
-    dependencies:
-      - STR_GENERALLOCK
-    unlocks:
-      - STR_SPEEDC
-
-  - name: STR_SPEEDC
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_GENERALLOCK
-
-  - name: STR_CRATED_RHINO
-    dependencies:
-      - STR_GENERALLOCK
-
-  - name: STR_CRATED_LANDSPEEDER
-    dependencies:
-      - STR_GENERALLOCK
-
-  - name: STR_SKYRANGER
-    requires:
-      - STR_CRATED_DROPPODS
-
-  - name: STR_STORMEAGLE_INTERCEPTOR
-    cost: 600
-    points: 25
-    listOrder: 5050
-    dependencies:
-      - STR_MARINES_AND_ADEPTAS
-      - STR_MIDTIER_PREREQ
-      - STR_BATTLESHIP
-      - STR_ABDUCTOR
-      - STR_TERROR_SHIP
-      - STR_HARVESTER
-      - STR_SUPPLY_SHIP
-
-  - name: STR_CRATED_DROPPODS
-    dependencies:
-      - STR_GENERALLOCK
-
-  - name: STR_STORMHAWKR
-    cost: 150
-    points: 10
-    dependencies:
-      - STR_GENERALLOCK
-
-  - name: STR_NEW_FIGHTER_CRAFT #Stormraven
-    cost: 600
-    points: 30
-    dependencies:
-      - STR_UFO_CONSTRUCTION
-      - STR_MARINES_AND_ADEPTAS
-
-  - name: STR_THUNDERHAWKTYPE1
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_GENERALLOCK
-
-  - name: STR_THUNDERHAWKTYPE2
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_GENERALLOCK
-##########################################INQCR
-# FACTION: CHAMBER MILITANT
-# SECTION: CRAFTS
-##########################################
-  - name: STR_ARVUS_GK
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_CHAMBERMILITANT
-
-  - name: STR_STORMRAVEN_GK #Stormraven
-    dependencies:
-      - STR_UFO_CONSTRUCTION
-      # - STR_GREYKNIGHTS
-      - STR_CHAMBERMILITANT
-
-  - name: STR_THUNDERHAWK_GK_REQ # GREYKNIGHTS
-    cost: 900
-    points: 30
-    dependencies:
-      # - STR_GK_HIGHTIER
-      # - STR_GREYKNIGHTS
-      # - STR_HIGHTIER_PREREQ
-      - STR_ELERIUM_115
-      - STR_MIDTIER_PREREQ
-      - STR_CHAMBERMILITANT
-
-  - name: STR_STORMEAGLE_INTERCEPTOR_GK
-    cost: 600
-    points: 25
-    listOrder: 5050
-    dependencies:
-      # - STR_GK_HIGHTIER
-      # - STR_GREYKNIGHTS
-      # - STR_HIGHTIER_PREREQ
-      - STR_CHAMBERMILITANT
-      - STR_MIDTIER_PREREQ
-      - STR_ELERIUM_115
-
-  - name: STR_CORVUS_RESEARCH
-    cost: 0
-    points: 10
-    dependencies:
-      - STR_ADEPTAS_AND_INQUISITION
-      - STR_ADEPTAS_MIDTIER
-##########################################DWCR
-# FACTION: DEATHWATCH
-# SECTION: CRAFTS
-##########################################
-  - name: STR_STORMEAGLE_INTERCEPTOR_DW
-    cost: 600
-    points: 25
-    listOrder: 5050
-    dependencies:
-      - STR_DEATHWATCH
-      - STR_MIDTIER_PREREQ
-      - STR_ELERIUM_115
-      #- STR_BATTLESHIP
-      #- STR_ABDUCTOR
-      #- STR_TERROR_SHIP
-      #- STR_HARVESTER
-      #- STR_SUPPLY_SHIP
-    getOneFree:
-      - STR_STORMEAGLE_INTERCEPTOR
-
-  - name: STR_THUNDERHAWK_DW_REQ # DEATHWATCH
-    cost: 900
-    points: 30
-    dependencies:
-      #- STR_DW_HIGHTIER
-      - STR_DEATHWATCH
-      #- STR_HIGHTIER_PREREQ
-      - STR_ELERIUM_115
-      - STR_MIDTIER_PREREQ
-
-  - name: STR_LANDRAIDER_DW #DW Manufacturing requirement tech
-    cost: 900
-    points: 30
-    dependencies:
-      - STR_DEATHWATCH
-      #- STR_HIGHTIER_PREREQ
-      #- STR_STORMEAGLE_INTERCEPTOR
-      - STR_UFO_CONSTRUCTION
-##########################################GKCR
-# FACTION: GREY KNIGHTS
-# SECTION: CRAFTS
-##########################################
-  - name: STR_XIPHON
-    dependencies:
-      - STR_GENERALLOCK
-##########################################AACR
-# FACTION: ADEPTUS ARBITES
-# SECTION: CRAFTS
-##########################################
-  - name: STR_LANDRAIDER_ARBITES #ARBITES
-    cost: 900
-    points: 30
-    dependencies:
-      - STR_ARBITES
-      - STR_HIGHTIER_PREREQ
-
-  - name: STR_NEW_TRANSPORT_PD
-    cost: 300
-    points: 75
-    dependencies:
-      - STR_ARBITES_MIDTIER
-
-  - name: STR_MANTICORE_REQUISITION
-    cost: 300
-    points: 75
-    dependencies:
-      - STR_UFO_CONSTRUCTION
-      - STR_ARBITES
-
-  - name: STR_VULTURE_ARBITES_REQUISITION
-    cost: 200
-    points: 50
-    dependencies:
-      - STR_ARBITES
-      - STR_ARBITES_MIDTIER
-##########################################ASCR
-# FACTION: ADEPTA SORORITAS
-# SECTION: CRAFTS
-##########################################
-  - name: STR_ADEPTAS_DROPPOD_RESEARCH
-    cost: 0
-    points: 10
-    dependencies:
-      - STR_ADEPTAS
-      - STR_NORMAL_STRATEGY_ADEPTAS
-      - STR_ELITE_STRATEGY_ADEPTAS
-      - STR_ADEPTAS_MIDTIER_NOVICE
-      - STR_CERAMITE_TIER_REPENTIA
-
-  - name: STR_TTA_RESEARCH
-    cost: 100
-    points: 10
-    dependencies:
-      - STR_ADEPTAS
-      - STR_UFO_CONSTRUCTION
-      - STR_ELITE_STRATEGY_ADEPTAS
-
-  - name: STR_LANDRAIDER_ADEPTAS
-    cost: 100
-    points: 10
-    dependencies:
-      - STR_ADEPTAS
-      - STR_UFO_CONSTRUCTION
-
-  - name: STR_ADEPTAS_CASTIGATOR_AC_RESEARCH
-    cost: 500
-    points: 10
-    dependencies:
-      - STR_ADEPTAS
-      - STR_NORMAL_STRATEGY_ADEPTAS
-      - STR_ELITE_STRATEGY_ADEPTAS
-      - STR_ADEPTAS_MIDTIER_NOVICE
-      - STR_CERAMITE_TIER_REPENTIA
-
-  - name: STR_ARVUS_ADEPTAS
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_ADEPTAS
-##########################################IGCR
-# FACTION: IMPERIAL GUARD
-# SECTION: CRAFTS
-##########################################
-  - name: STR_TAUROX_IG
-    dependencies:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_GENERALLOCK
-
-  - name: STR_CHIMERA_IG
-    dependencies:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_GENERALLOCK
-
-  - name: STR_CHIMERA_LIGHT_IG
-    dependencies:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_GENERALLOCK
-
-  - name: STR_VALKYRIE_GRAV_DROP_IG
-    dependencies:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_GENERALLOCK
