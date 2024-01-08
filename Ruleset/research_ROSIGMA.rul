@@ -1,11 +1,11 @@
 #
-# Search query should look like this: FS
+# Search query should look like this: #FS
 # Where: F - faction abbreviation, S - section abbreviation.
 #
 # Aviable FACTIONs: SM(Space Marines), PR(Primaris) INQ(Chamber Militant), DW(Deathwatch), GK(Grey Knights), AA(Adeptus Arbites), AS(Adepta Sororitas), IG(Imerial Guard)
 # Aviable SECTIONs: (AR)MOR, (CR)AFTS
 #
-# Example: IGCR; GKCR, SMAR
+# Example: #IGCR; #GKCR, #SMAR
 
 research:
   ## XCOM1
@@ -8780,26 +8780,6 @@ research:
       - STR_NURGLE_BLIGHTED
       - STR_SLAANESH_SISDEVOTED
 
-  - name: STR_JUMP_CARAPACE_REQUISITION
-    cost: 600
-    points: 125
-    dependencies:
-      - STR_CARAPACE_ARMOR_IG
-      - STR_JUMP_CARAPACE_DEP1
-
-  - name: STR_JUMP_CARAPACE_DEP1
-    dependencies:
-      - STR_FELINID_JUMP_ARMOR_REQUISITION
-      - STR_ELYSIAN_JUMP_ARMOR_REQUISITION
-
-  #- name: STR_SENSOR_CARAPACE_REQUISITION
-  #  cost: 10
-  #  points: 25
-  #  dependencies:
-  #    - STR_CARAPACE_ARMOR_IG
-  #    - STR_MOTION_SCANNER
-
-
 ##########################################SMAR
 # FACTION: SPACE MARINES
 # SECTION: ARMOR
@@ -8942,7 +8922,7 @@ research:
       - STR_NIGHTLORDS_RAPTOR_COMMANDER
       - STR_NIGHTLORDS_WARPTALON_SOLDIER
       - STR_NIGHTLORDS_WARPTALON_COMMANDER
-##########################################SMAR
+##########################################PRAR
 # FACTION: PRIMARIS
 # SECTION: ARMOR
 ##########################################
@@ -9034,15 +9014,6 @@ research:
       - STR_THREAT_ONE
       - STR_ARBITES
       # - STR_ENFORCER_ARMOR
-##########################################IGAR
-# FACTION: IMPERIAL GUARD
-# SECTION: ARMOR
-##########################################
-  - name: STR_BULLGRYN_ARMOR
-    cost: 100
-    points: 25
-    dependencies:
-      - STR_IMPERIAL_GUARD_MISSION_BULLGRYN_RIOT_COMPLETE
 ##########################################ASAR
 # FACTION: ADEPTA SORORITAS
 # SECTION: CRAFTS
@@ -9243,6 +9214,31 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_GENERALLOCK
+
+  - name: STR_JUMP_CARAPACE_REQUISITION
+    cost: 600
+    points: 125
+    dependencies:
+      - STR_CARAPACE_ARMOR_IG
+      - STR_JUMP_CARAPACE_DEP1
+
+  - name: STR_JUMP_CARAPACE_DEP1
+    dependencies:
+      - STR_FELINID_JUMP_ARMOR_REQUISITION
+      - STR_ELYSIAN_JUMP_ARMOR_REQUISITION
+
+  #- name: STR_SENSOR_CARAPACE_REQUISITION
+  #  cost: 10
+  #  points: 25
+  #  dependencies:
+  #    - STR_CARAPACE_ARMOR_IG
+  #    - STR_MOTION_SCANNER
+
+  - name: STR_BULLGRYN_ARMOR
+    cost: 100
+    points: 25
+    dependencies:
+      - STR_IMPERIAL_GUARD_MISSION_BULLGRYN_RIOT_COMPLETE
 ##########################################SMCR
 # FACTION: SPACE MARINES
 # SECTION: CRAFTS
