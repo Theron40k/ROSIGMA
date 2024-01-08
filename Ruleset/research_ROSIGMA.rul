@@ -1,11 +1,11 @@
 #
-# Searchable dividers:
-# FACTION: X
-# SECTION: X
+# Search query should look like this: FS
+# Where: F - faction abbreviation, S - section abbreviation.
 #
-# Aviable FACTIONs: SM, CHAMBER, DW, GK, ARBITES, ADEPTAS, IG
-# Aviable SECTIONs: CRAFTS
+# Aviable FACTIONs: SM(Space Marines), PR(Primaris) INQ(Chamber Militant), DW(Deathwatch), GK(Grey Knights), AA(Adeptus Arbites), AS(Adepta Sororitas), IG(Imerial Guard)
+# Aviable SECTIONs: (AR)MOR, (CR)AFTS
 #
+# Example: IGCR; GKCR, SMAR
 
 research:
   ## XCOM1
@@ -713,12 +713,6 @@ research:
       - STR_HIGHTIER_PREREQ
 
   #*** Imperial guard personnel ***
-  - name: STR_BULLGRYN_ARMOR
-    cost: 100
-    points: 25
-    dependencies:
-      - STR_IMPERIAL_GUARD_MISSION_BULLGRYN_RIOT_COMPLETE
-
   - name: STR_REGIMENT_OFFICERS
     cost: 200
     points: 50
@@ -970,150 +964,6 @@ research:
   - name: STR_LIGHT_BOLTERS
     dependencies:
       - STR_GENERALLOCK
-
-  #*** armors ***
-  # marines
-  - name: STR_SCOUTH_RESEARCH
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_SCOUT
-      - STR_SARGENT_ARMOR
-  - name: STR_SIGNAL_ARMOR_RESEARCH
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_DEVASTATOR
-      - STR_SARGENT_ARMOR
-  - name: STR_HONOR_ARMOR_RESEARCH
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_ASSAULT
-      - STR_SARGENT_ARMOR
-  - name: STR_HONOR_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_TATICAL
-      - STR_SARGENT_ARMOR
-  - name: STR_POWER_SUIT
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_ELERIUM_115
-      - STR_UFO_POWER_SOURCE
-      - STR_MIDTIER_PREREQ
-      - STR_PERSONAL_ARMOR
-  - name: STR_FLYING_SUIT # unchanged from XCOM1
-    cost: 330
-    points: 20
-    dependencies:
-      - STR_POWER_SUIT
-      - STR_UFO_NAVIGATION
-
-  - name: STR_PERSONAL_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ALIEN_ALLOYS
-      - STR_THREAT_ONE
-      - STR_MARINES_STRATEGY
-  - name: STR_DEV_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ALIEN_ALLOYS # necessary because Tactical Strategy unlocks STR_PERSONAL_ARMOR
-      - STR_PERSONAL_ARMOR
-
-  - name: STR_CHAP_ARMOR
-    cost: 300
-    points: 20
-    dependencies:
-      - STR_HIGHTIER_PREREQ
-      - STR_SARGENT_ARMOR
-  - name: STR_TSARGENT
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_HIGHTIER_PREREQ
-      - STR_POWER_SUIT
-      - STR_SARGENT_ARMOR
-  - name: STR_CENT_ARMORR
-    cost: 330
-    points: 20
-    dependencies:
-      - STR_CYDONIA_OR_BUST
-      - STR_UFO_NAVIGATION
-      - STR_MARINES_STRATEGY
-      - STR_PERSONAL_ARMOR
-
-  # marines PRIMARIS
-  - name: STR_PRIMARIS_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_PRIMARIS_AND_DEATHWATCH
-      - STR_ALIEN_ALLOYS
-      - STR_THREAT_ONE
-      - STR_MARINES_STRATEGY
-  - name: STR_MKX_PHB_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ALIEN_ALLOYS # necessary because Tactical Strategy unlocks STR_PERSONAL_ARMOR
-      - STR_PRIMARIS_ARMOR
-  - name: STR_MKX_INC_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_MKX_GRV_ARMOR
-      - STR_PRIMARIS_ARMOR
-      - STR_MKX_PHB_ARMOR
-  - name: STR_MKX_GRV_ARMOR
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_ELERIUM_115
-      - STR_UFO_POWER_SOURCE
-      - STR_MIDTIER_PREREQ
-      - STR_PRIMARIS_ARMOR
-  - name: STR_MKX_CHP_ARMOR
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_HIGHTIER_PREREQ
-      - STR_PRIMARIS_ARMOR
-
-  # Grey Knights
-  - name: STR_GK_CHP_ARMOR
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_GREYKNIGHTS
-
-  # arbites
-  - name: STR_ARBITOR_ARMOR
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_ELERIUM_115
-      - STR_UFO_POWER_SOURCE
-      - STR_ARBITES_MIDTIER
-      - STR_JUDGE_BIKE_ARMOR
-
-  - name: STR_MARSHAL_ARMOR
-    cost: 300
-    points: 20
-    dependencies:
-      - STR_JUDGE_BIKE_ARMOR
-      - STR_HIGHTIER_PREREQ
-      - STR_ARBITOR_ARMOR
 
   #*** early facilities ***
   - name: STR_STEELMILLR #facility
@@ -1872,25 +1722,6 @@ research:
 
   ## ROSIGMA
 
-  - name: STR_JUDGE_BIKE_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ALIEN_ALLOYS
-      - STR_ENFORCER_HEAVY_ARMOR
-      - STR_ARBITES_MIDTIER
-    unlocks:
-      - STR_HWP_CANNON_SHELLS
-
-  - name: STR_ENFORCER_HEAVY_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ALIEN_ALLOYS
-      - STR_THREAT_ONE
-      - STR_ARBITES
-      # - STR_ENFORCER_ARMOR
-
   #TO DO: Set up some chained (getOneFree/unlock) 0 cost techs that hands out the Grey Knight relevant weapon techs).
   - name: STR_ADEPTAS_AND_INQUISITION
     cost: 0
@@ -2253,24 +2084,6 @@ research:
       - STR_MARINES_STRATEGY
       - STR_CHAMBERMILITANT
       - STR_GENERALLOCK
-
-  - name: STR_SARGENT_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_PERSONAL_ARMOR
-      - STR_ASS_ARMOR
-      - STR_DEV_ARMOR
-      - STR_LEADER_PLUS
-      # - STR_BERSERKER_CORPSE
-
-  - name: STR_CAPTAIN_SUIT
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_POWER_SUIT
-      # - STR_LORD_CORPSE
-      - STR_COMMANDER_PLUS
 
   - name: STR_DREADNOUGHT_MARINE
     cost: 200
@@ -2818,39 +2631,6 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  - name: STR_ASS_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      # - STR_FLOATER_SOLDIER
-      - STR_PERSONAL_ARMOR
-      - STR_ASS_ARMOR_DEP1
-
-  - name: STR_ASS_ARMOR_DEP1
-    requires:
-      - STR_MARINES_STRATEGY
-      - STR_NOT_PRIMARIS
-    dependencies:
-      - STR_FLOATER_SOLDIER
-      - STR_FLOATER_MEDIC
-      - STR_FLOATER_NAVIGATOR
-      - STR_FLOATER_ENGINEER
-      - STR_FLOATER_LEADER
-      - STR_FLOATER_COMMANDER
-      - STR_WARPTALON_SOLDIER
-      - STR_WARPTALON_COMMANDER
-      - STR_ORK_STORMBOY
-      - STR_BLACKSTONE_JUMPTROOPER
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
-      - STR_NIGHTLORDS_RAPTOR_MEDIC
-      - STR_NIGHTLORDS_RAPTOR_ENGINEER
-      - STR_NIGHTLORDS_RAPTOR_LEADER
-      - STR_NIGHTLORDS_RAPTOR_COMMANDER
-      - STR_NIGHTLORDS_RAPTOR_LEADER
-      - STR_NIGHTLORDS_RAPTOR_COMMANDER
-      - STR_NIGHTLORDS_WARPTALON_SOLDIER
-      - STR_NIGHTLORDS_WARPTALON_COMMANDER
 
   - name: STR_FLOATER_SOLDIER
     cost: 50
@@ -7580,76 +7360,6 @@ research:
       - STR_UFO_CONSTRUCTION
       - STR_BLASTER_LAUNCHER
 
-  - name: STR_ADEPTAS_ARMOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ALIEN_ALLOYS
-      - STR_THREAT_ONE
-      - STR_NORMAL_STRATEGY_ADEPTAS
-      - STR_ELITE_STRATEGY_ADEPTAS
-      - STR_ADEPTAS_MIDTIER_NOVICE
-
-  - name: STR_ADEPTAS_ARMORB
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ALIEN_ALLOYS
-      - STR_ADEPTAS
-  - name: STR_DEATHCULT_ASSASSIN_ARMOR
-    cost: 500
-    points: 40
-    dependencies:
-      - STR_ADEPTAS_ARMORB
-      - STR_ADEPTAS_MIDTIER
-  # - name: STR_ASSASSINNEUTRAL_FEMSTORE
-  #   cost: 180
-  #   points: 20
-  #   dependencies:
-  #     - STR_ADEPTAS_ARMORB
-  - name: STR_ADEPTAS_ARMORS
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_ADEPTAS_ARMORS_DEP1
-      #- STR_ADEPTAS_ARMORS_DEP2
-      #- STR_ADEPTAS_ARMORS_DEP3
-      - STR_ADEPTAS_ARMOR
-      #- STR_ORK_STORMBOY
-      #- STR_WARPTALON_SOLDIER
-      #- STR_WARPTALON_COMMANDER
-      #- STR_FLOATER_SOLDIER
-
-  - name: STR_ADEPTAS_ARMORS_DEP1
-    requires:
-      - STR_ADEPTAS
-    dependencies:
-      - STR_FLOATER_SOLDIER
-      - STR_FLOATER_MEDIC
-      - STR_FLOATER_NAVIGATOR
-      - STR_FLOATER_ENGINEER
-      - STR_FLOATER_LEADER
-      - STR_FLOATER_COMMANDER
-      - STR_WARPTALON_SOLDIER
-      - STR_WARPTALON_COMMANDER
-      - STR_ORK_STORMBOY
-      - STR_BLACKSTONE_JUMPTROOPER
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
-      - STR_NIGHTLORDS_RAPTOR_MEDIC
-      - STR_NIGHTLORDS_RAPTOR_ENGINEER
-      - STR_NIGHTLORDS_RAPTOR_LEADER
-      - STR_NIGHTLORDS_RAPTOR_COMMANDER
-      - STR_NIGHTLORDS_RAPTOR_LEADER
-      - STR_NIGHTLORDS_RAPTOR_COMMANDER
-      - STR_NIGHTLORDS_WARPTALON_SOLDIER
-      - STR_NIGHTLORDS_WARPTALON_COMMANDER
-      - STR_HERETIC_SISTER_SERAPH
-      - STR_HERETIC_SISTERCELEST
-      - STR_SLAANESH_SISTER_SERAPH
-      # unlocks:
-      #   - STR_ADEPTAS_ARMORS
-
   - name: STR_INQOFF #facility
     cost: 100
     points: 15
@@ -7726,31 +7436,6 @@ research:
     dependencies:
       - STR_BOLTER_DOMINION
 
-  - name: STR_ADEPTAS_ARMOR_CELESTIAN_ELITE #celestian elite
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_UFO_CONSTRUCTION #ceramite
-      - STR_ADEPTAS_ARMOR_CELESTIAN_ELITE
-      - STR_FAITHFUL_ARMORY
-
-  - name: STR_ADEPTAS_ARMOR_CELESTIAN_SACRESANT #celestian elite
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_UFO_CONSTRUCTION #ceramite
-      - STR_ADEPTAS_ARMOR_CELESTIAN_SACRESANT
-      - STR_FAITHFUL_ARMORY
-
-  - name: STR_GUARD_POWER_ARMOR_RESEARCH
-    cost: 800
-    points: 100
-    dependencies:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_MIDTIER_PREREQ
-    unlocks:
-      - STR_ROTOR_CANNON_RESEARCH
-
   - name: STR_ROTOR_CANNON_RESEARCH #dependent on STR_GUARD_POWER_ARMOR_RESEARCH, could be available as its own midtier topic though
     cost: 500
     points: 50
@@ -7820,17 +7505,6 @@ research:
       #- STR_IMPERIAL_GUARD_MISSION_TRAINING_COMPLETE
       - STR_GENERALLOCK
 
-  - name: STR_ELYSIAN_JUMP_ARMOR_REQUISITION
-    cost: 400
-    points: 100
-    dependencies:
-      # - STR_IMPERIAL_GUARD_OPERATIONS
-      # - STR_MIDTIER_PREREQ
-      - STR_IMPERIAL_GUARD_MISSION_ELYSIAN_DROP_COMPLETE
-      # - STR_GENERALLOCK
-    unlocks:
-      - STR_JUMP_CARAPACE_DEP1
-
   - name: STR_AIRSTRIKE_REQUISITION
     cost: 200
     points: 50
@@ -7888,44 +7562,6 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_GENERALLOCK
-
-  - name: STR_FELINID_JUMP_ARMOR_REQUISITION
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_FELINID_GUARDSMEN
-      - STR_MIDTIER_PREREQ
-    unlocks:
-      - STR_JUMP_CARAPACE_DEP1
-
-  - name: STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-    requires:
-      - STR_FELINID_GUARDSMEN
-    dependencies:
-      - STR_FLOATER_SOLDIER
-      - STR_FLOATER_MEDIC
-      - STR_FLOATER_NAVIGATOR
-      - STR_FLOATER_ENGINEER
-      - STR_FLOATER_LEADER
-      - STR_FLOATER_COMMANDER
-      - STR_WARPTALON_SOLDIER
-      - STR_WARPTALON_COMMANDER
-      - STR_ORK_STORMBOY
-      - STR_BLACKSTONE_JUMPTROOPER
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
-      - STR_NIGHTLORDS_RAPTOR_MEDIC
-      - STR_NIGHTLORDS_RAPTOR_ENGINEER
-      - STR_NIGHTLORDS_RAPTOR_LEADER
-      - STR_NIGHTLORDS_RAPTOR_COMMANDER
-      - STR_NIGHTLORDS_RAPTOR_LEADER
-      - STR_NIGHTLORDS_RAPTOR_COMMANDER
-      - STR_NIGHTLORDS_WARPTALON_SOLDIER
-      - STR_NIGHTLORDS_WARPTALON_COMMANDER
-      - STR_HERETIC_SISTER_SERAPH
-      - STR_HERETIC_SISTERCELEST
-      - STR_SLAANESH_SISTER_SERAPH
 
   - name: STR_OGRYN_REQUISITION
     cost: 150
@@ -8017,11 +7653,6 @@ research:
   # unlocks
   # Transformation Pilot
   # STR_COMMISSAR_REQUISITION # manufacture project # not changed
-  ### ARMORS
-  - name: STR_CARAPACE_ARMOR_IG
-    dependencies:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_GENERALLOCK
   # unlocks
   # Purchase Carapace
   - name: STR_BASIC_SENTINEL
@@ -8848,17 +8479,6 @@ research:
       - STR_MIDTIER_PREREQ
 
   ### Adeptas
-  - name: STR_ADEPTAS_ARMORC #baroness
-    cost: 300
-    points: 20
-    dependencies:
-      # - STR_HIGHTIER_PREREQ
-      # - STR_ADEPTAS_ARMORS
-      # - STR_ADEPTAS_ARMORB
-      - STR_MASTER_CRAFTING
-      - STR_UFO_CONSTRUCTION
-      - STR_FAITHFUL_ARMORY
-
   - name: STR_ADEPTAS
     cost: 0
     points: 0
@@ -8883,38 +8503,6 @@ research:
       - STR_MARINES_STRATEGY
     dependencies:
       - STR_GENERALLOCK
-
-  - name: STR_ADEPTAS_ARMOR_HONOR
-    cost: 180
-    points: 20
-    dependencies:
-      - STR_MASTER_CRAFTING
-      - STR_UFO_CONSTRUCTION
-      - STR_FAITHFUL_ARMORY
-      # - STR_MIDTIER_PREREQ
-      # - STR_ADEPTAS_ARMORS
-      # - STR_ADEPTAS_ARMORB
-
-  - name: STR_ADEPTAS_ARMORCEL
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_ELERIUM_115
-      - STR_UFO_POWER_SOURCE
-      # - STR_MIDTIER_PREREQ
-      - STR_ADEPTAS_ARMORS
-      - STR_UFO_CONSTRUCTION
-      - STR_FAITHFUL_ARMORY
-
-  - name: STR_ADEPTAS_ARMORD #ADEPTAS DOM
-    cost: 205
-    points: 20
-    dependencies:
-      - STR_ADEPTAS_HIGHTIER
-      - STR_ADEPTAS_ARMOR_HONOR
-      - STR_UFO_CONSTRUCTION
-      - STR_FAITHFUL_ARMORY
-
 
   ### Imperial Guard
 
@@ -9212,9 +8800,451 @@ research:
   #    - STR_MOTION_SCANNER
 
 
-
+##########################################SMAR
+# FACTION: SPACE MARINES
+# SECTION: ARMOR
 ##########################################
-# FACTION: SM
+  - name: STR_SCOUTH_RESEARCH
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_SCOUT
+      - STR_SARGENT_ARMOR
+
+  - name: STR_SIGNAL_ARMOR_RESEARCH
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_DEVASTATOR
+      - STR_SARGENT_ARMOR
+
+  - name: STR_HONOR_ARMOR_RESEARCH
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_ASSAULT
+      - STR_SARGENT_ARMOR
+
+  - name: STR_HONOR_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_TATICAL
+      - STR_SARGENT_ARMOR
+
+  - name: STR_POWER_SUIT
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_ELERIUM_115
+      - STR_UFO_POWER_SOURCE
+      - STR_MIDTIER_PREREQ
+      - STR_PERSONAL_ARMOR
+
+  - name: STR_FLYING_SUIT # unchanged from XCOM1
+    cost: 330
+    points: 20
+    dependencies:
+      - STR_POWER_SUIT
+      - STR_UFO_NAVIGATION
+
+  - name: STR_PERSONAL_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS
+      - STR_THREAT_ONE
+      - STR_MARINES_STRATEGY
+
+  - name: STR_DEV_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS # necessary because Tactical Strategy unlocks STR_PERSONAL_ARMOR
+      - STR_PERSONAL_ARMOR
+
+  - name: STR_CHAP_ARMOR
+    cost: 300
+    points: 20
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+      - STR_SARGENT_ARMOR
+
+  - name: STR_TSARGENT
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+      - STR_POWER_SUIT
+      - STR_SARGENT_ARMOR
+
+  - name: STR_CENT_ARMORR
+    cost: 330
+    points: 20
+    dependencies:
+      - STR_CYDONIA_OR_BUST
+      - STR_UFO_NAVIGATION
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - name: STR_SARGENT_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_PERSONAL_ARMOR
+      - STR_ASS_ARMOR
+      - STR_DEV_ARMOR
+      - STR_LEADER_PLUS
+      # - STR_BERSERKER_CORPSE
+
+  - name: STR_CAPTAIN_SUIT
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_POWER_SUIT
+      # - STR_LORD_CORPSE
+      - STR_COMMANDER_PLUS
+
+  - name: STR_ASS_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      # - STR_FLOATER_SOLDIER
+      - STR_PERSONAL_ARMOR
+      - STR_ASS_ARMOR_DEP1
+
+  - name: STR_ASS_ARMOR_DEP1
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_NOT_PRIMARIS
+    dependencies:
+      - STR_FLOATER_SOLDIER
+      - STR_FLOATER_MEDIC
+      - STR_FLOATER_NAVIGATOR
+      - STR_FLOATER_ENGINEER
+      - STR_FLOATER_LEADER
+      - STR_FLOATER_COMMANDER
+      - STR_WARPTALON_SOLDIER
+      - STR_WARPTALON_COMMANDER
+      - STR_ORK_STORMBOY
+      - STR_BLACKSTONE_JUMPTROOPER
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
+      - STR_NIGHTLORDS_RAPTOR_MEDIC
+      - STR_NIGHTLORDS_RAPTOR_ENGINEER
+      - STR_NIGHTLORDS_RAPTOR_LEADER
+      - STR_NIGHTLORDS_RAPTOR_COMMANDER
+      - STR_NIGHTLORDS_RAPTOR_LEADER
+      - STR_NIGHTLORDS_RAPTOR_COMMANDER
+      - STR_NIGHTLORDS_WARPTALON_SOLDIER
+      - STR_NIGHTLORDS_WARPTALON_COMMANDER
+##########################################SMAR
+# FACTION: PRIMARIS
+# SECTION: ARMOR
+##########################################
+  - name: STR_PRIMARIS_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_PRIMARIS_AND_DEATHWATCH
+      - STR_ALIEN_ALLOYS
+      - STR_THREAT_ONE
+      - STR_MARINES_STRATEGY
+
+  - name: STR_MKX_PHB_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS # necessary because Tactical Strategy unlocks STR_PERSONAL_ARMOR
+      - STR_PRIMARIS_ARMOR
+
+  - name: STR_MKX_INC_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MKX_GRV_ARMOR
+      - STR_PRIMARIS_ARMOR
+      - STR_MKX_PHB_ARMOR
+
+  - name: STR_MKX_GRV_ARMOR
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_ELERIUM_115
+      - STR_UFO_POWER_SOURCE
+      - STR_MIDTIER_PREREQ
+      - STR_PRIMARIS_ARMOR
+
+  - name: STR_MKX_CHP_ARMOR
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+      - STR_PRIMARIS_ARMOR
+##########################################GKAR
+# FACTION: GREY KNIGHTS
+# SECTION: ARMOR
+##########################################
+  - name: STR_GK_CHP_ARMOR
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_GREYKNIGHTS
+##########################################AAAR
+# FACTION: ADEPTUS ARBITES
+# SECTION: ARMOR
+##########################################
+  - name: STR_ARBITOR_ARMOR
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_ELERIUM_115
+      - STR_UFO_POWER_SOURCE
+      - STR_ARBITES_MIDTIER
+      - STR_JUDGE_BIKE_ARMOR
+
+  - name: STR_MARSHAL_ARMOR
+    cost: 300
+    points: 20
+    dependencies:
+      - STR_JUDGE_BIKE_ARMOR
+      - STR_HIGHTIER_PREREQ
+      - STR_ARBITOR_ARMOR
+
+  - name: STR_JUDGE_BIKE_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS
+      - STR_ENFORCER_HEAVY_ARMOR
+      - STR_ARBITES_MIDTIER
+    unlocks:
+      - STR_HWP_CANNON_SHELLS
+
+  - name: STR_ENFORCER_HEAVY_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS
+      - STR_THREAT_ONE
+      - STR_ARBITES
+      # - STR_ENFORCER_ARMOR
+##########################################IGAR
+# FACTION: IMPERIAL GUARD
+# SECTION: ARMOR
+##########################################
+  - name: STR_BULLGRYN_ARMOR
+    cost: 100
+    points: 25
+    dependencies:
+      - STR_IMPERIAL_GUARD_MISSION_BULLGRYN_RIOT_COMPLETE
+##########################################ASAR
+# FACTION: ADEPTA SORORITAS
+# SECTION: CRAFTS
+##########################################
+  - name: STR_ADEPTAS_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS
+      - STR_THREAT_ONE
+      - STR_NORMAL_STRATEGY_ADEPTAS
+      - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_ADEPTAS_MIDTIER_NOVICE
+
+  - name: STR_ADEPTAS_ARMORB
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS
+      - STR_ADEPTAS
+
+  - name: STR_DEATHCULT_ASSASSIN_ARMOR
+    cost: 500
+    points: 40
+    dependencies:
+      - STR_ADEPTAS_ARMORB
+      - STR_ADEPTAS_MIDTIER
+
+  # - name: STR_ASSASSINNEUTRAL_FEMSTORE
+  #   cost: 180
+  #   points: 20
+  #   dependencies:
+  #     - STR_ADEPTAS_ARMORB
+
+  - name: STR_ADEPTAS_ARMORS
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ADEPTAS_ARMORS_DEP1
+      #- STR_ADEPTAS_ARMORS_DEP2
+      #- STR_ADEPTAS_ARMORS_DEP3
+      - STR_ADEPTAS_ARMOR
+      #- STR_ORK_STORMBOY
+      #- STR_WARPTALON_SOLDIER
+      #- STR_WARPTALON_COMMANDER
+      #- STR_FLOATER_SOLDIER
+
+  - name: STR_ADEPTAS_ARMORS_DEP1
+    requires:
+      - STR_ADEPTAS
+    dependencies:
+      - STR_FLOATER_SOLDIER
+      - STR_FLOATER_MEDIC
+      - STR_FLOATER_NAVIGATOR
+      - STR_FLOATER_ENGINEER
+      - STR_FLOATER_LEADER
+      - STR_FLOATER_COMMANDER
+      - STR_WARPTALON_SOLDIER
+      - STR_WARPTALON_COMMANDER
+      - STR_ORK_STORMBOY
+      - STR_BLACKSTONE_JUMPTROOPER
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
+      - STR_NIGHTLORDS_RAPTOR_MEDIC
+      - STR_NIGHTLORDS_RAPTOR_ENGINEER
+      - STR_NIGHTLORDS_RAPTOR_LEADER
+      - STR_NIGHTLORDS_RAPTOR_COMMANDER
+      - STR_NIGHTLORDS_RAPTOR_LEADER
+      - STR_NIGHTLORDS_RAPTOR_COMMANDER
+      - STR_NIGHTLORDS_WARPTALON_SOLDIER
+      - STR_NIGHTLORDS_WARPTALON_COMMANDER
+      - STR_HERETIC_SISTER_SERAPH
+      - STR_HERETIC_SISTERCELEST
+      - STR_SLAANESH_SISTER_SERAPH
+      # unlocks:
+      #   - STR_ADEPTAS_ARMORS
+
+  - name: STR_ADEPTAS_ARMOR_CELESTIAN_ELITE #celestian elite
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_UFO_CONSTRUCTION #ceramite
+      - STR_ADEPTAS_ARMOR_CELESTIAN_ELITE
+      - STR_FAITHFUL_ARMORY
+
+  - name: STR_ADEPTAS_ARMOR_CELESTIAN_SACRESANT #celestian elite
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_UFO_CONSTRUCTION #ceramite
+      - STR_ADEPTAS_ARMOR_CELESTIAN_SACRESANT
+      - STR_FAITHFUL_ARMORY
+
+  - name: STR_ADEPTAS_ARMOR_HONOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MASTER_CRAFTING
+      - STR_UFO_CONSTRUCTION
+      - STR_FAITHFUL_ARMORY
+      # - STR_MIDTIER_PREREQ
+      # - STR_ADEPTAS_ARMORS
+      # - STR_ADEPTAS_ARMORB
+
+  - name: STR_ADEPTAS_ARMORCEL
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_ELERIUM_115
+      - STR_UFO_POWER_SOURCE
+      # - STR_MIDTIER_PREREQ
+      - STR_ADEPTAS_ARMORS
+      - STR_UFO_CONSTRUCTION
+      - STR_FAITHFUL_ARMORY
+
+  - name: STR_ADEPTAS_ARMORD #ADEPTAS DOM
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_ADEPTAS_HIGHTIER
+      - STR_ADEPTAS_ARMOR_HONOR
+      - STR_UFO_CONSTRUCTION
+      - STR_FAITHFUL_ARMORY
+
+  - name: STR_ADEPTAS_ARMORC #baroness
+    cost: 300
+    points: 20
+    dependencies:
+      # - STR_HIGHTIER_PREREQ
+      # - STR_ADEPTAS_ARMORS
+      # - STR_ADEPTAS_ARMORB
+      - STR_MASTER_CRAFTING
+      - STR_UFO_CONSTRUCTION
+      - STR_FAITHFUL_ARMORY
+##########################################IGAR
+# FACTION: IMPERIAL GUARD
+# SECTION: ARMOR
+##########################################
+  - name: STR_GUARD_POWER_ARMOR_RESEARCH
+    cost: 800
+    points: 100
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_MIDTIER_PREREQ
+    unlocks:
+      - STR_ROTOR_CANNON_RESEARCH
+
+  - name: STR_ELYSIAN_JUMP_ARMOR_REQUISITION
+    cost: 400
+    points: 100
+    dependencies:
+      # - STR_IMPERIAL_GUARD_OPERATIONS
+      # - STR_MIDTIER_PREREQ
+      - STR_IMPERIAL_GUARD_MISSION_ELYSIAN_DROP_COMPLETE
+      # - STR_GENERALLOCK
+    unlocks:
+      - STR_JUMP_CARAPACE_DEP1
+
+  - name: STR_FELINID_JUMP_ARMOR_REQUISITION
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_FELINID_GUARDSMEN
+      - STR_MIDTIER_PREREQ
+    unlocks:
+      - STR_JUMP_CARAPACE_DEP1
+
+  - name: STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+    requires:
+      - STR_FELINID_GUARDSMEN
+    dependencies:
+      - STR_FLOATER_SOLDIER
+      - STR_FLOATER_MEDIC
+      - STR_FLOATER_NAVIGATOR
+      - STR_FLOATER_ENGINEER
+      - STR_FLOATER_LEADER
+      - STR_FLOATER_COMMANDER
+      - STR_WARPTALON_SOLDIER
+      - STR_WARPTALON_COMMANDER
+      - STR_ORK_STORMBOY
+      - STR_BLACKSTONE_JUMPTROOPER
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
+      - STR_NIGHTLORDS_RAPTOR_MEDIC
+      - STR_NIGHTLORDS_RAPTOR_ENGINEER
+      - STR_NIGHTLORDS_RAPTOR_LEADER
+      - STR_NIGHTLORDS_RAPTOR_COMMANDER
+      - STR_NIGHTLORDS_RAPTOR_LEADER
+      - STR_NIGHTLORDS_RAPTOR_COMMANDER
+      - STR_NIGHTLORDS_WARPTALON_SOLDIER
+      - STR_NIGHTLORDS_WARPTALON_COMMANDER
+      - STR_HERETIC_SISTER_SERAPH
+      - STR_HERETIC_SISTERCELEST
+      - STR_SLAANESH_SISTER_SERAPH
+
+  - name: STR_CARAPACE_ARMOR_IG
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
+##########################################SMCR
+# FACTION: SPACE MARINES
 # SECTION: CRAFTS
 ##########################################
   - name: STR_SPEEDR
@@ -9284,8 +9314,8 @@ research:
     points: 0
     dependencies:
       - STR_GENERALLOCK
-##########################################
-# FACTION: CHAMBER
+##########################################INQCR
+# FACTION: CHAMBER MILITANT
 # SECTION: CRAFTS
 ##########################################
   - name: STR_ARVUS_GK
@@ -9329,8 +9359,8 @@ research:
     dependencies:
       - STR_ADEPTAS_AND_INQUISITION
       - STR_ADEPTAS_MIDTIER
-##########################################
-# FACTION: DW
+##########################################DWCR
+# FACTION: DEATHWATCH
 # SECTION: CRAFTS
 ##########################################
   - name: STR_STORMEAGLE_INTERCEPTOR_DW
@@ -9367,15 +9397,15 @@ research:
       #- STR_HIGHTIER_PREREQ
       #- STR_STORMEAGLE_INTERCEPTOR
       - STR_UFO_CONSTRUCTION
-##########################################
-# FACTION: GK
+##########################################GKCR
+# FACTION: GREY KNIGHTS
 # SECTION: CRAFTS
 ##########################################
   - name: STR_XIPHON
     dependencies:
       - STR_GENERALLOCK
-##########################################
-# FACTION: ARBITES
+##########################################AACR
+# FACTION: ADEPTUS ARBITES
 # SECTION: CRAFTS
 ##########################################
   - name: STR_LANDRAIDER_ARBITES #ARBITES
@@ -9404,8 +9434,8 @@ research:
     dependencies:
       - STR_ARBITES
       - STR_ARBITES_MIDTIER
-##########################################
-# FACTION: ADEPTAS
+##########################################ASCR
+# FACTION: ADEPTA SORORITAS
 # SECTION: CRAFTS
 ##########################################
   - name: STR_ADEPTAS_DROPPOD_RESEARCH
@@ -9448,8 +9478,8 @@ research:
     points: 0
     dependencies:
       - STR_ADEPTAS
-##########################################
-# FACTION: IG
+##########################################IGCR
+# FACTION: IMPERIAL GUARD
 # SECTION: CRAFTS
 ##########################################
   - name: STR_TAUROX_IG
