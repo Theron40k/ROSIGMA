@@ -3,7 +3,7 @@
 # Case insensitive
 #
 # Aviable Sections: 
-# Armor, Crafts, Weapons, Items, Captives, Corpses
+# Crafts, Armor, Weapons, Items, Captives, Corpses
 #
 # Aviable Factions: 
 # General, SM(Space Marines), Primaris(Primaris Space Marines) INQ(Chamber Militant), DW(Deathwatch), GK(Grey Knights), Arbites, Adeptas, IG(Imerial Guard),
@@ -4761,6 +4761,12 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
+# Crafts Primaris
+##########################################
+# Section: Crafts
+# Faction: Primaris Space Marines
+##########################################
+
 # Crafts INQ
 ##########################################
 # Section: Crafts
@@ -4863,7 +4869,7 @@ research:
 # Crafts Arbites
 ##########################################
 # Section: Crafts
-# Faction: Adeptus Arbites
+# Faction: Arbites
 ##########################################
 
   - name: STR_LANDRAIDER_ARBITES #ARBITES
@@ -5157,6 +5163,18 @@ research:
       - STR_HIGHTIER_PREREQ
       - STR_PRIMARIS_ARMOR
 
+# Armor INQ
+##########################################
+# Section: Armor
+# Faction: Chamber Militant
+##########################################
+
+# Armor DW
+##########################################
+# Section: Armor
+# Faction: Deathwatch
+##########################################
+
 # Armor GK
 ##########################################
 # Section: Armor
@@ -5173,7 +5191,7 @@ research:
 # Armor Arbites
 ##########################################
 # Section: Armor
-# Faction: Adeptus Arbites
+# Faction: Arbites
 ##########################################
 
   - name: STR_ARBITOR_ARMOR
@@ -5443,6 +5461,42 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_MISSION_BULLGRYN_RIOT_COMPLETE
 
+# Weapons SM
+##########################################
+# Section: Weapons
+# Faction: Space Marines
+##########################################
+
+# Weapons Primaris
+##########################################
+# Section: Weapons
+# Faction: Primaris Space Marines
+##########################################
+
+# Weapons INQ
+##########################################
+# Section: Weapons
+# Faction: Chamber Militant
+##########################################
+
+# Weapons DW
+##########################################
+# Section: Weapons
+# Faction: Deathwatch
+##########################################
+
+# Weapons GK
+##########################################
+# Section: Weapons
+# Faction: Grey Knights
+##########################################
+
+# Weapons Arbites
+##########################################
+# Section: Weapons
+# Faction: Arbites
+##########################################
+
 # Weapons Adeptas
 ##########################################
 # Section: Weapons
@@ -5626,6 +5680,12 @@ research:
     points: 10
     dependencies:
       - STR_BOLTER_DOMINION
+
+# Weapons IG
+##########################################
+# Section: Weapons
+# Faction: Imperial Guard
+##########################################
 
 # Weapons Xenos
 ##########################################
