@@ -1,7 +1,7 @@
 #
 # Search query should look like this: #section faction
 # Case insensitive
-# Aviable Sections: Armor, Crafts, Weapons, Items, Capture
+# Aviable Sections: Armor, Crafts, Weapons, Items, Captive, Corpses
 # Aviable Factions: General, SM(Space Marines), PSM(Primaris Space Marines) INQ(Chamber Militant),
 # DW(Deathwatch), GK(Grey Knights), AA(Adeptus Arbites), AS(Adepta Sororitas), IG(Imerial Guard), Xenos
 #
@@ -913,14 +913,6 @@ research:
   - name: STR_INTERROGATION_COMPLETED
     dependencies:
       - STR_GENERALLOCK
-
-  - name: STR_GK_SOLDIER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-
   - name: STR_ELDAR_PLAT
     cost: 150
     points: 50
@@ -929,22 +921,10 @@ research:
     cost: 75
     points: 25
     needItem: true
-  - name: STR_ELDAR_DAVENGER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
   - name: STR_DAVENGER_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_ELDAR_SCORPION
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
   - name: STR_SCORPION_CORPSE
     cost: 75
     points: 25
@@ -953,34 +933,8 @@ research:
     cost: 75
     points: 25
     needItem: true
-  - name: STR_ELDAR_REAPER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
   - name: STR_ELDAR_REAPER_CORPSE
-    cost: 75
-    points: 25
-    needItem: true
-  - name: STR_TZEENTCH_SOLDIER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SLAANESH_SOLDIER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_NURGLE_SOLDIER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
+    cost: 75    needItem: true
   - name: STR_XENO_SOLDIER
     cost: 150
     points: 50
@@ -1005,63 +959,6 @@ research:
     cost: 150
     points: 50
     needItem: true
-  - name: STR_WARPTALON
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_OBLITERATOR
-    cost: 150
-    points: 500
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_KHRONE_TERRORIST
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SECTOID # ToDo: Live Aliens
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SNAKEMAN
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_ETHEREAL
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_MUTON
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_FLOATER
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-
-  - name: STR_ETHEREAL_SOLDIER_NW
-    cost: 192
-    points: 50
-    lookup: STR_ETHEREAL
-    needItem: true
-    destroyItem: true
-    getOneFree:
-      - STR_ETHEREAL_SOLDIER
-      #unlocks:
-      #  - STR_ALIEN_ORIGINS
-      #  - STR_PSI_LAB
 
   #---ITEMS------------------------------------------------------
   - name: STR_GAUSS_BLASTER
@@ -1832,193 +1729,6 @@ research:
     points: 10
     needItem: true
 
-  - name: STR_NURGLE_ZOMBIE
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_BOOMER
-  - name: STR_NURGLE_BOOMER
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_ZOMBIE
-
-  - name: STR_NURGLE_DAEMONETTE
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_CELATID_TERRORIST
-
-  - name: STR_NURGLE_ROTBEARER
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_CELATID_TERRORIST
-
-  - name: STR_NURGLE_CULTIST_LIGHT
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_CULTIST
-
-  - name: STR_NURGLE_CULTIST
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_CULTIST_LIGHT
-      - STR_NURGLE_CULTIST_FEM
-
-  - name: STR_NURGLE_CULTIST_FEM
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_CULTIST
-      - STR_NURGLE_CULTIST_LIGHT
-
-  - name: STR_NURGLE_CULTIST_HEAVY
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NURGLE_CULTIST
-      - STR_NURGLE_CULTIST_FEM
-
-  - name: STR_NURGLE_OGRYN
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NURGLE_CULTIST_HEAVY
-
-  - name: STR_NURGLE_CULTIST_LEADER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_LEADER_PLUS
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_NURGLE_CULTIST_HEAVY
-      - STR_NURGLE_OGRYN
-
-#HRUD NURGLE SKAVEN
-  - name: STR_NURGLE_PLAGUE_MONK
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NURGLE_CULTIST
-  - name: STR_NURGLE_VERMIN_MONK
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_NURGLE_PLAGUE_MONK
-
-  - name: STR_HRUD_VERMINKIN
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_HRUD_WARRIOR
-  - name: STR_HRUD_FESTERKIN
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_HRUD_VERMINKIN
-
-  - name: STR_HRUD_WARRIOR
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_HRUD_ARMORED_WARRIOR
-  - name: STR_HRUD_ARMORED_WARRIOR
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_HRUD_WARRIOR
-  - name: STR_HRUD_SNIPER
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_HRUD_ARMORED_WARRIOR
-
-  - name: STR_HRUD_STORMVERMIN
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_HRUD_ARMORED_WARRIOR
-  - name: STR_HRUD_STORMVERMIN_OFFICER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_LEADER_PLUS
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_HRUD_STORMVERMIN
-
   - name: STR_PLAGUE_MONK_CORPSE
     cost: 50
     points: 25
@@ -2056,13 +1766,6 @@ research:
     points: 25
     needItem: true
 
-  - name: STR_DEATHGUARD_SPEWER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
 
   - name: STR_GREEN_ROBE_CORPSE
     cost: 50
@@ -2199,215 +1902,6 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-
-  - name: STR_FLOATER_SOLDIER
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_FLOATER_MEDIC
-    cost: 75
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-
-  - name: STR_FLOATER_LEADER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_LEADER_PLUS
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_FLOATER_COMMANDER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_LEADER_PLUS
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_COMMANDER_PLUS
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_WARPTALON_SOLDIER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_WARPTALON_COMMANDER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_PSI_LAB
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-
-  - name: STR_NIGHT_LORDS_SISTER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHT_LORDS_SISTER_SNIPER
-  - name: STR_NIGHT_LORDS_SISTER_SNIPER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_LONGLAS_CHAOS
-  - name: STR_NIGHT_LORDS_SISTER_SUPERIOR
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_LEADER_PLUS
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHT_LORDS_SISTER
-      - STR_NIGHT_LORDS_SISTER_SNIPER
-
-  - name: STR_NIGHTLORDS_CSM_SOLDIER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-  - name: STR_NIGHTLORDS_CSM_LEADER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_LEADER_PLUS
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHTLORDS_CSM_SOLDIER
-  - name: STR_NIGHTLORDS_RAPTOR_SOLDIER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_RAPTOR_RESEARCH
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
-  - name: STR_NIGHTLORDS_RAPTOR_NAVIGATOR
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_RAPTOR_RESEARCH
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-  - name: STR_NIGHTLORDS_RAPTOR_ENGINEER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_RAPTOR_RESEARCH
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_MEDIC
-  - name: STR_NIGHTLORDS_RAPTOR_MEDIC
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_RAPTOR_RESEARCH
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-  - name: STR_NIGHTLORDS_RAPTOR_LEADER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_RAPTOR_RESEARCH
-      - STR_LEADER_PLUS
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-      - STR_NIGHTLORDS_RAPTOR_ENGINEER
-      - STR_NIGHTLORDS_RAPTOR_MEDIC
-      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
-  - name: STR_NIGHTLORDS_RAPTOR_COMMANDER
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_RAPTOR_RESEARCH
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_LEADER
-      - STR_NIGHTLORDS_RAPTOR_ENGINEER
-      - STR_NIGHTLORDS_RAPTOR_MEDIC
-      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
-
   - name: STR_SCARE_GRENADE
     cost: 50
     points: 15
@@ -2417,38 +1911,6 @@ research:
     cost: 192
     points: 50
     needItem: true
-
-  - name: STR_NIGHTLORDS_WARPTALON_SOLDIER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_WARPTALON_RESEARCH
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_NIGHTLORDS_RAPTOR_SOLDIER
-  - name: STR_NIGHTLORDS_WARPTALON_COMMANDER
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_NIGHTLORDS_WARPTALON_RESEARCH
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_NIGHTLORDS_WARPTALON_SOLDIER
 
   - name: STR_NIGHTLORDS_WARPTALON_RESEARCH
     cost: 192
@@ -2479,16 +1941,6 @@ research:
     cost: 50
     points: 25
     needItem: true
-
-  - name: STR_BLACKSTONE_JUMPTROOPER
-    cost: 75
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
 
   #arbites
   #*** early facilities ***
@@ -3302,29 +2754,7 @@ research:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_ELDAR_SEER #live interrogation
 
-  - name: STR_ELDAR_SEER
-    cost: 192
-    points: 50
-    needItem: true
-    getOneFree:
-      - STR_ELDAR_PLAT
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
-  - name: STR_ELDAR_GUARDIAN
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
-  - name: STR_ELDAR_BANSHEE
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
+
 
   #SISTERS OF CHAOS path
   - name: STR_ALIENS_ONLY2 #CHAOS PATH FOR SISTERS
@@ -3400,41 +2830,6 @@ research:
     cost: 100
     points: 25
     needItem: true
-  - name: STR_SLAANESH_GUARD_M
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SLAANESH_GUARD_F
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SLAANESH_GUARD_CARAPACE
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SLAANESH_GUARD_OFFICER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_LEADER_PLUS
-  - name: STR_SLAANESH_GUARD_COMMISSAR
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_LEADER_PLUS
-
   - name: STR_SLAANESH_GUARD_CORPSE
     cost: 25
     points: 25
@@ -3457,69 +2852,10 @@ research:
     cost: 50
     points: 25
     needItem: true
-
-  - name: STR_HERETIC_SISTERCANONESS
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_HERETIC_CANONESS_CORPSE
     cost: 25
     points: 25
     needItem: true
-  - name: STR_HERETIC_SISTERINQ
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_PSI_LAB
-
-  - name: STR_HERETIC_SISTERPALATINE
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_HERETIC_ELITE_SISTER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_HERETIC_SISTERHOSPITALLER
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_HERETIC_SISTERCELEST
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_SISTER_SERAPH
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_THREAT_ONE
-
   - name: STR_ADEPTAS_SLAANCEL_CORPSE
     cost: 25
     points: 25
@@ -3532,619 +2868,6 @@ research:
     cost: 25
     points: 25
     needItem: true
-  - name: STR_HERETIC_SISTER
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_HERETIC_SISTER_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_HERETIC_SISTER_SBLESSED
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_HERETIC_SISTER_SBLESSED_LIE
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_HERETIC_SISTER_SERAPH
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-  - name: STR_NURGLE_SISTERHOSPITALLER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_NURGLE_BLIGHTED
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_FELINID_ASSASSIN_DEP1
-  - name: STR_SECONDBORN_SISTER
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_FILTHY_SISTER
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_FILTH_SISTER_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_NURGLE_REBORNSISTER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_NURGLE_SISTERBLESSED
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_NURGLE_SISTERBLESSED_MIDWIFE
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_NURGLE_SISTERBLESSED_NURGLING
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_NURGLE_SOLDIER_BLESSED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_NURGLE_BLIGHT_HAULER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-
-  - name: STR_TZEENTCH_SISTERASS
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_FELINID_ASSASSIN_DEP1
-  - name: STR_REPENTIA_SUPERIOR
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_SISTERREPENT
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_ADEPTAS_KHORNEREPENTIA_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_KHORNE_SISREPENTINFERIOR
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_ADEPTAS_KHORNEREPENTIALIGHT_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_KHORNE_RETRIBUTOR_SUPERIOR
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_RETRIBUTOR
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_ADEPTA_KHORNERETRIBUTOR_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_KHORNE_ARMSISTER
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_ARMSISTER_BLESSED_TRUE
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_ARMSISTER_BLESSED_FALSE
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_ADEPTAS_REDBLACK_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_KHORNE_ROOKIESISTER
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_ADEPTA_KHORNESISTER_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_KHORNE_SISTERASS
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_FELINID_ASSASSIN_DEP1
-  - name: STR_KHORNE_SISTERASS_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_FALLEN_SISTER
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_FALLEN_SISTERDAEMONETTE
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_CANTUS
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_NOVICE
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SLAANESH_SISTERPALATINE
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_SISTERPALATINE_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_ADEPTAS_SLAANPURPLE_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_SISTERDOM_SUPERIOR
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_LEADER_PLUS
-  - name: STR_SLAANESH_SISTERDOM
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_PURPLESISTER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_SISTER_BLESSED_TRUE
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_SISTER_BLESSED_FALSE
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_CHOSENASS
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_FELINID_ASSASSIN_DEP1
-  - name: STR_SLAANCHOSEN_ASS_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_SISTERASS
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_FELINID_ASSASSIN_DEP1
-  - name: STR_SLAAN_ASS_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_SISDEVOTED
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_FELINID_ASSASSIN_DEP1
-  - name: STR_SLAAN_DEVOTED_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_FBLESSED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_FBLESSED_FALSE
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_ADEPTAS_SLAANDOM_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_MBLESSED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_DEMI_DAEMONETTE
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_DEMI_DAEMONETTE_FALSE
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SLAANESH_CHOSEN
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_PSI_LAB
-
-  - name: STR_SLAANSUP_CORPSE1
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_KHORNE_DEMIBLOODLETTERIN
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_DEMIBLOODLETTERIN_SPAWNED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_DEMIBLOODLETTERIN_RETRIBUTOR
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_DEMIBLOODLETTERIN_RETRIBUTOR_SPAWNED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_DEMIBLOODLETTERIN_SUPERIOR
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_KHORNE_DEMIBLOODLETTERIN_SUPERIOR_SPAWNED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-
-  #SLAANESH SLAANGOR HEDONITES
-  - name: STR_DIRE_DAEMONETTE
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-
-  - name: STR_DIRE_DAEMONETTE_CORPSE
-    cost: 25
-    points: 10
-    needItem: true
-
-  - name: STR_SLAANESH_DEMIMONDE
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-
-  - name: STR_SLAANESH_DEMIMONDE_CORPSE
-    cost: 25
-    points: 10
-    needItem: true
-
-  - name: STR_SLAANGOR_FIENDGOR
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-    getOneFree:
-      - STR_SLAANGOR_BULLGOR
-  - name: STR_SLAANGOR_BULLGOR
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_SLAANGOR_GOR
-  - name: STR_SLAANGOR_GOR
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_SLAANGOR_UNGOR
-  - name: STR_SLAANGOR_UNGOR
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_SLAANGOR_BRAYGOR
-  - name: STR_SLAANGOR_BRAYGOR
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-
-  - name: STR_SLAANGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_SLAANUNGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_SLAANBRAYGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_SLAANFIENDGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_SLAANBULLGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_ANOINTED
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-    getOneFree:
-      - STR_SLAANESH_ANOINTED_MISSILE
-  - name: STR_SLAANESH_ANOINTED_MISSILE
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-    getOneFree:
-      - STR_SLAANESH_ANOINTED
-
-  - name: STR_SLAANANOINTED_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Iron Warriors
-  - name: STR_IRON_MAIDEN_SISTER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_IRON_GUARD_SOLDIER
-  - name: STR_IRON_WARRIOR
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_IRON_WARRIOR_BREACHER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_IRON_WARRIOR_HEAVY
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_IRON_WARRIOR_MEDIC
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_IRON_BERSERKER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_IRON_TERMINATOR
-    cost: 200
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_IRON_WARRIOR_WARSMITH
-    cost: 500
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_PLASMA_RIFLE
-      - STR_PLASMA_RIFLE_CLIP
-      - STR_HFLAMERR
-      - STR_ALIEN_ALLOYS
-      - STR_MASTER_CRAFTING
-      - STR_BLASTER_LAUNCHER
 
   - name: STR_BLASTER_LAUNCHER
     cost: 900
@@ -4153,142 +2876,6 @@ research:
       # - STR_HEAVY_PLASMA
       - STR_HEAVY_LASER
     needItem: true
-
-  - name: STR_IRON_MAIDEN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_IRON_WARRIOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_IRON_BERSERKER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_IRON_TERMINATOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_IRON_WARRIOR_WARSMITH_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Black Legion
-  - name: STR_BLACK_LEGION_CSM_SOLDIER
-    cost: 300
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_BLACK_LEGION_CSM_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_CHAOS_MARINE_LEADER #Chaos Champion
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_LEADER_PLUS
-      - STR_CHAOS_PATH
-
-  #Alpha Legion
-  - name: STR_ALPHA_SOLDIER
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_SOLDIER_CORVUS
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_SOLDIER_ULTRA
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_SCOUT_ULTRA
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_DEV_ULTRA
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_SARGE_ULTRA
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_ELOHIM
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_GREYKNIGHT
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_DAEMONETTE
-    cost: 400
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_THREAT_ONE
-      - STR_ALPHA_LEGION_INTERROGATION
-  - name: STR_ALPHA_LEGION_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
 # Alpha Legion Infiltration Event Research
   - name: STR_ALPHA_LEGION_INFILTRATED
     dependencies:
@@ -4319,618 +2906,10 @@ research:
     cost: 1000
     points: 500
 #Alpha Legion end
-
-  - name: STR_SECTOID_ASPIRING_CHAMPION
-    cost: 200
-    points: 40
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SECTOID_FEMCULTIST
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SECTOID_DARKDISCIPLE
-    cost: 125
-    points: 30
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SECTOID_DARKDISCIPLE_ALPHA
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SECTOID_DARK_DISCIPLE_DAEMONETTE
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_SECTOID_DARK_DISCIPLE_NEVERBORN
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_DARK_APOSTLE_ALPHA
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_NEVERBORN_TERRORIST
-    cost: 250
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-
-  - name: STR_ALPHA_LEGION_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_SECTOID_FEMCULTIST_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_SECTOID_DARKDISCIPLE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NEVERBORN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
   - name: STR_NEVERBORN_WEAPON
     cost: 250
     points: 25
     needItem: true
-
-  #Khorne Gor Bloodgor
-  - name: STR_KHORNEGOR_UNGOR
-    cost: 75
-    points: 20
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_KHORNE_GOR
-  - name: STR_KHORNEUNGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_KHORNE_GOR
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_KHORNEGOR_UNGOR
-  - name: STR_KHORNEGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Chaos Squats Interrogation
-  - name: STR_CHAOS_SQUATS
-    cost: 150
-    points: 40
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_CHAOS_SQUATS_RANGER
-  - name: STR_CHAOS_SQUATS_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_CHAOS_SQUATS_RANGER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_CHAOS_SQUATS
-  - name: STR_CHAOS_SQUATS_HEAVY
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CHAOS_SQUATS_RANGER
-  - name: STR_CHAOS_SQUATS_EXO
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CHAOS_SQUATS_HEAVY
-  - name: STR_CHAOS_SQUATS_EXO_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_CHAOS_SQUATS_LEADER
-    cost: 192
-    points: 150
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_CHAOS_SQUATS_EXO
-      - STR_CHAOS_SQUATS_HEAVY
-      - STR_CHAOS_SQUATS_RANGER
-      - STR_CHAOS_SQUATS
-  - name: STR_CHAOS_SQUATS_LEADER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TRAITOR_SQUATS_HEAVY
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_TRAITOR_SQUATS
-  - name: STR_TRAITOR_SQUATS
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_TRAITOR_SQUATS_HEAVY
-  - name: STR_TRAITOR_SQUATS_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_CULTIST_SQUATS_LEADER
-    cost: 192
-    points: 150
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CULTIST_SQUAT_HEAVY
-  - name: STR_CULTIST_SQUATS_LEADER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_CULTIST_SQUAT_HEAVY
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_CULTIST_SQUATS
-  - name: STR_CULTIST_SQUATS
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_CULTIST_SQUAT_HEAVY
-  - name: STR_CULTIST_SQUATS_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Blackstone
-  - name: STR_BLACKSTONE_STORMTROOPER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_BLACKSTONE_STORMTROOPER_HEAVY
-  - name: STR_BLACKSTONE_STORMTROOPER_HEAVY
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_BLACKSTONE_STORMTROOPER_SNIPER
-  - name: STR_BLACKSTONE_STORMTROOPER_SNIPER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_LONGLAS_CHAOS
-  - name: STR_BLACKSTONE_STORMTROOPER_ELITE
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_BLACKSTONE_STORMTROOPER_HEAVY
-      - STR_BLACKSTONE_STORMTROOPER
-
-  - name: STR_BLACKSTONE_STORMTROOPER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_BLACKSTONE_STORMTROOPER_SNIPER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Nurgling
-  - name: STR_NURGLINGS
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CELATID_TERRORIST
-  - name: STR_NURGLING_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Tzeentch
-  - name: STR_TZEENTCH_BLESSED2
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_TZEENTCH_BLESSED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-
-  #Tzeentch cult
-  - name: STR_PINK_HORROR_TERRORIST
-    cost: 200
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_BLUE_HORROR_TERRORIST
-  - name: STR_PINKHORROR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_BLUE_HORROR_TERRORIST
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_PINK_HORROR_TERRORIST
-  - name: STR_BLUEHORROR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZAANGOR
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_BLUE_HORROR_TERRORIST
-  - name: STR_TZAANGOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_WARP_THRALL
-    cost: 100
-    points: 20
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_TZEENTCH_MUTANT
-  - name: STR_TZEENTCH_WARP_THRALL_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_TZEENTCH_MUTANT
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_TZEENTCH_WARP_THRALL
-  - name: STR_TZEENTCH_MUTANT_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_FEM_CULTIST
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_TZCULTIST_THRALL
-  - name: STR_TZEENTCH_FEM_CULTIST_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_TZCULTIST_THRALL
-    cost: 100
-    points: 30
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_TZEENTCH_FEM_CULTIST
-  - name: STR_TZCULTIST_THRALL_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_LESSER_DAEMON
-    cost: 150
-    points: 40
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_TZEENTCH_ACOLYTE_FLAMER
-  - name: STR_TZEENTCH_LESSER_DAEMON_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_ACOLYTE
-    cost: 125
-    points: 40
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_TZEENTCH_ACOLYTE_FLAMER
-  - name: STR_TZEENTCH_ACOLYTE_FLAMER
-    cost: 125
-    points: 40
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_TZEENTCH_ACOLYTE
-  - name: STR_TZEENTCH_ACOLYTE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_CULT_WITCH
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_TZEENTCH_CULT_LEADER
-  - name: STR_TZEENTCH_CULT_WITCH_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_CULT_LEADER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_TZEENTCH_CULT_LEADER_ASSASSIN
-  - name: STR_TZEENTCH_CULT_LEADER_ASSASSIN
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_TZEENTCH_CULT_LEADER
-  - name: STR_TZEENTCH_CULT_LEADER_SPAWN
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_TZEENTCH_CULT_LEADER
-  - name: STR_TZEENTCH_CULT_LEADER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_CULT_POSSESSED
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_TZEENTCH_CULT_LEADER
-  - name: STR_TZEENTCH_CULT_POSSESSED_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_CULT_SUMMONER
-    cost: 192
-    points: 75
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_LEADER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_TZEENTCH_CULT_LEADER
-
-  - name: STR_TZEENTCH_CULT_SUMMONER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Tzeentch traitor guard research
-  - name: STR_TZEENTCH_BATTLE_SERVITOR_PLASMA
-    cost: 192
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_BATTLESERVITOR_PLASMA_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_COMBAT_SERVITOR
-    cost: 192
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TZEENTCH_COMBAT_SERVITOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_TRAITORGUARD_BASIC
-    cost: 192
-    points: 20
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TZEENTCH_TRAITORGUARD_BASIC_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_TZEENTCH_TRAITORGUARD_HEAVY
-    cost: 192
-    points: 20
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TZEENTCH_TRAITORGUARD_HEAVY_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_TRAITORGUARD_SCOUT
-    cost: 192
-    points: 30
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_ASS_ARMOR_DEP1
-      - STR_THREAT_ONE
-  - name: STR_TZEENTCH_TRAITORGUARD_SCOUT_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_TRAITORGUARD_COMMANDO
-    cost: 192
-    points: 30
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_ASS_ARMOR_DEP1
-      - STR_THREAT_ONE
-  - name: STR_TZEENTCH_TRAITORGUARD_COMMANDO_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_TRAITORGUARD_CARAPACE
-    cost: 192
-    points: 30
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TZEENTCH_TRAITORGUARD_CARAPACE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TZEENTCH_TRAITORGUARD_OFFICER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-  - name: STR_TZEENTCH_TRAITORGUARD_OFFICER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
   #GSC Research
   - name: STR_GSC_INITIAL_DISCOVERY #1A basic fluff ufopedia unlock for GSC
     cost: 100
@@ -4940,7 +2919,6 @@ research:
     #- STR_ORDO_XENOS_INVESTIGATION
     dependencies:
       - STR_GSC_INTERROGATION_DEP1
-
   - name: STR_GSC_INTERROGATION_DEP1
     #requires:
     dependencies: #fill in with basic GSC cult members
@@ -4970,7 +2948,6 @@ research:
   - name: STR_GSC_DISCOVERY_INFECTION #1B
     requires:
       - STR_GSC_INITIAL_DISCOVERY
-
   - name: STR_GSC_CULT_INITIAL_REPORT_ORIGINS #2A
     requires:
       - STR_GSC_INITIAL_DISCOVERY
@@ -4996,570 +2973,7 @@ research:
   #STR_GSC_XENO_HYBRIDS #4B
   #STR_GSC_CULT_THE_TRUE_THREAT #5A
   #STR_GSX_XENO_GENESTEALER_LIFECYCLE #5B
-
-  - name: STR_GENE_HYBRID_ACOLYTE_A
-    cost: 75
-    points: 25
     needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_GENE_HYBRID_ACOLYTE_B
-  - name: STR_GENE_HYBRID_ACOLYTE_B
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_GENE_HYBRID_ACOLYTE_C
-  - name: STR_GENE_HYBRID_ACOLYTE_C
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_GENE_HYBRID_ACOLYTE_A
-
-  - name: STR_GENE_HYBRID_ACOLYTE_LEADER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_GENE_HYBRID_ACOLYTE_A
-
-  - name: STR_GENE_HYBRID_ACOLYTE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GENE_HYBRID_ACOLYTE_LEADER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_CLOAKED_WOMAN
-    cost: 25
-    points: 15
-    needItem: true
-  - name: STR_CLOAKED_WOMAN2
-    cost: 25
-    points: 15
-    needItem: true
-  - name: STR_CLOAKED_WOMAN_ORANGE
-    cost: 25
-    points: 15
-    needItem: true
-
-  #add to STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_ZOMBIE
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_ZOMBIE_CORPSE #GENE CULT
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_GSC_CLOAKED_WOMAN
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_CLOAKED_WOMAN2
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_CLOAKED_WOMAN_ORANGE
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-
-  - name: STR_GSC_CIVILIAN_F0
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_CIVILIAN_F0_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_CIVILIAN_F1
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_CIVILIAN_F1_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_CIVILIAN_M0
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_CIVILIAN_M0_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_CIVILIAN_M1
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GSC_CIVILIAN_M1_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_SPACER_FEMALE
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_SPACER_MALE
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_CIVILIAN_SPACER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_PENETANTE_FEMALE
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_PENETANTE_LEEROY
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_PENETANTE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_GSC_JUDGE_BIKE
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_SENTINEL
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_ARMORED_CAR
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_ENFORCER_HEAVY
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_ENFORCER_SHIELD
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_ENFORCER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_ENFORCER_MEDIC
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_ENFORCER_MEDIC_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_JUDGEF
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_JUDGEM
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_JUDGE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_ARBITOR
-    cost: 125
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_PSI_LAB
-  - name: STR_GSC_ARBITOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_WARDEN
-    cost: 200
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-  - name: STR_GSC_WARDEN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_PDF_SOLDIER
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_PDF_GUNNER
-    cost: 50
-    points: 15
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_PDF_MEDIC
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_PDF_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_GSC_ARMORED_CAR
-    cost: 50
-    points: 10
-    needItem: true
-  - name: STR_GSC_KRIEG_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_KRIEG_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_TANITH_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_TANITH_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_OGRYN
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_OGRYN_ORANGE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_FLAK_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_FLAK_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_MEDIC_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_MEDIC_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_FLAK_OFFICER_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_FLAK_OFFICER_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_CARAPACE_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_CARAPACE_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_CARAPACE_MEDIC_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_CARAPACE_MEDIC_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_GUARD_CARAPACE_OFFICER_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_GUARD_CARAPACE_OFFICER_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_GUARD_SCION_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_GUARD_SCION_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_PSYKER_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-  - name: STR_GSC_PSYKER_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
-  - name: STR_GSC_COMMISSAR_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_COMMISSAR_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_COMMISSAR_CARAPACE_FEMALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_COMMISSAR_CARAPACE_MALE
-    cost: 50
-    points: 10
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_OGRYN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_OGRYN_ORANGE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_TANITH_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_GUARD_FLAK_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GUARD_KRIEG_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GUARD_KRIEG_ENGINEER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GUARD_KRIEG_GRENADIER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_GUARD_CARAPACE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_SCION_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_PSYKER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_COMMISSAR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_GSC_PDF_MEDIC
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_GSC_PDF_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_GSC_MEDICAE
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_MEDICAE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_INFECTED_REPENTIA
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_REPENTIA_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_GSC_INFECTED_ADEPTAS
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_GSC_ADEPTAS_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - &STR_GSC_CULTIST
-    name: STR_GENE_CULTIST #GENE CULT
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
-  - name: STR_GENE_CULTIST_B #GENE CULT
-    refNode: *STR_GSC_CULTIST
-  - name: STR_GENE_CULTIST_S #GENE CULT
-    refNode: *STR_GSC_CULTIST
-  - name: STR_GENE_SAB #GENE CULT
-    refNode: *STR_GSC_CULTIST
-    cost: 125
-    points: 50
 
   - &STR_CORPSE_GSC
     name: STR_BW_CORPSE #GENE CULT
@@ -5572,13 +2986,6 @@ research:
   - name: STR_SOB_CORPSE #GENE CULT
     refNode: *STR_CORPSE_GSC
 
-  - name: STR_GSC_KELERMORPH #GENE CULT
-    cost: 125
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_GSC_INTERROGATION_DEP1
   - name: STR_GSC_KELER_CORPSE #GENE CULT
     cost: 50
     points: 25
@@ -5656,286 +3063,59 @@ research:
     points: 25
     needItem: true
 
-  - name: STR_BADMOONS_ORK_BOYZ
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
   - name: STR_BADMOONS_ORK_BOY_CORPSE
     refNode: *STR_CORPSE_BASIC
-  - name: STR_BADMOONS_ORK_BIGBOYZ
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_BADMOONS_ORK_BOYZ
   - name: STR_BADMOONS_ORK_BIGBOY_CORPSE
     refNode: *STR_CORPSE_BASIC
-  - name: STR_BADMOONS_ORK_NOBZ
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_BADMOONS_ORK_BIGBOYZ
   - name: STR_BADMOONS_ORK_NOBZ_CORPSE
     refNode: *STR_CORPSE_BASIC
 
-  - name: STR_ORK_BOY
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_ORK_ARDBOY
-  - name: STR_ORK_ARDBOY
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_ORK_NOBBOY
-  - name: STR_ORK_NOBBOY
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_ORK_ARDBOY
   - name: STR_ORK_KILLA
     cost: 192
     points: 50
     needItem: true
 
-  - name: STR_ORK_WARBIKER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_ORK_BIKE_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_ORK_KOMMANDOZ
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_ORK_KOMMANDOZ_SNIPER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_ORKKOMMANDO_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_ORK_TANKBUSTAZ
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_ORK_TANKBUSTAZ_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_ORK_STORMBOY
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_ORK_STORMBOY_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_BURNABOYZ
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_BURNABOYZ_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_SQUIG_TEST
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
   - name: STR_SQUIG_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_ORK_MEGANOB
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_ORK_MEGANOB_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_ORK_WARBOSS
-    cost: 192
-    points: 150 #commander
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_ORK_WARBOSS_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_ORK_DEFFKOPTER
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_ORK_DEFFKOPTER_CORPSE
     cost: 50
     points: 25
     needItem: true
 
-  - name: STR_WEIRDBOYZ
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_PSI_LAB
   - name: STR_ORKWYRDBOY_CORPSE
     cost: 50
     points: 25
     needItem: true
-
-  - name: STR_DEATHSKULL_ORK_BOY
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_BOY2
-  - name: STR_DEATHSKULL_ORK_BOY2
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_BOY
-  - name: STR_DEATHSKULL_ORK_KAP
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_KAP2
-      - STR_DEATHSKULL_ORK_KAP3
-  - name: STR_DEATHSKULL_ORK_KAP2
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_KAP
-      - STR_DEATHSKULL_ORK_KAP3
-  - name: STR_DEATHSKULL_ORK_KAP3
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_KAP
-      - STR_DEATHSKULL_ORK_KAP2
-  - name: STR_DEATHSKULL_ORK_NOB
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_BOY
-  - name: STR_DEATHSKULL_ORK_ARDNOB
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_NOB
-  - name: STR_DEATHSKULL_ORK_MEGANOB
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_DEATHSKULL_ORK_ARDNOB
-
-  - name: STR_ORK_FLASHGITZ #Deathskulls Blue
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_ORK_FLASHGITZ2
-  - name: STR_ORK_FLASHGITZ2 #Deathskulls Blue
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_ORK_FLASHGITZ
-
-  - name: STR_DEATHSKULL_MEKBOY
-    cost: 192
-    points: 150 #commander
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_BLASTER_LAUNCHER
-      - STR_HFLAMERR
-      - STR_MASTER_CRAFTING
-      - STR_HEAVY_PLASMA
-    getOneFree:
-      - STR_DEATHSKULL_ORK_MEGANOB
 
   - name: STR_ORK_FLASHGITZ_CORPSE
     cost: 50
@@ -6053,55 +3233,14 @@ research:
     cost: 50
     points: 25
     needItem: true
-  - name: STR_DESERTER_SCOUT_FEMALE
-    cost: 75
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
   - name: STR_DESERTER_SOLDIER_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_DESERTER_SOLDIER
-    cost: 192
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_DESERTER_GREEN_FLAK
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_DESERTER_GREEN_SHIRT
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_DESERTER_OFFICER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
   - name: STR_DESERTER_GUARD_OFFICER_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_DESERTER_PYSKER
-    cost: 150
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_INTERROGATION_COMPLETED
-      - STR_PSI_LAB
-      - STR_THREAT_ONE
   - name: STR_DESERTER_PSYKER_CORPSE
     cost: 50
     points: 25
@@ -6112,135 +3251,22 @@ research:
     cost: 50
     points: 25
     needItem: true
-  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_HB
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_MISSILE
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
 
-  - name: STR_TRAITORGUARD_OGRYN
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
   - name: STR_TRAITORGUARD_OGRYN_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_TRAITORGUARD_OGRYN_REDBLACK
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
   - name: STR_TRAITORGUARD_OGRYN_REDBLACK_CORPSE
     cost: 50
     points: 25
     needItem: true
 
-  - name: STR_NURGLE
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_KHRONE
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TZEENTCH
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SLAANESH
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_NIGHTLORDS
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_HERETEK
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_HARMONIC_MELTAGUN
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_PLASMA_CARBINE_CHAOS
-  - name: STR_CHAOS_HERETEK
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-      - STR_HARMONIC_MELTAGUN
-    getOneFree:
-      - STR_PLASMA_SPRAYGUN_CHAOS
-  - name: STR_CHAOS_HERETEK_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
 
-  - name: STR_CHAOS_PENETANTE
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CHAOS_PENETANTE_LEEROY
-  - name: STR_CHAOS_PENETANTE_LEEROY
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CHAOS_PENETANTE
   - name: STR_CHAOS_PENETANTE_CORPSE
     cost: 25
     points: 25
     needItem: true
 
-  - name: STR_IRON_GUARD_SOLDIER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_IRON_GUARD_ENGINEER
-  - name: STR_IRON_GUARD_ENGINEER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_IW_AUTOCANNON
-    getOneFree:
-      - STR_IRON_MAIDEN_SISTER
   - name: STR_IRON_GUARD_CORPSE
     cost: 25
     points: 25
@@ -7325,41 +4351,6 @@ research:
       - STR_LEADER_PLUS
       - STR_CHAOS_BASE_DATA
 
-  - &STR_NAVIGATOR
-    name: STR_SECTOID_NAVIGATOR
-    cost: 192
-    points: 50
-    lookup: STR_SECTOID
-    needItem: true
-    destroyItem: true
-    unlocks:
-      - STR_ALIEN_ORIGINS
-      # - STR_HYPER_WAVE_DECODER
-    getOneFree:
-      - STR_ALIEN_RESEARCH
-      - STR_ALIEN_HARVEST
-      - STR_ALIEN_ABDUCTION
-      - STR_ALIEN_INFILTRATION
-      - STR_ALIEN_BASE
-      - STR_ALIEN_TERROR
-      - STR_ALIEN_RETALIATION
-      - STR_ALIEN_SUPPLY
-
-  - name: STR_SNAKEMAN_NAVIGATOR
-    refNode: *STR_NAVIGATOR
-    lookup: STR_SNAKEMAN
-  - name: STR_MUTON_NAVIGATOR
-    refNode: *STR_NAVIGATOR
-    lookup: STR_MUTON
-  - name: STR_FLOATER_NAVIGATOR
-    refNode: *STR_NAVIGATOR
-    lookup: STR_FLOATER
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
 
   - name: STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     dependencies:
@@ -7460,31 +4451,6 @@ research:
       - STR_SUPPLY_SHIP
       - STR_HELLS
 
-  - &STR_ENGINEER
-    name: STR_SECTOID_ENGINEER
-    cost: 192
-    points: 50
-    needItem: true
-    destroyItem: true
-    unlocks:
-      - STR_ALIEN_ORIGINS
-    getOneFree: []
-    lookup: STR_SECTOID
-  - name: STR_SNAKEMAN_ENGINEER
-    refNode: *STR_ENGINEER
-    lookup: STR_SNAKEMAN
-  - name: STR_MUTON_ENGINEER
-    refNode: *STR_ENGINEER
-    lookup: STR_MUTON
-  - name: STR_FLOATER_ENGINEER
-    refNode: *STR_ENGINEER
-    lookup: STR_FLOATER
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
 
   - name: STR_ETHEREAL_LEADER # UNDIVIDED
     unlocks:
@@ -9155,9 +6121,9 @@ research:
     cost: 150
     points: 30
     needItem: true
-# Capture Xenos
+# Captive Xenos
 ##########################################
-# Section: Capture
+# Section: Captive
 # Faction: Xenos
 ##########################################
   - name: STR_SECTOID_COMMANDER # ToDo: Live Aliens
@@ -9561,3 +6527,2978 @@ research:
       - STR_KHRONE_TERRORIST
       - STR_WARPTALON_SOLDIER
       - STR_KHORNE_CHAMP
+
+  - name: STR_GK_SOLDIER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_ELDAR_DAVENGER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_ELDAR_SCORPION
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_NURGLE_ZOMBIE
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_BOOMER
+  - name: STR_NURGLE_BOOMER
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_ZOMBIE
+
+  - name: STR_NURGLE_DAEMONETTE
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_CELATID_TERRORIST
+
+  - name: STR_NURGLE_ROTBEARER
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_CELATID_TERRORIST
+
+  - name: STR_NURGLE_CULTIST_LIGHT
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_CULTIST
+
+  - name: STR_NURGLE_CULTIST
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_CULTIST_LIGHT
+      - STR_NURGLE_CULTIST_FEM
+
+  - name: STR_NURGLE_CULTIST_FEM
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_CULTIST
+      - STR_NURGLE_CULTIST_LIGHT
+
+  - name: STR_NURGLE_CULTIST_HEAVY
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NURGLE_CULTIST
+      - STR_NURGLE_CULTIST_FEM
+
+  - name: STR_NURGLE_OGRYN
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NURGLE_CULTIST_HEAVY
+
+  - name: STR_NURGLE_CULTIST_LEADER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_NURGLE_CULTIST_HEAVY
+      - STR_NURGLE_OGRYN
+
+#HRUD NURGLE SKAVEN
+  - name: STR_NURGLE_PLAGUE_MONK
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NURGLE_CULTIST
+  - name: STR_NURGLE_VERMIN_MONK
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_NURGLE_PLAGUE_MONK
+
+  - name: STR_HRUD_VERMINKIN
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_HRUD_WARRIOR
+  - name: STR_HRUD_FESTERKIN
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_HRUD_VERMINKIN
+
+  - name: STR_HRUD_WARRIOR
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_HRUD_ARMORED_WARRIOR
+  - name: STR_HRUD_ARMORED_WARRIOR
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_HRUD_WARRIOR
+  - name: STR_HRUD_SNIPER
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_HRUD_ARMORED_WARRIOR
+
+  - name: STR_HRUD_STORMVERMIN
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_HRUD_ARMORED_WARRIOR
+  - name: STR_HRUD_STORMVERMIN_OFFICER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_HRUD_STORMVERMIN
+
+  - name: STR_DEATHGUARD_SPEWER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_FLOATER_SOLDIER
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_FLOATER_MEDIC
+    cost: 75
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_FLOATER_LEADER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_FLOATER_COMMANDER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_LEADER_PLUS
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_COMMANDER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_WARPTALON_SOLDIER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_WARPTALON_COMMANDER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_NIGHT_LORDS_SISTER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHT_LORDS_SISTER_SNIPER
+  - name: STR_NIGHT_LORDS_SISTER_SNIPER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_LONGLAS_CHAOS
+  - name: STR_NIGHT_LORDS_SISTER_SUPERIOR
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHT_LORDS_SISTER
+      - STR_NIGHT_LORDS_SISTER_SNIPER
+
+  - name: STR_NIGHTLORDS_CSM_SOLDIER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+  - name: STR_NIGHTLORDS_CSM_LEADER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHTLORDS_CSM_SOLDIER
+  - name: STR_NIGHTLORDS_RAPTOR_SOLDIER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_RAPTOR_RESEARCH
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
+  - name: STR_NIGHTLORDS_RAPTOR_NAVIGATOR
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_RAPTOR_RESEARCH
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+  - name: STR_NIGHTLORDS_RAPTOR_ENGINEER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_RAPTOR_RESEARCH
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_MEDIC
+  - name: STR_NIGHTLORDS_RAPTOR_MEDIC
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_RAPTOR_RESEARCH
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+  - name: STR_NIGHTLORDS_RAPTOR_LEADER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_RAPTOR_RESEARCH
+      - STR_LEADER_PLUS
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+      - STR_NIGHTLORDS_RAPTOR_ENGINEER
+      - STR_NIGHTLORDS_RAPTOR_MEDIC
+      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
+  - name: STR_NIGHTLORDS_RAPTOR_COMMANDER
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_RAPTOR_RESEARCH
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_LEADER
+      - STR_NIGHTLORDS_RAPTOR_ENGINEER
+      - STR_NIGHTLORDS_RAPTOR_MEDIC
+      - STR_NIGHTLORDS_RAPTOR_NAVIGATOR
+
+  - name: STR_NIGHTLORDS_WARPTALON_SOLDIER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_WARPTALON_RESEARCH
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_NIGHTLORDS_RAPTOR_SOLDIER
+  - name: STR_NIGHTLORDS_WARPTALON_COMMANDER
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_NIGHTLORDS_WARPTALON_RESEARCH
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_NIGHTLORDS_WARPTALON_SOLDIER
+
+  - name: STR_BLACKSTONE_JUMPTROOPER
+    cost: 75
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_ELDAR_SEER
+    cost: 192
+    points: 50
+    needItem: true
+    getOneFree:
+      - STR_ELDAR_PLAT
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
+  - name: STR_ELDAR_GUARDIAN
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
+  - name: STR_ELDAR_BANSHEE
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
+  - name: STR_SLAANESH_GUARD_M
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_SLAANESH_GUARD_F
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_SLAANESH_GUARD_CARAPACE
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_SLAANESH_GUARD_OFFICER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_LEADER_PLUS
+  - name: STR_SLAANESH_GUARD_COMMISSAR
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_LEADER_PLUS
+  - name: STR_HERETIC_SISTERCANONESS
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_HERETIC_SISTERINQ
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+  - name: STR_HERETIC_SISTERPALATINE
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_HERETIC_ELITE_SISTER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_HERETIC_SISTERHOSPITALLER
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_HERETIC_SISTERCELEST
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_SISTER_SERAPH
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_THREAT_ONE
+
+  - name: STR_HERETIC_SISTER
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_HERETIC_SISTER_SBLESSED
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_HERETIC_SISTER_SBLESSED_LIE
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_HERETIC_SISTER_SERAPH
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+  - name: STR_NURGLE_SISTERHOSPITALLER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_NURGLE_BLIGHTED
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_FELINID_ASSASSIN_DEP1
+  - name: STR_SECONDBORN_SISTER
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_FILTHY_SISTER
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_NURGLE_REBORNSISTER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_NURGLE_SISTERBLESSED
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_NURGLE_SISTERBLESSED_MIDWIFE
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_NURGLE_SISTERBLESSED_NURGLING
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_NURGLE_SOLDIER_BLESSED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_NURGLE_BLIGHT_HAULER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_TZEENTCH_SISTERASS
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_FELINID_ASSASSIN_DEP1
+  - name: STR_REPENTIA_SUPERIOR
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_SISTERREPENT
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_KHORNE_SISREPENTINFERIOR
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_KHORNE_RETRIBUTOR_SUPERIOR
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_RETRIBUTOR
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_KHORNE_ARMSISTER
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_ARMSISTER_BLESSED_TRUE
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_ARMSISTER_BLESSED_FALSE
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_KHORNE_ROOKIESISTER
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_KHORNE_SISTERASS
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_FELINID_ASSASSIN_DEP1
+
+  - name: STR_FALLEN_SISTER
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_FALLEN_SISTERDAEMONETTE
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_CANTUS
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_NOVICE
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_SLAANESH_SISTERPALATINE
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_SLAANESH_SISTERDOM_SUPERIOR
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_LEADER_PLUS
+  - name: STR_SLAANESH_SISTERDOM
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_PURPLESISTER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_SISTER_BLESSED_TRUE
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_SISTER_BLESSED_FALSE
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_CHOSENASS
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_FELINID_ASSASSIN_DEP1
+
+  - name: STR_SLAANESH_SISTERASS
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_FELINID_ASSASSIN_DEP1
+
+  - name: STR_SLAANESH_SISDEVOTED
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_FELINID_ASSASSIN_DEP1
+
+  - name: STR_SLAANESH_FBLESSED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_FBLESSED_FALSE
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_SLAANESH_MBLESSED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_DEMI_DAEMONETTE
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_DEMI_DAEMONETTE_FALSE
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SLAANESH_CHOSEN
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+
+  - name: STR_KHORNE_DEMIBLOODLETTERIN
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_DEMIBLOODLETTERIN_SPAWNED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_DEMIBLOODLETTERIN_RETRIBUTOR
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_DEMIBLOODLETTERIN_RETRIBUTOR_SPAWNED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_DEMIBLOODLETTERIN_SUPERIOR
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_KHORNE_DEMIBLOODLETTERIN_SUPERIOR_SPAWNED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  #SLAANESH SLAANGOR HEDONITES
+  - name: STR_DIRE_DAEMONETTE
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+
+  - name: STR_SLAANESH_DEMIMONDE
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+
+  - name: STR_SLAANGOR_FIENDGOR
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+    getOneFree:
+      - STR_SLAANGOR_BULLGOR
+  - name: STR_SLAANGOR_BULLGOR
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_SLAANGOR_GOR
+  - name: STR_SLAANGOR_GOR
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_SLAANGOR_UNGOR
+  - name: STR_SLAANGOR_UNGOR
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_SLAANGOR_BRAYGOR
+  - name: STR_SLAANGOR_BRAYGOR
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_SLAANESH_ANOINTED
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+    getOneFree:
+      - STR_SLAANESH_ANOINTED_MISSILE
+  - name: STR_SLAANESH_ANOINTED_MISSILE
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+    getOneFree:
+      - STR_SLAANESH_ANOINTED
+
+  #Iron Warriors
+  - name: STR_IRON_MAIDEN_SISTER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_IRON_GUARD_SOLDIER
+  - name: STR_IRON_WARRIOR
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_IRON_WARRIOR_BREACHER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_IRON_WARRIOR_HEAVY
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_IRON_WARRIOR_MEDIC
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_IRON_BERSERKER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_IRON_TERMINATOR
+    cost: 200
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_IRON_WARRIOR_WARSMITH
+    cost: 500
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PLASMA_RIFLE
+      - STR_PLASMA_RIFLE_CLIP
+      - STR_HFLAMERR
+      - STR_ALIEN_ALLOYS
+      - STR_MASTER_CRAFTING
+      - STR_BLASTER_LAUNCHER
+
+  #Black Legion
+  - name: STR_BLACK_LEGION_CSM_SOLDIER
+    cost: 300
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+
+  - name: STR_CHAOS_MARINE_LEADER #Chaos Champion
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_LEADER_PLUS
+      - STR_CHAOS_PATH
+
+  #Alpha Legion
+  - name: STR_ALPHA_SOLDIER
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_SOLDIER_CORVUS
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_SOLDIER_ULTRA
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_SCOUT_ULTRA
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_DEV_ULTRA
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_SARGE_ULTRA
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_ELOHIM
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_GREYKNIGHT
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+  - name: STR_ALPHA_DAEMONETTE
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALPHA_LEGION_INTERROGATION
+
+  - name: STR_SECTOID_ASPIRING_CHAMPION
+    cost: 200
+    points: 40
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SECTOID_FEMCULTIST
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SECTOID_DARKDISCIPLE
+    cost: 125
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SECTOID_DARKDISCIPLE_ALPHA
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SECTOID_DARK_DISCIPLE_DAEMONETTE
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SECTOID_DARK_DISCIPLE_NEVERBORN
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_DARK_APOSTLE_ALPHA
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_NEVERBORN_TERRORIST
+    cost: 250
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  #Khorne Gor Bloodgor
+  - name: STR_KHORNEGOR_UNGOR
+    cost: 75
+    points: 20
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_KHORNE_GOR
+
+  - name: STR_KHORNE_GOR
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_KHORNEGOR_UNGOR
+
+  #Chaos Squats Interrogation
+  - name: STR_CHAOS_SQUATS
+    cost: 150
+    points: 40
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_CHAOS_SQUATS_RANGER
+
+  - name: STR_CHAOS_SQUATS_RANGER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_CHAOS_SQUATS
+  - name: STR_CHAOS_SQUATS_HEAVY
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CHAOS_SQUATS_RANGER
+  - name: STR_CHAOS_SQUATS_EXO
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CHAOS_SQUATS_HEAVY
+
+  - name: STR_CHAOS_SQUATS_LEADER
+    cost: 192
+    points: 150
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_CHAOS_SQUATS_EXO
+      - STR_CHAOS_SQUATS_HEAVY
+      - STR_CHAOS_SQUATS_RANGER
+      - STR_CHAOS_SQUATS
+
+  - name: STR_TRAITOR_SQUATS_HEAVY
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_TRAITOR_SQUATS
+  - name: STR_TRAITOR_SQUATS
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_TRAITOR_SQUATS_HEAVY
+
+  - name: STR_CULTIST_SQUATS_LEADER
+    cost: 192
+    points: 150
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CULTIST_SQUAT_HEAVY
+
+  - name: STR_CULTIST_SQUAT_HEAVY
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_CULTIST_SQUATS
+  - name: STR_CULTIST_SQUATS
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_CULTIST_SQUAT_HEAVY
+
+  #Blackstone
+  - name: STR_BLACKSTONE_STORMTROOPER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_BLACKSTONE_STORMTROOPER_HEAVY
+  - name: STR_BLACKSTONE_STORMTROOPER_HEAVY
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_BLACKSTONE_STORMTROOPER_SNIPER
+  - name: STR_BLACKSTONE_STORMTROOPER_SNIPER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_LONGLAS_CHAOS
+  - name: STR_BLACKSTONE_STORMTROOPER_ELITE
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_BLACKSTONE_STORMTROOPER_HEAVY
+      - STR_BLACKSTONE_STORMTROOPER
+
+  #Nurgling
+  - name: STR_NURGLINGS
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CELATID_TERRORIST
+
+  #Tzeentch
+  - name: STR_TZEENTCH_BLESSED2
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_TZEENTCH_BLESSED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  #Tzeentch cult
+  - name: STR_PINK_HORROR_TERRORIST
+    cost: 200
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_BLUE_HORROR_TERRORIST
+
+  - name: STR_BLUE_HORROR_TERRORIST
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_PINK_HORROR_TERRORIST
+
+  - name: STR_TZAANGOR
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_BLUE_HORROR_TERRORIST
+
+  - name: STR_TZEENTCH_WARP_THRALL
+    cost: 100
+    points: 20
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_TZEENTCH_MUTANT
+
+  - name: STR_TZEENTCH_MUTANT
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_TZEENTCH_WARP_THRALL
+
+  - name: STR_TZEENTCH_FEM_CULTIST
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_TZCULTIST_THRALL
+
+  - name: STR_TZCULTIST_THRALL
+    cost: 100
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_TZEENTCH_FEM_CULTIST
+
+  - name: STR_TZEENTCH_LESSER_DAEMON
+    cost: 150
+    points: 40
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_TZEENTCH_ACOLYTE_FLAMER
+
+  - name: STR_TZEENTCH_ACOLYTE
+    cost: 125
+    points: 40
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_TZEENTCH_ACOLYTE_FLAMER
+  - name: STR_TZEENTCH_ACOLYTE_FLAMER
+    cost: 125
+    points: 40
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_TZEENTCH_ACOLYTE
+
+  - name: STR_TZEENTCH_CULT_WITCH
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_TZEENTCH_CULT_LEADER
+
+  - name: STR_TZEENTCH_CULT_LEADER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_TZEENTCH_CULT_LEADER_ASSASSIN
+  - name: STR_TZEENTCH_CULT_LEADER_ASSASSIN
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_TZEENTCH_CULT_LEADER
+  - name: STR_TZEENTCH_CULT_LEADER_SPAWN
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_TZEENTCH_CULT_LEADER
+
+  - name: STR_TZEENTCH_CULT_POSSESSED
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_TZEENTCH_CULT_LEADER
+
+  - name: STR_TZEENTCH_CULT_SUMMONER
+    cost: 192
+    points: 75
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_TZEENTCH_CULT_LEADER
+
+  #Tzeentch traitor guard research
+  - name: STR_TZEENTCH_BATTLE_SERVITOR_PLASMA
+    cost: 192
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_TZEENTCH_COMBAT_SERVITOR
+    cost: 192
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_TZEENTCH_TRAITORGUARD_BASIC
+    cost: 192
+    points: 20
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_TZEENTCH_TRAITORGUARD_HEAVY
+    cost: 192
+    points: 20
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_TZEENTCH_TRAITORGUARD_SCOUT
+    cost: 192
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ASS_ARMOR_DEP1
+      - STR_THREAT_ONE
+
+  - name: STR_TZEENTCH_TRAITORGUARD_COMMANDO
+    cost: 192
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ASS_ARMOR_DEP1
+      - STR_THREAT_ONE
+
+  - name: STR_TZEENTCH_TRAITORGUARD_CARAPACE
+    cost: 192
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_TZEENTCH_TRAITORGUARD_OFFICER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+
+  - name: STR_GENE_HYBRID_ACOLYTE_A
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_GENE_HYBRID_ACOLYTE_B
+  - name: STR_GENE_HYBRID_ACOLYTE_B
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_GENE_HYBRID_ACOLYTE_C
+  - name: STR_GENE_HYBRID_ACOLYTE_C
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_GENE_HYBRID_ACOLYTE_A
+
+  - name: STR_GENE_HYBRID_ACOLYTE_LEADER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_GENE_HYBRID_ACOLYTE_A
+
+
+
+  - name: STR_CLOAKED_WOMAN
+    cost: 25
+    points: 15
+    needItem: true
+  - name: STR_CLOAKED_WOMAN2
+    cost: 25
+    points: 15
+    needItem: true
+  - name: STR_CLOAKED_WOMAN_ORANGE
+    cost: 25
+    points: 15
+
+  #add to STR_GSC_INTERROGATION_DEP1
+  - name: STR_GSC_ZOMBIE
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+
+
+  - name: STR_GSC_CLOAKED_WOMAN
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+  - name: STR_GSC_CLOAKED_WOMAN2
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+  - name: STR_GSC_CLOAKED_WOMAN_ORANGE
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+
+  - name: STR_GSC_CIVILIAN_F0
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+
+  - name: STR_GSC_CIVILIAN_F1
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+
+  - name: STR_GSC_CIVILIAN_M0
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+
+  - name: STR_GSC_CIVILIAN_M1
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+
+  - name: STR_GSC_SPACER_FEMALE
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_SPACER_MALE
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_GSC_PENETANTE_FEMALE
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_PENETANTE_LEEROY
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+
+  - name: STR_GSC_JUDGE_BIKE
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_SENTINEL
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_ARMORED_CAR
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_ENFORCER_HEAVY
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_ENFORCER_SHIELD
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_GSC_ENFORCER_MEDIC
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_GSC_JUDGEF
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_JUDGEM
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_GSC_ARBITOR
+    cost: 125
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_PSI_LAB
+
+  - name: STR_GSC_WARDEN
+    cost: 200
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+
+  - name: STR_GSC_PDF_SOLDIER
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_PDF_GUNNER
+    cost: 50
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_PDF_MEDIC
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_ARMORED_CAR
+    cost: 50
+    points: 10
+    needItem: true
+  - name: STR_GSC_KRIEG_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_KRIEG_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_TANITH_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_TANITH_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_OGRYN
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_OGRYN_ORANGE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_FLAK_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_FLAK_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_MEDIC_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_MEDIC_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_FLAK_OFFICER_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_FLAK_OFFICER_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_CARAPACE_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_CARAPACE_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_CARAPACE_MEDIC_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_CARAPACE_MEDIC_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_GUARD_CARAPACE_OFFICER_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_GUARD_CARAPACE_OFFICER_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_GUARD_SCION_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_GUARD_SCION_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_PSYKER_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+  - name: STR_GSC_PSYKER_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+  - name: STR_GSC_COMMISSAR_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_COMMISSAR_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_COMMISSAR_CARAPACE_FEMALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_COMMISSAR_CARAPACE_MALE
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_PDF_MEDIC
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_MEDICAE
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_GSC_INFECTED_REPENTIA
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - name: STR_GSC_INFECTED_ADEPTAS
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
+  - &STR_GSC_CULTIST
+    name: STR_GENE_CULTIST #GENE CULT
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+  - name: STR_GENE_CULTIST_B #GENE CULT
+    refNode: *STR_GSC_CULTIST
+  - name: STR_GENE_CULTIST_S #GENE CULT
+    refNode: *STR_GSC_CULTIST
+  - name: STR_GENE_SAB #GENE CULT
+    refNode: *STR_GSC_CULTIST
+    cost: 125
+    points: 50
+  - name: STR_GSC_KELERMORPH #GENE CULT
+    cost: 125
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+  - name: STR_BADMOONS_ORK_BOYZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_BADMOONS_ORK_BIGBOYZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_BADMOONS_ORK_BOYZ
+  - name: STR_BADMOONS_ORK_NOBZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_BADMOONS_ORK_BIGBOYZ
+  - name: STR_ORK_BOY
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_ORK_ARDBOY
+  - name: STR_ORK_ARDBOY
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_ORK_NOBBOY
+  - name: STR_ORK_NOBBOY
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_ORK_ARDBOY
+  - name: STR_ORK_WARBIKER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_ORK_KOMMANDOZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_ORK_KOMMANDOZ_SNIPER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_ORK_TANKBUSTAZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_ORK_STORMBOY
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_BURNABOYZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_SQUIG_TEST
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_ORK_MEGANOB
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_ORK_WARBOSS
+    cost: 192
+    points: 150 #commander
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_ORK_DEFFKOPTER
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_WEIRDBOYZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_PSI_LAB
+  - name: STR_DEATHSKULL_ORK_BOY
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_BOY2
+  - name: STR_DEATHSKULL_ORK_BOY2
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_BOY
+  - name: STR_DEATHSKULL_ORK_KAP
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_KAP2
+      - STR_DEATHSKULL_ORK_KAP3
+  - name: STR_DEATHSKULL_ORK_KAP2
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_KAP
+      - STR_DEATHSKULL_ORK_KAP3
+  - name: STR_DEATHSKULL_ORK_KAP3
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_KAP
+      - STR_DEATHSKULL_ORK_KAP2
+  - name: STR_DEATHSKULL_ORK_NOB
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_BOY
+  - name: STR_DEATHSKULL_ORK_ARDNOB
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_NOB
+  - name: STR_DEATHSKULL_ORK_MEGANOB
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_DEATHSKULL_ORK_ARDNOB
+  - name: STR_ORK_FLASHGITZ #Deathskulls Blue
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_ORK_FLASHGITZ2
+  - name: STR_ORK_FLASHGITZ2 #Deathskulls Blue
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_ORK_FLASHGITZ
+
+  - name: STR_DEATHSKULL_MEKBOY
+    cost: 192
+    points: 150 #commander
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_BLASTER_LAUNCHER
+      - STR_HFLAMERR      - STR_HEAVY_PLASMA
+    getOneFree:
+      - STR_DEATHSKULL_ORK_MEGANOB
+
+  - name: STR_DESERTER_SCOUT_FEMALE
+    cost: 75
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_SOLDIER
+    cost: 192
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_GREEN_FLAK
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_GREEN_SHIRT
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_OFFICER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_DESERTER_PYSKER
+    cost: 150
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_PSI_LAB
+      - STR_THREAT_ONE
+  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_HB
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_MISSILE
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TRAITORGUARD_OGRYN
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TRAITORGUARD_OGRYN_REDBLACK
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_NURGLE
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_KHRONE
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TZEENTCH
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_SLAANESH
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_NIGHTLORDS
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_HERETEK
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_HARMONIC_MELTAGUN
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_PLASMA_CARBINE_CHAOS
+  - name: STR_CHAOS_HERETEK
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+      - STR_HARMONIC_MELTAGUN
+    getOneFree:
+      - STR_PLASMA_SPRAYGUN_CHAOS
+  - name: STR_CHAOS_HERETEK_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_CHAOS_PENETANTE
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CHAOS_PENETANTE_LEEROY
+  - name: STR_CHAOS_PENETANTE_LEEROY
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CHAOS_PENETANTE
+  - name: STR_IRON_GUARD_SOLDIER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_IRON_GUARD_ENGINEER
+  - name: STR_IRON_GUARD_ENGINEER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_IW_AUTOCANNON
+    getOneFree:
+      - STR_IRON_MAIDEN_SISTER
+  - &STR_NAVIGATOR
+    name: STR_SECTOID_NAVIGATOR
+    cost: 192
+    points: 50
+    lookup: STR_SECTOID
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_ALIEN_ORIGINS
+      # - STR_HYPER_WAVE_DECODER
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+
+  - name: STR_SNAKEMAN_NAVIGATOR
+    refNode: *STR_NAVIGATOR
+    lookup: STR_SNAKEMAN
+  - name: STR_MUTON_NAVIGATOR
+    refNode: *STR_NAVIGATOR
+    lookup: STR_MUTON
+  - name: STR_FLOATER_NAVIGATOR
+    refNode: *STR_NAVIGATOR
+    lookup: STR_FLOATER
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - &STR_ENGINEER
+    name: STR_SECTOID_ENGINEER
+    cost: 192
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_ALIEN_ORIGINS
+    getOneFree: []
+    lookup: STR_SECTOID
+  - name: STR_SNAKEMAN_ENGINEER
+    refNode: *STR_ENGINEER
+    lookup: STR_SNAKEMAN
+  - name: STR_MUTON_ENGINEER
+    refNode: *STR_ENGINEER
+    lookup: STR_MUTON
+  - name: STR_FLOATER_ENGINEER
+    refNode: *STR_ENGINEER
+    lookup: STR_FLOATER
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_MASTER_CRAFTING
+
+# Corpses Xenos
+##########################################
+# Section: Corpses
+# Faction: Xenos
+##########################################
+
+  - name: STR_HERETIC_SISTER_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_FILTH_SISTER_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTAS_KHORNEREPENTIA_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTAS_KHORNEREPENTIALIGHT_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTA_KHORNERETRIBUTOR_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTAS_REDBLACK_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTA_KHORNESISTER_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_KHORNE_SISTERASS_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAANESH_SISTERPALATINE_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTAS_SLAANPURPLE_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAANCHOSEN_ASS_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAAN_ASS_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAAN_DEVOTED_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTAS_SLAANDOM_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAANSUP_CORPSE1
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_DIRE_DAEMONETTE_CORPSE
+    cost: 25
+    points: 10
+    needItem: true
+  - name: STR_SLAANESH_DEMIMONDE_CORPSE
+    cost: 25
+    points: 10
+    needItem: true
+  - name: STR_SLAANGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_SLAANUNGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_SLAANBRAYGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_SLAANFIENDGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_SLAANBULLGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_SLAANANOINTED_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_IRON_MAIDEN_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_IRON_WARRIOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_IRON_BERSERKER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_IRON_TERMINATOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_IRON_WARRIOR_WARSMITH_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_BLACK_LEGION_CSM_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ALPHA_LEGION_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ALPHA_LEGION_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_SECTOID_FEMCULTIST_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_SECTOID_DARKDISCIPLE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NEVERBORN_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_KHORNEUNGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_KHORNEGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_CHAOS_SQUATS_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_CHAOS_SQUATS_EXO_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_CHAOS_SQUATS_LEADER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TRAITOR_SQUATS_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_CULTIST_SQUATS_LEADER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_CULTIST_SQUATS_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_BLACKSTONE_STORMTROOPER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_BLACKSTONE_STORMTROOPER_SNIPER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NURGLING_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_PINKHORROR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_BLUEHORROR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZAANGOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_WARP_THRALL_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_MUTANT_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_FEM_CULTIST_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZCULTIST_THRALL_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_LESSER_DAEMON_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_ACOLYTE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_CULT_WITCH_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_CULT_LEADER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_CULT_POSSESSED_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_CULT_SUMMONER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_BATTLESERVITOR_PLASMA_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_COMBAT_SERVITOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_TRAITORGUARD_BASIC_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_TRAITORGUARD_HEAVY_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_TRAITORGUARD_SCOUT_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_TRAITORGUARD_COMMANDO_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_TRAITORGUARD_CARAPACE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TZEENTCH_TRAITORGUARD_OFFICER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GENE_HYBRID_ACOLYTE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GENE_HYBRID_ACOLYTE_LEADER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_ZOMBIE_CORPSE #GENE CULT
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_CIVILIAN_F0_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_CIVILIAN_F1_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_CIVILIAN_M0_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_CIVILIAN_M1_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_CIVILIAN_SPACER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_PENETANTE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_ENFORCER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_ENFORCER_MEDIC_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_JUDGE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_ARBITOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_WARDEN_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_PDF_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_OGRYN_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_OGRYN_ORANGE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_TANITH_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_GUARD_FLAK_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GUARD_KRIEG_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GUARD_KRIEG_ENGINEER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GUARD_KRIEG_GRENADIER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_GUARD_CARAPACE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_SCION_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_PSYKER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_COMMISSAR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_PDF_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_MEDICAE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_REPENTIA_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_ADEPTAS_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
