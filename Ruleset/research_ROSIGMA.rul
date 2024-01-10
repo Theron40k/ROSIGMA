@@ -289,15 +289,7 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_MISSIONS_TANITH1_COMPLETE
 
-  #*** Craft ***
-  - name: STR_MARAUDER_REQUISITION
-    cost: 600
-    points: 25
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_UFO_POWER_SOURCE
-      - STR_UFO_NAVIGATION
+
 
   #*** Ground-based craft weapons ***
   - name: STR_CRAFT_QUADLASER
@@ -4870,6 +4862,15 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_GENERALLOCK
+
+  - name: STR_MARAUDER_REQUISITION
+    cost: 600
+    points: 25
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_UFO_POWER_SOURCE
+      - STR_UFO_NAVIGATION
 
 # Armor SM
 ##########################################
