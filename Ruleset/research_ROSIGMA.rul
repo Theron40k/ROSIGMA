@@ -1,9 +1,13 @@
 #
-# Search query should look like this: #section faction
+# Search query should look like this: section faction
 # Case insensitive
-# Aviable Sections: Armor, Crafts, Weapons, Items, Captive, Corpses
-# Aviable Factions: General, SM(Space Marines), PSM(Primaris Space Marines) INQ(Chamber Militant),
-# DW(Deathwatch), GK(Grey Knights), AA(Adeptus Arbites), AS(Adepta Sororitas), IG(Imerial Guard), Xenos
+#
+# Aviable Sections: 
+# Armor, Crafts, Weapons, Items, Captive, Corpses
+#
+# Aviable Factions: 
+# General, SM(Space Marines), PSM(Primaris Space Marines) INQ(Chamber Militant), DW(Deathwatch), GK(Grey Knights), Arbites, Adeptas, IG(Imerial Guard),
+# Xenos, Ork, GSC, Chaos, Eldar, Hrud, Skaven
 #
 # Example queries: #crafts ig; #weapons psm ...
 
@@ -387,46 +391,7 @@ research:
       - STR_TZEENTCH_LEADER
       - STR_NURGLE_CHAMP
 
-  - name: STR_ETHEREAL_COMMANDER # UNDIVIDED
-    cost: 192
-    points: 500
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-  - name: STR_CHAOS_BEHEMOTH # SLANESH
-    cost: 192
-    points: 500
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-  - name: STR_TZEENTCH_LEADER # TZEENTCH
-    cost: 192
-    points: 500
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-  - name: STR_KHORNE_CHAMP # KHORNE
-    cost: 192
-    points: 500
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-  - name: STR_NURGLE_CHAMP # NURGLE
-    cost: 192
-    points: 500
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
+
   #---STRATEGY------------------------------------------------------
   - name: STR_DEATHWATCH
     cost: 5
@@ -917,24 +882,6 @@ research:
     cost: 150
     points: 50
     needItem: true
-  - name: STR_SEER_CORPSE
-    cost: 75
-    points: 25
-    needItem: true
-  - name: STR_DAVENGER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_SCORPION_CORPSE
-    cost: 75
-    points: 25
-    needItem: true
-  - name: STR_WRAITHGUARD_CORPSE
-    cost: 75
-    points: 25
-    needItem: true
-  - name: STR_ELDAR_REAPER_CORPSE
-    cost: 75    needItem: true
   - name: STR_XENO_SOLDIER
     cost: 150
     points: 50
@@ -946,10 +893,6 @@ research:
   - name: STR_HORMAGAUNT
     cost: 100
     points: 50
-    needItem: true
-  - name: STR_HORMAGAUNT_CORPSE
-    cost: 50
-    points: 25
     needItem: true
   - name: STR_HORMAGAUNT_WEAPON
     cost: 50
@@ -1692,110 +1635,6 @@ research:
       - STR_THE_EMPEROR_PROTECTS_MARINE_SUPPORT_RESEARCH
 
   #---MAIN STORY----------------------------------------------------
-  - name: STR_HERETIC_SISTERCANONESS
-    unlocks:
-      - STR_LEADER_PLUS
-    needItem: true
-
-  - name: STR_TZEENTCHS_SISTERCHAMP
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_COMMANDER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_PSI_LAB
-    needItem: true
-
-  - name: STR_HERETIC_SISTERCELEST
-    unlocks:
-      - STR_LEADER_PLUS
-    needItem: true
-
-  - name: STR_NURGLE_SISTERHOSPITALLER
-    unlocks:
-      - STR_MEDI_KIT_PREREQ
-      - STR_LEADER_PLUS
-    needItem: true
-
-  - name: STR_NURGLE_CIV_CULTIST_GREENROBE
-    cost: 25
-    points: 10
-    needItem: true
-  - name: STR_NURGLE_CIV_CULTIST_BLESSED
-    cost: 25
-    points: 10
-    needItem: true
-  - name: STR_NURGLE_CIV_CULTIST_BLESSED2
-    cost: 25
-    points: 10
-    needItem: true
-
-  - name: STR_PLAGUE_MONK_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_VERMIN_MONK_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_VERMINKIN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_FESTERKIN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_HRUD_WARRIOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_HRUD_ARMORED_WARRIOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_HRUD_SNIPER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_STORMVERMIN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_STORMVERMIN_OFFICER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-
-  - name: STR_GREEN_ROBE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NURGLE_ZOMBIE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NURGLE_BOOMER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NURGLE_DAEMONETTE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NURGLE_ROTBEARER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NURGLE_CULTIST_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NURGLE_OGRYN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
   #---STRATEGY------------------------------------------------------
   #*** Internal for Marines strategy unlocks ***
   #---START TIER----------------------------------------------------
@@ -1915,31 +1754,6 @@ research:
   - name: STR_NIGHTLORDS_WARPTALON_RESEARCH
     cost: 192
     points: 50
-    needItem: true
-
-  - name: STR_NIGHT_LORDS_SISTER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NIGHTLORD_CSM_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NIGHTLORD_CSM_LEADER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NIGHTLORD_RAPTOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NIGHTLORD_RAPTOR_OFFICER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_NIGHTLORD_WARPTALON_CORPSE
-    cost: 50
-    points: 25
     needItem: true
 
   #arbites
@@ -2826,48 +2640,8 @@ research:
     cost: 150
     points: 50
     needItem: true
-  - name: STR_SLAANESH_PLAT_CORPSE_P
-    cost: 100
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_GUARD_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_CARAPACE_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_OFFICER_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_SLAANESH_GUARD_COMMISSAR_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
 
   #ChaosSisters Interrogation (Needed for Ufopedia hooks)
-  - name: STR_ADEPTASZ_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_HERETIC_CANONESS_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_ADEPTAS_SLAANCEL_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_CHAOS_SERAPHIM_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_HERETIC_SERAPHIM_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
 
   - name: STR_BLASTER_LAUNCHER
     cost: 900
@@ -2975,21 +2749,6 @@ research:
   #STR_GSX_XENO_GENESTEALER_LIFECYCLE #5B
     needItem: true
 
-  - &STR_CORPSE_GSC
-    name: STR_BW_CORPSE #GENE CULT
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_BW2_CORPSE #GENE CULT
-    refNode: *STR_CORPSE_GSC
-
-  - name: STR_SOB_CORPSE #GENE CULT
-    refNode: *STR_CORPSE_GSC
-
-  - name: STR_GSC_KELER_CORPSE #GENE CULT
-    cost: 50
-    points: 25
-    needItem: true
 
   - name: STR_LIBERATOR_AUTOSTUB_KELER
     cost: 300
@@ -3057,82 +2816,13 @@ research:
   #    needItem: true
 
 
-  - &STR_CORPSE_BASIC
-    name: STR_GRETCHIN
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_BADMOONS_ORK_BOY_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_BADMOONS_ORK_BIGBOY_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_BADMOONS_ORK_NOBZ_CORPSE
-    refNode: *STR_CORPSE_BASIC
 
   - name: STR_ORK_KILLA
     cost: 192
     points: 50
     needItem: true
 
-  - name: STR_ORK_BIKE_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_ORKKOMMANDO_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_ORK_TANKBUSTAZ_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_ORK_STORMBOY_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_BURNABOYZ_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_SQUIG_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_ORK_MEGANOB_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_ORK_WARBOSS_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_ORK_DEFFKOPTER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
 
-  - name: STR_ORKWYRDBOY_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_ORK_FLASHGITZ_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_ORKDEATHSKULL_MEKBOY_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_DEATHSKULL_ORK_MEGANOB_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_DEATHSKULL_ORK_ARDNOB_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_DEATHSKULL_ORK_NOB_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_DEATHSKULL_ORK_KAP_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_DEATHSKULL_ORK_BOY_CORPSE
-    refNode: *STR_CORPSE_BASIC
 
   - name: STR_WYRDBOY_STIKK_ZZAP_CHARGE
     cost: 50
@@ -3228,49 +2918,6 @@ research:
       - STR_ASSC_DEP1
     needItem: true
 
-  #Deserters
-  - name: STR_DESERTER_SCOUT_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_DESERTER_SOLDIER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_DESERTER_GUARD_OFFICER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_DESERTER_PSYKER_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  #Traitor Guard
-  - name: STR_TG_BATTLESERVITOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_TRAITORGUARD_OGRYN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-  - name: STR_TRAITORGUARD_OGRYN_REDBLACK_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-
-  - name: STR_CHAOS_PENETANTE_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-
-  - name: STR_IRON_GUARD_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
 
   #CHAOS GENERAL WEAPONS
   - name: STR_CHAOS_RIPPERGUN
@@ -3325,101 +2972,6 @@ research:
     points: 25
     needItem: true
 
-  - name: STR_NECRON_WARRIOR_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
-  - name: STR_NECRON_IMORTAL_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_NECRON_DEATHMARK_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_NECRON_LYCHGUARD_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_DESTROYER_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_GREYK_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_GRETCHIN_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_ORKBOY_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_ORKARDBOY_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_ORKNOBBOY_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_KILLA_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_PLAT_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_SEER_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_GUARDIAN_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_BANSHEE_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_CSENTINEL_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_XENO_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_CARNI_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_PRIEST_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_LORD_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_SORC_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_WARPTALON_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_OBLITERATOR_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_BEHEMOTH_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_PREDATOR_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_PREDATORSIDE_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_BERSERKER_CORPSE
-    refNode: *STR_CORPSE_BASIC
-  - name: STR_ZOMBIE_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_ZOMBIE_AUTOPSY
-  - name: STR_SECTOID_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_SECTOID_AUTOPSY
-  - name: STR_SNAKEMAN_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_SNAKEMAN_AUTOPSY
-  - name: STR_ETHEREAL_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_ETHEREAL_AUTOPSY
-  - name: STR_MUTON_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_MUTON_AUTOPSY
-  - name: STR_FLOATER_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_FLOATER_AUTOPSY
-  - name: STR_CELATID_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_CELATID_AUTOPSY
-  - name: STR_SILACOID_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_SILACOID_AUTOPSY
-  - name: STR_CHRYSSALID_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_CHRYSSALID_AUTOPSY
-  - name: STR_REAPER_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_REAPER_AUTOPSY
-  - name: STR_SECTOPOD_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_SECTOPOD_AUTOPSY
-  - name: STR_CYBERDISC_CORPSE
-    refNode: *STR_CORPSE_BASIC
-    lookup: STR_CYBERDISC_AUTOPSY
-  - name: STR_VALKIA_CORPSE_BASIC
-    refNode: *STR_CORPSE_BASIC
 
   #---ITEMS------------------------------------------------------
   #CRAFTS
@@ -5313,11 +4865,13 @@ research:
       - STR_TZEENTCH_SISTERASS
       - STR_NURGLE_BLIGHTED
       - STR_SLAANESH_SISDEVOTED
+
 # Crafts SM
 ##########################################
 # Section: Crafts
 # Faction: Space Marines
 ##########################################
+
   - name: STR_SPEEDR
     cost: 150
     points: 10
@@ -5385,11 +4939,13 @@ research:
     points: 0
     dependencies:
       - STR_GENERALLOCK
+
 # Crafts INQ
 ##########################################
 # Section: Crafts
 # Faction: Chamber Militant
 ##########################################
+
   - name: STR_ARVUS_GK
     cost: 0
     points: 0
@@ -5431,11 +4987,13 @@ research:
     dependencies:
       - STR_ADEPTAS_AND_INQUISITION
       - STR_ADEPTAS_MIDTIER
+
 # Crafts DW
 ##########################################
 # Section: Crafts
 # Faction: Deathwatch
 ##########################################
+
   - name: STR_STORMEAGLE_INTERCEPTOR_DW
     cost: 600
     points: 25
@@ -5470,19 +5028,23 @@ research:
       #- STR_HIGHTIER_PREREQ
       #- STR_STORMEAGLE_INTERCEPTOR
       - STR_UFO_CONSTRUCTION
+
 # Crafts GK
 ##########################################
 # Section: Crafts
 # Faction: Grey Knigts
 ##########################################
+
   - name: STR_XIPHON
     dependencies:
       - STR_GENERALLOCK
-# Crafts AA
+
+# Crafts Arbites
 ##########################################
 # Section: Crafts
 # Faction: Adeptus Arbites
 ##########################################
+
   - name: STR_LANDRAIDER_ARBITES #ARBITES
     cost: 900
     points: 30
@@ -5509,11 +5071,13 @@ research:
     dependencies:
       - STR_ARBITES
       - STR_ARBITES_MIDTIER
-# Crafts AS
+
+# Crafts Adeptas
 ##########################################
 # Section: Crafts
 # Faction: Adepta Sororitas
 ##########################################
+
   - name: STR_ADEPTAS_DROPPOD_RESEARCH
     cost: 0
     points: 10
@@ -5554,11 +5118,13 @@ research:
     points: 0
     dependencies:
       - STR_ADEPTAS
+
 # Crafts IG
 ##########################################
 # Section: Crafts
 # Faction: Imperial Guard
 ##########################################
+
   - name: STR_TAUROX_IG
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
@@ -5578,11 +5144,13 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_GENERALLOCK
+
 # Armor SM
 ##########################################
 # Section: Armor
 # Faction: Space Marines
 ##########################################
+
   - name: STR_SCOUTH_RESEARCH
     cost: 180
     points: 20
@@ -5721,11 +5289,13 @@ research:
       - STR_NIGHTLORDS_RAPTOR_COMMANDER
       - STR_NIGHTLORDS_WARPTALON_SOLDIER
       - STR_NIGHTLORDS_WARPTALON_COMMANDER
+
 # Armor PSM
 ##########################################
 # Section: Armor
 # Faction: Primaris Space Marines
 ##########################################
+
   - name: STR_PRIMARIS_ARMOR
     cost: 180
     points: 20
@@ -5765,22 +5335,26 @@ research:
     dependencies:
       - STR_HIGHTIER_PREREQ
       - STR_PRIMARIS_ARMOR
+
 # Armor GK
 ##########################################
 # Section: Armor
 # Faction: Grey Knights
 ##########################################
+
   - name: STR_GK_CHP_ARMOR
     cost: 205
     points: 20
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_GREYKNIGHTS
-# Armor AA
+
+# Armor Arbites
 ##########################################
 # Section: Armor
 # Faction: Adeptus Arbites
 ##########################################
+
   - name: STR_ARBITOR_ARMOR
     cost: 205
     points: 20
@@ -5816,11 +5390,13 @@ research:
       - STR_THREAT_ONE
       - STR_ARBITES
       # - STR_ENFORCER_ARMOR
-# Armor AS
+
+# Armor Adeptas
 ##########################################
 # Section: Armor
 # Faction: Adepta Sororitas
 ##########################################
+
   - name: STR_ADEPTAS_ARMOR
     cost: 180
     points: 20
@@ -5951,11 +5527,13 @@ research:
       - STR_MASTER_CRAFTING
       - STR_UFO_CONSTRUCTION
       - STR_FAITHFUL_ARMORY
+
 # Armor IG
 ##########################################
 # Section: Armor
 # Faction: Imperial Guard
 ##########################################
+
   - name: STR_GUARD_POWER_ARMOR_RESEARCH
     cost: 800
     points: 100
@@ -6043,20 +5621,24 @@ research:
     points: 25
     dependencies:
       - STR_IMPERIAL_GUARD_MISSION_BULLGRYN_RIOT_COMPLETE
+
 # Weapons Xenos
 ##########################################
 # Section: Weapons
 # Faction: Xenos
 ##########################################
+
   - name: STR_ALIEN_GRENADE # Blight Grenade
     cost: 200
     points: 20
     needItem: true
+
 # Items General
 ##########################################
 # Section: Items
 # Faction: General
 ##########################################
+
   - name: STR_PSI_AMP # Tome of the Mind
     cost: 500
     points: 20
@@ -6121,11 +5703,13 @@ research:
     cost: 150
     points: 30
     needItem: true
+
 # Captive Xenos
 ##########################################
 # Section: Captive
 # Faction: Xenos
 ##########################################
+
   - name: STR_SECTOID_COMMANDER # ToDo: Live Aliens
     cost: 190
     points: 50
@@ -6535,122 +6119,6 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
 
-  - name: STR_ELDAR_DAVENGER
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-
-  - name: STR_ELDAR_SCORPION
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-
-  - name: STR_NURGLE_ZOMBIE
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_BOOMER
-  - name: STR_NURGLE_BOOMER
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_ZOMBIE
-
-  - name: STR_NURGLE_DAEMONETTE
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_CELATID_TERRORIST
-
-  - name: STR_NURGLE_ROTBEARER
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_CELATID_TERRORIST
-
-  - name: STR_NURGLE_CULTIST_LIGHT
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_CULTIST
-
-  - name: STR_NURGLE_CULTIST
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_CULTIST_LIGHT
-      - STR_NURGLE_CULTIST_FEM
-
-  - name: STR_NURGLE_CULTIST_FEM
-    cost: 50
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_NURGLE_CULTIST
-      - STR_NURGLE_CULTIST_LIGHT
-
-  - name: STR_NURGLE_CULTIST_HEAVY
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NURGLE_CULTIST
-      - STR_NURGLE_CULTIST_FEM
-
-  - name: STR_NURGLE_OGRYN
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_NURGLE_CULTIST_HEAVY
-
-  - name: STR_NURGLE_CULTIST_LEADER
-    cost: 100
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_LEADER_PLUS
-      - STR_THREAT_ONE
-      - STR_CHAOS_PATH
-      - STR_PSI_LAB
-    getOneFree:
-      - STR_NURGLE_CULTIST_HEAVY
-      - STR_NURGLE_OGRYN
 
 #HRUD NURGLE SKAVEN
   - name: STR_NURGLE_PLAGUE_MONK
@@ -6994,29 +6462,6 @@ research:
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
 
-  - name: STR_ELDAR_SEER
-    cost: 192
-    points: 50
-    needItem: true
-    getOneFree:
-      - STR_ELDAR_PLAT
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
-  - name: STR_ELDAR_GUARDIAN
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
-  - name: STR_ELDAR_BANSHEE
-    cost: 192
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
   - name: STR_SLAANESH_GUARD_M
     cost: 50
     points: 25
@@ -8206,6 +7651,235 @@ research:
       - STR_THREAT_ONE
       - STR_PSI_LAB
 
+  - name: STR_CLOAKED_WOMAN
+    cost: 25
+    points: 15
+    needItem: true
+  - name: STR_CLOAKED_WOMAN2
+    cost: 25
+    points: 15
+    needItem: true
+  - name: STR_CLOAKED_WOMAN_ORANGE
+    cost: 25
+    points: 15
+  - name: STR_DESERTER_SCOUT_FEMALE
+    cost: 75
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_SOLDIER
+    cost: 192
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_GREEN_FLAK
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_GREEN_SHIRT
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_DESERTER_OFFICER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - name: STR_DESERTER_PYSKER
+    cost: 150
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_PSI_LAB
+      - STR_THREAT_ONE
+  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_HB
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_MISSILE
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TRAITORGUARD_OGRYN
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TRAITORGUARD_OGRYN_REDBLACK
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_NURGLE
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_KHRONE
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_TZEENTCH
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_SLAANESH
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_NIGHTLORDS
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_HERETEK
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_HARMONIC_MELTAGUN
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_PLASMA_CARBINE_CHAOS
+  - name: STR_CHAOS_HERETEK
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_INTERROGATION_COMPLETED
+      - STR_HARMONIC_MELTAGUN
+    getOneFree:
+      - STR_PLASMA_SPRAYGUN_CHAOS
+  - name: STR_CHAOS_PENETANTE
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CHAOS_PENETANTE_LEEROY
+  - name: STR_CHAOS_PENETANTE_LEEROY
+    cost: 50
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_CHAOS_PENETANTE
+  - name: STR_IRON_GUARD_SOLDIER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_IRON_GUARD_ENGINEER
+  - name: STR_IRON_GUARD_ENGINEER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_IW_AUTOCANNON
+    getOneFree:
+      - STR_IRON_MAIDEN_SISTER
+  - &STR_NAVIGATOR
+    name: STR_SECTOID_NAVIGATOR
+    cost: 192
+    points: 50
+    lookup: STR_SECTOID
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_ALIEN_ORIGINS
+      # - STR_HYPER_WAVE_DECODER
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+
+  - name: STR_SNAKEMAN_NAVIGATOR
+    refNode: *STR_NAVIGATOR
+    lookup: STR_SNAKEMAN
+  - name: STR_MUTON_NAVIGATOR
+    refNode: *STR_NAVIGATOR
+    lookup: STR_MUTON
+  - name: STR_FLOATER_NAVIGATOR
+    refNode: *STR_NAVIGATOR
+    lookup: STR_FLOATER
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+  - &STR_ENGINEER
+    name: STR_SECTOID_ENGINEER
+    cost: 192
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_ALIEN_ORIGINS
+    getOneFree: []
+    lookup: STR_SECTOID
+  - name: STR_SNAKEMAN_ENGINEER
+    refNode: *STR_ENGINEER
+    lookup: STR_SNAKEMAN
+  - name: STR_MUTON_ENGINEER
+    refNode: *STR_ENGINEER
+    lookup: STR_MUTON
+  - name: STR_FLOATER_ENGINEER
+    refNode: *STR_ENGINEER
+    lookup: STR_FLOATER
+    unlocks:
+      - STR_ADEPTAS_ARMORS_DEP1
+      - STR_ASS_ARMOR_DEP1
+      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_MASTER_CRAFTING
+
+# Captive GSC
+##########################################
+# Section: Captive
+# Faction: Gene Stealer Cult
+##########################################
+
   - name: STR_GENE_HYBRID_ACOLYTE_A
     cost: 75
     points: 25
@@ -8249,21 +7923,6 @@ research:
     getOneFree:
       - STR_GENE_HYBRID_ACOLYTE_A
 
-
-
-  - name: STR_CLOAKED_WOMAN
-    cost: 25
-    points: 15
-    needItem: true
-  - name: STR_CLOAKED_WOMAN2
-    cost: 25
-    points: 15
-    needItem: true
-  - name: STR_CLOAKED_WOMAN_ORANGE
-    cost: 25
-    points: 15
-
-  #add to STR_GSC_INTERROGATION_DEP1
   - name: STR_GSC_ZOMBIE
     cost: 50
     points: 15
@@ -8271,7 +7930,6 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
       - STR_GSC_INTERROGATION_DEP1
-
 
   - name: STR_GSC_CLOAKED_WOMAN
     cost: 50
@@ -8666,6 +8324,18 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
       - STR_GSC_INTERROGATION_DEP1
+
+# Captive Ork
+##########################################
+# Section: Captive
+# Faction: Orks
+##########################################
+
+  - name: STR_GRETCHIN
+    cost: 50
+    points: 25
+    needItem: true
+
   - name: STR_BADMOONS_ORK_BOYZ
     cost: 192
     points: 50
@@ -8890,221 +8560,236 @@ research:
     getOneFree:
       - STR_DEATHSKULL_ORK_MEGANOB
 
-  - name: STR_DESERTER_SCOUT_FEMALE
-    cost: 75
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_DESERTER_SOLDIER
-    cost: 192
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_DESERTER_GREEN_FLAK
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_DESERTER_GREEN_SHIRT
-    cost: 75
-    points: 25
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_DESERTER_OFFICER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-  - name: STR_DESERTER_PYSKER
-    cost: 150
-    points: 100
-    needItem: true
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_INTERROGATION_COMPLETED
-      - STR_PSI_LAB
-      - STR_THREAT_ONE
-  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_HB
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TRAITORGUARD_BATTLE_SERVITOR_MISSILE
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TRAITORGUARD_OGRYN
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TRAITORGUARD_OGRYN_REDBLACK
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_NURGLE
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_KHRONE
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_TZEENTCH
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_SLAANESH
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_NIGHTLORDS
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-  - name: STR_HERETEK
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_HARMONIC_MELTAGUN
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_PLASMA_CARBINE_CHAOS
-  - name: STR_CHAOS_HERETEK
-    cost: 150
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_THREAT_ONE
-      - STR_INTERROGATION_COMPLETED
-      - STR_HARMONIC_MELTAGUN
-    getOneFree:
-      - STR_PLASMA_SPRAYGUN_CHAOS
-  - name: STR_CHAOS_HERETEK_CORPSE
-    cost: 25
-    points: 25
-    needItem: true
-  - name: STR_CHAOS_PENETANTE
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CHAOS_PENETANTE_LEEROY
-  - name: STR_CHAOS_PENETANTE_LEEROY
-    cost: 50
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-    getOneFree:
-      - STR_CHAOS_PENETANTE
-  - name: STR_IRON_GUARD_SOLDIER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-    getOneFree:
-      - STR_IRON_GUARD_ENGINEER
-  - name: STR_IRON_GUARD_ENGINEER
-    cost: 100
-    points: 50
-    needItem: true
-    unlocks:
-      - STR_INTERROGATION_COMPLETED
-      - STR_IW_AUTOCANNON
-    getOneFree:
-      - STR_IRON_MAIDEN_SISTER
-  - &STR_NAVIGATOR
-    name: STR_SECTOID_NAVIGATOR
-    cost: 192
-    points: 50
-    lookup: STR_SECTOID
-    needItem: true
-    destroyItem: true
-    unlocks:
-      - STR_ALIEN_ORIGINS
-      # - STR_HYPER_WAVE_DECODER
-    getOneFree:
-      - STR_ALIEN_RESEARCH
-      - STR_ALIEN_HARVEST
-      - STR_ALIEN_ABDUCTION
-      - STR_ALIEN_INFILTRATION
-      - STR_ALIEN_BASE
-      - STR_ALIEN_TERROR
-      - STR_ALIEN_RETALIATION
-      - STR_ALIEN_SUPPLY
+# Captive Chaos
+##########################################
+# Section: Captive
+# Faction: Chaos
+##########################################
 
-  - name: STR_SNAKEMAN_NAVIGATOR
-    refNode: *STR_NAVIGATOR
-    lookup: STR_SNAKEMAN
-  - name: STR_MUTON_NAVIGATOR
-    refNode: *STR_NAVIGATOR
-    lookup: STR_MUTON
-  - name: STR_FLOATER_NAVIGATOR
-    refNode: *STR_NAVIGATOR
-    lookup: STR_FLOATER
+  - name: STR_ETHEREAL_COMMANDER # UNDIVIDED
+    cost: 192
+    points: 500
+    needItem: true
     unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+  - name: STR_CHAOS_BEHEMOTH # SLANESH
+    cost: 192
+    points: 500
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+  - name: STR_TZEENTCH_LEADER # TZEENTCH
+    cost: 192
+    points: 500
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+  - name: STR_KHORNE_CHAMP # KHORNE
+    cost: 192
+    points: 500
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+
+  - name: STR_HERETIC_SISTERCANONESS
+    unlocks:
+      - STR_LEADER_PLUS
+    needItem: true
+
+  - name: STR_TZEENTCHS_SISTERCHAMP
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+    needItem: true
+
+  - name: STR_HERETIC_SISTERCELEST
+    unlocks:
+      - STR_LEADER_PLUS
+    needItem: true
+
+  - name: STR_NURGLE_SISTERHOSPITALLER
+    unlocks:
+      - STR_MEDI_KIT_PREREQ
+      - STR_LEADER_PLUS
+    needItem: true
+
+  - name: STR_NURGLE_CIV_CULTIST_GREENROBE
+    cost: 25
+    points: 10
+    needItem: true
+  - name: STR_NURGLE_CIV_CULTIST_BLESSED
+    cost: 25
+    points: 10
+    needItem: true
+  - name: STR_NURGLE_CIV_CULTIST_BLESSED2
+    cost: 25
+    points: 10
+    needItem: true
+
+  - name: STR_NURGLE_CHAMP # NURGLE
+    cost: 192
+    points: 500
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+
+  - name: STR_NURGLE_ZOMBIE
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_BOOMER
+  - name: STR_NURGLE_BOOMER
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_ZOMBIE
+
+  - name: STR_NURGLE_DAEMONETTE
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_CELATID_TERRORIST
+
+  - name: STR_NURGLE_ROTBEARER
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_CELATID_TERRORIST
+
+  - name: STR_NURGLE_CULTIST_LIGHT
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_CULTIST
+
+  - name: STR_NURGLE_CULTIST
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_CULTIST_LIGHT
+      - STR_NURGLE_CULTIST_FEM
+
+  - name: STR_NURGLE_CULTIST_FEM
+    cost: 50
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_NURGLE_CULTIST
+      - STR_NURGLE_CULTIST_LIGHT
+
+  - name: STR_NURGLE_CULTIST_HEAVY
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
-  - &STR_ENGINEER
-    name: STR_SECTOID_ENGINEER
+    getOneFree:
+      - STR_NURGLE_CULTIST
+      - STR_NURGLE_CULTIST_FEM
+
+  - name: STR_NURGLE_OGRYN
+    cost: 75
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_NURGLE_CULTIST_HEAVY
+
+  - name: STR_NURGLE_CULTIST_LEADER
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+      - STR_PSI_LAB
+    getOneFree:
+      - STR_NURGLE_CULTIST_HEAVY
+      - STR_NURGLE_OGRYN
+
+# Captive Eldar
+##########################################
+# Section: Captive
+# Faction: Eldar
+##########################################
+
+  - name: STR_ELDAR_DAVENGER
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_ELDAR_SCORPION
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_ELDAR_SEER
     cost: 192
     points: 50
     needItem: true
-    destroyItem: true
+    getOneFree:
+      - STR_ELDAR_PLAT
     unlocks:
-      - STR_ALIEN_ORIGINS
-    getOneFree: []
-    lookup: STR_SECTOID
-  - name: STR_SNAKEMAN_ENGINEER
-    refNode: *STR_ENGINEER
-    lookup: STR_SNAKEMAN
-  - name: STR_MUTON_ENGINEER
-    refNode: *STR_ENGINEER
-    lookup: STR_MUTON
-  - name: STR_FLOATER_ENGINEER
-    refNode: *STR_ENGINEER
-    lookup: STR_FLOATER
-    unlocks:
-      - STR_ADEPTAS_ARMORS_DEP1
-      - STR_ASS_ARMOR_DEP1
-      - STR_FELINID_JUMP_ARMOR_REQUISITION_DEP1
       - STR_INTERROGATION_COMPLETED
-      - STR_THREAT_ONE
-      - STR_MASTER_CRAFTING
+      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
+  - name: STR_ELDAR_GUARDIAN
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
+  - name: STR_ELDAR_BANSHEE
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_XENO_ONLY #added, unlocks XENO_ONLY (Xeno embrace) for research, which allows for recruiting captured Farseer.
 
 # Corpses Xenos
 ##########################################
@@ -9241,7 +8926,10 @@ research:
     cost: 50
     points: 25
     needItem: true
-
+  - name: STR_CHAOS_HERETEK_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
   - name: STR_SECTOID_FEMCULTIST_CORPSE
     cost: 50
     points: 25
@@ -9382,6 +9070,375 @@ research:
     cost: 50
     points: 25
     needItem: true
+  - name: STR_GUARD_KRIEG_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GUARD_KRIEG_ENGINEER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GUARD_KRIEG_GRENADIER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_GREEN_ROBE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NURGLE_ZOMBIE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NURGLE_BOOMER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NURGLE_DAEMONETTE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NURGLE_ROTBEARER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NURGLE_CULTIST_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NURGLE_OGRYN_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_NIGHT_LORDS_SISTER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NIGHTLORD_CSM_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NIGHTLORD_CSM_LEADER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NIGHTLORD_RAPTOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NIGHTLORD_RAPTOR_OFFICER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_NIGHTLORD_WARPTALON_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_SLAANESH_PLAT_CORPSE_P
+    cost: 100
+    points: 25
+    needItem: true
+  - name: STR_SLAANESH_GUARD_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAANESH_CARAPACE_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAANESH_OFFICER_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_SLAANESH_GUARD_COMMISSAR_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTASZ_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_HERETIC_CANONESS_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ADEPTAS_SLAANCEL_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_CHAOS_SERAPHIM_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_HERETIC_SERAPHIM_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - &STR_CORPSE_GSC
+    name: STR_BW_CORPSE #GENE CULT
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_BW2_CORPSE #GENE CULT
+    refNode: *STR_CORPSE_GSC
+
+  - name: STR_SOB_CORPSE #GENE CULT
+    refNode: *STR_CORPSE_GSC
+
+  #Deserters
+  - name: STR_DESERTER_SCOUT_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_DESERTER_SOLDIER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_DESERTER_GUARD_OFFICER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_DESERTER_PSYKER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  #Traitor Guard
+  - name: STR_TG_BATTLESERVITOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_TRAITORGUARD_OGRYN_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_TRAITORGUARD_OGRYN_REDBLACK_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+
+  - name: STR_CHAOS_PENETANTE_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+
+  - name: STR_IRON_GUARD_CORPSE
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_NECRON_WARRIOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_NECRON_IMORTAL_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_NECRON_DEATHMARK_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_NECRON_LYCHGUARD_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_DESTROYER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_GREYK_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_PLAT_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_SEER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_GUARDIAN_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_BANSHEE_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_CSENTINEL_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_XENO_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_CARNI_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_PRIEST_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_LORD_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_SORC_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_WARPTALON_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_OBLITERATOR_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_BEHEMOTH_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_PREDATOR_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_PREDATORSIDE_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_BERSERKER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ZOMBIE_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_ZOMBIE_AUTOPSY
+  - name: STR_SECTOID_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_SECTOID_AUTOPSY
+  - name: STR_SNAKEMAN_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_SNAKEMAN_AUTOPSY
+  - name: STR_ETHEREAL_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_ETHEREAL_AUTOPSY
+  - name: STR_MUTON_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_MUTON_AUTOPSY
+  - name: STR_FLOATER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_FLOATER_AUTOPSY
+  - name: STR_CELATID_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_CELATID_AUTOPSY
+  - name: STR_SILACOID_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_SILACOID_AUTOPSY
+  - name: STR_CHRYSSALID_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_CHRYSSALID_AUTOPSY
+  - name: STR_REAPER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_REAPER_AUTOPSY
+  - name: STR_SECTOPOD_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_SECTOPOD_AUTOPSY
+  - name: STR_CYBERDISC_CORPSE
+    refNode: *STR_CORPSE_BASIC
+    lookup: STR_CYBERDISC_AUTOPSY
+  - name: STR_VALKIA_CORPSE_BASIC
+    refNode: *STR_CORPSE_BASIC
+
+# Corpses Ork
+##########################################
+# Section: Corpses
+# Faction: Orks
+##########################################
+
+  - name: STR_ORKBOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ORKARDBOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ORKNOBBOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_KILLA_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - &STR_CORPSE_BASIC
+    name: STR_GRETCHIN_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_BADMOONS_ORK_BOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_BADMOONS_ORK_BIGBOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_BADMOONS_ORK_NOBZ_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ORK_BIKE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORKKOMMANDO_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORK_TANKBUSTAZ_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORK_STORMBOY_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_BURNABOYZ_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_SQUIG_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORK_MEGANOB_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORK_WARBOSS_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORK_DEFFKOPTER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORKWYRDBOY_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+
+  - name: STR_ORK_FLASHGITZ_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_ORKDEATHSKULL_MEKBOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_DEATHSKULL_ORK_MEGANOB_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_DEATHSKULL_ORK_ARDNOB_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_DEATHSKULL_ORK_NOB_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_DEATHSKULL_ORK_KAP_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_DEATHSKULL_ORK_BOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+# Corpses GSC
+##########################################
+# Section: Corpses
+# Faction: Gene Stealer Cult
+##########################################
+
+  - name: STR_GSC_GUARD_CARAPACE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_SCION_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_PSYKER_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_COMMISSAR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_PDF_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_MEDICAE_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_REPENTIA_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_GSC_ADEPTAS_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
   - name: STR_GENE_HYBRID_ACOLYTE_CORPSE
     cost: 50
     points: 25
@@ -9458,47 +9515,86 @@ research:
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GUARD_KRIEG_CORPSE
+  - name: STR_HORMAGAUNT_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GUARD_KRIEG_ENGINEER_CORPSE
+  - name: STR_GSC_KELER_CORPSE #GENE CULT
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GUARD_KRIEG_GRENADIER_CORPSE
+
+# Corpses Eldar
+##########################################
+# Section: Corpses
+# Faction: Eldar
+##########################################
+
+  - name: STR_SEER_CORPSE
+    cost: 75
+    points: 25
+    needItem: true
+  - name: STR_DAVENGER_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_GUARD_CARAPACE_CORPSE
+  - name: STR_SCORPION_CORPSE
+    cost: 75
+    points: 25
+    needItem: true
+  - name: STR_WRAITHGUARD_CORPSE
+    cost: 75
+    points: 25
+    needItem: true
+  - name: STR_ELDAR_REAPER_CORPSE
+    cost: 75    needItem: true
+
+# Corpses Skaven
+##########################################
+# Section: Corpses
+# Faction: Skaven
+##########################################
+
+  - name: STR_PLAGUE_MONK_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_SCION_CORPSE
+  - name: STR_VERMIN_MONK_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_PSYKER_CORPSE
+  - name: STR_VERMINKIN_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_COMMISSAR_CORPSE
+  - name: STR_FESTERKIN_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_PDF_CORPSE
+  - name: STR_STORMVERMIN_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_MEDICAE_CORPSE
+  - name: STR_STORMVERMIN_OFFICER_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_REPENTIA_CORPSE
+
+# Corpses Hrud
+##########################################
+# Section: Corpses
+# Faction: Hrud
+##########################################
+
+  - name: STR_HRUD_WARRIOR_CORPSE
     cost: 50
     points: 25
     needItem: true
-  - name: STR_GSC_ADEPTAS_CORPSE
+  - name: STR_HRUD_ARMORED_WARRIOR_CORPSE
+    cost: 50
+    points: 25
+    needItem: true
+  - name: STR_HRUD_SNIPER_CORPSE
     cost: 50
     points: 25
     needItem: true
