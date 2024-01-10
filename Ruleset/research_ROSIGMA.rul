@@ -5547,7 +5547,7 @@ research:
     points: 10
     dependencies:
       - STR_GRAVGUN_ADEPTAS
-    - name: STR_PLASMA_CARBINE_ADEPTAS
+  - name: STR_PLASMA_CARBINE_ADEPTAS
     cost: 500
     points: 20
     dependencies:
@@ -8621,7 +8621,8 @@ research:
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
       - STR_BLASTER_LAUNCHER
-      - STR_HFLAMERR      - STR_HEAVY_PLASMA
+      - STR_HFLAMERR      
+      - STR_HEAVY_PLASMA
     getOneFree:
       - STR_DEATHSKULL_ORK_MEGANOB
 
@@ -8918,7 +8919,8 @@ research:
     cost: 25
     points: 25
     needItem: true
-  - name: STR_SLAANSUP_CORPSE1
+  - &STR_CORPSE_BASIC
+    name: STR_SLAANSUP_CORPSE1
     cost: 50
     points: 25
     needItem: true
@@ -9396,12 +9398,8 @@ research:
     refNode: *STR_CORPSE_BASIC
   - name: STR_KILLA_CORPSE
     refNode: *STR_CORPSE_BASIC
-  - &STR_CORPSE_BASIC
-    name: STR_GRETCHIN_CORPSE
-    cost: 50
-    points: 25
-    needItem: true
-
+  - name: STR_GRETCHIN_CORPSE
+    refNode: *STR_CORPSE_BASIC
   - name: STR_BADMOONS_ORK_BOY_CORPSE
     refNode: *STR_CORPSE_BASIC
   - name: STR_BADMOONS_ORK_BIGBOY_CORPSE
@@ -9612,7 +9610,8 @@ research:
     points: 25
     needItem: true
   - name: STR_ELDAR_REAPER_CORPSE
-    cost: 75    needItem: true
+    cost: 75    
+    needItem: true
 
 # Corpses Skaven
 ##########################################
