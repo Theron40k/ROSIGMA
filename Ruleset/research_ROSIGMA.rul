@@ -31,31 +31,6 @@ research:
     dependencies:
       - STR_BLASTER_LAUNCHER
       - STR_BLASTER_BOMB
-  - name: STR_LASER_DEFENSE
-    cost: 510
-    points: 15
-    dependencies:
-      - STR_LASER_CANNON
-  - name: STR_PLASMA_DEFENSE
-    cost: 620
-    points: 25
-    dependencies:
-      - STR_PLASMA_CANNON
-  - name: STR_FUSION_DEFENSE
-    cost: 800
-    points: 25
-    dependencies:
-      - STR_FUSION_MISSILE
-  - name: STR_GRAV_SHIELD
-    cost: 930
-    points: 25
-    dependencies:
-      - STR_NEW_FIGHTER_TRANSPORTER
-  - name: STR_MIND_SHIELD
-    cost: 360
-    points: 25
-    dependencies:
-      - STR_PSI_LAB
   - name: STR_LEADER_PLUS
     requires:
       - STR_ALIEN_ORIGINS
@@ -358,17 +333,6 @@ research:
       - STR_COMMANDER_PLUS
     unlockFinalMission: false
 
-  - name: STR_SECTOID_COMMANDER # ToDo: Live Aliens
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_ALIEN_ORIGINS
-      - STR_PSI_LAB
-
-  - name: STR_SNAKEMAN_COMMANDER
-    unlocks:
-      - STR_LEADER_PLUS
-      - STR_ALIEN_ORIGINS
-
   - name: STR_COMMANDER_PLUS
     unlocks:
       - STR_CYDONIA_OR_BUST
@@ -498,24 +462,6 @@ research:
   - name: STR_LIGHT_BOLTERS
     dependencies:
       - STR_GENERALLOCK
-
-  #*** early facilities ***
-  - name: STR_STEELMILLR #facility
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_ALIEN_ALLOYS
-  - name: STR_DEFENSE_CORRIDORR #facility MARINES
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MOTION_SCANNER
-      - STR_MARINES_STRATEGY
-  - name: STR_DEFENSE_CORRIDORBR #facility OTHER FACTIONS BLACK
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MOTION_SCANNER
 
   #*** miscellaneous ***
   - name: STR_SPELLSR
@@ -701,53 +647,6 @@ research:
       - STR_HIGHTIER_PREREQ
       - STR_MARINES_STRATEGY
       - STR_HB
-
-  #*** midtier facilities ***
-  - name: STR_NAVY_COMUNICATIONS
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MIDTIER_PREREQ
-  - name: STR_APOC_BAY #facility
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MIDTIER_PREREQ
-  - name: STR_LIBRARY #facility
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MARINES_STRATEGY
-      - STR_PSI_AMP
-  - name: STR_LIBRARY_GK #facility
-    cost: 100
-    points: 15
-    getOneFree:
-      - STR_LIBRARY
-    dependencies:
-      - STR_CHAMBERMILITANT
-      - STR_PSI_AMP
-
-  - name: STR_TEC_BAYR #facility
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_MARINES_STRATEGY
-      - STR_APOC_BAY
-  - name: STR_TRAINFACILITYR #facility
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_MARINES_AND_ADEPTAS
-  - name: STR_TEC_BAY_CHAMBER_R #facility        CHAMBER MILITANT
-    cost: 100
-    points: 15
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_CHAMBERMILITANT
-      - STR_APOC_BAY
   #---MISSIONS------------------------------------------------------
   - name: STR_SIDEOPERATIONS # MISSION 1
     cost: 200
@@ -9663,3 +9562,99 @@ research:
     cost: 50
     points: 25
     needItem: true
+
+# Facilities General
+##########################################
+# Section: Facilities
+# Faction: General
+##########################################
+
+  - name: STR_LASER_DEFENSE
+    cost: 510
+    points: 15
+    dependencies:
+      - STR_LASER_CANNON
+  - name: STR_PLASMA_DEFENSE
+    cost: 620
+    points: 25
+    dependencies:
+      - STR_PLASMA_CANNON
+  - name: STR_FUSION_DEFENSE
+    cost: 800
+    points: 25
+    dependencies:
+      - STR_FUSION_MISSILE
+  - name: STR_GRAV_SHIELD
+    cost: 930
+    points: 25
+    dependencies:
+      - STR_NEW_FIGHTER_TRANSPORTER
+  - name: STR_MIND_SHIELD
+    cost: 360
+    points: 25
+    dependencies:
+      - STR_PSI_LAB
+  #*** early facilities ***
+  - name: STR_STEELMILLR #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_ALIEN_ALLOYS
+  - name: STR_DEFENSE_CORRIDORR #facility MARINES
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MOTION_SCANNER
+      - STR_MARINES_STRATEGY
+  - name: STR_DEFENSE_CORRIDORBR #facility OTHER FACTIONS BLACK
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MOTION_SCANNER
+
+  #*** midtier facilities ***
+  - name: STR_NAVY_COMUNICATIONS
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+  - name: STR_APOC_BAY #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+  - name: STR_LIBRARY #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MARINES_STRATEGY
+      - STR_PSI_AMP
+  - name: STR_LIBRARY_GK #facility
+    cost: 100
+    points: 15
+    getOneFree:
+      - STR_LIBRARY
+    dependencies:
+      - STR_CHAMBERMILITANT
+      - STR_PSI_AMP
+
+  - name: STR_TEC_BAYR #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_STRATEGY
+      - STR_APOC_BAY
+  - name: STR_TRAINFACILITYR #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_AND_ADEPTAS
+  - name: STR_TEC_BAY_CHAMBER_R #facility        CHAMBER MILITANT
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_CHAMBERMILITANT
+      - STR_APOC_BAY
