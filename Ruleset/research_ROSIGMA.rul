@@ -189,10 +189,19 @@ research:
       - STR_LASER_WEAPONS
       - STR_MOTION_SCANNER
       - STR_SMOKE
+      - STR_MEDI_KIT_PREREQ
+      - STR_XIPHON
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_HARDER_MISSIONS
+      - STR_IMPERIUM_RESEARCH
     getOneFree:
       - STR_PERSONAL_ARMOR
     disables:
       - STR_GREYKNIGHTS
+      - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
     spawnedEvent: STR_DEATHWATCH_CARE_PACKAGE
   - name: STR_CHOSEN_DEATHWATCH
@@ -554,12 +563,27 @@ research:
       - STR_GENERALLOCK
 
   - name: STR_RADICAL_INQUISITOR_STRATEGY
-    cost: 100
+    cost: 5
     points: -1000
     dependencies:
       - STR_CHAMBERMILITANT
-    getOneFree: #new
-      - STR_CORVUS_RESEARCH
+    unlocks:
+      - STR_MOTION_SCANNER
+      - STR_LASER_WEAPONS
+      - STR_HOLOGRAM_GRENADE_REQUISITION
+      - STR_SMOKE
+      - STR_XIPHON
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_LIGHT_BOLTERS #for the Inquisition Strategy
+      - STR_LIGHT_BOLTERS_LOWTIER #for the Inquisition Strategy
+      - STR_LIGHT_BOLTERS_MIDTIER #for the Inquisition Strategy
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_IMPERIUM_RESEARCH
+    disables:
+      - STR_GREYKNIGHTS
+      - STR_DEATHWATCH
     spawnedEvent: STR_REINFORCEMENTS_RADICAL_EVENT
 
   - name: STR_HERETICAL_INQUISITOR_STRATEGY #For later, requires some CHAOS Soldiers.
@@ -650,7 +674,7 @@ research:
     cost: 1000
     points: -100
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_IMPERIAL_ASSASSINS_INQ
   - name: STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_2
     cost: 1000
@@ -663,21 +687,21 @@ research:
     cost: 1000
     points: -500
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_2
     spawnedEvent: STR_REINFORCEMENTS_IMPERIAL_ASSASSINS_INQ_3
   - name: STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_4
     cost: 1000
     points: -750
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_3
     spawnedEvent: STR_REINFORCEMENTS_IMPERIAL_ASSASSINS_INQ_4
   - name: STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_5
     cost: 1000
     points: -1000
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MT_GK
       - STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_4
     spawnedEvent: STR_REINFORCEMENTS_IMPERIAL_ASSASSINS_INQ_5
@@ -685,7 +709,7 @@ research:
     cost: 1000
     points: -1000
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MT_GK
       - STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_5
     spawnedEvent: STR_REINFORCEMENTS_IMPERIAL_ASSASSINS_INQ_6
@@ -693,7 +717,7 @@ research:
     cost: 1000
     points: -1000
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MT_GK
       - STR_REQUISITION_IMPERIAL_ASSASSINS_RESEARCH_6
     spawnedEvent: STR_REINFORCEMENTS_IMPERIAL_ASSASSINS_INQ_7
@@ -703,21 +727,21 @@ research:
     cost: 500
     points: 10
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_FRATERIS_INQ
 
   - name: STR_REQUEST_ARBITES_RESEARCH
     cost: 250
     points: -100
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_ENFORCERS_INQ
 
   - name: STR_REQUEST_JUDGES_RESEARCH
     cost: 500
     points: -250
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MIDTIER_PREREQ
     unlocks:
       - STR_HWP_CANNON_SHELLS
@@ -727,14 +751,14 @@ research:
     cost: 250
     points: -100
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_PILOT_GUARD_INQ
 
   - name: STR_REQUEST_ADEPTAS_PILOTS_RESEARCH
     cost: 250
     points: -250
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MIDTIER_PREREQ
     spawnedEvent: STR_REINFORCEMENTS_ADEPTAS_PILOTS_INQ
 
@@ -742,14 +766,14 @@ research:
     cost: 500
     points: -100
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_KRIEG_INQ
 
   - name: STR_REQUEST_KRIEG_GRENADIER_KILLTEAM_RESEARCH
     cost: 500
     points: -250
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MIDTIER_PREREQ
     spawnedEvent: STR_REINFORCEMENTS_KRIEG_GRENADIER_INQ
 
@@ -757,7 +781,7 @@ research:
     cost: 750
     points: -500
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_UFO_CONSTRUCTION #ceramite tier
     spawnedEvent: STR_REINFORCEMENTS_KRIEG_PANZERGRENADIER_INQ
 
@@ -765,14 +789,14 @@ research:
     cost: 750
     points: -250
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_ADEPTAS_INQ
 
   - name: STR_REQUEST_ADEPTAS_AID_RESEARCH_2
     cost: 1000
     points: -500
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MIDTIER_PREREQ
     spawnedEvent: STR_REINFORCEMENTS_ADEPTAS_INQ_2
 
@@ -780,13 +804,13 @@ research:
     cost: 500
     points: -100
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_OGRYN_INQ
   - name: STR_REQUEST_OGRYN_AID_RESEARCH_2
     cost: 750
     points: -250
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MT_GK
     spawnedEvent: STR_REINFORCEMENTS_OGRYN_INQ_2
 
@@ -794,14 +818,14 @@ research:
     cost: 500
     points: -100
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     spawnedEvent: STR_REINFORCEMENTS_VETERAN_GUARD_INQ
 
   - name: STR_REQUEST_POWER_GUARD_AID_RESEARCH
     cost: 1500
     points: -500
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MT_GK
     spawnedEvent: STR_REINFORCEMENTS_VETERAN_GUARD_INQ_POWERED
 
@@ -831,7 +855,7 @@ research:
     cost: 1000
     points: 10
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_MIDTIER_PREREQ
     getOneFree:
       - STR_IMPERIAL_INQUISITOR
@@ -847,7 +871,7 @@ research:
     cost: 500
     points: 10
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
       - STR_ELITE_STRATEGY_ADEPTAS
     getOneFree:
       - STR_INQ_STORMTROOPER
@@ -1078,7 +1102,6 @@ research:
     points: 0
     dependencies:
       - STR_CHAOS_PATH
-      - STR_CHAMBERMILITANT
       - STR_HERETICAL_INQUISITOR_STRATEGY
     unlocks:
       - STR_CHAOS_MARINE_HIRE_RESEARCH
@@ -2314,11 +2337,26 @@ research:
       - STR_APOTHECARY_GK
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_SMOKE
+      - STR_XIPHON
+      - STR_ARVUS_GK
+      - STR_INQ_STORMTROOPER_REQUISITION
+      - STR_SUMMON_IMPERIAL_AGENTS_RESEARCH
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_REQUEST_ADEPTAS_AID_RESEARCH
+      - STR_REQUEST_GUARD_AID_RESEARCH
+      - STR_LIGHT_BOLTERS #for the Inquisition Strategy
+      - STR_LIGHT_BOLTERS_LOWTIER #for the Inquisition Strategy
+      - STR_LIGHT_BOLTERS_MIDTIER #for the Inquisition Strategy
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_HARDER_MISSIONS
+      - STR_IMPERIUM_RESEARCH
     disables:
       - STR_PERSONAL_ARMOR
       - STR_DEATHWATCH
+      - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
     spawnedEvent: STR_REINFORCEMENTS_GK
 
@@ -2436,24 +2474,8 @@ research:
       - STR_GENERALLOCK
     unlocks:
       - STR_GREYKNIGHTS
-      - STR_MOTION_SCANNER
-      - STR_LASER_WEAPONS
-      - STR_MEDI_KIT_PREREQ
-      - STR_XIPHON
-      - STR_INQ_STORMTROOPER_REQUISITION
-      - STR_SUMMON_IMPERIAL_AGENTS_RESEARCH
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_REQUEST_ADEPTAS_AID_RESEARCH
-      - STR_REQUEST_GUARD_AID_RESEARCH
-      - STR_LASER_WEAPONS #for the Inquisition Strategy
-      - STR_LIGHT_BOLTERS #for the Inquisition Strategy
-      - STR_LIGHT_BOLTERS_LOWTIER #for the Inquisition Strategy
-      - STR_LIGHT_BOLTERS_MIDTIER #for the Inquisition Strategy
-      - STR_ADEPTAS_AND_INQUISITION
-      - STR_MARINES_AND_INQUISITION
-      - STR_ADEPTAS_MARINES_AND_INQUISITION
-      - STR_HARDER_MISSIONS
-      - STR_IMPERIUM_RESEARCH
+      - STR_DEATHWATCH
+      - STR_RADICAL_INQUISITOR_STRATEGY
     disables:
       - STR_ARBITES
       - STR_MARINES_STRATEGY
@@ -2835,29 +2857,6 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  #---STRATEGY------------------------------------------------------
-  - name: STR_GREYKNIGHTS
-    cost: 5
-    points: 0
-    dependencies:
-      - STR_CHAMBERMILITANT
-    lookup: STR_CHOSEN_GREYKNIGHTS
-    getOneFree:
-      - STR_HB
-      - STR_HALLEBARD
-    unlocks:
-      - STR_MOTION_SCANNER
-      - STR_APOTHECARY_GK
-      - STR_LASER_WEAPONS
-    disables:
-      - STR_PERSONAL_ARMOR
-      - STR_DEATHWATCH
-      - STR_CHAOS_PATH
-    spawnedEvent: STR_REINFORCEMENTS_GK
-  - name: STR_CHOSEN_GREYKNIGHTS
-    dependencies:
-      - STR_GENERALLOCK
-
   #---BONEHEAD------------------------------------------------------
   - name: STR_BONEHEAD_SURGERY_RESEARCH
     cost: 200
@@ -3164,7 +3163,7 @@ research:
     cost: 0
     points: 0
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
 
   - name: STR_STORMRAVEN_GK #Stormraven
     dependencies:
@@ -4011,7 +4010,7 @@ research:
     cost: 100
     points: 50
     dependencies:
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
 
   - name: STR_ASSC_CLIP_UNLOCK
     cost: 0
@@ -4027,7 +4026,7 @@ research:
     points: 20
     dependencies:
       - STR_UFO_CONSTRUCTION
-      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
     getOneFree:
       - STR_HFLAMERR
 

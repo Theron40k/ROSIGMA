@@ -1,12 +1,9 @@
 crafts:
-  - type: STR_ARVUS_GK
-    requires: !remove
-      - STR_GREYKNIGHTS
 
   - type: STR_ARVUS_GK
     repairRate: 5 # was 1
-    requires: !add
-      - STR_CHAMBERMILITANT
+    requires:
+      - STR_ARVUS_GK
     vehicles: 999
     maxLargeUnits: 1
     battlescapeTerrainData:
