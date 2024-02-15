@@ -1,15 +1,8 @@
 crafts:
 
   - type: STR_STORMRAVEN_GK
-    requires: !remove
-      - STR_GREYKNIGHTS
     vehicles: 999
     maxLargeUnits: 1
-
-  - type: STR_STORMRAVEN_GK
-    requires: !add
-      - STR_CHAMBERMILITANT
-
     fuelMax: 600 # was 1200
     refuelRate: 10 # was 5
     repairRate: 5 # was 1
@@ -40,26 +33,13 @@ crafts:
       - [5, 10, 1, 0]
 
   - type: STR_STORMEAGLE_GK
-    requires: !add
-      - STR_CHAMBERMILITANT
     vehicles: 999
     maxLargeUnits: 1
-
-  - type: STR_STORMEAGLE_GK
-    requires: !remove
-      - STR_GREYKNIGHTS
-
     fuelMax: 500 # was 1000
     refuelRate: 10 # was 5
     repairRate: 5 # was 1
 
   - type: STR_THUNDERHAWNK_GK
-    requires: !add
-      - STR_CHAMBERMILITANT
-
-  - type: STR_THUNDERHAWNK_GK
-    requires: !remove
-      - STR_GREYKNIGHTS
     repairRate: 5 # was 1
     refuelRate: 10 #was 5
     vehicles: 999
