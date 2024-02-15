@@ -202,6 +202,7 @@ research:
       - STR_GREYKNIGHTS
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
+      - STR_MT_GK
     spawnedEvent: STR_DEATHWATCH_CARE_PACKAGE
   - name: STR_CHOSEN_DEATHWATCH
     dependencies:
@@ -567,6 +568,7 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
     unlocks:
+      - STR_ARVUS_GK
       - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
@@ -580,6 +582,7 @@ research:
       - STR_MARINES_AND_INQUISITION
       - STR_ADEPTAS_MARINES_AND_INQUISITION
       - STR_IMPERIUM_RESEARCH
+      - STR_HARDER_MISSIONS
     disables:
       - STR_GREYKNIGHTS
       - STR_DEATHWATCH
@@ -596,18 +599,6 @@ research:
       - STR_RADICAL_INQUISITOR_STRATEGY
     reenables:
       - STR_CHAOS_PATH
-    disables:
-      - STR_GREYKNIGHTS
-      - STR_REINFORCEMENT
-      - STR_REINFORCEMENT_2
-      - STR_REINFORCEMENT_3
-      - STR_REINFORCEMENT_3
-      - STR_REINFORCEMENT_4
-      - STR_REINFORCEMENT_5
-      - STR_REINFORCEMENT_6
-      - STR_REINFORCEMENT_7
-      - STR_REINFORCEMENT_8
-      - STR_REINFORCEMENT_9
 
   - name: STR_SUMMON_DAEMONS_RESEARCH
     cost: 1000
@@ -2367,56 +2358,48 @@ research:
     cost: 2000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT
     spawnedEvent: STR_REINFORCEMENTS_GK_2
   - name: STR_REINFORCEMENT_3
     cost: 4000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT_2
     spawnedEvent: STR_REINFORCEMENTS_GK_3
   - name: STR_REINFORCEMENT_4
     cost: 4000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT_3
     spawnedEvent: STR_REINFORCEMENTS_GK_3
   - name: STR_REINFORCEMENT_5
     cost: 4000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT_4
     spawnedEvent: STR_REINFORCEMENTS_GK_3
   - name: STR_REINFORCEMENT_6
     cost: 4000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT_5
     spawnedEvent: STR_REINFORCEMENTS_GK_3
   - name: STR_REINFORCEMENT_7
     cost: 4000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT_6
     spawnedEvent: STR_REINFORCEMENTS_GK_3
   - name: STR_REINFORCEMENT_8
     cost: 4000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT_7
     spawnedEvent: STR_REINFORCEMENTS_GK_3
   - name: STR_REINFORCEMENT_9
     cost: 4000
     points: 0
     dependencies:
-      - STR_GREYKNIGHTS
       - STR_REINFORCEMENT_8
     spawnedEvent: STR_REINFORCEMENTS_GK_3
 
@@ -2427,7 +2410,6 @@ research:
       - STR_HEAVY_LASER
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
-      - STR_MEDI_KIT_PREREQ
       - STR_CHAMBERMILITANT
       # - STR_GREYKNIGHTS
     unlocks:
@@ -3161,7 +3143,6 @@ research:
   - name: STR_STORMRAVEN_GK #Stormraven
     dependencies:
       - STR_UFO_CONSTRUCTION
-      # - STR_GREYKNIGHTS
       - STR_GREYKNIGHTS
 
   - name: STR_THUNDERHAWK_GK_REQ # GREYKNIGHTS
@@ -3169,7 +3150,6 @@ research:
     points: 30
     dependencies:
       # - STR_GK_HIGHTIER
-      # - STR_GREYKNIGHTS
       # - STR_HIGHTIER_PREREQ
       - STR_ELERIUM_115
       - STR_MIDTIER_PREREQ
