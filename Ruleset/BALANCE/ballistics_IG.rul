@@ -25,10 +25,14 @@ items:
     tuSnap: 20 # 40k 25 # ROSIGMA 1.06Beta2 20
     tuAimed: 0 # 40k 33 # ROSIGMA 1.06Beta2 35 # get rid of aimed
 
+    tags:
+      REACTION_MULTIPLIER: 150
+
   - type: STR_SHOTGUN_CHAOS
     refNode: *STR_SHOTGUN
 
   - type: STR_MCSHOTGUN # done
+    refNode: *STR_SHOTGUN
     dropoff: 5
     autoRange: 0
     snapRange: 10
@@ -38,7 +42,7 @@ items:
     accuracySnap: 85
     accuracyAimed: 0
     tuAuto: 0
-    tuSnap: 25
+    tuSnap: 20
     tuAimed: 0 # had no aimed
 
   - type: STR_RIPPER_GUN # done

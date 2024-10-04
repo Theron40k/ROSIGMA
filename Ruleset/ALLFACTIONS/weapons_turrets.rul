@@ -99,6 +99,95 @@ items:
     tags:
       TURRET_RELOAD_TURNS: 2
 
+  - type: STR_CAS_AIRSTRIKE
+    refNode: *STR_TURRET_DEFAULT
+    bigSprite: 911
+    dropoff: 100
+    autoRange: 1
+    snapRange: 0
+    aimRange: 0
+    maxRange: 8
+    vaporColorSurface: 4 #red laser
+    vaporDensitySurface: 2
+    vaporProbabilitySurface: 100
+    accuracyAuto: 10
+    accuracySnap: 0
+    accuracyAimed: 0
+    tuSnap: 0
+    tuAimed: 0
+    tuAuto: 0
+    confAuto:
+      name: STR_DESIGNATE_AIRSTRIKE
+    costAuto:
+      energy: 100
+      time: 1
+      mana: 100
+    invWidth: 1
+    invHeight: 3
+    explosionHitSound: {mod: 40k, index: 704}
+    hitSound: {mod: 40k, index: 704}
+    bulletSprite: {mod: 40k, index: 0}
+    fireSound: {mod: 40k, index: 0}
+    hitAnimation: 2210
+    bulletSpeed: 50
+    power: 100
+    damageAlter: #high explosive
+      ToHealth: 0
+      ToEnergy: 0
+      ToStun: 0
+      ToWound: 0
+      ToArmor: 0
+      ToTile: 0
+      ToItem: 0
+      ToArmorPre: 0
+      FixRadius: 0
+    spawnItem: STR_CAS_AIRSTRIKE_AMMO
+    spawnItemChance: 100
+#    floorSprite: 256
+#    handSprite: 256
+    flatRate: true
+    battleType: 1
+    fixedWeapon: true
+    fixedWeaponShow: false
+    explosionSpeed: 5
+    recover: false
+    clipSize: -1
+    tags:
+      TURRET_RELOAD_TURNS: 3
+
+  - type: STR_CAS_AIRSTRIKE_AMMO #HE munition
+    size: 0.0
+    weight: 999
+    floorSprite: 959
+    handSprite: 0
+    hitAnimation: 0
+    power: 100
+    damageType: 3
+    damageAlter: #high explosive
+      ToArmorPre: 0.1
+      RandomType: 6
+      ArmorEffectiveness: 0.9 #concussive
+      ToStun: 0.6 #concussive
+      ToEnergy: 0.4 #concussive
+      ToTime: 0.3 #concussive
+      ToTile: 0.75 #high explosive
+      ToItem: 0.75 #high explosive
+      FixRadius: 10 #1 for hand grenade version
+    battleType: 4
+    invWidth: 0 #shouldn't be possible to pick up
+    invHeight: 0
+    isExplodingInHands: true
+    tuThrow: 9999
+    armor: 999
+    costUnprime:
+      time: 9999
+    inventoryMoveCost:
+      basePercent: 9999
+    recover: false
+    defaultInventorySlot: STR_GROUND
+    tags:
+      MUNITION_DELAY: 1
+
   - type: STR_CAS_ASSCANNON
     refNode: *STR_TURRET_DEFAULT
     dropoff: 4

@@ -95,6 +95,16 @@ units:
     stats:
       mana: 60
 
+  - type: STR_VALK_AIRSTRIKE_TARGETER #UNIT IG rul
+    refNode: *STR_CAS_UNIT
+    armor: STR_VALK_AIRSTRIKE_TARGETER_ARMOR
+    stats:
+      tu: 100
+      stamina: 100
+      mana: 100
+    energyRecovery: 100
+    moveSound: {mod: 40k, index: 704}
+
   - type: STR_CORVUS_LEFT_ASSC_MOUNT
     refNode: *STR_CAS_UNIT #dependent on being in UNIT IG rul
     armor: STR_CORVUS_LEFT_CANNON_ARMOR

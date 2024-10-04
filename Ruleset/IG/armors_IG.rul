@@ -3681,6 +3681,49 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
 
+  - type: STR_VALK_AIRSTRIKE_TARGETER_ARMOR
+    refNode: *STR_CAS_ARMOR
+    allowInv: false
+    spriteSheet: VULTURE_CAS_AIRSTRIKE.PCK
+    spriteInv: VULTURE_CAS_GUN.SPK
+    builtInWeapons:
+      - STR_CAS_AIRSTRIKE
+    specialWeapon: STR_TURRET_RELOAD
+    frontArmor: 255
+    sideArmor: 255
+    rearArmor: 255
+    underArmor: 255
+    damageModifier: #VEICULE ARMOR
+      - 0.0 #none
+      - 0.0 #AP
+      - 0.0 #FLAMES
+      - 0.0 #HE
+      - 0.0 #LASCANON
+      - 0.0 #PLASMA
+      - 0.0 #STUN
+      - 0.0 #MELEE
+      - 0.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #IMPACT
+      - 0.0 #MELTA
+      - 0.0 #GRAV
+    visibilityAtDark: 1 #blind; we can't use this to scout
+    visibilityAtDay: 1 #blind; we can't use this to scout
+    camouflageAtDay: 1 # we have actual armor instead of camo; also potentially unlimited ammo means we need to not have super camo or we abuse the AI
+    camouflageAtDark: 1
+    psiCamouflage: -30
+    movementType: 1 #flies
+    drawingRoutine: 12
+    allowsMoving: true
+    constantAnimation: true
+    tags:
+      INFECTION_RESIST: 100 #infection immune
+      INTIMIDATION_RESISTANCE: 100 #intimidation immune
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_CANT_ADJUST_ALTITUDE: 1
+      UNIT_IS_INVULNERABLE: 1
+
   - type: STR_CORVUS_LEFT_CANNON_ARMOR #armor Adeptas/Inq, Crovus left assault cannon
     refNode: *STR_CAS_ARMOR
     spriteSheet: LEFT_CORVUS_ASSC.PCK

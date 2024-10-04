@@ -2087,5 +2087,28 @@ items:
     handSprite: 1124
     tuSnap: 30
     snapRange: 17
+    vaporColorSurface: 8
+    vaporDensitySurface: 5
+    vaporProbabilitySurface: 85
+    scripts: # give it a tight beam that disappates quickly without spreading
+      vaporParticleAmmo: |
+        var int temp;
+        var int randMax;
+
+        set randMax subvoxel_scale;
+        muldiv randMax 2 3;
+        random.randomRangeSymmetric temp randMax;
+        subvoxel_offset.setX temp;
+        random.randomRangeSymmetric temp randMax;
+        subvoxel_offset.setY temp;
+        random.randomRangeSymmetric temp randMax;
+        subvoxel_offset.setZ temp;
+        set temp 240;
+        sub temp particle_density;
+        div temp 4;
+        subvoxel_velocity.setZ temp;
+        mod particle_lifetime 10;
+        add particle_lifetime 3;
+        return;
     tags:
-      REACTION_MULTIPLIER: 0
+      REACTION_MULTIPLIER: 150
