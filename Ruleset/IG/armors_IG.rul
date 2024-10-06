@@ -3683,11 +3683,9 @@ armors:
 
   - type: STR_VALK_AIRSTRIKE_TARGETER_ARMOR
     refNode: *STR_CAS_ARMOR
-    allowInv: false
+    allowInv: true
     spriteSheet: VULTURE_CAS_AIRSTRIKE.PCK
     spriteInv: VULTURE_CAS_GUN.SPK
-    builtInWeapons:
-      - STR_CAS_AIRSTRIKE
     specialWeapon: STR_TURRET_RELOAD
     frontArmor: 255
     sideArmor: 255
@@ -3719,10 +3717,9 @@ armors:
     tags:
       INFECTION_RESIST: 100 #infection immune
       INTIMIDATION_RESISTANCE: 100 #intimidation immune
+      ARMOR_REINFORCEMENT_TU_PERCENT: 100
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
-      UNIT_CANT_ADJUST_ALTITUDE: 1
-      UNIT_IS_INVULNERABLE: 1
 
   - type: STR_CORVUS_LEFT_CANNON_ARMOR #armor Adeptas/Inq, Crovus left assault cannon
     refNode: *STR_CAS_ARMOR

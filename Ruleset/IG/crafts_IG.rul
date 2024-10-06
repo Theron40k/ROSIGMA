@@ -97,6 +97,8 @@ crafts:
           length: 20
           height: 8
           items:
+            STR_CAS_AIRSTRIKE_DESIGNATOR:
+              - [1, 1, 0]
             STR_GRAVDROP_DEPLOY_CHARGE:
               - [1, 1, 6]
               - [5, 2, 6]
@@ -123,8 +125,6 @@ crafts:
               - [7, 10, 4]
             STR_CAS_CANNON_SPAWNER:
               - [4, 14, 4]
-            STR_CAS_AIRSTRIKE_SPAWNER:
-              - [3, 14, 6]
             STR_CAS_LEAVE_CHARGE:
               - [4, 7, 4]
           fuseTimers:
@@ -132,7 +132,6 @@ crafts:
             STR_GRAVDROP_DEPLOY_CHARGE: [1, 1]
             STR_CAS_MISSILE_POD_SPAWNER: [0, 0]
             STR_CAS_CANNON_SPAWNER: [0, 0]
-            STR_CAS_AIRSTRIKE_SPAWNER: [1, 1]
     deployment:
       - [1, 1, 6, 0]
 #      - [2, 1, 3, 0] # added in HWP.map
@@ -754,7 +753,7 @@ crafts:
       - STR_NOT_STEEL_LEGION_STRATEGY
     marker: 42
     requiresBuyBaseFunc: [HANGAR]
-    sprite: 1008
+    sprite: 235
     fuelMax: 1000
     damageMax: 1440
     maxAltitude: 1

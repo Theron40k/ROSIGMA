@@ -79,6 +79,9 @@ units:
     value: 0
     intelligence: 1
     aggression: 1
+    canBeMindControlled: false
+    canPanic: false
+    canSurrender: false
     energyRecovery: 10
     livingWeapon: true
     moraleLossWhenKilled: 0
@@ -103,7 +106,10 @@ units:
       stamina: 100
       mana: 100
     energyRecovery: 100
+    ignoredByAI: true
     moveSound: {mod: 40k, index: 704}
+    builtInWeaponSets:
+      - - STR_CAS_AIRSTRIKE_SPAWNER
 
   - type: STR_CORVUS_LEFT_ASSC_MOUNT
     refNode: *STR_CAS_UNIT #dependent on being in UNIT IG rul
