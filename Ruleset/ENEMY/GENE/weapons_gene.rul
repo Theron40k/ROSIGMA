@@ -269,17 +269,17 @@ items:
     accuracySnap: 30
     tuSnap: 25
     snapRange: 15
-    damageType: 8 #acid
+    damageType: 0
     damageAlter:
-      ArmorEffectiveness: 0.5 #low power but high penetration
+      ArmorEffectiveness: 0.1 #very poor armor penetration
       ToHealth: 0.7
-      ToWound: 0.05
+      ToWound: 0.5 #can cause nasty wounds
       RandomWound: true
-      ToArmor: 0.05
-      ToTime: 0.6 #sedatives + viral payload
-      ToStun: 1.0 #sedatives + viral payload
-      ToEnergy: 1.0 #sedatives + viral payload
-      RandomType: 6 #gaussian
+      ToArmor: 0.1
+      ToTime: 0.0
+      ToStun: 0.0
+      ToEnergy: 0.0
+      RandomType: 6
     battleType: 1
     twoHanded: true
     blockBothHands: true
@@ -288,12 +288,6 @@ items:
     invWidth: 2
     invHeight: 3
     clipSize: -1
-    tags:
-      INFECTION_DAMAGE_PERCENT: 100 #inflicts % of damage dealt as infection damage
-      INFECTION_TYPE: 2 #the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
-      ITEM_AIMED_ACCURACY_POWER_BONUS: 150 #sniper weapon; aimed shots target vitals
-      ITEM_POWER_BONUS_PERCENTILE: 1
-    specialChance: 1 #low chance of zombifying its victims
     bulletSpeed: -2
     listOrder: 6940
 
@@ -314,7 +308,7 @@ items:
     fireSound: 3993
     hitSound: 3994
     hitAnimation: 2250
-    strengthApplied: true #allows larger tyranids to have a stronger version?
+    strengthApplied: true #allows larger tyranids to use a stronger version?
     tuAuto: 70
     accuracyAuto: 15
     autoRange: 6
@@ -322,17 +316,20 @@ items:
     tuSnap: 30
     accuracySnap: 45
     snapRange: 14
-    damageType: 8 #acid
+    damageType: 0
     damageAlter:
-      ArmorEffectiveness: 0.5 #low power but high penetration
-      ToHealth: 0.7
-      ToWound: 0.05
+      ArmorEffectiveness: 0.05 #very low armor penetration
+      ToHealth: 0.6
+      ToWound: 0.4 #can cause wounds
       RandomWound: true
-      ToArmor: 0.05
-      ToTime: 0.6 #sedatives + viral payload
-      ToStun: 1.0 #sedatives + viral payload
-      ToEnergy: 1.0 #sedatives + viral payload
-      RandomType: 6 #gaussian
+      ToArmor: 0.0
+      ToTime: 0.1 #attacks the nerve system
+      RandomTime: True
+      ToStun: 0.2
+      RandomStun: True
+      ToEnergy: 0.2
+      RandomEnergy: True
+      RandomType: 1
     battleType: 1
     twoHanded: true
     fixedWeapon: true
@@ -341,12 +338,6 @@ items:
     invHeight: 3
     clipSize: -1
     minRange: 1
-    tags:
-      INFECTION_DAMAGE_PERCENT: 100 #inflicts % of damage dealt as infection damage
-      INFECTION_TYPE: 2 #the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
-      ITEM_AIMED_ACCURACY_POWER_BONUS: 150 #sniper weapon; aimed shots target vitals
-      ITEM_POWER_BONUS_PERCENTILE: 1
-    specialChance: 1 #low chance of zombifying its victims
     bulletSpeed: -10
     listOrder: 6940
 
@@ -367,7 +358,7 @@ items:
     fireSound: 3993
     hitSound: 3994
     hitAnimation: 2250
-    strengthApplied: true #allows larger tyranids to have a stronger version?
+    strengthApplied: true #allows larger tyranids to use a stronger version?
     tuAuto: 70
     accuracyAuto: 15
     autoRange: 6
@@ -375,17 +366,20 @@ items:
     tuSnap: 30
     accuracySnap: 45
     snapRange: 14
-    damageType: 8 #acid
+    damageType: 0
     damageAlter:
-      ArmorEffectiveness: 0.5 #low power but high penetration
-      ToHealth: 0.7
-      ToWound: 0.05
+      ArmorEffectiveness: 0.05 #very low armor penetration
+      ToHealth: 0.6
+      ToWound: 0.4 #can cause wounds
       RandomWound: true
-      ToArmor: 0.05
-      ToTime: 0.6 #sedatives + viral payload
-      ToStun: 1.0 #sedatives + viral payload
-      ToEnergy: 1.0 #sedatives + viral payload
-      RandomType: 6 #gaussian
+      ToArmor: 0.0
+      ToTime: 0.1 #attacks the nerve system
+      RandomTime: True
+      ToStun: 0.2
+      RandomStun: True
+      ToEnergy: 0.2
+      RandomEnergy: True
+      RandomType: 1
     battleType: 1
     twoHanded: true
     fixedWeapon: true
@@ -394,12 +388,6 @@ items:
     invHeight: 3
     clipSize: -1
     minRange: 1
-    tags:
-      INFECTION_DAMAGE_PERCENT: 100 #inflicts % of damage dealt as infection damage
-      INFECTION_TYPE: 2 #the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
-      ITEM_AIMED_ACCURACY_POWER_BONUS: 150 #sniper weapon; aimed shots target vitals
-      ITEM_POWER_BONUS_PERCENTILE: 1
-    specialChance: 1 #low chance of zombifying its victims
     bulletSpeed: -10
     listOrder: 6940
 
@@ -417,9 +405,9 @@ items:
     fireSound: 3995
     explosionHitSound: 3996
     hitAnimation: 1170
-    power: 50
+    power: 60 #middling damage?  
     accuracySnap: 65
-    accuracyAimed: 90
+    accuracyAimed: 80
     tuSnap: 35
     tuAimed: 70
     snapRange: 16
@@ -430,32 +418,40 @@ items:
     invWidth: 2
     invHeight: 3
     clipSize: -1
-    blastRadius: 1
+    blastRadius: 1 #splashes acid in a small explosion eg a 3x3 grid
     minRange: 2
-    tags:
-      INFECTION_DAMAGE_PERCENT: 100 #inflicts % of damage dealt as infection damage
-      INFECTION_TYPE: 2 #the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
-      ITEM_AIMED_ACCURACY_POWER_BONUS: 150 #sniper weapon; aimed shots target vitals
-      ITEM_POWER_BONUS_PERCENTILE: 1
-    specialChance: 1 #low chance of zombifying its victims
     bulletSpeed: -2
     listOrder: 6940
 
   - type: STR_WARRIOR_TALONS # Warrior scything talons
     weight: 3
     bigSprite: {mod: 40k, index: 816}
+    #melee profile
     meleeSound: 48
     meleeAnimation: 16
     clipSize: -1
     strengthApplied: true
-    power: 80 #a bit stronger than hormagaunt talons
+    power: 70 #a bit stronger than hormagaunt talons
     damageType: 7
     damageAlter:
       RandomType: 7 #50-200% damage spread
-      IgnoreSelfDestruct: false
     accuracyMelee: 100
     tuMelee: 15
-    battleType: 3
+    #ranged profile
+    hitAnimation: 1030 #128 green from X1.pck
+    hitSound: {mod: 40k, index: 832 }
+    hitAnimFrames: 8
+    bulletSprite: {mod: 40k, index: 14}
+    confSnap:
+      name: STR_HALLEBARD_SNAPSHOT_LUNGE
+      shots: 1
+    costSnap:
+      time: 7
+    snapRange: 2
+    maxRange: 2 #reach
+    power: 70
+    accuracySnap: 100
+    battleType: 1
     fixedWeapon: true
     invWidth: 2
     invHeight: 3
@@ -472,13 +468,12 @@ items:
     meleeSound: { mod: 40k, index: 101} #stabhit
     meleeHitSound: { mod: 40k, index: 101}
     meleeAnimation: 80
-    power: 80
+    power: 100 #stronger than genestealers, should use over scything talons
     damageAlter:
       RandomType: 2 #TFTD [50% - 150%]
       IgnoreSelfDestruct: false
       ArmorEffectiveness: 0.5 #50% armor pierce
-      ToArmorPre: 0.6 #Rending, 30% or 18 armor points of damage per hit
-      ToWound: 0.1 #Slashing Barbed Talons + Toxin wounds
+      ToArmorPre: 0.6 #Rending, 30% or x armor points of damage per hit
       ToHealth: 0.8
     damageType: 7
     accuracyMelee: 100
