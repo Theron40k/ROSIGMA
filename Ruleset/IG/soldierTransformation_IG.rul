@@ -29,6 +29,7 @@ soldierTransformation:
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
+    includeBonusesForMinStats: true
     allowedSoldierTypes:
       - STR_GUARD_VETERAN
     # cost: 50000
@@ -43,6 +44,7 @@ soldierTransformation:
       tu: 1
 
   - name: STR_PROMOTE_OFFICER
+    includeBonusesForMinStats: true
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_REGIMENT_OFFICERS
@@ -104,6 +106,7 @@ soldierTransformation:
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
+    includeBonusesForMinStats: true
     allowedSoldierTypes:
       - STR_GUARDSL_VETERAN
     # cost: 50000
