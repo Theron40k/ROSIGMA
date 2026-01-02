@@ -4140,19 +4140,33 @@ alienRaces:
       - [STR_CHAOSFURY]
       - [STR_CHAOSFURY]
 
+  # # imperial as opfor
+  # ## PDF/Guard
+  # - id: STR_IMPERIAL_PDF_LIST # Low Tier Guard/PDF list
+  #   retaliationAggression: -100
+  #   membersRandom:
+  #     - [STR_GUARD_FLAK_COMMISSAR_AI]
+  #     - [STR_GUARD_FLAK_OFFICER_AI]
+  #     - [STR_GUARD_CARAPACE_OGRYN_AI]
+  #     - [STR_CMAS]
+  #     - [STR_HEAVY_GUARDSMAN_FEMALE, STR_HEAVY_GUARDSMAN_MALE]
+  #     - [FEMALE_CIVILIAN, MALE_CIVILIAN]
+  #     - [STR_HEAVY_GUARDSMAN_FEMALE, STR_HEAVY_GUARDSMAN_MALE]
+  #     - [STR_HEAVY_GUARDSMAN_FEMALE, STR_HEAVY_GUARDSMAN_MALE]
+
   # imperial as opfor
   ## PDF/Guard
   - id: STR_IMPERIAL_PDF_LIST # Low Tier Guard/PDF list
     retaliationAggression: -100
     membersRandom:
-      - [STR_GUARD_FLAK_COMMISSAR_AI]
-      - [STR_GUARD_FLAK_OFFICER_AI]
-      - [STR_GUARD_CARAPACE_OGRYN_AI]
-      - [STR_CMAS]
-      - [STR_HEAVY_GUARDSMAN_FEMALE, STR_HEAVY_GUARDSMAN_MALE]
-      - [FEMALE_CIVILIAN, MALE_CIVILIAN]
-      - [STR_HEAVY_GUARDSMAN_FEMALE, STR_HEAVY_GUARDSMAN_MALE]
-      - [STR_HEAVY_GUARDSMAN_FEMALE, STR_HEAVY_GUARDSMAN_MALE]
+      - [STR_GUARDS_OFF_LV1_AI]   # IG commander
+      - [STR_PDF_M_LV1_AI]
+      - [STR_PDF_M_LV1_AI]
+      - [STR_PDF_M_LV1_AI]
+      - [STR_PDF_M_LV1_AI]
+      - [STR_PDF_M_LV1_AI]
+      - [STR_PDF_M_LV1_AI]
+      - [STR_PDF_M_LV1_AI]
 
   - id: STR_IGOPFOR_TIER1
     retaliationMissionWeights:
