@@ -560,29 +560,25 @@ items:
 
   - type: STR_WARPSMITHPOWER_TOKEN
     invWidth: 1
-    invHeight: 3
-    weight: 0
-    bigSprite: 3829
-    defaultInventorySlot: STR_BACK_PACK
-    supportedInventorySections: [STR_BACK_PACK]
+    invHeight: 1
+    size: 0.1
+    bigSprite: 3852
+    defaultInventorySlot: STR_BELT
     hitSound: {mod: 40k, index: 37}
-    battleType: 8
-    LOSRequired: true
-    tuUse: 5
-    recover: false
+    battleType: 1
+    clipSize: -1
     fixedWeapon: true
-    # specialUseEmptyHand: true
-    confMelee:
+    tuSnap: 8
+    accuracySnap: 200
+    confSnap:
       name: STR_REPAIR
-    meleeSound: {mod: 40k, index: 698}
-    meleeHitSound: {mod: 40k, index: 699}
-    meleeAnimation: {mod: 40k, index: 32}
-    meleeType: 0
-    meleePower: 60
-    accuracyMelee: 100
-    meleeBonus:
+    fireSound: {mod: 40k, index: 698}
+    hitAnimation: {mod: 40k, index: 32}
+    bulletSprite: {mod: 40k, index: 22}
+    power: 60
+    damageBonus:
       strength: 0.5
-    meleeAlter:  # REPAIR
+    damageAlter:  # REPAIR
       RandomType: 3
       ToHealth: 0.0
       ToStun: 0.0
@@ -591,11 +587,18 @@ items:
       RandomWound: false
       RandomStun: false
       ArmorEffectiveness: 0.0
-    meleeMultiplier:
-      melee: 0.8
-    costMelee:
+    accuracyMultiplier:
+      psiStrength: 0.9
+    costSnap:
       time: 10
-      energy: 30
+      energy: 20
+    maxRange: 3
+    snapRange: 3
+    powerRangeThreshold: 3
+    dropoff: 1
+    powerRangeReduction: 1
+    twoHanded: false
+    recover: false
     tags:
       ITEM_REPAIRS_ARMOR: 1
       ITEM_IS_BUFF_WEAPON: 1
@@ -832,6 +835,66 @@ items:
     tags:
       REACTION_MULTIPLIER: 100
       REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_RECOIL: 70
+      ITEM_IS_HEAVY_WEAPON: 1
+
+  - type: STR_CLASCANSPITTER  # HellSpitter
+    categories: [STR_CAT_TERMINATOR, STR_CAT_CHAOS]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_BOOK_KORPHAERON
+      - STR_RITUAL_BLESSING
+    size: 0.3
+    weight: 150
+    armor: 200
+    costSell: 20000
+    bigSprite: 3850
+    handSprite: 2730
+    floorSprite: 2809
+    power: 180
+    powerRangeThreshold: 20
+    powerRangeReduction: 5
+    accuracySnap: 70
+    accuracyAimed: 100
+    tuSnap: 55
+    tuAimed: 85
+    snapRange: 25
+    aimRange: 30
+    confSnap:
+      shots: 2
+      name: STR_BURST_SNAPLASCAN
+    confAimed:
+      shots: 2
+      name: STR_BURST_AIMLASCAN
+    clipSize: -1
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 100
+    damageType: 4
+    damageAlter:  # DA LAS MELTA
+      RandomType: 6
+      ToArmorPre: 0.5
+      ToHealth: 0.8
+      ToArmor: 0.2
+      ToStun: 0.0
+    listOrder: 13227
+    hitSound: 3986
+    fireSound: 3984
+    hitAnimation: 2230
+    bulletSprite: {mod: 40k, index: 22}
+    vaporColorSurface: 3
+    vaporDensitySurface: 8
+    vaporProbabilitySurface: 100
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+    tags:
       ITEM_RECOIL: 70
       ITEM_IS_HEAVY_WEAPON: 1
 
