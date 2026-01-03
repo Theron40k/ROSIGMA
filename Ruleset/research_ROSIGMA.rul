@@ -7295,12 +7295,20 @@ research:
       - STR_CHAOSLORD_SUIT
     spawnedEvent: STR_BOOKKORPHAERON_GIFT
 
+  - name: STR_FINAL_RITUAL  # For the Urizen
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_KORPHAERON_PATHGIFT
+      - STR_WBMISSION9DONE
+
   - name: STR_WBOBLITERATOR_SUIT # Obliterator Creation
     cost: 900
     points: 30
     dependencies:
       - STR_WORDBEARERS_STRATEGY
-      - STR_CHAPTERARMYR
+      - STR_WBMISSION8DONE
       - STR_CHAOSLORD_SUIT
       - STR_HIGHTIER_PREREQ
 
@@ -7309,7 +7317,7 @@ research:
     points: 30
     dependencies:
       - STR_WORDBEARERS_STRATEGY
-      - STR_CHAPTERARMYR
+      - STR_WBMISSION8DONE
       - STR_CHAOSLORD_SUIT
       - STR_HIGHTIER_PREREQ
 
@@ -7354,7 +7362,7 @@ research:
     points: 30
     dependencies:
       - STR_WORDBEARERS_STRATEGY
-      - STR_CHAPTERARMYR
+      - STR_FINAL_RITUAL
       - STR_WBMISSION9DONE
       - STR_HIGHTIER_PREREQ
 
