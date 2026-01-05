@@ -30,6 +30,9 @@ weaponSets:
   - type: FLAK_GUARDSMENOFF_SET3
     weapons: [STR_PLASMA_PISTOL_TERRAN, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_OFFICERS_CHAIN_SWORD, STR_KRAK_GRENADE, STR_GRENADE]
 
+  - type: MOUNTED_BOLTER_SET1
+    weapons: [STR_AC_AP_AMMO, STR_AC_AP_AMMO]
+
   # Kasrkin WIP
   - type: CARAPACE_GUARDSMEN_SET1
     weapons: [STR_LASER_RIFLE_G_HIGH_GRADE, STR_LASGUN_CLIP_HOTSHOT, STR_LASGUN_CLIP_HOTSHOT, STR_LASGUN_CLIP_HOTSHOT, STR_KRAK_GRENADE, STR_MGRENADE]
@@ -410,8 +413,9 @@ units:
     energyRecovery: 20
     livingWeapon: true
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    builtInWeaponSets:
-      - [STR_AC_AP_AMMO, STR_AC_AP_AMMO]
+    weightedBuiltInWeaponSets:
+      -
+        MOUNTED_BOLTER_SET1: 100
 
 
   - type: STR_GUARDS_OFF_LV1_AI
