@@ -285,6 +285,78 @@ alienDeployments:
       showCraft: false
       showTarget: false
 
+  # for chaos assault imperial outpost
+
+  - type: STR_BELROSE_ASSAULT_SITE_GV
+    script: BELROSE_ASSAULT_SITE
+    briefing:
+      title: STR_BELROSE_ASSAULT_SITE_GV
+      palette: 4
+      desc: STR_BELROSE_ASSAULT_SITE_GV_BRIEFING
+      music: gmstory2
+      showCraft: true
+      showTarget: false
+      background: REGIMENT_INSPECTION.SCR
+    forcePercentageOutsideUfo: true
+    data:
+      - alienRank: 1
+        lowQty: 1
+        highQty: 1  # 2
+        dQty: 0  # 0
+        percentageOutsideUfo: 0
+      - alienRank: 2
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 10  # 8
+        highQty: 10  # 12
+        dQty: 4
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 6
+        lowQty: 0
+        highQty: 0
+        dQty: 4
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 0
+        highQty: 0
+        dQty: 4
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 9
+    cheatTurn: 0
+    terrains:
+      - ACULTASNOW
+    alert: STR_BELROSE_ASSAULT_SITE_GV_ALERT
+    alertBackground: REGIMENT_INSPECTION.SCR
+    alertDescription: STR_BELROSE_ASSAULT_SITE_GV_ALERT
+    duration: [168, 168]
+    despawnPenalty: 400
+    markerName: STR_BELROSE_ASSAULT_SITE_GV
+
+
+    # successEvents:
+    #   STR_CHAOSPDFSUPPORTREWARD: 100
+
 
   # - type: STR_FREE_TRADE_GV
   #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
@@ -708,7 +780,7 @@ alienDeployments:
     height: 9
 
 
-  - type: STR_WHITEPRINCEBASE_SINGLEFLOOR_GV
+  - type: STR_PRINCEBISHOPBASE_SINGLEFLOOR_GV
     randomRace: [STR_SLAANESH_TRAITOR_GUARD_LATE]
     markerIcon: 7
     markerName: STR_ALIEN_BASE
@@ -766,15 +838,15 @@ alienDeployments:
     height: 9
     terrains:
       - ALART_SLAAN
-    # script: WHITEPRINCE_BASE_SINGLEFLOOR
+    # script: PRINCEBISHOP_BASE_SINGLEFLOOR
     briefing:
       cutscene: CHAOSBASE
       music: gmstory2
-      title: STR_WHITEPRINCEBASE_SINGLEFLOOR_TITLE_GV
+      title: STR_PRINCEBISHOPBASE_SINGLEFLOOR_TITLE_GV
       textOffset: -16
       background: BACK01.SCR
       showTarget: false
-      desc: STR_WHITEPRINCEBASE_SINGLEFLOOR_BRIEFING_GV
+      desc: STR_PRINCEBISHOPBASE_SINGLEFLOOR_BRIEFING_GV
     objectiveType: 3
     genMission:
       STR_SLAAN_SUPPLY: 80
@@ -782,7 +854,7 @@ alienDeployments:
       STR_TERROR_MISSION_SLAAN: 20
       STR_DEFILER_RETALIATION: 5
       STR_SLAANESH_RETALIATION: 2
-      STR_WHITEPRINCEBASE_SINGLEFLOOR_MISSION_GV: 10  # tweaked down to make bases expand at a reasonable rate
+      STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 10  # tweaked down to make bases expand at a reasonable rate
       STR_SLAANESH_ABDUCTION: 15  # gotta abduct those slaves
       STR_ALIEN_INFILTRATION_SLAANESH: 10
     genMissionFreq: 5  # 6
@@ -1155,7 +1227,6 @@ alienDeployments:
     height: 10
     points: 1
 
-
   - type: STR_FINAL_LANDING_GUEVESA_GV
     music:
       - INMYSPIRIT  # change?
@@ -1214,8 +1285,8 @@ alienDeployments:
     nextStage: STR_FINAL_ENTRANCE_GUEVESA_GV
     loseCutscene: loseGame
     briefing:
-      title: STR_FINALLAND_TITLE_GV
-      desc: STR_FINALLAND_DESC_GV
+      title: STR_FINAL_LANDING_GUEVESA_GV
+      desc: STR_FINAL_LANDING_GUEVESA_GV_BRIEFING
       cutscene: c4
       textOffset: -16
       palette: 6
@@ -1265,8 +1336,8 @@ alienDeployments:
     loseCutscene: loseGame
     abortCutscene: loseGame
     briefing:
-      title: STR_FINALENTRANCE_TITLE_GV
-      desc: STR_FINALENTRANCE_DESC_GV
+      title: STR_FINAL_ENTRANCE_GUEVESA_GV
+      desc: STR_FINAL_ENTRANCE_GUEVESA_GV_BRIEFING
       textOffset: -16
       palette: 6
       music: GMGEO19
@@ -1329,8 +1400,8 @@ alienDeployments:
     winCutscene: winGame
     loseCutscene: loseGame
     briefing:
-      title: STR_CHAOS_FINAL2_TITLE
-      desc: STR_CHAOS_FINAL2_DESC
+      title: STR_FINAL_ASSAULT_GUEVESA_GV
+      desc: STR_FINAL_ASSAULT_GUEVESA_GV_BRIEFING
       textOffset: -16
       palette: 6
       music: INMYSPIRIT

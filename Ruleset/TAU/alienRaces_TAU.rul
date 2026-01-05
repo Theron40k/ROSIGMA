@@ -36,7 +36,7 @@ alienRaces:
       - [STR_REDEMPTIONIST_T0_GV, STR_FRATERIS_MILITIA_AI] # 6 Hangers on
       - [STR_REDEMPTIONIST_T0_GV, STR_FRATERIS_MILITIA_AI] # 7 Big guy
 
-  - id: STR_REDEMPTIONIST_MED_GV  # Redemptionist Crusaders
+  - id: STR_REDEMPTIONIST_MID_GV  # Redemptionist Crusaders
     retaliationMissionWeights:
       0:
         STR_ALIEN_RETALIATION: 100
@@ -237,6 +237,20 @@ alienRaces:
       - [STR_CHAOSCULT_GUARDFLAKM_AI, STR_CHAOSCULT_GUARDFLAKF_AI] # Soldier
       - [STR_CHAOSCULT_LEGIONSCOUT_AI, STR_CHAOSCULT_LEGIONSCOUTF_AI] # 6 Hangers on
       - [STR_CHAOSCULT_LEGIONSCOUT_AI, STR_CHAOSCULT_LEGIONSCOUTF_AI] # 7 Big guy
+
+  - id: STR_MOUNTED_TESTLIST_GV
+    retaliationMissionWeights:
+      0:
+        STR_TZEENTCH_RETALIATION: 100
+    membersRandom:
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # 0 Commander
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # 1 Leader
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # 2 Engineer
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # 3 Medic
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # 4 Navigator
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # Soldier
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # 6 Hangers on
+      - [STR_GUARDS_MOUNTED_BOLTER_AI] # 7 Big guy
 
 ## TODO: Make loyalist AI repentia
   - id: STR_FRATERIS_CRUSADERS_GV

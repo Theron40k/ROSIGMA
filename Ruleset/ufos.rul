@@ -4168,6 +4168,27 @@ ufos:
           length: 30
           height: 4
 
+  - type: STR_IMPERIAL_OUTPOST_BUILDING_BOLTERS
+    battlescapeTerrainData:
+      name: IMPOUT
+      mapDataSets:
+        - BLANKS
+        - OUTPOSTIMP
+        - IMPITEMS
+        - IMP_PODS
+      mapBlocks:
+        - name: IMPOUT
+          width: 30
+          length: 30
+          height: 4
+          items:
+            STR_GUARDS_MOUNTED_BOLTER_SPAWNER:
+              - [14, 27, 2]
+              - [14, 1, 2]
+              - [24, 14, 2]
+          fuseTimers:
+            STR_GUARDS_MOUNTED_BOLTER_SPAWNER: [0, 0]
+
   - type: STR_CHAOSVALKYRIE_CRASHED
     speedMax: 999999
     damageMax: 1

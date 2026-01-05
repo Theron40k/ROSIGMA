@@ -373,16 +373,46 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     # Cadian Shock Troops have a sergeant, 7 lasgunners, 2 heavy weapons
+    # Boost this up to make them less of a pushover
     weightedBuiltInWeaponSets:
       -
-        FLAK_GUARDSMEN_SET1: 70
+        FLAK_GUARDSMEN_SET1: 50
         FLAK_GUARDSMEN_SET2: 5
         FLAK_GUARDSMEN_SET3: 5
-        FLAK_GUARDSMEN_SET4: 5
-        FLAK_GUARDSMEN_SET5: 5
-        FLAK_GUARDSMEN_SET6: 5
-        FLAK_GUARDSMEN_SET7: 5
-        FLAK_GUARDSMEN_SET8: 5
+        FLAK_GUARDSMEN_SET4: 10
+        FLAK_GUARDSMEN_SET5: 10
+        FLAK_GUARDSMEN_SET6: 10
+        FLAK_GUARDSMEN_SET7: 10
+        FLAK_GUARDSMEN_SET8: 10
+
+  - &STR_GUARDS_LV1_TEMPLATE
+    type: STR_GUARDS_MOUNTED_BOLTER_AI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    liveAlien: ""
+    stats:
+      tu: 60
+      stamina: 1
+      health: 55
+      bravery: 80
+      reactions: 40
+      firing: 55
+      throwing: 50
+      strength: 25
+      psiStrength: 50
+      psiSkill: 0
+      melee: 60
+    armor: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_UC
+    standHeight: 21
+    kneelHeight: 14
+    value: 10
+    intelligence: 4
+    aggression: 3
+    energyRecovery: 20
+    livingWeapon: true
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets:
+      - [STR_AC_AP_AMMO, STR_AC_AP_AMMO]
+
 
   - type: STR_GUARDS_OFF_LV1_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
@@ -448,10 +478,10 @@ units:
         CARAPACE_GUARDSMEN_SET1: 50
         CARAPACE_GUARDSMEN_SET2: 5
         CARAPACE_GUARDSMEN_SET3: 5
-        CARAPACE_GUARDSMEN_SET4: 5
-        CARAPACE_GUARDSMEN_SET5: 5
-        CARAPACE_GUARDSMEN_SET6: 5
-        CARAPACE_GUARDSMEN_SET7: 5
+        CARAPACE_GUARDSMEN_SET4: 10
+        CARAPACE_GUARDSMEN_SET5: 10
+        CARAPACE_GUARDSMEN_SET6: 10
+        CARAPACE_GUARDSMEN_SET7: 10
 
   - type: STR_GUARDS_OFF_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
