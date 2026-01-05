@@ -721,7 +721,7 @@ alienMissions:
         STR_NECRON: 100
     siteType: STR_TOMB_NECRON
 
-  - type: STR_WHITEPRINCEBASE_SINGLEFLOOR_MISSION_GV
+  - type: STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV
     refNode: *STR_CAMPAIGN_BASES_GV
     regionWeights:
       0:
@@ -758,7 +758,7 @@ alienMissions:
         STR_SLAANESHSISTERSD: 50
         STR_SLAANESHSISTERS_OH_NO: 50
         STR_SLAANESH: 50
-    siteType: STR_WHITEPRINCEBASE_SINGLEFLOOR_GV
+    siteType: STR_PRINCEBISHOPBASE_SINGLEFLOOR_GV
     points: 50
 
 
@@ -948,8 +948,8 @@ alienMissions:
     refNode: *STR_TENAX_MISSION_TYPES_GV
     spawnZone: 3   # Terror mission
 
-  - &STR_WHITEPRINCE_MISSION_TYPES_GV
-    type: STR_WHITEPRINCE_NORMAL_MISSION_GV
+  - &STR_PRINCEBISHOP_MISSION_TYPES_GV
+    type: STR_PRINCEBISHOP_NORMAL_MISSION_GV
     points: 10
     objective: 3
     spawnZone: 0  # Normal mission
@@ -964,7 +964,7 @@ alienMissions:
         STR_SOUTH_EAST_ASIA: 15
         STR_SIBERIA: 10
         STR_AUSTRALASIA: 10
-    interruptResearch: STR_WHITEPRINCE_DEFEATED_GV
+    interruptResearch: STR_PRINCEBISHOP_DEFEATED_GV
     raceWeights:
       0:
         STR_IMPERIAL_PDF_LIST: 24
@@ -1036,14 +1036,14 @@ alienMissions:
         STR_BRIDES_OF_THE_EMPEROR: 3
         STR_ALPHA_DAEMONETTE_FORCE: 3
     waves:
-      - ufo: STR_WHITEPRINCE_MISSION_UFO_TRICK_GV
+      - ufo: STR_PRINCEBISHOP_MISSION_UFO_TRICK_GV
         count: 1
         trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
         timer: 0
         objective: true
 
-  - type: STR_WHITEPRINCE_TERROR_MISSION_GV
-    refNode: *STR_WHITEPRINCE_MISSION_TYPES_GV
+  - type: STR_PRINCEBISHOP_TERROR_MISSION_GV
+    refNode: *STR_PRINCEBISHOP_MISSION_TYPES_GV
     spawnZone: 3   # Terror mission
 
 

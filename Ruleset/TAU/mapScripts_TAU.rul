@@ -832,7 +832,7 @@ mapScripts:
         terrain: globeTerrain
         blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-  - type: WHITEPRINCE_BASE_SINGLEFLOOR
+  - type: PRINCEBISHOP_BASE_SINGLEFLOOR
     commands:
       # - type: addBlock      # add for lvl 2 version
       #   groups: 6  # elevator to part 2
@@ -1047,6 +1047,106 @@ mapScripts:
         # 6 is barrels
         # 19 is broken
 
+  # for chaos assault imperial outpost
+
+  - type: BELROSE_ASSAULT_SITE
+    commands:
+      - type: addUFO
+        UFOName: STR_IMPERIAL_OUTPOST_BUILDING_BOLTERS
+        rects:
+          - [0, 1, 3, 3]
+      - type: addCraft
+        rects:
+          - [4, 1, 1, 2]
+      # - type: addBlock
+      #   executions: 2
+      #   rects:
+      #     - [2, 0, 1, 1]
+      #     - [2, 1, 1, 1]
+      #   blocks: [0, 11]
+        # maxUses: [1, 1]
+      # - type: addBlock
+      #   executions: 10
+      #   blocks: [12, 13, 14, 15, 16, 17, 18]
+      #   maxUses: [1, 1, 1, 1, -1, 1, -1]
+      #   rects:
+      #     - [1, 0, 1, 1]
+      #     - [0, 0, 1, 1]
+      #     - [0, 1, 1, 1]
+          # - [0, 2, 1, 1]
+          # - [0, 3, 1, 1]
+          # - [0, 4, 1, 1]
+          # - [1, 4, 1, 1]
+      - type: addBlock
+        executions: 2
+        blocks: [12]
+        rects:
+          - [0, 1, 1, 1]
+      - type: addBlock
+        executions: 1
+        blocks: [6]
+        rects:
+          - [0, 3, 1, 1]
+      - type: addBlock
+        executions: 1
+        blocks: [13]
+        rects:
+          - [0, 4, 1, 1]
+      - type: addBlock
+        executions: 1
+        blocks: [17]
+        rects:
+          - [0, 0, 1, 1]
+      - type: addBlock
+        executions: 1
+        blocks: [12]
+        rects:
+          - [1, 0, 1, 1]
+      - type: addBlock
+        executions: 1
+        blocks: [6]
+        rects:
+          - [1, 4, 1, 1]
+      - type: addBlock
+        executions: 5
+        blocks: [5]
+        rects:
+          - [2, 0, 1, 1]
+          - [2, 4, 1, 1]
+          - [3, 1, 1, 1]
+          - [3, 2, 1, 1]
+          - [3, 3, 1, 1]
+          # - [1, 4, 1, 1]
+          # - [0, 2, 1, 1]
+            # 0, 1 flat
+            # 0 field with little grass tuf
+            # 1 flat bare field
+            # 2 small divided room
+            # 3 is a narrower hallway
+            # 4 is a wider hallway
+            # 5 is the little statue
+            # 6 blocky ruined vestibule 
+            # 7 flat tiles
+            # 8 annoying stairstep
+            # 9 open walled field
+            # 10 is the small spire, 
+            # 11 is the flat tiled area
+            # 12 is ruined columns
+            # 13 is wide cathedral with statue out front
+            # 14 is narrow tall cathedral
+            # 15 is shorter version of 14
+            # 16 is tall flat covered structure
+            # 17 tall cathedral w ladder no spire (13 without top)
+            # 18 is short stairs structure
+            # blocks: [8, 10, 13, 14, 15, 17, 18]
+            # maxUses: [-1, -1, -1, -1, -1, -1, -1, -1]
+      - type: fillArea
+        blocks: [0, 1, 2, 3, 4, 6, 7, 9, 10]
+        maxUses: [1, -1, 1, 1, 1, -1, 1, -1, 1]
+
+        # groups: [1]
+        #groups: [0]
+
 
   - type: TENAXBASE_AIRDEFENSE  # large air defense complex w/ missile silos
     commands:
@@ -1231,14 +1331,6 @@ mapScripts:
             blocks: [0]
             size: [1, 1, 4]
             terrain: HELPERDROPPOD2
-      # - type: fillArea
-      #   terrain: ACULTASNOW
-        # blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14]
-        # freqs: [8, 8, 8, 8, 8, 8, 8, 8, 8, 6, 3, 3]
-        # maxUses: [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -11, 1]
-        #blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8]
-        #freqs: [8, 8, 8, 8, 8, 8, 8, 8, 8]
-        #maxUses: [-1, -1, -1, -1, -1, -1, -1, -1, -1]
       - type: fillArea
         terrain: ACULTASNOW
         # 0, 1 flat
