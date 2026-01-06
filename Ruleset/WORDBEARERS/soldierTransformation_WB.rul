@@ -95,7 +95,6 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_DREADNOUGHT_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER
       - STR_WBSOLDIER_TERMINATOR
@@ -104,6 +103,7 @@ soldierTransformation:
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_PROMOTE_WBMARKCHAOS
     requires:
@@ -146,7 +146,6 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_OBLITERATOR_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
@@ -154,6 +153,7 @@ soldierTransformation:
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_WBMUTILATOR_CREATION
     requires:
@@ -170,7 +170,6 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_MUTILATOR_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
@@ -178,6 +177,7 @@ soldierTransformation:
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_WBBRASSSCORPION_CREATION
     requires:
@@ -195,7 +195,6 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_BRASSSCORP_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
@@ -203,6 +202,7 @@ soldierTransformation:
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_POSSESSED_MARINE
     requires:
@@ -217,12 +217,12 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_GREATERPOSSESSED_MARINE
     requires:
@@ -237,7 +237,6 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
@@ -245,6 +244,7 @@ soldierTransformation:
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_TRANSCENDENTPOSSESSED_MARINE
     requires:
@@ -259,9 +259,9 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_CHAOSMARKED
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
