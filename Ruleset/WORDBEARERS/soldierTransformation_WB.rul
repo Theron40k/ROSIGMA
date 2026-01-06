@@ -207,6 +207,7 @@ soldierTransformation:
   - name: STR_POSSESSED_MARINE
     requires:
       - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_EREBUS
       - STR_RITUAL_CONSECRATE
     cost: 50000
     requiredItems:
@@ -218,6 +219,29 @@ soldierTransformation:
     allowsLiveSoldiers: false
     allowedSoldierTypes:
       - STR_WBSOLDIER
+    transferTime: 24
+    recoveryTime: 0
+    lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
+
+  - name: STR_POSSESSED_MARINEKOR  # Kor Phaeron only have this type of possessed
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_RITUAL_CONSECRATE
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 60
+      STR_KILLPOINT_TOKEN: 20
+    producedSoldierType: STR_WBFALLENPOSS1
+    producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
+    allowsDeadSoldiers: true
+    allowsLiveSoldiers: false
+    allowedSoldierTypes:
+      - STR_WBSOLDIER
+      - STR_WBSOLDIER_TERMINATOR
+      - STR_WBSOLDIER_ACOLYTE
+      - STR_WBSOLDIER_CHAOSMARKED
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
