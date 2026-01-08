@@ -103,7 +103,7 @@ soldiers:
       firing: 25
     soldierNames:
       - delete
-      - Names/tau_firecaste.nam
+      - Names/tau_shasla.nam
     deathMale: [41, 42, 43]
     deathFemale: [44, 45, 46]
     value: 10
@@ -128,25 +128,34 @@ soldiers:
       mana: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_1
+    soldierNames:
+      - delete
+      - Names/tau_shasui.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
   - &STR_SHASVRES_GV
     type: STR_FIREWARRIOR_SHASVRE_GV
-    refNode: *STR_FIREWARRIOR_GV
+    refNode: *STR_SHASUIS_GV
     armor: STR_TAU_PATHFINDER_LEADER_ARMOR_GV
     costBuy: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_2
+    soldierNames:
+      - delete
+      - Names/tau_shasvre.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
   - type: STR_FIREWARRIOR_FIREBLADE_GV
-    refNode: *STR_FIREWARRIOR_GV
+    refNode: *STR_SHASVRES_GV
     armor: STR_TAUFIREBLADE_ARMOR_GV
     costBuy: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_3
+    soldierNames:
+      - delete
+      - Names/tau_shasel.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
@@ -236,7 +245,7 @@ soldiers:
     armor: STR_TAUGUEVESACARAP_ARMOR
     soldierNames:
       - delete
-      - Names/tau_guevesaui.nam    
+      - Names/tau_guevesaui.nam
     rankStrings:
       - STR_GUEVESA_RANK_1
     flagOffset: 42
@@ -301,7 +310,7 @@ soldiers:
     costBuy: 0
     soldierNames:
       - delete
-      - Names/tau_guevesavre.nam    
+      - Names/tau_guevesavre.nam
     rankStrings:
       - STR_GUEVESA_RANK_2
     statCaps:
