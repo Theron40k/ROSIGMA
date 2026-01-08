@@ -103,7 +103,7 @@ soldiers:
       firing: 25
     soldierNames:
       - delete
-      - Names/tau_firecaste.nam
+      - Names/tau_shasla.nam
     deathMale: [41, 42, 43]
     deathFemale: [44, 45, 46]
     value: 10
@@ -128,25 +128,34 @@ soldiers:
       mana: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_1
+    soldierNames:
+      - delete
+      - Names/tau_shasui.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
   - &STR_SHASVRES_GV
     type: STR_FIREWARRIOR_SHASVRE_GV
-    refNode: *STR_FIREWARRIOR_GV
+    refNode: *STR_SHASUIS_GV
     armor: STR_TAU_PATHFINDER_LEADER_ARMOR_GV
     costBuy: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_2
+    soldierNames:
+      - delete
+      - Names/tau_shasvre.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
   - type: STR_FIREWARRIOR_FIREBLADE_GV
-    refNode: *STR_FIREWARRIOR_GV
+    refNode: *STR_SHASVRES_GV
     armor: STR_TAUFIREBLADE_ARMOR_GV
     costBuy: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_3
+    soldierNames:
+      - delete
+      - Names/tau_shasel.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
@@ -159,10 +168,10 @@ soldiers:
       - STR_A_SECRET_PACT_GV
     armor: STR_TAUGUEVESAFLAK_PC_ARMOR_GV
     rankStrings:
-      - STR_GUEVESA_GV_RANK_0
+      - STR_GUEVESA_RANK_0
     soldierNames:
       - delete
-      - Names/tau_guevesa.nam
+      - Names/tau_guevesala.nam
     flagOffset: 42
     minStats:
       tu: 40  # was 50
@@ -234,8 +243,11 @@ soldiers:
     refNode: *STR_GUEVESA_SOLDIERS_GV
     costBuy: 0
     armor: STR_TAUGUEVESACARAP_ARMOR
+    soldierNames:
+      - delete
+      - Names/tau_guevesaui.nam
     rankStrings:
-      - STR_GUEVESA_GV_RANK_1
+      - STR_GUEVESA_RANK_1
     flagOffset: 42
     minStats:  # raise as veterans are now created by the game
       tu: 50
@@ -296,8 +308,11 @@ soldiers:
     refNode: *STR_GUEVESA_SOLDIERS_GV
     armor: STR_TAUGUEVESACARAP_ARMOR
     costBuy: 0
+    soldierNames:
+      - delete
+      - Names/tau_guevesavre.nam
     rankStrings:
-      - STR_GUEVESA_GV_RANK_2
+      - STR_GUEVESA_RANK_2
     statCaps:
       tu: 75
       stamina: 120
@@ -402,7 +417,7 @@ soldiers:
       firing: 25
     soldierNames:
       - delete
-      - Names/guard.nam
+      - Names/tau_militia.nam
     moraleLossWhenKilled: 75  # people don't care about the grunts so much
     allowPiloting: true
     allowPromotion: true
@@ -494,7 +509,7 @@ soldiers:
     avatarOffsetY: 42
     soldierNames:
       - delete
-      - Names/officer.nam
+      - Names/tau_militia_officer.nam
     deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
     rankStrings:
@@ -583,7 +598,7 @@ soldiers:
     avatarOffsetY: 35
     soldierNames:
       - delete
-      - Names/beastman.nam
+      - Names/tau_beastman_militia.nam
     deathMale: [2680, 2681, 2682, 2683, 2684]
     deathFemale: [2686, 2687, 2688, 2689, 2690]
     rankStrings:
