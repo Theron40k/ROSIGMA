@@ -4763,6 +4763,7 @@ alienDeployments:
 
   - &STR_DEFENSE
     type: STR_BASE_DEFENSE
+    bughuntMinTurn: 1   # your base your cameras
     enviroEffects: STR_INSIDE_ENVIRO
     isHidden: true  # crashes in New Battle anyway
     data:
@@ -9744,6 +9745,7 @@ alienDeployments:
     objectivesRequired: 4
 
   - type: STR_BASE_DEFENSE_NEW_BATTLE
+    bughuntMinTurn: 1   # your base your cameras
     isHidden: false
     refNode: *STR_DEFENSE
     width: 60
