@@ -201,18 +201,32 @@ missionScripts:
       STR_NOT_WORDBEARERS: true
 
   # word bearers version
+
+  - type: StarterTraditionalBasesEarlyWB
+    missionWeights:
+      0:
+        STR_FIERYHEART_BASE: 43
+        STR_IMPERIALGUARD_BASE: 43
+    firstMonth: 0
+    lastMonth: 1
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 100
+    researchTriggers:
+      STR_WORDBEARERS_STRATEGY: true
+
   - type: newTraditionalBasesEarlyWB
     missionWeights:
       0:
         STR_CULTIST_BASE: 13
-        STR_FIERYHEART_BASE: 33
-        STR_IMPERIALGUARD_BASE: 33
+        STR_FIERYHEART_BASE: 43
+        STR_IMPERIALGUARD_BASE: 43
         STR_ORK_BASE: 5
     firstMonth: 1
     lastMonth: 2
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 70
+    executionOdds: 100
     researchTriggers:
       STR_WORDBEARERS_STRATEGY: true
 
@@ -220,6 +234,7 @@ missionScripts:
     missionWeights:
       0:
         STR_CULTIST_BASE: 13
+        STR_FIERYHEART_BASE: 23
         STR_IMPERIALGUARD_BASE: 23
         STR_ULTRAMARINE_BASE: 43
         STR_ORK_BASE: 5
@@ -243,7 +258,7 @@ missionScripts:
     lastMonth: 8
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 70
+    executionOdds: 100
     researchTriggers:
       STR_WORDBEARERS_STRATEGY: true
       STR_BOOK_EREBUS: true
@@ -255,7 +270,7 @@ missionScripts:
     firstMonth: 9
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 70
+    executionOdds: 100
     researchTriggers:
       STR_WORDBEARERS_STRATEGY: true
       STR_BOOK_EREBUS: true
@@ -263,7 +278,8 @@ missionScripts:
   - type: newTraditionalBasesLaterWBKOR
     missionWeights:
       0:
-        STR_CULTIST_BASE: 23
+        STR_CULTIST_BASE: 13
+        STR_FIERYHEART_BASE: 23
         STR_IMPERIALGUARD_BASE: 23
         STR_SALAMANDER_BASE: 43
         STR_ORK_BASE: 5
@@ -287,7 +303,7 @@ missionScripts:
     lastMonth: 8
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 70
+    executionOdds: 100
     researchTriggers:
       STR_WORDBEARERS_STRATEGY: true
       STR_BOOK_KORPHAERON: true
@@ -299,7 +315,7 @@ missionScripts:
     firstMonth: 9
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 70
+    executionOdds: 100
     researchTriggers:
       STR_WORDBEARERS_STRATEGY: true
       STR_BOOK_KORPHAERON: true
