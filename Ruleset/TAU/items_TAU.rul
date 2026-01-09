@@ -116,9 +116,58 @@ items:
 
   - type: STR_GVTRUCK_TURRET_SPAWNER
     liveAlien: false
-    recover: true
+    recover: false
     spawnUnit: STR_GVTRUCK_SMALL_TURRET
     spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
+
+  - type: STR_CIVILIAN_M0_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_M0
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CIVILIAN_M1_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_M1
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CIVILIAN_F0_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_F0
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CIVILIAN_F1_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_F1
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+#  - type: STR_CULTIST_ROBE_GV_SPAWNER
+#    liveAlien: false
+#    recover: false
+#    spawnUnit: STR_CULTIST_ROBE_GV
+#    spawnUnitFaction: 1
+#    invWidth: 0
+#    invHeight: 0
+#    battleType: 4

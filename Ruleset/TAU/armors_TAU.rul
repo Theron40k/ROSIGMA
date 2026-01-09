@@ -252,6 +252,7 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -270,6 +271,7 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -292,6 +294,7 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -300,7 +303,6 @@ armors:
       ARMOR_OVERWATCH_TU_RESTORED: 30
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
       ARMOR_ENERGY_SHIELD_DECAY: 50
-
 
 ### TAU FIRE WARRIOR ADVANCED ARMORS
   - &STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
@@ -339,6 +341,7 @@ armors:
       - 0.9  # MELTA
     units:
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     loftempsSet: [3]
     allowsRunning: true
     allowsKneeling: true
@@ -523,6 +526,8 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     stats:
       tu: 20
       stamina: 20
@@ -558,7 +563,6 @@ armors:
     customArmorPreviewIndex: 1386
     corpseBattle:
       - STR_CRISIS_SUIT_PCCORPSE
-    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
     movementType: 1
     # specialWeapon: Use for upgraded suit abilities later
     # Term marine amounts of armor? - Crisis are T5 3+
@@ -586,10 +590,6 @@ armors:
       stamina: 20
       health: 50  # let's try this +2 wound
       firing: 10  # bonus to hit from sensors and firing computer
-    units:
-      - STR_FIREWARRIOR_SHASUI_GV
-      - STR_FIREWARRIOR_SHASVRE_GV
-      - STR_FIREWARRIOR_FIREBLADE_GV
     allowsKneeling: false
     allowsRunning: false
     loftempsSet: [5]
@@ -603,8 +603,14 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
-  - type: STR_STARSCYTHE_CRISIS_SUIT_BC2X_GV
+  - type: STR_STARSCYTHE_CRISIS_SUIT_BCX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
+    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - INV_NULL_3X3
@@ -614,6 +620,12 @@ armors:
 
   - type: STR_STARSCYTHE_CRISIS_SUIT_BCFL_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
+    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_GV
       - STR_TAU_SUIT_FLAMER_GV
@@ -622,8 +634,14 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
-  - type: STR_STARSCYTHE_CRISIS_SUIT_FL2X_GV
+  - type: STR_STARSCYTHE_CRISIS_SUIT_FLX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
+    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
       - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
       - INV_NULL_3X3
@@ -632,12 +650,12 @@ armors:
       - INV_NULL_4X2
 
   # AI versions
-  - type: STR_TAU_CRISISBC2XAI_ARMOR
+  - type: STR_TAU_CRISISBCX2AI_ARMOR
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     spriteSheet: TAUCRISISAIbattle.PCK
     spriteInv: TAUCRISISAIinv.PCK
     corpseBattle:
-      - STR_TAU_CRISISBC2XAI_CORPSE
+      - STR_TAU_CRISISBCX2AI_CORPSE
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - INV_NULL_3X3
@@ -659,12 +677,12 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
-  - type: STR_TAU_CRISISFL2XAI_ARMOR
+  - type: STR_TAU_CRISISFLX2AI_ARMOR
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     spriteSheet: TAUCRISISAIbattle.PCK
     spriteInv: TAUCRISISAIinv.PCK
     corpseBattle:
-      - STR_TAU_CRISISFL2XAI_CORPSE
+      - STR_TAU_CRISISFLX2AI_CORPSE
     builtInWeapons:
       - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
       - INV_NULL_3X3
@@ -672,12 +690,12 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
-  - type: STR_TAU_CRISISCOMMANDERBC2XAI_ARMOR
+  - type: STR_TAU_CRISISCOMMANDERBCX2AI_ARMOR
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     spriteSheet: TAUCRISISveteranAIbattle.PCK
     spriteInv: TAUCRISISveteranAIinv.PCK
     corpseBattle:
-      - STR_TAU_CRISISBC2XAI_CORPSE
+      - STR_TAU_CRISISBCX2AI_CORPSE
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - INV_NULL_3X3

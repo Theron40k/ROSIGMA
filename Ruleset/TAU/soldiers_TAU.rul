@@ -87,6 +87,9 @@ soldiers:
       melee: 40
       mana: 0
     armor: STR_TAU_PATHFINDER_ARMOR_GV
+    armorForAvatar: STR_TAU_BREACHER_ARMOR_GV
+    avatarOffsetX: 68
+    avatarOffsetY: 35
     allowPiloting: false
     allowPromotion: true
     rankStrings:
@@ -126,6 +129,7 @@ soldiers:
       psiSkill: 100
       melee: 100
       mana: 0
+    armorForAvatar: STR_TAU_BREACHER_LEADER_ARMOR_GV
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_1
     soldierNames:
@@ -147,12 +151,25 @@ soldiers:
     tags:
       SOLDIER_IS_OFFICER: 1
 
-  - type: STR_FIREWARRIOR_FIREBLADE_GV
+  - type: STR_FIREWARRIOR_SHASEL_GV
     refNode: *STR_SHASVRES_GV
-    armor: STR_TAUFIREBLADE_ARMOR_GV
+    armor: STR_TAU_PATHFINDER_LEADER_ARMOR_GV
     costBuy: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_3
+    soldierNames:
+      - delete
+      - Names/tau_shasel.nam
+    tags:
+      SOLDIER_IS_OFFICER: 1
+
+  - type: STR_FIREWARRIOR_FIREBLADE_GV
+    refNode: *STR_SHASVRES_GV
+    armor: STR_TAUFIREBLADE_ARMOR_GV
+    armorForAvatar: STR_TAUFIREBLADE_ARMOR_GV
+    costBuy: 0
+    rankStrings:
+      - STR_FIREWARRIOR_GV_RANK_4
     soldierNames:
       - delete
       - Names/tau_shasel.nam
@@ -432,7 +449,7 @@ soldiers:
     standHeight: 22
     kneelHeight: 14
     femaleFrequency: 50
-    avatarOffsetX: 66
+    avatarOffsetX: 68
     avatarOffsetY: 42
     deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
