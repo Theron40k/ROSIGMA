@@ -7296,6 +7296,15 @@ research:
       - STR_CHAOSLORD_SUIT
     spawnedEvent: STR_BOOKKORPHAERON_GIFT
 
+  - name: STR_FINAL_RITUALEREBUS  # For the Urizen
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_EREBUS_PATHGIFT
+      - STR_CHAOSLORD_SUIT
+      - STR_WBMISSION9DONE
+
   - name: STR_FINAL_RITUAL  # For the Urizen
     cost: 900
     points: 30
@@ -7357,6 +7366,15 @@ research:
     dependencies:
       - STR_WORDBEARERS_STRATEGY
       - STR_WBNEW_FIGHTER_TRANSPORTER
+
+  - name: STR_WBHOLYWARSHIPFINALEREBUS # WB The Holy Warship
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_FINAL_RITUALEREBUS
+      - STR_WBMISSION9DONE
+      - STR_HIGHTIER_PREREQ
 
   - name: STR_WBHOLYWARSHIPFINAL # WB The Holy Warship
     cost: 900
