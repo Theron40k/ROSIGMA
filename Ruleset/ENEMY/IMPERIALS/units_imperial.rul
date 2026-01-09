@@ -517,6 +517,102 @@ units:
         CARAPACE_GUARDSMENOFF_SET2: 10
         CARAPACE_GUARDSMENOFF_SET3: 10
 
+  # IG TIER 3
+
+  - type: STR_IGGUARDS_M_LV3_AI
+    liveAlien: STR_LIVE_CAPTURE_GUARDAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    stats:
+      tu: 70
+      stamina: 90
+      health: 70
+      bravery: 90
+      reactions: 80
+      firing: 80
+      throwing: 70
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 75
+    armor: IGGUARD_ARMOR_M_LV3
+    standHeight: 22
+    kneelHeight: 14
+    value: 30
+    intelligence: 4
+    aggression: 3
+    energyRecovery: 20
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        CARAPACE_GUARDSMEN_SET1: 50
+        CARAPACE_GUARDSMEN_SET2: 5
+        CARAPACE_GUARDSMEN_SET3: 5
+        CARAPACE_GUARDSMEN_SET4: 10
+        CARAPACE_GUARDSMEN_SET5: 10
+        CARAPACE_GUARDSMEN_SET6: 10
+        CARAPACE_GUARDSMEN_SET7: 10
+
+  - type: STR_IGCOMM_M_LV3_AI
+    liveAlien: STR_LIVE_CAPTURE_GUARDAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    stats:
+      tu: 80
+      stamina: 80
+      health: 70
+      bravery: 90
+      reactions: 80
+      firing: 80
+      throwing: 70
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 95
+    armor: IGCOMM_ARMOR_M_LV3
+    standHeight: 22
+    kneelHeight: 14
+    value: 30
+    intelligence: 6
+    aggression: 3
+    energyRecovery: 20
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        CARAPACE_GUARDSMENOFF_SET1: 10
+        CARAPACE_GUARDSMENOFF_SET2: 10
+        CARAPACE_GUARDSMENOFF_SET3: 10
+
+  - type: STR_IGGUARDS_OFF_LV3_AI
+    liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    stats:
+      tu: 70
+      stamina: 90
+      health: 90
+      bravery: 100
+      reactions: 80
+      firing: 90
+      throwing: 70
+      strength: 60
+      psiStrength: 60
+      psiSkill: 0
+      melee: 80
+    armor: IGOFF_ARMOR_M_LV3
+    standHeight: 22
+    kneelHeight: 14
+    value: 40
+    intelligence: 6
+    aggression: 3
+    energyRecovery: 20
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        CARAPACE_GUARDSMENOFF_SET1: 10
+        CARAPACE_GUARDSMENOFF_SET2: 10
+        CARAPACE_GUARDSMENOFF_SET3: 10
+
   # ULTRA TIER 0
 
   - type: STR_SPACEMARINE_SCOUT_AI
