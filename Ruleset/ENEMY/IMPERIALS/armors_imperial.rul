@@ -140,6 +140,102 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+  # IG TIER 3
+
+  - type: IGGUARD_ARMOR_M_LV3
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    spriteSheet: IG_POWER_ARMOR_BS.PCK
+    spriteInv: IGPA_GUARD_INV.PCK
+    corpseBattle:
+      - STR_GUARDH_AICORPSE
+    frontArmor: 100
+    sideArmor: 80
+    rearArmor: 55
+    underArmor: 80
+    drawingRoutine: 0
+    damageModifier:  # POWER ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.6  # FLAMES Hazard protected
+      - 0.8  # HE Hazard protected
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID Hazard protected
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [4]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+
+  - type: IGCOMM_ARMOR_M_LV3
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    spriteSheet: IG_COMMPOWER_ARMOR_BS.PCK
+    spriteInv: IGPA_COMM_INV.PCK
+    corpseBattle:
+      - STR_GUARDH_AICORPSE
+    frontArmor: 100
+    sideArmor: 80
+    rearArmor: 60
+    underArmor: 80
+    drawingRoutine: 0
+    builtInWeapons:
+      - STR_GUARD_PRIMER
+    damageModifier:  # POWER ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.6  # FLAMES Hazard protected
+      - 0.8  # HE Hazard protected
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID Hazard protected
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [4]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+
+  - type: IGOFF_ARMOR_M_LV3
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    spriteSheet: IG_OFFPOWER_ARMOR_BS.PCK
+    spriteInv: IGPA_OFF_INV.PCK
+    corpseBattle:
+      - STR_GUARDH_AICORPSE
+    frontArmor: 100
+    sideArmor: 90
+    rearArmor: 50
+    underArmor: 80
+    drawingRoutine: 0
+    builtInWeapons:
+      - INV_NULL_BACK_SIGNAL
+    damageModifier:  # POWER ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.6  # FLAMES Hazard protected
+      - 0.8  # HE Hazard protected
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID Hazard protected
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [4]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+
   # ULTRA TIER 0
 
   - type: STR_SPACEMARINEARMOR_SCOUT
