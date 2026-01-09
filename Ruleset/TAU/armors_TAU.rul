@@ -132,8 +132,6 @@ armors:
     customArmorPreviewIndex: 1380
     corpseBattle:
       - STR_TAUFIREWARRIOR_PCCORPSE
-    avatarOffsetX: 66
-    avatarOffsetY: 42
     frontArmor: 80 # +10 vs basic Guard Carapace
     sideArmor: 70
     rearArmor: 50
@@ -481,8 +479,6 @@ armors:
       bravery: 10
     allowsRunning: true
     allowsKneeling: true
-    avatarOffsetX: 66
-    avatarOffsetY: 42
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -567,7 +563,6 @@ armors:
     customArmorPreviewIndex: 1386
     corpseBattle:
       - STR_CRISIS_SUIT_PCCORPSE
-    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
     movementType: 1
     # specialWeapon: Use for upgraded suit abilities later
     # Term marine amounts of armor? - Crisis are T5 3+
@@ -595,13 +590,6 @@ armors:
       stamina: 20
       health: 50  # let's try this +2 wound
       firing: 10  # bonus to hit from sensors and firing computer
-    units:
-      - STR_FIREWARRIOR_SHASUI_GV
-      - STR_FIREWARRIOR_SHASVRE_GV
-      - STR_FIREWARRIOR_SHASEL_GV
-      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
-    avatarOffsetX: 66
-    avatarOffsetY: 42
     allowsKneeling: false
     allowsRunning: false
     loftempsSet: [5]
@@ -617,6 +605,12 @@ armors:
 
   - type: STR_STARSCYTHE_CRISIS_SUIT_BCX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
+    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - INV_NULL_3X3
@@ -626,6 +620,12 @@ armors:
 
   - type: STR_STARSCYTHE_CRISIS_SUIT_BCFL_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
+    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_GV
       - STR_TAU_SUIT_FLAMER_GV
@@ -636,6 +636,12 @@ armors:
 
   - type: STR_STARSCYTHE_CRISIS_SUIT_FLX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
+    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
       - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
       - INV_NULL_3X3
