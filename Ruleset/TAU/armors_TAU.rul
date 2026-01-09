@@ -132,6 +132,8 @@ armors:
     customArmorPreviewIndex: 1380
     corpseBattle:
       - STR_TAUFIREWARRIOR_PCCORPSE
+    avatarOffsetX: 66
+    avatarOffsetY: 42
     frontArmor: 80 # +10 vs basic Guard Carapace
     sideArmor: 70
     rearArmor: 50
@@ -252,6 +254,7 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV      
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -270,6 +273,7 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -292,6 +296,7 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV      
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -300,7 +305,6 @@ armors:
       ARMOR_OVERWATCH_TU_RESTORED: 30
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
       ARMOR_ENERGY_SHIELD_DECAY: 50
-
 
 ### TAU FIRE WARRIOR ADVANCED ARMORS
   - &STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
@@ -339,6 +343,7 @@ armors:
       - 0.9  # MELTA
     units:
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     loftempsSet: [3]
     allowsRunning: true
     allowsKneeling: true
@@ -476,6 +481,8 @@ armors:
       bravery: 10
     allowsRunning: true
     allowsKneeling: true
+    avatarOffsetX: 66
+    avatarOffsetY: 42
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -523,6 +530,8 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now      
     stats:
       tu: 20
       stamina: 20
@@ -589,7 +598,10 @@ armors:
     units:
       - STR_FIREWARRIOR_SHASUI_GV
       - STR_FIREWARRIOR_SHASVRE_GV
-      - STR_FIREWARRIOR_FIREBLADE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    avatarOffsetX: 66
+    avatarOffsetY: 42
     allowsKneeling: false
     allowsRunning: false
     loftempsSet: [5]
@@ -603,7 +615,7 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
-  - type: STR_STARSCYTHE_CRISIS_SUIT_BC2X_GV
+  - type: STR_STARSCYTHE_CRISIS_SUIT_BCX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
@@ -622,7 +634,7 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
-  - type: STR_STARSCYTHE_CRISIS_SUIT_FL2X_GV
+  - type: STR_STARSCYTHE_CRISIS_SUIT_FLX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     builtInWeapons:
       - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
@@ -632,12 +644,12 @@ armors:
       - INV_NULL_4X2
 
   # AI versions
-  - type: STR_TAU_CRISISBC2XAI_ARMOR
+  - type: STR_TAU_CRISISBCX2AI_ARMOR
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     spriteSheet: TAUCRISISAIbattle.PCK
     spriteInv: TAUCRISISAIinv.PCK
     corpseBattle:
-      - STR_TAU_CRISISBC2XAI_CORPSE
+      - STR_TAU_CRISISBCX2AI_CORPSE
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - INV_NULL_3X3
@@ -659,12 +671,12 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
-  - type: STR_TAU_CRISISFL2XAI_ARMOR
+  - type: STR_TAU_CRISISFLX2AI_ARMOR
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     spriteSheet: TAUCRISISAIbattle.PCK
     spriteInv: TAUCRISISAIinv.PCK
     corpseBattle:
-      - STR_TAU_CRISISFL2XAI_CORPSE
+      - STR_TAU_CRISISFLX2AI_CORPSE
     builtInWeapons:
       - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
       - INV_NULL_3X3
@@ -672,12 +684,12 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
-  - type: STR_TAU_CRISISCOMMANDERBC2XAI_ARMOR
+  - type: STR_TAU_CRISISCOMMANDERBCX2AI_ARMOR
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     spriteSheet: TAUCRISISveteranAIbattle.PCK
     spriteInv: TAUCRISISveteranAIinv.PCK
     corpseBattle:
-      - STR_TAU_CRISISBC2XAI_CORPSE
+      - STR_TAU_CRISISBCX2AI_CORPSE
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - INV_NULL_3X3

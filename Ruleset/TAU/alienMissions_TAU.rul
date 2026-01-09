@@ -24,8 +24,6 @@ alienMissions:
 # STR_CATACH_OUTPOST_DEFENSE - do these even fire? - no they upstream require Imperial Guard Operations
 # STR_TAU_ORCAEXPEDITION - only fires in warpstorms which are replaced
 # STR_TAU_ORCA_ASSAULT - does not appear to fire anywhere
-# STR_ALIEN_INFILTRATION - (but not hard) - this one is annoying to filter out because it's used by bases, other code. Can it be replaced?? Not easily, it is entwined in the code
-# STR_ALIEN_BASE - same deal here as STR_ALIEN_INFILTRATION, I may just have to suck this one up for now until the main team rejiggers things.
 
 
   - type: STR_ALIEN_ARTIFACT_TAU  # SPACE HULK
@@ -615,9 +613,6 @@ alienMissions:
         trajectory: VALK_CRASH
         timer: 0
         objective: true
-
-
-
 
 ### Guevesa Campaign bases
   - type: STR_REDEEMEDBASE_L1_MISSION_GV
