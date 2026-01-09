@@ -15553,6 +15553,9 @@ alienDeployments:
   # imperial ai bases
 
   - type: STR_IMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_IGOPFOR_TIER0
     shade: 3
     enviroEffects: STR_INSIDE_ENVIRO
     alienBase: true
@@ -15644,6 +15647,10 @@ alienDeployments:
         STR_IMPERIALBASE_ASSAULTV1: 100
 
   - type: STR_IMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_IGOPFOR_TIER0, STR_IGOPFOR_TIER0PLUS]  # [month from, old race, new race]
     shade: 3
     enviroEffects: STR_INSIDE_ENVIRO
     alienBase: true
@@ -15731,10 +15738,14 @@ alienDeployments:
     alienBaseUpgrades:
       0:
         STR_IMPERIALBASE_ASSAULTV1: 100
-      3:
+      2:
         STR_IMPERIALBASE_ASSAULTV2: 100
 
   - type: STR_IMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_IGOPFOR_TIER0PLUS, STR_IGOPFOR_TIER1]  # [month from, old race, new race]
     shade: 2
     enviroEffects: STR_INSIDE_ENVIRO
     alienBase: true
@@ -15811,7 +15822,7 @@ alienDeployments:
       STR_IMPERIALS_PATROL: 50
       STR_IMPERIAL_TERROR: 20
       STR_IMPERIALS_RETALIATION: 5
-      STR_NEWSPACEMARINE_BASE: 10
+      STR_NEWIMPERIALGUARD_BASEV2: 10
     genMissionFreq: 6
     genMissionLimit: 10000  # was 4 in OXCE_40k
     baseDetectionRange: 600            # base radar range, in nautical miles
@@ -15823,10 +15834,13 @@ alienDeployments:
     alienBaseUpgrades:
       0:
         STR_IMPERIALBASE_ASSAULTV2: 100
-      3:
+      2:
         STR_IMPERIALBASE_ASSAULTV3: 100
 
   - type: STR_IMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_IGOPFOR_TIER1, STR_IGOPFOR_TIER2]  # [month from, old race, new race]
     shade: 1
     enviroEffects: STR_INSIDE_ENVIRO
     alienBase: true
@@ -15903,7 +15917,1515 @@ alienDeployments:
       STR_IMPERIALS_PATROL: 50
       STR_IMPERIAL_TERROR_HARD: 20
       STR_IMPERIALS_RETALIATION: 10
-      STR_NEWSPACEMARINE_BASE: 10
+      STR_NEWIMPERIALGUARD_BASEV2: 10
+    genMissionFreq: 7
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+
+# ultramarine
+
+  - type: STR_UMIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_SMOPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_UMNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_UMIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_UMIMPERIALBASE_ASSAULTV1: 100
+
+  - type: STR_UMIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SMOPFOR_TIER0, STR_SMOPFOR_TIER0PLUS]  # [month from, old race, new race]
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - STARTIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV1
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_UMNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_UMIMPERIALBASE_ASSAULTV1: 100
+      2:
+        STR_UMIMPERIALBASE_ASSAULTV2: 100
+
+  - type: STR_UMIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SMOPFOR_TIER0PLUS, STR_SMOPFOR_TIER1]  # [month from, old race, new race]
+    shade: 2
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 131
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7  # 5
+        highQty: 7  # 7
+        dQty: 6
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV2
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 800]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 20
+      STR_IMPERIALS_RETALIATION: 5
+      STR_UMNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 6
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_UMIMPERIALBASE_ASSAULTV2: 100
+      2:
+        STR_UMIMPERIALBASE_ASSAULTV3: 100
+
+  - type: STR_UMIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SMOPFOR_TIER1, STR_SMOPFOR_TIER2]  # [month from, old race, new race]
+    shade: 1
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 132
+    data:
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 3  # 0
+        highQty: 3 # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 5
+        highQty: 9  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 1
+        highQty: 4  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 3 # 2
+        highQty: 3  # 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 70
+    length: 70
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV3
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 1200]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR_HARD: 20
+      STR_IMPERIALS_RETALIATION: 10
+      STR_UMNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 7
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+
+# black templars
+
+  - type: STR_BTIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_BTOPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_BTNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_BTIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_BTIMPERIALBASE_ASSAULTV1: 100
+
+  - type: STR_BTIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_BTOPFOR_TIER0, STR_BTOPFOR_TIER0PLUS]  # [month from, old race, new race]
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - STARTIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV1
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_BTNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_BTIMPERIALBASE_ASSAULTV1: 100
+      2:
+        STR_BTIMPERIALBASE_ASSAULTV2: 100
+
+  - type: STR_BTIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_BTOPFOR_TIER0PLUS, STR_BTOPFOR_TIER1]  # [month from, old race, new race]
+    shade: 2
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 131
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7  # 5
+        highQty: 7  # 7
+        dQty: 6
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV2
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 800]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 20
+      STR_IMPERIALS_RETALIATION: 5
+      STR_BTNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 6
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_BTIMPERIALBASE_ASSAULTV2: 100
+      2:
+        STR_BTIMPERIALBASE_ASSAULTV3: 100
+
+  - type: STR_BTIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_BTOPFOR_TIER1, STR_BTOPFOR_TIER2]  # [month from, old race, new race]
+    shade: 1
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 132
+    data:
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 3  # 0
+        highQty: 3 # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 5
+        highQty: 9  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 1
+        highQty: 4  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 3 # 2
+        highQty: 3  # 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 70
+    length: 70
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV3
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 1200]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR_HARD: 20
+      STR_IMPERIALS_RETALIATION: 10
+      STR_BTNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 7
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+
+# space wolves
+
+  - type: STR_SWIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_SWOPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_SWNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_SWIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_SWIMPERIALBASE_ASSAULTV1: 100
+
+  - type: STR_SWIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SWOPFOR_TIER0, STR_SWOPFOR_TIER0PLUS]  # [month from, old race, new race]
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - STARTIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV1
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_SWNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_SWIMPERIALBASE_ASSAULTV1: 100
+      2:
+        STR_SWIMPERIALBASE_ASSAULTV2: 100
+
+  - type: STR_SWIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SWOPFOR_TIER0PLUS, STR_SWOPFOR_TIER1]  # [month from, old race, new race]
+    shade: 2
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 131
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7  # 5
+        highQty: 7  # 7
+        dQty: 6
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV2
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 800]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 20
+      STR_IMPERIALS_RETALIATION: 5
+      STR_SWNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 6
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_SWIMPERIALBASE_ASSAULTV2: 100
+      2:
+        STR_SWIMPERIALBASE_ASSAULTV3: 100
+
+  - type: STR_SWIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SWOPFOR_TIER1, STR_SWOPFOR_TIER2]  # [month from, old race, new race]
+    shade: 1
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 132
+    data:
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 3  # 0
+        highQty: 3 # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 5
+        highQty: 9  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 1
+        highQty: 4  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 3 # 2
+        highQty: 3  # 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 70
+    length: 70
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV3
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 1200]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR_HARD: 20
+      STR_IMPERIALS_RETALIATION: 10
+      STR_SWNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 7
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+
+# crimson fists
+
+  - type: STR_CFIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_CFOPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_CFNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_CFIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_CFIMPERIALBASE_ASSAULTV1: 100
+
+  - type: STR_CFIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_CFOPFOR_TIER0, STR_CFOPFOR_TIER0PLUS]  # [month from, old race, new race]
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - STARTIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV1
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_CFNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_CFIMPERIALBASE_ASSAULTV1: 100
+      2:
+        STR_CFIMPERIALBASE_ASSAULTV2: 100
+
+  - type: STR_CFIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_CFOPFOR_TIER0PLUS, STR_CFOPFOR_TIER1]  # [month from, old race, new race]
+    shade: 2
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 131
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7  # 5
+        highQty: 7  # 7
+        dQty: 6
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV2
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 800]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 20
+      STR_IMPERIALS_RETALIATION: 5
+      STR_CFNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 6
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_CFIMPERIALBASE_ASSAULTV2: 100
+      2:
+        STR_CFIMPERIALBASE_ASSAULTV3: 100
+
+  - type: STR_CFIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_CFOPFOR_TIER1, STR_CFOPFOR_TIER2]  # [month from, old race, new race]
+    shade: 1
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 132
+    data:
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 3  # 0
+        highQty: 3 # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 5
+        highQty: 9  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 1
+        highQty: 4  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 3 # 2
+        highQty: 3  # 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 70
+    length: 70
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV3
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 1200]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR_HARD: 20
+      STR_IMPERIALS_RETALIATION: 10
+      STR_CFNEWSPACEMARINE_BASE2: 10
     genMissionFreq: 7
     genMissionLimit: 10000  # was 4 in OXCE_40k
     baseDetectionRange: 600            # base radar range, in nautical miles
@@ -15915,7 +17437,105 @@ alienDeployments:
 
   # salamander bases
 
+  - type: STR_SLMIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_SLMOPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_NEWIMPERIALSALAMANDER_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_SLMIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_SLMIMPERIALBASE_ASSAULTV1: 100
+
   - type: STR_SLMIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SLMOPFOR_TIER0, STR_SLMOPFOR_TIER0PLUS]  # [month from, old race, new race]
     shade: 3
     enviroEffects: STR_INSIDE_ENVIRO
     alienBase: true
@@ -16003,10 +17623,14 @@ alienDeployments:
     alienBaseUpgrades:
       0:
         STR_SLMIMPERIALBASE_ASSAULTV1: 100
-      3:
+      2:
         STR_SLMIMPERIALBASE_ASSAULTV2: 100
 
   - type: STR_SLMIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SLMOPFOR_TIER0PLUS, STR_SLMOPFOR_TIER1]  # [month from, old race, new race]
     shade: 2
     enviroEffects: STR_INSIDE_ENVIRO
     alienBase: true
@@ -16095,10 +17719,13 @@ alienDeployments:
     alienBaseUpgrades:
       0:
         STR_SLMIMPERIALBASE_ASSAULTV2: 100
-      3:
+      2:
         STR_SLMIMPERIALBASE_ASSAULTV3: 100
 
   - type: STR_SLMIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_SLMOPFOR_TIER1, STR_SLMOPFOR_TIER2]  # [month from, old race, new race]
     shade: 1
     enviroEffects: STR_INSIDE_ENVIRO
     alienBase: true
@@ -16176,6 +17803,1137 @@ alienDeployments:
       STR_SLMIMPERIAL_TERROR_HARD: 20
       STR_SLMIMPERIALS_RETALIATION: 10
       STR_NEWSALAMANDER_BASE: 10
+    genMissionFreq: 7
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+
+# dark angels
+
+  - type: STR_DAIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_DAOPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_DANEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_DAIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_DAIMPERIALBASE_ASSAULTV1: 100
+
+  - type: STR_DAIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_DAOPFOR_TIER0, STR_DAOPFOR_TIER0PLUS]  # [month from, old race, new race]
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - STARTIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV1
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_DANEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_DAIMPERIALBASE_ASSAULTV1: 100
+      2:
+        STR_DAIMPERIALBASE_ASSAULTV2: 100
+
+  - type: STR_DAIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_DAOPFOR_TIER0PLUS, STR_DAOPFOR_TIER1]  # [month from, old race, new race]
+    shade: 2
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 131
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7  # 5
+        highQty: 7  # 7
+        dQty: 6
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV2
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 800]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 20
+      STR_IMPERIALS_RETALIATION: 5
+      STR_DANEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 6
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_DAIMPERIALBASE_ASSAULTV2: 100
+      2:
+        STR_DAIMPERIALBASE_ASSAULTV3: 100
+
+  - type: STR_DAIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_DAOPFOR_TIER1, STR_DAOPFOR_TIER2]  # [month from, old race, new race]
+    shade: 1
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 132
+    data:
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 3  # 0
+        highQty: 3 # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 5
+        highQty: 9  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 1
+        highQty: 4  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 3 # 2
+        highQty: 3  # 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 70
+    length: 70
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV3
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 1200]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR_HARD: 20
+      STR_IMPERIALS_RETALIATION: 10
+      STR_DANEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 7
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+
+# bloody roses
+
+  - type: STR_BRIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_BLOODYROPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_BRNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_BRIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_BRIMPERIALBASE_ASSAULTV1: 100
+
+  - type: STR_BRIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_BLOODYROPFOR_TIER0, STR_BLOODYROPFOR_TIER0PLUS]  # [month from, old race, new race]
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - STARTIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV1
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_BRNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_BRIMPERIALBASE_ASSAULTV1: 100
+      2:
+        STR_BRIMPERIALBASE_ASSAULTV2: 100
+
+  - type: STR_BRIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_BLOODYROPFOR_TIER0PLUS, STR_BLOODYROPFOR_TIER1]  # [month from, old race, new race]
+    shade: 2
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 131
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7  # 5
+        highQty: 7  # 7
+        dQty: 6
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV2
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 800]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 20
+      STR_IMPERIALS_RETALIATION: 5
+      STR_BRNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 6
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_BRIMPERIALBASE_ASSAULTV2: 100
+      2:
+        STR_BRIMPERIALBASE_ASSAULTV3: 100
+
+  - type: STR_BRIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_BLOODYROPFOR_TIER1, STR_BLOODYROPFOR_TIER2]  # [month from, old race, new race]
+    shade: 1
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 132
+    data:
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 3  # 0
+        highQty: 3 # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 5
+        highQty: 9  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 1
+        highQty: 4  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 3 # 2
+        highQty: 3  # 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 70
+    length: 70
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV3
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 1200]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR_HARD: 20
+      STR_IMPERIALS_RETALIATION: 10
+      STR_BRNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 7
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+
+# fiery hearts
+
+  - type: STR_FHIMPERIALBASE_ASSAULTV0
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    race: STR_FIERYHOPFOR_TIER0
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 3
+    terrains:
+      - ZEROIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV0
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_FHNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_FHIMPERIALBASE_ASSAULTV0: 100
+      2:
+        STR_FHIMPERIALBASE_ASSAULTV1: 100
+
+  - type: STR_FHIMPERIALBASE_ASSAULTV1
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_FIERYHOPFOR_TIER0, STR_FIERYHOPFOR_TIER0PLUS]  # [month from, old race, new race]
+    shade: 3
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 130
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 8  # 5
+        highQty: 8  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - STARTIMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV1
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 500]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    # missionBountyItem: STR_IMPERIAL_BASE_DATA  # only level 2 and 3 bases will give it
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 30
+      STR_FHNEWSPACEMARINE_BASE: 10
+    genMissionFreq: 5
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_FHIMPERIALBASE_ASSAULTV1: 100
+      2:
+        STR_FHIMPERIALBASE_ASSAULTV2: 100
+
+  - type: STR_FHIMPERIALBASE_ASSAULTV2
+    resetAlienBaseAgeAfterUpgrade: true
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_FIERYHOPFOR_TIER0PLUS, STR_FIERYHOPFOR_TIER1]  # [month from, old race, new race]
+    shade: 2
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 131
+    data:
+      - alienRank: 6
+        lowQty: 1  # 1
+        highQty: 1  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 1  # 0
+        highQty: 1  # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7  # 5
+        highQty: 7  # 7
+        dQty: 6
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2  # 1
+        highQty: 2  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2  # 2
+        highQty: 2  # 4
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV2
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 800]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR: 20
+      STR_IMPERIALS_RETALIATION: 5
+      STR_FHNEWSPACEMARINE_BASE2: 10
+    genMissionFreq: 6
+    genMissionLimit: 10000  # was 4 in OXCE_40k
+    baseDetectionRange: 600            # base radar range, in nautical miles
+    baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
+    huntMissionMaxFrequency: 1440  # generate hunt mission max every 24 hours
+    huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
+      0:
+        STR_ALIEN_INTERCEPTION: 100
+    alienBaseUpgrades:
+      0:
+        STR_FHIMPERIALBASE_ASSAULTV2: 100
+      2:
+        STR_FHIMPERIALBASE_ASSAULTV3: 100
+
+  - type: STR_FHIMPERIALBASE_ASSAULTV3
+    resetAlienBaseAge: true
+    alienRaceEvolution:
+      - [0, STR_FIERYHOPFOR_TIER1, STR_FIERYHOPFOR_TIER2]  # [month from, old race, new race]
+    shade: 1
+    enviroEffects: STR_INSIDE_ENVIRO
+    alienBase: true
+    markerIcon: 132
+    data:
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2  # 3
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 3  # 0
+        highQty: 3 # 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 5
+        highQty: 9  # 7
+        dQty: 7
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 1
+        highQty: 4  # 2
+        dQty: 3  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 3  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 3 # 2
+        highQty: 3  # 4
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 70
+    length: 70
+    height: 4
+    terrains:
+      - IMPERIALAIBASESTERRAIN
+    script: IMPAIBASESCRIPTV3
+    briefing:
+      title: STR_IMPERIALBASE_ASSAULT_TITLE
+      textOffset: -16
+      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      background: BACK01.SCR
+      showTarget: false
+    markerName: STR_IMPERIAL_BASE_SITE
+    objectiveComplete: [STR_IMPERIAL_BASE_DESTROYED, 1200]
+    objectivePopup: STR_IMPERIAL_BASE_KILLED
+    objectiveFailed: [STR_IMPERIAL_BASE_NOT_DESTROYED, -100]
+    unlockedResearch: STR_IMPERIALBASEDEAD  # unlock great sacrifice manufacture
+    missionBountyItem: STR_IMPERIAL_BASE_DATA  # 3 will be needed to manufacture the great sacrifice for chaos lord unlock later
+    genMission:  # for now same as chaos base will change in future maybe
+      STR_IMPERIALS_SUPPLY: 80
+      STR_IMPERIALS_PATROL: 50
+      STR_IMPERIAL_TERROR_HARD: 20
+      STR_IMPERIALS_RETALIATION: 10
+      STR_FHNEWSPACEMARINE_BASE2: 10
     genMissionFreq: 7
     genMissionLimit: 10000  # was 4 in OXCE_40k
     baseDetectionRange: 600            # base radar range, in nautical miles

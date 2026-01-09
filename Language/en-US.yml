@@ -10427,8 +10427,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   SLGUARD_ARMOR_M_LV2: "SL Carapace Armor"
   SLGUARD_ARMOR_OFF_M_LV2: "SL Officer's Carapace Armor"
 
-  STR_IGOPFOR_TIER1: "Imperial Guards"
-  STR_IGOPFOR_TIER2: "Veteran Imperial Guards"
+  STR_IGOPFOR_TIER0: "Imperial Recruits"
+  STR_IGOPFOR_TIER0PLUS: "Imperial Guards"
+  STR_IGOPFOR_TIER1: "Veteran Imperial Guards"
+  STR_IGOPFOR_TIER2: "Elite Imperial Guards"
 
   STR_SLEGOPFOR_TIER1: "Steel Legion"
   STR_SLEGOPFOR_TIER2: "Veteran Steel Legion"
@@ -11457,7 +11459,27 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   # imperial ai bases
 
+  STR_IMPERIALGUARD_BASEV0: "Imperial Guard Site"
+
+  STR_ULTRAMARINE_BASEV0: "Ultramarine Site"
+  STR_BLACKTEMPLAR_BASEV0: "Black Templars Site"
+  STR_SPACEWOLVES_BASEV0: "Space Wolves Site"
+  STR_CRIMSONFIST_BASEV0: "Crimson Fist Site"
+  STR_DARKANGEL_BASEV0: "Dark Angel Site"
+  STR_SALAMANDER_BASEV0: "Salamanders Site"
+
+  STR_BLOODYROSE_BASEV0: "Bloody Rose Site"
+  STR_FIERYHEART_BASEV0: "Fiery Heart Site"
+
+  STR_BRNEWSPACEMARINE_BASE: "Bloody Roses Outpost Creation"
+  STR_BRNEWSPACEMARINE_BASE2: "Bloody Roses Base Creation"
+
+  STR_FHNEWSPACEMARINE_BASE: "Fiery Hearts Outpost Creation"
+  STR_FHNEWSPACEMARINE_BASE2: "Fiery Hearts Base Creation"
+
   STR_IMPERIALGUARD_BASE: "Imperial Guard Base"
+  STR_IMPERIALGUARD_BASEV2: "Imperial Guard Fortress"
+
   STR_ULTRAMARINE_BASE: "Ultramarine Base"
   STR_BLACKTEMPLAR_BASE: "Black Templars Base"
   STR_SPACEWOLVES_BASE: "Space Wolves Base"
@@ -11485,13 +11507,52 @@ en-US:  #  yamllint disable-line rule:empty-values
   MAP_ZEROIMPERIALAIBASESTERRAIN: "Imperial Terrain"
   MAP_STARTIMPERIALAIBASESTERRAIN: "Imperial Terrain"
   MAP_IMPERIALAIBASESTERRAIN: "Imperial Terrain"
+
+  STR_BRIMPERIALBASE_ASSAULTV0: "Bloody Rose Site"
+  STR_BRIMPERIALBASE_ASSAULTV1: "Bloody Rose Mission"
+  STR_BRIMPERIALBASE_ASSAULTV2: "Bloody Rose Commandery"
+  STR_BRIMPERIALBASE_ASSAULTV3: "Bloody Rose Preceptory"
+
+  STR_FHIMPERIALBASE_ASSAULTV0: "Fiery Heart Site"
+  STR_FHIMPERIALBASE_ASSAULTV1: "Fiery Heart Mission"
+  STR_FHIMPERIALBASE_ASSAULTV2: "Fiery Heart Commandery"
+  STR_FHIMPERIALBASE_ASSAULTV3: "Fiery Heart Preceptory"
+
   STR_IMPERIALBASE_ASSAULTV0: "Imperial Site"
   STR_IMPERIALBASE_ASSAULTV1: "Imperial Base"
   STR_IMPERIALBASE_ASSAULTV2: "Imperial Fortress"
-  STR_IMPERIALBASE_ASSAULTV3: "Imperial Monastery"
+  STR_IMPERIALBASE_ASSAULTV3: "Imperial Citadel"
+
+  STR_UMIMPERIALBASE_ASSAULTV0: "Ultramarines Site"
+  STR_UMIMPERIALBASE_ASSAULTV1: "Ultramarines Base"
+  STR_UMIMPERIALBASE_ASSAULTV2: "Ultramarines Fortress"
+  STR_UMIMPERIALBASE_ASSAULTV3: "Ultramarines Monastery"
+
+  STR_BTIMPERIALBASE_ASSAULTV0: "Black Templars Site"
+  STR_BTIMPERIALBASE_ASSAULTV1: "Black Templars Base"
+  STR_BTIMPERIALBASE_ASSAULTV2: "Black Templars Fortress"
+  STR_BTIMPERIALBASE_ASSAULTV3: "Black Templars Monastery"
+
+  STR_SWIMPERIALBASE_ASSAULTV0: "Space Wolves Site"
+  STR_SWIMPERIALBASE_ASSAULTV1: "Space Wolves Base"
+  STR_SWIMPERIALBASE_ASSAULTV2: "Space Wolves Fortress"
+  STR_SWIMPERIALBASE_ASSAULTV3: "Space Wolves Monastery"
+
+  STR_CFIMPERIALBASE_ASSAULTV0: "Crimson Fists Site"
+  STR_CFIMPERIALBASE_ASSAULTV1: "Crimson Fists Base"
+  STR_CFIMPERIALBASE_ASSAULTV2: "Crimson Fists Fortress"
+  STR_CFIMPERIALBASE_ASSAULTV3: "Crimson Fists Monastery"
+
+  STR_SLMIMPERIALBASE_ASSAULTV0: "Salamanders Site"
   STR_SLMIMPERIALBASE_ASSAULTV1: "Salamanders Base"
   STR_SLMIMPERIALBASE_ASSAULTV2: "Salamanders Fortress"
   STR_SLMIMPERIALBASE_ASSAULTV3: "Salamanders Monastery"
+
+  STR_DAIMPERIALBASE_ASSAULTV0: "Dark Angels Site"
+  STR_DAIMPERIALBASE_ASSAULTV1: "Dark Angels Base"
+  STR_DAIMPERIALBASE_ASSAULTV2: "Dark Angels Fortress"
+  STR_DAIMPERIALBASE_ASSAULTV3: "Dark Angels Monastery"
+
   STR_IMPERIALBASE_ASSAULT_TITLE: "IMPERIAL BASE ASSAULT"
   STR_IMPERIALBASE_ASSAULT_BRIEFING: "Our troops have finally gained entrance to an Imperial base. We must eliminate all those Imperium fools and leave their ruins behind, or when your troops have returned to the green exit area (click on the 'abort mission' icon to escape).{NEWLINE}{NEWLINE}{ALT}Destroy 3 Imperial Bases to collect 3 Components to the Great Sacrifice, then use them to Manufacture the Great Sacrifice that the Adept in Research will use."
   STR_IMPERIAL_BASE_KILLED: "Imperial base has been eliminated"
@@ -11681,7 +11742,23 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_IMPERIALS_PATROL: "Imperial Patrol"
   STR_IMPERIALS_SUPPLY: "Imperial Supply"
   STR_NEWIMPERIALGUARD_BASE: "Imperial Outpost Creation"
+  STR_NEWIMPERIALGUARD_BASEV2: "Imperial Base Creation"
   STR_NEWSPACEMARINE_BASE: "Imperial Base Creation"
+
+  STR_UMNEWSPACEMARINE_BASE: "Ultramarines Outpost Creation"
+  STR_UMNEWSPACEMARINE_BASE2: "Ultramarines Base Creation"
+
+  STR_BTNEWSPACEMARINE_BASE: "Black Templars Outpost Creation"
+  STR_BTNEWSPACEMARINE_BASE2: "Black Templars Base Creation"
+
+  STR_SWNEWSPACEMARINE_BASE: "Space Wolves Outpost Creation"
+  STR_SWNEWSPACEMARINE_BASE2: "Space Wolves Base Creation"
+
+  STR_CFNEWSPACEMARINE_BASE: "Crimson Fists Outpost Creation"
+  STR_CFNEWSPACEMARINE_BASE2: "Crimson Fists Base Creation"
+
+  STR_DANEWSPACEMARINE_BASE: "Dark Angels Outpost Creation"
+  STR_DANEWSPACEMARINE_BASE2: "Dark Angels Base Creation"
 
 
   STR_SLMMEDIUM_SCOUT_DOUBLE: "Salamanders Transport"

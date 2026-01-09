@@ -13823,22 +13823,14 @@ alienMissions:
 
   # imperial AI bases
 
-  - type: STR_IMPERIALGUARD_BASE
+  - type: STR_IMPERIALGUARD_BASEV0
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
     siteType: STR_IMPERIALBASE_ASSAULTV0
     raceWeights:
       0:
-        STR_IGOPFOR_TIER1: 100
-      2:
-        STR_IGOPFOR_TIER1: 100
-      3:
-        STR_IGOPFOR_TIER1: 100
-      5:
-        STR_IGOPFOR_TIER2: 100
-      9:
-        STR_IGOPFOR_TIER2: 100
+        STR_IGOPFOR_TIER0: 100
     waves:
       - ufo: STR_SMMEDIUM_SCOUT_DOUBLE
         count: 1
@@ -13853,22 +13845,103 @@ alienMissions:
         trajectory: P6
         timer: 5000
 
+  - type: STR_IMPERIALGUARD_BASE
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_IMPERIALBASE_ASSAULTV1
+    raceWeights:
+      0:
+        STR_IGOPFOR_TIER0PLUS: 100
+    waves:
+      - ufo: STR_SMMEDIUM_SCOUT_DOUBLE
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMLARGE_SCOUT
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMABDUCTOR
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+  - type: STR_IMPERIALGUARD_BASEV2
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_IMPERIALBASE_ASSAULTV2
+    raceWeights:
+      0:
+        STR_IGOPFOR_TIER1: 100
+    waves:
+      - ufo: STR_SMMEDIUM_SCOUT_DOUBLE
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMLARGE_SCOUT
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMABDUCTOR
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+
+  - type: STR_ULTRAMARINE_BASEV0
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_UMIMPERIALBASE_ASSAULTV0
+    raceWeights:
+      0:
+        STR_SMOPFOR_TIER0: 100
+    waves:
+      - ufo: STR_SMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
   - type: STR_ULTRAMARINE_BASE
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV1  # replace with ultramarine base once done
+    siteType: STR_UMIMPERIALBASE_ASSAULTV1  # replace with ultramarine base once done
     raceWeights:
       0:
-        STR_SMOPFOR_TIER0: 100
-      2:
-        STR_SMOPFOR_TIER0: 100
-      3:
         STR_SMOPFOR_TIER0PLUS: 100
-      4:
-        STR_SMOPFOR_TIER1: 100
-      9:
-        STR_SMOPFOR_TIER2: 100
+    waves:
+      - ufo: STR_SMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+  - type: STR_BLACKTEMPLAR_BASEV0
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_BTIMPERIALBASE_ASSAULTV0  # replace with black templar base once done
+    raceWeights:
+      0:
+        STR_BTOPFOR_TIER0: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -13887,18 +13960,32 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV0  # replace with black templar base once done
+    siteType: STR_BTIMPERIALBASE_ASSAULTV1  # replace with black templar base once done
     raceWeights:
       0:
-        STR_BTOPFOR_TIER0: 100
-      2:
-        STR_BTOPFOR_TIER0: 100
-      3:
         STR_BTOPFOR_TIER0PLUS: 100
-      4:
-        STR_BTOPFOR_TIER1: 100
-      9:
-        STR_BTOPFOR_TIER2: 100
+    waves:
+      - ufo: STR_SMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+  - type: STR_SPACEWOLVES_BASEV0
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_SWIMPERIALBASE_ASSAULTV0  # replace with space wolves base once done
+    raceWeights:
+      0:
+        STR_SWOPFOR_TIER0: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -13917,18 +14004,32 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV0  # replace with space wolves base once done
+    siteType: STR_SWIMPERIALBASE_ASSAULTV1  # replace with space wolves base once done
     raceWeights:
       0:
-        STR_SWOPFOR_TIER0: 100
-      2:
-        STR_SWOPFOR_TIER0: 100
-      3:
         STR_SWOPFOR_TIER0PLUS: 100
-      4:
-        STR_SWOPFOR_TIER1: 100
-      9:
-        STR_SWOPFOR_TIER2: 100
+    waves:
+      - ufo: STR_SMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+  - type: STR_CRIMSONFIST_BASEV0
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_CFIMPERIALBASE_ASSAULTV0  # replace with crimson fist base once done
+    raceWeights:
+      0:
+        STR_CFOPFOR_TIER0: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -13947,18 +14048,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV0  # replace with crimson fist base once done
+    siteType: STR_CFIMPERIALBASE_ASSAULTV1  # replace with crimson fist base once done
     raceWeights:
       0:
-        STR_CFOPFOR_TIER0: 100
-      2:
-        STR_CFOPFOR_TIER0: 100
-      3:
         STR_CFOPFOR_TIER0PLUS: 100
-      4:
-        STR_CFOPFOR_TIER1: 100
-      9:
-        STR_CFOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -13973,22 +14066,14 @@ alienMissions:
         trajectory: P6
         timer: 5000
 
-  - type: STR_SALAMANDER_BASE
+  - type: STR_SALAMANDER_BASEV0
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_SLMIMPERIALBASE_ASSAULTV1
+    siteType: STR_SLMIMPERIALBASE_ASSAULTV0
     raceWeights:
       0:
         STR_SLMOPFOR_TIER0: 100
-      2:
-        STR_SLMOPFOR_TIER0: 100
-      3:
-        STR_SLMOPFOR_TIER0PLUS: 100
-      4:
-        STR_SLMOPFOR_TIER1: 100
-      9:
-        STR_SLMOPFOR_TIER2: 100
     waves:
       - ufo: STR_SLMLARGE_SCOUT
         count: 1
@@ -14003,22 +14088,80 @@ alienMissions:
         trajectory: P6
         timer: 5000
 
+  - type: STR_SALAMANDER_BASE
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_SLMIMPERIALBASE_ASSAULTV1
+    raceWeights:
+      0:
+        STR_SLMOPFOR_TIER0PLUS: 100
+    waves:
+      - ufo: STR_SLMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SLMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SLMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+  - type: STR_DARKANGEL_BASEV0
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_DAIMPERIALBASE_ASSAULTV0  # replace with black templar base once done
+    raceWeights:
+      0:
+        STR_DAOPFOR_TIER0: 100
+    waves:
+      - ufo: STR_SMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
   - type: STR_DARKANGEL_BASE
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV0  # replace with black templar base once done
+    siteType: STR_DAIMPERIALBASE_ASSAULTV1  # replace with black templar base once done
     raceWeights:
       0:
-        STR_DAOPFOR_TIER0: 100
-      2:
-        STR_DAOPFOR_TIER0: 100
-      3:
         STR_DAOPFOR_TIER0PLUS: 100
-      4:
-        STR_DAOPFOR_TIER1: 100
-      9:
-        STR_DAOPFOR_TIER2: 100
+    waves:
+      - ufo: STR_SMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+  - type: STR_BLOODYROSE_BASEV0
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_BRIMPERIALBASE_ASSAULTV0
+    raceWeights:
+      0:
+        STR_BLOODYROPFOR_TIER0: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14037,18 +14180,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV0
+    siteType: STR_BRIMPERIALBASE_ASSAULTV1
     raceWeights:
       0:
-        STR_BLOODYROPFOR_TIER0: 100
-      2:
-        STR_BLOODYROPFOR_TIER0: 100
-      3:
         STR_BLOODYROPFOR_TIER0PLUS: 100
-      4:
-        STR_BLOODYROPFOR_TIER1: 100
-      9:
-        STR_BLOODYROPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14063,23 +14198,36 @@ alienMissions:
         trajectory: P6
         timer: 5000
 
+  - type: STR_FIERYHEART_BASEV0
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_FHIMPERIALBASE_ASSAULTV0
+    raceWeights:
+      0:
+        STR_FIERYHOPFOR_TIER0: 100
+    waves:
+      - ufo: STR_SMLARGE_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_SMBATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
 
   - type: STR_FIERYHEART_BASE
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV0
+    siteType: STR_FHIMPERIALBASE_ASSAULTV1
     raceWeights:
       0:
-        STR_FIERYHOPFOR_TIER0: 100
-      2:
-        STR_FIERYHOPFOR_TIER0: 100
-      3:
         STR_FIERYHOPFOR_TIER0PLUS: 100
-      4:
-        STR_FIERYHOPFOR_TIER1: 100
-      9:
-        STR_FIERYHOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14100,14 +14248,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV2  # replace with ultramarine base once done
+    siteType: STR_UMIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_SMOPFOR_TIER0PLUS: 100
-      1:
         STR_SMOPFOR_TIER1: 100
-      4:
-        STR_SMOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14126,14 +14270,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV2  # replace with black templar base once done
+    siteType: STR_BTIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_BTOPFOR_TIER0PLUS: 100
-      1:
         STR_BTOPFOR_TIER1: 100
-      4:
-        STR_BTOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14152,14 +14292,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV2  # replace with space wolves base once done
+    siteType: STR_SWIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_SWOPFOR_TIER0PLUS: 100
-      1:
         STR_SWOPFOR_TIER1: 100
-      4:
-        STR_SWOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14178,14 +14314,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV2  # replace with crimson fist base once done
+    siteType: STR_CFIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_CFOPFOR_TIER0PLUS: 100
-      1:
         STR_CFOPFOR_TIER1: 100
-      4:
-        STR_CFOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14207,11 +14339,7 @@ alienMissions:
     siteType: STR_SLMIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_SLMOPFOR_TIER0PLUS: 100
-      1:
         STR_SLMOPFOR_TIER1: 100
-      4:
-        STR_SLMOPFOR_TIER2: 100
     waves:
       - ufo: STR_SLMLARGE_SCOUT
         count: 1
@@ -14230,14 +14358,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV2  # replace with black templar base once done
+    siteType: STR_DAIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_DAOPFOR_TIER0PLUS: 100
-      1:
         STR_DAOPFOR_TIER1: 100
-      4:
-        STR_DAOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14256,14 +14380,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV2
+    siteType: STR_BRIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_BLOODYROPFOR_TIER0PLUS: 100
-      1:
         STR_BLOODYROPFOR_TIER1: 100
-      4:
-        STR_BLOODYROPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -14282,14 +14402,10 @@ alienMissions:
     points: 50
     objective: 2
     spawnZone: 4  # Mission zone for alien bases
-    siteType: STR_IMPERIALBASE_ASSAULTV2
+    siteType: STR_FHIMPERIALBASE_ASSAULTV2
     raceWeights:
       0:
-        STR_FIERYHOPFOR_TIER0PLUS: 100
-      1:
         STR_FIERYHOPFOR_TIER1: 100
-      4:
-        STR_FIERYHOPFOR_TIER2: 100
     waves:
       - ufo: STR_SMLARGE_SCOUT
         count: 1
@@ -17278,13 +17394,29 @@ alienMissions:
     retaliationOdds: 0
     raceWeights: {}
     operationType: 1
-    operationBaseType: STR_IMPERIALBASE_ASSAULTV0
+    operationBaseType: STR_IMPERIALBASE_ASSAULTV1
     objective: 2
     spawnZone: 4
     siteType: STR_IMPERIALBASE_ASSAULTV1
     points: 0
     waves:
       - ufo: STR_IMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_NEWIMPERIALGUARD_BASEV2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_IMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_IMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_IMPERIALBASE_ASSAULTV2
         count: 1
         timer: 0
         objective: true
@@ -17301,6 +17433,134 @@ alienMissions:
     points: 0
     waves:
       - ufo: STR_IMPERIALBASE_ASSAULTV2
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_UMNEWSPACEMARINE_BASE
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_UMIMPERIALBASE_ASSAULTV1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_UMIMPERIALBASE_ASSAULTV1
+    points: 0
+    waves:
+      - ufo: STR_UMIMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_UMNEWSPACEMARINE_BASE2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_UMIMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_UMIMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_UMIMPERIALBASE_ASSAULTV2
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_BTNEWSPACEMARINE_BASE
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_BTIMPERIALBASE_ASSAULTV1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_BTIMPERIALBASE_ASSAULTV1
+    points: 0
+    waves:
+      - ufo: STR_BTIMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_BTNEWSPACEMARINE_BASE2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_BTIMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_BTIMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_BTIMPERIALBASE_ASSAULTV2
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_SWNEWSPACEMARINE_BASE
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_SWIMPERIALBASE_ASSAULTV1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_SWIMPERIALBASE_ASSAULTV1
+    points: 0
+    waves:
+      - ufo: STR_SWIMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_SWNEWSPACEMARINE_BASE2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_SWIMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_SWIMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_SWIMPERIALBASE_ASSAULTV2
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_CFNEWSPACEMARINE_BASE
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_CFIMPERIALBASE_ASSAULTV1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_CFIMPERIALBASE_ASSAULTV1
+    points: 0
+    waves:
+      - ufo: STR_CFIMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_CFNEWSPACEMARINE_BASE2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_CFIMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_CFIMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_CFIMPERIALBASE_ASSAULTV2
         count: 1
         timer: 0
         objective: true
@@ -17334,6 +17594,102 @@ alienMissions:
     points: 0
     waves:
       - ufo: STR_SLMIMPERIALBASE_ASSAULTV2
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_DANEWSPACEMARINE_BASE
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_DAIMPERIALBASE_ASSAULTV1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_DAIMPERIALBASE_ASSAULTV1
+    points: 0
+    waves:
+      - ufo: STR_DAIMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_DANEWSPACEMARINE_BASE2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_DAIMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_DAIMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_DAIMPERIALBASE_ASSAULTV2
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_BRNEWSPACEMARINE_BASE
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_BRIMPERIALBASE_ASSAULTV1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_BRIMPERIALBASE_ASSAULTV1
+    points: 0
+    waves:
+      - ufo: STR_BRIMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_BRNEWSPACEMARINE_BASE2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_BRIMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_BRIMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_BRIMPERIALBASE_ASSAULTV2
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_FHNEWSPACEMARINE_BASE
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_FHIMPERIALBASE_ASSAULTV1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_FHIMPERIALBASE_ASSAULTV1
+    points: 0
+    waves:
+      - ufo: STR_FHIMPERIALBASE_ASSAULTV1
+        count: 1
+        timer: 0
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  - type: STR_FHNEWSPACEMARINE_BASE2
+    retaliationOdds: 0
+    raceWeights: {}
+    operationType: 1
+    operationBaseType: STR_FHIMPERIALBASE_ASSAULTV2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_FHIMPERIALBASE_ASSAULTV2
+    points: 0
+    waves:
+      - ufo: STR_FHIMPERIALBASE_ASSAULTV2
         count: 1
         timer: 0
         objective: true
