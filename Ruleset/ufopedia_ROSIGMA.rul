@@ -1818,6 +1818,14 @@ ufopaedia:
     requires:
       - STR_RITUAL_BLESSING
 
+  - id: STR_FINAL_RITUALEREBUS
+    type_id: 10
+    section: STR_ALIEN_RESEARCH_UC
+    image_id: WBCHAOSBOOK2.SPK
+    text: STR_FINAL_RITUAL_CODEX
+    requires:
+      - STR_FINAL_RITUALEREBUS
+
   - id: STR_FINAL_RITUAL
     type_id: 10
     section: STR_ALIEN_RESEARCH_UC
@@ -4389,6 +4397,15 @@ ufopaedia:
     text: STR_THUNDERHAWK_UFOPEDIA #placeholder
 
   - id: STR_WBWARSHIPFINAL
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBHOLYWARSHIPFINALEREBUS
+    image_id: WBWARSHIPCODEX.SPK
+    text: STR_WBWARSHIPFINAL_UFOPEDIA
+
+  - id: STR_WBWARSHIPFINALKR
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:

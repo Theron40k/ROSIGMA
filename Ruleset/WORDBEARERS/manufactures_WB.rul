@@ -272,7 +272,7 @@ manufacture:
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_BOOK_EREBUS
-      - STR_WBHOLYWARSHIPFINAL
+      - STR_WBHOLYWARSHIPFINALEREBUS
     space: 40
     time: 30000
     cost: 1000000
@@ -697,6 +697,7 @@ manufacture:
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_WBMISSION9DONE
+      - STR_NOT_WORDBEARERS  # so this manufacture does not appear i dont delete it to avoid breaking some save
     space: 1
     time: 100
     cost: 500
