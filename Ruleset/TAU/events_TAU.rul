@@ -11,9 +11,10 @@ adhocScripts:
       0:
         STR_EVE_OF_DESTRUCTION_MISSION_GV: 33
         STR_COUNTER_REDEMPTION_MISSION_GV: 33
-        STR_HIVE_TERROR_MISSION_GV: 33
+        STR_REDEMPTIONIST_HIVE_TERROR_MISSION_GV: 33
     startDelay: 10040  # 1 week
     randomDelay: 4320 # 3 more days
+    targetBaseOdds: 100
     adhocMissionScriptTags: ["redemptionist_intro"]
 
   - type: pipeline  # for Guevesa
@@ -26,6 +27,7 @@ adhocScripts:
     useTable: false
     startDelay: 20080  # 2-3 weeks
     randomDelay: 10040  #
+    targetBaseOdds: 100
     adhocMissionScriptTags: ["pipeline"]
 
   - type: linebacker
@@ -34,6 +36,7 @@ adhocScripts:
         STR_LINEBACKER_MISSION_GV: 100
     startDelay: 40160  # 4-5 weeks
     randomDelay: 10040  #
+    targetBaseOdds: 100
     adhocMissionScriptTags: ["linebacker"]
 
   - type: argentDawn
@@ -42,6 +45,7 @@ adhocScripts:
         STR_ARGENT_DAWN_MISSION_GV: 100
     startDelay: 60240 # 6-7 weeks
     randomDelay: 10040
+    targetBaseOdds: 100
     adhocMissionScriptTags: ["argentDawn"]
 
 ### starter base missions
@@ -93,14 +97,6 @@ adhocScripts:
 #        STR_BREAKTHROUGH_GV: 100
 #    adhocMissionScriptTags: ["breakthroughGV"]
 
-
-    # fine to spawn this on top of the player
-    # regionWeights:
-    #  0:
-    #    REGION_HULK_SITES: 100
-
-
-
 events:
   - name: STR_GUEVESA_STRATEGY_MILITIA_EVENT_GV
     description: STR_GUEVESA_STRATEGY_MILITIA_EVENT_DESCRIPTION_GV
@@ -108,21 +104,20 @@ events:
     adhocMissionScriptTags: ["redemptionist_intro", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
     spawnedPersonType: STR_MILITIA_GV
+    spawnedCraftType: STR_ARMORED_TRUCKS_GV
     everyMultiItemList:
-      STR_CHIMERA_TOKEN: 1
       STR_FLAMETHROWER: 5
       STR_FLAMETHROWER_CLIP: 15
       STR_SHOTGUN: 10
       STR_SHOTGUN_SHELLS: 20
       STR_STUN_SHELLS: 10
-      STR_STUB_RIFLE: 20
-      STR_STUB_GUN_AMMO: 40
-      # STR_LASER_RIFLEG: 10
-      # STR_LASGUN_CLIP: 20
-      # STR_LASER_PISTOLG: 10
-      # STR_LASPISTOL_CLIP: 20
-      # STR_CHAINSWORD: 10
-      # STR_KNIF: 20
+      STR_STUB_RIFLE: 5
+      STR_STUB_GUN_AMMO: 15
+      STR_LASER_RIFLEG: 5
+      STR_LASGUN_CLIP: 15
+      STR_LASER_PISTOLG: 5
+      STR_LASPISTOL_CLIP: 15
+      STR_CHAINSWORD: 5
       STR_GRENADE: 10
       STR_KRAK_GRENADE: 10
       STR_TRAUMA_PACK: 4
@@ -137,9 +132,11 @@ events:
     description: STR_RIDE_THE_LIGHTNING_EVENT_DESCRIPTION_GV
     background: GuardArmorBG.SCR
     interruptResearch: STR_NOT_TAU_GUEVESA_GV
+    spawnedCraftType: STR_GUEVESA_LIGHTNING_GV
+    spawnedPersonType: STR_PILOT_GUARD
+    spawnedPersons: 1
     timer: 5700
     everyMultiItemList:
-      STR_LIGHTNING_TOKEN: 1
       STR_AVALANCHE_LAUNCHER: 2
       STR_AVALANCHE_MISSILES: 16
 

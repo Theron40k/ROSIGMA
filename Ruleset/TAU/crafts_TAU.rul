@@ -55,7 +55,7 @@ crafts:
     takeoffSound: {mod: 40k, index: 56} #TURBINE SOUND
     selectSound: [{mod: 40k, index: 70}, {mod: 40k, index: 71}, {mod: 40k, index: 72}, {mod: 40k, index: 73}]  #INTERCEPTOR SOUND
     requires:
-      - STR_BASIC_GUEVESA_INTERCEPTORS
+      - STR_TANKERS_DELIGHT_GV
     requiresBuyBaseFunc: [HANGAR]
     marker: 40
     maxSkinIndex: 0 # default 0
@@ -106,7 +106,7 @@ crafts:
     marker: 30
     requiresBuyBaseFunc: [HANGAR]
     requires:
-      - STR_GUEVESA_STRATEGY_MILITIA_GV
+      - STR_TAU_GUEVESA_GV
     sprite: 1715
     fuelMax: 1500
     damageMax: 800
@@ -168,81 +168,6 @@ crafts:
       - [3, 2, 1, 0]  # truck2
     listOrder: 800
     spacecraft: false
-
-
-# ### TODO: Add hull bolters
-#   - type: STR_CHIMERAPD_GV
-#     # costBuy: 900000
-#     costRent: 400000
-#     costSell: 400000
-#     takeoffSound: {mod: 40k, index: 63} #TANKMOVE SOUND
-#     selectSound: [{mod: 40k, index: 65}, {mod: 40k, index: 66}, {mod: 40k, index: 67}, {mod: 40k, index: 68}]  #HEAVY TRANSPORT SOUND
-#     marker: 30
-#     requiresBuyBaseFunc: [HANGAR]
-#     requires:
-#       - STR_GUEVESA_STRATEGY_MILITIA_GV
-#     sprite: 548
-#     fuelMax: 1000
-#     damageMax: 1000
-#     speedMax: 150  # was 90
-#     repairRate: 10
-#     vehicles: 999
-#     maxLargeUnits: 1
-#     maxAltitude: 1
-#     accel: 2
-#     weapons: 1
-#     weaponTypes:
-#       - 3
-#     weaponStrings:
-#       - STR_ANTI_AIR_WEAPONS
-#     soldiers: 24
-#     refuelRate: 1000
-#     transferTime: 96
-#     score: 250
-#     battlescapeTerrainData:
-#       name: CHIMERAPD
-#       mapDataSets:
-#         - BLANKS
-#         - CHIMERAPD
-#       mapBlocks:
-#         - name: CHIMERAPD # CHIMERA
-#           width: 10
-#           length: 20
-#           items:
-#             STR_GORGON_HEAVY_STUBBER_LEFT_SPAWNER:
-#               - [6, 11, 1]
-#               - [2, 4, 1]
-#               - [1, 16, 1]
-#           fuseTimers:
-#             STR_GORGON_HEAVY_STUBBER_LEFT_SPAWNER: [0, 0]
-#     craftInventoryTile: [1, 2, 0] #[5, 4, 0]
-#     deployment:
-#       - [1, 2, 0, 0]
-#       - [2, 2, 0, 0]
-#       - [1, 3, 0, 0]
-#       - [2, 3, 0, 0]
-#       - [1, 14, 0, 0]
-#       - [2, 14, 0, 0]
-#       - [1, 15, 0, 0]
-#       - [2, 15, 0, 0]
-#       - [6, 9, 0, 0]
-#       - [7, 9, 0, 0]
-#       - [6, 10, 0, 0]
-#       - [7, 10, 0, 0]
-#       - [2, 4, 0, 0]
-#       - [3, 4, 0, 0]
-#       - [2, 5, 0, 0]
-#       - [3, 5, 0, 0]
-#       - [1, 16, 0, 0]
-#       - [2, 16, 0, 0]
-#       - [1, 17, 0, 0]
-#       - [2, 17, 0, 0]
-#       - [6, 10, 0, 0]
-#       - [7, 10, 0, 0]
-#       - [6, 11, 0, 0]
-#       - [7, 11, 0, 0]
-#     listOrder: 800
-#     spacecraft: true
 
   - type: STR_DEVILFISH_GV
     costBuy: 1200000
@@ -319,9 +244,12 @@ crafts:
     listOrder: 800
     spacecraft: true
 
-  - type: STR_GUEVCHIMERAUP  # uparmored chimera
+  - type: STR_CHIMERAGV  # uparmored chimera
     requires:
-      - STR_GUEVESA_STRATEGY_MILITIA_GV  # that is the uparmored version of chimera so you will have to adjust your requires accordingly
+      - STR_TANKERS_DELIGHT_GV  # that is the uparmored version of chimera so you will have to adjust your requires accordingly
+    costBuy: 900000
+    costRent: 400000
+    costSell: 400000
     fuelMax: 1400
     speedMax: 150  # was 90
     repairRate: 10  # was 1
@@ -340,17 +268,17 @@ crafts:
           width: 10
           length: 20
           items:
-            STR_GUEVCHIMERA_BOLTTURRET_SPAWNER:
+            STR_CHIMERAGV_BOLTTURRET_SPAWNER:
               - [1, 5, 1]
               - [7, 9, 1]
               - [2, 16, 1]
-            STR_GUEVCHIMERA_HULLGUN_SPAWNER:
+            STR_CHIMERAGV_HULLGUN_SPAWNER:
               - [8, 11, 0]
               - [2, 7, 0]
               - [3, 18, 0]
           fuseTimers:
-            STR_GUEVCHIMERA_BOLTTURRET_SPAWNER: [0, 0]
-            STR_GUEVCHIMERA_HULLGUN_SPAWNER: [0, 0]
+            STR_CHIMERAGV_BOLTTURRET_SPAWNER: [0, 0]
+            STR_CHIMERAGV_HULLGUN_SPAWNER: [0, 0]
     fixedWeapons: ["STR_CRAFT_MULTILASER_UC"]
     deployment:
       - [1, 3, 0, 0]
@@ -380,6 +308,25 @@ crafts:
     vehicles: 999
     soldiers: 24  # reinstate the old count
     maxLargeUnits: 3  # 1 for each APC
+    takeoffSound: 63 #TANKMOVE SOUND
+    selectSound: [65, 66, 67, 68]  #HEAVY TRANSPORT SOUND
+    marker: 30
+    requiresBuyBaseFunc: [HANGAR]
+    sprite: 1487
+    skinSprites: [1488,1500] # default empty, contains all sprites except for the first (index zero)
+    damageMax: 1000
+    maxAltitude: 1
+    accel: 2
+    weapons: 1
+    weaponTypes:
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+    refuelRate: 1000
+    transferTime: 96
+    score: 250
+    listOrder: 800
+    spacecraft: true
 
 
 extraSprites:
