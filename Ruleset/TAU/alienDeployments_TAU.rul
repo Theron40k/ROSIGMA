@@ -56,20 +56,21 @@ alienDeployments:
     width: 50
     length: 80
     height: 9
-    duration: [168, 168]
+    duration: [48, 72]
     despawnPenalty: 500
+    markerName: STR_EVE_OF_DESTRUCTION_GV
     alert: STR_EVE_OF_DESTRUCTION_GV_ALERT
     alertDescription: STR_EVE_OF_DESTRUCTION_GV_ALERT_DESCRIPTION
-    alertBackground: GovernorBG.SCR
-    objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
-    objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
+    alertBackground: UnrestBG.SCR
     abortPenalty: 100
     briefing:
       showCraft: false
       showTarget: false
+      title: STR_EVE_OF_DESTRUCTION_GV
+      desc: STR_EVE_OF_DESTRUCTION_GV_BRIEFING
 
-### small redemptionist church used as an intro mission
-  - type: STR_REDEMPTIONISTBASE_L1_GV
+### small redemptionist church also used as an intro mission
+  - type: STR_COUNTER_REDEMPTION_GV
     terrains:
       - IMP_MUNDAINDUSTRIALURBANDIO
     script: REDEMPTIONIST_BASE_LEVEL_1
@@ -115,6 +116,65 @@ alienDeployments:
     length: 60
     height: 9
     despawnPenalty: 500
+    duration: [48, 48]
+    markerName: STR_COUNTER_REDEMPTION_GV
+    alert: STR_COUNTER_REDEMPTION_GV_ALERT
+    alertDescription: STR_COUNTER_REDEMPTION_GV_ALERT_DESCRIPTION
+    alertBackground: UnrestBG.SCR
+    abortPenalty: 100
+    briefing:
+      showCraft: false
+      showTarget: false
+      title: STR_COUNTER_REDEMPTION_GV
+      desc: STR_COUNTER_REDEMPTION_GV_BRIEFING
+
+### small redemptionist church also used as an intro mission
+  - &STR_REDEMPTIONIST_CHURCHES
+    type: STR_REDEMPTIONISTBASE_L1_GV
+    terrains:
+      - IMP_MUNDAINDUSTRIALURBANDIO
+    script: REDEMPTIONIST_BASE_LEVEL_1
+    randomRace: [STR_REDEMPTIONIST_START_GV]
+    data: &cultistBaseLevel1
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3  # 2
+        highQty: 3  # 4
+        dQty: 4
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3  # 2
+        highQty: 3  # 4
+        dQty: 4
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 3
+        highQty: 4  # 5
+        dQty: 5
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 12  # 6
+        highQty: 12  # 12
+        dQty: 5
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 60
+    length: 60
+    height: 9
     # alienBaseUpgrades:
     #   0:
     #     STR_CULTIST_BASE_LEVEL_1: 100
@@ -125,16 +185,75 @@ alienDeployments:
     #     STR_CULTIST_BASE_LEVEL_2: 50
     #   3:
     #     STR_CULTIST_BASE_LEVEL_2: 100
-    objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
-    objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
-    abortPenalty: 100
+    # objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
+    # objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
+    markerName: STR_REDEMPTIONISTBASE_L1_GV
+    briefing:
+      showCraft: false
+      showTarget: false
+
+  - type: STR_EPIOUSION_GV
+    forcePercentageOutsideUfo: true
+    data:
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 2
+        lowQty: 2
+        highQty: 2 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 4
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 5
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 6
+        lowQty: 3 #1
+        highQty: 3 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 7
+        lowQty: 3 #1
+        highQty: 3 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+    width: 60
+    length: 60
+    height: 9
+    terrains:
+      - ACULTA
+    script: EPIOUSION_SCRIPT
+    duration: [72, 72]
+    alert: STR_EPIOUSION_GV_ALERT
+    alertDescription: STR_EPIOUSION_GV_ALERT_DESCRIPTION
+    alertBackground: UnrestBG.SCR
     briefing:
       showCraft: false
       showTarget: false
 
 
+
   - type: STR_REDEMPTIONISTBASE_L2_GV
-    #refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
     script: IMP_TEMPLE
     randomRace: [STR_REDEMPTIONIST_START_GV]
     terrains:
@@ -200,8 +319,8 @@ alienDeployments:
     width: 60
     length: 60
     height: 10
-    objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
-    objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
+    # objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
+    # objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
     abortPenalty: 100
     briefing:
       showCraft: false
@@ -274,16 +393,22 @@ alienDeployments:
     terrains:
       - HIVE
     script: HALEA_HIVE_SCRIPT
-    objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
-    objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
+    # objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
+    # objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
     despawnPenalty: 500
     abortPenalty: 100
     shade: 7
-    markerName: STR_ALIEN_BASE
+    duration: [48, 48]
+    markerName: STR_REDEMPTIONIST_HIVE_TERROR_GV
     enviroEffects: STR_INSIDE_ENVIRO
     briefing:
+      title: STR_REDEMPTIONIST_HIVE_TERROR_GV
+      desc: STR_REDEMPTIONIST_HIVE_TERROR_GV_BRIEFING
       showCraft: false
       showTarget: false
+    alert: STR_REDEMPTIONIST_HIVE_TERROR_GV_ALERT
+    alertDescription: STR_REDEMPTIONIST_HIVE_TERROR_GV_ALERT_DESCRIPTION
+    alertBackground: UnrestBG.SCR
 
 ### Assault bunker held by Prince Bishop troops
   - type: STR_BELROSE_ASSAULT_SITE_GV
@@ -349,7 +474,7 @@ alienDeployments:
     alert: STR_BELROSE_ASSAULT_SITE_GV_ALERT
     alertBackground: REGIMENT_INSPECTION.SCR
     alertDescription: STR_BELROSE_ASSAULT_SITE_GV_ALERT
-    duration: [168, 168]
+    duration: [72, 72]
     despawnPenalty: 400
     markerName: STR_BELROSE_ASSAULT_SITE_GV
 
@@ -1564,69 +1689,8 @@ alienDeployments:
     width: 50
     length: 50
     height: 9
-
-  - type: STR_EPIOUSION_GV
-    forcePercentageOutsideUfo: true
-    data:
-      - alienRank: 1
-        lowQty: 2
-        highQty: 2
-        dQty: 2
-        percentageOutsideUfo: 100
-        itemSets: [[], [], []]
-      - alienRank: 2
-        lowQty: 2
-        highQty: 2 #3
-        dQty: 2 #1
-        percentageOutsideUfo: 100
-        itemSets: [[], [], []]
-      - alienRank: 3
-        lowQty: 3
-        highQty: 3 #3
-        dQty: 2 #1
-        percentageOutsideUfo: 100
-        itemSets: [[], [], []]
-      - alienRank: 4
-        lowQty: 3
-        highQty: 3 #3
-        dQty: 2 #1
-        percentageOutsideUfo: 100
-        itemSets: [[], [], []]
-      - alienRank: 5
-        lowQty: 3
-        highQty: 3 #3
-        dQty: 2 #1
-        percentageOutsideUfo: 100
-        itemSets: [[], [], []]
-      - alienRank: 6
-        lowQty: 3 #1
-        highQty: 3 #3
-        dQty: 2
-        percentageOutsideUfo: 100
-        itemSets: [[], [], []]
-      - alienRank: 7
-        lowQty: 3 #1
-        highQty: 3 #3
-        dQty: 2
-        percentageOutsideUfo: 100
-        itemSets: [[], [], []]
-    width: 60
-    length: 60
-    height: 9
-    terrains:
-      - ACULTA
-    script: EPIOUSION_SCRIPT
-    duration: [168, 168]
-    alert: STR_EPIOUSION_GV_ALERT
-    alertDescription: STR_EPIOUSION_GV_ALERT_DESCRIPTION
-    alertBackground: GovernorBG.SCR
-    briefing:
-      showCraft: false
-      showTarget: false
-
   # - type: STR_MAKE_LEMANADE_GV
   #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
   #   customUfo: STR_GUARD_LEMAN_RUSS_FRIENDLY_GV
   #   civiliansByType:
   #     STR_GUARDS_M_LV1_AI: 4
-

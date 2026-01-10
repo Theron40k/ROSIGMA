@@ -1015,8 +1015,8 @@ research:
   - name: STR_NOT_WORDBEARERS  # (Not Word Bearers Strategy)
 
   - name: STR_NOT_ADEPTUS_TERRA  # (Not Adeptus Terra)
-  - delete: STR_NOT_ARBITES
-  - name: STR_NOT_ARBITES  # (Not Arbites)
+  - delete: STR_NOT_THE_IMPERIAL_LAW
+  - name: STR_NOT_THE_IMPERIAL_LAW  # (Not The Imperial Law)
   - name: STR_NOT_CHAOSCULT  # (Not Chaos Cult)
   - name: STR_NOT_GREENEST_ORKZ  # (Not Greenest Orkz)
 
@@ -1284,7 +1284,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE2
@@ -1320,7 +1319,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE1
@@ -1355,7 +1353,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_APOTHECARY
@@ -1389,7 +1386,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE2
@@ -1423,7 +1419,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE1
@@ -1466,7 +1461,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_CRATED_SWRHINOS
@@ -1581,7 +1575,6 @@ research:
       #- STR_HARDER_MISSIONS  # given by a further WB research so not now
       - STR_LIGHT_BOLTERS
       - STR_IMPERIUM_RESEARCH
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       #- STR_THUNDERHAWKTYPE1
@@ -1604,7 +1597,6 @@ research:
       #- STR_HARDER_MISSIONS  # given by a further WB research so not now
       - STR_LIGHT_BOLTERS
       - STR_IMPERIUM_RESEARCH
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       #- STR_THUNDERHAWKTYPE1
@@ -1760,7 +1752,6 @@ research:
       - STR_GENERALLOCK
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_XIPHON
       - STR_INQ_STORMTROOPER_REQUISITION
@@ -1806,7 +1797,6 @@ research:
       - STR_MARINES_AND_DEATHWATCH
       - STR_CORVUS_RESEARCH  # instead of STR_DEATHWATCH_AND_ADEPTAS setup
       - STR_LASER_WEAPONS
-      - STR_MOTION_SCANNER
       - STR_NOT_NORMAL_INQUISITION
     getOneFree:
       - STR_PERSONAL_ARMOR
@@ -1836,7 +1826,6 @@ research:
     getOneFree:
       - STR_HB_DEP1
     unlocks:
-      - STR_MOTION_SCANNER
       - STR_APOTHECARY_GK
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
@@ -1885,7 +1874,6 @@ research:
     lookup: STR_CHOSEN_ASSASSINORUM
     unlocks:
       - STR_EXITUS_AMMO_PREREQUISITE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
@@ -1970,7 +1958,6 @@ research:
       - STR_ARBITES
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_GUARD_AND_ARBITES
       - STR_LIGHT_BOLTERS
@@ -1984,7 +1971,7 @@ research:
       - STR_AWARD_PERSONAL_SHIELD
     disables:
       - STR_CHAOS_STRATEGY_ARBITES
-      - STR_NOT_ARBITES
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_HB_DEP1
       - STR_GREENEST_ORKZ
       - STR_GUEVESA_STRATEGY_MILITIA_GV
@@ -2037,7 +2024,6 @@ research:
       - STR_DEFAULT_CAMPAIGN
     unlocks:
       - STR_CHAOS_STRATEGY
-      - STR_MOTION_SCANNER
       - STR_GUARD_AND_ARBITES
       - STR_IMPERIUM_RESEARCH
       - STR_HEAVY_WEAPONS_IG
@@ -2063,7 +2049,6 @@ research:
     lookup: STR_CHOSEN_ORKZ
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_IMPERIAL_GUARD_BASIC_TRAINING # da greenest knows 'ow ta train da boyz.
       - STR_LASER_WEAPONS
@@ -2117,7 +2102,6 @@ research:
       - STR_DEATHWATCH_AND_ADEPTAS
       - STR_PRIMARIS_AND_ADEPTAS
       - STR_NOT_PRIMARIS
-      # - STR_MOTION_SCANNER
       # - STR_HOSPITALLER
       # - STR_LASER_WEAPONS
       - STR_MARINES_AND_ADEPTAS
@@ -2146,7 +2130,6 @@ research:
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_MEDICAE_RESEARCH  # see research40k.rul
       - STR_PHOSPHOR_GRENADE
-      - STR_MOTION_SCANNER
       - STR_ADEPTAS_REPENTIA_RESEARCH  # direct recruitment
       - STR_ADEPTAS_REPENTIA_SUPERIOR_RESEARCH  # Repentia Superior research
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
@@ -2179,7 +2162,6 @@ research:
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_MEDICAE_RESEARCH  # see research40k.rul
       - STR_PHOSPHOR_GRENADE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_ADEPTAS_NOVICE_RESEARCH
       - STR_ADEPTAS_NOVITIATE_SUPERIOR_RESEARCH
@@ -2217,7 +2199,6 @@ research:
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_LASER_WEAPONS
       - STR_MELTAGUN_TECH
-      - STR_MOTION_SCANNER
       - STR_ADEPTAS_NOVICE_RESEARCH
       - STR_CORVUS_RESEARCH
       - STR_FAITHFUL_ARMORY
@@ -2259,7 +2240,6 @@ research:
       - STR_PHOSPHOR_GRENADE
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_HARDER_MISSIONS
-      - STR_MOTION_SCANNER
       - STR_MELTAGUN_TECH  # Meltagun Tech
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
@@ -2319,7 +2299,6 @@ research:
     lookup: STR_CHOSEN_IGS
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       #      - STR_GUARD_AND_ARBITES
       #      - STR_GUARD_SUPORT
@@ -2359,7 +2338,6 @@ research:
       - STR_STORMTROOPER_REQUISITION
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER
       - STR_CARAPACE_ARMOR_IG
@@ -2399,7 +2377,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_GUARD_SUPORT  # added to enable medic armors
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER
       - STR_REGIMENT_OFFICERS
@@ -2435,7 +2412,6 @@ research:
       - STR_DEFAULT_CAMPAIGN
       - STR_STEELLEGION_GUARDSMEN
       - STR_SQUAT_GUARDSMEN  # Steel Legion link
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2469,7 +2445,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_KRIEG_GUARDSMEN #Already Exists
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
@@ -2506,7 +2481,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_KRIEG_GUARDSMEN #Already Exists
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
@@ -5963,16 +5937,13 @@ research:
       - STR_HIGHTIER_PREREQ
 
 # Catachan Missions and Progression
-  - name: STR_CATACHAN_GENLOCK  # Catachans
-    dependencies:
-      - STR_GENERALLOCK
   - name: STR_CATACHAN_GEN  # Contact Catachans
     cost: 50
     points: 10
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_CHAPTER_PURITY
-      - STR_CATACHAN_GENLOCK
+      - STR_MOTION_SCANNER
   - name: STR_CATACHAN_REQ  # Request Catachans Cooperation
     cost: 70
     points: 10
@@ -8331,7 +8302,7 @@ research:
     points: 20
     dependencies:
       - STR_HIGHTIER_PREREQ
-      - STR_NOT_ARBITES
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_GUARD
       - STR_NOT_CHAOSCULT
 
@@ -9622,9 +9593,7 @@ research:
     cost: 180
     points: 20
     dependencies:
-      - STR_GENERALLOCK
-    unlocks:
-      - STR_CATACHAN_GENLOCK
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
 
 ## Space Marines #ITEMS.SM#
 ### Assault Strategy #ITEMS.SM.ASS#
