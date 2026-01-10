@@ -1643,3 +1643,116 @@ terrains:
         width: 10
         length: 10
         groups: 13
+
+
+  - name: ACULTA_CIVS          #GOTHIC NORMAL   BOMBARDMENT DONE 21
+    enviroEffects: STR_FOREST_ENVIRO
+    script: GOTHIC
+    mapDataSets:
+      - BLANKS
+      - GOTHIC
+      - ACHURCH
+      - ACHURCH2
+      - ACHURCH3
+      - AGROUND
+      - ACHURCH4
+    mapBlocks:
+      - name: AULTA00
+        width: 10
+        length: 10
+        groups: 1
+      - name: AULTA01
+        width: 10
+        length: 10
+        items:
+          STR_CIVILIAN_M0_SPAWNER:
+            - [3, 4, 0]
+            - [1, 5, 0]
+            - [5, 7, 0]
+          STR_CIVILIAN_M1_SPAWNER:
+            - [2, 8, 0]
+            - [7, 3, 0]
+            - [4, 9, 0]
+          STR_CIVILIAN_F0_SPAWNER:
+            - [6, 6, 0]
+            - [0, 1, 0]
+            - [9, 7, 0]
+          STR_CIVILIAN_F1_SPAWNER:
+            - [2, 0, 0]
+            - [9, 2, 0]
+            - [5, 1, 0]
+        fuseTimers:
+          STR_CIVILIAN_M0_SPAWNER: [0, 0]
+          STR_CIVILIAN_M1_SPAWNER: [0, 0]
+          STR_CIVILIAN_F0_SPAWNER: [0, 0]
+          STR_CIVILIAN_F1_SPAWNER: [0, 0]
+      - name: AULTA02
+        width: 10
+        length: 10
+      - name: AULTA03
+        width: 10
+        length: 10
+      - name: AULTA04
+        width: 10
+        length: 10
+      - name: AULTA05
+        width: 10
+        length: 10
+      - name: AULTA06
+        width: 10
+        length: 10
+      - name: AULTA07
+        width: 10
+        length: 10
+        groups: 1
+      - name: AULTA08
+        width: 10
+        length: 10
+      - name: AULTA09
+        width: 10
+        length: 10
+      - name: AULTA10
+        width: 10
+        length: 10
+      - name: AULTA11
+        width: 10
+        length: 10
+        groups: 1
+      - name: AULTA12
+        width: 10
+        length: 10
+      - name: AULTA13
+        width: 10
+        length: 10
+      - name: AULTA14
+        width: 10
+        length: 10
+      - name: AULTA15
+        width: 10
+        length: 10
+      - name: AULTA16
+        width: 10
+        length: 10
+      - name: AULTA17
+        width: 10
+        length: 10
+      - name: AULTA18
+        width: 10
+        length: 10
+      - name: AULTA19_2X2P
+        width: 20
+        length: 20
+        groups: [11]
+      - name: AULTA20_3X3P
+        width: 30
+        length: 30
+        groups: [12]
+      - name: AULTA21BOMB  #21
+        width: 10
+        length: 10
+        items:
+          STR_BOMBARDMENT:
+            - [4, 4, 0]
+        fuseTimers:
+          STR_BOMBARDMENT: [-2, -2]
+        groups: [70]
