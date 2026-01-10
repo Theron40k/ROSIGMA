@@ -285,8 +285,7 @@ alienDeployments:
       showCraft: false
       showTarget: false
 
-  # for chaos assault imperial outpost
-
+### Assault bunker held by Prince Bishop troops
   - type: STR_BELROSE_ASSAULT_SITE_GV
     script: BELROSE_ASSAULT_SITE
     briefing:
@@ -341,7 +340,7 @@ alienDeployments:
         dQty: 4
         percentageOutsideUfo: 80
         itemSets: *emptyItemSets
-    width: 50
+    width: 60
     length: 50
     height: 9
     cheatTurn: 0
@@ -1566,7 +1565,64 @@ alienDeployments:
     length: 50
     height: 9
 
-
+  - type: STR_EPIOUSION_GV
+    forcePercentageOutsideUfo: true
+    data:
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 2
+        lowQty: 2
+        highQty: 2 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 4
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 5
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 6
+        lowQty: 3 #1
+        highQty: 3 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 7
+        lowQty: 3 #1
+        highQty: 3 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+    width: 60
+    length: 60
+    height: 9
+    terrains:
+      - ACULTA
+    script: EPIOUSION_SCRIPT
+    duration: [168, 168]
+    alert: STR_EPIOUSION_GV_ALERT
+    alertDescription: STR_EPIOUSION_GV_ALERT_DESCRIPTION
+    alertBackground: GovernorBG.SCR
+    briefing:
+      showCraft: false
+      showTarget: false
 
   # - type: STR_MAKE_LEMANADE_GV
   #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
@@ -1574,71 +1630,3 @@ alienDeployments:
   #   civiliansByType:
   #     STR_GUARDS_M_LV1_AI: 4
 
-
-    # - &STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
-  #   type: STR_SHRINEWARRENS_TEMPLATE_GV
-  #   data:
-  #     - alienRank: 1
-  #       lowQty: 2
-  #       highQty: 2
-  #       dQty: 2
-  #       percentageOutsideUfo: 100
-  #       itemSets: &emptyItemSets [[], [], []]
-  #     - alienRank: 2
-  #       lowQty: 2
-  #       highQty: 2 #3
-  #       dQty: 2 #1
-  #       percentageOutsideUfo: 100
-  #       itemSets: [[], [], []]
-  #     - alienRank: 3
-  #       lowQty: 3
-  #       highQty: 3 #3
-  #       dQty: 2 #1
-  #       percentageOutsideUfo: 100
-  #       itemSets: [[], [], []]
-  #     - alienRank: 4
-  #       lowQty: 3
-  #       highQty: 3 #3
-  #       dQty: 2 #1
-  #       percentageOutsideUfo: 100
-  #       itemSets: [[], [], []]
-  #     - alienRank: 5
-  #       lowQty: 3
-  #       highQty: 3 #3
-  #       dQty: 2 #1
-  #       percentageOutsideUfo: 100
-  #       itemSets: [[], [], []]
-  #     - alienRank: 6
-  #       lowQty: 3 #1
-  #       highQty: 3 #3
-  #       dQty: 2
-  #       percentageOutsideUfo: 100
-  #       itemSets: [[], [], []]
-  #     - alienRank: 7
-  #       lowQty: 3 #1
-  #       highQty: 3 #3
-  #       dQty: 2
-  #       percentageOutsideUfo: 100
-  #       itemSets: [[], [], []]
-  #   width: 60
-  #   length: 60
-  #   height: 9
-  #   terrains:
-  #     - ACULTASNOW
-  #   duration: [168, 168]
-  #   alert: STR_EPIOUSION_GV_ALERT
-  #   alertDescription: STR_EPIOUSION_GV_ALERT_DESCRIPTION
-  #   alertBackground: GovernorBG.SCR
-  #   briefing:
-  #     showCraft: false
-  #     showTarget: false
-
-    # - type: STR_EPIOUSION_GV
-  #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
-  #   civiliansByType:
-  #     STR_CIVILIAN_F0: 2
-  #     STR_CLOAKED_WOMAN: 2
-  #     STR_CIVILIAN_M0: 2
-  #     STR_CIVILIAN_F1: 2
-  #     STR_CLOAKED_WOMAN_ORANGE: 4
-  #     STR_CIVILIAN_M1: 2
