@@ -48,16 +48,6 @@ items:
     bigSprite: 3906
     floorSprite: 3907
 
-  - type: STR_PC_CLOAKED_WOMAN_ORANGE_CORPSE
-    recover: false
-    battleType: 11
-    weight: 30
-    armor: 20
-    invWidth: 2
-    invHeight: 3
-    bigSprite: 2711
-    floorSprite: 2711
-
   - type: STR_XV26_STEALTH_SUIT_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
     bigSprite: 3900
@@ -75,3 +65,28 @@ items:
     invHeight: 0
     battleType: 11
     recover: false
+
+  - type: STR_REDEMPTIONIST_CORPSE
+    battleType: 11
+    size: 0.4
+    costSell: 5000
+    weight: 20
+    bigSprite: {mod: 40k, index: 327}
+    floorSprite: {mod: 40k, index: 189}
+    invWidth: 2
+    invHeight: 3
+    recoveryPoints: 5
+    armor: 60
+    recover: true
+
+  - type: STR_REDEEMED_CORPSE
+    battleType: 11
+    size: 0.4
+    weight: 20
+    bigSprite: {mod: 40k, index: 213}
+    floorSprite: {mod: 40k, index: 101}
+    invWidth: 2
+    invHeight: 3
+    recoveryPoints: 10
+    armor: 60
+    recover: true
