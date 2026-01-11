@@ -379,7 +379,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       # UNIT_POSSESSION_TYPE: 3
       # UNIT_POSSESSION_MANIFESTATION_CHANCE: 4
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 50 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 25
       INFECTION_RESIST: 70 #blessed by the dark gods
       INTIMIDATION_RESISTANCE: 70 #zealous convictions
@@ -435,7 +435,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 200. Regenerates from 75 (at 0) to 0 (at 200) / Turn; artificer shields
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50 / Turn; artificer shields
       ARMOR_ENERGY_SHIELD_DECAY: 25
       # UNIT_POSSESSION_TYPE: 3
       # UNIT_POSSESSION_MANIFESTATION_CHANCE: 4
@@ -548,7 +548,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 200. Regenerates from 75 (at 0) to 0 (at 200) / Turn; artificer shields
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 30
       ARMOR_ENERGY_SHIELD_DECAY: 25
       # UNIT_POSSESSION_TYPE: 3
       # UNIT_POSSESSION_MANIFESTATION_CHANCE: 4
@@ -1413,7 +1413,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 80
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 70
       ARMOR_ENERGY_SHIELD_DECAY: 25
       INFECTION_RESIST: 100 #blessed by the dark gods
       INTIMIDATION_RESISTANCE: 100 #zealous convictions
@@ -1481,6 +1481,8 @@ armors:
       UNIT_TYPE_DAEMONIC: 1
       UNIT_TYPE_MECHANICAL: 1
       UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_WORDBEARER_BIKELEGIO_ARMORPLAYER # Word Bearers Assault Bike
     visibilityAtDay: 40
@@ -1730,6 +1732,8 @@ armors:
       UNIT_TYPE_DAEMONIC: 1
       UNIT_TYPE_MECHANICAL: 1
       UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_WBMARINE_MK3ARMORPLAYER  # WB MK3 MARINE ARMOR
     customArmorPreviewIndex: 986
@@ -2199,6 +2203,8 @@ armors:
       UNIT_SIZE: 200 # HUGE
       DODGE_CHANCE: 15  # oddly agile
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_WBQUORVONDAR_ARMORPLAYER   # WB QUOR VONDAR ARMOR
     refNode: *STR_WBDIABOLISTBASE_ARMOR
@@ -2318,6 +2324,8 @@ armors:
       INTIMIDATION_RESISTANCE: 100 #zealous convictions
       DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 15
+      ARMOR_ENERGY_SHIELD_DECAY: 25
     scripts:
       selectUnitSprite: |
         # https://openxcom.org/forum/index.php/topic, 4322.msg75634.html# msg75634
