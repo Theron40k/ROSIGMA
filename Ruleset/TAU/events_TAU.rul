@@ -6,16 +6,18 @@ adhocScripts:
 # Week 6: Argent Dawn
 
 ### starter terror missions
-  - type: redemptionist_intro
+  - type: intro_missions
     missionWeights:
       0:
-        STR_EVE_OF_DESTRUCTION_MISSION_GV: 33
-        STR_COUNTER_REDEMPTION_MISSION_GV: 33
-        STR_REDEMPTIONIST_HIVE_TERROR_MISSION_GV: 33
+        STR_EVE_OF_DESTRUCTION_MISSION_GV: 25
+        STR_COUNTER_REDEMPTION_MISSION_GV: 25
+        STR_REDEMPTIONIST_HIVE_TERROR_MISSION_GV: 25
+        STR_EPIOUSION_MISSION_GV: 25
+    useTable: false
     startDelay: 10040  # 1 week
     randomDelay: 4320 # 3 more days
     targetBaseOdds: 100
-    adhocMissionScriptTags: ["redemptionist_intro"]
+    adhocMissionScriptTags: ["intro_missions"]
 
   - type: pipeline  # for Guevesa
     missionWeights:
@@ -34,6 +36,7 @@ adhocScripts:
     missionWeights:
       0:
         STR_LINEBACKER_MISSION_GV: 100
+    useTable: false
     startDelay: 40160  # 4-5 weeks
     randomDelay: 10040  #
     targetBaseOdds: 100
@@ -43,6 +46,7 @@ adhocScripts:
     missionWeights:
       0:
         STR_ARGENT_DAWN_MISSION_GV: 100
+    useTable: false
     startDelay: 60240 # 6-7 weeks
     randomDelay: 10040
     targetBaseOdds: 100
@@ -56,6 +60,7 @@ adhocScripts:
     regionWeights:
       0:
         REGION_HULK_SITES: 100
+    useTable: false
     startDelay: 50200  # 5-6 weeks
     randomDelay: 10040
     adhocMissionScriptTags: ["tenaxBaseL1"]
@@ -67,6 +72,7 @@ adhocScripts:
     regionWeights:
       0:
         REGION_HULK_SITES: 100
+    useTable: false
     startDelay: 20080  # 2-3 weeks
     randomDelay: 10040
     adhocMissionScriptTags: ["PRINCEBISHOPBaseL1"]
@@ -78,6 +84,7 @@ adhocScripts:
     regionWeights:
       0:
         REGION_HULK_SITES: 100
+    useTable: false
     startDelay: 2880  # 2-3days
     randomDelay: 1440
     adhocMissionScriptTags: ["redeemedBaseL1"]
@@ -101,7 +108,7 @@ events:
   - name: STR_GUEVESA_STRATEGY_MILITIA_EVENT_GV
     description: STR_GUEVESA_STRATEGY_MILITIA_EVENT_DESCRIPTION_GV
     background: GuardPatrolBG.SCR
-    adhocMissionScriptTags: ["redemptionist_intro", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
+    adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
     spawnedPersonType: STR_MILITIA_GV
     spawnedCraftType: STR_ARMORED_TRUCKS_GV

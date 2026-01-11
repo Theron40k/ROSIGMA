@@ -1155,7 +1155,12 @@ alienMissions:
         STR_AUSTRALASIA: 10
     raceWeights:
       0:
-        STR_REDEMPTIONIST_START_GV: 100
+        STR_SNAKEMAN_DESERTERS: 10
+        STR_FRATERIS_CRUSADERS_GV: 10
+        STR_EARLY_CULTISTS: 10
+        STR_BASIC_GANGERS: 10
+        STR_IMPERIAL_PDF_LIST: 10
+        STR_REDEMPTIONIST_START_GV: 30
     waves:
       - ufo: STR_FAKE_UFO_TRICK
         count: 1
@@ -1220,6 +1225,38 @@ alienMissions:
         timer: 0
         objective: true
 
+  - type: STR_EPIOUSION_MISSION_GV
+    raceWeights:
+      0:
+        STR_SNAKEMAN_DESERTERS: 10
+        STR_FRATERIS_CRUSADERS_GV: 10
+        STR_EARLY_CULTISTS: 10
+        STR_BASIC_GANGERS: 10
+        STR_IMPERIAL_PDF_LIST: 10
+        STR_REDEMPTIONIST_START_GV: 10
+    points: 5
+    objective: 3
+    spawnZone: 0
+    retaliationOdds: 0
+    operationType: 0
+    siteType: STR_EPIOUSION
+    regionWeights:
+      0:
+        STR_NORTH_AMERICA: 18
+        STR_SOUTH_AMERICA: 10
+        STR_EUROPE: 16
+        STR_NORTH_AFRICA: 12
+        STR_SOUTHERN_AFRICA: 8
+        STR_CENTRAL_ASIA: 12
+        STR_SOUTH_EAST_ASIA: 15
+        STR_SIBERIA: 10
+        STR_AUSTRALASIA: 10
+    waves:
+      - ufo: STR_FAKE_UFO_TRICK
+        count: 1
+        trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
+        timer: 0
+        objective: true
 
   # Rescue a Sisters aid station that is under attack
   - type: STR_ARGENT_DAWN_MISSION_GV

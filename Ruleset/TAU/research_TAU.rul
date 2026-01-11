@@ -6,17 +6,19 @@ research:
   - name: STR_TAU_EMPIRE_GV         # (Tau and friends)
     dependencies:
       - STR_GENERALLOCK
-  - name: STR_TAU_GUEVESA_GV         # (Guevesa faction with Imperial weapons access)≠–
+  - name: STR_TAU_GUEVESA_GV         # (Guevesa faction with Imperial weapons access)
     dependencies:
       - STR_GENERALLOCK
-  - name: STR_TAU_AUXILIARY_GV         # (Guevesa faction with Imperial weapons access)≠–
+  - name: STR_TAU_AUXILIARY_GV         # (Guevesa faction with Imperial weapons access)
     dependencies:
       - STR_GENERALLOCK
+
   # Everyone has these four by default
   - name: STR_NOT_TAU_EMPIRE_GV         # (Not Tau and friends)
   - name: STR_NOT_TAU_GUEVESA_GV        # (Not xenophile scum)
   - name: STR_NOT_TAU_AUXILIARY_GV      # (Not xenophile scum with friends)
   - name: STR_NOT_DEBUG_TAU_EMPIRE_GV   # (Not cheating Tau and friends)
+
   - name: STR_REDEEMED_DEFEATED_GV        # (Tau campaign mechanics)
     dependencies:
       - STR_GENERALLOCK
@@ -56,13 +58,12 @@ research:
       - STR_IMPERIAL_WEAPONS  # Flamer/Shotgun/Guard Laspistol/Guard Lasgun
       - STR_GUARD_AND_ARBITES # easiest way to activate stub rifles
       - STR_NOT_STEEL_LEGION_STRATEGY # needed to activate normal chimeras (???)
-      - STR_CHIMERA_IG        # homemade regular chimeras are pretty but buggy
       - STR_TAU_EMPIRE_GV
       - STR_TAU_GUEVESA_GV
       - STR_TAU_AUXILIARY_GV
       - STR_CHAPTER_PURITY
       - STR_NOT_CHAOSCULT
-      - STR_NOT_THE_IMPERIAL_LAW       # We are both STR_ARBITES and STR_NOT_THE_IMPERIAL_LAW. STR_ARBITES means terra and STR_NOT_THE_IMPERIAL_LAW means not the imperial law :P
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_ENDGANGERSBASE    # Stop the onslaught of gang events
     disables:
       - STR_THE_IMPERIAL_LAW_STRATEGY
@@ -77,41 +78,35 @@ research:
       - STR_DEFAULT_CAMPAIGN      # Disables standard campaign missions
     spawnedEvent: STR_GUEVESA_STRATEGY_MILITIA_EVENT_GV
 
-### allows the guevesa interceptors
-  - name: STR_BASIC_GUEVESA_INTERCEPTORS
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_TAU_GUEVESA_GV
-
 ### Progression strategies to mid-tier
 ### "Remedial Imperial Guard Operations"
 ### Gives you a 2x2 (1x1?) TRADE facility you can more easily put in a regular base.
 ### Gives you TRADE access in a convenient package
   - name: STR_WHITESHIELD_BLACK_MARKET_GV
-    points: 250  # counteracts STR_TAU_TRADING - net 0
-    cost: 200
+    points: 0
+    cost: 400
     dependencies:
       - STR_TAU_GUEVESA_GV    # Any Guevesa can hook in here
       - STR_LASER_WEAPONS     # desperate for bigger guns
       - STR_SMOKE
       - STR_MOTION_SCANNER
+    needItem: true
+    neededItem: STR_KILLPOINT_TOKEN     # kill a bad guy and win a mission
     unlocks:
       - STR_HEAVY_WEAPONS_IG            # cannot make mounted equipment
       - STR_LIGHT_BOLTERS_LOWTIER       # bolters too
       # - figure out a way to give STR_CHAINSWORD_STEEL_LEGION and STR_LIGHT_POWERFIST here
     spawnedEvent: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
 
-### Gives you more affordable export pulse weapons
 ### Establish contact with Tau
 ### export pulse rifle deals
 ### high quality parts and supplies
   - name: STR_THE_COLD_TRADE_GV
-    points: -250
+    points: -100
     cost: 200
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
-      - STR_GAIN_250
+      - STR_LOSE_100
     unlocks:
       - STR_TAU_TRADING           # unlocks cheaper rifles and carbines + flak
     getOneFree:

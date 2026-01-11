@@ -4,7 +4,7 @@ crafts:
     takeoffSound: {mod: 40k, index: 56} #TURBINE SOUND
     selectSound: [{mod: 40k, index: 70}, {mod: 40k, index: 71}, {mod: 40k, index: 72}, {mod: 40k, index: 73}]  #INTERCEPTOR SOUND
     requires:
-      - STR_BASIC_GUEVESA_INTERCEPTORS
+      - STR_TAU_GUEVESA_GV
     requiresBuyBaseFunc: [HANGAR]
     marker: 39
     maxSkinIndex: 0              # default 0
@@ -48,7 +48,6 @@ crafts:
     listOrder: 210
     avoidBonus: 10      # ROSIGMA edit
     repairRate: 5       # ROSIGMA edit, was 1
-
 
 ### Copied from 40K, tweaked to ROSIGMA stats, set free to fly for the Greater Good
   - type: STR_GUEVESA_THUNDERBOLT_GV        #TIER I              RR 200
@@ -122,7 +121,9 @@ crafts:
     fixedWeapons: ["STR_CRAFT_MULTILASER_UC"]
     soldiers: 20
     maxLargeUnits: 2
-    costSell: 10000
+    costBuy: 600000
+    costRent: 300000
+    costSell: 300000
     refuelRate: 1000
     transferTime: 45
     score: 100
@@ -246,7 +247,8 @@ crafts:
 
   - type: STR_CHIMERAGV  # uparmored chimera
     requires:
-      - STR_TANKERS_DELIGHT_GV  # that is the uparmored version of chimera so you will have to adjust your requires accordingly
+      - STR_TANKERS_DELIGHT_GV
+    requiresBuyBaseFunc: [HANGAR]
     costBuy: 900000
     costRent: 400000
     costSell: 400000
@@ -311,7 +313,6 @@ crafts:
     takeoffSound: 63 #TANKMOVE SOUND
     selectSound: [65, 66, 67, 68]  #HEAVY TRANSPORT SOUND
     marker: 30
-    requiresBuyBaseFunc: [HANGAR]
     sprite: 1487
     skinSprites: [1488, 1500] # default empty, contains all sprites except for the first (index zero)
     damageMax: 1000

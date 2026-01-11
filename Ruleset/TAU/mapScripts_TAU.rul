@@ -1823,14 +1823,9 @@ mapScripts:
 
   - type: EPIOUSION_SCRIPT
     commands:
-      - type: addCraft
-      - type: addBlock
-        groups: [11]
-        rects:
-          - [1, 2, 2, 2]
       - type: addUFO
         executions: 1
-        UFOName: STR_IMP_MEDIUM_TRANSPORT
+        UFOName: STR_IMP_MEDIUM_TRANSPORT_NO_LOOT
         rects:
           - [1, 2, 2, 2]
       - type: addBlock
@@ -1842,4 +1837,9 @@ mapScripts:
           - [3, 3, 1, 1]
           - [4, 2, 1, 1]
           - [4, 3, 1, 1]
+      - type: addCraft
+      - type: addBlock
+        groups: [11]
+        rects:
+          - [1, 2, 2, 2]
       - type: fillArea

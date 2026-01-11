@@ -100,6 +100,8 @@ armors:
       INTIMIDATION_RESISTANCE: 100
       INFECTION_RESIST: 100
       ARMOR_OVERWATCH_TU_RESTORED: 30
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   - type: STR_TAUDRONE_GUN_ARMOR_GV
     refNode: *STR_TAUDRONE_BASE_ARMOR_GV
@@ -176,6 +178,15 @@ armors:
     heatVision: 35
     stats:
       firing: 5
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
 
 ### breacher armor is better sealed
 ### resistant to flames/HE/stun/melee/impact
@@ -203,6 +214,8 @@ armors:
       UNIT_TYPE_XENO: 1
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
       ARMOR_ENERGY_SHIELD_DECAY: 50
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
 ### pathfinders are pathfinders
   - &STR_TAU_PATHFINDER_TEMPLATE_GV
@@ -235,6 +248,8 @@ armors:
       UNIT_TYPE_XENO: 1
       HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30   # all Tau armors get this now
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 ### TAU FIRE WARRIOR SHASUI ARMORS
 ### shasui armor versions, not as good as shas'vre advanced armor
@@ -259,6 +274,8 @@ armors:
       UNIT_TYPE_XENO: 1
       HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
   - type: STR_TAU_BREACHER_LEADER_ARMOR_GV
     refNode: *STR_TAU_BREACHER_TEMPLATE_GV
@@ -278,6 +295,10 @@ armors:
       UNIT_TYPE_XENO: 1
       HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
   - type: STR_TAU_PATHFINDER_LEADER_ARMOR_GV
     refNode: *STR_TAU_PATHFINDER_TEMPLATE_GV
@@ -301,8 +322,8 @@ armors:
       UNIT_TYPE_XENO: 1
       HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
-      ARMOR_ENERGY_SHIELD_DECAY: 50
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 ### TAU FIRE WARRIOR ADVANCED ARMORS
   - &STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
@@ -345,14 +366,6 @@ armors:
     loftempsSet: [3]
     allowsRunning: true
     allowsKneeling: true
-    tags:
-      UNIT_TYPE_LIVING: 1
-      UNIT_TYPE_TAU: 1
-      UNIT_TYPE_XENO: 1
-      # ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
-      # ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 30
-      HAS_MARKERLIGHT: 1
 
 ### Strike Armor is specialized for long range fire
 ### Captain quality optics and firing accuracy bonus
@@ -368,6 +381,17 @@ armors:
       firing: 10
       reactions: 5
       bravery: 10
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      HAS_MARKERLIGHT: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 30
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+
 
 ### breacher armor is better sealed
 ### resistant to flames/HE/stun/melee/impact
@@ -400,6 +424,8 @@ armors:
       ARMOR_ENERGY_SHIELD_DECAY: 50
       ARMOR_OVERWATCH_TU_RESTORED: 30
       HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 ### pathfinders are pathfinders
   - type: STR_ENGRAVED_PATHFINDER_ARMOR_GV
@@ -432,6 +458,8 @@ armors:
       UNIT_TYPE_XENO: 1
       HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30   # all Tau armors get this now
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 
 ### TAU CADRE FIREBLADE ARMORS
@@ -486,6 +514,8 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
       ARMOR_ENERGY_SHIELD_DECAY: 50
       ARMOR_OVERWATCH_TU_RESTORED: 50
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
   - type: STR_XV26_STEALTH_SUIT_GV
     requires: STR_FORM_KILL_TEAMS_GV
@@ -546,7 +576,9 @@ armors:
       ARMOR_OVERWATCH_TU_RESTORED: 30
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
-
+      ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2  # 2 turns to infiltrate
+      ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
 
   - &STR_STARSCYTHE_OPTIONS_GV
     type: STR_STARSCYTHE_TEMPLATE_GV
@@ -600,8 +632,8 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
-      DODGE_CHANCE: 10
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
   - type: STR_STARSCYTHE_CRISIS_SUIT_BCX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
@@ -924,14 +956,14 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_IMPERIUM: 1
-      DODGE_CHANCE: 10
-      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 
 ### Penitent Engines are less armored than Sentinels on the tabletop!
 ### Try to strike some kind of compromise
 ### Consider further nerfing the flamer
-  - type: STR_PENITENT_ARMOR_NERFED
+  - type: STR_PENITENT_ENGINE_ARMOR_NERFED
     visibilityAtDay: 40
     visibilityAtDark: 9
     antiCamouflageAtDay: 0
@@ -978,14 +1010,47 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
 
 
-  - type: STR_REDEEMED_T1_ARMOR_GV
+  - type: STR_REDEMPTIONIST_ARMOR_GV
     visibilityAtDay: 40
     visibilityAtDark: 9
-    camouflageAtDay: 0
-    camouflageAtDark: 0
+    spriteSheet: MONK.PCK
+    spriteInv: MINV
+    corpseBattle:
+      - STR_REDEMPTIONIST_CORPSE
+    frontArmor: 20
+    sideArmor: 18
+    rearArmor: 16
+    underArmor: 12
+    drawingRoutine: 4
+    damageModifier: #CULTIST ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 2.0 #FLAMES
+      - 1.0 #HE
+      - 1.0 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.2 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #SMOKE
+      - 0.2 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [ 3 ]
+    size: 1
+    tags:
+      UNIT_TYPE_IMPERIAL: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_REDEEMED_ARMOR_GV
+    visibilityAtDay: 40
+    visibilityAtDark: 9
     spriteSheet: PRIEST.PCK
     spriteInv: CULTI4
-    corpseBattle: [STR_MONK_CORPSE]
+    corpseBattle:
+      - STR_REDEEMED_CORPSE
     drawingRoutine: 1
     frontArmor: 40
     sideArmor: 30
@@ -1009,9 +1074,8 @@ armors:
       UNIT_TYPE_TZEENTCH: 1
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-      DODGE_CHANCE: 15
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2
-
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
   - &STR_IW_GUARD_FLAK_ARMORS_GV
     type: STR_IW_GUARD_FLAK_HAZARD_GV
@@ -1107,8 +1171,6 @@ armors:
     tags:
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-
-
 
   - type: STR_IW_GUARD_FLAK_HAZARD_OFFICER_GV
     visibilityAtDay: 30
