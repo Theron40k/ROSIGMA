@@ -600,6 +600,8 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
 
   - type: STR_CAPTAIN_UC
     antiCamouflageAtDay: 5
@@ -620,6 +622,8 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_SIZE: 150 # LARGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
 
   - type: STR_GREYKNIGHT_UC                 # GREYKNIGHT ARMOR
     refNode: *STR_MARINE_OFFICER_ARMOR
@@ -709,6 +713,8 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
 
   - &STR_SCOUT_ARMOR
     type: STR_SCOUT_UC  # SCOUT
@@ -871,6 +877,12 @@ armors:
     rearArmor: 100
     underArmor: 160
     specialWeapon: STR_TELEPORT
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
 
 
   - type: STR_TASS_ARMOR_CLAWS
@@ -908,6 +920,12 @@ armors:
       F3: ["0", "TERMINATORMF", "F3_FACE", "CLAWS"]
       F4: ["0", "TERMINATORMF", "F4_FACE", "CLAWS"]
       F5: ["0", "TERMINATORMF", "F5_FACE", "CLAWS"]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
 
   - &STR_CENTURION_ARMOR
     type: CENT_ARMOR_UC            # CENT
