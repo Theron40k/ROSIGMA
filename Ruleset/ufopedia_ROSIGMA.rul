@@ -3378,6 +3378,8 @@ ufopaedia:
   - id: STR_VALKYRIE
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_NOT_WORDBEARERS
     text: STR_VALKYRIE_UFOPEDIA
     image_id: VALK.SPK
 
@@ -3398,6 +3400,7 @@ ufopaedia:
     requires:
       - STR_ULTIMATE_CRAFT
       - STR_ALIENS_ONLY
+      - STR_NOT_WORDBEARERS
     image_id: RHINO.SPK
     text: STR_AVENGER_UFOPEDIA
 
@@ -3408,6 +3411,7 @@ ufopaedia:
     requires:
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_ALIENS_ONLY
+      - STR_NOT_WORDBEARERS
     image_id: CHAOS_THUNDERHAWK.SPK
     text: STR_THUNDERHAWK_UFOPEDIA
     rect_stats:
@@ -3449,6 +3453,7 @@ ufopaedia:
     requires:
       - STR_MARINES_STRATEGY
       - STR_NOT_PRIMARIS
+      - STR_NOT_WORDBEARERS
     text: STR_DROPPOD_UFOPEDIA
 
   - delete: STR_SKYRANGER  # DROPPODS
@@ -3459,6 +3464,7 @@ ufopaedia:
     requires:
       - STR_MARINES_STRATEGY
       - STR_NOT_PRIMARIS
+      - STR_NOT_WORDBEARERS
     text: STR_DROPPOD_UFOPEDIA
 
   - delete: STR_INTERCEPTOR  # STORMTALON
@@ -3502,6 +3508,7 @@ ufopaedia:
     requires:
       - STR_NOT_PRIMARIS
       - STR_MARINES_STRATEGY
+      - STR_NOT_WORDBEARERS
     image_id: RHINO_NOTT.SPK
     text: STR_RHINO_NO_TT_UFOPAEDIA
 
