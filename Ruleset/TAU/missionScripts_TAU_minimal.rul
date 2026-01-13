@@ -1,73 +1,19 @@
 missionScripts:
-
-### These happen to you until you destroy the Redeemed cult
-  - type: recurringRedeemedTerrorGV
-    executionOdds: 80
-    firstMonth: 1
-    missionWeights:
-      0:
-        STR_REDEEMED_TERROR_MISSION_GV: 10
-    researchTriggers:
-      STR_HARDER_MISSIONS: false
-      STR_TAU_GUEVESA_GV: true
-      STR_REDEEMED_DEFEATED_GV: false
-    useTable: false
-    startDelay: 150
-    randomDelay: 40170 # 4 weeks - 150 minutes
-
-### These happen to you until you defeat Tenax
-  - type: recurringTenaxTerrorGV
-    executionOdds: 30
-    firstMonth: 1
-    missionWeights:
-      0:
-        STR_TENAX_TERROR_MISSION_GV: 10
-    researchTriggers:
-      STR_HARDER_MISSIONS: false
-      STR_TAU_GUEVESA_GV: true
-      STR_TENAX_DEFEATED_GV: false
-    useTable: false
-    startDelay: 150
-    randomDelay: 40170 # 4 weeks - 150 minutes
-
-### These happen to you until you defeat the Prince-Bishop
-  - type: recurringPRINCEBISHOPTerrorGV
-    executionOdds: 30
-    firstMonth: 1
-    missionWeights:
-      0:
-        STR_PRINCEBISHOP_TERROR_MISSION_GV: 10
-    researchTriggers:
-      STR_HARDER_MISSIONS: false
-      STR_TAU_GUEVESA_GV: true
-      STR_PRINCEBISHOP_DEFEATED_GV: false
-    useTable: false
-    startDelay: 150
-    randomDelay: 40170 # 4 weeks - 150 minutes
-
-### These happen to you until you defeat the Imperial Crusade
-### They will not activate until you research A Secret Pact
-  - type: recurringImperialTerrorGV
-    executionOdds: 100
-    firstMonth: 3   # the Imperial Crusade will not arrive before month 3
-    missionWeights:
-      0:
-        STR_CRUSADE_TERROR_MISSION_GV: 10
-    researchTriggers:
-      STR_HARDER_MISSIONS: false
-      STR_TAU_GUEVESA_GV: true
-      STR_A_SECRET_PACT_GV: true
-      STR_CRUSADE_DEFEATED_GV: false
-    useTable: false
-    startDelay: 150
-    randomDelay: 40170 # 4 weeks - 150 minutes
-
+### TODO: hard versions of all
+### TODO: Tau versions of standard missions
+### TODO: Rework initial base timing
+### TODO: Change up base missions
+### TODO: Develop base escalations
+### TODO: Properly replace campaign :P
+### TODO: Develop upgrading bases for Redeemed
+### TODO: Develop upgrading bases for Prince-Bishop
+### TODO: Develop bases for Tenax - they don't work right now
+### TODO: Consolidate recurring terror
+### TODO: Golden Blade soldiers
+### TODO: Inquisition + Deathwatch starting base when you go Guevesa
+### TODO: Imperial Crusade base thereafter
 
 ### Starter bases handled with adhocScripts fired by initial strategy research event
-
-  # Inquisition + Deathwatch starting base when you go Guevesa
-  # Imperial Crusade base thereafter
-
   - &STR_DESERTER_HIDEOUTS_GV
     type: deserterHideoutGV
     firstMonth: 0
@@ -113,7 +59,6 @@ missionScripts:
       STR_TAU_GUEVESA_GV: true
 
   - type: HULKERTau
-    # FIXME: retaliationOdds: 0
     missionWeights:
       0:
         STR_ALIENER_ARTIFACT_TAU: 100
@@ -130,75 +75,20 @@ missionScripts:
     maxRuns: 1
     varName: HULKERTau
 
-  - type: newGVBasesEarly
-    researchTriggers:
-      STR_TAU_GUEVESA_GV: true
-    regionWeights:
-      0:
-        REGION_HULK_SITES: 100
-    missionWeights:
-      0:
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
-        STR_REDEEMEDBASE_L1_MISSION_GV: 33
-        STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
-        STR_ORK_BASE_GV: 11
-    firstMonth: 1
-    lastMonth: 2
-    startDelay: 120
-    randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 50
-
-  - type: newGVBasesLater
-    researchTriggers:
-      STR_TAU_GUEVESA_GV: true
-    regionWeights:
-      0:
-        REGION_HULK_SITES: 100
-    missionWeights:
-      0:
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
-        STR_REDEEMEDBASE_L1_MISSION_GV: 33
-        STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
-        STR_ORK_BASE_GV: 11
-    firstMonth: 3
-    startDelay: 120
-    randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 100
-
-  - type: newGVBasesExtra
-    researchTriggers:
-      STR_TAU_GUEVESA_GV: true
-    regionWeights:
-      0:
-        REGION_HULK_SITES: 100
-    missionWeights:
-      0:
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
-        STR_REDEEMEDBASE_L1_MISSION_GV: 33
-        STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
-        STR_ORK_BASE_GV: 33
-        STR_NECRON_BASE_GV: 50
-    firstMonth: 6
-    startDelay: 120
-    randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 50
-
   - type: MMTau
     missionWeights:
       0:
-        STR_ELDAR_ARTIFACT_TAU: 20
         STR_CATACOMBS: 20
         STR_RESCUE_PDF_VALKYRIE_TAU: 40  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
       2:
-        STR_ELDAR_ARTIFACT_TAU: 20
         STR_CATACOMBS: 20
         STR_ALIEN_ARTIFACT_TAU: 20  # Space Hulk recurring mission, after initial script
         STR_RESCUE_PDF_VALKYRIE_TAU: 40  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
-      5:
+      4:
         STR_ALIEN_WAR_TAU: 33  # delays the WAR mission until month 5+
-        STR_ELDAR_ARTIFACT_TAU: 10
         STR_CATACOMBS: 10
         STR_ALIEN_ARTIFACT_TAU: 10
+        TR_RESCUE_PDF_VALKYRIE_TAU: 10
     regionWeights:
       0:
         REGION_HULK_SITES: 100
@@ -210,10 +100,11 @@ missionScripts:
       STR_TAU_GUEVESA_GV: true
 
 ### Normal warp storm content with Chaos enemies
+### More Slaanesh and Tzeentch weighting
   - &STR_NORMAL_MISSION_TABLE_GV
     type: warpStormGV
     missionWeights:
-      0:  # equal distribution for now
+      0:
         STR_ALIEN_RESEARCH: 33
         STR_ALIEN_RESEARCH_TZEENTCH: 20
         STR_NURGLE_RESEARCH: 11
@@ -231,9 +122,9 @@ missionScripts:
         STR_ALIEN_INFILTRATION_TZEENTCH: 11
         STR_ALIEN_BASE: 11
         STR_NURGLE_BASE: 11
-        STR_SLAANESH_BASE: 11
-        STR_TZEENTCH_BASE: 11
-      2:  # equal distribution for now
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
+      2:
         STR_ALIEN_RESEARCH: 33
         STR_ALIEN_RESEARCH_TZEENTCH: 20
         STR_NURGLE_RESEARCH: 11
@@ -249,10 +140,10 @@ missionScripts:
         STR_NURGLE_INFILTRATION: 11
         STR_ALIEN_INFILTRATION_SLAANESH: 11
         STR_ALIEN_INFILTRATION_TZEENTCH: 11
-        STR_ALIEN_BASE: 33
+        STR_ALIEN_BASE: 11
         STR_NURGLE_BASE: 11
-        STR_SLAANESH_BASE: 11
-        STR_TZEENTCH_BASE: 11
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
     researchTriggers:
       STR_HARDER_MISSIONS: false
       STR_TAU_GUEVESA_GV: true
@@ -268,11 +159,10 @@ missionScripts:
     refNode: *STR_NORMAL_MISSION_TABLE_GV
     firstMonth: 6
 
-
   - &STR_HARD_MISSION_TABLE
     type: warpStormHardGV
     missionWeights:
-      0:  # equal distribution for now
+      0:
         STR_ALIEN_RESEARCH_HARD: 33
         STR_NURGLE_RESEARCH_HARD: 11
         STR_ALIEN_RESEARCH_TZEENTCH_HARD: 20
@@ -288,14 +178,14 @@ missionScripts:
         STR_NURGLE_INFILTRATION_HARD: 11
         STR_ALIEN_INFILTRATION_SLAANESH_HARD: 11
         STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
-        STR_ALIEN_BASE: 33
+        STR_ALIEN_BASE: 11
         STR_NURGLE_BASE: 11
-        STR_SLAANESH_BASE: 11
-        STR_TZEENTCH_BASE: 11
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
         # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
         # STR_REDEEMEDBASE_L1_MISSION_GV: 33
         # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
-      2:  # equal distribution for now
+      2:
         STR_ALIEN_RESEARCH_HARD: 33
         STR_NURGLE_RESEARCH_HARD: 11
         STR_ALIEN_RESEARCH_TZEENTCH_HARD: 20
@@ -311,10 +201,10 @@ missionScripts:
         STR_NURGLE_INFILTRATION_HARD: 11
         STR_ALIEN_INFILTRATION_SLAANESH_HARD: 11
         STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
-        STR_ALIEN_BASE: 33
+        STR_ALIEN_BASE: 11
         STR_NURGLE_BASE: 11
-        STR_SLAANESH_BASE: 11
-        STR_TZEENTCH_BASE: 11
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
         # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
         # STR_REDEEMEDBASE_L1_MISSION_GV: 33
         # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
@@ -335,7 +225,6 @@ missionScripts:
     refNode: *STR_HARD_MISSION_TABLE
     firstMonth: 6
     useTable: true
-
 
   - type: finalMissionTauGuevesa # use guard for now.
     missionWeights:

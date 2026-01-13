@@ -461,6 +461,7 @@ missionScripts:
       STR_HARDER_MISSIONS: false
       STR_EVEN_HARDER_MISSIONS: false
       STR_CHAPTER_PURITY: true
+      STR_TAU_GUEVESA_GV: false
   - type: warpStormBuilding
     refNode: *STR_NORMAL_MISSION_TABLE
     firstMonth: 3
@@ -516,6 +517,7 @@ missionScripts:
         STR_SLAANESH_BASE: 11
         STR_TZEENTCH_BASE: 11
       # added to delay possible tau orca expedition
+      # STR_TAU_GUEVESA_TRADING will turn off tau expeditions
       3:  # equal distribution for now
         STR_ALIEN_RESEARCH_HARD: 33
         STR_NURGLE_RESEARCH_HARD: 11
@@ -545,6 +547,7 @@ missionScripts:
       STR_HARDER_MISSIONS: true
       STR_EVEN_HARDER_MISSIONS: false
       STR_CHAPTER_PURITY: true
+      STR_TAU_GUEVESA_GV: false
   - type: warpStormBuildingHard
     refNode: *STR_HARD_MISSION_TABLE
     firstMonth: 3
@@ -1611,7 +1614,6 @@ missionScripts:
     researchTriggers:
       STR_HARDER_MISSIONS: false
       STR_NOT_TAU_EMPIRE_GV: true  # Gue'vesa have missions without Tau - can still fire month 0
-      STR_GUEVESA_STRATEGY_MILITIA_GV: false
       STR_EVEN_HARDER_MISSIONS: false
       STR_NOT_WORDBEARERS: true
   - type: deserterHideoutHard
@@ -1632,7 +1634,6 @@ missionScripts:
     researchTriggers:
       STR_EVEN_HARDER_MISSIONS: true
       STR_NOT_TAU_EMPIRE_GV: true  # Gue'vesa have missions without Tau - can still fire month 0
-      STR_GUEVESA_STRATEGY_MILITIA_GV: false
       STR_NOT_WORDBEARERS: true
 
   # Traitor Guard
@@ -1651,7 +1652,6 @@ missionScripts:
     startDelay: 3000
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
-      STR_GUEVESA_STRATEGY_MILITIA_GV: false
       STR_EVEN_HARDER_MISSIONS: false
       STR_NOT_WORDBEARERS: true
     label: 101
@@ -1837,7 +1837,8 @@ missionScripts:
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
       STR_ALIENS_ONLY: false
-      STR_ARBITES: false
+      STR_NOT_THE_IMPERIAL_LAW: true
+      STR_NOT_CHAOSCULT: true
       STR_SPACEWOLVES_STRATEGY: false
 
   - type: recurringTerror
@@ -1877,7 +1878,7 @@ missionScripts:
       STR_EVEN_HARDER_MISSIONS: false
       STR_STEEL_LEGION_STRATEGY: false  # get their own ork tilted list
       STR_ALIENS_ONLY: false
-      STR_ARBITES: false
+      STR_NOT_THE_IMPERIAL_LAW: true
       STR_NOT_CHAOSCULT: true
       STR_NOT_WORDBEARERS: true
     useTable: false
@@ -1899,7 +1900,8 @@ missionScripts:
       STR_ALIENS_ONLY: false
       STR_HARDER_MISSIONS: true
       STR_EVEN_HARDER_MISSIONS: false
-      STR_ARBITES: false
+      STR_NOT_THE_IMPERIAL_LAW: true
+      STR_NOT_CHAOSCULT: true
       STR_STEEL_LEGION_STRATEGY: false
       STR_SPACEWOLVES_STRATEGY: false
     useTable: false

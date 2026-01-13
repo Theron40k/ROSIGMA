@@ -5,89 +5,89 @@ adhocScripts:
 # Week 5: Linebacker
 # Week 6: Argent Dawn
 
-### starter terror missions
-  - type: intro_missions
-    missionWeights:
-      0:
-        STR_EVE_OF_DESTRUCTION_MISSION_GV: 25
-        STR_COUNTER_REDEMPTION_MISSION_GV: 25
-        STR_REDEMPTIONIST_HIVE_TERROR_MISSION_GV: 25
-        STR_EPIOUSION_MISSION_GV: 25
-    useTable: false
-    startDelay: 10040  # 1 week
-    randomDelay: 4320 # 3 more days
-    targetBaseOdds: 100
-    adhocMissionScriptTags: ["intro_missions"]
+# ### starter terror missions
+#   - type: intro_missions
+#     missionWeights:
+#       0:
+#         STR_EVE_OF_DESTRUCTION_MISSION_GV: 25
+#         STR_COUNTER_REDEMPTION_MISSION_GV: 25
+#         STR_REDEMPTIONIST_HIVE_TERROR_MISSION_GV: 25
+#         STR_EPIOUSION_MISSION_GV: 25
+#     useTable: false
+#     startDelay: 10040  # 1 week
+#     randomDelay: 4320 # 3 more days
+#     targetBaseOdds: 100
+#     adhocMissionScriptTags: ["intro_missions"]
 
-  - type: pipeline  # for Guevesa
-    missionWeights:
-      0:
-        STR_REDEEMED_TERROR_MISSION_GV: 100
-    regionWeights:
-      0:
-        REGION_HULK_SITES: 100
-    useTable: false
-    startDelay: 20080  # 2-3 weeks
-    randomDelay: 10040  #
-    targetBaseOdds: 100
-    adhocMissionScriptTags: ["pipeline"]
+#   - type: pipeline  # for Guevesa
+#     missionWeights:
+#       0:
+#         STR_REDEEMED_TERROR_MISSION_GV: 100
+#     regionWeights:
+#       0:
+#         REGION_HULK_SITES: 100
+#     useTable: false
+#     startDelay: 20080  # 2-3 weeks
+#     randomDelay: 10040  #
+#     targetBaseOdds: 100
+#     adhocMissionScriptTags: ["pipeline"]
 
-  - type: linebacker
-    missionWeights:
-      0:
-        STR_LINEBACKER_MISSION_GV: 100
-    useTable: false
-    startDelay: 40160  # 4-5 weeks
-    randomDelay: 10040  #
-    targetBaseOdds: 100
-    adhocMissionScriptTags: ["linebacker"]
+#   - type: linebacker
+#     missionWeights:
+#       0:
+#         STR_LINEBACKER_MISSION_GV: 100
+#     useTable: false
+#     startDelay: 40160  # 4-5 weeks
+#     randomDelay: 10040  #
+#     targetBaseOdds: 100
+#     adhocMissionScriptTags: ["linebacker"]
 
-  - type: argentDawn
-    missionWeights:
-      0:
-        STR_ARGENT_DAWN_MISSION_GV: 100
-    useTable: false
-    startDelay: 60240 # 6-7 weeks
-    randomDelay: 10040
-    targetBaseOdds: 100
-    adhocMissionScriptTags: ["argentDawn"]
+#   - type: argentDawn
+#     missionWeights:
+#       0:
+#         STR_ARGENT_DAWN_MISSION_GV: 100
+#     useTable: false
+#     startDelay: 60240 # 6-7 weeks
+#     randomDelay: 10040
+#     targetBaseOdds: 100
+#     adhocMissionScriptTags: ["argentDawn"]
 
-### starter base missions
-  - type: tenaxBaseL1
-    missionWeights:
-      0:
-        STR_TENAXBASE_START_MISSION_GV: 100
-    regionWeights:
-      0:
-        REGION_HULK_SITES: 100
-    useTable: false
-    startDelay: 50200  # 5-6 weeks
-    randomDelay: 10040
-    adhocMissionScriptTags: ["tenaxBaseL1"]
+# ### starter base missions
+#   - type: tenaxBaseL1
+#     missionWeights:
+#       0:
+#         STR_TENAXBASE_START_MISSION_GV: 100
+#     regionWeights:
+#       0:
+#         REGION_HULK_SITES: 100
+#     useTable: false
+#     startDelay: 50200  # 5-6 weeks
+#     randomDelay: 10040
+#     adhocMissionScriptTags: ["tenaxBaseL1"]
 
-  - type: PRINCEBISHOPBaseL1
-    missionWeights:
-      0:
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 100
-    regionWeights:
-      0:
-        REGION_HULK_SITES: 100
-    useTable: false
-    startDelay: 20080  # 2-3 weeks
-    randomDelay: 10040
-    adhocMissionScriptTags: ["PRINCEBISHOPBaseL1"]
+#   - type: PRINCEBISHOPBaseL1
+#     missionWeights:
+#       0:
+#         STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 100
+#     regionWeights:
+#       0:
+#         REGION_HULK_SITES: 100
+#     useTable: false
+#     startDelay: 20080  # 2-3 weeks
+#     randomDelay: 10040
+#     adhocMissionScriptTags: ["princeBishopBaseL1"]
 
-  - type: redeemedBaseL1
-    missionWeights:
-      0:
-        STR_REDEEMEDBASE_L1_MISSION_GV: 100
-    regionWeights:
-      0:
-        REGION_HULK_SITES: 100
-    useTable: false
-    startDelay: 2880  # 2-3days
-    randomDelay: 1440
-    adhocMissionScriptTags: ["redeemedBaseL1"]
+#   - type: redeemedBaseL1
+#     missionWeights:
+#       0:
+#         STR_REDEEMEDBASE_L1_MISSION_GV: 100
+#     regionWeights:
+#       0:
+#         REGION_HULK_SITES: 100
+#     useTable: false
+#     startDelay: 2880  # 2-3days
+#     randomDelay: 1440
+#     adhocMissionScriptTags: ["redeemedBaseL1"]
 
 ### inq outpost after a secret pact
 
@@ -108,7 +108,7 @@ events:
   - name: STR_GUEVESA_STRATEGY_MILITIA_EVENT_GV
     description: STR_GUEVESA_STRATEGY_MILITIA_EVENT_DESCRIPTION_GV
     background: GuardPatrolBG.SCR
-    adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
+    # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
     spawnedPersonType: STR_MILITIA_GV
     spawnedCraftType: STR_ARMORED_TRUCKS_GV
@@ -191,7 +191,7 @@ events:
   - name: STR_A_SECRET_PACT_EVENT_GV
     description: STR_A_SECRET_PACT_EVENT_DESCRIPTION_GV
     background: InquisitionBG.SCR
-    adhocMissionScriptTags: ["inqOutpostGV"]
+    # adhocMissionScriptTags: ["inqOutpostGV"]
 
   - name: STR_INFILTRATION_CADRE_EVENT_GV
     description: STR_INFILTRATION_CADRE_EVENT_DESCRIPTION_GV
