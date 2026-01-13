@@ -9,7 +9,7 @@ missionScripts:
         STR_REDEEMED_TERROR_MISSION_GV: 10
     researchTriggers:
       STR_HARDER_MISSIONS: false
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
       STR_REDEEMED_DEFEATED_GV: false
     useTable: false
     startDelay: 150
@@ -24,7 +24,7 @@ missionScripts:
         STR_TENAX_TERROR_MISSION_GV: 10
     researchTriggers:
       STR_HARDER_MISSIONS: false
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
       STR_TENAX_DEFEATED_GV: false
     useTable: false
     startDelay: 150
@@ -39,7 +39,7 @@ missionScripts:
         STR_PRINCEBISHOP_TERROR_MISSION_GV: 10
     researchTriggers:
       STR_HARDER_MISSIONS: false
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
       STR_PRINCEBISHOP_DEFEATED_GV: false
     useTable: false
     startDelay: 150
@@ -55,7 +55,7 @@ missionScripts:
         STR_CRUSADE_TERROR_MISSION_GV: 10
     researchTriggers:
       STR_HARDER_MISSIONS: false
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
       STR_A_SECRET_PACT_GV: true
       STR_CRUSADE_DEFEATED_GV: false
     useTable: false
@@ -85,7 +85,7 @@ missionScripts:
     randomDelay: 40170 # 4 weeks - 150 minutes
     researchTriggers:
       STR_HARDER_MISSIONS: false
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
 
   - type: deserterHideoutHardGV
     refNode: *STR_DESERTER_HIDEOUTS_GV
@@ -94,7 +94,7 @@ missionScripts:
         STR_DESERTER_HIDEOUT_TAU_HARD_GV: 100
     researchTriggers:
       STR_HARDER_MISSIONS: true
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
 
   - type: SpaceHulkGV
     missionWeights:
@@ -110,7 +110,7 @@ missionScripts:
     executionOdds: 30
     startDelay: 10000
     researchTriggers:
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
 
   - type: HULKERTau
     # FIXME: retaliationOdds: 0
@@ -121,7 +121,7 @@ missionScripts:
       0:
         REGION_HULK_SITES: 100
     researchTriggers:
-      STR_TAU_EMPIRE_GV: true
+      STR_TAU_GUEVESA_GV: true
       STR_WARPED_VAULT: true
     firstMonth: 0
     startDelay: 4320  # 3 days
@@ -132,7 +132,7 @@ missionScripts:
 
   - type: newGVBasesEarly
     researchTriggers:
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
     regionWeights:
       0:
         REGION_HULK_SITES: 100
@@ -141,7 +141,7 @@ missionScripts:
         STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
         STR_REDEEMEDBASE_L1_MISSION_GV: 33
         STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
-        STR_ORK_BASE_GV: 33
+        STR_ORK_BASE_GV: 11
     firstMonth: 1
     lastMonth: 2
     startDelay: 120
@@ -150,7 +150,7 @@ missionScripts:
 
   - type: newGVBasesLater
     researchTriggers:
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
     regionWeights:
       0:
         REGION_HULK_SITES: 100
@@ -159,7 +159,7 @@ missionScripts:
         STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
         STR_REDEEMEDBASE_L1_MISSION_GV: 33
         STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
-        STR_ORK_BASE_GV: 33
+        STR_ORK_BASE_GV: 11
     firstMonth: 3
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
@@ -167,7 +167,7 @@ missionScripts:
 
   - type: newGVBasesExtra
     researchTriggers:
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
     regionWeights:
       0:
         REGION_HULK_SITES: 100
@@ -186,18 +186,18 @@ missionScripts:
   - type: MMTau
     missionWeights:
       0:
-        STR_ELDAR_ARTIFACT_TAU: 33
-        STR_CATACOMBS: 33
-        STR_RESCUE_PDF_VALKYRIE_TAU: 33  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
+        STR_ELDAR_ARTIFACT_TAU: 20
+        STR_CATACOMBS: 20
+        STR_RESCUE_PDF_VALKYRIE_TAU: 40  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
       2:
-        STR_ELDAR_ARTIFACT_TAU: 33
+        STR_ELDAR_ARTIFACT_TAU: 20
         STR_CATACOMBS: 20
         STR_ALIEN_ARTIFACT_TAU: 20  # Space Hulk recurring mission, after initial script
-        STR_RESCUE_PDF_VALKYRIE_TAU: 20  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
+        STR_RESCUE_PDF_VALKYRIE_TAU: 40  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
       5:
         STR_ALIEN_WAR_TAU: 33  # delays the WAR mission until month 5+
-        STR_ELDAR_ARTIFACT_TAU: 33
-        STR_CATACOMBS: 20
+        STR_ELDAR_ARTIFACT_TAU: 10
+        STR_CATACOMBS: 10
         STR_ALIEN_ARTIFACT_TAU: 10
     regionWeights:
       0:
@@ -207,7 +207,7 @@ missionScripts:
     executionOdds: 50
     startDelay: 15000  # 10k = 7 days
     researchTriggers:
-      STR_GUEVESA_STRATEGY_MILITIA_GV: true
+      STR_TAU_GUEVESA_GV: true
 
 ### Normal warp storm content with Chaos enemies
   - &STR_NORMAL_MISSION_TABLE_GV
@@ -229,13 +229,10 @@ missionScripts:
         STR_NURGLE_INFILTRATION: 11
         STR_ALIEN_INFILTRATION_SLAANESH: 11
         STR_ALIEN_INFILTRATION_TZEENTCH: 11
-        STR_ALIEN_BASE: 33
+        STR_ALIEN_BASE: 11
         STR_NURGLE_BASE: 11
         STR_SLAANESH_BASE: 11
         STR_TZEENTCH_BASE: 11
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
-        STR_REDEEMEDBASE_L1_MISSION_GV: 33
-        STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
       2:  # equal distribution for now
         STR_ALIEN_RESEARCH: 33
         STR_ALIEN_RESEARCH_TZEENTCH: 20
@@ -256,27 +253,24 @@ missionScripts:
         STR_NURGLE_BASE: 11
         STR_SLAANESH_BASE: 11
         STR_TZEENTCH_BASE: 11
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
-        STR_REDEEMEDBASE_L1_MISSION_GV: 33
-        STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
     researchTriggers:
       STR_HARDER_MISSIONS: false
-      STR_TAU_EMPIRE_GV: true
+      STR_TAU_GUEVESA_GV: true
     firstMonth: 1
 
-  - type: STR_WARP_STORM_BUILDING_GV
+  - type: warpStormBuildingGV
     refNode: *STR_NORMAL_MISSION_TABLE_GV
     firstMonth: 3
     lastMonth: 5
     executionOdds: 50
 
-  - type: STR_WARP_STORM_RAGING_GV
+  - type: warpStormRagingGV
     refNode: *STR_NORMAL_MISSION_TABLE_GV
     firstMonth: 6
 
 
   - &STR_HARD_MISSION_TABLE
-    type: STR_WARP_STORM_HARD_GV
+    type: warpStormHardGV
     missionWeights:
       0:  # equal distribution for now
         STR_ALIEN_RESEARCH_HARD: 33
@@ -298,9 +292,9 @@ missionScripts:
         STR_NURGLE_BASE: 11
         STR_SLAANESH_BASE: 11
         STR_TZEENTCH_BASE: 11
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
-        STR_REDEEMEDBASE_L1_MISSION_GV: 33
-        STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
+        # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
+        # STR_REDEEMEDBASE_L1_MISSION_GV: 33
+        # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
       2:  # equal distribution for now
         STR_ALIEN_RESEARCH_HARD: 33
         STR_NURGLE_RESEARCH_HARD: 11
@@ -321,23 +315,23 @@ missionScripts:
         STR_NURGLE_BASE: 11
         STR_SLAANESH_BASE: 11
         STR_TZEENTCH_BASE: 11
-        STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
-        STR_REDEEMEDBASE_L1_MISSION_GV: 33
-        STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
+        # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
+        # STR_REDEEMEDBASE_L1_MISSION_GV: 33
+        # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
     firstMonth: 1
     useTable: false
     researchTriggers:
       STR_HARDER_MISSIONS: true
-      STR_TAU_EMPIRE_GV: true
+      STR_TAU_GUEVESA_GV: true
 
-  - type: STR_WARP_STORM_BUILDING_HARD_GV
+  - type: warpStormBuildingHardGV
     refNode: *STR_HARD_MISSION_TABLE
     firstMonth: 3
     lastMonth: 5
     executionOdds: 50
     useTable: true
 
-  - type: STR_WARP_STORM_RAGING_HARD_GV
+  - type: warpStormRagingHardGV
     refNode: *STR_HARD_MISSION_TABLE
     firstMonth: 6
     useTable: true
