@@ -956,59 +956,8 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_IMPERIUM: 1
-      DODGE_CHANCE: 15
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2
-
-
-### Penitent Engines are less armored than Sentinels on the tabletop!
-### Try to strike some kind of compromise
-### Consider further nerfing the flamer
-  - type: STR_PENITENT_ENGINE_ARMOR_NERFED
-    visibilityAtDay: 40
-    visibilityAtDark: 9
-    antiCamouflageAtDay: 0
-    antiCamouflageAtDark: 0
-    spriteSheet: PEN.PCK
-    instantWoundRecovery: true
-    allowInv: false
-    spriteInv: PENI.SPK
-    corpseGeo: STR_DREAD_CORPSE
-    corpseBattle:
-      - PEN_CORPSE1
-      - PEN_CORPSE2
-      - PEN_CORPSE3
-      - PEN_CORPSE4
-    frontArmor: 110  # worse armored on the front :)
-    sideArmor: 110
-    rearArmor: 130
-    underArmor: 110
-    size: 2
-    moveSound: {mod: 40k, index: 700}
-    damageModifier:  # VEHICLE ARMOR LARGE
-      - 1.0  # none
-      - 1.0  # AP
-      - 0.4  # FLAMES
-      - 0.6  # HE  # large unit takes a lot more damage from AOE so lowering this balance out
-      - 1.3  # LASCANON
-      - 1.0  # PLASMA
-      - 0.9  # STUN
-      - 0.8  # MELEE
-      - 1.0  # ACID
-      - 0.0  # SMOKE
-      - 0.2  # IMPACT
-      - 1.2  # MELTA
-    loftempsSet: [92, 89, 90, 91]
-    drawingRoutine: 5
-    builtInWeapons:
-      - INV_NULL_3X3
-      - AUX_PENITENT_FLAMER
-    tags:
-      INFECTION_RESIST: 100  # infection immune
-      UNIT_SIZE: 200 # HUGE
-      UNIT_TYPE_LIVING: 1
-      UNIT_TYPE_MECHANICAL: 1
-      UNIT_TYPE_IMPERIUM: 1
-
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
   - type: STR_REDEMPTIONIST_ARMOR_GV
     visibilityAtDay: 40
