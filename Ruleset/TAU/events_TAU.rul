@@ -105,8 +105,8 @@ adhocScripts:
 #    adhocMissionScriptTags: ["breakthroughGV"]
 
 events:
-  - name: STR_GUEVESA_STRATEGY_MILITIA_EVENT_GV
-    description: STR_GUEVESA_STRATEGY_MILITIA_EVENT_DESCRIPTION_GV
+  - name: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
+    description: STR_TAU_GUEVESA_STRATEGY_EVENT_DESCRIPTION_GV
     background: GuardPatrolBG.SCR
     # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
@@ -228,10 +228,10 @@ events:
 
   # turn off the GSC arrival events
   - update: STR_GSC_ARRIVAL_BASE_SPAWN
-    interruptResearch: STR_GUEVESA_STRATEGY_MILITIA_GV
+    interruptResearch: STR_TAU_GUEVESA_STRATEGY_GV
 
   - update: STR_GSC_ARBITES_SPAWNED
-    interruptResearch: STR_GUEVESA_STRATEGY_MILITIA_GV
+    interruptResearch: STR_TAU_GUEVESA_STRATEGY_GV
 
   ### TODO: add export carbines
   - name: STR_FROM_THE_BARREL_EVENT_GV

@@ -32,7 +32,6 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-
 ### The Tau condition is
 ### STR_CHAPTER_PURITY: true
 ### STR_ARBITES: true
@@ -42,7 +41,7 @@ research:
 
 ### PDF commander strategy
 ### the big strategy that makes all the rules
-  - name: STR_GUEVESA_STRATEGY_MILITIA_GV
+  - name: STR_TAU_GUEVESA_STRATEGY_GV
     points: 0
     cost: 5
     dependencies:
@@ -74,8 +73,8 @@ research:
       - STR_GREENEST_ORKZ
       - STR_PSI_LAB
       - STR_THE_MARTIAN_SOLUTION  # More like a Terran problem!
-      - STR_DEFAULT_CAMPAIGN      # Disables standard campaign missions
-    spawnedEvent: STR_GUEVESA_STRATEGY_MILITIA_EVENT_GV
+      - STR_DEFAULT_CAMPAIGN      # alternate Tau versions of this content
+    spawnedEvent: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
 
 ### Progression strategies to mid-tier
 ### "Remedial Imperial Guard Operations"
@@ -608,7 +607,7 @@ research:
   - name: STR_DELIVER_DEBUG_PACKAGE_GV
     cost: 10
     dependencies:
-      - STR_GUEVESA_STRATEGY_MILITIA_GV
+      - STR_TAU_GUEVESA_STRATEGY_GV
     spawnedEvent: STR_DELIVER_DEBUG_PACKAGE_EVENT_GV
     getOneFree:
       - STR_STEALTH_SUIT_OPERATIONS_GV

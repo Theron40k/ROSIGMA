@@ -13,6 +13,53 @@ missionScripts:
 ### TODO: Inquisition + Deathwatch starting base when you go Guevesa
 ### TODO: Imperial Crusade base thereafter
 
+### Bases #BASE#
+  # Default Loyalist
+  - type: newGVBasesEarly
+    missionWeights:
+      0:
+        STR_CULTIST_BASE: 33
+        STR_TRAITOR_GUARD_BASE: 33
+        # Low chances of harder races
+    firstMonth: 1
+    lastMonth: 2
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+
+  - type: newTraditionalBasesLater
+    missionWeights:
+      0:
+        STR_CULTIST_BASE: 33
+        STR_TRAITOR_GUARD_BASE: 33
+        # Higher chances of harder races for 3-5
+        # Even chances of all for beyond that
+    firstMonth: 3
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+
+  - type: newTraditionalBasesExtra
+    missionWeights:
+      0:
+        STR_CULTIST_BASE: 33
+        STR_TRAITOR_GUARD_BASE: 33
+        # Higher chances of harder races
+        STR_NECRON_BASE: 50
+    firstMonth: 6
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+
 ### Starter bases handled with adhocScripts fired by initial strategy research event
   - &STR_DESERTER_HIDEOUTS_GV
     type: deserterHideoutGV
@@ -30,6 +77,7 @@ missionScripts:
     startDelay: 150
     randomDelay: 40170 # 4 weeks - 150 minutes
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_HARDER_MISSIONS: false
       STR_TAU_GUEVESA_GV: true
 
@@ -39,6 +87,7 @@ missionScripts:
       0:
         STR_DESERTER_HIDEOUT_TAU_HARD_GV: 100
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_HARDER_MISSIONS: true
       STR_TAU_GUEVESA_GV: true
 
@@ -56,6 +105,7 @@ missionScripts:
     executionOdds: 30
     startDelay: 10000
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_TAU_GUEVESA_GV: true
 
   - type: HULKERTau
@@ -66,6 +116,7 @@ missionScripts:
       0:
         REGION_HULK_SITES: 100
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_TAU_GUEVESA_GV: true
       STR_WARPED_VAULT: true
     firstMonth: 0
@@ -97,6 +148,7 @@ missionScripts:
     executionOdds: 50
     startDelay: 15000  # 10k = 7 days
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_TAU_GUEVESA_GV: true
 
 ### Normal warp storm content with Chaos enemies
@@ -145,6 +197,7 @@ missionScripts:
         STR_SLAANESH_BASE: 22
         STR_TZEENTCH_BASE: 22
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_HARDER_MISSIONS: false
       STR_TAU_GUEVESA_GV: true
     firstMonth: 1
@@ -211,6 +264,7 @@ missionScripts:
     firstMonth: 1
     useTable: false
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_HARDER_MISSIONS: true
       STR_TAU_GUEVESA_GV: true
 
@@ -226,7 +280,7 @@ missionScripts:
     firstMonth: 6
     useTable: true
 
-  - type: finalMissionTauGuevesa # use guard for now.
+  - type: finalMissionTauGuevesa
     missionWeights:
       0:
         STR_FINAL_MISSION_GUEVESA_GV: 100
@@ -234,6 +288,7 @@ missionScripts:
       0:
         REGION_FINAL_MISSION: 100
     researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
       STR_THE_SILVER_TOWER_GV: true
       STR_TAU_GUEVESA_GV: true
     useTable: false
