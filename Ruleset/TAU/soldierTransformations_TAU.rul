@@ -88,50 +88,66 @@ soldierTransformation:
 
 
 ### Transform guard pilots from militia
+  - name: STR_INDUCT_MILITIA_GV
+    cost: 0
+    requires:
+      - STR_TAU_GUEVESA_GV
+      - STR_RECRUIT_MILITIA_GV
+    producedSoldierType: STR_MILITIA_GV
+    producedSoldierArmor: STR_GUARDPD_ARMOR_UC    # get their flak armor back
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    upperBoundType: 1
+    allowedSoldierTypes:
+      - STR_GUARDSM_KRIEG
+      - STR_GUARDSM
 
   - &STR_GUEVESA_PROMOTION_GV
     name: STR_WELCOME_GUEVESALA_GV
+    cost: 0
     requires:
-      - STR_TAU_EMPIRE_GV
-      - STR_A_SECRET_PACT_GV
+      - STR_TAU_GUEVESA_GV
+      - STR_RECRUIT_GUEVESA_GV
     producedSoldierType: STR_GUEVESALA_GV
     producedSoldierArmor: STR_TAUGUEVESAFLAK_ARMOR
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
+    upperBoundType: 1
     allowedSoldierTypes:
       - STR_MILITIA_GV
-      - STR_MILITIA_OFFICER_GV
-      - STR_GUEVESACULTIST_GV
+      # - STR_MILITIA_OFFICER_GV
+      # - STR_GUEVESACULTIST_GV
     # requiredItems:
     #   STR_KILLPOINT_TOKEN: 10
     requiredCommendations:
       STR_BATTLE_TESTED: 0
     requiredMinStats:
-      bravery: 40
       tu: 1
 
   - name: STR_PROMOTE_GUEVESAUI_GV
     refNode: *STR_GUEVESA_PROMOTION_GV
     producedSoldierType: STR_GUEVESAUI_GV
     producedSoldierArmor: STR_TAUGUEVESACARAP_ARMOR
+    upperBoundType: 1
     allowedSoldierTypes:
+      - STR_MILITIA_GV
       - STR_GUEVESALA_GV
     requiredItems:
       STR_KILLPOINT_TOKEN: 60
     requiredCommendations:
       STR_BATTLE_TESTED: 0
-      STR_VETERAN_COMMENDATION: 0
 
   - name: STR_PROMOTE_GUEVESAVRE_GV
     refNode: *STR_GUEVESA_PROMOTION_GV
     producedSoldierType: STR_GUEVESAVRE_GV
     producedSoldierArmor: STR_TAUGUEVESACARAP_ARMOR
+    upperBoundType: 1
     allowedSoldierTypes:
       - STR_GUEVESAUI_GV
-      - STR_GUARD_OFFICER_VETERAN
     requiredItems:
-      STR_KILLPOINT_TOKEN: 60
+      STR_KILLPOINT_TOKEN: 120
     requiredCommendations:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0

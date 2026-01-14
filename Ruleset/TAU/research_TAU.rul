@@ -52,6 +52,7 @@ research:
       - STR_GUARD_BARRACKS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_PILOT_GUARDSMEN
+      - STR_RECRUIT_MILITIA_GV
       - STR_LASER_WEAPONS     # easiest way to activate heavy stubbers (???)
       - STR_IMPERIAL_WEAPONS  # Flamer/Shotgun/Guard Laspistol/Guard Lasgun
       - STR_GUARD_AND_ARBITES # easiest way to activate stub rifles
@@ -76,6 +77,20 @@ research:
       - STR_THE_MARTIAN_SOLUTION  # More like a Terran problem!
       - STR_DEFAULT_CAMPAIGN      # alternate Tau versions of this content
     spawnedEvent: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
+
+### Recruit new troops as militia
+  - name: STR_RECRUIT_MILITIA_GV
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+### Recruit new troops as guevesa
+  - name: STR_RECRUIT_GUEVESA_GV
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
 
 ### Progression strategies to mid-tier
 ### "Remedial Imperial Guard Operations"
@@ -150,19 +165,28 @@ research:
       - STR_TANKERS_DELIGHT_GV      # heavy guard equipment as remaining loyalist guardsmen join you
       - STR_BEASTMEN_CULTISTS_GV    # beastmen look to you for protection
       - STR_COOPT_NAVY_PILOTS_GV    # what else are they gonna do
+      - STR_RECRUIT_GUEVESA_GV      # turn on guevesa and turn off militia
+    disables:
+      - STR_RECRUIT_MILITIA_GV      # turn on guevesa and turn off militia
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
 #     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV # spawns free pathfinders
 
 ### Various degrees of danger
   - name: STR_INQUISITION_ATTENTION_GV
+    cost: 0
+    points: 0
     dependencies:
       - STR_GENERALLOCK
 
   - name: STR_INQUISITION_DANGER_GV
+    cost: 0
+    points: 0
     dependencies:
       - STR_GENERALLOCK
 
   - name: STR_IMPERIAL_CRUSADE_GV
+    cost: 0
+    points: 0
     dependencies:
       - STR_GENERALLOCK
 
