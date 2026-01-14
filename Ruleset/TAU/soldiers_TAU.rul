@@ -182,7 +182,7 @@ soldiers:
     costBuy: 20000
     costSalary: 4000
     requires:
-      - STR_A_SECRET_PACT_GV
+      - STR_RECRUIT_GUEVESA_GV
     armor: STR_TAUGUEVESAFLAK_PC_ARMOR_GV
     rankStrings:
       - STR_GUEVESA_RANK_0
@@ -373,7 +373,7 @@ soldiers:
   - type: STR_MILITIA_GV
     flagOffset: 42
     requires:
-      - STR_TAU_GUEVESA_STRATEGY_GV
+      - STR_RECRUIT_MILITIA_GV
     costBuy: 12000
     costSalary: 4000
     # shrine-bandits = penitents but can train
@@ -435,8 +435,8 @@ soldiers:
     soldierNames:
       - delete
       - Names/tau_militia.nam
-    moraleLossWhenKilled: 75  # people don't care about the grunts so much
-    allowPiloting: true
+    moraleLossWhenKilled: 100  # people don't care about the grunts so much
+    allowPiloting: false
     allowPromotion: true
     rankStrings:
       - STR_GUARD_RANK_0
