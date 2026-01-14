@@ -1305,7 +1305,7 @@ research:
       - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_ASSAULT_CARE_PACKAGE
 
 ### Devastator Strategy #STRATEGY.SM.DEV#
@@ -1339,7 +1339,7 @@ research:
       - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_DEVASTATOR_CARE_PACKAGE
 
 ### Primaris Strategy #STRATEGY.SM.PRIM#
@@ -1405,7 +1405,7 @@ research:
       - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_SCOUT_CARE_PACKAGE
 
 ### Tactical Strategy #STRATEGY.SM.TAC#
@@ -1440,7 +1440,7 @@ research:
       - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_TACTICAL_CARE_PACKAGE
 
   - name: STR_SMGIVEOTHER_INTERCEPTOR
@@ -6445,9 +6445,10 @@ research:
     cost: 500
     points: 50
     dependencies:
-      - STR_MARINES_STRATEGY
-      - STR_NOT_SPACEWOLVES
-      - STR_NOT_PRIMARIS
+      - STR_GENERALLOCK   # for now i am disabling it as it seems totally useless research in Rosigma due to some change
+     # - STR_MARINES_STRATEGY
+     # - STR_NOT_SPACEWOLVES
+     # - STR_NOT_PRIMARIS
   - name: STR_CRATED_RHINO  # Razorback Requisition
     # Devastator and Tactical
     dependencies:
