@@ -1561,6 +1561,8 @@ research:
       - STR_ENABLE_EXTRA_RETALIATIONS  # for now
       - STR_DIFFICULTY_OPTIONS
       - STR_DEFAULT_CAMPAIGN
+      - STR_MOTION_SCANNER
+      - STR_PHOSPHOR_GRENADE
     getOneFree:
       - STR_SMOKE
     spawnedEvent: STR_WORDBEARERS_BURNTHEM
@@ -1583,6 +1585,9 @@ research:
       - STR_CRATED_CHAOSDROPPODS
       - STR_CRATED_CHAOSRHINOS
       - STR_MARINE_BOLTERS
+    reenables:
+      - STR_MOTION_SCANNER
+      - STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_KORPHAERON
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGEMK3
@@ -1605,6 +1610,9 @@ research:
       - STR_CRATED_CHAOSDROPPODS
       - STR_CRATED_CHAOSRHINOS
       - STR_MARINE_BOLTERS
+    reenables:
+      - STR_MOTION_SCANNER
+      - STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_EREBUS
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGE
@@ -8281,7 +8289,6 @@ research:
   - name: STR_PHOSPHOR_GRENADE  # Phosphor Grenade
     cost: 50
     points: 15
-    needItem: true
     dependencies:
       - STR_SMOKE
 
