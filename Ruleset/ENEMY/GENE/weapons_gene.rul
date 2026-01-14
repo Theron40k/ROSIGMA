@@ -633,6 +633,47 @@ items:
     attraction: 1
     listOrder: 10715
 
+### Kept around to avoid breaking saves where it exists
+### Remove on future major patch
+  - type: STR_GENERIC_HEAVY_STUBBER
+    categories: [STR_CAT_AUTO]
+    requiresBuy:
+      - STR_GENERALLOCK
+      # - STR_LASER_WEAPONS
+      # - STR_IMPERIAL_WEAPONS
+    size: 0.3
+    dropoff: 5
+    costBuy: 6000
+    costSell: 1500
+    weight: 20
+    bigSprite: 2703  # generic heavy stubber bigob
+    floorSprite: {mod: 40k, index: 1122}
+    handSprite: {mod: 40k, index: 1920}
+    bulletSprite: {mod: 40k, index: 2}
+    bulletSpeed: 25
+    fireSound: {mod: 40k, index: 4}
+    compatibleAmmo:
+      - STR_HEAVY_STUBBER_CLIP
+      - STR_HEAVY_STUBBER_CLIP_MC
+    accuracyAuto: 40
+    accuracySnap: 55
+    tuAuto: 45
+    tuSnap: 30
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    armor: 60
+    autoRange: 15
+    snapRange: 15
+    autoShots: 15  # less than the military version
+    # FIXME: followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
+    confSnap:
+      shots: 7
+    sprayWaypoints: 2
+    listOrder: 10762
+
   - type: STR_MAKESHIFT_GRENADE
     categories: [STR_CAT_GRENADES]
     size: 0.1
