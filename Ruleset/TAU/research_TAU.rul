@@ -70,6 +70,7 @@ research:
       - STR_CHAOS_STRATEGY
       - STR_NOT_TAU_EMPIRE_GV
       - STR_NOT_TAU_GUEVESA_GV
+      - STR_NOT_TAU_AUXILIARY_GV
       - STR_GREENEST_ORKZ
       - STR_PSI_LAB
       - STR_THE_MARTIAN_SOLUTION  # More like a Terran problem!
@@ -92,20 +93,21 @@ research:
     neededItem: STR_KILLPOINT_TOKEN     # kill a bad guy and win a mission
     spawnedEvent: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
 
+### Discover the Cold Trade
+### Discover Tau artifacts
 ### Establish contact with Tau
 ### Tau pulse rifle available
 ### higher quality parts and supplies?
 ### win a couple missions?
   - name: STR_THE_COLD_TRADE_GV
-    points: -100
-    cost: 200
+    points: 0
+    cost: 400
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
-      - STR_LOSE_100
     unlocks:
+      - STR_TAU_TRADING
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
-      - STR_TAU_TRADING           # basic guevesa
     spawnedEvent: STR_THE_COLD_TRADE_EVENT_GV   # talk to the Tau here?
 
 ### Tau Guevesa trading
@@ -124,30 +126,32 @@ research:
     cost: 400
     dependencies:
       - STR_THE_COLD_TRADE_GV
-      - STR_LOSE_100
+      - STR_TAU_TRADING
+      - STR_ELERIUM_115             # guevesa supply crawlers need fuel
+      - STR_ALIEN_ALLOYS            # build fortifications and repair things
     unlocks:
       - STR_TAU_GUEVESA_TRADING           # unlocks cheaper rifles and carbines + flak
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
       - STR_ENGINSEER_REQUISITION         # Enginseers
       - STR_GUARD_PRIEST_REQUISITION      # Priests
-      - STR_GUEVESA_HEAVY_WEAPONS_GV
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
     spawnedEvent: STR_CULTURE_CLUB_GV
 
+### Form gue'vesa cluster preliminary to formal Tau pact
 ### Community outreach to get beastmen soldiers + cultists - can upgrade to Marin'vesa
 ### gated on mission/interrogation?
-  - name: STR_TAU_PROPAGANDA_GV
+  - name: STR_GUEVESA_CLUSTER_GV
     points: 0
     cost: 200
     dependencies:
       - STR_CULTURE_CLUB_GV
-      - STR_ELERIUM_115             # guevesa supply crawlers need fuel
-      - STR_ALIEN_ALLOYS            # build fortifications and repair things
     unlocks:
       - STR_INQUISITION_ATTENTION_GV      # uh oh!
-      - STR_PATHFINDER_BEACON_GV    # pathfinders infiltrate
+      # - STR_PATHFINDER_BEACON_GV    # pathfinders infiltrate
       - STR_TANKERS_DELIGHT_GV      # heavy guard equipment as remaining loyalist guardsmen join you
       - STR_BEASTMEN_CULTISTS_GV    # beastmen look to you for protection
+      - STR_COOPT_NAVY_PILOTS_GV    # what else are they gonna do
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
+#     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV # spawns free pathfinders
 
 ### Various degrees of danger
   - name: STR_INQUISITION_ATTENTION_GV
@@ -162,26 +166,20 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-### Pathfinders patch you into the system
-### Figure out pathfinder reinforcement
-  - name: STR_PATHFINDER_BEACON_GV
-    points: -250
-    cost: 200
-    dependencies:
-      - STR_TAU_PROPAGANDA_GV
-    unlocks:
-      - STR_TAU_PATHFINDERS_GV   # unlocks pathfinders
-      - STR_TAU_ARMORY_EXAM
-    spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV # spawns free pathfinders
-    getOneFree:
-      - STR_TAU_XENOTECH    # try to work around this - maybe with built in armor
+# ### Pathfinders patch you into the system
+# ### Figure out pathfinder reinforcement
+#   - name: STR_PATHFINDER_BEACON_GV
+#     points: -250
+#     cost: 200
+#     dependencies:
+#       - STR_GUEVESA_CLUSTER_GV
 
 ### Beastmen arrive, consider gating on mission - consider later launching mission at same time to cover cost
   - name: STR_BEASTMEN_CULTISTS_GV
     points: 0
     cost: 200
     dependencies:
-      - STR_TAU_PROPAGANDA_GV
+      - STR_GUEVESA_CLUSTER_GV
     spawnedEvent: STR_BEASTMEN_CULTISTS_EVENT_GV
 
 ### Unlock Chimeras
@@ -204,9 +202,9 @@ research:
 ### Manufacturing projects along these lines
   - name: STR_COOPT_NAVY_PILOTS_GV
     points: 0
-    cost: 10
+    cost: 100
     dependencies:
-      - STR_CULTURE_CLUB_GV
+      - STR_GENERALLOCK
     getOneFree:
       - STR_AIRSTRIKE_REQUISITION
     spawnedEvent: STR_COOPT_NAVY_PILOTS_EVENT_GV
@@ -215,22 +213,25 @@ research:
 ### "Light" Tau base
   - name: STR_A_SECRET_PACT_GV
     points: -250
-    cost: 300
+    cost: 500
     dependencies:
-      - STR_PATHFINDER_BEACON_GV
+      - STR_GUEVESA_CLUSTER_GV
+      # - STR_PATHFINDER_BEACON_GV
       - STR_LOSE_250
     unlocks:
       - STR_WATERCASTE_OUTPOST_GV        # Opens up TAU services and pathfinders
       - STR_MIDTIER_PREREQ
       - STR_HARDER_MISSIONS
+      - STR_TAU_PATHFINDERS_GV            # unlocks pathfinder construction
+      - STR_TAU_ARMORY_EXAM
+      - STR_DALYTH_PATTERN_GV             # Tau rebuilt Imperial weapons
+      - STR_TAU_XENOTECH
       - STR_INQUISITION_DANGER_GV     # You are in danger from the Inquisition
     spawnedEvent: STR_A_SECRET_PACT_EVENT_GV  # breadcrumb the navy communications here
 
   - name: STR_WATERCASTE_OUTPOST_GV
     dependencies:
       - STR_GENERALLOCK
-    unlocks:
-      - STR_DALYTH_PATTERN_GV         # Tau rebuilt Imperial weapons
 
   - name: STR_DALYTH_PATTERN_GV
     dependencies:
@@ -294,15 +295,15 @@ research:
       - STR_GENERALLOCK
     spawnedEvent: STR_RELOCATION_SUPPORT_EVENT_GV
 
-### Combine Tau guns and Imperial chassis
-  - name: STR_GUEVESA_HEAVY_WEAPONS_GV
-    points: 10
-    cost: 100
-    dependencies:
-      - STR_INFILTRATION_CADRE_GV
-      - STR_COOPT_NAVY_PILOTS_GV
-      - STR_TANKERS_DELIGHT_GV
-    spawnedEvent: STR_GUEVESA_HEAVY_WEAPONS_EVENT_GV
+# ### Combine Tau guns and Imperial chassis
+#   - name: STR_GUEVESA_HEAVY_WEAPONS_GV
+#     points: 10
+#     cost: 100
+#     dependencies:
+#       - STR_INFILTRATION_CADRE_GV
+#       - STR_COOPT_NAVY_PILOTS_GV
+#       - STR_TANKERS_DELIGHT_GV
+#     spawnedEvent: STR_GUEVESA_HEAVY_WEAPONS_EVENT_GV
 
 ### Ceramite tier part 3
 ### Tau "Large" Base
@@ -529,7 +530,7 @@ research:
     dependencies:
       - STR_INQ_ALIGN_TAU_RESEARCH
     unlocks:
-      - STR_TAU_PROPAGANDA_GV
+      - STR_GUEVESA_CLUSTER_GV
       - STR_TAU_EMPIRE_GV
       - STR_TAU_GUEVESA_GV
       - STR_TAU_AUXILIARY_GV
