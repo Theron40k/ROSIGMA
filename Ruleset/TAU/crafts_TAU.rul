@@ -106,10 +106,10 @@ crafts:
     requiresBuyBaseFunc: [HANGAR]
     requires:
       - STR_TAU_GUEVESA_GV
-    sprite: 1715
+    sprite: 2167
     fuelMax: 1500
-    damageMax: 800
-    speedMax: 250
+    damageMax: 800  # worse armor than a chimera
+    speedMax: 200   # a little faster than a chimera
     repairRate: 10
     vehicles: 999
     accel: 2
@@ -315,7 +315,7 @@ crafts:
     marker: 30
     sprite: 1487
     skinSprites: [1488, 1500] # default empty, contains all sprites except for the first (index zero)
-    damageMax: 1000
+    damageMax: 1200  # uparmored
     maxAltitude: 1
     accel: 2
     weapons: 1
