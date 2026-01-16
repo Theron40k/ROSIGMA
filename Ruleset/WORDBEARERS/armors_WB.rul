@@ -1734,6 +1734,8 @@ armors:
       UNIT_SIZE: 200 # HUGE
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 25
+    moveCost:
+      baseNormalPercent: [80, 80]
 
   - type: STR_WBMARINE_MK3ARMORPLAYER  # WB MK3 MARINE ARMOR
     customArmorPreviewIndex: 986
@@ -2691,3 +2693,123 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       UNIT_TURNS_UNTIL_DEATH: 12
+
+
+  - type: STR_WBEXECUTIONER_ARMORPLAYER  # WB EXECUTIONER ARMOR
+    refNode: *STR_WBDIABOLISTBASE_ARMOR
+    customArmorPreviewIndex: 939
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    spriteSheet: WORDBEARERexecutionerbattle.PCK
+    zombiImmune: true
+    corpseBattle:
+      - STR_WORDBEARER_EXECUTIONERPLAYER_CORPSE
+    corpseGeo: STR_WBFALLEN_CORPSE
+    storeItem: STR_WBEXECUTIONER_ARMORPLAYER
+    stats:
+      tu: 30
+      stamina: 20
+      health: 50
+      bravery: 20  # always multiples of 10
+      firing: -20
+      throwing: 0
+      strength: 30
+      psiStrength: 20
+      psiSkill: 10
+      melee: 30
+    frontArmor: 140
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 100
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 0.8  # PLASMA
+      - 0.8  # STUN
+      - 0.8  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.8  # MELTA
+    builtInWeapons:
+      - STR_CHAOSMARKED_CLAW_TOKEN
+      - STR_WBEXECUTIONER_AXE
+      - STR_WBEXECUTIONER_AXETRICK
+    units:
+      - STR_WBSOLDIER_ACOLYTE
+      - STR_WBSOLDIER_CHAOSMARKED
+    loftempsSet: [3]
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 80
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
+    moveCost:
+      baseNormalPercent: [80, 80]
+
+  - type: STR_WORDBEARER_HELBRUTE_ARMORPLAYER  # WB DREADNOUGHT ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    customArmorPreviewIndex: [176, 938, 178]
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteInv: WORDBEARER_HELBRUTEinventPLAYER.SPK
+    spriteSheet: WORDBEARERhelbrutebattle.PCK
+    instantWoundRecovery: true
+    allowInv: true
+    storeItem: STR_WORDBEARER_HELBRUTE_ARMORPLAYER
+    corpseGeo: STR_WBDREAD_CORPSE
+    corpseBattle:
+      - WBDREAD_CORPSE1
+      - WBDREAD_CORPSE2
+      - WBDREAD_CORPSE3
+      - WBDREAD_CORPSE4
+    frontArmor: 240
+    sideArmor: 230
+    rearArmor: 180
+    underArmor: 240
+    size: 2
+    moveSound: {mod: 40k, index: 700}
+    #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
+    units:
+      - STR_WBFALLEN
+    stats:
+      strength: 80
+      health: 180
+      melee: 20
+    damageModifier:
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES
+      - 0.7  # HE
+      - 1.1  # LASCANON
+      - 0.8  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 20
+    builtInWeapons:
+      - AUX_HOVERTANK_PLASMA
+      - STR_HELBRUTE_CLAW
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 100  # infection
+      INTIMIDATION_RESISTANCE: 100  # intimidation
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_REINFORCEMENT_TU_PERCENT: 75
