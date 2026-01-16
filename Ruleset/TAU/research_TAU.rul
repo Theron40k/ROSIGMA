@@ -76,6 +76,7 @@ research:
       - STR_PSI_LAB
       - STR_THE_MARTIAN_SOLUTION  # More like a Terran problem!
       - STR_DEFAULT_CAMPAIGN      # alternate Tau versions of this content
+      - STR_DIFFICULTY_OPTIONS    # does not have harder missions
     spawnedEvent: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
 
 ### Recruit new troops as militia
@@ -110,15 +111,13 @@ research:
 
 ### Discover the Cold Trade
 ### Discover Tau artifacts
-### Establish contact with Tau
-### Tau pulse rifle available
-### higher quality parts and supplies?
 ### win a couple missions?
   - name: STR_THE_COLD_TRADE_GV
     points: 0
-    cost: 400
+    cost: 300
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
+      - STR_ALIEN_ORIGINS     # try this for now.
     unlocks:
       - STR_TAU_TRADING
       - STR_HEAVY_WEAPONS_IG
@@ -142,8 +141,6 @@ research:
     dependencies:
       - STR_THE_COLD_TRADE_GV
       - STR_TAU_TRADING
-      - STR_ELERIUM_115             # guevesa supply crawlers need fuel
-      - STR_ALIEN_ALLOYS            # build fortifications and repair things
     unlocks:
       - STR_TAU_GUEVESA_TRADING           # unlocks cheaper rifles and carbines + flak
       - STR_ENGINSEER_REQUISITION         # Enginseers
@@ -159,6 +156,8 @@ research:
     cost: 200
     dependencies:
       - STR_CULTURE_CLUB_GV
+      - STR_ELERIUM_115             # guevesa supply crawlers need fuel
+      - STR_ALIEN_ALLOYS            # build fortifications and repair things
     unlocks:
       - STR_INQUISITION_ATTENTION_GV      # uh oh!
       # - STR_PATHFINDER_BEACON_GV    # pathfinders infiltrate
@@ -166,6 +165,8 @@ research:
       - STR_BEASTMEN_CULTISTS_GV    # beastmen look to you for protection
       - STR_COOPT_NAVY_PILOTS_GV    # what else are they gonna do
       - STR_RECRUIT_GUEVESA_GV      # turn on guevesa and turn off militia
+      - STR_MIDTIER_PREREQ
+      - STR_HARDER_MISSIONS
     disables:
       - STR_RECRUIT_MILITIA_GV      # turn on guevesa and turn off militia
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
@@ -244,8 +245,6 @@ research:
       - STR_LOSE_250
     unlocks:
       - STR_WATERCASTE_OUTPOST_GV        # Opens up TAU services and pathfinders
-      - STR_MIDTIER_PREREQ
-      - STR_HARDER_MISSIONS
       - STR_TAU_PATHFINDERS_GV            # unlocks pathfinder construction
       - STR_TAU_ARMORY_EXAM
       - STR_DALYTH_PATTERN_GV             # Tau rebuilt Imperial weapons

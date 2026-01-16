@@ -106,8 +106,8 @@
 
 events:
   - name: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
-    description: STR_TAU_GUEVESA_STRATEGY_EVENT_DESCRIPTION_GV
-    background: GuardPatrolBG.SCR
+    description: STR_TAU_GUEVESA_STRATEGY_CODEX_DESCRIPTION_GV
+    background: GuardOffensiveBG.SCR
     # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
     spawnedPersonType: STR_MILITIA_GV
@@ -129,14 +129,14 @@ events:
       STR_KRAK_GRENADE: 10
       STR_TRAUMA_PACK: 4
 
-  - name: STR_A_MATERIEL_WORLD_EVENT_GV
-    description: STR_A_MATERIEL_WORLD_EVENT_DESCRIPTION_GV
-    background: PDFDefenseBG.SCR
-    interruptResearch: STR_NOT_TAU_GUEVESA_GV
-    timer: 4500
+  # - name: STR_A_MATERIEL_WORLD_EVENT_GV
+  #   description: STR_A_MATERIEL_WORLD_CODEX_DESCRIPTION_GV
+  #   background: PDFDefenseBG.SCR
+  #   interruptResearch: STR_NOT_TAU_GUEVESA_GV
+  #   timer: 4500
 
   - name: STR_RIDE_THE_LIGHTNING_EVENT_GV
-    description: STR_RIDE_THE_LIGHTNING_EVENT_DESCRIPTION_GV
+    description: STR_RIDE_THE_LIGHTNING_CODEX_DESCRIPTION_GV
     background: GuardArmorBG.SCR
     interruptResearch: STR_NOT_TAU_GUEVESA_GV
     spawnedCraftType: STR_GUEVESA_LIGHTNING_GV
@@ -147,32 +147,32 @@ events:
       STR_AVALANCHE_LAUNCHER: 2
       STR_AVALANCHE_MISSILES: 16
 
-  - name: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
-    description: STR_WHITESHIELD_BLACK_MARKET_EVENT_DESCRIPTION_GV
-    background: GuardOffensiveBG.SCR
+  # - name: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
+  #   description: STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV
+  #   background: PDFDefenseBG.SC
 
   - name: STR_THE_COLD_TRADE_EVENT_GV
-    description: STR_THE_COLD_TRADE_EVENT_DESCRIPTION_GV
+    description: STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_TAU_PROPAGANDA_EVENT_GV
-    description: STR_TAU_PROPAGANDA_EVENT_DESCRIPTION_GV
+    description: STR_TAU_PROPAGANDA_CODEX_DESCRIPTION_GV
     background: HereticsvsSistersBG.SCR
 
   - name: STR_CULTURE_CLUB_EVENT_GV
-    description: STR_CULTURE_CLUB_EVENT_DESCRIPTION_GV
+    description: STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_BEASTMEN_CULTISTS_EVENT_GV
-    description: STR_BEASTMEN_CULTISTS_EVENT_DESCRIPTION_GV
+    description: STR_BEASTMEN_CULTISTS_CODEX_DESCRIPTION_GV
     background: BeastmenBG.SCR
 
   - name: STR_TANKERS_DELIGHT_EVENT_GV
-    description: STR_TANKERS_DELIGHT_EVENT_DESCRIPTION_GV
+    description: STR_TANKERS_DELIGHT_CODEX_DESCRIPTION_GV
     background: GuardArmorBG.SCR
 
   - name: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV
-    description: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_DESCRIPTION_GV
+    description: STR_PATHFINDERS_ARRIVE_FIRST_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
     everyMultiSoldierList:
       STR_FIREWARRIOR_GV: 4
@@ -189,40 +189,40 @@ events:
       STR_TAU_PHOTON_GRENADE: 5
 
   - name: STR_A_SECRET_PACT_EVENT_GV
-    description: STR_A_SECRET_PACT_EVENT_DESCRIPTION_GV
+    description: STR_A_SECRET_PACT_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
     # adhocMissionScriptTags: ["inqOutpostGV"]
 
   - name: STR_INFILTRATION_CADRE_EVENT_GV
-    description: STR_INFILTRATION_CADRE_EVENT_DESCRIPTION_GV
+    description: STR_INFILTRATION_CADRE_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_AUXILIARY_CADRE_EVENT_GV
-    description: STR_AUXILIARY_CADRE_EVENT_DESCRIPTION_GV
+    description: STR_AUXILIARY_CADRE_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_COALITION_COMMAND_EVENT_GV
-    description: STR_COALITION_COMMAND_EVENT_DESCRIPTION_GV
+    description: STR_COALITION_COMMAND_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
-    description: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_DESCRIPTION_GV
+    description: STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_THE_TERRAN_PROBLEM_EVENT_GV
-    description: STR_THE_TERRAN_PROBLEM_EVENT_DESCRIPTION_GV
+    description: STR_THE_TERRAN_PROBLEM_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_COALITION_COMMAND_EVENT_GV
-    description: STR_COALITION_COMMAND_EVENT_DESCRIPTION_GV
+    description: STR_COALITION_COMMAND_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_COOPT_ECCLESIARCHY_EVENT_GV
-    description: STR_COOPT_ECCLESIARCHY_EVENT_DESCRIPTION_GV
+    description: STR_COOPT_ECCLESIARCHY_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
   - name: STR_EMERGENCY_PROTOCOLS_EVENT_GV
-    description: STR_EMERGENCY_PROTOCOLS_EVENT_DESCRIPTION_GV
+    description: STR_EMERGENCY_PROTOCOLS_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
 
@@ -235,7 +235,7 @@ events:
 
   ### TODO: add export carbines
   - name: STR_FROM_THE_BARREL_EVENT_GV
-    description: STR_FROM_THE_BARREL_EVENT_DESCRIPTION_GV
+    description: STR_FROM_THE_BARREL_CODEX_DESCRIPTION_GV
     background: InquisitionLedgerBG.SCR
     everyMultiItemList:
       STR_TAU_PULSE_RIFLE_EXPORT_GUEVESA: 2
@@ -243,7 +243,7 @@ events:
 
 ### Provides the necessary materials for advancement thru tiers
   - name: STR_DELIVER_DEBUG_PACKAGE_EVENT_GV
-    description: STR_DELIVER_DEBUG_PACKAGE_EVENT_DESCRIPTION_GV
+    description: STR_DELIVER_DEBUG_PACKAGE_CODEX_DESCRIPTION_GV
     background: InquisitionLedgerBG.SCR
     everyMultiItemList:
       STR_ALIEN_ALLOYS: 500
