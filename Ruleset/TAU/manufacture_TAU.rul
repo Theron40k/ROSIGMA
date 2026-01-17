@@ -33,10 +33,9 @@ manufacture:
       STR_KILLPOINT_TOKEN: 40
       STR_ALIEN_ALLOYS: 40
       STR_ELERIUM_115: 10
-    space: 5
-    time: 200
+    space: 2
+    time: 500
     cost: 100000
-    requiresBaseFunc: [TAU]
 
   - name: STR_CRISIS_SUIT_ITEM_GV
     refNode: *STR_SUIT_MANUF_GV
@@ -47,10 +46,9 @@ manufacture:
       STR_KILLPOINT_TOKEN: 60
       STR_ALIEN_ALLOYS: 80
       STR_ELERIUM_115: 20
-    space: 10
-    time: 500
+    space: 5
+    time: 1000
     cost: 200000
-    requiresBaseFunc: [TAU]
 
   - name: STR_DEVILFISH_GV
     category: STR_CRAFT
@@ -64,7 +62,6 @@ manufacture:
       STR_ALIEN_ALLOYS: 400
       STR_UFO_POWER_SOURCE: 4
       STR_UFO_NAVIGATION: 4
-    requiresBaseFunc: [TAU]
 
   - name: STR_CONVERT_COMMISSION_GV
     space: 0
@@ -82,10 +79,9 @@ manufacture:
 ### Manufacture pulse weapons
   - name: STR_TAU_PULSE_RIFLE
     category: STR_WEAPON
-    space: 1
+    space: 0
     time: 500
     cost: 50000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_STRIKE_TEAMS_GV
     requiredItems:
@@ -95,10 +91,9 @@ manufacture:
 
   - name: STR_TAU_PULSE_CARBINE
     category: STR_WEAPON
-    space: 1
+    space: 0
     time: 500
     cost: 50000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -108,10 +103,9 @@ manufacture:
 
   - name: STR_TAU_PULSE_BLASTER
     category: STR_WEAPON
-    space: 1
+    space: 0
     time: 500
     cost: 50000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_BREACHERS_GV
     requiredItems:
@@ -121,10 +115,9 @@ manufacture:
 
   - name: STR_TAU_PULSE_PISTOL
     category: STR_WEAPON
-    space: 1
+    space: 0
     time: 250
     cost: 25000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -134,10 +127,9 @@ manufacture:
 
   - name: STR_TAU_RAIL_RIFLE
     category: STR_WEAPON
-    space: 1
+    space: 0
     time: 750
-    cost: 75000
-    requiresBaseFunc: [TAU]
+    cost: 100000
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -147,10 +139,9 @@ manufacture:
 
   - name: STR_TAU_PULSE_MAG
     category: STR_AMMUNITION
-    space: 1
+    space: 0
     time: 200
     cost: 1000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -160,10 +151,9 @@ manufacture:
 
   - name: STR_TAU_PULSE_BLASTER_MAG
     category: STR_AMMUNITION
-    space: 1
+    space: 0
     time: 200
     cost: 1000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_BREACHERS_GV
     requiredItems:
@@ -173,10 +163,9 @@ manufacture:
 
   - name: STR_TAU_PHOTON_GRENADE_CARBINE
     category: STR_AMMUNITION
-    space: 1
+    space: 0
     time: 200
     cost: 1000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -187,10 +176,9 @@ manufacture:
 
   - name: STR_TAU_RAIL_MAG
     category: STR_AMMUNITION
-    space: 1
+    space: 0
     time: 200
-    cost: 1000
-    requiresBaseFunc: [TAU]
+    cost: 5000
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -200,10 +188,10 @@ manufacture:
       STR_TAU_RAIL_MAG: 5
 
   - name: STR_TAU_PHOTON_GRENADE
-    space: 1
+    category: STR_AMMUNITION
+    space: 0
     time: 200
     cost: 1000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -213,10 +201,10 @@ manufacture:
       STR_TAU_PHOTON_GRENADE: 5
 
   - name: STR_TAU_FUSION_GRENADE
-    space: 1
+    category: STR_AMMUNITION
+    space: 0
     time: 200
     cost: 1000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -226,10 +214,10 @@ manufacture:
       STR_TAU_FUSION_GRENADE: 2
 
   - name: STR_TAU_EMP_GRENADE
-    space: 1
+    category: STR_AMMUNITION
+    space: 0
     time: 200
     cost: 1000
-    requiresBaseFunc: [TAU]
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
@@ -237,6 +225,107 @@ manufacture:
       STR_ELERIUM_115: 2
     producedItems:
       STR_TAU_EMP_GRENADE: 2
+
+### Upgrade export Tau weaponry
+  - name: STR_TAU_PULSE_RIFLE_EXPORT_GUEVESA_UPGRADE
+    category: STR_WEAPON
+    space: 0
+    time: 200
+    cost: 25000
+    requires:
+      - STR_TAU_GUEVESA_TRADING
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 5
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+      STR_TAU_PULSE_RIFLE_EXPORT: 1
+    producedItems:
+      STR_TAU_PULSE_RIFLE_EXPORT_GUEVESA: 1
+
+  - name: STR_TAU_PULSE_RIFLE_UPGRADE
+    category: STR_WEAPON
+    space: 0
+    time: 200
+    cost: 50000
+    requires:
+      - STR_A_SECRET_PACT_GV
+      - STR_TAU_XENOTECH
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 5
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+      STR_TAU_PULSE_RIFLE_EXPORT_GUEVESA: 1
+    producedItems:
+      STR_TAU_PULSE_RIFLE: 1
+
+  - name: STR_TAU_PULSE_CARBINE_UPGRADE
+    category: STR_WEAPON
+    space: 0
+    time: 200
+    cost: 50000
+    requires:
+      - STR_A_SECRET_PACT_GV
+      - STR_TAU_XENOTECH
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 5
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+      STR_TAU_PULSE_CARBINE_EXPORT_GUEVESA: 1
+    producedItems:
+      STR_TAU_PULSE_CARBINE: 1
+
+  - name: STR_TAU_PULSE_MAG_EXPORT_GUEVESA_UPGRADE
+    category: STR_AMMUNITION
+    space: 0
+    time: 50
+    cost: 1000
+    requires:
+      - STR_TAU_GUEVESA_TRADING
+    requiredItems:
+      STR_ELERIUM_115: 1
+      STR_TAU_PULSE_MAG_EXPORT: 1
+    producedItems:
+      STR_TAU_PULSE_MAG_EXPORT_GUEVESA: 1
+
+  - name: STR_TAU_PULSE_MAG_UPGRADE
+    category: STR_AMMUNITION
+    space: 0
+    time: 50
+    cost: 2000
+    requires:
+      - STR_A_SECRET_PACT_GV
+      - STR_TAU_XENOTECH
+    requiredItems:
+      STR_ELERIUM_115: 1
+      STR_TAU_PULSE_MAG_EXPORT_GUEVESA: 1
+    producedItems:
+      STR_TAU_PULSE_MAG: 1
+
+  - name: STR_TAU_PULSE_BLASTER_MAG_SWAP
+    category: STR_AMMUNITION
+    space: 0
+    time: 10
+    cost: 1000
+    requires:
+      - STR_A_SECRET_PACT_GV
+      - STR_TAU_XENOTECH
+    requiredItems:
+      STR_TAU_PULSE_MAG: 1
+    producedItems:
+      STR_TAU_PULSE_BLASTER_MAG: 1
+
+  - name: STR_TAU_PULSE_MAG_SWAP
+    category: STR_AMMUNITION
+    space: 0
+    time: 10
+    cost: 1000
+    requires:
+      - STR_A_SECRET_PACT_GV
+      - STR_TAU_XENOTECH
+    requiredItems:
+      STR_TAU_PULSE_MAG: 1
+    producedItems:
+      STR_TAU_PULSE_BLASTER_MAG: 1
 
 ### Recruit guard prisoners as gue'vesa for now
   - &STR_WELCOME_GUEVESALA_GV
