@@ -123,6 +123,7 @@ items:
       - STR_TAU_TRADING
     requiresBuy:
       - STR_TAU_TRADING
+      - STR_NOT_TAU_GUEVESA_TRADING   # stop buying old one when new one arrives
     requiresBuyBaseFunc: [TRADE]
     size: 0.4
     bigSprite: 3153
@@ -199,6 +200,7 @@ items:
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
     requiresBuy:
       - STR_TAU_TRADING
+      - STR_NOT_TAU_GUEVESA_TRADING   # stop buying old one when new one arrives
     requiresBuyBaseFunc: [TRADE]
     bigSprite: 3152
     floorSprite: 3151

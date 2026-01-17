@@ -18,6 +18,7 @@ research:
   - name: STR_NOT_TAU_GUEVESA_GV        # (Not xenophile scum)
   - name: STR_NOT_TAU_AUXILIARY_GV      # (Not xenophile scum with friends)
   - name: STR_NOT_DEBUG_TAU_EMPIRE_GV   # (Not cheating Tau and friends)
+  - name: STR_NOT_TAU_GUEVESA_TRADING   # (Not trading at improved terms)
 
   - name: STR_REDEEMED_DEFEATED_GV        # (Tau campaign mechanics)
     dependencies:
@@ -146,6 +147,8 @@ research:
       - STR_ENGINSEER_REQUISITION         # Enginseers
       - STR_GUARD_PRIEST_REQUISITION      # Priests
       - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
+    disables:
+      - STR_NOT_TAU_GUEVESA_TRADING       # remove old rifles/charges from market
     spawnedEvent: STR_CULTURE_CLUB_GV
 
 ### Form gue'vesa cluster preliminary to formal Tau pact
@@ -244,7 +247,6 @@ research:
       # - STR_PATHFINDER_BEACON_GV
       - STR_LOSE_250
     unlocks:
-      - STR_WATERCASTE_OUTPOST_GV        # Opens up TAU services and pathfinders
       - STR_TAU_PATHFINDERS_GV            # unlocks pathfinder construction
       - STR_TAU_ARMORY_EXAM
       - STR_DALYTH_PATTERN_GV             # Tau rebuilt Imperial weapons
@@ -252,9 +254,9 @@ research:
       - STR_INQUISITION_DANGER_GV     # You are in danger from the Inquisition
     spawnedEvent: STR_A_SECRET_PACT_EVENT_GV  # breadcrumb the navy communications here
 
-  - name: STR_WATERCASTE_OUTPOST_GV
-    dependencies:
-      - STR_GENERALLOCK
+  # - name: STR_WATERCASTE_OUTPOST_GV
+  #   dependencies:
+  #     - STR_GENERALLOCK
 
   - name: STR_DALYTH_PATTERN_GV
     dependencies:
@@ -277,31 +279,36 @@ research:
       # Fire Warriors deploy from these. Integrated workshops and/ or science facilities?
       # Limited recruits depending on Consulate/Embassy + Caravan Market/Starport?
       # 10 per barracks?
-      - STR_INFILTRATION_FIREBASE_GV           # Fire Warriors deploy from here, limited recruit per barracks?
-      - STR_IMPERIAL_CRUSADE_GV       # Super Danger! (Not yet implemented)
-    spawnedEvent: STR_INFILTRATION_CADRE_EVENT_GV
-
-### Recruit Fire Warriors directly
-# Fire Warriors deploy from here. Integrated workshops and/ or science facilities?
-# Limited recruits depending on Consulate/Embassy + Caravan Market/Starport?
-# 10 per barracks?
-  - name: STR_INFILTRATION_FIREBASE_GV
-    dependencies:
-      - STR_GENERALLOCK
-    unlocks:
       - STR_TAU_BREACHERS_GV
       - STR_TAU_STRIKE_TEAMS_GV
       - STR_DEVILFISH_TRANSPORTS_GV   # Build devilfish
       - STR_REMORA_INTERCEPTORS_GV    # Build remoras
       - STR_STEALTH_SUIT_OPERATIONS_GV          # Build stealth suits
       - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
+      - STR_IMPERIAL_CRUSADE_GV       # Super Danger! (Not yet implemented)
+    spawnedEvent: STR_INFILTRATION_CADRE_EVENT_GV
+
+# ### Recruit Fire Warriors directly
+# # Fire Warriors deploy from here. Integrated workshops and/ or science facilities?
+# # Limited recruits depending on Consulate/Embassy + Caravan Market/Starport?
+# # 10 per barracks?
+#   - name: STR_INFILTRATION_FIREBASE_GV
+#     dependencies:
+#       - STR_GENERALLOCK
+#     unlocks:
+#       - STR_TAU_BREACHERS_GV
+#       - STR_TAU_STRIKE_TEAMS_GV
+#       - STR_DEVILFISH_TRANSPORTS_GV   # Build devilfish
+#       - STR_REMORA_INTERCEPTORS_GV    # Build remoras
+#       - STR_STEALTH_SUIT_OPERATIONS_GV          # Build stealth suits
+#       - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
 
 ### build Devilfish from parts
   - name: STR_DEVILFISH_TRANSPORTS_GV
     dependencies:
       - STR_GENERALLOCK
 
-### Operate XV25 stealth suits
+### Operate XV26 stealth suits
   - name: STR_STEALTH_SUIT_OPERATIONS_GV
     dependencies:
       - STR_GENERALLOCK
