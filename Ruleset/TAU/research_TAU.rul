@@ -138,7 +138,7 @@ research:
 ### Cultist periodic arrival events
   - name: STR_CULTURE_CLUB_GV
     points: -100
-    cost: 400
+    cost: 500
     dependencies:
       - STR_THE_COLD_TRADE_GV
       - STR_TAU_TRADING
@@ -155,8 +155,8 @@ research:
 ### Community outreach to get beastmen soldiers + cultists - can upgrade to Marin'vesa
 ### gated on mission/interrogation?
   - name: STR_GUEVESA_CLUSTER_GV
-    points: 0
-    cost: 200
+    points: -250
+    cost: 1000
     dependencies:
       - STR_CULTURE_CLUB_GV
       - STR_ELERIUM_115             # guevesa supply crawlers need fuel
@@ -210,15 +210,13 @@ research:
       - STR_GUEVESA_CLUSTER_GV
     spawnedEvent: STR_BEASTMEN_CULTISTS_EVENT_GV
 
-### Unlock Chimeras
-###
-### Basic Sentinels too
+### Unlock Chimeras and basic Sentinels too?
 ### Gate on mission
   - name: STR_TANKERS_DELIGHT_GV
     points: 0
     cost: 200
     dependencies:
-      - STR_GENERALLOCK
+      - STR_GUEVESA_CLUSTER_GV
     unlocks:
       - STR_BASIC_SENTINEL
       # - STR_ARMOR_COLUMN -- deal with this craft stuff later
@@ -232,8 +230,8 @@ research:
     points: 0
     cost: 100
     dependencies:
-      - STR_GENERALLOCK
-    getOneFree:
+      - STR_GUEVESA_CLUSTER_GV
+    unlocks:
       - STR_AIRSTRIKE_REQUISITION
     spawnedEvent: STR_COOPT_NAVY_PILOTS_EVENT_GV
 
@@ -241,7 +239,7 @@ research:
 ### "Light" Tau base
   - name: STR_A_SECRET_PACT_GV
     points: -250
-    cost: 500
+    cost: 1000
     dependencies:
       - STR_GUEVESA_CLUSTER_GV
       # - STR_PATHFINDER_BEACON_GV
@@ -249,7 +247,6 @@ research:
     unlocks:
       - STR_TAU_PATHFINDERS_GV            # unlocks pathfinder construction
       - STR_TAU_ARMORY_EXAM
-      - STR_DALYTH_PATTERN_GV             # Tau rebuilt Imperial weapons
       - STR_TAU_XENOTECH
       - STR_INQUISITION_DANGER_GV     # You are in danger from the Inquisition
     spawnedEvent: STR_A_SECRET_PACT_EVENT_GV  # breadcrumb the navy communications here
@@ -326,6 +323,7 @@ research:
     spawnedEvent: STR_RELOCATION_SUPPORT_EVENT_GV
 
 # ### Combine Tau guns and Imperial chassis
+# ###
 #   - name: STR_GUEVESA_HEAVY_WEAPONS_GV
 #     points: 10
 #     cost: 100
@@ -347,7 +345,7 @@ research:
       - STR_UFO_CONSTRUCTION
     unlocks:
       - STR_STARSCYTHE_CRISIS_OPERATIONS_GV        # Starscythe Crisis
-      - STR_HAMMERHEAD_GUNSHIPS_GV      # Ion Hammerhead tanks
+      # - STR_HAMMERHEAD_GUNSHIPS_GV      # Ion Hammerhead tanks
       - STR_BARRACUDA_INTERCEPTORS_GV   # Barracuda Interceptors
       - STR_MASTER_CRAFTING
     spawnedEvent: STR_AUXILIARY_CADRE_EVENT_GV
