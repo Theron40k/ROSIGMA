@@ -793,7 +793,7 @@ armors:
     units:
       # - STR_GUARDSM
       - STR_MILITIA_GV
-      # - STR_MILITIA_OFFICER_GV
+      - STR_MILITIA_OFFICER_GV
       - STR_GUEVESALA_GV
       - STR_GUEVESAUI_GV
       - STR_GUEVESAVRE_GV
@@ -811,7 +811,7 @@ armors:
   - &STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
     type: STR_TAUGUEVESACARAP_PC_ARMOR_GV
     refNode: *STR_TAU_BASIC_ARMOR_TEMPLATE_GV
-    requires: STR_A_SECRET_PACT_GV
+    requires: STR_INFILTRATION_CADRE_GV
     spriteSheet: TAUGUEVESALV2battlePLAYER_GOG.PCK
     spriteInv: TAUGUEVESALV2ARMORPLAYER.PCK
     customArmorPreviewIndex: 1385
@@ -823,7 +823,6 @@ armors:
       strength: 5
     specialWeapon: STR_BAYONET
     units:
-      - STR_MILITIA_GV
       - STR_GUEVESALA_GV
       - STR_GUEVESAUI_GV
       - STR_GUEVESAVRE_GV
@@ -841,7 +840,6 @@ armors:
       melee: 5        # focus on what they're best at
       strength: 5
     units:
-      - STR_GUEVESALA_GV
       - STR_GUEVESAUI_GV
       - STR_GUEVESAVRE_GV
     tags:
@@ -856,7 +854,7 @@ armors:
 
 
   - type: STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV
-    refNode: *STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
+    refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
     spriteSheet: TAUGUEVESALV2battlePLAYER_GOG.PCK
     spriteInv: TAUGUEVESALV2ARMORPLAYER.PCK
     corpseBattle:
@@ -915,7 +913,6 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_IMPERIUM: 1
 
-
   - type: STR_TAUGUEVESA_IMPROVARMOR_T0_GV
     refNode: *STR_GUEVESA_LIGHT_ARMORS_GV
     spriteSheet: TAUMILITIABATTLE.PCK  # PENITENTS_BROWN.PCK
@@ -959,6 +956,97 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - &MARINVESA_FLAK_ARMOR_REF
+    type: STR_TAUMARINVESAFLAK_PC_ARMOR_GV
+    visibilityAtDay: 35  # abhuman beast malus
+    visibilityAtDark: 20  # abhuman beast bonus
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    customArmorPreviewIndex: 842  # was 542
+    spriteSheet: TAUBEASTMAN_FLAK_BSPLAYER.PCK
+    spriteInv: TBFLAK_33
+    corpseBattle:
+      - STR_TAUMARINVESA_PCCORPSE
+    storeItem: STR_NONE
+    frontArmor: 40
+    sideArmor: 30
+    rearArmor: 20
+    underArmor: 30
+    drawingRoutine: 0
+    zombiImmune: true
+    damageModifier:  # GUARD ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.4  # FLAMES 20% BEASTMAN WEAKNESS
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN 10% BEASTMAN BONUS
+      - 1.0  # MELEE 10% BEASTMAN BONUS
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_MARINVESA_GV
+    stats:
+      stamina: 10
+    loftempsSet: [3]
+    specialWeapon: STR_BAYONET
+    tags:
+      INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_LIVING: 1
+
+  - type: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+    visibilityAtDay: 35  # abhuman squat malus
+    visibilityAtDark: 30  # abhuman squat bonus
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    customArmorPreviewIndex: 843  # 543
+    requires: STR_INFILTRATION_CADRE_GV
+    spriteSheet: TAUBEASTMAN_CARAPACE_BSPLAYER.PCK
+    spriteInv: TBCA_33
+    storeItem: STR_NONE
+    corpseBattle:
+      - STR_TAUMARINVESA_PCCORPSE
+    frontArmor: 80 # +10 vs basic Guard Carapace
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 15
+    damageModifier:  # GUARD ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.2  # FLAMES 20% BEASTMAN MALUS
+      - 1.0  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.9  # STUN 10% BEASTMAN BONUS
+      - 0.9  # MELEE 10% BEASTMAN BONUS
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.1  # MELTA
+    units:
+      - STR_MARINVESA_GV
+    stats:
+      bravery: 10
+      strength: 5
+    loftempsSet: [4]  # big targets
+    specialWeapon: STR_BAYONET
+    tags:
+      INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_LIVING: 1
+
+
+### NPC armors
 
   - type: STR_REDEMPTIONIST_ARMOR_GV
     visibilityAtDay: 40
