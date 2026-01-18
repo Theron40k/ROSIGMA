@@ -217,9 +217,7 @@ research:
     cost: 200
     dependencies:
       - STR_GUEVESA_CLUSTER_GV
-    unlocks:
-      - STR_BASIC_SENTINEL
-      # - STR_ARMOR_COLUMN -- deal with this craft stuff later
+      # purchases unlocked over on the troops
     spawnedEvent: STR_TANKERS_DELIGHT_EVENT_GV
 
 ### Work out an arrangement with the Navy interceptors
@@ -233,7 +231,7 @@ research:
       - STR_GUEVESA_CLUSTER_GV
     unlocks:
       - STR_AIRSTRIKE_REQUISITION
-    spawnedEvent: STR_COOPT_NAVY_PILOTS_EVENT_GV
+#    spawnedEvent: STR_COOPT_NAVY_PILOTS_EVENT_GV
 
 ### Full alliance with the Tau - midtier complete
 ### "Light" Tau base
@@ -249,7 +247,7 @@ research:
       - STR_TAU_ARMORY_EXAM
       - STR_TAU_XENOTECH
       - STR_INQUISITION_DANGER_GV     # You are in danger from the Inquisition
-    spawnedEvent: STR_A_SECRET_PACT_EVENT_GV  # breadcrumb the navy communications here
+    spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV  # breadcrumb the navy communications here
 
   # - name: STR_WATERCASTE_OUTPOST_GV
   #   dependencies:
@@ -273,9 +271,6 @@ research:
       - STR_A_SECRET_PACT_GV
       - STR_NAVY_COMUNICATIONS
     unlocks:
-      # Fire Warriors deploy from these. Integrated workshops and/ or science facilities?
-      # Limited recruits depending on Consulate/Embassy + Caravan Market/Starport?
-      # 10 per barracks?
       - STR_TAU_BREACHERS_GV
       - STR_TAU_STRIKE_TEAMS_GV
       - STR_DEVILFISH_TRANSPORTS_GV   # Build devilfish
