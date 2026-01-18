@@ -798,7 +798,8 @@ items:
 
 ## Vehicles (Sentinels, etc.)
 
-  - type: STR_MULTI_LASER_SENTINEL  # done
+  - &STR_MULTILAS_SENTINEL_TEMPLATE
+    type: STR_MULTI_LASER_SENTINEL  # done
     dropoff: 3
     autoRange: 16
     snapRange: 0
@@ -821,6 +822,37 @@ items:
       ToStun: 0.3  # painful las burns
       ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
       RandomWound: false
+
+  - type: STR_MULTI_LASER_SENTINEL_GV
+    refNode: *STR_MULTILAS_SENTINEL_TEMPLATE
+    size: 1.0
+    weight: 0
+    floorSprite: {mod: 40k, index: 0}
+    handSprite: {mod: 40k, index: 0}
+    bigSprite: 3932
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    explosionSpeed: 5
+    sprayWaypoints: 2
+    clipSize: -1
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 100
+    recover: false
+    fixedWeapon: true
+    # laser sfx
+    fireSound: 3981
+    bulletSprite: {mod: 40k, index: 22}
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 2
+    vaporProbabilitySurface: 100
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
 
   - &STR_MOUNTED_LIGHT_LASCANNON_TEMPLATE
     type: STR_SLASCAN  # done  # Sentinel
@@ -864,6 +896,35 @@ items:
 
   - type: STR_SLASCANPD  # done  # Arbites
     refNode: *STR_MOUNTED_LIGHT_LASCANNON_TEMPLATE
+
+  - type: STR_SLASCAN_GV
+    refNode: *STR_MOUNTED_LIGHT_LASCANNON_TEMPLATE
+    size: 0.3
+    weight: 0
+    floorSprite: 0
+    handSprite: 0
+    hitAnimation: 2230
+    hitSound: 3986
+    fireSound: 3984
+    clipSize: -1
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 100
+    damageType: 4
+    recover: false
+    fixedWeapon: true
+    bigSprite: 3930
+    bulletSprite: {mod: 40k, index: 22}
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 6
+    vaporProbabilitySurface: 100
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
 
   - type: AUX_HOVERTANK_LASER  # done  # player Dread
     refNode: *STR_MOUNTED_LIGHT_LASCANNON_TEMPLATE

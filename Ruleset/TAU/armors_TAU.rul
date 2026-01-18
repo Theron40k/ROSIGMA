@@ -25,6 +25,24 @@ items:
   - type: STR_CRISIS_SUIT_ITEM_GV
     costSell: 0
 
+  - type: STR_SENTINELGV_ARMOR                #6800
+    requiresBuy:
+      - STR_TANKERS_DELIGHT_GV
+    size: 2
+    costBuy: 360000
+    costSell: 140000
+    transferTime: 50
+    listOrder: 6800
+
+  - type: STR_SENTINELGV_MULTILASER
+    requiresBuy:
+      - STR_TANKERS_DELIGHT_GV
+    size: 2
+    costBuy: 320000
+    costSell: 100000
+    transferTime: 50
+    listOrder: 6799
+
 
 
 armors:
@@ -1382,6 +1400,112 @@ armors:
       INTIMIDATION_RESISTANCE: 100
       UNIT_TYPE_MECHANICAL: 1
 
+
+  - &STR_SENTINELGV_OPEN
+    type: STR_SENTINELGV_ARMOR_UC
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 20
+    antiCamouflageAtDark: 10
+    heatVision: 50
+    instantWoundRecovery: true
+    frontArmor: 120
+    sideArmor: 100
+    rearArmor: 80
+    underArmor: 100
+    damageModifier:
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.4  # FLAMES
+      - 0.9  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    stats:
+      tu: 20
+      stamina: 20
+      health: 50
+      firing: 10  # bonus to hit from basic sensors and firing computer
+    spriteSheet: SENTGV.PCK
+    customArmorPreviewIndex: [860, 861, 862]
+    ufopediaType: STR_SENTINEL_ARMOR_UC
+    storeItem: STR_SENTINELGV_ARMOR
+    corpseGeo:  STR_BIKE_CORPSE
+    corpseBattle:
+      - 5_SENT1
+      - 5_SENT2
+      - 5_SENT3
+      - 5_SENT4
+    size: 2
+    moveSound: {mod: 40k, index: 700}
+    units:
+      - STR_MILITIA_GV
+      - STR_MILITIA_OFFICER_GV
+      - STR_GUEVESALA_GV
+      - STR_GUEVESAUI_GV
+      - STR_GUEVESAVRE_GV
+    loftempsSet: [ 92, 89, 90, 91 ]
+    drawingRoutine: 5
+    builtInWeapons:
+      - STR_SLASCAN_GV
+      - AUX_SENTINEL_STOMP #INV_NULL_SENTINEL_LH
+      - INV_NULL_SENTINEL_BLUE_BERRY
+      - INV_NULL_SENTINEL_BELT
+      - INV_NULL_SENTINEL_LL
+      - INV_NULL_2X1_RL
+    allowsKneeling: false
+    layersDefaultPrefix: GUARD
+    layersSpecificPrefix:
+      0: SENTINEL_LASCANNON
+      4: SENTINEL
+    layersDefinition:
+      F0: ["Prop", "F0", "F0_Hair_Tight", "", "Female", "", "", "", ""]
+      F1: ["Prop", "F1", "F1_Hair_Tight", "", "Female", "", "", "", ""]
+      F2: ["Prop", "F2", "F2_Hair_Tight", "", "Female", "", "", "", ""]
+      F3: ["Prop", "F3", "F3_Hair_Tight", "", "Female", "", "", "", ""]
+      F4: ["Prop", "F4", "F4_Hair_Tight", "", "Female", "", "", "", ""]
+      F5: ["Prop", "F5", "F5_Hair_Tight", "", "Female", "", "", "", ""]
+      F6: ["Prop", "F6", "F6_Hair_Tight", "", "Female", "", "", "", ""]
+      F7: ["Prop", "F7", "F7_Hair_Tight", "", "Female", "", "", "F7_Hair_Over", ""]
+      F8: ["Prop", "F8", "F8_Hair_Tight", "F8_Hair", "Female", "", "", "", ""]
+      F9: ["Prop", "F9", "F9_Hair_Tight", "F9_Hair", "Female", "", "", "", ""]
+      M0: ["Prop", "M0", "M0_Hair_Tight", "M0_Hair", "Male", "", "", "", ""]
+      M1: ["Prop", "M1", "M1_Hair_Tight", "M1_Hair", "Male", "", "", "", ""]
+      M2: ["Prop", "M2", "M2_Hair_Tight", "", "Male", "", "", "", ""]
+      M3: ["Prop", "M3", "M3_Hair_Tight", "M3_Hair", "Male", "", "", "", ""]
+      M4: ["Prop", "M4", "", "", "Male", "", "", "", ""]
+      M5: ["Prop", "M5", "M5_Hair_Tight", "", "Male", "", "", "", ""]
+      M6: ["Prop", "M6", "M6_Hair_Tight", "", "Male", "", "", "M6_Hair_Over", ""]
+      M7: ["Prop", "M7", "M7_Hair_Tight", "", "Male", "", "", "", ""]
+      M8: ["Prop", "M8", "M8_Hair_Tight", "", "Male", "", "", "", ""]
+      M9: ["Prop", "M9", "", "", "Male", "", "", "", ""]
+    tags:
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_SENTINELGV_MULTILASER_UC
+    refNode: *STR_SENTINELGV_OPEN
+    spriteSheet: SENTGV.PCK
+    customArmorPreviewIndex: [860, 861, 862]
+    storeItem: STR_SENTINELGV_MULTILASER
+    ufopediaType: STR_GUARD_ARMORS_SENTINEL_MULTILASER_UC
+    builtInWeapons:
+    - STR_MULTI_LASER_SENTINEL_GV
+    - AUX_SENTINEL_STOMP  # INV_NULL_SENTINEL_LH
+    - INV_NULL_SENTINEL_BLUE_BERRY
+    - INV_NULL_SENTINEL_BELT
+    - INV_NULL_SENTINEL_LL
+    - INV_NULL_2X1_RL
+
+
 extraSprites:
   - typeSingle: IW_GUARD_FLAK_HAZARD_INV.SPK
     fileSingle: Resources/FOES/Inventory/IW_GUARD_FLAK_HAZARD_INV.png
@@ -1399,3 +1523,270 @@ extraSprites:
     subY: 40
     files:
       0: Resources/FOES/Battlesprites/IRON_GUARD_BS.png
+
+### taken from 40K mod
+#*** Base Guardsmen ***
+  - typeSingle: GUARD__2__F0_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F0_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F0
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F0.png
+
+  - typeSingle: GUARD__2__F1_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F1_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F1
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F1.png
+
+  - typeSingle: GUARD__2__F2_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F2_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F2
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F2.png
+
+  - typeSingle: GUARD__2__F3_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F3_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F3
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F3.png
+
+  - typeSingle: GUARD__2__F4_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F4_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F4
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F4.png
+
+  - typeSingle: GUARD__2__F5_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F5_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F5
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F5.png
+
+  - typeSingle: GUARD__2__F6_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F6_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F6
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F6.png
+
+  - typeSingle: GUARD__7__F7_Hair_Over
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F7_Hair_Over.png
+
+  - typeSingle: GUARD__2__F7_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F7_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F7
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F7.png
+
+  - typeSingle: GUARD__3__F8_Hair
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F8_Hair.png
+
+  - typeSingle: GUARD__2__F8_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F8_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F8
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F8.png
+
+  - typeSingle: GUARD__3__F9_Hair
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F9_Hair.png
+
+  - typeSingle: GUARD__2__F9_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F9_Hair_Tight.png
+
+  - typeSingle: GUARD__1__F9
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/F9.png
+
+  - typeSingle: GUARD__3__M0_Hair
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M0_Hair.png
+
+  - typeSingle: GUARD__2__M0_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M0_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M0
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M0.png
+
+  - typeSingle: GUARD__3__M1_Hair
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M1_Hair.png
+
+  - typeSingle: GUARD__2__M1_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M1_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M1
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M1.png
+
+  - typeSingle: GUARD__2__M2_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M2_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M2
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M2.png
+
+  - typeSingle: GUARD__3__M3_Hair
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M3_Hair.png
+
+  - typeSingle: GUARD__2__M3_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M3_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M3
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M3.png
+
+  - typeSingle: GUARD__1__M4
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M4.png
+
+  - typeSingle: GUARD__2__M5_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M5_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M5
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M5.png
+
+  - typeSingle: GUARD__7__M6_Hair_Over
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M6_Hair_Over.png
+
+  - typeSingle: GUARD__2__M6_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M6_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M6
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M6.png
+
+  - typeSingle: GUARD__2__M7_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M7_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M7
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M7.png
+
+  - typeSingle: GUARD__2__M8_Hair_Tight
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M8_Hair_Tight.png
+
+  - typeSingle: GUARD__1__M8
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M8.png
+
+  - typeSingle: GUARD__1__M9
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/M9.png
+
+  # - typeSingle: OGRYN__1__M0
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/ogryn_gluttony.png
+
+  # - typeSingle: OGRYN__1__M1
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/ogryn_mad.png
+
+  # - typeSingle: OGRYN__1__M2
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/ogryn_psychosmooth.png
+
+  # - typeSingle: OGRYN__1__M3
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/ogryn_hawaiian.png
+
+#*** Armor pieces ***
+  - typeSingle: CARAPACE__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Carapace_Female.png
+
+  - typeSingle: CARAPACE__6__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Carapace_Helmet_Female.png
+
+  - typeSingle: CARAPACE__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Carapace_Male.png
+
+  - typeSingle: CARAPACE__6__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Carapace_Helmet_Male.png
+
+  - typeSingle: COMMISSAR__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Commissar_Female.png
+
+  - typeSingle: COMMISSAR__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Commissar_Male.png
+
+  - typeSingle: COMMISSAR_CARAPACE__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Commissar_Carapace_Female.png
+
+  - typeSingle: COMMISSAR_CARAPACE__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Commissar_Carapace_Male.png
+
+  - typeSingle: FLAK__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Flak_Female.png
+
+  - typeSingle: FLAK__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Flak_Male.png
+
+  - typeSingle: MEDIC__5__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Medic_Female.png
+
+  - typeSingle: MEDIC__5__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Medic_Male.png
+
+  - typeSingle: TANITH__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Tanith_Camo_Female.png
+
+  - typeSingle: TANITH__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Tanith_Camo_Male.png
+
+  - typeSingle: TANITH_MEDIC__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Tanith_Medic_Female.png
+
+  - typeSingle: TANITH_MEDIC__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Tanith_Medic_Male.png
+
+  - typeSingle: MOUNT_AUTOCANNON__8__Prop
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Mount_Autocannon.png
+
+  - typeSingle: MOUNT_LASCANNON__8__Prop
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Mount_Lascannon.png
+
+  - typeSingle: OFFICER_CARAPACE__5__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Officer_Carapace_Female.png
+
+  - typeSingle: OFFICER_CARAPACE__5__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Officer_Carapace_Male.png
+
+  - typeSingle: OFFICER_FLAK__5__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Officer_Flak_Female.png
+
+  - typeSingle: OFFICER_FLAK__5__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Officer_Flak_Male.png
+
+  - typeSingle: PILOT__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Pilot_Female.png
+
+  - typeSingle: PILOT__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Pilot_Male.png
+
+  # - typeSingle: SCION__4__Female_V1
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Female_v1.png
+
+  # - typeSingle: SCION__4__Female_V2
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Female_v2.png
+
+  # - typeSingle: SCION__4__Female_V3
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Female_v3.png
+
+  # - typeSingle: SCION__4__Male_V1
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Male_v1.png
+
+  # - typeSingle: SCION__4__Male_V2
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Male_v2.png
+
+  # - typeSingle: SCION__4__Male_V3
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Male_v3.png
+
+  # - typeSingle: SCION__5__Female
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Female_eq.png
+
+  # - typeSingle: SCION__5__Male
+  #   fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Scion_Male_eq.png
+
+  - typeSingle: SENTINEL__4__Female
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Female.png
+
+  - typeSingle: SENTINEL__4__Male
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Male.png
+
+  - typeSingle: SENTINEL_LASCANNON__0__Prop
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Open_Lascannon.png
+
+  - typeSingle: SENTINEL_MISSILE__0__Prop
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Open_Missile.png
+
+  - typeSingle: SENTINEL_AUTOCANNON__0__Prop
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Autocannon.png
+
+  - typeSingle: SENTINEL_HEAVY_FLAMER__0__Prop
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Heavy_Flamer.png
+
+  - typeSingle: SENTINEL_MULTIMELTA__0__Prop
+    fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Multimelta.png
