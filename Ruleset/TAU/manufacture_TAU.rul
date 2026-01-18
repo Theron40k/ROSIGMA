@@ -31,11 +31,12 @@ manufacture:
       - STR_FORM_KILL_TEAMS_GV
     requiredItems:
       STR_KILLPOINT_TOKEN: 40
-      STR_ALIEN_ALLOYS: 40
-      STR_ELERIUM_115: 10
+      STR_ALIEN_ALLOYS: 20
+      STR_UFO_CONSTRUCTION: 2
+      STR_UFO_POWER_SOURCE: 1
     space: 2
-    time: 500
-    cost: 100000
+    time: 1000
+    cost: 60000
 
   - name: STR_CRISIS_SUIT_ITEM_GV
     refNode: *STR_SUIT_MANUF_GV
@@ -44,22 +45,23 @@ manufacture:
       - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
     requiredItems:
       STR_KILLPOINT_TOKEN: 60
-      STR_ALIEN_ALLOYS: 80
-      STR_ELERIUM_115: 20
-    space: 5
-    time: 1000
-    cost: 200000
+      STR_ALIEN_ALLOYS: 40
+      STR_UFO_CONSTRUCTION: 4
+      STR_UFO_POWER_SOURCE: 1
+    space: 6
+    time: 2000
+    cost: 120000
 
   - name: STR_DEVILFISH_GV
     category: STR_CRAFT
     requires:
       - STR_DEVILFISH_TRANSPORTS_GV
     space: 0
-    time: 30000
-    cost: 700000
+    time: 4000
+    cost: 200000
     listOrder: 3351
     requiredItems:
-      STR_ALIEN_ALLOYS: 400
+      STR_ALIEN_ALLOYS: 80
       STR_UFO_POWER_SOURCE: 4
       STR_UFO_NAVIGATION: 4
 
@@ -76,6 +78,18 @@ manufacture:
       STR_OFFICER_COMMISSION: 1
       STR_OFFICERS_CHAIN_SWORD: 1
 
+  - name: STR_SENTINELGV_AUTOCANNON
+    requires:
+      - STR_TANKERS_DELIGHT_GV
+      - STR_AUTOCANNON_TECH
+      - STR_UFO_CONSTRUCTION
+    space: 12
+    time: 600
+    cost: 60000  # was 32000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 40  # was 80
+      STR_UFO_CONSTRUCTION: 5  # was 10
+
 ### Manufacture pulse weapons
   - name: STR_TAU_PULSE_RIFLE
     category: STR_WEAPON
@@ -87,7 +101,7 @@ manufacture:
     requiredItems:
       STR_KILLPOINT_TOKEN: 5
       # STR_TAU_PARTS_GV: 1
-      STR_ALIEN_ALLOYS: 5
+      STR_ALIEN_ALLOYS: 1
 
   - name: STR_TAU_PULSE_CARBINE
     category: STR_WEAPON

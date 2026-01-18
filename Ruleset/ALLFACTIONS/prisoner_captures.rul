@@ -565,6 +565,18 @@ items:  # Geoscape items representing genericized live aliens
     recover: true
     liveAlien: true
     costSell: 15000
+
+  ## Redemptionists
+  - type: STR_REDEMPTIONIST_T1_GV # Redemptionist T1
+    refNode: *STR_LIVE_CAPTURE_GENERIC
+    costSell: 1000
+  - type: STR_REDEMPTIONIST_T2_GV # Redemptionist T2
+    refNode: *STR_LIVE_CAPTURE_GENERIC
+    costSell: 2000
+  - type: STR_REDEMPTIONIST_T3_GV # Redemptionist T3
+    refNode: *STR_LIVE_CAPTURE_GENERIC
+    costSell: 3000
+
   ## Zombies
   - type: STR_GUARD_SQUAT_CARA_FEMALE_ZOMBIE
     size: 0.0
@@ -1004,6 +1016,14 @@ units:
     liveAlien: STR_LIVE_CAPTURE_PRIMORDIAL_SORCERER
   - type: STR_CHAOSCULT_PRIEST_LV4F_AI  # Chaos Sorceress
     liveAlien: STR_LIVE_CAPTURE_PRIMORDIAL_SORCERER
+
+  ## Redeemed (Redemptionist Tzeentch Cultists)
+  - type: STR_REDEEMED_T1_GV # Redeemed T1
+    liveAlien: STR_LIVE_CAPTURE_CULTIST
+  - type: STR_REDEEMED_T2_GV # Redeemed T2
+    liveAlien: STR_LIVE_CAPTURE_WITCH
+  - type: STR_REDEEMED_T3_GV # Redeemed T3
+    liveAlien: STR_LIVE_CAPTURE_WITCH_LEADER
 
   ## Chaos Sisters
   - type: STR_HERETIC_SISTER  # Heretic Sister

@@ -171,9 +171,9 @@ crafts:
     spacecraft: false
 
   - type: STR_DEVILFISH_GV
-    costBuy: 1200000
+    # costBuy: 2000000
     costRent: 400000
-    costSell: 400000
+    costSell: 0
     takeoffSound: {mod: 40k, index: 56} #TURBINE SOUND
     selectSound: [{mod: 40k, index: 70}, {mod: 40k, index: 71}, {mod: 40k, index: 72}, {mod: 40k, index: 73}]  #INTERCEPTOR SOUND
     marker: 30
@@ -182,11 +182,11 @@ crafts:
       - STR_DEVILFISH_TRANSPORTS_GV
     sprite: 548
     fuelMax: 1000
-    damageMax: 1000
-    speedMax: 200  # was 90
+    damageMax: 1200
+    speedMax: 250
     repairRate: 10
     vehicles: 999
-    maxLargeUnits: 1
+    maxLargeUnits: 2
     maxAltitude: 1
     accel: 4
     weapons: 1
