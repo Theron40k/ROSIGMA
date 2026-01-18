@@ -28,6 +28,7 @@ items:
   - type: STR_SENTINELGV_ARMOR                #6800
     requiresBuy:
       - STR_TANKERS_DELIGHT_GV
+      - STR_LASCAN_TECH
     size: 2
     costBuy: 360000
     costSell: 140000
@@ -43,6 +44,11 @@ items:
     transferTime: 50
     listOrder: 6799
 
+  - type: STR_SENTINELGV_AUTOCANNON
+    size: 2
+    costSell: 184000
+    transferTime: 50
+    listOrder: 6801
 
 
 armors:
@@ -1095,7 +1101,7 @@ armors:
     loftempsSet: [3]
     size: 1
     tags:
-      UNIT_TYPE_IMPERIAL: 1
+      UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
@@ -1431,7 +1437,7 @@ armors:
       stamina: 20
       health: 50
       firing: 10  # bonus to hit from basic sensors and firing computer
-    spriteSheet: SENTGV.PCK
+    spriteSheet: SENTINELGV.PCK
     customArmorPreviewIndex: [860, 861, 862]
     ufopediaType: STR_SENTINEL_ARMOR_UC
     storeItem: STR_SENTINELGV_ARMOR
@@ -1454,14 +1460,14 @@ armors:
     builtInWeapons:
       - STR_SLASCAN_GV
       - AUX_SENTINEL_STOMP
-      - INV_NULL_SENTINEL_BLUE_BERRY
+      - INV_NULL_SENTINELGV_BLUE_BERRY
       - INV_NULL_SENTINEL_BELT
       - INV_NULL_SENTINEL_LL
       - INV_NULL_2X1_RL
     allowsKneeling: false
     layersDefaultPrefix: GUARD
     layersSpecificPrefix:
-      0: SENTINEL_LASCANNON
+      0: SENTINELGV_LASCANNON
       4: SENTINEL
     layersDefinition:
       F0: ["Prop", "F0", "F0_Hair_Tight", "", "Female", "", "", "", ""]
@@ -1493,17 +1499,52 @@ armors:
 
   - type: STR_SENTINELGV_MULTILASER_UC
     refNode: *STR_SENTINELGV_OPEN
-    spriteSheet: SENTGV.PCK
+    spriteSheet: SENTINELGV.PCK
     customArmorPreviewIndex: [860, 861, 862]
     storeItem: STR_SENTINELGV_MULTILASER
     ufopediaType: STR_GUARD_ARMORS_SENTINEL_MULTILASER_UC
     builtInWeapons:
       - STR_MULTI_LASER_SENTINEL_GV
       - AUX_SENTINEL_STOMP
-      - INV_NULL_SENTINEL_BLUE_BERRY
+      - INV_NULL_SENTINELGV_BLUE_BERRY
       - INV_NULL_SENTINEL_BELT
       - INV_NULL_SENTINEL_LL
       - INV_NULL_2X1_RL
+    tags:
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - &STR_SENTINELGV_CLOSED  # DAMAGE + STATS (same as _OPEN)
+    type: STR_SENTINELGV_AUTOCANNON_UC
+    refNode: *STR_SENTINELGV_OPEN
+    ufopediaType: STR_GUARD_ARMORS_SENTINEL_AUTOCANNON_UC
+    storeItem: STR_SENTINELGV_AUTOCANNON
+    antiCamouflageAtDay: 8
+    antiCamouflageAtDark: 8
+    spriteSheet: SENTINELGV_AUTOCANNON.PCK
+    frontArmor: 140
+    sideArmor: 120
+    rearArmor: 100
+    underArmor: 120
+    layersSpecificPrefix:
+      0: SENTINELGV_AUTOCANNON
+      4: SENTINEL
+    builtInWeapons:
+      - STR_AUTOCANNON_SENTINEL_GV
+      - AUX_SENTINEL_STOMP
+      - INV_NULL_SENTINELGV_AUTOCANNON
+      - INV_NULL_SENTINEL_BELT
+      - INV_NULL_SENTINEL_LL
+      - INV_NULL_2X1_RL
+    tags:
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_IMPERIUM: 1
 
 
 extraSprites:
@@ -1740,17 +1781,17 @@ extraSprites:
   - typeSingle: SENTINEL__4__Male
     fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Male.png
 
-  - typeSingle: SENTINEL_LASCANNON__0__Prop
+  - typeSingle: SENTINELGV_LASCANNON__0__Prop
     fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Open_Lascannon.png
 
-  - typeSingle: SENTINEL_MISSILE__0__Prop
+  - typeSingle: SENTINELGV_MISSILE__0__Prop
     fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Open_Missile.png
 
-  - typeSingle: SENTINEL_AUTOCANNON__0__Prop
+  - typeSingle: SENTINELGV_AUTOCANNON__0__Prop
     fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Autocannon.png
 
-  - typeSingle: SENTINEL_HEAVY_FLAMER__0__Prop
+  - typeSingle: SENTINELGV_HEAVY_FLAMER__0__Prop
     fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Heavy_Flamer.png
 
-  - typeSingle: SENTINEL_MULTIMELTA__0__Prop
+  - typeSingle: SENTINELGV_MULTIMELTA__0__Prop
     fileSingle: Resources/TAU/SENTINEL_LAYERS/Armors/Sentinel_Multimelta.png
