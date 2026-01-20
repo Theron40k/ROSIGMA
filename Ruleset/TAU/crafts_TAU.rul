@@ -253,6 +253,8 @@ crafts:
     requires:
       - STR_TANKERS_DELIGHT_GV
     requiresBuyBaseFunc: [HANGAR]
+    takeoffSound: -1
+    selectSound: -1
     costBuy: 900000
     costRent: 400000
     costSell: 400000
@@ -314,11 +316,11 @@ crafts:
     vehicles: 999
     soldiers: 24  # reinstate the old count
     maxLargeUnits: 3  # 1 for each APC
-    takeoffSound: 63 #TANKMOVE SOUND
-    selectSound: [65, 66, 67, 68]  #HEAVY TRANSPORT SOUND
+    # takeoffSound: 63 #TANKMOVE SOUND
+    # selectSound: [65, 66, 67, 68]  #HEAVY TRANSPORT SOUND
     marker: 30
-    sprite: 1487
-    skinSprites: [1488, 1500] # default empty, contains all sprites except for the first (index zero)
+    sprite: 201
+    # skinSprites: [201, 212] # default empty, contains all sprites except for the first (index zero)
     damageMax: 1200  # uparmored
     maxAltitude: 1
     accel: 2
