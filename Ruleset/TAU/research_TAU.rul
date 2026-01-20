@@ -163,7 +163,6 @@ research:
       - STR_ALIEN_ALLOYS            # build fortifications and repair things
     unlocks:
       - STR_INQUISITION_ATTENTION_GV      # uh oh!
-      # - STR_PATHFINDER_BEACON_GV    # pathfinders infiltrate
       - STR_TANKERS_DELIGHT_GV      # heavy guard equipment as remaining loyalist guardsmen join you
       - STR_BEASTMEN_CULTISTS_GV    # beastmen look to you for protection
       - STR_COOPT_NAVY_PILOTS_GV    # what else are they gonna do
@@ -172,7 +171,7 @@ research:
       - STR_HARDER_MISSIONS
     disables:
       - STR_RECRUIT_MILITIA_GV      # turn on guevesa and turn off militia
-    spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
+#     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
 #     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV # spawns free pathfinders
 
 ### Various degrees of danger
@@ -182,11 +181,11 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  - name: STR_INQUISITION_DANGER_GV
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_GENERALLOCK
+  # - name: STR_INQUISITION_DANGER_GV
+  #   cost: 0
+  #   points: 0
+  #   dependencies:
+  #     - STR_GENERALLOCK
 
   - name: STR_IMPERIAL_CRUSADE_GV
     cost: 0
@@ -246,7 +245,6 @@ research:
       - STR_TAU_PATHFINDERS_GV            # unlocks pathfinder construction
       - STR_TAU_ARMORY_EXAM
       - STR_TAU_XENOTECH
-      - STR_INQUISITION_DANGER_GV     # You are in danger from the Inquisition
     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV  # breadcrumb the navy communications here
 
   # - name: STR_WATERCASTE_OUTPOST_GV
@@ -277,7 +275,6 @@ research:
       - STR_REMORA_INTERCEPTORS_GV    # Build remoras
       - STR_STEALTH_SUIT_OPERATIONS_GV          # Build stealth suits
       - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
-      - STR_IMPERIAL_CRUSADE_GV       # Super Danger! (Not yet implemented)
     spawnedEvent: STR_INFILTRATION_CADRE_EVENT_GV
 
 # ### Recruit Fire Warriors directly
@@ -343,6 +340,7 @@ research:
       # - STR_HAMMERHEAD_GUNSHIPS_GV      # Ion Hammerhead tanks
       - STR_BARRACUDA_INTERCEPTORS_GV   # Barracuda Interceptors
       - STR_MASTER_CRAFTING
+      - STR_IMPERIAL_CRUSADE_GV       # Super Danger!
     spawnedEvent: STR_AUXILIARY_CADRE_EVENT_GV
 
   - name: STR_STARSCYTHE_CRISIS_OPERATIONS_GV

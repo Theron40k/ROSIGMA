@@ -44,6 +44,8 @@ missionScripts:
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: false
       STR_TAU_GUEVESA_GV: true
+      STR_INQUISITION_ATTENTION: false
+
 
   - type: newTraditionalBasesExtra
     missionWeights:
@@ -59,6 +61,7 @@ missionScripts:
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: false
       STR_TAU_GUEVESA_GV: true
+      STR_INQUISITION_ATTENTION: false
 
 ### Starter bases handled with adhocScripts fired by initial strategy research event
   - &STR_DESERTER_HIDEOUTS_GV
@@ -134,12 +137,15 @@ missionScripts:
       2:
         STR_CATACOMBS: 20
         STR_ALIEN_ARTIFACT_TAU: 20  # Space Hulk recurring mission, after initial script
-        STR_RESCUE_PDF_VALKYRIE_TAU: 40  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
+        STR_RESCUE_PDF_VALKYRIE_TAU: 30  # grounded valkyrie appears on radar, go to support to pick up some PDF, maybe an officer
+        STR_SUPPORT_PDF_ASSAULT: 30  # PDF assaulting chaos base of cult or traitor guard
+
       4:
-        STR_ALIEN_WAR_TAU: 33  # delays the WAR mission until month 5+
+        STR_ALIEN_WAR_TAU: 50  # delays the WAR mission until month 5+
         STR_CATACOMBS: 10
         STR_ALIEN_ARTIFACT_TAU: 10
-        TR_RESCUE_PDF_VALKYRIE_TAU: 10
+        STR_RESCUE_PDF_VALKYRIE_TAU: 20
+        STR_SUPPORT_PDF_ASSAULT: 20  # PDF assaulting chaos base of cult or traitor guard
     regionWeights:
       0:
         REGION_HULK_SITES: 100
@@ -150,6 +156,7 @@ missionScripts:
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: false
       STR_TAU_GUEVESA_GV: true
+      # STR_INQUISITION_ATTENTION: false
 
 ### Normal warp storm content with Chaos enemies
 ### More Slaanesh and Tzeentch weighting
@@ -267,6 +274,7 @@ missionScripts:
       STR_DEFAULT_CAMPAIGN: false
       STR_HARDER_MISSIONS: true
       STR_TAU_GUEVESA_GV: true
+      STR_IMPERIAL_CRUSADE: false
 
   - type: warpStormBuildingHardGV
     refNode: *STR_HARD_MISSION_TABLE
@@ -294,3 +302,282 @@ missionScripts:
     useTable: false
     maxRuns: 1
     varName: finalMissionTauGuevesa
+
+
+### The Inquisition and Imperial Crusade
+  - type: starterGVInquisitionBaseIA
+    missionWeights:
+      0:
+        STR_INQUISITION_OUTPOST_BUILD_INITIAL_GV: 100
+    firstMonth: 1
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    maxRuns: 1
+    varName: InquisitionStartGV
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_INQUISITION_ATTENTION_GV: true
+      STR_IMPERIAL_CRUSADE_GV: false
+
+  - type: newGVBasesLaterIA
+    missionWeights:
+      0:
+        STR_CULTIST_BASE: 33
+        STR_TRAITOR_GUARD_BASE: 33
+        STR_INQUISITION_OUTPOST_BUILD_GV: 33
+        # Higher chances of harder races for 3-5
+        # Even chances of all for beyond that
+    firstMonth: 4
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_INQUISITION_ATTENTION_GV: true
+      STR_IMPERIAL_CRUSADE_GV: false
+
+  - type: newGVBasesExtraIA
+    missionWeights:
+      0:
+        STR_CULTIST_BASE: 33
+        STR_TRAITOR_GUARD_BASE: 33
+        STR_INQUISITION_OUTPOST_BUILD_GV: 33
+        # Higher chances of harder races
+        STR_NECRON_BASE: 50
+    firstMonth: 6
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_INQUISITION_ATTENTION_GV: true
+      STR_IMPERIAL_CRUSADE_GV: false
+
+  - type: starterGVCrusadeBaseBT
+    missionWeights:
+      0:
+        STR_BTNEWSPACEMARINE_BASE: 100
+    firstMonth: 1
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    maxRuns: 1
+    varName: BTStartGV
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_IMPERIAL_CRUSADE_GV: true
+
+  - type: starterGVCrusadeBaseBR
+    missionWeights:
+      0:
+        STR_BRNEWSPACEMARINE_BASE: 100
+    firstMonth: 1
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    maxRuns: 1
+    varName: BRStartGV
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_IMPERIAL_CRUSADE_GV: true
+
+  - type: starterGVCrusadeBaseIG
+    missionWeights:
+      0:
+        STR_NEWIMPERIALGUARD_BASE: 100
+    firstMonth: 1
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    maxRuns: 1
+    varName: IGStartGV
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_IMPERIAL_CRUSADE_GV: true
+
+  - type: starterGVInquisitionCrusadeIC
+    missionWeights:
+      0:
+        STR_INQUISITION_HQ_BUILD_INITIAL_GV: 100
+    firstMonth: 1
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    maxRuns: 1
+    varName: InquisitionCrusadeStartGV
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_IMPERIAL_CRUSADE_GV: true
+
+  - type: newGVBasesLaterIC
+    missionWeights:
+      0:
+        STR_CULTIST_BASE: 33
+        STR_TRAITOR_GUARD_BASE: 33
+        STR_INQUISITION_OUTPOST_BUILD_GV: 33
+        STR_NEWIMPERIALGUARD_BASE: 22
+        STR_BRNEWSPACEMARINE_BASE: 11
+        STR_BTNEWSPACEMARINE_BASE: 11
+        # Higher chances of harder races for 3-5
+        # Even chances of all for beyond that
+    firstMonth: 4
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_IMPERIAL_CRUSADE_GV: true
+
+  - type: newGVBasesExtraIC
+    missionWeights:
+      0:
+        STR_CULTIST_BASE: 33
+        STR_TRAITOR_GUARD_BASE: 33
+        STR_INQUISITION_OUTPOST_BUILD_GV: 33
+        STR_NEWIMPERIALGUARD_BASE: 33
+        STR_BRNEWSPACEMARINE_BASE: 33
+        STR_BTNEWSPACEMARINE_BASE: 33
+        # Higher chances of harder races
+        STR_NECRON_BASE: 50
+    firstMonth: 6
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_INQUISITION_ATTENTION_GV: true
+      STR_IMPERIAL_CRUSADE_GV: true
+
+  - type: warpStormHardICGV
+    missionWeights:
+      0:
+        STR_ALIEN_RESEARCH_HARD: 33
+        STR_NURGLE_RESEARCH_HARD: 11
+        STR_ALIEN_RESEARCH_TZEENTCH_HARD: 20
+        STR_ALIEN_HARVEST_HARD: 33
+        STR_NURGLE_HARVEST_HARD: 15
+        STR_ALIEN_HARVEST_TZEENTCH_HARD: 8 # rare
+        STR_SLAANESH_HARVEST_HARD: 8 # rare
+        STR_ALIEN_ABDUCTION_HARD: 33
+        STR_NURGLE_ABDUCTION_HARD: 12
+        STR_SLAANESH_ABDUCTION_HARD: 20
+        STR_ALIEN_ABDUCTION_TZEENTCH_HARD: 8
+        STR_ALIEN_INFILTRATION_HARD: 33
+        STR_NURGLE_INFILTRATION_HARD: 11
+        STR_ALIEN_INFILTRATION_SLAANESH_HARD: 11
+        STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
+        STR_ALIEN_BASE: 11
+        STR_NURGLE_BASE: 11
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
+        # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
+        # STR_REDEEMEDBASE_L1_MISSION_GV: 33
+        # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
+      2:
+        STR_ALIEN_RESEARCH_HARD: 33
+        STR_NURGLE_RESEARCH_HARD: 11
+        STR_ALIEN_RESEARCH_TZEENTCH_HARD: 20
+        STR_ALIEN_HARVEST_HARD: 33
+        STR_NURGLE_HARVEST_HARD: 15
+        STR_ALIEN_HARVEST_TZEENTCH_HARD: 8 # rare
+        STR_SLAANESH_HARVEST_HARD: 8 # rare
+        STR_ALIEN_ABDUCTION_HARD: 33
+        STR_NURGLE_ABDUCTION_HARD: 12
+        STR_SLAANESH_ABDUCTION_HARD: 20
+        STR_ALIEN_ABDUCTION_TZEENTCH_HARD: 8
+        STR_ALIEN_INFILTRATION_HARD: 33
+        STR_NURGLE_INFILTRATION_HARD: 11
+        STR_ALIEN_INFILTRATION_SLAANESH_HARD: 11
+        STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
+        STR_ALIEN_BASE: 11
+        STR_NURGLE_BASE: 11
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
+        STR_IMPERIALGUARD_BASE: 22
+        STR_BLACKTEMPLAR_BASE: 22
+        STR_BLOODYROSE_BASE: 22
+        STR_INQUISITION_OUTPOST_BUILD_GV: 22
+        # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
+        # STR_REDEEMEDBASE_L1_MISSION_GV: 33
+        # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
+    firstMonth: 1
+    useTable: false
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_HARDER_MISSIONS: true
+      STR_TAU_GUEVESA_GV: true
+      STR_IMPERIAL_CRUSADE: true
+
+  - &STR_HARD_MISSION_TABLE_IC
+    type: warpStormBuildingHardGV
+    missionWeights:
+      0:
+        STR_ALIEN_RESEARCH_HARD: 33
+        STR_NURGLE_RESEARCH_HARD: 11
+        STR_ALIEN_RESEARCH_TZEENTCH_HARD: 20
+        STR_ALIEN_HARVEST_HARD: 33
+        STR_NURGLE_HARVEST_HARD: 15
+        STR_ALIEN_HARVEST_TZEENTCH_HARD: 8 # rare
+        STR_SLAANESH_HARVEST_HARD: 8 # rare
+        STR_ALIEN_ABDUCTION_HARD: 33
+        STR_NURGLE_ABDUCTION_HARD: 12
+        STR_SLAANESH_ABDUCTION_HARD: 20
+        STR_ALIEN_ABDUCTION_TZEENTCH_HARD: 8
+        STR_ALIEN_INFILTRATION_HARD: 33
+        STR_NURGLE_INFILTRATION_HARD: 11
+        STR_ALIEN_INFILTRATION_SLAANESH_HARD: 11
+        STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
+        STR_ALIEN_BASE: 11
+        STR_NURGLE_BASE: 11
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
+        # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
+        # STR_REDEEMEDBASE_L1_MISSION_GV: 33
+        # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
+      2:
+        STR_ALIEN_RESEARCH_HARD: 33
+        STR_NURGLE_RESEARCH_HARD: 11
+        STR_ALIEN_RESEARCH_TZEENTCH_HARD: 20
+        STR_ALIEN_HARVEST_HARD: 33
+        STR_NURGLE_HARVEST_HARD: 15
+        STR_ALIEN_HARVEST_TZEENTCH_HARD: 8 # rare
+        STR_SLAANESH_HARVEST_HARD: 8 # rare
+        STR_ALIEN_ABDUCTION_HARD: 33
+        STR_NURGLE_ABDUCTION_HARD: 12
+        STR_SLAANESH_ABDUCTION_HARD: 20
+        STR_ALIEN_ABDUCTION_TZEENTCH_HARD: 8
+        STR_ALIEN_INFILTRATION_HARD: 33
+        STR_NURGLE_INFILTRATION_HARD: 11
+        STR_ALIEN_INFILTRATION_SLAANESH_HARD: 11
+        STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
+        STR_ALIEN_BASE: 22
+        STR_NURGLE_BASE: 22
+        STR_SLAANESH_BASE: 22
+        STR_TZEENTCH_BASE: 22
+        STR_IMPERIALGUARD_BASEV2: 22
+        STR_BLACKTEMPLAR_BASEV2: 22
+        STR_BLOODYROSE_BASEV2: 22
+        STR_INQUISITION_OUTPOST_BUILD_GV: 22
+        STR_INQUISITION_BASE_IFILTRATE_GV: 11
+        # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
+        # STR_REDEEMEDBASE_L1_MISSION_GV: 33
+        # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
+    firstMonth: 3
+    lastMonth: 5
+    executionOdds: 50
+    useTable: true
+
+  - type: warpStormRagingHardGV
+    refNode: *STR_HARD_MISSION_TABLE_IC
+    firstMonth: 6
+    useTable: true
