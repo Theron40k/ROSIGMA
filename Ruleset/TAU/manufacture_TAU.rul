@@ -383,6 +383,42 @@ manufacture:
     requiredItems:
       STR_LIVE_CAPTURE_GUARDAI_CATACHAN_VETERAN: 1
 
+  - name: STR_CRAFT_BURST_CANNON_MANUFACTURE_GV
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_INFILTRATION_CADRE_GV
+    space: 6
+    time: 300
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 60
+    producedItems:
+      STR_CRAFT_BURST_CANNON_GV: 1
+
+  - name: STR_CRAFT_SEEKER_MISSILE_RACK_MANUFACTURE_GV
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_INFILTRATION_CADRE_GV
+    space: 6
+    time: 300
+    cost: 100000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+    producedItems:
+      STR_CRAFT_SEEKER_MISSILE_RACK_GV: 1
+
+  - name: STR_CRAFT_SEEKER_MISSILE_MANUFACTURE_GV
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_INFILTRATION_CADRE_GV
+    space: 3
+    time: 50
+    cost: 20000
+    producedItems:
+      STR_CRAFT_SEEKER_MISSILE_GV: 1
+
+
+
 #   - &STR_COLLAR_PENITENT_GV
 #     name: STR_COLLAR_TRAITOR_GUARD_GV
 #     # category: STR_CAT_RADICAL
