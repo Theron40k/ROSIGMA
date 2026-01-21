@@ -1045,6 +1045,37 @@ units:
         SM_SMTERMI_SET5: 20
         CF_SMDEV_SET3: 20
 
+  - type: STR_UMDREAD_AI
+    race: STR_CIVILIAN  # imperial
+    rank: STR_LIVE_SOLDIER
+    liveAlien: ""
+    stats:
+      tu: 80
+      stamina: 200
+      health: 300
+      bravery: 110
+      reactions: 64
+      firing: 100
+      throwing: 0
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    armor: UMDREAD_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 30
+    deathSound: [859, 860]
+    moveSound: {mod: 40k, index: 700}
+    moraleLossWhenKilled: 50
+    intelligence: 2
+    aggression: 8
+    sniper: 75
+    spotter: 1
+    energyRecovery: 50
+    livingWeapon: true
+    canBeMindControlled: false
+
   # BLACKTEMPLAR TIER 0
 
   - type: STR_BLACKTEMPLAR_SCOUT_AI
@@ -2004,6 +2035,7 @@ units:
   - type: STR_SWDREAD_AI
     race: STR_CIVILIAN  # imperial
     rank: STR_LIVE_SOLDIER
+    liveAlien: ""
     stats:
       tu: 80
       stamina: 200
@@ -2750,6 +2782,37 @@ units:
         SM_SMTERMI_SET4: 20
         SM_SMTERMI_SET5: 20
         CF_SMDEV_SET3: 20
+
+  - type: STR_SLMDREAD_AI
+    race: STR_CIVILIAN  # imperial
+    rank: STR_LIVE_SOLDIER
+    liveAlien: ""
+    stats:
+      tu: 80
+      stamina: 200
+      health: 300
+      bravery: 110
+      reactions: 64
+      firing: 100
+      throwing: 0
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    armor: SLMDREAD_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 30
+    deathSound: [859, 860]
+    moveSound: {mod: 40k, index: 700}
+    moraleLossWhenKilled: 50
+    intelligence: 2
+    aggression: 8
+    sniper: 75
+    spotter: 1
+    energyRecovery: 50
+    livingWeapon: true
+    canBeMindControlled: false
 
   # imperial predator
 
