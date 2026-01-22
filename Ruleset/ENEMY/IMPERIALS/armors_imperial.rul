@@ -693,6 +693,62 @@ armors:
     psiDefence:
       psiStrength: 5.0               # 500% the psiStrength
 
+  - type: UMDREAD_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteInv: DREADINV4
+    spriteSheet: DREAD.PCK
+    instantWoundRecovery: true
+    allowInv: true
+    corpseGeo: STR_DREAD_CORPSE
+    corpseBattle:
+      - DREAD_CORPSE1
+      - DREAD_CORPSE2
+      - DREAD_CORPSE3
+      - DREAD_CORPSE4
+    frontArmor: 240
+    sideArmor: 230
+    rearArmor: 180
+    underArmor: 240
+    size: 2
+    moveSound: {mod: 40k, index: 700}
+    stats:
+      strength: 50
+      health: 200
+      melee: 20
+    damageModifier:  # DREAD ARMOR VENERABLE
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES
+      - 0.7  # HE
+      - 1.1  # LASCANON
+      - 0.8  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 20
+    builtInWeapons:
+      - AUX_HOVERTANK_PLASMA
+      - AUX_DREAD_FLAMER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 100  # infection
+      INTIMIDATION_RESISTANCE: 100  # intimidation
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_SIZE: 200 # HUGE
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength dread protected
+
   # BLACKTEMPLAR TIER 0
 
   - type: STR_BLACKTEMPLARARMOR_SCOUT
@@ -2556,6 +2612,62 @@ armors:
       UNIT_TYPE_LIVING: 1
     psiDefence:
       psiStrength: 5.0               # 500% the psiStrength
+
+  - type: SLMDREAD_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteInv: SLMDREADINVAI.PCK
+    spriteSheet: SLMDREADbattle.PCK
+    instantWoundRecovery: true
+    allowInv: true
+    corpseGeo: STR_SLMDREAD_CORPSE
+    corpseBattle:
+      - SLMDREAD_CORPSE1
+      - SLMDREAD_CORPSE2
+      - SLMDREAD_CORPSE3
+      - SLMDREAD_CORPSE4
+    frontArmor: 240
+    sideArmor: 230
+    rearArmor: 180
+    underArmor: 240
+    size: 2
+    moveSound: {mod: 40k, index: 700}
+    stats:
+      strength: 50
+      health: 200
+      melee: 20
+    damageModifier:  # DREAD ARMOR VENERABLE
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES
+      - 0.7  # HE
+      - 1.1  # LASCANON
+      - 0.8  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 20
+    builtInWeapons:
+      - AUX_HOVERTANK_PLASMA
+      - AUX_DREAD_FLAMER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 100  # infection
+      INTIMIDATION_RESISTANCE: 100  # intimidation
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_SIZE: 200 # HUGE
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength dread protected
 
 
   # imperial predator
