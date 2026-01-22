@@ -66,6 +66,7 @@ ai:
   respectMaxRange: true
   pickUpWeaponsMoreActively: true
   useDelayPsionic: 2  # on turn 2 to avoid being mind controlled in drop pods
+  targetWeightAsHostileCivilians: 100 # rosigma hostile civilians are much more dangerous than xcom civilians so AI should better take care of them
 
 # Surrendering
 surrenderMode: 1
@@ -103,6 +104,7 @@ constants:
   fireDamageRange: [5, 10]
   extendedHwpLoadOrder: true
   extendedTerrainMelee: 4
+  extendedSpotOnHitForSniping: 1  # https://openxcom.org/forum/index.php?topic=12278.msg169242#msg169242
 
 # User Options
 fixedUserOptions:
