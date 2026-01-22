@@ -451,14 +451,14 @@ ufos:
     size: STR_VERY_SMALL
     modSprite: InterceptionUFO-00
     sprite: 0
-    speedMax: 2200
+    speedMax: 1709
     damageMax: 19  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldCapacity: 59  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldRecharge: 59  # Tzeentch traits: shield regenerates ~1% of its capacity per second or 299, whichever is lower
     shieldRechargeInGeoscape: 9999  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldBleedThrough: 100  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     hitBonus: 20  # Tzeentch traits: higher accuracy.
-    accel: 12
+    accel: 3
     power: 10
     range: 65
     score: 10  # so these can't be farmed
@@ -530,6 +530,7 @@ ufos:
           items:
             STR_ELERIUM_115:
               - [9, 4, 0]
+
   - type: TZEENTCH_SHIP_03  # Medium-Large Terrorship
     size: STR_MEDIUM_UC
     sprite: 3
