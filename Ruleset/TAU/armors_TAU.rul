@@ -557,8 +557,6 @@ armors:
     movementType: 0
     specialWeapon: STR_JUMP_GAUNTLET_PLUS
     tags:
-      MaxFlight: 1
-      MaxCoolDown: 1
     corpseBattle:
       - STR_XV26_STEALTH_SUIT_PCCORPSE
     storeItem: STR_STEALTH_SUIT_ITEM_GV
@@ -607,6 +605,9 @@ armors:
       ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
       ARMOR_RESTEALTH_TURN_REQUIREMENT: 2  # 2 turns to infiltrate
       ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
+      MaxFlight: 1
+      MaxCoolDown: 1
+
 
   - &STR_STARSCYTHE_OPTIONS_GV
     type: STR_STARSCYTHE_TEMPLATE_GV
