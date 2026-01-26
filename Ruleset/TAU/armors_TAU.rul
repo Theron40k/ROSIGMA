@@ -137,8 +137,8 @@ armors:
     refNode: *STR_TAUDRONE_BASE_ARMOR_GV
     builtInWeapons:
       - STR_TAU_MARKERLIGHT_BEAM
-    tags:
-      HAS_MARKERLIGHT: 1
+    # tags:
+    #   HAS_MARKERLIGHT: 1
 
 
 
@@ -271,7 +271,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30   # all Tau armors get this now
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
@@ -297,7 +297,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
@@ -318,7 +318,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
       ARMOR_ENERGY_SHIELD_DECAY: 50
@@ -345,7 +345,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
@@ -410,7 +410,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
@@ -448,7 +448,7 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 50
       ARMOR_OVERWATCH_TU_RESTORED: 30
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -481,7 +481,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 30   # all Tau armors get this now
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
@@ -875,7 +875,7 @@ armors:
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
@@ -902,7 +902,7 @@ armors:
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
-      HAS_MARKERLIGHT: 1
+      # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
@@ -1553,7 +1553,6 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
 
   - type: STR_DEVILFISH_TURRET_ARMOR_GV
-    storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 30
     antiCamouflageAtDay: 20
@@ -1566,8 +1565,6 @@ armors:
     fearImmune: true
     painImmune: true
     corpseGeo: STR_CHIMERA_TURRET_CORPSE
-    units:
-      - STR_DEVILFISH_TURRET_GV
     corpseBattle:
       - STR_CHIMERA_TURRET_CORPSE_1
       - STR_CHIMERA_TURRET_CORPSE_2
