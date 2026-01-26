@@ -82,6 +82,18 @@ items:
     hitSound: {mod: 40k, index: 788}
     hiddenOnMinimap: true
 
+  - type: STR_ENEMY_DRONE_SPAWNER
+    spawnUnit: STR_TAUDRONE_GUN_GV
+    spawnUnitChance: 100
+    spawnUnitFaction: 1
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+    recover: false
+    hitAnimation: {mod: 40k, index: 150}
+    hitSound: {mod: 40k, index: 788}
+    hiddenOnMinimap: true
 
   # Tau Chimera Guns and spawners
 
@@ -180,10 +192,25 @@ items:
     recover: false
     defaultInventorySlot: STR_BACK_PACK
 
-  - type: STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER
-    spawnUnit: STR_PLACEHOLDER_DEVILFISH_TURRET
+  - &STR_DEVILFISH_TURRET_SPAWNERS
+    type: STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER
+    spawnUnit: STR_DEVILFISH_TURRET_GV
     spawnUnitChance: 100
     spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+    recover: false
+    hitAnimation: {mod: 40k, index: 150}
+    hitSound: {mod: 40k, index: 788}
+    hiddenOnMinimap: true
+
+  - &STR_DEVILFISH_TURRET_SPAWNERS
+    type: STR_ENEMY_DEVILFISH_TURRET_SPAWNER
+    spawnUnit: STR_DEVILFISH_TURRET_GV
+    spawnUnitChance: 100
+    spawnUnitFaction: 1
     invWidth: 0
     invHeight: 0
     battleType: 4
