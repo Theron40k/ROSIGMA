@@ -224,6 +224,11 @@ items:
     categories: [STR_CRAFT_WEAPONS]
     ufopediaType: STR_CRAFT_BURST_CANNON_GV_UC
     size: 0.8
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
+    costBuy: 30000
     costSell: 12000
     transferTime: 48
     listOrder: 1100
@@ -231,7 +236,12 @@ items:
   - type: STR_CRAFT_SEEKER_MISSILE_RACK_GV
     categories: [STR_CRAFT_WEAPONS]
     ufopediaType: STR_CRAFT_SEEKER_MISSILE_RACK_GV
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
     size: 0.8
+    costBuy: 50000
     costSell: 12000
     transferTime: 48
     listOrder: 1100
@@ -244,6 +254,7 @@ items:
     requiresBuyBaseFunc:
       - HANGAR
     size: 0.4
+    clipSize: 1
     costBuy: 5000
     costSell: 1200
     transferTime: 48
