@@ -99,6 +99,53 @@ crafts:
     avoidBonus: 5  # ROSIGMA edit
     repairRate: 3  # ROSIGMA edit, was 1
 
+### Copied from 40K, tweaked to ROSIGMA stats, set free to fly for the Greater Good
+  - type: STR_REMORA_GV           #TIER SPECIAL        RR 200
+    takeoffSound: {mod: 40k, index: 56} #TURBINE SOUND
+    selectSound: [{mod: 40k, index: 70}, {mod: 40k, index: 71}, {mod: 40k, index: 72}, {mod: 40k, index: 73}]  #INTERCEPTOR SOUND
+    requires:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc: [HANGAR]
+    marker: 39
+    maxSkinIndex: 0              # default 0
+    # skinSprites: [1586,1587,1588]   # default empty, contains all sprites except for the first (index zero)
+    sprite: 2169
+    fuelMax: 1000
+    damageMax: 200
+    speedMax: 2000
+    accel: 4
+    weapons: 4
+    fixedWeapons:
+      - STR_CRAFT_BURST_CANNON_GV_UC
+      - STR_CRAFT_BURST_CANNON_GV_UC
+      - STR_CRAFT_SEEKER_MISSILE_RACK_GV_UC
+      - STR_CRAFT_SEEKER_MISSILE_RACK_GV_UC
+    costBuy: 500000
+    costRent: 150000
+    costSell: 150000
+    soldiers: 0
+    vehicles: 0
+    refuelRate: 200
+    transferTime: 96
+    score: 100
+    pilots: 0
+    # battlescapeTerrainData:
+    #   name: VOSS3
+    #   mapDataSets:
+    #     - BLANKS
+    #     - VOSS2
+    #   mapBlocks:
+    #     - name: VOSS3
+    #       width: 10
+    #       length: 20
+    # deployment:
+    #   - [5, 15, 0, 4]
+    spacecraft: false
+    allowLanding: false
+    listOrder: 210
+    avoidBonus: 10      # small
+    repairRate: 5       # ROSIGMA edit, was 1
+
   - type: STR_ARMORED_TRUCKS_GV
     takeoffSound: -1
     selectSound: -1
@@ -333,6 +380,8 @@ crafts:
     score: 250
     listOrder: 800
     spacecraft: true
+
+
 
 
 extraSprites:

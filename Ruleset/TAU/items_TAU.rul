@@ -239,11 +239,15 @@ items:
   - type: STR_CRAFT_SEEKER_MISSILE_GV
     categories: [STR_CRAFT_WEAPONS]
     ufopediaType: STR_CRAFT_SEEKER_MISSILE_RACK_GV
-    size: 0.8
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
+    size: 0.4
+    costBuy: 5000
     costSell: 1200
     transferTime: 48
-    listOrder: 1100
-
+    listOrder: 1150
 
 #  - type: STR_CULTIST_ROBE_GV_SPAWNER
 #    liveAlien: false
