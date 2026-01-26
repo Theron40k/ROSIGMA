@@ -555,7 +555,7 @@ armors:
     spriteInv: TAUSTEALTHinv.PCK
     customArmorPreviewIndex: 217  # placeholder
     movementType: 0
-    specialWeapon: STR_JUMP_GAUNTLET_PLUS
+    specialWeapon: STR_JUMP_PACK
     corpseBattle:
       - STR_XV26_STEALTH_SUIT_PCCORPSE
     storeItem: STR_STEALTH_SUIT_ITEM_GV
@@ -616,6 +616,7 @@ armors:
     antiCamouflageAtDark: 10
     antiCamouflageAtDay: 10
     heatVision: 40
+    specialWeapon: STR_JUMP_PACK
     camouflageAtDark: 0
     camouflageAtDay: 0
     spriteSheet: TAUCRISISbattle.PCK
@@ -662,6 +663,8 @@ armors:
       ARMOR_OVERWATCH_TU_RESTORED: 30
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      MaxFlight: 1
+      MaxCoolDown: 1
 
   - type: STR_STARSCYTHE_CRISIS_SUIT_BCX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
