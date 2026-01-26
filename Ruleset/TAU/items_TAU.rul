@@ -82,6 +82,18 @@ items:
     hitSound: {mod: 40k, index: 788}
     hiddenOnMinimap: true
 
+  - type: STR_ENEMY_DRONE_SPAWNER
+    spawnUnit: STR_TAUDRONE_GUN_GV
+    spawnUnitChance: 100
+    spawnUnitFaction: 1
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+    recover: false
+    hitAnimation: {mod: 40k, index: 150}
+    hitSound: {mod: 40k, index: 788}
+    hiddenOnMinimap: true
 
   # Tau Chimera Guns and spawners
 
@@ -180,10 +192,25 @@ items:
     recover: false
     defaultInventorySlot: STR_BACK_PACK
 
-  - type: STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER
-    spawnUnit: STR_PLACEHOLDER_DEVILFISH_TURRET
+  - &STR_DEVILFISH_TURRET_SPAWNERS
+    type: STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER
+    spawnUnit: STR_DEVILFISH_TURRET_GV
     spawnUnitChance: 100
     spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+    recover: false
+    hitAnimation: {mod: 40k, index: 150}
+    hitSound: {mod: 40k, index: 788}
+    hiddenOnMinimap: true
+
+  - &STR_DEVILFISH_TURRET_SPAWNERS
+    type: STR_ENEMY_DEVILFISH_TURRET_SPAWNER
+    spawnUnit: STR_DEVILFISH_TURRET_GV
+    spawnUnitChance: 100
+    spawnUnitFaction: 1
     invWidth: 0
     invHeight: 0
     battleType: 4
@@ -197,6 +224,11 @@ items:
     categories: [STR_CRAFT_WEAPONS]
     ufopediaType: STR_CRAFT_BURST_CANNON_GV_UC
     size: 0.8
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
+    costBuy: 30000
     costSell: 12000
     transferTime: 48
     listOrder: 1100
@@ -204,7 +236,12 @@ items:
   - type: STR_CRAFT_SEEKER_MISSILE_RACK_GV
     categories: [STR_CRAFT_WEAPONS]
     ufopediaType: STR_CRAFT_SEEKER_MISSILE_RACK_GV
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
     size: 0.8
+    costBuy: 50000
     costSell: 12000
     transferTime: 48
     listOrder: 1100
@@ -212,11 +249,16 @@ items:
   - type: STR_CRAFT_SEEKER_MISSILE_GV
     categories: [STR_CRAFT_WEAPONS]
     ufopediaType: STR_CRAFT_SEEKER_MISSILE_RACK_GV
-    size: 0.8
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
+    size: 0.4
+    clipSize: 1
+    costBuy: 5000
     costSell: 1200
     transferTime: 48
-    listOrder: 1100
-
+    listOrder: 1150
 
 #  - type: STR_CULTIST_ROBE_GV_SPAWNER
 #    liveAlien: false

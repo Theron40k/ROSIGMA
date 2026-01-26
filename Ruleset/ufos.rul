@@ -4151,7 +4151,18 @@ ufos:
         - name: DEVILFISHCRAFT # CHIMERA
           width: 10
           length: 20
-
+          items:
+            STR_ENEMY_DRONE_SPAWNER:
+              - [3, 7, 1]
+              - [6, 7, 1]
+              - [3, 16, 1]
+              - [6, 16, 1]
+            STR_ENEMY_DEVILFISH_TURRET_SPAWNER:
+              - [4, 7, 0]
+              - [4, 16, 0]
+          fuseTimers:
+            STR_ENEMY_DRONE_SPAWNER: [0, 0]
+            STR_ENEMY_DEVILFISH_TURRET_SPAWNER: [0, 0]
 
   # for chaos assault imperial outpost
 
