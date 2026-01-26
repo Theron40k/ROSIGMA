@@ -372,6 +372,7 @@ units:
     value: 10
     intelligence: 4
     aggression: 3
+    spotter: 1
     energyRecovery: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
@@ -409,6 +410,7 @@ units:
     value: 10
     intelligence: 4
     aggression: 3
+    sniper: 65
     energyRecovery: 20
     livingWeapon: true
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -437,7 +439,7 @@ units:
     kneelHeight: 14
     intelligence: 5
     aggression: 3
-    spotter: 1
+    spotter: 2
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     livingWeapon: true
@@ -473,6 +475,8 @@ units:
     value: 30
     intelligence: 4
     aggression: 3
+    spotter: 2
+    sniper: 65
     energyRecovery: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
@@ -507,6 +511,8 @@ units:
     value: 40
     intelligence: 5
     aggression: 3
+    spotter: 3
+    sniper: 70
     energyRecovery: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
@@ -539,6 +545,8 @@ units:
     value: 30
     intelligence: 4
     aggression: 3
+    spotter: 3
+    sniper: 70
     energyRecovery: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
@@ -573,6 +581,8 @@ units:
     value: 30
     intelligence: 6
     aggression: 3
+    spotter: 3
+    sniper: 75
     energyRecovery: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
@@ -603,6 +613,8 @@ units:
     value: 40
     intelligence: 6
     aggression: 3
+    spotter: 3
+    sniper: 75
     energyRecovery: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
@@ -637,7 +649,7 @@ units:
     intelligence: 2
     aggression: 3
     spotter: 6
-    sniper: 60
+    sniper: 70
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -707,6 +719,7 @@ units:
     intelligence: 3
     aggression: 3
     spotter: 3
+    sniper: 80
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -996,7 +1009,7 @@ units:
     intelligence: 5
     aggression: 6
     spotter: 2
-    sniper: 60
+    sniper: 70
     value: 30
     livingWeapon: true
     energyRecovery: 60
@@ -1030,7 +1043,7 @@ units:
     intelligence: 5
     aggression: 6
     spotter: 2
-    sniper: 60
+    sniper: 70
     value: 30
     livingWeapon: true
     energyRecovery: 60
@@ -1069,7 +1082,7 @@ units:
     moraleLossWhenKilled: 50
     intelligence: 2
     aggression: 8
-    sniper: 75
+    sniper: 80
     spotter: 1
     energyRecovery: 50
     livingWeapon: true
@@ -1100,7 +1113,7 @@ units:
     intelligence: 2
     aggression: 3
     spotter: 6
-    sniper: 60
+    sniper: 70
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -1394,7 +1407,7 @@ units:
     intelligence: 2
     aggression: 3
     spotter: 6
-    sniper: 60
+    sniper: 70
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -1497,6 +1510,7 @@ units:
     intelligence: 3
     aggression: 3
     spotter: 3
+    sniper: 80
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1760,7 +1774,7 @@ units:
     intelligence: 2
     aggression: 3
     spotter: 6
-    sniper: 60
+    sniper: 70
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -1830,6 +1844,7 @@ units:
     intelligence: 3
     aggression: 3
     spotter: 3
+    sniper: 80
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2056,7 +2071,7 @@ units:
     moraleLossWhenKilled: 50
     intelligence: 2
     aggression: 8
-    sniper: 75
+    sniper: 80
     spotter: 1
     energyRecovery: 50
     livingWeapon: true
@@ -2376,7 +2391,7 @@ units:
     intelligence: 2
     aggression: 3
     spotter: 6
-    sniper: 60
+    sniper: 70
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -2446,6 +2461,7 @@ units:
     intelligence: 3
     aggression: 3
     spotter: 3
+    sniper: 80
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2734,7 +2750,7 @@ units:
     intelligence: 5
     aggression: 6
     spotter: 2
-    sniper: 60
+    sniper: 70
     value: 30
     livingWeapon: true
     energyRecovery: 60
@@ -2768,7 +2784,7 @@ units:
     intelligence: 5
     aggression: 6
     spotter: 2
-    sniper: 60
+    sniper: 70
     value: 30
     livingWeapon: true
     energyRecovery: 60
@@ -2807,7 +2823,7 @@ units:
     moraleLossWhenKilled: 50
     intelligence: 2
     aggression: 8
-    sniper: 75
+    sniper: 80
     spotter: 1
     energyRecovery: 50
     livingWeapon: true
@@ -2838,7 +2854,7 @@ units:
     intelligence: 4
     specab: 1
     aggression: 5
-    sniper: 50
+    sniper: 60
     spotter: 1
     energyRecovery: 34
     livingWeapon: true
@@ -2870,7 +2886,7 @@ units:
     intelligence: 4
     specab: 1
     aggression: 5
-    sniper: 50
+    sniper: 60
     spotter: 1
     energyRecovery: 34
     livingWeapon: true
@@ -2903,6 +2919,7 @@ units:
     value: 30
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -2972,7 +2989,7 @@ units:
     kneelHeight: 14
     value: 40
     intelligence: 4
-    aggression: 2
+    aggression: 8
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3009,6 +3026,7 @@ units:
     value: 40
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3043,7 +3061,8 @@ units:
     kneelHeight: 14
     value: 40
     intelligence: 4
-    aggression: 2
+    aggression: 6
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3088,6 +3107,7 @@ units:
     value: 40
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3123,6 +3143,7 @@ units:
     value: 40
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3160,8 +3181,8 @@ units:
     value: 40
     intelligence: 4
     aggression: 1
-    spotter: 1
-    sniper: 50
+    spotter: 2
+    sniper: 70
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3197,7 +3218,8 @@ units:
     kneelHeight: 14
     value: 50
     intelligence: 4
-    aggression: 3
+    aggression: 6
+    spotter: 2
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3235,7 +3257,8 @@ units:
     kneelHeight: 14
     value: 50
     intelligence: 4
-    aggression: 3
+    aggression: 8
+    spotter: 2
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3270,6 +3293,8 @@ units:
     value: 50
     intelligence: 8
     aggression: 4
+    spotter: 3
+    sniper: 80
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3310,7 +3335,7 @@ units:
     kneelHeight: 14
     intelligence: 2
     livingWeapon: true
-    aggression: 7
+    aggression: 8
     value: 20
     deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
     # deathSound: {mod: 40k, index: 23}
@@ -3341,6 +3366,7 @@ units:
     value: 30
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3410,7 +3436,7 @@ units:
     kneelHeight: 14
     value: 40
     intelligence: 4
-    aggression: 2
+    aggression: 8
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3447,6 +3473,7 @@ units:
     value: 40
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3481,7 +3508,8 @@ units:
     kneelHeight: 14
     value: 40
     intelligence: 4
-    aggression: 2
+    aggression: 6
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3526,6 +3554,7 @@ units:
     value: 40
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3561,6 +3590,7 @@ units:
     value: 40
     intelligence: 4
     aggression: 2
+    spotter: 2
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3598,8 +3628,8 @@ units:
     value: 40
     intelligence: 4
     aggression: 1
-    spotter: 1
-    sniper: 50
+    spotter: 2
+    sniper: 70
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3635,7 +3665,8 @@ units:
     kneelHeight: 14
     value: 50
     intelligence: 4
-    aggression: 3
+    aggression: 6
+    spotter: 2
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3673,8 +3704,9 @@ units:
     kneelHeight: 14
     value: 50
     intelligence: 4
-    aggression: 3
+    aggression: 8
     energyRecovery: 60
+    spotter: 2
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
       - - STR_ADEPTAS_POWER_AXE
@@ -3708,6 +3740,8 @@ units:
     value: 50
     intelligence: 8
     aggression: 4
+    spotter: 3
+    sniper: 80
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3783,7 +3817,7 @@ units:
     intelligence: 2
     aggression: 3
     spotter: 6
-    sniper: 60
+    sniper: 70
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -3886,6 +3920,7 @@ units:
     intelligence: 3
     aggression: 3
     spotter: 3
+    sniper: 80
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
