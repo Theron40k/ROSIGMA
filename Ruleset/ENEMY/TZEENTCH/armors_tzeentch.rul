@@ -407,14 +407,14 @@ armors:
       - 1.1  # MELEE
       - 0.6  # ACID
       - 0.0  # SMOKE
-    loftempsSet: [1]
+    loftempsSet: [4]    # was 1? normal armor size is 4, 3 allows some warpy dodge, 1 is too much
     builtInWeapons: []
     allowsRunning: false  # NPC limits for BAI
     tags:
       # ARMOR_ENERGY_SHIELD_CAPACITY: 180
       # ARMOR_ENERGY_SHIELD_PER_TURN: 20
       # ARMOR_ENERGY_SHIELD_FLASH_COLOR: 9
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 300  # enough to soak a heavy weapon strike reliably; relatively fragile armor once shields are penned
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 200  # was 300, 2x anything else in game "enough to soak a heavy weapon strike reliably; relatively fragile armor once shields are penned"
       ARMOR_ENERGY_SHIELD_DECAY: 50
       ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
       INFECTION_RESIST: 50  # infection resist
@@ -787,7 +787,7 @@ armors:
       UNIT_TYPE_PSYKER: 1
 
   - type: STR_TZEENTCH_ACOLYTE_FLAMER_ARMOR
-    ufopediatype: STR_TZEENTCH_ACOLYTE_ARMOR
+    ufopediaType: STR_TZEENTCH_ACOLYTE_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 20
     heatVision: 15
