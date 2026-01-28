@@ -703,7 +703,8 @@ units:
     builtInWeaponSets:
       - - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV  # do accelerator burst cannon later
 
-  - type: STR_DEVILFISH_DRONE_TURRET_GV
+  - &STR_DEVILFISH_DRONE_TURRETS
+    type: STR_DEVILFISH_DRONE_TURRET_GV
     race: STR_DEVILFISH_TURRET
     liveAlien: ""
     stats:
@@ -737,3 +738,7 @@ units:
     ignoredByAI: false
     builtInWeaponSets:
       - - STR_TAU_PULSE_CARBINE_DRONE_TWINLINKED  # do accelerator burst cannon later
+
+  - type: STR_DEVILFISH_DRONE_TURRET_AI_GV
+    refNode: *STR_DEVILFISH_DRONE_TURRETS
+    armor: STR_DEVILFISH_DRONE_TURRET_ARMOR_AI_GV
