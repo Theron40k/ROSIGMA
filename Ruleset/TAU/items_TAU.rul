@@ -42,13 +42,9 @@ items:
     invHeight: 3
     listOrder: 2100
 
-  - type: STR_TAUDRONE_GUN_GV
-    refNode: *STR_TAUDRONE_ITEMBASE_GV
-    listOrder: 2101
-
   - type: STR_TAUDRONE_MARKER_GV
     refNode: *STR_TAUDRONE_ITEMBASE_GV
-    listOrder: 2102
+    listOrder: 2101
 
   - type: STR_TAU_PULSE_CARBINE_DRONE_TWINLINKED
     floorSprite: 3146
@@ -69,8 +65,8 @@ items:
     invHeight: 0
     battleType: 4
 
-  - type: STR_FRIENDLY_DRONE_SPAWNER
-    spawnUnit: STR_TAUDRONE_GUN_GV
+  - type: STR_FRIENDLY_TURRET_DRONE_SPAWNER
+    spawnUnit: STR_DEVILFISH_DRONE_TURRET_GV
     spawnUnitChance: 100
     spawnUnitFaction: 0
     invWidth: 0
@@ -82,8 +78,8 @@ items:
     hitSound: {mod: 40k, index: 788}
     hiddenOnMinimap: true
 
-  - type: STR_ENEMY_DRONE_SPAWNER
-    spawnUnit: STR_TAUDRONE_GUN_GV
+  - type: STR_ENEMY_TURRET_DRONE_SPAWNER
+    spawnUnit: STR_DEVILFISH_DRONE_TURRET_GV
     spawnUnitChance: 100
     spawnUnitFaction: 1
     invWidth: 0

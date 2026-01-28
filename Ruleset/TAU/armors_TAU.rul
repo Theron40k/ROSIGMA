@@ -124,7 +124,7 @@ armors:
       UNIT_TYPE_XENO: 1
       INTIMIDATION_RESISTANCE: 100
       INFECTION_RESIST: 100
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 25
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
@@ -139,8 +139,6 @@ armors:
       - STR_TAU_MARKERLIGHT_BEAM
     # tags:
     #   HAS_MARKERLIGHT: 1
-
-
 
 ### TAU FIRE WARRIOR ARMORS
 ### no storeItem, you should not be able to get this
@@ -188,7 +186,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
 
 
 ### Strike Armor is specialized for long range fire
@@ -272,7 +270,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30   # all Tau armors get this now
+      ARMOR_OVERWATCH_TU_RESTORED: 10   # all Tau armors get this now
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -298,7 +296,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -319,7 +317,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
       ARMOR_ENERGY_SHIELD_DECAY: 50
       DODGE_CHANCE: 10
@@ -346,7 +344,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -411,7 +409,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
@@ -447,7 +445,7 @@ armors:
       UNIT_TYPE_XENO: 1
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
@@ -482,7 +480,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30   # all Tau armors get this now
+      ARMOR_OVERWATCH_TU_RESTORED: 10   # all Tau armors get this now
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -598,7 +596,7 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
@@ -660,7 +658,7 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
       MaxFlight: 1
@@ -880,7 +878,7 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
 
 
   - type: STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV
@@ -907,7 +905,7 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 30
+      ARMOR_OVERWATCH_TU_RESTORED: 10
 
 ### GUEVESA CULTIST ARMORS
   - &STR_GUEVESA_LIGHT_ARMORS_GV   # STR_GUARD_ARMOR_PILOT_DAMAGE
@@ -1558,6 +1556,9 @@ armors:
     antiCamouflageAtDay: 20
     antiCamouflageAtDark: 10
     heatVision: 50
+    camouflageAtDark: -999
+    camouflageAtDay: -999
+    psiCamouflage: -999
     spriteSheet: DEVILFISH_TURRET.PCK
     allowInv: false
     zombiImmune: true
@@ -1590,6 +1591,60 @@ armors:
       - 1.2  # MELTA
     loftempsSet: [92, 89, 90, 91]
     drawingRoutine: 5
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+
+  - type: STR_DEVILFISH_DRONE_TURRET_ARMOR_GV
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 20
+    antiCamouflageAtDark: 10
+    heatVision: 50
+    spriteSheet: TAUDRONEbattlePLAYER.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_TAUDRONE_PCCORPSE
+    corpseBattle:
+      - STR_TAUDRONE_PCCORPSE
+    frontArmor: 60
+    sideArmor: 60
+    rearArmor: 50
+    underArmor: 50
+    size: 1
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [4]
+    camouflageAtDark: -999
+    camouflageAtDay: -999
+    psiCamouflage: -999
+    movementType: 0
+    drawingRoutine: 4
     allowsKneeling: false
     allowsRunning: false
     allowsMoving: false
