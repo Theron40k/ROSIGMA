@@ -1756,3 +1756,373 @@ terrains:
         fuseTimers:
           STR_BOMBARDMENT: [-2, -2]
         groups: [70]
+
+  - name: IMPERIALAIBASESTERRAIN_GVFINAL
+    ambience: {mod: 40k, index: 896}  # cave
+    ambientVolume: 0.25
+    mapDataSets:
+      - BLANKS
+      - MISSXBASES01
+      - MISSXBASES02
+      - MISSXBASES03
+      - MISSXBASES04
+      - MISSXBASES05
+      - MISSXBASES06
+    mapBlocks:
+      - name: GKHQ01
+        width: 20
+        length: 10
+        groups: 9
+        items:
+          STR_TZEENTCH_BLESSED_SPAWNER:
+            - [1, 6, 0]
+            - [1, 2, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER:
+            - [4, 1, 1]
+            - [4, 6, 1]
+            - [17, 1, 0]
+            - [17, 6, 0]
+        fuseTimers:
+          STR_TZEENTCH_BLESSED_SPAWNER: [0, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER: [0, 0]
+      - name: GKHQ02
+        width: 30
+        length: 30
+        groups: 10
+        items:
+          STR_TZEENTCH_SUMMONER_SPAWNER:
+            - [3, 14, 3]
+          STR_TZEENTCH_BLESSED_SPAWNER:
+            - [9, 14, 0]
+            - [14, 9, 0]
+            - [19, 14, 0]
+            - [14, 19, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER:
+            - [4, 4, 2]
+            - [4, 23, 2]
+            - [25, 25, 2]
+            - [25, 2, 2]
+        fuseTimers:
+          STR_TZEENTCH_CULT_SUMMONER_SPAWNER: [0, 0]
+          STR_TZEENTCH_BLESSED_SPAWNER: [0, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER: [0, 0]
+      - name: MISSXBASE_00
+        width: 10
+        length: 10
+        groups: 2
+      - name: MISSXBASE_01
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_02
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_03
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_04
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_05
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_06
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_07
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_08
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_09
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_10
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_11
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_12
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_13
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_14
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_15
+        width: 10
+        length: 10
+        groups: 3
+      - name: MISSXBASE_16  # big tile
+        width: 20
+        length: 20
+        groups: 4
+      - name: MISSXBASE_17  # not fully build
+        width: 10
+        length: 10
+        groups: 5
+      - name: MISSXBASE_18  # not fully build
+        width: 10
+        length: 10
+        groups: 5
+      - name: MISSXBASE_19  # filled it is a blocker
+        width: 10
+        length: 10
+        groups: 6
+      - name: MISSXBASE_20  # not fully build
+        width: 10
+        length: 10
+        groups: 5
+      - name: MISSXBASE_21  # HQ
+        width: 20
+        length: 20
+        groups: 11
+        items:
+          STR_DAEMON_PURGE_MODERATE_ENVIRONMENTAL_TOKEN:
+            - [9, 12, 0]
+          STR_TZEENTCH_BLESSED_SPAWNER:
+            - [9, 12, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER:
+            - [9, 10, 2]
+            - [4, 9, 1]
+            - [13, 7, 1]
+            - [9, 4, 1]
+            - [11, 13, 1]
+        fuseTimers:
+          STR_TZEENTCH_BLESSED_SPAWNER: [0, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER: [0, 0]
+      - name: MISSXBASE_22  # big tile
+        width: 20
+        length: 20
+        groups: 4
+      - name: MISSXBASE_23
+        width: 10
+        length: 10
+        groups: 8
+      - name: MISSXBASE_24
+        width: 10
+        length: 10
+        groups: 8
+      - name: MISSXBASE_25
+        width: 10
+        length: 10
+        groups: 8
+      - name: MISSXBASE_26
+        width: 10
+        length: 10
+        groups: 8
+
+
+  - name: UBASETAU
+    ambience: 890 #warp
+    ambientVolume: 0.15
+    mapDataSets:
+      - BLANKS
+      - C_BASE
+      - CHAOSITEMS
+      - C_PODS
+      - BRAIN
+    mapBlocks:
+      - name: UBASE_00
+        width: 20
+        length: 20
+        groups: 3
+      - name: UBASE_01
+        width: 20
+        length: 20
+      - name: UBASE_02
+        width: 20
+        length: 20
+      - name: UBASE_03
+        width: 20
+        length: 20
+        items:
+          STR_ELERIUM_115:
+            - [2, 14, 1]
+      - name: UBASE_04
+        width: 10
+        length: 10
+        groups: 2
+        revealedFloors: 1
+      - name: UBASE_05
+        width: 10
+        length: 10
+      - name: UBASE_06
+        width: 10
+        length: 10
+      - name: UBASE_07
+        width: 10
+        length: 10
+        groups: 1
+      - name: UBASE_08
+        width: 10
+        length: 10
+      - name: UBASE_09
+        width: 10
+        length: 10
+      - name: UBASE_10
+        width: 10
+        length: 10
+      - name: UBASE_11
+        width: 10
+        length: 10
+#       UBASE_12 is impassable, 13 and 14 are apparently unused.
+#       in the interest of preserving an original experience,
+#       they have been disabled by being added to group 5, which is unused in the scripts.
+      - name: UBASE_12
+        width: 10
+        length: 10
+        groups: 5
+      - name: UBASE_13
+        width: 10
+        length: 10
+        groups: 5
+      - name: UBASE_14
+        width: 10
+        length: 10
+        groups: 5
+      - name: UBASE_15
+        width: 20
+        length: 20
+        groups: 4
+        items:
+          STR_TZEENTCH_SISTERASS_SPAWNER:
+            - [0, 7, 0]
+            - [0, 11, 0]
+            # - [2, 8, 0]
+            - [3, 16, 0]
+          STR_TZEENTCHS_SISTERCHAMP_SPAWNER:
+            - [1, 1, 0]
+            # - [16, 16, 0]
+          STR_TZEENTCH_BATTLE_SERVITOR_PLASMA_SPAWNER:
+            - [16, 2, 0]
+            # - [2, 16, 0]
+          STR_TZEENTCH_CULT_POSSESSED_SPAWNER:
+            - [10, 12, 0]
+            # - [9, 8, 0]
+          STR_TZEENTCH_CULT_LEADER_ASSASSIN_SPAWNER:
+            - [8, 11, 1]
+          STR_TZEENTCH_SISTER_SPAWNER:
+            - [1, 8, 0]  # door guard
+          # STR_KHORNE_VALKIA_SPAWNER:
+          #   - [2, 7, 0]
+          #   # - [2, 11, 0]
+          # STR_KHORNE_CHAMP_SPAWNER:
+          #   - [10, 9, 0]
+          # STR_SLAANESH_COMMANDER_SPAWNER:
+          #   - [12, 9, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER:
+            - [6, 9, 0]
+            # - [8, 7, 0]
+          STR_HERETIC_SISTERINQ_SPAWNER:
+            - [5, 11, 1]
+            # - [5, 17, 0]
+          # STR_SLAANESH_ANOINTED_MISSILE_SPAWNER:
+          #   - [1, 1, 0]
+          #   # - [16, 14, 0]
+          # STR_NIGHTLORDS_CSM_SPAWNER:
+          #   - [10, 6, 0]
+          #   - [8, 1, 0]
+          # STR_NIGHTLORDS_WARPTALON_SPAWNER:
+          #   - [13, 5, 0]
+          # STR_NEVERBORN_SPAWNER:
+          #   - [5, 13, 0]
+          #   # - [4, 13, 0]
+          #   # - [13, 11, 0]
+          #   - [6, 9, 1]
+          STR_CHAOS_DREAD2_SPAWNER:
+            - [13, 17, 0]
+          STR_TZEENTCH_CSM_SPAWNER:
+            - [7, 11, 1]
+            - [10, 5, 1]
+            # - [14, 5, 1]
+          # STR_NURGLE_CSM_SPAWNER:
+          #   - [10, 6, 1]
+          #   - [13, 13, 1]
+          # STR_NURGLE_TERMINATOR_SPAWNER:
+          #   - [14, 13, 1]
+          STR_BLUEHORROR_SPAWNER:
+            - [16, 9, 0]
+            # - [5, 17, 0]
+          STR_TZEENTCH_CULT_LEADER_SPAWNER:
+            - [6, 10, 1]
+          STR_TZEENTCH_SUMMONER_SPAWNER:
+            - [7, 11, 1]
+          STR_ETHEREAL_LEADER_SPAWNER:
+            - [8, 11, 1]
+          STR_PINKHORROR_SPAWNER:
+            - [9, 10, 0]
+          STR_TZEENTCH_FLAMER_TERRORIST_SPAWNER:
+            - [6, 10, 0]
+            # - [7, 8, 0]
+            - [13, 12, 0]
+            # - [9, 1, 1]
+          # STR_DEAMONETTE_SPAWNER:
+          #   - [8, 10, 0]
+          #   # - [12, 15, 1]
+          #   # - [13, 15, 1]
+          # STR_ALPHA_DAEMONETTE_SPAWNER:
+          #   - [2, 10, 0]
+          #   # - [2, 8, 0]
+          # STR_SLAANESH_CHOSEN_SPAWNER:
+          #   - [17, 1, 1]
+          # STR_PLAGUEBEARER_SPAWNER:
+          #   - [1, 8, 0]
+          #   # - [14, 4, 0]
+          #   - [12, 1, 0]
+          #   # - [3, 16, 0]
+        fuseTimers:
+          STR_TZEENTCH_SISTERASS_SPAWNER: [0, 0]
+          STR_TZEENTCHS_SISTERCHAMP_SPAWNER: [0, 0]
+          STR_TZEENTCH_BATTLE_SERVITOR_PLASMA_SPAWNER: [0, 0]
+          STR_TZEENTCH_CULT_POSSESSED_SPAWNER: [0, 0]
+          STR_TZEENTCH_CULT_LEADER_ASSASSIN_SPAWNER: [0, 0]
+          STR_TZEENTCH_SISTER_SPAWNER: [0, 0]
+          STR_HAVOC_TZEENTCH_SPAWNER: [0, 0]
+          STR_HERETIC_SISTERINQ_SPAWNER: [0, 0]
+          # STR_OBL_SPAWNER: [6, 10]
+          # STR_KHORNE_JUGG_SPAWNER: [0, 0]
+          # STR_KHORNE_VALKIA_SPAWNER: [6, 10]
+          # STR_KHORNE_CHAMP_SPAWNER: [6, 10]
+          # STR_IRON_BERSERKER_SPAWNER: [0, 0]
+          # STR_IRON_TERMINATOR_SPAWNER: [5, 6]
+          # STR_IRON_WARSMITH_SPAWNER: [6, 10]
+          # STR_NIGHTLORDS_CSM_SPAWNER: [0, 0]
+          # STR_NIGHTLORDS_WARPTALON_SPAWNER: [6, 10]
+          STR_PINKHORROR_SPAWNER: [4, 6]
+          STR_BLUEHORROR_SPAWNER: [6, 10]
+          # STR_NURGLE_CSM_SPAWNER: [0, 0]
+          # STR_NURGLE_TERMINATOR_SPAWNER: [10, 16]
+          STR_TZEENTCH_CSM_SPAWNER: [10, 16]
+          STR_TZEENTCH_CULT_LEADER_SPAWNER: [0, 0]
+          STR_TZEENTCH_SUMMONER_SPAWNER: [0, 0]
+          STR_ETHEREAL_LEADER_SPAWNER: [4, 6]
+          STR_TZEENTCH_FLAMER_TERRORIST_SPAWNER: [4, 8]
+          # STR_DEAMONETTE_SPAWNER: [0, 0]
+          # STR_ALPHA_DAEMONETTE_SPAWNER: [0, 0]
+          # STR_SLAANESH_CSM_SPAWNER: [0, 0]
+          # STR_SLAANESH_ANOINTED_SPAWNER: [4, 6]
+          # STR_SLAANESH_ANOINTED_MISSILE_SPAWNER: [4, 6]
+          # STR_SLAANESH_COMMANDER_SPAWNER: [0, 0]
+          # STR_CHAOS_DREAD2_SPAWNER: [0, 0]
+          # STR_NEVERBORN_SPAWNER: [0, 0]
+          # STR_SLAANESH_CHOSEN_SPAWNER: [6, 9]
+          # STR_PLAGUEBEARER_SPAWNER: [6, 8]
+          # STR_BLACKSTONE_STORMTROOPER_ELITE_SPAWNER: [0, 0]
