@@ -384,9 +384,9 @@ armors:
     visibilityAtDay: 40
     visibilityAtDark: 35  # Commander artificer armor + sorcerer + leader bonus
     heatVision: 50  # Commander artificer armor + sorcerer + leader bonus
-    antiCamouflageAtDay: 15  # Commander artificer armor + sorcerer + leader bonus
-    antiCamouflageAtDark: 15  # Commander artificer armor + sorcerer + leader bonus
-    psiVision: 10  # Commander artificer armor + sorcerer + leader bonus
+    antiCamouflageAtDay: 10  # Commander artificer armor + sorcerer + leader bonus
+    antiCamouflageAtDark: 10  # Commander artificer armor + sorcerer + leader bonus
+    psiVision: 5  # Commander artificer armor + sorcerer + leader bonus
     frontArmor: 120  # Commander artificer armor + sorcerer + leader bonus
     sideArmor: 110
     rearArmor: 90
@@ -405,8 +405,10 @@ armors:
       - 1.1  # PLASMA
       - 1.1  # STUN
       - 1.1  # MELEE
-      - 0.6  # ACID
+      - 0.6  # ACID; # Rubric have no flesh to burn/poison is ineffective
       - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
     loftempsSet: [4]    # was 1? normal armor size is 4, 3 allows some warpy dodge, 1 is too much
     builtInWeapons: []
     allowsRunning: false  # NPC limits for BAI
@@ -419,6 +421,58 @@ armors:
       ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
       INFECTION_RESIST: 50  # infection resist
       INTIMIDATION_RESISTANCE: 50  # intimidate immune
+      UNIT_SIZE: 150 # Large
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_TZEENTCH: 1
+      UNIT_TYPE_PSYKER: 1
+      DODGE_CHANCE: 100
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: MUTON_ARMORTZSLORD # TZEENTCH SORCERER LORD armor
+    visibilityAtDay: 40
+    visibilityAtDark: 35  # Commander artificer armor + sorcerer + leader bonus
+    heatVision: 50  # Commander artificer armor + sorcerer + leader bonus
+    antiCamouflageAtDay: 15  # Commander artificer armor + sorcerer + leader bonus
+    antiCamouflageAtDark: 15  # Commander artificer armor + sorcerer + leader bonus
+    psiVision: 10  # Commander artificer armor + sorcerer + leader bonus0
+    spriteSheet: TZSORCLORD_BS.PCK
+    spriteInv: TZSORCLORD_INV.PCK
+    allowInv: true
+    fearImmune: true
+    corpseBattle:
+      - STR_TZEENTCHS_CORPSE
+    frontArmor: 120  # Commander artificer armor + sorcerer + leader bonus
+    sideArmor: 110
+    rearArmor: 90
+    underArmor: 110
+    drawingRoutine: 0
+    constantAnimation: false
+    movementType: 1  # flying Tzeentch flight
+    moveSound: 2430  # magical flight
+    specialWeapon: STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+    damageModifier:  # CHAOS ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.1  # FLAMES; enchanted artificer power armor
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE
+      - 0.6  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    builtInWeapons: []
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 300
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      INFECTION_RESIST: 100  # infection resist
+      INTIMIDATION_RESISTANCE: 100  # intimidate immune
       UNIT_SIZE: 150 # Large
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_CHAOS: 1
