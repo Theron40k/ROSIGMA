@@ -1606,7 +1606,8 @@ armors:
       INTIMIDATION_RESISTANCE: 100
       UNIT_TYPE_MECHANICAL: 1
 
-  - type: STR_DEVILFISH_DRONE_TURRET_ARMOR_GV
+  - &STR_DEVILFISH_DRONE_TURRET_ARMORS
+    type: STR_DEVILFISH_DRONE_TURRET_ARMOR_GV
     visibilityAtDay: 40
     visibilityAtDark: 30
     antiCamouflageAtDay: 20
@@ -1659,6 +1660,17 @@ armors:
       INFECTION_RESIST: 100  # infection immune
       INTIMIDATION_RESISTANCE: 100
       UNIT_TYPE_MECHANICAL: 1
+
+  # orange
+  - type: STR_DEVILFISH_DRONE_TURRET_ARMOR_AI_GV
+    refNode: *STR_DEVILFISH_DRONE_TURRET_ARMORS
+    spriteSheet: TAUDRONEbattle.PCK
+    corpseGeo: STR_TAUDRONE_AICORPSE
+    corpseBattle:
+      - STR_TAUDRONE_AICORPSE
+
+
+
 
 
 
