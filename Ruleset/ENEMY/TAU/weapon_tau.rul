@@ -31,11 +31,12 @@ items:
     confAuto:
       name: TAUDRONEGUN_AUTO
       followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
+    # Carbine/rifle/burst cannon fire
     power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     twoHanded: false
@@ -84,12 +85,11 @@ items:
     tuSnap: 30
     autoShots: 3
     power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
-      # ArmorEffectiveness: 0.9  # some armor penetration
-    battleType: 1
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
+      # ArmorEffectiveness: 0.9  # some armor penetration    battleType: 1
     twoHanded: true
     oneHandedPenalty: 25
     invWidth: 2
@@ -190,10 +190,10 @@ items:
     battleType: 2
     clipSize: 36
     power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
 
   - type: STR_TAU_PULSE_MAG_EXPORT
@@ -224,10 +224,10 @@ items:
   - type: STR_TAU_PULSE_BLASTER_MAG
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
     power: 60
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 1   # random means some pellets will roll high
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 0.2 # was 0.3  # melts some armor on the way in
       ArmorEffectiveness: 0.8  # the blaster retains armor penetration
     shotgunBehavior: 1
     shotgunSpread: 25
@@ -261,10 +261,10 @@ items:
     tuAimed: 25
     autoShots: 4
     power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     confSnap: # 2 shot burst
@@ -396,10 +396,10 @@ items:
     tuSnap: 25
     autoShots: 4
     power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     confSnap:
@@ -459,7 +459,7 @@ items:
         return;
     tuLoad: 5 #quick reload; mainly for underslung
     battleType: 2
-    power: 80
+    power: 90
     clipSize: 3
     damageType: 6
     damageAlter:
@@ -510,7 +510,7 @@ items:
       energy: true
     tuAimed: 0
     accuracyAimed: 0
-    power: 80
+    power: 90
     damageType: 6
     damageAlter:
       ArmorEffectiveness: 0.5
@@ -654,7 +654,8 @@ items:
     accuracySnap: 90  # Breachers are more accurate
     tuSnap: 25
     power: 60
-    damageType: 5
+    damageType: 1
+    # Pulse blaster
     damageAlter:  # DA PLASMA
       RandomType: 1   # random means some pellets will roll high
       ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
@@ -711,10 +712,10 @@ items:
     tuSnap: 20
     tuAimed: 40
     power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     ammo:
@@ -752,6 +753,7 @@ items:
     invHeight: 3
     requires:
       - STR_TAU_XENOTECH
+      - STR_HIGHTIER_PREREQ
     compatibleAmmo:
       - STR_TAU_RAIL_MAG
     weight: 15
