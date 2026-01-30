@@ -870,6 +870,19 @@ armors:
     customArmorPreviewIndex: 1385
     corpseBattle:
       - STR_TAUGUEVESA_PCCORPSE
+    damageModifier:
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.7  # FLAMES; partially environmentally sealed
+      - 0.9  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE was 1.2 on NPCs
+      - 1.0  # ACID; partially environmentally sealed
+      - 0.0  # SMOKE
+      - 0.8  # IMPACT
+      - 1.0  # MELTA
     storeItem: STR_NONE
     stats:
       melee: 5        # focus on what they're best at
@@ -1092,7 +1105,8 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_LIVING: 1
 
-  - type: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+  - &STR_MARINVESA_CARAPACE
+    type: STR_TAUMARINVESACARAP_PC_ARMOR_GV
     visibilityAtDay: 35  # abhuman squat malus
     visibilityAtDark: 30  # abhuman squat bonus
     antiCamouflageAtDay: 5
@@ -1108,6 +1122,53 @@ armors:
     sideArmor: 70
     rearArmor: 50
     underArmor: 70
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 15
+    damageModifier:  # TAU CARAPACE ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.6  # FLAMES; partially environmentally sealed
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.9  # STUN
+      - 1.1  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.7  # IMPACT
+      - 0.9  # MELTA
+    units:
+      - STR_MARINVESA_GV
+    stats:
+      bravery: 10
+      strength: 5
+    loftempsSet: [4]  # big targets
+    specialWeapon: STR_BAYONET
+    tags:
+      INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_LIVING: 1
+
+  - type: STR_ENGRAVED_TAUMARINVESACARAP_PC_ARMOR_GV
+    refNode: *STR_MARINVESA_CARAPACE
+    visibilityAtDay: 35  # abhuman squat malus
+    visibilityAtDark: 30  # abhuman squat bonus
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    customArmorPreviewIndex: 843  # 543
+    psiCamouflage: 3
+    requires: STR_ENGRAVED_ARMORS_GV
+    spriteSheet: TAUBEASTMAN_CARAPACE_BSPLAYER.PCK
+    spriteInv: TBCA_33
+    storeItem: STR_NONE
+    corpseBattle:
+      - STR_TAUMARINVESA_PCCORPSE
+    frontArmor: 90 # +20 vs basic Guard Carapace, artificer
+    sideArmor: 80
+    rearArmor: 60
+    underArmor: 80
     drawingRoutine: 0
     zombiImmune: true
     weight: 15
@@ -1127,8 +1188,12 @@ armors:
     units:
       - STR_MARINVESA_GV
     stats:
-      bravery: 10
-      strength: 5
+      bravery: 15
+      strength: 10
+      melee: 10
+      reactions: 5
+      psiStrength: 25  # the greatest good of all is happening to them
+      psiSkill: 25
     loftempsSet: [4]  # big targets
     specialWeapon: STR_BAYONET
     tags:
@@ -1136,6 +1201,7 @@ armors:
       UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_LIVING: 1
+
 
 
 ### NPC armors
