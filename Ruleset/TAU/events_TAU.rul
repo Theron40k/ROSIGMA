@@ -178,12 +178,12 @@ events:
       STR_FIREWARRIOR_GV: 4
       STR_FIREWARRIOR_SHASUI_GV: 1
     everyMultiItemList:
-      STR_TAU_PULSE_CARBINE: 4
+      STR_TAU_PULSE_CARBINE: 5
       STR_TAU_PULSE_PISTOL: 5
-      STR_TAU_RAIL_RIFLE: 1
+      # STR_TAU_RAIL_RIFLE: 1
       STR_TAU_PULSE_MAG: 40
       STR_TAU_PHOTON_GRENADE_CARBINE: 30
-      STR_TAU_RAIL_MAG: 6
+      # STR_TAU_RAIL_MAG: 6
       STR_TAU_FUSION_GRENADE: 5
       STR_TAU_EMP_GRENADE: 5
       STR_TAU_PHOTON_GRENADE: 5
@@ -228,6 +228,11 @@ events:
   - name: STR_IMPERIAL_CRUSADE_EVENT_GV
     description: STR_IMPERIAL_CRUSADE_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
+
+  - name: STR_ENGRAVED_ARMORS_EVENT_GV
+    description: STR_ENGRAVED_ARMORS_CODEX_DESCRIPTION_GV
+    background: InquisitionBG.SCR
+
 
   # turn off the GSC arrival events
   - update: STR_GSC_ARRIVAL_BASE_SPAWN

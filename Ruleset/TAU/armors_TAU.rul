@@ -25,6 +25,9 @@ items:
   - type: STR_CRISIS_SUIT_ITEM_GV
     costSell: 0
 
+  - type: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
+    costSell: 0
+
   - type: STR_SENTINELGV_ARMOR                #6800
     requiresBuy:
       - STR_TANKERS_DELIGHT_GV
@@ -150,7 +153,7 @@ armors:
     visibilityAtDark: 30 #advanced NV
     antiCamouflageAtDark: 5 #superior Tau optics
     antiCamouflageAtDay: 5
-    heatVision: 25
+    heatVision: 20
     storeItem: STR_NONE
     spriteSheet: TAUFIREWARRIORbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSARMORPLAYER.PCK
@@ -180,6 +183,7 @@ armors:
     loftempsSet: [3]
     allowsRunning: true
     allowsKneeling: true
+    listOrder: 100
     units:
       - STR_FIREWARRIOR_GV
     tags:
@@ -249,22 +253,22 @@ armors:
     antiCamouflageAtDark: 10
     antiCamouflageAtDay: 10
     heatVision: 40
-    camouflageAtDark: -10 #minor camo
-    camouflageAtDay: -5
+    camouflageAtDark: -5 #minor camo
+    camouflageAtDay: -3
     spriteSheet: TAUFIREWARRIORPATHFINDERbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSPATHFINDERARMORPLAYER.PCK
     customArmorPreviewIndex: 1381
     corpseBattle:
       - STR_TAUFIREWARRIORPATHFINDER_PCCORPSE
-    frontArmor: 70 # slightly less protective than standard Fire Warrior armor
-    sideArmor: 60
-    rearArmor: 40
-    underArmor: 60
+    frontArmor: 65 # slightly less protective than standard Fire Warrior armor
+    sideArmor: 55
+    rearArmor: 35
+    underArmor: 45
     forcedTorso: 1
     stats:
-      tu: 10  # lighter
-      stamina: 10  # lighter
-      reactions: 10  # lighter
+      tu: 5  # lighter
+      stamina: 5  # lighter
+      reactions: 5  # lighter
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
@@ -282,6 +286,7 @@ armors:
     spriteSheet: TAUFIREWARRIORLEADERbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSLEADERARMORPLAYER.PCK
     customArmorPreviewIndex: 1382
+    listOrder: 150
     corpseBattle:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
     stats:
@@ -318,8 +323,8 @@ armors:
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 15
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
-      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -333,7 +338,7 @@ armors:
     stats:
       tu: 10  # lighter
       stamina: 10  # lighter
-      reactions: 10  # lighter
+      reactions: 5  # lighter
       bravery: 10
     units:
       - STR_FIREWARRIOR_SHASUI_GV
@@ -352,11 +357,11 @@ armors:
   - &STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
     type: STR_ENGRAVED_ARMORS_GV
     requires: STR_GENERALLOCK
-    storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 35
     antiCamouflageAtDark: 7
     antiCamouflageAtDay: 7
+    psiCamouflage: 3
     heatVision: 35
     spriteSheet: TAUFIREWARRIORLEADERbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSLEADERARMORPLAYER.PCK
@@ -369,6 +374,10 @@ armors:
     sideArmor: 80
     rearArmor: 60
     underArmor: 80
+    stats:
+      psiStrength: 25 # engraved armors (unknowingly) defend their blooded wearers against psi attacks
+      psiSkill: 25
+    listOrder: 200
     drawingRoutine: 0
     damageModifier:  # TAU CARAPACE ARMOR
       - 1.0  # none
@@ -413,7 +422,7 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
-      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_ENERGY_SHIELD_DECAY: 20
 
 
 ### breacher armor is better sealed
@@ -437,13 +446,13 @@ armors:
       - 0.6  # IMPACT
       - 0.8  # MELTA
     stats:
-      reactions: 5
+      reactions: 10
       bravery: 10
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
       ARMOR_ENERGY_SHIELD_DECAY: 50
       ARMOR_OVERWATCH_TU_RESTORED: 15
       # HAS_MARKERLIGHT: 1
@@ -473,7 +482,7 @@ armors:
     stats:
       tu: 15  # feels like youre wearing nothin at all
       stamina: 15
-      reactions: 15
+      reactions: 10
       bravery: 10
     tags:
       UNIT_TYPE_LIVING: 1
@@ -483,6 +492,8 @@ armors:
       ARMOR_OVERWATCH_TU_RESTORED: 15   # all Tau armors get this now
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
 
 
 ### TAU CADRE FIREBLADE ARMORS
@@ -534,13 +545,14 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100
       ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 50
+      ARMOR_OVERWATCH_TU_RESTORED: 15
       DODGE_CHANCE: 15
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
-  - type: STR_XV26_STEALTH_SUIT_GV
+  - &STR_STEALTH_SUITS
+    type: STR_XV26_STEALTH_SUIT_GV
     requires: STR_STEALTH_SUIT_OPERATIONS_GV
     visibilityAtDay: 40
     visibilityAtDark: 40
@@ -583,13 +595,14 @@ armors:
       - STR_FIREWARRIOR_SHASEL_GV
       - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     stats:
-      tu: 20
-      stamina: 20
-      health: 25  # suits are not invincible
-      firing: 10  # bonus to hit from sensors and firing computer
+      tu: 10
+      stamina: 10
+      health: 20  # suits are not invincible
+      firing: 5  # bonus to hit from sensors and firing computer
     loftempsSet: [4]
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_GV
+    listOrder: 300
     tags:
       UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_LIVING: 1
@@ -604,6 +617,15 @@ armors:
       ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
       MaxFlight: 1
       MaxCoolDown: 1
+
+  - type: STR_XV26_ENGRAVED_STEALTH_SUIT_GV
+    refNode: *STR_STEALTH_SUITS
+    storeItem: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
+    psiCamouflage: 5
+    stats:
+      psiStrength: 25
+      psiSkill: 25
+    listOrder: 301
 
 
   - &STR_STARSCYTHE_OPTIONS_GV
@@ -629,7 +651,7 @@ armors:
     sideArmor: 120
     leftArmorDiff: 10  # the arm shield :)
     rearArmor: 100
-    underArmor: 150
+    underArmor: 120
     standHeight: 25
     damageModifier:  # TERMINATOR ARMOR
       - 1.0  # none
@@ -645,13 +667,14 @@ armors:
       - 0.2  # IMPACT
       - 1.0  # MELTA
     stats:
-      tu: 20
-      stamina: 20
-      health: 50  # let's try this +2 wound
-      firing: 10  # bonus to hit from sensors and firing computer
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      firing: 5  # was 10 # bonus to hit from sensors and firing computer
     allowsKneeling: false
     allowsRunning: false
     loftempsSet: [5]
+    listOrder: 200
     tags:
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_LIVING: 1
@@ -673,6 +696,7 @@ armors:
       - STR_FIREWARRIOR_SHASEL_GV
       - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
+      - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
       - INV_NULL_3X3
       - INV_NULL_2X1_RL
@@ -704,6 +728,7 @@ armors:
       - STR_FIREWARRIOR_SHASEL_GV
       - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
     builtInWeapons:
+      - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
       - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
       - INV_NULL_3X3
       - INV_NULL_2X1_RL
@@ -867,6 +892,8 @@ armors:
       bravery: 10
       melee: 5        # focus on what they're best at
       strength: 5
+      tu: 5
+      stamina: 5
     units:
       - STR_GUEVESAUI_GV
       - STR_GUEVESAVRE_GV
@@ -877,7 +904,7 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
-      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_ENERGY_SHIELD_DECAY: 20
       ARMOR_OVERWATCH_TU_RESTORED: 15
 
 
@@ -890,7 +917,9 @@ armors:
     storeItem: STR_TAUGUEVESACARAP_PC_ARMOR_ITEM_GV
     specialWeapon: STR_BAYONET
     stats:
-      bravery: 10
+      bravery: 20
+      tu: 10
+      stamina: 10
       melee: 10        # focus on what they're best at
       strength: 10
       reactions: 5
@@ -903,7 +932,42 @@ armors:
       # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_OVERWATCH_TU_RESTORED: 15
+
+
+  - type: STR_ENGRAVED_TAUGUEVESACARAP_VETERAN_ARMOR_GV
+    refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
+    spriteSheet: TAUGUEVESALV2battlePLAYER_GOG.PCK
+    spriteInv: TAUGUEVESALV2ARMORPLAYER.PCK
+    corpseBattle:
+      - STR_TAUGUEVESA_PCCORPSE
+    storeItem: STR_ENGRAVED_ARMOR_ITEM_GV
+    specialWeapon: STR_BAYONET
+    frontArmor: 90 # +20 vs basic Guard Carapace; artificer quality
+    sideArmor: 80
+    rearArmor: 60
+    underArmor: 80
+    stats:
+      bravery: 20      # true believers
+      tu: 10
+      stamina: 10
+      melee: 10        # focus on what they're best at
+      strength: 10
+      reactions: 5
+      psiStrength: 25  # the greatest good of all is happening to them
+      psiSkill: 25
+    units:
+      - STR_GUEVESAUI_GV
+      - STR_GUEVESAVRE_GV
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      # HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
       ARMOR_ENERGY_SHIELD_DECAY: 50
       ARMOR_OVERWATCH_TU_RESTORED: 15
 
