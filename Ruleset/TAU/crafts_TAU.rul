@@ -235,7 +235,7 @@ crafts:
     maxLargeUnits: 2
     maxAltitude: 1
     accel: 4
-    weapons: 1
+    weapons: 2
     weaponTypes:
       - 3
     weaponStrings:
@@ -266,6 +266,84 @@ crafts:
           fuseTimers:
             STR_FRIENDLY_TURRET_DRONE_SPAWNER: [0, 0]
             STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER: [0, 0]
+    craftInventoryTile: [4, 5, 1]
+    deployment:
+      - [4, 5, 1, 0]
+      - [5, 5, 1, 0]
+      - [6, 5, 1, 0]
+      - [7, 5, 1, 0]
+      - [4, 4, 1, 0]
+      - [5, 4, 1, 0]
+      - [6, 4, 1, 0]
+      - [7, 4, 1, 0]
+      - [5, 3, 1, 0]
+      - [6, 3, 1, 0]
+      - [5, 2, 1, 0]
+      - [6, 2, 1, 0]
+      - [1, 15, 1, 0]
+      - [2, 15, 1, 0]
+      - [3, 15, 1, 0]
+      - [4, 15, 1, 0]
+      - [1, 14, 1, 0]
+      - [2, 14, 1, 0]
+      - [3, 14, 1, 0]
+      - [4, 14, 1, 0]
+      - [2, 13, 1, 0]
+      - [3, 13, 1, 0]
+      - [2, 12, 1, 0]
+      - [3, 12, 1, 0]
+    listOrder: 800
+    spacecraft: true
+
+  - type: STR_ORCA_GV
+    # costBuy: 2000000
+    costRent: 600000
+    costSell: 0
+    takeoffSound: {mod: 40k, index: 56} #TURBINE SOUND
+    selectSound: [{mod: 40k, index: 70}, {mod: 40k, index: 71}, {mod: 40k, index: 72}, {mod: 40k, index: 73}]  #INTERCEPTOR SOUND
+    marker: 30
+    requires:
+      - STR_ORCA_DROPSHIPS_GV
+    sprite: 2168
+    fuelMax: 3000
+    damageMax: 1000
+    speedMax: 600
+    repairRate: 10
+    vehicles: 999
+    maxLargeUnits: 2
+    maxAltitude: 4
+    accel: 4
+    weapons: 1
+    weaponTypes:
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+    soldiers: 36
+    refuelRate: 1000
+    transferTime: 96
+    score: 500
+    battlescapeTerrainData:
+      name: ORCAINTPLAYER
+      mapDataSets:
+        - BLANKS
+        - ORCAINT1PLAYER
+        - ORCAINT2PLAYER
+      mapBlocks:
+        - name: ORCAINTPLAYER
+          width: 10
+          length: 20
+          # items:
+          #   STR_FRIENDLY_TURRET_DRONE_SPAWNER:
+          #     - [4, 9, 1]
+          #     - [8, 9, 1]
+          #     - [1, 19, 1]
+          #     - [5, 19, 1]
+          #   STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER:
+          #     - [5, 8, 0]
+          #     - [2, 18, 0]
+          # fuseTimers:
+          #   STR_FRIENDLY_TURRET_DRONE_SPAWNER: [0, 0]
+          #   STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER: [0, 0]
     craftInventoryTile: [4, 5, 1]
     deployment:
       - [4, 5, 1, 0]
