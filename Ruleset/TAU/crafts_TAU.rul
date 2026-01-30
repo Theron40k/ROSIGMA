@@ -235,7 +235,7 @@ crafts:
     maxLargeUnits: 2
     maxAltitude: 1
     accel: 4
-    weapons: 1
+    weapons: 2
     weaponTypes:
       - 3
     weaponStrings:
@@ -292,6 +292,112 @@ crafts:
       - [3, 13, 1, 0]
       - [2, 12, 1, 0]
       - [3, 12, 1, 0]
+    listOrder: 800
+    spacecraft: true
+
+  - type: STR_ORCA_GV
+    # costBuy: 2000000
+    costRent: 600000
+    costSell: 0
+    takeoffSound: {mod: 40k, index: 56} #TURBINE SOUND
+    selectSound: [{mod: 40k, index: 70}, {mod: 40k, index: 71}, {mod: 40k, index: 72}, {mod: 40k, index: 73}]  #INTERCEPTOR SOUND
+    marker: 30
+    requires:
+      - STR_ORCA_DROPSHIPS_GV
+    sprite: 2168
+    fuelMax: 3000
+    damageMax: 1000
+    speedMax: 600
+    repairRate: 10
+    vehicles: 999
+    maxLargeUnits: 4
+    maxAltitude: 4
+    accel: 5
+    weapons: 1
+    weaponTypes:
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+    soldiers: 44
+    refuelRate: 1000
+    transferTime: 96
+    score: 500
+    battlescapeTerrainData:
+      name: ORCAINTPLAYER
+      mapDataSets:
+        - BLANKS
+        - ORCAINT1PLAYER
+        - ORCAINT2PLAYER
+      mapBlocks:
+        - name: ORCAINTPLAYER
+          width: 10
+          length: 20
+          # items:
+          #   STR_FRIENDLY_TURRET_DRONE_SPAWNER:
+          #     - [4, 9, 1]
+          #     - [8, 9, 1]
+          #     - [1, 19, 1]
+          #     - [5, 19, 1]
+          #   STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER:
+          #     - [5, 8, 0]
+          #     - [2, 18, 0]
+          # fuseTimers:
+          #   STR_FRIENDLY_TURRET_DRONE_SPAWNER: [0, 0]
+          #   STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER: [0, 0]
+    craftInventoryTile: [4, 5, 0]
+    deployment:
+      - [3, 3, 0, 0]
+      - [4, 3, 0, 0]
+      - [5, 3, 0, 0]
+      - [6, 3, 0, 0]
+      # - [1, 4, 0, 0]
+      # - [2, 4, 0, 0]
+      - [3, 4, 0, 0]
+      - [4, 4, 0, 0]
+      - [5, 4, 0, 0]
+      - [6, 4, 0, 0]
+      # - [7, 4, 0, 0]
+      # - [8, 4, 0, 0]
+      # - [1, 5, 0, 0]
+      # - [2, 5, 0, 0]
+      - [3, 5, 0, 0]
+      - [4, 5, 0, 0]
+      - [5, 5, 0, 0]
+      - [6, 5, 0, 0]
+      # - [7, 5, 0, 0]
+      # - [8, 5, 0, 0]
+      - [3, 6, 0, 0]
+      - [4, 6, 0, 0]
+      - [5, 6, 0, 0]
+      - [6, 6, 0, 0]
+      - [3, 7, 0, 0]
+      - [4, 7, 0, 0]
+      - [5, 7, 0, 0]
+      - [6, 7, 0, 0]
+      - [3, 8, 0, 0]
+      - [4, 8, 0, 0]
+      - [5, 8, 0, 0]
+      - [6, 8, 0, 0]
+      - [3, 9, 0, 0]
+      - [4, 9, 0, 0]
+      - [5, 9, 0, 0]
+      - [6, 9, 0, 0]
+      - [3, 10, 0, 0]
+      - [4, 10, 0, 0]
+      - [5, 10, 0, 0]
+      - [6, 10, 0, 0]
+      - [3, 11, 0, 0]
+      - [4, 11, 0, 0]
+      - [5, 11, 0, 0]
+      - [6, 11, 0, 0]
+      - [3, 12, 0, 0]
+      - [4, 12, 0, 0]
+      - [5, 12, 0, 0]
+      - [6, 12, 0, 0]
+      - [3, 13, 0, 0]
+      - [4, 13, 0, 0]
+      - [5, 13, 0, 0]
+      - [6, 13, 0, 0]
     listOrder: 800
     spacecraft: true
 
