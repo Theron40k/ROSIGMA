@@ -12117,11 +12117,11 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TAUDRONE_MARKER_ARMOR_GV: "Marker Drone Armor"
   STR_TAU_MARKERLIGHT_BEAM: "Markerlight Beam"
   STR_GUEVESALA_GV: "Gue'vesa"
-  STR_GUEVESAUI_GV: "Gue'vesa Veteran"
-  STR_GUEVESAVRE_GV: "Gue'vesa Officer"
+  STR_GUEVESAUI_GV: "Gue'vesa Sergeant"
+  STR_GUEVESAVRE_GV: "Gue'vesa Veteran"
   STR_GUEVESA_RANK_0: "Gue'vesa"
-  STR_GUEVESA_RANK_1: "GV-Veteran"
-  STR_GUEVESA_RANK_2: "GV-Officer"
+  STR_GUEVESA_RANK_1: "GV-Sergeant"
+  STR_GUEVESA_RANK_2: "GV-Veteran"
   STR_MILITIA_GV_RANK_0: "Juve"
   STR_MILITIA_GV_RANK_1: "Trooper"
   STR_MILITIA_GV_RANK_2: "Gunner"
@@ -12313,6 +12313,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_THE_SILVER_TOWER_EVENT_GV: "The Silver Tower"
   STR_THE_SILVER_TOWER_CODEX_DESCRIPTION_GV: "We have discovered the mastermind of this world's fall: a mad Imperial Inquisitor, ensnared by the dark powers she thought to master and direct. Her base of operations is Fortress Colonna. Once the pride of Pelega's ultra-parishes, Colonna has mutated into a vast ramifying silvered tower of razor-sharp angles. Roiling energies coruscate from the tower's surface, drawing Pel'ga inexorably into the depths of the warp. Save your world. Cast down the Silver Tower and kill all within."
 
+  STR_ENGRAVED_ARMORS_EVENT_GV: "Engraved Armors"
+  STR_ENGRAVED_ARMORS_CODEX_DESCRIPTION_GV: "By Fire Caste tradition, blooded warriors on campaign engrave Ethereal meditations and scenes from legend into their armor, and inlay the engravings with fine metals. Your campaign of liberation has grown strong enough that your soldiers have begun to do the same. The armoring skills of the veteran Sisters among your growing ranks have proven of great use in this hobby. You have noticed them praying over the armors as they work. Can't hurt."
+
   TRADE: "TRADE"
 
   STR_TAU_PULSE_RIFLE_EXPORT_GUEVESA: "Tau Guevesa Pulse Rifle"
@@ -12338,6 +12341,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV: "Dual Burst Cannons"
   STR_TAU_SUIT_FLAMER_GV: "Tau Flamer"
   STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV: "Tau Flamer"
+  STR_GENERIC_HEAVY_STUBBER: "Generic Heavy Stubber (Deprecated)"
 
   STR_DELIVER_DEBUG_PACKAGE_EVENT_GV: "Debug Package Delivery"
   STR_DELIVER_DEBUG_PACKAGE_CODEX_DESCRIPTION_GV: "Earth Caste Experimental Spacedrop"
@@ -12380,10 +12384,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_DEVILFISH_GV: "DEVILFISH"
   STR_DEVILFISH_TURRET_GV: "Accelerator Burst Cannon"
   STR_DEVILFISH_DRONE_TURRET_GV: "Twin-Linked Pulse Carbines"
+  STR_DEVILFISH_DRONE_TURRET_AI_GV: "Twin-Linked Pulse Carbines"
   STR_REMORA_GV: "REMORA DRONES"
   STR_DELIVER_DEBUG_PACKAGE_GV: "Order Guevesa Debug Package"
 
   STR_ORCA_GV: "ORCA-V"
+  STR_ORCA_DROPSHIPS_GV: "Orca Dropships"
 
   STR_CHIMERAGV: "CHIMERA-GV"
   STR_CHIMERAGV_HULLGUN: "Hull Turret"
@@ -12404,10 +12410,6 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_RECUSANT_SISTERS_GV: "Accept Recusant Sisters"
   STR_RALLY_GUARD_GV: "Rally Faithful Guard"
-  STR_ENGRAVED_ARMORS_GV: "Engraved Shas'vre Armors"
-  STR_ENGRAVED_PATHFINDER_ARMOR_GV: "Engraved Pathfinder Armor"
-  STR_ENGRAVED_STRIKE_ARMOR_GV: "Engraved Strike Armor"
-  STR_ENGRAVED_BREACHER_ARMOR_GV: "Engraved Breacher Armor"
 
   STR_APPOINT_FIREBLADE_GV: "Appoint Cadre Fireblade"
   STR_STEALTH_SUIT_OPERATIONS_GV: "Stealth Suit Operations"
@@ -12421,6 +12423,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_STEALTH_SUIT_ITEM_GV: "XV26 Stealth Suit"
   STR_XV26_STEALTH_SUIT_GV: "XV26 Stealth/Burst Cannon"
+  STR_XV26_ENGRAVED_STEALTH_SUIT_GV: "Engraved XV26/Burst Cannon"
   STR_CRISIS_SUIT_ITEM_GV: "XV8 Crisis Suit"
   STR_STARSCYTHE_CRISIS_SUIT_BCX2_GV: "XV8 Crisis/Burst Cannons"
   STR_STARSCYTHE_CRISIS_SUIT_BCFL_GV: "XV8 Crisis/Cannon+Flamer"
@@ -12432,8 +12435,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TAUGUEVESACARAP_PC_ARMOR_GV: "Gue'vesa Carapace"
   STR_TAUMARINVESAFLAK_PC_ARMOR_GV: "Marin'vesa Flak"
   STR_TAUMARINVESACARAP_PC_ARMOR_GV: "Marin'vesa Carapace"
-  STR_TAUGUEVESACARAP_LEADER_ARMOR_GV: "Gue'vesa'ui Carapace"
-  STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV: "Engraved Gue'vesa Carapace"
+  STR_TAUGUEVESACARAP_LEADER_ARMOR_GV: "Gue'vesa Sergeant Carapace"
+  STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV: "Gue'vesa Veteran Carapace"
   STR_TAU_PATHFINDER_ARMOR_GV: "Pathfinder Carapace"
   STR_TAU_STRIKE_ARMOR_GV: "Strike Carapace"
   STR_TAU_BREACHER_ARMOR_GV: "Breacher Carapace"
@@ -12442,6 +12445,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TAU_BREACHER_LEADER_ARMOR_GV: "Breacher Shas'ui Carapace"
   STR_TAUFIREBLADE_ARMOR_GV: "Fireblade Carapace"
   STR_TAU_BASIC_ARMOR_GV: "(Tau Armor Template - Debug Visible)"
+  STR_ENGRAVED_ARMORS_GV: "Engraved Shas'vre Armors"
+  STR_ENGRAVED_PATHFINDER_ARMOR_GV: "Engraved Pathfinder Carapace"
+  STR_ENGRAVED_STRIKE_ARMOR_GV: "Engraved Strike Carapace"
+  STR_ENGRAVED_BREACHER_ARMOR_GV: "Engraved Breacher Carapace"
+  STR_ENGRAVED_STEALTH_SUIT_ITEM_GV: "Engraved XV26 Stealth Suit"
+  STR_ENGRAVED_TAUGUEVESACARAP_VETERAN_ARMOR_GV: "Engraved Gue'vesa Veteran Carapace"
 
   STR_DESERTER_HIDEOUT_TAU_DEPLOYMENT_GV: "Deserter Hideout Tau"
   STR_DESERTER_HIDEOUT_TAU_DEPLOYMENT_HARD_GV: "Deserter Hideout Tau"
@@ -12677,6 +12686,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BATTLEGROUP_TENAX_GV_CODEX_DESCRIPTION: "Detlenef's death leaves the 22nd in the hands of the newly promoted Colonel Cornelius Tenax, and the Imperial expeditionary force has been renamed Battlegroup Tenax. Tenax inherits a badly demoralized force that has suffered heavy losses in armor and artillery. He immediately reorganizes his command, constructing new defensive lines and attempting to recover his troops' strength."
   STR_COLONEL_TENAX_GV_CODEX: "Colonel Cornelius Tenax"
   STR_COLONEL_TENAX_GV_CODEX_DESCRIPTION: "Colonel Cornelius Tenax has come up from a background in siege warfare, masterminding breaches and assaults over terrain thought impassible by the Assault Dragoons' armored vehicles. He is an uncompromising and easily disappointed man who expects the utmost from his soldiers. To win his approval is a rare honor indeed. His drive for victory is absolute and he will stop at nothing to achieve his objective."
+
 
   # Event library to preserve popup text
   STR_TAU_GUEVESA_STRATEGY_GV_CODEX: "{NEWLINE}The Tau'va is a difficult path, and a humble one. But we are glad to share it with you, commander.{NEWLINE}{NEWLINE}The Imperium's relief effort falters. The warp storm closes in. Do not give up. Do not lose hope. You are not alone."

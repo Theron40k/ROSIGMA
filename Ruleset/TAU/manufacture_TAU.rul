@@ -30,13 +30,13 @@ manufacture:
     requires:
       - STR_FORM_KILL_TEAMS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 40
-      STR_ALIEN_ALLOYS: 20
-      STR_UFO_CONSTRUCTION: 2
+      STR_KILLPOINT_TOKEN: 160
+      STR_ALIEN_ALLOYS: 50
+      STR_UFO_CONSTRUCTION: 5
       STR_UFO_POWER_SOURCE: 1
     space: 2
     time: 1000
-    cost: 60000
+    cost: 100000
 
   - name: STR_CRISIS_SUIT_ITEM_GV
     refNode: *STR_SUIT_MANUF_GV
@@ -44,13 +44,39 @@ manufacture:
     requires:
       - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 60
-      STR_ALIEN_ALLOYS: 40
-      STR_UFO_CONSTRUCTION: 4
-      STR_UFO_POWER_SOURCE: 1
+      STR_KILLPOINT_TOKEN: 240
+      STR_ALIEN_ALLOYS: 100
+      STR_UFO_CONSTRUCTION: 10
+      STR_UFO_POWER_SOURCE: 2
     space: 6
     time: 2000
-    cost: 120000
+    cost: 200000
+
+  - name: STR_ENGRAVED_ARMOR_ITEM_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_ENGRAVED_ARMORS_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 160
+      STR_ALIEN_ALLOYS: 20
+      STR_UFO_CONSTRUCTION: 4
+    space: 6
+    time: 2000
+    cost: 200000
+
+  - name: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_ENGRAVED_ARMORS_GV
+      - STR_ENGRAVED_BATTLESUITS_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 320
+      STR_ALIEN_ALLOYS: 40
+      STR_UFO_CONSTRUCTION: 4
+      STR_UFO_POWER_SOURCE: 4
+    space: 6
+    time: 2000
+    cost: 300000
 
   - name: STR_DEVILFISH_GV
     category: STR_CRAFT
@@ -65,18 +91,18 @@ manufacture:
       STR_UFO_POWER_SOURCE: 4
       STR_UFO_NAVIGATION: 4
 
-  - name: STR_COMMEND_GUEVESALA_GV
-    space: 0
-    time: 500
-    cost: 100000
-    requires:
-      - STR_TAU_GUEVESA_STRATEGY_GV
-      - STR_WHITESHIELD_BLACK_MARKET_GV
-    requiredItems:
-      STR_KILLPOINT_TOKEN: 150
-    producedItems:
-      STR_OFFICER_COMMISSION: 1
-      # STR_OFFICERS_PULSE_PISTOL_GV: 1
+  # - name: STR_COMMEND_GUEVESALA_GV
+  #   space: 0
+  #   time: 500
+  #   cost: 100000
+  #   requires:
+  #     - STR_TAU_GUEVESA_STRATEGY_GV
+  #     - STR_WHITESHIELD_BLACK_MARKET_GV
+  #   requiredItems:
+  #     STR_KILLPOINT_TOKEN: 150
+  #   producedItems:
+  #     STR_OFFICER_COMMISSION: 1
+  #     # STR_OFFICERS_PULSE_PISTOL_GV: 1
 
   - name: STR_CONVERT_COMMISSION_GV
     space: 0
@@ -112,9 +138,9 @@ manufacture:
     requires:
       - STR_TAU_STRIKE_TEAMS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 5
+      STR_KILLPOINT_TOKEN: 10
       # STR_TAU_PARTS_GV: 1
-      STR_ALIEN_ALLOYS: 1
+      STR_ALIEN_ALLOYS: 2
 
   - name: STR_TAU_PULSE_CARBINE
     category: STR_WEAPON
@@ -124,9 +150,9 @@ manufacture:
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 5
+      STR_KILLPOINT_TOKEN: 10
       # STR_TAU_PARTS_GV: 1
-      STR_ALIEN_ALLOYS: 1
+      STR_ALIEN_ALLOYS: 2
 
   - name: STR_TAU_PULSE_BLASTER
     category: STR_WEAPON
@@ -136,9 +162,9 @@ manufacture:
     requires:
       - STR_TAU_BREACHERS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 5
+      STR_KILLPOINT_TOKEN: 10
       # STR_TAU_PARTS_GV: 1
-      STR_ALIEN_ALLOYS: 1
+      STR_ALIEN_ALLOYS: 2
 
   - name: STR_TAU_PULSE_PISTOL
     category: STR_WEAPON
@@ -148,9 +174,9 @@ manufacture:
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 2
+      STR_KILLPOINT_TOKEN: 5
       # STR_TAU_PARTS_GV: 1
-      STR_ALIEN_ALLOYS: 1
+      STR_ALIEN_ALLOYS: 2
 
   - name: STR_TAU_RAIL_RIFLE
     category: STR_WEAPON
@@ -160,9 +186,10 @@ manufacture:
     requires:
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 10
+      STR_KILLPOINT_TOKEN: 50
       # STR_TAU_PARTS_GV: 1
-      STR_ALIEN_ALLOYS: 1
+      STR_ALIEN_ALLOYS: 10
+      STR_UFO_CONSTRUCTION: 2
 
   - name: STR_TAU_PULSE_MAG
     category: STR_AMMUNITION
@@ -262,9 +289,9 @@ manufacture:
     requires:
       - STR_TAU_GUEVESA_TRADING
     requiredItems:
-      STR_KILLPOINT_TOKEN: 5
-      STR_ALIEN_ALLOYS: 1
-      STR_ELERIUM_115: 1
+      STR_KILLPOINT_TOKEN: 10
+      STR_ALIEN_ALLOYS: 2
+      STR_ELERIUM_115: 2
       STR_TAU_PULSE_RIFLE_EXPORT: 1
     producedItems:
       STR_TAU_PULSE_RIFLE_EXPORT_GUEVESA: 1
@@ -278,9 +305,9 @@ manufacture:
       - STR_A_SECRET_PACT_GV
       - STR_TAU_XENOTECH
     requiredItems:
-      STR_KILLPOINT_TOKEN: 5
-      STR_ALIEN_ALLOYS: 1
-      STR_ELERIUM_115: 1
+      STR_KILLPOINT_TOKEN: 10
+      STR_ALIEN_ALLOYS: 2
+      STR_ELERIUM_115: 2
       STR_TAU_PULSE_RIFLE_EXPORT_GUEVESA: 1
     producedItems:
       STR_TAU_PULSE_RIFLE: 1
@@ -294,9 +321,9 @@ manufacture:
       - STR_A_SECRET_PACT_GV
       - STR_TAU_XENOTECH
     requiredItems:
-      STR_KILLPOINT_TOKEN: 5
-      STR_ALIEN_ALLOYS: 1
-      STR_ELERIUM_115: 1
+      STR_KILLPOINT_TOKEN: 10
+      STR_ALIEN_ALLOYS: 2
+      STR_ELERIUM_115: 2
       STR_TAU_PULSE_CARBINE_EXPORT_GUEVESA: 1
     producedItems:
       STR_TAU_PULSE_CARBINE: 1
