@@ -491,7 +491,7 @@ armors:
       # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 15   # all Tau armors get this now
       DODGE_CHANCE: 15
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
 
@@ -566,6 +566,7 @@ armors:
     customArmorPreviewIndex: 217  # placeholder
     movementType: 0
     specialWeapon: STR_JUMP_PACK
+    size: 1
     corpseBattle:
       - STR_XV26_STEALTH_SUIT_PCCORPSE
     storeItem: STR_STEALTH_SUIT_ITEM_GV
@@ -602,7 +603,6 @@ armors:
     loftempsSet: [4]
     builtInWeapons:
       - STR_TAU_SUIT_BURST_CANNON_GV
-    listOrder: 300
     tags:
       UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_LIVING: 1
@@ -621,11 +621,29 @@ armors:
   - type: STR_XV26_ENGRAVED_STEALTH_SUIT_GV
     refNode: *STR_STEALTH_SUITS
     storeItem: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
+    size: 1
+    corpseBattle:
+      - STR_XV26_STEALTH_SUIT_PCCORPSE
     psiCamouflage: 5
     stats:
       psiStrength: 25
       psiSkill: 25
-    listOrder: 301
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 15
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2  # 2 turns to infiltrate
+      ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
+      MaxFlight: 1
+      MaxCoolDown: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
 
 
   - &STR_STARSCYTHE_OPTIONS_GV
@@ -644,7 +662,7 @@ armors:
     customArmorPreviewIndex: 1386
     corpseBattle:
       - STR_CRISIS_SUIT_PCCORPSE
-    movementType: 1
+    movementType: 0
     # specialWeapon: Use for upgraded suit abilities later
     # Term marine amounts of armor? - Crisis are T5 3+
     frontArmor: 150
@@ -870,6 +888,19 @@ armors:
     customArmorPreviewIndex: 1385
     corpseBattle:
       - STR_TAUGUEVESA_PCCORPSE
+    damageModifier:
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.7  # FLAMES; partially environmentally sealed
+      - 0.9  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE was 1.2 on NPCs
+      - 1.0  # ACID; partially environmentally sealed
+      - 0.0  # SMOKE
+      - 0.8  # IMPACT
+      - 1.0  # MELTA
     storeItem: STR_NONE
     stats:
       melee: 5        # focus on what they're best at
@@ -884,7 +915,6 @@ armors:
       UNIT_TYPE_TAU: 1
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
-
 
   - type: STR_TAUGUEVESACARAP_LEADER_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
@@ -906,7 +936,6 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
       ARMOR_OVERWATCH_TU_RESTORED: 15
-
 
   - type: STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
@@ -935,7 +964,6 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
       ARMOR_ENERGY_SHIELD_DECAY: 50
       ARMOR_OVERWATCH_TU_RESTORED: 15
-
 
   - type: STR_ENGRAVED_TAUGUEVESACARAP_VETERAN_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
@@ -1049,8 +1077,7 @@ armors:
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
-  - &MARINVESA_FLAK_ARMOR_REF
-    type: STR_TAUMARINVESAFLAK_PC_ARMOR_GV
+  - type: STR_TAUMARINVESAFLAK_PC_ARMOR_GV
     visibilityAtDay: 35  # abhuman beast malus
     visibilityAtDark: 20  # abhuman beast bonus
     antiCamouflageAtDay: 3
@@ -1083,6 +1110,7 @@ armors:
     units:
       - STR_MARINVESA_GV
     stats:
+      bravery: 10
       stamina: 10
     loftempsSet: [3]
     specialWeapon: STR_BAYONET
@@ -1092,7 +1120,8 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_LIVING: 1
 
-  - type: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+  - &STR_MARINVESA_CARAPACE
+    type: STR_TAUMARINVESACARAP_PC_ARMOR_GV
     visibilityAtDay: 35  # abhuman squat malus
     visibilityAtDark: 30  # abhuman squat bonus
     antiCamouflageAtDay: 5
@@ -1111,6 +1140,56 @@ armors:
     drawingRoutine: 0
     zombiImmune: true
     weight: 15
+    damageModifier:  # TAU CARAPACE ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.6  # FLAMES; partially environmentally sealed
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.9  # STUN
+      - 1.1  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.7  # IMPACT
+      - 0.9  # MELTA
+    units:
+      - STR_MARINVESA_GV
+      - STR_MARINVESAUI_GV
+    stats:
+      bravery: 10
+      stamina: 10
+      strength: 5
+      melee: 5
+    loftempsSet: [4]  # big targets
+    specialWeapon: STR_BAYONET
+    tags:
+      INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_LIVING: 1
+
+  - type: STR_ENGRAVED_TAUMARINVESACARAP_PC_ARMOR_GV
+    refNode: *STR_MARINVESA_CARAPACE
+    visibilityAtDay: 35  # abhuman squat malus
+    visibilityAtDark: 30  # abhuman squat bonus
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    customArmorPreviewIndex: 843  # 543
+    psiCamouflage: 3
+    requires: STR_ENGRAVED_ARMORS_GV
+    spriteSheet: TAUBEASTMAN_CARAPACE_BSPLAYER.PCK
+    spriteInv: TBCA_33
+    storeItem: STR_NONE
+    corpseBattle:
+      - STR_TAUMARINVESA_PCCORPSE
+    frontArmor: 90 # +20 vs basic Guard Carapace, artificer
+    sideArmor: 80
+    rearArmor: 60
+    underArmor: 80
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 15
     damageModifier:  # GUARD ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -1125,17 +1204,28 @@ armors:
       - 1.0  # IMPACT
       - 1.1  # MELTA
     units:
-      - STR_MARINVESA_GV
+      - STR_MARINVESAUI_GV
     stats:
-      bravery: 10
-      strength: 5
+      stamina: 15
+      bravery: 15
+      strength: 10
+      melee: 10
+      reactions: 5
+      psiStrength: 25  # the greatest good of all is happening to them
+      psiSkill: 25
     loftempsSet: [4]  # big targets
     specialWeapon: STR_BAYONET
     tags:
       INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
       UNIT_SIZE: 150 # LARGE
-      UNIT_TYPE_TAU: 1
       UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_OVERWATCH_TU_RESTORED: 15
+      # HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 
 ### NPC armors
@@ -1732,11 +1822,6 @@ armors:
     corpseGeo: STR_TAUDRONE_AICORPSE
     corpseBattle:
       - STR_TAUDRONE_AICORPSE
-
-
-
-
-
 
 extraSprites:
   - typeSingle: IW_GUARD_FLAK_HAZARD_INV.SPK
