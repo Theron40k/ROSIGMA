@@ -244,8 +244,8 @@ research:
       - STR_LOSE_250
     unlocks:
       - STR_TAU_PATHFINDERS_GV            # unlocks pathfinder construction
-      - STR_TAU_ARMORY_EXAM
-      - STR_TAU_XENOTECH
+      - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
+      - STR_TAU_XENOTECH              # can start learning it from the pathfinders now
     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV  # breadcrumb the navy communications here
 
   # - name: STR_WATERCASTE_OUTPOST_GV
@@ -269,44 +269,35 @@ research:
     dependencies:
       - STR_A_SECRET_PACT_GV
       - STR_NAVY_COMUNICATIONS
-      - STR_TAU_XENOTECH
     unlocks:
+      - STR_TAU_ARMORY_EXAM
       - STR_TAU_BREACHERS_GV
       - STR_TAU_STRIKE_TEAMS_GV
-      - STR_DEVILFISH_TRANSPORTS_GV   # Build devilfish
       - STR_REMORA_INTERCEPTORS_GV    # Build remoras
-      - STR_STEALTH_SUIT_OPERATIONS_GV          # Build stealth suits
-      - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
     spawnedEvent: STR_INFILTRATION_CADRE_EVENT_GV
-
-# ### Recruit Fire Warriors directly
-# # Fire Warriors deploy from here. Integrated workshops and/ or science facilities?
-# # Limited recruits depending on Consulate/Embassy + Caravan Market/Starport?
-# # 10 per barracks?
-#   - name: STR_INFILTRATION_FIREBASE_GV
-#     dependencies:
-#       - STR_GENERALLOCK
-#     unlocks:
-#       - STR_TAU_BREACHERS_GV
-#       - STR_TAU_STRIKE_TEAMS_GV
-#       - STR_DEVILFISH_TRANSPORTS_GV   # Build devilfish
-#       - STR_REMORA_INTERCEPTORS_GV    # Build remoras
-#       - STR_STEALTH_SUIT_OPERATIONS_GV          # Build stealth suits
-#       - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
 
 ### build Devilfish from parts
   - name: STR_DEVILFISH_TRANSPORTS_GV
+    cost: 200
+    points: 20
     dependencies:
-      - STR_GENERALLOCK
+      - STR_INFILTRATION_CADRE_GV
+      - STR_TAU_XENOTECH
 
 ### Operate XV26 stealth suits
   - name: STR_STEALTH_SUIT_OPERATIONS_GV
+    cost: 300
+    points: 30
     dependencies:
-      - STR_GENERALLOCK
+      - STR_INFILTRATION_CADRE_GV
+      - STR_TAU_XENOTECH
 
   - name: STR_REMORA_INTERCEPTORS_GV
+    cost: 150
+    points: 15
     dependencies:
-      - STR_GENERALLOCK
+      - STR_INFILTRATION_CADRE_GV
+      - STR_TAU_XENOTECH
 
 ### Extract the Tau diplomatic staff to your base
   - name: STR_RELOCATION_SUPPORT_GV
@@ -347,15 +338,19 @@ research:
 
   - name: STR_STARSCYTHE_CRISIS_OPERATIONS_GV
     dependencies:
-      - STR_GENERALLOCK
+      - STR_AUXILIARY_CADRE_GV
+      - STR_TAU_XENOTECH
 
   - name: STR_HAMMERHEAD_GUNSHIPS_GV
     dependencies:
       - STR_GENERALLOCK
+      - STR_TAU_XENOTECH
 
   - name: STR_BARRACUDA_INTERCEPTORS_GV
     dependencies:
-      - STR_GENERALLOCK
+      - STR_REMORA_INTERCEPTORS_GV
+      - STR_AUXILIARY_CADRE_GV
+      - STR_TAU_XENOTECH
 
 ### The Tau realize the warp storm is a serious threat
 # STR_INFILTRATION_CADRE_GV + STR_ALIEN_ORIGINS => STR_FIRE_OF_UNKNOWN_ORIGIN_GV (EMERGENCY MEASURES, REACH OUT TO SISTERS, RALLY GUARD)
@@ -368,7 +363,7 @@ research:
     unlocks:
       - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
       - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
-      - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
+      # - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
     spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
 
 ### Pathfinder KT gizmos
@@ -386,7 +381,8 @@ research:
     points: 60
     cost: 200
     dependencies:
-      - STR_GENERALLOCK
+      - STR_INFILTRATION_CADRE_GV
+      - STR_FIRE_OF_UNKNOWN_ORIGIN_GV
     spawnedEvent: STR_EMERGENCY_PROTOCOLS_EVENT_GV
 
 ### Accept Sisters who have lost faith
@@ -394,14 +390,20 @@ research:
     points: 0
     cost: 200
     dependencies:
+      - STR_AUXILIARY_CADRE_GV
       - STR_EMERGENCY_PROTOCOLS_GV
+    reenables:
+      - STR_PSI_LAB
     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
+### NOT YET IMPLEMENTED
   - name: STR_RALLY_GUARD_GV
     points: 0
     cost: 200
     dependencies:
+      - STR_GENERALLOCK
+      - STR_AUXILIARY_CADRE_GV
       - STR_EMERGENCY_PROTOCOLS_GV
     spawnedEvent: STR_RALLY_GUARD_EVENT_GV
 
@@ -459,8 +461,8 @@ research:
   - name: STR_ENGRAVED_ARMORS_GV
     cost: 200
     dependencies:
-      - STR_COALITION_COMMAND_GV
-      - STR_RECUSANT_SISTERS_GV
+      - STR_AUXILIARY_CADRE_GV
+      - STR_COOPT_ECCLESIARCHY_GV
     spawnedEvent: STR_ENGRAVED_ARMORS_EVENT_GV
 
   - name: STR_APPOINT_FIREBLADE_GV
@@ -516,19 +518,21 @@ research:
     points: 0
     cost: 0
     dependencies:
-      - STR_GENERALLOCK
+      - STR_A_SECRET_PACT_GV
 
   - name: STR_TAU_BREACHERS_GV
     points: 0
     cost: 0
     dependencies:
-      - STR_GENERALLOCK
+      - STR_INFILTRATION_CADRE_GV
+      - STR_TAU_XENOTECH
 
   - name: STR_TAU_STRIKE_TEAMS_GV
     points: 0
     cost: 0
     dependencies:
-      - STR_GENERALLOCK
+      - STR_INFILTRATION_CADRE_GV
+      - STR_TAU_XENOTECH
 
 ### Unlocks Guard tier beastmen (and Marinvesa colored carapace)
 #  - name: STR_MARINVESA_GV
@@ -634,6 +638,7 @@ research:
   - name: STR_DELIVER_DEBUG_PACKAGE_GV
     cost: 10
     dependencies:
+      - STR_GENERALLOCK
       - STR_TAU_GUEVESA_STRATEGY_GV
     spawnedEvent: STR_DELIVER_DEBUG_PACKAGE_EVENT_GV
     getOneFree:

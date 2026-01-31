@@ -35,7 +35,9 @@ items:
     bulletSpeed: 50
 
 
-  - type: STR_TAU_SUIT_BURST_CANNON_GV
+# Used for Stealth suit burst cannons (and manportable ones...)
+  - &STR_BURST_CANNONS
+    type: STR_TAU_SUIT_BURST_CANNON_GV
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL, STR_CAT_TAU]
     weight: 1
     dropoff: 4 #tau carbine
@@ -89,62 +91,26 @@ items:
         set subvoxel_drift 3;
         return;
 
+  # Currently used for
+  # Starscythe dual burst cannons with S5/AP-1
+  # Accelerator Burst Cannon with S6/AP-1 fewer shots
   - type: STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
-    categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL, STR_CAT_TAU]
-    weight: 1
-    dropoff: 4 #tau carbine
-    bigSprite: 3140
-    floorSprite: 949
-    handSprite: 864
-    bulletSprite: {mod: 40k, index: 12}
-    fireSound: 2450
-    hitSound: {mod: 40k, index: 19}
-    hitAnimation: {mod: 40k, index: 100}
-    explosionSpeed: 10
-    bulletSpeed: 30
-    # carbine accuracy
-    accuracyAuto: 60
-    accuracySnap: 80
-    autoRange: 12
-    snapRange: 16
-    tuAuto: 40
-    tuSnap: 25
-    autoShots: 6
-    sprayWaypoints: 2
-    clipSize: -1
-    confSnap:
-      name: TAUSUITBC_BURST
-      shots: 3
-      followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
-    confAuto:
-      name: TAUSUITBC_AUTO
-      followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
-    power: 90
-    damageType: 1 # was 5
-    damageAlter:  # DA PULSE
+    refNode: *STR_BURST_CANNONS
+    damageAlter:  # DA PULSE AP
       RandomType: 6
-      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
-      # ArmorEffectiveness: 0.9  # some armor penetration
-    battleType: 1
-    twoHanded: false
-    invWidth: 2
-    invHeight: 3
-    arcingShot: false
-    recover: false
-    fixedWeapon: true
-    fixedWeaponShow: false
-    vaporColorSurface: {mod: 40k, index: 2}
-    vaporDensitySurface: 3
-    vaporProbabilitySurface: 50
-    scripts:
-      vaporParticleAmmo: |
-        # noting
-        set particle_lifetime 20;
-        set subvoxel_drift 3;
-        return;
+      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ArmorEffectiveness: 0.8  # has armor penetration on tabletop
     shotgunSpread: 1  # twin linked
     shotgunBehavior: 1  # twin linked
     shotgunPellets: 2
+
+# Used for Starscythe single burst cannon on the burst cannon/flamer model
+  - type: STR_TAU_STARSCYTHE_BURST_CANNON_SINGLE_GV
+    refNode: *STR_BURST_CANNONS
+    damageAlter:  # DA PULSE AP
+      RandomType: 6
+      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ArmorEffectiveness: 0.8  # has armor penetration on tabletop
 
   - type: STR_TAU_SUIT_FLAMER_GV
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
