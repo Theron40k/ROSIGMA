@@ -1096,6 +1096,7 @@ armors:
     units:
       - STR_MARINVESA_GV
     stats:
+      bravery: 10
       stamina: 10
     loftempsSet: [3]
     specialWeapon: STR_BAYONET
@@ -1140,9 +1141,12 @@ armors:
       - 0.9  # MELTA
     units:
       - STR_MARINVESA_GV
+      - STR_MARINVESAUI_GV
     stats:
       bravery: 10
+      stamina: 10
       strength: 5
+      melee: 5
     loftempsSet: [4]  # big targets
     specialWeapon: STR_BAYONET
     tags:
@@ -1186,8 +1190,9 @@ armors:
       - 1.0  # IMPACT
       - 1.1  # MELTA
     units:
-      - STR_MARINVESA_GV
+      - STR_MARINVESAUI_GV
     stats:
+      stamina: 15
       bravery: 15
       strength: 10
       melee: 10

@@ -16,7 +16,7 @@ soldierTransformation:
     requiredCommendations:
       STR_BATTLE_TESTED: 0
     requiredMinStats:
-      bravery: 50
+      bravery: 40
       tu: 1
 
   - name: STR_PROMOTE_SHASVRE_GV
@@ -33,7 +33,7 @@ soldierTransformation:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0
     requiredMinStats:
-      bravery: 50
+      bravery: 40
       tu: 1
 
   - name: STR_SELECT_FIREBLADE_GV
@@ -51,7 +51,7 @@ soldierTransformation:
       STR_VETERAN_COMMENDATION: 0
       STR_HERO_TO_THE_IMPERIUM: 0
     requiredMinStats:
-      bravery: 50
+      bravery: 40
       tu: 1
 
 ### Promote militia officer
@@ -73,7 +73,7 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_MILITIA_GV
     requiredMinStats:
-      bravery: 50
+      bravery: 40
       tu: 1
 
 ### Transform friendly guard NPCs into militia
@@ -127,7 +127,7 @@ soldierTransformation:
     requiredCommendations:
       STR_BATTLE_TESTED: 0
     requiredMinStats:
-      bravery: 50
+      bravery: 40
       tu: 1
 
   - name: STR_PROMOTE_GUEVESAVRE_GV
@@ -144,5 +144,20 @@ soldierTransformation:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0
     requiredMinStats:
-      bravery: 50
+      bravery: 40
+      tu: 1
+
+  - name: STR_PROMOTE_MARINVESAUI_GV
+    refNode: *STR_GUEVESA_PROMOTION_GV
+    producedSoldierType: STR_MARINVESAUI_GV
+    producedSoldierArmor: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+    upperBoundType: 1
+    allowedSoldierTypes:
+      - STR_MARINVESA_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 60
+    requiredCommendations:
+      STR_BATTLE_TESTED: 0
+    requiredMinStats:
+      bravery: 40
       tu: 1
