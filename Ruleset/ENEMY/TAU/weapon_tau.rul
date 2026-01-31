@@ -376,8 +376,9 @@ items:
     tags:
       REACTION_MULTIPLIER: 150
 
-
-  - type: STR_TAU_PULSE_CARBINE_DRONE_TWINLINKED
+### Remove reaction modifier and increase TUs on these
+  - &STR_PULSE_CARBINE_TWINLINKED
+    type: STR_TAU_PULSE_CARBINE_DRONE_TWINLINKED
     categories: [STR_CAT_PLASMA, STR_CAT_ASSAULT, STR_CAT_TAU]
     requires:
       - STR_TAU_XENOTECH
@@ -392,8 +393,8 @@ items:
     bulletSpeed: 100
     accuracyAuto: 60
     accuracySnap: 80
-    tuAuto: 40
-    tuSnap: 25
+    tuAuto: 60
+    tuSnap: 40
     autoShots: 4
     power: 90
     damageType: 1 # was 5
@@ -431,8 +432,11 @@ items:
     recover: false
     fixedWeapon: true
     fixedWeaponShow: false
-    tags:
-      REACTION_MULTIPLIER: 150
+
+  - type: STR_DRONE_TURRET_TWINLINKED_BURST_CANNON
+    refNode: *STR_PULSE_CARBINE_TWINLINKED
+    tuAuto: 80
+    tuSnap: 50
 
   - type: STR_TAU_PHOTON_GRENADE_CARBINE
     categories: [STR_CAT_TACTICAL, STR_CAT_TAU]
