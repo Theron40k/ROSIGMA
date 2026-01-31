@@ -160,10 +160,10 @@ armors:
     customArmorPreviewIndex: 1380
     corpseBattle:
       - STR_TAUFIREWARRIOR_PCCORPSE
-    frontArmor: 80 # +10 vs basic Guard Carapace
-    sideArmor: 70
-    rearArmor: 50
-    underArmor: 70
+    frontArmor: 70 # basic Guard Carapace
+    sideArmor: 60
+    rearArmor: 40
+    underArmor: 50
     standHeight: 22
     kneelHeight: 14
     drawingRoutine: 0
@@ -190,7 +190,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
 
 
 ### Strike Armor is specialized for long range fire
@@ -209,8 +209,6 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
-      ARMOR_ENERGY_SHIELD_DECAY: 50
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
@@ -222,6 +220,7 @@ armors:
     type: STR_TAU_BREACHER_ARMOR_GV
     requires: STR_TAU_BREACHERS_GV
     refNode: *STR_TAU_BASIC_ARMOR_TEMPLATE_GV
+    underArmor: 60  # better explosion resist
     damageModifier:  # Leader quality damage resist
       - 1.0  # none
       - 0.8  # AP
@@ -235,12 +234,12 @@ armors:
       - 0.0  # SMOKE
       - 0.7  # IMPACT
       - 0.9  # MELTA
+    stats:
+      reactions: 5
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10   # half leader shield
-      ARMOR_ENERGY_SHIELD_DECAY: 50
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
@@ -260,10 +259,10 @@ armors:
     customArmorPreviewIndex: 1381
     corpseBattle:
       - STR_TAUFIREWARRIORPATHFINDER_PCCORPSE
-    frontArmor: 65 # slightly less protective than standard Fire Warrior armor
-    sideArmor: 55
-    rearArmor: 35
-    underArmor: 45
+    frontArmor: 60 # slightly less protective than standard Fire Warrior armor
+    sideArmor: 50
+    rearArmor: 30
+    underArmor: 40
     forcedTorso: 1
     stats:
       tu: 5  # lighter
@@ -274,8 +273,8 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15   # all Tau armors get this now
-      DODGE_CHANCE: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10   # all Tau armors get this now
+      DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 ### TAU FIRE WARRIOR SHASUI ARMORS
@@ -290,7 +289,7 @@ armors:
     corpseBattle:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
     stats:
-      firing: 5
+      firing: 10
       bravery: 10
     units:
       - STR_FIREWARRIOR_SHASUI_GV
@@ -301,7 +300,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -312,6 +311,8 @@ armors:
     corpseBattle:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
     stats:
+      firing: 5
+      reactions: 5
       bravery: 10
     units:
       - STR_FIREWARRIOR_SHASUI_GV
@@ -322,9 +323,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
-      ARMOR_ENERGY_SHIELD_DECAY: 20
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -349,7 +348,7 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
@@ -370,10 +369,10 @@ armors:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
     standHeight: 22
     kneelHeight: 14
-    frontArmor: 90 # +20 vs basic Guard Carapace; artificer quality
-    sideArmor: 80
-    rearArmor: 60
-    underArmor: 80
+    frontArmor: 80 # +10 vs basic Guard Carapace; artificer quality
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 60
     stats:
       psiStrength: 25 # engraved armors (unknowingly) defend their blooded wearers against psi attacks
       psiSkill: 25
@@ -418,8 +417,8 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       # HAS_MARKERLIGHT: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15
-      DODGE_CHANCE: 10
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
@@ -432,6 +431,7 @@ armors:
     requires: STR_ENGRAVED_ARMORS_GV
     refNode: *STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
     storeItem: STR_ENGRAVED_ARMOR_ITEM_GV
+    underArmor: 70
     damageModifier:  # Captain quality damage resist
       - 1.0  # none
       - 0.7  # AP
@@ -446,17 +446,18 @@ armors:
       - 0.6  # IMPACT
       - 0.8  # MELTA
     stats:
+      firing: 5
       reactions: 10
       bravery: 10
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
-      ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       # HAS_MARKERLIGHT: 1
-      DODGE_CHANCE: 10
+      DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 ### pathfinders are pathfinders
@@ -475,13 +476,13 @@ armors:
     customArmorPreviewIndex: 1381
     corpseBattle:
       - STR_TAUFIREWARRIORPATHFINDER_PCCORPSE
-    frontArmor: 80 # Pathfinder is +10 vs basic Guard Carapace
-    sideArmor: 70
+    frontArmor: 70 # Pathfinder is +10 vs basic Guard Carapace
+    sideArmor: 60
     rearArmor: 50
-    underArmor: 70
+    underArmor: 60
     stats:
-      tu: 15  # feels like youre wearing nothin at all
-      stamina: 15
+      tu: 10  # feels like youre wearing nothin at all
+      stamina: 10
       reactions: 10
       bravery: 10
     tags:
@@ -545,9 +546,9 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
       ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
@@ -609,7 +610,7 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
@@ -665,7 +666,7 @@ armors:
     movementType: 0
     # specialWeapon: Use for upgraded suit abilities later
     # Term marine amounts of armor? - Crisis are T5 3+
-    frontArmor: 150
+    frontArmor: 140
     sideArmor: 120
     leftArmorDiff: 10  # the arm shield :)
     rearArmor: 100
@@ -699,7 +700,7 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
       MaxFlight: 1
@@ -878,6 +879,9 @@ armors:
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
 
   - &STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
     type: STR_TAUGUEVESACARAP_PC_ARMOR_GV
@@ -933,9 +937,7 @@ armors:
       # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
-      ARMOR_ENERGY_SHIELD_DECAY: 20
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
 
   - type: STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
@@ -961,9 +963,7 @@ armors:
       # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
-      ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_OVERWATCH_TU_RESTORED: 10
 
   - type: STR_ENGRAVED_TAUGUEVESACARAP_VETERAN_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
@@ -973,10 +973,10 @@ armors:
       - STR_TAUGUEVESA_PCCORPSE
     storeItem: STR_ENGRAVED_ARMOR_ITEM_GV
     specialWeapon: STR_BAYONET
-    frontArmor: 90 # +20 vs basic Guard Carapace; artificer quality
-    sideArmor: 80
-    rearArmor: 60
-    underArmor: 80
+    frontArmor: 80 # +10 vs basic Guard Carapace; artificer quality
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 60
     stats:
       bravery: 20      # true believers
       tu: 10
@@ -995,8 +995,8 @@ armors:
       # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
-      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
       ARMOR_OVERWATCH_TU_RESTORED: 15
 
 ### GUEVESA CULTIST ARMORS
@@ -1119,6 +1119,10 @@ armors:
       UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_LIVING: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      # HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
   - &STR_MARINVESA_CARAPACE
     type: STR_TAUMARINVESACARAP_PC_ARMOR_GV
@@ -1136,7 +1140,7 @@ armors:
     frontArmor: 80 # +10 vs basic Guard Carapace
     sideArmor: 70
     rearArmor: 50
-    underArmor: 70
+    underArmor: 60
     drawingRoutine: 0
     zombiImmune: true
     weight: 15
@@ -1168,6 +1172,11 @@ armors:
       UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_LIVING: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      # HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
 
   - type: STR_ENGRAVED_TAUMARINVESACARAP_PC_ARMOR_GV
     refNode: *STR_MARINVESA_CARAPACE
@@ -1183,10 +1192,10 @@ armors:
     storeItem: STR_NONE
     corpseBattle:
       - STR_TAUMARINVESA_PCCORPSE
-    frontArmor: 90 # +20 vs basic Guard Carapace, artificer
-    sideArmor: 80
-    rearArmor: 60
-    underArmor: 80
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70   # better against explosions
     drawingRoutine: 0
     zombiImmune: true
     weight: 15
@@ -1220,9 +1229,9 @@ armors:
       UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
-      ARMOR_ENERGY_SHIELD_DECAY: 50
-      ARMOR_OVERWATCH_TU_RESTORED: 15
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
+      ARMOR_OVERWATCH_TU_RESTORED: 10
       # HAS_MARKERLIGHT: 1
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
