@@ -360,7 +360,7 @@ missionScripts:
   - type: starterGVCrusadeBaseBT
     missionWeights:
       0:
-        STR_BLACKTEMPLAR_BASE: 100
+        STR_BLACKTEMPLAR_BASEV2: 100
     firstMonth: 1
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
@@ -375,7 +375,7 @@ missionScripts:
   - type: starterGVCrusadeBaseBR
     missionWeights:
       0:
-        STR_BLOODYROSE_BASE: 100
+        STR_BLOODYROSE_BASEV2: 100
     firstMonth: 1
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
@@ -408,8 +408,8 @@ missionScripts:
         STR_CULTIST_BASE: 33
         STR_TRAITOR_GUARD_BASE: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
-        STR_BLOODYROSE_BASE: 11
-        STR_BLACKTEMPLAR_BASE: 11
+        STR_BLOODYROSE_BASEV2: 22
+        STR_BLACKTEMPLAR_BASEV2: 22
         # Higher chances of harder races for 3-5
         # Even chances of all for beyond that
     firstMonth: 4
@@ -427,8 +427,8 @@ missionScripts:
         STR_CULTIST_BASE: 33
         STR_TRAITOR_GUARD_BASE: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
-        STR_BLOODYROSE_BASE: 33
-        STR_BLACKTEMPLAR_BASE: 33
+        STR_BLOODYROSE_BASEV2: 33
+        STR_BLACKTEMPLAR_BASEV2: 33
         # Higher chances of harder races
         STR_NECRON_BASE: 50
     firstMonth: 6
@@ -486,8 +486,8 @@ missionScripts:
         STR_NURGLE_BASE: 11
         STR_SLAANESH_BASE: 22
         STR_TZEENTCH_BASE: 22
-        STR_BLACKTEMPLAR_BASE: 22
-        STR_BLOODYROSE_BASE: 22
+        STR_BLACKTEMPLAR_BASEV2: 33
+        STR_BLOODYROSE_BASEV2: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
         # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
         # STR_REDEEMEDBASE_L1_MISSION_GV: 33
@@ -548,8 +548,7 @@ missionScripts:
         STR_TZEENTCH_BASE: 22
         STR_BLACKTEMPLAR_BASEV2: 33
         STR_BLOODYROSE_BASEV2: 33
-        STR_INQUISITION_OUTPOST_BUILD_GV: 22
-        STR_INQUISITION_BASE_IFILTRATE_GV: 11
+        STR_INQUISITION_BASE_IFILTRATE_GV: 33
         # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
         # STR_REDEEMEDBASE_L1_MISSION_GV: 33
         # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
@@ -562,3 +561,18 @@ missionScripts:
     refNode: *STR_HARD_MISSION_TABLE_IC
     firstMonth: 6
     useTable: true
+
+
+  - type: recurringImperialCrusadeTerrorGV
+    firstMonth: 0
+    missionWeights:
+      0:
+        STR_IMPERIAL_TERROR_HARD: 10
+    executionOdds: 80
+    useTable: false
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: false
+      STR_TAU_GUEVESA_GV: true
+      STR_INQUISITION_ATTENTION_GV: true
+      STR_IMPERIAL_CRUSADE_GV: true
+      STR_HARDER_MISSIONS: true
