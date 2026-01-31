@@ -491,7 +491,7 @@ armors:
       # HAS_MARKERLIGHT: 1
       ARMOR_OVERWATCH_TU_RESTORED: 15   # all Tau armors get this now
       DODGE_CHANCE: 15
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
 
@@ -628,6 +628,20 @@ armors:
     stats:
       psiStrength: 25
       psiSkill: 25
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 15
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2  # 2 turns to infiltrate
+      ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
+      MaxFlight: 1
+      MaxCoolDown: 1
 
 
   - &STR_STARSCYTHE_OPTIONS_GV
@@ -1202,9 +1216,14 @@ armors:
     tags:
       INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
       UNIT_SIZE: 150 # LARGE
-      UNIT_TYPE_TAU: 1
       UNIT_TYPE_LIVING: 1
-
+      UNIT_TYPE_TAU: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+      ARMOR_OVERWATCH_TU_RESTORED: 15
+      # HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
 
 ### NPC armors
