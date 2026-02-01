@@ -267,7 +267,7 @@ items:
   #   weight: 0
 
 
-  # limited by rounds not by stun
+  # limited by clip size not by stun
   - &STR_TAU_ARTS_OF_WAR
     type: STR_TAU_LEADER_COMMAND_GV
     requires:
@@ -305,60 +305,24 @@ items:
     costAuto:  # lowered cost
       time: 60  # was 60 but now % instead of flat
       energy: 60
-      # morale: 20
-      # stun: 5  # need to limit recursive use of this weapon
     hitSound: {mod: 40k, index: 0}
     fireSound: {mod: 40k, index: 491}
     bulletSpeed: -10
     bulletSprite: {mod: 40k, index: 22}
-    # accuracyAimed: 150
-    # tuAimed: 60
     noLOSAccuracyPenalty: 25  # comms relays
     battleType: 1
-    # minRange: 10
-    # dropoff: 0
     fixedWeapon: true
-    clipSize: 1 #   # 3 = unloaded, 2 = loaded, 1 = not used, 0 = fired
-    # confAimed:
-    #   name: STR_SIGNAL_POSITION
-    #   spendPerShot: 2  # setAmmoQuantity can't be set to 0 as the item would disappear (sanity check)
-    # tags:
-    #   ITEM_IS_VOX_WEAPON: 1
+    clipSize: 1
     experienceTrainingMode: 19
 
 
   - type: STR_TAU_VETERAN_COMMAND_GV
     refNode: *STR_TAU_ARTS_OF_WAR
-    recover: false
-    accuracyAuto: 200
-    accuracyMultiplier:
-      flatHundred: 1.0
-    arcingShot: false
-    damageType: 0
     damageBonus:
       bravery: 0.75
     damageAlter:
-      ResistType: 0
-      RandomType: 2   # 50-150
-      ArmorEffectiveness: 0.0
-      ToStun: 0.25
-      ToMorale: -0.5
-      ToTime: -0.5
-      ToEnergy: -1.00
-      ToHealth: 0.0
-      ToWound: 0.0
-      ToTile: 0.0  # this shouldn't blow up cover
-      ToItem: 0.0  # this shouldn't damage items
-      ToArmor: 0.0  # this shouldn't damage armor
-      RadiusReduction: 0.0
       FixRadius: 10
-      IgnorePainImmunity: true
-      IgnoreNormalMoraleLose: true
-    costAuto:  # lowered cost
-      time: 50  # was 60 but now % instead of flat
-      energy: 50
-      morale: 20
-      stun: 25  # need to limit recursive use of this weapon
+    clipSize: 2
 
 
   - type: STR_TAU_FIREBLADE_COMMAND_GV
@@ -370,6 +334,7 @@ items:
     costAuto:  # lowered cost
       time: 40  # was 60 but now % instead of flat
       energy: 40
+    clipSize: 3
 
 
   # Save for implementing as two ammos
