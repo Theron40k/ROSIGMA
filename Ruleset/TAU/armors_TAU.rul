@@ -28,6 +28,9 @@ items:
   - type: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
     costSell: 0
 
+  - type: STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV
+    costSell: 0
+
   - type: STR_SENTINELGV_ARMOR                #6800
     requiresBuy:
       - STR_TANKERS_DELIGHT_GV
@@ -605,7 +608,7 @@ armors:
     customArmorPreviewIndex: 1383
     corpseBattle:
       - STR_TAUFIREWARRIORCAPTAIN_PCCORPSE
-    specialWeapon: STR_TAU_VETERAN_COMMAND_GV
+    specialWeapon: STR_TAU_FIREBLADE_COMMAND_GV
     storeItem: STR_NONE
     standHeight: 22
     kneelHeight: 14
@@ -1064,19 +1067,22 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_OVERWATCH_TU_RESTORED: 10
 
+  # has airstrikes instead of command
   - type: STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
     spriteSheet: TAUGUEVESALV2battlePLAYER_GOG.PCK
     spriteInv: TAUGUEVESALV2ARMORPLAYER.PCK
     corpseBattle:
       - STR_TAUGUEVESA_PCCORPSE
-    storeItem: STR_TAUGUEVESACARAP_PC_ARMOR_ITEM_GV
+    storeItem: STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV
     specialWeapon: STR_AIRSTRIKE_VOX_SPECIAL
     stats:
       bravery: 20
       tu: 15
       stamina: 15
       reactions: 5
+    builtInWeapons:
+      - INV_NULL_BACK_SIGNAL
     units:
       - STR_GUEVESAVRE_GV
     tags:

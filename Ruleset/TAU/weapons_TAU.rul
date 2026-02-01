@@ -274,14 +274,14 @@ items:
       - STR_TAU_GUEVESA_STRATEGY_GV
     explosionHitSound: {mod: 40k, index: 803}
     hitAnimation: 2050
-    specialIconSprite: 10
+    specialIconSprite: 203
     recover: false
-    accuracyAuto: 200
+    accuracyAimed: 200
     accuracyMultiplier:
       flatHundred: 1.0
     arcingShot: false
     damageType: 0
-    autoRange: 0
+    aimRange: 0
     dropoff: 200
     damageBonus:
       bravery: 0.5
@@ -302,9 +302,11 @@ items:
       FixRadius: 5
       IgnorePainImmunity: true
       IgnoreNormalMoraleLose: true
-    costAuto:  # lowered cost
+    costAimed:  # lowered cost
       time: 60  # was 60 but now % instead of flat
       energy: 60
+    confAimed:
+      name: STR_DECLARE_MONTKA_GV
     hitSound: {mod: 40k, index: 0}
     fireSound: {mod: 40k, index: 491}
     bulletSpeed: -10
@@ -331,7 +333,7 @@ items:
       bravery: 1.0
     damageAlter:
       FixRadius: 15
-    costAuto:  # lowered cost
+    costAimed:  # lowered cost
       time: 40  # was 60 but now % instead of flat
       energy: 40
     clipSize: 3
