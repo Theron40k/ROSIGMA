@@ -281,10 +281,11 @@ items:
       flatHundred: 1.0
     arcingShot: false
     damageType: 0
-    aimRange: 0
-    dropoff: 200
+    aimRange: 1
+    dropoff: 100
     damageBonus:
       bravery: 0.5
+      reactions: 0.25
     damageAlter:
       ResistType: 0
       RandomType: 2   # 50-150
@@ -303,8 +304,8 @@ items:
       IgnorePainImmunity: true
       IgnoreNormalMoraleLose: true
     costAimed:  # lowered cost
-      time: 60  # was 60 but now % instead of flat
-      energy: 60
+      time: 60
+      energy: 20
     confAimed:
       name: STR_DECLARE_MONTKA_GV
     hitSound: {mod: 40k, index: 0}
@@ -321,7 +322,8 @@ items:
   - type: STR_TAU_VETERAN_COMMAND_GV
     refNode: *STR_TAU_ARTS_OF_WAR
     damageBonus:
-      bravery: 0.75
+      bravery: 0.5
+      reactions: 0.25
     damageAlter:
       FixRadius: 10
     clipSize: 2
@@ -330,7 +332,8 @@ items:
   - type: STR_TAU_FIREBLADE_COMMAND_GV
     refNode: *STR_TAU_ARTS_OF_WAR
     damageBonus:
-      bravery: 1.0
+      bravery: 0.5
+      reactions: 0.3
     damageAlter:
       FixRadius: 15
     costAimed:  # lowered cost
