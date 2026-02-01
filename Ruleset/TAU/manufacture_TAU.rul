@@ -32,11 +32,12 @@ manufacture:
     requiredItems:
       STR_KILLPOINT_TOKEN: 160
       STR_ALIEN_ALLOYS: 50
+      STR_ELERIUM_115: 50
       STR_UFO_CONSTRUCTION: 5
       STR_UFO_POWER_SOURCE: 1
     space: 2
-    time: 1000
-    cost: 100000
+    time: 1500
+    cost: 200000
 
   - name: STR_CRISIS_SUIT_ITEM_GV
     refNode: *STR_SUIT_MANUF_GV
@@ -46,11 +47,12 @@ manufacture:
     requiredItems:
       STR_KILLPOINT_TOKEN: 240
       STR_ALIEN_ALLOYS: 100
+      STR_ELERIUM_115: 50
       STR_UFO_CONSTRUCTION: 10
       STR_UFO_POWER_SOURCE: 2
     space: 6
-    time: 2000
-    cost: 200000
+    time: 3000
+    cost: 300000
 
   - name: STR_ENGRAVED_ARMOR_ITEM_GV
     category: STR_PERSONAL_ARMOR
@@ -70,26 +72,31 @@ manufacture:
       - STR_ENGRAVED_ARMORS_GV
       - STR_ENGRAVED_BATTLESUITS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 320
-      STR_ALIEN_ALLOYS: 40
-      STR_UFO_CONSTRUCTION: 4
-      STR_UFO_POWER_SOURCE: 4
+      STR_STEALTH_SUIT_ITEM_GV: 1
+      STR_KILLPOINT_TOKEN: 160
+      STR_ALIEN_ALLOYS: 50
+      STR_ELERIUM_115: 50
+      STR_UFO_CONSTRUCTION: 5
+      STR_UFO_POWER_SOURCE: 1
     space: 6
     time: 2000
-    cost: 300000
-
-  - name: STR_DEVILFISH_GV
-    category: STR_CRAFT
-    requires:
-      - STR_DEVILFISH_TRANSPORTS_GV
-    space: 0
-    time: 4000
     cost: 200000
-    listOrder: 3351
+
+  - name: STR_GUARD_POWER_ARMOR
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_GUARD_POWER_ARMOR_RESEARCH
     requiredItems:
-      STR_ALIEN_ALLOYS: 80
-      STR_UFO_POWER_SOURCE: 4
-      STR_UFO_NAVIGATION: 4
+      STR_ALIEN_ALLOYS: 40
+      STR_ELERIUM_115: 20
+      STR_KILLPOINT_TOKEN: 120
+    producedItems:
+      STR_GUARD_POWER_ARMOR: 1
+    space: 0
+    time: 1000  # significant manufacturing time
+    cost: 500000
+
+
 
   # - name: STR_COMMEND_GUEVESALA_GV
   #   space: 0
@@ -136,6 +143,7 @@ manufacture:
     time: 500
     cost: 50000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_STRIKE_TEAMS_GV
     requiredItems:
       STR_KILLPOINT_TOKEN: 10
@@ -149,6 +157,7 @@ manufacture:
     cost: 50000
     requires:
       - STR_TAU_PATHFINDERS_GV
+      - STR_TAU_XENOTECH
     requiredItems:
       STR_KILLPOINT_TOKEN: 10
       # STR_TAU_PARTS_GV: 1
@@ -161,6 +170,7 @@ manufacture:
     cost: 50000
     requires:
       - STR_TAU_BREACHERS_GV
+      - STR_TAU_XENOTECH
     requiredItems:
       STR_KILLPOINT_TOKEN: 10
       # STR_TAU_PARTS_GV: 1
@@ -173,6 +183,7 @@ manufacture:
     cost: 25000
     requires:
       - STR_TAU_PATHFINDERS_GV
+      - STR_TAU_XENOTECH
     requiredItems:
       STR_KILLPOINT_TOKEN: 5
       # STR_TAU_PARTS_GV: 1
@@ -185,12 +196,44 @@ manufacture:
     cost: 100000
     requires:
       - STR_TAU_PATHFINDERS_GV
-      - STR_HIGHTIER_PREREQ
+      - STR_TAU_XENOTECH
+      - STR_FORM_KILL_TEAMS_GV
     requiredItems:
       STR_KILLPOINT_TOKEN: 50
       # STR_TAU_PARTS_GV: 1
       STR_ALIEN_ALLOYS: 10
       STR_UFO_CONSTRUCTION: 2
+
+  - name: STR_TAU_ION_RIFLE_GV
+    category: STR_WEAPON
+    space: 0
+    time: 750
+    cost: 100000
+    requires:
+      - STR_TAU_PATHFINDERS_GV
+      - STR_TAU_XENOTECH
+      - STR_FORM_KILL_TEAMS_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+      # STR_TAU_PARTS_GV: 1
+      STR_ALIEN_ALLOYS: 10
+      STR_UFO_CONSTRUCTION: 2
+
+  - name: STR_TAU_MARKSMAN_RAIL_RIFLE_GV
+    category: STR_WEAPON
+    space: 0
+    time: 1500
+    cost: 200000
+    requires:
+      - STR_TAU_PATHFINDERS_GV
+      - STR_TAU_XENOTECH
+      - STR_FORM_KILL_TEAMS_GV
+      - STR_HIGHTIER_PREREQ
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 100
+      # STR_TAU_PARTS_GV: 1
+      STR_ALIEN_ALLOYS: 20
+      STR_UFO_CONSTRUCTION: 5
 
   - name: STR_TAU_PULSE_MAG
     category: STR_AMMUNITION
@@ -198,6 +241,7 @@ manufacture:
     time: 200
     cost: 1000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
       STR_ELERIUM_115: 2
@@ -210,6 +254,7 @@ manufacture:
     time: 200
     cost: 1000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_BREACHERS_GV
     requiredItems:
       STR_ELERIUM_115: 2
@@ -222,6 +267,7 @@ manufacture:
     time: 200
     cost: 1000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
       STR_ALIEN_ALLOYS: 1
@@ -235,6 +281,7 @@ manufacture:
     time: 200
     cost: 5000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
       STR_ALIEN_ALLOYS: 2
@@ -248,6 +295,7 @@ manufacture:
     time: 200
     cost: 1000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
       STR_ALIEN_ALLOYS: 2
@@ -261,6 +309,7 @@ manufacture:
     time: 200
     cost: 1000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
       STR_ALIEN_ALLOYS: 2
@@ -274,6 +323,7 @@ manufacture:
     time: 200
     cost: 1000
     requires:
+      - STR_TAU_XENOTECH
       - STR_TAU_PATHFINDERS_GV
     requiredItems:
       STR_ALIEN_ALLOYS: 2
@@ -365,16 +415,19 @@ manufacture:
       - STR_A_SECRET_PACT_GV
       - STR_TAU_XENOTECH
     requiredItems:
-      STR_TAU_PULSE_MAG: 1
-    producedItems:
       STR_TAU_PULSE_BLASTER_MAG: 1
+    producedItems:
+      STR_TAU_PULSE_MAG: 1
 
+### Deactivated due to ignoreAmmoPower
+# TODO: Delete later to not break saves
   - name: STR_TAU_PULSE_MAG_SWAP
     category: STR_AMMUNITION
     space: 0
     time: 10
     cost: 1000
     requires:
+      - STR_GENERALLOCK
       - STR_A_SECRET_PACT_GV
       - STR_TAU_XENOTECH
     requiredItems:

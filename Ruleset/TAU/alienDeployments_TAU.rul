@@ -495,14 +495,65 @@ alienDeployments:
   #   length: 60
   #   height: 9
 
-  # - type: STR_STAY_HYDRATED_GV
-  #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
-  #   script: TENAXBASE_AIRDEFENSE
-  #   terrains:
-  #     - ACULTASNOW
-  #   width: 80
-  #   length: 80
-  #   height: 9
+  - type: STR_STAY_HYDRATED_GV
+    markerIcon: 53
+    alienBase: false    # it's a base but it shouldn't have a second stage
+    objectiveType: 3 #target type
+#    objectiveComplete: [STR_TRAITOR_GUARD_BASE_DESTROYED, 750]
+    data:
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 10 #8
+        highQty: 10 #12
+        dQty: 4
+        percentageOutsideUfo: 65
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 10 #8
+        highQty: 10 #12
+        dQty: 6
+        percentageOutsideUfo: 65
+        itemSets: *emptyItemSets
+      - alienRank: 5 # guardsmen with alternate weapons - GLs, flamers
+        lowQty: 5 #4
+        highQty: 5 #6
+        dQty: 0
+        percentageOutsideUfo: 65
+        itemSets: *emptyItemSets
+      - alienRank: 4 # add scouts once you change their weapon sets
+        lowQty: 6 #4
+        highQty: 6 #8
+        dQty: 3
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    briefing:
+      cutscene: TRAITORGUARDBASE
+      music: gmstory2
+      title: STR_TENAXBASE_LEVEL_4_TITLE_GV
+      textOffset: -16
+      background: BACK01.SCR
+      showTarget: false
+      desc: STR_TENAXBASE_LEVEL_4_BRIEFING_GV
+    missionBountyItem: STR_KILLPOINT_TOKEN
+    missionBountyItemCount: 200
+    markerName: STR_ALIEN_BASE
+    script: TENAXBASE_AIRDEFENSE
+    terrains:
+      - ACULTA
+    width: 80
+    length: 80
+    height: 9
 
   - type: STR_TENAXBASE_L1_GV
     markerIcon: 51
@@ -751,7 +802,7 @@ alienDeployments:
   - type: STR_TENAXBASE_L4_GV #HANGAR HK
     markerIcon: 53
     # script: TENAXBASE_LEVEL4
-    alienBase: true
+    alienBase: false    # it's a base but it shouldn't have a second stage
     objectiveType: 3 #target type
     objectivesRequired: 5 #number of tiles to be dest
     objectiveComplete: [STR_TRAITOR_GUARD_BASE_DESTROYED, 750]
