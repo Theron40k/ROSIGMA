@@ -280,6 +280,26 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
+  - type: STR_TAU_PATHFINDER_TRANSPECTRAL_ARMOR_GV
+    refNode: *STR_TAU_PATHFINDER_TEMPLATE_GV
+    requires: STR_FORM_KILL_TEAMS_GV
+    specialWeapon: AUX_ADEPTAS_PROBE
+    visibilityAtDay: 40  # Advanced optics and scanners, but not as good as a diviner
+    visibilityAtDark: 40  # Optics enhance existing night vision
+    antiCamouflageAtDay: 20  # Scanners further enhanced
+    antiCamouflageAtDark: 20  # Scanners further enhanced
+    psiVision: 10  # Advanced high-power auspex scanner can detect stationary targets and hooks directly into the HUD
+    heatVision: 40
+    builtInWeapons:
+      - INV_NULL_AUSPEX
+
+  - type: STR_TAU_PATHFINDER_MEDIC_ARMOR_GV
+    refNode: *STR_TAU_PATHFINDER_TEMPLATE_GV
+    requires: STR_INFILTRATION_CADRE_GV
+    specialWeapon: STR_TAU_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+
 ### TAU FIRE WARRIOR SHASUI ARMORS
 ### shasui armor versions, not as good as shas'vre advanced armor
 ### markerlight equip and bravery buffs
@@ -718,6 +738,11 @@ armors:
       MaxFlight: 1
       MaxCoolDown: 1
 
+  - type: STR_XV26_STEALTH_SUIT_FUSION_BLASTER_GV
+    refNode: *STR_STEALTH_SUITS
+    builtInWeapons:
+      - STR_TAU_FUSION_BLASTER_SINGLE_GV
+
   - type: STR_XV26_ENGRAVED_STEALTH_SUIT_GV
     refNode: *STR_STEALTH_SUITS
     storeItem: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
@@ -852,6 +877,26 @@ armors:
       - INV_NULL_2X1_RL
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
+
+  - type: STR_SUNFORGE_CRISIS_SUIT_FBX2_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_SUNFORGE_CRISIS_OPERATIONS_GV
+    storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_FUSION_BLASTER_TWINLINKED_GV
+      - STR_TAU_FUSION_BLASTER_TWINLINKED_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
+      ARMOR_ENERGY_SHIELD_DECAY: 25
 
   # AI versions
   - type: STR_TAU_CRISISBCX2AI_ARMOR
@@ -1019,6 +1064,12 @@ armors:
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+  - type: STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_GV
+    refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+
   - type: STR_TAUGUEVESACARAP_LEADER_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
     specialWeapon: STR_TAU_LEADER_COMMAND_GV
@@ -1038,8 +1089,6 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_OVERWATCH_TU_RESTORED: 10
-    builtInWeapons:
-      - INV_NULL_BACK_SIGNAL
 
 
   - type: STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV
@@ -1081,8 +1130,6 @@ armors:
       tu: 15
       stamina: 15
       reactions: 5
-    builtInWeapons:
-      - INV_NULL_BACK_SIGNAL
     units:
       - STR_GUEVESAVRE_GV
     tags:
@@ -1092,6 +1139,8 @@ armors:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_OVERWATCH_TU_RESTORED: 10
+    builtInWeapons:
+      - INV_NULL_BACK_SIGNAL
 
   - type: STR_ENGRAVED_TAUGUEVESACARAP_VETERAN_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
