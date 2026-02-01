@@ -96,21 +96,37 @@ manufacture:
     time: 1000  # significant manufacturing time
     cost: 500000
 
+  - name: STR_DEVILFISH_GV
+    category: STR_CRAFT
+    requires:
+      - STR_DEVILFISH_TRANSPORTS_GV
+    space: 8
+    time: 4000
+    cost: 400000
+    listOrder: 3351
+    requiredItems:
+      STR_ALIEN_ALLOYS: 120
+      STR_ELERIUM_115: 80
+      STR_UFO_POWER_SOURCE: 4
+      STR_UFO_NAVIGATION: 4
+      STR_KILLPOINT_TOKEN: 200
 
+  - name: STR_ORCA_GV
+    category: STR_CRAFT
+    requires:
+      - STR_ORCA_DROPSHIPS_GV
+    space: 16
+    time: 16000
+    cost: 1600000
+    listOrder: 3352
+    requiredItems:
+      STR_ALIEN_ALLOYS: 480
+      STR_ELERIUM_115: 320
+      STR_UFO_POWER_SOURCE: 8
+      STR_UFO_NAVIGATION: 8
+      STR_KILLPOINT_TOKEN: 1600
 
-  # - name: STR_COMMEND_GUEVESALA_GV
-  #   space: 0
-  #   time: 500
-  #   cost: 100000
-  #   requires:
-  #     - STR_TAU_GUEVESA_STRATEGY_GV
-  #     - STR_WHITESHIELD_BLACK_MARKET_GV
-  #   requiredItems:
-  #     STR_KILLPOINT_TOKEN: 150
-  #   producedItems:
-  #     STR_OFFICER_COMMISSION: 1
-  #     # STR_OFFICERS_PULSE_PISTOL_GV: 1
-
+  ###
   - name: STR_CONVERT_COMMISSION_GV
     space: 0
     time: 500
@@ -123,6 +139,18 @@ manufacture:
     producedItems:
       STR_OFFICER_COMMISSION: 1
       STR_OFFICERS_CHAIN_SWORD: 1
+
+  - name: STR_TRAIN_FORWARD_AIR_CONTROLLER_GV
+    space: 0
+    time: 500
+    cost: 100000
+    requires:
+      - STR_COOPT_NAVY_PILOTS_GV
+      - STR_RALLY_GUARD_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 150
+    producedItems:
+      STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV: 1
 
   - name: STR_SENTINELGV_AUTOCANNON
     requires:
@@ -213,6 +241,7 @@ manufacture:
       - STR_TAU_PATHFINDERS_GV
       - STR_TAU_XENOTECH
       - STR_FORM_KILL_TEAMS_GV
+      - STR_PLASMA_RIFLE_DEP1
     requiredItems:
       STR_KILLPOINT_TOKEN: 50
       # STR_TAU_PARTS_GV: 1
