@@ -284,6 +284,7 @@ armors:
     refNode: *STR_TAU_STRIKE_TEMPLATE_GV
     spriteSheet: TAUFIREWARRIORLEADERbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSLEADERARMORPLAYER.PCK
+    specialWeapon: STR_TAU_LEADER_COMMAND_GV
     customArmorPreviewIndex: 1382
     listOrder: 150
     corpseBattle:
@@ -308,6 +309,7 @@ armors:
     refNode: *STR_TAU_BREACHER_TEMPLATE_GV
     spriteSheet: TAUFIREWARRIORLEADERbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSLEADERARMORPLAYER.PCK
+    specialWeapon: STR_TAU_LEADER_COMMAND_GV
     corpseBattle:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
     stats:
@@ -331,6 +333,7 @@ armors:
     refNode: *STR_TAU_PATHFINDER_TEMPLATE_GV
     spriteSheet: TAUFIREWARRIORPATHFINDERbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSPATHFINDERARMORPLAYER.PCK
+    specialWeapon: STR_TAU_LEADER_COMMAND_GV
     customArmorPreviewIndex: 1381
     corpseBattle:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
@@ -352,6 +355,97 @@ armors:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
+
+### TAU FIRE WARRIOR SHASVRE ARMORS
+### shasui armor versions, not as good as shas'vre advanced armor
+### markerlight equip and bravery buffs
+  - type: STR_TAU_STRIKE_VETERAN_ARMOR_GV
+    refNode: *STR_TAU_STRIKE_TEMPLATE_GV
+    spriteSheet: TAUFIREWARRIORLEADERbattlePLAYER_GOG.PCK
+    spriteInv: TAUFIREWARRIORSLEADERARMORPLAYER.PCK
+    specialWeapon: STR_TAU_VETERAN_COMMAND_GV
+    customArmorPreviewIndex: 1382
+    listOrder: 150
+    frontArmor: 80 # +10 vs basic Guard Carapace; artificer quality
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 60
+
+    corpseBattle:
+      - STR_TAUFIREWARRIORLEADER_PCCORPSE
+    stats:
+      firing: 10
+      reactions: 5
+      bravery: 10
+    units:
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      # HAS_MARKERLIGHT: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_TAU_BREACHER_VETERAN_ARMOR_GV
+    refNode: *STR_TAU_BREACHER_TEMPLATE_GV
+    spriteSheet: TAUFIREWARRIORLEADERbattlePLAYER_GOG.PCK
+    spriteInv: TAUFIREWARRIORSLEADERARMORPLAYER.PCK
+    specialWeapon: STR_TAU_VETERAN_COMMAND_GV
+    corpseBattle:
+      - STR_TAUFIREWARRIORLEADER_PCCORPSE
+    frontArmor: 85 # +15 vs basic Guard Carapace; artificer quality
+    sideArmor: 75
+    rearArmor: 55
+    underArmor: 70
+    stats:
+      firing: 5
+      reactions: 10
+      bravery: 10
+    units:
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      # HAS_MARKERLIGHT: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_TAU_PATHFINDER_VETERAN_ARMOR_GV
+    refNode: *STR_TAU_PATHFINDER_TEMPLATE_GV
+    spriteSheet: TAUFIREWARRIORPATHFINDERbattlePLAYER_GOG.PCK
+    spriteInv: TAUFIREWARRIORSPATHFINDERARMORPLAYER.PCK
+    specialWeapon: STR_TAU_VETERAN_COMMAND_GV
+    customArmorPreviewIndex: 1381
+    corpseBattle:
+      - STR_TAUFIREWARRIORLEADER_PCCORPSE
+    frontArmor: 65 # +15 slightly less protective than standard Fire Warrior armor
+    sideArmor: 55
+    rearArmor: 35
+    underArmor: 45
+    stats:
+      tu: 10
+      stamina: 10
+      reactions: 10
+      bravery: 10
+    units:
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      # HAS_MARKERLIGHT: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+
 ### TAU FIRE WARRIOR ADVANCED ARMORS
   - &STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
     type: STR_ENGRAVED_ARMORS_GV
@@ -364,6 +458,7 @@ armors:
     heatVision: 35
     spriteSheet: TAUFIREWARRIORLEADERbattlePLAYER_GOG.PCK
     spriteInv: TAUFIREWARRIORSLEADERARMORPLAYER.PCK
+    specialWeapon: STR_TAU_VETERAN_COMMAND_GV
     customArmorPreviewIndex: 1380
     corpseBattle:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
@@ -481,7 +576,7 @@ armors:
     rearArmor: 50
     underArmor: 60
     stats:
-      tu: 10  # feels like youre wearing nothin at all
+      tu: 10
       stamina: 10
       reactions: 10
       bravery: 10
@@ -510,6 +605,7 @@ armors:
     customArmorPreviewIndex: 1383
     corpseBattle:
       - STR_TAUFIREWARRIORCAPTAIN_PCCORPSE
+    specialWeapon: STR_TAU_VETERAN_COMMAND_GV
     storeItem: STR_NONE
     standHeight: 22
     kneelHeight: 14
@@ -672,19 +768,19 @@ armors:
     rearArmor: 100
     underArmor: 120
     standHeight: 25
-    damageModifier:  # TERMINATOR ARMOR
+    damageModifier: # TAU ARMOR
       - 1.0  # none
-      - 0.6  # AP
-      - 0.3  # FLAMES
-      - 0.4  # HE
-      - 0.9  # LASCANON
-      - 0.8  # PLASMA
-      - 1.0  # STUN
-      - 0.9  # MELEE
-      - 0.8  # ACID
+      - 0.8  # AP
+      - 0.6  # FLAMES; partially environmentally sealed
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.9  # STUN
+      - 1.1  # MELEE
+      - 0.9  # ACID
       - 0.0  # SMOKE
-      - 0.2  # IMPACT
-      - 1.0  # MELTA
+      - 0.7  # IMPACT
+      - 0.9  # MELTA
     stats:
       tu: 15     # was 20
       stamina: 15 # was 20
@@ -922,6 +1018,7 @@ armors:
 
   - type: STR_TAUGUEVESACARAP_LEADER_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
+    specialWeapon: STR_TAU_LEADER_COMMAND_GV
     stats:
       bravery: 10
       melee: 5        # focus on what they're best at
@@ -938,6 +1035,9 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_OVERWATCH_TU_RESTORED: 10
+    builtInWeapons:
+      - INV_NULL_BACK_SIGNAL
+
 
   - type: STR_TAUGUEVESACARAP_VETERAN_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
@@ -946,7 +1046,7 @@ armors:
     corpseBattle:
       - STR_TAUGUEVESA_PCCORPSE
     storeItem: STR_TAUGUEVESACARAP_PC_ARMOR_ITEM_GV
-    specialWeapon: STR_BAYONET
+    specialWeapon: STR_TAU_VETERAN_COMMAND_GV
     stats:
       bravery: 20
       tu: 10
@@ -955,7 +1055,29 @@ armors:
       strength: 10
       reactions: 5
     units:
-      - STR_GUEVESAUI_GV
+      - STR_GUEVESAVRE_GV
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      # HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+
+  - type: STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_GV
+    refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
+    spriteSheet: TAUGUEVESALV2battlePLAYER_GOG.PCK
+    spriteInv: TAUGUEVESALV2ARMORPLAYER.PCK
+    corpseBattle:
+      - STR_TAUGUEVESA_PCCORPSE
+    storeItem: STR_TAUGUEVESACARAP_PC_ARMOR_ITEM_GV
+    specialWeapon: STR_AIRSTRIKE_VOX_SPECIAL
+    stats:
+      bravery: 20
+      tu: 15
+      stamina: 15
+      reactions: 5
+    units:
       - STR_GUEVESAVRE_GV
     tags:
       UNIT_TYPE_LIVING: 1
@@ -972,7 +1094,7 @@ armors:
     corpseBattle:
       - STR_TAUGUEVESA_PCCORPSE
     storeItem: STR_ENGRAVED_ARMOR_ITEM_GV
-    specialWeapon: STR_BAYONET
+    specialWeapon: STR_AIRSTRIKE_VOX_SPECIAL
     frontArmor: 80 # +10 vs basic Guard Carapace; artificer quality
     sideArmor: 70
     rearArmor: 50
@@ -987,7 +1109,6 @@ armors:
       psiStrength: 25  # the greatest good of all is happening to them
       psiSkill: 25
     units:
-      - STR_GUEVESAUI_GV
       - STR_GUEVESAVRE_GV
     tags:
       UNIT_TYPE_LIVING: 1
@@ -1177,7 +1298,7 @@ armors:
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
-
+  # TODO: Marinvesavre
   - type: STR_ENGRAVED_TAUMARINVESACARAP_PC_ARMOR_GV
     refNode: *STR_MARINVESA_CARAPACE
     visibilityAtDay: 35  # abhuman squat malus
@@ -1188,6 +1309,7 @@ armors:
     psiCamouflage: 3
     requires: STR_ENGRAVED_ARMORS_GV
     spriteSheet: TAUBEASTMAN_CARAPACE_BSPLAYER.PCK
+    specialWeapon: STR_TAU_LEADER_COMMAND_GV
     spriteInv: TBCA_33
     storeItem: STR_NONE
     corpseBattle:

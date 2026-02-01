@@ -363,7 +363,7 @@ research:
     unlocks:
       - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
       - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
-      # - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
+      - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
     spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
 
 ### Pathfinder KT gizmos
@@ -397,14 +397,15 @@ research:
     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
-### NOT YET IMPLEMENTED
+### Placeholder for granting advanced Guard manufactures
   - name: STR_RALLY_GUARD_GV
     points: 0
-    cost: 200
+    cost: 100
     dependencies:
-      - STR_GENERALLOCK
       - STR_AUXILIARY_CADRE_GV
       - STR_EMERGENCY_PROTOCOLS_GV
+    unlocks:
+      - STR_GUARD_POWER_ARMOR_RESEARCH
     spawnedEvent: STR_RALLY_GUARD_EVENT_GV
 
 ### Tau version of The Heart of Chaos
