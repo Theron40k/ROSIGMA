@@ -211,62 +211,6 @@ items:
     shotgunBehavior: 1  # twin linked
     shotgunPellets: 2
 
-  # - type: STR_TAU_OFFICER_PULSE_PISTOL_GV
-  #   requires:
-  #     - STR_TAU_XENOTECH
-  #   size: 0.2
-  #   weight: 3
-  #   bigSprite: 3155
-  #   floorSprite: 3156
-  #   handSprite: 3748
-  #   bulletSprite: {mod: 40k, index: 12}
-  #   fireSound: 2450
-  #   hitSound: {mod: 40k, index: 19}
-  #   hitAnimation: {mod: 40k, index: 100}
-  #   reloadSound: 2451
-  #   costSell: 10000
-  #   explosionSpeed: 10
-  #   bulletSpeed: 100
-  #   accuracySnap: 80
-  #   accuracyAimed: 100
-  #   tuSnap: 20
-  #   tuAimed: 40
-  #   power: 90
-  #   damageType: 1 # was 5
-  #   damageAlter:  # DA PULSE
-  #     RandomType: 6
-  #     ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
-  #     # ArmorEffectiveness: 0.9  # some armor penetration
-  #   battleType: 1
-  #   ammo:
-  #     0:
-  #       compatibleAmmo: [STR_TAU_PULSE_MAG]
-  #   twoHanded: false
-  #   invWidth: 1
-  #   invHeight: 2
-  #   arcingShot: false
-  #   aimRange: 16
-  #   snapRange: 14
-  #   dropoff: 5
-  #   recover: true
-  #   vaporColorSurface: {mod: 40k, index: 2}
-  #   vaporDensitySurface: 3
-  #   vaporProbabilitySurface: 50
-  #   scripts:
-  #     vaporParticleAmmo: |
-  #       # noting
-  #       set particle_lifetime 20;
-  #       set subvoxel_drift 3;
-  #       return;
-  #   tuLoad: 5 #quick reload
-  #   tuUnload: 5
-  #   inventoryMoveCost: #quickdraw
-  #     basePercent: 50
-
-  # - type: STR_TAU_OFFICER_ART_OF_WAR
-  #   weight: 0
-
-
   # limited by clip size not by stun
   - &STR_TAU_ARTS_OF_WAR
     type: STR_TAU_LEADER_COMMAND_GV
@@ -340,6 +284,99 @@ items:
       time: 40  # was 60 but now % instead of flat
       energy: 40
     clipSize: 3
+
+
+  ### improved medikit because no bayonet
+  - type: STR_TAU_MEDI_KIT
+    requires:
+      - STR_TAU_GUEVESA_STRATEGY_GV
+    weight: 8
+    battleType: 6
+    painKiller: 20
+    heal: 20
+    stimulant: 20
+    woundRecovery: 1
+    healthRecovery: 4
+    stunRecovery: 5
+    energyRecovery: 12
+    painKillerRecovery: 1.1
+    tuUse: 10
+    experienceTrainingMode: 19
+    medikitTargetSelf: false
+    flatRate: true
+    recover: false
+    fixedWeapon: true
+    specialIconSprite: 100
+
+
+  - &STR_TAU_FUSION_BLASTERS
+    type: STR_TAU_FUSION_BLASTER_SINGLE_GV #MELTAGUN                    2019
+    categories: [STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requires:
+      - STR_TAU_XENOTECH
+      - STR_STEALTH_SUIT_OPERATIONS_GV
+      - STR_MELTAGUN_TECH
+    size: 0.3
+    costSell: 48000
+    weight: 5
+    bigSprite: {mod: 40k, index: 6}
+    floorSprite: {mod: 40k, index: 6}
+    handSprite: {mod: 40k, index: 16}
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: {mod: 40k, index: 739}
+    fixedWeapon: true
+    fixedWeaponShow: false
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 80
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 35
+    tuAimed: 0
+    maxRange: 20
+    clipSize: -1
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    listOrder: 11100
+    vaporColorSurface: {mod: 40k, index: 1}
+    vaporDensitySurface: 2
+    vaporProbabilitySurface: 85
+    power: 15
+    damageType: 11
+    damageAlter:  # DA MELTA
+      RandomType: 1
+      ToArmorPre: 1.0
+      ToHealth: 1.6
+      ToTile: 6.0
+      ToWound: 0.05
+      RandomWound: false
+      TileDamageMethod: 2
+      FireThreshold: 16
+    shotgunBehavior: 1
+    shotgunPellets: 10
+    shotgunSpread: 0
+    powerRangeReduction: 1.0
+    powerRangeThreshold: 3.0
+    recover: false
+    armor: 200
+
+  - type: STR_TAU_FUSION_BLASTER_TWINLINKED_GV #MELTAGUN                    2019
+    refNode: *STR_TAU_FUSION_BLASTERS
+    categories: [STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requires:
+      - STR_SUNFORGE_CRISIS_OPERATIONS_GV
+      - STR_TAU_XENOTECH
+      - STR_MELTAGUN_TECH
+    shotgunBehavior: 1
+    shotgunPellets: 20
+    shotgunSpread: 0
+    power: 20   #reroll woounds
 
 
   # Save for implementing as two ammos

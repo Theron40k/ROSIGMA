@@ -28,7 +28,8 @@ manufacture:
     name: STR_STEALTH_SUIT_ITEM_GV
     category: STR_PERSONAL_ARMOR
     requires:
-      - STR_FORM_KILL_TEAMS_GV
+      - STR_TAU_XENOTECH
+      - STR_STEALTH_SUIT_OPERATIONS_GV
     requiredItems:
       STR_KILLPOINT_TOKEN: 160
       STR_ALIEN_ALLOYS: 50
@@ -43,6 +44,7 @@ manufacture:
     refNode: *STR_SUIT_MANUF_GV
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_TAU_XENOTECH
       - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
     requiredItems:
       STR_KILLPOINT_TOKEN: 240
@@ -80,7 +82,7 @@ manufacture:
       STR_UFO_POWER_SOURCE: 1
     space: 6
     time: 2000
-    cost: 200000
+    cost: 300000
 
   - name: STR_GUARD_POWER_ARMOR
     category: STR_PERSONAL_ARMOR
