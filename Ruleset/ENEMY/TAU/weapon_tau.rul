@@ -754,7 +754,7 @@ items:
   # ion rifle prototype no art yet
   # cloned off the twincore dekker but with weak overheat damage
   # heavy....
-  - type: STR_TAU_ION_RIFLE_GV                 11600
+  - type: STR_TAU_ION_RIFLE_GV
     categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR]
     size: 0.3
     costSell: 235000
@@ -777,22 +777,22 @@ items:
     dropoff: 4
     snapRange: 21
     aimRange: 21
-    autoRange: 10
     accuracySnap: 70
     accuracyAimed: 70
-    accuracyAuto: 60
-    tuSnap: 30
-    tuAimed: 30
-    tuAuto: 35
+    # accuracyAuto: 60
+    tuSnap: 40    # bulky
+    tuAimed: 40
+    # tuAuto: 35
     confSnap:
       name: STR_BURST_SNAP_SHOT
-      shots: 2
-    confAuto:
-      name: STR_AUTOFIRE
-      shots: 4
+      shots: 3
+    # confAuto:
+    #   name: STR_AUTOFIRE
+    #   shots: 4
     confAimed:
-      spendPerShot: 4
-      name: STR_MAXIMAL_SHOT
+      shots: 3
+      spendPerShot: 2
+      name: STR_ION_RIFLE_OVERCHARGE_SHOT_GV
     tags:
       ITEM_AIMED_FLAT_POWER_BONUS_PERCENT: 50  # Maximal Shot Bonus
 
