@@ -110,7 +110,7 @@ crafts:
     maxSkinIndex: 0              # default 0
     # skinSprites: [1586,1587,1588]   # default empty, contains all sprites except for the first (index zero)
     sprite: 2169
-    fuelMax: 1000
+    fuelMax: 2000
     damageMax: 200
     speedMax: 2000
     accel: 4
@@ -165,7 +165,7 @@ crafts:
       - 3
     weaponStrings:
       - STR_ANTI_AIR_WEAPONS
-    fixedWeapons: ["STR_CRAFT_MULTILASER_UC"]
+    fixedWeapons: [STR_CRAFT_MULTILASER_UC]
     soldiers: 20
     maxLargeUnits: 2
     costBuy: 600000
@@ -240,6 +240,7 @@ crafts:
       - 3
     weaponStrings:
       - STR_ANTI_AIR_WEAPONS
+    fixedWeapons: [STR_CRAFT_BURST_CANNON_GV_UC, STR_CRAFT_BURST_CANNON_GV_UC, STR_CRAFT_SEEKER_MISSILE_RACK_GV_UC]
     soldiers: 24
     refuelRate: 1000
     transferTime: 96
@@ -305,9 +306,9 @@ crafts:
     requires:
       - STR_ORCA_DROPSHIPS_GV
     sprite: 2168
-    fuelMax: 3000
+    fuelMax: 4000
     damageMax: 1000
-    speedMax: 600
+    speedMax: 900
     repairRate: 10
     vehicles: 999
     maxLargeUnits: 4
@@ -318,6 +319,7 @@ crafts:
       - 3
     weaponStrings:
       - STR_ANTI_AIR_WEAPONS
+    fixedWeapons: [STR_CRAFT_BURST_CANNON_GV_UC]
     soldiers: 44
     refuelRate: 1000
     transferTime: 96
