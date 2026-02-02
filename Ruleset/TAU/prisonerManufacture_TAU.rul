@@ -2,6 +2,7 @@ manufacture:
 ### Recruit guard prisoners as gue'vesa for now
   - &STR_WELCOME_GUEVESALA_GV
     name: STR_WELCOME_GUARD_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     requires:
       - STR_GUEVESA_CLUSTER_GV
     spawnedPersonType: STR_GUEVESALA_GV
@@ -14,12 +15,14 @@ manufacture:
       STR_PURITY_SEAL: 2  # Consider doing something with these later
 
   - name: STR_WELCOME_CATACHAN_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_WELCOME_GUEVESALA_GV
     requiredItems:
       STR_LIVE_CAPTURE_GUARDAI_CATACHAN: 1
 
   - &STR_WELCOME_GUEVESAUI_GV
     name: STR_WELCOME_GUARD_VET_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     requires:
       - STR_GUEVESA_CLUSTER_GV
     spawnedPersonType: STR_GUEVESAUI_GV
@@ -32,6 +35,7 @@ manufacture:
       STR_PURITY_SEAL: 4  # Consider doing something with these later
 
   - name: STR_WELCOME_GUARD_SCOUT_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_WELCOME_GUEVESAUI_GV
     requiredItems:
       STR_LIVE_CAPTURE_GUARDAI_SCOUT: 1
@@ -44,6 +48,7 @@ manufacture:
   ### TODO: Explain what recusants are
   - &STR_RECUSANTS_GV
     name: STR_RECUSANT_SISTERS_NOVICE_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     space: 0
     time: 10
     cost: 1
@@ -56,6 +61,7 @@ manufacture:
       STR_PURITY_SEAL: 3
 
   - name: STR_RECUSANT_SISTERS_MEDICAE_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_RECUSANTS_GV
     spawnedPersonType: STR_GUEVESALA_GV
     requiredItems:
@@ -64,6 +70,7 @@ manufacture:
       STR_PURITY_SEAL: 5
 
   - name: STR_RECUSANT_SISTERS_ADEPTAS_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_RECUSANTS_GV
     spawnedPersonType: STR_GUEVESAUI_GV
     requiredItems:
@@ -72,6 +79,7 @@ manufacture:
       STR_PURITY_SEAL: 5
 
   - name: STR_RECUSANT_SISTERS_ELOHIM_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_RECUSANTS_GV
     spawnedPersonType: STR_GUEVESAVRE_GV
     requiredItems:
@@ -82,6 +90,7 @@ manufacture:
 
   - &STR_TAU_SISTERS_GV
     name: STR_ABSOLVE_ADEPTAS_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     space: 0
     time: 10
     cost: 1
@@ -94,6 +103,7 @@ manufacture:
       STR_PURITY_SEAL: 7
 
   - name: STR_ABSOLVE_MEDICAE_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_TAU_SISTERS_GV
     spawnedPersonType: STR_ADEPTAS
     requiredItems:
@@ -102,6 +112,7 @@ manufacture:
       STR_PURITY_SEAL: 7
 
   - name: STR_ABSOLVE_ADEPTAS_NOVICE_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_TAU_SISTERS_GV
     spawnedPersonType: STR_ADEPTAS_NOVICE
     requiredItems:
@@ -110,6 +121,7 @@ manufacture:
       STR_PURITY_SEAL: 5
 
   - name: STR_ABSOLVE_ADEPTAS_SUPERIOR_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
     refNode: *STR_TAU_SISTERS_GV
     spawnedPersonType: STR_ADEPTAS_SUPERIOR
     requiredItems:
@@ -117,157 +129,158 @@ manufacture:
     producedItems:
       STR_PURITY_SEAL: 10
 
-  # ### Eliminate psykers
-  # - &STR_PURGE_THE_WITCH_GV
-  #   name: STR_PURGE_CULTIST_LEADER_GV
-  #   requires:
-  #     - STR_EMERGENCY_PROTOCOLS_GV
-  #   space: 0
-  #   time: 10
-  #   cost: 0
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_CULTIST_LEADER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 10
-  #     STR_PURITY_SEAL: 3
-  # - name: STR_PURGE_CULTIST_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_CULTIST: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 7
-  #     STR_PURITY_SEAL: 2
-  # - name: STR_PURGE_BEASTMAN_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_CHAOS_BEASTMAN: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 7
-  #     STR_PURITY_SEAL: 2
-  # - name: STR_PURGE_WITCH_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_WITCH: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 15
-  #     STR_PURITY_SEAL: 5
-  # - name: STR_PURGE_WITCH_LEADER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_WITCH_LEADER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 50
-  #     STR_PURITY_SEAL: 10
-  # - name: STR_PURGE_TG_PSYKER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG_PSYKER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 20
-  #     STR_PURITY_SEAL: 10
-  # # do these guys get a pass under emergency protocols? not for now
-  # # not ready for psychic options yet
-  # # maybe choice of psychic vs sisters development in future
-  # - name: STR_PURGE_GUARDAI_PSYKER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_GUARDAI_PSYKER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 20
-  #     STR_PURITY_SEAL: 10
-  # - name: STR_PURGE_CHAOS_SISTER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_CHAOS_SISTER: 1
-  # - name: STR_PURGE_KHORNE_SISTER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_KHORNE_SISTER: 1
-  # - name: STR_PURGE_KHORNE_SUPERIOR_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_KHORNE_SUPERIOR: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 15
-  #     STR_PURITY_SEAL: 5
-  # - name: STR_PURGE_NURGLE_SISTER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_NURGLE_SISTER: 1
-  # - name: STR_PURGE_SLAANESH_SISTER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_SLAANESH_SISTER: 1
-  # - name: STR_PURGE_SLAANESH_SUPERIOR_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_SLAANESH_SUPERIOR: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 15
-  #     STR_PURITY_SEAL: 5
-  # - name: STR_PURGE_TZEENTCH_SISTER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TZEENTCH_SISTER: 1
-  # # a prisoner of exceptional value
-  # - name: STR_PURGE_HERETIC_INQUISITOR_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_HERETIC_SISTERINQ: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 50
-  #     STR_PURITY_SEAL: 10
-  # - name: STR_PURGE_NIGHT_SISTER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_NIGHT_SISTER: 1
-  # - name: STR_PURGE_NIGHT_SISTER_SUPERIOR_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_NIGHT_SISTER_SUPERIOR: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 15
-  #     STR_PURITY_SEAL: 5
-  # - name: STR_PURGE_SERAPHIM_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_SERAPHIM: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 15
-  #     STR_PURITY_SEAL: 5
-  # - name: STR_PURGE_ASSASSIN_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_CHAOS_ASSASSIN: 1
-  # - name: STR_PURGE_RAPTOR_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_RAPTOR: 1
-  # - name: STR_PURGE_RAPTOR_LEADER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_RAPTOR_LEADER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 15
-  #     STR_PURITY_SEAL: 5
-  # - name: STR_PURGE_RAPTOR_COMMANDER_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_RAPTOR_COMMANDER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 20
-  #     STR_PURITY_SEAL: 10
-  # - name: STR_PURGE_CHAOS_HERETEK_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
-  #   requiredItems:
-  #     STR_CHAOS_HERETEK: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 20
-  #     STR_PURITY_SEAL: 10
+  ### Eliminate psykers
+  - &STR_PURGE_WITCH
+    name: STR_PURGE_CULTIST_LEADER_GV
+    category: STR_PURGE_THE_WITCH_CATEGORY_GV
+    requires:
+      - STR_EMERGENCY_PROTOCOLS_GV
+    space: 0
+    time: 10
+    cost: 0
+    requiredItems:
+      STR_LIVE_CAPTURE_CULTIST_LEADER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 10
+      STR_PURITY_SEAL: 3
+  - name: STR_PURGE_CULTIST_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_CULTIST: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 7
+      STR_PURITY_SEAL: 2
+  - name: STR_PURGE_BEASTMAN_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_CHAOS_BEASTMAN: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 7
+      STR_PURITY_SEAL: 2
+  - name: STR_PURGE_WITCH_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_WITCH: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 15
+      STR_PURITY_SEAL: 5
+  - name: STR_PURGE_WITCH_LEADER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_WITCH_LEADER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 50
+      STR_PURITY_SEAL: 10
+  - name: STR_PURGE_TG_PSYKER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_TG_PSYKER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 20
+      STR_PURITY_SEAL: 10
+  # do these guys get a pass under emergency protocols? not for now
+  # not ready for psychic options yet
+  # maybe choice of psychic vs sisters development in future
+  - name: STR_PURGE_GUARDAI_PSYKER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_GUARDAI_PSYKER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 20
+      STR_PURITY_SEAL: 10
+  - name: STR_PURGE_CHAOS_SISTER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_CHAOS_SISTER: 1
+  - name: STR_PURGE_KHORNE_SISTER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_KHORNE_SISTER: 1
+  - name: STR_PURGE_KHORNE_SUPERIOR_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_KHORNE_SUPERIOR: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 15
+      STR_PURITY_SEAL: 5
+  - name: STR_PURGE_NURGLE_SISTER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_NURGLE_SISTER: 1
+  - name: STR_PURGE_SLAANESH_SISTER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_SLAANESH_SISTER: 1
+  - name: STR_PURGE_SLAANESH_SUPERIOR_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_SLAANESH_SUPERIOR: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 15
+      STR_PURITY_SEAL: 5
+  - name: STR_PURGE_TZEENTCH_SISTER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_TZEENTCH_SISTER: 1
+  # a prisoner of exceptional value
+  - name: STR_PURGE_HERETIC_INQUISITOR_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_HERETIC_SISTERINQ: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 50
+      STR_PURITY_SEAL: 10
+  - name: STR_PURGE_NIGHT_SISTER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_NIGHT_SISTER: 1
+  - name: STR_PURGE_NIGHT_SISTER_SUPERIOR_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_NIGHT_SISTER_SUPERIOR: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 15
+      STR_PURITY_SEAL: 5
+  - name: STR_PURGE_SERAPHIM_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_SERAPHIM: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 15
+      STR_PURITY_SEAL: 5
+  - name: STR_PURGE_ASSASSIN_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_CHAOS_ASSASSIN: 1
+  - name: STR_PURGE_RAPTOR_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_RAPTOR: 1
+  - name: STR_PURGE_RAPTOR_LEADER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_RAPTOR_LEADER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 15
+      STR_PURITY_SEAL: 5
+  - name: STR_PURGE_RAPTOR_COMMANDER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_RAPTOR_COMMANDER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 20
+      STR_PURITY_SEAL: 10
+  - name: STR_PURGE_CHAOS_HERETEK_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_CHAOS_HERETEK: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 20
+      STR_PURITY_SEAL: 10
 
   # # ## Chaos Marines
   # - name: STR_PURGE_CHAOS_MARINE_GV
-  #   refNode: *STR_PURGE_THE_WITCH_GV
+  #   refNode: *STR_PURGE_WITCH
   #   requiredItems:
   #     STR_LIVE_CAPTURE_CHAOS_MARINE: 1
 
@@ -296,101 +309,90 @@ manufacture:
   # # - type: STR_LIVE_CAPTURE_ALPHA_MARINE
 
 
-  # ### Eliminate committed traitors and fanatical Imperials
-  # - &STR_LIQUIDATION_GV
-  #   name: STR_PURGE_TRAITOR_GUARD_GV
-  #   requires:
-  #     - STR_EMERGENCY_PROTOCOLS_GV
-  #   space: 0
-  #   time: 10
-  #   cost: 0
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 3
-  #     STR_PURITY_SEAL: 1
-  # - name: STR_PURGE_FRATERIS_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_FRATERIS_MILITIA_AI: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 3
-  # - name: STR_PURGE_TRAITOR_VETERAN_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG_VETERAN: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 5
-  # - name: STR_PURGE_TRAITOR_SCOUT_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG_SCOUT: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 5
-  # - name: STR_PURGE_TRAITOR_CATACHAN_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG_CATACHAN: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 5
-  # - name: STR_PURGE_TRAITOR_CATACHAN_VETERAN_IG
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG_CATACHAN_VETERAN: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 5
-  # - name: STR_PURGE_FRATERIS_VETERAN_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_FRATERIS_MILITIA_VETERAN_AI: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 5
-  # - name: STR_PURGE_TG_STORMTROOPER_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG_STORMTROOPER: 1
-  # - name: STR_PURGE_INQ_STORMTROOPER_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_INQ_STORMTROOPER_AI: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 10
-  #     STR_PURITY_SEAL: 2
-  # - name: STR_PURGE_INQ_STORMTROOPER_ELITE_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_INQ_STORMTROOPER_AI_ELITE: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 10
-  #     STR_PURITY_SEAL: 2
-  # - name: STR_PURGE_TG_LEADER_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_TG_LEADER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 10
-  #     STR_PURITY_SEAL: 2
-  # - name: STR_PURGE_GUARD_STORMTROOPER_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_GUARDAI_STORMTROOPER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 10
-  #     STR_PURITY_SEAL: 2
-  # - name: STR_PURGE_COMMISSAR_GV
-  #   refNode: *STR_LIQUIDATION_GV
-  #   requiredItems:
-  #     STR_LIVE_CAPTURE_GUARDAI_LEADER: 1
-  #   producedItems:
-  #     STR_KILLPOINT_TOKEN: 20
-  #     STR_PURITY_SEAL: 2
+  ### Eliminate committed traitors and fanatical Imperials
+  - &STR_LIQUIDATE
+    name: STR_PURGE_TRAITOR_GUARD_GV
+    category: STR_LIQUIDATION_CATEGORY_GV
+    requires:
+      - STR_EMERGENCY_PROTOCOLS_GV
+    space: 0
+    time: 10
+    cost: 0
+    requiredItems:
+      STR_LIVE_CAPTURE_TG: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 3
+      STR_PURITY_SEAL: 1
+  - name: STR_PURGE_TRAITOR_VETERAN_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_TG_VETERAN: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 5
+  - name: STR_PURGE_TRAITOR_SCOUT_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_TG_SCOUT: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 5
+  - name: STR_PURGE_TRAITOR_CATACHAN_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_TG_CATACHAN: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 5
+  - name: STR_PURGE_TRAITOR_CATACHAN_VETERAN_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_TG_CATACHAN_VETERAN: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 5
+  - name: STR_PURGE_TG_STORMTROOPER_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_TG_STORMTROOPER: 1
+  - name: STR_PURGE_INQ_STORMTROOPER_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_INQ_STORMTROOPER_AI: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 10
+      STR_PURITY_SEAL: 2
+  - name: STR_PURGE_INQ_STORMTROOPER_ELITE_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_INQ_STORMTROOPER_AI_ELITE: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 10
+      STR_PURITY_SEAL: 2
+  - name: STR_PURGE_TG_LEADER_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_TG_LEADER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 10
+      STR_PURITY_SEAL: 2
+  - name: STR_PURGE_GUARD_STORMTROOPER_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_GUARDAI_STORMTROOPER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 10
+      STR_PURITY_SEAL: 2
+  - name: STR_PURGE_COMMISSAR_GV
+    refNode: *STR_LIQUIDATE
+    requiredItems:
+      STR_LIVE_CAPTURE_GUARDAI_LEADER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 20
+      STR_PURITY_SEAL: 2
 
   # # - name: STR_PURGE_ARBITES_GV
-  # #   refNode: *STR_LIQUIDATION_GV
+  # #   refNode: *STR_LIQUIDATE
   # #   requiredItems:
   # #     STR_ARBITES: 1
   # # - name: STR_PURGE_JUDGE_GV
-  # #   refNode: *STR_LIQUIDATION_GV
+  # #   refNode: *STR_LIQUIDATE
   # #   requiredItems:
   # #     STR_JUDGE: 1
   # #   producedItems:

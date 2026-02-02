@@ -56,6 +56,42 @@ manufacture:
     time: 3000
     cost: 300000
 
+  - name: STR_TAU_PATHFINDER_MEDIC_ARMOR_ITEM_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_INFILTRATION_CADRE_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 10
+      STR_ALIEN_ALLOYS: 1
+    space: 1
+    time: 100
+    cost: 20000
+
+  - name: STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_ITEM_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_A_SECRET_PACT_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 10
+      STR_ALIEN_ALLOYS: 1
+    space: 1
+    time: 100
+    cost: 20000
+
+  - name: STR_TAU_PATHFINDER_TRANSPECTRAL_ARMOR_ITEM_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_FORM_KILL_TEAMS_GV
+      - STR_TAU_PATHFINDERS_GV
+      - STR_HYPER_WAVE_DECODER
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+      STR_ALIEN_ALLOYS: 20
+      STR_ELERIUM_115: 20
+    space: 1
+    time: 100
+    cost: 100000
+
   - name: STR_ENGRAVED_ARMOR_ITEM_GV
     category: STR_PERSONAL_ARMOR
     requires:
