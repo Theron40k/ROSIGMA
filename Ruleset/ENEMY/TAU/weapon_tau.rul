@@ -757,8 +757,8 @@ items:
   - type: STR_TAU_ION_RIFLE_GV
     categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR]
     size: 0.3
-    costSell: 235000
-    weight: 24
+    costSell: 0
+    weight: 25
     bigSprite: 350
     floorSprite: {mod: 40k, index: 620}
     handSprite: {mod: 40k, index: 80}
@@ -779,16 +779,11 @@ items:
     aimRange: 21
     accuracySnap: 70
     accuracyAimed: 70
-    # accuracyAuto: 60
-    tuSnap: 40    # bulky
-    tuAimed: 40
-    # tuAuto: 35
+    tuSnap: 45    # bulky
+    tuAimed: 45
     confSnap:
       name: STR_BURST_SNAP_SHOT
       shots: 3
-    # confAuto:
-    #   name: STR_AUTOFIRE
-    #   shots: 4
     confAimed:
       shots: 3
       spendPerShot: 2
@@ -804,7 +799,7 @@ items:
     vaporDensitySurface: 6
     vaporProbabilitySurface: 18
     size: 0.1
-    costSell: 5000
+    costSell: 0
     weight: 4
     armor: 100
     bigSprite: 3228
@@ -854,12 +849,12 @@ items:
     hitAnimation: 1200
     powerForAnimation: 24
     reloadSound: 2454
-    costSell: 30000
+    costSell: 0
     bulletSpeed: 100
     accuracySnap: 70
     accuracyAimed: 90
     tuAimed: 70
-    tuSnap: 50
+    tuSnap: 45
     battleType: 1
     twoHanded: true
     blockBothHands: true
