@@ -101,8 +101,21 @@ manufacture:
       STR_ALIEN_ALLOYS: 20
       STR_UFO_CONSTRUCTION: 4
     space: 6
-    time: 2000
+    time: 1000
     cost: 200000
+
+  - name: STR_TAU_POWER_SOURCE_MANUFACTURING_GV
+    category: STR_UFO_COMPONENT
+    requires:
+      - STR_COALITION_COMMAND_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 25
+      STR_ALIEN_ALLOYS: 5
+      STR_ELERIUM_115: 8
+    space: 22
+    time: 800
+    cost: 130000
+
 
   - name: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
     category: STR_PERSONAL_ARMOR
@@ -359,7 +372,21 @@ manufacture:
       STR_ALIEN_ALLOYS: 2
       STR_ELERIUM_115: 2
     producedItems:
-      STR_TAU_RAIL_MAG: 5
+      STR_TAU_RAIL_MAG: 3
+
+  - name: STR_TAU_ION_RIFLE_MAG_GV
+    category: STR_AMMUNITION
+    space: 0
+    time: 200
+    cost: 5000
+    requires:
+      - STR_TAU_XENOTECH
+      - STR_TAU_PATHFINDERS_GV
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_TAU_ION_RIFLE_MAG_GV: 3
 
   - name: STR_TAU_PHOTON_GRENADE
     category: STR_AMMUNITION
