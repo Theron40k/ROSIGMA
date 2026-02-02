@@ -198,6 +198,8 @@ armors:
   - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_AI
     refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
     storeItem: ""  # !remove
+    corpseBattle:
+      - STR_INQ_STORMTROOPER_AI_CORPSE
     stats:
       firing: 10
       reactions: 10
@@ -217,6 +219,8 @@ armors:
       firing: 10
       reactions: 10
       bravery: 10
+    corpseBattle:
+      - STR_INQ_STORMTROOPER_ELITE_AI_CORPSE
     units: !remove
       - STR_INQ_STORMTROOPER
     tags:
