@@ -31,6 +31,15 @@ items:
   - type: STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV
     costSell: 0
 
+  - type: STR_TAU_PATHFINDER_TRANSPECTRAL_ARMOR_ITEM_GV
+    costSell: 0
+
+  - type: STR_TAU_PATHFINDER_MEDIC_ARMOR_ITEM_GV
+    costSell: 0
+
+  - type: STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_ITEM_GV
+    costSell: 0
+
   - type: STR_SENTINELGV_ARMOR                #6800
     requiresBuy:
       - STR_TANKERS_DELIGHT_GV
@@ -283,6 +292,7 @@ armors:
   - type: STR_TAU_PATHFINDER_TRANSPECTRAL_ARMOR_GV
     refNode: *STR_TAU_PATHFINDER_TEMPLATE_GV
     requires: STR_FORM_KILL_TEAMS_GV
+    storeItem: STR_TAU_PATHFINDER_TRANSPECTRAL_ARMOR_ITEM_GV
     specialWeapon: AUX_ADEPTAS_PROBE
     visibilityAtDay: 40  # Advanced optics and scanners, but not as good as a diviner
     visibilityAtDark: 40  # Optics enhance existing night vision
@@ -290,13 +300,24 @@ armors:
     antiCamouflageAtDark: 20  # Scanners further enhanced
     psiVision: 10  # Advanced high-power auspex scanner can detect stationary targets and hooks directly into the HUD
     heatVision: 40
+    units:
+      - STR_FIREWARRIOR_GV
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     builtInWeapons:
       - INV_NULL_AUSPEX
 
   - type: STR_TAU_PATHFINDER_MEDIC_ARMOR_GV
     refNode: *STR_TAU_PATHFINDER_TEMPLATE_GV
+    storeItem: STR_TAU_PATHFINDER_MEDIC_ARMOR_ITEM_GV
     requires: STR_INFILTRATION_CADRE_GV
     specialWeapon: STR_TAU_MEDI_KIT
+    units:
+      - STR_FIREWARRIOR_GV
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
     builtInWeapons:
       - INV_NULL_MEDI_KIT
 
@@ -1066,6 +1087,7 @@ armors:
 
   - type: STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
+    storeItem: STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_ITEM_GV
     specialWeapon: STR_GUARD_MEDI_KIT
     builtInWeapons:
       - INV_NULL_MEDI_KIT

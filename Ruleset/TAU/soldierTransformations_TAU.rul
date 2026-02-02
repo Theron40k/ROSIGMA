@@ -16,7 +16,7 @@ soldierTransformation:
     requiredCommendations:
       STR_BATTLE_TESTED: 0
     requiredMinStats:
-      bravery: 40
+      bravery: 50
       tu: 1
 
   - name: STR_PROMOTE_SHASVRE_GV
@@ -33,7 +33,7 @@ soldierTransformation:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0
     requiredMinStats:
-      bravery: 40
+      bravery: 50
       tu: 1
 
   - name: STR_SELECT_FIREBLADE_GV
@@ -51,7 +51,7 @@ soldierTransformation:
       STR_VETERAN_COMMENDATION: 0
       STR_HERO_TO_THE_IMPERIUM: 0
     requiredMinStats:
-      bravery: 40
+      bravery: 50
       tu: 1
 
 ### Promote militia officer
@@ -73,7 +73,7 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_MILITIA_GV
     requiredMinStats:
-      bravery: 40
+      bravery: 50
       tu: 1
 
 ### Transform friendly guard NPCs into militia
@@ -116,7 +116,7 @@ soldierTransformation:
   - name: STR_PROMOTE_GUEVESAUI_GV
     refNode: *STR_GUEVESA_PROMOTION_GV
     producedSoldierType: STR_GUEVESAUI_GV
-    producedSoldierArmor: STR_TAUGUEVESAFLAK_PC_ARMOR_GV
+    producedSoldierArmor: STR_TAUGUEVESACARAP_PC_ARMOR_GV
     upperBoundType: 1
     allowedSoldierTypes:
       - STR_MILITIA_GV
@@ -127,13 +127,13 @@ soldierTransformation:
     requiredCommendations:
       STR_BATTLE_TESTED: 0
     requiredMinStats:
-      bravery: 40
+      bravery: 50
       tu: 1
 
   - name: STR_PROMOTE_GUEVESAVRE_GV
     refNode: *STR_GUEVESA_PROMOTION_GV
     producedSoldierType: STR_GUEVESAVRE_GV
-    producedSoldierArmor: STR_TAUGUEVESAFLAK_PC_ARMOR_GV
+    producedSoldierArmor: STR_TAUGUEVESACARAP_PC_ARMOR_GV
     upperBoundType: 1
     allowedSoldierTypes:
       - STR_GUEVESAUI_GV
@@ -144,7 +144,7 @@ soldierTransformation:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0
     requiredMinStats:
-      bravery: 40
+      bravery: 50
       tu: 1
 
   - name: STR_PROMOTE_MARINVESAUI_GV
@@ -159,5 +159,5 @@ soldierTransformation:
     requiredCommendations:
       STR_BATTLE_TESTED: 0
     requiredMinStats:
-      bravery: 40
+      bravery: 50
       tu: 1
