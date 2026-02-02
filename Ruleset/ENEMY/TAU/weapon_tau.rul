@@ -760,12 +760,15 @@ items:
     costSell: 0
     weight: 25
     bigSprite: 350
+    requires:
+      - STR_TAU_XENOTECH
+      - STR_FORM_KILL_TEAMS_GV
     floorSprite: {mod: 40k, index: 620}
     handSprite: {mod: 40k, index: 80}
     bulletSprite: {mod: 40k, index: 11}
     fireSound: {mod: 40k, index: 18}
     compatibleAmmo:
-      - STR_TAU_ION_RIFLE_CLIP_GV
+      - STR_TAU_ION_RIFLE_MAG_GV
     battleType: 1
     twoHanded: true
     blockBothHands: true
@@ -793,7 +796,7 @@ items:
 
   # ion rifle ammo prototype no art yet
   # cloned off the twincore clip
-  - type: STR_TAU_ION_RIFLE_CLIP_GV  #                   11510
+  - type: STR_TAU_ION_RIFLE_MAG_GV  #                   11510
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 6
