@@ -758,7 +758,7 @@ items:
     categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR]
     size: 0.3
     costSell: 235000
-    weight: 30
+    weight: 24
     bigSprite: 350
     floorSprite: {mod: 40k, index: 620}
     handSprite: {mod: 40k, index: 80}
@@ -856,7 +856,7 @@ items:
     reloadSound: 2454
     costSell: 30000
     bulletSpeed: 100
-    accuracySnap: 60
+    accuracySnap: 70
     accuracyAimed: 90
     tuAimed: 70
     tuSnap: 50
@@ -864,9 +864,9 @@ items:
     twoHanded: true
     blockBothHands: true
     arcingShot: false
-    minRange: 4
-    snapRange: 20
-    aimRange: 30
+    minRange: 8
+    snapRange: 24
+    aimRange: 32
     dropoff: 3 #has exceptional range
     recover: true
     kneelBonus: 150 #extremely hard to wield otherwise
@@ -875,6 +875,7 @@ items:
     tags:
       REACTION_MULTIPLIER: 50
       REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # Battle railgun
 
   # very powerful
   - type: STR_TAU_MARKSMAN_RAIL_RIFLE_GV
@@ -886,17 +887,17 @@ items:
     weight: 12
     costSell: 0
     bulletSpeed: 100
-    accuracySnap: 70
-    accuracyAimed: 100
+    accuracySnap: 80
+    accuracyAimed: 110
     tuAimed: 60
     tuSnap: 40
     battleType: 1
     twoHanded: true
     blockBothHands: true
     arcingShot: false
-    minRange: 4
-    snapRange: 24
-    aimRange: 32
+    minRange: 6
+    snapRange: 32
+    aimRange: 40
     dropoff: 3 #has exceptional range
     recover: true
     kneelBonus: 150 # still better if kneeling
@@ -905,6 +906,7 @@ items:
     tags:
       REACTION_MULTIPLIER: 75
       REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # Battle railgun
 
   - type: STR_TAU_RAIL_MAG
     size: 0.05
