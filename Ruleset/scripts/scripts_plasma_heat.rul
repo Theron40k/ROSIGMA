@@ -62,19 +62,21 @@ extended:
 
           reaction_weapon.getTag temp2 Tag.ITEM_HEAT_AMMO_SNAP_MULTIPLIER; #for weapons that fire more than one shot per snap
           # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | ITEM_HEAT_AMMO_SNAP_MULTIPLIER:" temp2;
-          limit_lower temp 1;
+          limit_lower temp2 1;
           mul temp2 reaction_count;
+          # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | reaction_count addition to previousAmmoCount:" temp2;
           add previousAmmoCount temp2;
           reaction_weapon.getTag temp Tag.ITEM_HEAT_AMMO_SPENT_FOR_INCREASE;
+          limit_lower temp 1;
           div previousAmmoCount temp;
           # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | final previousAmmoCount:" previousAmmoCount;
 
           add currentHeat previousAmmoCount;
 
-          if ge currentHeat maxHeat;
+          if gt currentHeat maxHeat;
             # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | Aborting. Reaction Fire heat would exceed maxHeat. currentHeat:" currentHeat;
             # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | Aborting. Reaction Fire heat would exceed maxHeat. maxHeat:" maxHeat;
-            battle_game.flashMessage "STR_OVERHEATING_REACTION_NOTICE";
+            # battle_game.flashMessage "STR_OVERHEATING_REACTION_NOTICE";
             return 0;
           end;
 
