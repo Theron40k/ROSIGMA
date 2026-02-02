@@ -71,9 +71,10 @@ extended:
 
           add currentHeat previousAmmoCount;
 
-          if gt currentHeat maxHeat;
+          if ge currentHeat maxHeat;
             # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | Aborting. Reaction Fire heat would exceed maxHeat. currentHeat:" currentHeat;
             # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | Aborting. Reaction Fire heat would exceed maxHeat. maxHeat:" maxHeat;
+            battle_game.flashMessage "STR_OVERHEATING_REACTION_NOTICE";
             return 0;
           end;
 
