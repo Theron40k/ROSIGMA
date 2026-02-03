@@ -469,22 +469,32 @@ research:
     spawnedEvent: STR_ENGRAVED_ARMORS_EVENT_GV
 
   - name: STR_APPOINT_FIREBLADE_GV
+    points: 0
+    cost: 0
     dependencies:
       - STR_GENERALLOCK
 
   - name: STR_FIREKNIFE_CRISIS_OPERATIONS_GV
+    points: 0
+    cost: 0
     dependencies:
       - STR_GENERALLOCK
 
   - name: STR_SUNFORGE_CRISIS_OPERATIONS_GV
+    points: 0
+    cost: 0
     dependencies:
       - STR_GENERALLOCK
 
   - name: STR_BROADSIDE_SUITS_GV
+    points: 0
+    cost: 0
     dependencies:
       - STR_GENERALLOCK
 
   - name: STR_STALKER_SUITS_GV
+    points: 0
+    cost: 0
     dependencies:
       - STR_GENERALLOCK
 
@@ -496,8 +506,10 @@ research:
     spawnedEvent: STR_ENGRAVED_BATTLESUITS_GV
 
   - name: STR_ORCA_DROPSHIPS_GV
+    points: 60
+    cost: 600
     dependencies:
-      - STR_GENERALLOCK
+      - STR_COALITION_COMMAND_GV
 
   - name: STR_THE_SILVER_TOWER_GV
     points: 60
