@@ -660,11 +660,11 @@ items:
     bulletSpeed: 100
     accuracySnap: 100  # Breachers are more accurate
     tuSnap: 25
-    power: 120    # punch
+    power: 120    # lotsa punch
     damageType: 1
     # Pulse blaster
-    damageAlter:  # DA PULSE AP
-      RandomType: 6   # smoothed random
+    damageAlter:  # DA PULSE AP BREACHER
+      RandomType: 7   # rerolling wounds
       ToArmorPre: 0.2 # 0.2 # was 0.3  # melts some armor on the way in
       ArmorEffectiveness: 0.8  # the blaster retains armor penetration
     compatibleAmmo:
@@ -677,7 +677,7 @@ items:
     invWidth: 2
     invHeight: 3
     arcingShot: false
-    snapRange: 12
+    snapRange: 14
     dropoff: 20 #pulse shotgun
     recover: true
     shotgunBehavior: 1
@@ -687,7 +687,7 @@ items:
     vaporDensitySurface: 3
     vaporProbabilitySurface: 50
     powerRangeReduction: 20.0
-    powerRangeThreshold: 12.0
+    powerRangeThreshold: 14.0
     scripts:
       vaporParticleAmmo: |
         # noting
