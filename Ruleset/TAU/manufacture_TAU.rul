@@ -109,12 +109,14 @@ manufacture:
     requires:
       - STR_COALITION_COMMAND_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 25
+      STR_KILLPOINT_TOKEN: 20
       STR_ALIEN_ALLOYS: 5
       STR_ELERIUM_115: 8
+    producedItems:
+      STR_UFO_POWER_SOURCE: 1
     space: 22
     time: 800
-    cost: 130000
+    cost: 100000
 
 
   - name: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
@@ -154,7 +156,6 @@ manufacture:
     space: 8
     time: 4000
     cost: 400000
-    listOrder: 3351
     requiredItems:
       STR_ALIEN_ALLOYS: 120
       STR_ELERIUM_115: 80
@@ -166,24 +167,25 @@ manufacture:
     category: STR_CRAFT
     requires:
       - STR_ORCA_DROPSHIPS_GV
-    space: 16
+    space: 32
     time: 16000
-    cost: 1600000
-    listOrder: 3352
+    cost: 1200000
     requiredItems:
       STR_ALIEN_ALLOYS: 480
       STR_ELERIUM_115: 320
       STR_UFO_POWER_SOURCE: 8
       STR_UFO_NAVIGATION: 8
-      STR_KILLPOINT_TOKEN: 1600
+      STR_KILLPOINT_TOKEN: 800
 
-  ###
+  ### GENERALLOCKING this for now to avoid breaking saves
+  ### TODO: Sunset this method
   - name: STR_CONVERT_COMMISSION_GV
     space: 0
     time: 500
     cost: 100000
     category: STR_ADVANCEMENT
     requires:
+      - STR_GENERALLOCK
       - STR_TAU_GUEVESA_STRATEGY_GV
       - STR_WHITESHIELD_BLACK_MARKET_GV
     requiredItems:
