@@ -657,15 +657,15 @@ items:
     ignoreAmmoPower: true
     explosionSpeed: 10
     bulletSpeed: 100
-    accuracySnap: 90  # Breachers are more accurate
+    accuracySnap: 100  # Breachers are more accurate
     tuSnap: 25
-    power: 90
+    power: 120
     damageType: 1
     # Pulse blaster
     damageAlter:  # DA PULSE AP
       RandomType: 1   # random means some pellets will roll high
-      ToArmorPre: 0.1 # 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.9  # the blaster retains armor penetration
+      ToArmorPre: 0.15 # 0.2 # was 0.3  # melts some armor on the way in
+      ArmorEffectiveness: 0.8  # the blaster retains armor penetration
     compatibleAmmo:
       - STR_TAU_PULSE_MAG
     confSnap:
@@ -677,16 +677,16 @@ items:
     invHeight: 3
     arcingShot: false
     snapRange: 14
-    dropoff: 5 #pulse shotgun
+    dropoff: 20 #pulse shotgun
     recover: true
     shotgunBehavior: 1
-    shotgunSpread: 10
-    shotgunPellets: 4
+    shotgunSpread: 20
+    shotgunPellets: 5
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 3
     vaporProbabilitySurface: 50
-    powerRangeReduction: 0.5
-    powerRangeThreshold: 5.0
+    powerRangeReduction: 5.0
+    powerRangeThreshold: 10.0
     scripts:
       vaporParticleAmmo: |
         # noting
