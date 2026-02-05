@@ -332,7 +332,7 @@ items:
     snapRange: 12
     aimRange: 0
     accuracyAuto: 0
-    accuracySnap: 80
+    accuracySnap: 90
     accuracyAimed: 0
     tuAuto: 0
     tuSnap: 35
@@ -366,6 +366,7 @@ items:
     recover: false
     armor: 200
 
+
   - type: STR_TAU_FUSION_BLASTER_TWINLINKED_GV #MELTAGUN                    2019
     refNode: *STR_TAU_FUSION_BLASTERS
     categories: [STR_CAT_MELTA, STR_CAT_TACTICAL]
@@ -377,6 +378,124 @@ items:
     shotgunPellets: 20
     shotgunSpread: 0
     power: 20   #reroll woounds
+
+
+  - &STR_TAU_PLASMA_RIFLES
+    type: STR_TAU_PLASMA_RIFLE_GV  # done
+    vaporColorSurface: {mod: 40k, index: 2}
+    vaporDensitySurface: 6
+    vaporProbabilitySurface: 18
+    weight: 1
+    bigSprite: 222
+    floorSprite: {mod: 40k, index: 0}
+    handSprite: {mod: 40k, index: 0}
+    bulletSprite: {mod: 40k, index: 17}
+    fireSound: {mod: 40k, index: 18}
+    # hitSound: 19  # *** PLASMA rebalance
+    explosionHitSound: {mod: 40k, index: 690}  # *** PLASMA rebalance
+    hitAnimation: {mod: 40k, index: 112}  # 100  # *** PLASMA rebalance
+    battleType: 1
+    fixedWeapon: true
+    clipSize: -1
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    listOrder: 2710
+    dropoff: 4
+    autoRange: 0
+    snapRange: 18
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 95    # Fireknife targeting systems
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 40
+    tuAimed: 0
+    power: 150
+    powerForAnimation: 5  # 5 / 5 = 1
+    damageType: 5
+    damageAlter:
+      # ToHealth: 0.9
+      # ToArmor: 0.1
+      FixRadius: 1
+      ArmorEffectiveness: 0.65
+      FireThreshold: 70  # can ignite at high damage
+      ToArmor: 0.2
+      IgnoreDirection: false
+      RadiusReduction: 30.0
+
+  - type: STR_TAU_PLASMA_RIFLE_TWIN_LINKED_GV  # done
+    refNode: *STR_TAU_PLASMA_RIFLES
+    confSnap:
+      shots: 2
+    powerForAnimation: 5  # 5 / 5 = 1
+    damageType: 5
+    damageAlter:
+      # ToHealth: 0.9
+      # ToArmor: 0.1
+      FixRadius: 1
+      ArmorEffectiveness: 0.65
+      FireThreshold: 70  # can ignite at high damage
+      ToArmor: 0.2
+      IgnoreDirection: false
+      RadiusReduction: 30.0
+
+  - &STR_TAU_MISSILE_PODS
+    type: STR_TAU_MISSILE_POD_GV
+    # krak rockets... forever... but no auto shot
+    size: 0.2
+    hitAnimation: {mod: 40k, index: 184}
+    floorSprite: {mod: 40k, index: 16}
+    explosionHitSound: 5
+    bigSprite: 218
+    clipSize: -1
+    power: 110  # heavy version now has 150
+    powerForAnimation: 16  # 5 / 5 = 1
+    weight: 6  # was 8
+    costBuy: 0
+    costSell: 0
+    dropoff: 4
+    snapRange: 26
+    aimRange: 33
+    accuracySnap: 100 # Fireknife targeting systems
+    accuracyAimed: 110
+    tuSnap: 20
+    tuAimed: 40
+    damageType: 3
+    damageAlter:
+      ResistType: 1
+      RandomType: 6  # gaussian
+      ToHealth: 0.8
+      ToArmorPre: 0.3
+      ToArmor: 0.3
+      ToTile: 1.0
+      ToItem: 1.0
+      ArmorEffectiveness: 0.5
+      FixRadius: 1  # 1 for hand grenade version
+    battleType: 1
+    fixedWeapon: true
+    recover: false
+    fixedWeaponShow: false
+    invWidth: 2
+    invHeight: 3
+    tags:
+      DAMAGE_RESIST_PENETRATION_PERCENT: 50
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
+
+  - type: STR_TAU_MISSILE_POD_TWIN_LINKED_GV  # done
+    refNode: *STR_TAU_MISSILE_PODS
+    # krak rockets... forever
+    dropoff: 4
+    autoRange: 24
+    accuracyAuto: 90
+    tuAuto: 25
+    autoShots: 2
+    sprayWaypoints: 2
+
+
 
 
   # Save for implementing as two ammos
