@@ -443,13 +443,17 @@ items:
   - &STR_TAU_MISSILE_PODS
     type: STR_TAU_MISSILE_POD_GV
     # krak rockets... forever... but no auto shot
-    bigSprite: {mod: 40k, index: 1070}
+    size: 0.2
+    hitAnimation: {mod: 40k, index: 184}
+    floorSprite: {mod: 40k, index: 16}
+    explosionHitSound: 5
+    bigSprite: 218
     clipSize: -1
     power: 110  # heavy version now has 150
     powerForAnimation: 16  # 5 / 5 = 1
     weight: 6  # was 8
-    costBuy: 7500
-    costSell: 4000
+    costBuy: 0
+    costSell: 0
     dropoff: 4
     snapRange: 26
     aimRange: 33
