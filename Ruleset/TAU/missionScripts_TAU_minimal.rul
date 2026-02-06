@@ -329,6 +329,7 @@ missionScripts:
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
         # Higher chances of harder races for 3-5
         # Even chances of all for beyond that
+        STR_BLACKTEMPLAR_BASEV2: 33
     firstMonth: 4
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
@@ -346,7 +347,8 @@ missionScripts:
         STR_TRAITOR_GUARD_BASE: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
         # Higher chances of harder races
-        STR_NECRON_BASE: 50
+        STR_BLACKTEMPLAR_BASEV2: 50
+        STR_NECRON_BASE: 33
     firstMonth: 6
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
@@ -405,8 +407,6 @@ missionScripts:
   - type: newGVBasesLaterIC
     missionWeights:
       0:
-        STR_CULTIST_BASE: 33
-        STR_TRAITOR_GUARD_BASE: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
         STR_BLOODYROSE_BASEV2: 22
         STR_BLACKTEMPLAR_BASEV2: 22
@@ -424,13 +424,9 @@ missionScripts:
   - type: newGVBasesExtraIC
     missionWeights:
       0:
-        STR_CULTIST_BASE: 33
-        STR_TRAITOR_GUARD_BASE: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
         STR_BLOODYROSE_BASEV2: 33
-        STR_BLACKTEMPLAR_BASEV2: 33
-        # Higher chances of harder races
-        STR_NECRON_BASE: 50
+        STR_BLACKTEMPLAR_BASEV2: 50
     firstMonth: 6
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
@@ -484,8 +480,8 @@ missionScripts:
         STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
         STR_ALIEN_BASE: 11
         STR_NURGLE_BASE: 11
-        STR_SLAANESH_BASE: 22
-        STR_TZEENTCH_BASE: 22
+        STR_SLAANESH_BASE: 11
+        STR_TZEENTCH_BASE: 33
         STR_BLACKTEMPLAR_BASEV2: 33
         STR_BLOODYROSE_BASEV2: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
