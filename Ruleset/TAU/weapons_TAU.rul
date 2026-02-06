@@ -406,23 +406,22 @@ items:
     snapRange: 18
     aimRange: 0
     accuracyAuto: 0
-    accuracySnap: 95    # Fireknife targeting systems
+    accuracySnap: 100    # Fireknife targeting systems
     accuracyAimed: 0
     tuAuto: 0
-    tuSnap: 40
+    tuSnap: 30
     tuAimed: 0
-    power: 150
-    powerForAnimation: 5  # 5 / 5 = 1
+    power: 200  # always on maximal mode - hits very hard
+    powerForAnimation: 16  # 5 / 5 = 1
     damageType: 5
     damageAlter:
       # ToHealth: 0.9
       # ToArmor: 0.1
-      FixRadius: 1
+      RandomType: 6
       ArmorEffectiveness: 0.65
       FireThreshold: 70  # can ignite at high damage
       ToArmor: 0.2
-      IgnoreDirection: false
-      RadiusReduction: 30.0
+      FixRadius: 1
 
   - type: STR_TAU_PLASMA_RIFLE_TWIN_LINKED_GV  # done
     refNode: *STR_TAU_PLASMA_RIFLES
@@ -444,6 +443,7 @@ items:
     type: STR_TAU_MISSILE_POD_GV
     # krak rockets... forever... but no auto shot
     size: 0.2
+    bulletSprite: {mod: 40k, index: 0}
     hitAnimation: {mod: 40k, index: 184}
     floorSprite: {mod: 40k, index: 16}
     explosionHitSound: 5
