@@ -324,16 +324,13 @@ missionScripts:
   - type: newGVBasesLaterIA
     missionWeights:
       0:
-        STR_CULTIST_BASE: 33
-        STR_TRAITOR_GUARD_BASE: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
         # Higher chances of harder races for 3-5
         # Even chances of all for beyond that
-        STR_BLACKTEMPLAR_BASEV2: 33
     firstMonth: 4
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
-    executionOdds: 100
+    executionOdds: 70
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: false
       STR_TAU_GUEVESA_GV: true
@@ -343,12 +340,8 @@ missionScripts:
   - type: newGVBasesExtraIA
     missionWeights:
       0:
-        STR_CULTIST_BASE: 33
-        STR_TRAITOR_GUARD_BASE: 33
         STR_INQUISITION_OUTPOST_BUILD_GV: 33
         # Higher chances of harder races
-        STR_BLACKTEMPLAR_BASEV2: 50
-        STR_NECRON_BASE: 33
     firstMonth: 6
     startDelay: 120
     randomDelay: 20160 # Up to 2 weeks random delay
@@ -496,6 +489,7 @@ missionScripts:
       STR_TAU_GUEVESA_GV: true
       STR_IMPERIAL_CRUSADE_GV: true
 
+  # Tzeentchified
   - &STR_HARD_MISSION_TABLE_IC
     type: warpStormBuildingHardGV
     missionWeights:
@@ -523,28 +517,25 @@ missionScripts:
         # STR_REDEEMEDBASE_L1_MISSION_GV: 33
         # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
       2:
-        STR_ALIEN_RESEARCH_HARD: 33
+        STR_ALIEN_RESEARCH_HARD: 8
         STR_NURGLE_RESEARCH_HARD: 11
-        STR_ALIEN_RESEARCH_TZEENTCH_HARD: 20
-        STR_ALIEN_HARVEST_HARD: 33
+        STR_ALIEN_RESEARCH_TZEENTCH_HARD: 33
+        STR_ALIEN_HARVEST_HARD: 11
         STR_NURGLE_HARVEST_HARD: 15
-        STR_ALIEN_HARVEST_TZEENTCH_HARD: 8 # rare
+        STR_ALIEN_HARVEST_TZEENTCH_HARD: 33 # rare
         STR_SLAANESH_HARVEST_HARD: 8 # rare
-        STR_ALIEN_ABDUCTION_HARD: 33
+        STR_ALIEN_ABDUCTION_HARD: 8
         STR_NURGLE_ABDUCTION_HARD: 12
-        STR_SLAANESH_ABDUCTION_HARD: 20
-        STR_ALIEN_ABDUCTION_TZEENTCH_HARD: 8
-        STR_ALIEN_INFILTRATION_HARD: 33
+        STR_SLAANESH_ABDUCTION_HARD: 12
+        STR_ALIEN_ABDUCTION_TZEENTCH_HARD: 33
+        STR_ALIEN_INFILTRATION_HARD: 11
         STR_NURGLE_INFILTRATION_HARD: 11
         STR_ALIEN_INFILTRATION_SLAANESH_HARD: 11
-        STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 11
-        STR_ALIEN_BASE: 22
-        STR_NURGLE_BASE: 22
-        STR_SLAANESH_BASE: 22
-        STR_TZEENTCH_BASE: 22
-        STR_BLACKTEMPLAR_BASEV2: 33
-        STR_BLOODYROSE_BASEV2: 33
-        STR_INQUISITION_BASE_IFILTRATE_GV: 33
+        STR_ALIEN_INFILTRATION_TZEENTCH_HARD: 44
+        STR_ALIEN_BASE: 11
+        STR_NURGLE_BASE: 11
+        STR_SLAANESH_BASE: 11
+        STR_TZEENTCH_BASE: 44
         # STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 33
         # STR_REDEEMEDBASE_L1_MISSION_GV: 33
         # STR_TENAXBASE_LEVEL_1_MISSION_GV: 33
