@@ -396,6 +396,8 @@ research:
       - STR_EMERGENCY_PROTOCOLS_GV
     reenables:
       - STR_PSI_LAB
+    unlocks:
+      - STR_PSI_LAB
     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
@@ -518,6 +520,15 @@ research:
       - STR_COALITION_COMMAND_GV
       - STR_COMMANDER_PLUS
     spawnedEvent: STR_THE_SILVER_TOWER_EVENT_GV
+
+  - name: STR_TAU_PSI_LAB_BACKUP_GV
+    points: 0
+    cost: 0
+    dependencies:
+      - STR_RECUSANT_SISTERS_GV
+    unlocks:
+      - STR_PSI_LAB
+
 
 # # Future Imperial Crusade content
 # [NYI] STR_THE_TERRAN_PROBLEM_GV bifurcates into STR_THE_WARPSTORM_PROBLEM_GV and STR_THE_CRUSADE_PROBLEM_GV

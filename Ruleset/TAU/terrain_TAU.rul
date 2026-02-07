@@ -1774,23 +1774,21 @@ terrains:
         length: 10
         groups: 9
         items:
-          STR_TZEENTCH_BLESSED_SPAWNER:
+          STR_TZEENTCH_CSM_SPAWNER:
             - [1, 6, 0]
             - [1, 2, 0]
-          STR_HAVOC_TZEENTCH_SPAWNER:
-            - [4, 1, 1]
-            - [4, 6, 1]
             - [17, 1, 0]
             - [17, 6, 0]
+          # STR_BLACKSTONE_STORMTROOPER_ELITE_SPAWNER:
         fuseTimers:
-          STR_TZEENTCH_BLESSED_SPAWNER: [0, 0]
-          STR_HAVOC_TZEENTCH_SPAWNER: [0, 0]
+          STR_TZEENTCH_CSM_SPAWNER: [0, 0]
+          # STR_BLACKSTONE_STORMTROOPER_ELITE_SPAWNER: [0, 0]
       - name: GVGKHQ02
         width: 30
         length: 30
         groups: 10
         items:
-          STR_TZEENTCH_SUMMONER_SPAWNER:
+          STR_TZEENTCH_LEADER_SPAWNER:
             - [3, 14, 3]
           STR_TZEENTCH_BLESSED_SPAWNER:
             - [9, 14, 0]
@@ -1803,7 +1801,7 @@ terrains:
             - [25, 25, 2]
             - [25, 2, 2]
         fuseTimers:
-          STR_TZEENTCH_CULT_SUMMONER_SPAWNER: [0, 0]
+          STR_TZEENTCH_LEADER_SPAWNER: [0, 0]
           STR_TZEENTCH_BLESSED_SPAWNER: [0, 0]
           STR_HAVOC_TZEENTCH_SPAWNER: [0, 0]
       - name: GVMISSXBASE_00
@@ -1897,16 +1895,13 @@ terrains:
         items:
           STR_DAEMON_PURGE_MODERATE_ENVIRONMENTAL_TOKEN:
             - [9, 12, 0]
-          STR_TZEENTCH_BLESSED_SPAWNER:
-            - [9, 12, 0]
           STR_HAVOC_TZEENTCH_SPAWNER:
-            - [9, 10, 2]
             - [4, 9, 1]
             - [13, 7, 1]
             - [9, 4, 1]
             - [11, 13, 1]
         fuseTimers:
-          STR_TZEENTCH_BLESSED_SPAWNER: [0, 0]
+          # STR_TZEENTCH_BLESSED_SPAWNER: [0, 0]
           STR_HAVOC_TZEENTCH_SPAWNER: [0, 0]
       - name: GVMISSXBASE_22  # big tile
         width: 20
@@ -2006,42 +2001,42 @@ terrains:
           STR_TZEENTCH_SISTERASS_SPAWNER:
             - [0, 7, 0]
             - [0, 11, 0]
-            # - [2, 8, 0]
+            - [2, 8, 0]
             - [3, 16, 0]
           STR_TZEENTCHS_SISTERCHAMP_SPAWNER:
             - [1, 1, 0]
-            # - [16, 16, 0]
+            - [16, 16, 0]
           STR_TZEENTCH_BATTLE_SERVITOR_PLASMA_SPAWNER:
             - [16, 2, 0]
-            # - [2, 16, 0]
+            - [2, 16, 0]
           STR_TZEENTCH_CULT_POSSESSED_SPAWNER:
             - [10, 12, 0]
-            # - [9, 8, 0]
+            - [9, 8, 0]
           STR_TZEENTCH_CULT_LEADER_ASSASSIN_SPAWNER:
             - [8, 11, 1]
           STR_TZEENTCH_SISTER_SPAWNER:
             - [1, 8, 0]  # door guard
-          # STR_KHORNE_VALKIA_SPAWNER:
-          #   - [2, 7, 0]
-          #   # - [2, 11, 0]
-          # STR_KHORNE_CHAMP_SPAWNER:
+            - [2, 7, 0]
+            - [2, 11, 0]
+          # STR_TZEENTCH_LEADER_SPAWNER:
           #   - [10, 9, 0]
+            # - [12, 9, 0]
+          STR_TZEENTCH_SORCERERLORD_SPAWNER:
+            - [11, 9, 0]
           # STR_SLAANESH_COMMANDER_SPAWNER:
           #   - [12, 9, 0]
           STR_HAVOC_TZEENTCH_SPAWNER:
             - [6, 9, 0]
-            # - [8, 7, 0]
+            - [8, 7, 0]
           STR_HERETIC_SISTERINQ_SPAWNER:
             - [5, 11, 1]
             # - [5, 17, 0]
-          # STR_SLAANESH_ANOINTED_MISSILE_SPAWNER:
-          #   - [1, 1, 0]
-          #   # - [16, 14, 0]
-          # STR_NIGHTLORDS_CSM_SPAWNER:
-          #   - [10, 6, 0]
-          #   - [8, 1, 0]
-          # STR_NIGHTLORDS_WARPTALON_SPAWNER:
-          #   - [13, 5, 0]
+          STR_BLACKSTONE_STORMTROOPER_ELITE_SPAWNER:
+            - [1, 1, 0]
+            - [16, 14, 0]
+            - [10, 6, 0]
+            - [8, 1, 0]
+            - [13, 5, 0]
           # STR_NEVERBORN_SPAWNER:
           #   - [5, 13, 0]
           #   # - [4, 13, 0]
@@ -2052,10 +2047,9 @@ terrains:
           STR_TZEENTCH_CSM_SPAWNER:
             - [7, 11, 1]
             - [10, 5, 1]
-            # - [14, 5, 1]
-          # STR_NURGLE_CSM_SPAWNER:
-          #   - [10, 6, 1]
-          #   - [13, 13, 1]
+            - [14, 5, 1]
+            - [10, 6, 1]
+            - [13, 13, 1]
           # STR_NURGLE_TERMINATOR_SPAWNER:
           #   - [14, 13, 1]
           STR_BLUEHORROR_SPAWNER:
@@ -2111,17 +2105,19 @@ terrains:
           # STR_NURGLE_CSM_SPAWNER: [0, 0]
           # STR_NURGLE_TERMINATOR_SPAWNER: [10, 16]
           STR_TZEENTCH_CSM_SPAWNER: [10, 16]
-          STR_TZEENTCH_CULT_LEADER_SPAWNER: [0, 0]
-          STR_TZEENTCH_SUMMONER_SPAWNER: [0, 0]
+          STR_TZEENTCH_CULT_LEADER_SPAWNER: [4, 6]
+          STR_TZEENTCH_SUMMONER_SPAWNER: [4, 6]
           STR_ETHEREAL_LEADER_SPAWNER: [4, 6]
-          STR_TZEENTCH_FLAMER_TERRORIST_SPAWNER: [4, 8]
+          # STR_TZEENTCH_LEADER_SPAWNER: [10, 16]
+          STR_TZEENTCH_SORCERERLORD_SPAWNER: [10, 16]
+          STR_TZEENTCH_FLAMER_TERRORIST_SPAWNER: [4, 6]
           # STR_DEAMONETTE_SPAWNER: [0, 0]
           # STR_ALPHA_DAEMONETTE_SPAWNER: [0, 0]
           # STR_SLAANESH_CSM_SPAWNER: [0, 0]
           # STR_SLAANESH_ANOINTED_SPAWNER: [4, 6]
           # STR_SLAANESH_ANOINTED_MISSILE_SPAWNER: [4, 6]
           # STR_SLAANESH_COMMANDER_SPAWNER: [0, 0]
-          # STR_CHAOS_DREAD2_SPAWNER: [0, 0]
+          STR_CHAOS_DREAD2_SPAWNER: [0, 0]
           # STR_NEVERBORN_SPAWNER: [0, 0]
           # STR_SLAANESH_CHOSEN_SPAWNER: [6, 9]
           # STR_PLAGUEBEARER_SPAWNER: [6, 8]

@@ -1455,7 +1455,7 @@ alienDeployments:
     terrains:
       - FINALGUEVESA
     startingCondition: STR_FINAL_MISSION_GUEVESA_GV
-    race: STR_TZEENTCH_FINAL_HARD_GV
+    randomRace: [STR_TZEENTCH_CULT_BLUESTONE]
     # script: FINAL01S
     shade: 7
     nextStage: STR_FINAL_ENTRANCE_GUEVESA_GV
@@ -1475,32 +1475,55 @@ alienDeployments:
   - type: STR_FINAL_ENTRANCE_GUEVESA_GV
     music:
       - GMGEO19
+    randomRace: [STR_TZEENTCH_CULT_WITH_THOUSAND_SONS]
     data:
-      - alienRank: 5
-        lowQty: 5  # 4
-        highQty: 5  # 6
-        dQty: 5
-        percentageOutsideUfo: 60
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 4  # 3
-        highQty: 4  # 5
+        lowQty: 1
+        highQty: 2
         dQty: 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
-      - alienRank: 0
-        lowQty: 4  # 3
-        highQty: 4  # 5
-        dQty: 0
-        percentageOutsideUfo: 0
+      - alienRank: 2
+        lowQty: 2
+        highQty: 3 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4
+        highQty: 4 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 11 #4
+        highQty: 12 #6
+        dQty: 1
+        percentageOutsideUfo: 70
         itemSets: *emptyItemSets
       - alienRank: 6
-        lowQty: 3  # 2
-        highQty: 3  # 4
-        dQty: 0
-        percentageOutsideUfo: 100
+        lowQty: 4 #1
+        highQty: 5 #3
+        dQty: 2
+        percentageOutsideUfo: 50
         itemSets: *emptyItemSets
-    race: STR_TZEENTCH_FINAL_HARD_GV
+      - alienRank: 7
+        lowQty: 4 #1
+        highQty: 5 #3
+        dQty: 2
+        itemSets: *emptyItemSets
     width: 50
     length: 70
     height: 7
@@ -1523,7 +1546,7 @@ alienDeployments:
     width: 120
     length: 70
     height: 4
-    race: STR_TZEENTCH_FINAL_HARD_GV
+    randomRace: [STR_TZEENTCH_CULT_WITH_THOUSAND_SONS]
     enviroEffects: STR_WARDED_ENVIRO
     terrains:
       - ALART_TZEENTCH
@@ -1531,45 +1554,51 @@ alienDeployments:
     music:
       - INMYSPIRIT
     data:
-      - alienRank: 5
-        lowQty: 5 #4
-        highQty: 5 #6
-        dQty: 1
-        percentageOutsideUfo: 70
-        itemSets: *emptyItemSets
-      - alienRank: 4
-        lowQty: 1
-        highQty: 1 #2
-        dQty: 1 #0
-        percentageOutsideUfo: 20
-        itemSets: *emptyItemSets
-      - alienRank: 3
-        lowQty: 1
-        highQty: 1
-        dQty: 1
-        percentageOutsideUfo: 20
-        itemSets: *emptyItemSets
-      - alienRank: 2
-        lowQty: 1
-        highQty: 1 #2
-        dQty: 1 #0
-        percentageOutsideUfo: 20
-        itemSets: *emptyItemSets
-      - alienRank: 1
+      - alienRank: 0
         lowQty: 1
         highQty: 1
         dQty: 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2
+        highQty: 3
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 4 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 5
+        dQty: 1
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 5
+        highQty: 6 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 11 #4
+        highQty: 12 #6
+        dQty: 1
+        percentageOutsideUfo: 70
+        itemSets: *emptyItemSets
       - alienRank: 6
-        lowQty: 2 #1
-        highQty: 2 #3
+        lowQty: 6 #1
+        highQty: 7 #3
         dQty: 2
         percentageOutsideUfo: 50
         itemSets: *emptyItemSets
       - alienRank: 7
-        lowQty: 2 #1
-        highQty: 2 #3
+        lowQty: 5 #1
+        highQty: 6 #3
         dQty: 2
         percentageOutsideUfo: 50
         itemSets: *emptyItemSets
