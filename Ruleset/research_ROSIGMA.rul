@@ -2559,6 +2559,7 @@ research:
     points: 30
     dependencies:
       - STR_MIDTIER_PREREQ  # instead of being dependent on STR_MASTER_CRAFTING
+      - STR_NOT_WORDBEARERS
 
   - delete: STR_MASTER_CRAFTING
   - name: STR_MASTER_CRAFTING  # High-tier Master Crafting
@@ -2567,6 +2568,7 @@ research:
     dependencies:
       - STR_MASTER_CRAFTING_AMMO
       - STR_UFO_CONSTRUCTION  # instead of midtier
+      - STR_NOT_WORDBEARERS
 
   - delete: STR_HIGHTIER_PREREQ
   - name: STR_HIGHTIER_PREREQ  # (High-tier Researched)
@@ -3271,6 +3273,7 @@ research:
     dependencies:
       - STR_CHAOS_PATH
       - STR_NOT_CHAOSCULT
+      - STR_NOT_WORDBEARERS
       - STR_HIGHTIER_PREREQ
     unlocks:
       - STR_NEW_FIGHTER_TRANSPORTER
@@ -3280,11 +3283,12 @@ research:
     cost: 0
     points: 0
     dependencies:
+      - STR_WORDBEARERS_STRATEGY
       - STR_CHAOS_PATH
       - STR_NOT_CHAOSCULT
       - STR_CYDONIA_OR_BUST
     unlocks:
-      - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
 
 ### Missions
   - delete: STR_SIDEOPERATIONS
@@ -3559,7 +3563,6 @@ research:
       - STR_CASS_R
       - STR_HB_DEP1
       - STR_HFLAMERR
-      - STR_SIDEOPERATIONS
     cutscene: c2
 
   - delete: STR_CHAPTERARMYR
@@ -3572,7 +3575,7 @@ research:
       - STR_MIDTIER_PREREQ
 
   - delete: STR_ULTIMATE_CRAFT
-  - name: STR_ULTIMATE_CRAFT  # Chapter High-tier Requisitions
+  - name: STR_ULTIMATE_CRAFT  # Chapter High-tier Requisitions use by WB too
     cost: 900
     points: 30
     dependencies:
@@ -7348,6 +7351,11 @@ research:
       - STR_WORDBEARERS_STRATEGY
       - STR_WBNEW_FIGHTER_TRANSPORTER
 
+  - name: STR_NEW_FIGHTER_TRANSPORTERLOCK  #WB Warship lock
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_GENERALLOCK
+
   - name: STR_WBHOLYWARSHIPFINALEREBUS # WB The Holy Warship
     cost: 900
     points: 30
@@ -7356,6 +7364,7 @@ research:
       - STR_FINAL_RITUALEREBUS
       - STR_WBMISSION9DONE
       - STR_HIGHTIER_PREREQ
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
 
   - name: STR_WBHOLYWARSHIPFINAL # WB The Holy Warship
     cost: 900
@@ -7365,6 +7374,7 @@ research:
       - STR_FINAL_RITUAL
       - STR_WBMISSION9DONE
       - STR_HIGHTIER_PREREQ
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
 
 ### Eldar Alliance
   - delete: STR_ELDAR_SHIELD
