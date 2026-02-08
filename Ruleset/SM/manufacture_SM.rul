@@ -1460,3 +1460,18 @@ manufacture:
     requiredItems:
       STR_KILLPOINT_TOKEN: 2000
     requiresBaseFunc: [PSI]  # requires chapel now
+
+# re activate the old 40k crated drop pod free manufacture as recent 40k version disabled it
+
+  - name: STR_CRATED_DROPPODS
+    category: STR_CRAFT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_NOT_WORDBEARERS
+    space: 0
+    time: 100
+    cost: 1000
+    requiredItems:
+      STR_CRATED_DROPPODS: 1
+    producedItems:
+      STR_SKYRANGER: 1
