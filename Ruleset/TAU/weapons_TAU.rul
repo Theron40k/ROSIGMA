@@ -262,7 +262,6 @@ items:
     clipSize: 1
     experienceTrainingMode: 19
 
-
   - type: STR_TAU_VETERAN_COMMAND_GV
     refNode: *STR_TAU_ARTS_OF_WAR
     damageBonus:
@@ -271,7 +270,6 @@ items:
     damageAlter:
       FixRadius: 5
     clipSize: 2
-
 
   - type: STR_TAU_FIREBLADE_COMMAND_GV
     refNode: *STR_TAU_ARTS_OF_WAR
@@ -285,6 +283,44 @@ items:
       energy: 40
     clipSize: 3
 
+  - &STR_GUEVESA_POWER_SWORDS
+    type: STR_GUEVESA_LEADER_BLADE_GV
+    refNode: *STR_TAU_ARTS_OF_WAR
+    specialIconSprite: 240
+    meleeSound: {mod: 40k, index: 754}  # was nothing
+    meleeHitSound: {mod: 40k, index: 773}  # was 101
+    meleeAnimation: {mod: 40k, index: 4}  # was 0
+    hidePower: true
+    meleePower: 60  # lighter than typical power swords
+    costMelee:
+      time: 14
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    meleeBonus:
+      strength: 0.1
+      melee: 0.3
+    meleeMultiplier:
+      melee: 0.9
+      reactions: 0.1
+    meleeType: 5
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    experienceTrainingMode: 19
+    accuracyMelee: 110
+    confMelee:
+      name: STR_GUEVESA_SWORD_HIT_GV
+
+  - type: STR_GUEVESA_VETERAN_BLADE_GV
+    refNode: *STR_GUEVESA_POWER_SWORDS
+    damageBonus:
+      bravery: 0.5
+      reactions: 0.25
+    damageAlter:
+      FixRadius: 5
+    clipSize: 2
 
   ### improved medikit because no bayonet
   - type: STR_TAU_MEDI_KIT
