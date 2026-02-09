@@ -104,6 +104,17 @@
 #        STR_BREAKTHROUGH_GV: 100
 #    adhocMissionScriptTags: ["breakthroughGV"]
 
+### Take down an Iron Guard air defense base
+
+### backup for final mission not spawning
+# adhocScripts:
+#   - type: finalMissionBackupGV
+#     missionWeights:
+#       0:
+#         STR_FINAL_MISSION_GUEVESA_GV: 100
+#     adhocMissionScriptTags: ["finalMissionBackupGV"]
+
+
 events:
   - name: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
     description: STR_TAU_GUEVESA_STRATEGY_CODEX_DESCRIPTION_GV
@@ -236,7 +247,9 @@ events:
     description: STR_THE_SILVER_TOWER_CODEX_DESCRIPTION_GV
     background: InquisitionBG.SCR
 
-
+  - name: STR_PSI_LAB_BACKUP_EVENT_GV
+    description: STR_PSI_LAB_BACKUP_EVENT_DESCRIPTION_GV
+    background: InquisitionBG.SCR
 
   # turn off the GSC arrival events
   - update: STR_GSC_ARRIVAL_BASE_SPAWN
