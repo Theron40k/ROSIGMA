@@ -1,4 +1,15 @@
 manufacture:
+
+  ### Something (prosaic) to do with your purity seals for now
+  - name: STR_CONVERT_PURITY_SEALS_GV
+    space: 0
+    time: 10
+    cost: 1
+    requiredItems:
+      STR_PURITY_SEAL: 10
+    producedItems:
+      STR_KILLPOINT_TOKEN: 50
+
 ### Recruit guard prisoners as gue'vesa for now
   - &STR_WELCOME_GUEVESALA_GV
     name: STR_WELCOME_GUARD_GV
@@ -108,6 +119,16 @@ manufacture:
     spawnedPersonType: STR_ADEPTAS
     requiredItems:
       STR_SHRINE_MEDICAE_AI: 1
+    producedItems:
+      STR_PURITY_SEAL: 7
+
+  ### TODO: LOCK after Toad's game is done - one off
+  - name: STR_ABSOLVE_BR_MEDICAE_GV
+    category: STR_INDOCTRINATION_CATEGORY_GV
+    refNode: *STR_TAU_SISTERS_GV
+    spawnedPersonType: STR_ADEPTAS
+    requiredItems:
+      STR_BLOODYROSE_HOSPITALIER_AI: 1
     producedItems:
       STR_PURITY_SEAL: 7
 
