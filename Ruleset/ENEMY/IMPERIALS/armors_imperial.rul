@@ -1057,6 +1057,49 @@ armors:
     psiDefence:
       psiStrength: 5.0               # 500% the psiStrength
 
+  - type: STR_BLACKTEMPLARARMOR_REC
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    spriteSheet: BLACKTEMPLARRECbattle.PCK
+    spriteInv: BLACKTEMPLARARMOR_REC.PCK
+    corpseBattle:
+      - STR_BLACKTEMPLARREC_AICORPSE
+    specialWeapon: STR_MFIST
+    drawingRoutine: 0
+    frontArmor: 150
+    sideArmor: 130
+    rearArmor: 100
+    underArmor: 150
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.6  # AP
+      - 0.3  # FLAMES
+      - 0.4  # HE
+      - 0.9  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 0.8  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    allowsRunning: false
+    allowsKneeling: false
+    loftempsSet: [4]
+    builtInWeapons:
+      - AUX_CROZIUS
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 40
+      ARMOR_ENERGY_SHIELD_DECAY: 20
+      INFECTION_RESIST: 100  # infection immune
+      UNIT_TYPE_CONSECRATED: 1
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength
+
+
   # SPACE WOLVES TIER 0
 
   - type: STR_SPACEWOLVESARMOR_SCOUT
