@@ -28,7 +28,7 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_FIREWARRIOR_SHASUI_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 120
+      STR_KILLPOINT_TOKEN: 90
     requiredCommendations:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0
@@ -45,7 +45,7 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_FIREWARRIOR_SHASVRE_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 180
+      STR_KILLPOINT_TOKEN: 120
     requiredCommendations:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0
@@ -103,8 +103,6 @@ soldierTransformation:
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
-    requiredItems:
-      STR_KILLPOINT_TOKEN: 5
     upperBoundType: 1
     allowedSoldierTypes:
       - STR_MILITIA_GV
@@ -138,7 +136,7 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_GUEVESAUI_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 120
+      STR_KILLPOINT_TOKEN: 90
     requiredCommendations:
       STR_BATTLE_TESTED: 0
       STR_VETERAN_COMMENDATION: 0
@@ -157,6 +155,22 @@ soldierTransformation:
       STR_KILLPOINT_TOKEN: 60
     requiredCommendations:
       STR_BATTLE_TESTED: 0
+    requiredMinStats:
+      bravery: 50
+      tu: 1
+
+  - name: STR_PROMOTE_MARINVESAVRE_GV
+    refNode: *STR_GUEVESA_PROMOTION_GV
+    producedSoldierType: STR_MARINVESAVRE_GV
+    producedSoldierArmor: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+    upperBoundType: 1
+    allowedSoldierTypes:
+      - STR_MARINVESAVRE_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 90
+    requiredCommendations:
+      STR_BATTLE_TESTED: 0
+      STR_VETERAN_COMMENDATION: 0
     requiredMinStats:
       bravery: 50
       tu: 1

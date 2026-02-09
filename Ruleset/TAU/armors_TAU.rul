@@ -360,6 +360,10 @@ armors:
     specialWeapon: STR_TAU_LEADER_COMMAND_GV
     corpseBattle:
       - STR_TAUFIREWARRIORLEADER_PCCORPSE
+    frontArmor: 75 # +5 basic Guard Carapace
+    sideArmor: 65
+    rearArmor: 45
+    underArmor: 65
     stats:
       firing: 5
       reactions: 5
@@ -580,7 +584,10 @@ armors:
     requires: STR_ENGRAVED_ARMORS_GV
     refNode: *STR_TAU_ENGRAVED_ARMOR_TEMPLATE_GV
     storeItem: STR_ENGRAVED_ARMOR_ITEM_GV
-    underArmor: 70
+    frontArmor: 90 # +20 vs basic Guard Carapace; reinforced artificer quality
+    sideArmor: 80
+    rearArmor: 55
+    underArmor: 75
     damageModifier:  # Captain quality damage resist
       - 1.0  # none
       - 0.7  # AP
@@ -1270,6 +1277,8 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
       ARMOR_OVERWATCH_TU_RESTORED: 15
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
 
 ### GUEVESA CULTIST ARMORS
   - &STR_GUEVESA_LIGHT_ARMORS_GV   # STR_GUARD_ARMOR_PILOT_DAMAGE
@@ -1356,6 +1365,7 @@ armors:
     antiCamouflageAtDark: 3
     customArmorPreviewIndex: 842  # was 542
     spriteSheet: TAUBEASTMAN_FLAK_BSPLAYER.PCK
+    requires: STR_BEASTMEN_CULTISTS_GV
     spriteInv: TBFLAK_33
     corpseBattle:
       - STR_TAUMARINVESA_PCCORPSE
@@ -1432,6 +1442,7 @@ armors:
     units:
       - STR_MARINVESA_GV
       - STR_MARINVESAUI_GV
+      - STR_MARINVESAVRE_GV
     stats:
       bravery: 10
       stamina: 10
@@ -1450,43 +1461,99 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
   # TODO: Marinvesavre
-  - type: STR_ENGRAVED_TAUMARINVESACARAP_PC_ARMOR_GV
+  - type: STR_TAUMARINVESACARAP_LEADER_PC_ARMOR_GV
     refNode: *STR_MARINVESA_CARAPACE
     visibilityAtDay: 35  # abhuman squat malus
-    visibilityAtDark: 30  # abhuman squat bonus
+    visibilityAtDark: 35  # Tau night vision
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
     customArmorPreviewIndex: 843  # 543
     psiCamouflage: 3
-    requires: STR_ENGRAVED_ARMORS_GV
+    requires: STR_INFILTRATION_CADRE_GV
     spriteSheet: TAUBEASTMAN_CARAPACE_BSPLAYER.PCK
     specialWeapon: STR_GUEVESA_LEADER_BLADE_GV
     spriteInv: TBCA_33
     storeItem: STR_NONE
     corpseBattle:
       - STR_TAUMARINVESA_PCCORPSE
-    frontArmor: 80
-    sideArmor: 70
-    rearArmor: 50
-    underArmor: 70   # better against explosions
+    frontArmor: 85
+    sideArmor: 75
+    rearArmor: 55
+    underArmor: 75   # better against explosions
     drawingRoutine: 0
     zombiImmune: true
     weight: 15
-    damageModifier:  # GUARD ARMOR
+    damageModifier:  # Leader quality damage resist
       - 1.0  # none
-      - 1.0  # AP
-      - 1.2  # FLAMES 20% BEASTMAN MALUS
-      - 1.0  # HE
+      - 0.8  # AP
+      - 0.8  # FLAMES; partially environmentally sealed + 20% beastman malus
+      - 0.8  # HE
       - 0.8  # LASCANON
       - 0.9  # PLASMA
-      - 0.9  # STUN 10% BEASTMAN BONUS
-      - 0.9  # MELEE 10% BEASTMAN BONUS
-      - 1.0  # ACID
+      - 0.8  # STUN 10% beastman bonus
+      - 1.0  # MELEE 10% beastman bonus
+      - 0.9  # ACID
       - 0.0  # SMOKE
-      - 1.0  # IMPACT
-      - 1.1  # MELTA
+      - 0.7  # IMPACT
+      - 0.9  # MELTA
     units:
       - STR_MARINVESAUI_GV
+      - STR_MARINVESAVRE_GV
+    stats:
+      stamina: 15
+      bravery: 15
+      strength: 10
+      melee: 10
+      reactions: 5
+    loftempsSet: [4]  # big targets
+    tags:
+      INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      # HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  # TODO: Marinvesavre
+  - type: STR_ENGRAVED_TAUMARINVESACARAP_PC_ARMOR_GV
+    refNode: *STR_MARINVESA_CARAPACE
+    visibilityAtDay: 35  # abhuman squat malus
+    visibilityAtDark: 45  # abhuman squat bonus + Tau night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    customArmorPreviewIndex: 843  # 543
+    psiCamouflage: 5  # Warp attuned
+    requires: STR_ENGRAVED_ARMORS_GV
+    spriteSheet: TAUBEASTMAN_CARAPACE_BSPLAYER.PCK
+    specialWeapon: STR_GUEVESA_VETERAN_BLADE_GV
+    spriteInv: TBCA_33
+    storeItem: STR_ENGRAVED_ARMOR_ITEM_GV
+    corpseBattle:
+      - STR_TAUMARINVESA_PCCORPSE
+    frontArmor: 90 # +20 vs basic Guard Carapace; reinforced artificer quality
+    sideArmor: 80
+    rearArmor: 55
+    underArmor: 75
+    damageModifier:  # Captain quality damage resist
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.7  # FLAMES; partially environmentally sealed +20% beastman malus
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 0.8  # PLASMA
+      - 0.7  # STUN 10% beastman bonus
+      - 1.0  # MELEE 10% beastman bonus
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.6  # IMPACT
+      - 0.8  # MELTA
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 15
+    units:
+      - STR_MARINVESAVRE_GV
     stats:
       stamina: 15
       bravery: 15
@@ -1497,7 +1564,8 @@ armors:
       psiSkill: 25
     loftempsSet: [4]  # big targets
     tags:
-      INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
+      INFECTION_RESIST: 90  # infection/corruption resistant due to warp acclimatization and physiology
+      INTIMIDATION_RESISTANCE: 75
       UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_TAU: 1

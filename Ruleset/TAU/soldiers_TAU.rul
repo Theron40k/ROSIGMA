@@ -616,10 +616,7 @@ soldiers:
     deathMale: [2680, 2681, 2682, 2683, 2684]
     deathFemale: [2686, 2687, 2688, 2689, 2690]
     rankStrings:
-      - STR_MILITIA_GV_RANK_0
-      - STR_MILITIA_GV_RANK_1
-      - STR_MILITIA_GV_RANK_2
-      - STR_MILITIA_GV_RANK_3
+      - STR_MARINVESA_RANK_0
     rankSprite: {mod: 40k, index: 1000}
     rankBattleSprite: {mod: 40k, index: 1000}
     rankTinySprite: {mod: 40k, index: 1000}
@@ -670,8 +667,8 @@ soldiers:
       firing: 90  # was 100
       throwing: 80
       strength: 80  # was 65
-      psiStrength: 100
-      psiSkill: 50
+      psiStrength: 120
+      psiSkill: 75
       melee: 95  # was 90
       mana: 0
     trainingStatCaps:
@@ -681,8 +678,8 @@ soldiers:
       firing: 60
       throwing: 60
       strength: 65
-      psiStrength: 100
-      psiSkill: 50
+      psiStrength: 120
+      psiSkill: 75
       melee: 85
       mana: 0
     armor: STR_TAUMARINVESACARAP_PC_ARMOR_GV
@@ -703,7 +700,92 @@ soldiers:
     deathMale: [2680, 2681, 2682, 2683, 2684]
     deathFemale: [2686, 2687, 2688, 2689, 2690]
     rankStrings:
-      - STR_MILITIA_OFFICER_GV_RANK_0
+      - STR_MARINVESA_RANK_1
+    rankSprite: {mod: 40k, index: 1000}
+    rankBattleSprite: {mod: 40k, index: 1000}
+    rankTinySprite: {mod: 40k, index: 1000}
+    value: 10
+    moraleLossWhenKilled: 100
+
+
+### copy guard beastman
+### TODO: Add upgraded marin'vesa and officers
+  - type: STR_MARINVESAVRE_GV
+    refNode: *STR_MARINVESA_SOLDIERS
+    requires:
+      - STR_BEASTMEN_CULTISTS_GV
+      - STR_A_SECRET_PACT_GV
+    costBuy: 0
+    costSalary: 10000  # they eat more! and get paid more!
+    minStats:
+      tu: 60  # was 40
+      stamina: 70  # was 40
+      health: 50  # was 25
+      bravery: 60  # was 20
+      reactions: 50  # was 30
+      firing: 55  # was 40
+      throwing: 55  # was 35
+      strength: 40  # was 10
+      psiStrength: 0
+      psiSkill: 0
+      melee: 65  # was 20
+      mana: 0
+    maxStats:
+      tu: 90  # was 60
+      stamina: 90  # was 70
+      health: 70  # was 40
+      bravery: 80  # was 60
+      reactions: 85  # was 60
+      firing: 70  # was 70
+      throwing: 80  # was 65
+      strength: 60  # was 25
+      psiStrength: 120
+      psiSkill: 6  # was 6
+      melee: 80  # was 60
+      mana: 0
+    statCaps:
+      tu: 120  # was 75
+      stamina: 120  # was 90
+      health: 90  # was 55
+      bravery: 110  # was 100
+      reactions: 90  # was 60
+      firing: 100  # was 100
+      throwing: 90
+      strength: 80  # was 65
+      psiStrength: 120
+      psiSkill: 75
+      melee: 95  # was 90
+      mana: 0
+    trainingStatCaps:
+      tu: 90
+      stamina: 90
+      health: 70
+      firing: 60
+      throwing: 60
+      strength: 65
+      psiStrength: 120
+      psiSkill: 75
+      melee: 85
+      mana: 0
+    armor: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+    # dogfightExperience:
+    #   bravery: 10
+    #   reactions: 30
+    #   firing: 25
+    allowPiloting: false
+    allowPromotion: false
+    standHeight: 22
+    kneelHeight: 16
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 35
+    soldierNames:
+      - delete
+      - Names/tau_beastman_militia.nam
+    deathMale: [2680, 2681, 2682, 2683, 2684]
+    deathFemale: [2686, 2687, 2688, 2689, 2690]
+    rankStrings:
+      - STR_MARINVESA_RANK_2
     rankSprite: {mod: 40k, index: 1000}
     rankBattleSprite: {mod: 40k, index: 1000}
     rankTinySprite: {mod: 40k, index: 1000}
