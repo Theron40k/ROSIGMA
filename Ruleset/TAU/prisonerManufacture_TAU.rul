@@ -143,20 +143,34 @@ manufacture:
     producedItems:
       STR_KILLPOINT_TOKEN: 10
       STR_PURITY_SEAL: 3
-  - name: STR_PURGE_CULTIST_GV
+  - &STR_PURGE_CULTIST
+    name: STR_PURGE_CULTIST_GV
     refNode: *STR_PURGE_WITCH
     requiredItems:
       STR_LIVE_CAPTURE_CULTIST: 1
     producedItems:
       STR_KILLPOINT_TOKEN: 7
       STR_PURITY_SEAL: 2
+  - name: STR_PURGE_PRIMORDIAL_CULTIST_GV
+    refNode: *STR_PURGE_CULTIST
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_CULTIST: 1
+  - name: STR_PURGE_PRIMORDIAL_GUARD_GV
+    refNode: *STR_PURGE_CULTIST
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_GUARD: 1
+  - name: STR_PURGE_PRIMORDIAL_OGRYN_GV
+    refNode: *STR_PURGE_CULTIST
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_OGRYN: 1
+  - name: STR_PURGE_PRIMORDIAL_BULLGRYN_GV
+    refNode: *STR_PURGE_CULTIST
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_BULLGRYN: 1
   - name: STR_PURGE_BEASTMAN_GV
-    refNode: *STR_PURGE_WITCH
+    refNode: *STR_PURGE_CULTIST
     requiredItems:
       STR_LIVE_CAPTURE_CHAOS_BEASTMAN: 1
-    producedItems:
-      STR_KILLPOINT_TOKEN: 7
-      STR_PURITY_SEAL: 2
   - name: STR_PURGE_WITCH_GV
     refNode: *STR_PURGE_WITCH
     requiredItems:
@@ -187,6 +201,35 @@ manufacture:
       STR_LIVE_CAPTURE_GUARDAI_PSYKER: 1
     producedItems:
       STR_KILLPOINT_TOKEN: 20
+      STR_PURITY_SEAL: 10
+  - name: STR_PURGE_PRIMORDIAL_PRIEST_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_PRIEST: 1
+  - name: STR_PURGE_PRIMORDIAL_DEMAGOGUE_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_DEMAGOGUE: 1
+  - name: STR_PURGE_PRIMORDIAL_ASPIRANT_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_ASPIRANT: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 15
+      STR_PURITY_SEAL: 5
+  - name: STR_PURGE_PRIMORDIAL_LEGIONARY_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_LEGIONARY: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 20
+      STR_PURITY_SEAL: 10
+  - name: STR_PURGE_PRIMORDIAL_SORCERER_GV
+    refNode: *STR_PURGE_WITCH
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_SORCERER: 1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 50
       STR_PURITY_SEAL: 10
   - name: STR_PURGE_CHAOS_SISTER_GV
     refNode: *STR_PURGE_WITCH

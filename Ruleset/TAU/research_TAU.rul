@@ -523,12 +523,21 @@ research:
 
   - name: STR_TAU_PSI_LAB_BACKUP_GV
     points: 0
-    cost: 0
+    cost: 10
     dependencies:
       - STR_RECUSANT_SISTERS_GV
+    reenables:
+      - STR_PSI_LAB
     unlocks:
       - STR_PSI_LAB
+    spawnedEvent: STR_PSI_LAB_BACKUP_EVENT_GV
 
+  # - name: STR_THE_SILVER_TOWER_BACKUP_GV
+  #   points: 0
+  #   cost: 10
+  #   dependencies:
+  #     - STR_THE_SILVER_TOWER_GV
+  #   spawnedEvent: STR_THE_SILVER_TOWER_BACKUP_EVENT_GV
 
 # # Future Imperial Crusade content
 # [NYI] STR_THE_TERRAN_PROBLEM_GV bifurcates into STR_THE_WARPSTORM_PROBLEM_GV and STR_THE_CRUSADE_PROBLEM_GV
