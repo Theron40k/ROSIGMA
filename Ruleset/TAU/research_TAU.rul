@@ -394,10 +394,6 @@ research:
     dependencies:
       - STR_AUXILIARY_CADRE_GV
       - STR_EMERGENCY_PROTOCOLS_GV
-    reenables:
-      - STR_PSI_LAB
-    unlocks:
-      - STR_PSI_LAB
     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
@@ -422,13 +418,17 @@ research:
     spawnedEvent: STR_THE_TERRAN_PROBLEM_EVENT_GV
 
 ### Work out an arrangement over what's left of the Pelagan Imperial Creed
-### Allows priest requisition and covers you from public opinion hits
+### Unlocks Chapel
   - name: STR_COOPT_ECCLESIARCHY_GV
     points: 250
     cost: 300
     dependencies:
       - STR_THE_TERRAN_PROBLEM_GV
       - STR_RECUSANT_SISTERS_GV
+    reenables:
+      - STR_PSI_LAB
+    unlocks:
+      - STR_PSI_LAB
     spawnedEvent: STR_COOPT_ECCLESIARCHY_EVENT_GV
 
   # - name: STR_CONTACT_NICASSAR_GV
@@ -525,12 +525,40 @@ research:
     points: 0
     cost: 10
     dependencies:
-      - STR_RECUSANT_SISTERS_GV
+      - STR_COOPT_ECCLESIARCHY_GV
     reenables:
       - STR_PSI_LAB
     unlocks:
       - STR_PSI_LAB
     spawnedEvent: STR_PSI_LAB_BACKUP_EVENT_GV
+
+  # - name: STR_TAU_XENOPSYCH_DIVISION_GV
+  - name: STR_TAU_FRONTIER_PSYCH_GV
+    points: 250
+    cost: 1000
+    dependencies:
+      - STR_AUXILIARY_CADRE_GV
+      - STR_COOPT_ECCLESIARCHY_GV
+      - STR_GAIN_250
+    unlocks:
+      - STR_APOTHECARY_CORRUPTION_RESEARCH
+      - STR_CHAPEL_CORRUPTION_RESEARCH
+    spawnedEvent: STR_TAU_FRONTIER_PSYCH_EVENT_GV
+
+  # - name: STR_BLESSED_NANOMEDICINES_GV
+  #   points: 250
+  #   cost: 1000
+  #   dependencies:
+  #     - STR_TAU_FRONTIER_PSYCH_GV
+  #     - STR_APOTHECARY_CORRUPTION_RESEARCH
+  #     - STR_CHAPEL_CORRUPTION_RESEARCH
+  #     - STR_COOPT_ECCLESIARCHY_GV
+  #     - STR_GAIN_250
+  #   unlocks:
+  #     - STR_SLAANESH_CORRUPTION_RESEARCH
+  #     - STR_TZEENTCH_CORRUPTION_RESEARCH
+  #     - STR_NURGLE_CORRUPTION_RESEARCH
+  #   spawnedEvent: STR_BLESSED_NANOMEDICINES_EVENT_GV
 
   # - name: STR_THE_SILVER_TOWER_BACKUP_GV
   #   points: 0
