@@ -545,6 +545,36 @@ research:
       - STR_CHAPEL_CORRUPTION_RESEARCH
     spawnedEvent: STR_TAU_FRONTIER_PSYCH_EVENT_GV
 
+  - name: STR_NOCTILITH_SALVAGE_GV
+    points: 100
+    cost: 500
+    dependencies:
+      - STR_TAU_FRONTIER_PSYCH_GV
+      - STR_NECRON_REMNANT_RESEARCH
+      - STR_GAIN_100
+    spawnedEvent: STR_NOCTILITH_RESEARCH_EVENT_GV
+
+  - name: STR_WARDED_STARSCYTHES_GV
+    points: 0
+    cost: 0
+    dependencies:
+      - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
+      - STR_NOCTILITH_SALVAGE_GV
+
+  - name: STR_WARDED_FIREKNIVES_GV
+    points: 0
+    cost: 0
+    dependencies:
+      - STR_FIREKNIFE_CRISIS_OPERATIONS_GV
+      - STR_NOCTILITH_SALVAGE_GV
+
+  - name: STR_WARDED_SUNFORGES_GV
+    points: 0
+    cost: 0
+    dependencies:
+      - STR_SUNFORGE_CRISIS_OPERATIONS_GV
+      - STR_NOCTILITH_SALVAGE_GV
+
   # - name: STR_BLESSED_NANOMEDICINES_GV
   #   points: 250
   #   cost: 1000
