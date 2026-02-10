@@ -674,3 +674,58 @@ manufacture:
     space: 6
     time: 3000
     cost: 100000
+
+### Sisters armors
+  - name: STR_TAU_PRODUCE_SISTERSUPERIOR_ARMOR_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    space: 0
+    time: 250
+    cost: 150000
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 60
+      STR_ALIEN_ALLOYS: 30
+      # STR_ALIEN_HABITAT: 1
+    producedItems:
+      # STR_SISTERSUPERIOR_HONOR: 1
+      STR_ADEPTAS_ARMOR_SUPERIOR: 1
+
+  - name: STR_TAU_PRODUCE_NOVITIATESUPERIOR_ARMOR_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    space: 0
+    time: 250
+    cost: 150000
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 60
+      STR_ALIEN_ALLOYS: 30
+      # STR_ALIEN_HABITAT: 1
+    producedItems:
+#      STR_SISTERSUPERIOR_HONOR: 1
+      STR_ADEPTAS_ARMOR_NOVSUPERIOR_STOREITEM: 1
+
+  - name: STR_TAU_PRODUCE_ELOHIM_ARMOR_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    space: 0
+    time: 500
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+    producedItems:
+      STR_ADEPTAS_ARMOR_ELOHIM: 1
+
+  - name: STR_TAU_PRODUCE_RETRIBUTOR_ARMOR_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    space: 0
+    time: 500
+    cost: 75000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+    producedItems:
+      STR_ADEPTAS_ARMOR_RETRIBUTOR: 1

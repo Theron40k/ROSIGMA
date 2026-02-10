@@ -174,3 +174,70 @@ soldierTransformation:
     requiredMinStats:
       bravery: 50
       tu: 1
+
+
+  - name: STR_TAU_PROMOTE_SUPERIOR_GV
+    cost: 100000
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    producedSoldierType: STR_ADEPTAS_SUPERIOR
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_ADEPTAS
+      - STR_ADEPTAS_PILOT
+      - STR_ADEPTAS_VETERAN
+      - STR_ADEPTAS_REPENTIA_SUPERIOR  # if you feel like it, no practical difference
+      - STR_ADEPTAS_NOVITIATE_SUPERIOR  # if you feel like it, no practical difference
+    minRank: 3
+    requiredCommendations:
+      STR_VETERAN_COMMENDATION: 0
+    requiredMinStats:
+      bravery: 50
+      firing: 50
+      melee: 50
+      psiSkill: 50
+
+  - name: STR_TAU_PROMOTE_NOVITIATE_SUPERIOR_GV
+    cost: 100000
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    producedSoldierType: STR_ADEPTAS_NOVITIATE_SUPERIOR
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_ADEPTAS
+      - STR_ADEPTAS_PILOT
+      - STR_ADEPTAS_VETERAN
+      - STR_ADEPTAS_SUPERIOR  # if you feel like it, no practical difference
+      - STR_ADEPTAS_REPENTIA_SUPERIOR  # if you feel like it, no practical difference
+    minRank: 2  # lower rank requirement
+    requiredCommendations:
+      STR_LONG_SERVICE_TIME: 0  # instead of veteran, pencil pusher
+    requiredMinStats:
+      bravery: 50
+      firing: 40
+      melee: 40
+      psiSkill: 50
+
+  - name: STR_TAU_PROMOTE_TO_CANONESS_GV
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    cost: 200000
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 60
+      # STR_ALIEN_HABITAT: 1
+    requiredCommendations:
+      STR_VETERAN_COMMENDATION: 1
+    producedSoldierType: STR_CANONESS
+    keepSoldierArmor: true
+    allowsDeadSoldiers: false
+    allowsWoundedSoldiers: true
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ADEPTAS_SUPERIOR
+    minRank: 5
+    requiredMinStats:
+      psiSkill: 60
