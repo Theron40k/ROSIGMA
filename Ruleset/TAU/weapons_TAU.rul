@@ -67,11 +67,11 @@ items:
     confAuto:
       name: TAUSUITBC_AUTO
       followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
-    power: 90
+    power: 100
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     twoHanded: false
@@ -99,7 +99,7 @@ items:
     damageAlter:  # DA PULSE AP
       RandomType: 6
       ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.9  # has armor penetration on tabletop
+      ArmorEffectiveness: 0.85  # has armor penetration on tabletop
     shotgunSpread: 1  # twin linked
     shotgunBehavior: 1  # twin linked
     shotgunPellets: 2
@@ -109,8 +109,8 @@ items:
     refNode: *STR_BURST_CANNONS
     damageAlter:  # DA PULSE AP
       RandomType: 6
-      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.9  # has armor penetration on tabletop
+      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ArmorEffectiveness: 0.85  # has armor penetration on tabletop
 
   - type: STR_TAU_SUIT_FLAMER_GV
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
