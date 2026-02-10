@@ -569,3 +569,108 @@ manufacture:
     cost: 20000
     producedItems:
       STR_CRAFT_SEEKER_MISSILE_GV: 1
+
+  # Noctilith salvage
+  - name: STR_NOCTILITH_SALVAGE_GAUSS_BLASTER_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_NOCTILITH_SALVAGE_GV
+    space: 1
+    time: 50
+    cost: 10000
+    requiredItems:
+      STR_GAUSS_BLASTER_REMNANT: 1
+    producedItems:
+      STR_NOCTILITH_SHARD_GV: 1
+
+  - name: STR_NOCTILITH_SALVAGE_HYPERPHASESWORD_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_NOCTILITH_SALVAGE_GV
+    space: 1
+    time: 50
+    cost: 10000
+    requiredItems:
+      STR_HYPERPHASESWORD_REMNANT: 1
+    producedItems:
+      STR_NOCTILITH_SHARD_GV: 1
+
+  - name: STR_NOCTILITH_SALVAGE_SYNAPTIC_DISINTEGRATOR_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_NOCTILITH_SALVAGE_GV
+    space: 1
+    time: 50
+    cost: 10000
+    requiredItems:
+      STR_SYNAPTIC_DISINTEGRATOR_REMNANT: 1
+    producedItems:
+      STR_NOCTILITH_SHARD_GV: 1
+
+  - name: STR_NOCTILITH_SALVAGE_GAUSS_FLAYER_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_NOCTILITH_SALVAGE_GV
+    space: 1
+    time: 50
+    cost: 10000
+    requiredItems:
+      STR_GAUSS_FLAYER_REMNANT: 1
+    producedItems:
+      STR_NOCTILITH_SHARD_GV: 1
+
+  - name: STR_NOCTILITH_SALVAGE_GAUSS_REAPER_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_NOCTILITH_SALVAGE_GV
+    space: 1
+    time: 50
+    cost: 10000
+    requiredItems:
+      STR_GAUSS_REAPER_REMNANT: 1
+    producedItems:
+      STR_NOCTILITH_SHARD_GV: 1
+
+  - name: STR_NOCTILITH_SALVAGE_NECRON_WARSCYTHE_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_NOCTILITH_SALVAGE_GV
+    space: 1
+    time: 50
+    cost: 10000
+    requiredItems:
+      STR_NECRON_WARSCYTHE_REMNANT: 1
+    producedItems:
+      STR_NOCTILITH_SHARD_GV: 1
+
+  - name: STR_NOCTILITH_SALVAGE_STAFF_OF_LIGHT_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_NOCTILITH_SALVAGE_GV
+    space: 1
+    time: 50
+    cost: 10000
+    requiredItems:
+      STR_STAFF_OF_LIGHT_REMNANT: 1
+    producedItems:
+      STR_NOCTILITH_SHARD_GV: 1
+
+  - name: STR_WARDED_CRISIS_SUIT_MANUF_GV
+    refNode: *STR_SUIT_MANUF_GV
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_TAU_XENOTECH
+      - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
+      - STR_NOCTILITH_SALVAGE_GV
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 20
+      STR_NOCTILITH_SHARD_GV: 10
+      STR_ALIEN_ALLOYS: 10
+      STR_ELERIUM_115: 10
+      STR_UFO_CONSTRUCTION: 4
+      STR_CRISIS_SUIT_ITEM_GV: 1
+    producedItems:
+      STR_WARDED_CRISIS_SUIT_ITEM_GV: 1
+    space: 6
+    time: 3000
+    cost: 100000

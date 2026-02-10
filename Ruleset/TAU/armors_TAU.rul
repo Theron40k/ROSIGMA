@@ -28,6 +28,9 @@ items:
   - type: STR_ENGRAVED_STEALTH_SUIT_ITEM_GV
     costSell: 0
 
+  - type: STR_WARDED_CRISIS_SUIT_ITEM_GV
+    costSell: 0
+
   - type: STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV
     costSell: 0
 
@@ -863,7 +866,7 @@ armors:
       tu: 15     # was 20
       stamina: 15 # was 20
       health: 40  # was 50 #let's try this +2 wound
-      firing: 5  # was 10 # bonus to hit from sensors and firing computer
+      # firing: 5  # was 10 # bonus to hit from sensors and firing computer
     allowsKneeling: false
     allowsRunning: false
     loftempsSet: [5]
@@ -880,6 +883,7 @@ armors:
       MaxFlight: 1
       MaxCoolDown: 1
 
+### starscythes
   - type: STR_STARSCYTHE_CRISIS_SUIT_BCX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
@@ -928,6 +932,89 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
+  - type: STR_WARDED_STARSCYTHE_CRISIS_SUIT_BCX2_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_WARDED_STARSCYTHES_GV
+    storeItem: STR_WARDED_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    psiCamouflage: 3
+    stats:
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      psiStrength: 25
+      psiSkill: 25
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
+      - STR_TAU_SUIT_BURST_CANNON_TWINLINKED_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+
+  - type: STR_WARDED_STARSCYTHE_CRISIS_SUIT_BCFL_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_WARDED_STARSCYTHES_GV
+    storeItem: STR_WARDED_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    psiCamouflage: 3
+    stats:
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      psiStrength: 25
+      psiSkill: 25
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_STARSCYTHE_BURST_CANNON_SINGLE_GV
+      - STR_TAU_SUIT_FLAMER_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+
+  - type: STR_WARDED_STARSCYTHE_CRISIS_SUIT_FLX2_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_WARDED_STARSCYTHES_GV
+    storeItem: STR_WARDED_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    psiCamouflage: 3
+    stats:
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      psiStrength: 25
+      psiSkill: 25
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
+      - STR_TAU_SUIT_FLAMER_TWIN_LINKED_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+
+
+### fireknives
   - type: STR_FIREKNIFE_CRISIS_SUIT_MPX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     requires: STR_FIREKNIFE_CRISIS_OPERATIONS_GV
@@ -965,7 +1052,7 @@ armors:
 
   - type: STR_FIREKNIFE_CRISIS_SUIT_PRX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
-    requires: STR_SUNFORGE_CRISIS_OPERATIONS_GV
+    requires: STR_FIREKNIFE_CRISIS_OPERATIONS_GV
     storeItem: STR_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
     units:
       - STR_FIREWARRIOR_SHASUI_GV
@@ -980,6 +1067,89 @@ armors:
       - INV_NULL_2X1_LL
       - INV_NULL_4X2
 
+  - type: STR_WARDED_FIREKNIFE_CRISIS_SUIT_MPX2_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_WARDED_FIREKNIVES_GV
+    storeItem: STR_WARDED_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    psiCamouflage: 3
+    stats:
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      psiStrength: 25
+      psiSkill: 25
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_MISSILE_POD_TWIN_LINKED_GV
+      - STR_TAU_MISSILE_POD_TWIN_LINKED_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+
+
+  - type: STR_WARDED_FIREKNIFE_CRISIS_SUIT_MPPR_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_WARDED_FIREKNIVES_GV
+    storeItem: STR_WARDED_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    psiCamouflage: 3
+    stats:
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      psiStrength: 25
+      psiSkill: 25
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_MISSILE_POD_GV
+      - STR_TAU_PLASMA_RIFLE_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+
+  - type: STR_WARDED_FIREKNIFE_CRISIS_SUIT_PRX2_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_WARDED_FIREKNIVES_GV
+    storeItem: STR_WARDED_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    psiCamouflage: 3
+    stats:
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      psiStrength: 25
+      psiSkill: 25
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_PLASMA_RIFLE_TWIN_LINKED_GV
+      - STR_TAU_PLASMA_RIFLE_TWIN_LINKED_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+
+### sunforges
   - type: STR_SUNFORGE_CRISIS_SUIT_FBX2_GV
     refNode: *STR_STARSCYTHE_OPTIONS_GV
     requires: STR_SUNFORGE_CRISIS_OPERATIONS_GV
@@ -999,6 +1169,36 @@ armors:
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
       ARMOR_ENERGY_SHIELD_DECAY: 50
+
+  - type: STR_WARDED_SUNFORGE_CRISIS_SUIT_FBX2_GV
+    refNode: *STR_STARSCYTHE_OPTIONS_GV
+    requires: STR_WARDED_SUNFORGES_GV
+    storeItem: STR_WARDED_CRISIS_SUIT_ITEM_GV  # this is how we swap between different types of crisis
+    psiCamouflage: 3
+    stats:
+      tu: 15     # was 20
+      stamina: 15 # was 20
+      health: 40  # was 50 #let's try this +2 wound
+      psiStrength: 25
+      psiSkill: 25
+    units:
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV  # uncertain on this one but leaving it for now
+    builtInWeapons:
+      - STR_TAU_FUSION_BLASTER_TWINLINKED_GV
+      - STR_TAU_FUSION_BLASTER_TWINLINKED_GV
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50
+      ARMOR_ENERGY_SHIELD_DECAY: 50
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+
 
   # AI versions
   - type: STR_TAU_CRISISBCX2AI_ARMOR
