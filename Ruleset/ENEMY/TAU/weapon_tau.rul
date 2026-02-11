@@ -32,11 +32,11 @@ items:
       name: TAUDRONEGUN_AUTO
       followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
     # Carbine/rifle/burst cannon fire
-    power: 90
+    power: 100
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     twoHanded: false
@@ -84,11 +84,11 @@ items:
     tuAuto: 50
     tuSnap: 30
     autoShots: 3
-    power: 90
+    power: 100
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     twoHanded: true
@@ -194,7 +194,7 @@ items:
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
 
   - type: STR_TAU_PULSE_MAG_EXPORT
@@ -228,7 +228,7 @@ items:
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 1   # random means some pellets will roll high
-      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       ArmorEffectiveness: 0.8  # the blaster retains armor penetration
     shotgunBehavior: 1
     shotgunSpread: 25
@@ -265,7 +265,7 @@ items:
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     confSnap: # 2 shot burst
@@ -338,11 +338,11 @@ items:
     tuSnap: 25
     tuAimed: 25
     autoShots: 3
-    power: 90
+    power: 100
     damageType: 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     confSnap: # 2 shot burst
@@ -397,11 +397,11 @@ items:
     tuAuto: 50
     tuSnap: 35
     autoShots: 4
-    power: 90
+    power: 100
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     confSnap:
@@ -665,10 +665,9 @@ items:
     # Pulse blaster
     damageAlter:  # DA PULSE AP BREACHER
       RandomType: 7   # rerolling wounds
-      ToArmorPre: 0.3
-      ArmorEffectiveness: 0.8  # the blaster retains armor penetration
-    compatibleAmmo:
-      - STR_TAU_PULSE_MAG
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 0.85  # the blaster retains armor penetration
+    clipSize: -1  # debugging
     confSnap:
       spendPerShot: 2 #effectively half the normal ammo cap
     battleType: 1
@@ -677,17 +676,17 @@ items:
     invWidth: 2
     invHeight: 3
     arcingShot: false
-    snapRange: 14
+    snapRange: 16
     dropoff: 20 #pulse shotgun
     recover: true
     shotgunBehavior: 1
-    shotgunSpread: 10
-    shotgunPellets: 5
+    shotgunSpread: 0
+    shotgunPellets: 4
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 3
     vaporProbabilitySurface: 50
     powerRangeReduction: 20.0
-    powerRangeThreshold: 14.0
+    powerRangeThreshold: 16.0
     scripts:
       vaporParticleAmmo: |
         # noting
@@ -718,11 +717,11 @@ items:
     accuracyAimed: 100
     tuSnap: 20
     tuAimed: 40
-    power: 90
+    power: 100
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     ammo:
@@ -782,10 +781,10 @@ items:
     dropoff: 4
     snapRange: 21
     aimRange: 21
-    accuracySnap: 70
-    accuracyAimed: 70
-    tuSnap: 45    # bulky
-    tuAimed: 45
+    accuracySnap: 80
+    accuracyAimed: 80
+    tuSnap: 40    # bulky
+    tuAimed: 40
     confSnap:
       name: STR_BURST_SNAP_SHOT
       shots: 3
@@ -888,7 +887,7 @@ items:
     costSell: 0
     bulletSpeed: 100
     accuracySnap: 80
-    accuracyAimed: 110
+    accuracyAimed: 100
     tuAimed: 60
     tuSnap: 40
     battleType: 1
@@ -1019,4 +1018,4 @@ items:
       # RadiusReduction: 100  #still deals a lot of damage if it gets close, but it may be survivable
     clipSize: 2
     tags:
-      DAMAGE_RESIST_PENETRATION_PERCENT: 50 # 200 power is plenty . . .
+      DAMAGE_RESIST_PENETRATION_PERCENT: 75 # 200 power is plenty . . .
