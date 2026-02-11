@@ -100,7 +100,7 @@ items:
       RandomType: 6
       ToArmorPre: 0.1 # was 0.2 # was 0.3  # melts some armor on the way in
       ArmorEffectiveness: 0.85  # has armor penetration on tabletop
-    shotgunSpread: 1  # twin linked
+    shotgunSpread: 10  # twin linked
     shotgunBehavior: 1  # twin linked
     shotgunPellets: 2
 
@@ -291,7 +291,7 @@ items:
     meleeHitSound: {mod: 40k, index: 773}  # was 101
     meleeAnimation: {mod: 40k, index: 4}  # was 0
     hidePower: true
-    meleePower: 60  # lighter than typical power swords
+    meleePower: 50  # lighter than typical power swords
     costMelee:
       time: 14
       energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
@@ -442,11 +442,11 @@ items:
     snapRange: 18
     aimRange: 0
     accuracyAuto: 0
-    accuracySnap: 100    # Fireknife targeting systems
-    accuracyAimed: 0
+    accuracySnap: 80    # Fireknife targeting systems
+    accuracyAimed: 90
     tuAuto: 0
     tuSnap: 30
-    tuAimed: 0
+    tuAimed: 45
     power: 200  # always on maximal mode - hits very hard
     powerForAnimation: 16  # 5 / 5 = 1
     damageType: 5
@@ -462,6 +462,8 @@ items:
   - type: STR_TAU_PLASMA_RIFLE_TWIN_LINKED_GV  # done
     refNode: *STR_TAU_PLASMA_RIFLES
     confSnap:
+      shots: 2
+    confAimed:
       shots: 2
     powerForAnimation: 5  # 5 / 5 = 1
     damageType: 5
@@ -493,10 +495,10 @@ items:
     dropoff: 4
     snapRange: 26
     aimRange: 33
-    accuracySnap: 100 # Fireknife targeting systems
-    accuracyAimed: 110
-    tuSnap: 20
-    tuAimed: 40
+    accuracySnap: 90 # Fireknife targeting systems
+    accuracyAimed: 100
+    tuSnap: 25
+    tuAimed: 45
     damageType: 3
     damageAlter:
       ResistType: 1
@@ -507,6 +509,7 @@ items:
       ToTile: 1.0
       ToItem: 1.0
       ArmorEffectiveness: 0.5
+      RadiusReduction: 55.0 # needs a direct hit for full effect
       FixRadius: 1  # 1 for hand grenade version
     battleType: 1
     fixedWeapon: true
@@ -526,8 +529,8 @@ items:
     # krak rockets... forever
     dropoff: 4
     autoRange: 24
-    accuracyAuto: 90
-    tuAuto: 25
+    accuracyAuto: 75
+    tuAuto: 30
     autoShots: 2
     sprayWaypoints: 2
 
