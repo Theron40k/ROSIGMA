@@ -1776,6 +1776,121 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
+  - type: STR_TAU_ADEPTAS_ARMOR_GV     # ADEPTAS
+    visibilityAtDay: 40
+    visibilityAtDark: 30  # recently unearthed benefices of noctilucence
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteSheet: XCOM_33.PCK
+    spriteInv: TAUSISTER
+    requires: STR_COOPT_ECCLESIARCHY_GV
+    customArmorPreviewIndex: 60
+    corpseBattle:
+      - STR_ADEPTAS_CORPSE
+    stats:
+      tu: 5
+      stamina: 20
+      health: 5
+      # bravery: 10  # always multiples of 10
+      reactions: 10
+      firing: 10
+      throwing: 5
+      strength: 5
+      psiStrength: 0
+      psiSkill: 5
+      melee: 5
+    storeItem: STR_NONE
+    frontArmor: 100
+    sideArmor: 90
+    rearArmor: 55
+    underArmor: 90
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.6  # FLAMES
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS
+      - STR_ADEPTAS_PILOT
+      - STR_ADEPTAS_VETERAN
+      - STR_ADEPTAS_SUPERIOR
+      - STR_ADEPTAS_REPENTIA_SUPERIOR
+      - STR_ADEPTAS_NOVITIATE_SUPERIOR
+      - STR_CANONESS
+    builtInWeapons:
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+
+
+
+  - type: STR_TAU_ADEPTAS_ARMOR_NOVSUPERIOR_GV
+    visibilityAtDay: 40         # sanctified pathfinding oculotrices
+    visibilityAtDark: 40
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    spriteSheet: XCOM_33NOVSUPERIOR.PCK
+    spriteInv: TAUSUPERIOR
+    customArmorPreviewIndex: 130  # might need a new one
+    corpseBattle:
+      - STR_NOVITIATE_SUPERIOR_CORPSE
+    requires: STR_COOPT_ECCLESIARCHY_GV
+    stats:
+      tu: 15
+      stamina: 30  # +10
+      health: 15
+      bravery: 10  # always multiples of 10
+      reactions: 10
+      firing: 15
+      throwing: 5
+      strength: 10
+      psiStrength: 0
+      psiSkill: 5
+      melee: 10  # +5
+    storeItem: STR_ADEPTAS_ARMOR_NOVSUPERIOR_STOREITEM
+    frontArmor: 120  # -10
+    sideArmor: 105
+    rearArmor: 85
+    underArmor: 105
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.6  # FLAMES
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS_SUPERIOR
+      - STR_ADEPTAS_REPENTIA_SUPERIOR
+      - STR_ADEPTAS_NOVITIATE_SUPERIOR  # new soldierType
+      - STR_CANONESS
+    specialWeapon: STR_LEAD_BY_EXAMPLE
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      NO_BENEFIT_FROM_INSPIRE: 1
+
+
 
 ### NPC armors
 
