@@ -333,7 +333,6 @@ manufacture:
     producedItems:
       STR_TAU_PULSE_MAG: 5
 
-  # TODO: Deprecated
   - name: STR_TAU_PULSE_BLASTER_MAG
     category: STR_AMMUNITION
     space: 0
@@ -342,7 +341,6 @@ manufacture:
     requires:
       - STR_TAU_XENOTECH
       - STR_TAU_BREACHERS_GV
-      - STR_GENERALLOCK
     requiredItems:
       STR_ELERIUM_115: 2
     producedItems:
@@ -528,7 +526,6 @@ manufacture:
     time: 10
     cost: 1000
     requires:
-      - STR_GENERALLOCK
       - STR_A_SECRET_PACT_GV
       - STR_TAU_XENOTECH
     requiredItems:
@@ -676,20 +673,20 @@ manufacture:
     cost: 100000
 
 ### Sisters armors
-  - name: STR_TAU_PRODUCE_SISTERSUPERIOR_ARMOR_GV
-    category: STR_PERSONAL_ARMOR
-    requires:
-      - STR_COOPT_ECCLESIARCHY_GV
-    space: 0
-    time: 250
-    cost: 150000
-    requiredItems:
-      STR_KILLPOINT_TOKEN: 60
-      STR_ALIEN_ALLOYS: 30
-      # STR_ALIEN_HABITAT: 1
-    producedItems:
-      # STR_SISTERSUPERIOR_HONOR: 1
-      STR_ADEPTAS_ARMOR_SUPERIOR: 1
+  # - name: STR_TAU_PRODUCE_SISTERSUPERIOR_ARMOR_GV
+  #   category: STR_PERSONAL_ARMOR
+  #   requires:
+  #     - STR_COOPT_ECCLESIARCHY_GV
+  #   space: 0
+  #   time: 250
+  #   cost: 150000
+  #   requiredItems:
+  #     STR_KILLPOINT_TOKEN: 60
+  #     STR_ALIEN_ALLOYS: 30
+  #     # STR_ALIEN_HABITAT: 1
+  #   producedItems:
+  #     # STR_SISTERSUPERIOR_HONOR: 1
+  #     STR_ADEPTAS_ARMOR_SUPERIOR: 1
 
   - name: STR_TAU_PRODUCE_NOVITIATESUPERIOR_ARMOR_GV
     category: STR_PERSONAL_ARMOR
