@@ -31,14 +31,14 @@ manufacture:
       - STR_TAU_XENOTECH
       - STR_STEALTH_SUIT_OPERATIONS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 160
-      STR_ALIEN_ALLOYS: 50
-      STR_ELERIUM_115: 50
-      STR_UFO_CONSTRUCTION: 5
+      STR_KILLPOINT_TOKEN: 100
+      STR_ALIEN_ALLOYS: 40
+      STR_ELERIUM_115: 40
+      STR_UFO_CONSTRUCTION: 4
       STR_UFO_POWER_SOURCE: 1
     space: 2
-    time: 1500
-    cost: 200000
+    time: 1000
+    cost: 120000
 
   - name: STR_CRISIS_SUIT_ITEM_GV
     refNode: *STR_SUIT_MANUF_GV
@@ -47,14 +47,14 @@ manufacture:
       - STR_TAU_XENOTECH
       - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 240
-      STR_ALIEN_ALLOYS: 100
-      STR_ELERIUM_115: 50
-      STR_UFO_CONSTRUCTION: 10
+      STR_KILLPOINT_TOKEN: 200
+      STR_ALIEN_ALLOYS: 80
+      STR_ELERIUM_115: 40
+      STR_UFO_CONSTRUCTION: 8
       STR_UFO_POWER_SOURCE: 2
     space: 6
-    time: 3000
-    cost: 300000
+    time: 2000
+    cost: 240000
 
   - name: STR_TAU_PATHFINDER_MEDIC_ARMOR_ITEM_GV
     category: STR_PERSONAL_ARMOR
@@ -97,12 +97,12 @@ manufacture:
     requires:
       - STR_ENGRAVED_ARMORS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 160
+      STR_KILLPOINT_TOKEN: 100
       STR_ALIEN_ALLOYS: 20
       STR_UFO_CONSTRUCTION: 4
     space: 6
     time: 1000
-    cost: 200000
+    cost: 100000
 
   - name: STR_TAU_POWER_SOURCE_MANUFACTURING_GV
     category: STR_UFO_COMPONENT
@@ -126,14 +126,13 @@ manufacture:
       - STR_ENGRAVED_BATTLESUITS_GV
     requiredItems:
       STR_STEALTH_SUIT_ITEM_GV: 1
-      STR_KILLPOINT_TOKEN: 160
-      STR_ALIEN_ALLOYS: 50
-      STR_ELERIUM_115: 50
+      STR_KILLPOINT_TOKEN: 100
+      STR_ALIEN_ALLOYS: 10
+      STR_ELERIUM_115: 10
       STR_UFO_CONSTRUCTION: 5
-      STR_UFO_POWER_SOURCE: 1
     space: 6
-    time: 2000
-    cost: 300000
+    time: 1000
+    cost: 200000
 
   - name: STR_GUARD_POWER_ARMOR
     category: STR_PERSONAL_ARMOR
@@ -173,9 +172,9 @@ manufacture:
     requiredItems:
       STR_ALIEN_ALLOYS: 480
       STR_ELERIUM_115: 320
-      STR_UFO_POWER_SOURCE: 8
-      STR_UFO_NAVIGATION: 8
-      STR_KILLPOINT_TOKEN: 800
+      STR_UFO_POWER_SOURCE: 6
+      STR_UFO_NAVIGATION: 6
+      STR_KILLPOINT_TOKEN: 600
 
   ### GENERALLOCKING this for now to avoid breaking saves
   ### TODO: Sunset this method
@@ -203,7 +202,7 @@ manufacture:
       - STR_COOPT_NAVY_PILOTS_GV
       - STR_RALLY_GUARD_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 150
+      STR_KILLPOINT_TOKEN: 100
       STR_ALIEN_ALLOYS: 10
     producedItems:
       STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV: 1
