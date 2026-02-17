@@ -1374,3 +1374,74 @@ crafts:
     spacecraft: true
     allowLanding: false
     listOrder: 240
+
+  # krieg player truck
+
+  - type: STR_TRUCKARMOR_KRIEG
+    takeoffSound: -1
+    selectSound: -1
+    marker: 30
+    requiresBuyBaseFunc: [HANGAR]
+    requires:
+      - STR_KRIEG_STRATEGY  # placeholder
+    sprite: 1715
+    fuelMax: 1500
+    damageMax: 800
+    speedMax: 250
+    repairRate: 10
+    vehicles: 999
+    accel: 2
+    weapons: 1
+    weaponTypes:
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+    fixedWeapons: ["STR_CRAFT_MULTILASER_UC"]
+    soldiers: 20
+    maxLargeUnits: 2
+    costSell: 10000
+    refuelRate: 1000
+    transferTime: 45
+    score: 100
+    craftInventoryTile: [1, 5, 1]
+    battlescapeTerrainData:
+      name: KRIEG_ARMORTRUCK_CONVOY
+      mapDataSets:
+        - BLANKS
+        - KRIEG_TRUCK2
+        - CHAOSORKP
+        - KRIEG_TRUCK
+        - TRUCKKRIEG
+      mapBlocks:
+        - name: KRIEG_ARMORTRUCK_CONVOY
+          width: 10
+          length: 20
+          items:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS:  # placeholder
+              - [7, 16, 2]
+              - [3, 7, 2]
+          fuseTimers:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS: [0, 0]  # placeholder
+    deployment:
+      - [6, 15, 1, 0]  # truck1
+      - [7, 15, 1, 0]  # truck1
+      - [6, 14, 1, 0]  # truck1
+      - [7, 14, 1, 0]  # truck1
+      - [6, 13, 1, 0]  # truck1
+      - [7, 13, 1, 0]  # truck1
+      - [2, 6, 1, 0]  # truck2
+      - [3, 6, 1, 0]  # truck2
+      - [2, 5, 1, 0]  # truck2
+      - [3, 5, 1, 0]  # truck2
+      - [2, 4, 1, 0]  # truck2
+      - [3, 4, 1, 0]  # truck2
+      - [6, 12, 1, 0]  # truck1
+      - [7, 12, 1, 0]  # truck1
+      - [6, 11, 1, 0]  # truck1
+      - [7, 11, 1, 0]  # truck1
+      - [2, 3, 1, 0]  # truck2
+      - [3, 3, 1, 0]  # truck2
+      - [2, 2, 1, 0]  # truck2
+      - [3, 2, 1, 0]  # truck2
+    listOrder: 800
+    spacecraft: false
