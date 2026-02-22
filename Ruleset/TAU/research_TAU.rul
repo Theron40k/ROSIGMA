@@ -109,6 +109,10 @@ research:
       - STR_MOTION_SCANNER
     needItem: true
     neededItem: STR_KILLPOINT_TOKEN     # kill a bad guy and win a mission
+    unlocks:
+      - STR_HEAVY_WEAPONS_IG
+      - STR_LIGHT_BOLTERS_LOWTIER
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
     spawnedEvent: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
 
 ### Discover the Cold Trade
@@ -122,8 +126,6 @@ research:
       - STR_ALIEN_ORIGINS     # try this for now.
     unlocks:
       - STR_TAU_TRADING
-      - STR_HEAVY_WEAPONS_IG
-      - STR_LIGHT_BOLTERS_LOWTIER
     spawnedEvent: STR_THE_COLD_TRADE_EVENT_GV   # talk to the Tau here?
 
 ### Tau Guevesa trading
@@ -147,7 +149,6 @@ research:
       - STR_TAU_GUEVESA_TRADING           # unlocks cheaper rifles and carbines + flak
       - STR_ENGINSEER_REQUISITION         # Enginseers
       - STR_GUARD_PRIEST_REQUISITION      # Priests
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
     disables:
       - STR_NOT_TAU_GUEVESA_TRADING       # remove old rifles/charges from market
     spawnedEvent: STR_CULTURE_CLUB_GV
