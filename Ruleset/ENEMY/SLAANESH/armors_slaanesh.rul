@@ -1538,6 +1538,8 @@ armors:
   - type: STR_SLAANGOR_UNGOR_ARMORLIGHT                                  # SLAANESH REGULAR
     visibilityAtDay: 35
     visibilityAtDark: 20
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
     spriteSheet: SLAANUNGOR.PCK
     spriteInv: SlaanUngorInv.SPK
     allowInv: true
@@ -1571,8 +1573,6 @@ armors:
   - type: STR_SLAANGOR_BRAY_ARMORLIGHT                               # SLAANESH REGULAR
     visibilityAtDay: 30
     visibilityAtDark: 25
-    antiCamouflageAtDay: 5
-    antiCamouflageAtDark: 5
     spriteSheet: SLAANBRAY.PCK
     spriteInv: SLAANGORBRAYINV.SPK
     allowInv: true
@@ -1603,6 +1603,45 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_SLAANESH: 1
       UNIT_TYPE_MUTANT: 1
+
+  - type: STR_SLAANESH_CSM_CHAMPION_ARMOR         # SLAANESH INFRACTOR/FLAWLESS CHAMPION
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    heatVision: 30
+    antiCamouflageAtDay: 8
+    antiCamouflageAtDark: 8
+    meleeDodge:
+      reactions: 0.2
+    spriteSheet: SLAANESH_CSM_CHAMPION_BS.PCK
+    spriteInv: SLAANESH_CSM_CHAMPION_INV.SPK
+    customArmorPreviewIndex: 65 #replace
+    corpseBattle:
+      - STR_SLAANESH_CSM_CHAMPION_CORPSE #create new
+    frontArmor: 90 #-30 front armor, exposed belly
+    sideArmor: 100 #-10
+    rearArmor: 80
+    underArmor: 110
+    drawingRoutine: 0
+    damageModifier:  # CHAOS ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.9  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 0.9  # MELEE #melee champ
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   - type: STR_SLAANESH_ANOINTED_ARMOR
     visibilityAtDay: 40
