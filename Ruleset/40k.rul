@@ -3123,6 +3123,52 @@ units:
         - STR_PLASMA_TWINCORE_CLIP
         - STR_MGRENADE
 
+  - type: STR_SLAANESH_CSM_CHAMPION  # SLAANESH FLAWLESS CHAMPION
+    race: STR_SLAANESH
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 90
+      stamina: 96
+      health: 140 #higher health, less front armor
+      bravery: 100
+      reactions: 90
+      firing: 70
+      throwing: 50
+      strength: 75
+      psiStrength: 75
+      psiSkill: 0
+      melee: 95
+    armor: STR_SLAANESH_CSM_CHAMPION_ARMOR
+    intelligence: 2
+    aggression: 8
+    avoidsFire: false
+    isLeeroyJenkins: true
+    spotter: 1
+    value: 35
+    moraleLossWhenKilled: 110 #leader
+    deathSound: [4621, 4622, 4623, 4624, 4625]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_NEURAL_WHIP
+        - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_SLAANESH_GRENADE
+      - - STR_SLAAN_LONGBLADE
+        - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_SLAANESH_GRENADE
+      - - STR_SLAAN_CHAINSWORD
+        - STR_PLASMA_PISTOL_SLAAN
+        - STR_PLASMA_PISTOL_CLIP_SLAAN
+        - STR_PLASMA_PISTOL_CLIP_SLAAN
+        - STR_SONIC_GRENADE
+        - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_ANOINTED  # CHAOS Slaanesh SNEKman             aggroSound
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3238,9 +3284,10 @@ units:
         - STR_SLAANGOR_DOUBLECLAW
       - - STR_SLAANGOR_DOUBLECLAW
         - STR_SLAANGOR_DOUBLECLAW
+
   - type: STR_SLAANGOR_BULLGOR  # Heavy infantry Leader, left claw weapon built in                                   # RANK 5 weapons done
     race: STR_SLAANESH
-    rank: STR_LIVE_SOLDIER
+    rank: STR_LIVE_LEADER
     stats:
       tu: 75
       stamina: 100
@@ -3281,6 +3328,7 @@ units:
         - STR_PLASMA_PISTOL_CLIP_SLAAN
         - STR_SLAANGOR_CLAW
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANGOR_GOR  # Medium infantry, no claws                                    # RANK 5 weapons done
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3333,6 +3381,7 @@ units:
         - STR_CONSTRICTOR_WEBBER_AMMO
         - STR_SLAAN_CHAINSWORD
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANGOR_UNGOR                                          # RANK 5 weapons done
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3377,6 +3426,7 @@ units:
         - STR_SLAAN_HEAVY_STUBBER_CLIP
         - STR_SLAAN_HEAVY_STUBBER_CLIP
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANGOR_BRAYGOR  # Hornless human sized                                         # RANK 5 weapons done
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3418,7 +3468,7 @@ units:
 
   - type: STR_SLAANGOR_BULLGOR_RITUALIST  # ritualist version, affected by static tag
     race: STR_SLAANESH
-    rank: STR_LIVE_SOLDIER
+    rank: STR_LIVE_LEADER
     stats:
       tu: 75
       stamina: 100
