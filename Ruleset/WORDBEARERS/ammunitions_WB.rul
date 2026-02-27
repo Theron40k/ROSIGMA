@@ -523,8 +523,9 @@ items:
     bigSprite: 3805
     hitSound: {mod: 40k, index: 708}
     explosionHitSound: {mod: 40k, index: 771}
-    powerForAnimation: 32
+    powerForAnimation: 30
     hitAnimation: 2261
+    hitAnimFrames: 8
     damageAlter: #DA BOLTER
       ToArmorPre: 0.2 # 20% warpfire Breaching
       ArmorEffectiveness: 0.9
@@ -535,11 +536,12 @@ items:
       ToEnergy: 0.2
       ToWound: 0.1
       RandomWound: false
+      FixRadius: 1
     damageBonus:
       psiStrength: 0.5
-    explosionSpeed: 3
-    power: 100
-    damageType: 5
+    explosionSpeed: 2
+    power: 160
+    damageType: 3
     clipSize: -1
     battleType: 2
     armor: 200
