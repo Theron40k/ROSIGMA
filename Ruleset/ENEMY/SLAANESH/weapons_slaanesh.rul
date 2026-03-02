@@ -158,6 +158,42 @@ items:
       INFECTION_DAMAGE_PERCENT: 100  # inflicts % of damage dealt as infection damage
       INFECTION_TYPE: 3  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
 
+  - type: STR_SLAANESH_LESSER_SPAWN_WEAPON # For Slaanesh Lesser Spawn
+    refNode: *STR_SLAANESH_CORRUPTION_MELEE
+    bigSprite: 2427
+    meleeAnimation: 52
+    meleeSound: 2143
+    meleeHitSound: 2142
+    accuracyMelee: 80
+    meleeBonus:  # just need to touch
+      reactions: 0.1
+      melee: 0.5
+    power: 66
+    damageType: 12  # untyped
+    damageAlter:
+      IgnoreSelfDestruct: false
+      RandomType: 6
+      ArmorEffectiveness: 0.3  # doesn't really interact with armor
+      ToHealth: 0.25  # pure corruption; dummied down to 1% to fool AIs
+      ToMorale: 10.0
+      ToStun: 1.0
+      ToTime: 1.0
+      ToMana: 1.0
+      ToArmor: 0.0
+      ToTile: 0.0
+      ToItem: 0.0
+      ToWound: 0.0
+      RandomWound: false
+    costMelee:
+      time: 15
+      energy: 1
+    flatMelee:
+      time: true
+      energy: true
+    tags:
+      ITEM_DUMMY_HEALTH_DAMAGE_PERCENT: 1
+      INFECTION_DAMAGE_PERCENT: 100  # inflicts % of damage dealt as infection damage
+      INFECTION_TYPE: 3  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
 
   - type: STR_SLAANGOR_CLAW_GIMPIFY  # For Ritualist, zombifies
     weight: 10
