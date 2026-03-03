@@ -99,6 +99,45 @@ armors:
       - STR_COMBILAS
       - STR_FIXED_SONIC_CANNON
 
+  - type: STR_SLAANESH_LESSER_SPAWN_ARMOR
+    visibilityAtDay: 30
+    visibilityAtDark: 30
+    heatVision: 20
+    spriteSheet: LESSER_SLAANESH_SPAWN2_BS.PCK
+    spriteInv: SLAAN_LESSER_SPAWN_INV.SPK 
+    allowInv: false
+    corpseBattle:
+      - STR_SLAANESH_LESSER_SPAWN_CORPSE
+    frontArmor: 20
+    sideArmor: 20
+    rearArmor: 20
+    underArmor: 40
+    #specialWeapon: STR_SLAANESH_LESSER_SPAWN_WEAPON
+    drawingRoutine: 8
+    deathFrames: 3
+    damageModifier: #Flesh pulsating mass
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.3 #INC
+      - 0.5 #HE Resistance 
+      - 0.8 #LAS
+      - 1.0 #PLASMA
+      - 0.8 #STUN
+      - 1.1 #MELEE
+      - 1.3 #ACID
+      - 0.0 #SMOKE
+    loftempsSet: [ 4 ]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+    builtInWeapons: 
+      - STR_SLAANESH_LESSER_SPAWN_WEAPON
+
   - type: SLAANESH_SACRIFICE_M_ARMOR
     visibilityAtDay: 30
     visibilityAtDark: 15
