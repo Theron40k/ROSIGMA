@@ -3497,6 +3497,38 @@ units:
       - - STR_SLAANGOR_CLAW_GIMPIFY
       - - STR_SLAANGOR_CLAW_GIMPIFY
 
+  - type: STR_SLAANESH_LESSER_SPAWN #Lesser Spawn of Slaanesh Ground moving meatsack 
+    race: STR_SLAANESH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 100
+      health: 250
+      bravery: 110
+      reactions: 40
+      firing: 65
+      throwing: 70
+      strength: 70
+      psiStrength: 100
+      psiSkill: 0
+      melee: 80
+    armor: STR_SLAANESH_LESSER_SPAWN_ARMOR
+    standHeight: 10
+    kneelHeight: 10
+    value: 5
+    deathSound: [2134, 2135, 2102, 2103, 2100, 2101]
+    intelligence: 0
+    aggression: 8
+    berserkChance: 50
+    energyRecovery: 40
+    avoidsFire: true
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SLAANESH_LESSER_SPAWN_WEAPON
+      - - STR_SLAANESH_LESSER_SPAWN_WEAPON
+      - - STR_SLAANESH_LESSER_SPAWN_WEAPON
+
   - type: STR_SLAANESH_SACRIFICE_F  # Female version, transforms into Dire Daemonette
     race: STR_CIVILIAN
     stats:
