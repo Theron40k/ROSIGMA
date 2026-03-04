@@ -3531,6 +3531,48 @@ units:
       - - STR_SLAANESH_LESSER_SPAWN_WEAPON
       - - STR_SLAANESH_LESSER_SPAWN_WEAPON
 
+  - type: STR_SLAANESH_MUTANT  # SLAANESHI MUTANT
+    race: STR_SLAANESH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90
+      stamina: 100
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 40
+      throwing: 35
+      strength: 50
+      psiStrength: 35
+      psiSkill: 0
+      melee: 75
+    armor: STR_SLAANESH_MUTANT_ARMOR
+    standHeight: 20
+    kneelHeight: 14
+    value: 1
+    deathSound: [2134, 2135, 2017, 2102, 2103]
+    intelligence: 0
+    aggression: 2
+    avoidsFire: true
+    berserkChance: 33
+    energyRecovery: 50
+    spotter: 0
+    sniper: 0
+    moraleLossWhenKilled: 10
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SLAAN_BLADE
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_LASPISTOL_CLIP_SLAAN
+      - - STR_AUTOGUN_SLAANESH
+        - STR_AUTOGUN_SLAAN_CLIP
+        - STR_AUTOGUN_SLAAN_CLIP
+      - - STR_LASGUN_SLAANESH_ESCHER
+        - STR_LASGUN_CLIP_SLAAN
+        - STR_LASGUN_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_SACRIFICE_F  # Female version, transforms into Dire Daemonette
     race: STR_CIVILIAN
     stats:

@@ -138,6 +138,46 @@ armors:
     builtInWeapons:
       - STR_SLAANESH_LESSER_SPAWN_WEAPON
 
+  - type: STR_SLAANESH_MUTANT_ARMOR                                   # SLAANESHI MUTANT ARMOR
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 25
+      UNIT_SIZE: 100 # NORMAL
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+    visibilityAtDay: 35
+    visibilityAtDark: 20
+    heatVision: 0
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 3
+    meleeDodge:
+      reactions: 0.15
+    spriteSheet: SLAANESH_MUTANT_BS.PCK
+    spriteInv: SLAANESH_MUTANT_INV.SPK
+    corpseBattle:
+      - STR_SLAANESH_MUTANT_CORPSE #create new
+    frontArmor: 10
+    sideArmor: 5
+    rearArmor: 5
+    underArmor: 5
+    specialWeapon: AUX_SEDUCE_MEDIUM
+    damageModifier:  # MUTANT ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.3  # FLAMES
+      - 1.0  # HE
+      - 0.9  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE
+      - 1.4  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+
   - type: SLAANESH_SACRIFICE_M_ARMOR
     visibilityAtDay: 30
     visibilityAtDark: 15
