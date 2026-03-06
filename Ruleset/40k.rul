@@ -3143,6 +3143,8 @@ units:
     aggression: 8
     avoidsFire: false
     isLeeroyJenkins: true
+    standHeight: 18
+    kneelHeight: 14
     spotter: 1
     value: 35
     moraleLossWhenKilled: 110 #leader
@@ -3398,7 +3400,7 @@ units:
       psiSkill: 0
       melee: 65
     armor: STR_SLAANGOR_UNGOR_ARMORLIGHT
-    standHeight: 21
+    standHeight: 20
     kneelHeight: 15
     intelligence: 0
     value: 8
@@ -3443,8 +3445,8 @@ units:
       psiSkill: 0
       melee: 55
     armor: STR_SLAANGOR_BRAY_ARMORLIGHT  # see below
-    standHeight: 21
-    kneelHeight: 15
+    standHeight: 19
+    kneelHeight: 14
     intelligence: 0
     value: 5
     deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
@@ -3529,6 +3531,48 @@ units:
       - - STR_SLAANESH_LESSER_SPAWN_WEAPON
       - - STR_SLAANESH_LESSER_SPAWN_WEAPON
 
+  - type: STR_SLAANESH_MUTANT  # SLAANESHI MUTANT
+    race: STR_SLAANESH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90
+      stamina: 100
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 40
+      throwing: 35
+      strength: 50
+      psiStrength: 35
+      psiSkill: 0
+      melee: 75
+    armor: STR_SLAANESH_MUTANT_ARMOR
+    standHeight: 20
+    kneelHeight: 14
+    value: 1
+    deathSound: [2134, 2135, 2017, 2102, 2103]
+    intelligence: 0
+    aggression: 2
+    avoidsFire: true
+    berserkChance: 33
+    energyRecovery: 50
+    spotter: 0
+    sniper: 0
+    moraleLossWhenKilled: 10
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SLAAN_BLADE
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_LASPISTOL_CLIP_SLAAN
+      - - STR_AUTOGUN_SLAANESH
+        - STR_AUTOGUN_SLAAN_CLIP
+        - STR_AUTOGUN_SLAAN_CLIP
+      - - STR_LASGUN_SLAANESH_ESCHER
+        - STR_LASGUN_CLIP_SLAAN
+        - STR_LASGUN_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_SACRIFICE_F  # Female version, transforms into Dire Daemonette
     race: STR_CIVILIAN
     stats:
@@ -3544,7 +3588,7 @@ units:
       psiSkill: 0
       melee: 0
     armor: SLAANESH_SACRIFICE_F_ARMOR
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     spawnUnit: STR_DIRE_DAEMONETTE
     value: 10
@@ -3569,7 +3613,7 @@ units:
       psiSkill: 0
       melee: 0
     armor: SLAANESH_SACRIFICE_M_ARMOR
-    standHeight: 21
+    standHeight: 20
     kneelHeight: 14
     spawnUnit: STR_DIRE_DAEMONETTE
     value: 10
@@ -3594,7 +3638,7 @@ units:
       psiSkill: 0
       melee: 36
     armor: CIVILIAN_HEDONITE_ARMOR_SACRIFICE
-    standHeight: 20
+    standHeight: 19
     kneelHeight: 13
     value: 10
     intelligence: 0
@@ -3623,7 +3667,7 @@ units:
       melee: 36
     armor: CIVILIAN_HEDONITE_ARMOR_BLESSED_SACRIFICE
     spawnUnit: STR_CHRYSSALID_TERRORISTSELENE
-    standHeight: 20
+    standHeight: 19
     kneelHeight: 13
     value: 10
     intelligence: 0
@@ -3648,7 +3692,7 @@ units:
       melee: 36
     armor: CIVILIAN_HEDONITE_ARMOR_BLESSED_ALPHA_SACRIFICE
     spawnUnit: STR_ALPHA_SOLDIER_CORVUS
-    standHeight: 20
+    standHeight: 19
     kneelHeight: 13
     value: 10
     intelligence: 3
@@ -3672,7 +3716,7 @@ units:
       psiSkill: 0
       melee: 36
     armor: SLAANESH_DEMIMONDE_ARMOR_SACRIFICE
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 2
@@ -3700,7 +3744,7 @@ units:
       psiSkill: 0
       melee: 36
     armor: SLAANESH_DEMIMONDE_ARMOR_BLESSED_SACRIFICE
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 2
@@ -3725,7 +3769,7 @@ units:
       psiSkill: 0
       melee: 65
     armor: SLAANESH_DEMIMONDE_ARMOR
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3762,7 +3806,7 @@ units:
       psiSkill: 0
       melee: 50
     armor: SLAANESH_DEMIMONDE_ARMOR_RITUALIST
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3793,7 +3837,7 @@ units:
       psiSkill: 0
       melee: 50
     armor: SLAANESH_DEMIMONDE_ARMOR_BLESSED_RITUALIST  # can move after timer
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3825,7 +3869,7 @@ units:
       psiSkill: 0
       melee: 50
     armor: SLAANESH_DEMIMONDE_ARMOR_BLESSED  # can move
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3843,6 +3887,101 @@ units:
       - - STR_SLAAN_CONSTRICTOR_WEBBER
         - STR_CONSTRICTOR_WEBBER_AMMO
         - STR_SLAANESH_GRENADE
+
+  - type: STR_SLAANESH_SHARDSPEAKER #Shardspeaker
+    race: STR_SLAANESH
+    rank: STR_LIVE_LEADER
+    civilianRecoveryType: STR_CHAOS_WITCH_PLAYER #replace with slaanesh version?
+    stats:
+      tu: 65
+      stamina: 75
+      health: 40
+      bravery: 90
+      reactions: 50
+      firing: 60
+      throwing: 50
+      strength: 40
+      psiStrength: 60
+      psiSkill: 25
+      melee: 60
+    armor: STR_SLAANESH_SHARDSPEAKER_ARMOR
+    standHeight: 19
+    kneelHeight: 14
+    value: 15
+    berserkSound: 2213  # PlucktheLife from you
+    aggroSound: 2205  # laughter
+    deathSound: [2207, 2208, 2209, 2210]
+    intelligence: 3
+    aggression: 1
+    berserkChance: 50
+    sniper: 75
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SLAAN_BLADE
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_NEURAL_WHIP
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_NEURAL_WHIP
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_DAEMONETTESPAWNER_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+
+  - type: STR_SLAANESH_SHARDSPEAKER_COMMANDER #Slaaneshi Sorceress
+    race: STR_SLAANESH
+    rank: STR_LIVE_COMMANDER
+    civilianRecoveryType: STR_CHAOS_WITCH_PLAYER #replace with slaanesh version?
+    stats:
+      tu: 75
+      stamina: 85
+      health: 65
+      bravery: 100
+      reactions: 55
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 85
+      psiSkill: 25
+      melee: 70
+    armor: STR_SLAANESH_SHARDSPEAKER_COMMANDER_ARMOR
+    standHeight: 19
+    kneelHeight: 14
+    value: 15
+    berserkSound: 2213  # PlucktheLife from you
+    aggroSound: 2205  # laughter
+    deathSound: [2207, 2208, 2209, 2210]
+    intelligence: 3
+    aggression: 0
+    berserkChance: 50
+    sniper: 75
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_NEURAL_WHIP
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_NEURAL_WHIP
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_NEURAL_WHIP
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_DAEMONETTESPAWNER_GRENADE #placeholder for Slaaneshi spells
+        - STR_DAEMONETTESPAWNER_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
 
 # Slaanesh Traitor Guard units
   - type: STR_SLAANESH_SONIC_PLATFORM    # STR_ELDAR_ARMOR2                        RANK 7
