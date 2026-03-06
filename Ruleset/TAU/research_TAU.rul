@@ -96,12 +96,13 @@ research:
       - STR_GENERALLOCK
 
 ### Progression strategies to mid-tier
+
 ### "Remedial Imperial Guard Operations"
 ### Gives you a 2x2 (1x1?) TRADE facility you can more easily put in a regular base.
 ### Gives you TRADE access in a convenient package
   - name: STR_WHITESHIELD_BLACK_MARKET_GV
-    points: 0
-    cost: 400
+    points: 100
+    cost: 300
     dependencies:
       - STR_TAU_GUEVESA_GV    # Any Guevesa can hook in here
       - STR_LASER_WEAPONS     # desperate for bigger guns
@@ -110,8 +111,6 @@ research:
     needItem: true
     neededItem: STR_KILLPOINT_TOKEN     # kill a bad guy and win a mission
     unlocks:
-      - STR_HEAVY_WEAPONS_IG
-      - STR_LIGHT_BOLTERS_LOWTIER
       - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
     spawnedEvent: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
 
@@ -119,12 +118,12 @@ research:
 ### Discover Tau artifacts
 ### win a couple missions?
   - name: STR_THE_COLD_TRADE_GV
-    points: 0
-    cost: 300
+    points: 100
+    cost: 400
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
-      - STR_ALIEN_ORIGINS     # try this for now.
-    unlocks:
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
+    getOneFree:
       - STR_TAU_TRADING
     spawnedEvent: STR_THE_COLD_TRADE_EVENT_GV   # talk to the Tau here?
 
@@ -140,39 +139,38 @@ research:
 ### Accept Guevesa cultists first - they check you out
 ### Cultist periodic arrival events
   - name: STR_CULTURE_CLUB_GV
-    points: -100
-    cost: 500
+    points: 100
+    cost: 400
     dependencies:
       - STR_THE_COLD_TRADE_GV
-      - STR_TAU_TRADING
     unlocks:
       - STR_TAU_GUEVESA_TRADING           # unlocks cheaper rifles and carbines + flak
-      - STR_ENGINSEER_REQUISITION         # Enginseers
       - STR_GUARD_PRIEST_REQUISITION      # Priests
     disables:
       - STR_NOT_TAU_GUEVESA_TRADING       # remove old rifles/charges from market
-    spawnedEvent: STR_CULTURE_CLUB_GV
+    spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
+    # spawnedEvent: STR_CULTURE_CLUB_GV
 
 ### Form gue'vesa cluster preliminary to formal Tau pact
 ### Community outreach to get beastmen soldiers + cultists - can upgrade to Marin'vesa
 ### gated on mission/interrogation?
   - name: STR_GUEVESA_CLUSTER_GV
-    points: -250
-    cost: 1000
+    points: 100
+    cost: 600
     dependencies:
       - STR_CULTURE_CLUB_GV
       - STR_ELERIUM_115             # guevesa supply crawlers need fuel
       - STR_ALIEN_ALLOYS            # build fortifications and repair things
     unlocks:
       - STR_INQUISITION_ATTENTION_GV      # uh oh!
-      - STR_TANKERS_DELIGHT_GV      # heavy guard equipment as remaining loyalist guardsmen join you
-      - STR_BEASTMEN_CULTISTS_GV    # beastmen look to you for protection
       - STR_COOPT_NAVY_PILOTS_GV    # what else are they gonna do
       - STR_RECRUIT_GUEVESA_GV      # turn on guevesa and turn off militia
       - STR_MIDTIER_PREREQ
       - STR_HARDER_MISSIONS
     disables:
       - STR_RECRUIT_MILITIA_GV      # turn on guevesa and turn off militia
+    spawnedEvent: STR_CULTURE_CLUB_GV
+
 #     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
 #     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV # spawns free pathfinders
 
@@ -209,7 +207,7 @@ research:
     points: 0
     cost: 200
     dependencies:
-      - STR_GUEVESA_CLUSTER_GV
+      - STR_CULTURE_CLUB_GV
     spawnedEvent: STR_BEASTMEN_CULTISTS_EVENT_GV
 
 ### Unlock Chimeras and basic Sentinels too?
@@ -218,8 +216,12 @@ research:
     points: 0
     cost: 200
     dependencies:
-      - STR_GUEVESA_CLUSTER_GV
+      - STR_CULTURE_CLUB_GV
       # purchases unlocked over on the troops
+    unlocks:
+      - STR_HEAVY_WEAPONS_IG
+      - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_ENGINSEER_REQUISITION         # Enginseers
     spawnedEvent: STR_TANKERS_DELIGHT_EVENT_GV
 
 ### Work out an arrangement with the Navy interceptors
@@ -239,7 +241,7 @@ research:
 ### "Light" Tau base
   - name: STR_A_SECRET_PACT_GV
     points: -250
-    cost: 1000
+    cost: 800
     dependencies:
       - STR_GUEVESA_CLUSTER_GV
       # - STR_PATHFINDER_BEACON_GV
@@ -266,8 +268,8 @@ research:
 #     - STR_IMPERIAL_CRUSADE_GV which activates the Imperial Crusade content
 #     - STR_GUEVESA_HEAVY_WEAPONS_GV which activates Tau heavy weapons)
   - name: STR_INFILTRATION_CADRE_GV
-    points: 0
-    cost: 300
+    points: 100
+    cost: 400
     dependencies:
       - STR_A_SECRET_PACT_GV
       - STR_NAVY_COMUNICATIONS
@@ -276,28 +278,28 @@ research:
       - STR_TAU_BREACHERS_GV
       - STR_TAU_STRIKE_TEAMS_GV
       - STR_AWARD_PERSONAL_SHIELD
-      - STR_REMORA_INTERCEPTORS_GV    # Build remoras
+      # - STR_REMORA_INTERCEPTORS_GV    # Build remoras
     spawnedEvent: STR_INFILTRATION_CADRE_EVENT_GV
 
 ### build Devilfish from parts
   - name: STR_DEVILFISH_TRANSPORTS_GV
     cost: 200
-    points: 20
+    points: 50
     dependencies:
       - STR_INFILTRATION_CADRE_GV
       - STR_TAU_XENOTECH
 
 ### Operate XV26 stealth suits
   - name: STR_STEALTH_SUIT_OPERATIONS_GV
-    cost: 300
-    points: 30
+    cost: 200
+    points: 50
     dependencies:
       - STR_INFILTRATION_CADRE_GV
       - STR_TAU_XENOTECH
 
   - name: STR_REMORA_INTERCEPTORS_GV
-    cost: 150
-    points: 15
+    cost: 200
+    points: 50
     dependencies:
       - STR_INFILTRATION_CADRE_GV
       - STR_TAU_XENOTECH
@@ -332,9 +334,9 @@ research:
       - STR_INFILTRATION_CADRE_GV
       - STR_UFO_CONSTRUCTION
     unlocks:
-      - STR_STARSCYTHE_CRISIS_OPERATIONS_GV        # Starscythe Crisis
+      # - STR_STARSCYTHE_CRISIS_OPERATIONS_GV        # Starscythe Crisis
       # - STR_HAMMERHEAD_GUNSHIPS_GV      # Ion Hammerhead tanks
-      - STR_BARRACUDA_INTERCEPTORS_GV   # Barracuda Interceptors
+      # - STR_BARRACUDA_INTERCEPTORS_GV   # Barracuda Interceptors
       - STR_MASTER_CRAFTING
       - STR_IMPERIAL_CRUSADE_GV       # Super Danger!
     spawnedEvent: STR_AUXILIARY_CADRE_EVENT_GV
@@ -351,62 +353,62 @@ research:
 
   - name: STR_BARRACUDA_INTERCEPTORS_GV
     dependencies:
+      - STR_GENERALLOCK
       - STR_REMORA_INTERCEPTORS_GV
       - STR_AUXILIARY_CADRE_GV
       - STR_TAU_XENOTECH
 
 ### The Tau realize the warp storm is a serious threat
+# DEPRECATED
 # STR_INFILTRATION_CADRE_GV + STR_ALIEN_ORIGINS => STR_FIRE_OF_UNKNOWN_ORIGIN_GV (EMERGENCY MEASURES, REACH OUT TO SISTERS, RALLY GUARD)
   - name: STR_FIRE_OF_UNKNOWN_ORIGIN_GV
     points: 30
     cost: 300
     dependencies:
+      - STR_GENERALLOCK
       - STR_A_SECRET_PACT_GV
       - STR_ALIEN_ORIGINS
-    unlocks:
-      - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
-      - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
-      - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
+    # unlocks:
+    #   - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
+    #   - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
+    #   - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
     spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
+
+### Imperials generally approve of burning witches
+  - name: STR_EMERGENCY_PROTOCOLS_GV
+    points: 50
+    cost: 300
+    dependencies:
+      - STR_INFILTRATION_CADRE_GV
+      - STR_ALIEN_ORIGINS
+    spawnedEvent: STR_EMERGENCY_PROTOCOLS_EVENT_GV
 
 ### Pathfinder KT gizmos
 ### Advanced XV26 Stealth Suits from new KT
   - name: STR_FORM_KILL_TEAMS_GV
-    points: 10
-    cost: 100
-    dependencies:
-      - STR_INFILTRATION_CADRE_GV
-      - STR_FIRE_OF_UNKNOWN_ORIGIN_GV
-    spawnedEvent: STR_FORM_KILL_TEAMS_EVENT_GV
-
-### Imperials generally approve of burning witches
-  - name: STR_EMERGENCY_PROTOCOLS_GV
-    points: 60
+    points: 50
     cost: 200
     dependencies:
       - STR_INFILTRATION_CADRE_GV
-      - STR_FIRE_OF_UNKNOWN_ORIGIN_GV
-    spawnedEvent: STR_EMERGENCY_PROTOCOLS_EVENT_GV
+      - STR_EMERGENCY_PROTOCOLS_GV
+    spawnedEvent: STR_FORM_KILL_TEAMS_EVENT_GV
 
 ### Accept Sisters who have lost faith
-### Unlocks Chapel
+# DEPRECATED
   - name: STR_RECUSANT_SISTERS_GV
     points: 0
     cost: 200
     dependencies:
+      - STR_GENERALLOCK
       - STR_AUXILIARY_CADRE_GV
       - STR_EMERGENCY_PROTOCOLS_GV
-    reenables:
-      - STR_PSI_LAB
-    unlocks:
-      - STR_PSI_LAB
     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
 ### Placeholder for granting advanced Guard manufactures
   - name: STR_RALLY_GUARD_GV
-    points: 0
-    cost: 100
+    points: 50
+    cost: 200
     dependencies:
       - STR_AUXILIARY_CADRE_GV
       - STR_EMERGENCY_PROTOCOLS_GV
@@ -416,10 +418,11 @@ research:
 
 ### Tau version of The Heart of Chaos
   - name: STR_THE_TERRAN_PROBLEM_GV
-    points: 60
+    points: 50
     cost: 500
     dependencies:
-      - STR_FIRE_OF_UNKNOWN_ORIGIN_GV
+      - STR_AUXILIARY_CADRE_GV
+      - STR_EMERGENCY_PROTOCOLS_GV
       - STR_LEADER_PLUS
     spawnedEvent: STR_THE_TERRAN_PROBLEM_EVENT_GV
 
@@ -429,8 +432,12 @@ research:
     points: 250
     cost: 300
     dependencies:
+      - STR_AUXILIARY_CADRE_GV
       - STR_THE_TERRAN_PROBLEM_GV
-      - STR_RECUSANT_SISTERS_GV
+    reenables:
+      - STR_PSI_LAB
+    unlocks:
+      - STR_PSI_LAB
     spawnedEvent: STR_COOPT_ECCLESIARCHY_EVENT_GV
 
   # - name: STR_CONTACT_NICASSAR_GV
@@ -445,7 +452,7 @@ research:
 ### High tier starts a little early to reward the player
 ### and let them enjoy the full panoply of suits
   - name: STR_COALITION_COMMAND_GV
-    points: 60
+    points: 100
     cost: 1000
     dependencies:
       - STR_AUXILIARY_CADRE_GV
@@ -510,14 +517,14 @@ research:
     spawnedEvent: STR_ENGRAVED_BATTLESUITS_GV
 
   - name: STR_ORCA_DROPSHIPS_GV
-    points: 60
-    cost: 600
+    points: 50
+    cost: 1000
     dependencies:
       - STR_COALITION_COMMAND_GV
 
   - name: STR_THE_SILVER_TOWER_GV
-    points: 60
-    cost: 600
+    points: 50
+    cost: 1000
     dependencies:
       - STR_COALITION_COMMAND_GV
       - STR_COMMANDER_PLUS
@@ -537,7 +544,7 @@ research:
   # - name: STR_TAU_XENOPSYCH_DIVISION_GV
   - name: STR_TAU_FRONTIER_PSYCH_GV
     points: 250
-    cost: 1000
+    cost: 500
     dependencies:
       - STR_AUXILIARY_CADRE_GV
       - STR_COOPT_ECCLESIARCHY_GV
