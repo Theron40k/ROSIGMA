@@ -101,7 +101,7 @@ research:
 ### Gives you a 2x2 (1x1?) TRADE facility you can more easily put in a regular base.
 ### Gives you TRADE access in a convenient package
   - name: STR_WHITESHIELD_BLACK_MARKET_GV
-    points: 100
+    points: 50
     cost: 300
     dependencies:
       - STR_TAU_GUEVESA_GV    # Any Guevesa can hook in here
@@ -118,8 +118,8 @@ research:
 ### Discover Tau artifacts
 ### win a couple missions?
   - name: STR_THE_COLD_TRADE_GV
-    points: 100
-    cost: 400
+    points: 50
+    cost: 300
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
       - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
@@ -144,10 +144,7 @@ research:
     dependencies:
       - STR_THE_COLD_TRADE_GV
     unlocks:
-      - STR_TAU_GUEVESA_TRADING           # unlocks cheaper rifles and carbines + flak
       - STR_GUARD_PRIEST_REQUISITION      # Priests
-    disables:
-      - STR_NOT_TAU_GUEVESA_TRADING       # remove old rifles/charges from market
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
     # spawnedEvent: STR_CULTURE_CLUB_GV
 
@@ -163,13 +160,15 @@ research:
       - STR_ALIEN_ALLOYS            # build fortifications and repair things
     unlocks:
       - STR_INQUISITION_ATTENTION_GV      # uh oh!
-      - STR_COOPT_NAVY_PILOTS_GV    # what else are they gonna do
+      - STR_TAU_GUEVESA_TRADING           # unlocks cheaper rifles and carbines + flak
       - STR_RECRUIT_GUEVESA_GV      # turn on guevesa and turn off militia
       - STR_MIDTIER_PREREQ
       - STR_HARDER_MISSIONS
+      - STR_LIGHT_BOLTERS_MIDTIER         # Advanced bolters
     disables:
       - STR_RECRUIT_MILITIA_GV      # turn on guevesa and turn off militia
-    spawnedEvent: STR_CULTURE_CLUB_GV
+      - STR_NOT_TAU_GUEVESA_TRADING       # remove old rifles/charges from market
+    spawnedEvent: STR_CULTURE_CLUB_EVENT_GV
 
 #     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
 #     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV # spawns free pathfinders
@@ -219,9 +218,9 @@ research:
       - STR_CULTURE_CLUB_GV
       # purchases unlocked over on the troops
     unlocks:
-      - STR_HEAVY_WEAPONS_IG
-      - STR_LIGHT_BOLTERS_MIDTIER
       - STR_ENGINSEER_REQUISITION         # Enginseers
+      - STR_HEAVY_WEAPONS_IG
+      - STR_LIGHT_BOLTERS_LOWTIER         # Advanced bolters
     spawnedEvent: STR_TANKERS_DELIGHT_EVENT_GV
 
 ### Work out an arrangement with the Navy interceptors
@@ -244,12 +243,13 @@ research:
     cost: 800
     dependencies:
       - STR_GUEVESA_CLUSTER_GV
-      # - STR_PATHFINDER_BEACON_GV
+      - STR_UFO_POWER_SOURCE
       - STR_LOSE_250
     unlocks:
-      - STR_TAU_PATHFINDERS_GV            # unlocks pathfinder construction
+      - STR_TAU_PATHFINDERS_GV        # unlocks pathfinder recruitment
       - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
       - STR_TAU_XENOTECH              # can start learning it from the pathfinders now
+      - STR_TAU_ARMORY_EXAM
     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV  # breadcrumb the navy communications here
 
   # - name: STR_WATERCASTE_OUTPOST_GV
@@ -262,11 +262,6 @@ research:
 
 # Ceramite plates part 2
 # "Medium" Tau base
-# STR_A_SECRET_PACT_GV + STR_NAVY_COMUNICATIONS =>
-#     - STR_INFILTRATION_CADRE_GV (DEVILFISH, STEALTHS, REMORAS, TAU SMITHS, TAU CHIMERAS, TAU SENTINELS)
-#     - STR_RELOCATION_SUPPORT_GV which offsets the score penalty from STR_INFILTRATION_CADRE and provides free PATHFINDER CONTINGENT
-#     - STR_IMPERIAL_CRUSADE_GV which activates the Imperial Crusade content
-#     - STR_GUEVESA_HEAVY_WEAPONS_GV which activates Tau heavy weapons)
   - name: STR_INFILTRATION_CADRE_GV
     points: 100
     cost: 400
@@ -274,7 +269,6 @@ research:
       - STR_A_SECRET_PACT_GV
       - STR_NAVY_COMUNICATIONS
     unlocks:
-      - STR_TAU_ARMORY_EXAM
       - STR_TAU_BREACHERS_GV
       - STR_TAU_STRIKE_TEAMS_GV
       - STR_AWARD_PERSONAL_SHIELD
@@ -434,6 +428,7 @@ research:
     dependencies:
       - STR_AUXILIARY_CADRE_GV
       - STR_THE_TERRAN_PROBLEM_GV
+      - STR_ADEPTAS_NOVICE_RESEARCH   # recruit novices
     reenables:
       - STR_PSI_LAB
     unlocks:
