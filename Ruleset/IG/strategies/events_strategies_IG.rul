@@ -35,15 +35,17 @@ events:
       STR_LIGHT_BOLTER_AMMO_BELT: 6
 
   - name: STR_RECRUITS_ABHUMAN_STRATEGY_IG
-    refNode: *STR_RECRUITS_START_EVENT
     adhocMissionScriptTags: ["gameStart"]
     description: STR_RECRUITS_ABHUMAN_STRATEGY_IG_DESCRIPTION
+    background: GuardBG.SCR
     everyMultiSoldierList:
       STR_GUARD_BEASTMAN: 8
       STR_PENITENT_BEASTGUARD: 6
       STR_GUARD_SQUAT: 3
       STR_OGRYN: 1
     timer: 810
+    timerRandom: 0
+    researchList: [STR_ABHUMAN_STRATEGY_IG]
     interruptResearch: STR_NOT_ABHUMAN_STRATEGY
     everyMultiItemList:
       STR_CHIMERA_LIGHT_TOKEN: 1
