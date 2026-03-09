@@ -558,6 +558,42 @@ armors:
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
 
+  - type: STR_SLAANESH_CULTIST_BIGM_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 10
+    spriteSheet: SLAANESH_CULTIST_BIGM_BS.PCK
+    spriteInv: SLAANESH_CULTIST_BIGM_INV.SPK 
+    corpseBattle:
+      - STR_SLAANESH_CULTIST_BIGM_CORPSE
+    meleeDodge:
+      reactions: 0.05
+    frontArmor: 20
+    sideArmor: 20
+    rearArmor: 15
+    underArmor: 20
+    drawingRoutine: 0
+    damageModifier:  # CULTIST ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.2  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE
+      - 1.4  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
   - type: STR_SLAANESH_SHARDSPEAKER_ARMOR                        # SLAANESHI SHARDSPEAKER ARMOR
     allowsRunning: false  # NPC limits for BAI
     tags:
@@ -566,6 +602,9 @@ armors:
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_SLAANESH: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 33 #33x100/66=50 shield
+      ARMOR_ENERGY_SHIELD_DECAY: 66
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
       DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
     visibilityAtDay: 35
@@ -603,7 +642,7 @@ armors:
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_SLAANESH: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 66
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 66 #66x100/66=100 shield
       ARMOR_ENERGY_SHIELD_DECAY: 66
       ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
       DODGE_CHANCE: 30
