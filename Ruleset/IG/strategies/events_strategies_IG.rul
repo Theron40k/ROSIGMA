@@ -13,13 +13,15 @@ events:
     everyItemList: [STR_CHIMERA_TOKEN, STR_VALKYRIE_TOKEN, STR_LIGHTNING_TOKEN, STR_GUARD_ARMORS_MEDIC, STR_GUARD_ARMORS_MEDIC, STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER, STR_AC_AP_AMMO, STR_AC_AP_AMMO, STR_AC_AP_AMMO, STR_AC_AP_AMMO]
 
   - name: STR_RECRUITS_ELITE_STRATEGY_IG
-    refNode: *STR_RECRUITS_START_EVENT
     adhocMissionScriptTags: ["gameStartHard"]
     description: STR_RECRUITS_ELITE_STRATEGY_IG_DESCRIPTION
+    background: StormtrooperScionSingleBG.SCR
     spawnedPersons: 16
     spawnedPersonType: STR_STORMTROOPER
     timer: 810
+    timerRandom: 0
     interruptResearch: STR_NOT_ELITE_STRATEGY
+    researchList: [STR_ELITE_STRATEGY_IG]
     everyMultiItemList:
       STR_TAUROX_TOKEN: 1
       STR_VALKYRIE_GRAV_DROP_TOKEN: 1
