@@ -113,6 +113,8 @@ items:
       melee: 0.5
     flatRate: true
     clipSize: -1
+    recover: false
+    fixedWeapon: true
     battleType: 1
     maxRange: 15  # has super reach
     powerRangeThreshold: 15
@@ -286,6 +288,10 @@ items:
     flatMelee:
       time: true
       energy: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    fixedWeapon: true
     tags:
       ITEM_DUMMY_HEALTH_DAMAGE_PERCENT: 1
       INFECTION_DAMAGE_PERCENT: 50  # inflicts % of damage dealt as infection damage
@@ -537,6 +543,7 @@ items:
       melee: 1.0
       flatHundred: 0.0
     listOrder: 12400
+
   - type: STR_SLAAN_LASGUN
     categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
     size: 0.2
