@@ -99,6 +99,7 @@ soldiers:
     standHeight: 22
     kneelHeight: 14
     femaleFrequency: 50
+    moraleLossWhenKilled: 75    # sacrifices for the Greater Good
     dogfightExperience:
       bravery: 10
       reactions: 30
@@ -256,6 +257,8 @@ soldiers:
     avatarOffsetX: 66
     avatarOffsetY: 42
     value: 10
+    moraleLossWhenKilled: 75    # sacrifices for the Greater Good
+
 
 
   - type: STR_GUEVESAUI_GV
@@ -437,7 +440,7 @@ soldiers:
     soldierNames:
       - delete
       - Names/tau_militia.nam
-    moraleLossWhenKilled: 100
+    moraleLossWhenKilled: 100     # more fragile morale
     allowPiloting: false
     allowPromotion: true
     rankStrings:
@@ -621,7 +624,7 @@ soldiers:
     rankBattleSprite: {mod: 40k, index: 1000}
     rankTinySprite: {mod: 40k, index: 1000}
     value: 10
-    moraleLossWhenKilled: 100
+    moraleLossWhenKilled: 75      # sacrifices for the Greater Good
 
 ### copy guard beastman
 ### TODO: Add upgraded marin'vesa and officers
@@ -705,7 +708,7 @@ soldiers:
     rankBattleSprite: {mod: 40k, index: 1000}
     rankTinySprite: {mod: 40k, index: 1000}
     value: 10
-    moraleLossWhenKilled: 100
+    moraleLossWhenKilled: 75      # sacrifices for the Greater Good
 
 
 ### copy guard beastman
@@ -790,4 +793,4 @@ soldiers:
     rankBattleSprite: {mod: 40k, index: 1000}
     rankTinySprite: {mod: 40k, index: 1000}
     value: 10
-    moraleLossWhenKilled: 100
+    moraleLossWhenKilled: 75      # sacrifices for the Greater Good
