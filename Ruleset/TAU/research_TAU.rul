@@ -13,7 +13,7 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  # Everyone has these four by default
+  # Everyone has these five by default
   - name: STR_NOT_TAU_EMPIRE_GV         # (Not Tau and friends)
   - name: STR_NOT_TAU_GUEVESA_GV        # (Not xenophile scum)
   - name: STR_NOT_TAU_AUXILIARY_GV      # (Not xenophile scum with friends)
@@ -65,7 +65,10 @@ research:
       - STR_NOT_CHAOSCULT
       - STR_NOT_THE_IMPERIAL_LAW
       - STR_ENDGANGERSBASE    # Stop the onslaught of gang events
+      - STR_GENESTEALERS_INACTIVE # no genestealers
+      - STR_GSC_ARBITES_SPAWNED   # prevent GSC arbites spawn
     disables:
+      - STR_GENESTEALERS_ACTIVE
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_CHAOS_PATH
       - STR_CHAOS_STRATEGY_ARBITES
@@ -119,7 +122,7 @@ research:
 ### win a couple missions?
   - name: STR_THE_COLD_TRADE_GV
     points: 50
-    cost: 300
+    cost: 500
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
       - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
@@ -168,7 +171,8 @@ research:
     disables:
       - STR_RECRUIT_MILITIA_GV      # turn on guevesa and turn off militia
       - STR_NOT_TAU_GUEVESA_TRADING       # remove old rifles/charges from market
-    spawnedEvent: STR_CULTURE_CLUB_EVENT_GV
+    spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV  # breadcrumb the navy communications here
+
 
 #     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
 #     spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV # spawns free pathfinders
@@ -250,7 +254,7 @@ research:
       - STR_BIONICS_OPERATION         # proper med facilities redo as tau bionics
       - STR_TAU_XENOTECH              # can start learning it from the pathfinders now
       - STR_TAU_ARMORY_EXAM
-    spawnedEvent: STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV  # breadcrumb the navy communications here
+    spawnedEvent: STR_A_SECRET_PACT_EVENT_GV
 
   # - name: STR_WATERCASTE_OUTPOST_GV
   #   dependencies:
@@ -383,7 +387,6 @@ research:
     points: 50
     cost: 200
     dependencies:
-      - STR_INFILTRATION_CADRE_GV
       - STR_EMERGENCY_PROTOCOLS_GV
     spawnedEvent: STR_FORM_KILL_TEAMS_EVENT_GV
 
