@@ -572,17 +572,18 @@ eventScripts:
       STR_ALPHA_LEGION_PURGE: true
       STR_ALPHA_LEGION_PURGED: false  # so we only fire once
 
-  # GSC Spawn Events
+  # GSC Spawn Events - switch to month 1 so they can be deactivated
   - type: STR_GSC_ARRIVAL_BASE_SPAWN_EVENTSCRIPT
     eventWeights:
       0:
         STR_GSC_ARRIVAL_BASE_SPAWN: 100
-    firstMonth: 0
+    firstMonth: 1
     executionOdds: 80
     researchTriggers:
       STR_GSC_ARRIVAL_BASE_SPAWN: false
       STR_GSC_ARBITES_SPAWNED: false
       STR_STEEL_LEGION_STRATEGY: false
+      STR_TAU_GUEVESA_STRATEGY: false
 
   - type: STR_GSC_ARRIVAL_BASE_SPAWN_EVENTSCRIPT_SL
     eventWeights:
@@ -599,12 +600,13 @@ eventScripts:
     eventWeights:
       0:
         STR_GSC_ARBITES_SPAWNED: 100
-    firstMonth: 0
+    firstMonth: 1
     executionOdds: 80
     researchTriggers:
       STR_GSC_ARRIVAL_BASE_SPAWN: true
       STR_GSC_ARBITES_SPAWNED: false
       STR_STEEL_LEGION_STRATEGY: false
+      STR_TAU_GUEVESA_STRATEGY: false
 
   - type: STR_GSC_ARBITES_SPAWNED_EVENTSCRIPT_SL
     eventWeights:

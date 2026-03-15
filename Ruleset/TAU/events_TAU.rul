@@ -78,6 +78,7 @@ adhocScripts:
   - type: adhocStarterBaseCultistGV
     missionWeights:
       0:
+        # STR_SLAANESH_ABBEY_SCALING_GV: 100
         STR_TS_CULTIST_BASE_GV: 100
     regionWeights:
       0:
@@ -93,7 +94,7 @@ adhocScripts:
         STR_SIBERIA: 10
         STR_AUSTRALASIA: 10
     useTable: false
-    startDelay: 50200  # 5-6 weeks
+    startDelay: 20080  # 2-3 weeks
     randomDelay: 10040
     adhocMissionScriptTags: ["adhocStarterBaseCultistGV"]
 
@@ -115,9 +116,9 @@ adhocScripts:
         STR_SIBERIA: 10
         STR_AUSTRALASIA: 10
     useTable: false
-    startDelay: 20080  # 2-3 weeks
+    startDelay: 40160  # 4-5 weeks
     randomDelay: 10040
-    adhocMissionScriptTags: ["adhocStarterBaseCultistGV"]
+    adhocMissionScriptTags: ["adhocStarterBaseTraitorGuardGV"]
 
 #   - type: redeemedBaseL1
 #     missionWeights:
@@ -161,7 +162,7 @@ events:
   - name: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
     description: STR_TAU_GUEVESA_STRATEGY_CODEX_DESCRIPTION_GV
     background: GuardOffensiveBG.SCR
-    adhocMissionScriptTags: ["gameStartTau", "adhocStarterBaseCultistGV"]
+    adhocMissionScriptTags: ["gameStartTau", "adhocStarterBaseCultistGV", "adhocStarterBaseTraitorGuardGV"]
     # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
     spawnedPersonType: STR_MILITIA_GV
