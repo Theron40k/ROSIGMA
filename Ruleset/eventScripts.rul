@@ -480,8 +480,8 @@ eventScripts:
     eventWeights:
       0:
         STR_EARTHQUAKE_DETECTED_NECRONS: 100
-    firstMonth: 6
-    executionOdds: 80
+    firstMonth: 7
+    executionOdds: 70
     researchTriggers:
       STR_EARTHQUAKE_NECRONS: false
       STR_NECRONS_SPAWNED: false
@@ -491,7 +491,7 @@ eventScripts:
     eventWeights:
       0:
         STR_EARTHQUAKE_DETECTED_NECRONS: 100
-    firstMonth: 8
+    firstMonth: 9
     executionOdds: 50
     researchTriggers:
       STR_EARTHQUAKE_NECRONS: false
@@ -502,7 +502,7 @@ eventScripts:
     eventWeights:
       0:
         STR_NECRONS_SPAWNED: 100
-    firstMonth: 6
+    firstMonth: 8
     executionOdds: 80
     researchTriggers:
       STR_EARTHQUAKE_NECRONS: true
@@ -513,7 +513,7 @@ eventScripts:
     eventWeights:
       0:
         STR_NECRONS_SPAWNED: 100
-    firstMonth: 8
+    firstMonth: 10
     executionOdds: 50
     researchTriggers:
       STR_EARTHQUAKE_NECRONS: true
@@ -572,17 +572,18 @@ eventScripts:
       STR_ALPHA_LEGION_PURGE: true
       STR_ALPHA_LEGION_PURGED: false  # so we only fire once
 
-  # GSC Spawn Events
+  # GSC Spawn Events - switch to month 1 so they can be deactivated
   - type: STR_GSC_ARRIVAL_BASE_SPAWN_EVENTSCRIPT
     eventWeights:
       0:
         STR_GSC_ARRIVAL_BASE_SPAWN: 100
-    firstMonth: 0
+    firstMonth: 1
     executionOdds: 80
     researchTriggers:
       STR_GSC_ARRIVAL_BASE_SPAWN: false
       STR_GSC_ARBITES_SPAWNED: false
       STR_STEEL_LEGION_STRATEGY: false
+      STR_TAU_GUEVESA_STRATEGY: false
 
   - type: STR_GSC_ARRIVAL_BASE_SPAWN_EVENTSCRIPT_SL
     eventWeights:
@@ -599,12 +600,13 @@ eventScripts:
     eventWeights:
       0:
         STR_GSC_ARBITES_SPAWNED: 100
-    firstMonth: 0
+    firstMonth: 1
     executionOdds: 80
     researchTriggers:
       STR_GSC_ARRIVAL_BASE_SPAWN: true
       STR_GSC_ARBITES_SPAWNED: false
       STR_STEEL_LEGION_STRATEGY: false
+      STR_TAU_GUEVESA_STRATEGY: false
 
   - type: STR_GSC_ARBITES_SPAWNED_EVENTSCRIPT_SL
     eventWeights:

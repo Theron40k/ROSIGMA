@@ -12316,6 +12316,10 @@ ufopaedia:
   - id: STR_BLIGHT_ROCKET
     type_id: 4
     section: STR_NOT_AVAILABLE
+# this one is placeholder until someone define it with picture and description
+  - id: STR_BLIGHT_ROCKET_PLAYER
+    type_id: 4
+    section: STR_NOT_AVAILABLE
 
   - id: STR_SLAANESH_ROCKET_LAUNCHER
     type_id: 14
@@ -16909,6 +16913,26 @@ ufopaedia:
     text: STR_PESTIGOR_ARMOR_UFOPEDIA
 
   # Slaanesh
+  - id: STR_SLAANESH_CULTIST_BIGM
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: SLAANESH_CULTIST_BIGM_ORIGINS.SPK
+    text: STR_SLAANESH_CULTIST_BIGM_UFOPEDIA
+  - id: STR_SLAANESH_CULTIST_BIGM_ORIGINS
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_SLAANESH_CULTIST_BIGM_CORPSE
+    image_id: SLAANESH_CULTIST_BIGM_ORIGINS.SPK
+    text: STR_SLAANESH_CULTIST_BIGM_ORIGINS_UFOPEDIA
+  - id: STR_SLAANESH_CULTIST_BIGM_ARMOR
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_LIVE_CAPTURE_CULTIST
+    image_id: SLAANESH_CULTIST_BIGM_ORIGINS.SPK
+    text: STR_KHORNEGOR_UNGOR_ARMOR_UFOPEDIA
+
   - id: STR_SLAANESH_DEMIMONDE
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS

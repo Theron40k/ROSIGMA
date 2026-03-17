@@ -57,47 +57,47 @@ manufacture:
     requiredItems:
       STR_LIVE_CAPTURE_GUARDAI_CATACHAN_VETERAN: 1
 
-  ### TODO: Explain what recusants are
-  - &STR_RECUSANTS_GV
-    name: STR_RECUSANT_SISTERS_NOVICE_GV
-    category: STR_INDOCTRINATION_CATEGORY_GV
-    space: 0
-    time: 10
-    cost: 1
-    requires:
-      - STR_RECUSANT_SISTERS_GV
-    spawnedPersonType: STR_GUEVESALA_GV
-    requiredItems:
-      STR_SHRINE_NOVICE_AI: 1
-    producedItems:
-      STR_PURITY_SEAL: 5
+  # ### TODO: Explain what recusants are
+  # - &STR_RECUSANTS_GV
+  #   name: STR_RECUSANT_SISTERS_NOVICE_GV
+  #   category: STR_INDOCTRINATION_CATEGORY_GV
+  #   space: 0
+  #   time: 10
+  #   cost: 1
+  #   requires:
+  #     - STR_COOPT_ECCLESIARCHY_GV
+  #   spawnedPersonType: STR_GUEVESALA_GV
+  #   requiredItems:
+  #     STR_SHRINE_NOVICE_AI: 1
+  #   producedItems:
+  #     STR_PURITY_SEAL: 5
 
-  - name: STR_RECUSANT_SISTERS_MEDICAE_GV
-    category: STR_INDOCTRINATION_CATEGORY_GV
-    refNode: *STR_RECUSANTS_GV
-    spawnedPersonType: STR_GUEVESAUI_GV
-    requiredItems:
-      STR_SHRINE_MEDICAE_AI: 1
-    producedItems:
-      STR_PURITY_SEAL: 7
+  # - name: STR_RECUSANT_SISTERS_MEDICAE_GV
+  #   category: STR_INDOCTRINATION_CATEGORY_GV
+  #   refNode: *STR_RECUSANTS_GV
+  #   spawnedPersonType: STR_GUEVESAUI_GV
+  #   requiredItems:
+  #     STR_SHRINE_MEDICAE_AI: 1
+  #   producedItems:
+  #     STR_PURITY_SEAL: 7
 
-  - name: STR_RECUSANT_SISTERS_ADEPTAS_GV
-    category: STR_INDOCTRINATION_CATEGORY_GV
-    refNode: *STR_RECUSANTS_GV
-    spawnedPersonType: STR_GUEVESAUI_GV
-    requiredItems:
-      STR_SHRINE_ADEPTAS_AI: 1
-    producedItems:
-      STR_PURITY_SEAL: 10
+  # - name: STR_RECUSANT_SISTERS_ADEPTAS_GV
+  #   category: STR_INDOCTRINATION_CATEGORY_GV
+  #   refNode: *STR_RECUSANTS_GV
+  #   spawnedPersonType: STR_GUEVESAUI_GV
+  #   requiredItems:
+  #     STR_SHRINE_ADEPTAS_AI: 1
+  #   producedItems:
+  #     STR_PURITY_SEAL: 10
 
-  - name: STR_RECUSANT_SISTERS_ELOHIM_GV
-    category: STR_INDOCTRINATION_CATEGORY_GV
-    refNode: *STR_RECUSANTS_GV
-    spawnedPersonType: STR_GUEVESAVRE_GV
-    requiredItems:
-      STR_SHRINE_ELOHIM_AI: 1
-    producedItems:
-      STR_PURITY_SEAL: 15
+  # - name: STR_RECUSANT_SISTERS_ELOHIM_GV
+  #   category: STR_INDOCTRINATION_CATEGORY_GV
+  #   refNode: *STR_RECUSANTS_GV
+  #   spawnedPersonType: STR_GUEVESAVRE_GV
+  #   requiredItems:
+  #     STR_SHRINE_ELOHIM_AI: 1
+  #   producedItems:
+  #     STR_PURITY_SEAL: 15
 
 
   - &STR_TAU_SISTERS_GV
@@ -123,15 +123,15 @@ manufacture:
     producedItems:
       STR_PURITY_SEAL: 7
 
-  ### TODO: LOCK after Toad's game is done - one off
-  - name: STR_ABSOLVE_BR_MEDICAE_GV
-    category: STR_INDOCTRINATION_CATEGORY_GV
-    refNode: *STR_TAU_SISTERS_GV
-    spawnedPersonType: STR_ADEPTAS
-    requiredItems:
-      STR_BLOODYROSE_HOSPITALIER_AI: 1
-    producedItems:
-      STR_PURITY_SEAL: 7
+  # ### TODO: LOCK after Toad's game is done - one off
+  # - name: STR_ABSOLVE_BR_MEDICAE_GV
+  #   category: STR_INDOCTRINATION_CATEGORY_GV
+  #   refNode: *STR_TAU_SISTERS_GV
+  #   spawnedPersonType: STR_ADEPTAS
+  #   requiredItems:
+  #     STR_BLOODYROSE_HOSPITALIER_AI: 1
+  #   producedItems:
+  #     STR_PURITY_SEAL: 7
 
   - name: STR_ABSOLVE_ADEPTAS_NOVICE_GV
     category: STR_INDOCTRINATION_CATEGORY_GV

@@ -1045,6 +1045,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_IRON_GUARD_SERVITOR_CODEX: "{NEWLINE} The process to create Iron Guard are a well kept secret by the Warsmiths of the Iron Warriors. A form of Combat Servitor, they require living humans for their creations, turning anyone who can survive the process into a capable combatant, incapable of disobeying orders or near enough fearless."
   STR_PRODUCE_IRON_GUARD: "Produce Iron Guard Servitor"
 
+  STR_NECRON_EARLY: "Awakening Necron"
   STR_NECRONTECH_RESEARCH: "Necron Xenotech"
   STR_SCARAB_R_WEAPON: "Feeder Mandibles"
   STR_SCARAB_L_WEAPON: "Feeder Mandibles"
@@ -2869,6 +2870,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   CIVILIAN_HEDONITE_ARMOR_BLESSED_ALPHA_SACRIFICE: "Slaanesh Offering"
   STR_CIVILIAN_HEDONITE_CORPSE: "Slaanesh Hedonite Corpse"
 
+  STR_SLAANESH_CULTIST_BIGM: "Slaanesh Juiced Cultist"
+  STR_SLAANESH_CULTIST_BIGM_ARMOR: "Slaanesh Juiced Cultist"
+  STR_SLAANESH_CULTIST_BIGM_CORPSE: "Slaanesh Cultist Corpse"
+  STR_SLAANESH_CULTIST_BIGM_ORIGINS: "Slaanesh Juiced Cultist Origins"
+  STR_SLAANESH_CULTIST_BIGM_ORIGINS_UFOPEDIA: "{NEWLINE} These musclebound Slaaneshi Cultists inject themselves with any body enhancing drug they can get their hands on. Enhancing delights for the senses as well as their bodies, their stimulant boosted physique can make them dangerous combatants."
+  STR_SLAANESH_CULTIST_BIGM_UFOPEDIA: "{NEWLINE} The Juiced only wear what enhances and displays their superior physique, their stimulant fried senses making it difficult to inflict pain upon them by normal means."
+
 # SHARDSPEAKER
   STR_SLAANESH_SHARDSPEAKER: "Shardspeaker"
   STR_SLAANESH_SHARDSPEAKER_COMMANDER: "Slaaneshi Sorceress"
@@ -2882,6 +2890,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SLAANESH_SHARDSPEAKER_COMMANDER_UFOPEDIA: "{NEWLINE} Adorned with a gem-studded horned helmet and purple silk veil, the Slaaneshi Sorceress carry shards of warped mirrors and various implements of their demented craft."
   STR_SLAANESH_SHARDSPEAKER_COMMANDER_ORIGINS: "Slaaneshi Sorceress Origins"
   STR_SLAANESH_SHARDSPEAKER_COMMANDER_ORIGINS_UFOPEDIA: "{NEWLINE} The most accomplished and favoured of Shardspeakers become Chaos Sorceresses, anointed and versed in the deepest secrets of the Slaaneshi sorcery. They are not only dangerous unsanctioned psykers, but marked by the Dark Prince himself with the power to enrapture the minds of the weak-willed, mutate flesh with a touch or summon daemons with a sensual whisper."
+
+  STR_BLISSFUL_THROES: "Blissful Throes"
+  STR_BLISSFUL_THROES_CODEX: "{NEWLINE} A long whip of pure Chaos energy lashes out at the enemy with a delightful crack, leaving its victims wracked with pain, to the envy of the caster."
 
   # LESSER SPAWN OF SLAANESH
   STR_SLAANESH_LESSER_SPAWN: "Lesser Spawn of Slaanesh"
@@ -12341,27 +12352,29 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TENAX_EXHORT_EVENT_GV: "ORDO MILITARE IMPERIALIS"
   STR_TENAX_EXHORT_CODEX_DESCRIPTION_GV: "Guardsmen of the 22nd! We are the Emperor's wrath incarnate! Know that mercy is sin and pity is weakness. Let the traitor burn and the heretic bleed. Let the roar of your shells be your prayers, and the churn of your tracks your hymns.{NEWLINE}{NEWLINE}{NEWLINE}COLONEL AGRIPPA LUPICINUS TENAX{NEWLINE}KALINIT 22ND ASSAULT DRAGOONS{NEWLINE}AUCTORITAS AQUILARUM"
 
-  STR_WHITESHIELD_BLACK_MARKET_GV: "Whiteshield Black Market"
-  # STR_WHITESHIELD_BLACK_MARKET_EVENT_GV: "Whiteshield Black Market"
+  STR_WHITESHIELD_BLACK_MARKET_GV: "Whiteshield Black Market+"
+  STR_WHITESHIELD_BLACK_MARKET_EVENT_GV: "Whiteshield Black Market"
   # STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Weeks ago the Guard sent you trucks, small arms, and a vox. Since then, nothing. Heavier weapons never came. Much materiel was lost in the shrine-warrens rout. Most of the rest is now hoarded by deserters and traitors.{NEWLINE}{NEWLINE}As Imperial authority staggers, smuggling flourishes. Shadowy armored caravans crawl the desolate battlefields, dealing arms to those they deem worthy. Perhaps you can find weapons on the black market. The best way to become a regular caravan stop is to provide their supply crawlers with promethium fueling services."
   STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Citing battlefield losses and the risk of treason, the Guard has declined to supply your militia with heavy weaponry. You might even believe them, if your troops didn't keep finding brand-new Guard equipment in the hands of traitors. Something's rotten around here. You'd better get ready to fend for yourself.{NEWLINE}{NEWLINE}Luckily, you've dealt professionally with the black market all your life, and you're not about to let a pack of traitorous amateurs outgun you."
 
   STR_THE_COLD_TRADE_GV: "The Cold Trade"
   STR_THE_COLD_TRADE_EVENT_GV: "The Cold Trade"
-  STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "Among today's caravan deliveries you find an unfamiliar blue-enameled servo skull. When you approach, it speaks in a melodic northern Ultramar accent. {NEWLINE}{NEWLINE}'Captain. I greet you. I am Por'ui Dal'yth Ha'lea. I am an envoy from the Tau Empire. To you I offer our thanks for your business, and our appreciation for your fighting spirit. If you will accept it, I would like to offer our friendship. And if you provide us a broadcast tower with which to spread our message, I believe I can offer you soldiers.'"
+  STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "The Guard's assault on the rebel capital has devolved into a bloody quagmire. Resupply is nonexistent and rumors of mutiny spread. Luckily, you've been able to finance alternative supply arrangements using your black market connections. Lately your contacts have mentioned rumors of new weapons on the market - xenos rifles, long and angular in shape, phenomenally deadly, exorbitantly priced. You're reluctant to have dealings with xenos, but you need firepower."  # Repulsed at every turn by cultists and traitors, confronted by fell sorcery, Guard commanders have increasingly resorted to brutality The warp storm has had a perilous effect on Guard morale, and discipline among the Guard has broken down"
+  # STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "Among today's caravan deliveries you find an unfamiliar blue-enameled servo skull. When you approach, it speaks in a melodic northern Ultramar accent. {NEWLINE}{NEWLINE}'Captain. I greet you. I am Por'ui Dal'yth Ha'lea. I am an envoy from the Tau Empire. To you I offer our thanks for supporting the black market, and our appreciation for your fighting spirit. If you will accept it, I would like to offer our friendship. And if you can provide them shelter, I believe I can offer you soldiers.'"
 
-  STR_GUEVESA_CLUSTER_GV: "Broadcast Tau Propaganda+"
-  STR_TAU_PROPAGANDA_EVENT_GV: "Tau Propaganda"
-  STR_TAU_PROPAGANDA_CODEX_DESCRIPTION_GV: "HA'LEA: Hello to all you faithful serfs out there on the morning pilgrimage! Sister Holly from the Order of Living Water is now taking your confessions live on EWVN, go ahead voxer.{NEWLINE}{NEWLINE}VOXER: Hi, the impending apocalypse has really got me down. Where can I find emotional support?{NEWLINE}{NEWLINE}HA'LEA: Have you considered joining an armed cult? I've heard these 'Guevesa' combine an uplifting social message with exceptional levels of firepower. Why not give them a try? Next voxer please."
 
   STR_CULTURE_CLUB_GV: "Accept Gue'vesa Pilgrims+"
   STR_CULTURE_CLUB_EVENT_GV: "Gue'vesa Pilgrims Enlist"
-  STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "The guevesa pilgrims are strange indeed. Some are artisans able to craft remarkable devices. Others are Ministorum priests fleeing the Ecclesiarchy's corruption, willing to bless your troops in battle. Still others are soldiers, armed with Tau export weapons and willing to join your cause.{NEWLINE}{NEWLINE}Soon, the Tau send you a device called a 'pathfinder beacon'. When activated, Tau military liaison teams will be able to locate your base and make direct contact."
+  STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "Among today's caravan deliveries you find an unfamiliar blue-enameled servo skull. When you approach, it speaks in a melodic northern Ultramar accent. {NEWLINE}{NEWLINE}'Captain. I greet you. I am Por'ui Dal'yth Ha'lea. I am an envoy from the Tau Empire. To you I offer our thanks for your business, and our appreciation for your fighting spirit. If you will accept it, I would like to offer our friendship. And if you can provide them shelter, I believe I can offer you soldiers.'"
+  # STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "The guevesa pilgrims are strange indeed. Some are artisans able to craft remarkable devices. Others are Ministorum priests fleeing the Ecclesiarchy's corruption, willing to bless your troops in battle. Still others are soldiers, armed with Tau export weapons and willing to join your cause.{NEWLINE}{NEWLINE}Soon, the Tau send you a device called a 'pathfinder beacon'. When activated, Tau military liaison teams will be able to locate your base and make direct contact."
+
+  STR_TAU_PROPAGANDA_EVENT_GV: "Tau Propaganda"
+  STR_TAU_PROPAGANDA_CODEX_DESCRIPTION_GV: "HA'LEA: Hello to all you faithful serfs out there on the morning pilgrimage! Sister Holly from the Order of Living Water is now taking your confessions live on EWVN, go ahead voxer.{NEWLINE}{NEWLINE}VOXER: Hi, the impending apocalypse has really got me down. Where can I find emotional support?{NEWLINE}{NEWLINE}HA'LEA: Have you considered joining an armed cult? I've heard these 'Gue'vesa' combine an uplifting social message with exceptional levels of firepower. Why not give them a try? Next voxer please."
 
   STR_PATHFINDER_BEACON_GV: "Activate Pathfinder Beacon+"
   STR_PATHFINDERS_ARRIVE_FIRST_GV: "Pathfinders Arrive"
   STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV: "Pathfinders Arrive"
-  STR_PATHFINDERS_ARRIVE_FIRST_CODEX_DESCRIPTION_GV: "You expected the xenos to be taller. More fangs or tentacles. Something. Instead you got a three-way cross between a rugby player, a noseless goat, and a blueberry.{NEWLINE}{NEWLINE}'Mai,' it says, pointing to itself. 'Path finder. Sarge. Good signal.' It nods towards the pathfinder beacon. 'You get...' Mai hunts around for the word. '...shower? Long walk. Fast.' Yeah. You direct the pathfinders to their fortified consulate-bunker. A crowd of celebrating gue'vesa cultists begins to follow."
+  STR_PATHFINDERS_ARRIVE_FIRST_CODEX_DESCRIPTION_GV: "You expected the xenos soldiers to be taller. More fangs or tentacles. Something. Instead you got a three-way cross between a rugby player, a noseless goat, and a blueberry.{NEWLINE}{NEWLINE}'Mai,' it says, pointing to itself. 'Path finder. Sarge. Good signal.' It nods towards the pathfinder beacon. 'You get...' Mai hunts around for the word. '...shower? Long walk. Fast.' Yeah. You lead Mai and the pathfinders towards their fortified consulate-bunker."
 
   STR_BEASTMEN_CULTISTS_GV: "Accept Beastmen Pilgrims"
   STR_BEASTMEN_CULTISTS_EVENT_GV: "Marin'vesa Beastmen"
@@ -12369,15 +12382,20 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_TANKERS_DELIGHT_GV: "Accept Guard Deserters"
   STR_TANKERS_DELIGHT_EVENT_GV: "Accept Guard Deserters"
-  STR_TANKERS_DELIGHT_CODEX_DESCRIPTION_GV: "The mutiny has forced loyalist Guard into a terrible choice: remain loyal to Tenax and turn traitor to the Imperium, or commit the capital crime of desertion and become a rebel without a cause. Your forces offer an attractive third option. Soon, defecting Guardsmen are driving heavy weaponry direct to your front door."
+  STR_TANKERS_DELIGHT_CODEX_DESCRIPTION_GV: "Spreading mutinies against Imperial command have forced loyalist Guard into a terrible choice: remain with their units and turn traitor to the Imperium, or commit the capital crime of desertion and become a rebel without a cause. Your forces offer an attractive third option. Soon, defecting Guardsmen are driving heavy weaponry direct to your front door."
+
+  STR_GUEVESA_CLUSTER_GV: "Establish Gue'vesa Cluster+"
+  STR_GUEVESA_CLUSTER_EVENT_GV: "Establish Gue'vesa Cluster"
+  STR_GUEVESA_CLUSTER_EVENT_DESCRIPTION_GV: "Imperial authority has collapsed completely. The Guard's command structure has fallen apart amidst mutual accusations of treason. Regimental commanders become warlords. The evil influence of the warp storm spreads treason like wildfire. But the gue'vesa cultists and their xenos overlords remain steadfast. More and more pilgrims appear daily. Many of your soldiers have converted. Ha'lea begins to talk regularly of the Greater Good with you."
 
   STR_A_SECRET_PACT_GV: "A Secret Pact+"
   STR_A_SECRET_PACT_EVENT_GV: "A Secret Pact With Known Alien Forces"
-  STR_A_SECRET_PACT_CODEX_DESCRIPTION_GV: "Convinced of the xenos' good intentions, you have decided to sign a secret pact of cooperation with the Tau. Mai and the pathfinders can barely contain their delight as you renounce the ancient commandment to abhor the xenos. The Tau encourage you to remain strong in your faith in the Emperor, but from this point there is no turning back.{NEWLINE}{NEWLINE}Mai's cadre lurks in deep Pelega orbit. Establish orbital communications to coordinate their arrival planetside."
+  STR_A_SECRET_PACT_CODEX_DESCRIPTION_GV: "Convinced of the xenos' good intentions and reliant on their supplies, you have decided to sign a secret pact of cooperation with the Tau. Mai and Ha'lea can barely contain their delight as you renounce the ancient commandment to abhor the xenos. The Tau encourage you to remain strong in your faith in the Emperor, but from this point there is no turning back.{NEWLINE}{NEWLINE}Mai's cadre lurks in deep Pelega orbit. Establish orbital communications to coordinate their arrival planetside."
 
   STR_FIRE_OF_UNKNOWN_ORIGIN_GV: "Fire of Unknown Origin+"
   STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV: "Fire of Unknown Origin"
-  STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "COMM.0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}ANOMALOUS CONDITION REPORT - EMERGENCY ALERT{NEWLINE}{NEWLINE}Gravitic sensors in system: PELEGA [GUELA-FRONTIER] report maximum daily spatial stress transient > 3sig in excess of 30 standard days.{NEWLINE}{NEWLINE}PELEGA-CONSUL advises TSUNAMI-GV conditions. Capable merchant assets directed to respond. Expect beacon type CIV-IMPROV-126E, coalition protocol HOTSPRING-3A."
+  STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "PRIORITY - MERCHANT FLEET ASSETS - COREWARD FRONTIER{NEWLINE}PELEGA-EMBASSY [class:GUELA-FRONTIER] REPORTS ANOMALOUS DIMENSIONAL STRESS PRESENTING HAZARD TO NAVIGATION.{NEWLINE}ATTENDANT CIVIL DISORDER PRESENTS OPPORTUNITY FOR PLANETARY INDOCTRINATION.{NEWLINE}CAPABLE MERCHANT FLEET ASSETS DIRECTED TO RESPOND.{NEWLINE}EXPECT BEACON TYPE CIV-IMPROV-126E, COALITION PROTOCOL HOTSPRING-3A."
+  # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "COMM.0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}ANOMALOUS CONDITION REPORT - EMERGENCY ALERT{NEWLINE}{NEWLINE}Gravitic sensors in system: PELEGA [GUELA-FRONTIER] report maximum daily spatial stress transient > 3sig in excess of 30 standard days.{NEWLINE}{NEWLINE}PELEGA-CONSUL advises TSUNAMI-GV conditions. Capable merchant assets directed to respond. Expect beacon type CIV-IMPROV-126E, coalition protocol HOTSPRING-3A."
   # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "You and Mai go back and forth through the battle-vid footage in the privacy of her cramped little office.  's cramped little office is lit by a mixture of drone projections and 'recovered' Imperial candles. She's absorbed in cleaning a pulse carbine.  Sergeant Falx  COMM.0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}ANOMALOUS CONDITION REPORT - EMERGENCY ALERT{NEWLINE}{NEWLINE}Gravitic sensors in system: PELEGA [GUELA-FRONTIER] report maximum daily spatial stress transient > 3sig in excess of 30 standard days.{NEWLINE}{NEWLINE}PELEGA-CONSUL advises TSUNAMI-GV conditions. Capable merchant assets directed to respond. Expect beacon type CIV-IMPROV-126E, coalition protocol HOTSPRING-3A."
   # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "Ha'lea calls you and Mai into her cramped little office. You take a seat amidst the flickering drone projections and 'recovered' Imperial candles. 'The communication disturbances. '
   # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "Fio'vre Tau Cor've taps a pointer amidst the flickering series of unearthly photo-captures and strange squiggles projected on the concrete wall. He barks something in Tau. 'Folks, I'm an applied scientist. I'll keep this short,' translates his little drone. 'Extradimensional entities. Associated with dimensional stress transients. Which are becoming more severe. Orbital sensors-' - more pointing - '-"
@@ -12388,8 +12406,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_THE_TERRAN_PROBLEM_CODEX_DESCRIPTION_GV: "Ha'lea stalks grimly into your command tent.{NEWLINE}{NEWLINE}'Gue'vesa. The fabled curse of your people has indeed descended upon this world.'{NEWLINE}{NEWLINE}She collects herself, stifling anxiety. 'The witch proved very forthcoming. A tale of madness in high places. Of a sorcerous gue'la ritual somewhere on this world that is tearing at the fabric of space. Tearing it to let horrors through.'{NEWLINE}{NEWLINE}A single pulse shot echoes from the direction of the detainment cell blocks."
 
   STR_INFILTRATION_CADRE_GV: "Welcome Infiltration Cadre+"
-  STR_INFILTRATION_CADRE_EVENT_GV: "Infiltration Firebase"
-  STR_INFILTRATION_CADRE_CODEX_DESCRIPTION_GV: "Guided by your beacons, the infiltration cadre's stealthy transports slip through Pelega's ragged orbital defenses and arrive at your base. Your suspicious troops quickly warm to the prospect of xenos infiltration after the Tau improvise a distillery and institute a daily allotment of amasec. You discover that Tau rations taste like grass clippings, but they do fill you up.{NEWLINE}{NEWLINE}Heavy Tau forces are on their way. You will need to be able to work with ceramite to maintain their advanced equipment."
+  STR_INFILTRATION_CADRE_EVENT_GV: "Come Down To Us"
+  STR_INFILTRATION_CADRE_CODEX_DESCRIPTION_GV: "Guided by your beacons, the infiltration cadre's stealthy transports slip through Pelega's ragged orbital defenses and arrive at your base. Your suspicious troops quickly warm to the prospect of xenos infiltration after they get a chance to eat something other than corpse-starch. You discover that Tau rations taste like grass clippings, but they do fill you up.{NEWLINE}{NEWLINE}Heavy Tau forces are on their way. You will need to be able to work with ceramite to maintain their advanced equipment."
 
   STR_AUXILIARY_CADRE_GV: "Form Auxiliary Cadre+"
   STR_AUXILIARY_CADRE_EVENT_GV: "Auxiliary Cadre"
