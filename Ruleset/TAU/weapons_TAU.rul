@@ -263,25 +263,103 @@ items:
     experienceTrainingMode: 19
 
   - type: STR_TAU_VETERAN_COMMAND_GV
-    refNode: *STR_TAU_ARTS_OF_WAR
+    requires:
+      - STR_TAU_GUEVESA_STRATEGY_GV
+    explosionHitSound: {mod: 40k, index: 803}
+    hitAnimation: 2050
+    specialIconSprite: 203
+    recover: false
+    accuracyAimed: 200
+    accuracyMultiplier:
+      flatHundred: 1.0
+    arcingShot: false
+    damageType: 0
+    aimRange: 1
+    dropoff: 100
     damageBonus:
       bravery: 0.5
       reactions: 0.25
     damageAlter:
+      ResistType: 0
+      RandomType: 2   # 50-150
+      ArmorEffectiveness: 0.0
+      ToStun: 0.0
+      ToMorale: -0.5
+      ToTime: -0.5
+      ToEnergy: -1.00
+      ToHealth: 0.0
+      ToWound: 0.0
+      ToTile: 0.0  # this shouldn't blow up cover
+      ToItem: 0.0  # this shouldn't damage items
+      ToArmor: 0.0  # this shouldn't damage armor
+      RadiusReduction: 0.0
       FixRadius: 5
+      IgnorePainImmunity: true
+      IgnoreNormalMoraleLose: true
+    costAimed:  # lowered cost
+      time: 60
+      energy: 20
+    confAimed:
+      name: STR_DECLARE_MONTKA_GV
+    hitSound: {mod: 40k, index: 0}
+    fireSound: {mod: 40k, index: 491}
+    bulletSpeed: -10
+    bulletSprite: {mod: 40k, index: 22}
+    noLOSAccuracyPenalty: 25  # comms relays
+    battleType: 1
+    fixedWeapon: true
     clipSize: 2
+    experienceTrainingMode: 19
 
   - type: STR_TAU_FIREBLADE_COMMAND_GV
-    refNode: *STR_TAU_ARTS_OF_WAR
+    requires:
+      - STR_TAU_GUEVESA_STRATEGY_GV
+    explosionHitSound: {mod: 40k, index: 803}
+    hitAnimation: 2050
+    specialIconSprite: 203
+    recover: false
+    accuracyAimed: 200
+    accuracyMultiplier:
+      flatHundred: 1.0
+    arcingShot: false
+    damageType: 0
+    aimRange: 1
+    dropoff: 100
     damageBonus:
-      bravery: 0.5
+      bravery: 0.6
       reactions: 0.3
     damageAlter:
+      ResistType: 0
+      RandomType: 2   # 50-150
+      ArmorEffectiveness: 0.0
+      ToStun: 0.0
+      ToMorale: -0.5
+      ToTime: -0.5
+      ToEnergy: -1.00
+      ToHealth: 0.0
+      ToWound: 0.0
+      ToTile: 0.0  # this shouldn't blow up cover
+      ToItem: 0.0  # this shouldn't damage items
+      ToArmor: 0.0  # this shouldn't damage armor
+      RadiusReduction: 0.0
       FixRadius: 5
+      IgnorePainImmunity: true
+      IgnoreNormalMoraleLose: true
     costAimed:  # lowered cost
-      time: 40  # was 60 but now % instead of flat
-      energy: 40
+      time: 40
+      energy: 20
+    confAimed:
+      name: STR_DECLARE_MONTKA_GV
+    hitSound: {mod: 40k, index: 0}
+    fireSound: {mod: 40k, index: 491}
+    bulletSpeed: -10
+    bulletSprite: {mod: 40k, index: 22}
+    noLOSAccuracyPenalty: 25  # comms relays
+    battleType: 1
+    fixedWeapon: true
     clipSize: 3
+    experienceTrainingMode: 19
+
 
   - &STR_GUEVESA_POWER_SWORDS
     type: STR_GUEVESA_LEADER_BLADE_GV
@@ -314,7 +392,33 @@ items:
       name: STR_GUEVESA_SWORD_HIT_GV
 
   - type: STR_GUEVESA_VETERAN_BLADE_GV
-    refNode: *STR_GUEVESA_POWER_SWORDS
+    refNode: *STR_TAU_ARTS_OF_WAR
+    specialIconSprite: 240
+    meleeSound: {mod: 40k, index: 754}  # was nothing
+    meleeHitSound: {mod: 40k, index: 773}  # was 101
+    meleeAnimation: {mod: 40k, index: 4}  # was 0
+    hidePower: true
+    meleePower: 50  # lighter than typical power swords
+    costMelee:
+      time: 14
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    meleeBonus:
+      strength: 0.1
+      melee: 0.3
+    meleeMultiplier:
+      melee: 0.9
+      reactions: 0.1
+    meleeType: 5
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    experienceTrainingMode: 19
+    accuracyMelee: 110
+    confMelee:
+      name: STR_GUEVESA_SWORD_HIT_GV
     damageBonus:
       bravery: 0.5
       reactions: 0.25
