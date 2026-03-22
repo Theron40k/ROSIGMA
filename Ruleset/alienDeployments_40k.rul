@@ -1298,6 +1298,7 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
     height: 9
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_CULTIST_SUMMONING_LEVEL_1
     objectiveType: 100
@@ -1357,6 +1358,7 @@ alienDeployments:
             dQty: 3
             percentageOutsideUfo: 0
             itemSets: *emptyItemSets
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_CULTIST_RIOT
     data:
@@ -1495,6 +1497,7 @@ alienDeployments:
     markerName: STR_TERROR_SITE
     duration: [10, 24]
     despawnPenalty: 500
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_SHRINE_TERROR  # FRATERIS version
     briefing:
@@ -1573,7 +1576,7 @@ alienDeployments:
     markerName: STR_TERROR_SITE
     duration: [16, 30]
     despawnPenalty: 500
-
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS  # ROSIGMA
     briefing:
@@ -1654,6 +1657,7 @@ alienDeployments:
     markerName: STR_TERROR_SITE
     duration: [16, 30]
     despawnPenalty: 600
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_NOVICES  # ROSIGMA
     briefing:
@@ -1732,6 +1736,7 @@ alienDeployments:
     markerName: STR_TERROR_SITE
     duration: [16, 30]
     despawnPenalty: 600
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_ADEPTAS  # ROSIGMA
     briefing:
@@ -1810,6 +1815,7 @@ alienDeployments:
     markerName: STR_TERROR_SITE
     duration: [16, 30]
     despawnPenalty: 750
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_RIOT
     startingCondition: STR_RIGCITY_NOMASSIVECRAFT
@@ -1832,6 +1838,7 @@ alienDeployments:
       STR_MONK1: 2
       STR_MONK2: 2
     height: 12
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_ORKBASE1  # ORKBASE1 INC.
     data: &orkBaseTier1Data
@@ -6742,7 +6749,7 @@ alienDeployments:
         dQty: 1  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
-
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_TYRANID_HIVE_P1
     width: 50
@@ -7085,6 +7092,7 @@ alienDeployments:
     markerName: STR_DESERTER_HIDEOUT_SITE
     duration: [120, 240]
     despawnPenalty: 100
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_MEDIUM_SCOUT_DOUBLE  # CH02Double
     briefing:
@@ -9507,7 +9515,7 @@ alienDeployments:
     duration: [420, 640]
     despawnPenalty: 100
     missionBountyItem: STR_KILLPOINT_TOKEN
-    missionBountyItemCount: 200
+    missionBountyItemCount: 300
 
   - type: STR_CATACOMBS_HRUD_ASSAULT_DEPLOYMENT
     markerIcon: 124
@@ -9584,7 +9592,7 @@ alienDeployments:
     duration: [168, 252]
     despawnPenalty: 0
     missionBountyItem: STR_KILLPOINT_TOKEN
-    missionBountyItemCount: 200
+    missionBountyItemCount: 300
     nextStage: STR_HRUD_SHRINE_ASSAULT_DEPLOYMENT
 
   - type: STR_HRUD_SHRINE_ASSAULT_DEPLOYMENT
@@ -9733,7 +9741,7 @@ alienDeployments:
     duration: [168, 252]
     despawnPenalty: 0
     missionBountyItem: STR_KILLPOINT_TOKEN
-    missionBountyItemCount: 200
+    missionBountyItemCount: 300
     successEvents:
       STR_IRON_ALLIANCE_SECURED: 100
     unlockedResearch: STR_IRON_GUARD_REQUISITIONS
