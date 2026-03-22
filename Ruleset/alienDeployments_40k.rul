@@ -1496,7 +1496,7 @@ alienDeployments:
     alertBackground: ChaosAttacksBG.SCR
     markerName: STR_TERROR_SITE
     duration: [10, 24]
-    despawnPenalty: 500
+    despawnPenalty: 300 #use HARD for higher penalty
     missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_SHRINE_TERROR  # FRATERIS version
@@ -1575,7 +1575,7 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 500
+    despawnPenalty: 400
     missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS  # ROSIGMA
@@ -1656,7 +1656,7 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 600
+    despawnPenalty: 400
     missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_NOVICES  # ROSIGMA
@@ -1735,7 +1735,7 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 600
+    despawnPenalty: 400
     missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_ADEPTAS  # ROSIGMA
@@ -1814,7 +1814,7 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 750
+    despawnPenalty: 500
     missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_RIOT
@@ -2112,7 +2112,7 @@ alienDeployments:
     unlockedResearch: STR_ORK_BASE_LEVEL5_DEFEATED
     objectiveComplete: [STR_ORK_BASE_DESTROYED, 1200]
     objectiveFailed: [STR_ORK_BASE_NOT_DESTROYED, -600]
-    abortPenalty: 600
+    abortPenalty: 500
 
   - type: STR_ORKBASE_START
     markerIcon: 127
@@ -8110,7 +8110,7 @@ alienDeployments:
       background: BACK169.SCR
     markerName: STR_TERROR_SITE
     duration: [14, 28]
-    despawnPenalty: 500
+    despawnPenalty: 300
 
   - type: STR_GSC_PRECINCT_START
     startingCondition: STR_RIGCITY_NOMASSIVECRAFT
@@ -14644,7 +14644,7 @@ alienDeployments:
       background: CHAOSCULTDRAFTBG.SCR
     markerName: STR_SABOTAGECHAOSCULT_SITE
     duration: [4, 10]
-    despawnPenalty: 500
+    despawnPenalty: 400
 
   - type: STR_RIOTCHAOSCULT
     briefing:
@@ -14715,7 +14715,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_RIOTCHAOSCULT_SITE
 
   - type: STR_RIOTCHAOSCULTALTERNATE
@@ -14787,7 +14787,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_RIOTCHAOSCULT_SITE
 
   - type: STR_GANGERSCITYCONVOYDEF
@@ -14859,7 +14859,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_GANGERSCITYCONVOY_SITE
 
   - type: STR_GANGERSCITYCONVOYALT
@@ -14931,7 +14931,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_GANGERSCITYCONVOY_SITE
 
 
@@ -15004,7 +15004,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_ALIEN_TERRORCCULT_SITE
 
   - type: STR_WARP_TERRORCCULTDEPLOY
@@ -15076,7 +15076,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_WARP_TERRORCCULT_SITE
 
   - type: STR_TAU_ORCA  # Low armed recon big lander
@@ -20404,7 +20404,7 @@ alienDeployments:
       title: STR_TERROR_MISSION
     markerName: STR_TERROR_SITE
     duration: [4, 15]
-    despawnPenalty: 500
+    despawnPenalty: 400
 
   - type: STR_IMPERIALTERROR_MISSION_HARD
     data:
