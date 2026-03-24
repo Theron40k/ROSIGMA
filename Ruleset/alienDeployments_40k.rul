@@ -1298,6 +1298,7 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
     height: 9
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_CULTIST_SUMMONING_LEVEL_1
     objectiveType: 100
@@ -1357,6 +1358,7 @@ alienDeployments:
             dQty: 3
             percentageOutsideUfo: 0
             itemSets: *emptyItemSets
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_CULTIST_RIOT
     data:
@@ -1494,7 +1496,8 @@ alienDeployments:
     alertBackground: ChaosAttacksBG.SCR
     markerName: STR_TERROR_SITE
     duration: [10, 24]
-    despawnPenalty: 500
+    despawnPenalty: 300 #use HARD for higher penalty
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_SHRINE_TERROR  # FRATERIS version
     briefing:
@@ -1572,8 +1575,8 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 500
-
+    despawnPenalty: 400
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS  # ROSIGMA
     briefing:
@@ -1653,7 +1656,8 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 600
+    despawnPenalty: 400
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_NOVICES  # ROSIGMA
     briefing:
@@ -1731,7 +1735,8 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 600
+    despawnPenalty: 400
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_CIVILIAN_SHRINE_TERROR_ADEPTAS  # ROSIGMA
     briefing:
@@ -1809,7 +1814,8 @@ alienDeployments:
     alertBackground: ShrineAttackedBG.scr
     markerName: STR_TERROR_SITE
     duration: [16, 30]
-    despawnPenalty: 750
+    despawnPenalty: 500
+    missionBountyItem: STR_REQUISITION_BOUNTY_250K
 
   - type: STR_RIOT
     startingCondition: STR_RIGCITY_NOMASSIVECRAFT
@@ -1832,6 +1838,7 @@ alienDeployments:
       STR_MONK1: 2
       STR_MONK2: 2
     height: 12
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_ORKBASE1  # ORKBASE1 INC.
     data: &orkBaseTier1Data
@@ -2105,7 +2112,7 @@ alienDeployments:
     unlockedResearch: STR_ORK_BASE_LEVEL5_DEFEATED
     objectiveComplete: [STR_ORK_BASE_DESTROYED, 1200]
     objectiveFailed: [STR_ORK_BASE_NOT_DESTROYED, -600]
-    abortPenalty: 600
+    abortPenalty: 500
 
   - type: STR_ORKBASE_START
     markerIcon: 127
@@ -6742,7 +6749,7 @@ alienDeployments:
         dQty: 1  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
-
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_TYRANID_HIVE_P1
     width: 50
@@ -7085,6 +7092,7 @@ alienDeployments:
     markerName: STR_DESERTER_HIDEOUT_SITE
     duration: [120, 240]
     despawnPenalty: 100
+    missionBountyItem: STR_REQUISITION_BOUNTY_100K
 
   - type: STR_MEDIUM_SCOUT_DOUBLE  # CH02Double
     briefing:
@@ -8102,7 +8110,7 @@ alienDeployments:
       background: BACK169.SCR
     markerName: STR_TERROR_SITE
     duration: [14, 28]
-    despawnPenalty: 500
+    despawnPenalty: 300
 
   - type: STR_GSC_PRECINCT_START
     startingCondition: STR_RIGCITY_NOMASSIVECRAFT
@@ -9507,7 +9515,7 @@ alienDeployments:
     duration: [420, 640]
     despawnPenalty: 100
     missionBountyItem: STR_KILLPOINT_TOKEN
-    missionBountyItemCount: 200
+    missionBountyItemCount: 300
 
   - type: STR_CATACOMBS_HRUD_ASSAULT_DEPLOYMENT
     markerIcon: 124
@@ -9584,7 +9592,7 @@ alienDeployments:
     duration: [168, 252]
     despawnPenalty: 0
     missionBountyItem: STR_KILLPOINT_TOKEN
-    missionBountyItemCount: 200
+    missionBountyItemCount: 300
     nextStage: STR_HRUD_SHRINE_ASSAULT_DEPLOYMENT
 
   - type: STR_HRUD_SHRINE_ASSAULT_DEPLOYMENT
@@ -9733,7 +9741,7 @@ alienDeployments:
     duration: [168, 252]
     despawnPenalty: 0
     missionBountyItem: STR_KILLPOINT_TOKEN
-    missionBountyItemCount: 200
+    missionBountyItemCount: 300
     successEvents:
       STR_IRON_ALLIANCE_SECURED: 100
     unlockedResearch: STR_IRON_GUARD_REQUISITIONS
@@ -14636,7 +14644,7 @@ alienDeployments:
       background: CHAOSCULTDRAFTBG.SCR
     markerName: STR_SABOTAGECHAOSCULT_SITE
     duration: [4, 10]
-    despawnPenalty: 500
+    despawnPenalty: 400
 
   - type: STR_RIOTCHAOSCULT
     briefing:
@@ -14707,7 +14715,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_RIOTCHAOSCULT_SITE
 
   - type: STR_RIOTCHAOSCULTALTERNATE
@@ -14779,7 +14787,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_RIOTCHAOSCULT_SITE
 
   - type: STR_GANGERSCITYCONVOYDEF
@@ -14851,7 +14859,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_GANGERSCITYCONVOY_SITE
 
   - type: STR_GANGERSCITYCONVOYALT
@@ -14923,7 +14931,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_GANGERSCITYCONVOY_SITE
 
 
@@ -14996,7 +15004,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_ALIEN_TERRORCCULT_SITE
 
   - type: STR_WARP_TERRORCCULTDEPLOY
@@ -15068,7 +15076,7 @@ alienDeployments:
     alertSound: {mod: 40k, index: 52}
     alertBackground: CHAOSCULTMARKETBG.SCR
     duration: [168, 168]
-    despawnPenalty: 500
+    despawnPenalty: 400
     markerName: STR_WARP_TERRORCCULT_SITE
 
   - type: STR_TAU_ORCA  # Low armed recon big lander
@@ -20396,7 +20404,7 @@ alienDeployments:
       title: STR_TERROR_MISSION
     markerName: STR_TERROR_SITE
     duration: [4, 15]
-    despawnPenalty: 500
+    despawnPenalty: 400
 
   - type: STR_IMPERIALTERROR_MISSION_HARD
     data:
