@@ -130,18 +130,30 @@ items:
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_DRUM
     refNode: *STR_BOLTER_AMMO
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 65
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_MC_DRUM
     refNode: *STR_BOLTER_AMMO_MC
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 85
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_AP_DRUM
     refNode: *STR_BOLTER_AMMO_KRAKEN
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 65
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_EX_DRUM
     refNode: *STR_BOLTER_AMMO_KRAKEN
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 65
 
   - type: STR_LIGHT_BOLTER_AMMO  # done
