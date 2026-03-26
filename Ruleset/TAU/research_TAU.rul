@@ -115,6 +115,7 @@ research:
     neededItem: STR_KILLPOINT_TOKEN     # kill a bad guy and win a mission
     unlocks:
       - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
+      - STR_HEAVY_WEAPONS_IG
     spawnedEvent: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
 
 ### Discover the Cold Trade
@@ -125,7 +126,6 @@ research:
     cost: 500
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
     getOneFree:
       - STR_TAU_TRADING
     spawnedEvent: STR_THE_COLD_TRADE_EVENT_GV   # talk to the Tau here?
@@ -167,7 +167,6 @@ research:
       - STR_RECRUIT_GUEVESA_GV      # turn on guevesa and turn off militia
       - STR_MIDTIER_PREREQ
       - STR_HARDER_MISSIONS
-      - STR_LIGHT_BOLTERS_MIDTIER         # Advanced bolters
     disables:
       - STR_RECRUIT_MILITIA_GV      # turn on guevesa and turn off militia
       - STR_NOT_TAU_GUEVESA_TRADING       # remove old rifles/charges from market
@@ -223,8 +222,7 @@ research:
       # purchases unlocked over on the troops
     unlocks:
       - STR_ENGINSEER_REQUISITION         # Enginseers
-      - STR_HEAVY_WEAPONS_IG
-      - STR_LIGHT_BOLTERS_LOWTIER         # Advanced bolters
+      - STR_LIGHT_BOLTERS_MIDTIER         # Bolters
     spawnedEvent: STR_TANKERS_DELIGHT_EVENT_GV
 
 ### Work out an arrangement with the Navy interceptors
