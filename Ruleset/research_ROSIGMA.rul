@@ -8007,6 +8007,8 @@ research:
   - name: STR_LASER_WEAPONS  # Weapons Requisition
     cost: 50
     points: 10
+    getOneFree:
+      - STR_LIGHT_MELTAGUN_TECH
     dependencies:
       - STR_GENERALLOCK
 
@@ -8138,7 +8140,7 @@ research:
 
   # Melta
   - name: STR_LIGHT_MELTAGUN_TECH  # Light Meltagun Technology
-    cost: 120
+    cost: 50
     points: 10
     dependencies:
       - STR_LASER_WEAPONS
