@@ -303,7 +303,7 @@ items:
     damageType: 1
     power: 70
     damageAlter:  # DA BOLTER  DOUBLE SHOT
-      RandomType: 1
+      RandomType: 2 #50-150%
       ToArmorPre: 0.1
       ArmorEffectiveness: 0.9
       ToArmor: 0.15
@@ -324,7 +324,7 @@ items:
     damageAlter:
       ToArmorPre: 0.2
       ArmorEffectiveness: 0.8
-      RandomType: 1
+      RandomType: 2 #50-150%
       ToArmor: 0.15
       ToHealth: 1.1
       ToStun: 0.5  # was 1.0
@@ -340,6 +340,7 @@ items:
     damageAlter:
       ToArmorPre: 0.2
       ArmorEffectiveness: 0.8
+      RandomType: 7 #50-200%
 
   - type: STR_STORMBOLTER_CLIP  # done  # Adeptas
     refNode: *STR_STORMBOLTER_AMMO
@@ -347,11 +348,11 @@ items:
     clipSize: 20
 
   - type: STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 40
 
   - type: STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     damageAlter:  # DA BOLTER
       ToArmorPre: 0.05
       ArmorEffectiveness: 1.1
@@ -588,6 +589,7 @@ items:
     power: 120
     damageType: 1
     damageAlter: #DA BOLTER
+      RandomType: 7  # 50-200%
       ToArmorPre: 0.05
       ArmorEffectiveness: 0.9
       ToArmor: 0.1
@@ -629,7 +631,7 @@ items:
     damageType: 3
     damageAlter:  # high explosive
       ToArmorPre: 0.02
-      RandomType: 6
+      RandomType: 6 #2xD100
       ArmorEffectiveness: 0.95  # concussive
       ToStun: 0.6  # concussive
       ToEnergy: 0.4  # concussive
@@ -647,6 +649,7 @@ items:
     floorSprite: 3042
     handSprite: 3530
     damageAlter: #DA BOLTER
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.02
       ArmorEffectiveness: 0.5
       ToArmor: 0.05
@@ -663,6 +666,7 @@ items:
     damageType: 1
     clipSize: 100
     damageAlter:  # between normal and mastercraft ammo
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.1
       ArmorEffectiveness: 0.85
       ToArmor: 0.1
@@ -711,6 +715,7 @@ items:
     floorSprite: 993
     handSprite: 3500
     damageAlter:
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.05
       ArmorEffectiveness: 0.5
       ToArmor: 0.05
@@ -905,6 +910,7 @@ items:
     power: 65
     refNode: *STR_BOLTER_AMMO
     damageAlter:  # Plague weapon
+      RandomType: 2 # 50-150%
       ToArmorPre: 0.4
       ToArmor: 0.1
       ToHealth: 0.7
@@ -913,6 +919,7 @@ items:
   - type: STR_PISTOL_CLIP_BLIGHT  #              10210                    ToStun
     refNode: *STR_BOLTER_AMMO
     damageAlter:  # DA BLIGHT
+      RandomType: 2 # 50-150%
       ToArmorPre: 0.4
       ToArmor: 0.1
       ToHealth: 0.7
@@ -924,6 +931,7 @@ items:
     hitAnimation: 1170
     power: 80
     damageAlter:  # DA BLIGHT
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.4  # corrodes/melts away
       ToHealth: 0.6
       ToTime: 0.2
