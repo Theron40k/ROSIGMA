@@ -23,6 +23,7 @@ items:
       ToEnergy: 0.3
       ToWound: 0.2
       RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
     power: 60
     damageType: 1
     hitAnimation:
@@ -69,6 +70,7 @@ items:
       ToHealth: 0.9  # armor piercing; good penetration, much less stopping power
       ToStun: 0.3
       ToEnergy: 0.1
+      RandomType: 2 # 50-150 spread. No weak hits
     power: 60
     damageType: 1
 
@@ -84,20 +86,47 @@ items:
       ToEnergy: 0.3
       ToWound: 0.2
       RandomWound: false
+      RandomType: 8 # 50-200 spread. No weak hits
     power: 75
     damageType: 1
 
-  - type: STR_LIGHT_BOLTPISTOL_AMMO  # done
-    refNode: *STR_BOLTER_AMMO
+  - &STR_LIGHT_BOLTER_AMMO
+    type: STR_LIGHT_BOLTPISTOL_AMMO
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.07
+      ArmorEffectiveness: 0.93
+      ToArmor: 0.12
+      ToHealth: 1.08
+      ToStun: 0.4
+      ToEnergy: 0.25
+      ToWound: 0.15
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
     costSell: 75
     power: 55
+    damageType: 1
+    hitAnimation:
+      mod: 40k
+      index: 120
+    explosionSpeed: 3
 
   - type: STR_LIGHT_BOLTPISTOL_AMMO_MC  # done
     refNode: *STR_BOLTER_AMMO_MC
-    power: 75
+    power: 70
 
-  - type: STR_LIGHT_BOLTPISTOL_AMMO_AP  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+  - &STR_LIGHT_BOLTER_AMMO_KRAKEN
+    type: STR_LIGHT_BOLTPISTOL_AMMO_AP  # done
+    refNode: *STR_LIGHT_BOLTER_AMMO
+    requiresBuy:
+      - STR_BOLTER_AMMO_PREREQ
+    damageAlter:  # DA BOLTER AP+
+      ArmorEffectiveness: 0.5
+      ToArmorPre: 0.01
+      ToArmor: 0.04
+      ToHealth: 0.85  # armor piercing; good penetration, much less stopping power
+      ToStun: 0.15 #0.3 for standard
+      ToEnergy: 0.1
+      RandomType: 2 # 50-150 spread. No weak hits
     power: 55
 
   - type: STR_LIGHT_BOLTPISTOL_AMMO_EX  # done
@@ -157,7 +186,7 @@ items:
     power: 65
 
   - type: STR_LIGHT_BOLTER_AMMO  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
     bigSprite: 3230
     tags:
@@ -180,7 +209,7 @@ items:
       ITEM_AMMO_COLOR: 15
 
   - type: STR_LIGHT_BOLTER_AMMO_PEN  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_EX  # done
@@ -188,23 +217,23 @@ items:
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_SHORT  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_SHORT_PEN  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_BELT  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_BELT_PEN  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     power: 60
 
   - type: STR_AUTOGUN_CLIP_DRUM_KRAKEN
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     requiresBuy:
       - STR_ASSASSINORUM
     costBuy: 8000
@@ -335,7 +364,7 @@ items:
     shotgunPellets: 5
 
   - type: STR_LIGHT_BOLTER_AMMO_AP  # Elohim ammo
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     damageAlter:  # DA BOLTER
       ToArmorPre: 0.15
       ArmorEffectiveness: 0.7
@@ -346,16 +375,7 @@ items:
     power: 60  # was 70
 
   - type: STR_CANTUS_BOLTER_AMMO  # Ammo for the Cantus light bolter
-    refNode: *STR_BOLTER_AMMO
-    damageAlter:  # DA BOLTER LIGHT
-      ToArmorPre: 0.1
-      ArmorEffectiveness: 0.9
-      ToArmor: 0.15
-      ToHealth: 1.1
-      ToStun: 0.5
-      ToEnergy: 0.3
-      ToWound: 0.2
-      RandomWound: false
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 48
     clipSize: 30
 
@@ -851,7 +871,7 @@ items:
 
 ## Tzeentch inferno bolts
   - type: STR_TZ_LIGHT_BOLTER_AMMO_R  #          10460                      ToStun
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
     damageAlter:  # DA BOLTER TZZ
       RandomType: 1  # swingy random damage
