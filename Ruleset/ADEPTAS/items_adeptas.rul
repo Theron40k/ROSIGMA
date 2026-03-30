@@ -81,7 +81,7 @@ items:
     damageAlter:
       RandomType: 3
       ArmorEffectiveness: 0
-      ToStun: 0.5  # higher stun ratio due to higher potency and energy recovery
+      ToStun: 0.0  # use ClipSize limit per battle to not have Stun scale up with Devotion
       ToHealth: 0.00
       ToWound: 0.00
       RandomWound: false
@@ -111,7 +111,77 @@ items:
     fixedWeapon: true
     recover: false
     flatRate: true
-    clipSize: -1
+    clipSize: 20 #limit of 20 per battle for now
+    experienceTrainingMode: 19
+    # *** Melee bayonet
+    specialUseEmptyHand: true
+    meleeHitSound: {mod: 40k, index: 101}
+    meleeAnimation: 0
+    meleeType: 7
+    meleePower: 60
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+    meleeAlter:
+      ArmorEffectiveness: 0.9
+    accuracyMelee: 70
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.5
+    tuMelee: 10
+    flatMelee:
+      time: true
+    tags:
+      ITEM_IS_BUFF_WEAPON: 1
+      ITEM_DAMAGE_PERCENT_VS_MECHANICAL: 0
+      ITEM_DAMAGE_PERCENT_VS_PILOTED: 50
+
+  - type: STR_LEAD_BY_EXAMPLE_CANONESS  # Canoness upgraded ability
+    categories: [STR_CAT_SPELLS, STR_CAT_ADEPTAS]
+    specialIconSprite: 210  # faith icon
+    fireSound: {mod: 40k, index: 787}  # page
+    hitSound: [1553, 1552, 1546, 1557, 1558, 1551, 1542]
+    hitAnimation: {mod: 40k, index: 1100}
+    weight: 0
+    power: 10
+    damageBonus:
+      bravery: 0.5
+      psiSkill: 0.5  # devotion
+    damageType: 0
+    damageAlter:
+      RandomType: 3
+      ArmorEffectiveness: 0
+      ToStun: 0.0  # use ClipSize limit per battle to not have Stun scale up with Devotion
+      ToHealth: 0.00
+      ToWound: 0.00
+      RandomWound: false
+      ToMorale: -1.00
+      ToTime: -1.00
+      ToEnergy: -0.10  # having this high absolutely wrecks balance related to things balanced by energy consumption
+      ToTile: 0.0  # this shouldn't blow up cover
+      ToItem: 0.0  # this shouldn't damage items
+      ToArmor: 0.0  # this shouldn't damage armor
+    confAimed:
+      name: STR_INSPIRE
+    costAimed:
+      time: 25
+      energy: 30
+      stun: 30
+    accuracyAimed: 100
+    accuracyMultiplier:
+      firing: 0.0
+      bravery: 2.2
+    maxRange: 7
+    powerRangeThreshold: 2
+    powerRangeReduction: 5.0
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 2
+    fixedWeapon: true
+    recover: false
+    flatRate: true
+    clipSize: 50
     experienceTrainingMode: 19
     # *** Melee bayonet
     specialUseEmptyHand: true
