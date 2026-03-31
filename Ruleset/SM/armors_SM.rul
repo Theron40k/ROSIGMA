@@ -171,6 +171,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
 
   - type: STR_BLOODRAVENS_TACTICAL_ARMOR
     refNode: *STR_MARINE_ARMOR
@@ -265,6 +266,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
 
   - type: STR_SIGNAL_ARMOR_UC  # HONOR Sergeant
     refNode: *STR_MARINE_OFFICER_ARMOR
@@ -356,6 +358,7 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
       UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
   # dungeon specific end
 
@@ -451,6 +454,7 @@ armors:
       DODGE_CHANCE: 0
       FLIGHT_DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      INTIMIDATION_RESISTANCE: 75 #Assault
 
   - type: STR_ASS_ARMOR_HONOR_UC  # ASSAULT HONOR
     refNode: *STR_MARINE_OFFICER_ARMOR
@@ -602,6 +606,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
       ARMOR_ENERGY_SHIELD_DECAY: 15
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
   - type: STR_CAPTAIN_UC
     antiCamouflageAtDay: 5
@@ -624,6 +629,7 @@ armors:
       UNIT_SIZE: 150 # LARGE
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
   - type: STR_GREYKNIGHT_UC                 # GREYKNIGHT ARMOR
     refNode: *STR_MARINE_OFFICER_ARMOR
@@ -649,6 +655,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_SIZE: 200 # HUGE
+      INTIMIDATION_RESISTANCE: 100 #GK
 
   - type: STR_BLOODRAVENS_TERMINATOR_ARMOR
     refNode: *STR_TERMINATOR_ARMOR
@@ -760,6 +767,7 @@ armors:
       UNIT_SIZE: 125 # LARGE but not as large as power armor
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      INTIMIDATION_RESISTANCE: 50 #lwoer than tac marine
 
   - &STR_ADVANCED_SCOUT_ARMOR
     type: STR_SCOUTH_UC  # SCOUT HONOR BROWN
@@ -800,6 +808,7 @@ armors:
     tags:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      INTIMIDATION_RESISTANCE: 75 #theyshallknownofear
 
   - type: STR_SCOUTHW_UC  # SCOUT HONOR WHITE
     refNode: *STR_ADVANCED_SCOUT_ARMOR
@@ -883,7 +892,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
       ARMOR_ENERGY_SHIELD_DECAY: 15
-
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
   - type: STR_TASS_ARMOR_CLAWS
     refNode: *STR_TASS_ARMOR
@@ -959,6 +968,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_MECHANICAL: 1
       UNIT_SIZE: 200 # HUGE
+      INTIMIDATION_RESISTANCE: 100
 
   - type: CENT_ARMOR           # CENT UNIT
     refNode: *STR_CENTURION_ARMOR
@@ -1126,6 +1136,7 @@ armors:
       DODGE_CHANCE: 50
       FLIGHT_DODGE_CHANCE: 0
       ARMOR_MAX_SUCCESSFUL_DODGES: 5
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
   - type: STR_JUDGE_BIKE_ARMOR_UC
     refNode: *STR_BIKE_ARMOR_TEMPLATE
@@ -1361,6 +1372,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 200 # HUGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
   - type: STR_ULTRAsaturnine_ARMORPLAYER
     customArmorPreviewIndex: 297
@@ -1414,6 +1426,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 200 # HUGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
 #Space Wolves Armors, can be moved later but remember the RefNodes used must be duplicated in new file
   - type: STR_SPACEWOLVES_BLOODCLAW_ARMOR
@@ -1495,6 +1508,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 50 #Rookie Space Marines
 
   - type: STR_SPACEWOLVES_GREYHUNTER_ARMOR #Veteral TACTICAL PA
     refNode: *STR_MARINE_ARMOR
@@ -1575,7 +1589,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
-      INTIMIDATION_RESISTANCE: 25 #SW Veteran doesnt scare as easily as Blood Claws
+      INTIMIDATION_RESISTANCE: 75 #SW Veteran doesnt scare as easily as Blood Claws
 
   - type: STR_SPACEWOLVES_VETERANSCOUT_ARMOR #Only Space Wolves Veterans use scout armor
     refNode: *STR_ADVANCED_SCOUT_ARMOR
@@ -1652,7 +1666,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 125 # Not Power armored
-      INTIMIDATION_RESISTANCE: 25 #SW Veteran doesnt scare as easily as Blood Claws
+      INTIMIDATION_RESISTANCE: 75 #SW Veteran doesnt scare as easily as Blood Claws
 
   - type: STR_SPACEWOLVES_SKYCLAW_ARMOR  # ASSAULT SW
     refNode: *STR_MARINE_ARMOR
@@ -1729,7 +1743,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
-      INTIMIDATION_RESISTANCE: 50 #SW Reckless Assault berzerkerish+Know no Fear
+      INTIMIDATION_RESISTANCE: 75 #SW Reckless Assault berzerkerish+Know no Fear
 
   - type: STR_SPACEWOLVES_LONGFANG_ARMOR
     refNode: *STR_MARINE_ARMOR
@@ -1807,7 +1821,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
-      INTIMIDATION_RESISTANCE: 25 #SW Veteran + Know no Fear
+      INTIMIDATION_RESISTANCE: 80 #SW Veteran + Know no Fear
 
   - type: STR_SPACEWOLVES_WOLFPRIEST_ARMOR
     refNode: *STR_MARINE_OFFICER_ARMOR
@@ -1890,7 +1904,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
       INFECTION_RESIST: 25 #SW Warded rune armor
-      INTIMIDATION_RESISTANCE: 50 #SW Priest Chaplain
+      INTIMIDATION_RESISTANCE: 90 #SW Priest Chaplain
 
   - type: STR_SPACEWOLVES_IRONPRIEST_ARMOR #techmarine SW edition
     refNode: *STR_MARINE_OFFICER_ARMOR
@@ -1970,7 +1984,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
-      INTIMIDATION_RESISTANCE: 50 #SW Priest
+      INTIMIDATION_RESISTANCE: 90 #SW Priest
 
   - type: STR_SPACEWOLVES_SERGEANT_ARMOR #Pack Leader Battle Leader
     refNode: *STR_MARINE_OFFICER_ARMOR
@@ -2049,7 +2063,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
-      INTIMIDATION_RESISTANCE: 25 #SW Veteran
+      INTIMIDATION_RESISTANCE: 80 #SW Veteran
 
   - type: STR_SPACEWOLVES_WOLFGUARD_ARMOR
     refNode: *STR_MARINE_ARMOR
@@ -2129,7 +2143,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
       INFECTION_RESIST: 25 #SW Warded rune armor
-      INTIMIDATION_RESISTANCE: 50 #SW Warded Armor and Honor guard
+      INTIMIDATION_RESISTANCE: 80 #SW Warded Armor and Honor guard
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10 #10x100/20=50 points of shield
       ARMOR_ENERGY_SHIELD_DECAY: 20
 
@@ -2214,7 +2228,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 200 # LARGE
       INFECTION_RESIST: 25 #SW Warded rune armor
-      INTIMIDATION_RESISTANCE: 50 #SW Warded Armor and Honor guard
+      INTIMIDATION_RESISTANCE: 90 #SW Warded Armor and Honor guard
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
       ARMOR_ENERGY_SHIELD_DECAY: 15
 
@@ -2275,7 +2289,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 200 # LARGE
       INFECTION_RESIST: 50 #SW Warded artificer Lord rune armor
-      INTIMIDATION_RESISTANCE: 75 #SW Warded Lord Armor
+      INTIMIDATION_RESISTANCE: 100 #SW Warded Lord Armor
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50 #50x100/50=100 points of shield
       ARMOR_ENERGY_SHIELD_DECAY: 50
 
@@ -2330,7 +2344,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 200 # HUGE
       INFECTION_RESIST: 50 #SW Warded Terminator armor
-      INTIMIDATION_RESISTANCE: 75 #SW Warded Ancient Terminator armor
+      INTIMIDATION_RESISTANCE: 90 #SW Warded Ancient Terminator armor
 
   - &STR_RUNEPRIEST_ARMOR
     type: STR_SPACEWOLVES_RUNEPRIEST_ARMOR
@@ -2413,7 +2427,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_PSYKER: 1
       UNIT_SIZE: 150 # LARGE
-      INTIMIDATION_RESISTANCE: 75 #SW Warded Librarian
+      INTIMIDATION_RESISTANCE: 90 #SW Warded Librarian
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/10=120 points of shield
       ARMOR_ENERGY_SHIELD_DECAY: 10
       INFECTION_RESIST: 50 #SW Warded Librarian Armor
@@ -2500,7 +2514,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 200 # HUGE
       INFECTION_RESIST: 50 #SW Warded Terminator armor
-      INTIMIDATION_RESISTANCE: 75 #SW Warded Ancient Terminator armor
+      INTIMIDATION_RESISTANCE: 90 #SW Warded Ancient Terminator armor
 
   # wulfen
   - type: STR_SPACEWOLVES_WULFEN_ARMORPLAYER  # wulfen most is placeholder
@@ -2586,7 +2600,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 150 # LARGE
-      INTIMIDATION_RESISTANCE: 75 #Wulfen very hard to intimidate
+      INTIMIDATION_RESISTANCE: 90 #Wulfen very hard to intimidate
       INFECTION_RESIST: 50 #SW Wulfen Curse
       DODGE_CHANCE: 20 # wulfen
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
