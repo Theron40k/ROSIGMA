@@ -10080,11 +10080,11 @@ alienMissions:
         trajectory: P8
         timer: 3000
       - ufo: STR_IMP_MEDIUM_SCOUT
-        count: 2
+        count: 1
         trajectory: P8
         timer: 3000
       - ufo: STR_STORMRAVEN_UFO
-        count: 2
+        count: 1
         trajectory: P8
         timer: 3000
       - ufo: STR_IMP_MEDIUM_SCOUT
@@ -10170,11 +10170,11 @@ alienMissions:
         trajectory: P8
         timer: 3000
       - ufo: STR_STORMRAVEN_UFO
-        count: 2
+        count: 1
         trajectory: P8
         timer: 3000
       - ufo: STR_IMP_MEDIUM_SCOUT
-        count: 2
+        count: 1
         trajectory: P8
         timer: 3000
       - ufo: STR_IMP_TRANSPORT_BATTLESHIP
@@ -14698,19 +14698,7 @@ alienMissions:
         STR_SWOPFOR_TIER2: 25
         STR_DAOPFOR_TIER2: 25
     waves:
-      - ufo: STR_SMMEDIUM_SCOUT
-        count: 1
-        trajectory: P3
-        timer: 10000
-      - ufo: STR_SMMEDIUM_SCOUT_DOUBLE
-        count: 1
-        trajectory: P3
-        timer: 10000
-      - ufo: STR_SMLARGE_SCOUT
-        count: 1
-        trajectory: P0
-        timer: 10000
-      - ufo: STR_SMLARGE_SCOUT2
+      - ufo: STR_SMTERROR_SHIP
         count: 1
         trajectory: P0
         timer: 10000
@@ -14746,15 +14734,10 @@ alienMissions:
         STR_SWOPFOR_TIER2: 25
         STR_DAOPFOR_TIER2: 25
     waves:
-      - ufo: STR_SMMEDIUM_SCOUT
-        count: 2
-        trajectory: P3
-        timer: 10000
       - ufo: STR_SMTERROR_SHIP
         count: 1
         trajectory: P6
         timer: 5000
-
 
   - type: STR_IMPERIALS_RETALIATION
     points: 0
@@ -14876,6 +14859,158 @@ alienMissions:
         hunterKillerPercentage: 100
         escort: true
         objective: false                # can become a HK/escort
+
+  - type: STR_IMPERIALS_ABDUCTION #Imperial Raid random monthly mission type
+    points: 50
+    raceWeights:
+      0:
+        STR_IGOPFOR_TIER0PLUS: 30
+        STR_IGOPFOR_TIER1: 5
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 10
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 10
+        STR_FIERYHOPFOR_TIER0: 10
+        STR_BLOODYROPFOR_TIER0: 10
+      3:
+        STR_IGOPFOR_TIER1: 15
+        STR_SMOPFOR_TIER0: 25
+        STR_BTOPFOR_TIER0: 25
+        STR_CFOPFOR_TIER0: 25
+        STR_SWOPFOR_TIER0: 25
+        STR_DAOPFOR_TIER0: 25
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 5
+        STR_FIERYHOPFOR_TIER0PLUS: 25
+        STR_BLOODYROPFOR_TIER0PLUS: 25
+      5:
+        STR_IGOPFOR_TIER1: 15
+        STR_SMOPFOR_TIER0PLUS: 25
+        STR_BTOPFOR_TIER0PLUS: 25
+        STR_CFOPFOR_TIER0PLUS: 25
+        STR_SWOPFOR_TIER0PLUS: 25
+        STR_DAOPFOR_TIER0PLUS: 25
+        STR_FIERYHOPFOR_TIER1: 25
+        STR_BLOODYROPFOR_TIER1: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 25
+      7:
+        STR_IGOPFOR_TIER2: 10
+        STR_SMOPFOR_TIER1: 25
+        STR_BTOPFOR_TIER1: 25
+        STR_CFOPFOR_TIER1: 25
+        STR_SWOPFOR_TIER1: 25
+        STR_DAOPFOR_TIER1: 25
+        STR_FIERYHOPFOR_TIER2: 25
+        STR_BLOODYROPFOR_TIER2: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 25
+      9:
+        STR_SMOPFOR_TIER1: 25
+        STR_BTOPFOR_TIER1: 25
+        STR_CFOPFOR_TIER1: 25
+        STR_SWOPFOR_TIER1: 25
+        STR_DAOPFOR_TIER1: 25
+        STR_FIERYHOPFOR_TIER2: 25
+        STR_BLOODYROPFOR_TIER2: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 25
+        STR_INQUISITION_ASSASSINATION_FORCE: 25
+        STR_ALPHA_COMMANDO_RAID: 25
+      12:
+        STR_SMOPFOR_TIER2: 25
+        STR_BTOPFOR_TIER2: 25
+        STR_CFOPFOR_TIER2: 25
+        STR_SWOPFOR_TIER2: 25
+        STR_DAOPFOR_TIER2: 25
+        STR_INQUISITION_ASSASSINATION_FORCE: 25
+        STR_ALPHA_COMMANDO_RAID: 25
+    waves:
+      - ufo: STR_SMMEDIUM_SCOUT
+        count: 1
+        trajectory: P2
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
+      - ufo: STR_SMABDUCTOR
+        count: 2
+        trajectory: P3
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
+
+  - type: STR_IMPERIALS_HARVEST #Imperial Raid random monthly mission type
+    points: 50
+    raceWeights:
+      0:
+        STR_IGOPFOR_TIER0PLUS: 30
+        STR_IGOPFOR_TIER1: 5
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 10
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 10
+        STR_FIERYHOPFOR_TIER0: 10
+        STR_BLOODYROPFOR_TIER0: 10
+      3:
+        STR_IGOPFOR_TIER1: 15
+        STR_SMOPFOR_TIER0: 25
+        STR_BTOPFOR_TIER0: 25
+        STR_CFOPFOR_TIER0: 25
+        STR_SWOPFOR_TIER0: 25
+        STR_DAOPFOR_TIER0: 25
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 5
+        STR_FIERYHOPFOR_TIER0PLUS: 25
+        STR_BLOODYROPFOR_TIER0PLUS: 25
+      5:
+        STR_IGOPFOR_TIER1: 15
+        STR_SMOPFOR_TIER0PLUS: 25
+        STR_BTOPFOR_TIER0PLUS: 25
+        STR_CFOPFOR_TIER0PLUS: 25
+        STR_SWOPFOR_TIER0PLUS: 25
+        STR_DAOPFOR_TIER0PLUS: 25
+        STR_FIERYHOPFOR_TIER1: 25
+        STR_BLOODYROPFOR_TIER1: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 25
+      7:
+        STR_IGOPFOR_TIER2: 10
+        STR_SMOPFOR_TIER1: 25
+        STR_BTOPFOR_TIER1: 25
+        STR_CFOPFOR_TIER1: 25
+        STR_SWOPFOR_TIER1: 25
+        STR_DAOPFOR_TIER1: 25
+        STR_FIERYHOPFOR_TIER2: 25
+        STR_BLOODYROPFOR_TIER2: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 25
+      9:
+        STR_SMOPFOR_TIER1: 25
+        STR_BTOPFOR_TIER1: 25
+        STR_CFOPFOR_TIER1: 25
+        STR_SWOPFOR_TIER1: 25
+        STR_DAOPFOR_TIER1: 25
+        STR_FIERYHOPFOR_TIER2: 25
+        STR_BLOODYROPFOR_TIER2: 25
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 25
+        STR_INQUISITION_ASSASSINATION_FORCE: 25
+        STR_ALPHA_COMMANDO_RAID: 25
+      12:
+        STR_SMOPFOR_TIER2: 25
+        STR_BTOPFOR_TIER2: 25
+        STR_CFOPFOR_TIER2: 25
+        STR_SWOPFOR_TIER2: 25
+        STR_DAOPFOR_TIER2: 25
+        STR_INQUISITION_ASSASSINATION_FORCE: 25
+        STR_ALPHA_COMMANDO_RAID: 25
+    waves:
+      - ufo: STR_SMMEDIUM_SCOUT
+        count: 1
+        trajectory: P2
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
+      - ufo: STR_SMHARVESTER
+        count: 2
+        trajectory: P4
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
 
   # salamander enemy mission
 
@@ -15167,7 +15302,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
@@ -15225,7 +15360,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
@@ -15283,7 +15418,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
@@ -15341,7 +15476,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
@@ -15399,7 +15534,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
@@ -15457,7 +15592,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
@@ -15515,7 +15650,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
@@ -15573,7 +15708,7 @@ alienMissions:
         STR_SLMOPFOR_TIER1: 33
         STR_DAOPFOR_TIER1: 33
         STR_FIERYHOPFOR_TIER1: 33
-      4:
+      5:
         STR_SMOPFOR_TIER2: 33
         STR_BTOPFOR_TIER2: 33
         STR_SWOPFOR_TIER2: 33
