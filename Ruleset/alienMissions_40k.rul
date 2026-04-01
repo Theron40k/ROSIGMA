@@ -15153,6 +15153,68 @@ alienMissions:
         escort: true
         objective: false                # can become a HK/escort
 
+  - type: STR_SALAMANDERS_ABDUCTION
+    points: 50
+    raceWeights:
+      0:
+        STR_SLMOPFOR_TIER0: 30
+      3:
+        STR_SLMOPFOR_TIER0PLUS: 15
+      5:
+        STR_SLMOPFOR_TIER1: 15
+      7:
+        STR_SLMOPFOR_TIER1: 10
+      9:
+        STR_SLMOPFOR_TIER2: 25
+      12:
+        STR_SLMOPFOR_TIER2: 25
+    waves:
+      - ufo: STR_SLMMEDIUM_SCOUT
+        count: 1
+        trajectory: P2
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
+      - ufo: STR_SLMABDUCTOR
+        count: 2
+        trajectory: P3
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
+
+  - type: STR_SALAMANDERS_HARVEST
+    points: 50
+    raceWeights:
+      0:
+        STR_SLMOPFOR_TIER0: 30
+      3:
+        STR_SLMOPFOR_TIER0PLUS: 15
+      5:
+        STR_SLMOPFOR_TIER1: 15
+      7:
+        STR_SLMOPFOR_TIER1: 10
+      9:
+        STR_SLMOPFOR_TIER2: 25
+      12:
+        STR_SLMOPFOR_TIER2: 25
+    waves:
+      - ufo: STR_SLMMEDIUM_SCOUT
+        count: 1
+        trajectory: P2
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
+      - ufo: STR_SLMHARVESTER
+        count: 2
+        trajectory: P3
+        timer: 5000
+        hunterKillerPercentage: 100
+        huntMode: 0
+        huntBehavior: 0
+
 
   # ported from 40k
 
