@@ -14475,7 +14475,7 @@ alienMissions:
         trajectory: P5
         timer: 10000
       - ufo: STR_SMABDUCTOR_IMPOSTER
-        count: 2
+        count: 1
         trajectory: P5
         timer: 5000
       - ufo: STR_SMBATTLESHIP_IMPOSTER
@@ -14527,7 +14527,7 @@ alienMissions:
         timer: 0
         objective: true                 # cannot become a HK/escort
       - ufo: STR_SMLARGE_SCOUT_IMPOSTER
-        count: 2
+        count: 1
         trajectory: P9
         timer: 0
         hunterKillerPercentage: 100
@@ -14746,35 +14746,15 @@ alienMissions:
         STR_SWOPFOR_TIER2: 25
         STR_DAOPFOR_TIER2: 25
     waves:
-      - ufo: STR_SMLARGE_SCOUT
-        count: 1
+      - ufo: STR_SMMEDIUM_SCOUT
+        count: 2
         trajectory: P3
         timer: 10000
-      - ufo: STR_SMLARGE_SCOUT2
-        count: 1
-        trajectory: P3
-        timer: 5000
-      - ufo: STR_SMABDUCTOR
-        count: 1
-        trajectory: P3
-        timer: 5000
-      - ufo: STR_SMHARVESTER
-        count: 1
-        trajectory: P3
-        timer: 5000
       - ufo: STR_SMTERROR_SHIP
         count: 1
         trajectory: P6
         timer: 5000
-      - ufo: STR_SMSUPPLY_SHIP
-        count: 1
-        trajectory: P7
-        timer: 5000
-      - ufo: STR_SMBATTLESHIP
-        count: 1
-        trajectory: P7
-        timer: 5000
-        objective: true
+
 
   - type: STR_IMPERIALS_RETALIATION
     points: 0
@@ -14812,29 +14792,13 @@ alienMissions:
         STR_SWOPFOR_TIER2: 25
         STR_DAOPFOR_TIER2: 25
     waves:
-      - ufo: STR_SMLARGE_SCOUT
+      - ufo: STR_SMMEDIUM_SCOUT
         count: 1
         trajectory: P3
         timer: 10000
       - ufo: STR_SMLARGE_SCOUT2
         count: 1
         trajectory: P3
-        timer: 5000
-      - ufo: STR_SMABDUCTOR
-        count: 1
-        trajectory: P3
-        timer: 5000
-      - ufo: STR_SMHARVESTER
-        count: 1
-        trajectory: P3
-        timer: 5000
-      - ufo: STR_SMTERROR_SHIP
-        count: 1
-        trajectory: P6
-        timer: 5000
-      - ufo: STR_SMSUPPLY_SHIP
-        count: 1
-        trajectory: P7
         timer: 5000
       - ufo: STR_SMBATTLESHIP
         count: 1
@@ -14891,46 +14855,21 @@ alienMissions:
         hunterKillerPercentage: 100
         huntMode: 0
         huntBehavior: 0
-      - ufo: STR_SMLARGE_SCOUT
-        count: 1
-        trajectory: D0
-        timer: 500
-        hunterKillerPercentage: 100
-        huntMode: 0
-        huntBehavior: 0
-      - ufo: STR_SMLARGE_SCOUT2
-        count: 1
-        trajectory: D0
-        timer: 500
-        hunterKillerPercentage: 100
-        huntMode: 0
-        huntBehavior: 0
 
   - type: STR_IMPERIALS_SUPPLY # WITH HK/escort
     points: 0
     objective: 5
     raceWeights: {} #Special case, race comes from base.
     waves:
-      - ufo: STR_SMMEDIUM_SCOUT
+      - ufo: STR_SMSUPPLY_SHIP
         count: 1
         trajectory: D0
         timer: 5000
         hunterKillerPercentage: 100
         huntMode: 0
         huntBehavior: 0
-      - ufo: STR_SMMEDIUM_SCOUT_DOUBLE
-        count: 1
-        trajectory: P9
-        timer: 5000
-        objective: true                 # cannot become a HK/escort
-      - ufo: STR_SMLARGE_SCOUT
-        count: 2
-        trajectory: P9
-        timer: 500
-        hunterKillerPercentage: 100
-        escort: true
         objective: false                # can become a HK/escort
-      - ufo: STR_SMLARGE_SCOUT2
+      - ufo: STR_SMMEDIUM_SCOUT
         count: 2
         trajectory: P9
         timer: 500
@@ -14966,11 +14905,7 @@ alienMissions:
         count: 1
         trajectory: P3
         timer: 10000
-      - ufo: STR_SLMLARGE_SCOUT
-        count: 1
-        trajectory: P0
-        timer: 10000
-      - ufo: STR_SLMLARGE_SCOUT2
+      - ufo: STR_SLMTERROR_SHIP
         count: 1
         trajectory: P0
         timer: 10000
@@ -14998,27 +14933,10 @@ alienMissions:
         count: 1
         trajectory: P3
         timer: 5000
-      - ufo: STR_SLMABDUCTOR
-        count: 1
-        trajectory: P3
-        timer: 5000
-      - ufo: STR_SLMHARVESTER
-        count: 1
-        trajectory: P3
-        timer: 5000
       - ufo: STR_SLMTERROR_SHIP
         count: 1
         trajectory: P6
         timer: 5000
-      - ufo: STR_SMSUPPLY_SHIP
-        count: 1
-        trajectory: P7
-        timer: 5000
-      - ufo: STR_SLMBATTLESHIP
-        count: 1
-        trajectory: P7
-        timer: 5000
-        objective: true
 
   - type: STR_SLMIMPERIALS_RETALIATION
     points: 0
@@ -15045,22 +14963,6 @@ alienMissions:
         count: 1
         trajectory: P3
         timer: 5000
-      - ufo: STR_SLMABDUCTOR
-        count: 1
-        trajectory: P3
-        timer: 5000
-      - ufo: STR_SLMHARVESTER
-        count: 1
-        trajectory: P3
-        timer: 5000
-      - ufo: STR_SLMTERROR_SHIP
-        count: 1
-        trajectory: P6
-        timer: 5000
-      - ufo: STR_SMSUPPLY_SHIP
-        count: 1
-        trajectory: P7
-        timer: 5000
       - ufo: STR_SLMBATTLESHIP
         count: 1
         trajectory: P7
@@ -15083,7 +14985,7 @@ alienMissions:
       12:
         STR_SLMOPFOR_TIER2: 100
     waves:
-      - ufo: STR_SMMEDIUM_SCOUT
+      - ufo: STR_SLMMEDIUM_SCOUT
         count: 1
         trajectory: D0
         timer: 5000
@@ -15094,20 +14996,6 @@ alienMissions:
         count: 1
         trajectory: D0
         timer: 5000
-        hunterKillerPercentage: 100
-        huntMode: 0
-        huntBehavior: 0
-      - ufo: STR_SLMLARGE_SCOUT
-        count: 1
-        trajectory: D0
-        timer: 500
-        hunterKillerPercentage: 100
-        huntMode: 0
-        huntBehavior: 0
-      - ufo: STR_SLMLARGE_SCOUT2
-        count: 1
-        trajectory: D0
-        timer: 500
         hunterKillerPercentage: 100
         huntMode: 0
         huntBehavior: 0
@@ -15117,30 +15005,19 @@ alienMissions:
     objective: 5
     raceWeights: {} #Special case, race comes from base.
     waves:
-      - ufo: STR_SMMEDIUM_SCOUT
-        count: 1
+      - ufo: STR_SLMSUPPLY_SHIP
+        count: 2
         trajectory: P9
         timer: 5000
         objective: true
-      - ufo: STR_SLMMEDIUM_SCOUT_DOUBLE
-        count: 1
-        trajectory: P9
-        timer: 5000
-        objective: true                 # cannot become a HK/escort
-      - ufo: STR_SLMLARGE_SCOUT
+      - ufo: STR_SMMEDIUM_SCOUT
         count: 2
         trajectory: P9
         timer: 500
         hunterKillerPercentage: 100
         escort: true
         objective: false                # can become a HK/escort
-      - ufo: STR_SLMLARGE_SCOUT2
-        count: 2
-        trajectory: P9
-        timer: 500
-        hunterKillerPercentage: 100
-        escort: true
-        objective: false                # can become a HK/escort
+
 
   # ported from 40k
 
