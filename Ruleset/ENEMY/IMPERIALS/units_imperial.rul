@@ -419,7 +419,6 @@ units:
       -
         MOUNTED_BOLTER_SET1: 100
 
-
   - type: STR_BEASTGUARD_FLAK_IGOPFOR
     race: STR_IMPERIALGUARD_FACTION
     rank: STR_LIVE_SOLDIER
@@ -633,6 +632,60 @@ units:
         - STR_SMOKE_GRENADE
     liveAlien: ""
 
+  - type: STR_IGOPFOR_OPEN_MISSILE_SENTINEL #Tier 0Plus
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 55
+      bravery: 80
+      reactions: 40
+      firing: 58
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_OPEN_SENTINEL_MISSILE_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: [{mod: 40k, index: 700}]
+    capturable: false
+
+  - type: STR_IGOPFOR_OPEN_LASCANNON_SENTINEL #Tier 0Plus
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 55
+      bravery: 80
+      reactions: 40
+      firing: 58
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_OPEN_SENTINEL_LASCANNON_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: [{mod: 40k, index: 700}]
+    capturable: false
+
   # IG TIER 2
 
   - type: STR_GUARDS_M_LV2_AI
@@ -815,6 +868,60 @@ units:
         - STR_RIPPER_GUN_CLIP
     liveAlien: ""
 
+  - type: STR_IGOPFOR_MISSILE_SENTINEL #Tier 1
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 65
+      bravery: 90
+      reactions: 50
+      firing: 68
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_SENTINEL_MISSILE_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: [{mod: 40k, index: 700}]
+    capturable: false
+
+  - type: STR_IGOPFOR_LASCANNON_SENTINEL #Tier 2
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 65
+      bravery: 90
+      reactions: 50
+      firing: 68
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_SENTINEL_LASCANNON_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: [{mod: 40k, index: 700}]
+    capturable: false
+
   # IG TIER 3
 
   - type: STR_IGGUARDS_M_LV3_AI
@@ -919,6 +1026,33 @@ units:
         CARAPACE_GUARDSMENOFF_SET1: 10
         CARAPACE_GUARDSMENOFF_SET2: 10
         CARAPACE_GUARDSMENOFF_SET3: 10
+
+  - type: STR_IGOPFOR_HEAVY_PLASMA_SENTINEL #Tier 3
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 110
+      health: 75
+      bravery: 100
+      reactions: 50
+      firing: 75
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_SENTINEL_HEAVY_PLASMA_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 40
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: [{mod: 40k, index: 700}]
+    capturable: false
 
   # ULTRA TIER 0
 
