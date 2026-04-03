@@ -454,7 +454,81 @@ units:
         FLAK_GUARDSMENOFF_SET2: 5
         FLAK_GUARDSMENOFF_SET3: 5
 
+  - type: STR_SHARPSHOOTER_FEMALE_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 60
+      stamina: 75
+      health: 40
+      bravery: 80
+      reactions: 50
+      firing: 80
+      throwing: 50
+      strength: 50
+      psiStrength: 50
+      psiSkill: 0
+      melee: 40
+    armor: STR_TANITH_SCOUT_FEMALE
+    standHeight: 20
+    kneelHeight: 14
+    value: 20
+    intelligence: 2
+    aggression: 0
+    energyRecovery: 30
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    builtInWeaponSets:
+      - - STR_LONG_RIFLE_GUARD
+        - STR_STUB_GUN_AMMO_WOUND
+        - STR_STUB_GUN_AMMO_AP
+        - STR_SMOKE_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+
+  - type: STR_SHARPSHOOTER_MALE_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 60
+      stamina: 75
+      health: 45
+      bravery: 80
+      reactions: 50
+      firing: 80
+      throwing: 50
+      strength: 50
+      psiStrength: 50
+      psiSkill: 0
+      melee: 40
+    armor: STR_TANITH_SCOUT_MALE
+    standHeight: 21
+    kneelHeight: 14
+    value: 20
+    intelligence: 2
+    aggression: 1
+    energyRecovery: 30
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets:
+      - - STR_LONG_RIFLE_GUARD
+        - STR_STUB_GUN_AMMO_HP
+        - STR_STUB_GUN_AMMO_INC
+        - STR_SMOKE_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+
   - type: STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 64
       stamina: 100
@@ -558,6 +632,8 @@ units:
         CARAPACE_GUARDSMENOFF_SET3: 10
 
   - type: STR_BULLGRYN_SLAB_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 64
       stamina: 100
@@ -594,6 +670,8 @@ units:
     liveAlien: ""
 
   - type: STR_BULLGRYN_BUCKLER_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 64
       stamina: 100
