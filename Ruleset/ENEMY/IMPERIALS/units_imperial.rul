@@ -420,6 +420,46 @@ units:
         MOUNTED_BOLTER_SET1: 100
 
 
+  - type: STR_BEASTGUARD_FLAK_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 95
+      health: 70
+      bravery: 70
+      reactions: 55
+      firing: 50
+      throwing: 75
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_BEASTGUARD_FLAK_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 8
+    aggression: 6
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    berserkChance: 80
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_SMG_STUB_GUN
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_KNIF
+      - - STR_PUMP_SHOTGUN
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_SMOKE_GRENADE
+      - - STR_AUTOGUN
+        - STR_AUTOGUN_CLIP
+        - STR_AUTOGUN_CLIP
+        - STR_GRENADE
+
   - type: STR_GUARDS_OFF_LV1_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
     race: STR_IMPERIALGUARD_FACTION
@@ -631,6 +671,46 @@ units:
         CARAPACE_GUARDSMEN_SET5: 10
         CARAPACE_GUARDSMEN_SET6: 10
         CARAPACE_GUARDSMEN_SET7: 10
+
+  - type: STR_BEASTGUARD_CARAPACE_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 95
+      health: 90
+      bravery: 90
+      reactions: 55
+      firing: 50
+      throwing: 75
+      strength: 75
+      psiStrength: 65
+      psiSkill: 0
+      melee: 85
+    armor: STR_BEASTGUARD_CARAPACE_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 15
+    aggression: 6
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    berserkChance: 90
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_SHOTGUN_PISTOL
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_CHAINSWORD_GUARD
+      - - STR_BOLTER_LIGHT_SOLO_SHORT
+        - STR_LIGHT_BOLTER_AMMO_SHORT
+        - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
+        - STR_GRENADE
+      - - STR_BOLTER_LIGHT_SOLO
+        - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
+        - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
+        - STR_KRAK_GRENADE
 
   - type: STR_GUARDS_OFF_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
