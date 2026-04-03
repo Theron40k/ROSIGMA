@@ -526,6 +526,41 @@ units:
         - STR_LASGUN_CLIP_HOTSHOT
         - STR_KRAK_GRENADE
 
+  - type: STR_OGRYN_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 75
+      stamina: 100
+      health: 100
+      bravery: 90
+      reactions: 36
+      firing: 30
+      throwing: 40
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_OGRYN_UC
+    standHeight: 22
+    kneelHeight: 14
+    value: 20
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_CHAINSWORD_GUARD
+        - STR_FRAG_GRENADE
+      - - STR_HEAVY_STUBBER_LIGHT
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_HEAVY_STUBBER_CLIP
+      - - STR_SHOTGUN
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_FRAG_GRENADE
+    liveAlien: ""
+
   - type: STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR
     race: STR_IMPERIALGUARD_FACTION
     rank: STR_LIVE_ENGINEER
@@ -556,7 +591,6 @@ units:
         - STR_SMOKE_GRENADE
       - - STR_LIGHT_POWERFIST
         - STR_SMOKE_GRENADE
-    civilianRecoveryType: STR_OGRYN
     liveAlien: ""
 
   # IG TIER 2
@@ -666,7 +700,6 @@ units:
         - STR_RIPPER_GUN_CLIP
         - STR_RIPPER_GUN_CLIP
         - STR_SMOKE_GRENADE
-    civilianRecoveryType: STR_OGRYN
     liveAlien: ""
 
   - type: STR_BULLGRYN_BUCKLER_IGOPFOR
@@ -700,7 +733,6 @@ units:
       - - STR_RIPPER_GUN
         - STR_RIPPER_GUN_CLIP
         - STR_RIPPER_GUN_CLIP
-    civilianRecoveryType: STR_OGRYN
     liveAlien: ""
 
   # IG TIER 3
