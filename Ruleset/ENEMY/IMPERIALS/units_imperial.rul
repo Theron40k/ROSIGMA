@@ -454,6 +454,37 @@ units:
         FLAK_GUARDSMENOFF_SET2: 5
         FLAK_GUARDSMENOFF_SET3: 5
 
+  - type: STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR
+    stats:
+      tu: 64
+      stamina: 100
+      health: 100
+      bravery: 70
+      reactions: 32
+      firing: 20
+      throwing: 50
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_BULLGRYN_BUCKLER_RIOT
+    standHeight: 22
+    kneelHeight: 14
+    value: 20
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_STUN_ROD
+        - STR_SMOKE
+      - - STR_CHAINSWORD_GUARD
+        - STR_SMOKE
+      - - STR_LIGHT_POWERFIST
+        - STR_SMOKE
+    civilianRecoveryType: STR_OGRYN
+    liveAlien: ""
+
   # IG TIER 2
 
   - type: STR_GUARDS_M_LV2_AI
@@ -525,6 +556,74 @@ units:
         CARAPACE_GUARDSMENOFF_SET1: 10
         CARAPACE_GUARDSMENOFF_SET2: 10
         CARAPACE_GUARDSMENOFF_SET3: 10
+
+  - type: STR_BULLGRYN_SLAB_IGOPFOR
+    stats:
+      tu: 64
+      stamina: 100
+      health: 120
+      bravery: 90
+      reactions: 32
+      firing: 30
+      throwing: 50
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_BULLGRYN_SLAB_RIOT
+    standHeight: 22
+    kneelHeight: 14
+    value: 25
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_CHAINSWORD_GUARD
+        - STR_SMOKE_GRENADE
+        - STR_SMOKE_GRENADE
+      - - STR_SHOTGUN_PISTOL
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_SMOKE_GRENADE
+      - - STR_RIPPER_GUN
+        - STR_RIPPER_GUN_CLIP
+        - STR_RIPPER_GUN_CLIP
+        - STR_SMOKE_GRENADE
+    civilianRecoveryType: STR_OGRYN
+    liveAlien: ""
+
+  - type: STR_BULLGRYN_BUCKLER_IGOPFOR
+    stats:
+      tu: 64
+      stamina: 100
+      health: 120
+      bravery: 80
+      reactions: 32
+      firing: 30
+      throwing: 50
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_BULLGRYN_BUCKLER_RIOT
+    standHeight: 22
+    kneelHeight: 14
+    value: 25
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_CHAINSWORD_GUARD
+      - - STR_GRENADE_LAUNCHER_STEEL_LEGION
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+      - - STR_RIPPER_GUN
+        - STR_RIPPER_GUN_CLIP
+        - STR_RIPPER_GUN_CLIP
+    civilianRecoveryType: STR_OGRYN
+    liveAlien: ""
 
   # IG TIER 3
 
