@@ -3634,14 +3634,14 @@ units:
     deathSound: [1710, 1711, 1712, 1713, 1714]
     builtInWeaponSets:
       - - STR_BOLTPISTOL_SCOURGE
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
-      - - STR_BOLTPISTOL_SCOURGE
-        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
         - STR_LIGHT_BOLTPISTOL_AMMO
       - - STR_BOLTPISTOL_SCOURGE
         - STR_LIGHT_BOLTPISTOL_AMMO
         - STR_LIGHT_BOLTPISTOL_AMMO
+      - - STR_BOLTPISTOL_SCOURGE
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_REPENTIA_AI
@@ -3715,8 +3715,8 @@ units:
       - - STR_BOLTER_DEAZ
         - STR_LIGHT_BOLTER_AMMO
         - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_PEN
         - STR_LIGHT_BOLTER_AMMO
         - STR_PHOSPHOR_GRENADE
 
@@ -3763,7 +3763,6 @@ units:
       - - STR_PLASMA_PISTOL_TERRAN
         - STR_PLASMA_PISTOL_CLIP
         - STR_PLASMA_PISTOL_CLIP
-        - STR_PLASMA_PISTOL_CLIP
         - STR_PHOSPHOR_GRENADE
         - STR_SONIC_GRENADE
 
@@ -3795,14 +3794,16 @@ units:
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
       - - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_NEURAL_WHIP
+      - - STR_ADEPTAS_BOLTGUN_JOVE
+        - STR_RIFLE_CLIP
+        - STR_RIFLE_CLIP
+      - - STR_MC_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO_MC
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_ADEPTAS_POWER_AXE
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_ELOHIM_AI
@@ -3832,11 +3833,10 @@ units:
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
-      - - STR_HAND_FLAMETHROWER
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_PHOSPHOR_GRENADE
       - - STR_ADEPTAS_MELTAGUN_NECRO
         - STR_MELTA_AMMO
         - STR_MELTA_AMMO
@@ -3922,8 +3922,8 @@ units:
         - STR_MELTA_AMMO
         - STR_MGRENADE
       - - STR_ADEPTAS_BOLTGUN_JOVE
-        - STR_RIFLE_CLIP
-        - STR_RIFLE_CLIP
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
         - STR_MGRENADE
 
   - type: STR_BLOODYROSE_SACRESANT_AI
@@ -3953,13 +3953,13 @@ units:
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
-      - - STR_ADEPTAS_POWER_AXE
-        - STR_PHOSPHOR_GRENADE
-        - STR_PHOSPHOR_GRENADE
-      - - STR_ADEPTAS_ZWEIHANDER
-        - STR_MGRENADE
-        - STR_MGRENADE
       - - STR_DOMINION_HALBERD
+        - STR_PHOSPHOR_GRENADE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_DOMINION_HALBERD
+        - STR_MGRENADE
+        - STR_MGRENADE
+      - - STR_ADEPTAS_POWER_AXE
         - STR_MGRENADE
         - STR_MGRENADE
 
@@ -4108,8 +4108,8 @@ units:
         - STR_LIGHT_BOLTPISTOL_AMMO
         - STR_LIGHT_BOLTPISTOL_AMMO
       - - STR_BOLTPISTOL_SCOURGE
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_REPENTIA_AI
@@ -4182,8 +4182,8 @@ units:
       - - STR_BOLTER_DEAZ
         - STR_LIGHT_BOLTER_AMMO
         - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
         - STR_LIGHT_BOLTER_AMMO
         - STR_PHOSPHOR_GRENADE
 
@@ -4227,10 +4227,9 @@ units:
         - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
         - STR_PHOSPHOR_GRENADE
         - STR_SONIC_GRENADE
-      - - STR_PLASMA_PISTOL_TERRAN
-        - STR_PLASMA_PISTOL_CLIP
-        - STR_PLASMA_PISTOL_CLIP
-        - STR_PLASMA_PISTOL_CLIP
+      - - STR_INFERNO_PISTOL
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
         - STR_PHOSPHOR_GRENADE
         - STR_SONIC_GRENADE
 
@@ -4262,14 +4261,15 @@ units:
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
       - - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_NEURAL_WHIP
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_LIGHT_BOLTER_AMMO_AP
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_TERRAN
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_ELOHIM_AI
@@ -4298,11 +4298,10 @@ units:
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
-      - - STR_HAND_FLAMETHROWER
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_KRAK_GRENADE
       - - STR_ADEPTAS_MELTAGUN_NECRO
         - STR_MELTA_AMMO
         - STR_MELTA_AMMO
