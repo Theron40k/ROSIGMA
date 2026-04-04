@@ -526,6 +526,46 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+  - type: STR_SPACEMARINEARMOR_ADVSCOUT
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10 # higher tech
+    antiCamouflageAtDark: 10 # higher tech
+    camouflageAtDay: -8  # you need to be 8 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: -6  # you need to be 6 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 30 # higher tech
+    spriteSheet: SPACEMARINEADVscoutbattle.PCK
+    spriteInv: SPACEMARINEARMOR_ADVSCOUT.PCK
+    spriteFaceGroup: 6
+    spriteFaceColor: [164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96]
+    corpseBattle:
+      - STR_ADVSCOUT_AICORPSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
+    drawingRoutine: 0
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.0  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [2]
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
   # ULTRA TIER 1
 
   - type: STR_SPACEMARINEARMOR_TAC
@@ -2530,6 +2570,46 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_SALAMANDERARMOR_ADVSCOUT
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10 # higher tech
+    antiCamouflageAtDark: 10 # higher tech
+    camouflageAtDay: -8  # you need to be 8 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: -6  # you need to be 6 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 30 # higher tech
+    spriteSheet: SALAMANDERADVscoutbattle.PCK
+    spriteInv: SALAMANDERARMOR_ADVSCOUT.PCK
+    spriteFaceGroup: 6
+    spriteFaceColor: [164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96]
+    corpseBattle:
+      - STR_SALAMANDERADVSCOUT_AICORPSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
+    drawingRoutine: 0
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.9  # FLAMES #SLM bonus
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA #SLM bonus
+    loftempsSet: [2]
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
   # SALAMANDER TIER 1
 
