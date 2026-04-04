@@ -9675,8 +9675,25 @@ research:
     points: 15
     needItem: true
     destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_OGRYNOPFOR
+    cost: 10
+    points: 1  # ogryn interrogation may not be that useful
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
 ## Space Marines #CAPTIVES.SM#
   - name: STR_SPACEMARINE_SCOUT_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SPACEMARINE_ADVSCOUT_AI
     cost: 100
     points: 50
     needItem: true
@@ -10030,6 +10047,14 @@ research:
     destroyItem: true
 
   - name: STR_SALAMANDER_SCOUT_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SALAMANDER_ADVSCOUT_AI
     cost: 100
     points: 50
     needItem: true

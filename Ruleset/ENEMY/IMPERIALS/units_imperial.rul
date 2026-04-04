@@ -680,7 +680,7 @@ units:
         - STR_SHOTGUN_SHELLS
         - STR_SHOTGUN_SHELLS
         - STR_GRENADE
-    liveAlien: ""
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
 
   - type: STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR
     race: STR_IMPERIALGUARD_FACTION
@@ -712,7 +712,7 @@ units:
         - STR_SMOKE_GRENADE
       - - STR_LIGHT_POWERFIST
         - STR_SMOKE_GRENADE
-    liveAlien: ""
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
 
   - type: STR_IGOPFOR_OPEN_MISSILE_SENTINEL #Tier 0Plus
     race: STR_IMPERIALGUARD_FACTION
@@ -956,7 +956,7 @@ units:
         - STR_RIPPER_GUN_CLIP
         - STR_RIPPER_GUN_CLIP
         - STR_SMOKE_GRENADE
-    liveAlien: ""
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
 
   - type: STR_BULLGRYN_BUCKLER_IGOPFOR
     race: STR_IMPERIALGUARD_FACTION
@@ -989,7 +989,7 @@ units:
       - - STR_RIPPER_GUN
         - STR_RIPPER_GUN_CLIP
         - STR_RIPPER_GUN_CLIP
-    liveAlien: ""
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
 
   - type: STR_IGOPFOR_MISSILE_SENTINEL #Tier 1
     race: STR_IMPERIALGUARD_FACTION
@@ -1203,6 +1203,40 @@ units:
     aggression: 2
     spotter: 6
     sniper: 70
+    energyRecovery: 30
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        SM_SCOUT_SET1: 40
+        SM_SCOUT_SET2: 30
+        SM_SCOUT_SET3: 30
+
+  - type: STR_SPACEMARINE_ADVSCOUT_AI
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 110
+      stamina: 90
+      health: 90
+      bravery: 100  # UM
+      reactions: 100  # UM
+      firing: 90
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 70
+    armor: STR_SPACEMARINEARMOR_ADVSCOUT
+    standHeight: 21
+    kneelHeight: 16
+    value: 20
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    intelligence: 2
+    aggression: 2
+    spotter: 6
+    sniper: 80
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -2988,6 +3022,40 @@ units:
     aggression: 2
     spotter: 6
     sniper: 70
+    energyRecovery: 30
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        SM_SCOUT_SET1: 40
+        SM_SCOUT_SET2: 30
+        SM_SCOUT_SET3: 30
+
+  - type: STR_SALAMANDER_ADVSCOUT_AI
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 110
+      stamina: 90
+      health: 90
+      bravery: 90
+      reactions: 90
+      firing: 90
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 70
+    armor: STR_SALAMANDERARMOR_ADVSCOUT
+    standHeight: 21
+    kneelHeight: 16
+    value: 20
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    intelligence: 2
+    aggression: 2
+    spotter: 6
+    sniper: 80
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
