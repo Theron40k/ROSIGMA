@@ -459,6 +459,46 @@ units:
         - STR_AUTOGUN_CLIP
         - STR_GRENADE
 
+  - type: STR_BEASTGUARD_FLAKMEDIC_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 65
+      stamina: 95
+      health: 80
+      bravery: 70
+      reactions: 45
+      firing: 50
+      throwing: 75
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_BEASTGUARD_FLAK_ARMOR_MEDIC
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 10
+    aggression: 1
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    berserkChance: 60
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_AUTOPISTOL
+        - STR_AUTOPISTOL_CLIP
+        - STR_AUTOPISTOL_CLIP
+        - STR_KNIF
+      - - STR_SMG_STUB_GUN
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_SMOKE_GRENADE
+      - - STR_LASGUN_VOSS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_PHOSPHOR_GRENADE
+
   - type: STR_GUARDS_OFF_LV1_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
     race: STR_IMPERIALGUARD_FACTION
