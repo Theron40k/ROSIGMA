@@ -499,6 +499,48 @@ units:
         - STR_LASGUN_CLIP_HOTSHOT
         - STR_PHOSPHOR_GRENADE
 
+  - type: STR_IGOPFOR_SQUATS_FLAK
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 40
+      stamina: 95
+      health: 80
+      bravery: 90
+      reactions: 50
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_SQUAT_FLAK_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    moraleLossWhenKilled: 75
+    intelligence: 2
+    aggression: 2
+    value: 10
+    spotter: 2
+    sniper: 50
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_GRENADE_LAUNCHER
+        - STR_FRAG_GRENADE_DRUM
+        - STR_FRAG_GRENADE_DRUM
+        - STR_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+
   - type: STR_GUARDS_OFF_LV1_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
     race: STR_IMPERIALGUARD_FACTION
@@ -804,6 +846,47 @@ units:
         - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
         - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
         - STR_KRAK_GRENADE
+
+  - type: STR_IGOPFOR_SQUATS_CARAPACE
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 40
+      stamina: 95
+      health: 80
+      bravery: 90
+      reactions: 55
+      firing: 65
+      throwing: 50
+      strength: 55
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_SQUAT_CARAPACE_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    value: 15
+    sniper: 75  # artillery
+    energyRecovery: 50
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      - - STR_GRENADE_LAUNCHER
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_MGRENADE
 
   - type: STR_GUARDS_OFF_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
