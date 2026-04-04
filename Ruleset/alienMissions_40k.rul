@@ -15380,6 +15380,22 @@ alienMissions:
 
  # player word bearers
 
+  - type: STR_INQUISITION_OUTPOST_BUILD_INITIALWB  #  base early INQ for WB strat
+    retaliationOdds: 0
+    operationType: 0
+    spawnZone: 4
+    objective: 2
+    siteType: STR_INQUISITION_OUTPOSTWB
+    points: 0
+    waves:
+      - ufo: STR_SIGNAL_UFO
+        count: 1
+        trajectory: P5
+        timer: 30
+    raceWeights:
+      0:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 100
+
   - type: STR_SUPPORT_KHORNECHAOSMARINE_ASSAULT
     points: 10
     objective: 3
