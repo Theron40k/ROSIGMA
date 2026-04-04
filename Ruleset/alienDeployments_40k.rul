@@ -20992,6 +20992,85 @@ alienDeployments:
 
   # player word bearers
 
+  - type: STR_INQUISITION_OUTPOSTWB  # Small Inquisition Base
+    randomRace: [STR_IMPERIAL_INQUISITION_OUTPOST_LIST]
+    markerIcon: 118
+    terrains:
+      - CITY
+    script: INQUISITION_OUTPOST_SCRIPT
+    alienBase: true
+    customUfo: STR_IMP_LARGE_TRANSPORT  # mixes ship into map
+    objectiveComplete: [STR_INQUISITION_OUTPOST_DESTROYED, 200]
+    objectiveFailed: [STR_INQUISITION_OUTPOST_NOT_DESTROYED, -100]
+    abortPenalty: 100
+    data:
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 1
+        highQty: 1
+        dQty: 2
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 5
+        highQty: 5
+        dQty: 1
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 0
+        highQty: 0
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2  # 3
+        dQty: 1  # 1
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 4
+        highQty: 4  # 3
+        dQty: 6  # 1
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 6
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 5
+        highQty: 5
+        dQty: 2
+        percentageOutsideUfo: 90
+        itemSets: *emptyItemSets
+    briefing:
+      cutscene: TERROR
+      music: gmstory2
+      title: STR_INQUISITION_OUTPOST_ASSAULT
+      textOffset: -16
+      background: InquisitionBG.SCR
+      showTarget: false
+      desc: STR_INQUISITION_OUTPOST_ASSAULT_BRIEFING
+    markerName: STR_INQUISITION_OUTPOST
+    alienBaseUpgrades:
+      0:
+        STR_INQUISITION_OUTPOSTWB: 100
+      5:
+        STR_INQUISITION_OUTPOST: 50
+    width: 50
+    length: 50
+    height: 12
+
+
   - type: STR_KHORNEMARINE_ASSAULT_SITE
     script: STR_KHORNEMARINE_ASSAULT_SCRIPT
     briefing:

@@ -3352,6 +3352,7 @@ missionScripts:
     researchTriggers:
       STR_ALIENS_ONLY: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
 
   - type: secondInquisitionOutpost  # So that two get made immediately
     refNode: *starterInquisitionOutposts
@@ -3371,6 +3372,7 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
   - type: firstInquisitionHQNorthAmerica
     label: 2000
     regionWeights:
@@ -3380,7 +3382,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_NORTH_AMERICA: false
+
   - type: firstInquisitionHQEurope
     refNode: *SPAWN_HQ
     label: 2001
@@ -3392,7 +3396,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_EUROPE: false
+
   - type: firstInquisitionHQSouthAmerica
     refNode: *SPAWN_HQ
     label: 2002
@@ -3404,7 +3410,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_SOUTH_AMERICA: false
+
   - type: firstInquisitionHQNorthAfrica
     refNode: *SPAWN_HQ
     label: 2003
@@ -3416,7 +3424,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_NORTH_AFRICA: false
+
   - type: firstInquisitionHQSouthernAfrica
     refNode: *SPAWN_HQ
     label: 2004
@@ -3428,7 +3438,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_SOUTHERN_AFRICA: false
+
   - type: firstInquisitionHQCentralAsia
     refNode: *SPAWN_HQ
     label: 2005
@@ -3440,7 +3452,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_CENTRAL_ASIA: false
+
   - type: firstInquisitionHQSouthEastAsia
     refNode: *SPAWN_HQ
     label: 2006
@@ -3452,7 +3466,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_SOUTH_EAST_ASIA: false
+
   - type: firstInquisitionHQAustralasia
     refNode: *SPAWN_HQ
     label: 2007
@@ -3464,7 +3480,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_AUSTRALASIA: false
+
   - type: firstInquisitionHQArctic
     refNode: *SPAWN_HQ
     label: 2008
@@ -3476,7 +3494,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_ARCTIC: false
+
   - type: firstInquisitionHQAntarctica
     refNode: *SPAWN_HQ
     label: 2009
@@ -3488,7 +3508,9 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
       STR_BASE_IN_ANTARCTICA: false
+
   - type: firstInquisitionHQAnywhere
     # Fallback, for if the player somehow had a base in every region at some point
     conditionals: [-2000, -2001, -2002, -2003, -2004, -2005, -2006, -2007, -2008, -2009]
@@ -3505,6 +3527,7 @@ missionScripts:
       STR_ALIENS_ONLY: true
       STR_HARDER_MISSIONS: true
       STR_NOT_CHAOSCULT: true
+      STR_NOT_WORDBEARERS: true
 
   - delete: finalMissionChaos
   - type: finalMissionChaos
@@ -3531,7 +3554,7 @@ missionScripts:
     missionWeights:
       0:
         STR_INQUISITION_OUTPOST_BUILD_INITIAL: 100
-    firstMonth: 1
+    firstMonth: 4
     startDelay: 120
     randomDelay: 1440 # Up to 1 weeks random delay
     executionOdds: 100
@@ -3549,7 +3572,7 @@ missionScripts:
     missionWeights:
       0:
         STR_INQUISITION_HQ_BUILD_INITIAL: 100
-    firstMonth: 1
+    firstMonth: 4
     startDelay: 120
     randomDelay: 1440 # Up to 1 weeks random delay
     executionOdds: 100
@@ -3684,7 +3707,7 @@ missionScripts:
     missionWeights:
       0:
         STR_INQUISITION_HQ_BUILD_INITIAL: 100
-    firstMonth: 1
+    firstMonth: 4
     startDelay: 120
     randomDelay: 1440 # Up to 1 weeks random delay
     executionOdds: 100
@@ -3776,6 +3799,35 @@ missionScripts:
     varName: finalMissionCCULT
 
   # Word Bearer
+
+  - type: firstInquisitionOutpostWB
+    firstMonth: 1
+    missionWeights:
+      0:
+        STR_INQUISITION_OUTPOST_BUILD_INITIALWB: 100
+    targetBaseOdds: 100
+    executionOdds: 100
+    startDelay: 140
+    randomDelay: 1550
+    maxRuns: 2
+    varName: starterInquisitionOutpostsWB
+    researchTriggers:
+      STR_WORDBEARERS_STRATEGY: true
+
+  - type: secondInquisitionOutpostWB
+    firstMonth: 1
+    missionWeights:
+      0:
+        STR_INQUISITION_OUTPOST_BUILD_INITIALWB: 100
+    targetBaseOdds: 100
+    executionOdds: 100
+    startDelay: 140
+    randomDelay: 1550
+    maxRuns: 1
+    varName: starterInquisitionOutposts2WB
+    researchTriggers:
+      STR_WORDBEARERS_STRATEGY: true
+
   - type: finalMissionWB
     missionWeights:
       0:
