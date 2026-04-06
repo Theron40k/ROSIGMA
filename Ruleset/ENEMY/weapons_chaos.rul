@@ -61,6 +61,7 @@ items:
     categories: [STR_CAT_BOLTER]
     requires:
       - STR_CORRUPTED_REQUISITIONS
+    requiresBuyBaseFunc: [TRADE]
     size: 0.3
     dropoff: 5
     costSell: 1000
@@ -78,7 +79,7 @@ items:
       - STR_LIGHT_BOLTER_AMMO_INF
     accuracySnap: 85
     accuracyAuto: 65
-    tuSnap: 25
+    tuSnap: 26
     tuAuto: 35
     snapRange: 16
     autoRange: 12
@@ -1721,6 +1722,7 @@ items:
     hitAnimation: 2010  # nurgle green small explosion
     weight: 3
     damageAlter:  # Plague weapon
+      RandomType: 2 # 50-150%
       ToArmorPre: 0.4
       ToArmor: 0.1
       ToHealth: 0.6  # much less health damage; instead debilitates, infects and corrodes armor

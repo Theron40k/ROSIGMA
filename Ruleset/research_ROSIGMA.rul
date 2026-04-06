@@ -8007,6 +8007,8 @@ research:
   - name: STR_LASER_WEAPONS  # Weapons Requisition
     cost: 50
     points: 10
+    getOneFree:
+      - STR_LIGHT_MELTAGUN_TECH
     dependencies:
       - STR_GENERALLOCK
 
@@ -8138,7 +8140,7 @@ research:
 
   # Melta
   - name: STR_LIGHT_MELTAGUN_TECH  # Light Meltagun Technology
-    cost: 120
+    cost: 50
     points: 10
     dependencies:
       - STR_LASER_WEAPONS
@@ -9673,8 +9675,25 @@ research:
     points: 15
     needItem: true
     destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_OGRYNOPFOR
+    cost: 10
+    points: 1  # ogryn interrogation may not be that useful
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
 ## Space Marines #CAPTIVES.SM#
   - name: STR_SPACEMARINE_SCOUT_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SPACEMARINE_ADVSCOUT_AI
     cost: 100
     points: 50
     needItem: true
@@ -10028,6 +10047,14 @@ research:
     destroyItem: true
 
   - name: STR_SALAMANDER_SCOUT_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SALAMANDER_ADVSCOUT_AI
     cost: 100
     points: 50
     needItem: true

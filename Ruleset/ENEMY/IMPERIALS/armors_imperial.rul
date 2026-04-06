@@ -74,6 +74,104 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+  - type: STR_IGOPFOR_OPEN_SENTINEL_MISSILE_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    heatVision: 20
+    instantWoundRecovery: true
+    allowInv: false
+    spriteSheet: SENTINEL_MISSILE.PCK
+    spriteInv: IGOPFOR_OPEN_SENTINEL_MISSILES_INV.SPK
+    storeItem: STR_GUARD_ARMORS_SENTINEL_MISSILE
+    corpseGeo: STR_BIKE_CORPSE
+    corpseBattle:
+      - 5_SENT1
+      - 5_SENT2
+      - 5_SENT3
+      - 5_SENT4
+    frontArmor: 90
+    sideArmor: 90
+    rearArmor: 80
+    underArmor: 100
+    size: 2
+    weight: -20
+    moveSound: {mod: 40k, index: 700}
+    damageModifier: #VEHICLE ARMOR LARGE
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.4 #FLAMES
+      - 1.0 #HE
+      - 1.4 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 5
+    builtInWeapons:
+      - STR_SENTINEL_MISSILE_LAUNCHER
+      - STR_SENTINEL_FRAG_MISSILES
+      - AUX_SENTINEL_STOMP #INV_NULL_SENTINEL_LH
+      - INV_NULL_SENTINEL_BACK_MISSILE
+    allowsKneeling: false
+    tags:
+      UNIT_SIZE: 200 # Huge
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+
+
+  - type: STR_IGOPFOR_OPEN_SENTINEL_LASCANNON_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    allowInv: false
+    instantWoundRecovery: true
+    spriteSheet: SENT.PCK #open lascannon sentinel
+    spriteInv: IGOPFOR_OPEN_SENTINEL_LASCANNON_INV.SPK
+    corpseGeo: STR_BIKE_CORPSE
+    corpseBattle:
+      - 5_SENT1
+      - 5_SENT2
+      - 5_SENT3
+      - 5_SENT4
+    frontArmor: 90
+    sideArmor: 90
+    rearArmor: 80
+    underArmor: 100
+    size: 2
+    weight: -20
+    moveSound: {mod: 40k, index: 700}
+    damageModifier: #VEHICLE ARMOR LARGE
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.4 #FLAMES
+      - 1.0 #HE
+      - 1.4 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 5
+    builtInWeapons:
+      - STR_MOUNTED_LASCANNON
+      - AUX_SENTINEL_STOMP  # INV_NULL_SENTINEL_LH
+    allowsKneeling: false
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 200 # Huge
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+
   # IG TIER 2
 
   - type: GUARD_ARMOR_M_LV2
@@ -140,6 +238,104 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+
+  - type: STR_IGOPFOR_SENTINEL_MISSILE_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    heatVision: 25
+    allowInv: false
+    instantWoundRecovery: true
+    spriteSheet: CLOSED_SENTINEL_MISSILE_BS.PCK
+    spriteInv: IGOPFOR_SENTINEL_MISSILES_INV.SPK
+    corpseGeo: STR_BIKE_CORPSE
+    corpseBattle:
+      - 5_SENT1
+      - 5_SENT2
+      - 5_SENT3
+      - 5_SENT4
+    frontArmor: 120
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 110
+    size: 2
+    weight: -20
+    moveSound: {mod: 40k, index: 700}
+    damageModifier: #VEHICLE ARMOR LARGE
+      - 1.0 #none
+      - 0.9 #AP
+      - 0.2 #FLAMES
+      - 1.0 #HE
+      - 1.3 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 5
+    builtInWeapons:
+      - STR_SENTINEL_MISSILE_LAUNCHER
+      - STR_SENTINEL_KRAKK_MISSILES
+      - AUX_SENTINEL_STOMP #INV_NULL_SENTINEL_LH
+      - INV_NULL_SENTINEL_BACK_MISSILE
+    allowsKneeling: false
+    tags:
+      UNIT_SIZE: 200 # Huge
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+
+  - type: STR_IGOPFOR_SENTINEL_LASCANNON_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    heatVision: 25
+    allowInv: false
+    instantWoundRecovery: true
+    spriteSheet: CLOSED_SENTINEL_LASCANNON_BS.PCK
+    spriteInv: IGOPFOR_SENTINEL_LASCANNON_INV.SPK
+    corpseGeo: STR_BIKE_CORPSE
+    corpseBattle:
+      - 5_SENT1
+      - 5_SENT2
+      - 5_SENT3
+      - 5_SENT4
+    frontArmor: 120
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 110
+    size: 2
+    weight: -20
+    moveSound: {mod: 40k, index: 700}
+    damageModifier: #VEHICLE ARMOR LARGE
+      - 1.0 #none
+      - 0.9 #AP
+      - 0.2 #FLAMES
+      - 1.0 #HE
+      - 1.3 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 5
+    builtInWeapons:
+      - STR_MOUNTED_LASCANNON
+      - AUX_SENTINEL_STOMP  # INV_NULL_SENTINEL_LH
+    allowsKneeling: false
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 200 # Huge
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+
   # IG TIER 3
 
   - type: IGGUARD_ARMOR_M_LV3
@@ -147,6 +343,7 @@ armors:
     visibilityAtDark: 20
     spriteSheet: IG_POWER_ARMOR_BS.PCK
     spriteInv: IGPA_GUARD_INV.PCK
+    heatVision: 5
     corpseBattle:
       - STR_GUARDH_AICORPSE
     frontArmor: 100
@@ -175,6 +372,7 @@ armors:
   - type: IGCOMM_ARMOR_M_LV3
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 5
     spriteSheet: IG_COMMPOWER_ARMOR_BS.PCK
     spriteInv: IGPA_COMM_INV.PCK
     corpseBattle:
@@ -207,6 +405,7 @@ armors:
   - type: IGOFF_ARMOR_M_LV3
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 5
     spriteSheet: IG_OFFPOWER_ARMOR_BS.PCK
     spriteInv: IGPA_OFF_INV.PCK
     corpseBattle:
@@ -236,6 +435,55 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
 
+  - type: STR_IGOPFOR_SENTINEL_HEAVY_PLASMA_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    heatVision: 25
+    allowInv: false
+    instantWoundRecovery: true
+    spriteSheet: SENT_HEAVY_PLASMA.PCK
+    spriteInv: IGOPFOR_SENTINEL_HEAVY_PLASMA_INV.SPK
+    corpseGeo: STR_BIKE_CORPSE
+    corpseBattle:
+      - 5_SENT1
+      - 5_SENT2
+      - 5_SENT3
+      - 5_SENT4
+    frontArmor: 120
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 110
+    size: 2
+    weight: -20
+    moveSound: {mod: 40k, index: 700}
+    damageModifier: #VEHICLE ARMOR LARGE
+      - 1.0 #none
+      - 0.9 #AP
+      - 0.2 #FLAMES
+      - 1.0 #HE
+      - 1.3 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 5
+    builtInWeapons:
+      - STR_HEAVY_PLASMA_SENTINEL
+      - AUX_SENTINEL_STOMP  # INV_NULL_SENTINEL_LH
+      - INV_NULL_SENTINEL_BACK_HEAVY_PLASMA
+    allowsKneeling: false
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 200 # Huge
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+
   # ULTRA TIER 0
 
   - type: STR_SPACEMARINEARMOR_SCOUT
@@ -245,6 +493,7 @@ armors:
     antiCamouflageAtDark: 8
     camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 25
     spriteSheet: XCOM_0.PCK
     spriteInv: SPACEMARINEARMOR_SCOUT.PCK
     spriteFaceGroup: 6
@@ -277,11 +526,52 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+  - type: STR_SPACEMARINEARMOR_ADVSCOUT
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10 # higher tech
+    antiCamouflageAtDark: 10 # higher tech
+    camouflageAtDay: -8  # you need to be 8 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: -6  # you need to be 6 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 30 # higher tech
+    spriteSheet: SPACEMARINEADVscoutbattle.PCK
+    spriteInv: SPACEMARINEARMOR_ADVSCOUT.PCK
+    spriteFaceGroup: 6
+    spriteFaceColor: [164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96]
+    corpseBattle:
+      - STR_ADVSCOUT_AICORPSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
+    drawingRoutine: 0
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.0  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [2]
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
   # ULTRA TIER 1
 
   - type: STR_SPACEMARINEARMOR_TAC
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: XCOM_1.PCK
     spriteInv: SPACEMARINEARMOR_TAC.PCK
     corpseBattle:
@@ -315,6 +605,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_DEV
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: XCOM_23.PCK
     spriteInv: SPACEMARINEARMOR_DEV.PCK
     corpseBattle:
@@ -348,6 +639,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_ASS
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: XCOM_25.PCK
     spriteInv: SPACEMARINEARMOR_ASS.PCK
     corpseBattle:
@@ -384,6 +676,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_SARG
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: XCOM_21.PCK
     spriteInv: SPACEMARINEARMOR_SARG.PCK
     corpseBattle:
@@ -420,6 +713,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_HONOR
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SPACEMARINEHONORbattle.PCK
     spriteInv: SPACEMARINEARMOR_HONOR.PCK
     corpseBattle:
@@ -458,6 +752,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_TERMI
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: XCOM_2.PCK
     spriteInv: SPACEMARINEARMOR_TERMI.PCK
     corpseBattle:
@@ -496,6 +791,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_TECH
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: XCOM_30.PCK
     spriteInv: SPACEMARINEARMOR_TECH.PCK
     corpseBattle:
@@ -532,6 +828,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_CHAP
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
     spriteSheet: XCOM_27.PCK
@@ -573,6 +870,7 @@ armors:
   - type: STR_SPACEMARINEARMOR_CAPTAIN
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SPACEMARINECAPTAINbattle.PCK
     spriteInv: SPACEMARINEARMOR_CAPTAIN.PCK
     corpseBattle:
@@ -615,7 +913,7 @@ armors:
     visibilityAtDark: 40  # advanced sensors
     antiCamouflageAtDay: 5  # advanced sensors
     antiCamouflageAtDark: 5
-    heatVision: 20
+    heatVision: 25
     loftempsSet: [5]
     spriteInv: ULTRAcataphractinvent.PCK
     spriteSheet: ULTRAcataphract_BS.PCK
@@ -698,6 +996,7 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 20
     spriteInv: DREADINV4
     spriteSheet: DREAD.PCK
     instantWoundRecovery: true
@@ -758,6 +1057,7 @@ armors:
     antiCamouflageAtDark: 8
     camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 25
     spriteSheet: BLACKTEMPLARSCOUTbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_SCOUT.PCK
     spriteFaceGroup: 6
@@ -795,6 +1095,7 @@ armors:
   - type: STR_BLACKTEMPLARARMOR_TAC
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: BLACKTEMPLARTACbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_TAC.PCK
     corpseBattle:
@@ -828,6 +1129,7 @@ armors:
   - type: STR_BLACKTEMPLARARMOR_ASS
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: BLACKTEMPLARASSbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_ASS.PCK
     corpseBattle:
@@ -866,6 +1168,7 @@ armors:
   - type: STR_BLACKTEMPLARARMOR_HONOR
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: BLACKTEMPLARHONORbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_HONOR.PCK
     corpseBattle:
@@ -905,6 +1208,7 @@ armors:
   - type: STR_BLACKTEMPLARARMOR_TERMI
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: BLACKTEMPLARTERMIbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_TERMI.PCK
     corpseBattle:
@@ -943,6 +1247,7 @@ armors:
   - type: STR_BLACKTEMPLARARMOR_CAPTAIN
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: BLACKTEMPLARCAPTAINbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_CAPTAIN.PCK
     corpseBattle:
@@ -985,6 +1290,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
+    heatVision: 20
     spriteSheet: BLACKTEMPLARCHAPbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_CHAP.PCK
     corpseBattle:
@@ -1024,6 +1330,7 @@ armors:
   - type: STR_BLACKTEMPLARARMOR_TECH
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: BLACKTEMPLARTECHbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_TECH.PCK
     corpseBattle:
@@ -1060,6 +1367,7 @@ armors:
   - type: STR_BLACKTEMPLARARMOR_REC
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: BLACKTEMPLARRECbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_REC.PCK
     corpseBattle:
@@ -1109,6 +1417,7 @@ armors:
     antiCamouflageAtDark: 8
     camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 25
     spriteSheet: SPACEWOLVESSCOUTbattle.PCK
     spriteInv: SPACEWOLVESARMOR_SCOUT.PCK
     spriteFaceGroup: 6
@@ -1148,6 +1457,7 @@ armors:
     antiCamouflageAtDark: 8
     camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 20
     spriteSheet: SPACEWOLVESASSbattle.PCK
     spriteInv: SPACEWOLVESARMOR_ASS.PCK
     spriteFaceGroup: 6
@@ -1188,6 +1498,7 @@ armors:
   - type: STR_SPACEWOLVESARMOR_TAC
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: SPACEWOLVESTACbattle.PCK
     spriteInv: SPACEWOLVESARMOR_TAC.PCK
     corpseBattle:
@@ -1221,6 +1532,7 @@ armors:
   - type: STR_SPACEWOLVESARMOR_DEV
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: SPACEWOLVESDEVbattle.PCK
     spriteInv: SPACEWOLVESARMOR_DEV.PCK
     corpseBattle:
@@ -1256,7 +1568,7 @@ armors:
     antiCamouflageAtDark: 5
     camouflageAtDay: 5
     camouflageAtDark: 5
-    heatVision: 5
+    heatVision: 10
     allowInv: true
     spriteSheet: SPACEWOLVESWOLFYbattle.PCK
     spriteInv: SPACEWOLVESARMOR_WOLFY.PCK
@@ -1298,6 +1610,7 @@ armors:
   - type: STR_SPACEWOLVESARMOR_TERMI
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SPACEWOLVESTERMIbattle.PCK
     spriteInv: SPACEWOLVESARMOR_TERMI.PCK
     corpseBattle:
@@ -1338,6 +1651,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
+    heatVision: 20
     spriteSheet: SPACEWOLVESCHAPbattle.PCK
     spriteInv: SPACEWOLVESARMOR_CHAP.PCK
     corpseBattle:
@@ -1377,6 +1691,7 @@ armors:
   - type: STR_SPACEWOLVESARMOR_TECH
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SPACEWOLVESTECHbattle.PCK
     spriteInv: SPACEWOLVESARMOR_TECH.PCK
     corpseBattle:
@@ -1413,6 +1728,7 @@ armors:
   - type: STR_SPACEWOLVESARMOR_HONOR
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SPACEWOLVESHONORbattle.PCK
     spriteInv: SPACEWOLVESARMOR_HONOR.PCK
     corpseBattle:
@@ -1451,6 +1767,7 @@ armors:
   - type: STR_SPACEWOLVESARMOR_CAPTAIN
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SPACEWOLVESCAPbattle.PCK
     spriteInv: SPACEWOLVESARMOR_CAP.PCK
     corpseBattle:
@@ -1497,6 +1814,7 @@ armors:
     antiCamouflageAtDark: 8
     camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 25
     spriteSheet: CRIMSONFISTSCOUTbattle.PCK
     spriteInv: CRIMSONFISTARMOR_SCOUT.PCK
     spriteFaceGroup: 6
@@ -1534,6 +1852,7 @@ armors:
   - type: STR_CRIMSONFISTARMOR_TAC
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: CRIMSONFISTTACbattle.PCK
     spriteInv: CRIMSONFISTARMOR_TAC.PCK
     corpseBattle:
@@ -1568,6 +1887,7 @@ armors:
   - type: STR_CRIMSONFISTARMOR_DEV
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: CRIMSONFISTDEVbattle.PCK
     spriteInv: CRIMSONFISTARMOR_DEV.PCK
     corpseBattle:
@@ -1602,6 +1922,7 @@ armors:
   - type: STR_CRIMSONFISTARMOR_SARG
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: CRIMSONFISTSARGbattle.PCK
     spriteInv: CRIMSONFISTARMOR_SARG.PCK
     specialWeapon: STR_UNARMED_GAUNTLET_PLUS
@@ -1638,6 +1959,7 @@ armors:
   - type: STR_CRIMSONFISTARMOR_HONOR
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: CRIMSONFISTHONORbattle.PCK
     spriteInv: CRIMSONFISTARMOR_HONOR.PCK
     corpseBattle:
@@ -1676,6 +1998,7 @@ armors:
   - type: STR_CRIMSONFISTARMOR_TERMI
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: CRIMSONFISTTERMIbattle.PCK
     spriteInv: CRIMSONFISTARMOR_TERMI.PCK
     corpseBattle:
@@ -1714,6 +2037,7 @@ armors:
   - type: STR_CRIMSONFISTARMOR_CAPTAIN
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: CRIMSONFISTCAPbattle.PCK
     spriteInv: CRIMSONFISTARMOR_CAP.PCK
     corpseBattle:
@@ -1924,7 +2248,7 @@ armors:
   - type: STR_DEATHCOMPANY_MARINE_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 35  # die horus die
-    heatVision: 10
+    heatVision: 20
     antiCamouflageAtDark: 3
     antiCamouflageAtDay: 3
     psiVision: 1
@@ -1969,6 +2293,7 @@ armors:
   - type: STR_WHITESCARSARMOR_TAC
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: WHITESCARSTACbattle.PCK
     spriteInv: WHITESCARSARMOR_TAC.PCK
     corpseBattle:
@@ -2002,6 +2327,7 @@ armors:
   - type: STR_WHITESCARSARMOR_SARG
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: WHITESCARSSARGbattle.PCK
     spriteInv: WHITESCARSARMOR_SARG.PCK
     corpseBattle:
@@ -2036,6 +2362,7 @@ armors:
   - type: STR_WHITESCARSARMOR_TERMI
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: WHITESCARSTERMIbattle.PCK
     spriteInv: WHITESCARSARMOR_TERMI.PCK
     corpseBattle:
@@ -2074,6 +2401,7 @@ armors:
   - type: STR_WHITESCARSARMOR_CAPTAIN
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: WHITESCARSCAPbattle.PCK
     spriteInv: WHITESCARSARMOR_CAP.PCK
     corpseBattle:
@@ -2114,6 +2442,7 @@ armors:
   - type: STR_WHITESCARSBIKE_ARMOR_UC
     visibilityAtDay: 40
     visibilityAtDark: 30
+    heatVision: 20
     spriteSheet: WHITESCARSARMOR_ASSBIKEbattle.PCK
     spriteInv: WHITESCARSARMOR_ASSBIKE.PCK
     allowInv: true
@@ -2164,6 +2493,7 @@ armors:
   - type: STR_WHITESCARSARMOR_ASS
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: WHITESCARSASSAULTbattle.PCK
     spriteInv: WHITESCARSARMOR_ASSAULT.PCK
     corpseBattle:
@@ -2208,6 +2538,7 @@ armors:
     antiCamouflageAtDark: 8
     camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 25
     spriteSheet: SALAMANDERscoutbattle.PCK
     spriteInv: SALAMANDERARMOR_SCOUT.PCK
     spriteFaceGroup: 6
@@ -2240,11 +2571,52 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+  - type: STR_SALAMANDERARMOR_ADVSCOUT
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10 # higher tech
+    antiCamouflageAtDark: 10 # higher tech
+    camouflageAtDay: -8  # you need to be 8 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: -6  # you need to be 6 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 30 # higher tech
+    spriteSheet: SALAMANDERADVscoutbattle.PCK
+    spriteInv: SALAMANDERARMOR_ADVSCOUT.PCK
+    spriteFaceGroup: 6
+    spriteFaceColor: [164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96, 164, 164, 96, 96, 160, 160, 96, 96]
+    corpseBattle:
+      - STR_SALAMANDERADVSCOUT_AICORPSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
+    drawingRoutine: 0
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.9  # FLAMES #SLM bonus
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA #SLM bonus
+    loftempsSet: [2]
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
   # SALAMANDER TIER 1
 
   - type: STR_SALAMANDERARMOR_TAC
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: SALAMANDERtacbattle.PCK
     spriteInv: SALAMANDERARMOR_TAC.PCK
     corpseBattle:
@@ -2278,6 +2650,7 @@ armors:
   - type: STR_SALAMANDERARMOR_DEV
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: SALAMANDERdevbattle.PCK
     spriteInv: SALAMANDERARMOR_DEV.PCK
     corpseBattle:
@@ -2311,6 +2684,7 @@ armors:
   - type: STR_SALAMANDERARMOR_ASS
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: SALAMANDERassbattle.PCK
     spriteInv: SALAMANDERARMOR_ASS.PCK
     corpseBattle:
@@ -2347,6 +2721,7 @@ armors:
   - type: STR_SALAMANDERARMOR_SARG
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SALAMANDERsargbattle.PCK
     spriteInv: SALAMANDERARMOR_SARG.PCK
     corpseBattle:
@@ -2383,6 +2758,7 @@ armors:
   - type: STR_SALAMANDERARMOR_HONOR
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SALAMANDERhonbattle.PCK
     spriteInv: SALAMANDERARMOR_HONOR.PCK
     corpseBattle:
@@ -2421,6 +2797,7 @@ armors:
   - type: STR_SALAMANDERARMOR_TERMI
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SALAMANDERtermibattle.PCK
     spriteInv: SALAMANDERARMOR_TERMI.PCK
     corpseBattle:
@@ -2459,6 +2836,7 @@ armors:
   - type: STR_SALAMANDERARMOR_TECH
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SALAMANDERtechbattle.PCK
     spriteInv: SALAMANDERARMOR_TECH.PCK
     corpseBattle:
@@ -2497,6 +2875,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
+    heatVision: 20
     spriteSheet: SALAMANDERchapbattle.PCK
     spriteInv: SALAMANDERARMOR_CHAP.PCK
     corpseBattle:
@@ -2536,6 +2915,7 @@ armors:
   - type: STR_SALAMANDERARMOR_CAPTAIN
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: SALAMANDERcapbattle.PCK
     spriteInv: SALAMANDERARMOR_CAPTAIN.PCK
     corpseBattle:
@@ -2662,6 +3042,7 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 20
     spriteInv: SLMDREADINVAI.PCK
     spriteSheet: SLMDREADbattle.PCK
     instantWoundRecovery: true
@@ -2863,6 +3244,7 @@ armors:
   - type: STR_BLOODYROSE_ARMOR_HOSPITALIER
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 15
     antiCamouflageAtDay: 5  # heartbeat sensor
     antiCamouflageAtDark: 5
     spriteSheet: BLOODYROSE_HOSPI_battle.PCK
@@ -2964,6 +3346,7 @@ armors:
   - type: STR_BLOODYROSE_ARMOR_SISTER
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 15
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     spriteSheet: BLOODYROSE_SISTER_battle.PCK
@@ -2996,6 +3379,7 @@ armors:
   - type: STR_BLOODYROSE_ARMOR_SERAPHIM
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 15
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     spriteSheet: BLOODYROSE_SERAPH_battle.PCK
@@ -3048,6 +3432,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
+    heatVision: 15
     spriteSheet: BLOODYROSE_SISTERSUP_battle.PCK
     spriteInv: BLOODYROSE_SISTERSUP_INV.PCK
     corpseBattle:
@@ -3082,6 +3467,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
+    heatVision: 15
     spriteSheet: BLOODYROSE_ELOHIM_battle.PCK
     spriteInv: BLOODYROSE_ELOHIM_INV.PCK
     corpseBattle:
@@ -3128,6 +3514,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 4
     antiCamouflageAtDark: 4
+    heatVision: 15
     spriteSheet: BLOODYROSE_RETRIB_battle.PCK
     spriteInv: BLOODYROSE_RETRIB_INV.PCK
     corpseBattle:
@@ -3174,6 +3561,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: BLOODYROSE_CELEST_battle.PCK
     spriteInv: BLOODYROSE_CELEST_INV.PCK
     corpseBattle:
@@ -3225,6 +3613,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: BLOODYROSE_SACRE_battle.PCK
     spriteInv: BLOODYROSE_SACRE_INV.PCK
     spriteFaceGroup: 6
@@ -3280,6 +3669,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: BLOODYROSE_CANONESS_battle.PCK
     spriteInv: BLOODYROSE_CANONESS_INV.PCK
     corpseBattle:
@@ -3331,6 +3721,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: BLOODYROSE_PENITENTENGINE_battle.PCK
     spriteInv: BLOODYROSE_PENITENTENGINE_INV.PCK
     instantWoundRecovery: true
@@ -3426,6 +3817,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 5  # heartbeat sensor
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: FIERYHEART_HOSPI_battle.PCK
     spriteInv: FIERYHEART_HOSPI_INV.PCK
     spriteFaceGroup: 6
@@ -3473,6 +3865,7 @@ armors:
   - type: STR_FIERYHEART_ARMOR_REPENTIA
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 15
     spriteSheet: FIERYHEART_REPENT_battle.PCK
     spriteInv: FIERYHEART_REPENT_INV.PCK
     spriteFaceGroup: 6
@@ -3525,6 +3918,7 @@ armors:
   - type: STR_FIERYHEART_ARMOR_SISTER
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 15
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     spriteSheet: FIERYHEART_SISTER_battle.PCK
@@ -3559,6 +3953,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
+    heatVision: 15
     spriteSheet: FIERYHEART_SERAPH_battle.PCK
     spriteInv: FIERYHEART_SERAPH_INV.PCK
     corpseBattle:
@@ -3609,6 +4004,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
+    heatVision: 15
     spriteSheet: FIERYHEART_SISTERSUP_battle.PCK
     spriteInv: FIERYHEART_SISTERSUP_INV.PCK
     corpseBattle:
@@ -3643,6 +4039,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
+    heatVision: 15
     spriteSheet: FIERYHEART_ELOHIM_battle.PCK
     spriteInv: FIERYHEART_ELOHIM_INV.PCK
     corpseBattle:
@@ -3689,6 +4086,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 4
     antiCamouflageAtDark: 4
+    heatVision: 15
     spriteSheet: FIERYHEART_RETRIB_battle.PCK
     spriteInv: FIERYHEART_RETRIB_INV.PCK
     corpseBattle:
@@ -3735,6 +4133,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: FIERYHEART_CELEST_battle.PCK
     spriteInv: FIERYHEART_CELEST_INV.PCK
     corpseBattle:
@@ -3786,6 +4185,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: FIERYHEART_SACRE_battle.PCK
     spriteInv: FIERYHEART_SACRE_INV.PCK
     spriteFaceGroup: 6
@@ -3841,6 +4241,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: FIERYHEART_CANONESS_battle.PCK
     spriteInv: FIERYHEART_CANONESS_INV.PCK
     corpseBattle:
@@ -3892,6 +4293,7 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    heatVision: 15
     spriteSheet: FIERYHEART_PENITENTENGINE_battle.PCK
     spriteInv: FIERYHEART_PENITENTENGINE_INV.PCK
     instantWoundRecovery: true
@@ -3945,6 +4347,7 @@ armors:
     antiCamouflageAtDark: 8
     camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 25
     spriteSheet: DARKANGELSCOUTbattle.PCK
     spriteInv: DARKANGELARMOR_SCOUT.PCK
     spriteFaceGroup: 6
@@ -3982,6 +4385,7 @@ armors:
   - type: STR_DARKANGELARMOR_TAC
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: DARKANGELTACbattle.PCK
     spriteInv: DARKANGELARMOR_TAC.PCK
     corpseBattle:
@@ -4015,6 +4419,7 @@ armors:
   - type: STR_DARKANGELARMOR_ASS
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: DARKANGELASSbattle.PCK
     spriteInv: DARKANGELARMOR_ASS.PCK
     corpseBattle:
@@ -4051,6 +4456,7 @@ armors:
   - type: STR_DARKANGELARMOR_DEV
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: DARKANGELDEVbattle.PCK
     spriteInv: DARKANGELARMOR_DEV.PCK
     corpseBattle:
@@ -4084,6 +4490,7 @@ armors:
   - type: STR_DARKANGELARMOR_SARGE
     visibilityAtDay: 40
     visibilityAtDark: 20
+    heatVision: 20
     spriteSheet: DARKANGELSARGEbattle.PCK
     spriteInv: DARKANGELARMOR_SARGE.PCK
     corpseBattle:
@@ -4120,6 +4527,7 @@ armors:
   - type: STR_DARKANGELARMOR_TERMI
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: DARKANGELTERMIbattle.PCK
     spriteInv: DARKANGELARMOR_TERMI.PCK
     corpseBattle:
@@ -4160,6 +4568,7 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
+    heatVision: 20
     spriteSheet: DARKANGELCHAPbattle.PCK
     spriteInv: DARKANGELARMOR_CHAP.PCK
     corpseBattle:
@@ -4199,6 +4608,7 @@ armors:
   - type: STR_DARKANGELARMOR_CAPTAIN
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: DARKANGELCAPbattle.PCK
     spriteInv: DARKANGELARMOR_CAP.PCK
     corpseBattle:
@@ -4239,6 +4649,7 @@ armors:
   - type: STR_DARKANGELARMOR_HONOR
     visibilityAtDay: 40
     visibilityAtDark: 25
+    heatVision: 20
     spriteSheet: DARKANGELHONORbattle.PCK
     spriteInv: DARKANGELARMOR_HONOR.PCK
     corpseBattle:

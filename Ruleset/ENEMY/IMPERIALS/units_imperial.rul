@@ -121,6 +121,13 @@ weaponSets:
   - type: SM_SCOUT_SET3
     weapons: [STR_HEAVY_CANNON, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_GRENADE]
 
+  - type: SM_ADVSCOUT_SET1
+    weapons: [STR_PISTOLS, STR_PISTOL_CLIP_AP, STR_PISTOL_CLIP_AP, STR_PISTOL_CLIP_AP, STR_CHAINSWORD, STR_KRAK_GRENADE]
+  - type: SM_ADVSCOUT_SET2
+    weapons: [STR_RIFLEC, STR_RIFLE_CLIP_AP, STR_RIFLE_CLIP_AP, STR_KRAK_GRENADE]
+  - type: SM_ADVSCOUT_SET3
+    weapons: [STR_HEAVY_CANNON, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_KRAK_GRENADE]
+
   - type: SM_SMTACTICAL_SET1
     weapons: [STR_RIFLEB, STR_RIFLE_CLIP, STR_RIFLE_CLIP, STR_KRAK_GRENADE, STR_GRENADE]
   - type: SM_SMTACTICAL_SET2
@@ -351,7 +358,8 @@ units:
 
   - &STR_GUARDS_LV1_TEMPLATE
     type: STR_GUARDS_M_LV1_AI
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_SOLDIER
     liveAlien: STR_LIVE_CAPTURE_GUARDAI
     stats:
       tu: 60
@@ -369,7 +377,7 @@ units:
     moraleLossWhenKilled: 75  # like PC guard
     standHeight: 21
     kneelHeight: 14
-    value: 10
+    value: 5
     intelligence: 4
     aggression: 2
     spotter: 1
@@ -390,7 +398,7 @@ units:
         FLAK_GUARDSMEN_SET8: 10
 
   - type: STR_GUARDS_MOUNTED_BOLTER_AI
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
     liveAlien: ""
     stats:
       tu: 60
@@ -407,7 +415,7 @@ units:
     armor: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_UC
     standHeight: 21
     kneelHeight: 14
-    value: 10
+    value: 20
     intelligence: 4
     aggression: 2
     sniper: 65
@@ -418,10 +426,132 @@ units:
       -
         MOUNTED_BOLTER_SET1: 100
 
+  - type: STR_BEASTGUARD_FLAK_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 95
+      health: 70
+      bravery: 70
+      reactions: 55
+      firing: 50
+      throwing: 75
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_BEASTGUARD_FLAK_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 8
+    aggression: 6
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    berserkChance: 80
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_SMG_STUB_GUN
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_KNIF
+      - - STR_PUMP_SHOTGUN
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_SMOKE_GRENADE
+      - - STR_AUTOGUN
+        - STR_AUTOGUN_CLIP
+        - STR_AUTOGUN_CLIP
+        - STR_GRENADE
+
+  - type: STR_BEASTGUARD_FLAKMEDIC_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 65
+      stamina: 95
+      health: 80
+      bravery: 70
+      reactions: 45
+      firing: 50
+      throwing: 75
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_BEASTGUARD_FLAK_ARMOR_MEDIC
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 10
+    aggression: 1
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    berserkChance: 60
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_AUTOPISTOL
+        - STR_AUTOPISTOL_CLIP
+        - STR_AUTOPISTOL_CLIP
+        - STR_KNIF
+      - - STR_SMG_STUB_GUN
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_SMOKE_GRENADE
+      - - STR_LASGUN_VOSS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_IGOPFOR_SQUATS_FLAK
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 40
+      stamina: 95
+      health: 80
+      bravery: 90
+      reactions: 50
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_SQUAT_FLAK_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    moraleLossWhenKilled: 75
+    intelligence: 2
+    aggression: 2
+    value: 10
+    spotter: 2
+    sniper: 50
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_GRENADE_LAUNCHER
+        - STR_FRAG_GRENADE_DRUM
+        - STR_FRAG_GRENADE_DRUM
+        - STR_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE
 
   - type: STR_GUARDS_OFF_LV1_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 65
       stamina: 80
@@ -444,7 +574,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     livingWeapon: true
     moveSound: -1
-    value: 20
+    value: 15
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
       -
@@ -452,11 +582,205 @@ units:
         FLAK_GUARDSMENOFF_SET2: 5
         FLAK_GUARDSMENOFF_SET3: 5
 
+  - type: STR_SHARPSHOOTER_FEMALE_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 60
+      stamina: 75
+      health: 40
+      bravery: 80
+      reactions: 50
+      firing: 80
+      throwing: 50
+      strength: 50
+      psiStrength: 50
+      psiSkill: 0
+      melee: 40
+    armor: STR_TANITH_SCOUT_FEMALE
+    standHeight: 20
+    kneelHeight: 14
+    value: 20
+    intelligence: 2
+    aggression: 0
+    energyRecovery: 30
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    builtInWeaponSets:
+      - - STR_LONG_RIFLE_GUARD
+        - STR_STUB_GUN_AMMO_WOUND
+        - STR_STUB_GUN_AMMO_AP
+        - STR_SMOKE_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+
+  - type: STR_SHARPSHOOTER_MALE_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 60
+      stamina: 75
+      health: 45
+      bravery: 80
+      reactions: 50
+      firing: 80
+      throwing: 50
+      strength: 50
+      psiStrength: 50
+      psiSkill: 0
+      melee: 40
+    armor: STR_TANITH_SCOUT_MALE
+    standHeight: 21
+    kneelHeight: 14
+    value: 20
+    intelligence: 2
+    aggression: 1
+    energyRecovery: 30
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets:
+      - - STR_LONG_RIFLE_GUARD
+        - STR_STUB_GUN_AMMO_HP
+        - STR_STUB_GUN_AMMO_INC
+        - STR_SMOKE_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_KRAK_GRENADE
+
+  - type: STR_OGRYN_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 75
+      stamina: 100
+      health: 100
+      bravery: 90
+      reactions: 36
+      firing: 30
+      throwing: 40
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_OGRYN_UC
+    standHeight: 22
+    kneelHeight: 14
+    value: 20
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_HEAVY_STUBBER_LIGHT
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_HEAVY_STUBBER_CLIP
+      - - STR_SHOTGUN
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_GRENADE
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
+
+  - type: STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 64
+      stamina: 100
+      health: 100
+      bravery: 70
+      reactions: 32
+      firing: 20
+      throwing: 50
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_BULLGRYN_BUCKLER_RIOT
+    standHeight: 22
+    kneelHeight: 14
+    value: 20
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_STUN_ROD
+        - STR_SMOKE_GRENADE
+      - - STR_CHAINSWORD_GUARD
+        - STR_SMOKE_GRENADE
+      - - STR_LIGHT_POWERFIST
+        - STR_SMOKE_GRENADE
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
+
+  - type: STR_IGOPFOR_OPEN_MISSILE_SENTINEL #Tier 0Plus
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 55
+      bravery: 80
+      reactions: 40
+      firing: 58
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_OPEN_SENTINEL_MISSILE_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: {mod: 40k, index: 700}
+    capturable: false
+
+  - type: STR_IGOPFOR_OPEN_LASCANNON_SENTINEL #Tier 0Plus
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 55
+      bravery: 80
+      reactions: 40
+      firing: 58
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_OPEN_SENTINEL_LASCANNON_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: {mod: 40k, index: 700}
+    capturable: false
+
   # IG TIER 2
 
   - type: STR_GUARDS_M_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 70
       stamina: 84
@@ -472,7 +796,7 @@ units:
     armor: GUARD_ARMOR_M_LV2
     standHeight: 21
     kneelHeight: 14
-    value: 30
+    value: 10
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -490,9 +814,91 @@ units:
         CARAPACE_GUARDSMEN_SET6: 10
         CARAPACE_GUARDSMEN_SET7: 10
 
+  - type: STR_BEASTGUARD_CARAPACE_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 95
+      health: 90
+      bravery: 90
+      reactions: 55
+      firing: 50
+      throwing: 75
+      strength: 75
+      psiStrength: 65
+      psiSkill: 0
+      melee: 85
+    armor: STR_BEASTGUARD_CARAPACE_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 15
+    aggression: 6
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    berserkChance: 90
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_SHOTGUN_PISTOL
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_CHAINSWORD_GUARD
+      - - STR_BOLTER_LIGHT_SOLO_SHORT
+        - STR_LIGHT_BOLTER_AMMO_SHORT
+        - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
+        - STR_GRENADE
+      - - STR_BOLTER_LIGHT_SOLO
+        - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
+        - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
+        - STR_KRAK_GRENADE
+
+  - type: STR_IGOPFOR_SQUATS_CARAPACE
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 40
+      stamina: 95
+      health: 80
+      bravery: 90
+      reactions: 55
+      firing: 65
+      throwing: 50
+      strength: 55
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_SQUAT_CARAPACE_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]
+    moveSound: -1
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    value: 15
+    sniper: 75  # artillery
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_GRENADE_LAUNCHER
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_INCENDIARY_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_MGRENADE
+
   - type: STR_GUARDS_OFF_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 75
       stamina: 100
@@ -508,7 +914,7 @@ units:
     armor: GUARD_ARMOR_OFF_M_LV2
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 25
     intelligence: 5
     aggression: 2
     spotter: 3
@@ -522,11 +928,136 @@ units:
         CARAPACE_GUARDSMENOFF_SET2: 10
         CARAPACE_GUARDSMENOFF_SET3: 10
 
+  - type: STR_BULLGRYN_SLAB_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 64
+      stamina: 100
+      health: 120
+      bravery: 90
+      reactions: 32
+      firing: 30
+      throwing: 50
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_BULLGRYN_SLAB_RIOT
+    standHeight: 22
+    kneelHeight: 14
+    value: 25
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_CHAINSWORD_GUARD
+        - STR_SMOKE_GRENADE
+        - STR_SMOKE_GRENADE
+      - - STR_SHOTGUN_PISTOL
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_SMOKE_GRENADE
+      - - STR_RIPPER_GUN
+        - STR_RIPPER_GUN_CLIP
+        - STR_RIPPER_GUN_CLIP
+        - STR_SMOKE_GRENADE
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
+
+  - type: STR_BULLGRYN_BUCKLER_IGOPFOR
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 64
+      stamina: 100
+      health: 120
+      bravery: 80
+      reactions: 32
+      firing: 30
+      throwing: 50
+      strength: 84
+      psiStrength: 32
+      psiSkill: 0
+      melee: 70
+    armor: STR_BULLGRYN_BUCKLER_RIOT
+    standHeight: 22
+    kneelHeight: 14
+    value: 25
+    intelligence: 0
+    aggression: 8
+    energyRecovery: 40
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_CHAINSWORD_GUARD
+      - - STR_GRENADE_LAUNCHER_STEEL_LEGION
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+      - - STR_RIPPER_GUN
+        - STR_RIPPER_GUN_CLIP
+        - STR_RIPPER_GUN_CLIP
+    liveAlien: STR_LIVE_CAPTURE_OGRYNOPFOR
+
+  - type: STR_IGOPFOR_MISSILE_SENTINEL #Tier 1
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 65
+      bravery: 90
+      reactions: 50
+      firing: 68
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_SENTINEL_MISSILE_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: {mod: 40k, index: 700}
+    capturable: false
+
+  - type: STR_IGOPFOR_LASCANNON_SENTINEL #Tier 2
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 65
+      bravery: 90
+      reactions: 50
+      firing: 68
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_SENTINEL_LASCANNON_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: {mod: 40k, index: 700}
+    capturable: false
+
   # IG TIER 3
 
   - type: STR_IGGUARDS_M_LV3_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 70
       stamina: 90
@@ -542,7 +1073,7 @@ units:
     armor: IGGUARD_ARMOR_M_LV3
     standHeight: 22
     kneelHeight: 14
-    value: 30
+    value: 20
     intelligence: 4
     aggression: 2
     spotter: 3
@@ -562,7 +1093,8 @@ units:
 
   - type: STR_IGCOMM_M_LV3_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 80
       stamina: 80
@@ -594,7 +1126,8 @@ units:
 
   - type: STR_IGGUARDS_OFF_LV3_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 70
       stamina: 90
@@ -610,7 +1143,7 @@ units:
     armor: IGOFF_ARMOR_M_LV3
     standHeight: 22
     kneelHeight: 14
-    value: 40
+    value: 35
     intelligence: 6
     aggression: 2
     spotter: 3
@@ -624,10 +1157,37 @@ units:
         CARAPACE_GUARDSMENOFF_SET2: 10
         CARAPACE_GUARDSMENOFF_SET3: 10
 
+  - type: STR_IGOPFOR_HEAVY_PLASMA_SENTINEL #Tier 3
+    race: STR_IMPERIALGUARD_FACTION
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 110
+      health: 75
+      bravery: 100
+      reactions: 50
+      firing: 75
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IGOPFOR_SENTINEL_HEAVY_PLASMA_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 40
+    deathSound: [{mod: 40k, index: 23}]
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    energyRecovery: 80
+    moveSound: {mod: 40k, index: 700}
+    capturable: false
+
   # ULTRA TIER 0
 
   - type: STR_SPACEMARINE_SCOUT_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_ULTRAMARINES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 100
@@ -644,7 +1204,7 @@ units:
     armor: STR_SPACEMARINEARMOR_SCOUT
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -660,10 +1220,44 @@ units:
         SM_SCOUT_SET2: 30
         SM_SCOUT_SET3: 30
 
+  - type: STR_SPACEMARINE_ADVSCOUT_AI
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 110
+      stamina: 90
+      health: 90
+      bravery: 100  # UM
+      reactions: 100  # UM
+      firing: 90
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 70
+    armor: STR_SPACEMARINEARMOR_ADVSCOUT
+    standHeight: 21
+    kneelHeight: 16
+    value: 20
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    intelligence: 2
+    aggression: 2
+    spotter: 6
+    sniper: 80
+    energyRecovery: 30
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        SM_ADVSCOUT_SET1: 30
+        SM_ADVSCOUT_SET2: 30
+        SM_ADVSCOUT_SET3: 40
+
   # ULTRA TIER 1
 
   - type: STR_SPACEMARINE_TAC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_ULTRAMARINES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 90
@@ -680,7 +1274,7 @@ units:
     armor: STR_SPACEMARINEARMOR_TAC
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 25
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -697,8 +1291,8 @@ units:
         SM_SMTACTICAL_SET4: 10
 
   - type: STR_SPACEMARINE_DEV_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 85
       stamina: 110
@@ -714,7 +1308,7 @@ units:
     armor: STR_SPACEMARINEARMOR_DEV
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
@@ -733,8 +1327,8 @@ units:
         SM_SMDEV_SET5: 10
 
   - type: STR_SPACEMARINE_ASS_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 100
       stamina: 100
@@ -750,7 +1344,7 @@ units:
     armor: STR_SPACEMARINEARMOR_ASS
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
@@ -766,8 +1360,8 @@ units:
         SM_SMASS_SET3: 15
 
   - type: STR_SPACEMARINE_SARG_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 95
       stamina: 110
@@ -783,7 +1377,7 @@ units:
     armor: STR_SPACEMARINEARMOR_SARG
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -802,7 +1396,7 @@ units:
   # ULTRA TIER 2
 
   - type: STR_SPACEMARINE_HONOR_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_ULTRAMARINES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 120
@@ -819,7 +1413,7 @@ units:
     armor: STR_SPACEMARINEARMOR_HONOR
     standHeight: 21
     kneelHeight: 16
-    value: 40
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -836,14 +1430,14 @@ units:
         SM_SMHONOR_SET2B: 30
 
   - type: STR_SPACEMARINE_TERMI_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_ULTRAMARINES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 115
       stamina: 140
       health: 180
       bravery: 130  # UM
-      reactions: 120  # UM
+      reactions: 80  # UM+10
       firing: 110
       throwing: 110
       strength: 130
@@ -853,7 +1447,7 @@ units:
     armor: STR_SPACEMARINEARMOR_TERMI
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
@@ -871,14 +1465,14 @@ units:
         SM_SMTERMI_SET5: 10
 
   - type: STR_SPACEMARINE_TECH_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 90
       stamina: 110
       health: 150
       bravery: 120  # UM
-      reactions: 130  # UM
+      reactions: 80  # UM
       firing: 90
       throwing: 90
       strength: 100
@@ -888,7 +1482,7 @@ units:
     armor: STR_SPACEMARINEARMOR_TECH
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 8
     aggression: 2
@@ -914,14 +1508,14 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_SPACEMARINE_CHAP_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 90
       stamina: 100
       health: 150
       bravery: 120  # UM
-      reactions: 120  # UM
+      reactions: 80  # UM
       firing: 85
       throwing: 90
       strength: 85
@@ -931,7 +1525,7 @@ units:
     armor: STR_SPACEMARINEARMOR_CHAP
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 6
     aggression: 2
@@ -954,8 +1548,8 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_SPACEMARINE_CAPTAIN_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_ULTRAMARINES_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 125
       stamina: 150
@@ -989,7 +1583,7 @@ units:
         SM_SMCAP_SET3: 20
 
   - type: STR_ULTRA_CATAPHRACT_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_ULTRAMARINES_FACTION
     rank: STR_LIVE_SOLDIER
   #    liveAlien: ""
     stats:
@@ -1010,7 +1604,7 @@ units:
     aggression: 2
     spotter: 2
     sniper: 70
-    value: 30
+    value: 40
     livingWeapon: true
     energyRecovery: 60
     standHeight: 21
@@ -1024,7 +1618,7 @@ units:
         CF_SMDEV_SET3: 20
 
   - type: STR_ULTRA_SATURNINE_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_ULTRAMARINES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 70
@@ -1044,7 +1638,7 @@ units:
     aggression: 2
     spotter: 2
     sniper: 70
-    value: 30
+    value: 45
     livingWeapon: true
     energyRecovery: 60
     standHeight: 21
@@ -1058,7 +1652,7 @@ units:
         CF_SMDEV_SET3: 20
 
   - type: STR_UMDREAD_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_ULTRAMARINES_FACTION
     rank: STR_LIVE_SOLDIER
     liveAlien: ""
     stats:
@@ -1076,7 +1670,7 @@ units:
     armor: UMDREAD_ARMOR
     standHeight: 23
     kneelHeight: 16
-    value: 30
+    value: 50
     deathSound: [859, 860]
     moveSound: {mod: 40k, index: 700}
     moraleLossWhenKilled: 50
@@ -1091,7 +1685,7 @@ units:
   # BLACKTEMPLAR TIER 0
 
   - type: STR_BLACKTEMPLAR_SCOUT_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_BLACKTEMPLARS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 100
@@ -1108,7 +1702,7 @@ units:
     armor: STR_BLACKTEMPLARARMOR_SCOUT
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -1127,7 +1721,7 @@ units:
   # BLACKTEMPLAR TIER 1
 
   - type: STR_BLACKTEMPLAR_TAC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_BLACKTEMPLARS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 90
@@ -1144,7 +1738,7 @@ units:
     armor: STR_BLACKTEMPLARARMOR_TAC
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 25
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -1161,8 +1755,8 @@ units:
         BT_SMTACTICAL_SET4: 10
 
   - type: STR_BLACKTEMPLAR_ASS_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_BLACKTEMPLARS_FACTION
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 100
       stamina: 100
@@ -1179,7 +1773,7 @@ units:
     isLeeroyJenkins: true
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
@@ -1197,7 +1791,7 @@ units:
   # BLACKTEMPLAR TIER 2
 
   - type: STR_BLACKTEMPLAR_HONOR_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_BLACKTEMPLARS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 120
@@ -1215,7 +1809,7 @@ units:
     isLeeroyJenkins: true
     standHeight: 21
     kneelHeight: 16
-    value: 40
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -1232,14 +1826,14 @@ units:
         BT_SMHONOR_SET2B: 30
 
   - type: STR_BLACKTEMPLAR_TERMI_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_BLACKTEMPLARS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 115
       stamina: 140
       health: 180
       bravery: 110
-      reactions: 110
+      reactions: 70
       firing: 110
       throwing: 110
       strength: 130
@@ -1249,7 +1843,7 @@ units:
     armor: STR_BLACKTEMPLARARMOR_TERMI
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
@@ -1267,8 +1861,8 @@ units:
         BT_SMTERMI_SET5: 10
 
   - type: STR_BLACKTEMPLAR_CAPTAIN_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_BLACKTEMPLARS_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 125
       stamina: 150
@@ -1302,14 +1896,14 @@ units:
         BT_SMCAP_SET3: 20
 
   - type: STR_BLACKTEMPLAR_CHAP_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_BLACKTEMPLARS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 90
       stamina: 100
       health: 150
       bravery: 100
-      reactions: 110
+      reactions: 70
       firing: 85
       throwing: 90
       strength: 85
@@ -1319,7 +1913,7 @@ units:
     armor: STR_BLACKTEMPLARARMOR_CHAP
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 6
     aggression: 2
@@ -1342,14 +1936,14 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_BLACKTEMPLAR_TECH_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_BLACKTEMPLARS_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 90
       stamina: 110
       health: 150
       bravery: 100
-      reactions: 120
+      reactions: 70
       firing: 90
       throwing: 90
       strength: 100
@@ -1385,7 +1979,7 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_BLACKTEMPLAR_REC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_BLACKTEMPLARS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 105
@@ -1428,7 +2022,7 @@ units:
   # SPACE WOLVES TIER 0
 
   - type: STR_SPACEWOLVES_SCOUT_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SPACEWOLVES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 100
@@ -1445,7 +2039,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_SCOUT
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -1462,8 +2056,8 @@ units:
         SW_SCOUT_SET3: 30
 
   - type: STR_SPACEWOLVES_ASS_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SPACEWOLVES_FACTION
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 100
       stamina: 90
@@ -1479,7 +2073,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_ASS
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
@@ -1497,7 +2091,7 @@ units:
   # SPACE WOLVES TIER 1
 
   - type: STR_SPACEWOLVES_TAC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SPACEWOLVES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 90
@@ -1514,7 +2108,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_TAC
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 25
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -1531,8 +2125,8 @@ units:
         SW_SMTACTICAL_SET4: 10
 
   - type: STR_SPACEWOLVES_DEV_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SPACEWOLVES_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 85
       stamina: 110
@@ -1548,7 +2142,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_DEV
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
@@ -1600,14 +2194,14 @@ units:
   # SPACE WOLVES TIER 2
 
   - type: STR_SPACEWOLVES_TERMI_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SPACEWOLVES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 115
       stamina: 140
       health: 200  # SW
       bravery: 110
-      reactions: 110
+      reactions: 70
       firing: 110
       throwing: 110
       strength: 130
@@ -1617,7 +2211,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_TERMI
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
@@ -1635,14 +2229,14 @@ units:
         SW_SMTERMI_SET5: 10
 
   - type: STR_SPACEWOLVES_CHAP_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SPACEWOLVES_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 90
       stamina: 100
       health: 170  # SW
       bravery: 100
-      reactions: 110
+      reactions: 80
       firing: 85
       throwing: 90
       strength: 85
@@ -1652,7 +2246,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_CHAP
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 6
     aggression: 2
@@ -1678,14 +2272,14 @@ units:
         - STR_WOLF_CALLERAI
 
   - type: STR_SPACEWOLVES_TECH_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SPACEWOLVES_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 90
       stamina: 110
       health: 170  # SW
       bravery: 100
-      reactions: 120
+      reactions: 80
       firing: 90
       throwing: 90
       strength: 100
@@ -1695,7 +2289,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_TECH
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 8
     aggression: 2
@@ -1724,7 +2318,7 @@ units:
         - STR_WOLF_CALLERAI
 
   - type: STR_SPACEWOLVES_HONOR_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SPACEWOLVES_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 120
@@ -1741,7 +2335,7 @@ units:
     armor: STR_SPACEWOLVESARMOR_HONOR
     standHeight: 21
     kneelHeight: 16
-    value: 40
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -1758,8 +2352,8 @@ units:
         SW_SMHONOR_SET2B: 30
 
   - type: STR_SPACEWOLVES_CAPTAIN_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SPACEWOLVES_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 125
       stamina: 150
@@ -1795,7 +2389,7 @@ units:
   # CRIMSON FIST TIER 0
 
   - type: STR_CRIMSONFIST_SCOUT_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_CRIMSONFISTS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 100
@@ -1812,7 +2406,7 @@ units:
     armor: STR_CRIMSONFISTARMOR_SCOUT
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -1831,7 +2425,7 @@ units:
   # CRIMSON FIST TIER 1
 
   - type: STR_CRIMSONFIST_TAC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_CRIMSONFISTS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 90
@@ -1848,7 +2442,7 @@ units:
     armor: STR_CRIMSONFISTARMOR_TAC
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 25
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -1865,8 +2459,8 @@ units:
         CF_SMTACTICAL_SET4: 10
 
   - type: STR_CRIMSONFIST_DEV_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_CRIMSONFISTS_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 85
       stamina: 110
@@ -1882,7 +2476,7 @@ units:
     armor: STR_CRIMSONFISTARMOR_DEV
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
@@ -1901,8 +2495,8 @@ units:
         CF_SMDEV_SET5: 10
 
   - type: STR_CRIMSONFIST_SARG_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_CRIMSONFISTS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 95
       stamina: 110
@@ -1918,7 +2512,7 @@ units:
     armor: STR_CRIMSONFISTARMOR_SARG
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -1937,7 +2531,7 @@ units:
   # CRIMSON FIST TIER 2
 
   - type: STR_CRIMSONFIST_HONOR_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_CRIMSONFISTS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 120
@@ -1954,7 +2548,7 @@ units:
     armor: STR_CRIMSONFISTARMOR_HONOR
     standHeight: 21
     kneelHeight: 16
-    value: 40
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -1969,24 +2563,24 @@ units:
         CF_SMHONOR_SET2: 30
 
   - type: STR_CRIMSONFIST_TERMI_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_CRIMSONFISTS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 115
       stamina: 140
       health: 180
       bravery: 110
-      reactions: 110
-      firing: 130  # CF
+      reactions: 80 #FISTIN
+      firing: 120
       throwing: 110
       strength: 130
       psiStrength: 100
       psiSkill: 0
-      melee: 100
+      melee: 110 #FISTIN
     armor: STR_CRIMSONFISTARMOR_TERMI
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
@@ -2004,8 +2598,8 @@ units:
         CF_SMTERMI_SET5: 10
 
   - type: STR_CRIMSONFIST_CAPTAIN_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_CRIMSONFISTS_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 125
       stamina: 150
@@ -2090,8 +2684,8 @@ units:
     capturable: false
 
   - type: STR_SWDREAD_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SPACEWOLVES_FACTION
+    rank: STR_LIVE_TERRORIST
     liveAlien: ""
     stats:
       tu: 80
@@ -2108,7 +2702,7 @@ units:
     armor: SWDREAD_ARMOR4_UC
     standHeight: 23
     kneelHeight: 16
-    value: 30
+    value: 50
     deathSound: [859, 860]
     moveSound: {mod: 40k, index: 700}
     moraleLossWhenKilled: 50
@@ -2123,7 +2717,7 @@ units:
   # legion of the damned
 
   - type: STR_LEGIONDAMNED_MARINE_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_LEGIONDAMNED_FACTION
     rank: STR_LIVE_SOLDIER
     liveAlien: ""
     stats:
@@ -2166,7 +2760,7 @@ units:
   # death company
 
   - type: STR_DEATHCOMPANY_MARINE_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_DEATHCOMPANY_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 140
@@ -2204,7 +2798,7 @@ units:
   # white scars
 
   - type: STR_WHITESCARS_TAC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_WHITESCARS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 90
@@ -2221,7 +2815,7 @@ units:
     armor: STR_WHITESCARSARMOR_TAC
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 25
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -2238,8 +2832,8 @@ units:
         SM_SMTACTICAL_SET4: 10
 
   - type: STR_WHITESCARS_SARG_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_WHITESCARS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 95
       stamina: 110
@@ -2255,7 +2849,7 @@ units:
     armor: STR_WHITESCARSARMOR_SARG
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -2272,14 +2866,14 @@ units:
         SM_SMTACTICAL_SET4: 40
 
   - type: STR_WHITESCARS_TERMI_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_WHITESCARS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 115
       stamina: 140
       health: 180
-      bravery: 130  # UM
-      reactions: 120  # UM
+      bravery: 130  # WS
+      reactions: 80  # WS
       firing: 110
       throwing: 110
       strength: 130
@@ -2289,7 +2883,7 @@ units:
     armor: STR_WHITESCARSARMOR_TERMI
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
@@ -2307,14 +2901,14 @@ units:
         SM_SMTERMI_SET5: 10
 
   - type: STR_WHITESCARS_CAPTAIN_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_WHITESCARS_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 125
       stamina: 150
       health: 190
-      bravery: 140  # UM
-      reactions: 130  # UM
+      bravery: 140  # WS
+      reactions: 130  # WS
       firing: 120
       throwing: 120
       strength: 140
@@ -2342,14 +2936,14 @@ units:
         SM_SMCAP_SET3: 20
 
   - type: STR_WHITESCARS_ASSBIKER_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_WHITESCARS_FACTION
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 100
       stamina: 100
       health: 140
-      bravery: 120  # UM
-      reactions: 110  # UM
+      bravery: 120  # WS
+      reactions: 110  # WS
       firing: 80
       throwing: 80
       strength: 75
@@ -2375,14 +2969,14 @@ units:
         SM_SMASS_SET3: 15
 
   - type: STR_WHITESCARS_ASS_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_WHITESCARS_FACTION
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 100
       stamina: 100
       health: 140
-      bravery: 120  # UM
-      reactions: 110  # UM
+      bravery: 120  # WS
+      reactions: 110  # WS
       firing: 80
       throwing: 80
       strength: 75
@@ -2412,7 +3006,7 @@ units:
   # SALAMANDER TIER 0
 
   - type: STR_SALAMANDER_SCOUT_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SALAMANDERS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 100
@@ -2429,7 +3023,7 @@ units:
     armor: STR_SALAMANDERARMOR_SCOUT
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -2445,10 +3039,44 @@ units:
         SM_SCOUT_SET2: 30
         SM_SCOUT_SET3: 30
 
+  - type: STR_SALAMANDER_ADVSCOUT_AI
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 110
+      stamina: 90
+      health: 90
+      bravery: 90
+      reactions: 90
+      firing: 90
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 70
+    armor: STR_SALAMANDERARMOR_ADVSCOUT
+    standHeight: 21
+    kneelHeight: 16
+    value: 20
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    intelligence: 2
+    aggression: 2
+    spotter: 6
+    sniper: 80
+    energyRecovery: 30
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        SM_ADVSCOUT_SET1: 30
+        SM_ADVSCOUT_SET2: 30
+        SM_ADVSCOUT_SET3: 40
+
   # SALAMANDER TIER 1
 
   - type: STR_SALAMANDER_TAC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SALAMANDERS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 90
@@ -2465,7 +3093,7 @@ units:
     armor: STR_SALAMANDERARMOR_TAC
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 25
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -2482,8 +3110,8 @@ units:
         SM_SMTACTICAL_SET4: 10
 
   - type: STR_SALAMANDER_DEV_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 85
       stamina: 110
@@ -2499,7 +3127,7 @@ units:
     armor: STR_SALAMANDERARMOR_DEV
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
@@ -2518,8 +3146,8 @@ units:
         SM_SMDEV_SET5: 10
 
   - type: STR_SALAMANDER_ASS_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 100
       stamina: 100
@@ -2535,7 +3163,7 @@ units:
     armor: STR_SALAMANDERARMOR_ASS
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
@@ -2551,8 +3179,8 @@ units:
         SM_SMASS_SET3: 15
 
   - type: STR_SALAMANDER_SARG_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 95
       stamina: 110
@@ -2568,7 +3196,7 @@ units:
     armor: STR_SALAMANDERARMOR_SARG
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -2587,7 +3215,7 @@ units:
   # SALAMANDER TIER 2
 
   - type: STR_SALAMANDER_HONOR_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SALAMANDERS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 120
@@ -2604,7 +3232,7 @@ units:
     armor: STR_SALAMANDERARMOR_HONOR
     standHeight: 21
     kneelHeight: 16
-    value: 40
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -2621,14 +3249,14 @@ units:
         SM_SMHONOR_SET2B: 30
 
   - type: STR_SALAMANDER_TERMI_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_SALAMANDERS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 115
       stamina: 140
       health: 180
       bravery: 120
-      reactions: 110
+      reactions: 70
       firing: 110
       throwing: 110
       strength: 130
@@ -2638,7 +3266,7 @@ units:
     armor: STR_SALAMANDERARMOR_TERMI
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
@@ -2656,14 +3284,14 @@ units:
         SM_SMTERMI_SET5: 10
 
   - type: STR_SALAMANDER_TECH_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 90
       stamina: 110
       health: 150
       bravery: 110
-      reactions: 120
+      reactions: 70
       firing: 90
       throwing: 90
       strength: 100
@@ -2673,7 +3301,7 @@ units:
     armor: STR_SALAMANDERARMOR_TECH
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 8
     aggression: 2
@@ -2699,14 +3327,14 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_SALAMANDER_CHAP_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 90
       stamina: 100
       health: 150
       bravery: 110
-      reactions: 110
+      reactions: 70
       firing: 85
       throwing: 90
       strength: 85
@@ -2716,7 +3344,7 @@ units:
     armor: STR_SALAMANDERARMOR_CHAP
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 6
     aggression: 2
@@ -2739,8 +3367,8 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_SALAMANDER_CAPTAIN_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 125
       stamina: 150
@@ -2774,8 +3402,8 @@ units:
         SM_SMCAP_SET3: 20
 
   - type: STR_SALAMANDER_CATAPHRACT_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 90
       stamina: 180
@@ -2794,7 +3422,7 @@ units:
     aggression: 2
     spotter: 2
     sniper: 70
-    value: 30
+    value: 45
     livingWeapon: true
     energyRecovery: 60
     standHeight: 21
@@ -2808,8 +3436,8 @@ units:
         CF_SMDEV_SET3: 20
 
   - type: STR_SALAMANDER_SATURNINE_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 70
       stamina: 200
@@ -2828,7 +3456,7 @@ units:
     aggression: 2
     spotter: 2
     sniper: 70
-    value: 30
+    value: 50
     livingWeapon: true
     energyRecovery: 60
     standHeight: 21
@@ -2842,8 +3470,8 @@ units:
         CF_SMDEV_SET3: 20
 
   - type: STR_SLMDREAD_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_SALAMANDERS_FACTION
+    rank: STR_LIVE_TERRORIST
     liveAlien: ""
     stats:
       tu: 80
@@ -2860,7 +3488,7 @@ units:
     armor: SLMDREAD_ARMOR
     standHeight: 23
     kneelHeight: 16
-    value: 30
+    value: 50
     deathSound: [859, 860]
     moveSound: {mod: 40k, index: 700}
     moraleLossWhenKilled: 50
@@ -2938,12 +3566,13 @@ units:
       - - PREDSIDE_WEAPON
       - - PREDSIDE_WEAPON
 
+
   # adeptas bloody rose
 
-
   - type: STR_BLOODYROSE_CANTUS_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_NOVICE_AI
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 55
       stamina: 60
@@ -2960,7 +3589,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 30
+    value: 10
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -2979,8 +3608,9 @@ units:
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_HOSPITALIER_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_MEDICAE_AI
+    rank: STR_LIVE_MEDIC
     stats:
       tu: 65
       stamina: 70
@@ -2997,26 +3627,27 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 25
     intelligence: 4
     aggression: 2
     energyRecovery: 30
     deathSound: [1710, 1711, 1712, 1713, 1714]
     builtInWeaponSets:
       - - STR_BOLTPISTOL_SCOURGE
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
-      - - STR_BOLTPISTOL_SCOURGE
-        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
         - STR_LIGHT_BOLTPISTOL_AMMO
       - - STR_BOLTPISTOL_SCOURGE
         - STR_LIGHT_BOLTPISTOL_AMMO
         - STR_LIGHT_BOLTPISTOL_AMMO
+      - - STR_BOLTPISTOL_SCOURGE
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_REPENTIA_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_NOVICE_AI
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 60
       stamina: 70
@@ -3033,7 +3664,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 15
     intelligence: 4
     aggression: 8
     energyRecovery: 30
@@ -3052,8 +3683,9 @@ units:
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_ADEPTAS_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ADEPTAS_AI
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 60
       stamina: 70
@@ -3070,7 +3702,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 15
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3083,14 +3715,15 @@ units:
       - - STR_BOLTER_DEAZ
         - STR_LIGHT_BOLTER_AMMO
         - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_PEN
         - STR_LIGHT_BOLTER_AMMO
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_SERAPHIM_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ADEPTAS_AI
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 60
       stamina: 70
@@ -3107,7 +3740,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 20
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3130,13 +3763,13 @@ units:
       - - STR_PLASMA_PISTOL_TERRAN
         - STR_PLASMA_PISTOL_CLIP
         - STR_PLASMA_PISTOL_CLIP
-        - STR_PLASMA_PISTOL_CLIP
         - STR_PHOSPHOR_GRENADE
         - STR_SONIC_GRENADE
 
   - type: STR_BLOODYROSE_ADEPTASSUPERIOR_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ADEPTAS_AI
+    rank: STR_LIVE_LEADER
     stats:
       tu: 60
       stamina: 70
@@ -3153,7 +3786,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 25
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3161,19 +3794,22 @@ units:
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
       - - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_NEURAL_WHIP
+      - - STR_ADEPTAS_BOLTGUN_JOVE
+        - STR_RIFLE_CLIP
+        - STR_RIFLE_CLIP
+      - - STR_MC_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO_MC
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_ADEPTAS_POWER_AXE
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_ELOHIM_AI
     liveAlien: STR_SHRINE_ELOHIM_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 60
       stamina: 70
@@ -3190,18 +3826,17 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 20
     intelligence: 4
     aggression: 2
     spotter: 2
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
-      - - STR_HAND_FLAMETHROWER
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_PHOSPHOR_GRENADE
       - - STR_ADEPTAS_MELTAGUN_NECRO
         - STR_MELTA_AMMO
         - STR_MELTA_AMMO
@@ -3211,8 +3846,9 @@ units:
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_BLOODYROSE_RETRIBUTOR_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
+    rank: STR_LIVE_ENGINEER
     stats:
       tu: 60
       stamina: 70
@@ -3229,7 +3865,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 25
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3250,8 +3886,9 @@ units:
         - STR_MGRENADE
 
   - type: STR_BLOODYROSE_CELESTIAN_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 70
       stamina: 80
@@ -3268,7 +3905,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 25
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3285,13 +3922,14 @@ units:
         - STR_MELTA_AMMO
         - STR_MGRENADE
       - - STR_ADEPTAS_BOLTGUN_JOVE
-        - STR_RIFLE_CLIP
-        - STR_RIFLE_CLIP
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
         - STR_MGRENADE
 
   - type: STR_BLOODYROSE_SACRESANT_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 70
       stamina: 80
@@ -3308,26 +3946,27 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 30
     intelligence: 4
     aggression: 8
     spotter: 2
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
-      - - STR_ADEPTAS_POWER_AXE
-        - STR_PHOSPHOR_GRENADE
-        - STR_PHOSPHOR_GRENADE
-      - - STR_ADEPTAS_ZWEIHANDER
-        - STR_MGRENADE
-        - STR_MGRENADE
       - - STR_DOMINION_HALBERD
+        - STR_PHOSPHOR_GRENADE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_DOMINION_HALBERD
+        - STR_MGRENADE
+        - STR_MGRENADE
+      - - STR_ADEPTAS_POWER_AXE
         - STR_MGRENADE
         - STR_MGRENADE
 
   - type: STR_BLOODYROSE_CANONESS_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 90
       stamina: 90
@@ -3344,7 +3983,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 40
     intelligence: 8
     aggression: 2
     spotter: 3
@@ -3390,7 +4029,7 @@ units:
     intelligence: 2
     livingWeapon: true
     aggression: 8
-    value: 20
+    value: 40
     deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
     # deathSound: {mod: 40k, index: 23}
     moveSound: {mod: 40k, index: 14}
@@ -3400,7 +4039,7 @@ units:
 
 
   - type: STR_FIERYHEART_CANTUS_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_NOVICE_AI
     stats:
       tu: 55
@@ -3418,7 +4057,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 30
+    value: 10
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3437,8 +4076,9 @@ units:
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_HOSPITALIER_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_MEDICAE_AI
+    rank: STR_LIVE_MEDIC
     stats:
       tu: 65
       stamina: 70
@@ -3455,7 +4095,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 25
     intelligence: 4
     aggression: 2
     energyRecovery: 30
@@ -3468,13 +4108,14 @@ units:
         - STR_LIGHT_BOLTPISTOL_AMMO
         - STR_LIGHT_BOLTPISTOL_AMMO
       - - STR_BOLTPISTOL_SCOURGE
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_REPENTIA_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_NOVICE_AI
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 60
       stamina: 70
@@ -3491,7 +4132,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 15
     intelligence: 4
     aggression: 8
     energyRecovery: 30
@@ -3510,7 +4151,7 @@ units:
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_ADEPTAS_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ADEPTAS_AI
     stats:
       tu: 60
@@ -3528,7 +4169,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 15
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3541,14 +4182,15 @@ units:
       - - STR_BOLTER_DEAZ
         - STR_LIGHT_BOLTER_AMMO
         - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
         - STR_LIGHT_BOLTER_AMMO
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_SERAPHIM_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ADEPTAS_AI
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 60
       stamina: 70
@@ -3565,7 +4207,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 20
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3585,16 +4227,16 @@ units:
         - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
         - STR_PHOSPHOR_GRENADE
         - STR_SONIC_GRENADE
-      - - STR_PLASMA_PISTOL_TERRAN
-        - STR_PLASMA_PISTOL_CLIP
-        - STR_PLASMA_PISTOL_CLIP
-        - STR_PLASMA_PISTOL_CLIP
+      - - STR_INFERNO_PISTOL
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
         - STR_PHOSPHOR_GRENADE
         - STR_SONIC_GRENADE
 
   - type: STR_FIERYHEART_ADEPTASSUPERIOR_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ADEPTAS_AI
+    rank: STR_LIVE_LEADER
     stats:
       tu: 60
       stamina: 70
@@ -3611,7 +4253,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 25
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3619,18 +4261,19 @@ units:
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
       - - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
-        - STR_LIGHT_BOLTPISTOL_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
-      - - STR_BOLTER_DEAZ
-        - STR_LIGHT_BOLTER_AMMO
-        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_NEURAL_WHIP
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_LIGHT_BOLTER_AMMO_AP
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_TERRAN
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_ELOHIM_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
     stats:
       tu: 60
@@ -3648,18 +4291,17 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 20
     intelligence: 4
     aggression: 2
     spotter: 2
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
-      - - STR_HAND_FLAMETHROWER
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_HAND_FLAMETHROWER_CLIP
-        - STR_BOLTPISTOL_DEAZ
-        - STR_LIGHT_BOLTPISTOL_AMMO
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_KRAK_GRENADE
       - - STR_ADEPTAS_MELTAGUN_NECRO
         - STR_MELTA_AMMO
         - STR_MELTA_AMMO
@@ -3669,7 +4311,7 @@ units:
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_RETRIBUTOR_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
     stats:
       tu: 60
@@ -3687,7 +4329,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 25
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3708,7 +4350,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_FIERYHEART_CELESTIAN_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
     stats:
       tu: 70
@@ -3726,7 +4368,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 25
     intelligence: 4
     aggression: 2
     spotter: 2
@@ -3748,7 +4390,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_FIERYHEART_SACRESANT_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
     stats:
       tu: 70
@@ -3766,7 +4408,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 30
     intelligence: 4
     aggression: 8
     energyRecovery: 60
@@ -3784,8 +4426,9 @@ units:
         - STR_MGRENADE
 
   - type: STR_FIERYHEART_CANONESS_AI
-    race: STR_CIVILIAN
+    race: STR_ADEPTASORORITAS
     liveAlien: STR_SHRINE_ELOHIM_AI
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 90
       stamina: 90
@@ -3802,7 +4445,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 21
     kneelHeight: 14
-    value: 50
+    value: 40
     intelligence: 8
     aggression: 2
     spotter: 3
@@ -3849,7 +4492,7 @@ units:
     intelligence: 2
     aggression: 8
     livingWeapon: true
-    value: 20
+    value: 40
     deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
     # deathSound: {mod: 40k, index: 23}
     moveSound: {mod: 40k, index: 14}
@@ -3860,7 +4503,7 @@ units:
   # DARKANGEL TIER 0
 
   - type: STR_DARKANGEL_SCOUT_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_DARKANGELS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 100
@@ -3877,7 +4520,7 @@ units:
     armor: STR_DARKANGELARMOR_SCOUT
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 20
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -3896,7 +4539,7 @@ units:
   # DARKANGEL TIER 1
 
   - type: STR_DARKANGEL_TAC_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_DARKANGELS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 90
@@ -3913,7 +4556,7 @@ units:
     armor: STR_DARKANGELARMOR_TAC
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 25
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
@@ -3930,7 +4573,7 @@ units:
         BT_SMTACTICAL_SET4: 10
 
   - type: STR_DARKANGEL_ASS_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_DARKANGELS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 100
@@ -3947,7 +4590,7 @@ units:
     armor: STR_DARKANGELARMOR_ASS
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
@@ -3963,7 +4606,7 @@ units:
         BT_SMASS_SET3: 15
 
   - type: STR_DARKANGEL_DEV_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_DARKANGELS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 85
@@ -3980,7 +4623,7 @@ units:
     armor: STR_DARKANGELARMOR_DEV
     standHeight: 21
     kneelHeight: 16
-    value: 35
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
@@ -3999,8 +4642,8 @@ units:
         SM_SMDEV_SET5: 10
 
   - type: STR_DARKANGEL_SARGE_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_DARKANGELS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 95
       stamina: 110
@@ -4035,14 +4678,14 @@ units:
   # DARKANGEL TIER 2
 
   - type: STR_DARKANGEL_TERMI_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_DARKANGELS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 115
       stamina: 140
       health: 180
       bravery: 110
-      reactions: 110
+      reactions: 70
       firing: 110
       throwing: 110
       strength: 130
@@ -4052,7 +4695,7 @@ units:
     armor: STR_DARKANGELARMOR_TERMI
     standHeight: 21
     kneelHeight: 16
-    value: 45
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
@@ -4070,14 +4713,14 @@ units:
         BT_SMTERMI_SET5: 10
 
   - type: STR_DARKANGEL_CHAP_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_DARKANGELS_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 90
       stamina: 100
       health: 150
       bravery: 100
-      reactions: 110
+      reactions: 70
       firing: 85
       throwing: 90
       strength: 85
@@ -4087,7 +4730,7 @@ units:
     armor: STR_DARKANGELARMOR_CHAP
     standHeight: 21
     kneelHeight: 16
-    value: 50
+    value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 6
     aggression: 2
@@ -4110,8 +4753,8 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_DARKANGEL_CAPTAIN_AI
-    race: STR_CIVILIAN  # imperial
-    rank: STR_LIVE_SOLDIER
+    race: STR_DARKANGELS_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 125
       stamina: 150
@@ -4145,7 +4788,7 @@ units:
         BT_SMCAP_SET3: 20
 
   - type: STR_DARKANGEL_HONOR_AI
-    race: STR_CIVILIAN  # imperial
+    race: STR_DARKANGELS_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 120
@@ -4162,7 +4805,7 @@ units:
     armor: STR_DARKANGELARMOR_HONOR
     standHeight: 21
     kneelHeight: 16
-    value: 40
+    value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 5
     aggression: 2
@@ -4183,7 +4826,7 @@ units:
   # SL TIER 1
 
   - type: STR_SLGUARDS_M_LV1_AI
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_STEELLEGION_FACTION
     liveAlien: STR_LIVE_CAPTURE_GUARDAI
     stats:
       tu: 60
@@ -4200,7 +4843,7 @@ units:
     armor: SLGUARD_ARMOR_M_LV1_AI
     standHeight: 21
     kneelHeight: 14
-    value: 30
+    value: 12
     moraleLossWhenKilled: 75
     aggression: 2
     intelligence: 4
@@ -4219,7 +4862,8 @@ units:
 
   - type: STR_SLGUARDS_OFF_LV1_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_STEELLEGION_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 65
       stamina: 80
@@ -4254,7 +4898,7 @@ units:
 
   - type: STR_SLGUARDS_M_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_STEELLEGION_FACTION
     stats:
       tu: 70
       stamina: 84
@@ -4270,7 +4914,7 @@ units:
     armor: SLGUARD_ARMOR_M_LV2
     standHeight: 21
     kneelHeight: 14
-    value: 30
+    value: 15
     aggression: 2
     intelligence: 4
     energyRecovery: 20
@@ -4288,7 +4932,8 @@ units:
 
   - type: STR_SLGUARDS_OFF_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
-    race: STR_SECTOID  # trying to avoid setting them as civilians
+    race: STR_STEELLEGION_FACTION
+    rank: STR_LIVE_LEADER
     stats:
       tu: 75
       stamina: 100
@@ -4304,7 +4949,7 @@ units:
     armor: SLGUARD_ARMOR_OFF_M_LV2
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 25
     aggression: 2
     intelligence: 5
     energyRecovery: 20
@@ -4337,7 +4982,7 @@ units:
     moraleLossWhenKilled: 75  # like PC guard
     standHeight: 21
     kneelHeight: 14
-    value: 10
+    value: 6
     aggression: 2
     intelligence: 3
     energyRecovery: 20

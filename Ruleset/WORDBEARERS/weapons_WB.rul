@@ -55,7 +55,7 @@ items:
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
     size: 0.3
-    dropoff: 4
+    dropoff: 5
     autoRange: 9
     snapRange: 14
     aimRange: 0
@@ -100,9 +100,9 @@ items:
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
     size: 0.3
-    dropoff: 3
-    autoRange: 17
-    snapRange: 23
+    dropoff: 4
+    autoRange: 13
+    snapRange: 20
     aimRange: 0
     accuracyAuto: 50
     accuracySnap: 60
@@ -155,7 +155,7 @@ items:
       - STR_RITUAL_SACRIFICE
       - STR_HB_DEP1
     size: 0.6
-    dropoff: 3
+    dropoff: 4
     autoRange: 0
     snapRange: 15
     aimRange: 0
@@ -252,6 +252,8 @@ items:
     bigSprite: {mod: 40k, index: 294}
     fireSound: {mod: 40k, index: 739}
     power: 130
+    autoRange: 15
+    snapRange: 21
     blastRadius: 4
     accuracyAuto: 50
     accuracySnap: 60
@@ -278,8 +280,8 @@ items:
     bigSprite: {mod: 40k, index: 316}
     fireSound: {mod: 40k, index: 18}
     bulletSpeed: 100
-    autoRange: 25
-    snapRange: 25
+    autoRange: 12
+    snapRange: 18
     aimRange: 30
     dropoff: 3
     power: 130
@@ -323,7 +325,7 @@ items:
     weight: 40
     bigSprite: {mod: 40k, index: 1081}
     bulletSpeed: 100
-    autoRange: 25
+    autoRange: 18
     snapRange: 25
     aimRange: 35
     dropoff: 3
@@ -557,7 +559,7 @@ items:
       ToArmorPre: 0.1
       ToArmor: 0.2
       ToStun: 0.4
-      ToEnergy: 0.4
+      ToEnergy: 0.5
       ToWound: 0.3
       ToMorale: 0.6
       RadiusReduction: 5 # low power falloff
@@ -620,9 +622,9 @@ items:
   - type: STR_PISTOLBOLTSPITTER_WORDBEARER  # Pistol Boltspitter
     categories: [STR_CAT_BOLTER, STR_CAT_CHAOS]
     size: 0.2
-    dropoff: 4
+    dropoff: 5
     autoRange: 0
-    snapRange: 12
+    snapRange: 11
     aimRange: 0
     accuracyAuto: 0
     accuracySnap: 75
@@ -656,6 +658,20 @@ items:
     listOrder: 10141
     inventoryMoveCost: #quickdraw
       basePercent: 50
+    ignoreAmmoPower: true
+    power: 65
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
 
@@ -667,9 +683,9 @@ items:
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
     size: 0.3
-    dropoff: 3
-    autoRange: 10
-    snapRange: 15
+    dropoff: 5
+    autoRange: 9
+    snapRange: 14
     aimRange: 0
     accuracyAuto: 66
     accuracySnap: 80
@@ -699,6 +715,20 @@ items:
     bulletSpeed: 50
     attraction: 1
     listOrder: 10341
+    ignoreAmmoPower: true
+    power: 70
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
 
   - type: STR_HEAVYBOLTSPITTER_WORDBEARER  # Heavy Boltspitter
     categories: [STR_CAT_BOLTER, STR_CAT_CHAOS]
@@ -710,9 +740,9 @@ items:
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
     size: 0.3
-    dropoff: 2
-    autoRange: 18
-    snapRange: 24
+    dropoff: 4
+    autoRange: 13
+    snapRange: 20
     aimRange: 0
     accuracyAuto: 50
     accuracySnap: 60
@@ -748,6 +778,20 @@ items:
     bulletSpeed: 50
     attraction: 4
     listOrder: 12001
+    ignoreAmmoPower: true
+    power: 85
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
     tags:
       ITEM_RECOIL: 70 #slightly more recoil than guard, but more accurate if controllable
       REACTION_MULTIPLIER: 50
@@ -763,9 +807,9 @@ items:
       - STR_RITUAL_SACRIFICE
       - STR_HB_DEP1
     size: 0.6
-    dropoff: 2
+    dropoff: 4
     autoRange: 0
-    snapRange: 16
+    snapRange: 15
     aimRange: 0
     accuracyAuto: 0
     accuracySnap: 75
@@ -791,6 +835,20 @@ items:
     bulletSpeed: 50
     attraction: 8
     listOrder: 13101
+    ignoreAmmoPower: true
+    power: 85
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
 
   - type: STR_BOLTSPITTERAC_WORDBEARER  # Boltspitter Autocannon
     categories: [STR_CAT_TERMINATOR, STR_CAT_CHAOS]
@@ -819,7 +877,7 @@ items:
       - STR_AUTOCANNON_HE_AMMO
       - STR_AUTOCANNON_AP_AMMO
       - STR_AUTOCANNON_BOX_AMMO
-    dropoff: 2
+    dropoff: 3
     minRange: 4
     accuracySnap: 60
     tuSnap: 28
@@ -844,6 +902,19 @@ items:
     twoHanded: true
     oneHandedPenalty: 100
     listOrder: 13227
+    ignoreAmmoPower: true
+    power: 105
+    damageAlter: #DA BOLTER
+      RandomType: 7  # 50-200%
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+      ToWound: 0.2
+      ToEnergy: 0.3
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
     tags:
       REACTION_MULTIPLIER: 100
       REACTION_PENALTY_KNEELING_BYPASS: 1
@@ -871,7 +942,7 @@ items:
     accuracyAimed: 100
     tuSnap: 55
     tuAimed: 85
-    snapRange: 25
+    snapRange: 20
     aimRange: 30
     confSnap:
       shots: 2
@@ -890,8 +961,8 @@ items:
       RandomType: 6
       ToArmorPre: 0.5
       ToHealth: 0.8
-      ToArmor: 0.2
-      ToStun: 0.0
+      ToArmor: 0.3
+      ToStun: 0.3
     listOrder: 13227
     hitSound: 3986
     fireSound: 3984

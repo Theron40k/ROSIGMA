@@ -743,3 +743,19 @@ eventScripts:
     minScore: -2000
     researchTriggers:
       STR_CHAPTER_PURITY: false
+      STR_CHOSEN_WORDBEARERS: false
+
+  - type: STR_WORDBEARER_MONTHLY_RECURRING_SCRIPT # Wordbearers alternative to lone recruitment
+    eventWeights:
+      0:
+        STR_CHAOS_LONE_SERVITOR_EVENT: 5
+        STR_CHAOS_LONE_BEASTMAN_EVENT: 5
+        STR_CHAOS_PAIR_SLAANESH_NOVICES_EVENT: 3
+        STR_CHAOS_LONE_HERETIC_SISTER_EVENT: 2
+        STR_CHAOS_LONE_HERETIC_HOSPITALIER_EVENT: 5
+    firstMonth: 1 # wont show up on the first month.
+    executionOdds: 20
+    minScore: -2000
+    researchTriggers:
+      STR_CHAPTER_PURITY: false
+      STR_CHOSEN_WORDBEARERS: true

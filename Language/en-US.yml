@@ -14,6 +14,9 @@ en-US:  #  yamllint disable-line rule:empty-values
 # *** MISC **********************************************************************
   STR_OPENXCOM: "40000 - ROSIGMA 3.2"
   IMPERIUM: "IMPERIUM"
+  ARMO: "ARMORY"
+  MILL: "FORGE"
+  STR_XCOM_AGENTS_HAVE_LOCATED_AN_ALIEN_BASE_IN_REGION: "We have detected a enemy presence on the planet"
 
   STR_HWP_CAPACITY: " "  # uncomment to check for HWP: -1  # SpeedC is an exception
   STR_COUNTRY_HAS_SIGNED_A_SECRET_PACT: "{0} has fallen to Chaos and become corrupted. Destroy the Chaos hold there and reclaim the sector!"
@@ -1290,6 +1293,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LIVE_CAPTURE_GUARDAI_STORMTROOPER: "Imperial Stormtrooper"
   STR_LIVE_CAPTURE_GUARDAI_SQUAT: "Imperial Squat"
   STR_LIVE_CAPTURE_GUARDAI_PSYKER: "Sanctioned Psyker"
+  STR_LIVE_CAPTURE_OGRYNOPFOR: "Imperial Ogryn"
 
 # Reeducation captive recruitment
 
@@ -1602,6 +1606,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LEGIONDAMNED_TESTLIST: "Legion of the Damned Testlist"
   STR_DEATHCOMPANY_TESTLIST: "Death Company Testlist"
 
+  STR_IMPADVSCOUT_TESTLIST: "AdvScout Testlist"
+
 # HULK MISSION
   STR_ORK_SPACEHULK: "Hulk Freebootas"  # ORKMOD
   STR_ORK_DEATHSKULLS_SPACEHULK: "Deathskull Freebootas"
@@ -1831,6 +1837,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SLAAN_ADEPTAS_CORRUPTED_ARMOR: "Corrupted Sister Armor"
   STR_SLAAN_ADEPTAS_CORRUPTED_ARMOR_BLESSED: "Corrupted Sister Armor"
   STR_LEAD_BY_EXAMPLE: "Lead By Example"
+  STR_LEAD_BY_EXAMPLE_CANONESS: "Lead By Example"
   STR_REPENTIA_SUPERIOR_CORPSE: "Repentia Superior Corpse"
   STR_REP_SUPERIOR_CORPSE: "Repentia Superior Corpse"
   STR_PRODUCE_REPSUPERIOR_HONOR: "Repentia Superior Kit"
@@ -2693,7 +2700,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_AUTOCANNON_HE_AMMO: "Autocannon HE Drum Magazine"
   STR_AUTOCANNON_AP_AMMO: "Autocannon AP Drum Magazine"
   STR_AUTOCANNON_BOX_AMMO: "Autocannon Box Magazine"
-  STR_CHAOS_CHAIN_AXE: "Chaos Chain Axe"
+  STR_CHAOS_CHAIN_AXE: "Heretic Chain Axe"
 
 # CHAOS OGRYN
   STR_TRAITORGUARD_OGRYN: "Traitor Ogryn"
@@ -4875,6 +4882,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ARMORS_MOUNTED_HEAVY_LASCANNON_CODEX: "An upscaled variant of the standard Imperial Guard Hellhammer Lascannon, this massive, wheel-mounted model is specialized at defeating superheavy armor with a higher yield beam, including Terminator class power armor and Titan plating."
   STR_GUARD_ARMORS_MOUNTED_HEAVY_LASCANNON_CODEX2: "{ALT}{NEWLINE}Heavy Lascannon Properties:{ALT}  {NEWLINE}{NEWLINE}  >> {ALT}Maximal Shot:{ALT} +100 power. Costs 2 ammo."
 
+  STR_TRUCKARMOR_KRIEG: "Battle Truck (Krieg)"
+
   STR_GUARDSM_KRIEG: "Guardsman (Krieg)"
   STR_GUARD_KRIEG_GRENADIER: "Grenadier (Krieg)"
   STR_KRIEG_SHOVEL: "Shovel (Krieg)"
@@ -6121,7 +6130,8 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_GIFTWB: "Order Warship Deployment"
 
-  STR_WBDROPPODS: "WB DREADCLAWS"
+  STR_WBDROPPODS: "WB DROPPODS"
+  STR_WBDROPPODSUPGRADE: "WB DREADCLAWS"
   STR_WBRHINOS: "WB RHINOS"
   STR_WBTHUNDERHAWK: "WB THUNDERHAWK"
   STR_WBWARSHIPFINAL: "WB HOLY WARSHIP"
@@ -6134,10 +6144,29 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WBWARSHIPFINALALT: "WB HOLY WARSHIP"
   STR_WBWARSHIPFINALALTK: "WB SACRED WARSHIP"
 
-  STR_WBDROPPODS_UFOPEDIA: "{NEWLINE}Dreadclaws are Drop Pod-like transports used by the Space Marine Legions of old, and still used by the Word Bearers. Those smaller variant of the Dreadclaws are used to quickly deploy Chaos Marines onto a planet from a Chaos Base."
+  STR_WBDROPPODS_UFOPEDIA: "{NEWLINE}Drop Pod transports used by the Space Marine Legions, and still used by the Word Bearers. Those are used to quickly deploy Chaos Marines onto a planet from a Chaos Base."
+  STR_WBDROPPODSUPGRADE_UFOPEDIA: "{NEWLINE}Dreadclaws are Drop Pod-like transports used by the Space Marine Legions of old, and still used by the Word Bearers. Those Dreadclaws comes with turrets to support Chaos Marines deployment onto a planet from a Chaos Base."
   STR_WBRHINOS_UFOPEDIA: "{NEWLINE}Chaos Rhinos are Rhino vehicles in the service of Chaos Space Marines. Serving as their most common vehicle, over the ten thousand years since the Long War began, Chaos Marines have continued to use the robust Rhino as their favored main transport."
   STR_WBHELLBLADE_UFOPEDIA: "{NEWLINE}The Hell Blade is an interceptor and air superiority fighter aircraft that is used by the forces of Chaos, including the Word Bearers."
   STR_WBTHUNDERHAWK_UFOPEDIA: "{NEWLINE}The Chaos Thunderhawk gunship is a multi-use aircraft in wide use by Word Bearers that still employ them in great numbers, either dating back to the Great Crusade or aquired since the Horus Heresy."
+
+  STR_WBSSCOUT_ARMORPLAYER_CODEX: "Aspirants are the novices Word Bearers aspiring to become full fledged Chaos Marines for their legion."
+  STR_WBMARINE_ARMORPLAYER_CODEX: "Chaos Marines are the warrior monks of the Word Bearers equipped to fight using a variety of ranged weapons across a broad range of combat conditions."
+  STR_WBRAPTOR_ARMORPLAYER_CODEX: "Chaos Raptor are marines contaminated by the Warp used as dedicated assault troops of the Word Bearers to dive on the enemies from above."
+  STR_WBHAVOC_ARMORPLAYER_CODEX: "Havoc Chaos Marines are the heavy weapon specialists of the Word Bearers legions, they are there to bring more firepower to support their brothers."
+
+  STR_WBMARINEELITE_ARMORPLAYER_CODEX: "Chaos Elite Marines are the most accomplished legionnaires of the Word Bearers, their abilities to turn the tide of a battle must never be underestimated."
+  STR_WBTERMINATOR_ARMORPLAYER_CODEX: "The Anointed are the most favoured warriors within the Word Bearers Legion and are awarded the right to wear a powerful Terminator Armor."
+  STR_WBTERMINATORELITE_ARMORPLAYER_CODEX: "Elite Anointed are the champions that rose from the Annointed warrior cults within the Word Bearers Legion, they bring doom to any foolish enemies that stand against them."
+
+  STR_WBMARINE_MK3ARMORPLAYER_CODEX: "Chaos Marines are the warrior monks of the Word Bearers equipped to fight using a variety of ranged weapons across a broad range of combat conditions."
+  STR_WBBREACHER_MK3ARMORPLAYER_CODEX: "Breacher Chaos Marines are the siege specialists of the Word Bearers legions, able to defend any fortication with their sacred shields and breach the enemies walls."
+  STR_WBASHEN_MK3ARMORPLAYER_CODEX: "Chaos Ashen Marines are marines contaminated by the Warp used as dedicated assault troops of the Word Bearers to dive on the enemies from above."
+
+  STR_WBEXECUTIONER_ARMORPLAYER_CODEX: "Mighty warrior of the faith, the Executioner is tasked by his Word Bearer legion to take the heads of the enemies of the Pantheon."
+
+  STR_WBARMORPEDIA: "WORD BEARER ARMORS"
+  STR_WBCHAOSLORDARMORPLAYER_CODEX: "The Word Bearer Chaos Lord is one of the most powerful of the Champions of Chaos and serves as the commander of the legion and the other forces of Chaos."
 
  # player word bearers strategy researches
 
@@ -6431,6 +6460,18 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CHAOS_CROZIUS_POWER3: "Hell Fire"
   STR_WARPFIRE_IMPLOSION: "Implosion"
   STR_WARPFIRE_RIFT: "Rift"
+
+  STR_PISTOLBOLTSPITTER_WORDBEARER_CODEX: "These twisted organic monstrosities are capable of vomiting forth a torrent of Bolter shells propelled by a mechanism that Tech-Priests can't identify."
+  STR_BOLTERBOLTSPITTER_WORDBEARER_CODEX: "These twisted organic monstrosities are capable of vomiting forth a torrent of Bolter shells propelled by a mechanism that Tech-Priests can't identify."
+  STR_STORMBOLTSPITTER_WORDBEARER_CODEX: "These twisted organic monstrosities are capable of vomiting forth a torrent of Bolter shells propelled by a mechanism that Tech-Priests can't identify."
+  STR_HEAVYBOLTSPITTER_WORDBEARER_CODEX: "These twisted organic monstrosities are capable of vomiting forth a torrent of Bolter shells propelled by a mechanism that Tech-Priests can't identify."
+  STR_BOLTSPITTERAC_WORDBEARER_CODEX: "These twisted organic monstrosities are capable of vomiting forth a torrent of Bolter shells propelled by a mechanism that Tech-Priests can't identify."
+
+  STR_BOLTPISTOL_WORDBEARER_CODEX: "These blasphemous weapons were the result of the Word Bearers occult and Daemonic studies. Defying all coventional wisdom and non-functional at first glance, they nonetheless are able to emit a searing burst of warp flame."
+  STR_BOLTER_WORDBEARER_CODEX: "These blasphemous weapons were the result of the Word Bearers occult and Daemonic studies. Defying all coventional wisdom and non-functional at first glance, they nonetheless are able to emit a searing burst of warp flame."
+  STR_STORMBOLTER_WORDBEARER_CODEX: "These blasphemous weapons were the result of the Word Bearers occult and Daemonic studies. Defying all coventional wisdom and non-functional at first glance, they nonetheless are able to emit a searing burst of warp flame."
+  STR_HEAVYBOLTER_WORDBEARER_CODEX: "These blasphemous weapons were the result of the Word Bearers occult and Daemonic studies. Defying all coventional wisdom and non-functional at first glance, they nonetheless are able to emit a searing burst of warp flame."
+  STR_ASSC_WORDBEARER_CODEX: "These blasphemous weapons were the result of the Word Bearers occult and Daemonic studies. Defying all coventional wisdom and non-functional at first glance, they nonetheless are able to emit a searing burst of warp flame."
 
   # player word bearers campaign
 
@@ -9428,10 +9469,10 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_HULKER_REINFORCEMENTS_TITLE: "GENESTEALERS REINFORCEMENT"
   STR_HULKER_REINFORCEMENTS_DESC: "More genestealers ! Be prepared ... they're coming from everywhere, the roofs, the floors, even the walls as if there was no end of them in that level."
-  STR_HULKER_REINFORCEMENTS2_DESC: "The amount of Genestealers in this Hulk is unbelievable, there must be an end to their numbers but we must stand and fight, purge and destroy those abominations for the Emperor and cleanse this level."
-  STR_HULKER_REINFORCEMENTS3_DESC: "They are throwing everything they have at us! The enemies are more than legions, they vastly outnumber our forces. It seems there is no end, we must destroy the Main Atmospheric Control as soon as possible. May the Emperor protects us!"
-  STR_HULKER_REINFORCEMENTS2a_DESC: "The enemies are more than legions and vastly outnumber our forces. It seems there is no end, we must destroy the 6 Atmospheric Computers as soon as possible. May the Emperor protects us!"
-  STR_HULKER_REINFORCEMENTS2b_DESC: "The enemies are more than legions and vastly outnumber our forces. It seems there is no end, we must reach the teleporters and escape to proceed to our goal. May the Emperor protects us!"
+  STR_HULKER_REINFORCEMENTS2_DESC: "The amount of Genestealers in this Hulk is unbelievable, there must be an end to their numbers but we must stand and fight, purge and destroy those abominations and cleanse this level."
+  STR_HULKER_REINFORCEMENTS3_DESC: "They are throwing everything they have at us! The enemies are more than legions, they vastly outnumber our forces. It seems there is no end, we must destroy the Main Atmospheric Control as soon as possible."
+  STR_HULKER_REINFORCEMENTS2a_DESC: "The enemies are more than legions and vastly outnumber our forces. It seems there is no end, we must destroy the 6 Atmospheric Computers as soon as possible."
+  STR_HULKER_REINFORCEMENTS2b_DESC: "The enemies are more than legions and vastly outnumber our forces. It seems there is no end, we must reach the teleporters and escape to proceed to our goal."
 
   # STR_ALIEN_ACTIVITY_DETECTED: "SPACE CRASH LAND DETECTED"
   STR_SPACERHULKER_SITE_P1_BRIEFING: "The Massive Artifact is a WARPED Space Hulk containing an Ancient Vault crash-landed on the planet. The Emperor requires the immediate extraction of that Vault, but it is likely protected by xenos! Accept this journey and gain entrance to the fallen Hulk so we can secure the precious material - let none stop you on your quest!"
@@ -9440,7 +9481,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SPACERHULKER_SITE_P4_BRIEFING: "LAST CHANCE TO RETREAT FROM MISSION. We are getting closer to the Core but the Genestealers are going to overwhelm us with numbers. We must DESTROY 6 Generators before 25 turns to remove the shield blocking our path to our goal. The Generators are located in 2 separate locations on this level."
   STR_SPACERHULKER_SITE_P5_BRIEFING: >
     This is it, we have finally reached the Core of the WARPED Space Hulk, we must destroy the Atmospheric Control system so the genetic poison we'll inject into the level will kill every genestealers still onboard.
-    {NEWLINE}Summon all your strength and fight with all your bravery in those dark corridors so we can acquire and secure the Ancient Vault. For the Imperium, for the Emperor !
+    {NEWLINE}Summon all your strength and fight with all your bravery in those dark corridors so we can acquire and secure the Ancient Vault. !
 
   STR_WARPED_HULK_LOOT: "Ancient Vault"
   STR_WARPED_LOOT_IG: "Opening Ancient Vault"
@@ -10494,6 +10535,23 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE_HEAVY_DESC: "The Grey Knights are sending the totality of their forces! Commander, our cause is lost unless we achieve victory soon!"
 
   # imperial as opfor for chaos player and cultists
+  STR_PDF_FACTION: "Planetary Defense Forces"
+  STR_IMPERIALGUARD_FACTION: "Imperial Guard"
+  STR_STEELLEGION_FACTION: "Steel Legion"
+  STR_VALHALLAN_FACTION: "Valhallan Ice Warriors"
+  STR_CATACHAN_FACTION: "Catachan Jungle Fighters"
+  STR_INQUISITION_FACTION: "Inquisition"
+  STR_ADEPTASORORITAS: "Adepta Sororitas"
+  STR_DARKANGELS_FACTION: "Dark Angels"
+  STR_ULTRAMARINES_FACTION: "Ultramarines"
+  STR_BLACKTEMPLARS_FACTION: "Black Templars"
+  STR_CRIMSONFISTS_FACTION: "Crimson Fists"
+  STR_IMPERIALFISTS_FACTION: "Imperial Fists"
+  STR_SPACEWOLVES_FACTION: "Space Wolves"
+  STR_SALAMANDERS_FACTION: "Salamanders"
+  STR_LEGIONDAMNED_FACTION: "Legion of the Damned"
+  STR_DEATHCOMPANY_FACTION: "Death Company"
+  STR_WHITESCARS_FACTION: "White Scars"
 
   STR_GUARDS_M_LV1_AI: "Guardsman"
   STR_GUARDS_OFF_LV1_AI: "Officer"
@@ -10524,9 +10582,37 @@ en-US:  #  yamllint disable-line rule:empty-values
   SLGUARD_ARMOR_OFF_M_LV2: "SL Officer's Carapace Armor"
 
   STR_IGOPFOR_TIER0: "Imperial Recruits"
-  STR_IGOPFOR_TIER0PLUS: "Imperial Guards"
-  STR_IGOPFOR_TIER1: "Veteran Imperial Guards"
-  STR_IGOPFOR_TIER2: "Elite Imperial Guards"
+  STR_IGOPFOR_ABHUMAN_TIER0: "Imperial Abhuman Recruits"
+  STR_IGOPFOR_TIER0PLUS: "Imperial Guard"
+  STR_IGOPFOR_ABHUMAN_TIER0PLUS: "Imperial Abhuman Force"
+  STR_IGOPFOR_TIER1: "Veteran Imperial Guard"
+  STR_IGOPFOR_TIER2: "Elite Imperial Guard"
+
+  STR_IGOPFOR_OPEN_MISSILE_SENTINEL: "Open Missile Sentinel"
+  STR_IGOPFOR_OPEN_SENTINEL_MISSILE_ARMOR: "Open Missile Sentinel"
+  STR_IGOPFOR_OPEN_LASCANNON_SENTINEL: "Open Lascannon Sentinel"
+  STR_IGOPFOR_OPEN_SENTINEL_LASCANNON_ARMOR: "Open Lascannon Sentinel"
+  STR_IGOPFOR_MISSILE_SENTINEL: "Missile Sentinel"
+  STR_IGOPFOR_SENTINEL_MISSILE_ARMOR: "Missile Sentinel"
+  STR_IGOPFOR_LASCANNON_SENTINEL: "Lascannon Sentinel"
+  STR_IGOPFOR_SENTINEL_LASCANNON_ARMOR: "Lascannon Sentinel"
+  STR_IGOPFOR_HEAVY_PLASMA_SENTINEL: "Heavy Plasma Sentinel"
+  STR_IGOPFOR_SENTINEL_HEAVY_PLASMA_ARMOR: "Heavy Plasma Sentinel"
+
+  STR_BEASTGUARD_PENITENT_IGOPFOR: "Penitent Beastman"
+  STR_BEASTGUARD_FLAK_IGOPFOR: "Guard Beastman"
+  STR_BEASTGUARD_FLAKMEDIC_IGOPFOR: "Beastguard Medic"
+  STR_BEASTGUARD_CARAPACE_IGOPFOR: "Guard Beastman Veteran"
+
+  STR_IGOPFOR_SQUATS_FLAK: "Guard Squat"
+  STR_IGOPFOR_SQUATS_CARAPACE: "Guard Squat"
+  STR_SHARPSHOOTER_FEMALE_IGOPFOR: "Guard Sharpshooter"
+  STR_SHARPSHOOTER_MALE_IGOPFOR: "Guard Sharpshooter"
+
+  STR_OGRYN_IGOPFOR: "Ogryn"
+  STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR: "Buckler Bullgryn"
+  STR_BULLGRYN_BUCKLER_IGOPFOR: "Buckler Bullgryn"
+  STR_BULLGRYN_SLAB_IGOPFOR: "Slab Bullgryn"
 
   STR_SLEGOPFOR_TIER1: "Steel Legion"
   STR_SLEGOPFOR_TIER2: "Veteran Steel Legion"
@@ -10539,11 +10625,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SMOPFOR_M5: "Ultramarine Defense M5"
   STR_SMOPFOR_M7: "Ultramarine Spaceport M7"
 
-
   STR_BTOPFOR_TIER0: "Black Templar Combat Patrol"
   STR_BTOPFOR_TIER0PLUS: "Black Templar War Patrol"
   STR_BTOPFOR_TIER1: "Black Templar Fighting Company"
   STR_BTOPFOR_TIER2: "Black Templar Crusade Force"
+
+  STR_BTANDFIERYHEART_OPFOR_TIER0: "Black Templar Combat Patrol"
+  STR_BTANDFIERYHEART_OPFOR_TIER0PLUS: "Black Templar War Patrol"
+  STR_BTANDFIERYHEART_OPFOR_TIER1: "Black Templar Fighting Company"
 
   STR_SWOPFOR_TIER0: "Space Wolves Youngpack"
   STR_SWOPFOR_TIER0PLUS: "Space Wolves Huntingpack"
@@ -10583,6 +10672,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 
   STR_SPACEMARINE_SCOUT_AI: "Ultramarine Scout"
+  STR_SPACEMARINE_ADVSCOUT_AI: "Ultramarine Adv. Scout"
   STR_SPACEMARINE_TAC_AI: "Ultramarine Tactical"
   STR_SPACEMARINE_DEV_AI: "Ultramarine Devastator"
   STR_SPACEMARINE_ASS_AI: "Ultramarine Assault"
@@ -10595,6 +10685,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_UMDREAD_AI: "Ultramarine Dreadnought"
 
   STR_SPACEMARINEARMOR_SCOUT: "Ultramarine Scout Armor"
+  STR_SPACEMARINEARMOR_ADVSCOUT: "Ultramarine Adv. Scout Armor"
   STR_SPACEMARINEARMOR_TAC: "Ultramarine Tactical Armor"
   STR_SPACEMARINEARMOR_DEV: "Ultramarine Devastator Armor"
   STR_SPACEMARINEARMOR_ASS: "Ultramarine Assault Armor"
@@ -10691,6 +10782,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   WSBIKE_CORPSE4: "White Scars Bike Wreck"
 
   STR_SALAMANDER_SCOUT_AI: "Salamander Scout"
+  STR_SALAMANDER_ADVSCOUT_AI: "Salamander Adv. Scout"
   STR_SALAMANDER_TAC_AI: "Salamander Tactical"
   STR_SALAMANDER_DEV_AI: "Salamander Devastator"
   STR_SALAMANDER_ASS_AI: "Salamander Assault"
@@ -10705,6 +10797,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SLMDREAD_AI: "Salamander Dreadnought"
 
   STR_SALAMANDERARMOR_SCOUT: "Salamander Scout Armor"
+  STR_SALAMANDERARMOR_ADVSCOUT: "Salamander Adv. Scout Armor"
   STR_SALAMANDERARMOR_TAC: "Salamander Tactical Armor"
   STR_SALAMANDERARMOR_DEV: "Salamander Devastator Armor"
   STR_SALAMANDERARMOR_ASS: "Salamander Assault Armor"
@@ -10719,6 +10812,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   SLMDREAD_ARMOR: "Salamander Dread Armor"
 
   STR_SALAMANDERSCOUT_AICORPSE: "Salamander Scout Corpse"
+  STR_SALAMANDERADVSCOUT_AICORPSE: "Salamander Adv. Scout Corpse"
   STR_SALAMANDERMK7_AICORPSE: "Salamander Marine Corpse"
   STR_SALAMANDERSARGENT_AICORPSE: "Salamander Sergeant Corpse"
   STR_SALAMANDERHONOR_AICORPSE: "Salamander Honor Guard Corpse"
@@ -10744,6 +10838,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_STEELLEGION_CARAPACE_OFFICER_CORPSEAI: "SL Veteran Officer Corpse"
 
   STR_SCOUT_AICORPSE: "Ultramarine Scout Corpse"
+  STR_ADVSCOUT_AICORPSE: "Ultramarine Adv. Scout Corpse"
   STR_MK7_AICORPSE: "Ultramarine Corpse"
   STR_SARGENT_AICORPSE: "Ultramarine Sergeant Corpse"
   STR_TERMINATOR_AICORPSE: "Ultramarine Terminator Corpse"
@@ -10824,6 +10919,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   SLGUARD_ARMOR_OFF_M_LV2_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
 
   STR_SPACEMARINEARMOR_SCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
+  STR_SPACEMARINEARMOR_ADVSCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SPACEMARINEARMOR_TAC_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SPACEMARINEARMOR_DEV_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SPACEMARINEARMOR_ASS_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
@@ -10869,6 +10965,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WHITESCARSBIKE_ARMOR_UC_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_WHITESCARSARMOR_ASS_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SALAMANDERARMOR_SCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
+  STR_SALAMANDERARMOR_ADVSCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SALAMANDERARMOR_TAC_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SALAMANDERARMOR_DEV_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SALAMANDERARMOR_ASS_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
@@ -11612,6 +11709,8 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   BASE: "BASE"  # noticed this one in the log so adding it in the language file just in case
 
+  STR_INQUISITION_OUTPOSTWB: "Minor Inquisition Outpost"
+
   STR_ULTRAMARINE_BASEV2: "Ultramarine Fortress"
   STR_BLACKTEMPLAR_BASEV2: "Black Templars Fortress"
   STR_SPACEWOLVES_BASEV2: "Space Wolves Fortress"
@@ -11848,20 +11947,35 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   # space marines enemy ship
 
+  STR_SMMEDIUM_SCOUT: "Imperial Interceptor"
   STR_SMMEDIUM_SCOUT_DOUBLE: "Imperial Transport"
   STR_SMLARGE_SCOUT: "Imperial Vanguard"
+  STR_SMLARGE_SCOUT2: "Imperial Escort"
+  STR_SMHARVESTER: "Imperial Destroyer"
+  STR_SMTERROR_SHIP: "Imperial Barge"
   STR_SMABDUCTOR: "Imperial Cruiser"
+  STR_SMSUPPLY_SHIP: "Imperial Supply Ship"
   STR_SMBATTLESHIP: "Imperial Battleship"
 
-  STR_IMPERIAL_TERROR: "Imperial Terror"
-  STR_IMPERIAL_TERROR_HARD: "Imperial Terror"
-  STR_IMPERIALTERROR_MISSION: "Imperial Terror"
-  STR_IMPERIALTERROR_MISSION_HARD: "Imperial Terror"
+
+  STR_IMPERIAL_TERROR: "Imperial Purge"
+  STR_IMPERIAL_TERROR_HARD: "Imperial Purge"
+  STR_IMPERIALTERROR_MISSION: "Imperial Purge"
+  STR_IMPERIALTERROR_MISSION_HARD: "Imperial Purge"
   STR_IMPERIALS_TERRORISE: "IMPERIAL ATTACK"
   STR_IMPERIALS_TERROR_MISSION_BRIEFING: "An affiliated Chaos Cult is under attack, the cultists are in disarray. We must retake the position and fortify by eliminating all Imperial threats in the area. Glory to Chaos !"
   STR_IMPERIALS_RETALIATION: "Imperial Retaliation"
   STR_IMPERIALS_PATROL: "Imperial Patrol"
   STR_IMPERIALS_SUPPLY: "Imperial Supply"
+  STR_IMPERIALS_RESEARCH: "Imperial Investigation"
+  STR_IMPERIALS_ABDUCTION: "Imperial Raid"
+  STR_IMPERIALS_ABDUCTION_BRIEFING: "The Imperials are searching for agents and dissidents to arrest and interrogate. While we have no agents operating here we can inflict pain on the Imperials and lead their suspicions astray by interdicting these missions."
+  STR_IMPERIALS_HARVEST: "Imperial Sweep"
+  STR_IMPERIALS_HARVEST_BRIEFING: "The Imperials are conducting a sweep of the sector for dissidents and would be heretics. No doubt their victims will be turned into servitors and executed, eventually. Let's disrupt their operations and bait them into chasing their own shadows."
+  STR_SALAMANDERS_ABDUCTION: "Salamanders Raid"
+  STR_SALAMANDERS_ABDUCTION_BRIEFING: "The Salamanders are searching for agents and dissidents to arrest and interrogate. While we have no agents operating here we can inflict pain on the Imperials and lead their suspicions astray by interdicting these missions."
+  STR_SALAMANDERS_HARVEST: "Salamanders Sweep"
+  STR_SALAMANDERS_HARVEST_BRIEFING: "The Salamanders are conducting a sweep of the sector for refugees and citizens in need of aid. Their attempts at charity will no doubt end in disaster, but we should do our outmost to hasten it along to prevent them disrupting our efforts in the area."
   STR_NEWIMPERIALGUARD_BASE: "Imperial Outpost Creation"
   STR_NEWIMPERIALGUARD_BASEV2: "Imperial Base Creation"
   STR_NEWSPACEMARINE_BASE: "Imperial Base Creation"
@@ -11882,9 +11996,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_DANEWSPACEMARINE_BASE2: "Dark Angels Base Creation"
 
 
+  STR_SLMMEDIUM_SCOUT: "Salamanders Interceptor"
   STR_SLMMEDIUM_SCOUT_DOUBLE: "Salamanders Transport"
   STR_SLMLARGE_SCOUT: "Salamanders Vanguard"
+  STR_SLMLARGE_SCOUT2: "Salamancers Escort"
+  STR_SLMHARVESTER: "Salamancers Destroyer"
+  STR_SLMTERROR_SHIP: "Salamancers Barge"
   STR_SLMABDUCTOR: "Salamanders Cruiser"
+  STR_SLMSUPPLY_SHIP: "Salamancers Supply Ship"
   STR_SLMBATTLESHIP: "Salamanders Battleship"
 
   STR_SLMIMPERIAL_TERROR: "Salamanders Terror"

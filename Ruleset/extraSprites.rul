@@ -308,6 +308,7 @@ extraSprites:
       233: Resources/Crafts/Leman_dogfight.png
       234: Resources/Crafts/Cassium_dogfight.png
       235: Resources/Crafts/Gorgon_minimised.png
+      246: Resources/Crafts/Gorgon_dogfight.png
       300: Resources/Droppod/Droppod_minimised.gif
       311: Resources/Droppod/Droppod_dogfight.gif
       403: Resources/Crafts/thawkrad_minimised.gif
@@ -811,10 +812,35 @@ extraSprites:
     fileSingle: Resources/Pedia/WBannointcommendation.png
 
 
-
   - typeSingle: VINDICAREINV.SPK  # MONK INV
     fileSingle: Resources/UnitSprites/Armors/imperial_assassin_inventory.png
 
+
+  - type: CLOSED_SENTINEL_MISSILE_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/FOES/Battlesprites/CLOSED_SENTINEL_MISSILE_BS.png
+  - type: CLOSED_SENTINEL_LASCANNON_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/FOES/Battlesprites/CLOSED_SENTINEL_LASCANNON_BS.png
+
+  - typeSingle: IGOPFOR_OPEN_SENTINEL_MISSILES_INV.SPK
+    fileSingle: Resources/FOES/Inventory/IMPERIALS/IGOPFOR_OPEN_SENTINEL_MISSILES_INV.png
+  - typeSingle: IGOPFOR_OPEN_SENTINEL_LASCANNON_INV.SPK
+    fileSingle: Resources/FOES/Inventory/IMPERIALS/IGOPFOR_OPEN_SENTINEL_LASCANNON_INV.png
+  - typeSingle: IGOPFOR_SENTINEL_MISSILES_INV.SPK
+    fileSingle: Resources/FOES/Inventory/IMPERIALS/IGOPFOR_SENTINEL_MISSILES_INV.png
+  - typeSingle: IGOPFOR_SENTINEL_LASCANNON_INV.SPK
+    fileSingle: Resources/FOES/Inventory/IMPERIALS/IGOPFOR_SENTINEL_LASCANNON_INV.png
+  - typeSingle: IGOPFOR_SENTINEL_HEAVY_PLASMA_INV.SPK
+    fileSingle: Resources/FOES/Inventory/IMPERIALS/IGOPFOR_SENTINEL_HEAVYPLASMA_INV.png
 
   - type: STORMTROOPER_CARAPACE_OFFICER.PCK
     width: 512
@@ -9454,6 +9480,25 @@ extraSprites:
 
   # player word bearers
 
+  - typeSingle: WBARMORMK3MARINEPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/wbmk3marinecodex.png
+
+  - typeSingle: WBARMORMK3BREACHERPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/wbbreachercodex.png
+
+  - typeSingle: WBARMORMK3ASHENPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/wbashencodex.png
+
+
+  - typeSingle: WBARMORMARINEPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/wbmarinecodex.png
+
+  - typeSingle: WBARMORHAVOCPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/wbhavoccodex.png
+
+  - typeSingle: WBARMORRAPTORPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/wbraptorcodex.png
+
   - typeSingle: WORDBEARERS_INTRO1_CODEX.SPK
     fileSingle: Resources/CODEX/WBCODEXINTROCREW.png
 
@@ -10898,6 +10943,9 @@ extraSprites:
   - typeSingle: SPACEMARINEARMOR_SCOUT.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/SCOUTAI.png
 
+  - typeSingle: SPACEMARINEARMOR_ADVSCOUT.PCK
+    fileSingle: Resources/FOES/Inventory/IMPERIALS/SMADVscoutAIinvent.png
+
   - typeSingle: SPACEMARINEARMOR_TAC.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/TACTICALAI.png
 
@@ -10921,6 +10969,14 @@ extraSprites:
 
   - typeSingle: SPACEMARINEARMOR_CAPTAIN.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/UMcaptain.png
+
+  - type: SPACEMARINEADVscoutbattle.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/FOES/Battlesprites/SMADVscoutAIbattle.png
 
   - type: SPACEMARINECAPTAINbattle.PCK
     width: 512
@@ -11148,6 +11204,9 @@ extraSprites:
   - typeSingle: SALAMANDERARMOR_SCOUT.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/SLMscoutAIinvent.png
 
+  - typeSingle: SALAMANDERARMOR_ADVSCOUT.PCK
+    fileSingle: Resources/FOES/Inventory/IMPERIALS/SLMADVscoutAIinvent.png
+
   - typeSingle: SALAMANDERARMOR_TAC.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/SLMtacticalAIinvent.png
 
@@ -11189,6 +11248,14 @@ extraSprites:
     subY: 40
     files:
       0: Resources/FOES/Battlesprites/SLMscoutAIbattle.png
+
+  - type: SALAMANDERADVscoutbattle.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/FOES/Battlesprites/SLMADVscoutAIbattle.png
 
   - type: SALAMANDERtacbattle.PCK
     width: 512
