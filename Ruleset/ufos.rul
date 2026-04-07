@@ -136,13 +136,13 @@ ufos:
       name: CH001_SLAAN
       mapDataSets:
         - BLANKS
-        - CH2
-        - CH3
-        - CHI1_40k
+        - CH2_40k
+        - CH3_40k
+        - CHI1_S_40k
         - CHI2_40k
         - CHI3_40k
         - CHI4_40k
-        - CHI5_40k
+        - CHI5_S_40k
       mapBlocks:
         - name: CH001_SLAAN
           width: 10
@@ -6395,3 +6395,268 @@ ufos:
               - [3, 11, 0]
               - [24, 5, 1]
               - [5, 5, 1]
+
+  # inquisition ai ships
+
+  - type: STR_INQMEDIUM_SCOUT #transport
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_SMALL
+    modSprite: InterceptionUFO-02
+    damageMax: 220
+    speedMax: 1600
+    accel: 5
+    power: 8
+    range: 65
+    score: 75
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: INQSHPCH02
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH02
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+
+  - type: STR_INQLARGE_SCOUT2 #Hell Cruiser
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_MEDIUM_UC #smaller than the pancake, only 1 floor
+    modSprite: InterceptionUFO-03
+    damageMax: 500
+    speedMax: 2000
+    accel: 5
+    power: 8
+    range: 65
+    score: 125
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: INQSHPCH03
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH03
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 0]
+              - [13, 16, 0]
+
+  - type: STR_INQABDUCTOR
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-05
+    damageMax: 1400
+    speedMax: 1300
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1500
+    battlescapeTerrainData:
+      name: INQSHPCH05
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH05
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 4, 1]
+              - [9, 4, 1]
+              - [10, 4, 1]
+              - [11, 4, 1]
+
+  - type: STR_INQHARVESTER
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-04
+    damageMax: 1000
+    speedMax: 800
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1000
+    battlescapeTerrainData:
+      name: INQSHPCH04B
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH04B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [8, 10, 0]
+
+  - type: STR_INQTERROR_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-08
+    damageMax: 3000
+    speedMax: 2800
+    accel: 6
+    power: 50
+    range: 65
+    score: 500
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: INQSHPCH06
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH06
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [9, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [5, 15, 1]
+              - [6, 15, 1]
+
+  - type: STR_INQSUPPLY_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-06
+    damageMax: 5400
+    speedMax: 1200
+    accel: 6
+    power: 30
+    range: 65
+    score: 400
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: INQSHPCH08
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH08
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+
+  - type: STR_INQBATTLESHIP
+    marker: 18
+    markerLand: 23
+    markerCrash: 28
+    alertSound: 36
+    size: STR_VERY_LARGE
+    modSprite: InterceptionUFO-07
+    damageMax: 7000
+    speedMax: 1000
+    accel: 2
+    power: 150
+    range: 65
+    score: 700
+    reload: 24
+    breakOffTime: 4000
+    battlescapeTerrainData:
+      name: INQSHPCH07
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH07
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [12, 3, 0]
+              - [13, 3, 0]
+              - [14, 3, 0]
+              - [15, 3, 0]
+              - [16, 3, 0]
+              - [17, 3, 0]
+              - [2, 12, 0]
+              - [3, 12, 0]
+              - [26, 12, 0]
+              - [27, 12, 0]
