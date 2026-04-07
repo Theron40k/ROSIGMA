@@ -14,6 +14,9 @@ ru:  #  yamllint disable-line rule:empty-values
 # *** MISC **********************************************************************
   STR_OPENXCOM: "40000 - ROSIGMA 3.2"
   IMPERIUM: "ИМПЕРИУМ"
+  ARMO: "ОРУЖЕЙНАЯ"
+  MILL: "КУЗНИЦА"
+  STR_XCOM_AGENTS_HAVE_LOCATED_AN_ALIEN_BASE_IN_REGION: "Мы обнаружили присутствие противника на планете"
 
   STR_HWP_CAPACITY: " "  # uncomment to check for HWP: -1  # SpeedC is an exception
   STR_COUNTRY_HAS_SIGNED_A_SECRET_PACT: "{0} попал под влияние Хаоса и был осквернен. Уничтожьте оплот Хаоса и верните сектор!"
@@ -262,7 +265,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_BASIC_SPAWN_TACTICAL_MARINES_RESEARCH: "Запрос: Тактические Десантники"
   STR_BASIC_SPAWN_DEVASTATOR_MARINES_RESEARCH: "Запрос: Опустошители"
   STR_BASIC_SPAWN_ASSAULT_MARINES_RESEARCH: "Запрос: Штурмовики"
-  STR_MCRIFLE_UFOPEDIA: "{NEWLINE} Изысканное и украшенное, улучшенное оружие всем видом показывает свою огневую мощью. Каждый компонент оружия создан, испытан, помазан и откалиброван техножрецами и технодесантниками, а также благословлен Омниссией."
+  STR_MCRIFLE_UFOPEDIA: "{NEWLINE} Изысканное и украшенное, улучшенное оружие всем видом показывает свою огневую мощью. Каждый компонент оружия создан, испытан, помазан и откалиброван техножрецами и технодесантниками, а также благословлен Омниссией.{NEWLINE}{NEWLINE}Отдача: {ALT}40"
 
   STR_SMGIVESECONDINTERCEPTOR: "Коготи Бури Прибыли"
   STR_GIVESECONDINTERCEPTOR_DESCRIPTION: "Перехватчики Когти Бури прибыли и уже находятся в ваших ангарах."
@@ -1045,6 +1048,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_IRON_GUARD_SERVITOR_CODEX: "{NEWLINE} Процесс создания Стражей Железа - тщательно охраняемый секрет Кузнецов Войны Железных Воинов. Вид Боевого Сервитора, для которого требуются живые люди, кто может пережить процесс превращения в эффективного и бесстрашного бойца."
   STR_PRODUCE_IRON_GUARD: "Создать Сервитор Сраж Железа"
 
+  STR_NECRON_EARLY: "Пробуждение Некронов"
   STR_NECRONTECH_RESEARCH: "Ксенотехнологии Некронов"
   STR_SCARAB_R_WEAPON: "Мандибулы"
   STR_SCARAB_L_WEAPON: "Жвалы"
@@ -1289,6 +1293,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_LIVE_CAPTURE_GUARDAI_STORMTROOPER: "Имперский Штурмовик"
   STR_LIVE_CAPTURE_GUARDAI_SQUAT: "Имперский Скват"
   STR_LIVE_CAPTURE_GUARDAI_PSYKER: "Санкционированный Псайкер"
+  STR_LIVE_CAPTURE_OGRYNOPFOR: "Имперский Огрин"
 
 # Reeducation captive recruitment
 
@@ -1352,6 +1357,7 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_COLLAR_TRAITOR_GUARDSMAN_INQ: "Заключение: Гвардеец Ренегат"
   STR_COLLAR_CULTIST_INQ: "Заключение: Культист"
+  STR_COLLAR_PRIMORIDAL_CULTIST_INQ: "Заключение: Культист Хаоса"
   STR_COLLAR_CULTIST_LEADER_INQ: "Заключение: Культист Лидер"
   STR_COLLAR_WITCH_INQ: "Заключение: Ведьма"
   STR_COLLAR_TRAITOR_VETERAN_INQ: "Заключение: Ветеран Ренегат"
@@ -1402,6 +1408,7 @@ ru:  #  yamllint disable-line rule:empty-values
 # IG version of the recruit manufacturing
   STR_COLLAR_TRAITOR_GUARDSMAN_IG: "Заключение: Гвардеец Ренегат"
   STR_COLLAR_CULTIST_IG: "Заключение: Культист Еретик"
+  STR_COLLAR_PRIMORIDAL_CULTIST_IG: "Заключение: Культист Хаоса"
   STR_COLLAR_CULTIST_LEADER_IG: "Заключение: Культист Лидер"
   STR_COLLAR_WITCH_IG: "Заключение: Ведьма"
   STR_COLLAR_TRAITOR_VETERAN_IG: "Заключение: Гвардеец Ренегат Вет."
@@ -1598,6 +1605,8 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_LEGIONDAMNED_TESTLIST: "Легион Проклятых"
   STR_DEATHCOMPANY_TESTLIST: "Рота Смерти"
+
+  STR_IMPADVSCOUT_TESTLIST: "Скауты II"
 
 # HULK MISSION
   STR_ORK_SPACEHULK: "Орки Флибустьеры" # ORKMOD
@@ -1828,6 +1837,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLAAN_ADEPTAS_CORRUPTED_ARMOR: "Оскверненная Броня"
   STR_SLAAN_ADEPTAS_CORRUPTED_ARMOR_BLESSED: "Оскверненная Броня"
   STR_LEAD_BY_EXAMPLE: "Личный Пример"
+  STR_LEAD_BY_EXAMPLE_CANONESS: "Личный Пример"
   STR_REPENTIA_SUPERIOR_CORPSE: "Труп Старшей Кающейся"
   STR_REP_SUPERIOR_CORPSE: "Труп Старшей Кающейся"
   STR_PRODUCE_REPSUPERIOR_HONOR: "Инвентарь Сташей Кающейся"
@@ -1944,7 +1954,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ORK_ARDESTBOY_CORPSE: "Труп Крепкого Орка" # ORKMOD
   STR_ORK_KOMMANDOZ: "Орк Коммандозз" # ORKMOD
   STR_ORK_KOMMANDOZ_SNIPER: "Снайпер Коммандозз"
-  STR_ORK_KOMMANDOZ_TO_HONOR: "Обмен:Трупа Орка Коммандозз"
+  STR_ORK_KOMMANDOZ_TO_HONOR: "Обмен:Труп Орка Коммандозз"
   STR_ORKKOMMANDO_CORPSE: "Труп Орка Коммандозз" # ORKMOD
   STR_ORK_ARMORKommando: "Орк Коммандозз" # ORKMOD
   STR_ORK_ARMOR_KOMMANDO_SNIPER: "Орк Коммандозз Снайпер"
@@ -2001,7 +2011,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ORK_FLASHGITZ_AUTOPSY: "Орк Понторез-происхождение"
   STR_FLASHGITZ_CORPSE: "Труп Понтореза" # ORKMOD
   STR_ORK_FLASHGITZ_CORPSE: "Труп Понтореза" # ORKMOD
-  STR_ORK_FLASHGITZ_CORPSE_FOR_HONOR: "Обмен:Трупа Понтореза"
+  STR_ORK_FLASHGITZ_CORPSE_FOR_HONOR: "Обмен:Труп Понтореза"
   STR_ORK_FLASHGITZ_ARMOR: "Орк Понторез"
   STR_ORK_FLASHGITZ_UFOPEDIA: "{NEWLINE} Орк Понторез-происхождение"
   STR_ORK_FLASHGITZARMOR_UFOPEDIA: "{NEWLINE} Дорогая по стандартам орков и тщательно изготовленная броня Понторезов на удивление хорошо сочетается с их оружием. Имеет защиту эквивалентную некоторым типам панцирного доспеха."
@@ -2558,7 +2568,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_HRUD_STORMVERMIN_OFFICER_UFOPEDIA: "{NEWLINE} У лидера кагорты лучшая броня и снаряжение среди их сородичей."
 
   # Nurgle
-  STR_NURGLE_ELITE: "Немертвая Стража Нургла"
+  STR_NURGLE_EARLY: "Авангард Нургла"
+  STR_NURGLE_ELITE: "Гвардия Смерти Нургла"
 
   STR_NURGLE_CIVILIAN_RACELIST: "Культ Чумы"
   STR_NURGLE_ZOMBINO_RACELIST: "Ясли Нургла"
@@ -2681,15 +2692,15 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_CHAOS_GRAVPISTOL: "ГравиПистоль Хаоса"
   STR_CHAOS_MC_GRAVPISTOL: "Наградной ГравиПистоль Хаоса"
   STR_CHAOS_AUTOCANNON_HANDHELD: "Автопушка Армагеддон"
-  STR_CHAOS_AUTOCANNON_HANDHELD_UFOPEDIA: "{NEWLINE} После Третьей войны за Армагеддон данная модель автопушки получила широкое распространение на черном рынке, теперь ее часто можно встретить в руках предателей и даже бандитов."
+  STR_CHAOS_AUTOCANNON_HANDHELD_UFOPEDIA: "{NEWLINE} После Третьей войны за Армагеддон данная модель автопушки получила широкое распространение на черном рынке, теперь ее часто можно встретить в руках предателей и даже бандитов.{NEWLINE}{NEWLINE}Отдача: {ALT}70"
   STR_AUTOCANNON_KALIBRAX: "Автопушка Калибракс"
-  STR_AUTOCANNON_KALIBRAX_UFOPEDIA: "{NEWLINE} Эта модель автопушки широко применялась во времена Великого Крестового Похода, но сейчас она на встречается только у еретиков."
+  STR_AUTOCANNON_KALIBRAX_UFOPEDIA: "{NEWLINE} Эта модель автопушки широко применялась во времена Великого Крестового Похода, но сейчас она на встречается только у еретиков.{NEWLINE}{NEWLINE}Отдача: {ALT}70"
   STR_CASSC: "Автопушка Жнец"
   STR_AUTOCANNON_AMMO: "Барабан Автопушки"
   STR_AUTOCANNON_HE_AMMO: "Барабан Автопушки/Р"
   STR_AUTOCANNON_AP_AMMO: "Барабан Автопушки/ББ"
   STR_AUTOCANNON_BOX_AMMO: "Короб Боепр. Автопушки"
-  STR_CHAOS_CHAIN_AXE: "Пилотопор Хаоса"
+  STR_CHAOS_CHAIN_AXE: "Пилотопор Еретиков"
 
 # CHAOS OGRYN
   STR_TRAITORGUARD_OGRYN: "Огрины Ренегаты"
@@ -2706,8 +2717,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TRAITORGUARD_OGRYN_REDBLACK_AUTOPSY_UFOPEDIA: "{NEWLINE} Огрины Хаоса - большие НЕ-люди, которые были введены в заблуждение Хаосом. Их можно встретить в многих культах Хаоса или в качестве охранников предателей."
   STR_TRAITORGUARD_OGRYN_REDBLACK_UFOPEDIA: "{NEWLINE} Огрины Хаоса с поразительной легкостью владеют тяжелым вооружением, таким как тяжелый стабер. Их панцирная броня в сочетании с их физической силой и выносливостью делает их опасными противниками."
   STR_TRAITORGUARD_OGRYN_REDBLACK_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
-  STR_TRAITORGUARD_OGRYN_CORPSE_FOR_HONOR: "Обмен: Трупа Огрина Ренегата"
-  STR_TRAITORGUARD_OGRYN_REDBLACK_CORPSE_FOR_HONOR: "Обмен:Трупа Огрина Хаоса"
+  STR_TRAITORGUARD_OGRYN_CORPSE_FOR_HONOR: "Обмен:Труп Огрина Ренегата"
+  STR_TRAITORGUARD_OGRYN_REDBLACK_CORPSE_FOR_HONOR: "Обмен:Труп Огрина Хаоса"
 
 # CHAOS GENERAL
   STR_UNDIVIDED_CULT: "Культ Хаоса Неделимого"  # Mid Tier Chaos cult, Undivided
@@ -2722,7 +2733,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_CHAOS_PENETANTE_UFOPEDIA: "{NEWLINE} Эти трусы используются силами Хаоса, как безграничный ресурс, чтобы прорвать нашу оборону и на которых приходится тратить ценные боеприпасы. Владеют грубым холодным оружием, простыми стаберами. Носят ошейники с взрывчаткой."
   STR_CHAOS_PENETANTE_AUTOPSY: "Заключенные Хаоса-происхождение"
   STR_CHAOS_PENETANTE_AUTOPSY_UFOPEDIA: "{NEWLINE} Легион Заключенных Хаоса состоят из пленных гвардейцев, СПО и мирных жителей которые перешли на сторону Хаоса и оказались слишком трусливы, чтобы умереть за Императора. Пушечное мясо, оснащенное ошейниками и жилетами с взрывчаткой, идущие толпой на аванпосты и укрепления имперских сил , используются для прореживания имперской обороны."
-  STR_CHAOS_PENETANTE_CORPSE_FOR_HONOR: "Обмен:Трупа Заключенного Хаоса"
+  STR_CHAOS_PENETANTE_CORPSE_FOR_HONOR: "Обмен:Труп Заключенного Хаоса"
 
   STR_HERETEK: "ЕреТЕХ"
   STR_CHAOS_HERETEK: "ЕреТЕХ"
@@ -2732,7 +2743,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_CHAOS_HERETEK_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_CHAOS_HERETEK_AUTOPSY: "ЕреТЕХ-происхождение"
   STR_CHAOS_HERETEK_AUTOPSY_UFOPEDIA: "{NEWLINE} ЕреТЕХ - Темных Механикус , техножрецы-предатели, вместе с Рыцарями Хаоса они составляют инженерный костяк сил Хаоса, производят и содержат свою технику, корабли и даже титанов."
-  STR_CHAOS_HERETEK_CORPSE_FOR_HONOR: "Обмен:Трупа ЕреТЕХа"
+  STR_CHAOS_HERETEK_CORPSE_FOR_HONOR: "Обмен:Труп ЕреТЕХа"
 
   STR_KHRONE_BERSERKERS: "Берсеркеры Кхорна"
   STR_KHORNE_ELITE: "Терминаторы Кхорна"
@@ -2756,7 +2767,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_KHORNEGOR_UNGOR: "Хорнунгор"
   STR_KHORNE_UNGOR: "Хорнунгор"
   STR_KHORNEUNGOR_CORPSE: "Труп Хорнунгор"
-  STR_KHORNEGOR_UNGOR_TO_HONOR: "Обмен:Трупа Хорнунгора"
+  STR_KHORNEGOR_UNGOR_TO_HONOR: "Обмен:Труп Хорнунгора"
   STR_KHORNEGOR_UNGOR_UFOPEDIA: "{NEWLINE} Хорнунгоры носят, собранные культистами Хаоса и рабами,  трофейные пластины бронежилетов и панцирной брони для увеличения фронтальной брони этих ударноавангардных войск."
   STR_KHORNE_UNGOR_ARMOR: "Хорнунгор"
   STR_KHORNEGOR_UNGOR_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
@@ -2781,6 +2792,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ALIEN_BASE_ASSAULT_SLAANESH_BRIEFING: "Мерзкая почва сотрясается под нашими сапогами . Обратите в бегство полураздетых рабов Слаанеш и уничтожайте их, пока они прячутся в своем убежище разврата. Без колебаний уничтожте их наглого и постоянно ухмыляющегося командира! Очистите это место огем и мечом!"
   STR_ALIEN_BASE_ASSAULT2_SLAANESH_BRIEFING: "Сам воздух кипит от манящих ароматов и стонов содрогающихся стен. Соберите всю свою силу и направте ее на поклонников Слаанеш. Захватите их командира и уничтожьте командный центр!"
 
+  STR_SLAANESH_CULT_EARLY: "Культ Слаанеш"
+  STR_SLAANESH_EARLY: "Дети Слаанеш" #First quarter chaos base
   STR_SLAANESH_LATE: "Избранные Слаанеш" # Month 10-12+
   # The slick soil shivers beaneath our sabatons, send the scantily clad servants of Slaanesh scurrying and locate the shimmering entrance inside their scandalous halls!"
 
@@ -2864,7 +2877,48 @@ ru:  #  yamllint disable-line rule:empty-values
   CIVILIAN_HEDONITE_ARMOR_BLESSED_ALPHA_SACRIFICE: "Подношение Слаанешу"
   STR_CIVILIAN_HEDONITE_CORPSE: "Труп Гедониста Слаанеш"
 
-# SLAANGOR
+  STR_SLAANESH_CULTIST_BIGM: "Культист Качок Слаанеш"
+  STR_SLAANESH_CULTIST_BIGM_ARMOR: "Культист Качок Слаанеш"
+  STR_SLAANESH_CULTIST_BIGM_CORPSE: "Труп Культиста Слаанеш"
+  STR_SLAANESH_CULTIST_BIGM_ORIGINS: "Культист Качок-происхождение"
+  STR_SLAANESH_CULTIST_BIGM_ORIGINS_UFOPEDIA: "{NEWLINE} Культисты Слаанеша вводят себе любые доступные препараты для улучшения телосложения. Усиливая свое физичское и эмоциональное состояние, их накачанные стероидами тела могут стать непреодалимой преградой для ваших бойцов."
+  STR_SLAANESH_CULTIST_BIGM_UFOPEDIA: "{NEWLINE} Качки, накачанные стероидами носят только то, что демонстративно подчеркивает их превосходную физическую форму, а их измененные от стимуляторов чувства искажают причинение боли обычными способами."
+
+# SHARDSPEAKER
+  STR_SLAANESH_SHARDSPEAKER: "Словоблудец"
+  STR_SLAANESH_SHARDSPEAKER_COMMANDER: "Колдунья Словоблудица"
+  STR_SLAANESH_SHARDSPEAKER_CORPSE: "Труп Словоблудца"
+  STR_SLAANESH_SHARDSPEAKER_COMMANDER_CORPSE: "Труп Колдуньи Слаанеш"
+  STR_SLAANESH_SHARDSPEAKER_ARMOR: "Словоблудец"
+  STR_SLAANESH_SHARDSPEAKER_COMMANDER_ARMOR: "Колдунья Слаанеш"
+  STR_SLAANESH_SHARDSPEAKER_UFOPEDIA: "{NEWLINE} Непревзойденные ораторы Слаанеша, облаченные в рогатые шлемы и тончайший розовый шелка, с гордостью демонстрируют свою декадентскую роскошь с таким же рвением, с каким совершают чудовищные акты ереси. Они носят с собой осколки искоженных зеркал, чтобы извлекать души своих жертв."
+  STR_SLAANESH_SHARDSPEAKER_ORIGINS: "Словоблудец-происхождение"
+  STR_SLAANESH_SHARDSPEAKER_ORIGINS_UFOPEDIA: "{NEWLINE} Словоблудцы - это ведьмы, поклявшиеся в верности Слаанеш. Они могут высасывать жизненную силу из своих жертв, обрушивать на них извращенные сновидения или заставлять их предаваться своим худшим порокам."
+  STR_SLAANESH_SHARDSPEAKER_COMMANDER_UFOPEDIA: "{NEWLINE} Колдунья Слаанеша, облаченная в украшенный драгоценными камнями рогатый шлем и пурпурную шелковую вуаль, носит осколки искаженных зеркал и различные инструменты для своего безумного ремесла."
+  STR_SLAANESH_SHARDSPEAKER_COMMANDER_ORIGINS: "Колдунья Слаанеш-происхождение"
+  STR_SLAANESH_SHARDSPEAKER_COMMANDER_ORIGINS_UFOPEDIA: "{NEWLINE} Самые искусные из избранных Словоблудцев становятся Колдуньями Хаоса, помазанными и посвященными в глубочайшие тайны колдовства Слаанеш. Они являются не только опасными несанкционированными псайкерами, но и отмечены самим Темным Принцем властью пленять умы слабовольных, изменять плоть одним прикосновением или призывать демонов чувственным шепотом."
+
+  STR_BLISSFUL_THROES: "Блаженные Муки"
+  STR_BLISSFUL_THROES_CODEX: "{NEWLINE} Длинный хлыст из чистой энергии Хаоса обрушивается на врага с восхитительным треском, оставляя своих жертв истерзанных болью, ублажая заклинателя."
+
+  # LESSER SPAWN OF SLAANESH
+  STR_SLAANESH_LESSER_SPAWN: "Малое Отродье Слаанеш"
+  STR_SLAANESH_LESSER_SPAWN_ARMOR: "Малое Отродье Слаанеш"
+  STR_SLAANESH_LESSER_SPAWN_CORPSE: "Труп Отродья Слаанеш"
+  STR_SLAANESH_LESSER_SPAWN_WEAPON: "Удар Отродья"
+  STR_SLAANESH_LESSER_SPAWN_UFOPEDIA: "{NEWLINE} От этого некогда человека осталась лишь пульсирующая масса гротескной плоти и органов."
+  STR_SLAANESH_LESSER_SPAWN_ORIGINS: "Малое Отродье Слаанеш-происхождение"
+  STR_SLAANESH_LESSER_SPAWN_ORIGINS_UFOPEDIA: "{NEWLINE} Малые отродья Слаанеш - это то, что осталось от слабовольных людей, измененных благословением Владыки Излишеств. Их тела и разум искажены до неузнаваемости, превратившись в сверкающую массу, дрожащую и стонущую от удовольствия."
+
+  # SLAANESHI MUTANT
+  STR_SLAANESH_MUTANT: "Мутант Слаанеш"
+  STR_SLAANESH_MUTANT_ARMOR: "Мутант Слаанеш"
+  STR_SLAANESH_MUTANT_CORPSE: "Труп Мутанта Слаанеш"
+  STR_SLAANESH_MUTANT_UFOPEDIA: "{NEWLINE} Эти развратные мутанты Слаанеша, похоже, ничего не носят. Совсем ничего. Вообще ничего."
+  STR_SLAANESH_MUTANT_ORIGINS: "Мутант Слаанеш-происхождение"
+  STR_SLAANESH_MUTANT_ORIGINS_UFOPEDIA: "{NEWLINE} Мутанты Слаанеш - это либо мутировавшие люди, несущие метку Князя Наслаждения, либо рожденные от тех, кто был затронут развращенным влиянием Слаанеш. Блестательные соблазнительницы, бесстыдно разгуливают куда им вздумается, гнусно поражая любого, кто не принимает бесстыдство."
+
+  # SLAANGOR
   STR_SLAANGOR_LATE: "Клан Избранных Слаангора"
   STR_SLAANGOR_MIXED: "Клан Слаангора"
   STR_SLAANGOR_EARLY: "Слаангор Поборник"
@@ -2874,13 +2928,13 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLAANGOR_FIENDGOR_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SLAANGOR_FIENDGOR_AUTOPSY: "Извергор-происхождение"
   STR_SLAANGOR_FIENDGOR_AUTOPSY_UFOPEDIA: "{NEWLINE} Извергоры Слаанеш - благословенные и самые мутировавшие из всех Слаангоров, огромные по размеру с двумя клешнями, способными раскалывать броню. Эти зверолюди с грациозной скоростью перемещаются по полю боя, чтобы оставлять после себя разорванную в клочья броню своих врагов и калек, для потехи другим Слаангорам."
-  STR_SLAANFIENDGOR_TO_HONOR: "Обмен:Трупа Извергора"
+  STR_SLAANFIENDGOR_TO_HONOR: "Обмен:Труп Извергора"
   STR_SLAANGOR_BULLGOR: "Слаан Буйволгор"
   STR_SLAANGOR_BULLGOR_RITUALIST: "Слаан Буйволгор"
   STR_SLAANGOR_BULLGOR_ARMOR: "Слаан Буйволгор"
   STR_SLAANGOR_BULLGOR_ARMOR_RITUALIST: "Слаан Буйволгор"
   STR_SLAANBULLGOR_CORPSE: "Труп Слаана Буйволгора"
-  STR_SLAANBULLGOR_TO_HONOR: "Обмен:Трупа Слаана Буйволгора"
+  STR_SLAANBULLGOR_TO_HONOR: "Обмен:Труп Слаана Буйволгора"
   STR_SLAANGOR_CLAW: "Клешня Слаангора"
   STR_SLAANGOR_CLAW_GIMPIFY: "Клешня Слаангора"
   STR_SLAANGOR_DOUBLECLAW: "Зазубренная Клешня Извергора"
@@ -2890,7 +2944,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLAANGOR_BULLGOR_AUTOPSY_UFOPEDIA: "{NEWLINE} Буйволгоры Слаанеш - лидеры и ветераны банды Слаангоров, более крупные, чем их сородичи. Они отмечены маркой Слаанеш на своем снаряжении и теле. Часто имеют мутации в виде зазубренных клешней."
   STR_SLAANGOR_GOR: "Слаангор"
   STR_SLAANGOR_CORPSE: "Труп Слаангора"
-  STR_SLAANGOR_GOR_TO_HONOR: "Обмен:Трупа Слаангора"
+  STR_SLAANGOR_GOR_TO_HONOR: "Обмен:Труп Слаангора"
   STR_SLAANGOR_GOR_ARMORMEDIUM: "Слаангор"
   STR_SLAANGOR_GOR_UFOPEDIA: "{NEWLINE} Слаангоры носят доспехи и снаряжение, предоставленное им преспешниками Хаоса. Их обмундирование имеет удивительную мобильность и хорошую защиту."
   STR_SLAANGOR_GOR_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
@@ -2899,7 +2953,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLAANGOR_UNGOR: "Слаанунгор"
   STR_SLAANUNGOR_CORPSE: "Труп Слаанунгора"
   STR_SLAANGOR_UNGOR_ARMORLIGHT: "Слаанунгор"
-  STR_SLAANUNGOR_GOR_TO_HONOR: "Обмен:Трупа Слаанунгора"
+  STR_SLAANUNGOR_GOR_TO_HONOR: "Обмен:Труп Слаанунгора"
   STR_SLAANUNGOR_GOR_UFOPEDIA: "{NEWLINE} Слаанунгоры носят доспехи и снаряжение, предоставленное им преспешниками Хаоса. Их броня эквивалентна бронежилету гвардейца и имеет хорошую мобильность и ащиту."
   STR_SLAANUNGOR_GOR_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SLAANUNGOR_GOR_AUTOPSY: "Слаанунгоры-происхождение"
@@ -2908,11 +2962,20 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLAANGOR_BRAY_ARMORLIGHT: "Ревунгор Слаанеш"
   SLAANGOR_BRAY_ARMORLIGHT: "Ревунгор Слаанеш"
   STR_SLAANBRAYGOR_CORPSE: "Труп Ревунгора Слаанеш"
-  STR_SLAANBRAY_TO_HONOR: "Обмен:Трупа Ревунгора"
-  STR_SLAANBRAY_UFOPEDIA: "{NEWLINE} Ревунгорs используют низкокачественную броню и снаряжение, в основном они вооружены легким стрелковым вооружением. Ревунгоры являются  реальной угрозой обычных гвардейцев."
+  STR_SLAANBRAY_TO_HONOR: "Обмен:Труп Ревунгора"
+  STR_SLAANBRAY_UFOPEDIA: "{NEWLINE} Ревунгоры используют низкокачественную броню и снаряжение, в основном они вооружены легким стрелковым вооружением. Ревунгоры являются  реальной угрозой обычных гвардейцев."
   STR_SLAANGOR_BRAY_ARMORLIGHT_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SLAANGOR_BRAYGOR_AUTOPSY: "Ревунгоры-происхождение"
   STR_SLAANGOR_BRAYGOR_AUTOPSY_UFOPEDIA: "{NEWLINE} Ревунгоры - самые слабые и самые мелкие из фенотипа ГОР, у этих зверолюдей нет рогов, как у их более крупных сородичей,они менее агрессивны . Однако они по-прежнему агрессивнее ,сильнее и крепче большинства людей. В бою выполняют роль стрелков-застрельщиков, легко находят слабые места в броне врагов, избегают лобовых атак, но предпочитают атаковать с флангов и тыла."
+
+# Slaanesh CSM Champion
+  STR_SLAANESH_CSM_CHAMPION: "Безупречный Чемпион"
+  STR_SLAANESH_CSM_CHAMPION_ARMOR: "Безупречный Чемпион"
+  STR_SLAANESH_CSM_CHAMPION_CORPSE: "Труп Безупречного Чемпиона"
+  STR_SLAANESH_CSM_CHAMPION_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
+  STR_SLAANESH_CSM_CHAMPION_ORIGINS: "Безупречный Чемпион-происхождение"
+  STR_SLAANESH_CSM_CHAMPION_ORIGINS_UFOPEDIA: "{NEWLINE} Безупречные Клинки - это элитные Чемпионы Слаанеша из Легиона Детей Императора, полностью отдающиеся яростному азарту ближнего боя. Считая себя величайшими бойцами могут командовать подраделениями на поле боя. Наполненные коктейлем из боевых стимуляторов и психоактивных веществ, поддерживающих их в непрерывном состоянии адреналинового блаженства и одержимостью фехтованием."
+
 # Slaanesh Anointed
   STR_SLAANESH_ANOINTED: "Помазанник Слаанеш"
   STR_SLAANESH_ANOINTED_MISSILE: "Помазанник Слаанеш"
@@ -2920,7 +2983,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLAANESH_ANOINTED_ARMOR: "Помазанник Слаанеш"
   STR_SLAANESH_ANOINTED_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SLAANANOINTED_CORPSE: "Труп Помазанника Слаанеш"
-  STR_SLAANANOINTED_TO_HONOR: "Обмен:Трупа Помазанника Слаанеш"
+  STR_SLAANANOINTED_TO_HONOR: "Обмен:Труп Помазанника Слаанеш"
   STR_SLAANESHANOINTED_AUTOPSY: "Помазанники Слаанеш-происхождение"
   STR_SLAANESHANOINTED_AUTOPSY_UFOPEDIA: "{NEWLINE} Помазанники Слаанеш - это Избранные Слаанеш, которые претерпели некоторую форму мутации, вызванную хаосом, в виде мерзкой демонической змеиной формы. Как ветераны ренегатов космодесанта имеют лучшее вооружение. Помазанники являются элитой и представляют собой серьезную угрозу на поле боя. Несмотря на то, что они сильны и не ведают страха, молниеносные рефлексы делают их опасными противниками на открытой местности."
 # SLAANESH BEHEMOTH
@@ -2964,7 +3027,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SINGLE_FREQUENCY: "Одночастотный"
   STR_VARIED_FREQUENCY: "Многочастотный"
 
-  STR_HEAVY_STUBBER_SLAAN: "Тяж.Стабаер Слаанеш"
+  STR_HEAVY_STUBBER_SLAAN: "Стабер Тяж. Слаанеш"
   STR_SLAAN_HEAVY_STUBBER_CLIP: "Патрон.Лента Тяж.Стабера Слаанеш"
   STR_AUTOGUN_SLAANESH: "Автоган Слаанеш"
   STR_AUTOGUN_SLAAN_CLIP: "Маг.Автогана Слаанеш"
@@ -3214,7 +3277,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_DEMI_VALKYRIA_AUTOPSY_UFOPEDIA: "{NEWLINE} Валькирии Кхорна - Избранные , получившие благосклонность своего Бога-покровителя следуя его губительной воле. Превращенные в полудемоническое существо, похожее на демонов Кровопускателей. Поэтому обладают сверхчеловеческим телосложением и способностями, способными голыми руками разорвать даже силовую броню. По наблюдениям, существует несколько типов валькирий, в разной степени трансформации, их способности могут различаться."
   STR_VALKIA_CORPSE_BASIC: "Труп Валькирии Кхорна"
   STR_VALKIA_CORPSE_ELITE: "Труп Избранной Валькирии Кхорна"
-  STR_KHORNE_DEMIVALKYRIA_TO_HONOR: "Обмен: Труп Валькирии"
+  STR_KHORNE_DEMIVALKYRIA_TO_HONOR: "Обмен:Труп Валькирии"
   STR_KHORNE_CHOSEN_DEMIVALKYRIA_TO_HONOR: "Обмен:Труп Избранной Валькирии"
   STR_PENITENT_ENGINECHAOS: "Умертвляющий"
   STR_NURGLE2: "Благословенная Нургла"
@@ -3896,7 +3959,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_RIPPER_PISTOL_REQUISITION: "Запрос: Пистолет Потрошитель"
   STR_RIPPER_PISTOL_AMMO: "Маг.Пистолета Потрошителя"
 
-  STR_HEAVY_STUBBER_ASSAULT: "Штурмовой Стабер"
+  STR_HEAVY_STUBBER_ASSAULT: "Стабер Штурмовой"
   STR_HEAVY_STUBBER_ASSAULT_CODEX: "{NEWLINE} КомбиСтабер, спаренный тяжелый стабер или просто штурмовой стабер, это двухствольное, а иногда и трехствольное тяжелое стаберное оружие обеспечивает огромную скорострельность за счет большого веса и отдачи. {NEWLINE}{NEWLINE}Отдача: {ALT} 45"
   STR_STUBCANNON_GUARD: "Ручная Пушка"
   STR_STUBCANNON_GUARD_CODEX: "{NEWLINE} Эта многоцелевая ручная пушка, разработанная Домом Орлок, может стрелять 40-мм снарядами и гранатами. Оружие считается нестандартным, тем не менее, попадает в руки ветеранам гвардии и не-людям. {NEWLINE}{NEWLINE}Отдача: {ALT} 35"
@@ -3974,7 +4037,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_HEAVY_STUBBER_HYBRID_CODEX: "{NEWLINE} Комбистабер, более известный как стабер Гибрид, похож на штурмовой стабер, но его дополнительный ствол заменен 40-мм гранатометом. Скорострельность не выше, чем у обычного тяжелого стабера, 40-мм гранатомет может использоваться для борьбы с тяжелобронированными целями. {NEWLINE}Отдача: {ALT} 45"
 
   STR_BOLTER_HEAVY_SOLAR: "Тяж. Болтер Солар"
-  STR_BOLTER_HEAVY_SOLAR_CODEX: "{NEWLINE} Древняя модель, производимая на благословленных мануфакторумах Терры, тяжелый болтер модели Солар востребован и темпераментен. Дополнительные литании, а также отсутствие рукоятки предполают, что только самые сильные солдаты могут стрелять из него без предварительной фиксации. {NEWLINE} ОТДАЧА: 60 {ALT}"
+  STR_BOLTER_HEAVY_SOLAR_CODEX: "{NEWLINE} Древняя модель, производимая на благословленных мануфакторумах Терры, тяжелый болтер модели Солар востребован и темпераментен. Дополнительные литании, а также отсутствие рукоятки предполают, что только самые сильные солдаты могут стрелять из него без предварительной фиксации. {NEWLINE}{NEWLINE}Отдача: {ALT}60"
 
   STR_PLASMA_PISTOL_CLIP_UFOPEDIA: "{NEWLINE} Необходимая мощность, чтобы оторвать себе руку, в удобном и компактном форм-факторе."
 
@@ -4211,7 +4274,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SMOKE_GRENADE_DRUM: "РГ-Барабан/Дым"
   STR_PHOTON_GRENADE_DRUM: "РГ-Барабан/Фотон"
 
-  STR_HEAVY_STUBBER_LIGHT: "Тяж. Стабер Портативный"
+  STR_HEAVY_STUBBER_LIGHT: "Стабер Тяж./Портативный"
   # STR_HEAVY_STUBBER_LIGHT_UFOPEDIA: "{NEWLINE} This is the handheld version of the Heavy Stubber. By replacing parts with lighter variants it can be used without a bipod, allowing more mobility. On the other hand this means that the fire rate has been reduced to compensate for the recoil.{NEWLINE}{NEWLINE}Recoil: {ALT}30"
   # Ticker175
   STR_HEAVY_STUBBER_LIGHT_UFOPEDIA: "{NEWLINE} Ручной вариант Тяжелого Стабера. Заменены все тяжелые части на более легкими компонентами, может обеспечивать хорошую плотность огня, портативное оружие с большой мобильностью. Эта модель не такая мощная, как стандартный вариант, но все равно хорошо работает на поле боя. {NEWLINE}{NEWLINE}Отдача: {ALT}30"
@@ -4316,7 +4379,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ARMORS_MOUNTED_MORTAR: "Мортира на Лафете"
   STR_GUARD_ARMORS_MOUNTED_MORTAR_UFOPEDIA: "{NEWLINE} Мортира - Миномет для обстрела вражеских огневых точек. Мортира прикреплена к колесной базе."
 
-  STR_HEAVY_STUBBER_KRIEG: "Тяжелый Стабер Люциус"
+  STR_HEAVY_STUBBER_KRIEG: "Стабер Тяж. Люциус"
   STR_HEAVY_STUBBER_CLIP_KRIEG: "Маг.Тяж.Стабера Люциус"
   STR_KRIEG_HEAVY_STUBBER_UFOPEDIA: "{NEWLINE} Люциус - модель тяжелого стабера крига использует тяжелые бронебойные снаряды калибра 14.5mm, предназначенные для пробивания панцирной и даже силового брони. Тяжелый стабер близок к калибру болтера и автопушки. {NEWLINE}{NEWLINE}Отдача: {ALT}40"
 
@@ -4334,8 +4397,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SMALL_ROCKET: "Ракета/Р"
   STR_LARGE_ROCKET: "Ракета/ББ"
   STR_HEAVY_ROCKET: "Ракета/Мельта"
-  STR_HEAVY_ROCKET_HE: "Тяж.Ракета/Р"
-  STR_HEAVY_ROCKET_KRAK: "Тяж.Ракета/ББ"
+  STR_HEAVY_ROCKET_HE: "Ракета Тяж./Р"
+  STR_HEAVY_ROCKET_KRAK: "Ракета Тяж./ББ"
   STR_HEAVY_ROCKET_CODEX: "{NEWLINE} Мельта-Ракета - это большая пассивноуправляемая ракета, предназначенная для уничтожения танков и силовой брони. Ракета стоит больше, чем жизни нескольких гвардейцев, выбирайте цели с умом."
 
   STR_ACCATRAN_ROCKET_LAUNCHER: "Ракетная Установка Аккатран"
@@ -4723,7 +4786,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SPONSON_HB: "Спонсон/Тяж.Болтер"
   STR_SPONSON_BOLTER: "Спонсон/Тяж.Болтер"
   STR_MULTIMELTA_SPONSON: "Спонсон/Мультимельта"
-  STR_HULL_BOLTER: "Фронтальный Болте"
+  STR_HULL_BOLTER: "Фронтальный Болтер"
   STR_HULL_LAS: "Фронтальная Лазпушка"
   STR_LEMAN_HULL_BOLTER: "Фронтальный Болтер Леман Русса"
   STR_LEMAN_HULL_LAS: "Фронтальная Лазпушка"
@@ -4800,11 +4863,11 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_GORGONSL_HEAVY_FLAMER_BACK_RIGHT: "Спонсон/Тяж.Огнемет"
   STR_GORGONSL_HEAVY_FLAMER_BACK_RIGHT_ARMOR: "Спонсон/Тяж.Огнемет"
   STR_GORGONSL_HEAVY_FLAMER: "Тяжелый Огнемет"
-  STR_GORGONSL_HEAVY_STUBBER_LEFT: "Станковый Тяж. Стабер"
-  STR_GORGONSL_HEAVY_STUBBER_LEFT_ARMOR: "Станковый Тяж. Стабер"
-  STR_GORGONSL_HEAVY_STUBBER_RIGHT: "Станковый Тяж. Стабер"
-  STR_GORGONSL_HEAVY_STUBBER_RIGHT_ARMOR: "Станковый Тяж. Стабер"
-  STR_GORGONSL_HEAVY_STUBBER: "Тяжелый Стабер"
+  STR_GORGONSL_HEAVY_STUBBER_LEFT: "Стабер Станковый Тяж."
+  STR_GORGONSL_HEAVY_STUBBER_LEFT_ARMOR: "Стабер Станковый Тяж."
+  STR_GORGONSL_HEAVY_STUBBER_RIGHT: "Стабер Станковый Тяж."
+  STR_GORGONSL_HEAVY_STUBBER_RIGHT_ARMOR: "Стабер Станковый Тяж."
+  STR_GORGONSL_HEAVY_STUBBER: "Стабер Тяжелый"
 
   STR_CASSIUMSL: "КРАСС"
 
@@ -4818,6 +4881,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ARMORS_MOUNTED_HEAVY_LASCANNON_UC: "Тяж. Лазпушка на Лафете"
   STR_GUARD_ARMORS_MOUNTED_HEAVY_LASCANNON_CODEX: "Массивная модель на колесной базе, является улучшенной моделью стандартной лазпушки Адский Молот, предназначена для поражения сверхтяжелой брони, включая силовую броню класса Терминатор и обшивку Титанов."
   STR_GUARD_ARMORS_MOUNTED_HEAVY_LASCANNON_CODEX2: "{ALT}{NEWLINE}Особенность:{ALT}  {NEWLINE}{NEWLINE}  >> {ALT}Мощный Выстрел:{ALT} +100 мощность ценой 2х расхода боеприпасов."
+
+  STR_TRUCKARMOR_KRIEG: "Боевой Фургон Крига"
 
   STR_GUARDSM_KRIEG: "Гвардеец Крига"
   STR_GUARD_KRIEG_GRENADIER: "Гренадер Крига"
@@ -5605,7 +5670,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TZEENTCH_LASGUN: "Лазган Нигилус"
   STR_TZEENTCH_LASGUN_UFOPEDIA: "{NEWLINE} Оружие Нигилус является не одной моделью или даже типом оружия, а целом рядом археотехов, которые механикумы сочли оскверненными и не нуждающимся в немедленной очистке."
   STR_TZEENTCH_LONGLAS: "Лонглаз Нигилус"
-  STR_PLASMA_PISTOL_TZEENTCH: "Улуч.Плазмопистолет"
+  STR_PLASMA_PISTOL_TZEENTCH: "Зачарованный Плазмопистолет"
   STR_BOLTPISTOL_TZEENTCH: "Болтпистолет Рубрикатор"
   STR_TZEENTCH_BOLTER_LIGHT_SOLO: "Легк. Болтер Рубрикатор"
   STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED: "Легк. Болтер Рубрикатор/Оптика"
@@ -6065,7 +6130,8 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_GIFTWB: "Зака: Развертывание Линкора"
 
-  STR_WBDROPPODS: "КОГТИ УЖАСА НС"
+  STR_WBDROPPODS: "ДЕСАНТНЫЕ МОДУЛИ НС"
+  STR_WBDROPPODSUPGRADE: "КОГТИ УЖАСА НС"
   STR_WBRHINOS: "БТР НОСОРОГ НС"
   STR_WBTHUNDERHAWK: "ГРОМОВОЙ ЯСТРЕБ НС"
   STR_WBWARSHIPFINAL: "СВЯТОЙ ЛИНКОР НС"
@@ -6078,10 +6144,29 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_WBWARSHIPFINALALT: "СВЯТОЙ ЛИНКОР НС"
   STR_WBWARSHIPFINALALTK: "СВЯЩЕННЫЙ ЛИНКОР НС"
 
-  STR_WBDROPPODS_UFOPEDIA: "{NEWLINE}Когти Ужаса - это десантное средство, похожие на десантные модули, которые использовались Легионами Космических Десантников в прошлом и до сих пор используются Несущими Слово. Используются для быстрой высадки Космических Десантников Хаоса на планету."
+  STR_WBDROPPODS_UFOPEDIA: "{NEWLINE}Десантные модули до сих пор используются Несущими Слово. Они применяются для быстрой высадки космодесантников Хаоса на планету."
+  STR_WBDROPPODSUPGRADE_UFOPEDIA: "{NEWLINE}Когти Ужаса - это десантное средство, похожие на десантные модули, которые использовались Легионами Космических Десантников в прошлом и до сих пор используются Несущими Слово. Используются для быстрой высадки Космических Десантников Хаоса на планету."
   STR_WBRHINOS_UFOPEDIA: "{NEWLINE} Носороги Хаос - это боевые машины типа бтр Носорог, находящиеся на службе у Космических Десантников Хаоса. На протяжении десяти тысяч лет, прошедших с начала Долгой Войны, Носорог оставался самым распространенным видом транспортных средств. Космические Десантники Хаоса используют Носорог в качестве основного транспортного средства."
   STR_WBHELLBLADE_UFOPEDIA: "{NEWLINE}Клинок Ада - это истребитель и перехватчик, используемый силами Хаоса, включая Несущих Слово."
   STR_WBTHUNDERHAWK_UFOPEDIA: "{NEWLINE}Громовой Ястреб Хаоса - это многоцелевой летательный аппарат для атмосферных и орбитальных полетов, широко используемый Космодесантом со времен Великого крестового похода и Ереси Хоруса."
+
+  STR_WBSSCOUT_ARMORPLAYER_CODEX: "Аспиранты - это новобранцы, стремящиеся стать полноправными космодесантниками Несущих Слово."
+  STR_WBMARINE_ARMORPLAYER_CODEX: "Космодесантники Хаоса - это воины Несущих Слово, экипированные для боя в самых разнообразных условиях с использованием дальнобойного оружия."
+  STR_WBRAPTOR_ARMORPLAYER_CODEX: "Рапторы - это Космодесантники Хаоса, пораженные Варпом, используемые в качестве специальных штурмовых подразделений Несущих Слово для атаки врагов с высоты."
+  STR_WBHAVOC_ARMORPLAYER_CODEX: "Опустошители Хаоса - это специалисты по тяжелому вооружению в легионе Несущих Слово, их задача - обеспечение огневой поддержки для прикрытия своих боевых братьев."
+
+  STR_WBMARINEELITE_ARMORPLAYER_CODEX: "Элитные подразделения Несущих Слово - самые опытные легионеры, их способность переломить ход битвы никогда нельзя недооценивать."
+  STR_WBTERMINATOR_ARMORPLAYER_CODEX: "Избранные или Помазанные - самые привилегированные воины в Легионе Несущих Слово, им даровано право носить терминаторскую броню."
+  STR_WBTERMINATORELITE_ARMORPLAYER_CODEX: "Элитные Помазанные - это чемпионы, вышедшие Помазанных Легиона Несущих Слово; они несут гибель любым глупцам, которые здумают идти против них."
+
+  STR_WBMARINE_MK3ARMORPLAYER_CODEX: "Космодесантники Хаоса - это воины Несущих Слово, экипированные для боя в самых разнообразных условиях с использованием дальнобойного оружия."
+  STR_WBBREACHER_MK3ARMORPLAYER_CODEX: "Подавители Хаоса - специалисты по осаде в легионах Несущих Слово, способные защитить любое укрепление своими освященными щитами и прорваться через ряды противника."
+  STR_WBASHEN_MK3ARMORPLAYER_CODEX: "Пепельные Десантники Хаоса - это космодесантники Несущих Слово, использующие прыжковые ранцы, для специализированных штурмовых действий и внезапных атак врага."
+
+  STR_WBEXECUTIONER_ARMORPLAYER_CODEX: "Палач - воин веры легиона Несущих Слово должен отрубать головы врагов во славу Пантеона."
+
+  STR_WBARMORPEDIA: "БРОНЯ НЕСУЩИХ СЛОВО"
+  STR_WBCHAOSLORDARMORPLAYER_CODEX: "Лорд Хаоса Несущих Слово, является одним из самых могущественных Чемпионов Хаоса и командующим легионом или другими формированиями Хаоса."
 
  # player word bearers strategy researches
 
@@ -6292,11 +6377,11 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_BOLTPISTOL_WORDBEARER: "Болтпистолет Огонь Варпа"
   STR_BOLTER_WORDBEARER: "Болтер Огонь Варпа"
-  STR_HEAVYBOLTER_WORDBEARER: "Тяж.Болтер Огонь Вартпа"
+  STR_HEAVYBOLTER_WORDBEARER: "Тяж. Болтер Огонь Варпа"
   STR_STORMBOLTER_WORDBEARER: "Штурмболтер Огонь Варпа"
   STR_ASSC_WORDBEARER: "Автопушка Огонь Варпа"
 
-  STR_PISTOL_CLIP_WARP: "Маг. БолтПист. Огонь Варпа"
+  STR_PISTOL_CLIP_WARP: "Маг. Болтпист. Огонь Варпа"
   STR_RIFLE_CLIP_WARP: "Маг. Болтера Огонь Варпа"
   STR_AC_AP_AMMO_WARP: "Боепр. Тяж.Болтера Огонь Варпа"
   STR_HB_CLIP_WARP: "Маг.Штормболт. Огонь Варпа"
@@ -6375,6 +6460,18 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_CHAOS_CROZIUS_POWER3: "Адское Пламе"
   STR_WARPFIRE_IMPLOSION: "Схлопывание"
   STR_WARPFIRE_RIFT: "Разлом"
+
+  STR_PISTOLBOLTSPITTER_WORDBEARER_CODEX: "Это извращенное органическое чудовище способное извергать поток болтерных снарядов, приводимое в движение механизмом, который техножрецы не могут идентифицировать."
+  STR_BOLTERBOLTSPITTER_WORDBEARER_CODEX: "Это извращенное органическое чудовище способное извергать поток болтерных снарядов, приводимое в движение механизмом, который техножрецы не могут идентифицировать."
+  STR_STORMBOLTSPITTER_WORDBEARER_CODEX: "Это извращенное органическое чудовище способное извергать поток болтерных снарядов, приводимое в движение механизмом, который техножрецы не могут идентифицировать."
+  STR_HEAVYBOLTSPITTER_WORDBEARER_CODEX: "Это извращенное органическое чудовище способно извергать поток болтерных снарядов, приводимое в движение механизмом, который техножрецы не могут идентифицировать.{NEWLINE}{NEWLINE}Отдача: {ALT}70"
+  STR_BOLTSPITTERAC_WORDBEARER_CODEX: "Это извращенное органическое чудовище способное извергать поток болтерных снарядов, приводимое в движение механизмом, который техножрецы не могут идентифицировать.{NEWLINE}{NEWLINE}Отдача: {ALT}70"
+
+  STR_BOLTPISTOL_WORDBEARER_CODEX: "Это кощунственное оружие стало результатом оккультных и демонических изысканий Несущих Слово. Вопреки всем общепринятым представлениям и на первый взгляд нефункциональное, но, тем не менее, способно изрыгать обжигающий поток пламени варпа."
+  STR_BOLTER_WORDBEARER_CODEX: "Это кощунственное оружие стало результатом оккультных и демонических изысканий Несущих Слово. Вопреки всем общепринятым представлениям и на первый взгляд нефункциональное, но, тем не менее, способно изрыгать обжигающий поток пламени варпа."
+  STR_STORMBOLTER_WORDBEARER_CODEX: "Это кощунственное оружие стало результатом оккультных и демонических изысканий Несущих Слово. Вопреки всем общепринятым представлениям и на первый взгляд нефункциональное, но, тем не менее, способно изрыгать обжигающий поток пламени варпа."
+  STR_HEAVYBOLTER_WORDBEARER_CODEX: "Это кощунственное оружие стало результатом оккультных и демонических изысканий Несущих Слово. Вопреки всем общепринятым представлениям и на первый взгляд нефункциональное, но, тем не менее, способно изрыгать обжигающий поток пламени варпа.{NEWLINE}{NEWLINE}Отдача: {ALT}70"
+  STR_ASSC_WORDBEARER_CODEX: "Это кощунственное оружие стало результатом оккультных и демонических изысканий Несущих Слово. Вопреки всем общепринятым представлениям и на первый взгляд нефункциональное, но, тем не менее, способно изрыгать обжигающий поток пламени варпа.{NEWLINE}{NEWLINE}Отдача: {ALT}70"
 
   # player word bearers campaign
 
@@ -7224,7 +7321,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_GENE_HYBRID_ACOLYTE_LEADER_UFOPEDIA: "{NEWLINE} Лидер Аколитов носит укрепленную робу заводского рабочего, из-за чего имеет хорошую защиту от кислот и других химикатов. Являются довольно крепким противником"
   STR_GENE_HYBRID_ACOLYTE_LEADER_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_GENE_HYBRID_ACOLYTE_LEADER_AUTOPSY: "Гибрид Лидер-происхождение"
-  STR_GENE_HYBRID_ACOLYTE_LEADER_AUTOPSY_UFOPEDIA: "{NEWLINE} ГЛидер Аколитов - это гибриды генокрад во втором поколении после заражения человеческого организма патриархом генокрадов. Обладают лидерскими способностями и способны вести в бой других гибридов."
+  STR_GENE_HYBRID_ACOLYTE_LEADER_AUTOPSY_UFOPEDIA: "{NEWLINE} Лидер Аколитов - это гибриды генокрад во втором поколении после заражения человеческого организма патриархом генокрадов. Обладают лидерскими способностями и способны вести в бой других гибридов."
   STR_GSC_ABERRANT: "Аберрант"
   STR_GSC_MINER: "Неофит Выводка"
 
@@ -7247,7 +7344,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_STUN_SHELLS: "Патроны Дробовика/Шок"
   STR_STUN_GAS_SHELLS: "Патроны Дробовика/Газ"
 
-  STR_HEAVY_STUBBER_HANDHELD: "Тяж. Стабер Арбитров"
+  STR_HEAVY_STUBBER_HANDHELD: "Стабер Тяж. Арбитров"
   STR_HEAVY_STUBBER_HANDHELD_UFOPEDIA: "{NEWLINE} Тяжелый стабер, предназначенный для мобильных боев на извилистых улицах жилых кварталов, обладает облегченной рамой, что обеспечивает гибкость и огневую мощь из-за более крупного калибра."
   STR_PUMP_SHOTGUN: "Помповое Ружье"
   STR_PUMP_SHOTGUN_CODEX: "Помповое ружье простое и древнее оружие, обеспечивает возможность стрельбы картечью в ближнем бою с минимальным уровнем затрат и подготовки. Этот тип оружия можно найти по всему Империуму в арсеналах любой банды или культа."
@@ -8061,28 +8158,28 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_PRIMARIS_VOLKITE_CHARGER: "Волкитный Разрядник"
   STR_PRIMARIS_VOLKITE_CHARGER_CODEX: "{NEWLINE}Это компактный вариант Волкитного Мушкета, который использовался Солар Ауксилией, а также Астартес. Волкитный Разрядник имеет меньше мощность и дальность стрельбы, для снижения веса и улучшения характеристик ближнего боя."
   STR_PRIMARIS_ABSOLVER_PISTOL: "Болтпистолет Освобождение"
-  STR_PRIMARIS_ABSOLVER_PISTOL_CODEX: "{NEWLINE} Болтпистолет Освобождение - это новое поколение болтпистолетов, обычно используемых Капелланами Примарис. Это тяжелое оружие выглядеть как полноразмерная винтовка в неаугментированных человеческих руках и обладает значительной останавливающей силой."
+  STR_PRIMARIS_ABSOLVER_PISTOL_CODEX: "{NEWLINE} Болтпистолет Освобождение - это новое поколение болтпистолетов, обычно используемых Капелланами Примарис. Это тяжелое оружие выглядеть как полноразмерная винтовка в неаугментированных человеческих руках и обладает значительной останавливающей силой.{NEWLINE}{NEWLINE}Отдача: {ALT}50"
   STR_PRIMARIS_EXECUTOR_RIFLE: "Болтер Палач"
   STR_PRIMARIS_EXECUTOR_RIFLE_DRUM_MAG: "Барабан Болтера Палач"
   STR_PRIMARIS_EXECUTOR_RIFLE_CODEX: "{NEWLINE} Болтер Палач - это вариант тяжелого болтера, используемый тяжелыми Примарис Заступниками. Имеет большую дальность, наносит больше урона и способен пробивать укрепленную броню."
   STR_PRIMARIS_MELTA_RIFLE: "Мельта-Винтовка"
   STR_PRIMARIS_MELTA_RIFLE_CODEX: "{NEWLINE} Мельта-Винтовка, которая используется отделениями Искоренителей Примарис, основана на усовершенствованной версии обычного Мельтагана Велисария Коула. Благодаря превосходной фокусировки луча, она отличается  дальностью и улучшенными характеристиками по сравнению со своим почтенным предшественником."
   STR_PRIMARIS_OCCULUS_CARBINE: "Болтер Око"
-  STR_PRIMARIS_OCCULUS_CARBINE_CODEX: "{NEWLINE} Это вариант Болтера модели Коул, который используют лейтенанты Авангарда и все Примарисы Нарушители. Карабин оснащен сложной системой прицеливания Око, что позволяет улучшить эффективную дальность и смертоносность стрельбы."
+  STR_PRIMARIS_OCCULUS_CARBINE_CODEX: "{NEWLINE} Это вариант Болтера модели Коул, который используют лейтенанты Авангарда и все Примарисы Нарушители. Карабин оснащен сложной системой прицеливания Око, что позволяет улучшить эффективную дальность и смертоносность стрельбы.{NEWLINE}{NEWLINE}Отдача: {ALT}40"
   STR_PRIMARIS_CARBINE: "Болт-Карабин"
-  STR_PRIMARIS_CARBINE_CODEX: "{NEWLINE} Этот компактный болтер имеет дополнительную рукоятку под стволом для уменьшения отдачи. Болт-карабины стреляют болтами меньшего калибра, чем стандартный болтер, что приводит к снижению пробивной силы и эффективной дальности. Тем не менее, оружие считается простым в обращении."
+  STR_PRIMARIS_CARBINE_CODEX: "{NEWLINE} Этот компактный болтер имеет дополнительную рукоятку под стволом для уменьшения отдачи. Болт-карабины стреляют болтами меньшего калибра, чем стандартный болтер, что приводит к снижению пробивной силы и эффективной дальности. Тем не менее, оружие считается простым в обращении.{NEWLINE}{NEWLINE}Отдача: {ALT}40"
   STR_PRIMARIS_HEAVY_BOLT_PISTOL: "Тяж. Болтпистолет"
-  STR_PRIMARIS_HEAVY_BOLT_PISTOL_CODEX: "{NEWLINE}Тяжелый болтпистолет - вариант стандартного болтпистолета, который имеет удлиненный ствол для увеличения дальности стрельбы. Он обычно используется отделениями Грабителей и Штурмовых Заступников Козмодесанта Примарис."
+  STR_PRIMARIS_HEAVY_BOLT_PISTOL_CODEX: "{NEWLINE}Тяжелый болтпистолет - вариант стандартного болтпистолета, который имеет удлиненный ствол для увеличения дальности стрельбы. Он обычно используется отделениями Грабителей и Штурмовых Заступников Козмодесанта Примарис.{NEWLINE}{NEWLINE}Отдача: {ALT}40"
   STR_PRIMARIS_HEAVY_BOLT_RIFLE: "Тяж. Болтерная Винтовка"
-  STR_PRIMARIS_HEAVY_BOLT_RIFLE_CODEX: "{NEWLINE}Тяжелая Болтерная Винтовка - варианты Болтерной Винтовки, используемые Тяжелыми Заступниками Примарис и капитанами, носящими броню Гравис. Выглядит почти идентично винтовкам Адский Шторм и Болтеру Палач, за исключением коробочногоо магазина с открытыми боеприпасами."
+  STR_PRIMARIS_HEAVY_BOLT_RIFLE_CODEX: "{NEWLINE}Тяжелая Болтерная Винтовка - варианты Болтерной Винтовки, используемые Тяжелыми Заступниками Примарис и капитанами, носящими броню Гравис. Выглядит почти идентично винтовкам Адский Шторм и Болтеру Палач, за исключением коробочногоо магазина с открытыми боеприпасами.{NEWLINE}{NEWLINE}Отдача: {ALT}50"
   STR_PRIMARIS_HEAVY_BOLT_RIFLE_DRUM: "Барабан Тяж.Болт.Винтовки"
   STR_PRIMARIS_HEAVY_BOLT_RIFLE_AP_DRUM: "Барабан Тяж.Болт.Винт/Кракен"
   STR_PRIMARIS_HEAVY_BOLT_RIFLE_EX_DRUM: "Барабан Тяж.Болт.Винт/Экспанс."
   STR_PRIMARIS_HEAVY_BOLT_RIFLE_MC_DRUM: "Барабан Тяж.Болт.Винт/Спец."
   STR_PRIMARIS_CAWL_UNDERSLUNG: "КомбиБолтер Коул"
-  STR_PRIMARIS_CAWL_UNDERSLUNG_CODEX: "{NEWLINE} Болтер модели Коул, дополненный стандартным имперским 40мм подствольным гранатометом, предназначенным для обеспечения огневой мощи с закрытых позиций."
+  STR_PRIMARIS_CAWL_UNDERSLUNG_CODEX: "{NEWLINE} Болтер модели Коул, дополненный стандартным имперским 40мм подствольным гранатометом, предназначенным для обеспечения огневой мощи с закрытых позиций.{NEWLINE}{NEWLINE}Отдача: {ALT}40"
   STR_PRIMARIS_STALKER_BOLTER: "Болтер Сталкер Примарис"
-  STR_PRIMARIS_STALKER_BOLTER_CODEX: "{NEWLINE} Вариант болтера модели Коул с интегрированным прицелом, предназначенный для обеспечения точной стрельбы на средней дистанции в качестве специализированной снайперской винтовки."
+  STR_PRIMARIS_STALKER_BOLTER_CODEX: "{NEWLINE} Вариант болтера модели Коул с интегрированным прицелом, предназначенный для обеспечения точной стрельбы на средней дистанции в качестве специализированной снайперской винтовки.{NEWLINE}{NEWLINE}Отдача: {ALT}40"
 
 
 ## Craft Weapons
@@ -8358,9 +8455,9 @@ ru:  #  yamllint disable-line rule:empty-values
   AUX_DOUBLE_STARCANNON: "Спаренная Звездная Пушка"
   AUX_STARCANNON: "Звездная Пушка"
   STR_GRENADE_LAUNCHER_TAUROS_SMOKE: "Гранатомет с Ленточным Питанием"
-  STR_TAUROS_HEAVY_FLAMER: "Стац. Тяж. Огнемет Тауроса"
-  STR_GUARD_ARMORS_TAUROS_HEAVY_FLAMER: "Тяж. Огнемет Тауроса"
-  STR_GUARD_ARMORS_TAUROS_HEAVY_STUBBER: "Тяж. Стабер Тауроса"
+  STR_TAUROS_HEAVY_FLAMER: "Таурос/Стац. Тяж. Огнемет"
+  STR_GUARD_ARMORS_TAUROS_HEAVY_FLAMER: "Таурос/Тяж. Огнемет"
+  STR_GUARD_ARMORS_TAUROS_HEAVY_STUBBER: "Таурос/Тяж. Стабер"
   STR_GUARD_ARMORS_TAUROS_HEAVY_STUBBER_CODEX: "{NEWLINE}Таурос - это легкий многоцелевой багги, который можно десантировать с стандартной Валькирии. Таурос оснащен электродвигателем и гальванической силовой установкой, которая может выдавать достаточно энергии для поддержания значительного ряда вооружения."
   STR_IMMOLATOR_HEAVY_FLAMER: "Тяжелый Огнемет"
   STR_MANTICORE_R: "Пусковая Установка"
@@ -9291,8 +9388,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELITE_STRATEGY_IG_UFOPEDIA: "{NEWLINE} Возьмите на себя командование элитной командой спецназа и положитесь на их превосходные навыки, раздобудьте имперские жетоны и наймите больше опытных бойцов. Используя усиленную панцирную броню и хеллганы, вы сможете справиться с любой угрозой. Однако остерегайтесь потерь, поскольку замена спецназовцев обходится дорого. {NEWLINE} Вы получите 16 Спецназовцев и колонну Таурокс в течение нескольких дней после начала игры."
   STR_ABHUMAN_STRATEGY_IG_UFOPEDIA: "{NEWLINE} Вы начинаете с всеми доступными типами не-людей: огринам, скватами, зверолюдьми и фелинидами. Более сильные и специализированные типы войск, могут выполнять различные роли на поле боя. Вы не получите доступ к некоторым передовым типам оборудования и бронетехники. {NEWLINE} Вы получите 8 Зверолюдей, 6 Зверолюдей заключенных , 3 Сквата и 1 Огрина, а также  колонну Легких Химер в течение нескольких дней."
 
-  STR_SPACEHULKS: "Космические Скиталецы"
-  STR_SPACEHULKS_UFOPEDIA: "{NEWLINE} Массовое скопление затерянных кораблей и обломков, которые слились воедино. Они дрейфуют в космосе, входя и выходя из варпа, и на протяжении тысячелетий потерянные корабли сростаются вместе. Скиталецы могут располагать информацией, имеющей огромную ценность для Империума. {NEWLINE}{NEWLINE} Все имперские силы должны обследовать и уничтожать такие объекты как можно скорее. Оставление их в покое вызовет огромное недовольство властей планеты.{ALT} >>"
+  STR_SPACEHULKS: "Космические Скитальцы"
+  STR_SPACEHULKS_UFOPEDIA: "{NEWLINE} Массовое скопление затерянных кораблей и обломков, которые слились воедино. Они дрейфуют в космосе, входя и выходя из варпа, и на протяжении тысячелетий потерянные корабли сростаются вместе. Скитальцы могут располагать информацией, имеющей огромную ценность для Империума. {NEWLINE}{NEWLINE} Все имперские силы должны обследовать и уничтожать такие объекты как можно скорее. Оставление их в покое вызовет огромное недовольство властей планеты.{ALT} >>"
   STR_SPACEHULKS2_UFOPEDIA: "{NEWLINE} Миссия может оказаться довольно сложной если вы недостаточно быстры: смертоносные враги, которые получают несколько волн подкреплений, ближний бой и коридоры, которые {ALT}слишком узкие для техники {ALT}. {NEWLINE}{NEWLINE} Обязательно подготовьтесь соответствующим образом: сосредоточьтесь на оружии ближнего боя, таком как дробовики и огнеметы или на быстром и компактном оружии, таком как мощные пистолеты и карабины. Выбирайте опытных и быстрых солдат с хорошей реакцией.{ALT} << >>"
   STR_SPACEHULKS3_UFOPEDIA: "{NEWLINE} Первый уровень Космического Скитальца довольно простой - найдите лифт на второй уровень и войдите в него любым количеством солдат, убивая всех врагов, встреченных по пути, вам лучше поторопиться и добраться до лифта раньше прибытия вражеского подкрепления.{NEWLINE}{NEWLINE} Если какие-либо солдаты останутся после активации лифта, они будут в вашем десантном корабле до вашего возвращения.{ALT}   << >>"
   STR_SPACEHULKS4_UFOPEDIA: "{NEWLINE} Пройдя на второй уровень, вам нужно найти консоль управления на верхних этажах и уничтожить ее. Попытка уничтожить все волны врагов, даже если это возможно, может отнять слишком много ваших сил, поэтому рекомендуется начать поиск для уничтожения консоли. {NEWLINE}{NEWLINE} Вы узнаете о наличия консоли управления по вращающимся элементам конструции.{ALT} <<"
@@ -9373,9 +9470,9 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_HULKER_REINFORCEMENTS_TITLE: "ПОДКРЕПЛЕНИЕ ГЕНОКРАДОВ"
   STR_HULKER_REINFORCEMENTS_DESC: "Кругоме генокрады! Будьте готовы ко всему... они лезут отовсюду: с потолка, из полов и даже из переборок, как будто им нет конца."
   STR_HULKER_REINFORCEMENTS2_DESC: "Количество генокрадов в этом скитальце невообразимо, их надо полностью уничтожить, мы должны сражаться и выжить, очистить этот уровень и уничтожить этуй мерзость."
-  STR_HULKER_REINFORCEMENTS3_DESC: "Они лезут из всех щелей! Врагов легионы, они даваят нас числом. Кажется, им нет конца, мы должны как можно скорее уничтожить Главный атмосферный контроллер. Да хранит нас Император!"
-  STR_HULKER_REINFORCEMENTS2a_DESC: "Врагов легионы, они даваят нас числом. Кажется, им нет конца, мы должны уничтожить 6 атмосферных когитаторов как можно скорее. Да хранит нас Император!"
-  STR_HULKER_REINFORCEMENTS2b_DESC: "Врагов легионы, они даваят нас числом. Кажется, им нет конца, нам нужно добраться до телепортариума и эвакуироваться. Да хранит нас Император!"
+  STR_HULKER_REINFORCEMENTS3_DESC: "Они лезут из всех щелей! Врагов легионы, они даваят нас числом. Кажется, им нет конца, мы должны как можно скорее уничтожить Главный атмосферный контроллер."
+  STR_HULKER_REINFORCEMENTS2a_DESC: "Врагов легионы, они даваят нас числом. Кажется, им нет конца, мы должны уничтожить 6 атмосферных когитаторов как можно скорее."
+  STR_HULKER_REINFORCEMENTS2b_DESC: "Врагов легионы, они даваят нас числом. Кажется, им нет конца, нам нужно добраться до телепортариума и эвакуироваться."
 
   # STR_ALIEN_ACTIVITY_DETECTED: "SPACE CRASH LAND DETECTED"
   STR_SPACERHULKER_SITE_P1_BRIEFING: "Массивный Артефакт, содержащий Древнее Хранилище, совершил аварийную посадку на планету. Император требует немедленного извлечения этого Хранилища, но оно, скорее всего, окружено ксеносами! Примите эту миссию и обеспечте доступ к упавшему Скитальцу, чтобы мы могли сохранить драгоценные технологии - пусть никто не помешает вам в вашем начинание!"
@@ -9384,7 +9481,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SPACERHULKER_SITE_P4_BRIEFING: "ПОСЛЕДНИЙ ШАНС ЭВАКУИРОВАТЬСЯ. Мы приближаемся к центру объекта, но генокрады собираются в большие группы. Нам нужно УНИЧТОЖИТЬ 6 генераторов за 25 ходов, чтобы снять щиты, преграждающий путь к цели. Генераторы расположены в двух разных местах на этом уровне."
   STR_SPACERHULKER_SITE_P5_BRIEFING: >
     Вот и все, мы наконец-то достигли ядра ИСКАЖЕННОГО космического скитальца, мы должны уничтожить систему контроля атмосферы, чтобы биологическое оружие, которое распылим на уровне, убило всех генокрадов, оставшихся на борту.
-    {NEWLINE}Соберите все свои силы и сражайтесь со всей своей храбростью в темных коридорах, чтобы мы могли захватить и защитить Древнее Хранилище. За Империум, за Императора !
+    {NEWLINE}Соберите все свои силы и сражайтесь со всей своей храбростью в темных коридорах, чтобы мы могли захватить и защитить Древнее Хранилище.
 
   STR_WARPED_HULK_LOOT: "Древнее Хранилище"
   STR_WARPED_LOOT_IG: "Вскрытие Древнего Хранилища"
@@ -9492,15 +9589,15 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_LE10_POWER_ARMOR_HULK_CHAOS: "Броня Силовая LE10"
   STR_LE10_POWER_ARMOR_HULK_ORK_CODEX: >
     {NEWLINE}
-    + + +ПРОТОКОЛ ДОПРОСА+ + +{NEWLINE}
-    + + +   ОТКУДА: ПЕЛАГИЯ IV   + + +{NEWLINE}
+    + + + ПРОТОКОЛ ДОПРОСА + + +{NEWLINE}
+    + + + ОТКУДА: ПЕЛАГИЯ IV + + +{NEWLINE}
     СЛЕДОВАТЕЛЬ: Вы сказали, что знаете, как извлечь образец археотеха?{NEWLINE}
     СУБЪЕКТ: АрхеХрень? БронеБронЫк? Моя просто знать как енто делать.{NEWLINE}
     СЛЕДОВАТЕЛЬ: И как вы этого добились?{NEWLINE}
     СУБЪЕКТ: Моя просто пнуть енту хрень. Пошевелить вон енте штуки-дрюки, подцепить и залезть тудым. Как-то так...{NEWLINE}
     СЛЕДОВАТЕЛЬ: И где вы этому научились?{NEWLINE}
     СУБЪЕКТ: Не учЫться. Просто знать , как енто работать.{NEWLINE}
-    + + + + +  КОНЕЦ СООБЩЕНИЯ + + + + +
+    + + + + + КОНЕЦ СООБЩЕНИЯ + + + + +
   STR_INTERITUS_ARMOR_HULK: "Броня Силовая Интеритус"
   STR_EXPULSUM_ARMOR_HULK: "Броня Силовая Экспульсум"
   STR_SATURNINE_ARMOR_HULK: "Броня Терминатора Сатурн"
@@ -10438,6 +10535,23 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE_HEAVY_DESC: "Серые Рыцари отправили все свои силы! Командир, наше дело проиграно, если мы не одержим победу сейчас!"
 
   # imperial as opfor for chaos player and cultists
+  STR_PDF_FACTION: "Силы Планетарной Обороны"
+  STR_IMPERIALGUARD_FACTION: "Имперская Гвардия"
+  STR_STEELLEGION_FACTION: "Стальной Легион"
+  STR_VALHALLAN_FACTION: "Ледяные Воины Вальгаллы"
+  STR_CATACHAN_FACTION: "Джунглиевые Бойцы Катачана"
+  STR_INQUISITION_FACTION: "Инквизиция"
+  STR_ADEPTASORORITAS: "Сестры Битв"
+  STR_DARKANGELS_FACTION: "Темные Ангелы"
+  STR_ULTRAMARINES_FACTION: "Ультрамарины"
+  STR_BLACKTEMPLARS_FACTION: "Черные Храмовники"
+  STR_CRIMSONFISTS_FACTION: "Багровые Кулаки"
+  STR_IMPERIALFISTS_FACTION: "Имперские Кулаки"
+  STR_SPACEWOLVES_FACTION: "Космические Волки"
+  STR_SALAMANDERS_FACTION: "Саламандры"
+  STR_LEGIONDAMNED_FACTION: "Легион Проклятых"
+  STR_DEATHCOMPANY_FACTION: "Рота Смерти"
+  STR_WHITESCARS_FACTION: "Белые Шрамы"
 
   STR_GUARDS_M_LV1_AI: "Гвардеец"
   STR_GUARDS_OFF_LV1_AI: "Офицер"
@@ -10468,36 +10582,67 @@ ru:  #  yamllint disable-line rule:empty-values
   SLGUARD_ARMOR_OFF_M_LV2: "Броня Панцир.Офицера СЛ"
 
   STR_IGOPFOR_TIER0: "Имперские Рекруты"
-  STR_IGOPFOR_TIER0PLUS: "Имперские Гвардейцы"
-  STR_IGOPFOR_TIER1: "Ветераны Имперской Гвардии"
-  STR_IGOPFOR_TIER2: "Элитные Имперские Гвардейцы"
+  STR_IGOPFOR_ABHUMAN_TIER0: "Имперские НЕ-Люди Рекруты"
+  STR_IGOPFOR_TIER0PLUS: "Имперский Гвардеец"
+  STR_IGOPFOR_ABHUMAN_TIER0PLUS: "Имперские Силы НЕ-Людей"
+  STR_IGOPFOR_TIER1: "Ветеран Имперской Гвардии"
+  STR_IGOPFOR_TIER2: "Элитный Имперский Гвардеец"
+
+  STR_IGOPFOR_OPEN_MISSILE_SENTINEL: "Часовой/Ракетный Блок"
+  STR_IGOPFOR_OPEN_SENTINEL_MISSILE_ARMOR: "Часовой/Ракетный Блок"
+  STR_IGOPFOR_OPEN_LASCANNON_SENTINEL: "Часовой/Лазпушка"
+  STR_IGOPFOR_OPEN_SENTINEL_LASCANNON_ARMOR: "Часовой/Лазпушка"
+  STR_IGOPFOR_MISSILE_SENTINEL: "Часовой II/Ракетный Блок"
+  STR_IGOPFOR_SENTINEL_MISSILE_ARMOR: "Часовой II/Ракетный Блок"
+  STR_IGOPFOR_LASCANNON_SENTINEL: "Часовой II/Лазпушка"
+  STR_IGOPFOR_SENTINEL_LASCANNON_ARMOR: "Часовой II/Лазпушка"
+  STR_IGOPFOR_HEAVY_PLASMA_SENTINEL: "Часовой II/Тяж.Плазма"
+  STR_IGOPFOR_SENTINEL_HEAVY_PLASMA_ARMOR: "Часовой II/Тяж.Плазма"
+
+  STR_BEASTGUARD_PENITENT_IGOPFOR: "Заключенный Зверолюд"
+  STR_BEASTGUARD_FLAK_IGOPFOR: "Зверолюд Гвардеец"
+  STR_BEASTGUARD_FLAKMEDIC_IGOPFOR: "Зверолюд Медик"
+  STR_BEASTGUARD_CARAPACE_IGOPFOR: "Зверолюд Ветеран"
+
+  STR_IGOPFOR_SQUATS_FLAK: "Скват Гвардеец"
+  STR_IGOPFOR_SQUATS_CARAPACE: "Скват Гвардеец"
+  STR_SHARPSHOOTER_FEMALE_IGOPFOR: "Гвардеец Снайпер"
+  STR_SHARPSHOOTER_MALE_IGOPFOR: "Гвардеец Снайпер"
+
+  STR_OGRYN_IGOPFOR: "Огрин"
+  STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR: "Щит Булгрина"
+  STR_BULLGRYN_BUCKLER_IGOPFOR: "Щит Булгрина"
+  STR_BULLGRYN_SLAB_IGOPFOR: "Ростовой Щит Булгрина"
 
   STR_SLEGOPFOR_TIER1: "Стальной Легион"
   STR_SLEGOPFOR_TIER2: "Ветеран Стального Легиона"
 
   STR_SMOPFOR_TIER0: "Патруль Ультрамаринов"
-  STR_SMOPFOR_TIER0PLUS: "Боевой Патруль Ультрамаринов"
+  STR_SMOPFOR_TIER0PLUS: "Боевой Патруль УЛ"
   STR_SMOPFOR_TIER1: "Взвод Ультрамаринов"
   STR_SMOPFOR_TIER2: "Рота Ультрамаринов"
   STR_SMOPFOR_M4: "Ульрамарины: Благочестивые M4"
   STR_SMOPFOR_M5: "Ульрамарины: Оборона M5"
   STR_SMOPFOR_M7: "Ульрамарины: Космопорт M7"
 
+  STR_BTOPFOR_TIER0: "Патруль ЧХ"
+  STR_BTOPFOR_TIER0PLUS: "Боевой Патруль ЧХ"
+  STR_BTOPFOR_TIER1: "Рота ЧХ"
+  STR_BTOPFOR_TIER2: "Крестовых Поход ЧХ"
 
-  STR_BTOPFOR_TIER0: "Патруль Черных Храмовников"
-  STR_BTOPFOR_TIER0PLUS: "Боевой Патруль Черных Храмовников"
-  STR_BTOPFOR_TIER1: "Рота Черных Храмовников"
-  STR_BTOPFOR_TIER2: "Кркстовых Поход Черных Храмовников"
+  STR_BTANDFIERYHEART_OPFOR_TIER0: "Боевой Патруль ЧХ"
+  STR_BTANDFIERYHEART_OPFOR_TIER0PLUS: "Военный Патруль ЧХ"
+  STR_BTANDFIERYHEART_OPFOR_TIER1: "Боевая Рота ЧХ"
 
-  STR_SWOPFOR_TIER0: "Стая Космических Волков"
-  STR_SWOPFOR_TIER0PLUS: "Охотничья Стая Космических Волков"
-  STR_SWOPFOR_TIER1: "Боевая Стая Космических Волков"
-  STR_SWOPFOR_TIER2: "Великая Стая Космических Волков"
+  STR_SWOPFOR_TIER0: "Стая КВ"
+  STR_SWOPFOR_TIER0PLUS: "Охотничья Стая КВ"
+  STR_SWOPFOR_TIER1: "Боевая Стая КВ"
+  STR_SWOPFOR_TIER2: "Великая Стая КВ"
 
-  STR_CFOPFOR_TIER0: "Патруль Багровых Кулаков"
-  STR_CFOPFOR_TIER0PLUS: "Боевой Патруль Багровых Кулаков"
-  STR_CFOPFOR_TIER1: "Боевая Рота Багровых Кулаков"
-  STR_CFOPFOR_TIER2: "Крестовый Поход Багровых Кулаков"
+  STR_CFOPFOR_TIER0: "Патруль БК"
+  STR_CFOPFOR_TIER0PLUS: "Боевой Патруль БК"
+  STR_CFOPFOR_TIER1: "Боевая Рота БК"
+  STR_CFOPFOR_TIER2: "Крестовый Поход БК"
 
   STR_SLMOPFOR_TIER0: "Патруль Саламандры"
   STR_SLMOPFOR_TIER0PLUS: "Боевой Патруль Саламандры"
@@ -10507,8 +10652,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLMOPFOR_M5: "Саламандры: Оборона M5"
   STR_SLMOPFOR_M7: "Саламандры: Космопорт M7"
 
-  STR_WS_MISS1: "Белые Шрамы Поисковая Группа"
-  STR_WS_MISS2: "Белые Шрамы Штурмовая Группа"
+  STR_WS_MISS1: "Поисковая Группа БШ"
+  STR_WS_MISS2: "Штурмовая Группа БШ"
 
   STR_DAOPFOR_TIER0: "Боевой Патруль ТА"
   STR_DAOPFOR_TIER0PLUS: "Военный Патруль ТА"
@@ -10526,19 +10671,21 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_FIERYHOPFOR_TIER2: "Рота Пламенного Сердца"
 
 
-  STR_SPACEMARINE_SCOUT_AI: "Скаут Ультрамаринов"
-  STR_SPACEMARINE_TAC_AI: "Тактикал Ультрамаринов"
-  STR_SPACEMARINE_DEV_AI: "Опустошитель Ультамаринов"
-  STR_SPACEMARINE_ASS_AI: "Штурмовик Ультрамаринов"
-  STR_SPACEMARINE_SARG_AI: "Сержант Ультрамаринов"
-  STR_SPACEMARINE_TERMI_AI: "Терминатор Ультамаринов"
-  STR_SPACEMARINE_TECH_AI: "Техдеснтник Ультрамарины"
-  STR_SPACEMARINE_CHAP_AI: "Капеллан Ультрамаринов"
-  STR_SPACEMARINE_CAPTAIN_AI: "Капитан Ультамаринов"
+  STR_SPACEMARINE_SCOUT_AI: "Скаут УЛ"
+  STR_SPACEMARINE_ADVSCOUT_AI: "Скаут II УЛ"
+  STR_SPACEMARINE_TAC_AI: "Тактикал УЛ"
+  STR_SPACEMARINE_DEV_AI: "Опустошитель УЛ"
+  STR_SPACEMARINE_ASS_AI: "Штурмовик УЛ"
+  STR_SPACEMARINE_SARG_AI: "Сержант УЛ"
+  STR_SPACEMARINE_TERMI_AI: "Терминатор УЛ"
+  STR_SPACEMARINE_TECH_AI: "Техдеснтник УЛ"
+  STR_SPACEMARINE_CHAP_AI: "Капеллан УЛ"
+  STR_SPACEMARINE_CAPTAIN_AI: "Капитан УЛ"
   STR_SPACEMARINE_HONOR_AI: "Почетный Страж УЛ"
-  STR_UMDREAD_AI: "Дредноут Ультрамаринов"
+  STR_UMDREAD_AI: "Дредноут УЛ"
 
   STR_SPACEMARINEARMOR_SCOUT: "Броня Скаута УЛ"
+  STR_SPACEMARINEARMOR_ADVSCOUT: "Броня Скаута II УЛ"
   STR_SPACEMARINEARMOR_TAC: "Броня Тактикала УЛ"
   STR_SPACEMARINEARMOR_DEV: "Броня Опустошителя УЛ"
   STR_SPACEMARINEARMOR_ASS: "Броня Штурмовика УЛ"
@@ -10593,13 +10740,13 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SPACEWOLVESARMOR_HONOR: "Броня Волчего Стража КВ"
   STR_FENRISWOLFY_ARMOR: "Броня Фенрисийского Волка"
 
-  STR_CRIMSONFIST_SCOUT_AI: "Скаут Багровых Кулаков"
-  STR_CRIMSONFIST_TAC_AI: "Тактикал Багровых Кулаков"
-  STR_CRIMSONFIST_DEV_AI: "Опустошитель Багровых Кулаков"
-  STR_CRIMSONFIST_SARG_AI: "Сержант Багровых Кулаков"
-  STR_CRIMSONFIST_HONOR_AI: "Почетный Страж Багровых Кулаков"
-  STR_CRIMSONFIST_TERMI_AI: "Терминатор Багровых Кулаков"
-  STR_CRIMSONFIST_CAPTAIN_AI: "Капитан Багровых Кулаков"
+  STR_CRIMSONFIST_SCOUT_AI: "Скаут БК"
+  STR_CRIMSONFIST_TAC_AI: "Тактикал БК"
+  STR_CRIMSONFIST_DEV_AI: "Опустошитель БК"
+  STR_CRIMSONFIST_SARG_AI: "Сержант БК"
+  STR_CRIMSONFIST_HONOR_AI: "Почетный Страж БК"
+  STR_CRIMSONFIST_TERMI_AI: "Терминатор БК"
+  STR_CRIMSONFIST_CAPTAIN_AI: "Капитан БК"
 
   STR_CRIMSONFISTARMOR_SCOUT: "Броня Скаута БК"
   STR_CRIMSONFISTARMOR_TAC: "Броня Тактикала БК"
@@ -10609,12 +10756,12 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_CRIMSONFISTARMOR_TERMI: "Броня Терминатора БК"
   STR_CRIMSONFISTARMOR_CAPTAIN: "Броня Капитана БК"
 
-  STR_WHITESCARS_TAC_AI: "Тактикал Белых Шрамов"
-  STR_WHITESCARS_SARG_AI: "Сержант Белых Шрамов"
-  STR_WHITESCARS_TERMI_AI: "Терминатор Белых Шрамов"
-  STR_WHITESCARS_CAPTAIN_AI: "Капитан Белых Шрамов"
-  STR_WHITESCARS_ASSBIKER_AI: "Штурмовой Байкер Белых Шрамов"
-  STR_WHITESCARS_ASS_AI: "Штурмовик Белых Шрамов"
+  STR_WHITESCARS_TAC_AI: "Тактикал БШ"
+  STR_WHITESCARS_SARG_AI: "Сержант БШ"
+  STR_WHITESCARS_TERMI_AI: "Терминатор БШ"
+  STR_WHITESCARS_CAPTAIN_AI: "Капитан БШ"
+  STR_WHITESCARS_ASSBIKER_AI: "Штурмовой Байкер БШ"
+  STR_WHITESCARS_ASS_AI: "Штурмовик БШ"
 
   STR_WHITESCARSARMOR_TAC: "Броня Тактикала БШ"
   STR_WHITESCARSARMOR_SARG: "Броня Сержанта БШ"
@@ -10635,6 +10782,7 @@ ru:  #  yamllint disable-line rule:empty-values
   WSBIKE_CORPSE4: "Обломки Байка БШ"
 
   STR_SALAMANDER_SCOUT_AI: "Скаут Саламандр"
+  STR_SALAMANDER_ADVSCOUT_AI: "Скаут II Саламандр"
   STR_SALAMANDER_TAC_AI: "Тактикал Саламандр"
   STR_SALAMANDER_DEV_AI: "Опустошитель Саламандр"
   STR_SALAMANDER_ASS_AI: "Штурмовик Саламандр"
@@ -10649,6 +10797,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SLMDREAD_AI: "Дредноут Саламандр"
 
   STR_SALAMANDERARMOR_SCOUT: "Броня Скаута Саламандр"
+  STR_SALAMANDERARMOR_ADVSCOUT: "Броня Скаута II Саламандр"
   STR_SALAMANDERARMOR_TAC: "Броня Тактикала Саламандр"
   STR_SALAMANDERARMOR_DEV: "Броня Опустошителя Саламандр"
   STR_SALAMANDERARMOR_ASS: "Броня Штурмовика Саламандр"
@@ -10663,6 +10812,7 @@ ru:  #  yamllint disable-line rule:empty-values
   SLMDREAD_ARMOR: "Броня Дредноута Саламандр"
 
   STR_SALAMANDERSCOUT_AICORPSE: "Труп Скаута Саламандр"
+  STR_SALAMANDERADVSCOUT_AICORPSE: "Труп Скаута II Саламандр"
   STR_SALAMANDERMK7_AICORPSE: "Труп Десантника Саламандр"
   STR_SALAMANDERSARGENT_AICORPSE: "Труп Сержанта Саламандр"
   STR_SALAMANDERHONOR_AICORPSE: "Труп Почетной Стражи Саламандр"
@@ -10687,13 +10837,14 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_STEELLEGION_CARAPACE_CORPSEAI: "Труп Ветерана Гвардии СЛ"
   STR_STEELLEGION_CARAPACE_OFFICER_CORPSEAI: "Труп Ветерана Офицера СЛ"
 
-  STR_SCOUT_AICORPSE: "Труп Скаута Ультрамаринов"
-  STR_MK7_AICORPSE: "Труп Ультрамарина"
-  STR_SARGENT_AICORPSE: "Труп Сержанта Ультамаринов"
-  STR_TERMINATOR_AICORPSE: "Труп Терминатора Ультамаринов"
-  STR_TECH_AICORPSE: "Труп Техдесантника Ультрамаринов"
-  STR_CHAP_AICORPSE: "Труп Капеллана Ультамаринов"
-  STR_HONOR_AICORPSE: "Труп Почетного Стража Ультрамаринов"
+  STR_SCOUT_AICORPSE: "Труп Скаута УЛ"
+  STR_ADVSCOUT_AICORPSE: "Труп Скаута II УЛ"
+  STR_MK7_AICORPSE: "Труп УЛ"
+  STR_SARGENT_AICORPSE: "Труп Сержанта УЛ"
+  STR_TERMINATOR_AICORPSE: "Труп Терминатора УЛ"
+  STR_TECH_AICORPSE: "Труп Техдесантника УЛ"
+  STR_CHAP_AICORPSE: "Труп Капеллана УЛ"
+  STR_HONOR_AICORPSE: "Труп Почетного Стража УЛ"
 
   STR_BLACKTEMPLARSCOUT_AICORPSE: "Труп Скаута ЧХ"
   STR_BLACKTEMPLARMK7_AICORPSE: "Труп Черного Храмовника"
@@ -10768,6 +10919,7 @@ ru:  #  yamllint disable-line rule:empty-values
   SLGUARD_ARMOR_OFF_M_LV2_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
 
   STR_SPACEMARINEARMOR_SCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
+  STR_SPACEMARINEARMOR_ADVSCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SPACEMARINEARMOR_TAC_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SPACEMARINEARMOR_DEV_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SPACEMARINEARMOR_ASS_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
@@ -10813,6 +10965,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_WHITESCARSBIKE_ARMOR_UC_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_WHITESCARSARMOR_ASS_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SALAMANDERARMOR_SCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
+  STR_SALAMANDERARMOR_ADVSCOUT_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SALAMANDERARMOR_TAC_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SALAMANDERARMOR_DEV_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_SALAMANDERARMOR_ASS_UFOPEDIA: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
@@ -11556,6 +11709,8 @@ ru:  #  yamllint disable-line rule:empty-values
 
   BASE: "БАЗА"  # noticed this one in the log so adding it in the language file just in case
 
+  STR_INQUISITION_OUTPOSTWB: "Малый Аванпост Инквизиции"
+
   STR_ULTRAMARINE_BASEV2: "Крепость Ультрамаринов"
   STR_BLACKTEMPLAR_BASEV2: "Крепость Черных Храмовников"
   STR_SPACEWOLVES_BASEV2: "Крепость Космических Волков"
@@ -11792,23 +11947,38 @@ ru:  #  yamllint disable-line rule:empty-values
 
   # space marines enemy ship
 
+  STR_SMMEDIUM_SCOUT: "Имперский Перехватчик"
   STR_SMMEDIUM_SCOUT_DOUBLE: "Имперский Транспорт"
   STR_SMLARGE_SCOUT: "Имперский Авангард"
+  STR_SMLARGE_SCOUT2: "Имперский Эскорт"
+  STR_SMHARVESTER: "Имперский Эсминец"
+  STR_SMTERROR_SHIP: "Имперская Баржа"
   STR_SMABDUCTOR: "Имперский Крейсер"
-  STR_SMBATTLESHIP: "Имперский Боевой Корабль"
+  STR_SMSUPPLY_SHIP: "Имп. Корабль Снабжения"
+  STR_SMBATTLESHIP: "Имперский Линкор"
 
-  STR_IMPERIAL_TERROR: "Имперский Террор"
-  STR_IMPERIAL_TERROR_HARD: "Имперский Террор"
-  STR_IMPERIALTERROR_MISSION: "Имперский Террор"
-  STR_IMPERIALTERROR_MISSION_HARD: "Имперский Террор"
+
+  STR_IMPERIAL_TERROR: "Имперская Зачистка"
+  STR_IMPERIAL_TERROR_HARD: "Имперская Зачистка"
+  STR_IMPERIALTERROR_MISSION: "Имперская Зачистка"
+  STR_IMPERIALTERROR_MISSION_HARD: "Имперская Зачистка"
   STR_IMPERIALS_TERRORISE: "ИМПЕРСКАЯ АТАКА"
   STR_IMPERIALS_TERROR_MISSION_BRIEFING: "На один из культов Хаоса напали, культисты в смятении. Мы должны отбить позиции и укрепиться, уничтожив все имперские угрозы в этом районе. За Хаос!"
   STR_IMPERIALS_RETALIATION: "Имперское Возмездие"
   STR_IMPERIALS_PATROL: "Имперский Патруль"
   STR_IMPERIALS_SUPPLY: "Имперское Снабжение"
-  STR_NEWIMPERIALGUARD_BASE: "Создание Имп. Аванпоста"
-  STR_NEWIMPERIALGUARD_BASEV2: "Создание Имп.Базы"
-  STR_NEWSPACEMARINE_BASE: "Создание Имп.Базы"
+  STR_IMPERIALS_RESEARCH: "Имперское Расследование"
+  STR_IMPERIALS_ABDUCTION: "Имперский Рейд"
+  STR_IMPERIALS_ABDUCTION_BRIEFING: "Имперцы разыскивают агентов и диссидентов для ареста и допроса. Хотя у нас здесь нет действующих агентов, мы можем причинить Империуму боль и страдания, а также сбить их с толку, пресекая подобные миссии."
+  STR_IMPERIALS_HARVEST: "Имперская Облава"
+  STR_IMPERIALS_HARVEST_BRIEFING: "Имперцы проводят зачистку сектора в поисках диссидентов и потенциальных еретиков. Без сомнения, их жертв в конечном итоге превратят в сервиторов или казнят. Неплохо бы сорвать эти мероприятия и заманить их в ловушку, пусть они бегают за собственной тенью."
+  STR_SALAMANDERS_ABDUCTION: "Саламандры: Рейд"
+  STR_SALAMANDERS_ABDUCTION_BRIEFING: "Саламандры разыскивают агентов и диссидентов для ареста и допроса. Хотя у нас здесь нет действующих агентов, мы можем причинить им боль и страдания, а также сбить их с толку, пресекая подобные миссии."
+  STR_SALAMANDERS_HARVEST: "Саламандры: Облава"
+  STR_SALAMANDERS_HARVEST_BRIEFING: "Саламандры проводят обследование сектора в поисках беженцев и нуждающихся в помощи граждан. Их попытки оказать благотворительную помощь, несомненно, закончатся катастрофой, мы должны сделать все возможное, чтобы ускорить этот процесс."
+  STR_NEWIMPERIALGUARD_BASE: "Создание Аванпоста Имп."
+  STR_NEWIMPERIALGUARD_BASEV2: "Создание Базы Имп."
+  STR_NEWSPACEMARINE_BASE: "Создание Базы Имп."
 
   STR_UMNEWSPACEMARINE_BASE: "Создание Аванпоста УЛ"
   STR_UMNEWSPACEMARINE_BASE2: "Создание Базы УЛ"
@@ -11826,9 +11996,14 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_DANEWSPACEMARINE_BASE2: "Создание Базы ТА"
 
 
+  STR_SLMMEDIUM_SCOUT: "Перехватчик Саламандр"
   STR_SLMMEDIUM_SCOUT_DOUBLE: "Транспорт Саламандр"
   STR_SLMLARGE_SCOUT: "Авангард Саламандр"
+  STR_SLMLARGE_SCOUT2: "Эскорт Саламандр"
+  STR_SLMHARVESTER: "Эсминец Саламандр"
+  STR_SLMTERROR_SHIP: "Баржа Саламандр"
   STR_SLMABDUCTOR: "Крейсер Саламандр"
+  STR_SLMSUPPLY_SHIP: "Корабль Снабжения Сал."
   STR_SLMBATTLESHIP: "Линкор Саламандр"
 
   STR_SLMIMPERIAL_TERROR: "Террор Саламандр"
@@ -12121,7 +12296,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_FIREWARRIOR_GV_RANK_3: "Шас-Эль"
   STR_FIREWARRIOR_GV_RANK_4: "Шас-Нел"
   STR_TAUDRONE_GUN_GV: "Боевой Дрон"
-  STR_TAUDRONE_MARKER_GV: "Маркерный дрон"
+  STR_TAUDRONE_MARKER_GV: "Маркерный Дрон"
   STR_TAUDRONE_GUN_ARMOR_GV: "Броня Боевого Дрона"
   STR_TAUDRONE_MARKER_ARMOR_GV: "Броня Маркерного Дрона"
   STR_TAU_MARKERLIGHT_BEAM: "Маркеровочный Луч"
@@ -12211,10 +12386,13 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ABSOLVE_MEDICAE_GV: "Освобождение Лекаря от Ксенофобии"
   STR_ABSOLVE_ADEPTAS_NOVICE_GV: "Освобождение Послушницы от Ксенофобии"
   STR_ABSOLVE_ADEPTAS_SUPERIOR_GV: "Освобождение Старшей от Ксенофобии"
-  STR_PROMOTE_SUPERIOR_GV: "Повышение: Добрая Ст. Сестра"
-  STR_PROMOTE_TO_CANONESS_GV: "Повышение: Добрая Канонисса"
-  STR_INDUCT_CANTUS_GV: "Посвятить: Добрая Послушница"
-  STR_PROMOTE_CANTUS_GV: "Посвятить: Добрая Сестра"
+  STR_TAU_PROMOTE_SUPERIOR_GV: "Повышение: Старшая Сестра ГВ"
+  STR_TAU_PROMOTE_NOVITIATE_SUPERIOR_GV: "Повышение: Старшая Послушница ГВ"
+  STR_TAU_PROMOTE_TO_CANONESS_GV: "Повышение: Сестра Канонесса ГВ"
+  STR_TAU_PRODUCE_SISTERSUPERIOR_ARMOR_GV: "Броня Старшей Сестры ГВ"
+  STR_TAU_PRODUCE_NOVITIATESUPERIOR_ARMOR_GV: "Броня Старшей Сестры ГВ"
+  STR_TAU_PRODUCE_ELOHIM_ARMOR_GV: "Броня Элохим ГВ"
+  STR_TAU_PRODUCE_RETRIBUTOR_ARMOR_GV: "Броня Воздаятеля ГВ"
   STR_ABSOLVE_BR_MEDICAE_GV: "(Освободить Госпитальера КР)"
   STR_NOCTILITH_SALVAGE_GAUSS_BLASTER_GV: "Трофейный Бластер Гаусса"
   STR_NOCTILITH_SALVAGE_HYPERPHASESWORD_GV: "Трофейный Гиперфазовый Клинок"
@@ -12254,7 +12432,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_GUEVESA_LIGHTNING_GV: "МОЛНИЯ ГВ"
   STR_GUEVESA_THUNDERBOLT_GV: "ГРОМ ГВ"
   STR_GUEVESACULTIST_GV: "Гуэвеса Культисты"
-  STR_TAU_GUEVESA_STRATEGY_GV: "[WIP] Стратегия Высшего Блага"
+  STR_TAU_GUEVESA_STRATEGY_GV: "Стратегия Высшего Блага"
   # STR_NOODLING3: "Апокалиптический имперский культ занял святилище в подземных лабиринтах рядом с вашей базой. Они облачены в оранжевые одежды и называют себя Создателями Пути. Утверждают, что их молитвы откроют путь сквозь варп-шторм ангелам Императора, которые прибудут в огненной буре и очистят мир копьями молний. Звучит заманчиво. Они тяжело вооружены, но верны и лучше бандитов, вы с радостью оставляете их в покое."
   STR_TAUGUEVESAFLAK_PC_ARMOR_ITEM_GV: "Бронежилет Тау Гуэвеса"
   STR_TAUGUEVESACARAP_PC_ARMOR_ITEM_GV: "Панцирь Тау Гуэвеса"
@@ -12270,8 +12448,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_INQ_ALIGN_TAU_RESEARCH_CODEX: "{NEWLINE}Высказывание этой идеи является прямой ересью, постоянные контакты с агентами Тау позволили установить минимальную степень доверия. Коварные ксеносы начали предлагать вам улучшенное экспортное оружие по значительно сниженным ценам, несомненно, надеясь еще больше склонить вас на сторону Высшего Блага.{NEWLINE}{NEWLINE}Инквизитор, не поддавайтесь чарующему обаянию и приветливости представителей Касты Воды!"
   STR_INQ_FOR_THE_GREATER_GOOD: "[WIP] За Высшее Благо"
   # some extra info for inquisitors
-  STR_INQ_FOR_THE_GREATER_GOOD_CODEX_TITLE: "!!! За Высшее Благо"
-  STR_INQ_FOR_THE_GREATER_GOOD_PT2_CODEX_TITLE: "Ксенос Террификус"  #Xenos Terrificus - странно-пугающий чужестранец
+  STR_INQ_FOR_THE_GREATER_GOOD_CODEX_TITLE: "   !!! За Высшее Благо"
+  STR_INQ_FOR_THE_GREATER_GOOD_PT2_CODEX_TITLE: "   Ксенос Террификус"  #Xenos Terrificus - странно-пугающий чужестранец
   STR_INQ_FOR_THE_GREATER_GOOD_PT2_CODEX: "{NEWLINE}Мы рады услышать, что член Инквизиции хочет узнать больше о Высшем Благе.{NEWLINE}{NEWLINE}{ALT}[ВНИМАНИЕ!!!Если вы хотите поэкспериментировать и перейти на стратегию Тау, изучите сюжетное ответвление -Пропаганда Тау-!{NEWLINE}{NEWLINE}Изучение пропаганды Тау носит экспериментальный характер и может привести к сбоям в игре. Сохранитесь перед изучением! Пожалуйста, оставьте ваши отзывы и впечатления в Discord. --С Уважением! Greatergreen]"
 
   STR_TAU_GUEVESA_MARKET_GV: "Черный Рынок"
@@ -12293,27 +12471,29 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TENAX_EXHORT_EVENT_GV: "ПРИКАЗ ИМПЕРСКОЙ ГВАРДИИ"
   STR_TENAX_EXHORT_CODEX_DESCRIPTION_GV: "Гвардейцы 22-го полка! Мы - воплощение гнева Императора! Знайте, что милосердие - грех, а сострадание - слабость. Пусть предатель истекет кровью, а еретик сгорит. Пусть грохот ваших снарядов станет вашей молитвой, а звук марша походных колонн - вашим гимном.{NEWLINE}{NEWLINE}{NEWLINE}ПОЛКОВНИК АГРИППА ЛУПИСИНУС ТЕНАКС{NEWLINE}КАЛИНИТСКИЙ 22-Й ШТУРМОВОЙ ДРАГУНСКИЙ ПОЛК{NEWLINE}АВТОРИТАС АКВИЛАРУМ"
 
-  STR_WHITESHIELD_BLACK_MARKET_GV: "Белые Щиты Черный Рынок"
-  # STR_WHITESHIELD_BLACK_MARKET_EVENT_GV: "Whiteshield Black Market"
+  STR_WHITESHIELD_BLACK_MARKET_GV: "Белые Щиты Черный Рынок+"
+  STR_WHITESHIELD_BLACK_MARKET_EVENT_GV: "Белые Щиты Черный Рынок"
   # STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Weeks ago the Guard sent you trucks, small arms, and a vox. Since then, nothing. Heavier weapons never came. Much materiel was lost in the shrine-warrens rout. Most of the rest is now hoarded by deserters and traitors.{NEWLINE}{NEWLINE}As Imperial authority staggers, smuggling flourishes. Shadowy armored caravans crawl the desolate battlefields, dealing arms to those they deem worthy. Perhaps you can find weapons on the black market. The best way to become a regular caravan stop is to provide their supply crawlers with promethium fueling services."
   STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Ссылаясь на боевые потери и риск измены и предательства, Гвардия отказалась снабжать ополчение тяжелым вооружением. Вы бы им даже поверили, если бы не обнаружили совершенно новое снаряжение Гвардии в руках предателей. Что-то здесь неладно. Вам лучше приготовиться защищаться самостоятельно.{NEWLINE}{NEWLINE}К счастью, вы всю свою жизнь имели дело с черным рынком и даже сейчас не собираетесь позволить кучке дилетантов превзойти вас в обеспечение снаряжением."
 
   STR_THE_COLD_TRADE_GV: "Холодная Торговля"
   STR_THE_COLD_TRADE_EVENT_GV: "Холодная Торговля"
-  STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "Сегодня среди караванов вы находите незнакомый сервочереп, покрытый синей эмалью. При приближении он говорит мелодичным голосом с акцентом северного Ультрамара. {NEWLINE}{NEWLINE}К-апитан. Приветствую вас. Я По-руи Да-лит Ха-леа. Я посланник Империи Тау. Мы благодарим вас за сотрудничество и высоко ценим ваш боевой дух. Если вы согласитесь, я хотел бы предложить вам нашу дружбу. А если вы предоставите нам передающую вышку для распространения нашего сообщения, я думаю, смогу предложить вам солдат."
+  STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "Штурм гвардии на столицу повстанцев превратился в кровавое болото. Снабжение отсутствует, ходят слухи о мятеже неоторых подразделений. К счастью, вам удалось получить альтернативные источники снабжения, используя свои связи на черном рынке. В последнее время до вас дошли слухи о появлении на рынке нового оружия - ксеновинтовок, угловатых по форме, феноменально смертоносных и непомерно дорогих. Вам не нравится иметь дело с ксеносами, но вам нужна огневая мощь."  # Repulsed at every turn by cultists and traitors, confronted by fell sorcery, Guard commanders have increasingly resorted to brutality The warp storm has had a perilous effect on Guard morale, and discipline among the Guard has broken down"
+  # STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "Among today's caravan deliveries you find an unfamiliar blue-enameled servo skull. When you approach, it speaks in a melodic northern Ultramar accent. {NEWLINE}{NEWLINE}'Captain. I greet you. I am Por'ui Dal'yth Ha'lea. I am an envoy from the Tau Empire. To you I offer our thanks for supporting the black market, and our appreciation for your fighting spirit. If you will accept it, I would like to offer our friendship. And if you can provide them shelter, I believe I can offer you soldiers.'"
 
-  STR_GUEVESA_CLUSTER_GV: "Вещание Пропаганды Тау+"
-  STR_TAU_PROPAGANDA_EVENT_GV: "Тау Пропаганда"
-  STR_TAU_PROPAGANDA_CODEX_DESCRIPTION_GV: "ХА-ЛЕА: Привет всем верным служащим, совершающим утреннее паломничество! Сестра Холли из Ордена Живой Воды принимает ваши исповеди в прямом эфире на EWVN, передаю слово.{NEWLINE}{NEWLINE}ГОЛОС: Привет, надвигающийся апокалипсис меня очень сильно угнетает. Где я могу найти эмоциональную поддержку?{NEWLINE}{NEWLINE}ХА-ЛЕА: Вы не думали о том, чтобы присоединиться к вооруженному культу? Я слышала, что эти Гуэвеса сочетают в себе воодушевляющее социальное послание с достойным уровнем огневой мощи. Следующий, пожалуйста спрашивайте..."
 
   STR_CULTURE_CLUB_GV: "Принять паломников Гуэвеса+"
   STR_CULTURE_CLUB_EVENT_GV: "Паломники Гуэвеса: Рекруты"
-  STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "Паломники Гуэвеса действительно странные. Некоторые из них - ремесленники, способные создавать удивительные устройства. Другие - священники, спасающиеся от коррупции Экклезиархии и готовы благословлять ваши войска в бою. Третьи - солдаты, вооруженные экспортным оружием Тау и готовые присоединиться к вашему делу.{NEWLINE}{NEWLINE}Вскоре Тау должны прислать вам устройство, называемое Маяком Следопытов. После активации Тау смогут определить ваше местоположение и установить прямой контакт."
+  STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "Среди сегодняшних караванов вы обнаружите незнакомый сервочереп, покрытый синей эмалью. При приближении он заговорит с мелодичным северным ультрамарским акцентом. {NEWLINE}{NEWLINE}Капитан. Приветствую вас. Меня зовут Поруи Дал-ит Ха-леа. Я посланник из Империи Тау. Выражаю вам благодарность за сотрудничество и признательность за ваш боевой дух. Если вы примете это предложение, я хотел бы предложить вам нашу дружбу. И если вы сможете предоставить убежище, я думаю, я смогу предложить вам солдат."
+  # STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "The guevesa pilgrims are strange indeed. Some are artisans able to craft remarkable devices. Others are Ministorum priests fleeing the Ecclesiarchy's corruption, willing to bless your troops in battle. Still others are soldiers, armed with Tau export weapons and willing to join your cause.{NEWLINE}{NEWLINE}Soon, the Tau send you a device called a 'pathfinder beacon'. When activated, Tau military liaison teams will be able to locate your base and make direct contact."
+
+  STR_TAU_PROPAGANDA_EVENT_GV: "Тау Пропаганда"
+  STR_TAU_PROPAGANDA_CODEX_DESCRIPTION_GV: "ХА-ЛЕА: Привет всем верным служащим, совершающим утреннее паломничество! Сестра Холли из Ордена Живой Воды принимает ваши исповеди в прямом эфире на EWVN, передаю слово.{NEWLINE}{NEWLINE}ГОЛОС: Привет, надвигающийся апокалипсис меня очень сильно угнетает. Где я могу найти эмоциональную поддержку?{NEWLINE}{NEWLINE}ХА-ЛЕА: Вы не думали о том, чтобы присоединиться к вооруженному культу? Я слышала, что эти Гуэвеса сочетают в себе воодушевляющее социальное послание с достойным уровнем огневой мощи. Следующий, пожалуйста спрашивайте...."
 
   STR_PATHFINDER_BEACON_GV: "Маяк Следопытов: Активация+"
   STR_PATHFINDERS_ARRIVE_FIRST_GV: "Следопыты Вернулись"
   STR_PATHFINDERS_ARRIVE_FIRST_EVENT_GV: "Следопыты Вернулись"
-  STR_PATHFINDERS_ARRIVE_FIRST_CODEX_DESCRIPTION_GV: "Вы ожидали, что ксеносы будут выше. С большим количеством клыков или щупалец и чем-нибудь еще. Вместо этого вы видите нечто среднее между регбистом, безносым козлом, цвета черники.{NEWLINE}{NEWLINE}Мэй, - говорит он, указывая на себя. Следопыт. Сержант. Хороший сигнал. Он кивает в сторону маяка следопытов. Вы получите… - Мэй ищет подходящее слово … душ? Долгий путь. Быстро. Да. Вы указываете следопыту путь к укрепленному консульству. Толпа ликующих Гуэвеса начинает следовать за ним."
+  STR_PATHFINDERS_ARRIVE_FIRST_CODEX_DESCRIPTION_GV: "Вы ожидали, что ксеносы будут выше. С большим количеством клыков или щупалец и чем-нибудь еще. Вместо этого вы видите нечто среднее между регбистом, безносым козлом, цвета черники.{NEWLINE}{NEWLINE}Мэй, - говорит он, указывая на себя. Следопыт. Сержант. Хороший сигнал. Он кивает в сторону маяка следопытов. Вы получите… - Мэй ищет подходящее слово … душ? Долгий путь. Быстро. Да. Вы указываете следопыту путь к укрепленному консульству."
 
   STR_BEASTMEN_CULTISTS_GV: "Принять Зверолюдов Паломников"
   STR_BEASTMEN_CULTISTS_EVENT_GV: "Маринвеса Зверолюди"
@@ -12321,7 +12501,11 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_TANKERS_DELIGHT_GV: "Принять Гвардейцев Дезертиров"
   STR_TANKERS_DELIGHT_EVENT_GV: "Принять Гвардейцев Дезертиров"
-  STR_TANKERS_DELIGHT_CODEX_DESCRIPTION_GV: "Мятеж поставил лоялистов из Гвардии перед ужасным выбором: остаться верными Тенаксу и предать Империум, или совершить тяжкое преступление - дезертирство - и стать повстанцем без причины. Вы предлагаете третий вариант. Вскоре дезертировавшие гвардейцы начнут доставлять тяжелое вооружение прямо к вашиму порогу."
+  STR_TANKERS_DELIGHT_CODEX_DESCRIPTION_GV: "Распространяющиеся мятежи против имперского командования поставили лоялистов перед ужасным выбором: остаться в своих подразделениях и предать Империум, или совершить тяжкое преступление - дезертирство - и стать партизаном. Вы предложили третий вариант и вскоре дезертировавшие гвардейцы начали стекаться прямо к вашим дверям."
+
+  STR_GUEVESA_CLUSTER_GV: "Основание Кластера Гуэ-Веса+"
+  STR_GUEVESA_CLUSTER_EVENT_GV: "Основание Кластера Гуэ-Веса"
+  STR_GUEVESA_CLUSTER_EVENT_DESCRIPTION_GV: "Имперская власть рухнула. Командная структура Гвардии развалилась на фоне взаимных обвинений в измене. Командиры полков превратились в вождей. Пагубное влияние варп-шторма распространяет подозрения и измены как лесной пожар. Но культисты гвэ-веса и их ксенопокровители остаются непоколебимыми. С каждым днем ​​появляется все больше паломников. Многие из ваших солдаты обратились в их веру. Ха-Леа начинает регулярно говорить с вами о Высшем Благе."
 
   STR_A_SECRET_PACT_GV: "Секретный Пакт+"
   STR_A_SECRET_PACT_EVENT_GV: "Секретный Пакт с Известными Инопланетными Силами"
@@ -12329,15 +12513,20 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_FIRE_OF_UNKNOWN_ORIGIN_GV: "Огонь Неизвестной Природы+"
   STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV: "Огонь Неизвестной Природы"
-  STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "КОММ.0.376.1.ПУСТОГЛАЗ.пламя [ПИЛЗ.ПРИ:ЦУНАМИ-ГВ]{NEWLINE}{NEWLINE}СООБЩЕНИЕ ОБ АНОМАЛЬНОЙ СИТУАЦИИ - АВАРИЙНОЕ ПРЕДУПРЕЖДЕНИЕ{NEWLINE}{NEWLINE}Гравитационные датчики в системе:: ПЕЛАГЕЯ [ГРАНИЦА-ГУЭЛА] Сообщается о максимальном суточном пространственном напряжении > 3 сигмы, превышающем 30 стандартных дней.{NEWLINE}{NEWLINE}СОВЕТ-ПЕЛАГЕИ сообщаят о ситуации ЦУНАМИ-ГВ. Доступные торговые ресурсы направлены на реагирование. Ожидается сигнал типа ГРАЖ-УЛУЧШ-126E, протокол коалиции ГЕЙЗЕР-3A."
+  STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "ПРИОРИТЕТ - АКТИВЫ ТОРГОВОГО ФЛОТА - ЦЕНТРАЛЬНОЕ ПРИГРАНИЧЬЕ{NEWLINE}ПОСОЛЬСТВО-ПЕЛАГЕЯ [класс:ГУЭЛА-ОКРАИНА] СООБЩЕНИЕ О АНОМАЛЬНОМ ЯВЛЕНИИ КОСМОСА ЗАТРУДНЯЮЩЕМ СУХОХОДСТУ.{NEWLINE}ГРАЖДАНСКИЕ БЕСПОРЯДКИ ДАЮТ ВОЗМОЖЕОСТЬ ДЛЯ ПЛАНЕТАРНОЙ ИНДОКТРИНАЦИИ.{NEWLINE}БЛИЖАЙШИЕ КОРАБЛИ ТОРГОВОГО ФЛОТА НАПРАВЛЕНЫ НА РЕАГИРОВАНИЕ.{NEWLINE}ОЖИДАЙТЕ СИГНАЛ МАЯКА ГРАЖ-ЛУЧ-126E, КОАЛИЦИОННЫЙ ПРОТОКОЛ ГЕЙЗЕР-3A."
+  # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "COMM.0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}ANOMALOUS CONDITION REPORT - EMERGENCY ALERT{NEWLINE}{NEWLINE}Gravitic sensors in system: PELEGA [GUELA-FRONTIER] report maximum daily spatial stress transient > 3sig in excess of 30 standard days.{NEWLINE}{NEWLINE}PELEGA-CONSUL advises TSUNAMI-GV conditions. Capable merchant assets directed to respond. Expect beacon type CIV-IMPROV-126E, coalition protocol HOTSPRING-3A."
+  # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "You and Mai go back and forth through the battle-vid footage in the privacy of her cramped little office.  's cramped little office is lit by a mixture of drone projections and 'recovered' Imperial candles. She's absorbed in cleaning a pulse carbine.  Sergeant Falx  COMM.0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}ANOMALOUS CONDITION REPORT - EMERGENCY ALERT{NEWLINE}{NEWLINE}Gravitic sensors in system: PELEGA [GUELA-FRONTIER] report maximum daily spatial stress transient > 3sig in excess of 30 standard days.{NEWLINE}{NEWLINE}PELEGA-CONSUL advises TSUNAMI-GV conditions. Capable merchant assets directed to respond. Expect beacon type CIV-IMPROV-126E, coalition protocol HOTSPRING-3A."
+  # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "Ha'lea calls you and Mai into her cramped little office. You take a seat amidst the flickering drone projections and 'recovered' Imperial candles. 'The communication disturbances. '
+  # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "Fio'vre Tau Cor've taps a pointer amidst the flickering series of unearthly photo-captures and strange squiggles projected on the concrete wall. He barks something in Tau. 'Folks, I'm an applied scientist. I'll keep this short,' translates his little drone. 'Extradimensional entities. Associated with dimensional stress transients. Which are becoming more severe. Orbital sensors-' - more pointing - '-"
+  # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "COMM.FTL0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}PELEGA-EMBASSY [GUELA-FRONTIER] reports successful gue'vesa cooperation during anomalous gravitic stress-associated planetary civil disorder. Available Merchant Fleet intervention assets are directed to respond."
 
   STR_THE_TERRAN_PROBLEM_GV: "Проблемы Терран+"
   STR_THE_TERRAN_PROBLEM_EVENT_GV: "Проблемы Терран"
-  STR_THE_TERRAN_PROBLEM_CODEX_DESCRIPTION_GV: "Ха-Леа входит в вашу командную палатку и бросает планшет с данными на картографический стол.{NEWLINE}{NEWLINE}Гуэвеса. Легендарное проклятие вашего народа обрушилось на этот мир. Колдун был очень откровенен.{NEWLINE}{NEWLINE}Она на мгновение замирает и пристально смотрит на вас. -История о безумии в высших эшелонах власти. О ритуале Гуэла, происходящем где-то на этом мире, который разрывает ткань пространства, Разрывает ее, чтобы выпустить ужасы наружу."
+  STR_THE_TERRAN_PROBLEM_CODEX_DESCRIPTION_GV: "Ха-Леа входит с мрачным видом в вашу командную палатку.{NEWLINE}{NEWLINE}Гуэ-веса. Легендарное проклятие вашего народа действительно обрушилось на этот мир{NEWLINE}{NEWLINE}Она собирается с мыслями, подавляя тревогу. Ведьма оказалась очень откровенной и рассказала о творящемся безумии в высших эшелонах власти. О колдовском ритуале гуэла, происходящем где-то на этом мире, разрывающем ткань пространства, чтобы впустить ужасы варпа.{NEWLINE}{NEWLINE}Одиночный импульсный выстрел эхом доносится со стороны тюремных блоков."
 
   STR_INFILTRATION_CADRE_GV: "Добро Пожалость на Базу+"
-  STR_INFILTRATION_CADRE_EVENT_GV: "Внедрение на Базу"
-  STR_INFILTRATION_CADRE_CODEX_DESCRIPTION_GV: "Направляемые вашими маяками, скрытные транспортные корабли прорываются сквозь потрепанную орбитальную оборону Пелагеи для прибытя на вашу базу. Ваши подозрительные солдаты принимают перспективу сотрудничества с ксеносами после того, как Тау строят винокурню и вводят ежедневное распределение амасека. Вы обнаружили, что пайки Тау на вкус как скошенная трава, но зато они очень сытные.{NEWLINE}{NEWLINE}Основные силы Тау уже в пути. Вам потребуется умение работать с керамитом для обслуживания их передового оборудования."
+  STR_INFILTRATION_CADRE_EVENT_GV: "Добро Пожаловать!"
+  STR_INFILTRATION_CADRE_CODEX_DESCRIPTION_GV: "Направляемые вашими маяками, сокрытые транспортные корабли диверсантов прорвались сквозь потрепанную орбитальную оборону Пелагеи и прибыли на вашу базу. Ваши подозрительные солдаты быстро прониклись перспективой сотрудничества с ксеносами, получив возможность поесть чего-нибудь, кроме трупного крахмала. Однако, сухпайки Тау на вкус как скошенная трава, но зато очень питательные.{NEWLINE}{NEWLINE}Вооруженные силы Тау уже в пути. Вам потребуется умение работать с керамитом для обслуживания их передового снаряжения."
 
   STR_AUXILIARY_CADRE_GV: "Из Вспомогательных Кадров+"
   STR_AUXILIARY_CADRE_EVENT_GV: "Вспомогательные Кадры"
@@ -12345,13 +12534,19 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_COALITION_COMMAND_GV: "Коалиция Тау Пелагея+"
   STR_COALITION_COMMAND_EVENT_GV: "Коалиция Тау Пелагея"
-  STR_COALITION_COMMAND_CODEX_DESCRIPTION_GV: "Руководствуясь вашими навигационными маяками, торговый флот проложил себе путь сквозь варп-шторм и вышел в реальное пространство радом с высокой орбитой Пелагеи. Застигнутые врасплох, корабли Имперского флота получили серьезные повреждения в серии ожесточенных сражений и были вынуждены разорвать кольцо блокады планеты. Бронированные отряды Тау уже приступили к высадке. Вокруг ваших сил быстро начала формироваться полноценная коалиция Тау."
+  STR_COALITION_COMMAND_CODEX_DESCRIPTION_GV: "Руководствуясь вашими навигационными маяками, торговый флот проложил себе путь сквозь варп-шторм и вышел в реальное пространство радом с высокой орбитой Пелагеи. Застигнутые врасплох, корабли Имперского флота получили серьезные повреждения в серии ожесточенных сражений и были вынуждены разорвать кольцо блокады планеты. Вооруженные силы Тау уже приступили к высадке. Вокруг ваших сил быстро начала формироваться полноценная коалиция Тау."
 
-  STR_EMERGENCY_PROTOCOLS_GV: "Экстренные Протоколы"
+  STR_EMERGENCY_PROTOCOLS_GV: "Экстренные Протоколы+"
   STR_EMERGENCY_PROTOCOLS_EVENT_GV: "Экстренные Протоколы"
   STR_EMERGENCY_PROTOCOLS_CODEX_DESCRIPTION_GV: "ЗАГОЛОВОК: БОЛЬШИМИ БУКВАМИ::ЦУНАМИ-ГВ{NEWLINE}{NEWLINE}В целях обеспечения общественной безопасности Высшее Благо объявляется сувереном над системой Пель-Га. Всем лояльным имперским силам, получившим это сообщение, предписывается неустанно преследовать ведьм и колдунов и подготовиться к координации усилий по очищению вместе представителями армии Тау. Невыполнение этого требования приведет к ликвидации."
 
   STR_RALLY_GUARD_GV: "Сплочение Верующих Гвардейцев"
+  STR_RALLY_GUARD_EVENT_GV: "Сплочение Верующих Гвардейцев"
+  STR_RALLY_GUARD_CODEX_DESCRIPTION_GV: "Сплочение Верующих Гвардейцев"
+
+  STR_FORM_KILL_TEAMS_GV: "Формирование Истребительной Команды"
+  STR_FORM_KILL_TEAMS_EVENT_GV: "Формирование Истребительной Команды"
+  STR_FORM_KILL_TEAMS_CODEX_DESCRIPTION_GV: "Формирование Истребительной Команды"
 
   STR_RECUSANT_SISTERS_GV: "Принять Сестер-Отступниц"
   STR_RECUSANT_SISTERS_EVENT_GV: "Принять Сестер-Отступниц"
@@ -12359,7 +12554,7 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_COOPT_ECCLESIARCHY_GV: "Привлечение Экклезиархии"
   STR_COOPT_ECCLESIARCHY_EVENT_GV: "Привлечение Экклезиархии"
-  STR_COOPT_ECCLESIARCHY_CODEX_DESCRIPTION_GV: "Большинство выживших епископов Пелагеи под дулом пистолета были доставлены в совет и мягко понуждаемы к принятию декларации о терпимости к ксеносам при соблюдении длинного списка условий. В Диалогус Холли комментариям к Имперскому Кредо, указывает на то, что вмешательство в усилия по охоте на ведьм со стороны ксеносов действительно считается укрывательством ведьмы."
+  STR_COOPT_ECCLESIARCHY_CODEX_DESCRIPTION_GV: "Большинство выживших епископов Пелагеи принятию декларации о терпимости к ксеносам при соблюдении длинного списка условий. В Диалогус Холли комментариям к Имперскому Кредо, указано на то, что вмешательство в усилия по охоте на ведьм со стороны ксеносов действительно считается укрывательством ведьмы."
 
   STR_IMPERIAL_CRUSADE_GV: "Экскоммуникате Траиторис"
   STR_IMPERIAL_CRUSADE_EVENT_GV: "Экскоммуникате Траиторис"  # Отлучение от церкви отступников!
@@ -12441,7 +12636,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TAU_MARKSMAN_RAIL_RIFLE_GV: "Рельсовая Винт. Меткого Стрелка"
   STR_TAU_MARKSMAN_RAIL_RIFLE_GV_CODEX: "TODO"
 
-  STR_GENERIC_HEAVY_STUBBER: "Списанный Тяж. Стабер"
+  STR_GENERIC_HEAVY_STUBBER: "Стабер Тяж./Списанный"
 
   STR_DECLARE_MONTKA_GV: "Монт-Ка!"
 
@@ -12515,7 +12710,6 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_APPOINT_FIREBLADE_GV: "Назначение: Кадр Огненный Клинок"
   STR_STEALTH_SUIT_OPERATIONS_GV: "Операции: Стелс Костюм"
-  STR_FORM_KILL_TEAMS_GV: "Из Истебительной Команды"
   STR_STARSCYTHE_CRISIS_OPERATIONS_GV: "XV8 Кризис/Звездная Коса"
   STR_FIREKNIFE_CRISIS_OPERATIONS_GV: "XV8 Кризис/Огненный Нож"
   STR_SUNFORGE_CRISIS_OPERATIONS_GV: "XV8 Кризис/Солнечный Горн"
@@ -12587,6 +12781,9 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TAU_PATHFINDER_MEDIC_ARMOR_ITEM_GV: "Панцирь Следопыта/Медик"
   STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_GV: "Панцирь Гуэвеса/Медик"
   STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_ITEM_GV: "Панцирь Гуэвеса/Медик"
+  STR_TAU_ADEPTAS_ARMOR_NOVSUPERIOR_GV: "Панцирь Старшей Сестры ГВ"
+  STR_TAU_ADEPTAS_ARMOR_GV: "Панцирь Сестры ГВ"
+
 
   STR_TAU_LEADER_COMMAND_GV: "Коммандование Шас-Уи"
   STR_TAU_VETERAN_COMMAND_GV: "Коммандование Шас-Вре"
@@ -12644,6 +12841,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_WARDED_FIREKNIFE_CRISIS_SUIT_MPPR_GV_CODEX: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_WARDED_FIREKNIFE_CRISIS_SUIT_PRX2_GV_CODEX: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
   STR_WARDED_SUNFORGE_CRISIS_SUIT_FBX2_GV_CODEX: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
+  STR_TAU_ADEPTAS_ARMOR_CODEX_DESCRIPTION_GV: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
+  STR_TAU_ADEPTAS_ARMOR_NOVSUPERIOR_CODEX_DESCRIPTION_GV: "{NEWLINE}{NEWLINE} ОПИСАНИЕ БРОНИ"
 
   STR_CRAFT_BURST_CANNON_GV_UC: "СКОРОСТРЕЛЬНАЯ ПУШКА"
   STR_CRAFT_BURST_CANNON_GV: "Скорострельная Пушка"
@@ -12777,9 +12976,11 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TAUFIREWARRIORLEADER_PCCORPSE: "Труп Шас-Уи ВКО"
   STR_TAUFIREWARRIORCAPTAIN_PCCORPSE: "Труп Шас-Эль ВКО"
   STR_TAUGUEVESA_PCCORPSE: "Труп Гуэвеса"
+  STR_TAUMARINVESA_PCCORPSE: "Труп Маринвеса"
   STR_TAUMILITIA_PCCORPSE: "Труп Ополченца"
   STR_XV26_STEALTH_SUIT_PCCORPSE: "Труп Пилота XV26 Стелс"
   STR_CRISIS_SUIT_PCCORPSE: "Труп Пилота XV8 Кризис"
+
 
 
 
@@ -12821,7 +13022,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TITHE_DISRUPTED_GV_CODEX: "Неуплата Десятины"
   STR_TITHE_DISRUPTED_GV_CODEX_DESCRIPTION: "Безумие гражданской войны, подпитываемое варпом, уничтожило любую экономическую активность, превратив благополучных и прибыльных паломников в нищие, охваченные ужасом толпы беженцев. Их средства были присвоены для финансирования боевых действий, а частная собственность была разграблена везде, где ее можно было найти. В результате дефицит планетарной казны оказался столь же огромным, сколь и предсказуемым, а десятина в пользу Империума не была уплочена. И неотвратимый взор Империума пал на враждующих жрецов Пелагеи IV."
   STR_BATTLEGROUP_DETLENEF_GV_CODEX: "Боевая Группа Детленефа"
-  STR_BATTLEGROUP_DETLENEF_GV_CODEX_DESCRIPTION: "Погружение столь прибыльного мира-святилища в анархию рассматривалось как серьезная, но не катастрофическая проблема, командование имперского сектора это осозналвало. Слишком жестокие репрессии могли нанести серьезный ущерб религиозной и коммерческой деательности планеты, поэтому требовался более мягкий подход. В связи с этим на Пелагею была отправлена ​​боевая группа, сформированная из 22-го Калинитского Гвардейского Драгунского Штурмового полка, под командованием полковника Винтеуса Детленефа, с приказом обеспечить своевременное исполнение имперской десятины."
+  STR_BATTLEGROUP_DETLENEF_GV_CODEX_DESCRIPTION: "Погружение столь прибыльного мира-святилища в анархию рассматривалось как серьезная, но не катастрофическая проблема, командование имперского сектора это осозналвало. Слишком жестокие репрессии могли нанести серьезный ущерб религиозной и коммерческой деательности планеты, поэтому требовался более мягкий подход. В связи с этим на Пелагею была отправлена боевая группа, сформированная из 22-го Калинитского Гвардейского Драгунского Штурмового полка, под командованием полковника Винтеуса Детленефа, с приказом обеспечить своевременное исполнение имперской десятины."
   STR_COLONEL_DETLENEF_GV_CODEX: "Полковник Винтеус Детленеф"
   STR_COLONEL_DETLENEF_GV_CODEX_DESCRIPTION: "Полковник Детленеф одержал впечатляющую серию побед для Империума на бескрайних пустынях Нозорта Прайма и в радиоактивных степях Бактросса II, командуя с уверенностью из башни своего личного командного танка -Рогал Дорн-. Его агрессивный, напористый стиль снискал ему большую славу и почет в прошлом. Он - эксперт в маневренной войне, не колеблясь прибегает к подавляющей огневой мощи, чтобы сокрушить любое препятствие на пути его бронетанковых батальонов."
   STR_KALINIT_ASSAULT_DRAGOONS_GV_CODEX: "Штурмовые Драгуны Калинита"
