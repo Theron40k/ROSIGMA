@@ -105,7 +105,7 @@ research:
 ### Gives you TRADE access in a convenient package
   - name: STR_WHITESHIELD_BLACK_MARKET_GV
     points: 50
-    cost: 300
+    cost: 150 # was 300, split into Gun Runners
     dependencies:
       - STR_TAU_GUEVESA_GV    # Any Guevesa can hook in here
       - STR_LASER_WEAPONS     # desperate for bigger guns
@@ -114,18 +114,31 @@ research:
     needItem: true
     neededItem: STR_KILLPOINT_TOKEN     # kill a bad guy and win a mission
     unlocks:
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
       - STR_HEAVY_WEAPONS_IG
     spawnedEvent: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
+
+### Gun Runners unlocks high grade ballistics for you
+### Black Market is required
+  - name: STR_GUN_RUNNERS_GV
+    points: 50
+    cost: 150
+    dependencies:
+      - STR_WHITESHIELD_BLACK_MARKET_GV
+      - STR_HEAVY_WEAPONS_IG
+    requiresBaseFunc: [TRADE]
+    unlocks:
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE
+    spawnedEvent: STR_GUN_RUNNERS_EVENT_GV
 
 ### Discover the Cold Trade
 ### Discover Tau artifacts
 ### win a couple missions?
   - name: STR_THE_COLD_TRADE_GV
     points: 50
-    cost: 500
+    cost: 300
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
+      - STR_GUN_RUNNERS_GV
     getOneFree:
       - STR_TAU_TRADING
     spawnedEvent: STR_THE_COLD_TRADE_EVENT_GV   # talk to the Tau here?
@@ -142,8 +155,8 @@ research:
 ### Accept Guevesa cultists first - they check you out
 ### Cultist periodic arrival events
   - name: STR_CULTURE_CLUB_GV
-    points: 100
-    cost: 400
+    points: 50
+    cost: 200
     dependencies:
       - STR_THE_COLD_TRADE_GV
     unlocks:
@@ -156,7 +169,7 @@ research:
 ### gated on mission/interrogation?
   - name: STR_GUEVESA_CLUSTER_GV
     points: 100
-    cost: 600
+    cost: 400
     dependencies:
       - STR_CULTURE_CLUB_GV
       - STR_ELERIUM_115             # guevesa supply crawlers need fuel
@@ -207,7 +220,7 @@ research:
 ### Beastmen arrive, consider gating on mission - consider later launching mission at same time to cover cost
   - name: STR_BEASTMEN_CULTISTS_GV
     points: 0
-    cost: 200
+    cost: 100
     dependencies:
       - STR_CULTURE_CLUB_GV
     spawnedEvent: STR_BEASTMEN_CULTISTS_EVENT_GV
@@ -216,7 +229,7 @@ research:
 ### Gate on mission
   - name: STR_TANKERS_DELIGHT_GV
     points: 0
-    cost: 200
+    cost: 100
     dependencies:
       - STR_CULTURE_CLUB_GV
       # purchases unlocked over on the troops
@@ -242,7 +255,7 @@ research:
 ### "Light" Tau base
   - name: STR_A_SECRET_PACT_GV
     points: -250
-    cost: 800
+    cost: 500
     dependencies:
       - STR_GUEVESA_CLUSTER_GV
       - STR_UFO_POWER_SOURCE
@@ -266,15 +279,12 @@ research:
 # "Medium" Tau base
   - name: STR_INFILTRATION_CADRE_GV
     points: 100
-    cost: 400
+    cost: 500
     dependencies:
       - STR_A_SECRET_PACT_GV
       - STR_NAVY_COMUNICATIONS
     unlocks:
-      - STR_TAU_BREACHERS_GV
-      - STR_TAU_STRIKE_TEAMS_GV
       - STR_AWARD_PERSONAL_SHIELD
-      # - STR_REMORA_INTERCEPTORS_GV    # Build remoras
     spawnedEvent: STR_INFILTRATION_CADRE_EVENT_GV
 
 ### build Devilfish from parts
