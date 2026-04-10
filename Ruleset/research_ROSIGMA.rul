@@ -3575,13 +3575,26 @@ research:
       - STR_MIDTIER_PREREQ
 
   - delete: STR_ULTIMATE_CRAFT
-  - name: STR_ULTIMATE_CRAFT  # Chapter High-tier Requisitions use by WB too
+  - name: STR_ULTIMATE_CRAFT  # Chapter High-tier Requisitions
     cost: 900
     points: 30
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_MARINES_STRATEGY
       - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_CYDONIA_OR_BUST
+      - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
+    unlocks:
+      - STR_HIGHTIER_PREREQ
+
+  - name: STR_ULTIMATE_CRAFTWB  # Legion High-tier Requisitions for WB only
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_WORDBEARERS_STRATEGY
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
       - STR_CYDONIA_OR_BUST
       - STR_NOT_SPACEWOLVES
     unlocks:

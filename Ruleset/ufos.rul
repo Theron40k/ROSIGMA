@@ -136,13 +136,13 @@ ufos:
       name: CH001_SLAAN
       mapDataSets:
         - BLANKS
-        - CH2
-        - CH3
-        - CHI1_40k
+        - CH2_40k
+        - CH3_40k
+        - CHI1_S_40k
         - CHI2_40k
         - CHI3_40k
         - CHI4_40k
-        - CHI5_40k
+        - CHI5_S_40k
       mapBlocks:
         - name: CH001_SLAAN
           width: 10
@@ -4421,6 +4421,43 @@ ufos:
             STR_ELERIUM_115:
               - [12, 12, 0]
               - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [12, 12, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWERJOINT
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02TRIPPLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
+        - name: SMCH02TRIPPLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
 
   - type: STR_SMLARGE_SCOUT2 #Hell Cruiser
     marker: 15
@@ -4712,6 +4749,113 @@ ufos:
               - [4, 15, 1]
               - [5, 15, 1]
               - [6, 15, 1]
+        - name: SMSHPCH06B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [8, 8, 1]
+              - [8, 21, 1]
+        - name: SMSHPCH06C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [3, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH06D
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [7, 21, 0]
+              - [6, 10, 0]
+              - [2, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [3, 12, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [8, 9, 1]
+              - [15, 11, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [14, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 8, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [3, 9, 1]
+              - [17, 9, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR5
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 12, 1]
+              - [17, 10, 1]
 
   - type: STR_SMSUPPLY_SHIP
     marker: 17
@@ -4962,6 +5106,43 @@ ufos:
             STR_ELERIUM_115:
               - [12, 12, 0]
               - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [12, 12, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWERJOINT
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02TRIPPLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
+        - name: SMCH02TRIPPLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
 
   - type: STR_SLMLARGE_SCOUT2 #Hell Cruiser
     marker: 15
@@ -5253,6 +5434,113 @@ ufos:
               - [4, 15, 1]
               - [5, 15, 1]
               - [6, 15, 1]
+        - name: SMSHPCH06B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [8, 8, 1]
+              - [8, 21, 1]
+        - name: SMSHPCH06C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [3, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH06D
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [7, 21, 0]
+              - [6, 10, 0]
+              - [2, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [3, 12, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [8, 9, 1]
+              - [15, 11, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [14, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 8, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [3, 9, 1]
+              - [17, 9, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR5
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 12, 1]
+              - [17, 10, 1]
 
   - type: STR_SLMSUPPLY_SHIP
     marker: 17
@@ -5434,6 +5722,43 @@ ufos:
             STR_ELERIUM_115:
               - [12, 12, 0]
               - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [12, 12, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWERJOINT
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02TRIPPLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
+        - name: SMCH02TRIPPLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
 
   - type: STR_SMLARGE_SCOUT_IMPOSTER
     marker: 15
@@ -5783,6 +6108,42 @@ ufos:
           items:
             STR_ELERIUM_115:
               - [2, 3, 0]
+        - name: SMSHPCH02B
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02C
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02D
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02E
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 3, 1]
+        - name: SMSHPCH00BIG
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+        - name: SMSHPCH00FAT
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
 
   - type: STR_SISLARGE_SCOUT2 #Hell Cruiser
     marker: 15
@@ -5818,6 +6179,48 @@ ufos:
             STR_ELERIUM_115:
               - [5, 16, 0]
               - [13, 16, 0]
+        - name: SISSHPCH03B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 14, 0]
+              - [13, 15, 0]
+        - name: SISSHPCH03CR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03DR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03ER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03FR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03HEAVY
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 1]
+              - [14, 16, 1]
 
   - type: STR_SISABDUCTOR
     marker: 16
@@ -5855,6 +6258,37 @@ ufos:
               - [9, 4, 1]
               - [10, 4, 1]
               - [11, 4, 1]
+        - name: SISSHPCH05B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 4, 1]
+              - [9, 4, 1]
+              - [10, 4, 1]
+              - [11, 4, 1]
+        - name: SISSHPCH140
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 1, 0]
+              - [6, 12, 0]
+              - [9, 1, 1]
+              - [9, 9, 1]
+        - name: SISSHPCH05ABDUCTOR
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [5, 23, 0]
+              - [8, 22, 0]
+              - [6, 7, 0]
+              - [8, 6, 0]
+              - [12, 25, 1]
+              - [12, 13, 1]
+              - [8, 13, 1]
+              - [12, 16, 1]
 
   - type: STR_SISHARVESTER
     marker: 16
@@ -5891,6 +6325,16 @@ ufos:
               - [6, 10, 0]
               - [7, 10, 0]
               - [8, 10, 0]
+        - name: SISSHPCH130
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 2, 0]
+              - [6, 9, 0]
+              - [12, 9, 0]
+              - [7, 10, 1]
+              - [8, 2, 2]
 
   - type: STR_SISTERROR_SHIP
     marker: 17
@@ -5932,6 +6376,62 @@ ufos:
               - [4, 15, 1]
               - [5, 15, 1]
               - [6, 15, 1]
+        - name: SMSHPCH06B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [8, 8, 1]
+              - [8, 21, 1]
+        - name: SMSHPCH06C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [3, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH06D
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [7, 21, 0]
+              - [6, 10, 0]
+              - [2, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SISSHPCH06FLEUR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 5, 0]
+              - [4, 14, 0]
+              - [2, 8, 0]
+              - [5, 10, 2]
+              - [5, 7, 2]
+              - [5, 10, 1]
+              - [5, 7, 1]
+              - [14, 16, 1]
+              - [14, 2, 1]
 
   - type: STR_SISSUPPLY_SHIP
     marker: 17
@@ -5969,6 +6469,24 @@ ufos:
               - [9, 3, 0]
               - [10, 3, 0]
               - [11, 3, 0]
+        - name: SISSHPCH08B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+        - name: SISSHPCH0C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
 
   - type: STR_SISBATTLESHIP
     marker: 18
@@ -5998,6 +6516,302 @@ ufos:
         - SISCHI5_40k
       mapBlocks:
         - name: SISSHPCH07
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [12, 3, 0]
+              - [13, 3, 0]
+              - [14, 3, 0]
+              - [15, 3, 0]
+              - [16, 3, 0]
+              - [17, 3, 0]
+              - [2, 12, 0]
+              - [3, 12, 0]
+              - [26, 12, 0]
+              - [27, 12, 0]
+        - name: SISSHPCH07B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [6, 25, 2]
+              - [14, 25, 2]
+              - [9, 5, 1]
+              - [10, 5, 1]
+              - [6, 27, 1]
+              - [9, 27, 1]
+              - [13, 27, 1]
+              - [15, 23, 1]
+              - [3, 23, 1]
+              - [6, 10, 1]
+        - name: SISSHPCH07C
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [17, 15, 1]
+              - [13, 1, 0]
+              - [14, 1, 0]
+              - [15, 1, 0]
+              - [16, 1, 0]
+              - [12, 15, 1]
+              - [14, 24, 0]
+              - [24, 15, 0]
+              - [3, 11, 0]
+              - [24, 5, 1]
+              - [5, 5, 1]
+
+  # inquisition ai ships
+
+  - type: STR_INQMEDIUM_SCOUT #transport
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_SMALL
+    modSprite: InterceptionUFO-02
+    damageMax: 220
+    speedMax: 1600
+    accel: 5
+    power: 8
+    range: 65
+    score: 75
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: INQSHPCH02
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH02
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+
+  - type: STR_INQLARGE_SCOUT2 #Hell Cruiser
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_MEDIUM_UC #smaller than the pancake, only 1 floor
+    modSprite: InterceptionUFO-03
+    damageMax: 500
+    speedMax: 2000
+    accel: 5
+    power: 8
+    range: 65
+    score: 125
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: INQSHPCH03
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH03
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 0]
+              - [13, 16, 0]
+
+  - type: STR_INQABDUCTOR
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-05
+    damageMax: 1400
+    speedMax: 1300
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1500
+    battlescapeTerrainData:
+      name: INQSHPCH05
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH05
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 4, 1]
+              - [9, 4, 1]
+              - [10, 4, 1]
+              - [11, 4, 1]
+
+  - type: STR_INQHARVESTER
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-04
+    damageMax: 1000
+    speedMax: 800
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1000
+    battlescapeTerrainData:
+      name: INQSHPCH04B
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH04B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [8, 10, 0]
+
+  - type: STR_INQTERROR_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-08
+    damageMax: 3000
+    speedMax: 2800
+    accel: 6
+    power: 50
+    range: 65
+    score: 500
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: INQSHPCH06
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH06
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [9, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [5, 15, 1]
+              - [6, 15, 1]
+
+  - type: STR_INQSUPPLY_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-06
+    damageMax: 5400
+    speedMax: 1200
+    accel: 6
+    power: 30
+    range: 65
+    score: 400
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: INQSHPCH08
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH08
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+
+  - type: STR_INQBATTLESHIP
+    marker: 18
+    markerLand: 23
+    markerCrash: 28
+    alertSound: 36
+    size: STR_VERY_LARGE
+    modSprite: InterceptionUFO-07
+    damageMax: 7000
+    speedMax: 1000
+    accel: 2
+    power: 150
+    range: 65
+    score: 700
+    reload: 24
+    breakOffTime: 4000
+    battlescapeTerrainData:
+      name: INQSHPCH07
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH07
           width: 30
           length: 30
           items:
