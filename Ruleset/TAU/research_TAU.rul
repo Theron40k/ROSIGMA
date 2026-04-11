@@ -162,8 +162,6 @@ research:
       - STR_THE_COLD_TRADE_GV
     needItem: true
     neededItem: STR_TAU_PULSE_RIFLE_EXPORT
-    unlocks:
-      - STR_GUARD_PRIEST_REQUISITION      # Priests
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
     # spawnedEvent: STR_CULTURE_CLUB_GV
 
@@ -172,7 +170,7 @@ research:
 ### gated on mission/interrogation?
   - name: STR_GUEVESA_CLUSTER_GV
     points: 100
-    cost: 400
+    cost: 300
     dependencies:
       - STR_CULTURE_CLUB_GV
       - STR_ELERIUM_115             # guevesa supply crawlers need fuel
@@ -422,6 +420,7 @@ research:
     unlocks:
       - STR_GUARD_POWER_ARMOR_RESEARCH
       - STR_LASGUN_HOTSHOT
+      - STR_GUARD_PRIEST_REQUISITION      # Priests
     spawnedEvent: STR_RALLY_GUARD_EVENT_GV
 
 ### Tau version of The Heart of Chaos
