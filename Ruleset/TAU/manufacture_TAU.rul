@@ -31,9 +31,9 @@ manufacture:
       - STR_TAU_XENOTECH
       - STR_STEALTH_SUIT_OPERATIONS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 100
-      STR_ALIEN_ALLOYS: 40
-      STR_ELERIUM_115: 40
+      STR_KILLPOINT_TOKEN: 80
+      STR_ALIEN_ALLOYS: 20
+      STR_ELERIUM_115: 20
       STR_UFO_CONSTRUCTION: 4
       STR_UFO_POWER_SOURCE: 1
     space: 2
@@ -47,14 +47,15 @@ manufacture:
       - STR_TAU_XENOTECH
       - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
     requiredItems:
-      STR_KILLPOINT_TOKEN: 200
-      STR_ALIEN_ALLOYS: 80
+      STR_KILLPOINT_TOKEN: 160
+      STR_ALIEN_ALLOYS: 40
       STR_ELERIUM_115: 40
       STR_UFO_CONSTRUCTION: 8
-      STR_UFO_POWER_SOURCE: 2
+      STR_UFO_POWER_SOURCE: 1
+      STR_UFO_NAVIGATION: 1
     space: 6
     time: 2000
-    cost: 240000
+    cost: 160000
 
   - name: STR_TAU_PATHFINDER_MEDIC_ARMOR_ITEM_GV
     category: STR_PERSONAL_ARMOR
@@ -158,8 +159,8 @@ manufacture:
     requiredItems:
       STR_ALIEN_ALLOYS: 120
       STR_ELERIUM_115: 80
-      STR_UFO_POWER_SOURCE: 4
-      STR_UFO_NAVIGATION: 4
+      STR_UFO_POWER_SOURCE: 2
+      STR_UFO_NAVIGATION: 2
       STR_KILLPOINT_TOKEN: 200
 
   - name: STR_ORCA_GV
@@ -168,12 +169,12 @@ manufacture:
       - STR_ORCA_DROPSHIPS_GV
     space: 32
     time: 16000
-    cost: 1200000
+    cost: 800000
     requiredItems:
       STR_ALIEN_ALLOYS: 480
       STR_ELERIUM_115: 320
-      STR_UFO_POWER_SOURCE: 6
-      STR_UFO_NAVIGATION: 6
+      STR_UFO_POWER_SOURCE: 4
+      STR_UFO_NAVIGATION: 4
       STR_KILLPOINT_TOKEN: 600
 
   ### GENERALLOCKING this for now to avoid breaking saves
