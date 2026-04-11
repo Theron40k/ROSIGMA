@@ -138,7 +138,7 @@ research:
     cost: 300
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
-      - STR_GUN_RUNNERS_GV
+      - STR_ALIEN_ALLOYS
     getOneFree:
       - STR_TAU_TRADING
     spawnedEvent: STR_THE_COLD_TRADE_EVENT_GV   # talk to the Tau here?
@@ -153,12 +153,15 @@ research:
       - STR_GENERALLOCK
 
 ### Accept Guevesa cultists first - they check you out
-### Cultist periodic arrival events
+### You need to buy an Export Pulse Rifle to get in the system :)
+### Cultist periodic arrival events?
   - name: STR_CULTURE_CLUB_GV
     points: 50
     cost: 200
     dependencies:
       - STR_THE_COLD_TRADE_GV
+    needItem: true
+    neededItem: STR_TAU_PULSE_RIFLE_EXPORT
     unlocks:
       - STR_GUARD_PRIEST_REQUISITION      # Priests
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
@@ -364,21 +367,21 @@ research:
       - STR_AUXILIARY_CADRE_GV
       - STR_TAU_XENOTECH
 
-### The Tau realize the warp storm is a serious threat
-# DEPRECATED
-# STR_INFILTRATION_CADRE_GV + STR_ALIEN_ORIGINS => STR_FIRE_OF_UNKNOWN_ORIGIN_GV (EMERGENCY MEASURES, REACH OUT TO SISTERS, RALLY GUARD)
-  - name: STR_FIRE_OF_UNKNOWN_ORIGIN_GV
-    points: 30
-    cost: 300
-    dependencies:
-      - STR_GENERALLOCK
-      - STR_A_SECRET_PACT_GV
-      - STR_ALIEN_ORIGINS
-    # unlocks:
-    #   - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
-    #   - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
-    #   - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
-    spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
+# ### The Tau realize the warp storm is a serious threat
+# # DEPRECATED
+# # STR_INFILTRATION_CADRE_GV + STR_ALIEN_ORIGINS => STR_FIRE_OF_UNKNOWN_ORIGIN_GV (EMERGENCY MEASURES, REACH OUT TO SISTERS, RALLY GUARD)
+#   - name: STR_FIRE_OF_UNKNOWN_ORIGIN_GV
+#     points: 30
+#     cost: 300
+#     dependencies:
+#       - STR_GENERALLOCK
+#       - STR_A_SECRET_PACT_GV
+#       - STR_ALIEN_ORIGINS
+#     # unlocks:
+#     #   - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
+#     #   - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
+#     #   - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
+#     spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
 
 ### Imperials generally approve of burning witches
   - name: STR_EMERGENCY_PROTOCOLS_GV
@@ -398,19 +401,18 @@ research:
       - STR_EMERGENCY_PROTOCOLS_GV
     spawnedEvent: STR_FORM_KILL_TEAMS_EVENT_GV
 
-### Accept Sisters who have lost faith
-# DEPRECATED
-  - name: STR_RECUSANT_SISTERS_GV
-    points: 0
-    cost: 200
-    dependencies:
-      - STR_GENERALLOCK
-      - STR_AUXILIARY_CADRE_GV
-      - STR_EMERGENCY_PROTOCOLS_GV
-    spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
+# ### Accept Sisters who have lost faith
+# # DEPRECATED
+#   - name: STR_RECUSANT_SISTERS_GV
+#     points: 0
+#     cost: 200
+#     dependencies:
+#       - STR_GENERALLOCK
+#       - STR_AUXILIARY_CADRE_GV
+#       - STR_EMERGENCY_PROTOCOLS_GV
+#     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
-### Placeholder for granting advanced Guard manufactures
   - name: STR_RALLY_GUARD_GV
     points: 50
     cost: 200
