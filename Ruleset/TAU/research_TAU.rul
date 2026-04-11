@@ -105,7 +105,7 @@ research:
 ### Gives you TRADE access in a convenient package
   - name: STR_WHITESHIELD_BLACK_MARKET_GV
     points: 50
-    cost: 300
+    cost: 150 # was 300, split into Gun Runners
     dependencies:
       - STR_TAU_GUEVESA_GV    # Any Guevesa can hook in here
       - STR_LASER_WEAPONS     # desperate for bigger guns
@@ -114,18 +114,31 @@ research:
     needItem: true
     neededItem: STR_KILLPOINT_TOKEN     # kill a bad guy and win a mission
     unlocks:
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE   # Gunsmiths
       - STR_HEAVY_WEAPONS_IG
     spawnedEvent: STR_WHITESHIELD_BLACK_MARKET_EVENT_GV
+
+### Gun Runners unlocks high grade ballistics for you
+### Black Market is required
+  - name: STR_GUN_RUNNERS_GV
+    points: 50
+    cost: 150
+    dependencies:
+      - STR_WHITESHIELD_BLACK_MARKET_GV
+      - STR_HEAVY_WEAPONS_IG
+    requiresBaseFunc: [TRADE]
+    unlocks:
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE
+    spawnedEvent: STR_GUN_RUNNERS_EVENT_GV
 
 ### Discover the Cold Trade
 ### Discover Tau artifacts
 ### win a couple missions?
   - name: STR_THE_COLD_TRADE_GV
     points: 50
-    cost: 500
+    cost: 300
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
+      - STR_ALIEN_ALLOYS
     getOneFree:
       - STR_TAU_TRADING
     spawnedEvent: STR_THE_COLD_TRADE_EVENT_GV   # talk to the Tau here?
@@ -140,14 +153,15 @@ research:
       - STR_GENERALLOCK
 
 ### Accept Guevesa cultists first - they check you out
-### Cultist periodic arrival events
+### You need to buy an Export Pulse Rifle to get in the system :)
+### Cultist periodic arrival events?
   - name: STR_CULTURE_CLUB_GV
-    points: 100
-    cost: 400
+    points: 50
+    cost: 200
     dependencies:
       - STR_THE_COLD_TRADE_GV
-    unlocks:
-      - STR_GUARD_PRIEST_REQUISITION      # Priests
+    needItem: true
+    neededItem: STR_TAU_PULSE_RIFLE_EXPORT
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
     # spawnedEvent: STR_CULTURE_CLUB_GV
 
@@ -156,7 +170,7 @@ research:
 ### gated on mission/interrogation?
   - name: STR_GUEVESA_CLUSTER_GV
     points: 100
-    cost: 600
+    cost: 300
     dependencies:
       - STR_CULTURE_CLUB_GV
       - STR_ELERIUM_115             # guevesa supply crawlers need fuel
@@ -207,7 +221,7 @@ research:
 ### Beastmen arrive, consider gating on mission - consider later launching mission at same time to cover cost
   - name: STR_BEASTMEN_CULTISTS_GV
     points: 0
-    cost: 200
+    cost: 100
     dependencies:
       - STR_CULTURE_CLUB_GV
     spawnedEvent: STR_BEASTMEN_CULTISTS_EVENT_GV
@@ -216,7 +230,7 @@ research:
 ### Gate on mission
   - name: STR_TANKERS_DELIGHT_GV
     points: 0
-    cost: 200
+    cost: 100
     dependencies:
       - STR_CULTURE_CLUB_GV
       # purchases unlocked over on the troops
@@ -242,7 +256,7 @@ research:
 ### "Light" Tau base
   - name: STR_A_SECRET_PACT_GV
     points: -250
-    cost: 800
+    cost: 500
     dependencies:
       - STR_GUEVESA_CLUSTER_GV
       - STR_UFO_POWER_SOURCE
@@ -266,15 +280,12 @@ research:
 # "Medium" Tau base
   - name: STR_INFILTRATION_CADRE_GV
     points: 100
-    cost: 400
+    cost: 500
     dependencies:
       - STR_A_SECRET_PACT_GV
       - STR_NAVY_COMUNICATIONS
     unlocks:
-      - STR_TAU_BREACHERS_GV
-      - STR_TAU_STRIKE_TEAMS_GV
       - STR_AWARD_PERSONAL_SHIELD
-      # - STR_REMORA_INTERCEPTORS_GV    # Build remoras
     spawnedEvent: STR_INFILTRATION_CADRE_EVENT_GV
 
 ### build Devilfish from parts
@@ -354,21 +365,21 @@ research:
       - STR_AUXILIARY_CADRE_GV
       - STR_TAU_XENOTECH
 
-### The Tau realize the warp storm is a serious threat
-# DEPRECATED
-# STR_INFILTRATION_CADRE_GV + STR_ALIEN_ORIGINS => STR_FIRE_OF_UNKNOWN_ORIGIN_GV (EMERGENCY MEASURES, REACH OUT TO SISTERS, RALLY GUARD)
-  - name: STR_FIRE_OF_UNKNOWN_ORIGIN_GV
-    points: 30
-    cost: 300
-    dependencies:
-      - STR_GENERALLOCK
-      - STR_A_SECRET_PACT_GV
-      - STR_ALIEN_ORIGINS
-    # unlocks:
-    #   - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
-    #   - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
-    #   - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
-    spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
+# ### The Tau realize the warp storm is a serious threat
+# # DEPRECATED
+# # STR_INFILTRATION_CADRE_GV + STR_ALIEN_ORIGINS => STR_FIRE_OF_UNKNOWN_ORIGIN_GV (EMERGENCY MEASURES, REACH OUT TO SISTERS, RALLY GUARD)
+#   - name: STR_FIRE_OF_UNKNOWN_ORIGIN_GV
+#     points: 30
+#     cost: 300
+#     dependencies:
+#       - STR_GENERALLOCK
+#       - STR_A_SECRET_PACT_GV
+#       - STR_ALIEN_ORIGINS
+#     # unlocks:
+#     #   - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
+#     #   - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
+#     #   - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
+#     spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
 
 ### Imperials generally approve of burning witches
   - name: STR_EMERGENCY_PROTOCOLS_GV
@@ -388,19 +399,18 @@ research:
       - STR_EMERGENCY_PROTOCOLS_GV
     spawnedEvent: STR_FORM_KILL_TEAMS_EVENT_GV
 
-### Accept Sisters who have lost faith
-# DEPRECATED
-  - name: STR_RECUSANT_SISTERS_GV
-    points: 0
-    cost: 200
-    dependencies:
-      - STR_GENERALLOCK
-      - STR_AUXILIARY_CADRE_GV
-      - STR_EMERGENCY_PROTOCOLS_GV
-    spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
+# ### Accept Sisters who have lost faith
+# # DEPRECATED
+#   - name: STR_RECUSANT_SISTERS_GV
+#     points: 0
+#     cost: 200
+#     dependencies:
+#       - STR_GENERALLOCK
+#       - STR_AUXILIARY_CADRE_GV
+#       - STR_EMERGENCY_PROTOCOLS_GV
+#     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
-### Placeholder for granting advanced Guard manufactures
   - name: STR_RALLY_GUARD_GV
     points: 50
     cost: 200
@@ -410,6 +420,7 @@ research:
     unlocks:
       - STR_GUARD_POWER_ARMOR_RESEARCH
       - STR_LASGUN_HOTSHOT
+      - STR_GUARD_PRIEST_REQUISITION      # Priests
     spawnedEvent: STR_RALLY_GUARD_EVENT_GV
 
 ### Tau version of The Heart of Chaos

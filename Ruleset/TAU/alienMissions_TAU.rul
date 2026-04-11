@@ -1886,7 +1886,6 @@ alienMissions:
     siteType: STR_TRAITOR_GUARD_BASE_START
     points: 0
 
-
   - type: STR_KTS_TRAITOR_GUARD_BASE_GV
     retaliationOdds: 0
     raceWeights:
@@ -1931,20 +1930,13 @@ alienMissions:
         STR_TZEENTCH_CULT_BLUESTONE: 5
         STR_BLACKSTONE_WITH_TZEENTCH_FORCE: 5
         STR_TZEENTCH_TRAITOR_GUARD_STORMTROOPERS: 5
-    operationType: 3 # Creates a new base to start from if the region doesn't have one
+    operationType: 3 # Only creates a new base if the region doesn't have one
     operationSpawnZone: 4
-    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
     objective: 2
     spawnZone: 4
+    points: 0
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
     siteType: STR_TRAITOR_GUARD_BASE_LEVEL_1
-    points: 5
-    waves:
-      - ufo: STR_TRAITOR_CASSIUM
-        count: 2
-        timer: 0
-        trajectory: TRAITOR_GUARD_BASE_CREATION
-        objective: true
-
 
   - type: STR_SLAANESH_ABBEY_SCALING_GV
     points: 50

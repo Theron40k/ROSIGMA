@@ -5220,7 +5220,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BATTLE_TESTED: "Battle Tested"
   STR_BATTLE_TESTED_COMMENDATION_DESCRIPTION: "{NEWLINE} On the path to veterancy, battle tested soldiers have a basic level of real combat experience. {NEWLINE}{NEWLINE} This is a minimum requirement for Imperial Guard officer field promotions, as no fellow soldier would respect their commands otherwise. {NEWLINE}{NEWLINE} For this award a soldier needs to take part in at least 3 missions, serve for 1 month, and achieve at least 1 enemy kill."
   STR_VETERAN_COMMENDATION: "Veteran"
-  STR_VETERAN_COMMENDATION_DESCRIPTION: "{NEWLINE} Survivors of multiple combat missions earn the right to call themselves battle-hardened Veterans and are considered the hardiest troopers in the Imperium. Veterans often gain access to improved wargear reserved for the most enthusiastic and resilient defenders of Humanity. {NEWLINE}{NEWLINE} To receive a Veteran Commendation, a soldier must participate in 15 missions and achieve 15 enemy kills. Those reaching 30 kills receive an additional bronze star device."
+  STR_VETERAN_COMMENDATION_DESCRIPTION: "{NEWLINE} Survivors of multiple combat missions earn the right to call themselves battle-hardened Veterans and are considered the hardiest troopers in the Imperium. Veterans often gain access to improved wargear reserved for the most enthusiastic and resilient defenders of Humanity. {NEWLINE}{NEWLINE} To receive a Veteran Commendation, a soldier must participate in 15 victories and achieve 15 enemy kills. Those reaching 30 kills receive an additional bronze star device."
   STR_HERO_TO_THE_IMPERIUM: "Hero to the Imperium"
   STR_HERO_TO_THE_IMPERIUM_DESCRIPTION: "{NEWLINE} Soldiers receiving this award have been of great service to the Imperium of Mankind and have earned an honorable discharge. Some choose to retire in peace, while others take up the mantle of command in far-off warzones.{NEWLINE}{NEWLINE} Allowing these soldiers to retire from the campaign as heroes will grant a huge amount of Imperial favor, represented in tokens. {NEWLINE}{NEWLINE} Soldiers must survive 50 missions and achieve 100 enemy kills to be considered Heroes of the Imperium."
 
@@ -12517,9 +12517,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   # STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Weeks ago the Guard sent you trucks, small arms, and a vox. Since then, nothing. Heavier weapons never came. Much materiel was lost in the shrine-warrens rout. Most of the rest is now hoarded by deserters and traitors.{NEWLINE}{NEWLINE}As Imperial authority staggers, smuggling flourishes. Shadowy armored caravans crawl the desolate battlefields, dealing arms to those they deem worthy. Perhaps you can find weapons on the black market. The best way to become a regular caravan stop is to provide their supply crawlers with promethium fueling services."
   STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Citing battlefield losses and the risk of treason, the Guard has declined to supply your militia with heavy weaponry. You might even believe them, if your troops didn't keep finding brand-new Guard equipment in the hands of traitors. Something's rotten around here. You'd better get ready to fend for yourself.{NEWLINE}{NEWLINE}Luckily, you've dealt professionally with the black market all your life, and you're not about to let a pack of traitorous amateurs outgun you."
 
+  STR_GUN_RUNNERS_GV: "Gun Runners"
+  STR_GUN_RUNNERS_EVENT_GV: "Gun Runners"
+  STR_GUN_RUNNERS_CODEX_DESCRIPTION_GV: "Placeholder"
+
   STR_THE_COLD_TRADE_GV: "The Cold Trade"
   STR_THE_COLD_TRADE_EVENT_GV: "The Cold Trade"
-  STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "The Guard's assault on the rebel capital has devolved into a bloody quagmire. Resupply is nonexistent and rumors of mutiny spread. Luckily, you've been able to finance alternative supply arrangements using your black market connections. Lately your contacts have mentioned rumors of new weapons on the market - xenos rifles, long and angular in shape, phenomenally deadly, exorbitantly priced. You're reluctant to have dealings with xenos, but you need firepower."  # Repulsed at every turn by cultists and traitors, confronted by fell sorcery, Guard commanders have increasingly resorted to brutality The warp storm has had a perilous effect on Guard morale, and discipline among the Guard has broken down"
+  STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "The Guard's assault on the rebel capital has devolved into a bloody quagmire. Resupply is nonexistent and rumors of mutiny spread. Luckily, you've been able to finance alternative supply arrangements using your black market connections. Lately your contacts have mentioned rumors of new weapons on the market - xenos rifles, long and angular in shape, phenomenally deadly, exorbitantly priced. You're reluctant to deal with xenos, but firepower is firepower."  # Repulsed at every turn by cultists and traitors, confronted by fell sorcery, Guard commanders have increasingly resorted to brutality The warp storm has had a perilous effect on Guard morale, and discipline among the Guard has broken down"
   # STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "Among today's caravan deliveries you find an unfamiliar blue-enameled servo skull. When you approach, it speaks in a melodic northern Ultramar accent. {NEWLINE}{NEWLINE}'Captain. I greet you. I am Por'ui Dal'yth Ha'lea. I am an envoy from the Tau Empire. To you I offer our thanks for supporting the black market, and our appreciation for your fighting spirit. If you will accept it, I would like to offer our friendship. And if you can provide them shelter, I believe I can offer you soldiers.'"
 
 
@@ -12618,7 +12622,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   # STR_BLESSED_NANOMEDICINES_GV: "Blessed Nanomedicines"
   # STR_BLESSED_NANOMEDICINES_EVENT_GV: "Blessed Nanomedicines"
   # STR_BLESSED_NANOMEDICINES_CODEX_DESCRIPTION_GV: "It's a little awkward that the Sisters of Battle started consistently getting better yields on their nanotherapeutic manufacturing runs once they made a little religious ceremony out of it. Lots of newly discovered scrolls miraculously turning up in the medicae archives these days."
-
 
   TRADE: "TRADE"
 
@@ -12939,6 +12942,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_IW_GUARD_FLAK_HAZARD_SAPPER_GV_CODEX: "CODEX ARMOR DETAIL"
   STR_IW_GUARD_FLAK_HAZARD_OFFICER_GV_CODEX: "CODEX ARMOR DETAIL"
 
+  STR_TS_CULTIST_BASE_START_GV: "Chaos Cult"
+  STR_TS_CULTIST_BASE_GV: "Chaos Cult"
+  STR_KTS_TRAITOR_GUARD_BASE_START_GV: "Traitor Guard Base"
+  STR_KTS_TRAITOR_GUARD_BASE_GV: "Traitor Guard Base"
+  STR_SLAANESH_ABBEY_SCALING_GV: "Decadent Abbey"
+  STR_TZEENTCH_BASE_SCALING_GV: "Sorcerous Coven"
+  STR_ALIEN_BASE_SCALING_GV: "Warband Camp"
   STR_SHRINEWARRENS_TEMPLATE_GV: "Shrine-Warrens Template"
   STR_FREE_TRADE_GV: "Free Trade"
   STR_STAY_HYDRATED_GV: "Stay Hydrated"
