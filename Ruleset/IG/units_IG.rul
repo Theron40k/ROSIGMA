@@ -16,6 +16,7 @@ units:
   - type: STR_GUARD_KRIEG
     civilianRecoveryType: STR_GUARDSM_KRIEG
     race: STR_CIVILIAN
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 55
       stamina: 65
@@ -51,6 +52,7 @@ units:
   - type: STR_VALHALLAN_GUARD_AI
     civilianRecoveryType: STR_GUARD_VALHALLAN #recovered if he survives
     race: STR_VALHALLAN_FACTION
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 55
       stamina: 65
@@ -86,6 +88,7 @@ units:
   - type: STR_STEELLEGION_AI  # Steel Legion Trooper AI mode
     civilianRecoveryType: STR_GUARDSL
     race: STR_CIVILIAN
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 55
       stamina: 65
@@ -192,6 +195,7 @@ units:
 
   - type: STR_GUARD_FLAK_COMMISSAR_AI
     race: STR_CIVILIAN
+    rank: STR_LIVE_LEADER
     stats:
       tu: 65
       stamina: 80
@@ -234,6 +238,7 @@ units:
 
   - type: STR_GUARD_FLAK_OFFICER_AI
     race: STR_CIVILIAN
+    rank: STR_LIVE_LEADER
     stats:
       tu: 65
       stamina: 80
@@ -270,6 +275,7 @@ units:
 
   - type: STR_GUARD_CARAPACE_OGRYN_AI
     race: STR_CIVILIAN
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 65
       stamina: 100
@@ -310,6 +316,7 @@ units:
 # IG Expanded Zombie Traitor Foes Units (can be moved somewhere else)
   - type: STR_GUARD_SQUAT_FLAK_MALE_ZOMBIE
     race: STR_ZOMBIEM
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 30
       stamina: 50
@@ -332,6 +339,7 @@ units:
 
   - type: STR_GUARD_SQUAT_FLAK_FEMALE_ZOMBIE
     race: STR_ZOMBIEM
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 30
       stamina: 50
@@ -354,6 +362,7 @@ units:
 
   - type: STR_GUARD_SQUAT_CARA_MALE_ZOMBIE
     race: STR_ZOMBIEM
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 40
       stamina: 50
@@ -376,6 +385,7 @@ units:
 
   - type: STR_GUARD_SQUAT_CARA_FEMALE_ZOMBIE
     race: STR_ZOMBIEM
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 40
       stamina: 50
@@ -427,7 +437,7 @@ units:
 # unique
 
   - type: STR_SLY_MARBO_AI
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 200
@@ -489,7 +499,7 @@ units:
 # catachan
 
   - type: STR_CATACHAN_FIGHTER_ALLY_AI  # rifle - shotgun
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHAN_FIGHTER
     stats:
@@ -530,7 +540,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHAN_FIGHTER_ALLY2_AI  # flamer - melta
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHAN_FIGHTER
     stats:
@@ -571,7 +581,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHAN_FIGHTER_ALLY3_AI  # heavy gun
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHAN_FIGHTER
     stats:
@@ -612,7 +622,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHAN_FIGHTER_ALLY4_AI  # explosion
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHAN_FIGHTER
     stats:
@@ -662,7 +672,7 @@ units:
         - STR_KRAK_GRENADE40
 
   - type: STR_CATACHANVET_FIGHTER_ALLY_AI  # rifle - shotgun
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANVET_FIGHTER
     stats:
@@ -703,7 +713,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHANVET_FIGHTER_ALLY2_AI  # flamer - melta
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANVET_FIGHTER
     stats:
@@ -744,7 +754,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHANVET_FIGHTER_ALLY3_AI  # heavy gun
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANVET_FIGHTER
     stats:
@@ -785,7 +795,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHANVET_FIGHTER_ALLY4_AI  # explosion
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANVET_FIGHTER
     stats:
@@ -826,7 +836,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHANTOP_FIGHTER_ALLY_AI  # rifle shotgun
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANTOP_FIGHTER
     stats:
@@ -868,7 +878,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHANTOP_FIGHTER_ALLY2_AI  # flamer melta
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANTOP_FIGHTER
     stats:
@@ -909,7 +919,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_CATACHANTOP_FIGHTER_ALLY3_AI  # gunner
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANTOP_FIGHTER
     stats:
@@ -950,7 +960,7 @@ units:
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_CATACHANTOP_FIGHTER_ALLY4_AI  # explosion
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     civilianRecoveryType: STR_CATACHANTOP_FIGHTER
     stats:
@@ -993,7 +1003,7 @@ units:
 # marbostory
 
   - type: STR_SLY_MARBO_M1
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 200
@@ -1053,7 +1063,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_SLY_MARBO_M2
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 200
@@ -1102,7 +1112,7 @@ units:
         - STR_KRAK_GRENADE40
 
   - type: STR_SLY_MARBO_M3
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 200
@@ -1154,7 +1164,7 @@ units:
         - STR_MGRENADE
 
   - type: STR_SLY_MARBO_END
-    race: STR_CIVILIAN
+    race: STR_CATACHAN_FACTION
     rank: STR_LIVE_SOLDIER
     stats:
       tu: 200
