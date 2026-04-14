@@ -1445,6 +1445,21 @@ ufopaedia:
       - STR_STEEL_LEGION_STRATEGY
     image_id: STEELLEGION_INTRO_CODEX.SPK
 
+# #STRATEGY.IG.VALHALLAN#          Valhallan Strategy
+  - id: STR_VALHALLAN_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: 4IG.SPK
+    text: STR_VALHALLAN_STRATEGY_IG_UFOPEDIA
+    requires:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+  - id: STR_CHOSEN_VALHALLA
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    image_id: VALHALLAN_INTRO_CODEX.SPK
+
 ####################################
 # #RESEARCH#
 ####################################
@@ -8769,26 +8784,6 @@ ufopaedia:
 
 # #ARMORS.IG.ABHUMAN#         Abhuman Strategy
 
-# #ARMORS.IG.VALHALLAN        Valhallan Ice Warriors Strategy
-
-#ADD CHOSEN_VALHALLAN codex article and SPK
-
-  - id: STR_VALHALLAN_FLAK_ARMOR
-    type_id: 15
-    section: STR_ARMORPEDIA
-    image_id: VALHALLAN_CODEX.SPK
-    text: STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA
-    requires:
-      - STR_VALHALLAN_GUARDSMEN
-
-#  #- id: STR_VALHALLAN_CARAPACE_ARMOR
-#    #type_id: 15
-#    #section: STR_ARMORPEDIA
-#    #image_id: VALHALLAN_CARAPACE_CODEX.SPK
-#    #text: STR_VALHALLAN_CARAPACE_ARMOR_UFOPAEDIA
-#    #requires:
-#      #- STR_VALHALLAN_GUARDSMEN
-#      #- STR_CARAPACE_ARMOR_IG
 
 # #ARMORS.IG.STEEL#           Steel Legion Strategy
   - id: STR_STEELLEGION_FLAK_ARMOR
@@ -8893,6 +8888,25 @@ ufopaedia:
     requires:
       - STR_STEELLEGION_GUARDSMEN
       - STR_CARAPACE_ARMOR_IG
+
+# #ARMORS.IG.VALHALLAN        Valhallan Ice Warriors Strategy
+
+  - id: STR_VALHALLAN_FLAK_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CODEX.SPK
+    text: STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+
+#  #- id: STR_VALHALLAN_CARAPACE_ARMOR
+#    #type_id: 15
+#    #section: STR_ARMORPEDIA
+#    #image_id: VALHALLAN_CARAPACE_CODEX.SPK
+#    #text: STR_VALHALLAN_CARAPACE_ARMOR_UFOPAEDIA
+#    #requires:
+#      #- STR_VALHALLAN_GUARDSMEN
+#      #- STR_CARAPACE_ARMOR_IG
 
 
 ####################################
