@@ -3857,6 +3857,52 @@ armors:
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 2
+    spriteSheet: VALHALLAN_CARAPACE_BS.PCK
+    spriteInv: GUARD_VALHALLAN_CARAPACE
+    customArmorPreviewIndex: 921
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    corpseBattle:
+      - STR_VALHALLAN_CARAPACE_CORPSE
+    storeItem: STR_NONE
+    frontArmor: 70
+    sideArmor: 60
+    rearArmor: 30
+    underArmor: 60
+    stats:
+      tu: -5
+      stamina: -10
+      strength: 5
+      bravery: 10  # always multiples of 10
+    drawingRoutine: 0
+    weight: 15
+    damageModifier:  # GUARD ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.2  # FLAMES
+      - 1.0  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_GUARD_VALHALLAN
+    loftempsSet: [3]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
 
   # TURRETS AND SPONSONS
   - type: STR_CHIMERA_TURRET_ARMOR
