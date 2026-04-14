@@ -10093,6 +10093,14 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
     image_id: 1CH.SPK
 
+  - id: STR_BOLTPISTOL_SLAAN #Slaanesh Boltpistol
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BOLTER
+      - STR_CHAOS_ARMORY_EXAM_SLAANESH
+    image_id: 1CH.SPK
+
   - delete: STR_LIGHT_BOLTER_AMMO
   - id: STR_LIGHT_BOLTER_AMMO  # Light Bolter Clip
     type_id: 14
@@ -10125,6 +10133,12 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
     image_id: 1CH.SPK
   - id: STR_LIGHT_BOLTER_AMMO_SLAAN  # Light Penetrator Bolter Mag.
+    # Slaanesh
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+    requires:
+      - STR_DONTSHOWYET
+  - id: STR_BOLTPISTOL_CLIP_S # Penetrator Boltpistol Mag.
     # Slaanesh
     type_id: 14
     section: STR_NOT_AVAILABLE
