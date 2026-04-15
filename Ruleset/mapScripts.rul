@@ -2704,14 +2704,15 @@ mapScripts:
         groups: 6
       - type: fillArea
         groups: 3
-      - type: digTunnel
-        direction: both
-        tunnelData:
-          level: 2
-          MCDReplacements:
-            - type: floor
-              set: 1
-              entry: 52
+# shouldnt be needed after the map block were reduced in z levels
+#      - type: digTunnel
+#        direction: both
+#        tunnelData:
+#          level: 2
+#          MCDReplacements:
+#            - type: floor
+#              set: 1
+#              entry: 52
 
   - type: IMPAIBASESCRIPTV2
     commands:
