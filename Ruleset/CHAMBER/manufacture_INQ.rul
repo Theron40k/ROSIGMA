@@ -89,7 +89,16 @@ manufacture:
     requiredItems:
       STR_LIVE_CAPTURE_CHAOS_BEASTMAN: 1
     spawnedPersonType: STR_PENITENT_BEASTGUARD
+  - name: STR_CLEANSE_NIGHT_ADEPTAS_INQ #not a real sister adeptas
+    refNode: *STR_COLLAR_PENITENT
+    requiredItems:
+      STR_LIVE_CAPTURE_NIGHT_SISTER: 1
+  - name: STR_CLEANSE_NIGHT_SUPERIOR_INQ #not a real sister adeptas
+    refNode: *STR_COLLAR_PENITENT
+    requiredItems:
+      STR_LIVE_CAPTURE_NIGHT_SISTER_SUPERIOR: 1
 
+  
   - name: STR_RECRUIT_TG_STORMTROOPER_INQ
     category: STR_CAT_REEDUCATE
     requires:
@@ -166,11 +175,6 @@ manufacture:
     requiredItems:
       STR_LIVE_CAPTURE_TZEENTCH_SISTER: 1
       STR_KILLPOINT_TOKEN: 5
-  - name: STR_CLEANSE_NIGHT_ADEPTAS_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
-    requiredItems:
-      STR_LIVE_CAPTURE_NIGHT_SISTER: 1
-      STR_KILLPOINT_TOKEN: 5
   - name: STR_CLEANSE_HERETIC_SERAPHIM_INQ
     refNode: *STR_CLEANSE_ADEPTAS
     requiredItems:
@@ -195,29 +199,24 @@ manufacture:
     producedItems:
       STR_PURITY_SEAL: 1
   - name: STR_CLEANSE_KHORNE_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_KHORNE_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
   - name: STR_CLEANSE_NURGLE_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_NURGLE_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
   - name: STR_CLEANSE_SLAANESH_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_SLAANESH_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
   - name: STR_CLEANSE_TZEENTCH_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_TZEENTCH_SUPERIOR: 1
-      STR_KILLPOINT_TOKEN: 50
-  - name: STR_CLEANSE_NIGHT_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
-    requiredItems:
-      STR_LIVE_CAPTURE_NIGHT_SISTER_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
 
   - name: STR_RECRUIT_CAPTIVE_HERETICAL_SISTERINQ
