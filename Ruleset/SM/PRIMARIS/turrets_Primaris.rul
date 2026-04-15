@@ -1,0 +1,84 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+units:
+
+  - type: STR_IMPULSORTURRET_TURRETUNIT
+    race: STR_CHIMERA_TURRET
+    liveAlien: ""
+    stats:
+      tu: 20
+      stamina: 10
+      health: 50
+      bravery: 100
+      reactions: 20
+      firing: 110
+      throwing: 0
+      strength: 245
+      psiStrength: 250
+      psiSkill: 0
+      melee: 0
+      mana: 200 #extra dakka
+    armor: STR_IMPULSORTURRET_TURRETARMOR
+    standHeight: 16
+    kneelHeight: 16
+    deathSound: 23
+    value: 20
+    energyRecovery: 10
+    moraleLossWhenKilled: 25
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_GORGON_HEAVY_STUBBER
+      - - STR_GORGON_HEAVY_STUBBER
+      - - STR_GORGON_HEAVY_STUBBER
+
+armors:
+
+  - type: STR_IMPULSORTURRET_TURRETARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    spriteSheet: IMPULSOR_TURRET.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHAOSTRUCK_SMALL_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHAOSTRUCK_SMALL_TURRET_CORPSE
+    frontArmor: 100
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 110  # was 120 chaos lack of maintenance
+    damageModifier: #VEHICLE ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.8 #FLAMES
+      - 1.0 #HE
+      - 1.4 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [4]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    specialWeapon: STR_TURRET_RELOAD
+    recovery:  # Manned turrets recover morale rapidly
+      morale:
+        flatHundred: 0.5
+
+
+items:
+
+  - type: STR_IMPULSORTURRET_TURRETARMOR
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661

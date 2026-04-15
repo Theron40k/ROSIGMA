@@ -352,12 +352,93 @@ crafts:
     speedMax: 400  # was 300
     vehicles: 999
     maxLargeUnits: 1
+    battlescapeTerrainData:
+      name: IMPULSOR
+      mapDataSets:
+        - BLANKS
+        - IMPULSOR
+      mapBlocks:
+        - name: IMPULSOR
+          width: 10
+          length: 20
+          items:
+            STR_IMPULSORTURRET_SPAWNER:
+              - [3, 9, 2]
+              - [5, 9, 2]
+          fuseTimers:
+            STR_IMPULSORTURRET_SPAWNER: [0, 0]
+    deployment:
+      - [4, 5, 1, 0]
+      - [5, 5, 1, 0]
+      - [4, 6, 1, 0]
+      - [5, 6, 1, 0]
+      - [4, 7, 1, 0]
+      - [5, 7, 1, 0]
+      - [4, 8, 1, 0]
+      - [5, 8, 1, 0]
+      - [4, 9, 1, 0]
+      - [5, 9, 1, 0]
 
   - type: STR_IMPULSORS
     refNode: *STR_IMPULOSR
+    battlescapeTerrainData:
+      name: IMPULSOR
+      mapDataSets:
+        - BLANKS
+        - IMPULSOR
+      mapBlocks:
+        - name: IMPULSORS
+          width: 10
+          length: 20
+          items:
+            STR_IMPULSOR_SPAWNER:
+              - [3, 7, 2]
+            STR_IMPULSORTURRET_SPAWNER:
+              - [3, 9, 2]
+              - [5, 9, 2]
+          fuseTimers:
+            STR_IMPULSOR_SPAWNER: [0, 0]
+            STR_IMPULSORTURRET_SPAWNER: [0, 0]
+    deployment:
+      - [4, 5, 1, 0]
+      - [5, 5, 1, 0]
+      - [4, 6, 1, 0]
+      - [5, 6, 1, 0]
+      - [4, 7, 1, 0]
+      - [5, 7, 1, 0]
+      - [4, 8, 1, 0]
+      - [5, 8, 1, 0]
+      - [4, 9, 1, 0]
+      - [5, 9, 1, 0]
 
   - type: STR_IMPULSOR_DW
     refNode: *STR_IMPULOSR
+    battlescapeTerrainData:
+      name: IMPULSOR
+      mapDataSets:
+        - BLANKS
+        - IMPULSORDW
+      mapBlocks:
+        - name: IMPULSOR
+          width: 10
+          length: 20
+          items:
+            STR_IMPULSORTURRET_SPAWNER_DW:
+              - [3, 9, 2]
+              - [5, 9, 2]
+          fuseTimers:
+            STR_IMPULSORTURRET_SPAWNER_DW: [0, 0]
+    deployment:
+      - [4, 5, 1, 0]
+      - [5, 5, 1, 0]
+      - [4, 6, 1, 0]
+      - [5, 6, 1, 0]
+      - [4, 7, 1, 0]
+      - [5, 7, 1, 0]
+      - [4, 8, 1, 0]
+      - [5, 8, 1, 0]
+      - [4, 9, 1, 0]
+      - [5, 9, 1, 0]
 
   - type: STR_SPEEDC
     requires:
