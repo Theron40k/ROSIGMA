@@ -30,6 +30,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 60 #theyshallknownofear
 
   - type: STR_MKX_TAC_LV1_UC
     builtInWeapons:
@@ -43,6 +44,8 @@ armors:
     underArmor: 95
     builtInWeapons:
       - INV_NULL_3X1_BACKPACK
+    tags:
+      INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
   - type: STR_MKX_TAC_LV3_UC
     refNode: *STR_MKX_TAC
     frontArmor: 130
@@ -64,6 +67,8 @@ armors:
       - 1.0  # MELTA
     builtInWeapons:
       - INV_NULL_3X1_BACKPACK
+    tags:
+      INTIMIDATION_RESISTANCE: 70 #theyshallknownofear
   - type: STR_MKX_TAC_LV4_UC
     refNode: *STR_MKX_TAC
     frontArmor: 135
@@ -85,6 +90,8 @@ armors:
       - 1.0  # MELTA
     builtInWeapons:
       - INV_NULL_3X1_BACKPACK
+    tags:
+      INTIMIDATION_RESISTANCE: 75 #theyshallknownofear
   - type: STR_MKX_TAC_LV5_UC
     refNode: *STR_MKX_TAC
     frontArmor: 135
@@ -106,6 +113,8 @@ armors:
       - 1.0  # MELTA
     builtInWeapons:
       - INV_NULL_3X1_BACKPACK
+    tags:
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
 
   - &STR_MKX_LIB
     refNode: *STR_MKX_TAC
@@ -130,6 +139,9 @@ armors:
       - 0.2  # IMPACT
       - 1.0  # MELTA
     loftempsSet: [4]
+    tags:
+      INTIMIDATION_RESISTANCE: 75 #theyshallknownofear
+
   - type: STR_MKX_LIB_LV2_UC
     refNode: *STR_MKX_LIB
     frontArmor: 120
@@ -149,6 +161,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
   - type: STR_MKX_LIB_LV3_UC
     frontArmor: 130
     sideArmor: 105
@@ -167,6 +181,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 85 #theyshallknownofear
 
   - type: STR_MKX_APO_UC
     refNode: *STR_MKX_TAC
@@ -190,6 +206,8 @@ armors:
       - 0.2  # IMPACT
       - 1.0  # MELTA
     loftempsSet: [4]
+    tags:
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
 
   - &STR_MKX_TEC
     type: STR_MKX_TEC_LV1_UC
@@ -214,6 +232,9 @@ armors:
       - 0.2  # IMPACT
       - 1.0  # MELTA
     loftempsSet: [4]
+    tags:
+      INTIMIDATION_RESISTANCE: 75 #theyshallknownofear
+
   - type: STR_MKX_TEC_LV2_UC
     refNode: *STR_MKX_TEC
     frontArmor: 120
@@ -233,6 +254,10 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
+
+
   - type: STR_MKX_TEC_LV3_UC
     refNode: *STR_MKX_TEC
     frontArmor: 130
@@ -252,6 +277,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 85 #theyshallknownofear
 
   - type: STR_MKX_CHP_UC
     refNode: *STR_MKX_TAC
@@ -294,6 +321,8 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_CONSECRATED: 1
       UNIT_SIZE: 150 # LARGE
+    tags:
+      INTIMIDATION_RESISTANCE: 85 #theyshallknownofear
 
   - &STR_MKX_INC
     type: STR_MKX_INC_LV1_UC
@@ -303,12 +332,18 @@ armors:
     rearArmor: 80
     underArmor: 100
     loftempsSet: [4]
+    tags:
+      INTIMIDATION_RESISTANCE: 60 #theyshallknownofear
+
   - type: STR_MKX_INC_LV2_UC
     refNode: *STR_MKX_INC
     frontArmor: 120
     sideArmor: 110
     rearArmor: 80
     underArmor: 110
+    tags:
+      INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
+
   - type: STR_MKX_INC_LV3_UC
     refNode: *STR_MKX_INC
     frontArmor: 125
@@ -328,6 +363,9 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 70 #theyshallknownofear
+
   - type: STR_MKX_INC_LV4_UC
     refNode: *STR_MKX_INC
     frontArmor: 130
@@ -347,6 +385,9 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 75 #theyshallknownofear
+
   - type: STR_MKX_INC_LV5_UC
     refNode: *STR_MKX_INC
     frontArmor: 135
@@ -366,6 +407,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
 
   - &STR_MKX_BIKE
     type: STR_MKX_BIKE_UC
@@ -379,6 +422,7 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_MECHANICAL: 1
       UNIT_SIZE: 200 # HUGE
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
 
   - type: STR_MKX_BIKE_LV1_UC
     refNode: *STR_MKX_BIKE
@@ -405,12 +449,16 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 60 #theyshallknownofear
+
   - type: STR_MKX_PHB_LV2_UC
     refNode: *STR_MKX_PHB
     frontArmor: 115
     sideArmor: 110
     rearArmor: 75
     underArmor: 110
+    tags:
+      INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
   - type: STR_MKX_PHB_LV3_UC
     refNode: *STR_MKX_PHB
     frontArmor: 120
@@ -430,6 +478,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 70 #theyshallknownofear
   - type: STR_MKX_PHB_LV4_UC
     refNode: *STR_MKX_PHB
     frontArmor: 120
@@ -449,6 +499,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 75 #theyshallknownofear
   - type: STR_MKX_PHB_LV5_UC
     refNode: *STR_MKX_PHB
     frontArmor: 120
@@ -468,6 +520,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
 
   - &STR_MKX_GRV
     type: STR_MKX_GRV_LV1_UC
@@ -484,12 +538,15 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
   - type: STR_MKX_GRV_LV2_UC
     refNode: *STR_MKX_GRV
     frontArmor: 135
     sideArmor: 125
     rearArmor: 80
     underArmor: 125
+    tags:
+      INTIMIDATION_RESISTANCE: 70 #theyshallknownofear
   - type: STR_MKX_GRV_LV3_UC
     refNode: *STR_MKX_GRV
     frontArmor: 135
@@ -509,6 +566,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 75 #theyshallknownofear
   - type: STR_MKX_GRV_LV4_UC
     refNode: *STR_MKX_GRV
     stats:
@@ -530,6 +589,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 80 #theyshallknownofear
   - type: STR_MKX_GRV_LV5_UC
     refNode: *STR_MKX_GRV
     frontArmor: 140
@@ -549,6 +610,8 @@ armors:
       - 0.0  # SMOKE
       - 0.2  # IMPACT
       - 1.0  # MELTA
+    tags:
+      INTIMIDATION_RESISTANCE: 85 #theyshallknownofear
 
   - type: STR_MKX_TAC_ZOMBIE
     loftempsSet: [4]
@@ -636,5 +699,5 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
       UNIT_SIZE: 150 # LARGE
-
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
