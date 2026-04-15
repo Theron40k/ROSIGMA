@@ -1004,6 +1004,9 @@ research:
   - name: STR_CHOSEN_ORKZ  # Emprah's Greenest Selected
     refNode: *STR_LOCKED
 
+  - name: STR_NOT_IMPERIUM  # (Not Imperium)
+    refNode: *STR_LOCKED
+
   - name: STR_NOT_MARINES  # (Not Space Marines)
   - name: STR_NOT_ASSAULT  # (Not Assault Strategy)
   - name: STR_NOT_DEVASTATOR  # (Not Devastator Strategy)
@@ -1537,6 +1540,7 @@ research:
       - STR_BOOK_EREBUS
       - STR_BOOK_KORPHAERON
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_NOT_IMPERIUM
     disables:
       - STR_CHAPTER_PURITY
       - STR_NOT_WORDBEARERS
@@ -2040,6 +2044,7 @@ research:
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_IMPERIAL_GUARD_BASIC_TRAINING
       - STR_PILOT_GUARDSMEN
+      - STR_NOT_IMPERIUM
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
@@ -2847,6 +2852,7 @@ research:
       - STR_LOSE_500
     unlocks:
       - STR_ALIENS_ONLY
+      - STR_NOT_IMPERIUM
       - STR_NOTDONEBEFORE
     disables:
       - STR_PSYKER_REQUISITION
