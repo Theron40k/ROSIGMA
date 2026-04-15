@@ -295,6 +295,7 @@ research:
     dependencies:
       - STR_INFILTRATION_CADRE_GV
       - STR_TAU_XENOTECH
+      - STR_MASTER_CRAFTING
 
 ### Operate XV26 stealth suits
   - name: STR_STEALTH_SUIT_OPERATIONS_GV
@@ -303,6 +304,7 @@ research:
     dependencies:
       - STR_INFILTRATION_CADRE_GV
       - STR_TAU_XENOTECH
+      - STR_MASTER_CRAFTING
 
   - name: STR_REMORA_INTERCEPTORS_GV
     cost: 200
@@ -344,13 +346,14 @@ research:
       # - STR_STARSCYTHE_CRISIS_OPERATIONS_GV        # Starscythe Crisis
       # - STR_HAMMERHEAD_GUNSHIPS_GV      # Ion Hammerhead tanks
       # - STR_BARRACUDA_INTERCEPTORS_GV   # Barracuda Interceptors
-      - STR_MASTER_CRAFTING
+      # - STR_MASTER_CRAFTING
       - STR_IMPERIAL_CRUSADE_GV       # Super Danger!
     spawnedEvent: STR_AUXILIARY_CADRE_EVENT_GV
 
   - name: STR_STARSCYTHE_CRISIS_OPERATIONS_GV
     dependencies:
       - STR_AUXILIARY_CADRE_GV
+      - STR_MASTER_CRAFTING
       - STR_TAU_XENOTECH
 
   - name: STR_HAMMERHEAD_GUNSHIPS_GV
@@ -364,22 +367,6 @@ research:
       - STR_REMORA_INTERCEPTORS_GV
       - STR_AUXILIARY_CADRE_GV
       - STR_TAU_XENOTECH
-
-# ### The Tau realize the warp storm is a serious threat
-# # DEPRECATED
-# # STR_INFILTRATION_CADRE_GV + STR_ALIEN_ORIGINS => STR_FIRE_OF_UNKNOWN_ORIGIN_GV (EMERGENCY MEASURES, REACH OUT TO SISTERS, RALLY GUARD)
-#   - name: STR_FIRE_OF_UNKNOWN_ORIGIN_GV
-#     points: 30
-#     cost: 300
-#     dependencies:
-#       - STR_GENERALLOCK
-#       - STR_A_SECRET_PACT_GV
-#       - STR_ALIEN_ORIGINS
-#     # unlocks:
-#     #   - STR_EMERGENCY_PROTOCOLS_GV    # Purge witches
-#     #   - STR_RECUSANT_SISTERS_GV   # Contact loyal Sisters
-#     #   - STR_RALLY_GUARD_GV            # Rally what remains of the Guard
-#     spawnedEvent: STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV
 
 ### Imperials generally approve of burning witches
   - name: STR_EMERGENCY_PROTOCOLS_GV
@@ -398,17 +385,6 @@ research:
     dependencies:
       - STR_EMERGENCY_PROTOCOLS_GV
     spawnedEvent: STR_FORM_KILL_TEAMS_EVENT_GV
-
-# ### Accept Sisters who have lost faith
-# # DEPRECATED
-#   - name: STR_RECUSANT_SISTERS_GV
-#     points: 0
-#     cost: 200
-#     dependencies:
-#       - STR_GENERALLOCK
-#       - STR_AUXILIARY_CADRE_GV
-#       - STR_EMERGENCY_PROTOCOLS_GV
-#     spawnedEvent: STR_RECUSANT_SISTERS_EVENT_GV
 
 ### Rally the remnants of the loyal Guard to your banner
   - name: STR_RALLY_GUARD_GV
@@ -465,6 +441,7 @@ research:
     dependencies:
       - STR_AUXILIARY_CADRE_GV
       - STR_THE_TERRAN_PROBLEM_GV
+      - STR_MASTER_CRAFTING
     unlocks:
       - STR_APPOINT_FIREBLADE_GV
       - STR_FIREKNIFE_CRISIS_OPERATIONS_GV
@@ -485,6 +462,7 @@ research:
     dependencies:
       - STR_AUXILIARY_CADRE_GV
       - STR_COOPT_ECCLESIARCHY_GV
+      - STR_MASTER_CRAFTING
     spawnedEvent: STR_ENGRAVED_ARMORS_EVENT_GV
 
   - name: STR_APPOINT_FIREBLADE_GV
@@ -537,17 +515,6 @@ research:
       - STR_COALITION_COMMAND_GV
       - STR_COMMANDER_PLUS
     spawnedEvent: STR_THE_SILVER_TOWER_EVENT_GV
-
-# DEPRECATED
-  - name: STR_TAU_PSI_LAB_BACKUP_GV
-    points: 0
-    cost: 10
-    dependencies:
-      - STR_GENERALLOCK
-    reenables:
-      - STR_PSI_LAB
-    unlocks:
-      - STR_PSI_LAB
 
   # - name: STR_TAU_XENOPSYCH_DIVISION_GV
   - name: STR_TAU_FRONTIER_PSYCH_GV
