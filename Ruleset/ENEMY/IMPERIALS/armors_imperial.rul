@@ -491,8 +491,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 8
     antiCamouflageAtDark: 8
-    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 20
+    camouflageAtDark: 8
     heatVision: 25
     spriteSheet: XCOM_0.PCK
     spriteInv: SPACEMARINEARMOR_SCOUT.PCK
@@ -531,8 +531,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 10 # higher tech
     antiCamouflageAtDark: 10 # higher tech
-    camouflageAtDay: -8  # you need to be 8 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -6  # you need to be 6 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 15
+    camouflageAtDark: 5
     heatVision: 30 # higher tech
     spriteSheet: SPACEMARINEADVscoutbattle.PCK
     spriteInv: SPACEMARINEARMOR_ADVSCOUT.PCK
@@ -1055,8 +1055,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 8
     antiCamouflageAtDark: 8
-    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 22 #worse at sneaky
+    camouflageAtDark: 10 #worse at sneaky
     heatVision: 25
     spriteSheet: BLACKTEMPLARSCOUTbattle.PCK
     spriteInv: BLACKTEMPLARARMOR_SCOUT.PCK
@@ -1415,8 +1415,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 8
     antiCamouflageAtDark: 8
-    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 20
+    camouflageAtDark: 8
     heatVision: 25
     spriteSheet: SPACEWOLVESSCOUTbattle.PCK
     spriteInv: SPACEWOLVESARMOR_SCOUT.PCK
@@ -1455,8 +1455,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 8
     antiCamouflageAtDark: 8
-    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 25
+    camouflageAtDark: 15
     heatVision: 20
     spriteSheet: SPACEWOLVESASSbattle.PCK
     spriteInv: SPACEWOLVESARMOR_ASS.PCK
@@ -1566,7 +1566,7 @@ armors:
     visibilityAtDark: 40
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
-    camouflageAtDay: 5
+    camouflageAtDay: 15
     camouflageAtDark: 5
     heatVision: 10
     allowInv: true
@@ -1812,8 +1812,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 8
     antiCamouflageAtDark: 8
-    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 20
+    camouflageAtDark: 8
     heatVision: 25
     spriteSheet: CRIMSONFISTSCOUTbattle.PCK
     spriteInv: CRIMSONFISTARMOR_SCOUT.PCK
@@ -2536,8 +2536,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 8
     antiCamouflageAtDark: 8
-    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 20
+    camouflageAtDark: 8
     heatVision: 25
     spriteSheet: SALAMANDERscoutbattle.PCK
     spriteInv: SALAMANDERARMOR_SCOUT.PCK
@@ -2576,8 +2576,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 10 # higher tech
     antiCamouflageAtDark: 10 # higher tech
-    camouflageAtDay: -8  # you need to be 8 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -6  # you need to be 6 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 15
+    camouflageAtDark: 5
     heatVision: 30 # higher tech
     spriteSheet: SALAMANDERADVscoutbattle.PCK
     spriteInv: SALAMANDERARMOR_ADVSCOUT.PCK
@@ -4345,8 +4345,8 @@ armors:
     visibilityAtDark: 30
     antiCamouflageAtDay: 8
     antiCamouflageAtDark: 8
-    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 20
+    camouflageAtDark: 8
     heatVision: 25
     spriteSheet: DARKANGELSCOUTbattle.PCK
     spriteInv: DARKANGELARMOR_SCOUT.PCK
@@ -4820,3 +4820,56 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+#INQ OPFOR
+
+  - type: STR_REPRISALIA_ARMOR_AI
+    camouflageAtDay: 15
+    camouflageAtDark: 5
+    visibilityAtDay: 40
+    visibilityAtDark: 25  # Between assassin and stormtrooper
+    heatVision: 30  # Inq
+    antiCamouflageAtDay: 5  # +1 Inq
+    antiCamouflageAtDark: 5  # +1 Inq
+    spriteSheet: ADEPTAS_REPRISALIA_BS.PCK
+    spriteInv: REPRI_51
+    drawingRoutine: 0
+    customArmorPreviewIndex: 81
+    storeItem: ""
+    corpseBattle:
+      - STR_REPRISALIA_CORPSE #make NPC version?
+    frontArmor: 75 # Weaker than stormtrooper carapace
+    sideArmor: 60
+    rearArmor: 45
+    underArmor: 60
+    damageModifier:  # GUARD/MARINE HYBRID ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.7  # FLAMES
+      - 0.9  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.9  # ACID INQ prepped
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT; droppod proof
+      - 1.0  # MELTA
+    personalLight: 5
+    recovery:
+      energy:
+        stamina: 0.33
+    psiDefence:
+      flatHundred: 0.5  # Armor's hexagrammic and pentagrammic wards protect from psychic influence
+      psiSkill: 1.0  # Armor's hexagrammic and pentagrammic wards enhance the protection granted by faith and Devotion
+      moraleCurrent: 1.0  # Discipline and training protects from psychic influence.
+    builtInWeapons:
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    loftempsSet: [3]
+    tags:
+      ARMOR_OVERWATCH_TU_RESTORED: 50 #INQ assassin
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2

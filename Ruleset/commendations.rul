@@ -137,3 +137,18 @@ commendations:
         - [1, ["STATUS_DEAD", "FACTION_HOSTILE"]]
     units:
       - STR_WBSOLDIER
+
+
+  - type: STR_CHAOS_ATTENTION  # can be chaos marked
+    description: STR_CHAOS_ATTENTION_DESCRIPTION
+    sprite: 5
+    criteria:
+      killsWithCriteriaCareer: [70]
+      totalWins: [1]
+    killCriteria:
+      -
+        - [1, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+    units:
+      - STR_WBSOLDIER
+      - STR_WBSOLDIER_TERMINATOR
+      - STR_WBSOLDIER_ACOLYTE

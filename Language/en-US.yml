@@ -3050,6 +3050,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BOLTERSLAAN: "Slaanesh Bolter"
   STR_LIGHT_BOLTERSLAAN: "Slaanesh Light Bolter"
   STR_SONICKOMBI_CHARGE: "Sonic Combi-Bolter Charge"
+  STR_BOLTPISTOL_SLAAN: "Slaanesh Boltpistol"
+  STR_BOLTPISTOL_CLIP_S: "Penetrator Boltpistol Mag."
 
   STR_SLAANESH_ROCKET_LAUNCHER: "Slaanesh Missile Launcher"
   STR_SLAANESH_ROCKET_LAUNCHER_UFOPEDIA: "{NEWLINE} The Slaanesh Missile Launcher is a corrupted version of the Proteus Pattern launcher, an older heavy design, capable of rapid firing smaller missiles. Its weakness is its low ammo capacity and high dispersion"
@@ -3734,6 +3736,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_IMPERIAL_ASSASSINFEM_AI: "Imperial Assassin"
   STR_ADEPTAS_DCASSASSIN_AI: "Death Cult Assassin"
   STR_IMPERIAL_INQUISITOR_AI: "Imperial Inquisitor"
+  STR_IMPERIAL_INQUISITOR_AI_UFOPEDIA: "{NEWLINE} The Inquisitors are the highest-ranking agents of the Holy Ordos of the Emperor's Inquisition, wielding power on par with sector Lords, Generals and Cardinals. It is the inquisitors that are tasked with rooting out and destroying the influence of Chaos and Xenos within the Imperium of Man. For this purpose they can command the vast resources of the Militarum, as well as the three Chamber Militant dedicated to supporting the Inquisitions efforts - the Adepta Sororitas (Ordo Hereticus), the Deathwatch (Ordo Xenos) and the Grey Knights (Ordo Malleus)."
 
   STR_MARINE_DEVASTATOR_AI: "Devastator Marine"
   STR_DEV_ARMOR_ULTRA: "Devastator Marine"
@@ -4299,10 +4302,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BOLTER_SOLO_DMR_UFOPEDIA: "{NEWLINE} Perinetus Pattern Solo Mark II Scoped variants enhances the weapon's range and accuracy. Made to be used by normal humans, it is modified to produce less recoil at the expense of automatic fire modes. Popular with sharpshooters within both Guard and PDF, the Solo Pattern finds widespread use. {NEWLINE}{NEWLINE}Recoil: {ALT}20"
   STR_BOLTER_SOLO_SHORT_UFOPEDIA: "{NEWLINE} Perinetus Pattern Solo Mark II is unsophisticated and lacks the capability for autofire, allowing it only singleshot firemode. This is made up by the weapon's range, accuracy and reliability in adverse conditions. Some Guardsmen were unhappy with the weight and started modifying it accordingly. {NEWLINE}{NEWLINE}Recoil: {ALT}20"
 
-  STR_BOLTER_LIGHT_LMG: "Light Bolter Accatran"
-  STR_LIGHT_BOLTER_AMMO_BELT: "Light Bolter Belt"
-  STR_LIGHT_BOLTER_AMMO_BELT_PEN: "Light Bolter Kraken Belt"
-  STR_BOLTER_LIGHT_LMG_UFOPEDIA: "{NEWLINE} The Accatran MkVe is a bolter pattern variant chambered for light bolter calibre rounds, favored by light troops and Elysian drop troops for the extra firepower it provides. Equipped with a bipod, this squad based support bolter brings superior firepower compared to a heavy stubber. {NEWLINE}{NEWLINE}Recoil: {ALT}40"
+  STR_BOLTER_LIGHT_LMG: "Bolter Accatran Pattern"
+  STR_LIGHT_BOLTER_AMMO_BELT: "Accatran Bolter Belt"
+  STR_LIGHT_BOLTER_AMMO_BELT_PEN: "Accatran Kraken Belt"
+  STR_BOLTER_LIGHT_LMG_UFOPEDIA: "{NEWLINE} The Accatran MkVe is a bolter pattern variant chambered for lighter bolter calibre rounds than its heavy bolter cousins, favored by light troops and Elysian drop troops for the extra firepower it provides. Equipped with a bipod, this squad based support bolter brings superior firepower compared to a heavy stubber. {NEWLINE}{NEWLINE}Recoil: {ALT}40"
 
   STR_HELLPISTOL_BUILTIN: "Hellpistol"
   STR_HELLPISTOL: "Master Crafted Laspistol"
@@ -4610,7 +4613,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_STEEL_LEGION_STRATEGY_CERAMITETIER: "STEEL LEGION CERAMITE-TIER"
 
   STR_RECRUITS_STEELLEGION_STRATEGY_IG: "Steel Legion Strategy Chosen"
-  STR_RECRUITS_STEELLEGION_STRATEGY_IG_DESCRIPTION: "We have chosen the Steel Legion as our main stay of our armies. Our first recruits will arrive soon."
+  STR_RECRUITS_STEELLEGION_STRATEGY_IG_DESCRIPTION: "We have chosen the Steel Legion as our primary regiment. Our first recruits will arrive soon."
   STR_STEELLEGION_OFFICERS_EVENT: "Officers Arrive"
   STR_STEELLEGION_OFFICERS_EVENT_DESCRIPTION: "Steel Legion Officers have arrived to command your troopers in the field. User their officer swords to motivate your troopers."
 
@@ -4756,10 +4759,33 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 # VALHALLAN
   STR_GUARD_VALHALLAN: "Valhallan Guard"
+  STR_VALHALLAN_GUARDSMEN: "Valhallan Recruitment"
   STR_VALHALLAN_FLAK_ARMOR: "Valhallan Flak Armor"
   STR_VALHALLAN_FLAK_CORPSE: "Valhallan Corpse"
+  STR_VALHALLAN_VETERAN: "Valhallan Veteran"
+  STR_VALHALLAN_CARAPACE_ARMOR: "Valhallan Carapace Armor"
+  STR_VALHALLAN_CARAPACE_CORPSE: "Valhallan Veteran Corpse"
+  STR_VALHALLAN_SHARPSHOOTER: "Valhallan Sniper Gear"
+  STR_VALHALLAN_SHARPSHOOTER_ARMOR: "Valhallan Sniper Gear"
+  STR_VALHALLAN_SHARPSHOOTER_CORPSE: "Valhallan Sniper Corpse"
+  STR_VALHALLAN_OFFICER_FLAK: "Valhallan Officer"
+  STR_VALHALLAN_OFFICER_FLAK_ARMOR: "Valhallan Officer Armor"
+  STR_VALHALLAN_OFFICER_FLAK_CORPSE: "Valhallan Officer Corpse"
+  STR_VALHALLAN_OFFICER_VETERAN: "Valhallan Veteran Officer"
+  STR_VALHALLAN_OFFICER_CARAPACE_ARMOR: "Valhallan Veteran Officer Carapace"
+  STR_VALHALLAN_OFFICER_CARAPACE_CORPSE: "Valhallan Veteran Officer Corpse"
   STR_VALHALLAN_GUARD_AI: "Valhallan Guard"
   STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA: "{NEWLINE}The Guardsmen of the Regiment Valhallan Ice Warriors hail from their namesake planet of Valhalla. Grim and tenacious troops never retreat and refuse to surrender. They are particularly successful at cold weather combat and are often used by the Imperium when a campaign of attrition must be fought on an Ice World that is similar in climate to their frigid homeworld or when an operation involves combat against Orks."
+  STR_VALHALLAN_GUARD_CARAPACE_ARMOR_UFOPAEDIA: "{NEWLINE}Valhallan Ice Warrior veterans wear carapace armor adapted for cold climate combat, integrated to be worn with their long coats and other gear."
+
+  STR_RECRUITS_VALHALLA_STRATEGY_IG: "Valhalla Strategy Chosen"
+  STR_RECRUITS_VALHALLA_STRATEGY_IG_DESCRIPTION: "We have chosen the Valhallan Ice Warriors as the main force. Our first recruits will arrive soon."
+  STR_VALHALLA_OFFICERS_EVENT: "Officers Arrive"
+  STR_VALHALLA_OFFICERS_EVENT_DESCRIPTION: "Valhallan Officers have arrived to command your troopers in the field. User their officer swords and COMMANDS to motivate your troopers."
+
+  STR_VALHALLAN_CODEX_ORIGINS: "THE VALHALLAN ICE WARRIORS"
+  STR_VALHALLAN_CODEX_ORIGINS_TEXT: "{NEWLINE} The Valhallan Ice Warriors is the Militarum Regimentum of the Astra Militarum that specialize in arctic and cold climate attritional fighting. Hailing from the frozen and desolate Ice World of Valhalla located in the Segmentum Ultima. Famed as some of the toughest regiments ever deployed by the Imperial Guard, these grim and tenacious troops never retreat and refuse to surrender, scoring many glorious victories against Orks and other enemies. Their preferred tactic is massed artillery barrages with infantry assault waves."
+  STR_VALHALLAN_STRATEGY_IG_UFOPEDIA: "{NEWLINE} Lead the stubborn infantry of the imperium with this Valhallan regiment. Your forces suffer less morale penalties from losses and can call in artillery against entrenched foes that your masses of infantry cannot overcome with fixed bayonets alone. The key to victory is training your troops, keeping your veterans (within reason) alive while using your officers commands to boost your troops. At mid-tier you will gain access to the Leman Russ armored column and even larger transport options. {NEWLINE} You will receive 28 Valhallan troopers, a convoy and two officers within days of game start."
 
 ### ADVANCED TURRETS  ###
   STR_LEMONRUSS: "Battle Cannon Turret"
@@ -5235,6 +5261,9 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_ANOINTED_MARKING: "Chaos Anointment"
   STR_ANOINTED_MARKING_DESCRIPTION: "{NEWLINE}Word Bearers awarded with a Chaos Anointment can be promoted to Anointed. {NEWLINE}{NEWLINE} For this glory, the Word Bearers Brother needs to have achieved 30 enemy kills in a campaign and be part of 10 victorious missions."
+
+  STR_CHAOS_ATTENTION: "Favour of Chaos"
+  STR_CHAOS_ATTENTION_DESCRIPTION: "{NEWLINE}Word Bearers awarded with the Favour of Chaos can be promoted to receive the Mark of Chaos. {NEWLINE}{NEWLINE} For this greater glory, the Word Bearers Brother needs to have achieved 70 enemy kills in a campaign."
 
 
 ## Soldier Transformations
@@ -5912,6 +5941,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TZEENTCHDEMON_ARMORTEMPO_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_UNDIVIDEDDEMON_ARMORTEMPO_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_UNDIVIDEDDEMON_ARMORTEMPO2_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
+  STR_NEVERBORNLING_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
 
  # player word bearers
 
@@ -6123,6 +6153,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TZEENTCHDEMONTEMPO: "Tzeentch Daemon"
   STR_UNDIVIDEDDEMONTEMPO: "Chaos Daemon"
   STR_UNDIVIDEDDEMONTEMPO2: "Chaos Daemon"
+  STR_NEVERBORNLING: "Chaos Neverbornling"
 
   STR_KHORNEDEMON_ARMORTEMPO: "Khorne Daemon Armor"
   STR_NURGLEDEMON_ARMORTEMPO: "Nurgle Daemon Armor"
@@ -6130,6 +6161,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TZEENTCHDEMON_ARMORTEMPO: "Tzeentch Daemon Armor"
   STR_UNDIVIDEDDEMON_ARMORTEMPO: "Chaos Daemon Armor"
   STR_UNDIVIDEDDEMON_ARMORTEMPO2: "Chaos Daemon Armor"
+  STR_NEVERBORNLING_ARMOR: "Chaos Neverbornling Armor"
 
   STR_WORDBEARERKHORNEDEMON_SPAWNER: "Khorne Daemon Spawner"
   STR_WORDBEARERNURGLEDEMON_SPAWNER: "Nurgle Daemon Spawner"
@@ -6137,6 +6169,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WORDBEARERTZEENTCHDEMON_SPAWNER: "Tzeentch Daemon Spawner"
   STR_WORDBEARERCHAOSDEMON_SPAWNER: "Chaos Daemon Spawner"
   STR_WORDBEARERCHAOSDEMON_SPAWNER2: "Chaos Daemon Spawner"
+  STR_WORDBEARERNEVERBORNLING_SPAWNER: "Chaos Neverbornling Spawner"
 
   STR_WBDAEMONS_CORPSE: "Daemon Corpse"
 
@@ -6179,6 +6212,8 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_WBARMORPEDIA: "WORD BEARER ARMORS"
   STR_WBCHAOSLORDARMORPLAYER_CODEX: "The Word Bearer Chaos Lord is one of the most powerful of the Champions of Chaos and serves as the commander of the legion and the other forces of Chaos."
+
+  STR_WORDBEARER_TECHMARINE_ARMORPLAYER_CODEX: "Warpsmiths are Techmarines that turned to the Powers of the Warp, masters of Daemonic Soul Forges which churn out the Daemon Engines for the armies of Chaos Space Marines and Daemon Princes."
 
  # player word bearers strategy researches
 
@@ -7017,6 +7052,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GENE_CULT: "Genestealer Cult"
   STR_TYRANID_OUTPOST: "Tyranid Outpost"
 
+  STR_GENE_TURRET: "Autocannon Turret"
+  STR_AUTOCANNON_GENE: "Autocannon"
+  STR_GENE_TURRET_CORPSE: "Turret wreck"
+
   STR_GSC_CULT_DISGUISED_RACE: "Insurrectionists"
   STR_GSC_CULT_RACE: "Xeno Tainted"
   STR_GSC_CREW_DISGUISED: "Voidcrew"
@@ -7438,7 +7477,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   # Biovore
   STR_BIOVORE: "Biovore"
   STR_BIOVORE_ARMOR: "Biovore"
-  STR_BIOVORE_COPRSE: "Biovore Corpse"
+  STR_BIOVORE_CORPSE: "Biovore Corpse"
   STR_BIOVORE_UFOPEDIA: "{NEWLINE} The 'living artillery' of Tyranid Swarms Biovores are an evolution of the Hive Mind's desire to counter long range firepower. They carry a swollen clutch of the deadly Spore Mines within themselves, firing them through a large cannon-like dorsal aperture by means of powerful muscle spasms towards groups of enemies or as directed by the Hive Mind."
   STR_BIOVORE_ARMOR_UFOPEDIA: "{NEWLINE} The Biovore is protected by a thick chitin carapace and through layers of thick flesh, but is somewhat vulnerable due to its partially exposed embryonic sac containing the explosive Spore Mine ammunition."
   STR_BIOVORE_AUTOPSY: "Biovore Origins"
@@ -8034,6 +8073,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_REPRISALIA: "Reprisalia"
   STR_REPRISALIA_ARMOR: "Reprisalia Armor"
+  STR_REPRISALIA_ARMOR_AI: "Reprisalia" #OPFOR Use
   STR_REPRISALIA_ARMOR_UFOPEDIA: "{NEWLINE} The commando Adeptas Reprisalia are drawn from many orders but serve primarily as the special forces for the Order Famolous and Dialogus as well as on request by the Inquisition.{NEWLINE} The Reprisalia specialize in hostage rescue and elimination, recovery of holy texts, sensitive data interception and elimination of threats to the ecclessiarchy where discretion is required.{NEWLINE} As such the Sisters Profile recruited to the Reprisalia are selected by and trained in special skills not commonly found amongst ordinary Sisters. Long ranged sharpshooting, infiltration, silent- and unarmed combat along with soft skills with ciphers, xeno-communication, binharic and a multitude of non-standard weapons."
   STR_REPRISALIA_CORPSE: "Reprisalia Corpse"
 
@@ -8960,7 +9000,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_KRIEG_STRATEGY: "[WIP] Krieg Strategy"
   STR_CHOSEN_KRIEG: "Krieg Selected"
   STR_VALHALLAN_STRATEGY: "[WIP] Valhallan Strategy"
-  STR_CHOSEN_VALHALLA: "Valhalla Selected"
+  STR_CHOSEN_VALHALLA: "Valhallan Strategy Selected"
 
 # Research Strategies CM
 ##########################################
@@ -10593,6 +10633,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   SLGUARD_ARMOR_M_LV2: "SL Carapace Armor"
   SLGUARD_ARMOR_OFF_M_LV2: "SL Officer's Carapace Armor"
 
+  STR_IGOPFOR_ARMORYROOKIES: "Imperial Rookies"
   STR_IGOPFOR_TIER0: "Imperial Recruits"
   STR_IGOPFOR_ABHUMAN_TIER0: "Imperial Abhuman Recruits"
   STR_IGOPFOR_TIER0PLUS: "Imperial Guard"
@@ -11785,7 +11826,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_DAIMPERIALBASE_ASSAULTV3: "Dark Angels Monastery"
 
   STR_IMPERIALBASE_ASSAULT_TITLE: "IMPERIAL BASE ASSAULT"
-  STR_IMPERIALBASE_ASSAULT_BRIEFING: "Our troops have finally gained entrance to an Imperial base. We must eliminate all those Imperium fools and leave their ruins behind, or when your troops have returned to the green exit area (click on the 'abort mission' icon to escape).{NEWLINE}{NEWLINE}{ALT}Destroy 3 Imperial Bases to collect 3 Components to the Great Sacrifice, then use them to Manufacture the Great Sacrifice that the Adept in Research will use."
+  STR_IMPERIALBASE_ASSAULTLOW_BRIEFING: "Our troops have finally gained entrance to an Imperial base. We must eliminate all those Imperium fools and leave their ruins behind, or escape when your troops have returned to the green exit area (click on the 'abort mission' icon to escape)."
+  STR_IMPERIALBASE_ASSAULT_BRIEFING: "Our troops have finally gained entrance to an Imperial base. We must eliminate all those Imperium fools and leave their ruins behind, or escape when your troops have returned to the green exit area (click on the 'abort mission' icon to escape).{NEWLINE}{NEWLINE}{ALT}Destroy 3 of those large Imperial Bases to collect 3 Components to the Great Sacrifice, then use them to Manufacture the Great Sacrifice that the Adept in Research will use."
   STR_IMPERIAL_BASE_KILLED: "Imperial base has been eliminated"
   STR_IMPERIAL_BASE_DESTROYED: "IMPERIAL BASE DESTROYED"
   STR_IMPERIAL_BASE_NOT_DESTROYED: "Imperial base still operational"

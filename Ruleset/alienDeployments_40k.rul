@@ -91,7 +91,7 @@ alienDeployments:
         minTurn: 15
         maxTurn: 19
         executionOdds: 50
-        maxRuns: -1  # they just keep coming
+        maxRuns: 3 #max 3 waves
         useSpawnNodes: true
         spawnNodeRanks: [4]  # leader/commander nodes
         mapBlockFilterType: 0  # all blocks, just go by node placement
@@ -124,7 +124,7 @@ alienDeployments:
       - type: GeneAwakeningMany
         minTurn: 20
         executionOdds: 100
-        maxRuns: -1  # they just keep coming
+        maxRuns: 5  # 5
         data:
           - alienRank: 5
             lowQty: 2  # 1
@@ -3449,6 +3449,15 @@ alienDeployments:
             highQty: 0
             dQty: 1
             itemSets: [[], [], []]
+    briefing:
+      cutscene: ELDARBASE
+      desc: STR_WEBWAY_DESCRIPTION
+      music: gmstory2
+      showCraft: true
+      showTarget: false
+      background: WEBWAYOBJECTIVE.SCR
+      title: STR_WEBWAY_TITLE
+      palette: 4
     missionBountyItem: STR_REQUISITION_BOUNTY_250K
     objectiveType: 14
     objectivesRequired: 2 #number of tiles to be dest
@@ -15832,7 +15841,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -15929,7 +15938,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -16213,7 +16222,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -16310,7 +16319,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -16594,7 +16603,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -16691,7 +16700,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -16975,7 +16984,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -17072,7 +17081,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -17356,7 +17365,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -17453,7 +17462,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -17737,7 +17746,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -17834,7 +17843,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -18118,7 +18127,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -18215,7 +18224,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -18499,7 +18508,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -18596,7 +18605,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -18880,7 +18889,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -18977,7 +18986,7 @@ alienDeployments:
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
       textOffset: -16
-      desc: STR_IMPERIALBASE_ASSAULT_BRIEFING
+      desc: STR_IMPERIALBASE_ASSAULTLOW_BRIEFING
       background: BACK01.SCR
       showTarget: false
     markerName: STR_IMPERIAL_BASE_SITE
@@ -21239,13 +21248,13 @@ alienDeployments:
       - alienRank: 0
         lowQty: 0
         highQty: 0
-        dQty: 1
+        dQty: 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
         lowQty: 1
-        highQty: 1
-        dQty: 2
+        highQty: 2
+        dQty: 1
         percentageOutsideUfo: 50
         itemSets: *emptyItemSets
       - alienRank: 2
@@ -21254,33 +21263,33 @@ alienDeployments:
         dQty: 1
         percentageOutsideUfo: 75
         itemSets: *emptyItemSets
-      - alienRank: 3
+      - alienRank: 3 # Visiting dignitaries for this particular base
         lowQty: 0
-        highQty: 0
-        dQty: 1
+        highQty: 2
+        dQty: 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
         lowQty: 2
-        highQty: 2  # 3
+        highQty: 4  # 3
         dQty: 1  # 1
         percentageOutsideUfo: 75
         itemSets: *emptyItemSets
       - alienRank: 5
         lowQty: 4
-        highQty: 4  # 3
+        highQty: 6  # 3
         dQty: 6  # 1
         percentageOutsideUfo: 80
         itemSets: *emptyItemSets
       - alienRank: 6
-        lowQty: 2
+        lowQty: 1
         highQty: 2
         dQty: 1
         percentageOutsideUfo: 50
         itemSets: *emptyItemSets
-      - alienRank: 7
-        lowQty: 5
-        highQty: 5
+      - alienRank: 7 #used to include some civilians in this particular base
+        lowQty: 4
+        highQty: 6
         dQty: 2
         percentageOutsideUfo: 90
         itemSets: *emptyItemSets

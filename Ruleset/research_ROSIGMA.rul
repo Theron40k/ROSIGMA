@@ -2485,10 +2485,10 @@ research:
     cost: 5
     dependencies:
       - STR_GENERALLOCK
-    # lookup: STR_CHOSEN_VALHALLA # Commented out until there is a 'pedia page, will crash otherwise
+    lookup: STR_CHOSEN_VALHALLA
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_KRIEG_GUARDSMEN #Already Exists
+      - STR_VALHALLAN_GUARDSMEN
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
@@ -2513,7 +2513,7 @@ research:
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
-    #spawnedEvent: STR_RECRUITS_VALHALLAN_STRATEGY_IG #Create
+    spawnedEvent: STR_RECRUITS_VALHALLAN_STRATEGY_IG
 
 ####################################
 #PROGRESSION# Progression Research Section
@@ -3728,6 +3728,19 @@ research:
     dependencies:
       - STR_GENERALLOCK
       - STR_IMPERIAL_INQUISITOR_REQUISITION
+
+  - name: STR_IMPERIAL_INQUISITOR_AI  # Inquisitor OPFOR capture
+    cost: 250
+    points: 100
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+      - STR_THREAT_ONE
 
   - name: STR_INQ_STORMTROOPER_REQUISITION  # Requisition Inquisition Storm Troopers
     cost: 200
@@ -5555,6 +5568,13 @@ research:
     points: 0
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
+
+  - name: STR_VALHALLAN_GUARDSMEN  # Valhallan Recruitment
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_VALHALLAN_STRATEGY
       - STR_GENERALLOCK
 
   - name: STR_STEELLEGION_GUARDSMEN  # Steel Legion Recruitment

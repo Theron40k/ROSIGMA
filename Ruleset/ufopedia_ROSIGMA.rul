@@ -593,6 +593,12 @@ ufopaedia:
     image_id: COMMENDATION_ANNOINTING.SPK
     text: STR_ANOINTED_MARKING_DESCRIPTION
 
+  - id: STR_CHAOS_ATTENTION
+    type_id: 10
+    section: STR_HELP_CAMPAIGN
+    image_id: COMMENDATION_CHAOS_ATTENTION.SPK
+    text: STR_CHAOS_ATTENTION_DESCRIPTION
+
 ####################################
 # #STRATEGY#
 ####################################
@@ -1438,6 +1444,21 @@ ufopaedia:
     requires:
       - STR_STEEL_LEGION_STRATEGY
     image_id: STEELLEGION_INTRO_CODEX.SPK
+
+# #STRATEGY.IG.VALHALLAN#          Valhallan Strategy
+  - id: STR_VALHALLAN_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: 4IG.SPK
+    text: STR_VALHALLAN_STRATEGY_IG_UFOPEDIA
+    requires:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+  - id: STR_CHOSEN_VALHALLA
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    image_id: VALHALLAN_INTRO_CODEX.SPK
 
 ####################################
 # #RESEARCH#
@@ -6919,6 +6940,17 @@ ufopaedia:
       - STR_POWER_ARMOR_WB_CODEX
       - STR_BOOK_EREBUS
 
+  - id: STR_WORDBEARER_TECHMARINE_ARMORPLAYER
+    type_id: 15
+    section: STR_WBARMORPEDIA
+    image_id: WBTECHMARINECODEX.SPK
+    text: STR_WORDBEARER_TECHMARINE_ARMORPLAYER_CODEX
+    requires:
+      - STR_TEC_BAYR
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_PERSONAL_ARMOR_WB
+
   - id: STR_WBEXECUTIONER_ARMORPLAYER
     type_id: 15
     section: STR_WBARMORPEDIA
@@ -7010,6 +7042,14 @@ ufopaedia:
       - STR_DIABO_ARMOR_WB
     image_id: NEVERBORN_ORIGINS_CODEX.SPK
     text: STR_UNDIVIDEDDEMON_ARMORTEMPO2_UFOPEDIA
+
+  - id: STR_NEVERBORNLING_ARMOR
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_DIABO_ARMOR_WB
+    image_id: NEVERBORN_ORIGINS_CODEX.SPK
+    text: STR_NEVERBORNLING_ARMOR_UFOPEDIA
 
 # #ARMORS.CM#               Chamber Militant
   - id: STR_INQ_STORMTROOPER_CARAPACE_ARMOR
@@ -7132,6 +7172,12 @@ ufopaedia:
     text: STR_ADEPTAS_ARMORI_UFOPEDIA
     requires:
       - STR_NOT_WORDBEARERS
+
+  - id: STR_IMPERIAL_INQUISITOR_AI #OPFOR Commander Inquisitor
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: INQUISITOR_CODEX.SPK
+    text: STR_IMPERIAL_INQUISITOR_AI_UFOPEDIA
 
   - id: STR_INQ_INQUISITOR_ARMOR_BIOMANCER
     type_id: 15
@@ -8743,6 +8789,8 @@ ufopaedia:
       - STR_ELERIUM_115
 
 # #ARMORS.IG.ABHUMAN#         Abhuman Strategy
+
+
 # #ARMORS.IG.STEEL#           Steel Legion Strategy
   - id: STR_STEELLEGION_FLAK_ARMOR
     type_id: 15
@@ -8845,6 +8893,25 @@ ufopaedia:
     text: STR_STEELLEGION_STORMTROOPER_ARMOR_MEDIC_CODEX
     requires:
       - STR_STEELLEGION_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+# #ARMORS.IG.VALHALLAN        Valhallan Ice Warriors Strategy
+
+  - id: STR_VALHALLAN_FLAK_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CODEX.SPK
+    text: STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+
+  - id: STR_VALHALLAN_CARAPACE_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CARAPACE_CODEX.SPK
+    text: STR_VALHALLAN_CARAPACE_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
       - STR_CARAPACE_ARMOR_IG
 
 
@@ -10032,6 +10099,14 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
     image_id: 1CH.SPK
 
+  - id: STR_BOLTPISTOL_SLAAN #Slaanesh Boltpistol
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BOLTER
+      - STR_CHAOS_ARMORY_EXAM_SLAANESH
+    image_id: 1CH.SPK
+
   - delete: STR_LIGHT_BOLTER_AMMO
   - id: STR_LIGHT_BOLTER_AMMO  # Light Bolter Clip
     type_id: 14
@@ -10064,6 +10139,12 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
     image_id: 1CH.SPK
   - id: STR_LIGHT_BOLTER_AMMO_SLAAN  # Light Penetrator Bolter Mag.
+    # Slaanesh
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+    requires:
+      - STR_DONTSHOWYET
+  - id: STR_BOLTPISTOL_CLIP_S # Penetrator Boltpistol Mag.
     # Slaanesh
     type_id: 14
     section: STR_NOT_AVAILABLE
@@ -10529,6 +10610,18 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
   - id: STR_PRIMARIS_HEAVY_BOLT_RIFLE_MC_DRUM
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_PRIMARIS_EXECUTOR_RIFLE  # Primaris Executor rifle
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: PRIMARIS_EXECUTOR_RIFLE_CODEX.SPK
+    text: STR_PRIMARIS_EXECUTOR_RIFLE_CODEX
+    requires:
+      - STR_PRIMARIS
+
+  - id: STR_PRIMARIS_EXECUTOR_RIFLE_DRUM_MAG
     type_id: 14
     section: STR_NOT_AVAILABLE
 
@@ -17025,6 +17118,7 @@ ufopaedia:
       - STR_LIVE_CAPTURE_WITCH_LEADER
     image_id: SLAANESH_SHARDSPEAKER_ORIGINS.SPK
     text: STR_KHORNEGOR_UNGOR_ARMOR_UFOPEDIA
+
 
   # Tzeentch
   - id: STR_TZEENTCH_FEM_CULTIST

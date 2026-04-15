@@ -3153,16 +3153,16 @@ units:
     livingWeapon: true
     builtInWeaponSets:
       - - STR_NEURAL_WHIP
-        - STR_BOLTPISTOL_CHAOS
-        - STR_PISTOL_CLIP_AP
-        - STR_PISTOL_CLIP_AP
-        - STR_PISTOL_CLIP_AP
+        - STR_BOLTPISTOL_SLAAN
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
         - STR_SLAANESH_GRENADE
       - - STR_SLAAN_LONGBLADE
-        - STR_BOLTPISTOL_CHAOS
-        - STR_PISTOL_CLIP_AP
-        - STR_PISTOL_CLIP_AP
-        - STR_PISTOL_CLIP_AP
+        - STR_BOLTPISTOL_SLAAN
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
         - STR_SLAANESH_GRENADE
       - - STR_SLAAN_CHAINSWORD
         - STR_PLASMA_PISTOL_SLAAN
@@ -13161,7 +13161,8 @@ units:
 
   - type: STR_IMPERIAL_INQUISITOR_AI
     civilianRecoveryType: STR_IMPERIAL_INQUISITOR  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 80
       stamina: 80
@@ -13178,7 +13179,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 100
-    intelligence: 8
+    intelligence: 3
     aggression: 1
     sniper: 75
     spotter: 4
@@ -13207,7 +13208,8 @@ units:
 
   - type: STR_ADEPTAS_DCASSASSIN_AI
     civilianRecoveryType: STR_ADEPTAS_DCAssassin  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 120
       stamina: 110
@@ -13224,7 +13226,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 40
-    intelligence: 3
+    intelligence: 1
     aggression: 8
     spotter: 1
     avoidsFire: false
@@ -13249,7 +13251,8 @@ units:
 
   - type: STR_IMPERIAL_ASSASSINFEM_AI
     civilianRecoveryType: STR_IMPERIAL_ASSASSINFEM  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 80
       stamina: 110
@@ -13301,7 +13304,8 @@ units:
   - &INQ_STORMTROOPER_AI_TEMPLATE
     type: STR_INQ_STORMTROOPER_AI
     civilianRecoveryType: STR_INQ_STORMTROOPER  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 60
       stamina: 70
@@ -13318,7 +13322,7 @@ units:
     standHeight: 22
     kneelHeight: 14
     value: 30
-    intelligence: 4
+    intelligence: 3
     aggression: 8
     spotter: 1
     sniper: 90
@@ -13355,6 +13359,7 @@ units:
 
   - type: STR_INQ_STORMTROOPER_AI_ELITE #has Rosarius and better stats
     refNode: *INQ_STORMTROOPER_AI_TEMPLATE
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 75
       stamina: 90
@@ -13368,7 +13373,7 @@ units:
       psiSkill: 0
       melee: 90
     value: 40
-    intelligence: 5
+    intelligence: 3
     aggression: 8
     spotter: 2
     sniper: 90
@@ -13409,7 +13414,8 @@ units:
 
   - type: STR_GK_DREAD_AI_UNIT
     # civilianRecoveryType: STR_INQ_STORMTROOPER  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_GREYKNIGHT
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 110
       stamina: 200
@@ -13426,10 +13432,11 @@ units:
     standHeight: 22
     kneelHeight: 14
     value: 100
-    intelligence: 5
+    intelligence: 1
     aggression: 8
     spotter: 1
     sniper: 90
+    psiWeapon: STR_NONE
     energyRecovery: 200
     avoidsFire: false
     canBeMindControlled: false #it's still a Grey Knight; incorruptible
@@ -13476,12 +13483,13 @@ units:
     standHeight: 20
     kneelHeight: 15
     value: 0
-    intelligence: 5
+    intelligence: 3
     aggression: 8
     sniper: 75
     avoidsFire: false
     spotter: 1
     energyRecovery: 60
+    psiWeapon: STR_NONE
     canBeMindControlled: false
     deathSound: [713, 714, 715, 716, 717, 718, 719, 720, 721, 722]
     builtInWeaponSets:
@@ -13521,7 +13529,7 @@ units:
     standHeight: 20
     kneelHeight: 15
     value: 0
-    intelligence: 8
+    intelligence: 3
     aggression: 8
     sniper: 100
     avoidsFire: false
@@ -13571,7 +13579,7 @@ units:
     standHeight: 20
     kneelHeight: 15
     value: 0
-    intelligence: 8
+    intelligence: 3
     aggression: 8
     sniper: 100
     avoidsFire: false

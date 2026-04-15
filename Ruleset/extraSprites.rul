@@ -220,6 +220,17 @@ extraSprites:
   - typeSingle: KRIEGBOMBARDMENTBG.SCR  # Krieg Artillery
     fileSingle: Resources/Backgrounds/KRIEGBOMBARDMENTBG.png
 
+# Valhallan Ice Warriors background art SCRs
+
+  - typeSingle: VALHALLANICEWARRIORSBG.SCR  # Generic Faction BG
+    fileSingle: Resources/Backgrounds/VALHALLANICEWARRIORSBG.png
+
+  - typeSingle: VALHALLANICEWARRIORSSUCCESSBG.SCR  # Valhallan Success Victory BG
+    fileSingle: Resources/Backgrounds/VALHALLANICEWARRIORSSUCCESSBG.png
+
+  - typeSingle: VALHALLANICEWARRIORSPRESSUREDBG.SCR  # Valhallans Pressured BG
+    fileSingle: Resources/Backgrounds/VALHALLANICEWARRIORSPRESSUREDBG.png
+
 # Space Wolves background art SCRs
   - typeSingle: BLOODCLAW.SCR  # Blood Claw Reinforcements
     fileSingle: Resources/Backgrounds/BLOODCLAW.png
@@ -810,6 +821,9 @@ extraSprites:
 
   - typeSingle: COMMENDATION_ANNOINTING.SPK
     fileSingle: Resources/Pedia/WBannointcommendation.png
+
+  - typeSingle: COMMENDATION_CHAOS_ATTENTION.SPK
+    fileSingle: Resources/Pedia/wbchaosattention.png
 
 
   - typeSingle: VINDICAREINV.SPK  # MONK INV
@@ -2924,6 +2938,10 @@ extraSprites:
 
 
   # Valhallan
+
+  - typeSingle: VALHALLAN_INTRO_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_INTRO_CODEX.png
+
   - typeSingle: VALHALLAN_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_CODEX.png
 
@@ -2948,89 +2966,140 @@ extraSprites:
       0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_flak.png
       1000: Resources/UnitSprites/bs_valhalla_flak_sb.png
 
+  - type: VALHALLAN_CARAPACE_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/valhalla_carapace_bs.png
+      1000: Resources/UnitSprites/valhalla_carapace_bs_sb.png
+
   # VALHALLAN ROOKIE Inventory
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F0
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F0.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f0.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F1
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F1.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f1.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F2
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F2.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f2.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F3
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F3.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f3.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F4
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F4.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f4.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F5
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F5.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f5.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F6
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F6.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f6.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F7
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F7.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f7.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F8
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F8.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f8.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F9
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__F9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0f9.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M0
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M0.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m0.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M1
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M1.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m1.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M2
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M2.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m2.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M3
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M3.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m3.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M4
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M4.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m4.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M5
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M5.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m5.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M6
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M6.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m6.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M7
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M7.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m7.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M8
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M8.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m8.png
-  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M9
+  - typeSingle: GUARD_VALHALLAN_ROOKIE__0__M9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANRECRUIT/man_0m9.png
 
   # VALHALLAN FLAK Inventory
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F0
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F0.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f0.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F1
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F1.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f1.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F2
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F2.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f2.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F3
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F3.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f3.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F4
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F4.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f4.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F5
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F5.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f5.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F6
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F6.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f6.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F7
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F7.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f7.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F8
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F8.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f8.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__F9
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__F9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0f9.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M0
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M0.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m0.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M1
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M1.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m1.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M2
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M2.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m2.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M3
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M3.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m3.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M4
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M4.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m4.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M5
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M5.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m5.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M6
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M6.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m6.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M7
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M7.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m7.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M8
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M8.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m8.png
-  - typeSingle: GUARD_VALHALLAN_FLAK__0__M9
+  - typeSingle: GUARD_VALHALLAN_FLAK__0__M9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m9.png
+
+ # VALHALLAN CARAPACE Inventory
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACE__0__M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m9.png
 
   # Elite guard armors PCKs
   - type: STORMTROOPER_CARAPACE.PCK
@@ -4760,6 +4829,9 @@ extraSprites:
 
   - typeSingle: KHORNELING_INV.SPK
     fileSingle: Resources/FOES/Inventory/KHORNELING_INV.png
+
+  - typeSingle: NEVERBORNLING_INV.SPK
+    fileSingle: Resources/FOES/Inventory/NEVERBORNLING_INV.png
 
   # PLAYER ELDAR
   - typeSingle: FARSEER_INV.SPK
@@ -9592,6 +9664,9 @@ extraSprites:
   - typeSingle: WBEXECUTIONERCODEX.SPK
     fileSingle: Resources/CODEX/wbexecutionercodex.png
 
+  - typeSingle: WBTECHMARINECODEX.SPK
+    fileSingle: Resources/CODEX/wbtechmarinecodex.png
+
   - typeSingle: WBHELBRUTECODEX.SPK
     fileSingle: Resources/CODEX/wbhelbrutecodex.png
 
@@ -13333,6 +13408,9 @@ extraSprites:
   - typeSingle: ARMORY_TARGET.SCR  # ARMORY RAID
     fileSingle: Resources/Backgrounds/ArmoryTarget.png
 
+  - typeSingle: WEBWAYOBJECTIVE.SCR #ELDAR
+    fileSingle: Resources/Backgrounds/webwayobjective.png
+
   ## Events
 
   - typeSingle: BACK_VETERAN_IG.SCR  # SHIP
@@ -15171,6 +15249,14 @@ extraSprites:
     height: 200
     files:
       0: Resources/FOES/Battlesprites/bs_khorneling.png
+
+  - type: NEVERBORNLING_BS.PCK
+    subX: 32
+    subY: 40
+    width: 512
+    height: 200
+    files:
+      0: Resources/FOES/Battlesprites/bs_neverbornling.png
 
   - typeSingle: CLOAKED_WOMAN_INV.SPK  # MONK INV
     fileSingle: Resources/FOES/Inventory/CLOAKED_WOMAN_INV.png
