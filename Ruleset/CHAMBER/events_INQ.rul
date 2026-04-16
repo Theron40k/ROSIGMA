@@ -50,6 +50,8 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
+      STR_LASER_RIFLE_G_HIGH_GRADE: 2
+      STR_LASGUN_CLIP_HOTSHOT: 8
       STR_AUTOGUN_ADEPTAS_SCOPED: 2
       STR_AUTOGUN_CLIP: 8
       STR_MGRENADE: 2
@@ -82,7 +84,7 @@ events:
       -
         STR_LIVE_CAPTURE_SLAANESH_SISTER: 1
         STR_LASER_PISTOLCS: 1
-        STR_LASPISTOL_CLIP_SLAAN: 3
+        STR_LASPISTOL_CLIP_SLAAN: 4
         STR_SLAANESH_GRENADE: 2
       -
         STR_LIVE_CAPTURE_WITCH_LEADER: 1
@@ -176,9 +178,9 @@ events:
     timer: 2440  # 2 days
     everyMultiItemList:
       STR_STUB_GUN: 2
-      STR_STUB_GUN_AMMO_AP: 6
+      STR_STUB_GUN_AMMO_AP: 8
       STR_SHOTGUN: 2
-      STR_SHOTGUN_SHELLS: 6
+      STR_SHOTGUN_SHELLS: 8
       STR_SMOKE_GRENADE: 2
       STR_MOTION_SCANNER: 1
     spawnedPersons: 2
@@ -244,7 +246,7 @@ events:
     everyMultiItemList:
       STR_ADEPTAS_ZWEIHANDER: 1
       STR_BOLTPISTOL_DEAZ: 1
-      STR_LIGHT_BOLTPISTOL_AMMO: 6
+      STR_LIGHT_BOLTPISTOL_AMMO: 8
       STR_MGRENADE: 2
       STR_KNIF: 1
       STR_ADEPTAS_ARMOR_ELOHIM: 1
@@ -266,12 +268,10 @@ events:
     everyMultiItemList:
       STR_EVISCERATOR: 1
       STR_PURITY_SEAL: 1
-      STR_STUB_GUN: 2
+      STR_STUB_GUN: 4
       STR_STUB_GUN_AMMO: 4
-      STR_AUTOGUN: 2
+      STR_AUTOGUN: 4
       STR_AUTOGUN_CLIP: 4
-      STR_SHOTGUN: 2
-      STR_SHOTGUN_SHELLS: 4
     everyMultiSoldierList:
       STR_GUARD_PRIEST: 1
       STR_PENITENT: 6
@@ -326,7 +326,7 @@ events:
     timer: 2440  # 2 days
     everyMultiItemList:
       STR_AUTOCARBINE_NAVY: 1
-      STR_AUTOGUN_CLIP_DRUM_KRAKEN: 3
+      STR_AUTOGUN_CLIP_DRUM_KRAKEN: 4
       STR_KRAK_GRENADE: 1
       STR_MGRENADE: 1
       STR_MOTION_SCANNER: 1
@@ -339,7 +339,7 @@ events:
     timer: 2440  # 2 days
     everyMultiItemList:
       STR_MC_BOLTER_DEAZ: 1
-      STR_LIGHT_BOLTPISTOL_AMMO_MC: 10
+      STR_LIGHT_BOLTPISTOL_AMMO_MC: 4
       STR_HOLOGRAM_GRENADE: 2
     spawnedPersons: 1
     spawnedPersonType: STR_IMPERIAL_INQUISITOR
@@ -524,7 +524,7 @@ events:
     points: -100
     everyMultiItemList:
       STR_LASGUN_TANITH: 2
-      STR_LASGUN_CLIP_HOTSHOT: 6
+      STR_LASGUN_CLIP_HOTSHOT: 8
     everyMultiSoldierList:
       STR_GUARD_TANITH: 2
   - name: STR_INQ_SECURE_SUPPORT_GUARD_PILOTS_EVENT
@@ -571,7 +571,7 @@ events:
       STR_ROTOR_CANNON_KOMBI: 2
       STR_ROTOR_CANNON_KRAKEN_AMMO: 6
       STR_GUARD_KRIEG_GRENADIER_LUCIUS: 4
-      STR_MELTA_GRENADE40: 4
+      STR_MELTA_GRENADE40: 6
       STR_ROTOR_KOMBI_SLUG40: 6
       STR_INCENDIARY_GRENADE40: 6
       STR_GUARD_POWER_ARMOR: 4
@@ -712,19 +712,19 @@ events:
     randomMultiItemList:
       -
         STR_MCPLASMA_PISTOL: 1
-        STR_PLASMA_PISTOL_CLIP: 2
+        STR_PLASMA_PISTOL_CLIP: 3
       -
         STR_PLASMA_RIFLE_TERRAN: 1
-        STR_PLASMA_RIFLE_CLIP: 2
+        STR_PLASMA_RIFLE_CLIP: 3
       -
         STR_MCRIFLE: 1
-        STR_RIFLE_CLIP: 2
+        STR_RIFLE_CLIP: 3
       -
         STR_HEAVY_LASER: 1
         STR_MELTA_AMMO: 1
       -
         STR_MCSHOTGUNPD: 1
-        STR_SHOTGUN_SHELLS: 2
+        STR_SHOTGUN_SHELLS: 8
       -
         STR_HAMMER: 1
       -
@@ -737,11 +737,11 @@ events:
     timer: 2440  # 2 days
     randomMultiItemList:
       -
-        STR_SHOTGUNPD: 6
-        STR_SHOTGUN_SHELLS: 6
+        STR_SHOTGUNPD: 10
+        STR_SHOTGUN_SHELLS: 30
       -
         STR_HEAVY_STUBBER_HANDHELD: 2
-        STR_HEAVY_STUBBER_CLIP: 6
+        STR_HEAVY_STUBBER_CLIP: 8
       -
         STR_STUN_ROD: 10
         STR_PHOTON_GRENADE: 10
@@ -750,7 +750,7 @@ events:
         STR_KRAK_GRENADE: 10
       -
         STR_STUB_GUN: 6
-        STR_STUB_GUN_AMMO_AP: 12
+        STR_STUB_GUN_AMMO_AP: 18
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_3_EVENT # Penitents
     description: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_3_EVENT_DESCRIPTION
     background: ArbitesBG.SCR
@@ -811,7 +811,7 @@ events:
     timerRandom: 2880
     everyMultiItemList:
       STR_RIPPER_GUN: 4
-      STR_RIPPER_GUN_CLIP: 8
+      STR_RIPPER_GUN_CLIP: 12
       STR_POWER_PICK: 2
     spawnedPersons: 6
     spawnedPersonType: STR_OGRYN
@@ -850,6 +850,7 @@ events:
       -
         STR_HEAVY_STUBBER_KRIEG: 1
         STR_HEAVY_STUBBER_CLIP_KRIEG: 4
+        STR_GUARD_ARMORH: 1
       -
         STR_GRENADE_LAUNCHER: 1
         STR_FRAG_GRENADE_DRUM: 4
@@ -860,7 +861,7 @@ events:
         STR_PLASMA_RIFLE_CLIP: 4
     spawnedPersons: 1
     spawnedPersonType: STR_GUARD_SQUAT
-    #TODO stats
+
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_BEASTMAN_EVENT
     description: STR_INQ_SECURE_SUPPORT_ABHUMANS_BEASTMAN_EVENT_DESCRIPTION
     background: BeastmenBG.SCR
@@ -1038,8 +1039,8 @@ events:
     timer: 2440  # 2 days
     points: -250
     everyMultiItemList:
-      STR_AUTO_CANNON: 1
-      STR_AC_I_AMMO: 4
+      STR_AUTO_CANNON_RETRIBUTOR: 1
+      STR_AC_INC_ADEPTAS_AMMO: 4
       STR_ADEPTAS_ROCKET_LAUNCHER: 1
       STR_INCENDIARY_ROCKET: 4
       STR_HEAVY_ROCKET: 4
@@ -1279,8 +1280,7 @@ events:
       STR_HEAVY_LASER: 1
       STR_MELTA_AMMO: 4
       STR_MAKESHIFT_PIPEBOMB: 24
-      STR_POWER_PICK: 1
-      STR_LIGHT_POWERFIST: 1
+      STR_POWER_PICK: 2
     everyMultiSoldierList:
       STR_CHAOSCULT_SOLDIER_LV2: 4
       STR_CHAOS_FANATIC_PLAYER: 1
@@ -1624,12 +1624,8 @@ events:
     timerRandom: 2880
     everyMultiItemList:
       STR_AUTOGUN_ADEPTAS: 4
-      STR_AUTOGUN_ADEPTAS_SCOPED: 2
-      STR_AUTOGUN_CLIP: 20
-      STR_BOLTER_CANTUS: 2
-      STR_CANTUS_BOLTER_AMMO: 12
-      STR_BOLTPISTOL_DEAZ: 2
-      STR_LIGHT_BOLTPISTOL_AMMO: 6
+      STR_AUTOGUN_ADEPTAS_SCOPED: 4
+      STR_AUTOGUN_CLIP: 32
       STR_ADEPTAS_MEDICAE_ARMORSTORE: 1
       STR_ADEPTAS_CANTUSArmor: 3
     spawnedPersons: 8
