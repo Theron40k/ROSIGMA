@@ -7215,6 +7215,25 @@ ufopaedia:
     requires:
       - STR_INQ_PSYCHIC_SANCTION_RESEARCH
 
+##ADMECH OPFOR
+  - id: STR_ENGINSEER_OPFOR
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: TECHPRIEST_CODEX.SPK
+    text: STR_ENGINSEER_OPFOR_UFOPEDIA
+  - id: STR_ENGINSEER_OPFOR_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ENGINSEER_CORPSE
+    image_id: TECHPRIEST_CODEX.SPK
+    text: STR_ENGINSEER_ARMOR_UC_CODEX
+  - id: STR_ENGINSEER_ARMOR_OPFOR
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: TECHPRIEST_CODEX.SPK
+    text: STR_CHAOS_HERETEK_ARMOR_UFOPEDIA #CODEX ARMOR DETAILS
+
 # #ARMORS.CM.DW#              Deathwatch
   - delete: STR_DW_CAP_ARMOR_ULTRA_UC
   - id: STR_DW_CAP_ARMOR_ULTRA_UC
@@ -17658,7 +17677,7 @@ ufopaedia:
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
     image_id: chaosheretekarmorcodex.SPK
-    text: STR_CHAOS_HERETEK_ARMOR_UFOPEDIA
+    text: STR_CHAOS_HERETEK_ARMOR_UFOPEDIA #CODEX ARMOR DETAILS
 
   - id: STR_TRAITORGUARD_BATTLE_SERVITOR_HB
     type_id: 10
