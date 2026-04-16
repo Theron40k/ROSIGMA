@@ -213,6 +213,8 @@ weaponSets:
     weapons: [STR_PISTOL, STR_PISTOL_CLIP, STR_PISTOL_CLIP, STR_PISTOL_CLIP, STR_CHAINSWORD, STR_GRENADE]
   - type: BT_SCOUT_SET2
     weapons: [STR_RIFLEB, STR_RIFLE_CLIP, STR_RIFLE_CLIP, STR_GRENADE]
+  - type: BT_SCOUT_SET2B
+    weapons: [STR_SHOTGUN, STR_SHOTGUN_SHELLS, STR_SHOTGUN_SHELLS, STR_KRAK_GRENADE]
   - type: BT_SCOUT_SET3
     weapons: [STR_HEAVY_CANNON, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_GRENADE]
 
@@ -1241,8 +1243,9 @@ units:
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
       -
-        SM_SCOUT_SET1: 40
-        SM_SCOUT_SET2: 30
+        SM_SCOUT_SET1: 35
+        SM_SCOUT_SET2: 25
+        BT_SCOUT_SET2B: 10
         SM_SCOUT_SET3: 30
 
   - type: STR_SPACEMARINE_ADVSCOUT_AI
@@ -1740,7 +1743,8 @@ units:
     weightedBuiltInWeaponSets:
       -
         BT_SCOUT_SET1: 60
-        BT_SCOUT_SET2: 30
+        BT_SCOUT_SET2: 15
+        BT_SCOUT_SET2B: 15
         BT_SCOUT_SET3: 10
 
   # BLACKTEMPLAR TIER 1
