@@ -379,38 +379,38 @@ events:
 
   # Can't get this Event to match the Regiment ItemList to the SoldierList. I wave it away as minostorum fumbles
   - name: STR_INQ_REQUISITION_GUARD_EVENT
-    description: STR_INQ_REQUISITION_GUARD_EVENT_DESCRIPTION  #
+    description: STR_INQ_REQUISITION_GUARD_EVENT_DESCRIPTION
     background: ImperialCommandBG.scr
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     randomMultiSoldierList:
       - # Cadians
-        STR_GUARD_VETERAN: 4
+        STR_GUARD_VETERAN: 5
         STR_OGRYN: 1
       - # Krieg
-        STR_GUARDSM_KRIEG: 6
+        STR_GUARDSM_KRIEG: 8
       - # Steel Legion
-        STR_GUARDSL: 6
+        STR_GUARDSL: 8
       - # Catachans
         STR_CATACHANVET_FIGHTER: 4
     randomMultiItemList:
       - # Cadians
-        STR_MCLASER_RIFLE: 4
-        STR_LASGUN_CLIP_HOTSHOT: 12
-        STR_GRENADE: 8
+        STR_MCLASER_RIFLE: 5
+        STR_LASGUN_CLIP_HOTSHOT: 16
+        STR_GRENADE: 10
         STR_RIPPER_GUN: 1
         STR_RIPPER_GUN_CLIP: 8
         STR_OGRYN_CARAPACE: 1
         STR_BULLGRYN_ARMOR: 1
       - # Krieg
-        STR_LASGUN_LUCIUS: 4
-        STR_LASGUN_CLIP: 12
+        STR_LASGUN_LUCIUS: 6
+        STR_LASGUN_CLIP: 24
         STR_KRAK_GRENADE: 8
         STR_HEAVY_STUBBER_KRIEG: 2
-        STR_HEAVY_STUBBER_CLIP_KRIEG: 6
+        STR_HEAVY_STUBBER_CLIP_KRIEG: 8
       - # Steel Legion
-        STR_LASGUN_STEEL_LEGION: 4
-        STR_LASGUN_CLIP: 12
+        STR_LASGUN_STEEL_LEGION: 6
+        STR_LASGUN_CLIP: 24
         STR_GRENADE_LAUNCHER_STEEL_LEGION: 2
         STR_FRAG_GRENADE_DRUM: 6
         STR_KRAK_GRENADE_DRUM: 6
@@ -495,7 +495,7 @@ events:
       STR_FLAMETHROWER: 1
       STR_FLAMETHROWER_CLIP: 2
       STR_SATCHEL_CHARGE_HE: 2
-    spawnedPersons: 1
+    spawnedPersons: 2
     spawnedPersonType: STR_CATACHANVET_FIGHTER
   - name: STR_INQ_SECURE_SUPPORT_GUARD_SLEGION_EVENT
     description: STR_INQ_SECURE_SUPPORT_GUARD_SLEGION_EVENT_DESCRIPTION
@@ -730,7 +730,7 @@ events:
       -
         STR_POWER_PICK: 1
       -
-        STR_STIMM_AUTOINJECTOR: 20
+        STR_STIMM_AUTOINJECTOR: 30
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_2_EVENT # Arbites Surplus Gear
     description: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_2_EVENT_DESCRIPTION
     background: ArbitesBG.SCR
