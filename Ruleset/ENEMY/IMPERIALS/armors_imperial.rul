@@ -484,6 +484,46 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_MECHANICAL: 1
 
+  - type: STR_ENGINSEER_ARMOR_OPFOR            # Enginseer
+    spriteSheet: ENGINSEER.PCK
+    spriteInv: ENGINSEER.SPK
+    customArmorPreviewIndex: 837
+    forcedTorso: 1
+    corpseBattle:
+      - STR_ENGINSEER_CORPSE
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    heatVision: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    painImmune: true
+    frontArmor: 90
+    sideArmor: 80
+    rearArmor: 60
+    underArmor: 80
+    weight: 10
+    drawingRoutine: 0
+    damageModifier:
+      - 1.0 #SUPPORT
+      - 0.9 #AP
+      - 0.6 #FLAMES
+      - 0.8 #HE
+      - 1.0 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 0.5 #ACID naturally resistant to contaminants
+      - 0.0 #SMOKE
+      - 0.2 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [3]
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+
   # ULTRA TIER 0
 
   - type: STR_SPACEMARINEARMOR_SCOUT
