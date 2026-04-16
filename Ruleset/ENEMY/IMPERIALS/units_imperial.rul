@@ -3638,6 +3638,48 @@ units:
       - - PREDSIDE_WEAPON
       - - PREDSIDE_WEAPON
 
+  # Reprisalia
+  - type: STR_REPRISALIA_AI #OPFOR
+    race: STR_ADEPTASORORITAS
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 70
+      stamina: 90
+      health: 50
+      bravery: 110
+      reactions: 110
+      firing: 110
+      throwing: 100
+      strength: 70
+      psiStrength: 90
+      psiSkill: 50 #disabled psi amp, this is for psi defense only
+      melee: 100
+    armor: STR_REPRISALIA_ARMOR_AI
+    standHeight: 20
+    kneelHeight: 14
+    value: 15
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    sniper: 90
+    avoidsFire: false
+    energyRecovery: 50
+    deathSound: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
+    psiWeapon: STR_NONE
+    builtInWeaponSets:
+       - - STR_REPRESSOR_SNIPER
+         - STR_STUB_GUN_AMMO_AP
+         - STR_STUB_GUN_AMMO_AP
+         - STR_STUB_GUN_AMMO_AP
+         - STR_SMOKE_GRENADE
+       - - STR_REPRESSOR_SNIPER
+         - STR_REPRESSOR_AMMO
+         - STR_STUB_GUN_AMMO_AP
+         - STR_SMOKE_GRENADE
+       - - STR_REPRESSOR_SNIPER
+         - STR_REPRESSOR_AMMO
+         - STR_REPRESSOR_AMMO
+         - STR_KRAK_GRENADE
 
   # adeptas bloody rose
 
