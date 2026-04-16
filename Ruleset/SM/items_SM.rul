@@ -184,7 +184,7 @@ items:
   - type: STR_MCRIFLE  # BOLTER                 10400                   MC no aim
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     size: 0.3
-    costSell: 2750
+    costSell: 10000
     weight: 20
     compatibleAmmo:
       - STR_RIFLE_CLIP
@@ -295,6 +295,9 @@ items:
       ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 50  # percent of the user's Firing Accuracy that applies as a damage bonus; used for precision weapons like sniper rifles
       ITEM_RECOIL: 25
       ITEM_IS_HEAVY_WEAPON: 1  # infantry but not mounted/vehicle heavy weapons
+
+  - type: STR_HFLAMER
+    costSell: 35000
 
   - type: STR_SHOTGUN
     weight: 10  # +3 from 7 vanilla, makes the low weight carbines more attractive.
@@ -1921,7 +1924,7 @@ items:
     categories: [STR_CAT_MELTA, STR_CAT_TACTICAL]
     size: 0.5
     dropoff: 6
-    costSell: 50000
+    costSell: 10000
     weight: 35
     bigSprite: 1049
     floorSprite: 978
@@ -1952,7 +1955,7 @@ items:
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
     size: 0.1
     dropoff: 6
-    costSell: 50000
+    costSell: 20000
     weight: 20
     floorSprite: 971
     handSprite: 1100
@@ -2006,7 +2009,7 @@ items:
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
     size: 0.2
     dropoff: 5
-    costSell: 100000
+    costSell: 50000
     weight: 40
     floorSprite: 973
     handSprite: 1116
