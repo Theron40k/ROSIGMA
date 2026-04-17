@@ -788,7 +788,7 @@ ufopaedia:
     type_id: 10
     section: STR_STRATEGY
     requires:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     image_id: INQUISITOR_CODEX.SPK
     text: STR_INQUISITION_FAVOR_CODEX
 
@@ -3009,7 +3009,7 @@ ufopaedia:
     image_id: 036.SPK
     text: STR_PRISION_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ARMORY_ARBITES
   - id: STR_ARMORY_ARBITES
     type_id: 16
@@ -3018,7 +3018,7 @@ ufopaedia:
     text: STR_ARMORY_ARBITES_UFOPEDIA
     requires:
       - STR_ARBITES_MIDTIER
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_DEFENSE_HALL
   - id: STR_DEFENSE_HALL
     type_id: 16
@@ -3315,7 +3315,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_AIRCRAFT_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
 ## #CRAFTS.MULT#
   - delete: STR_VALKYRIE  # VALKYRIE
@@ -3754,7 +3754,7 @@ ufopaedia:
   - id: STR_VULTURE
     type_id: 11
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_VULTURE_UFOPEDIA
     image_id: 2VULTURE.SPK
@@ -3763,7 +3763,7 @@ ufopaedia:
   - id: STR_CHIMERAPD
     type_id: 11
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_CHIMERAPD_UFOPEDIA
     image_id: 2CHIMERAL.SPK
@@ -3773,7 +3773,6 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
       - STR_NEW_FIGHTER_PD
       - STR_THE_IMPERIAL_LAW_STRATEGY
     image_id: 2THUNDERBOLT.SPK
@@ -3784,7 +3783,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NEW_TRANSPORT_PD
     image_id: 2TAUROX.SPK
     text: STR_TAUROXPD_UFOPEDIA
@@ -3794,7 +3793,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ARBITES_HIGHTIER
     image_id: 2MANTICORE.SPK
     text: STR_CHIMERAPDH_UFOPEDIA
@@ -3804,7 +3803,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ARBITES_HIGHTIER
     image_id: 2CRASSUS.SPK
     text: STR_CASSIUMPD_UFOPEDIA
@@ -3814,7 +3813,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_PREATOR_PD_R
     image_id: 2PREATOR.SPK
     text: STR_PREATOR_UFOPEDIA
@@ -3835,7 +3834,7 @@ ufopaedia:
     text: STR_ARMYPD_UFOPEDIA
     image_id: 2MOBP.SPK
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_LANDRAIDER_ARBITES
 
 ### #CRAFTS.AT.CULT#
@@ -5393,7 +5392,7 @@ ufopaedia:
     text: STR_CMAS_UFOPEDIA
     weapon: STR_CMAS
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 ## #SOLDIERS.AT.CULT#      Chaos Cult Strategy
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
@@ -7510,7 +7509,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_A_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
   - delete: STR_PENAL_ARMOR_UC
   - id: STR_PENAL_ARMOR_UC
@@ -7519,11 +7518,11 @@ ufopaedia:
     image_id: PENAL_LEGION.SPK
     text: STR_PENAL_ARMOR_BROWN_UC_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ENFORCER_ARMOR_UC
   - id: STR_ENFORCER_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF.SPK
@@ -7531,7 +7530,6 @@ ufopaedia:
   - delete: STR_ENFORCER_MEDIC_ARMOR_UC
   - id: STR_ENFORCER_MEDIC_ARMOR_UC
     requires:
-      - STR_ARBITES
       - STR_ENFORCER_ARMOR
       - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
@@ -7541,7 +7539,7 @@ ufopaedia:
   - delete: STR_ENFORCER_SIGNAL_ARMOR_UC
   - id: STR_ENFORCER_SIGNAL_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ENFORCER_ARMOR
       - STR_ARBITES_MIDTIER
     type_id: 15
@@ -7551,7 +7549,7 @@ ufopaedia:
   - delete: STR_ENFORCER_HEAVY_ARMOR_UC
   - id: STR_ENFORCER_HEAVY_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF2.SPK
@@ -7559,7 +7557,7 @@ ufopaedia:
   - delete: STR_ENFORCER_SHIELD_ARMOR_UC
   - id: STR_ENFORCER_SHIELD_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF2.SPK
@@ -7567,7 +7565,7 @@ ufopaedia:
   - delete: STR_JUDGE_ARMOR_UC
   - id: STR_JUDGE_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG.SPK
@@ -7579,11 +7577,11 @@ ufopaedia:
     image_id: C15.SPK
     text: STR_JUDGE_BIKE_ARMOR_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ARBITOR_ARMOR_UC
   - id: STR_ARBITOR_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG2.SPK
@@ -7591,7 +7589,7 @@ ufopaedia:
   - delete: STR_MARSHAL_ARMOR_UC
   - id: STR_MARSHAL_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG3.SPK
@@ -9542,7 +9540,7 @@ ufopaedia:
     image_id: 1LBMC.SPK
     text: STR_MASTER_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_MASTER_CRAFTING
     pages:
       - title: STR_MCSHOTGUNPD
@@ -15274,7 +15272,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_BOOKS_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
   # Spells
   - delete: STR_MIND_PROBE

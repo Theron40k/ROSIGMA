@@ -8,7 +8,7 @@ crafts:
 
   - type: STR_STORMRAVEN_GK
     requires: !add
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
 
     fuelMax: 600  # was 1200
     refuelRate: 10  # was 5
@@ -41,7 +41,7 @@ crafts:
 
   - type: STR_STORMEAGLE_GK
     requires: !add
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     vehicles: 999
     maxLargeUnits: 1
 
@@ -55,7 +55,7 @@ crafts:
 
   - type: STR_THUNDERHAWNK_GK
     requires: !add
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
 
   - type: STR_THUNDERHAWNK_GK
     # requires: !remove
@@ -157,3 +157,5 @@ crafts:
     avoidBonus: 5  # was 0; to bring it in line with Lightning Interceptor
     hitBonus: 5  # was 0; to bring it in line with Lightning Interceptor
     repairRate: 5  # was 1; to bring it in line with Lightning Interceptor
+    requires:
+      - STR_CHAMBER_NOT_ARBITES

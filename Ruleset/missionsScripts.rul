@@ -2285,9 +2285,8 @@ missionScripts:
     firstMonth: 1  # was 0
     # lastMonth: 12
     researchTriggers:
-      STR_CHAMBERMILITANT: true
+      STR_CHAMBER_NOT_ARBITES: true
       STR_NOT_CHAOSCULT: true
-      STR_THE_IMPERIAL_LAW_STRATEGY: false
 
   # Officio Assassinorum
   - type: MMAssassinorum # should be in addition to standard chamber militant missions. Will make adjustments as I go
@@ -3337,8 +3336,7 @@ missionScripts:
         REGION_FINAL_MISSION: 100
     researchTriggers:
       STR_CYDONIA_OR_BUST: true
-      STR_CHAMBERMILITANT: true
-      STR_THE_IMPERIAL_LAW_STRATEGY: false
+      STR_CHAMBER_NOT_ARBITES: true
     useTable: false
     maxRuns: 1
     varName: finalMissionChamber
