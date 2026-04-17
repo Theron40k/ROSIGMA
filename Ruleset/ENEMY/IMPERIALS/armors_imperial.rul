@@ -4862,6 +4862,143 @@ armors:
 
 #INQ OPFOR
 
+  - type: STR_INQ_SLGUARD_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 22
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    heatVision: 20
+    spriteSheet: INQ_SLGUARD_BS.PCK
+    spriteInv: INQ_SLGUARD_INV.SPK
+    corpseBattle:
+      - STR_INQ_SLGUARD_CORPSE
+    frontArmor: 70
+    sideArmor: 65
+    rearArmor: 50
+    underArmor: 50
+    drawingRoutine: 0
+    stats:
+      firing: 5
+      reactions: 5
+      bravery: 10
+    psiDefence:
+      flatHundred: 0.5  # Armor's hexagrammic and pentagrammic wards protect from psychic influence
+      psiSkill: 1.0  # Armor's hexagrammic and pentagrammic wards enhance the protection granted by faith and Devotion
+      moraleCurrent: 1.0  # Discipline and training protects from psychic influence.
+    damageModifier: #INQ ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 0.9 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 33
+      INTIMIDATION_RESISTANCE: 25
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_INQ_STORMTROOPER_OFFICER_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 22
+    antiCamouflageAtDay: 7 #Inq Officer
+    antiCamouflageAtDark: 7 #Inq Officer
+    heatVision: 30
+    spriteSheet: INQ_STORMTROOPER_OFFICER_BS.PCK
+    spriteInv: INQ_STORMTROOPER_OFFICER_INV.SPK
+    corpseBattle:
+      - STR_INQ_STORMTROOPER_OFFICER_CORPSE
+    frontArmor: 95
+    sideArmor: 85
+    rearArmor: 65
+    underArmor: 80
+    zombiImmune: true  # Armor's hexagrammic and pentagrammic wards protect from daemonic corruption
+    psiDefence:
+      flatHundred: 0.5  # Armor's hexagrammic and pentagrammic wards protect from psychic influence
+      psiSkill: 1.0  # Armor's hexagrammic and pentagrammic wards enhance the protection granted by faith and Devotion
+      moraleCurrent: 1.0  # Discipline and training protects from psychic influence.
+    stats:
+      firing: 10
+      reactions: 10
+      bravery: 10
+    drawingRoutine: 0
+    damageModifier: #INQ ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 0.9 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 33
+      INTIMIDATION_RESISTANCE: 50
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_INQ_INQUISITOR_INTERROGATOR_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 7 #Inq
+    antiCamouflageAtDark: 7 #Inq
+    heatVision: 30
+    spriteSheet: INQ_INQUISITOR_INTERROGATOR_BS.PCK
+    spriteInv: INQ_INQUISITOR_INTERROGATOR_INV.png
+    corpseBattle:
+      - STR_INQ_INQUISITOR_INTERROGATOR_CORPSE
+    frontArmor: 100
+    sideArmor: 95
+    rearArmor: 75
+    underArmor: 80
+    zombiImmune: true  # Armor's hexagrammic and pentagrammic wards protect from daemonic corruption
+    psiDefence:
+      flatHundred: 0.5  # Armor's hexagrammic and pentagrammic wards protect from psychic influence
+      psiSkill: 1.0  # Armor's hexagrammic and pentagrammic wards enhance the protection granted by faith and Devotion
+      moraleCurrent: 1.0  # Discipline and training protects from psychic influence.
+    stats:
+      firing: 5
+      reactions: 15
+      bravery: 10
+    drawingRoutine: 0
+    damageModifier: #INQ ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 0.9 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 50
+      INTIMIDATION_RESISTANCE: 50
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
   - type: STR_REPRISALIA_ARMOR_AI
     camouflageAtDay: 15
     camouflageAtDark: 5
@@ -4907,6 +5044,8 @@ armors:
       - INV_NULL_2X1_LL
     loftempsSet: [3]
     tags:
+      INFECTION_RESIST: 33
+      INTIMIDATION_RESISTANCE: 33
       ARMOR_OVERWATCH_TU_RESTORED: 50 #INQ assassin
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
