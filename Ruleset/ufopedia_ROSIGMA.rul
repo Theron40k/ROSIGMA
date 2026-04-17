@@ -16385,6 +16385,31 @@ ufopaedia:
       - STR_DARKANGEL_HONOR_AI
 
 #FOES.CM#              Chamber Militant Units
+
+  - id: STR_INQ_INQUISITOR_INTERROGATOR_ARMOR #Interrogator
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: INQ_INTERROGATOR_CODEX.SPK
+    text: STR_INQ_INQUISITOR_INTERROGATOR_UFOPEDIA
+    requires:
+      - STR_INQ_INQUISITOR_INTERROGATOR
+
+  - id: STR_INQ_STORMTROOPER_OFFICER_ARMOR
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: INQ_STORMTROOPER_OFFICER_CODEX.SPK
+    text: STR_INQ_STORMTROOPER_OFFICER_UFOPEDIA
+    requires:
+      - STR_INQ_STORMTROOPER_OFFICER
+
+  - id: STR_INQ_SLGUARD_ARMOR #INQ Trooper
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: INQ_TROOPER_CODEX.SPK
+    text: STR_INQ_SLGUARD_UFOPEDIA
+    requires:
+      - STR_INQ_SLGUARD
+
 #FOES.CM.DW#             Deathwatch
 #FOES.CM.GK#             Grey Knights
   - delete: STR_GREYKNIGHT_AUTOPSY
