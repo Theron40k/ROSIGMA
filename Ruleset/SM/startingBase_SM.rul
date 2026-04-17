@@ -57,10 +57,17 @@ startingBase:  # *** Default, Marines
     STR_STINGRAY_MISSILES: 25
 
 events:
+
   - name: STR_DEATHWATCH_CARE_PACKAGE
     adhocMissionScriptTags: ["gameStartHard"]
     description: STR_DEATHWATCH_REINFORCEMENTS
     background: BACK13.SCR
+    spawnedCraftType: STR_XIPHON_GK
+    timer: 300
+    timerRandom: 0
+    researchList: [STR_CHAMBER_NOT_ARBITES]
+    spawnedPersons: 2
+    spawnedPersonType: STR_ULTRAMARINE
     everyMultiItemList:
       STR_CRATED_CORVUS: 1
       STR_POWER_SUIT: 1
@@ -101,4 +108,3 @@ events:
     everyMultiItemList:
       STR_RIFLEA: 1
       STR_RIFLE_CLIP: 2
-
