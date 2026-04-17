@@ -1755,6 +1755,32 @@ research:
       - STR_ALIEN_ORIGINS
       - STR_COMMANDER_PLUS
 
+  - name: STR_STORMBOLTERS_WB  # Word Bearers Spreading the Faith
+    cost: 300
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_MIDTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+
+  - name: STR_AUTOCANNONS_WB  # Word Bearers Bearing the Word
+    cost: 400
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_CASS_R
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+      - STR_RITUAL_BETRAYAL
+
 ## Chamber Militant #STRATEGY.CM#
   - delete: STR_CHAMBERMILITANT
   - name: STR_CHAMBERMILITANT  # Chamber Militant
@@ -3571,7 +3597,6 @@ research:
       - STR_RITUAL_SACRIFICE
     unlocks:
       - STR_MIDTIER_PREREQ
-      - STR_CASS_R
       - STR_HB_DEP1
       - STR_HFLAMERR
     cutscene: c2
