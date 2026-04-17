@@ -2011,13 +2011,16 @@ research:
       #GG- STR_TAU_GUEVESA_STRATEGY_GV
     spawnedEvent: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
 
-# must be given as part of a research list
+# must be given with a researchList on an event or as a getOneFree
 # do NOT unlock with the non-Arbites Chamber strategy researches
   - name: STR_CHAMBER_NOT_ARBITES
     cost: 0
     points: 0
     dependencies:
       - STR_GENERALLOCK
+    disables:
+      # so you can't wait and get the free Inq and then pick it
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     spawnedEvent: STR_RECRUITS_CHAMBER_NOT_ARBITES
 
 ## The Alien and the Heretic #STRATEGY.AT#
