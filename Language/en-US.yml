@@ -514,7 +514,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CONVERT_FRATERIS_MILITIA: "Convert Frateris Militia"
   STR_CONVERT_FRATERIS_MILITIA_VETERAN: "Convert Frateris Militia Veteran"
   STR_CONVERT_GUARD: "Convert Guardsman"
-  STR_CONVERT_GUARD_VETERAN: "Convert Veteran Guardsman"
+  STR_CONVERT_GUARD_VETERAN: "Convert Guard Officer"
 
   ## Chaos Unit Names
   STR_CHAOS_FANATIC_PLAYER: "Chaos Fanatic"
@@ -1162,6 +1162,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_DATASLATE_SCAN: "Craft Data Slate"
 
+  STR_SISTERS_TRANSFORMATIONS_DEP: "Adeptas Sororitas Rituals" # Requirement for shared Adeptas Transformations
   STR_PROMOTE_TO_ADEPTAS_NOVICE: "Anomalous meritorious induction"  # for recruiting outside the Progenium
   STR_PROMOTE_TO_FRATERIS_MILITIA: "Induct into Frateris Militia"
   STR_ADEPTAS_FRATERIS_MILITIA_VETERAN: "Veteran Frateris Militia"
@@ -1213,6 +1214,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQUISITION_FAVOR_CODEX: "{NEWLINE} Pulling on a lifetime of favors, blackmail and even bribes, you may Secure the Support of various Imperial factions to provide you with recurring assistance through the work of your Adepts. To this end, you will likely want to prioritize acquiring more Adepts.{NEWLINE} {NEWLINE} Doing so will strain the limits of your influence, however, often resulting in Monthly Score penalties. If you call upon many Factions, be prepared to excel in your missions at any cost, as the weight of their expectations may spell your demise."
 
   STR_INQ_STORMTROOPER_CODEX_UNLOCKER: "(Stormtrooper Intelligence)"
+
+  STR_INQ_TRANSFORM_RETINUE_INDUCTION: "Retinue Induction"
+  STR_INQ_TRANSFORM_REJUVENATE: "Rejuvenat Treatment"
 
   STR_RADICAL_INQUISITOR_STRATEGY: "The Radical Road"
   STR_RADICAL_INQUISITOR_STRATEGY_DESCRIPTION: "{NEWLINE} A dire situation requires dire solutions. You understand that you must use the tools of the Xenos and the Heretic in order to defeat them, and the Inquisition must consider the use any tool. By means of regular psycho-indoctrination, captives with potential may once again serve the Emperor."
@@ -1285,7 +1289,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LIVE_CAPTURE_TG_SQUAT: "Traitor Squat"
   STR_LIVE_CAPTURE_TG_PSYKER: "Renegade Psyker"
   STR_LIVE_CAPTURE_GUARDAI: "Imperial Guardsman"
-  STR_LIVE_CAPTURE_GUARDAI_VETERAN: "Imperial Guardsman Veteran"
+  STR_LIVE_CAPTURE_GUARDAI_VETERAN: "Imperial Guard Officer"
   STR_LIVE_CAPTURE_GUARDAI_SCOUT: "Imperial Scout"
   STR_LIVE_CAPTURE_GUARDAI_CATACHAN: "Catachan"
   STR_LIVE_CAPTURE_GUARDAI_CATACHAN_VETERAN: "Catachan Veteran"
@@ -1760,7 +1764,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LIGHT_FLAMETHROWER_CLIP: "Light Flamer Fuel Tank"
   STR_FLAMERFIRE: "Fire Flamethrower"
   STR_FLAMERFIRE_SHORT: "Flamer (x{0})"
-  STR_BOLTER_MEPHISTO_UFOPEDIA: "{NEWLINE} The Mephisto Pattern Combi-Bolter solves the problem of Sisters of Battles angst between wielding his holy implement the Bolter, and cleansing heretics with holy fire, by combining the two in one easy to use kombi-weapon. The Mephisto addon light flamer doesn't quite match its dedicated counterpart, but has its uses. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sisters mod
+  STR_BOLTER_MEPHISTO_UFOPEDIA: "{NEWLINE} The Mephisto Pattern Combi-Bolter features a underslung flamethrower and a light calibre bolter round with reduced recoil for rapid burst fire. The Mephisto addon light flamer doesn't quite match its dedicated counterpart, but allows its user to employ flame barriers and purge less armored targets. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sisters mod
   STR_BOLTER_HELLSPITE: "Bolter Hellspite Pattern"
   STR_AUTOFIRE: "Autofire"
   STR_FULL_AUTO: "Full Auto"
@@ -8072,9 +8076,12 @@ en-US:  #  yamllint disable-line rule:empty-values
 # Reprisalia
 
   STR_REPRISALIA: "Reprisalia"
+  STR_REPRISALIA_AI: "Reprisalia"
   STR_REPRISALIA_ARMOR: "Reprisalia Armor"
   STR_REPRISALIA_ARMOR_AI: "Reprisalia" #OPFOR Use
-  STR_REPRISALIA_ARMOR_UFOPEDIA: "{NEWLINE} The commando Adeptas Reprisalia are drawn from many orders but serve primarily as the special forces for the Order Famolous and Dialogus as well as on request by the Inquisition.{NEWLINE} The Reprisalia specialize in hostage rescue and elimination, recovery of holy texts, sensitive data interception and elimination of threats to the ecclessiarchy where discretion is required.{NEWLINE} As such the Sisters Profile recruited to the Reprisalia are selected by and trained in special skills not commonly found amongst ordinary Sisters. Long ranged sharpshooting, infiltration, silent- and unarmed combat along with soft skills with ciphers, xeno-communication, binharic and a multitude of non-standard weapons."
+  STR_REPRISALIA_AI_CODEX: "{NEWLINE} The Adepta Reprisalia are called upon by the Inquisition to assassinate particularly dangerous heretics and witches. Armed with suppressed Repressor rifles they prefer to engage from a distance, silently taking out their targets."
+  STR_REPRISALIA_ARMOR_UFOPEDIA: "{NEWLINE} The commando Adepta Reprisalia are drawn from many orders but serve primarily as the special forces for the Order Famolous and Dialogus as well as on request by the Inquisition.{NEWLINE} The Reprisalia specialize in hostage rescue and elimination, recovery of holy texts, sensitive data interception and elimination of threats to the ecclessiarchy where discretion is required.{NEWLINE} As such the Sisters Profile recruited to the Reprisalia are selected by and trained in special skills not commonly found amongst ordinary Sisters. Long ranged sharpshooting, infiltration, silent- and unarmed combat along with soft skills with ciphers, xeno-communication, binharic and a multitude of non-standard weapons."
+  STR_REPRISALIA_AI_AUTOPSY: "Reprisalia Origins"
   STR_REPRISALIA_CORPSE: "Reprisalia Corpse"
 
   STR_REPRISALIA_ACCESS: "Reprisalia Access"
@@ -8243,6 +8250,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_IMPULSORTURRET_SPAWNER_DW: "DW Impulsor Turret Spawner"
   STR_IMPULSORTURRET_TURRETUNIT_DW: "DW Impulsor Turret"
   STR_IMPULSORTURRET_TURRETARMOR_DW: "DW Impulsor Turret Armor"
+
+  STR_REPULSORLASCANTURRET_SPAWNER: "Repulsor Lascan Turret Spawner"
+  STR_REPULSOR_LASCANNONTURRET: "Repulsor Twin-Linked Lascannon"
+  STR_REPULSORLASCANTURRET_ARMOR: "Repulsor Twin-Linked Lascannon Armor"
+
+  STR_REPULSORBATTLECANNON_SPAWNER: "Repulsor Battlecannon Spawner"
+  STR_REPULSOR_BATTLECANNON: "Repulsor Battlecannon"
+  STR_REPULSOR_BATTLECANNONARMOR: "Repulsor Battlecannon Armor"
 
 #  STR_CRAFT_SHIELD_UFOPEDIA: "{NEWLINE} The shield dome contains an refractor field emitter that can generate a personal protective force field around an individual and around the craft.{NEWLINE}{NEWLINE}Slot: Auxiliary{NEWLINE}Shield Capacity: 250"
 #  STR_THRUSTER_UFOPEDIA: "{NEWLINE} The typical craft engine has a core combustion chamber surrounded by a frontal fan and a rearward turbine. Reinforcing the turbofan and turbine sections allow for increased fuel input from the craft's on-board fusion reactor, increasing its speed and agility.{NEWLINE}{NEWLINE}Slot: Auxiliary{NEWLINE}Speed Increase: 250 kt{NEWLINE}Dodge Bonus: 3%"
@@ -8905,6 +8920,8 @@ en-US:  #  yamllint disable-line rule:empty-values
 # Faction: General
 ##########################################
   STR_IMPERIUM_RESEARCH: "(Imperium of Man)"
+  STR_NOT_IMPERIUM: "(Not Imperium)"
+
   STR_ADEPTAS_AND_INQUISITION: "(Adeptas or Inquisition)"
   STR_MARINES_AND_INQUISITION: "(Marines or Inquisition)"
   STR_ADEPTAS_MARINES_AND_INQUISITION: "(Adeptas/Marines/Inquisition)"
@@ -10604,6 +10621,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_STEELLEGION_FACTION: "Steel Legion"
   STR_VALHALLAN_FACTION: "Valhallan Ice Warriors"
   STR_CATACHAN_FACTION: "Catachan Jungle Fighters"
+  STR_ADMECH_FACTION: "Adeptus Mechanicus"
   STR_INQUISITION_FACTION: "Inquisition"
   STR_ADEPTASORORITAS: "Adepta Sororitas"
   STR_DARKANGELS_FACTION: "Dark Angels"
@@ -12324,9 +12342,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ADV_TECHPRIEST_GEAR: "Advanced Enginseer Gear"
   STR_WRIT_ILLUMINAT: "Writ Illuminat"
   STR_ENGINSEER: "Enginseer Techpriest"
+  STR_ENGINSEER_OPFOR: "Enginseer Techpriest"
   STR_TECH_ENGINSEER_RANK_0: "Enginseer Techpriest"
   STR_ENGINSEER_ARMOR_UC: "Enginseer Techpriest"
+  STR_ENGINSEER_ARMOR_OPFOR: "Enginseer Techpriest"
   STR_ENGINSEER_ARMOR_UC_CODEX: "Enginseers are members of the Cult Mechanicus dedicated to the maintenance of Imperium technology, and are frequently attached to Imperial armies to repair and service vehicles and other war machines. They are often called upon to make field repairs in battle, accompanied by servitors for assistance and protection."
+  STR_ENGINSEER_OPFOR_UFOPEDIA: "Enginseers are members of the Adeptus Mechanicus, often found in the field working for the various Imperium departments to maintain their machinery, armor and weaponry. Themselves cybernetically enhanced, with strong optics they are capable ranged and melee fighters."
+  STR_ENGINSEER_OPFOR_AUTOPSY: "Enginseer Origins"
   STR_ENGINSEER_CORPSE: "Enginseer Corpse"
   STR_TECHPRIEST_SCANNER: "Enginseer Scanner"
   STR_TECHPRIEST_POWERAXE: "Omnisian Axe"

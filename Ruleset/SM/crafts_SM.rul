@@ -329,22 +329,94 @@ crafts:
   - type: STR_REPULSOR
     repairRate: 10
     speedMax: 800  # was 300
+    battlescapeTerrainData:
+      name: REPULSORD
+      mapDataSets:
+        - BLANKS
+        - REPULSOR
+        - TURRET
+      mapBlocks:
+        - name: REPULSORD
+          width: 10
+          length: 20
+          items:
+            STR_REPULSORLASCANTURRET_SPAWNER:
+              - [4, 10, 1]
+            STR_REPULSORBATTLECANNON_SPAWNER:
+              - [4, 10, 2]
+          fuseTimers:
+            STR_REPULSORLASCANTURRET_SPAWNER: [0, 0]
+            STR_REPULSORBATTLECANNON_SPAWNER: [0, 0]
 
   - type: STR_REPULSOR_DW
     repairRate: 10
     speedMax: 800  # was 300
+    battlescapeTerrainData:
+      name: REPULSORD
+      mapDataSets:
+        - BLANKS
+        - REPULSORDW
+        - TURRETDW
+      mapBlocks:
+        - name: REPULSORD
+          width: 10
+          length: 20
+          items:
+            STR_REPULSORLASCANTURRET_SPAWNER:
+              - [4, 10, 1]
+            STR_REPULSORBATTLECANNON_SPAWNER:
+              - [4, 10, 2]
+          fuseTimers:
+            STR_REPULSORLASCANTURRET_SPAWNER: [0, 0]
+            STR_REPULSORBATTLECANNON_SPAWNER: [0, 0]
 
   - type: STR_REPULSOR_T
     repairRate: 10
     speedMax: 400  # was 300
     vehicles: 999
     maxLargeUnits: 1
+    battlescapeTerrainData:
+      name: REPULSOR
+      mapDataSets:
+        - BLANKS
+        - REPULSOR
+      mapBlocks:
+        - name: REPULSOR
+          width: 10
+          length: 20
+          items:
+            STR_IMPULSORTURRET_SPAWNER:
+              - [2, 8, 2]
+              - [5, 8, 2]
+            STR_REPULSORLASCANTURRET_SPAWNER:
+              - [4, 10, 1]
+          fuseTimers:
+            STR_IMPULSORTURRET_SPAWNER: [0, 0]
+            STR_REPULSORLASCANTURRET_SPAWNER: [0, 0]
 
   - type: STR_REPULSOR_T_DW
     repairRate: 10
     speedMax: 400  # was 300
     vehicles: 999
     maxLargeUnits: 1
+    battlescapeTerrainData:
+      name: REPULSOR
+      mapDataSets:
+        - BLANKS
+        - REPULSORDW
+      mapBlocks:
+        - name: REPULSOR
+          width: 10
+          length: 20
+          items:
+            STR_IMPULSORTURRET_SPAWNER_DW:
+              - [2, 8, 2]
+              - [5, 8, 2]
+            STR_REPULSORLASCANTURRET_SPAWNER:
+              - [4, 10, 1]
+          fuseTimers:
+            STR_IMPULSORTURRET_SPAWNER_DW: [0, 0]
+            STR_REPULSORLASCANTURRET_SPAWNER: [0, 0]
 
   - &STR_IMPULOSR
     type: STR_IMPULSOR
@@ -486,9 +558,56 @@ crafts:
       - [2, 2, 0, 0]
       - [3, 1, 0, 0]
       - [3, 2, 0, 0]  # landspeeder 2 HWP block
+
   - type: STR_ARMY_P
     vehicles: 999
     maxLargeUnits: 2
+    battlescapeTerrainData:
+      name: PARMY
+      mapDataSets:
+        - BLANKS
+        - IMPULSOR
+        - REPULSOR
+        - TURRET
+      mapBlocks:
+        - name: PARMY
+          width: 10
+          length: 20
+          items:
+            STR_IMPULSORTURRET_SPAWNER:
+              - [1, 17, 2]
+              - [3, 17, 2]
+              - [4, 7, 2]
+              - [7, 7, 2]
+            STR_REPULSORLASCANTURRET_SPAWNER:
+              - [6, 9, 1]
+          fuseTimers:
+            STR_IMPULSORTURRET_SPAWNER: [0, 0]
+            STR_REPULSORLASCANTURRET_SPAWNER: [0, 0]
+    deployment:
+      - [5, 4, 1, 4]  # REPULSOR
+      - [6, 4, 1, 4]
+      - [7, 4, 1, 4]
+      - [5, 5, 1, 4]
+      - [6, 5, 1, 4]
+      - [7, 5, 1, 4]
+      - [5, 6, 1, 4]
+      - [6, 6, 1, 4]
+      - [7, 6, 1, 4]
+      - [5, 7, 1, 4]
+      - [6, 7, 1, 4]
+      - [7, 7, 1, 4]
+      - [4, 6, 1, 4]
+      - [8, 6, 1, 4]
+
+      - [2, 14, 1, 0] #IMPULSOR
+      - [3, 14, 1, 0]
+      - [2, 15, 1, 0]
+      - [3, 15, 1, 0]
+      - [2, 16, 1, 0]
+      - [3, 16, 1, 0]
+      - [2, 17, 1, 0]
+      - [3, 17, 1, 0]
 
   # added this from 40k to disable it from word bearers
 
