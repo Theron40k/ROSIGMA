@@ -512,7 +512,7 @@ alienDeployments:
           showTarget: false
         minTurn: 20
         executionOdds: 60
-        maxRuns: -1  # they just keep coming
+        maxRuns: 1
         useSpawnNodes: true
         spawnNodeRanks: [4]  # leader/commander nodes
         mapBlockFilterType: 0  # all blocks, just go by node placement
@@ -695,7 +695,7 @@ alienDeployments:
           showTarget: false
         minTurn: 20
         executionOdds: 100
-        maxRuns: -1  # they just keep coming
+        maxRuns: 1
         useSpawnNodes: true
         spawnNodeRanks: [4]  # leader/commander nodes
         mapBlockFilterType: 0  # all blocks, just go by node placement
@@ -878,7 +878,7 @@ alienDeployments:
           showTarget: false
         minTurn: 20
         executionOdds: 100
-        maxRuns: -1  # they just keep coming
+        maxRuns: 1
         useSpawnNodes: true
         spawnNodeRanks: [4]  # leader/commander nodes
         mapBlockFilterType: 0  # all blocks, just go by node placement
@@ -1053,7 +1053,7 @@ alienDeployments:
           showTarget: false
         minTurn: 20
         executionOdds: 100
-        maxRuns: -1  # they just keep coming
+        maxRuns: 1
         useSpawnNodes: true
         spawnNodeRanks: [4]  # leader/commander nodes
         mapBlockFilterType: 0  # all blocks, just go by node placement
@@ -2739,9 +2739,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_PDF_DEPOT_TITLE
@@ -16028,9 +16028,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -16086,26 +16086,26 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 8  # 5
-        highQty: 12  # 7
+        lowQty: 14  # 5
+        highQty: 18  # 7
         dQty: 14
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 3  # 1
-        highQty: 5  # 2
+        lowQty: 5  # 1
+        highQty: 7  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 4
-        highQty: 5
+        lowQty: 6
+        highQty: 7
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 4  # 2
+        lowQty: 4
+        highQty: 6  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -16123,7 +16123,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -16409,9 +16409,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -16467,25 +16467,25 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 11  # 5
+        highQty: 14  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 4  # 1
-        highQty: 5  # 2
+        lowQty: 5  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
         lowQty: 4
-        highQty: 5
+        highQty: 6
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
+        lowQty: 4
         highQty: 5  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
@@ -16504,7 +16504,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -16790,9 +16790,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -16837,7 +16837,7 @@ alienDeployments:
     data:
       - alienRank: 6
         lowQty: 2  # 1
-        highQty: 3  # 3
+        highQty: 4  # 3
         dQty: 1
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -16848,8 +16848,8 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 12  # 5
+        highQty: 15  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -16860,20 +16860,20 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 3
-        highQty: 5
+        lowQty: 4
+        highQty: 6
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 5  # 2
+        lowQty: 4
+        highQty: 6  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 2 # 2
-        highQty: 3  # 4
+        lowQty: 3 # 2
+        highQty: 4  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -16885,7 +16885,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -17171,9 +17171,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -17217,44 +17217,44 @@ alienDeployments:
     markerIcon: 132
     data:
       - alienRank: 6
-        lowQty: 2  # 1
-        highQty: 3  # 3
+        lowQty: 3  # 1
+        highQty: 4  # 3
         dQty: 1
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 7
-        lowQty: 2  # 0
-        highQty: 3 # 2
+        lowQty: 3  # 0
+        highQty: 4 # 2
         dQty: 1
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 12  # 5
+        highQty: 16  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 4  # 1
-        highQty: 5  # 2
+        lowQty: 5  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 3
-        highQty: 5
+        lowQty: 4
+        highQty: 6
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 5  # 2
+        lowQty: 4
+        highQty: 6  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
         lowQty: 3 # 2
-        highQty: 3  # 4
+        highQty: 4  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -17266,7 +17266,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -17552,9 +17552,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -17610,32 +17610,32 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 12  # 5
+        highQty: 16  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 4  # 1
-        highQty: 4  # 2
+        lowQty: 5  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 4
-        highQty: 4
+        lowQty: 5
+        highQty: 6
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 4  # 2
+        lowQty: 4
+        highQty: 5  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
         lowQty: 3 # 2
-        highQty: 4  # 4
+        highQty: 5  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -17647,7 +17647,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -17933,9 +17933,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -17991,32 +17991,32 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 12  # 5
+        highQty: 16  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 3  # 1
-        highQty: 4  # 2
+        lowQty: 5  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 3
-        highQty: 4
+        lowQty: 4
+        highQty: 5
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 4  # 2
+        lowQty: 4
+        highQty: 6  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 3 # 2
-        highQty: 4  # 4
+        lowQty: 4 # 2
+        highQty: 5  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -18028,7 +18028,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -18314,9 +18314,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -18366,20 +18366,20 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 7
-        lowQty: 2  # 0
-        highQty: 3 # 2
+        lowQty: 3  # 0
+        highQty: 4 # 2
         dQty: 1
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 12  # 5
+        highQty: 16  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 3  # 1
-        highQty: 5  # 2
+        lowQty: 4  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -18390,14 +18390,14 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 4  # 2
+        lowQty: 5
+        highQty: 6  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 3 # 2
-        highQty: 4  # 4
+        lowQty: 4 # 2
+        highQty: 5  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -18409,7 +18409,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -18695,9 +18695,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -18753,32 +18753,32 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 14  # 5
+        highQty: 18  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 4  # 1
-        highQty: 5  # 2
+        lowQty: 5  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 3
-        highQty: 5
+        lowQty: 5
+        highQty: 6
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 4  # 2
+        lowQty: 4
+        highQty: 6  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 3 # 2
-        highQty: 4  # 4
+        lowQty: 4 # 2
+        highQty: 5  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -18790,7 +18790,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -19076,9 +19076,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_IMPERIALBASE_ASSAULT_TITLE
@@ -19134,32 +19134,32 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 14  # 5
+        highQty: 18  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 4  # 1
-        highQty: 5  # 2
+        lowQty: 5  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 3
-        highQty: 5
+        lowQty: 4
+        highQty: 6
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 4  # 2
+        lowQty: 4
+        highQty: 6  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 3 # 2
-        highQty: 4  # 4
+        lowQty: 4 # 2
+        highQty: 5  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -19171,7 +19171,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3
@@ -19351,9 +19351,9 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 50
     length: 50
-    height: 4
+    height: 2
     terrains:
-      - IMPERIALAIBASESTERRAIN
+      - IMPERIALAIBASESTERRAINLOW
     script: IMPAIBASESCRIPTV2
     briefing:
       title: STR_AL_IMPOSTER_BASE_ASSAULT_TITLE
@@ -19405,32 +19405,32 @@ alienDeployments:
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 5
-        lowQty: 9  # 5
-        highQty: 12  # 7
+        lowQty: 12  # 5
+        highQty: 16  # 7
         dQty: 8
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 4
-        lowQty: 3  # 1
-        highQty: 5  # 2
+        lowQty: 5  # 1
+        highQty: 6  # 2
         dQty: 3  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 3
-        lowQty: 3
-        highQty: 4
+        lowQty: 4
+        highQty: 5
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 2
-        lowQty: 3
-        highQty: 4  # 2
+        lowQty: 4
+        highQty: 5  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 3 # 2
-        highQty: 4  # 4
+        lowQty: 4 # 2
+        highQty: 5  # 4
         dQty: 2
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
@@ -19442,7 +19442,7 @@ alienDeployments:
         itemSets: *emptyItemSets
     width: 70
     length: 70
-    height: 4
+    height: 3
     terrains:
       - IMPERIALAIBASESTERRAIN
     script: IMPAIBASESCRIPTV3

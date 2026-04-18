@@ -995,6 +995,8 @@ research:
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_KRIEG  # Krieg Selected
     refNode: *STR_LOCKED
+  - name: STR_CHOSEN_VALHALLA # Valhallan Selected
+    refNode: *STR_LOCKED
   - delete: STR_CHOSEN_ELDAR
   - name: STR_CHOSEN_ELDAR  # Eldar Path
     refNode: *STR_LOCKED
@@ -1756,6 +1758,32 @@ research:
       - STR_RITUAL_BETRAYAL
       - STR_ALIEN_ORIGINS
       - STR_COMMANDER_PLUS
+
+  - name: STR_STORMBOLTERS_WB  # Word Bearers Spreading the Faith
+    cost: 300
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_MIDTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+
+  - name: STR_AUTOCANNONS_WB  # Word Bearers Bearing the Word
+    cost: 400
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_CASS_R
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+      - STR_RITUAL_BETRAYAL
 
 ## Chamber Militant #STRATEGY.CM#
   - delete: STR_CHAMBERMILITANT
@@ -3624,7 +3652,6 @@ research:
       - STR_RITUAL_SACRIFICE
     unlocks:
       - STR_MIDTIER_PREREQ
-      - STR_CASS_R
       - STR_HB_DEP1
       - STR_HFLAMERR
     cutscene: c2
@@ -3808,6 +3835,39 @@ research:
       - STR_COMMANDER_PLUS
       - STR_ALIEN_ORIGINS
       - STR_PSI_LAB
+      - STR_THREAT_ONE
+
+  - name: STR_INQ_INQUISITOR_INTERROGATOR  # INTERROGATOR OPFOR capture
+    cost: 200
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+      - STR_THREAT_ONE
+
+  - name: STR_INQ_STORMTROOPER_OFFICER  # INQ LEADER OPFOR capture
+    cost: 150
+    points: 40
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_THREAT_ONE
+
+  - name: STR_INQ_SLGUARD  # INQ TROOPER OPFOR capture
+    cost: 100
+    points: 25
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ALIEN_ORIGINS
       - STR_THREAT_ONE
 
   - name: STR_INQ_STORMTROOPER_REQUISITION  # Requisition Inquisition Storm Troopers

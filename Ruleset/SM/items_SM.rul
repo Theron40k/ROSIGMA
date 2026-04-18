@@ -296,6 +296,10 @@ items:
       ITEM_RECOIL: 25
       ITEM_IS_HEAVY_WEAPON: 1  # infantry but not mounted/vehicle heavy weapons
 
+
+  - type: STR_HEAVY_LASER
+    costSell: 10000
+
   - type: STR_HFLAMER
     costSell: 35000
 
@@ -1090,8 +1094,9 @@ items:
   - type: STR_BIKE_ARMOR
     requiresBuy:
       - STR_NOT_PRIMARIS
-      - STR_NOT_SPACEWOLVES #Until Swiftclaw bike armor is added
+      - STR_NOT_SPACEWOLVES  # Until Swiftclaw bike armor is added
       - STR_MARINES_STRATEGY
+      - STR_NOT_WORDBEARERS  # they have their own stuff
 
   - type: STR_GRAV_FLAMER
     powerRangeReduction: 15

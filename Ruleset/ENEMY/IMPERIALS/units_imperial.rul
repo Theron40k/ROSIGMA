@@ -56,7 +56,7 @@ weaponSets:
   - type: CARAPACE_GUARDSMENOFF_SET1
     weapons: [STR_BOLTPISTOL_LIGHT_ULTRA, STR_LIGHT_BOLTPISTOL_AMMO, STR_LIGHT_BOLTPISTOL_AMMO, STR_LIGHT_POWERFIST, STR_KRAK_GRENADE, STR_MGRENADE]
   - type: CARAPACE_GUARDSMENOFF_SET2
-    weapons: [STR_BOLTPISTOL_LIGHT_ULTRA, STR_LIGHT_BOLTPISTOL_AMMO, STR_LIGHT_BOLTPISTOL_AMMO, STR_POWER_SWORD, STR_KRAK_GRENADE, STR_MGRENADE]
+    weapons: [STR_BOLTPISTOL_LIGHT_ULTRA, STR_LIGHT_BOLTPISTOL_AMMO_AP, STR_LIGHT_BOLTPISTOL_AMMO, STR_POWER_SWORD, STR_KRAK_GRENADE, STR_MGRENADE]
   - type: CARAPACE_GUARDSMENOFF_SET3
     weapons: [STR_PLASMA_PISTOL_TERRAN, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_OFFICERS_CHAIN_SWORD, STR_KRAK_GRENADE, STR_MGRENADE]
 
@@ -78,6 +78,9 @@ weaponSets:
   - type: FLAK_SLGUARDSMEN_SET7
     weapons: [STR_PLASMA_RIFLE_TERRAN, STR_PLASMA_RIFLE_CLIP, STR_PLASMA_RIFLE_CLIP, STR_KRAK_GRENADE]
 
+  - type: MISSILE_SLGUARDSMEN_SET1
+    weapons: [STR_MELTA_LAUNCHER_STEEL_LEGION, STR_HELLPISTOL, STR_LASPISTOL_CLIP_HOTSHOT, STR_LASPISTOL_CLIP_HOTSHOT, STR_KRAK_GRENADE]
+
   # SL command squad loadouts
   - type: FLAK_SLGUARDSMENOFF_SET1
     weapons: [STR_BOLTPISTOL_DEAZ, STR_LIGHT_BOLTPISTOL_AMMO, STR_LIGHT_BOLTPISTOL_AMMO, STR_LIGHT_BOLTPISTOL_AMMO, STR_LIGHT_POWERFIST, STR_KRAK_GRENADE, STR_GRENADE]
@@ -89,6 +92,14 @@ weaponSets:
   # SL stormtroopers
   - type: CARAPACE_SLGUARDSMEN_SET1
     weapons: [STR_LASCARBINE_STEEL_LEGION_MID, STR_LASGUN_CLIP_HOTSHOT, STR_LASGUN_CLIP_HOTSHOT, STR_KRAK_LAUNCHER_STEEL_LEGION]
+  - type: CARAPACE_SLGUARDSMEN_SET1B
+    weapons: [STR_LASGUN_STEEL_LEGION_MID, STR_LASGUN_CLIP_HOTSHOT, STR_LASGUN_CLIP_HOTSHOT, STR_KRAK_LAUNCHER_STEEL_LEGION]
+  - type: CARAPACE_SLGUARDSMEN_SET1C
+    weapons: [STR_LASGUN_STEEL_LEGION_HIGH, STR_LASGUN_CLIP_HOTSHOT, STR_LASGUN_CLIP_HOTSHOT, STR_KRAK_LAUNCHER_STEEL_LEGION]
+  - type: CARAPACE_SLGUARDSMEN_SET8
+    weapons: [STR_HELLGUN_STEEL_LEGION, STR_KRAK_GRENADE]
+  - type: CARAPACE_SLGUARDSMEN_SET9
+    weapons: [STR_VOLLEYGUN_STEEL_LEGION, STR_KRAK_GRENADE]
   # sergeant sets
   - type: CARAPACE_SLGUARDSMEN_SET2
     weapons: [STR_HELLPISTOL, STR_LASPISTOL_CLIP_HOTSHOT, STR_LASPISTOL_CLIP_HOTSHOT, STR_CHAINSWORD_STEEL_LEGION, STR_MELTA_LAUNCHER_STEEL_LEGION]
@@ -99,11 +110,12 @@ weaponSets:
   - type: CARAPACE_SLGUARDSMEN_SET4
     weapons: [STR_GRENADE_LAUNCHER_STEEL_LEGION, STR_KRAK_GRENADE_DRUM, STR_KRAK_GRENADE_DRUM, STR_KRAK_GRENADE_DRUM, STR_MGRENADE]
   - type: CARAPACE_SLGUARDSMEN_SET5
-    weapons: [STR_FLAMETHROWER, STR_FLAMETHROWER_CLIP, STR_FLAMETHROWER_CLIP, STR_KRAK_GRENADE]
+    weapons: [STR_HEAVY_FLAMER_STEEL_LEGION, STR_HFLAMER_CLIP, STR_KRAK_GRENADE]
   - type: CARAPACE_SLGUARDSMEN_SET6
     weapons: [STR_HEAVY_LASER, STR_MELTA_AMMO, STR_MELTA_AMMO, STR_KRAK_GRENADE]
   - type: CARAPACE_SLGUARDSMEN_SET7
     weapons: [STR_PLASMA_RIFLE_SEQUANA, STR_PLASMA_RIFLE_CLIP, STR_PLASMA_RIFLE_CLIP, STR_KRAK_GRENADE]
+
 
   # SL stormtroopers officers
   - type: CARAPACE_SLGUARDSMENOFF_SET1
@@ -471,10 +483,10 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 5
-    intelligence: 4
+    intelligence: 1
     aggression: 2
     spotter: 1
-    energyRecovery: 20
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     # Cadian Shock Troops have a sergeant, 7 lasgunners, 2 heavy weapons
@@ -509,10 +521,10 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 20
-    intelligence: 4
+    intelligence: 1
     aggression: 2
     sniper: 65
-    energyRecovery: 20
+    energyRecovery: 40
     livingWeapon: true
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     weightedBuiltInWeaponSets:
@@ -660,7 +672,7 @@ units:
     armor: GUARD_ARMOR_OFF_M_LV1_AI
     standHeight: 20
     kneelHeight: 14
-    intelligence: 5
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 40
@@ -890,11 +902,11 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 10
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     sniper: 65
-    energyRecovery: 20
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
@@ -1008,11 +1020,11 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 5
+    intelligence: 2
     aggression: 2
     spotter: 3
     sniper: 70
-    energyRecovery: 20
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
@@ -1167,11 +1179,11 @@ units:
     standHeight: 22
     kneelHeight: 14
     value: 20
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 3
     sniper: 70
-    energyRecovery: 20
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
@@ -1204,11 +1216,11 @@ units:
     standHeight: 22
     kneelHeight: 14
     value: 30
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     sniper: 75
-    energyRecovery: 20
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
@@ -1237,11 +1249,11 @@ units:
     standHeight: 22
     kneelHeight: 14
     value: 35
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     sniper: 75
-    energyRecovery: 20
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
@@ -1475,7 +1487,7 @@ units:
     kneelHeight: 16
     value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -1511,7 +1523,7 @@ units:
     kneelHeight: 16
     value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -1586,7 +1598,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 8
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -1629,7 +1641,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -1669,7 +1681,7 @@ units:
     kneelHeight: 16
     value: 45
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -1702,7 +1714,7 @@ units:
       melee: 100
     armor: STR_ULTRAcataphract_ARMOR
     avoidsFire: false  # doesn't really care
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 2
     sniper: 70
@@ -1736,7 +1748,7 @@ units:
       melee: 90
     armor: STR_ULTRAsaturnine_ARMOR
     avoidsFire: false  # doesn't really care
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 2
     sniper: 70
@@ -1915,7 +1927,7 @@ units:
     kneelHeight: 16
     value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -1984,7 +1996,7 @@ units:
     kneelHeight: 16
     value: 45
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2019,7 +2031,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2059,7 +2071,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 8
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2102,7 +2114,7 @@ units:
     kneelHeight: 16
     value: 55
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2352,7 +2364,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2395,7 +2407,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 8
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2441,7 +2453,7 @@ units:
     kneelHeight: 16
     value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2475,7 +2487,7 @@ units:
     kneelHeight: 16
     value: 45
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2618,7 +2630,7 @@ units:
     kneelHeight: 16
     value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2654,7 +2666,7 @@ units:
     kneelHeight: 16
     value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2721,7 +2733,7 @@ units:
     kneelHeight: 16
     value: 45
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -2842,7 +2854,7 @@ units:
     kneelHeight: 16
     value: 50
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 2
     aggression: 2
     spotter: 2
     sniper: 100
@@ -2958,7 +2970,7 @@ units:
     kneelHeight: 16
     value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -3027,7 +3039,7 @@ units:
     kneelHeight: 16
     value: 45
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -3307,7 +3319,7 @@ units:
     kneelHeight: 16
     value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -3346,7 +3358,7 @@ units:
     kneelHeight: 16
     value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -3416,7 +3428,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 8
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -3459,7 +3471,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -3499,7 +3511,7 @@ units:
     kneelHeight: 16
     value: 45
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -3531,7 +3543,7 @@ units:
       melee: 100
     armor: STR_SALAMANDERcataphract_ARMOR
     avoidsFire: false  # doesn't really care
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 2
     sniper: 70
@@ -3565,7 +3577,7 @@ units:
       melee: 90
     armor: STR_SALAMANDERsaturnine_ARMOR
     avoidsFire: false  # doesn't really care
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 2
     sniper: 70
@@ -3635,7 +3647,7 @@ units:
     kneelHeight: 16
     value: 25
     deathSound: {mod: 40k, index: 23}
-    intelligence: 4
+    intelligence: 2
     specab: 1
     aggression: 2
     sniper: 60
@@ -3667,7 +3679,7 @@ units:
     kneelHeight: 16
     value: 25
     deathSound: {mod: 40k, index: 23}
-    intelligence: 4
+    intelligence: 2
     specab: 1
     aggression: 2
     sniper: 60
@@ -3744,7 +3756,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 10
-    intelligence: 4
+    intelligence: 1
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -3782,7 +3794,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     energyRecovery: 30
     deathSound: [1710, 1711, 1712, 1713, 1714]
@@ -3819,7 +3831,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 15
-    intelligence: 4
+    intelligence: 1
     aggression: 8
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
@@ -3857,7 +3869,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 15
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -3895,7 +3907,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 20
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -3941,7 +3953,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 3
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -3981,7 +3993,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 20
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 40
@@ -4020,7 +4032,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     sniper: 70
@@ -4060,7 +4072,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 60
@@ -4101,7 +4113,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 30
-    intelligence: 4
+    intelligence: 2
     aggression: 8
     spotter: 2
     energyRecovery: 60
@@ -4138,7 +4150,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 40
-    intelligence: 8
+    intelligence: 3
     aggression: 2
     spotter: 3
     sniper: 80
@@ -4180,7 +4192,7 @@ units:
     armor: STR_BLOODYROSE_ARMOR_PENITENTENG
     standHeight: 24
     kneelHeight: 14
-    intelligence: 2
+    intelligence: 0
     livingWeapon: true
     aggression: 8
     value: 40
@@ -4212,7 +4224,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 10
-    intelligence: 4
+    intelligence: 1
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -4250,7 +4262,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     energyRecovery: 30
     deathSound: [1710, 1711, 1712, 1713, 1714]
@@ -4287,7 +4299,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 15
-    intelligence: 4
+    intelligence: 1
     aggression: 8
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
@@ -4324,7 +4336,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 15
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -4362,7 +4374,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 20
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -4408,7 +4420,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 3
     aggression: 2
     spotter: 2
     energyRecovery: 30
@@ -4423,7 +4435,7 @@ units:
         - STR_LIGHT_BOLTER_AMMO_AP
       - - STR_PLASMA_PISTOL_TERRAN
         - STR_PLASMA_PISTOL_CLIP
-        - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
         - STR_PHOSPHOR_GRENADE
 
   - type: STR_FIERYHEART_ELOHIM_AI
@@ -4446,7 +4458,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 20
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 40
@@ -4484,7 +4496,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     sniper: 70
@@ -4523,7 +4535,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 25
-    intelligence: 4
+    intelligence: 2
     aggression: 2
     spotter: 2
     energyRecovery: 60
@@ -4563,7 +4575,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 30
-    intelligence: 4
+    intelligence: 2
     aggression: 8
     energyRecovery: 60
     spotter: 2
@@ -4572,7 +4584,7 @@ units:
       - - STR_ADEPTAS_POWER_AXE
         - STR_PHOSPHOR_GRENADE
         - STR_PHOSPHOR_GRENADE
-      - - STR_ADEPTAS_ZWEIHANDER
+      - - STR_DOMINION_HALBERD
         - STR_MGRENADE
         - STR_MGRENADE
       - - STR_DOMINION_HALBERD
@@ -4600,7 +4612,7 @@ units:
     standHeight: 21
     kneelHeight: 14
     value: 40
-    intelligence: 8
+    intelligence: 3
     aggression: 2
     spotter: 3
     sniper: 80
@@ -4643,7 +4655,7 @@ units:
     psiWeapon: STR_NONE
     standHeight: 24
     kneelHeight: 14
-    intelligence: 2
+    intelligence: 0
     aggression: 8
     livingWeapon: true
     value: 40
@@ -4815,7 +4827,7 @@ units:
     kneelHeight: 16
     value: 35
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -4886,7 +4898,7 @@ units:
     kneelHeight: 16
     value: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -4926,7 +4938,7 @@ units:
     kneelHeight: 16
     value: 45
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 6
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -4961,7 +4973,7 @@ units:
     kneelHeight: 16
     value: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
-    intelligence: 5
+    intelligence: 3
     aggression: 2
     spotter: 3
     energyRecovery: 40
@@ -5000,8 +5012,8 @@ units:
     value: 12
     moraleLossWhenKilled: 75
     aggression: 2
-    intelligence: 4
-    energyRecovery: 20
+    intelligence: 1
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
@@ -5033,7 +5045,7 @@ units:
     armor: SLGUARD_ARMOR_OFF_M_LV1_AI
     standHeight: 20
     kneelHeight: 14
-    intelligence: 3
+    intelligence: 2
     aggression: 2
     spotter: 1
     energyRecovery: 40
@@ -5070,19 +5082,21 @@ units:
     kneelHeight: 14
     value: 15
     aggression: 2
-    intelligence: 4
-    energyRecovery: 20
+    intelligence: 2
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
       -
-        CARAPACE_SLGUARDSMEN_SET1: 35
+        CARAPACE_SLGUARDSMEN_SET1: 25
         CARAPACE_SLGUARDSMEN_SET2: 5
         CARAPACE_SLGUARDSMEN_SET3: 5
         CARAPACE_SLGUARDSMEN_SET4: 5
         CARAPACE_SLGUARDSMEN_SET5: 5
         CARAPACE_SLGUARDSMEN_SET6: 5
         CARAPACE_SLGUARDSMEN_SET7: 5
+        CARAPACE_SLGUARDSMEN_SET8: 5
+        CARAPACE_SLGUARDSMEN_SET9: 5
 
   - type: STR_SLGUARDS_OFF_LV2_AI
     liveAlien: STR_LIVE_CAPTURE_GUARDAI_VETERAN
@@ -5105,8 +5119,8 @@ units:
     kneelHeight: 14
     value: 25
     aggression: 2
-    intelligence: 5
-    energyRecovery: 20
+    intelligence: 3
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     weightedBuiltInWeaponSets:
@@ -5138,8 +5152,8 @@ units:
     kneelHeight: 14
     value: 6
     aggression: 2
-    intelligence: 3
-    energyRecovery: 20
+    intelligence: 1
+    energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets: []
     # PDF don't get the heavier weapons - consider swapping in autoguns here
@@ -5149,3 +5163,111 @@ units:
         FLAK_GUARDSMEN_SET4: 10
         FLAK_GUARDSMEN_SET5: 10
         FLAK_GUARDSMEN_SET8: 10
+
+  #INQ
+
+  - type: STR_INQ_SLGUARD
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 90
+      health: 70
+      bravery: 90
+      reactions: 80
+      firing: 80
+      throwing: 70
+      strength: 60
+      psiStrength: 60
+      psiSkill: 0
+      melee: 75
+    armor: STR_INQ_SLGUARD_ARMOR
+    standHeight: 21
+    kneelHeight: 14
+    value: 15
+    intelligence: 2
+    aggression: 2
+    spotter: 3
+    sniper: 70
+    energyRecovery: 50
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        CARAPACE_SLGUARDSMEN_SET1: 10 #Krak Missile and Lascarbine
+        CARAPACE_SLGUARDSMEN_SET2: 5 #Melta Missile and Hellpistol+Chainsword
+        MISSILE_SLGUARDSMEN_SET1: 5
+        CARAPACE_SLGUARDSMEN_SET4: 15 #GL Steel LEgion
+        CARAPACE_SLGUARDSMEN_SET6: 10 #Melta
+        FLAK_SLGUARDSMEN_SET7: 10 #plasma
+        CARAPACE_SLGUARDSMEN_SET1B: 35 #lasgun steel legion midtier hotshot
+        CARAPACE_SLGUARDSMEN_SET8: 5 #hellgun
+        CARAPACE_SLGUARDSMEN_SET9: 5 #volleygun
+
+  - type: STR_INQ_STORMTROOPER_OFFICER
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 80
+      stamina: 80
+      health: 70
+      bravery: 90
+      reactions: 80
+      firing: 80
+      throwing: 70
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 95
+    armor: STR_INQ_STORMTROOPER_OFFICER_ARMOR
+    standHeight: 22
+    kneelHeight: 14
+    value: 30
+    intelligence: 3
+    aggression: 2
+    spotter: 3
+    sniper: 75
+    energyRecovery: 50
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        CARAPACE_GUARDSMENOFF_SET1: 10
+        CARAPACE_GUARDSMENOFF_SET2: 10
+        CARAPACE_GUARDSMENOFF_SET3: 10
+        CARAPACE_SLGUARDSMENOFF_SET1: 10
+        CARAPACE_SLGUARDSMENOFF_SET2: 10
+        CARAPACE_SLGUARDSMENOFF_SET3: 10
+
+  - type: STR_INQ_INQUISITOR_INTERROGATOR
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 70
+      stamina: 90
+      health: 100
+      bravery: 110
+      reactions: 80
+      firing: 90
+      throwing: 70
+      strength: 60
+      psiStrength: 75
+      psiSkill: 0
+      melee: 80
+    armor: STR_INQ_INQUISITOR_INTERROGATOR_ARMOR
+    standHeight: 21
+    kneelHeight: 14
+    value: 30
+    intelligence: 3
+    aggression: 2
+    spotter: 3
+    sniper: 75
+    energyRecovery: 50
+    deathSound: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -
+        SLM_ADVSCOUT_SET1: 10 #inferno pistol
+        CARAPACE_GUARDSMENOFF_SET2: 10 #Boltpistol+Power Sword
+        SM_SMPPHOBOS_SET2: 10 #Occulus Carbine
+        BT_SMHONOR_SET2B: 10 #Plasma pistol+Power Sword+MGrenade
