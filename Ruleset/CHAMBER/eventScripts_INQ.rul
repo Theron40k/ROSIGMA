@@ -409,3 +409,23 @@ eventScripts:
     minFunds: 2000000
     researchTriggers:
       STR_INQ_SECURE_SUPPORT_ASSASSINS_RESEARCH: true
+
+
+  - type: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
+    oneTimeSequentialEvents:
+      - STR_RECRUITS_IMPERIAL_LAW_STRATEGY
+    firstMonth: 0
+    lastMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_THE_IMPERIAL_LAW_STRATEGY: true
+
+
+  - type: STR_RECRUITS_CHAMBER_NOT_ARBITES
+    oneTimeSequentialEvents:
+      - STR_RECRUITS_CHAMBER_NOT_ARBITES
+    firstMonth: 0
+    lastMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_CHAMBER_NOT_ARBITES: true

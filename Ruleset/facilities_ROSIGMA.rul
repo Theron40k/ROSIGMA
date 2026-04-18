@@ -511,6 +511,24 @@ facilities:
         terrain: VULTURE4X4
         blocks: [0]
 
+  - type: STR_OUTPOST_THE_IMPERIAL_LAW_HYPER
+    refNode: *STR_OUTPOST_DECODER
+    requires:
+      - STR_THE_IMPERIAL_LAW_STRATEGY
+      - STR_HYPER_WAVE_DECODER
+    verticalLevels:
+      - type: ground
+        terrain: baseTerrain
+        groups: [13]
+        size: [4, 4, 0]
+      - type: middle
+        blocks: [60]
+        size: [4, 4, 1]
+      - type: ceiling
+        size: [4, 4, 3]
+        terrain: VULTURE4X4
+        blocks: [0]
+
   - type: STR_OUTPOST_MARINES_HYPER
     refNode: *STR_OUTPOST_DECODER
     requires:

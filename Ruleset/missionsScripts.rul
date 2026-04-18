@@ -2235,10 +2235,10 @@ missionScripts:
     firstMonth: 2
     researchTriggers:
       STR_THE_IMPERIAL_LAW_STRATEGY: true
-      STR_ADEPTAS: false
+      #GG STR_ADEPTAS: false
       STR_CHAOS_PATH: false
-      STR_NOT_CHAOSCULT: true
-      STR_NOT_TAU_GUEVESA_GV: true
+      #GG STR_NOT_CHAOSCULT: true
+      #GG STR_NOT_TAU_GUEVESA_GV: true
 
   # Adeptas
   - type: MMAdeptas
@@ -2285,7 +2285,7 @@ missionScripts:
     firstMonth: 1  # was 0
     # lastMonth: 12
     researchTriggers:
-      STR_CHAMBERMILITANT: true
+      STR_CHAMBER_NOT_ARBITES: true
       STR_NOT_CHAOSCULT: true
 
   # Officio Assassinorum
@@ -3336,7 +3336,7 @@ missionScripts:
         REGION_FINAL_MISSION: 100
     researchTriggers:
       STR_CYDONIA_OR_BUST: true
-      STR_CHAMBERMILITANT: true
+      STR_CHAMBER_NOT_ARBITES: true
     useTable: false
     maxRuns: 1
     varName: finalMissionChamber
@@ -3366,7 +3366,7 @@ missionScripts:
         REGION_FINAL_MISSION: 100
     researchTriggers:
       STR_ARBITES_BUST: true
-      STR_ARBITES: true
+      STR_THE_IMPERIAL_LAW_STRATEGY: true
     useTable: false
     maxRuns: 1
     varName: finalMissionArbites

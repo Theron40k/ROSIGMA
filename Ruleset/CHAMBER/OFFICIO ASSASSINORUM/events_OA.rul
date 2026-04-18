@@ -8,11 +8,14 @@ events:
     funds: 1500000 # Each Assassin costs 300000, this covers that.
     everyMultiItemList:
       STR_TEMPLE_TOKEN: 5
-      STR_KILLPOINT_TOKEN: 1250 # each assassin costs 250
+      STR_KILLPOINT_TOKEN: 1250 # each assassin costs 250 + 180 from CM base
       STR_TELEPORTARIUM_TOKEN: 1
-    spawnedPersons: 4
-    spawnedPersonType: STR_IMPERIAL_ASSASSINFEM
-    researchList: [STR_OFFICIO_ASSASSINORUM_TIPS]
+    # researchList: [STR_OFFICIO_ASSASSINORUM_TIPS] replaced this with a simple dependency on STR_ASSASSINORUM so I can spawn second STR_XIPHON_GK
+    spawnedCraftType: STR_XIPHON_GK
+    researchList: [STR_CHAMBER_NOT_ARBITES]
+
+
+
 
   - name: STR_ASSASSINORUM_MIDTIER_REINFORCEMENTS
     description: STR_ASSASSINORUM_MIDTIER_REINFORCEMENTS_DESCRIPTION

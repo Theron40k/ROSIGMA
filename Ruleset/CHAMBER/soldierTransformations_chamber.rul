@@ -17,7 +17,7 @@ soldierTransformation:
     allowsWoundedSoldiers: true
     transferTime: 0
     requires:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     allowedSoldierTypes:
       - STR_INQ_STORMTROOPER
       - STR_IMPERIAL_INQUISITOR
@@ -29,7 +29,7 @@ soldierTransformation:
   - name: STR_INQ_TRANSFORM_RETINUE_INDUCTION
     cost: 0
     requires:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -92,7 +92,7 @@ soldierTransformation:
   - name: STR_INQ_TRANSFORM_REJUVENATE
     cost: 50000
     requires:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
