@@ -4999,6 +4999,53 @@ armors:
       DODGE_CHANCE: 30
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
+  - type: STR_IMPERIAL_INQUISITOR_AI_ARMOR    # Inquisitor
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 12
+    antiCamouflageAtDark: 15
+    heatVision: 30
+    #specialWeapon: AUX_ADEPTAS_PROBE
+    spriteSheet: XCOM_44.PCK
+    spriteInv: MAN_44
+    corpseBattle:
+      - STR_IMPERIAL_INQUISITOR_AI_CORPSE
+    frontArmor: 145
+    sideArmor: 135
+    rearArmor: 130
+    underArmor: 135
+    zombiImmune: true  # Armor's hexagrammic and pentagrammic wards protect from daemonic corruption
+    psiDefence:
+      flatHundred: 0.5  # Armor's hexagrammic and pentagrammic wards protect from psychic influence
+      psiSkill: 1.0  # Armor's hexagrammic and pentagrammic wards enhance the protection granted by faith and Devotion
+      moraleCurrent: 1.0  # Discipline and training protects from psychic influence.
+    stats:
+      firing: 10
+      reactions: 15
+      bravery: 10
+    drawingRoutine: 0
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.2  # FLAMES
+      - 0.6  # HE
+      - 0.7  # LASCANON
+      - 0.8  # PLASMA
+      - 0.7  # STUN
+      - 0.8  # MELEE
+      - 0.7  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 75
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 30
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
   - type: STR_REPRISALIA_ARMOR_AI
     camouflageAtDay: 15
     camouflageAtDark: 5
