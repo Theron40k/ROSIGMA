@@ -954,8 +954,6 @@ research:
   - delete: STR_GUARD_SUPORT
   - name: STR_GUARD_SUPORT  # (Non-Arbites Guard Requisitions)
     refNode: *STR_LOCKED
-  # - name: STR_CHAMBER_NOT_ARBITES  # (Chamber not Arbites)
-  #   refNode: *STR_LOCKED
 
   - delete: STR_PICK_STRATEGY
   - name: STR_PICK_STRATEGY  # Strategy Selection
@@ -1834,7 +1832,7 @@ research:
       - STR_ADEPTAS_MARINES_AND_INQUISITION
       - STR_NOT_NORMAL_INQUISITION
       - STR_HARDER_MISSIONS
-      # - STR_CHAMBER_NOT_ARBITES
+      - STR_CHAMBER_NOT_ARBITES
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     getOneFree:
       - STR_PERSONAL_ARMOR
@@ -1879,6 +1877,7 @@ research:
       - STR_MARINES_AND_INQUISITION
       - STR_ADEPTAS_AND_INQUISITION
       - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_CHAMBER_NOT_ARBITES
     disables:
       - STR_NORMAL_INQUISITION
       - STR_NOT_GK
@@ -1913,6 +1912,7 @@ research:
       - STR_MARINES_AND_INQUISITION
       - STR_ADEPTAS_AND_INQUISITION
       - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_CHAMBER_NOT_ARBITES
       - STR_HARDER_MISSIONS
     disables:
       - STR_NOT_RADICAL
@@ -1993,7 +1993,6 @@ research:
 
 ### The Imperial Law Strategy #STRATEGY.AT.LAW#
   - name: STR_THE_IMPERIAL_LAW_STRATEGY  # The Imperial Law Strategy
-    # Added new arbites research used as a way to prevent arbites joining if you go chaos
     cost: 5
     points: 0
     reenables:
@@ -2022,7 +2021,6 @@ research:
       - STR_CHAMBER_NOT_ARBITES
       - STR_NOT_THE_IMPERIAL_LAW
       - STR_NORMAL_INQUISITION
-      # - STR_HARDER_MISSIONS
       - STR_DEATHWATCH
       - STR_GREYKNIGHTS
       - STR_RADICAL_INQUISITOR_STRATEGY
