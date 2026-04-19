@@ -2286,6 +2286,8 @@ research:
     dependencies:
       - STR_ADEPTAS  # - STR_GENERALLOCK
     lookup: STR_CHOSEN_ADEPTAS
+    getOneFree: #WARNING do not add more than 1 getOneFree tech due to auto-repeatability issues
+      - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
