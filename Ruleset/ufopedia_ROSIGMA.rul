@@ -11152,7 +11152,7 @@ ufopaedia:
     image_id: 1LP.SPK
     text: STR_HELLPISTOL_UFOPEDIA
     requires:
-      - STR_MASTER_CRAFTING
+      - STR_MASTER_CRAFTING_AMMO  # same as manufacture
 
   - id: STR_LASER_PISTOLCS
     type_id: 14
@@ -12867,8 +12867,9 @@ ufopaedia:
     image_id: 1MCPS.SPK
     text: STR_POWER_SWORD_MC_UFOPEDIA
     requires:
+      - STR_UFO_CONSTRUCTION # same as manufacture requirements.
+      - STR_CHAPTER_PURITY
       - STR_POWER_SWORD
-      - STR_MASTER_CRAFTING
 
   - delete: STR_HAMMER
   - id: STR_HAMMER
