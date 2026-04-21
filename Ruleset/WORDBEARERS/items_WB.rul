@@ -220,6 +220,20 @@ items:
     transferTime: 10
     listOrder: 6661
 
+  - type: STR_WBEXECUTIONER_ARMORPLAYER
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+  - type: STR_WORDBEARER_HELBRUTE_ARMORPLAYER
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
   - type: STR_CRATED_CHAOSDROPPODS
   - type: STR_CRATED_CHAOSRHINOS
 
@@ -231,7 +245,7 @@ items:
     invWidth: 0
     invHeight: 0
     battleType: 4
-    armor: 20
+    armor: 255
 
   - type: STR_WBVINDICATOR2_SPAWNER
     spawnUnit: STR_WBVINDICATOR2
@@ -249,29 +263,115 @@ items:
 
 
   - type: STR_WORDBEARERDEMONHIGH_SPAWNER
+    recover: false
     spawnUnit: STR_SILACOID_TERRORIST
     spawnUnitFaction: 2
     invWidth: 0
     invHeight: 0
     battleType: 4
-    armor: 20
+    armor: 255
 
 
   - type: STR_WORDBEARERDEMONMED_SPAWNER
+    recover: false
     spawnUnit: STR_CHAOSFURY
     spawnUnitFaction: 2
     invWidth: 0
     invHeight: 0
     battleType: 4
-    armor: 20
+    armor: 255
 
   - type: STR_WORDBEARERDEMONLOW_SPAWNER
+    recover: false
     spawnUnit: STR_BRIMSTONE_HORROR
     spawnUnitFaction: 2
     invWidth: 0
     invHeight: 0
     battleType: 4
-    armor: 20
+    armor: 255
+
+
+  - type: STR_WORDBEARERKHORNEDEMON_SPAWNER
+    recover: false
+    spawnUnit: STR_KHORNEDEMONTEMPO
+    spawnUnitFaction: 2
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
+  - type: STR_WORDBEARERNURGLEDEMON_SPAWNER
+    recover: false
+    spawnUnit: STR_NURGLEDEMONTEMPO
+    spawnUnitFaction: 2
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
+  - type: STR_WORDBEARERSLAANESHDEMON_SPAWNER
+    recover: false
+    spawnUnit: STR_SLAANESHDEMONTEMPO
+    spawnUnitFaction: 2
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
+  - type: STR_WORDBEARERTZEENTCHDEMON_SPAWNER
+    recover: false
+    spawnUnit: STR_TZEENTCHDEMONTEMPO
+    spawnUnitFaction: 2
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
+  - type: STR_WORDBEARERCHAOSDEMON_SPAWNER
+    recover: false
+    spawnUnit: STR_UNDIVIDEDDEMONTEMPO
+    spawnUnitFaction: 2
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
+  - type: STR_WORDBEARERCHAOSDEMON_SPAWNER2
+    recover: false
+    spawnUnit: STR_UNDIVIDEDDEMONTEMPO2
+    spawnUnitFaction: 2
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
+  - type: STR_WORDBEARERNEVERBORNLING_SPAWNER
+    recover: false
+    spawnUnit: STR_NEVERBORNLING
+    spawnUnitFaction: 2
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
+  - type: STR_DREADCLAW_TURRET_SPAWNER
+    spawnUnit: STR_DREADCLAW_TURRET
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    recover: false
+    hitAnimation: {mod: 40k, index: 1992}
+
+  - type: STR_DREADCLAW_SMOKER_SPAWNER
+    spawnUnit: STR_WBSMOKER_UNIT
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    recover: false
+    hitAnimation: {mod: 40k, index: 1992}
+
 
 
   # erebus
@@ -481,3 +581,21 @@ items:
     armor: 100
     recover: false
     hiddenOnMinimap: true
+
+
+  - type: STR_PSI_AMP_TOKENWB
+    size: 0
+    weight: 0
+    invWidth: 0
+    invHeight: 0
+    hitSound: {mod: 40k, index: 36}
+    armor: 255
+    recover: false
+    hiddenOnMinimap: true
+    fixedWeapon: true
+    defaultInventorySlot: STR_BACK_PACK
+    battleType: 9
+    tuUse: 25
+    flatRate: true
+    maxRange: 15
+    LOSRequired: true

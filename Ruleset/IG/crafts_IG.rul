@@ -203,6 +203,10 @@ crafts:
   - type: STR_CHIMERA
     requires:
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_ABHUMAN_STRATEGY
+      - STR_NOT_ELITE_STRATEGY
+      - STR_NOT_KRIEG_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_CHIMERA_IG
     fuelMax: 1400
     speedMax: 150  # was 90
@@ -223,22 +227,22 @@ crafts:
           length: 20
           items:
             STR_CHIMERA_COMMAND_TURRET_SPAWNER:
-              - [1, 4, 1]
+              - [1, 5, 1]
               - [7, 9, 1]
               - [2, 16, 1]
             STR_CHIMERA_HULL_SPAWNER:
               - [8, 11, 0]
-              - [2, 6, 0]
+              - [2, 7, 0]
               - [3, 18, 0]
           fuseTimers:
             STR_CHIMERA_COMMAND_TURRET_SPAWNER: [0, 0]
             STR_CHIMERA_HULL_SPAWNER: [0, 0]
     fixedWeapons: ["STR_CRAFT_MULTILASER_UC"]
     deployment:
-      - [1, 2, 0, 0]
-      - [2, 2, 0, 0]
       - [1, 3, 0, 0]
       - [2, 3, 0, 0]
+      - [1, 4, 0, 0]
+      - [2, 4, 0, 0]
       - [2, 14, 0, 0]
       - [3, 14, 0, 0]
       - [2, 15, 0, 0]
@@ -247,10 +251,10 @@ crafts:
       - [8, 7, 0, 0]
       - [7, 8, 0, 0]
       - [8, 8, 0, 0]
-      - [1, 4, 0, 0]
-      - [2, 4, 0, 0]
       - [1, 5, 0, 0]
       - [2, 5, 0, 0]
+      - [1, 6, 0, 0]
+      - [2, 6, 0, 0]
       - [2, 16, 0, 0]
       - [3, 16, 0, 0]
       - [2, 17, 0, 0]
@@ -301,21 +305,21 @@ crafts:
           length: 20
           items:
             STR_CHIMERASL_COMMAND_TURRET_SPAWNER:
-              - [1, 4, 1]
+              - [1, 5, 1]
               - [7, 9, 1]
               - [2, 16, 1]
             STR_CHIMERASL_HULL_SPAWNER:
               - [8, 11, 0]
-              - [2, 6, 0]
+              - [2, 7, 0]
               - [3, 18, 0]
           fuseTimers:
             STR_CHIMERASL_COMMAND_TURRET_SPAWNER: [0, 0]
             STR_CHIMERASL_HULL_SPAWNER: [0, 0]
     deployment:
-      - [1, 2, 0, 0]
-      - [2, 2, 0, 0]
       - [1, 3, 0, 0]
       - [2, 3, 0, 0]
+      - [1, 4, 0, 0]
+      - [2, 4, 0, 0]
       - [2, 14, 0, 0]
       - [3, 14, 0, 0]
       - [2, 15, 0, 0]
@@ -324,10 +328,10 @@ crafts:
       - [8, 7, 0, 0]
       - [7, 8, 0, 0]
       - [8, 8, 0, 0]
-      - [1, 4, 0, 0]
-      - [2, 4, 0, 0]
       - [1, 5, 0, 0]
       - [2, 5, 0, 0]
+      - [1, 6, 0, 0]
+      - [2, 6, 0, 0]
       - [2, 16, 0, 0]
       - [3, 16, 0, 0]
       - [2, 17, 0, 0]
@@ -640,7 +644,7 @@ crafts:
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_NOT_CHAOSCULT
       - STR_NOT_TAU_GUEVESA_GV
-    soldiers: 16
+    soldiers: 19
     vehicles: 999
     maxLargeUnits: 1
     repairRate: 6  # was 1, and +1 bonus vs fancy high tech Inq Valk version.
@@ -673,10 +677,7 @@ crafts:
       - [3, 10, 0, 0]
       - [4, 10, 0, 0]
       - [5, 10, 0, 0]
-      - [3, 11, 0, 0]
       - [4, 11, 0, 0]
-      - [5, 11, 0, 0]
-      - [4, 12, 0, 0]
       - [3, 6, 0, 0]
       - [4, 6, 0, 0]
       - [5, 6, 0, 0]
@@ -787,6 +788,7 @@ crafts:
     transferTime: 96
     score: 250
     repairRate: 8
+    craftInventoryTile: [3, 12, 1]
     battlescapeTerrainData:
       name: GORGON
       mapDataSets:
@@ -897,6 +899,7 @@ crafts:
     transferTime: 96
     score: 250
     repairRate: 8
+    craftInventoryTile: [3, 12, 1]
     battlescapeTerrainData:
       name: GORGONSL
       mapDataSets:
@@ -1230,6 +1233,10 @@ crafts:
       - [2, 8, 1, 0]
     battlescapeTerrainData:
       name: BANEBLADE
+      mapDataSets:
+        - BLANKS
+        - BANEBLADE
+        - BANEBLADEI
       mapBlocks:
         - name: BANEBLADE
           width: 10
@@ -1367,3 +1374,74 @@ crafts:
     spacecraft: true
     allowLanding: false
     listOrder: 240
+
+  # krieg player truck
+
+  - type: STR_TRUCKARMOR_KRIEG
+    takeoffSound: -1
+    selectSound: -1
+    marker: 30
+    requiresBuyBaseFunc: [HANGAR]
+    requires:
+      - STR_KRIEG_STRATEGY  # placeholder
+    sprite: 1715
+    fuelMax: 1500
+    damageMax: 800
+    speedMax: 250
+    repairRate: 10
+    vehicles: 999
+    accel: 2
+    weapons: 1
+    weaponTypes:
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+    fixedWeapons: ["STR_CRAFT_MULTILASER_UC"]
+    soldiers: 20
+    maxLargeUnits: 2
+    costSell: 10000
+    refuelRate: 1000
+    transferTime: 45
+    score: 100
+    craftInventoryTile: [1, 5, 1]
+    battlescapeTerrainData:
+      name: KRIEG_ARMORTRUCK_CONVOY
+      mapDataSets:
+        - BLANKS
+        - KRIEG_TRUCK2
+        - CHAOSORKP
+        - KRIEG_TRUCK
+        - TRUCKKRIEG
+      mapBlocks:
+        - name: KRIEG_ARMORTRUCK_CONVOY
+          width: 10
+          length: 20
+          items:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS:  # placeholder
+              - [7, 16, 2]
+              - [3, 7, 2]
+          fuseTimers:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS: [0, 0]  # placeholder
+    deployment:
+      - [6, 15, 1, 0]  # truck1
+      - [7, 15, 1, 0]  # truck1
+      - [6, 14, 1, 0]  # truck1
+      - [7, 14, 1, 0]  # truck1
+      - [6, 13, 1, 0]  # truck1
+      - [7, 13, 1, 0]  # truck1
+      - [2, 6, 1, 0]  # truck2
+      - [3, 6, 1, 0]  # truck2
+      - [2, 5, 1, 0]  # truck2
+      - [3, 5, 1, 0]  # truck2
+      - [2, 4, 1, 0]  # truck2
+      - [3, 4, 1, 0]  # truck2
+      - [6, 12, 1, 0]  # truck1
+      - [7, 12, 1, 0]  # truck1
+      - [6, 11, 1, 0]  # truck1
+      - [7, 11, 1, 0]  # truck1
+      - [2, 3, 1, 0]  # truck2
+      - [3, 3, 1, 0]  # truck2
+      - [2, 2, 1, 0]  # truck2
+      - [3, 2, 1, 0]  # truck2
+    listOrder: 800
+    spacecraft: false

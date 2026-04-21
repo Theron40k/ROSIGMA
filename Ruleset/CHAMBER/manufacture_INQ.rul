@@ -48,6 +48,10 @@ manufacture:
     refNode: *STR_COLLAR_PENITENT
     requiredItems:
       STR_LIVE_CAPTURE_CULTIST: 1
+  - name: STR_COLLAR_PRIMORDIAL_CULTIST_INQ
+    refNode: *STR_COLLAR_PENITENT
+    requiredItems:
+      STR_LIVE_CAPTURE_PRIMORDIAL_CULTIST: 1
   - name: STR_COLLAR_CULTIST_LEADER_INQ
     refNode: *STR_COLLAR_PENITENT
     requiredItems:
@@ -85,6 +89,14 @@ manufacture:
     requiredItems:
       STR_LIVE_CAPTURE_CHAOS_BEASTMAN: 1
     spawnedPersonType: STR_PENITENT_BEASTGUARD
+  - name: STR_CLEANSE_NIGHT_ADEPTAS_INQ #not a real sister adeptas
+    refNode: *STR_COLLAR_PENITENT
+    requiredItems:
+      STR_LIVE_CAPTURE_NIGHT_SISTER: 1
+  - name: STR_CLEANSE_NIGHT_SUPERIOR_INQ #not a real sister adeptas
+    refNode: *STR_COLLAR_PENITENT
+    requiredItems:
+      STR_LIVE_CAPTURE_NIGHT_SISTER_SUPERIOR: 1
 
   - name: STR_RECRUIT_TG_STORMTROOPER_INQ
     category: STR_CAT_REEDUCATE
@@ -162,15 +174,10 @@ manufacture:
     requiredItems:
       STR_LIVE_CAPTURE_TZEENTCH_SISTER: 1
       STR_KILLPOINT_TOKEN: 5
-  - name: STR_CLEANSE_NIGHT_ADEPTAS_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
-    requiredItems:
-      STR_LIVE_CAPTURE_KHORNE_SISTER: 1
-      STR_KILLPOINT_TOKEN: 5
   - name: STR_CLEANSE_HERETIC_SERAPHIM_INQ
     refNode: *STR_CLEANSE_ADEPTAS
     requiredItems:
-      STR_LIVE_CAPTURE_KHORNE_SISTER: 1
+      STR_LIVE_CAPTURE_SERAPHIM: 1
       STR_KILLPOINT_TOKEN: 5
     spawnedSoldier:
       armor: STR_ADEPTAS_ARMORS_UC
@@ -191,29 +198,24 @@ manufacture:
     producedItems:
       STR_PURITY_SEAL: 1
   - name: STR_CLEANSE_KHORNE_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_KHORNE_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
   - name: STR_CLEANSE_NURGLE_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_NURGLE_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
   - name: STR_CLEANSE_SLAANESH_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_SLAANESH_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
   - name: STR_CLEANSE_TZEENTCH_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
+    refNode: *CLEANSE_SUPERIOR
     requiredItems:
       STR_LIVE_CAPTURE_TZEENTCH_SUPERIOR: 1
-      STR_KILLPOINT_TOKEN: 50
-  - name: STR_CLEANSE_NIGHT_SUPERIOR_INQ
-    refNode: *STR_CLEANSE_ADEPTAS
-    requiredItems:
-      STR_LIVE_CAPTURE_NIGHT_SISTER_SUPERIOR: 1
       STR_KILLPOINT_TOKEN: 50
 
   - name: STR_RECRUIT_CAPTIVE_HERETICAL_SISTERINQ
@@ -319,7 +321,7 @@ manufacture:
 
   - name: STR_STORMRAVEN_GK
     requires: !add
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
 
   - name: STR_STORMRAVEN_GK
     requires: !remove
@@ -370,7 +372,7 @@ manufacture:
 
   - name: STR_STORMEAGLE_GK
     requires: !add
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
 
   - name: STR_STORMEAGLE_GK
     requires: !remove
@@ -394,6 +396,18 @@ manufacture:
     spawnedPersonType: STR_GK_LV1
     producedItems:
       STR_KILLPOINT_TOKEN: 1
+
+  - name: STR_CRATED_ARVUS_GK
+    category: STR_CRAFT
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+    space: 0
+    time: 10
+    cost: 0
+    requiredItems:
+      STR_CRATED_ARVUS_GK: 1
+    producedItems:
+      STR_ARVUS_GK: 1
 
 # NECRON
 # Cannot build the Warscythe and Staff of Light; these are too complex even for Adepts to 'piece together' with considerable trial and error

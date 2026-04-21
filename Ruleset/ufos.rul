@@ -136,13 +136,13 @@ ufos:
       name: CH001_SLAAN
       mapDataSets:
         - BLANKS
-        - CH2
-        - CH3
-        - CHI1_40k
+        - CH2_40k
+        - CH3_40k
+        - CHI1_S_40k
         - CHI2_40k
         - CHI3_40k
         - CHI4_40k
-        - CHI5_40k
+        - CHI5_S_40k
       mapBlocks:
         - name: CH001_SLAAN
           width: 10
@@ -451,14 +451,14 @@ ufos:
     size: STR_VERY_SMALL
     modSprite: InterceptionUFO-00
     sprite: 0
-    speedMax: 2200
+    speedMax: 1709
     damageMax: 19  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldCapacity: 59  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldRecharge: 59  # Tzeentch traits: shield regenerates ~1% of its capacity per second or 299, whichever is lower
     shieldRechargeInGeoscape: 9999  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldBleedThrough: 100  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     hitBonus: 20  # Tzeentch traits: higher accuracy.
-    accel: 12
+    accel: 3
     power: 10
     range: 65
     score: 10  # so these can't be farmed
@@ -530,11 +530,12 @@ ufos:
           items:
             STR_ELERIUM_115:
               - [9, 4, 0]
+
   - type: TZEENTCH_SHIP_03  # Medium-Large Terrorship
     size: STR_MEDIUM_UC
     sprite: 3
     modSprite: InterceptionUFO-08
-    speedMax: 4000
+    speedMax: 3400
     damageMax: 99  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldCapacity: 299  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldRecharge: 299  # Tzeentch traits: shield regenerates ~1% of its capacity per second or 299, whichever is lower
@@ -571,7 +572,7 @@ ufos:
     size: STR_MEDIUM_UC
     sprite: 3
     modSprite: InterceptionUFO-03
-    speedMax: 4000
+    speedMax: 1800
     damageMax: 149  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldCapacity: 349  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldRecharge: 299  # Tzeentch traits: shield regenerates ~1% of its capacity per second or 299, whichever is lower
@@ -626,7 +627,7 @@ ufos:
     size: STR_MEDIUM_UC
     sprite: 3
     modSprite: InterceptionUFO-05
-    speedMax: 4000
+    speedMax: 1800
     damageMax: 99  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldCapacity: 299  # Tzeentch traits: lower HP, but shields equal to half its normal HP.
     shieldRecharge: 299  # Tzeentch traits: shield regenerates ~1% of its capacity per second or 299, whichever is lower
@@ -2094,6 +2095,127 @@ ufos:
         - TAUROX_ORANGE
       mapBlocks:
         - name: GSC_TRUCK_CONVOY_BIG
+          width: 20
+          length: 20
+          height: 5
+          items:
+            STR_REQUISITION_BOUNTY_250K:
+              - [0, 0, 0]
+              # STR_TURRET1_SPAWNER:  # ersatz turret ORK
+              #   - [4, 15, 2]
+              #   - [6, 5, 2]
+              #   - [17, 6, 2]
+  - type: STR_IMP_TAUROX  # Imperial clean NPC Taurox pair
+    size: STR_SMALL
+    modSprite: Interception_Ork_Convoy  # change
+    damageMax: 160
+    speedMax: 200
+    accel: 3
+    power: 5
+    range: 65
+    score: 50
+    reload: 12
+    breakOffTime: 600
+    missionScore: 0
+    battlescapeTerrainData:
+      name: IMP_TAUROX
+      mapDataSets:
+        - BLANKS
+        - IMP_TAUROX
+      mapBlocks:
+        - name: IMP_TAUROX
+          width: 10
+          length: 20
+          height: 5
+          items:
+            STR_REQUISITION_BOUNTY_250K:
+              - [0, 0, 0]
+              # STR_TURRET1_SPAWNER:  # ersatz turret ORK
+              #   - [4, 15, 2]
+              #   - [6, 5, 2]
+  - type: STR_IMP_TAUROX_CONVOY  # Imperial clean taurox 4x with limo
+    size: STR_MEDIUM_UC
+    modSprite: Interception_Ork_Convoy  # change
+    damageMax: 400
+    speedMax: 200
+    accel: 2
+    power: 5
+    range: 65
+    score: 50
+    reload: 12
+    breakOffTime: 1000
+    missionScore: 0
+    battlescapeTerrainData:
+      name: IMP_TAUROX_CONVOY
+      mapDataSets:
+        - BLANKS
+        - IMP_TAUROX  # TAUROX_ORANGE + Some box tileset, but which one? Not CH or CHI series. Not CHURCH.
+      mapBlocks:
+        - name: IMP_TAUROX_CONVOY
+          width: 20
+          length: 20
+          height: 5
+          items:
+            STR_REQUISITION_BOUNTY_250K:
+              - [0, 0, 0]
+              # STR_TURRET1_SPAWNER:  # ersatz turret ORK
+              #  - [4, 15, 2]
+              #   - [6, 5, 2]
+              #   - [17, 6, 2]
+  - type: STR_IMP_TRUCKS  # Imperial clean truck pair
+    size: STR_SMALL
+    modSprite: Interception_Ork_Convoy  # change
+    damageMax: 125
+    speedMax: 200
+    accel: 3
+    power: 5
+    range: 65
+    score: 50
+    reload: 12
+    breakOffTime: 800
+    missionScore: 0
+    battlescapeTerrainData:
+      name: IMP_TRUCK_CONVOY
+      mapDataSets:
+        - BLANKS
+        - IMP_TRUCK2
+        - ORKP
+        - IMP_TRUCK
+        - 04STORAGE
+      mapBlocks:
+        - name: IMP_TRUCK_CONVOY
+          width: 10
+          length: 20
+          height: 5
+          items:
+            STR_REQUISITION_BOUNTY_250K:
+              - [0, 0, 0]
+              # STR_TURRET1_SPAWNER:  # ersatz turret ORK
+              #   - [4, 15, 2]
+              #   - [6, 5, 2]
+  - type: STR_IMP_TRUCK_CONVOY  # Imperial clean trucks with Taurox escort
+    size: STR_MEDIUM_UC
+    modSprite: Interception_Ork_Convoy  # change
+    damageMax: 350
+    speedMax: 150
+    accel: 2
+    power: 5
+    range: 65
+    score: 50
+    reload: 12
+    breakOffTime: 1000
+    missionScore: 0
+    battlescapeTerrainData:
+      name: IMP_TRUCK_CONVOY_BIG
+      mapDataSets:
+        - BLANKS
+        - IMP_TRUCK2
+        - ORKP
+        - IMP_TRUCK
+        - 04STORAGE
+        - IMP_TAUROX
+      mapBlocks:
+        - name: IMP_TRUCK_CONVOY_BIG
           width: 20
           length: 20
           height: 5
@@ -3981,11 +4103,11 @@ ufos:
     size: STR_MEDIUM_UC
     modSprite: ORCASIGNAL
     damageMax: 450 # More than Valk
-    armor: 1
+    armor: 3  # has some armor
     speedMax: 600
     hitBonus: 30  # Tau higher accuracy.
     accel: 3
-    power: 5  # lightly armed dropship
+    power: 5  # poor air to air capability
     range: 65
     score: 50
     reload: 12
@@ -3996,10 +4118,52 @@ ufos:
       mapDataSets:
         - BLANKS
         - ORCAINT1
+        - ORCAINT2
       mapBlocks:
         - name: ORCAINT
           width: 20
           length: 20
+
+
+  - type: STR_TAU_DEVILFISH
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    size: STR_SMALL
+    modSprite: 2DEVILFISHSIGNAL
+    damageMax: 480 # More than Valk
+    armor: 5
+    speedMax: 200
+    hitBonus: 30  # Tau higher accuracy.
+    accel: 5
+    power: 15
+    range: 65
+    score: 75
+    reload: 12
+    breakOffTime: 600
+    missionScore: 0
+    battlescapeTerrainData:
+      name: DEVILFISHUFO
+      mapDataSets:
+        - BLANKS
+        - ORCAINT1
+        - TAUDEVILFUFO
+      mapBlocks:
+        - name: DEVILFISHUFO # CHIMERA
+          width: 10
+          length: 20
+          items:
+            STR_ENEMY_TURRET_DRONE_SPAWNER:
+              - [4, 9, 1]
+              - [8, 9, 1]
+              - [1, 19, 1]
+              - [5, 19, 1]
+            STR_ENEMY_DEVILFISH_TURRET_SPAWNER:
+              - [5, 8, 0]
+              - [2, 18, 0]
+          fuseTimers:
+            STR_ENEMY_TURRET_DRONE_SPAWNER: [0, 0]
+            STR_ENEMY_DEVILFISH_TURRET_SPAWNER: [0, 0]
 
   # for chaos assault imperial outpost
 
@@ -4016,6 +4180,27 @@ ufos:
           width: 30
           length: 30
           height: 4
+
+  - type: STR_IMPERIAL_OUTPOST_BUILDING_BOLTERS
+    battlescapeTerrainData:
+      name: IMPOUT
+      mapDataSets:
+        - BLANKS
+        - ACULTA_OUTPOSTIMP
+        - ACULTA_IMPITEMS
+        - IMP_PODS
+      mapBlocks:
+        - name: IMPOUT
+          width: 30
+          length: 30
+          height: 4
+          items:
+            STR_GUARDS_MOUNTED_BOLTER_SPAWNER:
+              - [14, 27, 2]
+              - [14, 1, 2]
+              - [24, 14, 2]
+          fuseTimers:
+            STR_GUARDS_MOUNTED_BOLTER_SPAWNER: [0, 0]
 
   - type: STR_CHAOSVALKYRIE_CRASHED
     speedMax: 999999
@@ -4133,6 +4318,75 @@ ufos:
               - [0, 0, 0]
 
   # space marines enemy ships
+  - type: STR_SMMEDIUM_SCOUT #transport
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_SMALL
+    modSprite: InterceptionUFO-02
+    damageMax: 220
+    speedMax: 1600
+    accel: 5
+    power: 8
+    range: 65
+    score: 75
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: SMSHPCH02
+      mapDataSets:
+        - BLANKS
+        - SMCH2_40k
+        - SMCH3_40k
+        - SMCHI1_40k
+        - SMCHI2_40k
+        - SMCHI3_40k
+        - SMCHI4_40k
+        - SMCHI5_40k
+      mapBlocks:
+        - name: SMSHPCH02
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02B
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02C
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02D
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02E
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 3, 1]
+        - name: SMSHPCH00BIG
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+        - name: SMSHPCH00FAT
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
 
   - type: STR_SMMEDIUM_SCOUT_DOUBLE
     marker: 15
@@ -4167,12 +4421,144 @@ ufos:
             STR_ELERIUM_115:
               - [12, 12, 0]
               - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [12, 12, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWERJOINT
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02TRIPPLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
+        - name: SMCH02TRIPPLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
 
-  - type: STR_SMLARGE_SCOUT
+  - type: STR_SMLARGE_SCOUT2 #Hell Cruiser
     marker: 15
     markerLand: 20
     markerCrash: 25
-    size: STR_MEDIUM_UC
+    alertSound: 35
+    size: STR_MEDIUM_UC #smaller than the pancake, only 1 floor
+    modSprite: InterceptionUFO-03
+    damageMax: 500
+    speedMax: 2000
+    accel: 5
+    power: 8
+    range: 65
+    score: 125
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: SMSHPCH03
+      mapDataSets:
+        - BLANKS
+        - SMCH2_40k
+        - SMCH3_40k
+        - SMCHI1_40k
+        - SMCHI2_40k
+        - SMCHI3_40k
+        - SMCHI4_40k
+        - SMCHI5_40k
+      mapBlocks:
+        - name: SMSHPCH03
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 0]
+              - [13, 16, 0]
+        - name: SMSHPCH03B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 14, 0]
+              - [13, 15, 0]
+        - name: SMSHPCH03CR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SMSHPCH03DR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SMSHPCH03ER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SMSHPCH03FR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SMSHPCH03HEAVY
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 1]
+              - [14, 16, 1]
+        - name: SMSHPCH02HAMMERHEAD
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [9, 10, 1]
+              - [12, 9, 1]
+        - name: SMSHPCH02HAMMERHEAD4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [9, 10, 1]
+              - [12, 9, 1]
+
+  - type: STR_SMLARGE_SCOUT #big pancake 2 floors
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    size: STR_LARGE
     modSprite: InterceptionUFO-03
     damageMax: 500
     speedMax: 2000
@@ -4201,13 +4587,45 @@ ufos:
             STR_ELERIUM_115:
               - [9, 3, 0]
               - [10, 3, 0]
+        - name: SMSHPCH03L2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 3, 0]
+              - [10, 3, 0]
+        - name: SMSHPCH03L3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 3, 0]
+              - [10, 3, 0]
+        - name: SMSHPCH02HAMMERHEAD2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 6, 0]
+              - [4, 13, 0]
+              - [9, 9, 1]
+              - [7, 9, 0]
+        - name: SMSHPCH02HAMMERHEAD3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+              - [3, 12, 0]
+              - [9, 9, 1]
+              - [7, 9, 0]
 
   - type: STR_SMABDUCTOR
     marker: 16
     markerLand: 21
     markerCrash: 26
     alertSound: 35
-    size: STR_MEDIUM_UC
+    size: STR_LARGE
     modSprite: InterceptionUFO-05
     damageMax: 1400
     speedMax: 1300
@@ -4238,6 +4656,261 @@ ufos:
               - [9, 4, 1]
               - [10, 4, 1]
               - [11, 4, 1]
+
+  - type: STR_SMHARVESTER
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-04
+    damageMax: 1000
+    speedMax: 800
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1000
+    battlescapeTerrainData:
+      name: SMSHPCH04
+      mapDataSets:
+        - BLANKS
+        - SMCH2_40k
+        - SMCH3_40k
+        - SMCHI1_40k
+        - SMCHI2_40k
+        - SMCHI3_40k
+        - SMCHI4_40k
+        - SMCHI5_40k
+      mapBlocks:
+        - name: SMSHPCH04B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [8, 10, 0]
+        - name: SMSHPCH04C
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [7, 9, 0]
+        - name: SMSHPCH04D
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [7, 9, 0]
+
+  - type: STR_SMTERROR_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-08
+    damageMax: 3000
+    speedMax: 2800
+    accel: 6
+    power: 50
+    range: 65
+    score: 500
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: SMSHPCH06
+      mapDataSets:
+        - BLANKS
+        - SMCH2_40k
+        - SMCH3_40k
+        - SMCHI1_40k
+        - SMCHI2_40k
+        - SMCHI3_40k
+        - SMCHI4_40k
+        - SMCHI5_40k
+      mapBlocks:
+        - name: SMSHPCH06
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [9, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [5, 15, 1]
+              - [6, 15, 1]
+        - name: SMSHPCH06B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [8, 8, 1]
+              - [8, 21, 1]
+        - name: SMSHPCH06C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [3, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH06D
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [7, 21, 0]
+              - [6, 10, 0]
+              - [2, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [3, 12, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [8, 9, 1]
+              - [15, 11, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [14, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 8, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [3, 9, 1]
+              - [17, 9, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR5
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 12, 1]
+              - [17, 10, 1]
+
+  - type: STR_SMSUPPLY_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-06
+    damageMax: 5400
+    speedMax: 1200
+    accel: 6
+    power: 30
+    range: 65
+    score: 400
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: SMSHPCH08
+      mapDataSets:
+        - BLANKS
+        - SMCH2_40k
+        - SMCH3_40k
+        - SMCHI1_40k
+        - SMCHI2_40k
+        - SMCHI3_40k
+        - SMCHI4_40k
+        - SMCHI5_40k
+      mapBlocks:
+        - name: SMSHPCH08
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+        - name: SMSHPCH08B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+        - name: SMSHPCH08C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
 
   - type: STR_SMBATTLESHIP
     marker: 18
@@ -4281,8 +4954,124 @@ ufos:
               - [3, 12, 0]
               - [26, 12, 0]
               - [27, 12, 0]
+        - name: SMCH07B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [6, 25, 2]
+              - [14, 25, 2]
+              - [9, 5, 1]
+              - [10, 5, 1]
+              - [6, 27, 1]
+              - [9, 27, 1]
+              - [13, 27, 1]
+              - [15, 23, 1]
+              - [3, 23, 1]
+              - [6, 10, 1]
+        - name: SMCH07C
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [17, 15, 1]
+              - [13, 1, 0]
+              - [14, 1, 0]
+              - [15, 1, 0]
+              - [16, 1, 0]
+              - [12, 15, 1]
+              - [14, 24, 0]
+              - [24, 15, 0]
+              - [3, 11, 0]
+              - [24, 5, 1]
+              - [5, 5, 1]
+        - name: SMCH07D
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [5, 24, 1]
+              - [22, 4, 0]
+              - [18, 19, 0]
+              - [8, 24, 0]
+              - [9, 9, 0]
+              - [5, 5, 1]
+              - [3, 11, 2]
+              - [24, 24, 1]
+              - [26, 17, 2]
+              - [10, 23, 2]
+              - [18, 7, 2]
 
   # salamanders enemy ships
+  - type: STR_SLMMEDIUM_SCOUT #transport
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_SMALL
+    modSprite: InterceptionUFO-02
+    damageMax: 220
+    speedMax: 1600
+    accel: 5
+    power: 8
+    range: 65
+    score: 75
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: SLMSHPCH02
+      mapDataSets:
+        - BLANKS
+        - SLMCH2_40k
+        - SLMCH3_40k
+        - SLMCHI1_40k
+        - SLMCHI2_40k
+        - SLMCHI3_40k
+        - SLMCHI4_40k
+        - SLMCHI5_40k
+      mapBlocks:
+        - name: SLMSHPCH02
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SLMSHPCH02B
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SLMSHPCH02C
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SLMSHPCH02D
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SLMSHPCH02E
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 3, 1]
+        - name: SMSHPCH00BIG
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+        - name: SMSHPCH00FAT
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
 
   - type: STR_SLMMEDIUM_SCOUT_DOUBLE
     marker: 15
@@ -4317,12 +5106,144 @@ ufos:
             STR_ELERIUM_115:
               - [12, 12, 0]
               - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [12, 12, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWERJOINT
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02TRIPPLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
+        - name: SMCH02TRIPPLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
+
+  - type: STR_SLMLARGE_SCOUT2 #Hell Cruiser
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_MEDIUM_UC #1 floor
+    modSprite: InterceptionUFO-03
+    damageMax: 500
+    speedMax: 2000
+    accel: 5
+    power: 8
+    range: 65
+    score: 125
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: SLMSHPCH03
+      mapDataSets:
+        - BLANKS
+        - SLMCH2_40k
+        - SLMCH3_40k
+        - SLMCHI1_40k
+        - SLMCHI2_40k
+        - SLMCHI3_40k
+        - SLMCHI4_40k
+        - SLMCHI5_40k
+      mapBlocks:
+        - name: SLMSHPCH03
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 0]
+              - [13, 16, 0]
+        - name: SLMSHPCH03B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 14, 0]
+              - [13, 15, 0]
+        - name: SLMSHPCH03CR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SLMSHPCH03DR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SLMSHPCH03ER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SLMSHPCH03FR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SLMSHPCH03HEAVY
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 1]
+              - [14, 16, 1]
+        - name: SMSHPCH02HAMMERHEAD
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [9, 10, 1]
+              - [12, 9, 1]
+        - name: SMSHPCH02HAMMERHEAD4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [9, 10, 1]
+              - [12, 9, 1]
 
   - type: STR_SLMLARGE_SCOUT
     marker: 15
     markerLand: 20
     markerCrash: 25
-    size: STR_MEDIUM_UC
+    size: STR_LARGE #2 floor pancake
     modSprite: InterceptionUFO-03
     damageMax: 500
     speedMax: 2000
@@ -4351,13 +5272,45 @@ ufos:
             STR_ELERIUM_115:
               - [9, 3, 0]
               - [10, 3, 0]
+        - name: SLMSHPCH03L2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 3, 0]
+              - [10, 3, 0]
+        - name: SLMSHPCH03L3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 3, 0]
+              - [10, 3, 0]
+        - name: SMSHPCH02HAMMERHEAD2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 6, 0]
+              - [4, 13, 0]
+              - [9, 9, 1]
+              - [7, 9, 0]
+        - name: SMSHPCH02HAMMERHEAD3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+              - [3, 12, 0]
+              - [9, 9, 1]
+              - [7, 9, 0]
 
   - type: STR_SLMABDUCTOR
     marker: 16
     markerLand: 21
     markerCrash: 26
     alertSound: 35
-    size: STR_MEDIUM_UC
+    size: STR_LARGE
     modSprite: InterceptionUFO-05
     damageMax: 1400
     speedMax: 1300
@@ -4388,6 +5341,261 @@ ufos:
               - [9, 4, 1]
               - [10, 4, 1]
               - [11, 4, 1]
+
+  - type: STR_SLMHARVESTER
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-04
+    damageMax: 1000
+    speedMax: 800
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1000
+    battlescapeTerrainData:
+      name: SLMSHPCH04
+      mapDataSets:
+        - BLANKS
+        - SLMCH2_40k
+        - SLMCH3_40k
+        - SLMCHI1_40k
+        - SLMCHI2_40k
+        - SLMCHI3_40k
+        - SLMCHI4_40k
+        - SLMCHI5_40k
+      mapBlocks:
+        - name: SLMSHPCH04B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [8, 10, 0]
+        - name: SLMSHPCH04C
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [7, 9, 0]
+        - name: SLMSHPCH04D
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [7, 9, 0]
+
+  - type: STR_SLMTERROR_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-08
+    damageMax: 3000
+    speedMax: 2800
+    accel: 6
+    power: 50
+    range: 65
+    score: 500
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: SLMSHPCH06
+      mapDataSets:
+        - BLANKS
+        - SLMCH2_40k
+        - SLMCH3_40k
+        - SLMCHI1_40k
+        - SLMCHI2_40k
+        - SLMCHI3_40k
+        - SLMCHI4_40k
+        - SLMCHI5_40k
+      mapBlocks:
+        - name: SLMSHPCH06
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [9, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [5, 15, 1]
+              - [6, 15, 1]
+        - name: SMSHPCH06B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [8, 8, 1]
+              - [8, 21, 1]
+        - name: SMSHPCH06C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [3, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH06D
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [7, 21, 0]
+              - [6, 10, 0]
+              - [2, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [3, 12, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [5, 12, 1]
+              - [3, 7, 1]
+              - [8, 9, 1]
+              - [15, 11, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [14, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 8, 1]
+              - [15, 19, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [3, 9, 1]
+              - [17, 9, 1]
+        - name: SMSHPCH02HAMMERHEADTOPFLOOR5
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [7, 9, 0]
+              - [4, 14, 0]
+              - [4, 5, 0]
+              - [13, 10, 0]
+              - [3, 12, 1]
+              - [3, 7, 1]
+              - [8, 12, 1]
+              - [17, 10, 1]
+
+  - type: STR_SLMSUPPLY_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-06
+    damageMax: 5400
+    speedMax: 1200
+    accel: 6
+    power: 30
+    range: 65
+    score: 400
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: SLMSHPCH08
+      mapDataSets:
+        - BLANKS
+        - SLMCH2_40k
+        - SLMCH3_40k
+        - SLMCHI1_40k
+        - SLMCHI2_40k
+        - SLMCHI3_40k
+        - SLMCHI4_40k
+        - SLMCHI5_40k
+      mapBlocks:
+        - name: SLMSHPCH08
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+        - name: SLMSHPCH08B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+        - name: SLMSHPCH08C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
 
   - type: STR_SLMBATTLESHIP
     marker: 18
@@ -4431,6 +5639,53 @@ ufos:
               - [3, 12, 0]
               - [26, 12, 0]
               - [27, 12, 0]
+        - name: SLMCH07B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [6, 25, 2]
+              - [14, 25, 2]
+              - [9, 5, 1]
+              - [10, 5, 1]
+              - [6, 27, 1]
+              - [9, 27, 1]
+              - [13, 27, 1]
+              - [15, 23, 1]
+              - [3, 23, 1]
+              - [6, 10, 1]
+        - name: SLMCH07C
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [17, 15, 1]
+              - [13, 1, 0]
+              - [14, 1, 0]
+              - [15, 1, 0]
+              - [16, 1, 0]
+              - [12, 15, 1]
+              - [14, 24, 0]
+              - [24, 15, 0]
+              - [3, 11, 0]
+              - [24, 5, 1]
+              - [5, 5, 1]
+        - name: SMCH07D
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [5, 24, 1]
+              - [22, 4, 0]
+              - [18, 19, 0]
+              - [8, 24, 0]
+              - [9, 9, 0]
+              - [5, 5, 1]
+              - [3, 11, 2]
+              - [24, 24, 1]
+              - [26, 17, 2]
+              - [10, 23, 2]
+              - [18, 7, 2]
 
   # Imposter space marines enemy ships for the Alpha Legion
 
@@ -4467,12 +5722,49 @@ ufos:
             STR_ELERIUM_115:
               - [12, 12, 0]
               - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [12, 12, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02DOUBLETOWERJOINT
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+        - name: SMCH02TRIPPLETOWER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
+        - name: SMCH02TRIPPLETOWER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 13, 0]
+              - [3, 4, 0]
+              - [13, 10, 0]
 
   - type: STR_SMLARGE_SCOUT_IMPOSTER
     marker: 15
     markerLand: 20
     markerCrash: 25
-    size: STR_MEDIUM_UC
+    size: STR_LARGE
     modSprite: InterceptionUFO-03
     damageMax: 500
     speedMax: 2000
@@ -4501,13 +5793,45 @@ ufos:
             STR_ELERIUM_115:
               - [9, 3, 0]
               - [10, 3, 0]
+        - name: SMSHPCH03L2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 3, 0]
+              - [10, 3, 0]
+        - name: SMSHPCH03L3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 3, 0]
+              - [10, 3, 0]
+        - name: SMSHPCH02HAMMERHEAD2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 6, 0]
+              - [4, 13, 0]
+              - [9, 9, 1]
+              - [7, 9, 0]
+        - name: SMSHPCH02HAMMERHEAD3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+              - [3, 12, 0]
+              - [9, 9, 1]
+              - [7, 9, 0]
 
   - type: STR_SMABDUCTOR_IMPOSTER
     marker: 16
     markerLand: 21
     markerCrash: 26
     alertSound: 35
-    size: STR_MEDIUM_UC
+    size: STR_LARGE
     modSprite: InterceptionUFO-05
     damageMax: 1400
     speedMax: 1300
@@ -4581,6 +5905,53 @@ ufos:
               - [3, 12, 0]
               - [26, 12, 0]
               - [27, 12, 0]
+        - name: SMCH07B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [6, 25, 2]
+              - [14, 25, 2]
+              - [9, 5, 1]
+              - [10, 5, 1]
+              - [6, 27, 1]
+              - [9, 27, 1]
+              - [13, 27, 1]
+              - [15, 23, 1]
+              - [3, 23, 1]
+              - [6, 10, 1]
+        - name: SMCH07C
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [17, 15, 1]
+              - [13, 1, 0]
+              - [14, 1, 0]
+              - [15, 1, 0]
+              - [16, 1, 0]
+              - [12, 15, 1]
+              - [14, 24, 0]
+              - [24, 15, 0]
+              - [3, 11, 0]
+              - [24, 5, 1]
+              - [5, 5, 1]
+        - name: SMCH07D
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [5, 24, 1]
+              - [22, 4, 0]
+              - [18, 19, 0]
+              - [8, 24, 0]
+              - [9, 9, 0]
+              - [5, 5, 1]
+              - [3, 11, 2]
+              - [24, 24, 1]
+              - [26, 17, 2]
+              - [10, 23, 2]
+              - [18, 7, 2]
 
   # chaos cult final mission helper
 
@@ -4701,3 +6072,757 @@ ufos:
               amount: 2
               mixed: true
               itemList: [STR_MAP1, STR_MAP2, STR_MAP3]
+
+  # adeptas ai ships
+
+  - type: STR_SISMEDIUM_SCOUT #transport
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_SMALL
+    modSprite: InterceptionUFO-02
+    damageMax: 220
+    speedMax: 1600
+    accel: 5
+    power: 8
+    range: 65
+    score: 75
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: SISSHPCH02
+      mapDataSets:
+        - BLANKS
+        - SISCH2_40k
+        - SISCH3_40k
+        - SISCHI1_40k
+        - SISCHI2_40k
+        - SISCHI3_40k
+        - SISCHI4_40k
+        - SISCHI5_40k
+      mapBlocks:
+        - name: SISSHPCH02
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02B
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02C
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02D
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+        - name: SMSHPCH02E
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 3, 1]
+        - name: SMSHPCH00BIG
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+        - name: SMSHPCH00FAT
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [3, 7, 0]
+
+  - type: STR_SISLARGE_SCOUT2 #Hell Cruiser
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_MEDIUM_UC #smaller than the pancake, only 1 floor
+    modSprite: InterceptionUFO-03
+    damageMax: 500
+    speedMax: 2000
+    accel: 5
+    power: 8
+    range: 65
+    score: 125
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: SISSHPCH03
+      mapDataSets:
+        - BLANKS
+        - SISCH2_40k
+        - SISCH3_40k
+        - SISCHI1_40k
+        - SISCHI2_40k
+        - SISCHI3_40k
+        - SISCHI4_40k
+        - SISCHI5_40k
+      mapBlocks:
+        - name: SISSHPCH03
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 0]
+              - [13, 16, 0]
+        - name: SISSHPCH03B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 14, 0]
+              - [13, 15, 0]
+        - name: SISSHPCH03CR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03DR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03ER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03FR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 16, 0]
+              - [16, 16, 0]
+        - name: SISSHPCH03HEAVY
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 1]
+              - [14, 16, 1]
+
+  - type: STR_SISABDUCTOR
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-05
+    damageMax: 1400
+    speedMax: 1300
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1500
+    battlescapeTerrainData:
+      name: SISSHPCH05
+      mapDataSets:
+        - BLANKS
+        - SISCH2_40k
+        - SISCH3_40k
+        - SISCHI1_40k
+        - SISCHI2_40k
+        - SISCHI3_40k
+        - SISCHI4_40k
+        - SISCHI5_40k
+      mapBlocks:
+        - name: SISSHPCH05
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 4, 1]
+              - [9, 4, 1]
+              - [10, 4, 1]
+              - [11, 4, 1]
+        - name: SISSHPCH05B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 4, 1]
+              - [9, 4, 1]
+              - [10, 4, 1]
+              - [11, 4, 1]
+        - name: SISSHPCH140
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 1, 0]
+              - [6, 12, 0]
+              - [9, 1, 1]
+              - [9, 9, 1]
+        - name: SISSHPCH05ABDUCTOR
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [5, 23, 0]
+              - [8, 22, 0]
+              - [6, 7, 0]
+              - [8, 6, 0]
+              - [12, 25, 1]
+              - [12, 13, 1]
+              - [8, 13, 1]
+              - [12, 16, 1]
+
+  - type: STR_SISHARVESTER
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-04
+    damageMax: 1000
+    speedMax: 800
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1000
+    battlescapeTerrainData:
+      name: SISSHPCH04B
+      mapDataSets:
+        - BLANKS
+        - SISCH2_40k
+        - SISCH3_40k
+        - SISCHI1_40k
+        - SISCHI2_40k
+        - SISCHI3_40k
+        - SISCHI4_40k
+        - SISCHI5_40k
+      mapBlocks:
+        - name: SISSHPCH04B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [8, 10, 0]
+        - name: SISSHPCH130
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 2, 0]
+              - [6, 9, 0]
+              - [12, 9, 0]
+              - [7, 10, 1]
+              - [8, 2, 2]
+
+  - type: STR_SISTERROR_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-08
+    damageMax: 3000
+    speedMax: 2800
+    accel: 6
+    power: 50
+    range: 65
+    score: 500
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: SISSHPCH06
+      mapDataSets:
+        - BLANKS
+        - SISCH2_40k
+        - SISCH3_40k
+        - SISCHI1_40k
+        - SISCHI2_40k
+        - SISCHI3_40k
+        - SISCHI4_40k
+        - SISCHI5_40k
+      mapBlocks:
+        - name: SISSHPCH06
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [9, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [5, 15, 1]
+              - [6, 15, 1]
+        - name: SMSHPCH06B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [8, 8, 1]
+              - [8, 21, 1]
+        - name: SMSHPCH06C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [7, 15, 0]
+              - [3, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SMSHPCH06D
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [7, 21, 0]
+              - [6, 10, 0]
+              - [2, 14, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [2, 15, 1]
+              - [4, 15, 1]
+              - [8, 7, 1]
+              - [8, 22, 1]
+        - name: SISSHPCH06FLEUR
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 5, 0]
+              - [4, 14, 0]
+              - [2, 8, 0]
+              - [5, 10, 2]
+              - [5, 7, 2]
+              - [5, 10, 1]
+              - [5, 7, 1]
+              - [14, 16, 1]
+              - [14, 2, 1]
+
+  - type: STR_SISSUPPLY_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-06
+    damageMax: 5400
+    speedMax: 1200
+    accel: 6
+    power: 30
+    range: 65
+    score: 400
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: SISSHPCH08
+      mapDataSets:
+        - BLANKS
+        - SISCH2_40k
+        - SISCH3_40k
+        - SISCHI1_40k
+        - SISCHI2_40k
+        - SISCHI3_40k
+        - SISCHI4_40k
+        - SISCHI5_40k
+      mapBlocks:
+        - name: SISSHPCH08
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+        - name: SISSHPCH08B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+        - name: SISSHPCH0C
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+
+  - type: STR_SISBATTLESHIP
+    marker: 18
+    markerLand: 23
+    markerCrash: 28
+    alertSound: 36
+    size: STR_VERY_LARGE
+    modSprite: InterceptionUFO-07
+    damageMax: 7000
+    speedMax: 1000
+    accel: 2
+    power: 150
+    range: 65
+    score: 700
+    reload: 24
+    breakOffTime: 4000
+    battlescapeTerrainData:
+      name: SISSHPCH07
+      mapDataSets:
+        - BLANKS
+        - SISCH2_40k
+        - SISCH3_40k
+        - SISCHI1_40k
+        - SISCHI2_40k
+        - SISCHI3_40k
+        - SISCHI4_40k
+        - SISCHI5_40k
+      mapBlocks:
+        - name: SISSHPCH07
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [12, 3, 0]
+              - [13, 3, 0]
+              - [14, 3, 0]
+              - [15, 3, 0]
+              - [16, 3, 0]
+              - [17, 3, 0]
+              - [2, 12, 0]
+              - [3, 12, 0]
+              - [26, 12, 0]
+              - [27, 12, 0]
+        - name: SISSHPCH07B
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [6, 25, 2]
+              - [14, 25, 2]
+              - [9, 5, 1]
+              - [10, 5, 1]
+              - [6, 27, 1]
+              - [9, 27, 1]
+              - [13, 27, 1]
+              - [15, 23, 1]
+              - [3, 23, 1]
+              - [6, 10, 1]
+        - name: SISSHPCH07C
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [17, 15, 1]
+              - [13, 1, 0]
+              - [14, 1, 0]
+              - [15, 1, 0]
+              - [16, 1, 0]
+              - [12, 15, 1]
+              - [14, 24, 0]
+              - [24, 15, 0]
+              - [3, 11, 0]
+              - [24, 5, 1]
+              - [5, 5, 1]
+
+  # inquisition ai ships
+
+  - type: STR_INQMEDIUM_SCOUT #transport
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_SMALL
+    modSprite: InterceptionUFO-02
+    damageMax: 220
+    speedMax: 1600
+    accel: 5
+    power: 8
+    range: 65
+    score: 75
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: INQSHPCH02
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH02
+          width: 10
+          length: 10
+          items:
+            STR_ELERIUM_115:
+              - [2, 3, 0]
+
+  - type: STR_INQLARGE_SCOUT2 #Hell Cruiser
+    marker: 15
+    markerLand: 20
+    markerCrash: 25
+    alertSound: 35
+    size: STR_MEDIUM_UC #smaller than the pancake, only 1 floor
+    modSprite: InterceptionUFO-03
+    damageMax: 500
+    speedMax: 2000
+    accel: 5
+    power: 8
+    range: 65
+    score: 125
+    reload: 12
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: INQSHPCH03
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH03
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 16, 0]
+              - [13, 16, 0]
+
+  - type: STR_INQABDUCTOR
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-05
+    damageMax: 1400
+    speedMax: 1300
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1500
+    battlescapeTerrainData:
+      name: INQSHPCH05
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH05
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 4, 1]
+              - [9, 4, 1]
+              - [10, 4, 1]
+              - [11, 4, 1]
+
+  - type: STR_INQHARVESTER
+    marker: 16
+    markerLand: 21
+    markerCrash: 26
+    alertSound: 35
+    size: STR_LARGE
+    modSprite: InterceptionUFO-04
+    damageMax: 1000
+    speedMax: 800
+    accel: 8
+    power: 20
+    range: 65
+    score: 250
+    reload: 30
+    breakOffTime: 1000
+    battlescapeTerrainData:
+      name: INQSHPCH04B
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH04B
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 10, 0]
+              - [7, 10, 0]
+              - [8, 10, 0]
+
+  - type: STR_INQTERROR_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-08
+    damageMax: 3000
+    speedMax: 2800
+    accel: 6
+    power: 50
+    range: 65
+    score: 500
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: INQSHPCH06
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH06
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 15, 0]
+              - [9, 15, 0]
+              - [11, 15, 0]
+              - [12, 15, 0]
+              - [3, 15, 1]
+              - [4, 15, 1]
+              - [5, 15, 1]
+              - [6, 15, 1]
+
+  - type: STR_INQSUPPLY_SHIP
+    marker: 17
+    markerLand: 22
+    markerCrash: 27
+    size: STR_LARGE
+    alertSound: 36
+    modSprite: InterceptionUFO-06
+    damageMax: 5400
+    speedMax: 1200
+    accel: 6
+    power: 30
+    range: 65
+    score: 400
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: INQSHPCH08
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH08
+          width: 20
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
+
+  - type: STR_INQBATTLESHIP
+    marker: 18
+    markerLand: 23
+    markerCrash: 28
+    alertSound: 36
+    size: STR_VERY_LARGE
+    modSprite: InterceptionUFO-07
+    damageMax: 7000
+    speedMax: 1000
+    accel: 2
+    power: 150
+    range: 65
+    score: 700
+    reload: 24
+    breakOffTime: 4000
+    battlescapeTerrainData:
+      name: INQSHPCH07
+      mapDataSets:
+        - BLANKS
+        - INQCH2_40k
+        - INQCH3_40k
+        - INQCHI1_40k
+        - INQCHI2_40k
+        - INQCHI3_40k
+        - INQCHI4_40k
+        - INQCHI5_40k
+      mapBlocks:
+        - name: INQSHPCH07
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [12, 3, 0]
+              - [13, 3, 0]
+              - [14, 3, 0]
+              - [15, 3, 0]
+              - [16, 3, 0]
+              - [17, 3, 0]
+              - [2, 12, 0]
+              - [3, 12, 0]
+              - [26, 12, 0]
+              - [27, 12, 0]

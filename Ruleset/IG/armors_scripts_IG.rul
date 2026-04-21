@@ -252,6 +252,34 @@ armors:
   # - type: STR_GUARD_KRIEG_GRENADIER_ARMOR_LUCIUS
   #   refNode: *STR_CARAPACE_ARMOR_POWER_PACK_GREEN
 
+  - type: STR_VALHALLAN_FLAK_ARMOR
+    spriteSheet: VALHALLAN_FLAK_BS.PCK
+    scripts:
+      selectUnitSprite: | ## whiteshields valhallans
+        var int isFemale;
+        var int currentRank;
+        var int unitDirection;
+        var int health;
+
+        unit.getRank currentRank;
+        unit.getHealth health;
+
+        if and gt health 0 eq currentRank 0 eq blit_part blit_torso;
+
+          set sprite_index 288;
+          unit.getGender isFemale;
+
+          if neq 0 isFemale;
+
+            add sprite_offset 8;
+
+          end;
+
+        end;
+
+        add sprite_index sprite_offset;
+        return sprite_index;
+
   - type: STR_GUARD_ARMORSM
     spriteSheet: GUARDSMAN_FLAK_GOG.PCK
     scripts:

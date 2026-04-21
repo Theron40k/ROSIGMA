@@ -256,7 +256,7 @@ items:
     clipSize: 32
     armor: 200
     battleType: 2
-    listOrder: 10715
+    listOrder: 10710
     invWidth: 2
     invHeight: 1  # Same size as grenade drums. Smaller ammo, but more of it.
     shotgunPellets: 6
@@ -401,7 +401,7 @@ items:
     size: 0.4
     dropoff: 4 #heavy weapon
     requiresBuy:
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
     costBuy: 100000
     costSell: 30000
     weight: 45  # 5 weight, guard vs marine
@@ -927,7 +927,7 @@ items:
     size: 0.4
     requiresBuy:
       - STR_MIDTIER_PREREQ
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
     costBuy: 35000  # cheaper than longlas
     costSell: 5000
     bigSprite: 278
@@ -983,7 +983,7 @@ items:
     size: 0.4
     requiresBuy:
       - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
     costBuy: 300000
     costSell: 50000
     bigSprite: 255
@@ -1029,7 +1029,7 @@ items:
     armor: 200
     requiresBuy:
       - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
     costBuy: 3000
     costSell: 500
     weight: 4
@@ -1058,7 +1058,7 @@ items:
     armor: 200
     requiresBuy:
       - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
     weight: 5
     costBuy: 10000
     costSell: 2000
@@ -1369,7 +1369,7 @@ items:
     size: 0.2
     dropoff: 5
     requiresBuy:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     # recoveryTransformations:
     #   STR_ROTOR_CANNON: [1]  # Doesn´t work for player weapons as they don´t transform back
     costBuy: 300000
@@ -1420,7 +1420,7 @@ items:
   - type: STR_ROTOR_CANNON_KOMBI_BLACK  # Imperial version
     categories: [STR_CAT_AUTO]
     requiresBuy:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
       - STR_MT_GK  # Midtier Inquisition
     size: 0.5
     dropoff: 5
@@ -1499,7 +1499,7 @@ items:
     categories: [STR_CAT_AUTO]
     size: 0.1
     requiresBuy:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     costBuy: 10000
     costSell: 2000
     weight: 20  ## double heavy stubber belt
@@ -2071,7 +2071,7 @@ items:
     size: 0.2
     requiresBuy:
       - STR_MIDTIER_PREREQ
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
     costBuy: 20000  # 3500 for basic, so more expensive, longlas is still more expensive.
     costSell: 1500
@@ -2119,7 +2119,7 @@ items:
   - type: STR_LASCARBINE
     requiresBuy:
       - STR_LASER_WEAPONS
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
     armor: 200  # to avoid item pile destruction
     meleePower: 50
@@ -2192,7 +2192,7 @@ items:
   - type: STR_LONGLAS  # Added higher energy drain for aimed shots
     requiresBuy:
       - STR_MIDTIER_PREREQ  # long rifle now basic guarad sniper at start
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
     costBuy: 75000  # 28750
     armor: 200  # to avoid item pile destruction
     confAimed:
@@ -2283,8 +2283,8 @@ items:
     size: 0.3
     requiresBuyBaseFunc: [TRADE]
     requiresBuy:
-      - STR_MIDTIER_PREREQ  # long rifle now basic guarad sniper at start
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_MIDTIER_PREREQ  # long rifle now basic guard sniper at start
+      - STR_GUARD_AND_ARBITES
     costBuy: 250000  # mucho expensive
     costSell: 25000
     weight: 30  # heavy
@@ -2490,7 +2490,7 @@ items:
     defaultInventorySlot: STR_BACK_PACK
 
   - type: STR_CAS_AIRSTRIKE_DESIGNATOR
-    dropoff: 999
+    dropoff: 5
     minRange: 10
     autoRange: 35
     snapRange: 0
@@ -3096,7 +3096,7 @@ items:
     size: 0.4
     dropoff: 8  # high drop off, inaccurate
     requiresBuy:
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
       - STR_HEAVY_WEAPONS_IG
       - STR_IMPERIAL_WEAPONS
     costBuy: 100000
@@ -3479,11 +3479,11 @@ items:
       ITEM_AMMO_COLOR: 2
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
+    listOrder: 11870
 
   - &STR_GRENADE_DRUM
     type: STR_SMOKE_GRENADE_DRUM  # smoke munition
     requiresBuy:
-      # - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_GUARD_AND_ARBITES
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
@@ -3503,7 +3503,7 @@ items:
     invWidth: 2
     invHeight: 1
     armor: 200
-    listOrder: 11890
+    listOrder: 11870
     blastRadius: 5
     bigSprite: 261
     tags:
@@ -3514,7 +3514,7 @@ items:
   - type: STR_PHOTON_GRENADE_DRUM  # photon munition
     refNode: *STR_GRENADE_DRUM
     requiresBuy:
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
       - STR_PHOTON_GRENADE_REQUISITION
       - STR_HEAVY_WEAPONS_IG
     explosionHitSound: {mod: 40k, index: 803}
@@ -3533,7 +3533,7 @@ items:
       ToWound: 0.00
       RandomWound: false
       FixRadius: 3
-    listOrder: 11891
+    listOrder: 11870
     bigSprite: 262
     armor: 200
     tags:
@@ -3581,7 +3581,7 @@ items:
   # bring the range up to the IG Heavy Bolter; the stubber is already bad enough with 85% tu and low AP damage
   - type: STR_HEAVY_STUBBER
     requiresBuy:
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
       - STR_IMPERIAL_WEAPONS
     autoRange: 24  # was 18
     bigSprite: 212
@@ -4091,7 +4091,7 @@ items:
     categories: [STR_CAT_BOLTER, STR_CAT_MELTA]
     requiresBuy:
       - STR_LIGHT_BOLTERS_MIDTIER
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
       - STR_IMPERIAL_GUARD_MIDTIER
       - STR_MELTAGUN_TECH  # meltagun tech
     size: 0.3
@@ -4207,7 +4207,7 @@ items:
       ITEM_AMMO_COLOR: 6
 
   - type: STR_LIGHT_BOLTER_AMMO_BELT_PEN
-    refNode: *STR_LIGHT_BOLTER_AMMO_BELT_ACCATRAN
+    # refNode: *STR_LIGHT_BOLTER_AMMO_BELT_ACCATRAN
     requiresBuy:
       - STR_LIGHT_BOLTERS_MIDTIER
       - STR_MIDTIER_PREREQ
@@ -4217,6 +4217,20 @@ items:
     listOrder: 19181
     tags:
       ITEM_AMMO_COLOR: 1
+    categories: [STR_CAT_BOLTER]
+    size: 0.1
+    # requiresBuyBaseFunc: [TRADE]
+    weight: 5  # weight more
+    floorSprite: {mod: 40k, index: 1004}
+    handSprite: {mod: 40k, index: 1032}
+    hitSound: {mod: 40k, index: 708}
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    clipSize: 40  # added ammo capacity
+    battleType: 2
+    armor: 200
+    invWidth: 1
+    invHeight: 3
 
   - &STR_LIGHT_BOLTER_CLIP_AP
     type: STR_LIGHT_BOLTER_AMMO_PEN
@@ -4868,7 +4882,6 @@ items:
     size: 0.4
     requires:
       - STR_GUARD_AND_ARBITES
-      # - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_HEAVY_WEAPONS_IG
     costBuy: 10000
     costSell: 3000
@@ -5083,7 +5096,6 @@ items:
     categories: [STR_CAT_EQUIPMENT]
     requiresBuy:
       - STR_GUARD_AND_ARBITES
-    #   - STR_IMPERIAL_GUARD_OPERATIONS
     size: 0.2
     costBuy: 500
     costSell: 50
@@ -5295,10 +5307,9 @@ items:
     requiresBuy:
       - STR_GUARD_AND_ARBITES
       - STR_NOT_TAU_EMPIRE_GV
-    #  - STR_IMPERIAL_GUARD_OPERATIONS
     size: 0.3
     weight: 30  # light heavy stubber is 15, HB is 40, heavy plasma is 35, Rippergun is 50
-    costBuy: 150000  # same as other special IG guns, but can be changed, should be lower priced than their heavy bolter
+    costBuy: 50000   #should be lower priced than their heavy bolter
     costSell: 3000
     bigSprite: 235
     floorSprite: 235
@@ -5321,7 +5332,6 @@ items:
     requiresBuy:
       - STR_GUARD_AND_ARBITES
       - STR_NOT_TAU_EMPIRE_GV
-      # - STR_IMPERIAL_GUARD_OPERATIONS
     categories: [STR_CAT_AUTO]
     size: 0.1
     costBuy: 2500  # expensive special AP rounds, could maybe be manufactured for 1 adam per magazine
@@ -5389,7 +5399,7 @@ items:
   # https://openxcom.org/forum/index.php/topic, 7443.0.html
   - type: STR_CHAINSWORD_GUARD
     requiresBuy:
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GUARD_AND_ARBITES
       - STR_MIDTIER_PREREQ
     categories: [STR_CAT_MELEE]
     size: 0.2
@@ -5928,6 +5938,7 @@ items:
     costUse:
       time: 10
     medikitTargetSelf: true
+    medikitTargetImmune: true
     medikitTargetMatrix: 63
     flatUse: true
     costThrow:
@@ -5945,6 +5956,7 @@ items:
       energy: 25
       stun: 10
       morale: 10
+    specialUseEmptyHand: false # it was true in 40k and somehow block its use in rosigma on a bug reported save
     tags:
       ITEM_IS_PSYCHIC_POWER: 1
       ITEM_PSYCHIC_POWER_MODIFIER: 10
@@ -5954,6 +5966,7 @@ items:
       energy: 25
       stun: 10
       morale: 10
+    specialUseEmptyHand: false # it was true in 40k and somehow block its use in rosigma on a bug reported save
     tags:
       ITEM_IS_PSYCHIC_POWER: 1
       ITEM_PSYCHIC_POWER_MODIFIER: 10
@@ -5964,6 +5977,7 @@ items:
       energy: 25
       stun: 10
       morale: 10
+    specialUseEmptyHand: false # it was true in 40k and somehow block its use in rosigma on a bug reported save
     tags:
       ITEM_IS_PSYCHIC_POWER: 1
       ITEM_PSYCHIC_POWER_MODIFIER: 5
@@ -5983,6 +5997,7 @@ items:
       ArmorEffectiveness: 0.0
       ToArmor: 0.0
     maxRange: 20  # no blasting someone across the map
+    specialUseEmptyHand: false # it was true in 40k and somehow block its use in rosigma on a bug reported save
     tags:
       ITEM_IS_PSYCHIC_POWER: 1
       ITEM_PSYCHIC_POWER_MODIFIER: 5
@@ -5993,6 +6008,7 @@ items:
       energy: 25
       stun: 10
       morale: 10
+    specialUseEmptyHand: false # it was true in 40k and somehow block its use in rosigma on a bug reported save
     tags:
       ITEM_IS_PSYCHIC_POWER: 1
       ITEM_PSYCHIC_POWER_MODIFIER: 10
@@ -7067,7 +7083,7 @@ items:
   - type: STR_TECHPRIEST_TOOL_SERVITOR            # Techpriest Sanctus Canister; inaccessible for now
     refNode: *REF_TECH_SUPPORT
     battleType: 9
-    bigSprite: 317
+    bigSprite: 3616
     invHeight: 2
     invWidth: 1
     hitSound: {mod: 40k, index: 37} ###CHANGEME
@@ -7093,7 +7109,7 @@ items:
 
   - type: STR_TECHPRIEST_TOOL_SHIELD              # Techpriest Shield; inaccessible for now
     refNode: *REF_TECH_SUPPORT
-    bigSprite: 316
+    bigSprite: 3617
     invHeight: 2
     invWidth: 1
     battleType: 6
@@ -7117,7 +7133,7 @@ items:
     hitAnimation: 110
     hitAnimFrames: 10
     targetMatrix: 6
-    bigSprite: 315
+    bigSprite: 3614
     invHeight: 2
     invWidth: 1
     power: 1

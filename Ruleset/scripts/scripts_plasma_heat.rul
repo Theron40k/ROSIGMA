@@ -62,10 +62,12 @@ extended:
 
           reaction_weapon.getTag temp2 Tag.ITEM_HEAT_AMMO_SNAP_MULTIPLIER; #for weapons that fire more than one shot per snap
           # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | ITEM_HEAT_AMMO_SNAP_MULTIPLIER:" temp2;
-          limit_lower temp 1;
+          limit_lower temp2 1;
           mul temp2 reaction_count;
+          # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | reaction_count addition to previousAmmoCount:" temp2;
           add previousAmmoCount temp2;
           reaction_weapon.getTag temp Tag.ITEM_HEAT_AMMO_SPENT_FOR_INCREASE;
+          limit_lower temp 1;
           div previousAmmoCount temp;
           # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | final previousAmmoCount:" previousAmmoCount;
 
@@ -74,6 +76,7 @@ extended:
           if gt currentHeat maxHeat;
             # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | Aborting. Reaction Fire heat would exceed maxHeat. currentHeat:" currentHeat;
             # debug_log "ROSIGMA_rUR_plasma_heat | offset: 20 | Aborting. Reaction Fire heat would exceed maxHeat. maxHeat:" maxHeat;
+            # battle_game.flashMessage "STR_OVERHEATING_REACTION_NOTICE";
             return 0;
           end;
 
@@ -309,7 +312,7 @@ items:
 
         return;
 
-      accuracyMultiplier: |
+    accuracyMultiplier: |
         var int temp;
         var int previousAmmoCount;
         var int currentAmmoCount;
@@ -437,6 +440,7 @@ items:
       ITEM_AIMED_FLAT_POWER_BONUS_PERCENT: 50  # Maximal Shot Bonus
       ITEM_OVERHEAT_DAMAGE: 150  # average damage dealt directly to the wielder's HP if the weapon overheats
 
+
   - type: STR_PLASMA_RIFLE_SEQUANA
     refNode: *STR_OVERHEATING_PLASMA
     bigSprite: 358
@@ -516,6 +520,16 @@ items:
       ITEM_OVERHEAT_DAMAGE: 50
       ITEM_HEAT_SINK_COLOR: 15
 
+  - type: STR_TAU_ION_RIFLE_GV  # Ion Rifle
+    refNode: *STR_OVERHEATING_PLASMA
+    bigSprite: 350
+    tags:
+      ITEM_HEAT_MAX_LEVEL: 7
+      ITEM_HEAT_DISSIPATION_PER_TURN: 6  # much improved dissipation
+      ITEM_HEAT_AMMO_SPENT_FOR_INCREASE: 1
+      ITEM_AIMED_FLAT_POWER_BONUS_PERCENT: 50  # Maximal Shot Bonus
+      ITEM_HEAT_AMMO_SNAP_MULTIPLIER: 3
+      ITEM_OVERHEAT_DAMAGE: 50  # average damage dealt directly to the wielder's HP if the weapon overheats
 
 # items:
 #  - type: STR_RIFLE
@@ -527,6 +541,3 @@ items:
 #      return bonus;
 #      # debug_log "local accuracyMultiplierBonusStats";
 #      return 0;
-
-
-

@@ -3,6 +3,7 @@ manufacture:
     category: STR_ADVANCEMENT
     requires:
       - STR_UNLOCKED1
+      - STR_NOT_WORDBEARERS
     space: 0
     time: 500
     cost: 1000
@@ -666,6 +667,7 @@ manufacture:
     requires:
       - STR_TEC_BAYR
       - STR_MARINES_AND_DEATHWATCH
+      - STR_NOT_WORDBEARERS
     space: 0
     time: 800
     cost: 30000
@@ -702,6 +704,7 @@ manufacture:
     category: STR_PERSONAL_ARMOR
     requires:
       - STR_SIGNAL_ARMOR_RESEARCH
+      - STR_NOT_WORDBEARERS
     space: 0
     time: 800
     cost: 40000
@@ -814,6 +817,7 @@ manufacture:
       - STR_UFO_CONSTRUCTION
       - STR_NOT_GK
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
     space: 0
     time: 1200
     cost: 600000
@@ -830,6 +834,7 @@ manufacture:
       - STR_UFO_CONSTRUCTION
       - STR_NOT_GK
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
     space: 0
     time: 1200
     cost: 700000
@@ -846,6 +851,7 @@ manufacture:
       - STR_UFO_CONSTRUCTION
       - STR_NOT_GK
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
     space: 0
     time: 1200
     cost: 600000
@@ -864,6 +870,7 @@ manufacture:
       - STR_NOT_GK
       - STR_CHAPTER_PURITY
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
     space: 0
     time: 1200
     cost: 750000
@@ -1323,6 +1330,16 @@ manufacture:
       STR_ALIEN_ALLOYS: 10
       STR_UFO_CONSTRUCTION: 5
 
+  - name: STR_PISTOL_CLIP
+    category: STR_AMMUNITION
+    requires:
+      - STR_BOLTER_AMMO_PREREQ
+    space: 0
+    time: 80
+    cost: 2500
+    producedItems:
+      STR_PISTOL_CLIP: 10
+
   - name: STR_PISTOL_CLIP_EX
     category: STR_AMMUNITION
     requires:
@@ -1395,6 +1412,18 @@ manufacture:
     producedItems:
       STR_RHINO_NO_TT: 1
 
+  - name: STR_CRATED_LANDSPEEDER
+    category: STR_CRAFT
+    requires:
+      - STR_CRATED_LANDSPEEDER
+    space: 0
+    time: 100
+    cost: 1000
+    requiredItems:
+      STR_CRATED_LANDSPEEDER: 1
+    producedItems:
+      STR_SPEEDC: 1
+
   - delete: STR_ASSCANNON  # fixed craft weapons now
 
   - name: STR_PATCHMORAL  # tome nerfs
@@ -1441,3 +1470,18 @@ manufacture:
     requiredItems:
       STR_KILLPOINT_TOKEN: 2000
     requiresBaseFunc: [PSI]  # requires chapel now
+
+# re activate the old 40k crated drop pod free manufacture as recent 40k version disabled it
+
+  - name: STR_CRATED_DROPPODS
+    category: STR_CRAFT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_NOT_WORDBEARERS
+    space: 0
+    time: 100
+    cost: 1000
+    requiredItems:
+      STR_CRATED_DROPPODS: 1
+    producedItems:
+      STR_SKYRANGER: 1

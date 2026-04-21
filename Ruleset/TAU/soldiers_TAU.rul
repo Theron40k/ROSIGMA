@@ -32,8 +32,7 @@ soldiers:
   - &STR_FIREWARRIOR_GV
     type: STR_FIREWARRIOR_GV
     requires:
-      - STR_INFILTRATION_FIREBASE_GV
-    requiresBuyBaseFunc: [TAU]
+      - STR_TAU_PATHFINDERS_GV
     costBuy: 30000
     costSalary: 10000
     minStats:
@@ -87,6 +86,9 @@ soldiers:
       melee: 40
       mana: 0
     armor: STR_TAU_PATHFINDER_ARMOR_GV
+    armorForAvatar: STR_TAU_BREACHER_ARMOR_GV
+    avatarOffsetX: 68
+    avatarOffsetY: 35
     allowPiloting: false
     allowPromotion: true
     rankStrings:
@@ -97,13 +99,14 @@ soldiers:
     standHeight: 22
     kneelHeight: 14
     femaleFrequency: 50
+    moraleLossWhenKilled: 75    # sacrifices for the Greater Good
     dogfightExperience:
       bravery: 10
       reactions: 30
       firing: 25
     soldierNames:
       - delete
-      - Names/tau_firecaste.nam
+      - Names/tau_shasla.nam
     deathMale: [41, 42, 43]
     deathFemale: [44, 45, 46]
     value: 10
@@ -126,43 +129,66 @@ soldiers:
       psiSkill: 100
       melee: 100
       mana: 0
+    armorForAvatar: STR_TAU_BREACHER_LEADER_ARMOR_GV
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_1
+    soldierNames:
+      - delete
+      - Names/tau_shasui.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
   - &STR_SHASVRES_GV
     type: STR_FIREWARRIOR_SHASVRE_GV
-    refNode: *STR_FIREWARRIOR_GV
+    refNode: *STR_SHASUIS_GV
     armor: STR_TAU_PATHFINDER_LEADER_ARMOR_GV
     costBuy: 0
     rankStrings:
       - STR_FIREWARRIOR_GV_RANK_2
+    soldierNames:
+      - delete
+      - Names/tau_shasvre.nam
+    tags:
+      SOLDIER_IS_OFFICER: 1
+
+  - type: STR_FIREWARRIOR_SHASEL_GV
+    refNode: *STR_SHASVRES_GV
+    armor: STR_TAU_PATHFINDER_LEADER_ARMOR_GV
+    costBuy: 0
+    rankStrings:
+      - STR_FIREWARRIOR_GV_RANK_3
+    soldierNames:
+      - delete
+      - Names/tau_shasel.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
   - type: STR_FIREWARRIOR_FIREBLADE_GV
-    refNode: *STR_FIREWARRIOR_GV
+    refNode: *STR_SHASVRES_GV
     armor: STR_TAUFIREBLADE_ARMOR_GV
+    armorForAvatar: STR_TAUFIREBLADE_ARMOR_GV
     costBuy: 0
     rankStrings:
-      - STR_FIREWARRIOR_GV_RANK_3
+      - STR_FIREWARRIOR_GV_RANK_4
+    soldierNames:
+      - delete
+      - Names/tau_shasel.nam
     tags:
       SOLDIER_IS_OFFICER: 1
 
 
   - &STR_GUEVESA_SOLDIERS_GV
     type: STR_GUEVESALA_GV
-    costBuy: 20000
-    costSalary: 4000
+    costBuy: 18000
+    costSalary: 3000
     requires:
-      - STR_A_SECRET_PACT_GV
+      - STR_RECRUIT_GUEVESA_GV
     armor: STR_TAUGUEVESAFLAK_PC_ARMOR_GV
     rankStrings:
-      - STR_GUEVESA_GV_RANK_0
+      - STR_GUEVESA_RANK_0
     soldierNames:
       - delete
-      - Names/tau_guevesa.nam
+      - Names/tau_guevesala.nam
     flagOffset: 42
     minStats:
       tu: 40  # was 50
@@ -220,6 +246,9 @@ soldiers:
       firing: 25
     deathMale: [41, 42, 43]
     deathFemale: [44, 45, 46]
+    rankSprite: {mod: 40k, index: 1000}
+    rankBattleSprite: {mod: 40k, index: 1000}
+    rankTinySprite: {mod: 40k, index: 1000}
     allowPiloting: true
     allowPromotion: true
     standHeight: 22
@@ -228,14 +257,19 @@ soldiers:
     avatarOffsetX: 66
     avatarOffsetY: 42
     value: 10
+    moraleLossWhenKilled: 75    # sacrifices for the Greater Good
+
 
 
   - type: STR_GUEVESAUI_GV
     refNode: *STR_GUEVESA_SOLDIERS_GV
     costBuy: 0
-    armor: STR_TAUGUEVESACARAP_ARMOR
+    armor: STR_TAUGUEVESAFLAK_PC_ARMOR_GV
+    soldierNames:
+      - delete
+      - Names/tau_guevesaui.nam
     rankStrings:
-      - STR_GUEVESA_GV_RANK_1
+      - STR_GUEVESA_RANK_1
     flagOffset: 42
     minStats:  # raise as veterans are now created by the game
       tu: 50
@@ -294,10 +328,13 @@ soldiers:
 
   - type: STR_GUEVESAVRE_GV
     refNode: *STR_GUEVESA_SOLDIERS_GV
-    armor: STR_TAUGUEVESACARAP_ARMOR
+    armor: STR_TAUGUEVESAFLAK_PC_ARMOR_GV
     costBuy: 0
+    soldierNames:
+      - delete
+      - Names/tau_guevesavre.nam
     rankStrings:
-      - STR_GUEVESA_GV_RANK_2
+      - STR_GUEVESA_RANK_2
     statCaps:
       tu: 75
       stamina: 120
@@ -332,7 +369,7 @@ soldiers:
 #  - type: STR_GUEVESACULTIST_GV
 #    refNode: *STR_GUEVESA_SOLDIERS_GV
 #    requires:
-#      - STR_WATERCASTE_PROPAGANDA_GV
+#      - STR_GUEVESA_CLUSTER_GV
 #    costBuy: 10000
 #    costSalary: 5000   # more expensive to maintain than Guard
 #    armor: STR_TAUGUEVESAROBE_ARMOR_GV
@@ -341,7 +378,7 @@ soldiers:
   - type: STR_MILITIA_GV
     flagOffset: 42
     requires:
-      - STR_GUEVESA_STRATEGY_MILITIA_GV
+      - STR_RECRUIT_MILITIA_GV
     costBuy: 12000
     costSalary: 4000
     # shrine-bandits = penitents but can train
@@ -402,22 +439,22 @@ soldiers:
       firing: 25
     soldierNames:
       - delete
-      - Names/guard.nam
-    moraleLossWhenKilled: 75  # people don't care about the grunts so much
-    allowPiloting: true
+      - Names/tau_militia.nam
+    moraleLossWhenKilled: 100     # more fragile morale
+    allowPiloting: false
     allowPromotion: true
     rankStrings:
-      - STR_GUARD_RANK_0
-      - STR_GUARD_RANK_1
-      - STR_GUARD_RANK_2
-      - STR_GUARD_RANK_3
+      - STR_MILITIA_GV_RANK_0
+      - STR_MILITIA_GV_RANK_1
+      - STR_MILITIA_GV_RANK_2
+      - STR_MILITIA_GV_RANK_3
     rankSprite: {mod: 40k, index: 1000}
     rankBattleSprite: {mod: 40k, index: 1000}
     rankTinySprite: {mod: 40k, index: 1000}
     standHeight: 22
     kneelHeight: 14
     femaleFrequency: 50
-    avatarOffsetX: 66
+    avatarOffsetX: 68
     avatarOffsetY: 42
     deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
@@ -427,7 +464,7 @@ soldiers:
   - type: STR_MILITIA_OFFICER_GV
     flagOffset: 42
     requires:
-      - STR_GUEVESA_STRATEGY_MILITIA_GV
+      - STR_TAU_GUEVESA_STRATEGY_GV
     # costBuy: 100000 # you will manuf this gamer eventually
     costSalary: 20000
     minStats:
@@ -494,16 +531,11 @@ soldiers:
     avatarOffsetY: 42
     soldierNames:
       - delete
-      - Names/officer.nam
+      - Names/tau_militia_officer.nam
     deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
     rankStrings:
-      - STR_OFFICER_RANK_0
-      - STR_OFFICER_RANK_1
-      - STR_OFFICER_RANK_2
-      - STR_OFFICER_RANK_3
-      - STR_OFFICER_RANK_4
-      # - STR_OFFICER_RANK_5
+      - STR_MILITIA_OFFICER_GV_RANK_0
     rankSprite: {mod: 40k, index: 1012}
     rankBattleSprite: {mod: 40k, index: 1012}
     rankTinySprite: {mod: 40k, index: 1012}
@@ -513,12 +545,12 @@ soldiers:
 
 ### copy guard beastman
 ### TODO: Add upgraded marin'vesa and officers
-### TODO: Add recolored beastman armor
-  - type: STR_BEASTMAN_CULTIST_GV
+  - &STR_MARINVESA_SOLDIERS
+    type: STR_MARINVESA_GV
     requires:
       - STR_BEASTMEN_CULTISTS_GV
-    costBuy: 25000  #
-    costSalary: 5000  # they eat more!
+    costBuy: 24000  #
+    costSalary: 4000  # they eat more!
     minStats:
       tu: 50  # was 40
       stamina: 50  # was 40
@@ -569,30 +601,196 @@ soldiers:
       psiSkill: 50
       melee: 85
       mana: 0
-    armor: STR_PENAL_ARMOR_BEASTMAN
+    armor: STR_TAUMARINVESAFLAK_PC_ARMOR_GV
     # dogfightExperience:
     #   bravery: 10
     #   reactions: 30
     #   firing: 25
     allowPiloting: false
     allowPromotion: true
-    standHeight: 21
+    standHeight: 22
     kneelHeight: 16
     femaleFrequency: 50
     avatarOffsetX: 66
     avatarOffsetY: 35
     soldierNames:
       - delete
-      - Names/beastman.nam
+      - Names/tau_beastman_militia.nam
     deathMale: [2680, 2681, 2682, 2683, 2684]
     deathFemale: [2686, 2687, 2688, 2689, 2690]
     rankStrings:
-      - STR_GUARD_RANK_0
-      - STR_GUARD_RANK_1
-      - STR_GUARD_RANK_2
-      - STR_GUARD_RANK_3
+      - STR_MARINVESA_RANK_0
     rankSprite: {mod: 40k, index: 1000}
     rankBattleSprite: {mod: 40k, index: 1000}
     rankTinySprite: {mod: 40k, index: 1000}
     value: 10
-    moraleLossWhenKilled: 100
+    moraleLossWhenKilled: 75      # sacrifices for the Greater Good
+
+### copy guard beastman
+### TODO: Add upgraded marin'vesa and officers
+  - type: STR_MARINVESAUI_GV
+    refNode: *STR_MARINVESA_SOLDIERS
+    requires:
+      - STR_BEASTMEN_CULTISTS_GV
+      - STR_A_SECRET_PACT_GV
+    costBuy: 0
+    costSalary: 10000  # they eat more! and get paid more!
+    minStats:
+      tu: 50  # was 40
+      stamina: 60  # was 40
+      health: 40  # was 25
+      bravery: 50  # was 20
+      reactions: 40  # was 30
+      firing: 45  # was 40
+      throwing: 45  # was 35
+      strength: 30  # was 10
+      psiStrength: 0
+      psiSkill: 0
+      melee: 65  # was 20
+      mana: 0
+    maxStats:
+      tu: 80  # was 60
+      stamina: 80  # was 70
+      health: 60  # was 40
+      bravery: 70  # was 60
+      reactions: 75  # was 60
+      firing: 60  # was 70
+      throwing: 70  # was 65
+      strength: 50  # was 25
+      psiStrength: 100
+      psiSkill: 6  # was 6
+      melee: 70  # was 60
+      mana: 0
+    statCaps:
+      tu: 110  # was 75
+      stamina: 110  # was 90
+      health: 80  # was 55
+      bravery: 100  # was 100
+      reactions: 80  # was 60
+      firing: 90  # was 100
+      throwing: 80
+      strength: 80  # was 65
+      psiStrength: 120
+      psiSkill: 75
+      melee: 95  # was 90
+      mana: 0
+    trainingStatCaps:
+      tu: 90
+      stamina: 90
+      health: 70
+      firing: 60
+      throwing: 60
+      strength: 65
+      psiStrength: 120
+      psiSkill: 75
+      melee: 85
+      mana: 0
+    armor: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+    # dogfightExperience:
+    #   bravery: 10
+    #   reactions: 30
+    #   firing: 25
+    allowPiloting: false
+    allowPromotion: false
+    standHeight: 22
+    kneelHeight: 16
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 35
+    soldierNames:
+      - delete
+      - Names/tau_beastman_militia.nam
+    deathMale: [2680, 2681, 2682, 2683, 2684]
+    deathFemale: [2686, 2687, 2688, 2689, 2690]
+    rankStrings:
+      - STR_MARINVESA_RANK_1
+    rankSprite: {mod: 40k, index: 1000}
+    rankBattleSprite: {mod: 40k, index: 1000}
+    rankTinySprite: {mod: 40k, index: 1000}
+    value: 10
+    moraleLossWhenKilled: 75      # sacrifices for the Greater Good
+
+
+### copy guard beastman
+### TODO: Add upgraded marin'vesa and officers
+  - type: STR_MARINVESAVRE_GV
+    refNode: *STR_MARINVESA_SOLDIERS
+    requires:
+      - STR_BEASTMEN_CULTISTS_GV
+      - STR_A_SECRET_PACT_GV
+    costBuy: 0
+    costSalary: 10000  # they eat more! and get paid more!
+    minStats:
+      tu: 60  # was 40
+      stamina: 70  # was 40
+      health: 50  # was 25
+      bravery: 60  # was 20
+      reactions: 50  # was 30
+      firing: 55  # was 40
+      throwing: 55  # was 35
+      strength: 40  # was 10
+      psiStrength: 0
+      psiSkill: 0
+      melee: 65  # was 20
+      mana: 0
+    maxStats:
+      tu: 90  # was 60
+      stamina: 90  # was 70
+      health: 70  # was 40
+      bravery: 80  # was 60
+      reactions: 85  # was 60
+      firing: 70  # was 70
+      throwing: 80  # was 65
+      strength: 60  # was 25
+      psiStrength: 120
+      psiSkill: 6  # was 6
+      melee: 80  # was 60
+      mana: 0
+    statCaps:
+      tu: 120  # was 75
+      stamina: 120  # was 90
+      health: 90  # was 55
+      bravery: 110  # was 100
+      reactions: 90  # was 60
+      firing: 100  # was 100
+      throwing: 90
+      strength: 80  # was 65
+      psiStrength: 120
+      psiSkill: 75
+      melee: 95  # was 90
+      mana: 0
+    trainingStatCaps:
+      tu: 90
+      stamina: 90
+      health: 70
+      firing: 60
+      throwing: 60
+      strength: 65
+      psiStrength: 120
+      psiSkill: 75
+      melee: 85
+      mana: 0
+    armor: STR_TAUMARINVESACARAP_PC_ARMOR_GV
+    # dogfightExperience:
+    #   bravery: 10
+    #   reactions: 30
+    #   firing: 25
+    allowPiloting: false
+    allowPromotion: false
+    standHeight: 22
+    kneelHeight: 16
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 35
+    soldierNames:
+      - delete
+      - Names/tau_beastman_militia.nam
+    deathMale: [2680, 2681, 2682, 2683, 2684]
+    deathFemale: [2686, 2687, 2688, 2689, 2690]
+    rankStrings:
+      - STR_MARINVESA_RANK_2
+    rankSprite: {mod: 40k, index: 1000}
+    rankBattleSprite: {mod: 40k, index: 1000}
+    rankTinySprite: {mod: 40k, index: 1000}
+    value: 10
+    moraleLossWhenKilled: 75      # sacrifices for the Greater Good

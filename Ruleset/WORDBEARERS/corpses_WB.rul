@@ -477,7 +477,7 @@ items:
 
   - type: STR_WORDBEARER_PLAYER_POSS1CORPSE
     size: 3
-    recover: false
+    recover: true
     weight: 50
     bigSprite: 3064
     floorSprite: 3066
@@ -527,3 +527,30 @@ items:
     invHeight: 3
     armor: 40
     battleType: 11
+
+  - type: STR_WBDAEMONS_CORPSE
+    recover: false
+    weight: 40
+    bigSprite: {mod: 40k, index: 51}
+    floorSprite: {mod: 40k, index: 47}
+    invWidth: 2
+    invHeight: 3
+    battleType: 11
+    armor: 40
+
+  - type: STR_WORDBEARER_EXECUTIONERPLAYER_CORPSE
+    recover: true
+    weight: 50
+    bigSprite: 3869
+    floorSprite: 3871
+    invWidth: 2
+    invHeight: 3
+    armor: 10
+    battleType: 11
+    power: 30
+    damageType: 3
+    damageAlter:
+      FixRadius: 1
+    spawnUnit: STR_WORDBEARER_POSSESSEDLV2
+    spawnUnitChance: 70
+    spawnUnitFaction: 2

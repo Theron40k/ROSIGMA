@@ -633,11 +633,14 @@ items:
     attraction: 1
     listOrder: 10715
 
+### Kept around to avoid breaking saves where it exists
+### Remove on future major patch
   - type: STR_GENERIC_HEAVY_STUBBER
     categories: [STR_CAT_AUTO]
     requiresBuy:
-      - STR_LASER_WEAPONS
-      - STR_IMPERIAL_WEAPONS
+      - STR_GENERALLOCK
+      # - STR_LASER_WEAPONS
+      # - STR_IMPERIAL_WEAPONS
     size: 0.3
     dropoff: 5
     costBuy: 6000

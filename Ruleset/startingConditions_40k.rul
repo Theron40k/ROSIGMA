@@ -54,10 +54,23 @@
     allowedCraft:
       - STR_VALKYRIE_CHAOS
       - STR_WBDROPPODS
+      - STR_WBDROPPODSUPGRADE
+
+  - type: STR_VALKYRIE_ONLY
+    allowedCraft:
+      - STR_VALKYRIE
+      - STR_VALKYRIE_CHAOS
+      - STR_WBDROPPODS
 
   - type: STR_RIGCITY_NOMASSIVECRAFT
     forbiddenCraft:
       - STR_CHAOS_MOBILEFORT
+
+  - type: STR_DEEPSPACEWB
+    allowedCraft:
+      - STR_WBTHUNDERHAWK
+      - STR_WBDROPPODS
+      - STR_WBDEMONHOST
 
 enviroEffects:
   - type: STR_HANGAR_ENVIRO     # HANGAR

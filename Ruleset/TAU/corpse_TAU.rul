@@ -2,10 +2,10 @@ items:
 
   - &STR_TAU_PCCORPSE_TEMPLATE
     type: STR_TAUFIREWARRIOR_PCCORPSE
-    recover: true
+    recover: false
     weight: 40
-    bigSprite: 3136
-    floorSprite: 3137
+    bigSprite: 3900
+    floorSprite: 3901
     invWidth: 2
     invHeight: 3
     armor: 60
@@ -13,65 +13,97 @@ items:
 
   - type: STR_TAUFIREWARRIORPATHFINDER_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3173
-    floorSprite: 3174
+    bigSprite: 3900  # temporary
+    floorSprite: 3901
 
   - type: STR_TAUDRONE_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3138
-    floorSprite: 3139
+    bigSprite: 3902
+    floorSprite: 3903
     invWidth: 2 #2x2?
     invHeight: 3
 
   - type: STR_TAUFIREWARRIORLEADER_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3136
-    floorSprite: 3137
+    bigSprite: 3900
+    floorSprite: 3901
 
   - type: STR_TAUFIREWARRIORCAPTAIN_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3165
-    floorSprite: 3166
+    bigSprite: 3904
+    floorSprite: 3905
 
+  # split this into flak and carapace perhaps
   - type: STR_TAUGUEVESA_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
     weight: 30
     armor: 40
-    bigSprite: 3167
-    floorSprite: 3168
+    bigSprite: 3908
+    floorSprite: 3909
 
-  - type: STR_PC_CLOAKED_WOMAN_ORANGE_CORPSE
-    recover: true
-    battleType: 11
-    weight: 30
-    armor: 20
-    invWidth: 2
-    invHeight: 3
-    bigSprite: 2711
-    floorSprite: 2711
-
-  - type: STR_XV25_STEALTH_SUIT_PCCORPSE
+  - type: STR_TAUMILITIA_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3136
-    floorSprite: 3137
+    weight: 30
+    armor: 40
+    bigSprite: 3906
+    floorSprite: 3907
+
+  - type: STR_TAUMARINVESA_PCCORPSE
+    refNode: *STR_TAU_PCCORPSE_TEMPLATE
+    weight: 30
+    armor: 40
+    bigSprite: 3910
+    floorSprite: 3910
 
   - type: STR_XV26_STEALTH_SUIT_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3136
-    floorSprite: 3137
+    bigSprite: 3900
+    floorSprite: 3901
 
-  - type: STR_STARSCYTHE_CRISIS_SUIT_BC2X_PCCORPSE
+  - type: STR_CRISIS_SUIT_PCCORPSE
     refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3136
-    floorSprite: 3137
+    bigSprite: 3900
+    floorSprite: 3901
 
-  - type: STR_STARSCYTHE_CRISIS_SUIT_BCFL_PCCORPSE
-    refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3136
-    floorSprite: 3137
+  - type: STR_GVTRUCK_SMALL_TURRET_CORPSE
+    floorSprite: 3911
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
 
-  - type: STR_STARSCYTHE_CRISIS_SUIT_FL2X_PCCORPSE
-    refNode: *STR_TAU_PCCORPSE_TEMPLATE
-    bigSprite: 3136
-    floorSprite: 3137
+  - type: STR_REDEMPTIONIST_CORPSE
+    battleType: 11
+    size: 0.4
+    costSell: 5000
+    weight: 20
+    bigSprite: {mod: 40k, index: 327}
+    floorSprite: {mod: 40k, index: 189}
+    invWidth: 2
+    invHeight: 3
+    recoveryPoints: 5
+    armor: 60
+    recover: true
 
+  - type: STR_REDEEMED_CORPSE
+    battleType: 11
+    size: 0.4
+    weight: 20
+    bigSprite: {mod: 40k, index: 213}
+    floorSprite: {mod: 40k, index: 101}
+    invWidth: 2
+    invHeight: 3
+    recoveryPoints: 10
+    armor: 60
+    recover: true
+
+  - type: STR_TAUDRONE_AICORPSEGV
+    recover: false
+    weight: 40
+    bigSprite: 3138
+    floorSprite: 3139
+    invWidth: 2
+    invHeight: 3
+    armor: 60
+    battleType: 11

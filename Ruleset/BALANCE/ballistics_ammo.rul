@@ -23,6 +23,7 @@ items:
       ToEnergy: 0.3
       ToWound: 0.2
       RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
     power: 60
     damageType: 1
     hitAnimation:
@@ -69,6 +70,7 @@ items:
       ToHealth: 0.9  # armor piercing; good penetration, much less stopping power
       ToStun: 0.3
       ToEnergy: 0.1
+      RandomType: 2 # 50-150 spread. No weak hits
     power: 60
     damageType: 1
 
@@ -84,20 +86,47 @@ items:
       ToEnergy: 0.3
       ToWound: 0.2
       RandomWound: false
+      RandomType: 8 # 50-200 spread. No weak hits
     power: 75
     damageType: 1
 
-  - type: STR_LIGHT_BOLTPISTOL_AMMO  # done
-    refNode: *STR_BOLTER_AMMO
+  - &STR_LIGHT_BOLTER_AMMO
+    type: STR_LIGHT_BOLTPISTOL_AMMO
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.07
+      ArmorEffectiveness: 0.93
+      ToArmor: 0.12
+      ToHealth: 1.08
+      ToStun: 0.4
+      ToEnergy: 0.25
+      ToWound: 0.15
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
     costSell: 75
     power: 55
+    damageType: 1
+    hitAnimation:
+      mod: 40k
+      index: 120
+    explosionSpeed: 3
 
   - type: STR_LIGHT_BOLTPISTOL_AMMO_MC  # done
     refNode: *STR_BOLTER_AMMO_MC
-    power: 75
+    power: 70
 
-  - type: STR_LIGHT_BOLTPISTOL_AMMO_AP  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+  - &STR_LIGHT_BOLTER_AMMO_KRAKEN
+    type: STR_LIGHT_BOLTPISTOL_AMMO_AP  # done
+    refNode: *STR_LIGHT_BOLTER_AMMO
+    requiresBuy:
+      - STR_BOLTER_AMMO_PREREQ
+    damageAlter:  # DA BOLTER AP+
+      ArmorEffectiveness: 0.5
+      ToArmorPre: 0.01
+      ToArmor: 0.04
+      ToHealth: 0.85  # armor piercing; good penetration, much less stopping power
+      ToStun: 0.15 #0.3 for standard
+      ToEnergy: 0.1
+      RandomType: 2 # 50-150 spread. No weak hits
     power: 55
 
   - type: STR_LIGHT_BOLTPISTOL_AMMO_EX  # done
@@ -130,22 +159,34 @@ items:
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_DRUM
     refNode: *STR_BOLTER_AMMO
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 65
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_MC_DRUM
     refNode: *STR_BOLTER_AMMO_MC
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 85
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_AP_DRUM
     refNode: *STR_BOLTER_AMMO_KRAKEN
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 65
 
   - type: STR_PRIMARIS_HEAVY_BOLT_RIFLE_EX_DRUM
     refNode: *STR_BOLTER_AMMO_KRAKEN
+    requiresBuy:
+      - STR_PRIMARIS
+      - STR_BOLTER_AMMO_PREREQ
     power: 65
 
   - type: STR_LIGHT_BOLTER_AMMO  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
     bigSprite: 3230
     tags:
@@ -168,7 +209,7 @@ items:
       ITEM_AMMO_COLOR: 15
 
   - type: STR_LIGHT_BOLTER_AMMO_PEN  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_EX  # done
@@ -176,23 +217,23 @@ items:
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_SHORT  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_SHORT_PEN  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_BELT  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
 
   - type: STR_LIGHT_BOLTER_AMMO_BELT_PEN  # done
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     power: 60
 
   - type: STR_AUTOGUN_CLIP_DRUM_KRAKEN
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     requiresBuy:
       - STR_ASSASSINORUM
     costBuy: 8000
@@ -262,7 +303,7 @@ items:
     damageType: 1
     power: 70
     damageAlter:  # DA BOLTER  DOUBLE SHOT
-      RandomType: 1
+      RandomType: 2 #50-150%
       ToArmorPre: 0.1
       ArmorEffectiveness: 0.9
       ToArmor: 0.15
@@ -283,7 +324,7 @@ items:
     damageAlter:
       ToArmorPre: 0.2
       ArmorEffectiveness: 0.8
-      RandomType: 1
+      RandomType: 2 #50-150%
       ToArmor: 0.15
       ToHealth: 1.1
       ToStun: 0.5  # was 1.0
@@ -299,6 +340,7 @@ items:
     damageAlter:
       ToArmorPre: 0.2
       ArmorEffectiveness: 0.8
+      RandomType: 7 #50-200%
 
   - type: STR_STORMBOLTER_CLIP  # done  # Adeptas
     refNode: *STR_STORMBOLTER_AMMO
@@ -306,11 +348,11 @@ items:
     clipSize: 20
 
   - type: STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO  # done
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 40
 
   - type: STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     damageAlter:  # DA BOLTER
       ToArmorPre: 0.05
       ArmorEffectiveness: 1.1
@@ -323,7 +365,7 @@ items:
     shotgunPellets: 5
 
   - type: STR_LIGHT_BOLTER_AMMO_AP  # Elohim ammo
-    refNode: *STR_BOLTER_AMMO_KRAKEN
+    refNode: *STR_LIGHT_BOLTER_AMMO_KRAKEN
     damageAlter:  # DA BOLTER
       ToArmorPre: 0.15
       ArmorEffectiveness: 0.7
@@ -334,16 +376,7 @@ items:
     power: 60  # was 70
 
   - type: STR_CANTUS_BOLTER_AMMO  # Ammo for the Cantus light bolter
-    refNode: *STR_BOLTER_AMMO
-    damageAlter:  # DA BOLTER LIGHT
-      ToArmorPre: 0.1
-      ArmorEffectiveness: 0.9
-      ToArmor: 0.15
-      ToHealth: 1.1
-      ToStun: 0.5
-      ToEnergy: 0.3
-      ToWound: 0.2
-      RandomWound: false
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 48
     clipSize: 30
 
@@ -385,6 +418,9 @@ items:
     shotgunPellets: 6
 
   - type: STR_REDEEMER_SHELLS_KRAK  #                        10610
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ADEPTAS]
+    requiresBuy:
+      - STR_ADEPTAS
     shotgunBehavior: 1   # *** makes the shotgun a bit more useful at range bit tightening the spread ***
     shotgunSpread: 15  # fewer pellets, but less spread
     power: 40
@@ -400,6 +436,9 @@ items:
 
   - type: STR_REDEEMER_SHELLS_INC  #                       10612
     refNode: *STR_BOLTER_AMMO_INCENDIARY
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ADEPTAS]
+    requiresBuy:
+      - STR_ADEPTAS
     shotgunBehavior: 1   # *** makes the shotgun a bit more useful at range bit tightening the spread ***
     shotgunSpread: 25
     shotgunPellets: 6
@@ -413,6 +452,9 @@ items:
       FixRadius: 2
 
   - type: STR_REDEEMER_PENITENCE_SHELLS  #                        10613
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ADEPTAS]
+    requiresBuy:
+      - STR_ADEPTAS
     shotgunBehavior: 1   # *** makes the shotgun a bit more useful at range bit tightening the spread ***
     shotgunSpread: 25
     power: 40
@@ -452,13 +494,21 @@ items:
     clipSize: 32
 
   - type: STR_SHOTGUN_SHELLS_AP
+    requiresBuy: !remove
+      - STR_ARBITES
+    requiresBuyBaseFunc: [TRADE]
 
   - type: STR_SHOTGUN_SHELLS_MC
     refNode: *STR_SHOTGUN_AMMO_TEMPLATE
     power: 60
 
   - type: STR_SHOTGUN_SHELLS_INC
-    refNode: *STR_BOLTER_AMMO_INCENDIARY
+    # remove buy research reqs but require TRADE, similar to the drum
+    # requires MC shotgun to use
+    requiresBuy: !remove
+      - STR_ARBITES
+    requiresBuyBaseFunc: [TRADE]
+    refNode: *STR_SHOTGUN_AMMO_TEMPLATE
     shotgunBehavior: 1
     shotgunSpread: 25
     shotgunPellets: 6
@@ -539,6 +589,7 @@ items:
     power: 120
     damageType: 1
     damageAlter: #DA BOLTER
+      RandomType: 7  # 50-200%
       ToArmorPre: 0.05
       ArmorEffectiveness: 0.9
       ToArmor: 0.1
@@ -580,7 +631,7 @@ items:
     damageType: 3
     damageAlter:  # high explosive
       ToArmorPre: 0.02
-      RandomType: 6
+      RandomType: 6 #2xD100
       ArmorEffectiveness: 0.95  # concussive
       ToStun: 0.6  # concussive
       ToEnergy: 0.4  # concussive
@@ -598,6 +649,7 @@ items:
     floorSprite: 3042
     handSprite: 3530
     damageAlter: #DA BOLTER
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.02
       ArmorEffectiveness: 0.5
       ToArmor: 0.05
@@ -614,6 +666,7 @@ items:
     damageType: 1
     clipSize: 100
     damageAlter:  # between normal and mastercraft ammo
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.1
       ArmorEffectiveness: 0.85
       ToArmor: 0.1
@@ -662,6 +715,7 @@ items:
     floorSprite: 993
     handSprite: 3500
     damageAlter:
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.05
       ArmorEffectiveness: 0.5
       ToArmor: 0.05
@@ -822,7 +876,7 @@ items:
 
 ## Tzeentch inferno bolts
   - type: STR_TZ_LIGHT_BOLTER_AMMO_R  #          10460                      ToStun
-    refNode: *STR_BOLTER_AMMO
+    refNode: *STR_LIGHT_BOLTER_AMMO
     power: 60
     damageAlter:  # DA BOLTER TZZ
       RandomType: 1  # swingy random damage
@@ -856,6 +910,7 @@ items:
     power: 65
     refNode: *STR_BOLTER_AMMO
     damageAlter:  # Plague weapon
+      RandomType: 2 # 50-150%
       ToArmorPre: 0.4
       ToArmor: 0.1
       ToHealth: 0.7
@@ -864,6 +919,7 @@ items:
   - type: STR_PISTOL_CLIP_BLIGHT  #              10210                    ToStun
     refNode: *STR_BOLTER_AMMO
     damageAlter:  # DA BLIGHT
+      RandomType: 2 # 50-150%
       ToArmorPre: 0.4
       ToArmor: 0.1
       ToHealth: 0.7
@@ -875,6 +931,7 @@ items:
     hitAnimation: 1170
     power: 80
     damageAlter:  # DA BLIGHT
+      RandomType: 7 # 50-200%
       ToArmorPre: 0.4  # corrodes/melts away
       ToHealth: 0.6
       ToTime: 0.2

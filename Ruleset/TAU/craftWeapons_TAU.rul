@@ -1,0 +1,31 @@
+craftWeapons:
+  - type: STR_CRAFT_BURST_CANNON_GV_UC
+    sprite: 2
+    sound: 8
+    damage: 30
+    range: 25             # bad range
+    accuracy: 30
+    reloadCautious: 4
+    reloadStandard: 4
+    reloadAggressive: 4
+    ammoMax: 100          # tons of ammo
+    rearmRate: 100
+    launcher: STR_CRAFT_BURST_CANNON_GV
+    projectileType: 2
+    projectileSpeed: 8
+    bulletSaving: true
+
+  - type: STR_CRAFT_SEEKER_MISSILE_RACK_GV_UC
+    sprite: 0
+    sound: 5
+    damage: 80            # better damage than hunter-seekers
+    range: 40
+    accuracy: 75          # markerlight accuracy
+    reloadCautious: 64
+    reloadStandard: 48
+    reloadAggressive: 32
+    ammoMax: 6
+    launcher: STR_CRAFT_SEEKER_MISSILE_RACK_GV
+    clip: STR_CRAFT_SEEKER_MISSILE_GV
+    projectileType: 0
+    projectileSpeed: 8

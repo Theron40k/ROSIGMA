@@ -99,6 +99,86 @@ armors:
       - STR_COMBILAS
       - STR_FIXED_SONIC_CANNON
 
+  - type: STR_SLAANESH_LESSER_SPAWN_ARMOR
+    visibilityAtDay: 30
+    visibilityAtDark: 30
+    heatVision: 20
+    spriteSheet: LESSER_SLAANESH_SPAWN2_BS.PCK
+    spriteInv: SLAAN_LESSER_SPAWN_INV.SPK
+    allowInv: false
+    corpseBattle:
+      - STR_SLAANESH_LESSER_SPAWN_CORPSE
+    frontArmor: 20
+    sideArmor: 20
+    rearArmor: 20
+    underArmor: 40
+    #specialWeapon: STR_SLAANESH_LESSER_SPAWN_WEAPON
+    drawingRoutine: 8
+    constantAnimation: true
+    deathFrames: 3
+    damageModifier: #Flesh pulsating mass
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.3 #INC
+      - 0.5 #HE Resistance
+      - 0.8 #LAS
+      - 1.0 #PLASMA
+      - 0.8 #STUN
+      - 1.1 #MELEE
+      - 1.3 #ACID
+      - 0.0 #SMOKE
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+    builtInWeapons:
+      - STR_SLAANESH_LESSER_SPAWN_WEAPON
+
+  - type: STR_SLAANESH_MUTANT_ARMOR                                   # SLAANESHI MUTANT ARMOR
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      INFECTION_RESIST: 75
+      INTIMIDATION_RESISTANCE: 25
+      UNIT_SIZE: 100 # NORMAL
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+    visibilityAtDay: 35
+    visibilityAtDark: 20
+    heatVision: 0
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 3
+    meleeDodge:
+      reactions: 0.15
+    spriteSheet: SLAANESH_MUTANT_BS.PCK
+    spriteInv: SLAANESH_MUTANT_INV.SPK
+    corpseBattle:
+      - STR_SLAANESH_MUTANT_CORPSE #create new
+    frontArmor: 10
+    sideArmor: 5
+    rearArmor: 5
+    underArmor: 5
+    specialWeapon: AUX_SEDUCE_MEDIUM
+    damageModifier:  # MUTANT ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.3  # FLAMES
+      - 1.0  # HE
+      - 0.9  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE
+      - 1.4  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+
   - type: SLAANESH_SACRIFICE_M_ARMOR
     visibilityAtDay: 30
     visibilityAtDark: 15
@@ -478,6 +558,122 @@ armors:
       UNIT_TYPE_DECOY: 1
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
+
+  - type: STR_SLAANESH_CULTIST_BIGM_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 10
+    spriteSheet: SLAANESH_CULTIST_BIGM_BS.PCK
+    spriteInv: SLAANESH_CULTIST_BIGM_INV.SPK
+    corpseBattle:
+      - STR_SLAANESH_CULTIST_BIGM_CORPSE
+    meleeDodge:
+      reactions: 0.05
+    frontArmor: 20
+    sideArmor: 20
+    rearArmor: 15
+    underArmor: 20
+    drawingRoutine: 0
+    damageModifier:  # CULTIST ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.2  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE
+      - 1.4  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_SLAANESH_SHARDSPEAKER_ARMOR                        # SLAANESHI SHARDSPEAKER ARMOR
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 100 # NORMAL
+      INFECTION_RESIST: 80  # Sorceress
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 33 #33x100/66=50 shield
+      ARMOR_ENERGY_SHIELD_DECAY: 66
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+    visibilityAtDay: 35
+    visibilityAtDark: 20
+    heatVision: 10
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteSheet: SLAANESH_SHARDSPEAKER_BS.PCK
+    spriteInv: SLAANESH_SHARDSPEAKER_INV.SPK
+    corpseBattle:
+      - STR_SLAANESH_SHARDSPEAKER_CORPSE
+    frontArmor: 20
+    sideArmor: 15
+    rearArmor: 10
+    underArmor: 10
+    specialWeapon: AUX_SEDUCE
+    damageModifier:  # MUTANT ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.3  # FLAMES
+      - 1.0  # HE
+      - 0.9  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE
+      - 1.2  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+
+  - type: STR_SLAANESH_SHARDSPEAKER_COMMANDER_ARMOR                        # SLAANESHI SHARDSPEAKER COMMANDER ARMOR
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 100 # NORMAL
+      INFECTION_RESIST: 100  # Great Sorceress
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 66 #66x100/66=100 shield
+      ARMOR_ENERGY_SHIELD_DECAY: 66
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      DODGE_CHANCE: 30
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+    visibilityAtDay: 35
+    visibilityAtDark: 25
+    heatVision: 20
+    antiCamouflageAtDay: 8
+    antiCamouflageAtDark: 8
+    spriteSheet: SLAANESH_SHARDSPEAKER_COMMANDER_BS.PCK
+    spriteInv: SLAANESH_SHARDSPEAKER_COMMANDER_INV.SPK
+    corpseBattle:
+      - STR_SLAANESH_SHARDSPEAKER_COMMANDER_CORPSE
+    frontArmor: 30
+    sideArmor: 25
+    rearArmor: 15
+    underArmor: 15
+    specialWeapon: AUX_SEDUCE
+    damageModifier:  # MUTANT ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.3  # FLAMES
+      - 1.0  # HE
+      - 0.9  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE
+      - 1.2  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
 
   - type: STR_SLAANGOR_BULLGOR_ARMOR_RITUALIST   # SLAANESH BULLGOR RITUALIST
     visibilityAtDay: 40
@@ -1538,6 +1734,8 @@ armors:
   - type: STR_SLAANGOR_UNGOR_ARMORLIGHT                                  # SLAANESH REGULAR
     visibilityAtDay: 35
     visibilityAtDark: 20
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
     spriteSheet: SLAANUNGOR.PCK
     spriteInv: SlaanUngorInv.SPK
     allowInv: true
@@ -1571,8 +1769,6 @@ armors:
   - type: STR_SLAANGOR_BRAY_ARMORLIGHT                               # SLAANESH REGULAR
     visibilityAtDay: 30
     visibilityAtDark: 25
-    antiCamouflageAtDay: 5
-    antiCamouflageAtDark: 5
     spriteSheet: SLAANBRAY.PCK
     spriteInv: SLAANGORBRAYINV.SPK
     allowInv: true
@@ -1603,6 +1799,45 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_SLAANESH: 1
       UNIT_TYPE_MUTANT: 1
+
+  - type: STR_SLAANESH_CSM_CHAMPION_ARMOR         # SLAANESH INFRACTOR/FLAWLESS CHAMPION
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    heatVision: 30
+    antiCamouflageAtDay: 8
+    antiCamouflageAtDark: 8
+    meleeDodge:
+      reactions: 0.2
+    spriteSheet: SLAANESH_CSM_CHAMPION_BS.PCK
+    spriteInv: SLAANESH_CSM_CHAMPION_INV.SPK
+    customArmorPreviewIndex: 65 #replace
+    corpseBattle:
+      - STR_SLAANESH_CSM_CHAMPION_CORPSE #create new
+    frontArmor: 90 #-30 front armor, exposed belly
+    sideArmor: 100 #-10
+    rearArmor: 80
+    underArmor: 110
+    drawingRoutine: 0
+    damageModifier:  # CHAOS ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.9  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 0.9  # MELEE #melee champ
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   - type: STR_SLAANESH_ANOINTED_ARMOR
     visibilityAtDay: 40

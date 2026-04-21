@@ -33,9 +33,9 @@ armors:
       melee: 0
     builtInWeapons:
       - STR_CHAOSMARKED_CLAW_TOKEN
-    frontArmor: 80
-    sideArmor: 60
-    rearArmor: 40
+    frontArmor: 75
+    sideArmor: 55
+    rearArmor: 45
     underArmor: 60
     damageModifier:  # SCOUT ARMOR
       - 1.0  # none
@@ -55,6 +55,8 @@ armors:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
       - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDEREBUS
+      - STR_WBSOLDIER_WARPEDKOR
     loftempsSet: [2]
     tags:
       UNIT_SIZE: 150 # LARGE
@@ -91,14 +93,14 @@ armors:
       reactions: 10
       firing: 15
       throwing: 10
-      strength: 10
+      strength: 0
       psiStrength: 0
       psiSkill: 0
       melee: 10
-    frontArmor: 115
-    sideArmor: 115
-    rearArmor: 85
-    underArmor: 115
+    frontArmor: 110
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 110
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -157,14 +159,14 @@ armors:
       reactions: 20
       firing: 30
       throwing: 10
-      strength: 40
+      strength: 20
       psiStrength: 0
       psiSkill: 0
       melee: 0
-    frontArmor: 130
-    sideArmor: 115
-    rearArmor: 85
-    underArmor: 115
+    frontArmor: 125
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 110
     units:
       - STR_WBSOLDIER
       - STR_WBSOLDIER_TERMINATOR
@@ -183,7 +185,7 @@ armors:
     customArmorPreviewIndex: 970
     spriteSheet: WORDBEARERraptorbattle.PCK
     storeItem: STR_WBRAPTOR_ARMORPLAYER
-    specialWeapon: STR_JUMP_GAUNTLET_PLUS  # jump flight
+    specialWeapon: STR_WB_FLYING_TOKEN
     stats:
       tu: 25
       stamina: 20
@@ -192,14 +194,14 @@ armors:
       reactions: 20
       firing: 0
       throwing: 0
-      strength: 10
+      strength: 0
       psiStrength: 0
       psiSkill: 0
       melee: 25
-    frontArmor: 120
-    sideArmor: 100
-    rearArmor: 80
-    underArmor: 100
+    frontArmor: 115
+    sideArmor: 95
+    rearArmor: 75
+    underArmor: 95
     movementType: 0
     drawingRoutine: 0
     moveCost:
@@ -208,7 +210,7 @@ armors:
       - INV_NULL_3X3
     loftempsSet: [3]
     units:
-      - STR_WBSOLDIER
+      - STR_WBSOLDIER_WARPEDKOR
     tags:
       INFECTION_RESIST: 50
       INTIMIDATION_RESISTANCE: 30
@@ -242,14 +244,14 @@ armors:
       reactions: 20
       firing: 25
       throwing: 10
-      strength: 30
+      strength: 10
       psiStrength: 0
       psiSkill: 0
       melee: 20
-    frontArmor: 130
-    sideArmor: 130
-    rearArmor: 90
-    underArmor: 130
+    frontArmor: 125
+    sideArmor: 125
+    rearArmor: 85
+    underArmor: 125
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.9  # AP was 1.0
@@ -299,10 +301,10 @@ armors:
       psiStrength: 0
       psiSkill: 0
       melee: 10
-    frontArmor: 110
-    sideArmor: 105
-    rearArmor: 95
-    underArmor: 100
+    frontArmor: 105
+    sideArmor: 100
+    rearArmor: 90
+    underArmor: 95
     builtInWeapons:
       - INV_NULL_3X3
       - AUX_MEDI_KIT
@@ -340,14 +342,14 @@ armors:
       reactions: -10
       firing: 20
       throwing: 30
-      strength: 100
+      strength: 80
       psiStrength: 10
       psiSkill: 0
       melee: 10
-    frontArmor: 140
-    sideArmor: 130
-    rearArmor: 100
-    underArmor: 150
+    frontArmor: 135
+    sideArmor: 125
+    rearArmor: 95
+    underArmor: 145
     damageModifier: #TERMINATOR ARMOR
       - 1.0 #none
       - 0.8 #AP
@@ -377,7 +379,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       # UNIT_POSSESSION_TYPE: 3
       # UNIT_POSSESSION_MANIFESTATION_CHANCE: 4
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 50 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 25
       INFECTION_RESIST: 70 #blessed by the dark gods
       INTIMIDATION_RESISTANCE: 70 #zealous convictions
@@ -412,10 +414,10 @@ armors:
       psiStrength: 20
       psiSkill: 20
       melee: 20
-    frontArmor: 150
-    sideArmor: 150
-    rearArmor: 110
-    underArmor: 150
+    frontArmor: 145
+    sideArmor: 145
+    rearArmor: 105
+    underArmor: 145
     damageModifier:  # TERMINATOR ARMOR
       - 1.0  # none
       - 0.6  # AP
@@ -433,7 +435,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 200. Regenerates from 75 (at 0) to 0 (at 200) / Turn; artificer shields
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50 # / Turn; artificer shields
       ARMOR_ENERGY_SHIELD_DECAY: 25
       # UNIT_POSSESSION_TYPE: 3
       # UNIT_POSSESSION_MANIFESTATION_CHANCE: 4
@@ -464,14 +466,14 @@ armors:
       reactions: 0
       firing: 0
       throwing: -10
-      strength: 50
+      strength: 30
       psiStrength: 10
       psiSkill: 10
       melee: 10
-    frontArmor: 140
-    sideArmor: 140
-    rearArmor: 100
-    underArmor: 140
+    frontArmor: 135
+    sideArmor: 135
+    rearArmor: 95
+    underArmor: 135
     damageModifier: #TERMINATOR ARMOR
       - 1.0 #none
       - 0.8 #AP
@@ -521,14 +523,14 @@ armors:
       reactions: 10  # tartaros more agile
       firing: 30
       throwing: 40
-      strength: 90  # tartaros less
+      strength: 80  # tartaros less
       psiStrength: 20
       psiSkill: 20
       melee: 30  # tartaros more agile
-    frontArmor: 160 # tartaros more
-    sideArmor: 150
-    rearArmor: 100  # tartaros less
-    underArmor: 150
+    frontArmor: 155 # tartaros more
+    sideArmor: 145
+    rearArmor: 95  # tartaros less
+    underArmor: 145
     damageModifier:  # TERMINATOR ARMOR
       - 1.0  # none
       - 0.6  # AP
@@ -546,7 +548,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 200. Regenerates from 75 (at 0) to 0 (at 200) / Turn; artificer shields
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 30
       ARMOR_ENERGY_SHIELD_DECAY: 25
       # UNIT_POSSESSION_TYPE: 3
       # UNIT_POSSESSION_MANIFESTATION_CHANCE: 4
@@ -583,10 +585,10 @@ armors:
       psiStrength: 20
       psiSkill: 10
       melee: 0
-    frontArmor: 115
-    sideArmor: 105
-    rearArmor: 80
-    underArmor: 105
+    frontArmor: 110
+    sideArmor: 100
+    rearArmor: 75
+    underArmor: 100
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.9  # AP was 1.0
@@ -643,10 +645,10 @@ armors:
       psiStrength: 40
       psiSkill: 20
       melee: 5
-    frontArmor: 125
-    sideArmor: 110
-    rearArmor: 100
-    underArmor: 110
+    frontArmor: 120
+    sideArmor: 105
+    rearArmor: 95
+    underArmor: 105
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.8  # AP
@@ -662,9 +664,9 @@ armors:
       - 0.9  # MELTA
     builtInWeapons:
       - STR_CHAOSMARKED_CLAW_TOKEN
-      - STR_CHAOS_CROZIUS_SORC_PLAYER
+      - STR_CHAOS_CROZIUS_ARCHDIAB_PLAYER
       - STR_CHAOS_CROZIUS_POWER2
-      - STR_BRIMSTONE_HORROR_SPAWNER_GRENADE_PLAYER
+      - STR_WARPFIRE_IMPLOSION
       - STR_BLOODLETTERSPAWNER_GRENADE_PLAYER
     units:
       - STR_WBSOLDIER_ACOLYTE
@@ -742,14 +744,14 @@ armors:
       reactions: 40
       firing: 20
       throwing: 0
-      strength: 30
+      strength: 20
       psiStrength: 60
       psiSkill: 30
       melee: 25
-    frontArmor: 135
-    sideArmor: 120
-    rearArmor: 110
-    underArmor: 120
+    frontArmor: 130
+    sideArmor: 115
+    rearArmor: 105
+    underArmor: 115
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.8  # AP
@@ -766,8 +768,8 @@ armors:
     builtInWeapons:
       - STR_CHAOSMARKED_CLAW_TOKEN
       - STR_CHAOS_CROZIUS_APOSTLE_PLAYER
-      - STR_CHAOS_CROZIUS_POWER2
-      - STR_BRIMSTONE_HORROR_SPAWNER_GRENADE_PLAYER
+      - STR_CHAOS_CROZIUS_POWER3
+      - STR_WARPFIRE_RIFT
       - STR_BLOODLETTERSPAWNER_BIGGRENADE_PLAYER
     units:
       - STR_WBSOLDIER_CHAOSMARKED
@@ -852,10 +854,10 @@ armors:
       psiStrength: 10
       psiSkill: 10
       melee: 20
-    frontArmor: 130
-    sideArmor: 105
-    rearArmor: 80
-    underArmor: 105
+    frontArmor: 125
+    sideArmor: 100
+    rearArmor: 75
+    underArmor: 100
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.8  # AP was 1.0
@@ -900,22 +902,22 @@ armors:
       - STR_WORDBEARER_GALV_POSSCORPSE
     builtInWeapons:
       - INV_NULL_3X3
-    frontArmor: 120
-    sideArmor: 110
-    rearArmor: 80
-    underArmor: 120
+    frontArmor: 115
+    sideArmor: 105
+    rearArmor: 75
+    underArmor: 115
     damageModifier:  # CHAOS ARMOR
       - 1.0  # none
       - 0.8  # AP
       - 0.6  # FLAMES
       - 0.7  # HE
-      - 1.0  # LASCANON
+      - 1.1  # LASCANON
       - 1.0  # PLASMA
       - 0.9  # STUN
       - 0.9  # MELEE Weakness
       - 0.5  # ACID; Daemons resistant to poison
       - 0.0  # SMOKE
-      - 1.0  # IMPACT
+      - 0.2  # IMPACT
       - 1.2  # MELTA
     loftempsSet: [3]
     allowsRunning: false  # NPC limits for BAI
@@ -949,22 +951,22 @@ armors:
       - STR_WORDBEARER_GALVELITE_POSSCORPSE
     builtInWeapons:
       - INV_NULL_3X3
-    frontArmor: 130
-    sideArmor: 120
-    rearArmor: 90
-    underArmor: 130
+    frontArmor: 125
+    sideArmor: 115
+    rearArmor: 85
+    underArmor: 125
     damageModifier:  # CHAOS ARMOR
       - 1.0  # none
       - 0.7  # AP
       - 0.6  # FLAMES
       - 0.7  # HE
-      - 1.0  # LASCANON
+      - 1.1  # LASCANON
       - 1.0  # PLASMA
       - 0.9  # STUN
       - 0.8  # MELEE Weakness
       - 0.5  # ACID; Daemons innately resist acid/poison
       - 0.0  # SMOKE
-      - 1.0  # IMPACT
+      - 0.2  # IMPACT
       - 1.2  # MELTA
     loftempsSet: [4]
     allowsRunning: false  # NPC limits for BAI
@@ -998,10 +1000,10 @@ armors:
     spriteInv: WORDBEARERdemonlordinvent.SPK
     corpseBattle:
       - STR_WORDBEARER_DEMONLORD_CORPSE
-    frontArmor: 120 #-40 from shredded terminator armor across the board; has much higher HP in compensation
-    sideArmor: 110
-    rearArmor: 70
-    underArmor: 120
+    frontArmor: 115 #-40 from shredded terminator armor across the board; has much higher HP in compensation
+    sideArmor: 105
+    rearArmor: 65
+    underArmor: 115
     specialWeapon: STR_POWERFIST
     builtInWeapons:
       - INV_NULL_1X3
@@ -1010,7 +1012,7 @@ armors:
       - 0.7  # AP;
       - 0.1  # FLAMES; Word Bearer Resistance -0.1
       - 0.6  # HE
-      - 0.8  # LASCANON
+      - 1.0  # LASCANON
       - 0.9  # PLASMA
       - 0.7  # STUN; Word Bearer Resistance -0.1
       - 0.7  # MELEE; Word Bearer Resistance -0.1
@@ -1036,6 +1038,7 @@ armors:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
       ARMOR_REINFORCEMENT_TU_PERCENT: 75
+      FLIGHT_DODGE_CHANCE: 20
 
   # word bearer cultist
 
@@ -1094,10 +1097,10 @@ armors:
       - WBDREAD_CORPSE4
     selfDestructItem: WBDREAD_CORPSE1
     specab: 1
-    frontArmor: 230
-    sideArmor: 230
-    rearArmor: 180
-    underArmor: 240
+    frontArmor: 225
+    sideArmor: 225
+    rearArmor: 175
+    underArmor: 235
     size: 2
     moveSound: {mod: 40k, index: 700}
     #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
@@ -1153,10 +1156,10 @@ armors:
       - WBDREAD_CORPSE2
       - WBDREAD_CORPSE3
       - WBDREAD_CORPSE4
-    frontArmor: 240
-    sideArmor: 230
-    rearArmor: 180
-    underArmor: 240
+    frontArmor: 235
+    sideArmor: 225
+    rearArmor: 175
+    underArmor: 235
     size: 2
     moveSound: {mod: 40k, index: 700}
     #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
@@ -1214,14 +1217,14 @@ armors:
       reactions: 25
       firing: 25
       throwing: 10
-      strength: 35
+      strength: 10
       psiStrength: 10
       psiSkill: 10
       melee: 25
-    frontArmor: 150
-    sideArmor: 140
-    rearArmor: 100
-    underArmor: 140
+    frontArmor: 145
+    sideArmor: 135
+    rearArmor: 95
+    underArmor: 135
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.7  # AP was 0.8
@@ -1271,10 +1274,10 @@ armors:
       bravery: 40
       firing: 35
       melee: 30
-    frontArmor: 180
-    sideArmor: 170
-    rearArmor: 170
-    underArmor: 180
+    frontArmor: 175
+    sideArmor: 165
+    rearArmor: 165
+    underArmor: 175
     allowsKneeling: false
     corpseBattle:
       - STR_WORDBEARERcataphract_CORPSE_GEO
@@ -1327,10 +1330,10 @@ armors:
       bravery: 30
       firing: 35
       melee: 25
-    frontArmor: 200
-    sideArmor: 190
-    rearArmor: 160
-    underArmor: 200
+    frontArmor: 195
+    sideArmor: 185
+    rearArmor: 155
+    underArmor: 195
     allowsKneeling: false
     corpseBattle:
       - STR_WORDBEARERsaturnine_CORPSE_GEO
@@ -1380,14 +1383,14 @@ armors:
       reactions: 10
       firing: 40
       throwing: 50
-      strength: 110
+      strength: 100
       psiStrength: 30
       psiSkill: 30
       melee: 40
-    frontArmor: 160
-    sideArmor: 160
-    rearArmor: 110
-    underArmor: 160
+    frontArmor: 155
+    sideArmor: 155
+    rearArmor: 105
+    underArmor: 155
     damageModifier:  # TERMINATOR ARMOR
       - 1.0  # none
       - 0.6  # AP
@@ -1410,7 +1413,7 @@ armors:
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 80
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 70
       ARMOR_ENERGY_SHIELD_DECAY: 25
       INFECTION_RESIST: 100 #blessed by the dark gods
       INTIMIDATION_RESISTANCE: 100 #zealous convictions
@@ -1433,10 +1436,10 @@ armors:
       - WBOBLI_CORPSE3
       - WBOBLI_CORPSE4
     specab: 2
-    frontArmor: 200
-    sideArmor: 200
-    rearArmor: 170
-    underArmor: 200
+    frontArmor: 195
+    sideArmor: 195
+    rearArmor: 165
+    underArmor: 195
     size: 2
     moveSound: {mod: 40k, index: 14}
     #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
@@ -1478,6 +1481,8 @@ armors:
       UNIT_TYPE_DAEMONIC: 1
       UNIT_TYPE_MECHANICAL: 1
       UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_WORDBEARER_BIKELEGIO_ARMORPLAYER # Word Bearers Assault Bike
     visibilityAtDay: 40
@@ -1497,10 +1502,10 @@ armors:
       - WBDREAD_CORPSE2
       - WBDREAD_CORPSE3
       - WBDREAD_CORPSE4
-    frontArmor: 150
-    sideArmor: 150
-    rearArmor: 85
-    underArmor: 120
+    frontArmor: 145
+    sideArmor: 145
+    rearArmor: 80
+    underArmor: 115
     stats:
       tu: 50
       stamina: 50
@@ -1556,14 +1561,14 @@ armors:
       reactions: 10
       firing: -30
       throwing: -20
-      strength: 20
+      strength: 0
       psiStrength: 0
       psiSkill: 0
       melee: 30
-    frontArmor: 130
-    sideArmor: 110
-    rearArmor: 90
-    underArmor: 110
+    frontArmor: 125
+    sideArmor: 105
+    rearArmor: 85
+    underArmor: 105
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.9  # AP
@@ -1584,11 +1589,12 @@ armors:
       baseFlyPercent: [50, 50]
     builtInWeapons:
       - STR_WARPTALON_CLAW
-      - INV_NULL_1X3
+      - STR_PHOSPHEX_ASHENGUN_TOKEN
+      - STR_CHAOSMARKED_CLAW_TOKEN
     loftempsSet: [3]
     units:
-      - STR_WBSOLDIER_TERMINATOR
-      - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDEREBUS
+      - STR_WBSOLDIER_WARPEDKOR
     tags:
       INFECTION_RESIST: 80
       INTIMIDATION_RESISTANCE: 90
@@ -1598,6 +1604,71 @@ armors:
       DODGE_CHANCE: 10
       FLIGHT_DODGE_CHANCE: 30
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      MaxFlight: 2
+      MaxCoolDown: 1
+
+  - type: STR_WBWARPTALON_ARMORPLAYERMARKED  # WB RAPTOR ARMOR for chaos chosen
+    ufopediaType: STR_WBWARPTALON_ARMORPLAYER
+    refNode: *STR_WBMARINEBASE_ARMOR
+    customArmorPreviewIndex: 982
+    spriteSheet: WORDBEARERwarptalonbattle.PCK
+    spriteInv: WORDBEARERwarptaloninvent.SPK
+    storeItem: STR_WBWARPTALON_ARMORPLAYER
+    specialWeapon: STR_JUMP_GAUNTLET_PLUS  # jump flight
+    corpseBattle:
+      - STR_WBWARPTALON_CORPSE
+    selfDestructItem: STR_WBWARPTALON_CORPSE
+    specab: 1
+    stats:
+      tu: 20
+      stamina: 20
+      health: 20
+      bravery: 10  # always multiples of 10
+      reactions: 10
+      firing: -30
+      throwing: -20
+      strength: 10
+      psiStrength: 0
+      psiSkill: 0
+      melee: 30
+    frontArmor: 125
+    sideArmor: 105
+    rearArmor: 85
+    underArmor: 105
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 0.8  # HE
+      - 1.0  # LASCANON
+      - 0.9  # PLASMA
+      - 0.9  # STUN
+      - 1.0  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA
+    movementType: 0
+    drawingRoutine: 0
+    moveCost:
+      baseNormalPercent: [75, 75]
+      baseFlyPercent: [50, 50]
+    builtInWeapons:
+      - STR_CHAOSMARKED_CLAW_TOKEN
+    loftempsSet: [3]
+    units:
+      - STR_WBSOLDIER_CHAOSMARKED
+    tags:
+      INFECTION_RESIST: 80
+      INTIMIDATION_RESISTANCE: 90
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_CHAOS: 1
+      DODGE_CHANCE: 10
+      FLIGHT_DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      MaxFlight: 3
+      MaxCoolDown: 1
 
   - type: STR_WORDBEARER_MUTILATOR_ARMORPLAYER  # WB MUTILATOR ARMOR
     visibilityAtDay: 40
@@ -1617,10 +1688,10 @@ armors:
       - WBMUTIL_CORPSE3
       - WBMUTIL_CORPSE4
     specab: 2
-    frontArmor: 200
-    sideArmor: 200
-    rearArmor: 170
-    underArmor: 200
+    frontArmor: 195
+    sideArmor: 195
+    rearArmor: 165
+    underArmor: 195
     size: 2
     moveSound: {mod: 40k, index: 14}
     #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
@@ -1661,6 +1732,10 @@ armors:
       UNIT_TYPE_DAEMONIC: 1
       UNIT_TYPE_MECHANICAL: 1
       UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+    moveCost:
+      baseNormalPercent: [80, 80]
 
   - type: STR_WBMARINE_MK3ARMORPLAYER  # WB MK3 MARINE ARMOR
     customArmorPreviewIndex: 986
@@ -1686,14 +1761,14 @@ armors:
       reactions: 10
       firing: 15
       throwing: 20
-      strength: 10
+      strength: 0
       psiStrength: 10
       psiSkill: 0
       melee: 10
-    frontArmor: 125
-    sideArmor: 125
-    rearArmor: 90
-    underArmor: 125
+    frontArmor: 120
+    sideArmor: 120
+    rearArmor: 85
+    underArmor: 120
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -1752,14 +1827,14 @@ armors:
       reactions: 20
       firing: 30
       throwing: 10
-      strength: 40
+      strength: 20
       psiStrength: 0
       psiSkill: 0
       melee: 0
-    frontArmor: 190  # +50 shield
-    sideArmor: 145  # + 20 shield
-    rearArmor: 85
-    underArmor: 115
+    frontArmor: 185  # +50 shield
+    sideArmor: 140  # + 20 shield
+    rearArmor: 80
+    underArmor: 110
     builtInWeapons:
       - STR_WBMK3BREACHER_SHIELD
     units:
@@ -1780,7 +1855,7 @@ armors:
     customArmorPreviewIndex: 951
     spriteSheet: WORDBEARERMK3ASHENbattle.PCK
     storeItem: STR_WBASHEN_MK3ARMORPLAYER
-    specialWeapon: STR_PHOSPHEX_ASHENGUN_TOKEN
+    specialWeapon: STR_WB_FLYING_TOKEN
     builtInWeapons:
       - STR_PHOSPHEX_ASHENGUN_TOKEN
     corpseBattle:
@@ -1795,21 +1870,21 @@ armors:
       reactions: 20
       firing: 0
       throwing: 0
-      strength: 10
+      strength: 0
       psiStrength: 0
       psiSkill: 0
       melee: 25
-    frontArmor: 130
-    sideArmor: 110
-    rearArmor: 80
-    underArmor: 100
-    movementType: 1
+    frontArmor: 125
+    sideArmor: 105
+    rearArmor: 75
+    underArmor: 95
+    movementType: 0
     drawingRoutine: 0
     moveCost:
       baseFlyPercent: [75, 75]
     loftempsSet: [3]
     units:
-      - STR_WBSOLDIER
+      - STR_WBSOLDIER_WARPEDEREBUS
     tags:
       INFECTION_RESIST: 50
       INTIMIDATION_RESISTANCE: 30
@@ -1819,6 +1894,8 @@ armors:
       DODGE_CHANCE: 0
       FLIGHT_DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      MaxFlight: 1
+      MaxCoolDown: 1
 
   - type: STR_WBAPOTH_MK3ARMORPLAYER  # WB MK3 APOTHECARY ARMOR
     refNode: *STR_WBMARINEBASE_ARMOR
@@ -1843,10 +1920,10 @@ armors:
       psiStrength: 10
       psiSkill: 0
       melee: 10
-    frontArmor: 120
-    sideArmor: 115
-    rearArmor: 95
-    underArmor: 100
+    frontArmor: 115
+    sideArmor: 110
+    rearArmor: 90
+    underArmor: 95
     builtInWeapons:
       - INV_NULL_3X3
       - AUX_MEDI_KIT
@@ -1894,22 +1971,22 @@ armors:
       psiStrength: 0
       psiSkill: 0
       melee: 10
-    frontArmor: 120
-    sideArmor: 110
-    rearArmor: 80
-    underArmor: 120
+    frontArmor: 115
+    sideArmor: 105
+    rearArmor: 75
+    underArmor: 115
     damageModifier:  # CHAOS ARMOR
       - 1.0  # none
       - 0.8  # AP
       - 0.6  # FLAMES
       - 0.7  # HE
-      - 1.0  # LASCANON
+      - 1.1  # LASCANON
       - 1.0  # PLASMA
       - 0.9  # STUN
       - 0.9  # MELEE Weakness
       - 0.5  # ACID; Daemons resistant to poison
       - 0.0  # SMOKE
-      - 1.0  # IMPACT
+      - 0.2  # IMPACT
       - 1.2  # MELTA
     loftempsSet: [3]
     recovery: #these daemons have slow regeneration
@@ -1955,26 +2032,26 @@ armors:
       reactions: 0
       firing: 30
       throwing: 40
-      strength: 60
+      strength: 10
       psiStrength: 20
       psiSkill: 20
       melee: 20
-    frontArmor: 130
-    sideArmor: 120
-    rearArmor: 90
-    underArmor: 130
+    frontArmor: 125
+    sideArmor: 115
+    rearArmor: 85
+    underArmor: 125
     damageModifier:  # CHAOS ARMOR
       - 1.0  # none
       - 0.7  # AP
       - 0.6  # FLAMES
       - 0.7  # HE
-      - 1.0  # LASCANON
+      - 1.1  # LASCANON
       - 1.0  # PLASMA
       - 0.9  # STUN
       - 0.8  # MELEE Weakness
       - 0.5  # ACID; Daemons innately resist acid/poison
       - 0.0  # SMOKE
-      - 1.0  # IMPACT
+      - 0.2  # IMPACT
       - 1.2  # MELTA
     loftempsSet: [4]
     allowsRunning: false  # NPC limits for BAI
@@ -1998,7 +2075,7 @@ armors:
 
   - type: STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER  # WB TRANSCENDENT ARMOR
     customArmorPreviewIndex: 947
-    movementType: 1  # flying
+    movementType: 0
     visibilityAtDay: 40
     visibilityAtDark: 40  # terminator sensors + artificer + daemonic senses
     antiCamouflageAtDay: 10  # terminator sensors + keen senses
@@ -2011,7 +2088,7 @@ armors:
       - STR_WORDBEARER_PLAYER_POSS3CORPSE
     storeItem: STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
     builtInWeapons:
-      - STR_WARPTALON_CLAW_TOKEN
+      - STR_CHAOSMARKED_CLAW_TOKEN
     units:
       - STR_WBFALLENPOSS3
     stats:
@@ -2022,21 +2099,21 @@ armors:
       reactions: 10
       firing: 30
       throwing: 50
-      strength: 110
+      strength: 60
       psiStrength: 30
       psiSkill: 30
       melee: 40
-    frontArmor: 160
-    sideArmor: 130
-    rearArmor: 100
-    underArmor: 130
-    specialWeapon: STR_POWERFIST
+    frontArmor: 155
+    sideArmor: 125
+    rearArmor: 95
+    underArmor: 125
+    specialWeapon: STR_WB_FLYING_TOKEN
     damageModifier:  # TERMINATOR ARMOR
       - 1.0  # none
       - 0.7  # AP;
       - 0.1  # FLAMES; Word Bearer Resistance -0.1
       - 0.6  # HE
-      - 0.8  # LASCANON
+      - 1.0  # LASCANON
       - 0.9  # PLASMA
       - 0.7  # STUN; Word Bearer Resistance -0.1
       - 0.7  # MELEE; Word Bearer Resistance -0.1
@@ -2062,6 +2139,9 @@ armors:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
       ARMOR_REINFORCEMENT_TU_PERCENT: 75
+      FLIGHT_DODGE_CHANCE: 20
+      MaxFlight: 2
+      MaxCoolDown: 1
 
   - type: STR_WORDBEARER_BRASSSCORP_ARMORPLAYER  # WB BRASS SCORPION ARMOR
     visibilityAtDay: 40
@@ -2082,10 +2162,10 @@ armors:
       - WBOBLI_CORPSE4
     selfDestructItem: WBSCORP_CORPSE1
     specab: 3
-    frontArmor: 200
-    sideArmor: 200
-    rearArmor: 190
-    underArmor: 220
+    frontArmor: 195
+    sideArmor: 195
+    rearArmor: 185
+    underArmor: 215
     size: 2
     moveSound: {mod: 40k, index: 700}
     #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
@@ -2125,6 +2205,8 @@ armors:
       UNIT_SIZE: 200 # HUGE
       DODGE_CHANCE: 15  # oddly agile
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_WBQUORVONDAR_ARMORPLAYER   # WB QUOR VONDAR ARMOR
     refNode: *STR_WBDIABOLISTBASE_ARMOR
@@ -2146,14 +2228,14 @@ armors:
       reactions: 40
       firing: 20
       throwing: 0
-      strength: 30
-      psiStrength: 60
+      strength: 0
+      psiStrength: 20
       psiSkill: 30
       melee: 25
-    frontArmor: 135
-    sideArmor: 120
-    rearArmor: 110
-    underArmor: 120
+    frontArmor: 130
+    sideArmor: 115
+    rearArmor: 105
+    underArmor: 115
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.8  # AP
@@ -2169,7 +2251,7 @@ armors:
       - 0.9  # MELTA
     specialWeapon: STR_MFIST
     builtInWeapons:
-      - STR_PSI_AMP_TOKEN
+      - STR_PSI_AMP_TOKENWB
       - STR_WARPFIRE_FLAMER_TOKEN
       - INV_NULL_3X3
     units:
@@ -2207,14 +2289,14 @@ armors:
       reactions: 30
       firing: 30
       throwing: 10
-      strength: 40
+      strength: 20
       psiStrength: 20
       psiSkill: 20
       melee: 40
-    frontArmor: 150
-    sideArmor: 125
-    rearArmor: 100
-    underArmor: 125
+    frontArmor: 145
+    sideArmor: 120
+    rearArmor: 95
+    underArmor: 120
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.8  # AP was 1.0
@@ -2244,6 +2326,8 @@ armors:
       INTIMIDATION_RESISTANCE: 100 #zealous convictions
       DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 15
+      ARMOR_ENERGY_SHIELD_DECAY: 25
     scripts:
       selectUnitSprite: |
         # https://openxcom.org/forum/index.php/topic, 4322.msg75634.html# msg75634
@@ -2296,7 +2380,7 @@ armors:
     bleedImmune: true
     fearImmune: true
     painImmune: true
-    spriteInv: VIN.SPK
+    spriteInv: WBVINDI.SPK
     corpseGeo: STR_WBDREAD_CORPSE
     corpseBattle:
       - WBDREAD_CORPSE1
@@ -2306,10 +2390,10 @@ armors:
     visibilityAtDay: 120
     visibilityAtDark: 120
     heatVision: 60
-    frontArmor: 150
-    sideArmor: 150
-    rearArmor: 150
-    underArmor: 150
+    frontArmor: 145
+    sideArmor: 145
+    rearArmor: 145
+    underArmor: 145
     size: 2
     allowsMoving: false
     damageModifier: #VEHICLE ARMOR LARGE
@@ -2327,3 +2411,455 @@ armors:
       - 1.2 #MELTA
     loftempsSet: [92, 89, 90, 91]
     drawingRoutine: 12
+
+  # daemonic temporary host
+
+  - type: STR_KHORNEDEMON_ARMORTEMPO
+    visibilityAtDay: 40
+    visibilityAtDark: 40  # daemons have perfect night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 6
+    spriteSheet: BLOODLETTER_BS.PCK
+    spriteInv: BLOODLETTER_INV.SPK
+    corpseBattle:
+      - STR_WBDAEMONS_CORPSE
+    heatVision: 33  # daemons have 33% heat vision as standard
+    psiVision: 10
+    frontArmor: 60  # decently armored; Brass armor of Khorne
+    sideArmor: 50
+    rearArmor: 50
+    underArmor: 60
+    standHeight: 22
+    kneelHeight: 14
+    drawingRoutine: 10
+    constantAnimation: false
+    fearImmune: true  # Bloodletters are fear immune
+    zombiImmune: true  # It's a daemon; can't zombify this.
+    painImmune: true  # Most daemons don't care about pain
+    damageModifier:  # DEAMON ARMOR
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 0.5  # STUN
+      - 0.5  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_KHORNE: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      UNIT_TURNS_UNTIL_DEATH: 6
+
+  - type: STR_NURGLEDEMON_ARMORTEMPO
+    visibilityAtDay: 40
+    visibilityAtDark: 40  # daemons have perfect night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 6
+    spriteSheet: WBDEMONNURGLE_BS.PCK
+    spriteInv: WBDEMONNURGLE_INV.SPK
+    corpseBattle:
+      - STR_WBDAEMONS_CORPSE
+    heatVision: 33  # daemons have 33% heat vision as standard
+    psiVision: 10
+    frontArmor: 60  # decently armored; Brass armor of Khorne
+    sideArmor: 50
+    rearArmor: 50
+    underArmor: 60
+    standHeight: 22
+    kneelHeight: 14
+    drawingRoutine: 10
+    constantAnimation: false
+    fearImmune: true  # Bloodletters are fear immune
+    zombiImmune: true  # It's a daemon; can't zombify this.
+    painImmune: true  # Most daemons don't care about pain
+    damageModifier:  # DEAMON ARMOR
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 0.5  # STUN
+      - 0.5  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_NURGLE: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      UNIT_TURNS_UNTIL_DEATH: 6
+
+  - type: STR_SLAANESHDEMON_ARMORTEMPO
+    visibilityAtDay: 40
+    visibilityAtDark: 40  # daemons have perfect night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 6
+    spriteSheet: WBDEMONSLAANESH_BS.PCK
+    spriteInv: WBDEMONSLAANESH_INV.SPK
+    corpseBattle:
+      - STR_WBDAEMONS_CORPSE
+    heatVision: 33  # daemons have 33% heat vision as standard
+    psiVision: 10
+    frontArmor: 60  # decently armored; Brass armor of Khorne
+    sideArmor: 50
+    rearArmor: 50
+    underArmor: 60
+    standHeight: 22
+    kneelHeight: 14
+    drawingRoutine: 10
+    constantAnimation: false
+    fearImmune: true  # Bloodletters are fear immune
+    zombiImmune: true  # It's a daemon; can't zombify this.
+    painImmune: true  # Most daemons don't care about pain
+    damageModifier:  # DEAMON ARMOR
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 0.5  # STUN
+      - 0.5  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      UNIT_TURNS_UNTIL_DEATH: 9
+
+  - type: STR_TZEENTCHDEMON_ARMORTEMPO
+    visibilityAtDay: 40
+    visibilityAtDark: 40  # daemons have perfect night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 6
+    spriteSheet: WBDEMONTZEENTCH_BS.PCK
+    spriteInv: WBDEMONTZEENTCH_INV.SPK
+    corpseBattle:
+      - STR_WBDAEMONS_CORPSE
+    heatVision: 33  # daemons have 33% heat vision as standard
+    psiVision: 10
+    frontArmor: 60  # decently armored; Brass armor of Khorne
+    sideArmor: 50
+    rearArmor: 50
+    underArmor: 60
+    standHeight: 22
+    kneelHeight: 14
+    drawingRoutine: 10
+    constantAnimation: false
+    fearImmune: true  # Bloodletters are fear immune
+    zombiImmune: true  # It's a daemon; can't zombify this.
+    painImmune: true  # Most daemons don't care about pain
+    damageModifier:  # DEAMON ARMOR
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 0.5  # STUN
+      - 0.5  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_SLAANESH: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      UNIT_TURNS_UNTIL_DEATH: 9
+
+  - type: STR_UNDIVIDEDDEMON_ARMORTEMPO
+    visibilityAtDay: 40
+    visibilityAtDark: 40  # daemons have perfect night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 6
+    spriteSheet: WBDEMONCHAOS_BS.PCK
+    spriteInv: WBDEMONCHAOS_INV.SPK
+    corpseBattle:
+      - STR_WBDAEMONS_CORPSE
+    heatVision: 33  # daemons have 33% heat vision as standard
+    psiVision: 10
+    frontArmor: 60  # decently armored; Brass armor of Khorne
+    sideArmor: 50
+    rearArmor: 50
+    underArmor: 60
+    standHeight: 22
+    kneelHeight: 14
+    drawingRoutine: 10
+    constantAnimation: false
+    fearImmune: true  # Bloodletters are fear immune
+    zombiImmune: true  # It's a daemon; can't zombify this.
+    painImmune: true  # Most daemons don't care about pain
+    damageModifier:  # DEAMON ARMOR
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 0.5  # STUN
+      - 0.5  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_CHAOS: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      UNIT_TURNS_UNTIL_DEATH: 12
+
+  - type: STR_UNDIVIDEDDEMON_ARMORTEMPO2
+    visibilityAtDay: 40
+    visibilityAtDark: 40  # daemons have perfect night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 6
+    spriteSheet: WBDEMONCHAOS_BS.PCK
+    spriteInv: WBDEMONCHAOS_INV.SPK
+    corpseBattle:
+      - STR_WBDAEMONS_CORPSE
+    heatVision: 33  # daemons have 33% heat vision as standard
+    psiVision: 10
+    frontArmor: 60  # decently armored; Brass armor of Khorne
+    sideArmor: 60
+    rearArmor: 50
+    underArmor: 60
+    standHeight: 22
+    kneelHeight: 14
+    drawingRoutine: 10
+    constantAnimation: false
+    fearImmune: true  # Bloodletters are fear immune
+    zombiImmune: true  # It's a daemon; can't zombify this.
+    painImmune: true  # Most daemons don't care about pain
+    damageModifier:  # DEAMON ARMOR
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.1  # PLASMA
+      - 0.5  # STUN
+      - 0.5  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_CHAOS: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+      UNIT_TURNS_UNTIL_DEATH: 12
+
+
+  - type: STR_WBEXECUTIONER_ARMORPLAYER  # WB EXECUTIONER ARMOR
+    refNode: *STR_WBDIABOLISTBASE_ARMOR
+    customArmorPreviewIndex: 939
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    spriteSheet: WORDBEARERexecutionerbattle.PCK
+    zombiImmune: true
+    corpseBattle:
+      - STR_WORDBEARER_EXECUTIONERPLAYER_CORPSE
+    corpseGeo: STR_WBFALLEN_CORPSE
+    storeItem: STR_WBEXECUTIONER_ARMORPLAYER
+    stats:
+      tu: 30
+      stamina: 20
+      health: 50
+      bravery: 20  # always multiples of 10
+      firing: -20
+      throwing: 0
+      strength: 30
+      psiStrength: 20
+      psiSkill: 10
+      melee: 30
+    frontArmor: 135
+    sideArmor: 105
+    rearArmor: 75
+    underArmor: 95
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.5  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 0.8  # PLASMA
+      - 0.8  # STUN
+      - 0.8  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.8  # MELTA
+    builtInWeapons:
+      - STR_CHAOSMARKED_CLAW_TOKEN
+      - STR_WBEXECUTIONER_AXE
+      - STR_WBEXECUTIONER_AXETRICK
+    units:
+      - STR_WBSOLDIER_ACOLYTE
+      - STR_WBSOLDIER_CHAOSMARKED
+    loftempsSet: [3]
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 80
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
+    moveCost:
+      baseNormalPercent: [80, 80]
+
+  - type: STR_WORDBEARER_HELBRUTE_ARMORPLAYER  # WB DREADNOUGHT ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    customArmorPreviewIndex: [176, 938, 178]
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteInv: WORDBEARER_HELBRUTEinventPLAYER.SPK
+    spriteSheet: WORDBEARERhelbrutebattle.PCK
+    instantWoundRecovery: true
+    allowInv: true
+    storeItem: STR_WORDBEARER_HELBRUTE_ARMORPLAYER
+    corpseGeo: STR_WBDREAD_CORPSE
+    corpseBattle:
+      - WBDREAD_CORPSE1
+      - WBDREAD_CORPSE2
+      - WBDREAD_CORPSE3
+      - WBDREAD_CORPSE4
+    frontArmor: 235
+    sideArmor: 225
+    rearArmor: 175
+    underArmor: 235
+    size: 2
+    moveSound: {mod: 40k, index: 700}
+    #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
+    units:
+      - STR_WBFALLEN
+    stats:
+      strength: 80
+      health: 180
+      melee: 20
+    damageModifier:
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES
+      - 0.7  # HE
+      - 1.1  # LASCANON
+      - 0.8  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 20
+    builtInWeapons:
+      - AUX_HOVERTANK_PLASMA
+      - STR_HELBRUTE_CLAW
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 100  # infection
+      INTIMIDATION_RESISTANCE: 100  # intimidation
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_REINFORCEMENT_TU_PERCENT: 75
+
+  # non player neverbornling
+
+  - type: STR_NEVERBORNLING_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 40 #daemons have perfect night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 6
+    recovery:
+      energy:
+        stamina: 0.33
+    spriteSheet: NEVERBORNLING_BS.PCK
+    spriteInv: NEVERBORNLING_INV.SPK
+    deathFrames: 8
+    corpseBattle:
+      - STR_KHORNELING_CORPSE
+    heatVision: 33 #daemons have 33% heat vision as standard
+    psiVision: 10
+    frontArmor: 60 #still has a bloodletter skull, bounces off the dome
+    sideArmor: 30 #Right in the arms
+    rearArmor: 20 #All tushy
+    underArmor: 20 #Just a little Guy
+    fearImmune: true #Bloodletters are fear immune
+    zombiImmune: true #It's a daemon; can't zombify this.
+    painImmune: true #Most daemons don't care about pain
+    damageModifier: #DEAMON ARMOR
+      - 1.0 #none
+      - 0.7 #AP; Bloodletters more resilient to physical and fire damage.
+      - 0.0 #FLAMES: They have so little hp they were still dying in fire.
+      - 0.7 #HE
+      - 1.0 #LASCANON
+      - 1.1 #PLASMA
+      - 0.5 #STUN
+      - 0.5 #MELEE; Bloodletters are masters of melee combat, and are especially protected against it
+      - 0.5 #ACID; daemons innately resist poisons/hazardous chems
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    drawingRoutine: 4
+    loftempsSet: [3]
+    allowsRunning: false #NPC limits for BAI
+    builtInWeapons:
+      - STR_KHORNELING_CLAWS
+      - STR_KHORNELING_CLAWS
+    tags:
+      INFECTION_RESIST: 100 #infection immune
+      INTIMIDATION_RESISTANCE: 100 #intimidation immune
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_CHAOS: 1

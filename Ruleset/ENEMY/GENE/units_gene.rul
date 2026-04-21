@@ -1,12 +1,10 @@
 #GSC
 
 weaponSets:
-  - type: GENERIC_HEAVYSTUBBER_SET
-    weapons: [STR_GENERIC_HEAVY_STUBBER, STR_HEAVY_STUBBER_CLIP, STR_HEAVY_STUBBER_CLIP, STR_MAKESHIFT_PIPEBOMB]
+  - type: HEAVY_STUBBER_LIGHT_SET
+    weapons: [STR_HEAVY_STUBBER_LIGHT, STR_HEAVY_STUBBER_CLIP, STR_HEAVY_STUBBER_CLIP, STR_MAKESHIFT_PIPEBOMB]
   - type: GENERIC_LASCUTTER_SET
     weapons: [STR_LASCUTTER, STR_LASCUTTER_BIG_AMMO, STR_LASCUTTER_BIG_AMMO, STR_PHOTON_GRENADE]
-  - type: GENERIC_GRAVGUN_AND_KRAK_GRENADE_SET
-    weapons: [STR_SMALL_LAUNCHER, STR_STUN_BOMB, STR_STUN_BOMB, STR_STUN_BOMB, STR_KRAK_GRENADE]
 
 
 units:
@@ -122,9 +120,8 @@ units:
     #    - STR_PLASMA_RIFLE_CLIP
     weightedBuiltInWeaponSets:
       -
-        GENERIC_HEAVYSTUBBER_SET: 60
+        HEAVY_STUBBER_LIGHT_SET: 60
         GENERIC_LASCUTTER_SET: 30
-        GENERIC_GRAVGUN_AND_KRAK_GRENADE_SET: 10
 
   - type: STR_GENE_CULTIST_S    # Neophyte Hybrids #Planetary defense forces Brood Sister (Not Adeptas)
     race: STR_GENE_CULT
@@ -411,7 +408,7 @@ units:
     livingWeapon: true
     moraleLossWhenKilled: 33  # No GSC cares
     builtInWeaponSets:
-      - - STR_GENERIC_HEAVY_STUBBER
+      - - STR_HEAVY_STUBBER_LIGHT
         - STR_HEAVY_STUBBER_CLIP
         - STR_HEAVY_STUBBER_CLIP
       - - STR_ACCATRAN_ROCKET_LAUNCHER
@@ -1881,14 +1878,14 @@ units:
     livingWeapon: true
     moveSound: -1
     builtInWeaponSets:
-      - - STR_GENERIC_HEAVY_STUBBER
+      - - STR_HEAVY_STUBBER_LIGHT
         - STR_HEAVY_STUBBER_CLIP
         - STR_HEAVY_STUBBER_CLIP
-      - - STR_GENERIC_HEAVY_STUBBER
+      - - STR_HEAVY_STUBBER_LIGHT
         - STR_HEAVY_STUBBER_CLIP
         - STR_HEAVY_STUBBER_CLIP
         - STR_PHOTON_GRENADE
-      - - STR_GENERIC_HEAVY_STUBBER
+      - - STR_HEAVY_STUBBER_LIGHT
         - STR_HEAVY_STUBBER_CLIP
         - STR_HEAVY_STUBBER_CLIP
         - STR_PHOTON_GRENADE
@@ -2828,10 +2825,10 @@ units:
     livingWeapon: true
     deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
     builtInWeaponSets:
-      - - STR_GENERIC_HEAVY_STUBBER
+      - - STR_HEAVY_STUBBER_LIGHT
         - STR_HEAVY_STUBBER_CLIP
         - STR_HEAVY_STUBBER_CLIP
-      - - STR_GENERIC_HEAVY_STUBBER
+      - - STR_HEAVY_STUBBER_LIGHT
         - STR_HEAVY_STUBBER_CLIP
         - STR_HEAVY_STUBBER_CLIP
         - STR_GRENADE

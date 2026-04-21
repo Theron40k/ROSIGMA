@@ -1,7 +1,13 @@
 alienDeployments:
 ### TODO: alienRaceEvolution on deploys
-  - &STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
-    type: STR_SHRINEWARRENS_TEMPLATE_GV
+### TODO: bounties
+
+### intro_missions starter missions
+### these set the scene for the player w/r/t the redemptionist threat
+### convoy escort missions
+  - type: STR_EVE_OF_DESTRUCTION_GV
+    script: CONVOY_ESCORT_GV
+    forcePercentageOutsideUfo: true
     data:
       - alienRank: 1
         lowQty: 2
@@ -9,6 +15,192 @@ alienDeployments:
         dQty: 2
         percentageOutsideUfo: 100
         itemSets: &emptyItemSets [[], [], []]
+      - alienRank: 2
+        lowQty: 2
+        highQty: 2 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 4
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 5
+        lowQty: 4
+        highQty: 4 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 6
+        lowQty: 4 #1
+        highQty: 4 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 7
+        lowQty: 3 #1
+        highQty: 3 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+    terrains:
+      - ACULTA
+    width: 50
+    length: 80
+    height: 9
+    duration: [48, 72]
+    despawnPenalty: 500
+    markerName: STR_EVE_OF_DESTRUCTION_GV
+    alert: STR_EVE_OF_DESTRUCTION_GV_ALERT
+    alertDescription: STR_EVE_OF_DESTRUCTION_GV_ALERT_DESCRIPTION
+    alertBackground: UnrestBG.SCR
+    abortPenalty: 100
+    briefing:
+      showCraft: false
+      showTarget: false
+      title: STR_EVE_OF_DESTRUCTION_GV
+      desc: STR_EVE_OF_DESTRUCTION_GV_BRIEFING
+
+### small redemptionist church also used as an intro mission
+  - type: STR_COUNTER_REDEMPTION_GV
+    terrains:
+      - IMP_MUNDAINDUSTRIALURBANDIO
+    script: REDEMPTIONIST_BASE_LEVEL_1
+    randomRace: [STR_REDEMPTIONIST_START_GV]
+    data: &cultistBaseLevel1
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3  # 2
+        highQty: 3  # 4
+        dQty: 4
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3  # 2
+        highQty: 3  # 4
+        dQty: 4
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 3
+        highQty: 4  # 5
+        dQty: 5
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 12  # 6
+        highQty: 12  # 12
+        dQty: 5
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 60
+    length: 60
+    height: 9
+    despawnPenalty: 500
+    duration: [48, 48]
+    markerName: STR_COUNTER_REDEMPTION_GV
+    alert: STR_COUNTER_REDEMPTION_GV_ALERT
+    alertDescription: STR_COUNTER_REDEMPTION_GV_ALERT_DESCRIPTION
+    alertBackground: UnrestBG.SCR
+    abortPenalty: 100
+    briefing:
+      showCraft: false
+      showTarget: false
+      title: STR_COUNTER_REDEMPTION_GV
+      desc: STR_COUNTER_REDEMPTION_GV_BRIEFING
+
+### small redemptionist church also used as an intro mission
+  - &STR_REDEMPTIONIST_CHURCHES
+    type: STR_REDEMPTIONISTBASE_L1_GV
+    terrains:
+      - IMP_MUNDAINDUSTRIALURBANDIO
+    script: REDEMPTIONIST_BASE_LEVEL_1
+    randomRace: [STR_REDEMPTIONIST_START_GV]
+    data: &cultistBaseLevel1
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3  # 2
+        highQty: 3  # 4
+        dQty: 4
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3  # 2
+        highQty: 3  # 4
+        dQty: 4
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4  # 3
+        highQty: 4  # 5
+        dQty: 5
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 12  # 6
+        highQty: 12  # 12
+        dQty: 5
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    width: 60
+    length: 60
+    height: 9
+    # alienBaseUpgrades:
+    #   0:
+    #     STR_CULTIST_BASE_LEVEL_1: 100
+    #   1:
+    #     STR_CULTIST_BASE_LEVEL_1: 100
+    #   2:
+    #     STR_CULTIST_BASE_LEVEL_1: 50
+    #     STR_CULTIST_BASE_LEVEL_2: 50
+    #   3:
+    #     STR_CULTIST_BASE_LEVEL_2: 100
+    # objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
+    # objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
+    markerName: STR_REDEMPTIONISTBASE_L1_GV
+    briefing:
+      showCraft: false
+      showTarget: false
+
+  - type: STR_EPIOUSION_GV
+    forcePercentageOutsideUfo: true
+    data:
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
       - alienRank: 2
         lowQty: 2
         highQty: 2 #3
@@ -49,30 +241,247 @@ alienDeployments:
     length: 60
     height: 9
     terrains:
-      - ACULTASNOW
-      - ACULTA_SHRINE_ASSAULT
-    duration: [168, 168]
-    alert: STR_FIRESTARTER_GV_ALERT
-    alertDescription: STR_FIRESTARTER_GV_ALERT_DESCRIPTION
-    alertBackground: GovernorBG.SCR
+      - ACULTA
+    script: EPIOUSION_SCRIPT
+    duration: [72, 72]
+    alert: STR_EPIOUSION_GV_ALERT
+    alertDescription: STR_EPIOUSION_GV_ALERT_DESCRIPTION
+    alertBackground: UnrestBG.SCR
     briefing:
       showCraft: false
       showTarget: false
 
-  - type: STR_FIRESTARTER_GV
-    civiliansByType:
-      STR_CIVILIAN_F0: 2
-      STR_CLOAKED_WOMAN: 2
-      STR_CIVILIAN_M0: 2
-      STR_CIVILIAN_F1: 2
-      STR_CLOAKED_WOMAN_ORANGE: 4
-      STR_CIVILIAN_M1: 2
 
-  - type: STR_MAKE_LEMONADE_GV
-    refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
-    customUfo: STR_GUARD_LEMAN_RUSS_FRIENDLY_GV
+
+  - type: STR_REDEMPTIONISTBASE_L2_GV
+    script: IMP_TEMPLE
+    randomRace: [STR_REDEMPTIONIST_START_GV]
+    terrains:
+      - IMP_MUNDAINDUSTRIALURBANDIO
+    forcePercentageOutsideUfo: true
+    # civiliansByType:
+    #   STR_GUARDS_M_LV1_AI: 4
+    #   STR_CIVILIAN_F0: 2
+    #   STR_CLOAKED_WOMAN: 2
+    #   STR_CIVILIAN_M0: 2
+    #   STR_CIVILIAN_F1: 2
+    #   STR_CLOAKED_WOMAN_ORANGE: 4
+    #   STR_CIVILIAN_M1: 2
+    data:
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 2
+        lowQty: 2
+        highQty: 2 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 4
+        lowQty: 3
+        highQty: 3 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 5
+        lowQty: 5
+        highQty: 5 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 6
+        lowQty: 4 #1
+        highQty: 4 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+      - alienRank: 7
+        lowQty: 3 #1
+        highQty: 3 #3
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: [[], [], []]
+    width: 60
+    length: 60
+    height: 10
+    # objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
+    # objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
+    abortPenalty: 100
+    briefing:
+      showCraft: false
+      showTarget: false
+
+  - type: STR_REDEMPTIONIST_HIVE_TERROR_GV
+    randomRace: [STR_REDEMPTIONIST_START_GV]
+    data:
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 1
+        highQty: 1
+        dQty: 1  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 2
+        highQty: 2  # 3
+        dQty: 2  # 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2  # 3
+        dQty: 1  # 2
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 9  # 8
+        highQty: 9  # 10
+        dQty: 3  # 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 6
+        lowQty: 2  # 1
+        highQty: 2
+        dQty: 2  # 3
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 2  # 1
+        highQty: 2
+        dQty: 2  # 3
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+    points: 5
+    width: 60
+    length: 40
+    height: 4
     civiliansByType:
-      STR_GUARDS_M_LV1_AI: 4
+      STR_CIVILIAN_M0ARMED: 2
+      STR_CIVILIAN_M1ARMED: 2
+      STR_CIVILIAN_F0ARMED: 2
+      STR_CIVILIAN_F1ARMED: 2
+      STR_GANGERBASE_SOLDIERF0_AI: 3
+      STR_GANGERBASE_SOLDIERF1_AI: 3
+      STR_GANGERBASE_SOLDIERM0_AI: 3
+      STR_GANGERBASE_SOLDIERM1_AI: 3
+    terrains:
+      - HIVE
+    script: HALEA_HIVE_SCRIPT
+    # objectiveComplete: [STR_CULTIST_BASE_DESTROYED, 200]
+    # objectiveFailed: [STR_CULTIST_BASE_NOT_DESTROYED, -100]
+    despawnPenalty: 500
+    abortPenalty: 100
+    shade: 7
+    duration: [48, 48]
+    markerName: STR_REDEMPTIONIST_HIVE_TERROR_GV
+    enviroEffects: STR_INSIDE_ENVIRO
+    briefing:
+      title: STR_REDEMPTIONIST_HIVE_TERROR_GV
+      desc: STR_REDEMPTIONIST_HIVE_TERROR_GV_BRIEFING
+      showCraft: false
+      showTarget: false
+    alert: STR_REDEMPTIONIST_HIVE_TERROR_GV_ALERT
+    alertDescription: STR_REDEMPTIONIST_HIVE_TERROR_GV_ALERT_DESCRIPTION
+    alertBackground: UnrestBG.SCR
+
+### Assault bunker held by Prince Bishop troops
+  - type: STR_BELROSE_ASSAULT_SITE_GV
+    script: BELROSE_ASSAULT_SITE
+    briefing:
+      title: STR_BELROSE_ASSAULT_SITE_GV
+      palette: 4
+      desc: STR_BELROSE_ASSAULT_SITE_GV_BRIEFING
+      music: gmstory2
+      showCraft: true
+      showTarget: false
+      background: REGIMENT_INSPECTION.SCR
+    forcePercentageOutsideUfo: true
+    data:
+      - alienRank: 1
+        lowQty: 1
+        highQty: 1  # 2
+        dQty: 0  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 2  # 0
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 10  # 8
+        highQty: 10  # 12
+        dQty: 4
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 6
+        lowQty: 0
+        highQty: 0
+        dQty: 4
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 0
+        highQty: 0
+        dQty: 4
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+    width: 60
+    length: 50
+    height: 9
+    cheatTurn: 0
+    terrains:
+      - ACULTA
+    alert: STR_BELROSE_ASSAULT_SITE_GV_ALERT
+    alertBackground: REGIMENT_INSPECTION.SCR
+    alertDescription: STR_BELROSE_ASSAULT_SITE_GV_ALERT
+    duration: [72, 72]
+    despawnPenalty: 400
+    markerName: STR_BELROSE_ASSAULT_SITE_GV
+
+
+    # successEvents:
+    #   STR_CHAOSPDFSUPPORTREWARD: 100
+
 
   # - type: STR_FREE_TRADE_GV
   #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
@@ -86,14 +495,65 @@ alienDeployments:
   #   length: 60
   #   height: 9
 
-  # - type: STR_STAY_HYDRATED_GV
-  #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
-  #   script: TENAXBASE_AIRDEFENSE
-  #   terrains:
-  #     - ACULTASNOW
-  #   width: 80
-  #   length: 80
-  #   height: 9
+  - type: STR_STAY_HYDRATED_GV
+    markerIcon: 53
+    alienBase: false    # it's a base but it shouldn't have a second stage
+    objectiveType: 3 #target type
+#    objectiveComplete: [STR_TRAITOR_GUARD_BASE_DESTROYED, 750]
+    data:
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2 #3
+        dQty: 2 #1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 10 #8
+        highQty: 10 #12
+        dQty: 4
+        percentageOutsideUfo: 65
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 10 #8
+        highQty: 10 #12
+        dQty: 6
+        percentageOutsideUfo: 65
+        itemSets: *emptyItemSets
+      - alienRank: 5 # guardsmen with alternate weapons - GLs, flamers
+        lowQty: 5 #4
+        highQty: 5 #6
+        dQty: 0
+        percentageOutsideUfo: 65
+        itemSets: *emptyItemSets
+      - alienRank: 4 # add scouts once you change their weapon sets
+        lowQty: 6 #4
+        highQty: 6 #8
+        dQty: 3
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+    briefing:
+      cutscene: TRAITORGUARDBASE
+      music: gmstory2
+      title: STR_TENAXBASE_LEVEL_4_TITLE_GV
+      textOffset: -16
+      background: BACK01.SCR
+      showTarget: false
+      desc: STR_TENAXBASE_LEVEL_4_BRIEFING_GV
+    missionBountyItem: STR_KILLPOINT_TOKEN
+    missionBountyItemCount: 200
+    markerName: STR_ALIEN_BASE
+    script: TENAXBASE_AIRDEFENSE
+    terrains:
+      - ACULTA
+    width: 80
+    length: 80
+    height: 9
 
   - type: STR_TENAXBASE_L1_GV
     markerIcon: 51
@@ -342,7 +802,7 @@ alienDeployments:
   - type: STR_TENAXBASE_L4_GV #HANGAR HK
     markerIcon: 53
     # script: TENAXBASE_LEVEL4
-    alienBase: true
+    alienBase: false    # it's a base but it shouldn't have a second stage
     objectiveType: 3 #target type
     objectivesRequired: 5 #number of tiles to be dest
     objectiveComplete: [STR_TRAITOR_GUARD_BASE_DESTROYED, 750]
@@ -496,10 +956,10 @@ alienDeployments:
     height: 9
 
 
-  - type: STR_WHITEPRINCEBASE_SINGLEFLOOR_GV
+  - type: STR_PRINCEBISHOPBASE_SINGLEFLOOR_GV
     randomRace: [STR_SLAANESH_TRAITOR_GUARD_LATE]
     markerIcon: 7
-    markerName: STR_SLAANESH_BASE
+    markerName: STR_ALIEN_BASE
     data:
       - alienRank: 6
         lowQty: 2  # 1
@@ -554,15 +1014,15 @@ alienDeployments:
     height: 9
     terrains:
       - ALART_SLAAN
-    # script: WHITEPRINCE_BASE_SINGLEFLOOR
+    # script: PRINCEBISHOP_BASE_SINGLEFLOOR
     briefing:
       cutscene: CHAOSBASE
       music: gmstory2
-      title: STR_WHITEPRINCEBASE_SINGLEFLOOR_TITLE_GV
+      title: STR_PRINCEBISHOPBASE_SINGLEFLOOR_TITLE_GV
       textOffset: -16
       background: BACK01.SCR
       showTarget: false
-      desc: STR_WHITEPRINCEBASE_SINGLEFLOOR_BRIEFING_GV
+      desc: STR_PRINCEBISHOPBASE_SINGLEFLOOR_BRIEFING_GV
     objectiveType: 3
     genMission:
       STR_SLAAN_SUPPLY: 80
@@ -570,7 +1030,7 @@ alienDeployments:
       STR_TERROR_MISSION_SLAAN: 20
       STR_DEFILER_RETALIATION: 5
       STR_SLAANESH_RETALIATION: 2
-      STR_WHITEPRINCEBASE_SINGLEFLOOR_MISSION_GV: 10  # tweaked down to make bases expand at a reasonable rate
+      STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV: 10  # tweaked down to make bases expand at a reasonable rate
       STR_SLAANESH_ABDUCTION: 15  # gotta abduct those slaves
       STR_ALIEN_INFILTRATION_SLAANESH: 10
     genMissionFreq: 5  # 6
@@ -943,18 +1403,17 @@ alienDeployments:
     height: 10
     points: 1
 
-
   - type: STR_FINAL_LANDING_GUEVESA_GV
     music:
       - INMYSPIRIT  # change?
     data:
-      - alienRank: 5
-        lowQty: 5  # 4
-        highQty: 5  # 6
-        dQty: 5
-        percentageOutsideUfo: 70
+      - alienRank: 1
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
         itemSets: *emptyItemSets
-      - alienRank: 4
+      - alienRank: 2
         lowQty: 1
         highQty: 1  # 2
         dQty: 2  # 0
@@ -966,17 +1425,17 @@ alienDeployments:
         dQty: 2
         percentageOutsideUfo: 20
         itemSets: *emptyItemSets
-      - alienRank: 2
+      - alienRank: 4
         lowQty: 1
         highQty: 1  # 2
         dQty: 2  # 0
         percentageOutsideUfo: 20
         itemSets: *emptyItemSets
-      - alienRank: 1
-        lowQty: 1
-        highQty: 1
-        dQty: 0
-        percentageOutsideUfo: 0
+      - alienRank: 5
+        lowQty: 5  # 4
+        highQty: 5  # 6
+        dQty: 5
+        percentageOutsideUfo: 70
         itemSets: *emptyItemSets
       - alienRank: 6
         lowQty: 2  # 1
@@ -994,67 +1453,90 @@ alienDeployments:
     length: 50
     height: 7
     terrains:
-      - FINALGUARD
+      - FINALGUEVESA
     startingCondition: STR_FINAL_MISSION_GUEVESA_GV
-    race: STR_TZEENTCH_FINAL_HARD_GV
+    randomRace: [STR_TZEENTCH_CULT_BLUESTONE]
     # script: FINAL01S
     shade: 7
     nextStage: STR_FINAL_ENTRANCE_GUEVESA_GV
     loseCutscene: loseGame
     briefing:
-      title: STR_FINALLAND_TITLE_GV
-      desc: STR_FINALLAND_DESC_GV
+      title: STR_FINAL_LANDING_GUEVESA_GV
+      desc: STR_FINAL_LANDING_GUEVESA_GV_BRIEFING
       cutscene: c4
       textOffset: -16
       palette: 6
       music: GMGEO19
       showTarget: false
     markerIcon: 57
-    markerName: STR_FINAL_BASE
+    markerName: STR_FINAL_LANDING_GUEVESA_GV
     finalDestination: false
 
   - type: STR_FINAL_ENTRANCE_GUEVESA_GV
     music:
       - GMGEO19
+    randomRace: [STR_TZEENTCH_CULT_WITH_THOUSAND_SONS]
     data:
-      - alienRank: 5
-        lowQty: 5  # 4
-        highQty: 5  # 6
-        dQty: 5
-        percentageOutsideUfo: 60
+      - alienRank: 0
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
         itemSets: *emptyItemSets
       - alienRank: 1
-        lowQty: 4  # 3
-        highQty: 4  # 5
+        lowQty: 1
+        highQty: 2
         dQty: 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
-      - alienRank: 0
-        lowQty: 4  # 3
-        highQty: 4  # 5
-        dQty: 0
-        percentageOutsideUfo: 0
+      - alienRank: 2
+        lowQty: 2
+        highQty: 3 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 4
+        highQty: 4 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 11 #4
+        highQty: 12 #6
+        dQty: 1
+        percentageOutsideUfo: 70
         itemSets: *emptyItemSets
       - alienRank: 6
-        lowQty: 3  # 2
-        highQty: 3  # 4
-        dQty: 0
-        percentageOutsideUfo: 100
+        lowQty: 4 #1
+        highQty: 5 #3
+        dQty: 2
+        percentageOutsideUfo: 50
         itemSets: *emptyItemSets
-    race: STR_TZEENTCH_FINAL_HARD_GV
+      - alienRank: 7
+        lowQty: 4 #1
+        highQty: 5 #3
+        dQty: 2
+        itemSets: *emptyItemSets
     width: 50
     length: 70
     height: 7
     terrains:
       - ALART_TZEENTCH
-    # script: FINAL_SCRIPT_GUEVESA_GV
+    script: FINAL_SCRIPT_GUEVESA_GV
     shade: 7
     nextStage: STR_FINAL_ASSAULT_GUEVESA_GV
     loseCutscene: loseGame
     abortCutscene: loseGame
     briefing:
-      title: STR_FINALENTRANCE_TITLE_GV
-      desc: STR_FINALENTRANCE_DESC_GV
+      title: STR_FINAL_ENTRANCE_GUEVESA_GV
+      desc: STR_FINAL_ENTRANCE_GUEVESA_GV_BRIEFING
       textOffset: -16
       palette: 6
       music: GMGEO19
@@ -1064,189 +1546,231 @@ alienDeployments:
     width: 120
     length: 70
     height: 4
-    race: STR_TZEENTCH_FINAL_HARD_GV
+    randomRace: [STR_TZEENTCH_CULT_WITH_THOUSAND_SONS]
     enviroEffects: STR_WARDED_ENVIRO
     terrains:
       - ALART_TZEENTCH
-    # script: SILVER_TOWER_SCRIPT_GV
-    # reinforcements:  # time pressure; get it done
-    #   - type: GK_REINFORCEMENTS_FINAL_LIGHT
-    #     briefing:
-    #       palette: 4
-    #       textOffset: -32
-    #       title: STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE
-    #       desc: STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE_LIGHT_INSIDE_DESC
-    #       background: ImperialCommandBG.scr
-    #       cutscene: ""
-    #       showCraft: false
-    #       showTarget: false
-    #     minTurn: 5
-    #     maxTurn: 14
-    #     executionOdds: 25
-    #     maxRuns: -1  # they just keep coming
-    #     useSpawnNodes: true
-    #     mapBlockFilterType: 0  # all blocks, just go by node placement
-    #     data:
-    #       - alienRank: 5
-    #         lowQty: 1
-    #         highQty: 1
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 4
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 3
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 6
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 7
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #   - type: GK_REINFORCEMENTS_FINAL_MEDIUM
-    #     briefing:
-    #       palette: 4
-    #       textOffset: -32
-    #       title: STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE
-    #       desc: STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE_MEDIUM_DESC
-    #       background: ImperialCommandBG.scr
-    #       cutscene: ""
-    #       showCraft: false
-    #       showTarget: false
-    #     minTurn: 15
-    #     maxTurn: 24
-    #     executionOdds: 50
-    #     maxRuns: -1  # they just keep coming
-    #     useSpawnNodes: true
-    #     mapBlockFilterType: 0  # all blocks, just go by node placement
-    #     data:
-    #       - alienRank: 5
-    #         lowQty: 1
-    #         highQty: 1
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 4
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 3
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 6
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 7
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #   - type: GK_REINFORCEMENTS_FINAL_HEAVY
-    #     briefing:
-    #       palette: 4
-    #       textOffset: -32
-    #       title: STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE
-    #       desc: STR_GREYKNIGHT_REINFORCEMENTS_FINAL_TITLE_HEAVY_DESC
-    #       background: ImperialCommandBG.scr
-    #       cutscene: ""
-    #       showCraft: false
-    #       showTarget: false
-    #     minTurn: 25
-    #     executionOdds: 100
-    #     maxRuns: -1  # they just keep coming
-    #     useSpawnNodes: true
-    #     mapBlockFilterType: 0  # all blocks, just go by node placement
-    #     data:
-    #       - alienRank: 5
-    #         lowQty: 2
-    #         highQty: 2
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 4
-    #         lowQty: 1
-    #         highQty: 1
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 3
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 6
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
-    #       - alienRank: 7
-    #         lowQty: 0
-    #         highQty: 0
-    #         dQty: 1
-    #         itemSets: *emptyItemSets
+    script: SILVER_TOWER_SCRIPT_GV
     music:
       - INMYSPIRIT
     data:
-      - alienRank: 5
-        lowQty: 5 #4
-        highQty: 5 #6
-        dQty: 1
-        percentageOutsideUfo: 70
-        itemSets: *emptyItemSets
-      - alienRank: 4
-        lowQty: 1
-        highQty: 1 #2
-        dQty: 1 #0
-        percentageOutsideUfo: 20
-        itemSets: *emptyItemSets
-      - alienRank: 3
-        lowQty: 1
-        highQty: 1
-        dQty: 1
-        percentageOutsideUfo: 20
-        itemSets: *emptyItemSets
-      - alienRank: 2
-        lowQty: 1
-        highQty: 1 #2
-        dQty: 1 #0
-        percentageOutsideUfo: 20
-        itemSets: *emptyItemSets
-      - alienRank: 1
+      - alienRank: 0
         lowQty: 1
         highQty: 1
         dQty: 0
         percentageOutsideUfo: 0
         itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 2
+        highQty: 3
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 3
+        highQty: 4 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 4
+        highQty: 5
+        dQty: 1
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 5
+        highQty: 6 #2
+        dQty: 1 #0
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 11 #4
+        highQty: 12 #6
+        dQty: 1
+        percentageOutsideUfo: 70
+        itemSets: *emptyItemSets
       - alienRank: 6
-        lowQty: 2 #1
-        highQty: 2 #3
+        lowQty: 6 #1
+        highQty: 7 #3
         dQty: 2
         percentageOutsideUfo: 50
         itemSets: *emptyItemSets
       - alienRank: 7
-        lowQty: 2 #1
-        highQty: 2 #3
+        lowQty: 5 #1
+        highQty: 6 #3
         dQty: 2
         percentageOutsideUfo: 50
         itemSets: *emptyItemSets
     winCutscene: winGame
     loseCutscene: loseGame
     briefing:
-      title: STR_CHAOS_FINAL2_TITLE
-      desc: STR_CHAOS_FINAL2_DESC
+      title: STR_FINAL_ASSAULT_GUEVESA_GV
+      desc: STR_FINAL_ASSAULT_GUEVESA_GV_BRIEFING
       textOffset: -16
       palette: 6
       music: INMYSPIRIT
       showTarget: false
     finalDestination: false # used for the hangar mission, not necessary since this is spawned as a base
+
+### Imperial UFOs recolored from GSC
+  - type: STR_IMP_TAUROX  # 2xTaurox Imperial
+    briefing:
+      cutscene: SMALL
+      music: gmstory2
+    data:
+      - alienRank: 5
+        lowQty: 4  # 1
+        highQty: 4  # 3
+        dQty: 1
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2
+        dQty: 0
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 3  # medics
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 2  # Engineers and Heavies
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 1  # Leaders
+        lowQty: 1
+        highQty: 1  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+    width: 40
+    length: 40
+    height: 9
+    # unlockedResearch: STR_SMALL_SCOUT
+  - type: STR_IMP_TAUROX_CONVOY  # 4xTaurox Imperial limo
+    briefing:
+      cutscene: MEDIUM
+      music: gmstory2
+    data:
+      - alienRank: 5
+        lowQty: 4  # 1
+        highQty: 4  # 3
+        dQty: 4
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2
+        dQty: 0
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 3  # medics
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 3  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 2  # Engineers and Heavies
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 2  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 1  # Leaders
+        lowQty: 1
+        highQty: 1  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 9
+    # unlockedResearch: STR_SMALL_SCOUT
+  - type: STR_IMP_TRUCKS  # 2xImperial Trucks
+    briefing:
+      cutscene: SMALL
+      music: gmstory2
+    data:
+      - alienRank: 5
+        lowQty: 4  # 1
+        highQty: 4  # 3
+        dQty: 3
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2
+        dQty: 0
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 3  # medics
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 2  # Engineers and Heavies
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 1  # Leaders
+        lowQty: 1
+        highQty: 1  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+    width: 40
+    length: 40
+    height: 9
+    # unlockedResearch: STR_SMALL_SCOUT
+  - type: STR_IMP_TRUCK_CONVOY  # 3x Imperial Trucks + 1 Imperial Taurox
+    briefing:
+      cutscene: MEDIUM
+      music: gmstory2
+    data:
+      - alienRank: 5
+        lowQty: 4  # 1
+        highQty: 4  # 3
+        dQty: 4
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 3  # medics
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 4  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 2  # Engineers and Heavies
+        lowQty: 2
+        highQty: 2  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+      - alienRank: 1  # Leaders
+        lowQty: 1
+        highQty: 1  # 2
+        dQty: 0  # 1
+        percentageOutsideUfo: 25
+        itemSets: *emptyItemSets
+    width: 50
+    length: 50
+    height: 9
+  # - type: STR_MAKE_LEMANADE_GV
+  #   refNode: *STR_DEPLOYMENT_TEMPLATE_NORMAL_GV
+  #   customUfo: STR_GUARD_LEMAN_RUSS_FRIENDLY_GV
+  #   civiliansByType:
+  #     STR_GUARDS_M_LV1_AI: 4

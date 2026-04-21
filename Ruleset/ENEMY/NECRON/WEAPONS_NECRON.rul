@@ -416,7 +416,7 @@ items:
     maxRange: 2
     powerRangeThreshold: 2
     powerRangeReduction: 99
-    dropoff: 999
+    dropoff: 5
     tuSnap: 0
     flatSnap: true
     accuracySnap: 110
@@ -568,7 +568,7 @@ items:
     accuracyMultiplier:
       melee: 0.7
       strength: 0.3
-    dropoff: 999
+    dropoff: 5
     flatSnap: true
     costSnap:
       time: 25
@@ -728,10 +728,10 @@ items:
     tags:  # Flayed Ones regenerate when they wound/kill
       TAG_HP_RETURNED_ON_KILL: 88  # regains 88 HP on kill; Sacred Khorne Number
       TAG_ENERGY_RETURNED_ON_KILL: 88  # regains 88 Energy on kill
-      TAG_TIME_RETURNED_ON_KILL: 8  # regains 8 TU on kill
+      # TAG_TIME_RETURNED_ON_KILL: 8  # regains 8 TU on kill
       TAG_MORALE_RETURNED_ON_KILL: 88  # regains 88 Morale on kill
       TAG_STUN_RETURNED_ON_KILL: 88  # regains 88 Stun on kill
-      YTAG_DAMAGE_RETURNED_AS_TIME: 8  # regain 8% of damage dealt in TUs; Sacred Khorne Number
+      # YTAG_DAMAGE_RETURNED_AS_TIME: 8  # regain 8% of damage dealt in TUs; Sacred Khorne Number
       YTAG_DAMAGE_RETURNED_AS_HP: 8  # regain 8% of damage dealt in HP; Sacred Khorne Number
       YTAG_DAMAGE_RETURNED_AS_ENERGY: 8
       YTAG_DAMAGE_RETURNED_AS_MORALE: 8
@@ -739,11 +739,14 @@ items:
       YTAG_DAMAGE_RETURNED_RESIST_TYPE: 0  # untyped damage so no modifications
 
   - &STR_NECRON_ITEM_REMNANT
+    type: STR_NECRON_REMNANTS
     size: 0.1
     battleType: 0
     costSell: 1000
-    type: STR_HYPERPHASESWORD_REMNANT
     ufopediaType: STR_NECRON_REMNANTS
+
+  - type: STR_HYPERPHASESWORD_REMNANT
+    refNode: *STR_NECRON_ITEM_REMNANT
 
   - type: STR_GAUSS_CANNON_REMNANT
     refNode: *STR_NECRON_ITEM_REMNANT

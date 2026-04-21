@@ -184,6 +184,12 @@ items:  # Geoscape items representing genericized live aliens
   # - type: STR_LIVE_CAPTURE_SLAANESH_MARINE_LEADER
   #  refNode: *STR_LIVE_CAPTURE_GENERIC
   #  costSell: 80000
+  - type: STR_SLAANESH_CSM_CHAMPION
+    size: 0.0
+    recover: true
+    liveAlien: true
+    costSell: 40000
+    listOrder: 20300
   - type: STR_SLAANESH_ANOINTED
     size: 0.0
     recover: true
@@ -410,6 +416,18 @@ items:  # Geoscape items representing genericized live aliens
     liveAlien: true
     costSell: 50000
     listOrder: 20300
+  - type: STR_SLAANESH_LESSER_SPAWN
+    size: 0.0
+    recover: true
+    liveAlien: true
+    costSell: 7500
+    listOrder: 20300
+  - type: STR_SLAANESH_MUTANT
+    size: 0.0
+    recover: true
+    liveAlien: true
+    costSell: 5000
+    listOrder: 20300
   ## Dark Mechanicum
   - type: STR_CHAOS_HERETEK       # 20400
     size: 0.0
@@ -565,6 +583,29 @@ items:  # Geoscape items representing genericized live aliens
     recover: true
     liveAlien: true
     costSell: 15000
+
+  ## Redemptionists
+  - type: STR_REDEMPTIONIST_T0_GV # Redemptionist T1
+    refNode: *STR_LIVE_CAPTURE_GENERIC
+    costSell: 1000
+  - type: STR_REDEMPTIONIST_T1_GV # Redemptionist T1
+    refNode: *STR_LIVE_CAPTURE_GENERIC
+    costSell: 1000
+  - type: STR_REDEMPTIONIST_T2_GV # Redemptionist T2
+    refNode: *STR_LIVE_CAPTURE_GENERIC
+    costSell: 2000
+  - type: STR_REDEMPTIONIST_T3_GV # Redemptionist T3
+    refNode: *STR_LIVE_CAPTURE_GENERIC
+    costSell: 3000
+
+ ## ADMECH ADEPTUS MECHANICUS
+  - type: STR_ENGINSEER_OPFOR       # 20400
+    size: 0.0
+    recover: true
+    liveAlien: true
+    costSell: 30000
+    listOrder: 20400
+
   ## Zombies
   - type: STR_GUARD_SQUAT_CARA_FEMALE_ZOMBIE
     size: 0.0
@@ -918,6 +959,9 @@ units:
   - type: STR_NURGLE_CULTIST_LEADER  # Nurgle Cult Leader
     liveAlien: STR_LIVE_CAPTURE_CULTIST_LEADER
 
+  - type: STR_SLAANESH_CULTIST_BIGM
+    liveAlien: STR_LIVE_CAPTURE_CULTIST
+
   - type: STR_TZEENTCH_CULT_WITCH  # Chaos Witch
     liveAlien: STR_LIVE_CAPTURE_WITCH
   - type: STR_TZEENTCH_CULT_WITCH_RITUALIST  # Chaos Witch
@@ -932,6 +976,10 @@ units:
     liveAlien: STR_LIVE_CAPTURE_WITCH
   - type: STR_SLAANESH_DEMIMONDE_BLESSED  # Slaanesh Demimonde
     liveAlien: STR_LIVE_CAPTURE_WITCH
+  - type: STR_SLAANESH_SHARDSPEAKER
+    liveAlien: STR_LIVE_CAPTURE_WITCH_LEADER
+  - type: STR_SLAANESH_SHARDSPEAKER_COMMANDER
+    liveAlien: STR_LIVE_CAPTURE_WITCH_LEADER
   - type: STR_TZEENTCH_ACOLYTE  # Chaos Acolyte
     liveAlien: STR_LIVE_CAPTURE_WITCH
   - type: STR_TZEENTCH_ACOLYTE_FLAMER  # Chaos Acolyte
@@ -1004,6 +1052,14 @@ units:
     liveAlien: STR_LIVE_CAPTURE_PRIMORDIAL_SORCERER
   - type: STR_CHAOSCULT_PRIEST_LV4F_AI  # Chaos Sorceress
     liveAlien: STR_LIVE_CAPTURE_PRIMORDIAL_SORCERER
+
+  ## Redeemed (Redemptionist Tzeentch Cultists)
+  - type: STR_REDEEMED_T1_GV # Redeemed T1
+    liveAlien: STR_LIVE_CAPTURE_CULTIST
+  - type: STR_REDEEMED_T2_GV # Redeemed T2
+    liveAlien: STR_LIVE_CAPTURE_WITCH
+  - type: STR_REDEEMED_T3_GV # Redeemed T3
+    liveAlien: STR_LIVE_CAPTURE_WITCH_LEADER
 
   ## Chaos Sisters
   - type: STR_HERETIC_SISTER  # Heretic Sister

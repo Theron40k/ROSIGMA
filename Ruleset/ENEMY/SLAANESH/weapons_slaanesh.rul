@@ -68,6 +68,104 @@ items:
     specialIconSprite: 3
     specialUseEmptyHand: false
 
+  - type: STR_BLISSFUL_THROES
+    categories: [STR_CAT_MELEE, STR_CAT_CHAOS, STR_CAT_SLAANESH]
+    size: 0.1
+    weight: 0
+    bigSprite: 2430 #Purple tentacle
+    bulletSprite: 25 #purple bullet 875
+    fireSound: 2000 #Whip
+    hitSound: {mod: 40k, index: 1} #change
+    # hitAnimation: 2320 #Slaanhitsmall.png
+    power: 40  # melee
+    confSnap:
+      shots: 1
+    costSnap:
+      time: 15
+      energy: 6
+    accuracySnap: 80
+    confAuto:
+      shots: 2
+    costAuto:
+      time: 25
+      energy: 10
+    accuracyAuto: 70
+    damageAlter:
+      ArmorEffectiveness: 0.2
+      ToArmorPre: 0.1
+      ToTime: 0.5
+      ToEnergy: 0.5
+      RandomEnergy: true
+      ToMorale: 1.5
+      ToHealth: 0.2 #low health damage
+      RandomHealth: true
+      ToStun: 0.5
+      ToWound: 0.05
+      RandomStun: true
+      RandomType: 6  # [0% - 200%]
+      FixRadius: 1
+      ToTile: 0.00  # this shouldn't blow up cover
+      ToItem: 0.00
+    damageType: 7 #melee
+    accuracyMultiplier:
+      firing: 0.0
+      throwing: 0.5
+      melee: 0.5
+    flatRate: true
+    clipSize: -1
+    recover: false
+    fixedWeapon: true
+    battleType: 1
+    maxRange: 15  # has super reach
+    powerRangeThreshold: 15
+    powerRangeReduction: 99
+    twoHanded: false
+    skillApplied: true
+    meleeSound: 2000 #Whip replace
+    meleeHitSound: 2000 #Whip replace
+    meleeAnimation: 17 #meleePurple
+    meleeType: 6
+    meleePower: 50
+    meleeAlter:
+      ArmorEffectiveness: 0.2
+      ToArmorPre: 0.1
+      ToTime: 0.5
+      ToEnergy: 0.5
+      RandomEnergy: true
+      ToMorale: 1.5
+      ToHealth: 0.2 #low health damage
+      RandomHealth: true
+      ToStun: 0.5
+      ToWound: 0.05
+      RandomStun: true
+      RandomType: 6  # [0% - 200%]
+      FixRadius: 1
+      ToTile: 0.00  # this shouldn't blow up cover
+      ToItem: 0.00
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    costMelee:
+      time: 12
+      energy: 5
+    flatMelee:
+      time: true
+    strengthApplied: false
+    accuracyMelee: 80
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 50
+    listOrder: 12600
+    tags:
+      ITEM_DOESNT_HURT_USER: 1
+      ITEM_IS_PSYCHIC_POWER: 1
+      INFECTION_DAMAGE_PERCENT: 50  # inflicts % of damage dealt as infection damage
+      INFECTION_TYPE: 3  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
+
   - &STR_SLAANESH_CORRUPTION_MELEE
     type: STR_DIRE_DAEMONETTE_CLAWS
     weight: 3
@@ -158,6 +256,46 @@ items:
       INFECTION_DAMAGE_PERCENT: 100  # inflicts % of damage dealt as infection damage
       INFECTION_TYPE: 3  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
 
+  - type: STR_SLAANESH_LESSER_SPAWN_WEAPON # For Slaanesh Lesser Spawn
+    refNode: *STR_SLAANESH_CORRUPTION_MELEE
+    bigSprite: 2427
+    meleeAnimation: 98 #doubleslashpurple
+    meleeSound: 2143
+    meleeHitSound: 2142
+    accuracyMelee: 80
+    meleeBonus:  # just need to touch
+      reactions: 0.1
+      melee: 0.5
+    power: 66
+    damageType: 12  # untyped
+    damageAlter:
+      IgnoreSelfDestruct: false
+      RandomType: 6
+      ArmorEffectiveness: 0.3  # doesn't really interact with armor
+      ToHealth: 0.25  # pure corruption; dummied down to 1% to fool AIs
+      ToMorale: 10.0
+      ToStun: 1.0
+      ToTime: 1.0
+      ToMana: 1.0
+      ToArmor: 0.0
+      ToTile: 0.0
+      ToItem: 0.0
+      ToWound: 0.0
+      RandomWound: false
+    costMelee:
+      time: 15
+      energy: 1
+    flatMelee:
+      time: true
+      energy: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    fixedWeapon: true
+    tags:
+      ITEM_DUMMY_HEALTH_DAMAGE_PERCENT: 1
+      INFECTION_DAMAGE_PERCENT: 50  # inflicts % of damage dealt as infection damage
+      INFECTION_TYPE: 3  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
 
   - type: STR_SLAANGOR_CLAW_GIMPIFY  # For Ritualist, zombifies
     weight: 10
@@ -405,6 +543,7 @@ items:
       melee: 1.0
       flatHundred: 0.0
     listOrder: 12400
+
   - type: STR_SLAAN_LASGUN
     categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
     size: 0.2
@@ -976,7 +1115,7 @@ items:
   - type: STR_BOLTERSLAAN  # BOLTER SLAANESH  10340
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     size: 0.3
-    dropoff: 7
+    dropoff: 5
     costSell: 2750
     weight: 20
     bigSprite: 2320
@@ -1039,7 +1178,7 @@ items:
   - type: STR_LIGHT_BOLTERSLAAN  # BOLTER SLAANESH  10340
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     size: 0.3
-    dropoff: 8
+    dropoff: 5
     costSell: 2250
     weight: 15
     bigSprite: 2319
@@ -1100,7 +1239,7 @@ items:
   - type: STR_BOLTERSLAAN_SCOPED  # BOLTER SLAANESH  10340
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     size: 0.3
-    dropoff: 7
+    dropoff: 4
     costSell: 3000
     weight: 22
     bigSprite: 2321
@@ -1163,10 +1302,49 @@ items:
       ITEM_RECOIL: 40
       ITEM_COLOR_CHANGES_WITH_AMMO: 15
 
+  - type: STR_BOLTPISTOL_SLAAN  # BOLTPISTOL SLAANESH
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.2
+    dropoff: 5
+    costSell: 1750
+    weight: 15
+    bigSprite: 2340
+    floorSprite: 2436
+    handSprite: 2680
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 708}
+    compatibleAmmo:
+      - STR_BOLTPISTOL_CLIP_S #create
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_PISTOL_CLIP_MC
+    accuracySnap: 65
+    accuracyAuto: 35
+    tuSnap: 20
+    confSnap:
+      shots: 2
+    tuAuto: 33
+    snapRange: 11
+    autoRange: 7
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 30
+    autoShots: 3
+    bulletSpeed: 50
+    attraction: 1
+    listOrder: 10340
+    tags:
+      ITEM_RECOIL: 35
+      ITEM_COLOR_CHANGES_WITH_AMMO: 15
+      REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+
   - type: STR_LARGE_KOMBIBOLTERSLAAN  # SONICBOLTER SLAANESH  10340
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     size: 0.3
-    dropoff: 7
+    dropoff: 4
     costSell: 5000
     weight: 25
     bigSprite: 2322
@@ -1231,6 +1409,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: 26
     damageAlter:  # DA BOLTER SLAAN
+      RandomType: 2 #50-150%
       ToArmorPre: 0.3
       ArmorEffectiveness: 0.75
       ToArmor: 0.2
@@ -1248,6 +1427,35 @@ items:
     invHeight: 2
     listOrder: 10460
 
+  - type: STR_BOLTPISTOL_CLIP_S
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.1
+    costSell: 100
+    weight: 1
+    bigSprite: 2341
+    floorSprite: {mod: 40k, index: 4} #Needs unique
+    handSprite: {mod: 40k, index: 464} #Needs unique
+    hitSound: {mod: 40k, index: 708}
+    hitAnimation: 26
+    damageAlter:  # DA BOLTER SLAAN
+      RandomType: 2 #50-150%
+      ToArmorPre: 0.3
+      ArmorEffectiveness: 0.8
+      ToArmor: 0.15
+      ToHealth: 0.7
+      ToStun: 0.30
+      ToEnergy: 0.3
+      ToMorale: 0.2
+    explosionSpeed: 5
+    power: 60
+    damageType: 1
+    clipSize: 10
+    battleType: 2
+    armor: 30
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10341
+
   - type: STR_LIGHT_BOLTER_AMMO_SLAAN
     categories: [STR_CAT_BOLTER]
     size: 0.1
@@ -1259,6 +1467,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: 26
     damageAlter:  # DA LIGHT BOLTER SLAAN
+      RandomType: 2 #50-150%
       ToArmorPre: 0.15
       ArmorEffectiveness: 0.8
       ToArmor: 0.15

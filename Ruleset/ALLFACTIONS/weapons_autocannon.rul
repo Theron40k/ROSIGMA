@@ -36,10 +36,11 @@ items:
       ITEM_RECOIL: 70
       ITEM_IS_HEAVY_WEAPON: 1
 
-  - type: STR_AUTOCANNON_HANDHELD_ANY  # Generic autocannon for use by any faction
+  - type: STR_AUTOCANNON_HANDHELD_ANY  # Generic autocannon for use by any faction except IG as it is not really usable by them without bipods
     refNode: *STR_AUTOCANNON_TEMPLATE
     requiresBuy:
       - STR_MIDTIER_PREREQ
+      - STR_NOT_GUARD
     requiresBuyBaseFunc: [TRADE]
     costBuy: 450000
     costSell: 10000
@@ -117,6 +118,7 @@ items:
       - STR_AUTOCANNON_HE_AMMO
       - STR_AUTOCANNON_AP_AMMO
       - STR_AUTOCANNON_BOX_AMMO
+      - STR_ASSC_CLIP_AP
     battleType: 1
     twoHanded: true
     oneHandedPenalty: 100

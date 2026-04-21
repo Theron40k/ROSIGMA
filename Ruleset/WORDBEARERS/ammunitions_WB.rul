@@ -19,7 +19,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: 140
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.2 # 20% warpfire Breaching
+      ToArmorPre: 0.3 # 20% warpfire Breaching
       ArmorEffectiveness: 0.9
       ToArmor: 0.2 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -29,7 +29,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.1  # word bearers faith
+      psiSkill: 0.1  # word bearers faith
     explosionSpeed: 3
     power: 60
     damageType: 1
@@ -61,7 +61,7 @@ items:
     damageAlter: #DA BOLTER
       ToArmorPre: 0.2 # 20% warpfire Breaching
       ArmorEffectiveness: 0.9
-      ToArmor: 0.2 # 20% warpfire Breaching
+      ToArmor: 0.3 # 20% warpfire Breaching
       ToHealth: 0.8
       ToStun: 0.8 # warpfire ShellShock
       ToTime: 0.4  # 40% to TU damage warfire Pinning
@@ -69,7 +69,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.1  # word bearers faith
+      psiSkill: 0.1  # word bearers faith
     explosionSpeed: 3
     power: 65
     damageType: 1
@@ -99,7 +99,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: {mod: 40k, index: 26}
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.2 # 20% warpfire Breaching
+      ToArmorPre: 0.3 # 20% warpfire Breaching
       ArmorEffectiveness: 0.9
       ToArmor: 0.2 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -109,7 +109,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.1  # word bearers faith
+      psiSkill: 0.1  # word bearers faith
     explosionSpeed: 5
     power: 80
     clipSize: 50
@@ -127,10 +127,13 @@ items:
     categories: [STR_CAT_TERMINATOR, STR_CAT_BOLTER, STR_CAT_CHAOS]
     requires:
       - STR_WORDBEARERS_STRATEGY
+      - STR_MIDTIER_PREREQ
+      - STR_HB_DEP1
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
-      - STR_HB_DEP1
+      - STR_RITUAL_FAVOURS
+      - STR_STORMBOLTERS_WB
     size: 0.3
     costSell: 1000
     weight: 10
@@ -140,7 +143,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: {mod: 40k, index: 26}
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.2 # 20% warpfire Breaching
+      ToArmorPre: 0.3 # 20% warpfire Breaching
       ArmorEffectiveness: 0.9
       ToArmor: 0.2 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -150,7 +153,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.1  # word bearers faith
+      psiSkill: 0.1  # word bearers faith
     shotgunSpread: 1  # 1/100; hit together
     shotgunBehavior: 1  # new behaviour
     shotgunPellets: 2
@@ -170,6 +173,16 @@ items:
 
   - type: STR_ASSC_CLIP_WARP # Word Bearers Warpfire Autocannon ammo
     categories: [STR_CAT_TERMINATOR, STR_CAT_CHAOS]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_AUTOCANNONS_WB
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+      - STR_RITUAL_BETRAYAL
     size: 0.3
     costSell: 1000
     weight: 15
@@ -186,7 +199,7 @@ items:
     invWidth: 2
     invHeight: 2
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.2 # 20% warpfire Breaching
+      ToArmorPre: 0.3 # 20% warpfire Breaching
       ArmorEffectiveness: 0.9
       ToArmor: 0.2 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -196,7 +209,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.1  # word bearers faith
+      psiSkill: 0.1  # word bearers faith
     bulletSpeed: 50
     explosionSpeed: 5
     attraction: 8
@@ -220,7 +233,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: 140
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.3 # 30% warpfire Breaching
+      ToArmorPre: 0.4 # 30% warpfire Breaching
       ArmorEffectiveness: 0.8
       ToArmor: 0.3 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -230,7 +243,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.3  # word bearers faith
+      psiSkill: 0.3  # word bearers faith
     explosionSpeed: 3
     power: 70
     damageType: 1
@@ -260,7 +273,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: {mod: 40k, index: 140}
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.3 # 30% warpfire Breaching
+      ToArmorPre: 0.4 # 30% warpfire Breaching
       ArmorEffectiveness: 0.8
       ToArmor: 0.3 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -270,7 +283,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.3  # word bearers faith
+      psiSkill: 0.3  # word bearers faith
     explosionSpeed: 3
     power: 75
     damageType: 1
@@ -299,7 +312,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: {mod: 40k, index: 26}
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.3 # 30% warpfire Breaching
+      ToArmorPre: 0.4 # 30% warpfire Breaching
       ArmorEffectiveness: 0.8
       ToArmor: 0.3 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -309,7 +322,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.3  # word bearers faith
+      psiSkill: 0.3  # word bearers faith
     explosionSpeed: 5
     power: 90
     clipSize: 50
@@ -328,6 +341,7 @@ items:
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_HIGHTIER_PREREQ
+      - STR_STORMBOLTERS_WB
       - STR_RITUAL_BLESSING
     size: 0.3
     costSell: 1000
@@ -338,7 +352,7 @@ items:
     hitSound: {mod: 40k, index: 708}
     hitAnimation: {mod: 40k, index: 26}
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.3 # 30% warpfire Breaching
+      ToArmorPre: 0.4 # 30% warpfire Breaching
       ArmorEffectiveness: 0.8
       ToArmor: 0.3 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -348,7 +362,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.3  # word bearers faith
+      psiSkill: 0.3  # word bearers faith
     shotgunSpread: 1  # 1/100; hit together
     shotgunBehavior: 1  # new behaviour
     shotgunPellets: 2
@@ -368,6 +382,17 @@ items:
 
   - type: STR_ASSC_CLIP_WARPBLESS # Word Bearers Warpfire Autocannon Blessed ammo
     categories: [STR_CAT_TERMINATOR, STR_CAT_CHAOS]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_AUTOCANNONS_WB
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+      - STR_RITUAL_BETRAYAL
+      - STR_RITUAL_BLESSING
     size: 0.3
     costSell: 1000
     weight: 15
@@ -384,7 +409,7 @@ items:
     invWidth: 2
     invHeight: 2
     damageAlter: #DA BOLTER
-      ToArmorPre: 0.3 # 30% warpfire Breaching
+      ToArmorPre: 0.4 # 30% warpfire Breaching
       ArmorEffectiveness: 0.8
       ToArmor: 0.3 # 20% warpfire Breaching
       ToHealth: 0.8
@@ -394,7 +419,7 @@ items:
       ToWound: 0.1
       RandomWound: false
     damageBonus:
-      psiStrength: 0.3  # word bearers faith
+      psiSkill: 0.3  # word bearers faith
     bulletSpeed: 50
     explosionSpeed: 5
     attraction: 8
@@ -432,4 +457,138 @@ items:
     hitAnimation: {mod: 40k, index: 88}
     explosionHitSound: {mod: 40k, index: 788}
     hitSound: {mod: 40k, index: 788}
+
+  - type: STR_CHAOS_CROZIUS_POWER3
+    recover: false
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [IMPERIUM]
+    size: 0.1
+    weight: 2
+    bigSprite: {mod: 40k, index: 338}
+    floorSprite: {mod: 40k, index: 199}
+    handSprite: {mod: 40k, index: 688}
+    bulletSprite: {mod: 40k, index: 19}
+    fireSound: [{mod: 40k, index: 823}, {mod: 40k, index: 824}, {mod: 40k, index: 825}, {mod: 40k, index: 826}, {mod: 40k, index: 827}]
+    explosionHitSound: {mod: 40k, index: 771}
+    power: 60
+    damageType: 2
+    damageAlter:
+      RandomType: 6
+      FireBlastCalc: false
+      IgnoreOverKill: false
+      IgnoreSelfDestruct: false
+      ToHealth: 1.0
+      ToTile: 0.3
+      ToItem: 0.3
+      ToMorale: 5.0
+      ArmorEffectiveness: 0.5
+      FixRadius: -1
+    damageBonus:
+      bravery: 0.6
+      psiSkill: 0.6
+      psiStrength: 0.2
+    bulletSpeed: 50
+    explosionSpeed: 10
+    clipSize: -1
+    battleType: 2
+    armor: 40
+    attraction: 8
+    invWidth: 1
+    invHeight: 1
+
+  - type: STR_WARPFIRE_IMPLOSION # Arch Diabolist Warpfire Implosion
+    categories: [STR_CAT_BOLTER, STR_CAT_CHAOS]
+    requiresBuyBaseFunc: [IMPERIUM]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_EREBUS
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
+    size: 0.1
+    weight: 2
+    bigSprite: 3805
+    hitSound: {mod: 40k, index: 708}
+    explosionHitSound: {mod: 40k, index: 771}
+    powerForAnimation: 32
+    hitAnimation: 2160
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0.2 # 20% warpfire Breaching
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.3 # 20% warpfire Breaching
+      ToHealth: 0.8
+      ToStun: 0.8 # warpfire ShellShock
+      ToTime: 0.4  # 40% to TU damage warfire Pinning
+      ToEnergy: 0.2
+      ToWound: 0.1
+      RandomWound: false
+    damageBonus:
+      psiSkill: 0.3
+    explosionSpeed: 3
+    power: 80
+    damageType: 4
+    clipSize: -1
+    battleType: 2
+    armor: 200
+    attraction: 1
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10408
+    vaporColorSurface: 16
+    vaporDensitySurface: 1
+
+  - type: STR_WARPFIRE_RIFT # Dark Apostle Warpfire Rift
+    categories: [STR_CAT_BOLTER, STR_CAT_CHAOS]
+    requiresBuyBaseFunc: [IMPERIUM]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_EREBUS
+      - STR_EREBUS_PATHGIFT
+    size: 0.1
+    weight: 2
+    bigSprite: 3805
+    hitSound: {mod: 40k, index: 708}
+    explosionHitSound: {mod: 40k, index: 771}
+    powerForAnimation: 30
+    hitAnimation: 2261
+    hitAnimFrames: 8
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0.3 # 20% warpfire Breaching
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2 # 20% warpfire Breaching
+      ToHealth: 0.8
+      ToStun: 0.8 # warpfire ShellShock
+      ToTime: 0.4  # 40% to TU damage warfire Pinning
+      ToEnergy: 0.2
+      ToWound: 0.1
+      RandomWound: false
+      FixRadius: 1
+    damageBonus:
+      psiStrength: 0.5
+    explosionSpeed: 2
+    power: 160
+    damageType: 3
+    clipSize: -1
+    battleType: 2
+    armor: 200
+    attraction: 1
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10408
+    vaporColorSurface: 16
+    vaporDensitySurface: 3
+
+  # dreadclaw smoker ammo
+
+  - type: STR_WBSMOKER_AMMO
+    size: 0.3
+    weight: 15
+    bigSprite: {mod: 40k, index: 1082}
+    power: 60
+    clipSize: 3
+    battleType: 2
+    invWidth: 1
+    invHeight: 3
+    recover: false
+    damageType: 9
+    blastRadius: 5
 

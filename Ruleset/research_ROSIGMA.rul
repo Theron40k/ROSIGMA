@@ -44,7 +44,7 @@
 # #CM.GK#             Grey Knights
 # #CM.RAD#            The Radical Road
 # #CM.OA#             Officio Assassinorum
-# #AT#              Adeptus Terra
+# #AT#              The Alien and the Heretic
 # #AT.LAW#            The Imperial Law Strategy
 # #AT.CULT#           Chaos Cult
 # #SOB#             Adeptas
@@ -225,6 +225,10 @@ research:
       - STR_PSI_LAB
       - STR_LIBRARY
       - STR_IMPERIAL_WEAPONS
+
+  - name: STR_BLOCKIT # Block IT
+    dependencies:
+      - STR_GENERALLOCK
 
   - name: STR_UNSANCTIONED_REQUISITIONS  # Unsanctioned Requisitions
     dependencies:
@@ -989,6 +993,8 @@ research:
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_KRIEG  # Krieg Selected
     refNode: *STR_LOCKED
+  - name: STR_CHOSEN_VALHALLA # Valhallan Selected
+    refNode: *STR_LOCKED
   - delete: STR_CHOSEN_ELDAR
   - name: STR_CHOSEN_ELDAR  # Eldar Path
     refNode: *STR_LOCKED
@@ -998,6 +1004,9 @@ research:
   - name: STR_CHOSEN_ASSASSINORUM  # Officio Assassinorum Selected
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_ORKZ  # Emprah's Greenest Selected
+    refNode: *STR_LOCKED
+
+  - name: STR_NOT_IMPERIUM  # (Not Imperium)
     refNode: *STR_LOCKED
 
   - name: STR_NOT_MARINES  # (Not Space Marines)
@@ -1010,9 +1019,9 @@ research:
   - name: STR_NOT_SPACEWOLVES  # (Not Spacewolf Strategy)
   - name: STR_NOT_WORDBEARERS  # (Not Word Bearers Strategy)
 
-  - name: STR_NOT_ADEPTUS_TERRA  # (Not Adeptus Terra)
-  - delete: STR_NOT_ARBITES
-  - name: STR_NOT_ARBITES  # (Not Arbites)
+  - name: STR_NOT_ADEPTUS_TERRA  # (Not Alien or Heretic)
+  - delete: STR_NOT_THE_IMPERIAL_LAW
+  - name: STR_NOT_THE_IMPERIAL_LAW  # (Not The Imperial Law)
   - name: STR_NOT_CHAOSCULT  # (Not Chaos Cult)
   - name: STR_NOT_GREENEST_ORKZ  # (Not Greenest Orkz)
 
@@ -1280,7 +1289,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE2
@@ -1299,9 +1307,10 @@ research:
       - STR_DEVASTATOR
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
+      - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_ASSAULT_CARE_PACKAGE
 
 ### Devastator Strategy #STRATEGY.SM.DEV#
@@ -1315,7 +1324,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE1
@@ -1333,9 +1341,10 @@ research:
       - STR_TATICAL
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
+      - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_DEVASTATOR_CARE_PACKAGE
 
 ### Primaris Strategy #STRATEGY.SM.PRIM#
@@ -1349,7 +1358,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_APOTHECARY
@@ -1367,6 +1375,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_CASS_R
+      - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_PRIMARIS_CARE_PACKAGE
@@ -1382,7 +1391,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE2
@@ -1399,9 +1407,10 @@ research:
       - STR_DEVASTATOR
       - STR_TATICAL
       - STR_SPACEWOLVES_STRATEGY
+      - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_SCOUT_CARE_PACKAGE
 
 ### Tactical Strategy #STRATEGY.SM.TAC#
@@ -1415,7 +1424,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_THUNDERHAWKTYPE1
@@ -1434,9 +1442,10 @@ research:
       - STR_DEVASTATOR
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
+      - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
-      - STR_ADV_DROPPODS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_TACTICAL_CARE_PACKAGE
 
   - name: STR_SMGIVEOTHER_INTERCEPTOR
@@ -1457,7 +1466,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_CRATED_SWRHINOS
@@ -1476,6 +1484,7 @@ research:
       - STR_DEVASTATOR
       - STR_SCOUT
       - STR_TATICAL
+      - STR_WORDBEARERS_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_SPACEWOLVES_INITIAL_SITREP
@@ -1530,9 +1539,10 @@ research:
       - STR_MARINES_STRATEGY
     lookup: STR_CHOSEN_WORDBEARERS
     unlocks:
-      - STR_DEFAULT_CAMPAIGN
       - STR_BOOK_EREBUS
       - STR_BOOK_KORPHAERON
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_NOT_IMPERIUM
     disables:
       - STR_CHAPTER_PURITY
       - STR_NOT_WORDBEARERS
@@ -1552,10 +1562,16 @@ research:
       - STR_DEVASTATOR
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
+      - STR_HARDER_MISSIONS # they get enabled a bit later
       - STR_ENABLE_EVEN_HARDER_MISSIONS
       - STR_ENABLE_EXTRA_RETALIATIONS  # for now
       - STR_DIFFICULTY_OPTIONS
       - STR_DEFAULT_CAMPAIGN
+      - STR_MOTION_SCANNER
+      - STR_PHOSPHOR_GRENADE
+    getOneFree:
+      - STR_SMOKE
+    spawnedEvent: STR_WORDBEARERS_BURNTHEM
 
   - name: STR_BOOK_EREBUS
     cost: 1
@@ -1567,8 +1583,6 @@ research:
       #- STR_HARDER_MISSIONS  # given by a further WB research so not now
       - STR_LIGHT_BOLTERS
       - STR_IMPERIUM_RESEARCH
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       #- STR_THUNDERHAWKTYPE1
@@ -1577,6 +1591,9 @@ research:
       - STR_CRATED_CHAOSDROPPODS
       - STR_CRATED_CHAOSRHINOS
       - STR_MARINE_BOLTERS
+    reenables:
+      - STR_MOTION_SCANNER
+      - STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_KORPHAERON
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGEMK3
@@ -1591,8 +1608,6 @@ research:
       #- STR_HARDER_MISSIONS  # given by a further WB research so not now
       - STR_LIGHT_BOLTERS
       - STR_IMPERIUM_RESEARCH
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       #- STR_THUNDERHAWKTYPE1
@@ -1601,6 +1616,9 @@ research:
       - STR_CRATED_CHAOSDROPPODS
       - STR_CRATED_CHAOSRHINOS
       - STR_MARINE_BOLTERS
+    reenables:
+      - STR_MOTION_SCANNER
+      - STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_EREBUS
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGE
@@ -1659,6 +1677,13 @@ research:
     dependencies:
       - STR_WORDBEARERS_STRATEGY
       - STR_GENERALLOCK
+
+  - name: STR_THECAMPAIGNREWARD
+    cost: 10
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBMISSION9DONE
     spawnedEvent: STR_WORDBEARERS_REWARD
 
   - name: STR_RITUAL_CONTACT  # Ritual of Contact
@@ -1732,6 +1757,32 @@ research:
       - STR_ALIEN_ORIGINS
       - STR_COMMANDER_PLUS
 
+  - name: STR_STORMBOLTERS_WB  # Word Bearers Spreading the Faith
+    cost: 300
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_MIDTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+
+  - name: STR_AUTOCANNONS_WB  # Word Bearers Bearing the Word
+    cost: 400
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_CASS_R
+      - STR_BOLTER_AMMO_PREREQ
+      - STR_RITUAL_CONSECRATE
+      - STR_RITUAL_SACRIFICE
+      - STR_RITUAL_FAVOURS
+      - STR_RITUAL_BETRAYAL
+
 ## Chamber Militant #STRATEGY.CM#
   - delete: STR_CHAMBERMILITANT
   - name: STR_CHAMBERMILITANT  # Chamber Militant
@@ -1741,24 +1792,9 @@ research:
       - STR_GENERALLOCK
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
-      - STR_LASER_WEAPONS
       - STR_XIPHON
-      - STR_INQ_STORMTROOPER_REQUISITION
-      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
-      - STR_INQ_REQUISITION_SORORITAS_RESEARCH
-      - STR_INQ_REQUISITION_GUARD_RESEARCH
-      - STR_INQ_REQUISITION_ARBITES_RESEARCH
-      - STR_LIGHT_BOLTERS_MIDTIER  # for the Inquisition Strategy
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_IMPERIUM_RESEARCH
-      - STR_GREYKNIGHTS
-      - STR_MARINE_BOLTERS
-      - STR_LIGHT_BOLTERS  # for the Inquisition Strategy
-      - STR_ADEPTAS_AND_INQUISITION
-      - STR_MARINES_AND_INQUISITION
-      - STR_ADEPTAS_MARINES_AND_INQUISITION
-      - STR_HARDER_MISSIONS
+      # - STR_HARDER_MISSIONS
       - STR_INQ_STORMTROOPER_CODEX_UNLOCKER
       - STR_NORMAL_INQUISITION
     disables:
@@ -1779,22 +1815,31 @@ research:
       - STR_CHAMBERMILITANT
     lookup: STR_CHOSEN_DEATHWATCH
     unlocks:
+      - STR_LASER_WEAPONS
+      - STR_LIGHT_BOLTERS
+      - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
+      - STR_INQ_STORMTROOPER_REQUISITION
+      - STR_CORVUS_RESEARCH  # instead of STR_DEATHWATCH_AND_ADEPTAS setup
       - STR_POWER_ARMOR_SM_CODEX
       - STR_TERMINATOR_ARMOR_SM_CODEX
       - STR_NOT_PRIMARIS
       - STR_DEATHWATCH_AND_ADEPTAS
       - STR_PRIMARIS_AND_DEATHWATCH
       - STR_MARINES_AND_DEATHWATCH
-      - STR_CORVUS_RESEARCH  # instead of STR_DEATHWATCH_AND_ADEPTAS setup
-      - STR_LASER_WEAPONS
-      - STR_MOTION_SCANNER
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
       - STR_NOT_NORMAL_INQUISITION
+      - STR_HARDER_MISSIONS
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     getOneFree:
       - STR_PERSONAL_ARMOR
     disables:
       - STR_NORMAL_INQUISITION
       - STR_NOT_DEATHWATCH
       - STR_GREYKNIGHTS
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
       - STR_ASSASSINORUM
@@ -1817,17 +1862,26 @@ research:
     getOneFree:
       - STR_HB_DEP1
     unlocks:
-      - STR_MOTION_SCANNER
       - STR_APOTHECARY_GK
-      - STR_LASER_WEAPONS
       - STR_HOLOGRAM_GRENADE_REQUISITION
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_LASER_WEAPONS
+      - STR_LIGHT_BOLTERS
+      - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
+      - STR_INQ_STORMTROOPER_REQUISITION
       - STR_NOT_NORMAL_INQUISITION
+      - STR_GREYKNIGHTS
+      - STR_HARDER_MISSIONS
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
     disables:
       - STR_NORMAL_INQUISITION
       - STR_NOT_GK
       - STR_PERSONAL_ARMOR
       - STR_DEATHWATCH
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
       - STR_DEFENSE_CORRIDORBR
@@ -1843,16 +1897,26 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_LOSE_200
-    getOneFree:  # new
-      - STR_CORVUS_RESEARCH
     unlocks:
       - STR_REEDUCATION_RESEARCH
       - STR_LASGUN_HOTSHOT
+      - STR_LASER_WEAPONS
+      - STR_LIGHT_BOLTERS
+      - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
+      - STR_INQ_STORMTROOPER_REQUISITION
+      - STR_CORVUS_RESEARCH
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_HARDER_MISSIONS
     disables:
       - STR_NOT_RADICAL
       - STR_GREYKNIGHTS
       - STR_DEATHWATCH
       - STR_ASSASSINORUM
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NORMAL_INQUISITION
     spawnedEvent: STR_REINFORCEMENTS_RADICAL_EVENT
 
@@ -1866,8 +1930,10 @@ research:
     lookup: STR_CHOSEN_ASSASSINORUM
     unlocks:
       - STR_EXITUS_AMMO_PREREQUISITE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
+      - STR_LIGHT_BOLTERS
+      - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_GUARD_BARRACKS
@@ -1878,11 +1944,16 @@ research:
       - STR_IMPERIAL_ASSASSINS
       - STR_REPRISALIA_ACCESS
       - STR_MEDI_KIT_PREREQ
+      - STR_HARDER_MISSIONS
       - STR_EVEN_HARDER_MISSIONS
       - STR_NOT_NORMAL_INQUISITION
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
     disables:
       - STR_DEATHWATCH
       - STR_GREYKNIGHTS
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
       - STR_INQUISITION_VALKYRIE
@@ -1892,7 +1963,7 @@ research:
 
   - name: STR_OFFICIO_ASSASSINORUM_TIPS # PLEASE READ THE CODEX DEAR PLAYER
     dependencies:
-      - STR_GENERALLOCK
+      - STR_ASSASSINORUM
     cost: 0
     points: 0
 
@@ -1917,7 +1988,65 @@ research:
     cost: 0
     points: 0
 
-## Adeptus Terra #STRATEGY.AT#
+### The Imperial Law Strategy #STRATEGY.AT.LAW#
+  - name: STR_THE_IMPERIAL_LAW_STRATEGY  # The Imperial Law Strategy
+    cost: 5
+    points: 0
+    reenables:
+      - STR_CHAPTER_PURITY
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
+    dependencies:
+      - STR_CHAMBERMILITANT
+    unlocks:
+      - STR_DEFAULT_CAMPAIGN
+      - STR_LASER_WEAPONS
+      - STR_GUARD_AND_ARBITES
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_GUARD_BARRACKS
+      - STR_HEAVY_WEAPONS_IG
+      - STR_BASIC_SENTINEL_MISSILE
+      - STR_PILOT_GUARDSMEN
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_AWARD_PERSONAL_SHIELD
+      - STR_IMPERIUM_RESEARCH
+      - STR_NOT_NORMAL_INQUISITION
+      - STR_NOT_DEATHWATCH
+      - STR_NOT_GK
+      - STR_NOT_RADICAL
+    disables:
+      - STR_CHAMBER_NOT_ARBITES
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_NORMAL_INQUISITION
+      - STR_DEATHWATCH
+      - STR_GREYKNIGHTS
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_CHAOS_PATH
+      - STR_ASSASSINORUM
+      - STR_HB_DEP1
+      - STR_MARINE_BOLTERS
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_INQUISITION_VALKYRIE
+      - STR_XIPHON
+      #GG- STR_GREENEST_ORKZ
+      #GG- STR_TAU_GUEVESA_STRATEGY_GV
+    spawnedEvent: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
+
+# must be given with a researchList on an event or as a getOneFree
+# do NOT unlock with the non-Arbites Chamber strategy researches
+  - name: STR_CHAMBER_NOT_ARBITES
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+    disables:
+      # so you can't wait and get the free Inq and then pick it
+      - STR_THE_IMPERIAL_LAW_STRATEGY
+    spawnedEvent: STR_RECRUITS_CHAMBER_NOT_ARBITES
+
+## The Alien and the Heretic #STRATEGY.AT#
   - delete: STR_ARBITES
   - name: STR_ARBITES  # Arbites
     cost: 0
@@ -1927,7 +2056,6 @@ research:
       - STR_GENERALLOCK
     unlocks:
       - STR_IMPERIUM_RESEARCH
-      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_CHAOS_STRATEGY_ARBITES
     disables:
       - STR_NOT_ADEPTUS_TERRA
@@ -1939,37 +2067,6 @@ research:
       - STR_GUARD_SUPORT
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
 
-### The Imperial Law Strategy #STRATEGY.AT.LAW#
-  - name: STR_THE_IMPERIAL_LAW_STRATEGY  # The Imperial Law Strategy
-    # Added new arbites research used as a way to prevent arbites joining if you go chaos
-    cost: 5
-    points: 0
-    reenables:
-      - STR_CHAPTER_PURITY
-      - STR_THE_EMPEROR_PROTECTS_RESEARCH
-    dependencies:
-      - STR_ARBITES
-    unlocks:
-      - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
-      - STR_LASER_WEAPONS
-      - STR_GUARD_AND_ARBITES
-      - STR_LIGHT_BOLTERS
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_GUARD_BARRACKS
-      - STR_HEAVY_WEAPONS_IG
-      - STR_BASIC_SENTINEL_MISSILE
-      - STR_PILOT_GUARDSMEN
-      - STR_NOT_STEEL_LEGION_STRATEGY
-      - STR_CHAPTER_PURITY
-      - STR_AWARD_PERSONAL_SHIELD
-    disables:
-      - STR_CHAOS_STRATEGY_ARBITES
-      - STR_NOT_ARBITES
-      - STR_HB_DEP1
-      - STR_GREENEST_ORKZ
-      - STR_GUEVESA_STRATEGY_MILITIA_GV
-    spawnedEvent: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
 
 ### Chaos Cult #STRATEGY.AT.CULT#
   - name: STR_CHAOS_STRATEGY  # Ruinous Powers
@@ -1994,6 +2091,10 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
+  - name: STR_NOTDONEBEFORE  # this will be to avoid making more great sacrifice and trigger chaos bowl multiple times
+    dependencies:
+      - STR_GENERALLOCK
+
   - name: STR_CHAOS_STRATEGY_ARBITES  # Chaos Cult Strategy
     cost: 5
     points: 0
@@ -2010,11 +2111,10 @@ research:
       - STR_MELTAGUN_TECH
       - STR_NOT_CHAOSCULT
       - STR_GREENEST_ORKZ
-      - STR_GUEVESA_STRATEGY_MILITIA_GV
+      - STR_TAU_GUEVESA_STRATEGY_GV
       - STR_DEFAULT_CAMPAIGN
     unlocks:
       - STR_CHAOS_STRATEGY
-      - STR_MOTION_SCANNER
       - STR_GUARD_AND_ARBITES
       - STR_IMPERIUM_RESEARCH
       - STR_HEAVY_WEAPONS_IG
@@ -2023,9 +2123,11 @@ research:
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_IMPERIAL_GUARD_BASIC_TRAINING
       - STR_PILOT_GUARDSMEN
+      - STR_NOT_IMPERIUM
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOTDONEBEFORE
     reenables:
       - STR_CYDONIA_OR_BUST
     spawnedEvent: STR_RECRUITS_CHAOS_STRATEGY_ARBITES
@@ -2039,7 +2141,6 @@ research:
     lookup: STR_CHOSEN_ORKZ
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_IMPERIAL_GUARD_BASIC_TRAINING # da greenest knows 'ow ta train da boyz.
       - STR_LASER_WEAPONS
@@ -2093,7 +2194,6 @@ research:
       - STR_DEATHWATCH_AND_ADEPTAS
       - STR_PRIMARIS_AND_ADEPTAS
       - STR_NOT_PRIMARIS
-      # - STR_MOTION_SCANNER
       # - STR_HOSPITALLER
       # - STR_LASER_WEAPONS
       - STR_MARINES_AND_ADEPTAS
@@ -2102,6 +2202,7 @@ research:
       - STR_ADEPTAS_AND_INQUISITION
       - STR_ADEPTAS_MARINES_AND_INQUISITION
       - STR_IMPERIUM_RESEARCH
+      - STR_SISTERS_TRANSFORMATIONS_DEP
     disables:
       - STR_NOT_ADEPTAS
       - STR_ARBITES
@@ -2122,7 +2223,6 @@ research:
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_MEDICAE_RESEARCH  # see research40k.rul
       - STR_PHOSPHOR_GRENADE
-      - STR_MOTION_SCANNER
       - STR_ADEPTAS_REPENTIA_RESEARCH  # direct recruitment
       - STR_ADEPTAS_REPENTIA_SUPERIOR_RESEARCH  # Repentia Superior research
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
@@ -2155,7 +2255,6 @@ research:
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_MEDICAE_RESEARCH  # see research40k.rul
       - STR_PHOSPHOR_GRENADE
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_ADEPTAS_NOVICE_RESEARCH
       - STR_ADEPTAS_NOVITIATE_SUPERIOR_RESEARCH
@@ -2182,9 +2281,8 @@ research:
     dependencies:
       - STR_ADEPTAS  # - STR_GENERALLOCK
     lookup: STR_CHOSEN_ADEPTAS
-    getOneFree:
+    getOneFree: #WARNING do not add more than 1 getOneFree tech due to auto-repeatability issues
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
-      - STR_MELTAGUN_TECH
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
@@ -2193,11 +2291,9 @@ research:
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_LASER_WEAPONS
       - STR_MELTAGUN_TECH
-      - STR_MOTION_SCANNER
       - STR_ADEPTAS_NOVICE_RESEARCH
       - STR_CORVUS_RESEARCH
       - STR_FAITHFUL_ARMORY
-      - STR_TRAINING_BOLTERS_ADEPTAS  # Starts with Autoguns only
       - STR_PENITENT_ENGINE_RESEARCH
       - STR_ALIEN_ALLOYS
       - STR_ADEPTAS_DROPPOD_RESEARCH
@@ -2207,9 +2303,6 @@ research:
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
       - STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH  # recruitment
       - STR_ADEPTAS_SUPERIOR_RESEARCH
-      # - Repentia tech, or have that be just dependent on getting to Adeptas tier?
-      # -  # Adeptas Sentinel
-      # -  # Rhino option?
       - STR_NOT_ELITE_STRATEGY_ADEPTAS
       - STR_NOT_REPENTIA_STRATEGY_ADEPTAS
       - STR_NOT_NOVICE_STRATEGY_ADEPTAS
@@ -2235,7 +2328,6 @@ research:
       - STR_PHOSPHOR_GRENADE
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_HARDER_MISSIONS
-      - STR_MOTION_SCANNER
       - STR_MELTAGUN_TECH  # Meltagun Tech
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
@@ -2295,7 +2387,6 @@ research:
     lookup: STR_CHOSEN_IGS
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       #      - STR_GUARD_AND_ARBITES
       #      - STR_GUARD_SUPORT
@@ -2335,7 +2426,6 @@ research:
       - STR_STORMTROOPER_REQUISITION
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER
       - STR_CARAPACE_ARMOR_IG
@@ -2375,7 +2465,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_GUARD_SUPORT  # added to enable medic armors
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER
       - STR_REGIMENT_OFFICERS
@@ -2411,7 +2500,6 @@ research:
       - STR_DEFAULT_CAMPAIGN
       - STR_STEELLEGION_GUARDSMEN
       - STR_SQUAT_GUARDSMEN  # Steel Legion link
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2445,7 +2533,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_KRIEG_GUARDSMEN #Already Exists
-      - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
@@ -2478,11 +2565,10 @@ research:
     cost: 5
     dependencies:
       - STR_GENERALLOCK
-    # lookup: STR_CHOSEN_VALHALLA # Commented out until there is a 'pedia page, will crash otherwise
+    lookup: STR_CHOSEN_VALHALLA
     unlocks:
       - STR_DEFAULT_CAMPAIGN
-      - STR_KRIEG_GUARDSMEN #Already Exists
-      - STR_MOTION_SCANNER
+      - STR_VALHALLAN_GUARDSMEN
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
@@ -2507,7 +2593,7 @@ research:
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
-    #spawnedEvent: STR_RECRUITS_VALHALLAN_STRATEGY_IG #Create
+    spawnedEvent: STR_RECRUITS_VALHALLAN_STRATEGY_IG
 
 ####################################
 #PROGRESSION# Progression Research Section
@@ -2553,6 +2639,7 @@ research:
     points: 30
     dependencies:
       - STR_MIDTIER_PREREQ  # instead of being dependent on STR_MASTER_CRAFTING
+      - STR_NOT_WORDBEARERS
 
   - delete: STR_MASTER_CRAFTING
   - name: STR_MASTER_CRAFTING  # High-tier Master Crafting
@@ -2561,6 +2648,7 @@ research:
     dependencies:
       - STR_MASTER_CRAFTING_AMMO
       - STR_UFO_CONSTRUCTION  # instead of midtier
+      - STR_NOT_WORDBEARERS
 
   - delete: STR_HIGHTIER_PREREQ
   - name: STR_HIGHTIER_PREREQ  # (High-tier Researched)
@@ -2839,6 +2927,8 @@ research:
       - STR_LOSE_500
     unlocks:
       - STR_ALIENS_ONLY
+      - STR_NOT_IMPERIUM
+      - STR_NOTDONEBEFORE
     disables:
       - STR_PSYKER_REQUISITION
       - STR_IMPERIAL_GUARD_MISSIONS
@@ -3264,6 +3354,7 @@ research:
     dependencies:
       - STR_CHAOS_PATH
       - STR_NOT_CHAOSCULT
+      - STR_NOT_WORDBEARERS
       - STR_HIGHTIER_PREREQ
     unlocks:
       - STR_NEW_FIGHTER_TRANSPORTER
@@ -3273,11 +3364,12 @@ research:
     cost: 0
     points: 0
     dependencies:
+      - STR_WORDBEARERS_STRATEGY
       - STR_CHAOS_PATH
       - STR_NOT_CHAOSCULT
       - STR_CYDONIA_OR_BUST
     unlocks:
-      - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
 
 ### Missions
   - delete: STR_SIDEOPERATIONS
@@ -3510,6 +3602,7 @@ research:
       - STR_MEDI_KIT_PREREQ
       - STR_UFO_CONSTRUCTION
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
       - STR_NOT_GUARD
       - STR_NOT_PRIMARIS
@@ -3549,10 +3642,8 @@ research:
       - STR_RITUAL_SACRIFICE
     unlocks:
       - STR_MIDTIER_PREREQ
-      - STR_CASS_R
       - STR_HB_DEP1
       - STR_HFLAMERR
-      - STR_SIDEOPERATIONS
     cutscene: c2
 
   - delete: STR_CHAPTERARMYR
@@ -3572,6 +3663,19 @@ research:
       - STR_MIDTIER_PREREQ
       - STR_MARINES_STRATEGY
       - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_CYDONIA_OR_BUST
+      - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
+    unlocks:
+      - STR_HIGHTIER_PREREQ
+
+  - name: STR_ULTIMATE_CRAFTWB  # Legion High-tier Requisitions for WB only
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_WORDBEARERS_STRATEGY
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
       - STR_CYDONIA_OR_BUST
       - STR_NOT_SPACEWOLVES
     unlocks:
@@ -3627,6 +3731,7 @@ research:
       - STR_UFO_CONSTRUCTION
       - STR_NOT_GUARD
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
 
   - name: STR_HELFROST_BLASTER_RESEARCH
@@ -3636,6 +3741,7 @@ research:
       - STR_SPACEWOLVES_MIDTIER_RESEARCH
       - STR_NOT_GUARD
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
 
   - name: STR_HELFROST_CANNON_RESEARCH
@@ -3647,6 +3753,7 @@ research:
       - STR_HELFROST_BLASTER_RESEARCH
       - STR_NOT_GUARD
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
 
   - name: STR_SWSTORMWOLF #Mid tier air transport for Space Wolves
@@ -3695,6 +3802,7 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_MIDTIER_PREREQ
+      - STR_NOT_THE_IMPERIAL_LAW
     getOneFree:
       - STR_IMPERIAL_INQUISITOR
   - name: STR_IMPERIAL_INQUISITOR  # Inquisitor
@@ -3706,12 +3814,59 @@ research:
       - STR_GENERALLOCK
       - STR_IMPERIAL_INQUISITOR_REQUISITION
 
+  - name: STR_IMPERIAL_INQUISITOR_AI  # Inquisitor OPFOR capture
+    cost: 250
+    points: 100
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+      - STR_THREAT_ONE
+
+  - name: STR_INQ_INQUISITOR_INTERROGATOR  # INTERROGATOR OPFOR capture
+    cost: 200
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+      - STR_THREAT_ONE
+
+  - name: STR_INQ_STORMTROOPER_OFFICER  # INQ LEADER OPFOR capture
+    cost: 150
+    points: 40
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_THREAT_ONE
+
+  - name: STR_INQ_SLGUARD  # INQ TROOPER OPFOR capture
+    cost: 100
+    points: 25
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ALIEN_ORIGINS
+      - STR_THREAT_ONE
+
   - name: STR_INQ_STORMTROOPER_REQUISITION  # Requisition Inquisition Storm Troopers
     cost: 200
     points: 10
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_NOT_THE_IMPERIAL_LAW
     getOneFree:
       - STR_INQ_STORMTROOPER
   - name: STR_INQ_STORMTROOPER  # Inquisition Storm Trooper
@@ -3807,116 +3962,133 @@ research:
       - STR_ALIEN_ORIGINS
 
   - name: STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH  # Summon Agents of the Inquisition
-    cost: 250
+    cost: 200
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_AGENTS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH # Secure Inquisitorial Agents Network
-    cost: 500
+    cost: 400
     dependencies:
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_EVENT
 
   - name: STR_INQ_REQUISITION_ARBITES_RESEARCH  # Requisition Arbites Support
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_ARBITES_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH  # Requisition Arbites Support
     cost: 600
     dependencies:
       - STR_INQ_REQUISITION_ARBITES_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     unlocks:
       - STR_PHOTON_GRENADE_REQUISITION
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ARBITES_EVENT
 
   - name: STR_INQ_REQUISITION_ARBITES_JUDGES_RESEARCH  # Requisition Judges
-    cost: 800
+    cost: 600
     points: -250
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_ARBITES_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_250
-    unlocks:
-      - STR_HWP_CANNON_SHELLS
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE
     spawnedEvent: STR_INQ_REQUISITION_ARBITES_JUDGES_EVENT
 
   - name: STR_INQ_REQUISITION_GUARD_RESEARCH  # Requisition Guard Veterans
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_GUARD_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_GUARD_RESEARCH  # Requisition Guard Veterans
     cost: 600
     dependencies:
       - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_SECURE_SUPPORT_GUARD_EVENT
 
   - name: STR_INQ_REQUISITION_HEAVY_GUARD_RESEARCH  # Requisition Heavy Guard
-    cost: 1000
-    points: -250
+    cost: 800
+    points: -100
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_GUARD_RESEARCH
-      - STR_LOSE_250
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_LOSE_100
     spawnedEvent: STR_INQ_REQUISITION_HEAVY_GUARD_EVENT
     unlocks:
       - STR_ROTOR_CANNON_RESEARCH
       - STR_AUTOCANNON_TECH
 
   - name: STR_INQ_REQUISITION_KRIEG_GRENADIERS_RESEARCH  # Requisition Krieg Grenadier Kill Team
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_LOSE_100
+    spawnedEvent: STR_INQ_REQUISITION_KRIEG_GRENADIERS_EVENT
+
+  - name: STR_INQ_REQUISITION_KRIEG_PANZERGRENADIERS_RESEARCH   # Requisition Krieg Panzergrenadier Kill Team
+    cost: 700
+    points: -250
+    dependencies:
+      - STR_UFO_CONSTRUCTION  # ceramite tier
+      - STR_INQ_REQUISITION_KRIEG_GRENADIERS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_LOSE_250
+    spawnedEvent: STR_INQ_REQUISITION_KRIEG_PANZERGRENADIERS_EVENT
+
+  - name: STR_INQ_REQUISITION_SORORITAS_RESEARCH   # Requisition Adeptas Sororitas
+    cost: 250
+    dependencies:
+      - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+    spawnedEvent: STR_INQ_REQUISITION_SORORITAS_EVENT
+
+  - name: STR_INQ_SECURE_SUPPORT_SORORITAS_RESEARCH
+    cost: 700
+    dependencies:
+      - STR_NOT_RADICAL
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_INQ_REQUISITION_SORORITAS_RESEARCH
+    unlocks:
+      - STR_SISTERS_TRANSFORMATIONS_DEP
+    spawnedEvent: STR_INQ_SECURE_SUPPORT_SORORITAS_EVENT
+
+  - name: STR_INQ_REQUISITION_SORORITAS_VETERANS_RESEARCH  # Requisition Further Adeptas Sororitas
     cost: 700
     points: -250
     dependencies:
       - STR_MIDTIER_PREREQ
-      - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_INQ_REQUISITION_SORORITAS_RESEARCH
       - STR_LOSE_250
-    spawnedEvent: STR_INQ_REQUISITION_KRIEG_GRENADIERS_EVENT
-
-  - name: STR_INQ_REQUISITION_KRIEG_PANZERGRENADIERS_RESEARCH   # Requisition Krieg Panzergrenadier Kill Team
-    cost: 900
-    points: -500
-    dependencies:
-      - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_INQ_REQUISITION_KRIEG_GRENADIERS_RESEARCH
-      - STR_LOSE_500
-    spawnedEvent: STR_INQ_REQUISITION_KRIEG_PANZERGRENADIERS_EVENT
-
-  - name: STR_INQ_REQUISITION_SORORITAS_RESEARCH   # Requisition Adeptas Sororitas
-    cost: 400
-    dependencies:
-      - STR_CHAMBERMILITANT
-    spawnedEvent: STR_INQ_REQUISITION_SORORITAS_EVENT
-
-  - name: STR_INQ_SECURE_SUPPORT_SORORITAS_RESEARCH
-    cost: 800
-    dependencies:
-      - STR_NOT_RADICAL
-      - STR_INQ_REQUISITION_SORORITAS_RESEARCH
-    spawnedEvent: STR_INQ_SECURE_SUPPORT_SORORITAS_EVENT
-
-  - name: STR_INQ_REQUISITION_SORORITAS_VETERANS_RESEARCH  # Requisition Further Adeptas Sororitas
-    cost: 900
-    points: -500
-    dependencies:
-      - STR_MIDTIER_PREREQ
-      - STR_INQ_REQUISITION_SORORITAS_RESEARCH
-      - STR_LOSE_500
     spawnedEvent: STR_INQ_REQUISITION_SORORITAS_VETERANS_EVENT
 
   - name: STR_INQ_REQUISITION_OGRYNS_RESEARCH  # Request Ogryn Bodyguards
     cost: 400
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_INQ_REQUISITION_GUARD_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_OGRYNS_EVENT
 
   - name: STR_INQ_REQUISITION_OGRYNS_BIGGER_RESEARCH  # Request Bigger Ogryn Bodyguards
-    cost: 800
+    cost: 600
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_OGRYNS_RESEARCH
@@ -3926,37 +4098,42 @@ research:
     cost: 400
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_ASSASSINS_EVENT  # Order Imperial Assassins
 
   - name: STR_INQ_SECURE_SUPPORT_ASSASSINS_RESEARCH
     cost: 600
     dependencies:
       - STR_INQ_REQUISITION_ASSASSINS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT
 
   - name: STR_INQ_REQUISITION_GUARD_PILOTS_RESEARCH   # Requisition Guard Pilots
-    cost: 250
+    cost: 200
     dependencies:
       - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_REQUISITION_GUARD_PILOTS_EVENT
 
   - name: STR_INQ_REQUISITION_ADEPTAS_PILOTS_RESEARCH  # Requisition Adeptas Pilots
-    cost: 400
+    cost: 250
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_REQUISITION_ADEPTAS_PILOTS_EVENT
 
   - name: STR_INQ_RR_CONTACT_THE_ABHUMANS_RESEARCH  # Contact the Abhuman Community
-    cost: 400
-    points: -250
+    cost: 250
+    points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_LOSE_250
+      - STR_LOSE_100
     spawnedEvent: STR_INQ_RR_CONTACT_THE_ABHUMANS_EVENT
 
   - name: STR_INQ_RR_RECRUIT_OGRYN_RESEARCH  # Recruit Local Ogryn
-    cost: 600
+    cost: 400
     points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
@@ -3965,12 +4142,12 @@ research:
     spawnedEvent: STR_INQ_RR_RECRUIT_OGRYN_EVENT
 
   - name: STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_RESEARCH  # A Deal With The Squats
-    cost: 600
-    points: -250
+    cost: 400
+    points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_RR_CONTACT_THE_ABHUMANS_RESEARCH
-      - STR_LOSE_250
+      - STR_LOSE_100
     spawnedEvent: STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_RESEARCH  # Secure Abhuman Community Support
@@ -3984,7 +4161,7 @@ research:
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ABHUMANS_EVENT
 
   - name: STR_ENTANGLE_ADEPTAS_RESEARCH  # Entangle the Adeptas
-    cost: 800
+    cost: 700
     disables:
       - STR_INQ_SECURE_SUPPORT_SORORITAS_RESEARCH
     dependencies:
@@ -4000,18 +4177,18 @@ research:
 
 
   - name: STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH  # Indulge the Deathcults
-    cost: 800
+    cost: 700
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_1_EVENT
   - name: STR_INQ_RR_DEATHCULT_RITUAL_2_RESEARCH  # Partake in Deathcult Rituals
-    cost: 900
+    cost: 800
     dependencies:
       - STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH
       - STR_MIDTIER_PREREQ
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_2_EVENT
   - name: STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH  # Embrace the Deathcults
-    cost: 1000
+    cost: 900
     dependencies:
       - STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH
       - STR_HIGHTIER_PREREQ
@@ -4138,7 +4315,7 @@ research:
     spawnedEvent: STR_REWARD_INQUISITION_STORMTROOPERS
 
   - name: STR_INQ_CONTACT_REVISIONISTS_RESEARCH  # Contact Revisionists
-    cost: 400
+    cost: 300
     points: -100
     dependencies:
       - STR_HERETICAL_INQUISITOR_STRATEGY
@@ -4146,7 +4323,7 @@ research:
     spawnedEvent: STR_INQ_CONTACT_REVISIONISTS_EVENT
 
   - name: STR_INQ_CONTACT_DEFECTOR_SISTERS_RESEARCH  # Contact Heretical Sisters
-    cost: 800
+    cost: 700
     points: -250
     dependencies:
       - STR_HERETICAL_INQUISITOR_STRATEGY
@@ -4154,7 +4331,7 @@ research:
     spawnedEvent: STR_INQ_CONTACT_DEFECTOR_SISTERS_EVENT
 
   - name: STR_INQ_CONTACT_DEFECTOR_MARINES_RESEARCH  # Heretical Marines Contacted
-    cost: 1100
+    cost: 900
     points: -500
     dependencies:
       - STR_HERETICAL_INQUISITOR_STRATEGY
@@ -4162,7 +4339,7 @@ research:
     spawnedEvent: STR_INQ_CONTACT_DEFECTOR_MARINES_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_REVISIONISTS_RESEARCH  # Secure Revisionists Support
-    cost: 800
+    cost: 600
     points: -500
     dependencies:
       - STR_INQ_CONTACT_REVISIONISTS_RESEARCH
@@ -4172,11 +4349,11 @@ research:
     spawnedEvent: STR_INQ_SECURE_SUPPORT_REVISIONISTS_EVENT
 
   - name: STR_INQ_ARCHENEMY_ARMAMENTS_RESEARCH  # Armaments of the Archenemy
-    cost: 100
-    points: -250
+    cost: 200
+    points: -100
     dependencies:
       - STR_HERETICAL_INQUISITOR_STRATEGY
-      - STR_LOSE_250
+      - STR_LOSE_100
     getOneFree:
       - STR_CORRUPTED_REQUISITIONS
 
@@ -4516,9 +4693,10 @@ research:
       - STR_NECRONTECH_RESEARCH
       - STR_THUNDERHAWK_RAD_REQ # for final mission
 
-## Adeptus Terra #PROGRESSION.AT#
+## The Alien and the Heretic #PROGRESSION.AT#
   - name: STR_ENDGANGERSBASE
-    # for Adeptus Terra when ganger base destroyed to stop their base mission generating
+    # for Chaos Cult when ganger base destroyed to stop their base mission generating
+    # and for other STR_ARBITES friends
     dependencies:
       - STR_GENERALLOCK
 
@@ -4533,6 +4711,8 @@ research:
       - STR_MOTION_SCANNER
       - STR_INTERROGATION_COMPLETED
       - STR_THE_IMPERIAL_LAW_STRATEGY
+    reenables:
+      - STR_HARDER_MISSIONS
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_AIRSTRIKE_REQUISITION
@@ -4540,6 +4720,7 @@ research:
       - STR_HAND_FLAMETHROWER_REQUISITION
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
       - STR_BIONICS_OPERATION
+      - STR_LIGHT_BOLTERS_MIDTIER
     cutscene: c2
 
   - delete: STR_ARBITES_HIGHTIER
@@ -4771,31 +4952,53 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  - name: STR_SACRIFICE_TO_CHAOS  # Sacrifice to Chaos Chaos Cult version
+#######
+####### those 2 researches are only kept to avoid people crashing with their save before this change
+####### they're now blocked to either appear
+#######
+  - name: STR_SACRIFICE_TO_CHAOS  # Sacrifice to Chaos Chaos Cult version cant be done anymore
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_SACRIFICE_TO_CHAOSPC  # Sacrifice to Chaos  Player Chaos version cant be done anymore
+    dependencies:
+      - STR_GENERALLOCK
+
+###########
+###########
+
+
+  - name: STR_GREAT_SACRIFICE  # The Great Sacrifice Chaos Cult version
     cost: 100
     points: 30
     dependencies:
       - STR_CHAOS_STRATEGY
       - STR_CHAOS_PATH
       - STR_IMPERIALBASEDEAD
+      - STR_NOT_WORDBEARERS
     unlocks:
       - STR_CHAOSLORD_PRELOCK
-    neededItem: STR_GREAT_SACRIFICE
+    needItem: true
     destroyItem: true
     spawnedEvent: STR_CHAOSBOWL_STARTER
+    disables:
+      - STR_NOTDONEBEFORE
 
-  - name: STR_SACRIFICE_TO_CHAOSPC  # Sacrifice to Chaos  Player Chaos version
+  - name: STR_GREAT_SACRIFICEPC  # The Great Sacrifice Player Chaos version
     cost: 100
     points: 30
     dependencies:
       - STR_NOT_CHAOSCULT
       - STR_CHAOS_PATH
       - STR_IMPERIALBASEDEAD
+      - STR_NOT_WORDBEARERS
     unlocks:
       - STR_CHAOSLORD_PRELOCK
-    neededItem: STR_GREAT_SACRIFICE
+    needItem: true
     destroyItem: true
     spawnedEvent: STR_CHAOSBOWL_STARTERPC
+    disables:
+      - STR_NOTDONEBEFORE
 
   - name: STR_SECRET_OF_CULT  # Secrets of the Cult
     spawnedEvent: STR_RECRUITS_CHAOS_SLIMEHELP
@@ -5173,6 +5376,13 @@ research:
       - STR_COMMANDER_PLUS
 
 ## Adeptas #PROGRESSION.SOB#
+
+  # Requirement for Adeptas Transformations which are also available to Chamber Militant.
+  - name: STR_SISTERS_TRANSFORMATIONS_DEP
+    cost: 0
+    dependencies:
+      - STR_GENERALLOCK
+
   - delete: STR_STORMBOLTER_DEAZ
   - delete: STR_STORMBOLTER_CLIP  # Storm Bolter De'az Box Magazine
     # Depreciated adeptas specific stormbolter research
@@ -5512,6 +5722,13 @@ research:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_GENERALLOCK
 
+  - name: STR_VALHALLAN_GUARDSMEN  # Valhallan Recruitment
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_VALHALLAN_STRATEGY
+      - STR_GENERALLOCK
+
   - name: STR_STEELLEGION_GUARDSMEN  # Steel Legion Recruitment
     cost: 0
     points: 0
@@ -5812,6 +6029,7 @@ research:
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_BIONICS_OPERATION
+      - STR_CHIMERA_IG
 
   - delete: STR_REGIMENT_OFFICERS
   - name: STR_REGIMENT_OFFICERS  # Regimental Officers
@@ -5916,16 +6134,13 @@ research:
       - STR_HIGHTIER_PREREQ
 
 # Catachan Missions and Progression
-  - name: STR_CATACHAN_GENLOCK  # Catachans
-    dependencies:
-      - STR_GENERALLOCK
   - name: STR_CATACHAN_GEN  # Contact Catachans
     cost: 50
     points: 10
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_CHAPTER_PURITY
-      - STR_CATACHAN_GENLOCK
+      - STR_MOTION_SCANNER
   - name: STR_CATACHAN_REQ  # Request Catachans Cooperation
     cost: 70
     points: 10
@@ -6288,6 +6503,8 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_PSI_AMP
+      - STR_NOT_THE_IMPERIAL_LAW
+
   - delete: STR_TEC_BAY_CHAMBER_R
   - name: STR_TEC_BAY_CHAMBER_R  # Techmarine Bay Requisition
     cost: 100
@@ -6296,6 +6513,7 @@ research:
       - STR_MIDTIER_PREREQ
       - STR_CHAMBERMILITANT
       - STR_APOC_BAY
+      - STR_NOT_THE_IMPERIAL_LAW
 
 ### Deathwatch #FACILITIES.CM.DW#
 ### Grey Knights #FACILITIES.CM.GK#
@@ -6311,7 +6529,7 @@ research:
       - STR_CHAMBERMILITANT
 
 ### The Radical Road #FACILITIES.CM.RAD#
-## Adeptus Terra #FACILITIES.AT#
+## The Alien and the Heretic #FACILITIES.AT#
 ### The Imperial Law Strategy #FACILITIES.AT.LAW#
 ### Chaos Cult #FACILITIES.AT.CULT#
 ## Adeptas #FACILITIES.SOB#
@@ -6427,9 +6645,10 @@ research:
     cost: 500
     points: 50
     dependencies:
-      - STR_MARINES_STRATEGY
-      - STR_NOT_SPACEWOLVES
-      - STR_NOT_PRIMARIS
+      - STR_GENERALLOCK   # for now i am disabling it as it seems totally useless research in Rosigma due to some change
+     # - STR_MARINES_STRATEGY
+     # - STR_NOT_SPACEWOLVES
+     # - STR_NOT_PRIMARIS
   - name: STR_CRATED_RHINO  # Razorback Requisition
     # Devastator and Tactical
     dependencies:
@@ -6535,6 +6754,7 @@ research:
     points: 0
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
   - delete: STR_STORMRAVEN_GK
   - name: STR_STORMRAVEN_GK  # STORMRAVEN ¬
     dependencies:
@@ -6586,7 +6806,7 @@ research:
     cost: 0
     points: 0
 
-## Adeptus Terra #CRAFTS.AT#
+## The Alien and the Heretic #CRAFTS.AT#
 ### The Imperial Law Strategy #CRAFTS.AT.LAW#
   - delete: STR_LANDRAIDER_ARBITES
   - name: STR_LANDRAIDER_ARBITES  # Mobile Precint Requisition
@@ -7220,6 +7440,14 @@ research:
       - STR_WORDBEARERS_STRATEGY
       - STR_HIGHTIER_PREREQ
       - STR_RITUAL_BETRAYAL
+
+  - name: STR_EREBUS_PATHGIFT  # Grand Apostle
+    cost: 300
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_EREBUS
+      - STR_DARKAPO_SUIT
     spawnedEvent: STR_BOOKEREBUS_GIFT
 
   - name: STR_CHAOSLORD_SUIT  # Armor of the Chaos Lord
@@ -7231,14 +7459,39 @@ research:
       - STR_HIGHTIER_PREREQ
       - STR_RITUAL_BETRAYAL
       - STR_RITUAL_BLESSING
+
+  - name: STR_KORPHAERON_PATHGIFT  # Keeper of the Faith
+    cost: 300
+    points: 100
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_CHAOSLORD_SUIT
     spawnedEvent: STR_BOOKKORPHAERON_GIFT
+
+  - name: STR_FINAL_RITUALEREBUS  # For the Urizen
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_EREBUS_PATHGIFT
+      - STR_CHAOSLORD_SUIT
+      - STR_WBMISSION9DONE
+
+  - name: STR_FINAL_RITUAL  # For the Urizen
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_KORPHAERON_PATHGIFT
+      - STR_WBMISSION9DONE
 
   - name: STR_WBOBLITERATOR_SUIT # Obliterator Creation
     cost: 900
     points: 30
     dependencies:
       - STR_WORDBEARERS_STRATEGY
-      - STR_CHAPTERARMYR
+      - STR_WBMISSION8DONE
       - STR_CHAOSLORD_SUIT
       - STR_HIGHTIER_PREREQ
 
@@ -7247,7 +7500,7 @@ research:
     points: 30
     dependencies:
       - STR_WORDBEARERS_STRATEGY
-      - STR_CHAPTERARMYR
+      - STR_WBMISSION8DONE
       - STR_CHAOSLORD_SUIT
       - STR_HIGHTIER_PREREQ
 
@@ -7287,14 +7540,30 @@ research:
       - STR_WORDBEARERS_STRATEGY
       - STR_WBNEW_FIGHTER_TRANSPORTER
 
+  - name: STR_NEW_FIGHTER_TRANSPORTERLOCK  #WB Warship lock
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_WBHOLYWARSHIPFINALEREBUS # WB The Holy Warship
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_FINAL_RITUALEREBUS
+      - STR_WBMISSION9DONE
+      - STR_HIGHTIER_PREREQ
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
+
   - name: STR_WBHOLYWARSHIPFINAL # WB The Holy Warship
     cost: 900
     points: 30
     dependencies:
       - STR_WORDBEARERS_STRATEGY
-      - STR_CHAPTERARMYR
+      - STR_FINAL_RITUAL
       - STR_WBMISSION9DONE
       - STR_HIGHTIER_PREREQ
+      - STR_NEW_FIGHTER_TRANSPORTERLOCK
 
 ### Eldar Alliance
   - delete: STR_ELDAR_SHIELD
@@ -7662,7 +7931,7 @@ research:
       - STR_ALIEN_ALLOYS
       - STR_ASSASSINORUM
 
-## Adeptus Terra #ARMORS.AT#
+## The Alien and the Heretic #ARMORS.AT#
 ### The Imperial Law Strategy #ARMORS.AT.LAW#
   - delete: STR_ARBITOR_ARMOR
   - name: STR_ARBITOR_ARMOR  # Arbitor Armor
@@ -7927,6 +8196,8 @@ research:
   - name: STR_LASER_WEAPONS  # Weapons Requisition
     cost: 50
     points: 10
+    getOneFree:
+      - STR_LIGHT_MELTAGUN_TECH
     dependencies:
       - STR_GENERALLOCK
 
@@ -7986,6 +8257,7 @@ research:
       - STR_NOT_GUARD
       - STR_NOT_PRIMARIS
       - STR_NOT_WORDBEARERS
+      - STR_NOT_CHAMBER # will be force unlocked in appropriate chamber strats
     unlocks:
       - STR_BOLTER_AMMO_PREREQ
 
@@ -8058,7 +8330,7 @@ research:
 
   # Melta
   - name: STR_LIGHT_MELTAGUN_TECH  # Light Meltagun Technology
-    cost: 120
+    cost: 50
     points: 10
     dependencies:
       - STR_LASER_WEAPONS
@@ -8220,7 +8492,6 @@ research:
   - name: STR_PHOSPHOR_GRENADE  # Phosphor Grenade
     cost: 50
     points: 15
-    needItem: true
     dependencies:
       - STR_SMOKE
 
@@ -8242,7 +8513,7 @@ research:
     points: 20
     dependencies:
       - STR_HIGHTIER_PREREQ
-      - STR_NOT_ARBITES
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_GUARD
       - STR_NOT_CHAOSCULT
 
@@ -8278,7 +8549,7 @@ research:
 
 ### The Radical Road #WEAPONS.CM.RAD#
 ### Officio Assassinorum #WEAPONS.CM.OA#
-## Adeptus Terra #WEAPONS.AT#
+## The Alien and the Heretic #WEAPONS.AT#
 ### The Imperial Law Strategy #WEAPONS.AT.LAW#
 ### Chaos Cult #WEAPONS.AT.CULT#
 ### Da Emprah's Greenest #WEAPONS.AT.ORKZ#
@@ -9533,9 +9804,7 @@ research:
     cost: 180
     points: 20
     dependencies:
-      - STR_GENERALLOCK
-    unlocks:
-      - STR_CATACHAN_GENLOCK
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
 
 ## Space Marines #ITEMS.SM#
 ### Assault Strategy #ITEMS.SM.ASS#
@@ -9547,7 +9816,7 @@ research:
 ### Deathwatch #ITEMS.CM.DW#
 ### Grey Knights #ITEMS.CM.GK#
 ### The Radical Road #ITEMS.CM.RAD#
-## Adeptus Terra #ITEMS.AT#
+## The Alien and the Heretic #ITEMS.AT#
 ### The Imperial Law Strategy #ITEMS.AT.LAW#
 ### Chaos Cult #ITEMS.AT.CULT#
 ## Adeptas #ITEMS.SOB#
@@ -9596,8 +9865,25 @@ research:
     points: 15
     needItem: true
     destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_OGRYNOPFOR
+    cost: 10
+    points: 1  # ogryn interrogation may not be that useful
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
 ## Space Marines #CAPTIVES.SM#
   - name: STR_SPACEMARINE_SCOUT_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SPACEMARINE_ADVSCOUT_AI
     cost: 100
     points: 50
     needItem: true
@@ -9750,6 +10036,16 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
       - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_BLACKTEMPLAR_REC_AI
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
     destroyItem: true
 
   - name: STR_SPACEWOLVES_SCOUT_AI
@@ -9948,6 +10244,14 @@ research:
       - STR_INTERROGATION_COMPLETED
     destroyItem: true
 
+  - name: STR_SALAMANDER_ADVSCOUT_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
   - name: STR_SALAMANDER_TAC_AI
     cost: 100
     points: 50
@@ -10026,6 +10330,83 @@ research:
       - STR_LEADER_PLUS
     destroyItem: true
 
+  - name: STR_DARKANGEL_SCOUT_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_DARKANGEL_TAC_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_DARKANGEL_DEV_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_DARKANGEL_ASS_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_DARKANGEL_SARGE_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_DARKANGEL_TERMI_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_DARKANGEL_CHAP_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_DARKANGEL_CAPTAIN_AI
+    cost: 400
+    points: 100
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+    destroyItem: true
+
+  - name: STR_DARKANGEL_HONOR_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
 ## Chamber Militant #CAPTIVES.CM#
   - delete: STR_GK_SOLDIER
   - name: STR_GK_SOLDIER  # Grey Knight
@@ -10035,7 +10416,7 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
     destroyItem: true
-## Adeptus Terra #CAPTIVES.AT#
+## The Alien and the Heretic #CAPTIVES.AT#
 ### Chaos Cult #CAPTIVES.AT.CULT#
   - name: STR_LIVE_CAPTURE_PRIMORDIAL_CULTIST  # Chaos Cultist
     cost: 50
@@ -10203,7 +10584,219 @@ research:
     refNode: *STR_LOCKED
 
 ## Adeptas #CAPTIVES.SOB#
+
+  - name: STR_BLOODYROSE_CANTUS_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_HOSPITALIER_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_REPENTIA_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_ADEPTAS_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_SERAPHIM_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_ADEPTASSUPERIOR_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_ELOHIM_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_RETRIBUTOR_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_CELESTIAN_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_SACRESANT_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_CANONESS_AI
+    cost: 300
+    points: 80
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+    destroyItem: true
+
+  - name: STR_BLOODYROSE_PENITENTENG_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_CANTUS_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_HOSPITALIER_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_REPENTIA_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_ADEPTAS_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_SERAPHIM_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_ADEPTASSUPERIOR_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_ELOHIM_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_RETRIBUTOR_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_FIERYHEART_CELESTIAN_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_FIERYHEART_SACRESANT_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_FIERYHEART_CANONESS_AI
+    cost: 300
+    points: 80
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+    destroyItem: true
+
+  - name: STR_FIERYHEART_PENITENTENG_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
 ## Imperial Guard #CAPTIVES.IG#
+
+  - name: STR_LIVE_CAPTURE_GUARDAI_VETERAN
+    cost: 192
+    points: 500
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
   - name: STR_GUARDS_M_LV1_AI
     cost: 50
     points: 10
@@ -10237,6 +10830,65 @@ research:
       - STR_LEADER_PLUS
     destroyItem: true
 
+  - name: STR_IGGUARDS_OFF_LV3_AI
+    cost: 100
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_IGCOMM_M_LV3_AI
+    cost: 100
+    points: 70
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_IGGUARDS_OFF_LV3_AI
+    cost: 100
+    points: 70
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_SLGUARDS_M_LV1_AI
+    cost: 50
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SLGUARDS_OFF_LV1_AI
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SLGUARDS_M_LV2_AI
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SLGUARDS_OFF_LV2_AI
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
 ## Foes #CAPTIVE.FOE#
 ##  Chaos  #CAPTIVES.FOE.CHAOS#
 ## (Entries within subsections should be presented in the order of affiliation: Undivided, Khorne, Nurgle, Slaanesh, Tzeentch)
@@ -10261,6 +10913,17 @@ research:
       - STR_HARMONIC_MELTAGUN
     getOneFree:
       - STR_PLASMA_SPRAYGUN_CHAOS
+    destroyItem: true
+
+  - name: STR_ENGINSEER_OPFOR #ENGINSEER
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_THREAT_ONE
+      - STR_HARMONIC_MELTAGUN
+      - STR_INTERROGATION_COMPLETED
+    getOneFree:
+      - STR_MELTAGUN_TECH
     destroyItem: true
 
 ### Cultists and Mutants #CAPTIVES.FOE.CHAOS.CULT#
@@ -11144,6 +11807,7 @@ research:
     points: 100
     needItem: true
     unlocks:
+      - STR_LEADER_PLUS
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
       - STR_PSI_LAB
@@ -11155,6 +11819,7 @@ research:
     points: 150
     needItem: true
     unlocks:
+      - STR_LEADER_PLUS
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
       - STR_PSI_LAB
@@ -11253,6 +11918,19 @@ research:
       - STR_ALIEN_ORIGINS
       - STR_THREAT_ONE
 
+  - name: STR_SLAANESH_CSM_CHAMPION  # Flawless Champion
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_ALIEN_ORIGINS
+      - STR_CHAOS_PATH
+    getOneFree:
+      - STR_LIVE_CAPTURE_SLAANESH_MARINE
+    destroyItem: true
+
   - name: STR_SLAANESH_ANOINTED  # Slaanesh Anointed
     cost: 192
     points: 50
@@ -11300,6 +11978,23 @@ research:
 
   - delete: STR_TZEENTCH_LEADER
   - name: STR_TZEENTCH_LEADER  # Tzeentch Sorcerer
+    cost: 192
+    points: 500
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_COMMANDER_PLUS
+      - STR_ALIEN_ORIGINS
+      - STR_PSI_LAB
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_LIVE_CAPTURE_TZEENTCH_MARINE
+      - STR_LIVE_CAPTURE_CHAOS_ASSASSIN
+      - STR_TZEENTCHS_SISTERCHAMP
+
+  - name: STR_TZEENTCH_SORCERERLORD  # Tzeentch Sorcerer Lord
     cost: 192
     points: 500
     needItem: true
@@ -12802,6 +13497,87 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
+  - name: STR_TAU_CRISISBCX2AI  # Crisis Burst Cannons
+    cost: 200
+    points: 100
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_TAU_CRISISBCX2AI_ARMOR
+    destroyItem: true
+
+  - name: STR_TAU_CRISISBCX2AI_ARMOR  # STR_TAU_FIREWARRIORLEADERAI; free research with unit
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_TAU_CRISISBCFLAI  # Crisis Burst Cannons
+    cost: 200
+    points: 100
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_TAU_CRISISBCX2AI_ARMOR
+    destroyItem: true
+
+  - name: STR_TAU_CRISISBCFLAI_ARMOR  # STR_TAU_FIREWARRIORLEADERAI; free research with unit
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_TAU_CRISISFLX2AI  # Crisis Burst Cannons
+    cost: 200
+    points: 100
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_TAU_CRISISFLX2AI_ARMOR
+    destroyItem: true
+
+  - name: STR_TAU_CRISISFLX2AI_ARMOR  # STR_TAU_FIREWARRIORLEADERAI; free research with unit
+    dependencies:
+      - STR_GENERALLOCK
+
   - name: STR_TAU_FIREWARRIORCAPTAINAI  # Fire Warrior Commander
     cost: 300
     points: 200
@@ -12827,6 +13603,62 @@ research:
     destroyItem: true
 
   - name: STR_TAU_FIREWARRIORCAPTAINAI_ARMOR  # STR_TAU_FIREWARRIORCAPTAINAI; free research with unit
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_TAU_CRISISCOMMANDERBCX2AI  # Fire Warrior Commander
+    cost: 300
+    points: 200
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_XENO_LEADER_INTERROGATED
+      - STR_TAU_CRISISCOMMANDERBCX2AI_ARMOR
+    destroyItem: true
+
+  - name: STR_TAU_CRISISCOMMANDERBCX2AI_ARMOR  # STR_TAU_FIREWARRIORCAPTAINAI; free research with unit
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_TAU_CRISISCOMMANDERBCFLAI  # Fire Warrior Commander
+    cost: 300
+    points: 200
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_XENO_LEADER_INTERROGATED
+      - STR_TAU_CRISISCOMMANDERBCFLAI_ARMOR
+    destroyItem: true
+
+  - name: STR_TAU_CRISISCOMMANDERBCFLAI_ARMOR  # STR_TAU_FIREWARRIORCAPTAINAI; free research with unit
     dependencies:
       - STR_GENERALLOCK
 
@@ -12889,7 +13721,7 @@ research:
     cost: 25
     points: 25
     needItem: true
-## Adeptus Terra #CORPSES.AT#
+## The Alien and the Heretic #CORPSES.AT#
 ### Chaos Cult #CORPSES.AT.CULT#
   - name: STR_CULTISTLV1_CORPSE_GEO
     refNode: *STR_CORPSE_BASIC
@@ -12961,6 +13793,10 @@ research:
     refNode: *STR_CORPSE_BASIC
   - name: STR_SLAANESH_DEMIMONDE_CORPSE
     refNode: *STR_CORPSE_BASIC
+  - name: STR_SLAANESH_SHARDSPEAKER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_SLAANESH_SHARDSPEAKER_COMMANDER_CORPSE
+    refNode: *STR_CORPSE_BASIC
   - name: STR_SLAANGOR_CORPSE
     refNode: *STR_CORPSE_BASIC
   - name: STR_SLAANUNGOR_CORPSE
@@ -12970,6 +13806,12 @@ research:
   - name: STR_SLAANFIENDGOR_CORPSE
     refNode: *STR_CORPSE_BASIC
   - name: STR_SLAANBULLGOR_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_SLAANESH_LESSER_SPAWN_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_SLAANESH_MUTANT_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_SLAANESH_CULTIST_BIGM_CORPSE
     refNode: *STR_CORPSE_BASIC
   - name: STR_SLAANANOINTED_CORPSE
     refNode: *STR_CORPSE_BASIC

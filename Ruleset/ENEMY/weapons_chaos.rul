@@ -37,7 +37,7 @@ items:
       - STR_ALIENS_ONLY
     size: 0.1
     costSell: 1450
-    weight: 3
+    weight: 5
     power: 90
     damageType: 3
     damageAlter:  # high explosive properties plus extra Pre ablation due to blight
@@ -61,7 +61,8 @@ items:
     categories: [STR_CAT_BOLTER]
     requires:
       - STR_CORRUPTED_REQUISITIONS
-    size: 0.3
+    requiresBuyBaseFunc: [TRADE]
+    size: 0.2
     dropoff: 5
     costSell: 1000
     bigSprite: 2074
@@ -76,9 +77,9 @@ items:
       - STR_LIGHT_BOLTER_AMMO_EX
       - STR_LIGHT_BOLTER_AMMO_MC
       - STR_LIGHT_BOLTER_AMMO_INF
-    accuracySnap: 85
-    accuracyAuto: 65
-    tuSnap: 25
+    accuracySnap: 70
+    accuracyAuto: 50
+    tuSnap: 26
     tuAuto: 35
     snapRange: 16
     autoRange: 12
@@ -91,7 +92,7 @@ items:
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     autoShots: 4
     bulletSpeed: 30
     attraction: 1
@@ -124,7 +125,7 @@ items:
     categories: [STR_CAT_BOLTER]
     requires:
       - STR_ALIENS_ONLY
-    size: 0.3
+    size: 0.2
     dropoff: 5
     costSell: 1000
     bigSprite: 2961  # LBOLTER phobos
@@ -139,8 +140,8 @@ items:
       - STR_LIGHT_BOLTER_AMMO_EX
       - STR_LIGHT_BOLTER_AMMO_MC
       - STR_LIGHT_BOLTER_AMMO_INF
-    accuracySnap: 85
-    accuracyAuto: 65
+    accuracySnap: 75
+    accuracyAuto: 60
     tuSnap: 22
     tuAuto: 33
     snapRange: 16
@@ -149,7 +150,7 @@ items:
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     autoShots: 4
     bulletSpeed: 30
     attraction: 1
@@ -227,7 +228,7 @@ items:
 
   - type: STR_CHAOS_RIPPERGUN
     categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT]
-    size: 0.6
+    size: 0.4
     dropoff: 5
     costSell: 1000
     weight: 50
@@ -252,7 +253,7 @@ items:
     oneHandedPenalty: 75
     invWidth: 2
     invHeight: 3
-    armor: 60
+    armor: 100
     autoRange: 8
     snapRange: 12
     # *** Melee club
@@ -291,7 +292,7 @@ items:
       flatHundred: 0.1
     invWidth: 2
     invHeight: 3
-    armor: 60
+    armor: 100
     sprayWaypoints: 2
     kneelBonus: 150  # heavy weapon
     listOrder: 10762
@@ -367,7 +368,7 @@ items:
     invWidth: 2
     invHeight: 3
     bulletSpeed: 100
-    armor: 30
+    armor: 100
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3984
@@ -420,7 +421,7 @@ items:
     blockBothHands: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3984
@@ -443,7 +444,7 @@ items:
     dropoff: 5
     powerRangeThreshold: 18
     powerRangeReduction: 5
-    weight: 9
+    weight: 15
     bigSprite: 2809
     floorSprite: 2803
     handSprite: 2710
@@ -523,7 +524,7 @@ items:
     categories: [STR_CAT_LASGUN]
     size: 0.2
     dropoff: 5
-    weight: 9
+    weight: 15
     powerRangeThreshold: 13
     powerRangeReduction: 10
     bigSprite: 2810
@@ -1010,7 +1011,7 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 2
-    armor: 30
+    armor: 100
     bulletSpeed: 30
     attraction: 5
     listOrder: 10140
@@ -1044,7 +1045,7 @@ items:
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     autoShots: 4
     bulletSpeed: 50
     attraction: 1
@@ -1081,7 +1082,7 @@ items:
     invWidth: 1
     invHeight: 3
     twoHanded: true
-    armor: 30
+    armor: 100
     experienceTrainingMode: 5
     listOrder: 10741
     # *** Melee bayonet
@@ -1118,6 +1119,7 @@ items:
     battleType: 3
     clipSize: -1
     size: 0.2
+    armor: 200
     weight: 20  # Heavy Sword
     requires:
       - STR_NURGLE_OPTIONS
@@ -1181,7 +1183,7 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 2
-    armor: 30
+    armor: 100
     bulletSpeed: 30
     attraction: 5
     listOrder: 10141
@@ -1227,7 +1229,7 @@ items:
 
   - type: STR_BOLTERN_LIGHT  # LIGHT BOLTER NURGLE CHAOS
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
-    size: 0.3
+    size: 0.2
     dropoff: 5
     costSell: 2000
     bigSprite: 2604
@@ -1235,24 +1237,24 @@ items:
     handSprite: {mod: 40k, index: 1544}
     bulletSprite: {mod: 40k, index: 6}
     fireSound: {mod: 40k, index: 707}
-    weight: 15
+    weight: 17
     compatibleAmmo:
       - STR_LIGHT_BOLTER_AMMO
       - STR_LIGHT_BOLTER_AMMO_PEN
       - STR_LIGHT_BOLTER_AMMO_EX
       - STR_LIGHT_BOLTER_AMMO_MC
       - STR_LIGHT_BOLTER_AMMO_NURGLE
-    accuracySnap: 80
+    accuracySnap: 75
     accuracyAuto: 60  # accurate but slow
-    tuSnap: 25  # poor for light bolter reaction shots
+    tuSnap: 22
     tuAuto: 35  # slower than other light bolters
     snapRange: 16  # long range, no bayonet
-    autoRange: 11  # long range, no bayonet
+    autoRange: 12  # long range, no bayonet
     battleType: 1
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     autoShots: 2  # only two shots
     bulletSpeed: 50
     attraction: 1
@@ -1273,7 +1275,7 @@ items:
     handSprite: 2540  # handOB.rul file
     bulletSprite: {mod: 40k, index: 6}
     fireSound: {mod: 40k, index: 707}
-    weight: 15
+    weight: 20
     ammo:
       0:
         compatibleAmmo: [STR_LIGHT_BOLTER_AMMO, STR_LIGHT_BOLTER_AMMO_PEN, STR_LIGHT_BOLTER_AMMO_EX, STR_LIGHT_BOLTER_AMMO_MC, STR_LIGHT_BOLTER_AMMO_NURGLE]
@@ -1291,20 +1293,20 @@ items:
       ammoSlot: 1  # Grenades
       name: STR_LAUNCH_GRENADE
       arcing: true
-    accuracySnap: 80
+    accuracySnap: 75
     accuracyAuto: 60
     accuracyAimed: 55
-    tuSnap: 20
+    tuSnap: 22
     tuAuto: 33
     tuAimed: 35
     snapRange: 16
-    autoRange: 11
+    autoRange: 12
     aimRange: 15
     battleType: 1
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     bulletSpeed: 50
     attraction: 1
     listOrder: 10351
@@ -1432,7 +1434,7 @@ items:
 
   - type: STR_BOLTERN  # BOLTER NURGLE CHAOS   10350
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
-    size: 0.3
+    size: 0.2
     dropoff: 4
     costSell: 500  # rotted and disgusting; no one wants this
     weight: 20
@@ -1446,13 +1448,13 @@ items:
     accuracyAuto: 46
     tuSnap: 25
     tuAuto: 40
-    snapRange: 16
+    snapRange: 17
     autoRange: 11
     battleType: 1
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     autoShots: 3
     bulletSpeed: 50
     attraction: 1
@@ -1466,7 +1468,7 @@ items:
     size: 0.3
     dropoff: 4  # heavy weapon drop off
     costSell: 1000  # rotted and disgusting; no one wants this
-    weight: 40
+    weight: 50
     bigSprite: 2601
     floorSprite: 2600
     handSprite: 2510
@@ -1482,7 +1484,7 @@ items:
     accuracySnap: 85
     accuracyAuto: 70
     tuAimed: 0
-    tuSnap: 28
+    tuSnap: 33
     tuAuto: 35
     kneelBonus: 133
     snapRange: 18
@@ -1496,7 +1498,7 @@ items:
     oneHandedPenalty: 75
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     autoShots: 6
     bulletSpeed: 75
     attraction: 8
@@ -1540,20 +1542,21 @@ items:
     autoShots: 6
     listOrder: 10530
     tags:
-      INFECTION_DAMAGE_PERCENT: 25  # inflicts % of damage dealt as infection damage
+      INFECTION_DAMAGE_PERCENT: 15  # inflicts % of damage dealt as infection damage
       INFECTION_TYPE: 1  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
 
   - type: STR_NURGLE_ROCKET_LAUNCHER  #                12120
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
     size: 0.4
     dropoff: 5
+    armor: 100
     costSell: 10000
     bigSprite: 2602
     floorSprite: 2601
     handSprite: 2520
     bulletSprite: 0
     fireSound: {mod: 40k, index: 52}
-    weight: 50
+    weight: 60
     compatibleAmmo:
       - STR_SMALL_ROCKET
       - STR_LARGE_ROCKET
@@ -1580,7 +1583,7 @@ items:
     size: 0.2
     # costBuy: 8000
     costSell: 6500
-    weight: 30
+    weight: 60
     bigSprite: 2627
     floorSprite: 2622
     handSprite: 2620
@@ -1705,7 +1708,7 @@ items:
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     autoShots: 2  # fewer autofire shots; Tzeentch bolter is more of a battle rifle
     bulletSpeed: 50
     attraction: 1
@@ -1721,6 +1724,7 @@ items:
     hitAnimation: 2010  # nurgle green small explosion
     weight: 3
     damageAlter:  # Plague weapon
+      RandomType: 2 # 50-150%
       ToArmorPre: 0.4
       ToArmor: 0.1
       ToHealth: 0.6  # much less health damage; instead debilitates, infects and corrodes armor
@@ -1775,7 +1779,7 @@ items:
     invWidth: 2
     invHeight: 3
     flatRate: true
-    armor: 60
+    armor: 200
     skillApplied: true
     strengthApplied: false
     attraction: 8
@@ -1812,7 +1816,7 @@ items:
     invWidth: 2
     invHeight: 3
     flatRate: true
-    armor: 60
+    armor: 200
     skillApplied: true
     strengthApplied: false
     attraction: 8
@@ -1848,7 +1852,7 @@ items:
     invWidth: 2
     invHeight: 3
     flatRate: true
-    armor: 60
+    armor: 200
     skillApplied: true
     strengthApplied: false
     attraction: 8
@@ -1886,7 +1890,7 @@ items:
     invWidth: 1
     invHeight: 3
     flatRate: true
-    armor: 100
+    armor: 200
     skillApplied: true
     meleeMultiplier:
       melee: 0.9
@@ -1901,6 +1905,7 @@ items:
 
   - type: STR_AXE  #                 3011           DA CHAIN
     power: 66
+    armor: 100
     damageAlter:  # DA CHAIN
       RandomType: 1
       ToArmorPre: 0.3
@@ -2033,7 +2038,7 @@ items:
       - STR_ALIENS_ONLY
     costSell: 250000
     size: 0.2
-    weight: 15
+    weight: 20
     bigSprite: 2988
     floorSprite: 2989
     handSprite: 3580
@@ -2752,8 +2757,6 @@ items:
     categories: [STR_CAT_BOLTER]
     size: 0.3
     dropoff: 4  # heavy weapon
-    requires:
-      - STR_CORRUPTED_REQUISITIONS
     costSell: 5000
     weight: 33
     bigSprite: 3030
@@ -2768,16 +2771,17 @@ items:
       - STR_AC_I_AMMO
       - STR_AC_N_AMMO
     accuracyAimed: 0
-    accuracySnap: 85
-    accuracyAuto: 70
+    accuracySnap: 60
+    accuracyAuto: 55
     tuAimed: 0
-    tuSnap: 28
-    tuAuto: 35
+    tuSnap: 25
+    tuAuto: 60
     snapRange: 20
     confSnap:  # For AI Reaction Overwatch
       name: STR_BURST_SNAP_SHOT  # name of attack in action menu.
       shots: 2
     autoRange: 12
+    minRange: 5
     battleType: 1
     twoHanded: true
     oneHandedPenalty: 75
@@ -2824,7 +2828,7 @@ items:
     size: 0.4
     dropoff: 5
     costSell: 7000
-    weight: 50
+    weight: 40
     fireSound: {mod: 40k, index: 52}
     compatibleAmmo:
       - STR_SMALL_ROCKET
@@ -2968,6 +2972,7 @@ items:
     size: 0.3
     dropoff: 10
     costSell: 12000
+    armor: 50 #fragile
     weight: 25
     bigSprite: 2096
     floorSprite: 2059
@@ -2999,6 +3004,7 @@ items:
     size: 0.3
     dropoff: 7
     costSell: 10000
+    armor: 100
     weight: 18
     compatibleAmmo:
       - STR_MELTA_AMMO
@@ -3018,7 +3024,7 @@ items:
     size: 0.3
     dropoff: 5
     costSell: 20000
-    weight: 20
+    weight: 40
     compatibleAmmo:
       - STR_BLASTER_BOMB
     accuracySnap: 80
@@ -3029,7 +3035,7 @@ items:
     invWidth: 2
     invHeight: 3
     recoveryPoints: 5
-    armor: 40
+    armor: 100
     listOrder: 12300
 
   - type: STR_SMALL_LAUNCHER  # CHAOS GRAVGUN                          11810
@@ -3037,7 +3043,8 @@ items:
     size: 0.2
     dropoff: 5
     costSell: 12000
-    weight: 10
+    weight: 20
+    armor: 50 #fragile
     compatibleAmmo:
       - STR_STUN_BOMB
     accuracySnap: 70
@@ -3061,7 +3068,8 @@ items:
       - STR_ALIENS_ONLY
     size: 0.2
     costSell: 18000
-    weight: 15
+    weight: 30
+    armor: 50 #fragile
     bigSprite: 2050
     floorSprite: {mod: 40k, index: 36}
     handSprite: {mod: 40k, index: 64}
@@ -3087,7 +3095,8 @@ items:
     categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL, STR_CAT_NURGLE]
     size: 0.2
     costSell: 5000
-    weight: 6
+    weight: 10
+    armor: 50 #fragile
     bigSprite: 2650  # Was 2614
     floorSprite: 2613
     handSprite: 2590
@@ -3116,7 +3125,7 @@ items:
     size: 0.3
     dropoff: 5
     costSell: 5000  # only valuable because the technology is esoteric
-    weight: 18
+    weight: 30 #added kombi-weight
     bigSprite: 2613
     floorSprite: 2612
     handSprite: 2580
@@ -3147,7 +3156,7 @@ items:
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 100
     bulletSpeed: 30
     listOrder: 10334
     tags:
@@ -3159,7 +3168,8 @@ items:
     size: 0.2
     dropoff: 6  # shotgun/scattershot
     costSell: 20000
-    weight: 20  # heavier
+    armor: 50 #fragile
+    weight: 35  # heavier
     bigSprite: 2612
     floorSprite: 2611
     handSprite: 2570
@@ -3192,7 +3202,8 @@ items:
     size: 0.3
     dropoff: 4  # heavy weapon
     costSell: 30000
-    weight: 30  # heavier
+    weight: 60  # heavier
+    armor: 50 #fragile
     bigSprite: 2616
     floorSprite: 2615
     handSprite: 2610
@@ -3221,7 +3232,7 @@ items:
 
   - type: STR_PLAGUE_KNIFE  # Plague Knife
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
-    size: 0.2
+    size: 0.1
     costSell: 1000
     weight: 8
     bigSprite: 2615
@@ -3254,7 +3265,7 @@ items:
     battleType: 3
     invWidth: 1
     invHeight: 3
-    armor: 10
+    armor: 100
     flatRate: true
     attraction: 8
     listOrder: 15252

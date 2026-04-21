@@ -31,11 +31,12 @@ items:
     confAuto:
       name: TAUDRONEGUN_AUTO
       followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
-    power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    # Carbine/rifle/burst cannon fire
+    power: 100
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     twoHanded: false
@@ -83,12 +84,11 @@ items:
     tuAuto: 50
     tuSnap: 30
     autoShots: 3
-    power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    power: 100
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
-      # ArmorEffectiveness: 0.9  # some armor penetration
+      ToArmorPre: 0.2 # was 0.1 or 0.3, depending # melts some armor on the way in
     battleType: 1
     twoHanded: true
     oneHandedPenalty: 25
@@ -123,6 +123,7 @@ items:
       - STR_TAU_TRADING
     requiresBuy:
       - STR_TAU_TRADING
+      - STR_NOT_TAU_GUEVESA_TRADING   # stop buying old one when new one arrives
     requiresBuyBaseFunc: [TRADE]
     size: 0.4
     bigSprite: 3153
@@ -164,6 +165,8 @@ items:
   - &STR_TAU_PULSE_AMMO_TEMPLATE
     type: STR_TAU_PULSE_MAG #universal ammo
     size: 0.05
+    requires:
+      - STR_TAU_XENOTECH
     weight: 1 #light weight
     invHeight: 1
     invWidth: 1
@@ -185,25 +188,32 @@ items:
         set subvoxel_drift 3;
         return;
     explosionSpeed: 10
-    bulletSpeed: 50 # slow it down some
+    bulletSpeed: 25 # slow it down some
     battleType: 2
-    clipSize: 36
-    power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    clipSize: 20
+    power: 100
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # 0.3  # melts some armor on the way in
+      ToArmorPre: 0.2 # was 0.1-0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
 
   - type: STR_TAU_PULSE_MAG_EXPORT
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
     requiresBuy:
       - STR_TAU_TRADING
+      - STR_NOT_TAU_GUEVESA_TRADING   # stop buying old one when new one arrives
     requiresBuyBaseFunc: [TRADE]
     bigSprite: 3152
     floorSprite: 3151
     handSprite: 3704
     clipSize: 12 #severely limited
+    # doesn't hit as hard
+    power: 90
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
+      RandomType: 6
+      ToArmorPre: 0.15 # was 0.1-0.3  # melts some armor on the way in
     costBuy: 5000
     costSell: 1000
 
@@ -215,23 +225,30 @@ items:
     bigSprite: 3152
     floorSprite: 3151
     handSprite: 3704
-    clipSize: 24
+    clipSize: 16
+    # doesn't hit as hard
+    power: 95
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
+      RandomType: 6
+      ToArmorPre: 0.15 # was 0.1-0.3  # melts some armor on the way in
     costBuy: 4000 # friends pay 40% per shot
     costSell: 500
 
   - type: STR_TAU_PULSE_BLASTER_MAG
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
-    power: 60
-    damageType: 5
-    damageAlter:  # DA PLASMA
-      RandomType: 1   # random means some pellets will roll high
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.8  # the blaster retains armor penetration
+    power: 100
+    clipSize: 16
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
+      RandomType: 7   # random means some pellets will roll high
+      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
+      ArmorEffectiveness: 0.85  # the blaster retains armor penetration
     shotgunBehavior: 1
-    shotgunSpread: 25
-    shotgunPellets: 6
-    powerRangeReduction: 0.5
-    powerRangeThreshold: 5.0
+    shotgunSpread: 10
+    shotgunPellets: 5
+    powerRangeReduction: 20.0
+    powerRangeThreshold: 12.0
 
   - &STR_TAU_PULSE_CARBINE_TEMPLATE
     type: STR_TAU_PULSE_CARBINE
@@ -253,14 +270,14 @@ items:
     bulletSpeed: 100
     accuracyAuto: 60
     accuracySnap: 80
-    accuracyAimed: 80
+    accuracyAimed: 90
     tuAuto: 40
     tuSnap: 25
     tuAimed: 25
     autoShots: 4
-    power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    power: 100
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
       ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
@@ -288,7 +305,7 @@ items:
     invWidth: 2
     invHeight: 3
     arcingShot: false
-    aimRange: 16
+    aimRange: 20
     snapRange: 16
     autoRange: 12
     dropoff: 4
@@ -305,13 +322,16 @@ items:
     tags:
       REACTION_MULTIPLIER: 150
 
+
 ### nerfed similar to guevesa export
   - type: STR_TAU_PULSE_CARBINE_EXPORT_GUEVESA
     categories: [STR_CAT_PLASMA, STR_CAT_ASSAULT, STR_CAT_TAU]
     requires:
       - STR_TAU_GUEVESA_TRADING
+    requiresBuy:
+      - STR_TAU_GUEVESA_TRADING
     requiresBuyBaseFunc: [TRADE]
-    costBuy: 200000   # friends pay 30%
+    costBuy: 200000   # friends pay 40%
     size: 0.3
     weight: 5
     bigSprite: 3500
@@ -327,14 +347,14 @@ items:
     bulletSpeed: 100
     accuracyAuto: 55
     accuracySnap: 75
-    accuracyAimed: 75
+    accuracyAimed: 85
     tuAuto: 40
     tuSnap: 25
     tuAimed: 25
     autoShots: 3
-    power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    power: 100
+    damageType: 1
+    damageAlter:  # DA PULSE
       RandomType: 6
       ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
@@ -354,7 +374,7 @@ items:
     invWidth: 2
     invHeight: 3
     arcingShot: false
-    aimRange: 14
+    aimRange: 18
     snapRange: 14
     autoRange: 10
     dropoff: 4
@@ -371,8 +391,9 @@ items:
     tags:
       REACTION_MULTIPLIER: 150
 
-
-  - type: STR_TAU_PULSE_CARBINE_DRONE_TWINLINKED
+### Remove reaction modifier and increase TUs on these
+  - &STR_PULSE_CARBINE_TWINLINKED
+    type: STR_TAU_PULSE_CARBINE_DRONE_TWINLINKED
     categories: [STR_CAT_PLASMA, STR_CAT_ASSAULT, STR_CAT_TAU]
     requires:
       - STR_TAU_XENOTECH
@@ -387,12 +408,12 @@ items:
     bulletSpeed: 100
     accuracyAuto: 60
     accuracySnap: 80
-    tuAuto: 40
-    tuSnap: 25
+    tuAuto: 50
+    tuSnap: 35
     autoShots: 4
-    power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    power: 100
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
       ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
@@ -426,8 +447,11 @@ items:
     recover: false
     fixedWeapon: true
     fixedWeaponShow: false
-    tags:
-      REACTION_MULTIPLIER: 150
+
+  - type: STR_DRONE_TURRET_TWINLINKED_BURST_CANNON
+    refNode: *STR_PULSE_CARBINE_TWINLINKED
+    tuAuto: 60
+    tuSnap: 40
 
   - type: STR_TAU_PHOTON_GRENADE_CARBINE
     categories: [STR_CAT_TACTICAL, STR_CAT_TAU]
@@ -454,7 +478,7 @@ items:
         return;
     tuLoad: 5 #quick reload; mainly for underslung
     battleType: 2
-    power: 80
+    power: 90
     clipSize: 3
     damageType: 6
     damageAlter:
@@ -505,7 +529,7 @@ items:
       energy: true
     tuAimed: 0
     accuracyAimed: 0
-    power: 80
+    power: 90
     damageType: 6
     damageAlter:
       ArmorEffectiveness: 0.5
@@ -629,6 +653,7 @@ items:
       DAMAGE_RESIST_PENETRATION_PERCENT: 99
       ITEM_ENERGY_SHIELD_REDUCTION_PERCENT: 100 #annihilates shields
 
+  # not a sniper weapon
   - type: STR_TAU_PULSE_BLASTER
     size: 0.3
     categories: [STR_CAT_PLASMA, STR_CAT_ASSAULT, STR_CAT_TAU]
@@ -645,36 +670,39 @@ items:
     reloadSound: 2451
     costSell: 20000
     explosionSpeed: 10
-    bulletSpeed: 100
+    bulletSpeed: 50
     accuracySnap: 90  # Breachers are more accurate
     tuSnap: 25
-    power: 60
-    damageType: 5
-    damageAlter:  # DA PLASMA
-      RandomType: 1   # random means some pellets will roll high
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.8  # the blaster retains armor penetration
-    compatibleAmmo:
-      - STR_TAU_PULSE_BLASTER_MAG
-    confSnap:
-      spendPerShot: 2 #effectively half the normal ammo cap
+    power: 100    # was 120 - too easy to get one shots
+    damageType: 1
+    # Pulse blaster
+    damageAlter:  # DA PULSE AP BREACHER
+      RandomType: 7   # rerolling wounds
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.85  # the blaster retains armor penetration
+    # clipSize: -1  # debugging
+    # confSnap:
+    #   spendPerShot: 2 #effectively half the normal ammo cap
     battleType: 1
     twoHanded: true
     oneHandedPenalty: 50
     invWidth: 2
     invHeight: 3
     arcingShot: false
-    snapRange: 14
-    dropoff: 5 #pulse shotgun
+    snapRange: 12   # was 16
+    dropoff: 20 #pulse shotgun
     recover: true
     shotgunBehavior: 1
-    shotgunSpread: 25
-    shotgunPellets: 6
+    shotgunSpread: 10
+    shotgunPellets: 5
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 3
     vaporProbabilitySurface: 50
-    powerRangeReduction: 0.5
-    powerRangeThreshold: 5.0
+    powerRangeReduction: 20.0
+    powerRangeThreshold: 12.0
+    ammo:
+      0:
+        compatibleAmmo: [STR_TAU_PULSE_BLASTER_MAG]
     scripts:
       vaporParticleAmmo: |
         # noting
@@ -700,16 +728,16 @@ items:
     reloadSound: 2451
     costSell: 10000
     explosionSpeed: 10
-    bulletSpeed: 100
+    bulletSpeed: 50
     accuracySnap: 80
     accuracyAimed: 100
     tuSnap: 20
     tuAimed: 40
-    power: 90
-    damageType: 5
-    damageAlter:  # DA PLASMA
+    power: 100
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
       RandomType: 6
-      ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
+      ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
       # ArmorEffectiveness: 0.9  # some armor penetration
     battleType: 1
     ammo:
@@ -740,7 +768,89 @@ items:
       REACTION_MULTIPLIER: 200
       ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 15
 
-  - type: STR_TAU_RAIL_RIFLE
+  # ion rifle prototype no art yet
+  # cloned off the twincore dekker but with weak overheat damage
+  # heavy....
+  - type: STR_TAU_ION_RIFLE_GV
+    categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR]
+    size: 0.3
+    costSell: 0
+    weight: 25
+    bigSprite: 350
+    requires:
+      - STR_TAU_XENOTECH
+    floorSprite: {mod: 40k, index: 620}
+    handSprite: {mod: 40k, index: 80}
+    bulletSprite: {mod: 40k, index: 11}
+    fireSound: {mod: 40k, index: 18}
+    compatibleAmmo:
+      - STR_TAU_ION_RIFLE_MAG_GV
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    attraction: 1
+    listOrder: 11500
+    dropoff: 4
+    snapRange: 24
+    aimRange: 24
+    accuracySnap: 90
+    accuracyAimed: 90
+    tuSnap: 35    # bulky
+    tuAimed: 35
+    confSnap:
+      name: STR_BURST_SNAP_SHOT
+      shots: 3
+    confAimed:
+      shots: 3
+      spendPerShot: 2
+      name: STR_ION_RIFLE_OVERCHARGE_SHOT_GV
+    tags:
+      ITEM_AIMED_FLAT_POWER_BONUS_PERCENT: 50  # Maximal Shot Bonus
+
+  # ion rifle ammo prototype no art yet
+  # cloned off the twincore clip
+  - type: STR_TAU_ION_RIFLE_MAG_GV  #                   11510
+    categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
+    vaporColorSurface: {mod: 40k, index: 2}
+    vaporDensitySurface: 6
+    vaporProbabilitySurface: 18
+    size: 0.1
+    costSell: 0
+    weight: 4
+    armor: 100
+    bigSprite: 3228
+    requires:
+      - STR_TAU_XENOTECH
+    floorSprite: {mod: 40k, index: 621}
+    handSprite: {mod: 40k, index: 440}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 100}  # 60  # *** PLASMA rebalance
+    powerForAnimation: 5
+    power: 110  # 75  # *** PLASMA rebalance
+    damageType: 5
+    damageAlter:  # DA PLASMA
+      RandomType: 6
+      ToHealth: 1.0
+      ToArmorPre: 0.2  # melts some armor on the way in
+      ArmorEffectiveness: 0.75  # *** PLASMA rebalance
+      FireThreshold: 70  # can ignite at high damage
+      ToArmor: 0.1
+    clipSize: 16
+    battleType: 2
+    recoveryPoints: 1
+    listOrder: 11510
+    tags:
+      ITEM_IS_PALETTE_SWAP: 1
+      ITEM_BASE_COLOR: 15
+      ITEM_SWAP_BASE_COLOR: 2
+
+
+  # good but not that good XD
+  - &STR_RAIL_RIFLES
+    type: STR_TAU_RAIL_RIFLE
     categories: [STR_CAT_DEVASTATOR, STR_CAT_TAU]
     size: 0.6
     invWidth: 2
@@ -760,19 +870,19 @@ items:
     hitAnimation: 1200
     powerForAnimation: 24
     reloadSound: 2454
-    costSell: 30000
-    bulletSpeed: 100
-    accuracySnap: 50
-    accuracyAimed: 80
-    tuAimed: 80
-    tuSnap: 60
+    costSell: 0
+    bulletSpeed: 50
+    accuracySnap: 70
+    accuracyAimed: 90
+    tuAimed: 70
+    tuSnap: 45
     battleType: 1
     twoHanded: true
     blockBothHands: true
     arcingShot: false
-    minRange: 10
-    snapRange: 20
-    aimRange: 30
+    minRange: 8
+    snapRange: 24
+    aimRange: 32
     dropoff: 3 #has exceptional range
     recover: true
     kneelBonus: 150 #extremely hard to wield otherwise
@@ -781,10 +891,40 @@ items:
     tags:
       REACTION_MULTIPLIER: 50
       REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # Battle railgun
+
+  # very powerful
+  - type: STR_TAU_MARKSMAN_RAIL_RIFLE_GV
+    refNode: *STR_RAIL_RIFLES
+    weight: 12
+    costSell: 0
+    bulletSpeed: 100
+    accuracySnap: 80
+    accuracyAimed: 100
+    tuAimed: 60
+    tuSnap: 40
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    arcingShot: false
+    minRange: 6
+    snapRange: 32
+    aimRange: 40
+    dropoff: 3 #has exceptional range
+    recover: true
+    kneelBonus: 150 # still better if kneeling
+    tuLoad: 5 #quick reload
+    tuUnload: 5
+    tags:
+      REACTION_MULTIPLIER: 75
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # Battle railgun
 
   - type: STR_TAU_RAIL_MAG
     size: 0.05
     weight: 1 #light weight
+    requires:
+      - STR_TAU_XENOTECH
     invWidth: 1
     invHeight: 1
     bigSprite: 3171
@@ -888,9 +1028,9 @@ items:
       ToItem: 1.0
       ToArmorPre: 0.3  # destroys armor on the way in
       ArmorEffectiveness: 0.3
-      FixRadius: 1 #just has to be close
+      # FixRadius: 1 #just has to be close
       IgnoreOverKill: false
-      RadiusReduction: 100  #still deals a lot of damage if it gets close, but it may be survivable
+      # RadiusReduction: 100  #still deals a lot of damage if it gets close, but it may be survivable
     clipSize: 2
     tags:
-      DAMAGE_RESIST_PENETRATION_PERCENT: 95 #resistance isn't very effective against this
+      DAMAGE_RESIST_PENETRATION_PERCENT: 75 # 200 power is plenty . . .

@@ -55,7 +55,7 @@ items:
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
     size: 0.3
-    dropoff: 4
+    dropoff: 5
     autoRange: 9
     snapRange: 14
     aimRange: 0
@@ -66,7 +66,7 @@ items:
     tuSnap: 23
     tuAimed: 0
     costSell: 3000
-    weight: 20
+    weight: 25
     bigSprite: 3801
     floorSprite: {mod: 40k, index: 210}
     handSprite: {mod: 40k, index: 1528}
@@ -100,9 +100,9 @@ items:
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
     size: 0.3
-    dropoff: 3
-    autoRange: 17
-    snapRange: 23
+    dropoff: 4
+    autoRange: 13
+    snapRange: 20
     aimRange: 0
     accuracyAuto: 50
     accuracySnap: 60
@@ -150,12 +150,15 @@ items:
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_BOOK_EREBUS
+      - STR_MIDTIER_PREREQ
+      - STR_HB_DEP1
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
-      - STR_HB_DEP1
+      - STR_RITUAL_FAVOURS
+      - STR_STORMBOLTERS_WB
     size: 0.6
-    dropoff: 3
+    dropoff: 4
     autoRange: 0
     snapRange: 15
     aimRange: 0
@@ -191,11 +194,14 @@ items:
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_BOOK_EREBUS
+      - STR_HIGHTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_AUTOCANNONS_WB
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
       - STR_RITUAL_FAVOURS
-      - STR_HB_DEP1
+      - STR_RITUAL_BETRAYAL
     size: 0.6
     costSell: 20000
     weight: 100
@@ -252,6 +258,8 @@ items:
     bigSprite: {mod: 40k, index: 294}
     fireSound: {mod: 40k, index: 739}
     power: 130
+    autoRange: 15
+    snapRange: 21
     blastRadius: 4
     accuracyAuto: 50
     accuracySnap: 60
@@ -278,8 +286,8 @@ items:
     bigSprite: {mod: 40k, index: 316}
     fireSound: {mod: 40k, index: 18}
     bulletSpeed: 100
-    autoRange: 25
-    snapRange: 25
+    autoRange: 12
+    snapRange: 18
     aimRange: 30
     dropoff: 3
     power: 130
@@ -323,7 +331,7 @@ items:
     weight: 40
     bigSprite: {mod: 40k, index: 1081}
     bulletSpeed: 100
-    autoRange: 25
+    autoRange: 18
     snapRange: 25
     aimRange: 35
     dropoff: 3
@@ -399,12 +407,24 @@ items:
     recover: false
     battleType: 3
     clipSize: -1
+    tags:
+      TAG_HP_RETURNED_ON_KILL: 5  # regains 5 HP on kill
+      TAG_ENERGY_RETURNED_ON_KILL: 5  # regains 5 Energy on kill
+      TAG_TIME_RETURNED_ON_KILL: 8  # regains 8 TU on kill
+      TAG_MORALE_RETURNED_ON_KILL: 5  # regains 5 Morale on kill
+      TAG_STUN_RETURNED_ON_KILL: 5  # regains 5 Stun on kill
+      YTAG_DAMAGE_RETURNED_AS_TIME: 8  # regain 8% of damage dealt in TUs
+      YTAG_DAMAGE_RETURNED_AS_HP: 5  # regain 5% of damage dealt in HP
+      YTAG_DAMAGE_RETURNED_AS_ENERGY: 5
+      YTAG_DAMAGE_RETURNED_AS_MORALE: 5
+      YTAG_DAMAGE_RETURNED_AS_STUN: 5
+      YTAG_DAMAGE_RETURNED_RESIST_TYPE: 0  # untyped damage so no modifications
 
   - type: STR_WBMK3BREACHER_SHIELD
     defaultInventorySlot: STR_LEFT_HAND
     weight: 5
     bigSprite: 3827
-    handSprite: 3846
+    # handSprite: 3846 # shield is now in the armor sprite sheet
     floorSprite: 3828
     meleeSound: {mod: 40k, index: 710}
     meleeHitSound: {mod: 40k, index: 772}
@@ -489,8 +509,7 @@ items:
     invWidth: 0
     invHeight: 0
     weight: 0
-    defaultInventorySlot: STR_BACK_PACK
-    defaultInvSlotX: 2
+    defaultInventorySlot: STR_BELT
     power: 80
     damageType: 5  # plasma
     damageBonus:
@@ -546,7 +565,7 @@ items:
       ToArmorPre: 0.1
       ToArmor: 0.2
       ToStun: 0.4
-      ToEnergy: 0.4
+      ToEnergy: 0.5
       ToWound: 0.3
       ToMorale: 0.6
       RadiusReduction: 5 # low power falloff
@@ -561,29 +580,25 @@ items:
 
   - type: STR_WARPSMITHPOWER_TOKEN
     invWidth: 1
-    invHeight: 3
-    weight: 0
-    bigSprite: 3829
-    defaultInventorySlot: STR_BACK_PACK
-    supportedInventorySections: [STR_BACK_PACK]
+    invHeight: 1
+    size: 0.1
+    bigSprite: 3852
+    defaultInventorySlot: STR_BELT
     hitSound: {mod: 40k, index: 37}
-    battleType: 8
-    LOSRequired: true
-    tuUse: 5
-    recover: false
+    battleType: 1
+    clipSize: -1
     fixedWeapon: true
-    # specialUseEmptyHand: true
-    confMelee:
+    tuSnap: 8
+    accuracySnap: 200
+    confSnap:
       name: STR_REPAIR
-    meleeSound: {mod: 40k, index: 698}
-    meleeHitSound: {mod: 40k, index: 699}
-    meleeAnimation: {mod: 40k, index: 32}
-    meleeType: 0
-    meleePower: 60
-    accuracyMelee: 100
-    meleeBonus:
+    fireSound: {mod: 40k, index: 698}
+    hitAnimation: {mod: 40k, index: 32}
+    bulletSprite: {mod: 40k, index: 22}
+    power: 60
+    damageBonus:
       strength: 0.5
-    meleeAlter:  # REPAIR
+    damageAlter:  # REPAIR
       RandomType: 3
       ToHealth: 0.0
       ToStun: 0.0
@@ -592,11 +607,18 @@ items:
       RandomWound: false
       RandomStun: false
       ArmorEffectiveness: 0.0
-    meleeMultiplier:
-      melee: 0.8
-    costMelee:
+    accuracyMultiplier:
+      psiStrength: 0.9
+    costSnap:
       time: 10
-      energy: 30
+      energy: 20
+    maxRange: 3
+    snapRange: 3
+    powerRangeThreshold: 3
+    dropoff: 1
+    powerRangeReduction: 1
+    twoHanded: false
+    recover: false
     tags:
       ITEM_REPAIRS_ARMOR: 1
       ITEM_IS_BUFF_WEAPON: 1
@@ -606,9 +628,9 @@ items:
   - type: STR_PISTOLBOLTSPITTER_WORDBEARER  # Pistol Boltspitter
     categories: [STR_CAT_BOLTER, STR_CAT_CHAOS]
     size: 0.2
-    dropoff: 4
+    dropoff: 5
     autoRange: 0
-    snapRange: 12
+    snapRange: 11
     aimRange: 0
     accuracyAuto: 0
     accuracySnap: 75
@@ -642,6 +664,20 @@ items:
     listOrder: 10141
     inventoryMoveCost: #quickdraw
       basePercent: 50
+    ignoreAmmoPower: true
+    power: 65
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
 
@@ -653,9 +689,9 @@ items:
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
     size: 0.3
-    dropoff: 3
-    autoRange: 10
-    snapRange: 15
+    dropoff: 5
+    autoRange: 9
+    snapRange: 14
     aimRange: 0
     accuracyAuto: 66
     accuracySnap: 80
@@ -664,7 +700,7 @@ items:
     tuSnap: 20
     tuAimed: 0
     costSell: 3000
-    weight: 20
+    weight: 25
     bigSprite: 3832
     floorSprite: {mod: 40k, index: 210}
     handSprite: {mod: 40k, index: 1528}
@@ -685,6 +721,20 @@ items:
     bulletSpeed: 50
     attraction: 1
     listOrder: 10341
+    ignoreAmmoPower: true
+    power: 70
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
 
   - type: STR_HEAVYBOLTSPITTER_WORDBEARER  # Heavy Boltspitter
     categories: [STR_CAT_BOLTER, STR_CAT_CHAOS]
@@ -696,9 +746,9 @@ items:
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
     size: 0.3
-    dropoff: 2
-    autoRange: 18
-    snapRange: 24
+    dropoff: 4
+    autoRange: 13
+    snapRange: 20
     aimRange: 0
     accuracyAuto: 50
     accuracySnap: 60
@@ -734,6 +784,20 @@ items:
     bulletSpeed: 50
     attraction: 4
     listOrder: 12001
+    ignoreAmmoPower: true
+    power: 85
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
     tags:
       ITEM_RECOIL: 70 #slightly more recoil than guard, but more accurate if controllable
       REACTION_MULTIPLIER: 50
@@ -744,14 +808,17 @@ items:
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_BOOK_KORPHAERON
+      - STR_MIDTIER_PREREQ
+      - STR_HB_DEP1
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
-      - STR_HB_DEP1
+      - STR_RITUAL_FAVOURS
+      - STR_STORMBOLTERS_WB
     size: 0.6
-    dropoff: 2
+    dropoff: 4
     autoRange: 0
-    snapRange: 16
+    snapRange: 15
     aimRange: 0
     accuracyAuto: 0
     accuracySnap: 75
@@ -777,17 +844,34 @@ items:
     bulletSpeed: 50
     attraction: 8
     listOrder: 13101
+    ignoreAmmoPower: true
+    power: 85
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.2
+      RandomWound: false
+      RandomType: 2 # 50-150 spread. No weak hits
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
 
   - type: STR_BOLTSPITTERAC_WORDBEARER  # Boltspitter Autocannon
     categories: [STR_CAT_TERMINATOR, STR_CAT_CHAOS]
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_BOOK_KORPHAERON
+      - STR_HIGHTIER_PREREQ
+      - STR_HB_DEP1
+      - STR_AUTOCANNONS_WB
       - STR_BOLTER_AMMO_PREREQ
       - STR_RITUAL_CONSECRATE
       - STR_RITUAL_SACRIFICE
       - STR_RITUAL_FAVOURS
-      - STR_HB_DEP1
+      - STR_RITUAL_BETRAYAL
     size: 0.6
     costSell: 20000
     weight: 100
@@ -805,7 +889,7 @@ items:
       - STR_AUTOCANNON_HE_AMMO
       - STR_AUTOCANNON_AP_AMMO
       - STR_AUTOCANNON_BOX_AMMO
-    dropoff: 2
+    dropoff: 3
     minRange: 4
     accuracySnap: 60
     tuSnap: 28
@@ -830,9 +914,83 @@ items:
     twoHanded: true
     oneHandedPenalty: 100
     listOrder: 13227
+    ignoreAmmoPower: true
+    power: 105
+    damageAlter: #DA BOLTER
+      RandomType: 7  # 50-200%
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+      ToWound: 0.2
+      ToEnergy: 0.3
+    damageBonus:
+      psiStrength: 0.2  # word bearers faith
     tags:
       REACTION_MULTIPLIER: 100
       REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_RECOIL: 70
+      ITEM_IS_HEAVY_WEAPON: 1
+
+  - type: STR_CLASCANSPITTER  # HellSpitter
+    categories: [STR_CAT_TERMINATOR, STR_CAT_CHAOS]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_BOOK_KORPHAERON
+      - STR_RITUAL_BLESSING
+      - STR_AUTOCANNONS_WB
+    size: 0.3
+    weight: 150
+    armor: 200
+    costSell: 20000
+    bigSprite: 3850
+    handSprite: 2730
+    floorSprite: 2809
+    power: 180
+    powerRangeThreshold: 20
+    powerRangeReduction: 5
+    accuracySnap: 70
+    accuracyAimed: 100
+    tuSnap: 55
+    tuAimed: 85
+    snapRange: 20
+    aimRange: 30
+    confSnap:
+      shots: 2
+      name: STR_BURST_SNAPLASCAN
+    confAimed:
+      shots: 2
+      name: STR_BURST_AIMLASCAN
+    clipSize: -1
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 100
+    damageType: 4
+    damageAlter:  # DA LAS MELTA
+      RandomType: 6
+      ToArmorPre: 0.5
+      ToHealth: 0.8
+      ToArmor: 0.3
+      ToStun: 0.3
+    listOrder: 13227
+    hitSound: 3986
+    fireSound: 3984
+    hitAnimation: 2230
+    bulletSprite: {mod: 40k, index: 22}
+    vaporColorSurface: 3
+    vaporDensitySurface: 8
+    vaporProbabilitySurface: 100
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+    tags:
       ITEM_RECOIL: 70
       ITEM_IS_HEAVY_WEAPON: 1
 
@@ -855,19 +1013,229 @@ items:
     fixedWeapon: true
     recover: false
     requires:
-      - STR_ALIENS_ONLY
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_EREBUS
+      - STR_EREBUS_PATHGIFT
     costAimed:
-      time: 40
-      energy: 40
-      morale: 20
-    costSnap:
       time: 20
-      energy: 40
-      morale: 20
+      energy: 20
+    costSnap:
+      time: 30
+      energy: 20
     costAuto:
       time: 20
       energy: 40
-      morale: 20
+    # melee
+    meleePower: 100
+    meleeBonus:
+      strength: 0.2
+      melee: 0.3
+      bravery: 0.2
+    costMelee:
+      time: 20
+      energy: 4
+    meleeType: 5
+    meleeAlter:
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 2
+    dropoff: 5
+    aimRange: 20
+    snapRange: 15
+    autoRange: 10
+    powerRangeThreshold: 20
+    powerRangeReduction: 5
+    compatibleAmmo:
+      - STR_CHAOS_CROZIUS_POWER3
+      - STR_WARPFIRE_RIFT
+      - STR_BLOODLETTERSPAWNER_BIGGRENADE_PLAYER
+    ammo:
+      0:
+        compatibleAmmo: [STR_CHAOS_CROZIUS_POWER3]
+      1:
+        compatibleAmmo: [STR_WARPFIRE_RIFT]
+      2:
+        compatibleAmmo: [STR_BLOODLETTERSPAWNER_BIGGRENADE_PLAYER]
+    confSnap:
+      name: STR_CHAOS_CROZIUS_POWER3
+      ammoSlot: 0
+    confAimed:
+      name: STR_WARPFIRE_RIFT
+      ammoSlot: 1
+      shots: 1
+    confAuto:
+      name: STR_SUMMON_HIGH_THINGS
+      ammoSlot: 2
+      shots: 1
+    accuracyAimed: 90
+    accuracySnap: 70
+    accuracyAuto: 40
+    accuracyMelee: 80
+
+  # ashen and raptor
+
+  - type: STR_WB_FLYING_TOKEN
+    medikitTargetMatrix: 0
+    medikitType: 1
+    medikitActionName: STR_ACTIVATE_FLIGHT
+    medikitTargetSelf: true
+    heal: 999
+    battleType: 6  # not used as medikit
+    tuUse: 10
+    flatRate: true
+    fixedWeapon: true
+    specialIconSprite: 205
+    tags:
+      ActivateFlight: 1
+
+
+  - type: STR_WBEXECUTIONER_AXE
+    categories: [STR_CAT_MELEE]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
+    size: 0.2
+    weight: 15  # irrelevant for this case
+    bigSprite: 3870
+    floorSprite: 3872
+    handSprite: 3873
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    meleeAnimation: {mod: 40k, index: 12}
+    power: 120
+    damageType: 7
+    damageAlter:  # DA CHAIN
+      RandomType: 1
+      ToArmorPre: 0.4  # shreds armor
+      ToHealth: 0.9
+      ToWound: 0.4  # spills blood
+      ToMorale: 0.5  # demoralizing and painful
+      ToEnergy: 0.5
+      IgnoreSelfDestruct: false  # default true for HE, fire, smoke, stun, mel
+      RandomWound: false
+    damageBonus:
+      strength: 0.3
+      melee: 0.3
+    accuracyMelee: 110
+    costMelee:
+      time: 15
+      energy: 2
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false  # irrelevant for this case
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    recover: true
+    skillApplied: true
+    strengthApplied: false
+    fixedWeapon: true
+    fixedWeaponShow: true
+    tags:
+      TAG_HP_RETURNED_ON_KILL: 5  # regains 5 HP on kill
+      TAG_ENERGY_RETURNED_ON_KILL: 5  # regains 5 Energy on kill
+      TAG_TIME_RETURNED_ON_KILL: 8  # regains 8 TU on kill
+      TAG_MORALE_RETURNED_ON_KILL: 5  # regains 5 Morale on kill
+      TAG_STUN_RETURNED_ON_KILL: 5  # regains 5 Stun on kill
+      YTAG_DAMAGE_RETURNED_AS_TIME: 8  # regain 8% of damage dealt in TUs
+      YTAG_DAMAGE_RETURNED_AS_HP: 5  # regain 5% of damage dealt in HP
+      YTAG_DAMAGE_RETURNED_AS_ENERGY: 5
+      YTAG_DAMAGE_RETURNED_AS_MORALE: 5
+      YTAG_DAMAGE_RETURNED_AS_STUN: 5
+      YTAG_DAMAGE_RETURNED_RESIST_TYPE: 0  # untyped damage so no modifications
+
+  - type: STR_WBEXECUTIONER_AXETRICK  # this one exist only to block the 2nd hand of the executioner
+    categories: [STR_CAT_MELEE]
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
+    size: 0.2
+    weight: 15  # irrelevant for this case
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    meleeAnimation: {mod: 40k, index: 12}
+    power: 120
+    damageType: 7
+    damageAlter:  # DA CHAIN
+      RandomType: 1
+      ToArmorPre: 0.4  # shreds armor
+      ToHealth: 0.9
+      ToWound: 0.4  # spills blood
+      ToMorale: 0.5  # demoralizing and painful
+      ToEnergy: 0.5
+      IgnoreSelfDestruct: false  # default true for HE, fire, smoke, stun, mel
+      RandomWound: false
+    damageBonus:
+      strength: 0.3
+      melee: 0.3
+    accuracyMelee: 110
+    costMelee:
+      time: 15
+      energy: 2
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false  # irrelevant for this case
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    recover: true
+    skillApplied: true
+    strengthApplied: false
+    fixedWeapon: true
+    fixedWeaponShow: true
+    tags:
+      TAG_HP_RETURNED_ON_KILL: 5  # regains 5 HP on kill
+      TAG_ENERGY_RETURNED_ON_KILL: 5  # regains 5 Energy on kill
+      TAG_TIME_RETURNED_ON_KILL: 8  # regains 8 TU on kill
+      TAG_MORALE_RETURNED_ON_KILL: 5  # regains 5 Morale on kill
+      TAG_STUN_RETURNED_ON_KILL: 5  # regains 5 Stun on kill
+      YTAG_DAMAGE_RETURNED_AS_TIME: 8  # regain 8% of damage dealt in TUs
+      YTAG_DAMAGE_RETURNED_AS_HP: 5  # regain 5% of damage dealt in HP
+      YTAG_DAMAGE_RETURNED_AS_ENERGY: 5
+      YTAG_DAMAGE_RETURNED_AS_MORALE: 5
+      YTAG_DAMAGE_RETURNED_AS_STUN: 5
+      YTAG_DAMAGE_RETURNED_RESIST_TYPE: 0  # untyped damage so no modifications
+
+
+  - type: STR_CHAOS_CROZIUS_ARCHDIAB_PLAYER
+    defaultInventorySlot: STR_RIGHT_HAND
+    bigSprite: {mod: 40k, index: 338}
+    floorSprite: {mod: 40k, index: 199}
+    handSprite: {mod: 40k, index: 688}
+    bulletSprite: {mod: 40k, index: 19}
+    fireSound: [{mod: 40k, index: 823}, {mod: 40k, index: 824}, {mod: 40k, index: 825}, {mod: 40k, index: 826}, {mod: 40k, index: 827}]
+    explosionHitSound: {mod: 40k, index: 771}
+    arcingShot: false
+    battleType: 1
+    twoHanded: false
+    maxRange: 60
+    invWidth: 2
+    invHeight: 3
+    armor: 40
+    flatRate: true
+    fixedWeapon: true
+    recover: false
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_EREBUS
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
+    costAimed:
+      time: 20
+      energy: 20
+    costSnap:
+      time: 30
+      energy: 20
+    costAuto:
+      time: 20
+      energy: 40
     # melee
     meleePower: 100
     meleeBonus:
@@ -891,20 +1259,20 @@ items:
     powerRangeReduction: 5
     compatibleAmmo:
       - STR_CHAOS_CROZIUS_POWER2
-      - STR_BRIMSTONE_HORROR_SPAWNER_GRENADE_PLAYER
-      - STR_BLOODLETTERSPAWNER_BIGGRENADE_PLAYER
+      - STR_WARPFIRE_IMPLOSION
+      - STR_BLOODLETTERSPAWNER_GRENADE_PLAYER
     ammo:
       0:
         compatibleAmmo: [STR_CHAOS_CROZIUS_POWER2]
       1:
-        compatibleAmmo: [STR_BRIMSTONE_HORROR_SPAWNER_GRENADE_PLAYER]
+        compatibleAmmo: [STR_WARPFIRE_IMPLOSION]
       2:
-        compatibleAmmo: [STR_BLOODLETTERSPAWNER_BIGGRENADE_PLAYER]
+        compatibleAmmo: [STR_BLOODLETTERSPAWNER_GRENADE_PLAYER]
     confSnap:
       name: STR_CHAOS_CROZIUS_POWER2
       ammoSlot: 0
     confAimed:
-      name: STR_SUMMON_THINGS
+      name: STR_WARPFIRE_IMPLOSION
       ammoSlot: 1
       shots: 1
     confAuto:
@@ -915,3 +1283,89 @@ items:
     accuracySnap: 70
     accuracyAuto: 40
     accuracyMelee: 80
+
+  # turrets weapon dreadclaw
+
+  - type: STR_WBSMOKER_WEAPON
+    size: 1.0
+    weight: 85
+    bigSprite: {mod: 40k, index: 1083}
+    bulletSprite: {mod: 40k, index: 0}
+    fireSound: {mod: 40k, index: 4}
+    compatibleAmmo:
+      - STR_WBSMOKER_AMMO
+    confAimed:
+      name: STR_SMOKE_SHOT_TAURUS  # name of attack in action menu.
+      shots: 1
+    flatUse:
+      time: true
+      energy: true
+    battleType: 1
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    fixedWeapon: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    dropoff: 4
+    accuracyAimed: 65
+    aimRange: 21  # same as snap
+    costAimed:
+      time: 1
+      energy: 3
+    tags:
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+
+  - type: STR_DREADCLAW_TURRET_DROPPOD
+    size: 0
+    invWidth: 2
+    invHeight: 3
+    dropoff: 4
+    autoRange: 12
+    snapRange: 20
+    aimRange: 0
+    accuracyAuto: 40
+    accuracySnap: 75
+    accuracyAimed: 0
+    flatUse:
+      time: true
+      energy: true
+    costAuto:
+      time: 1
+      energy: 4
+      mana: 3
+    costSnap:
+      time: 1
+      energy: 2
+      mana: 1
+    autoShots: 3
+    battleType: 1
+    clipSize: -1
+    power: 80
+    damageType: 1
+    damageAlter:
+      RandomType: 0
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToEnergy: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+    shotgunSpread: 1  # 1/100; hit together
+    shotgunBehavior: 1  # new behaviour
+    shotgunPellets: 2
+    bulletSpeed: 50
+    explosionSpeed: 5
+    floorSprite: 0
+    handSprite: 0
+    fixedWeapon: true
+    recover: false
+    bigSprite: {mod: 40k, index: 200}
+    bulletSprite: {mod: 40k, index: 15}
+    fireSound: {mod: 40k, index: 12}
+    hitSound: {mod: 40k, index: 13}
+    hitAnimation: {mod: 40k, index: 26}
+    tags:
+      TURRET_RELOAD_TURNS: 2
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 7

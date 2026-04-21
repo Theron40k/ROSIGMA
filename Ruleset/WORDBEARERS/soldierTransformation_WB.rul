@@ -3,6 +3,43 @@ extended:
 
 soldierTransformation:
 
+  - name: STR_PROMOTE_WBWARPEDMARINEEREBUS
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_EREBUS
+      - STR_PERSONAL_ARMOR_WB
+      - STR_RITUAL_CONTACT
+    producedSoldierType: STR_WBSOLDIER_WARPEDEREBUS
+    cost: 15000
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_WBSOLDIER
+    transferTime: 0
+    flatOverallStatChange:
+      tu: 10
+
+  - name: STR_PROMOTE_WBWARPEDMARINEKOR
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_PERSONAL_ARMOR_WB
+      - STR_RITUAL_CONTACT
+    producedSoldierType: STR_WBSOLDIER_WARPEDKOR
+    cost: 15000
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_WBSOLDIER
+    transferTime: 0
+    flatOverallStatChange:
+      tu: 10
+      health: 10
+
   - name: STR_PROMOTE_WBTERMINATOR
     requires:
       - STR_WORDBEARERS_STRATEGY
@@ -18,6 +55,8 @@ soldierTransformation:
     transferTime: 0
     requiredCommendations:
       STR_ANOINTED_MARKING: 0
+    flatOverallStatChange:
+      strength: 10
 
   - name: STR_PROMOTE_WBACOLYTE
     requires:
@@ -25,7 +64,7 @@ soldierTransformation:
       - STR_POWER_SUIT_WB
     requiredMinStats:
       psiStrength: 80
-      psiSkill: 60
+      psiSkill: 40
     producedSoldierType: STR_WBSOLDIER_ACOLYTE
     cost: 25000
     keepSoldierArmor: false
@@ -38,6 +77,9 @@ soldierTransformation:
     transferTime: 0
     requiredCommendations:
       STR_VETERAN_COMMENDATION: 0
+    flatOverallStatChange:
+      psiStrength: 10
+      psiSkill: 10
 
   - name: STR_WBDREADNOUGHT_MARINE
     requires:
@@ -53,17 +95,21 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_DREADNOUGHT_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
       - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDEREBUS
+      - STR_WBSOLDIER_WARPEDKOR
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_PROMOTE_WBMARKCHAOS
+    requiredCommendations:
+      STR_CHAOS_ATTENTION: 0
     requires:
       - STR_WORDBEARERS_STRATEGY
       - STR_POWER_SUIT_WB
@@ -84,6 +130,10 @@ soldierTransformation:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
     transferTime: 10
+    flatOverallStatChange:
+      tu: 10
+      strength: 10
+      psiStrength: 10
 
   - name: STR_WBOBLITERATOR_CREATION
     requires:
@@ -100,14 +150,15 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_OBLITERATOR_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
       - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDKOR
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_WBMUTILATOR_CREATION
     requires:
@@ -124,14 +175,15 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_MUTILATOR_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
       - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDEREBUS
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_WBBRASSSCORPION_CREATION
     requires:
@@ -149,14 +201,15 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_BRASSSCORP_ARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
       - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDKOR
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_POSSESSED_MARINE
     requires:
@@ -171,12 +224,40 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER
+      - STR_WBSOLDIER_TERMINATOR
+      - STR_WBSOLDIER_ACOLYTE
+      - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDEREBUS
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
+
+  - name: STR_POSSESSED_MARINEKOR  # Kor Phaeron only have this type of possessed
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_RITUAL_CONSECRATE
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 60
+      STR_KILLPOINT_TOKEN: 20
+    producedSoldierType: STR_WBFALLENPOSS1
+    producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
+    allowsDeadSoldiers: true
+    allowsLiveSoldiers: false
+    allowedSoldierTypes:
+      - STR_WBSOLDIER
+      - STR_WBSOLDIER_TERMINATOR
+      - STR_WBSOLDIER_ACOLYTE
+      - STR_WBSOLDIER_CHAOSMARKED
+      - STR_WBSOLDIER_WARPEDKOR
+    transferTime: 24
+    recoveryTime: 0
+    lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_GREATERPOSSESSED_MARINE
     requires:
@@ -191,13 +272,14 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
+      - STR_WBFALLENPOSS1
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false
 
   - name: STR_TRANSCENDENTPOSSESSED_MARINE
     requires:
@@ -212,9 +294,9 @@ soldierTransformation:
     producedSoldierArmor: STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
-    needsCorpseRecovered: true
     allowedSoldierTypes:
       - STR_WBSOLDIER_CHAOSMARKED
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+    needsCorpseRecovered: false

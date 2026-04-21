@@ -760,7 +760,7 @@ weaponSets:  # these can be re-used for any unit
   - type: TERMINATOR_LASCANNON
     weapons: [STR_CHAOS_LASCANNON_HANDHELD, STR_MGRENADE, STR_MGRENADE, STR_MGRENADE]
   - type: TERMINATOR_IW_AUTOCANNON
-    weapons: [STR_IW_AUTOCANNON, STR_ASSC_CLIP_AP, STR_ASSC_CLIP_AP, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
+    weapons: [STR_IW_AUTOCANNON, STR_AUTOCANNON_AP_AMMO, STR_AUTOCANNON_AP_AMMO, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
   - type: TERMINATOR_HEAVYFLAMER
     weapons: [STR_HFLAMER, STR_HFLAMER_CLIP, STR_HFLAMER_CLIP, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
   - type: TERMINATOR_MULTIMELTA
@@ -1118,6 +1118,9 @@ units:
       - - STR_TZEENTCH_FLAMER_WEAPON_PINK_LESSER
       - - STR_TZEENTCH_FLAMER_WEAPON_PINK_LESSER
         - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+    standHeight: 21
+    kneelHeight: 16
+
   - type: STR_FLAMER_TERRORIST_RECOVERABLE
     refNode: *FLAMER
     liveAlien: STR_FLAMER_TERRORIST
@@ -2377,6 +2380,7 @@ units:
       - - STR_SCREAMER_PISTOL
         - STR_CPOWER_DAGGER
         - STR_MGRENADE
+
   - type: STR_SLAANESH_SISTER_BLESSED_FALSE   # CHAOS STR_ADEPTAS_SLAANESH Blessed by Lies                    RANK 5 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_MEDIC
@@ -2417,6 +2421,8 @@ units:
       - - STR_SONIC_GUN
         - STR_CPOWER_DAGGER
         - STR_MGRENADE
+
+#Khorne Sisters
   - type: STR_KHORNE_SISTER     # CHAOS STR_ADEPTAS_KHORNE                      RANK 5 NO weapons
     race: STR_KHRONE
     rank: STR_LIVE_MEDIC
@@ -2759,6 +2765,7 @@ units:
         - STR_BLASTER_BOMB
         - STR_BLASTER_BOMB
         - STR_HIGH_EXPLOSIVE
+
   - type: STR_KHORNE_ARMSISTER     # CHAOS STR_ADEPTAS_KHORNE                      RANK 5 NO weapons
     race: STR_KHRONE
     rank: STR_LIVE_SOLDIER
@@ -2798,6 +2805,7 @@ units:
       - - STR_PLASMA_CARBINE_CHAOS
         - STR_PLASMA_SPRAY_CLIP
         - STR_PLASMA_SPRAY_CLIP
+
   - type: STR_KHORNE_ROOKIESISTER     # CHAOS SRookie Khorne Sister Early Enemy                      RANK 5 NO weapons
     race: STR_KHRONE
     rank: STR_LIVE_SOLDIER
@@ -3115,6 +3123,54 @@ units:
         - STR_PLASMA_TWINCORE_CLIP
         - STR_MGRENADE
 
+  - type: STR_SLAANESH_CSM_CHAMPION  # SLAANESH FLAWLESS CHAMPION
+    race: STR_SLAANESH
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 90
+      stamina: 96
+      health: 140 #higher health, less front armor
+      bravery: 100
+      reactions: 90
+      firing: 70
+      throwing: 50
+      strength: 75
+      psiStrength: 75
+      psiSkill: 0
+      melee: 95
+    armor: STR_SLAANESH_CSM_CHAMPION_ARMOR
+    intelligence: 2
+    aggression: 8
+    avoidsFire: false
+    isLeeroyJenkins: true
+    standHeight: 18
+    kneelHeight: 14
+    spotter: 1
+    value: 35
+    moraleLossWhenKilled: 110 #leader
+    deathSound: [4621, 4622, 4623, 4624, 4625]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_NEURAL_WHIP
+        - STR_BOLTPISTOL_SLAAN
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_SLAANESH_GRENADE
+      - - STR_SLAAN_LONGBLADE
+        - STR_BOLTPISTOL_SLAAN
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_BOLTPISTOL_CLIP_S
+        - STR_SLAANESH_GRENADE
+      - - STR_SLAAN_CHAINSWORD
+        - STR_PLASMA_PISTOL_SLAAN
+        - STR_PLASMA_PISTOL_CLIP_SLAAN
+        - STR_PLASMA_PISTOL_CLIP_SLAAN
+        - STR_SONIC_GRENADE
+        - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_ANOINTED  # CHAOS Slaanesh SNEKman             aggroSound
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3230,9 +3286,10 @@ units:
         - STR_SLAANGOR_DOUBLECLAW
       - - STR_SLAANGOR_DOUBLECLAW
         - STR_SLAANGOR_DOUBLECLAW
+
   - type: STR_SLAANGOR_BULLGOR  # Heavy infantry Leader, left claw weapon built in                                   # RANK 5 weapons done
     race: STR_SLAANESH
-    rank: STR_LIVE_SOLDIER
+    rank: STR_LIVE_LEADER
     stats:
       tu: 75
       stamina: 100
@@ -3273,6 +3330,7 @@ units:
         - STR_PLASMA_PISTOL_CLIP_SLAAN
         - STR_SLAANGOR_CLAW
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANGOR_GOR  # Medium infantry, no claws                                    # RANK 5 weapons done
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3325,6 +3383,7 @@ units:
         - STR_CONSTRICTOR_WEBBER_AMMO
         - STR_SLAAN_CHAINSWORD
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANGOR_UNGOR                                          # RANK 5 weapons done
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3341,7 +3400,7 @@ units:
       psiSkill: 0
       melee: 65
     armor: STR_SLAANGOR_UNGOR_ARMORLIGHT
-    standHeight: 21
+    standHeight: 20
     kneelHeight: 15
     intelligence: 0
     value: 8
@@ -3369,6 +3428,7 @@ units:
         - STR_SLAAN_HEAVY_STUBBER_CLIP
         - STR_SLAAN_HEAVY_STUBBER_CLIP
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANGOR_BRAYGOR  # Hornless human sized                                         # RANK 5 weapons done
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -3385,8 +3445,8 @@ units:
       psiSkill: 0
       melee: 55
     armor: STR_SLAANGOR_BRAY_ARMORLIGHT  # see below
-    standHeight: 21
-    kneelHeight: 15
+    standHeight: 19
+    kneelHeight: 14
     intelligence: 0
     value: 5
     deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
@@ -3410,7 +3470,7 @@ units:
 
   - type: STR_SLAANGOR_BULLGOR_RITUALIST  # ritualist version, affected by static tag
     race: STR_SLAANESH
-    rank: STR_LIVE_SOLDIER
+    rank: STR_LIVE_LEADER
     stats:
       tu: 75
       stamina: 100
@@ -3439,6 +3499,80 @@ units:
       - - STR_SLAANGOR_CLAW_GIMPIFY
       - - STR_SLAANGOR_CLAW_GIMPIFY
 
+  - type: STR_SLAANESH_LESSER_SPAWN #Lesser Spawn of Slaanesh Ground moving meatsack
+    race: STR_SLAANESH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 100
+      health: 250
+      bravery: 110
+      reactions: 40
+      firing: 65
+      throwing: 70
+      strength: 70
+      psiStrength: 100
+      psiSkill: 0
+      melee: 80
+    armor: STR_SLAANESH_LESSER_SPAWN_ARMOR
+    standHeight: 10
+    kneelHeight: 10
+    value: 5
+    deathSound: [2134, 2135, 2102, 2103, 2100, 2101]
+    intelligence: 0
+    aggression: 8
+    berserkChance: 50
+    energyRecovery: 40
+    avoidsFire: true
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SLAANESH_LESSER_SPAWN_WEAPON
+      - - STR_SLAANESH_LESSER_SPAWN_WEAPON
+      - - STR_SLAANESH_LESSER_SPAWN_WEAPON
+
+  - type: STR_SLAANESH_MUTANT  # SLAANESHI MUTANT
+    race: STR_SLAANESH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90
+      stamina: 100
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 40
+      throwing: 35
+      strength: 50
+      psiStrength: 35
+      psiSkill: 0
+      melee: 75
+    armor: STR_SLAANESH_MUTANT_ARMOR
+    standHeight: 20
+    kneelHeight: 14
+    value: 1
+    deathSound: [2134, 2135, 2017, 2102, 2103]
+    intelligence: 0
+    aggression: 2
+    avoidsFire: true
+    berserkChance: 33
+    energyRecovery: 50
+    spotter: 0
+    sniper: 0
+    moraleLossWhenKilled: 10
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SLAAN_BLADE
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_LASPISTOL_CLIP_SLAAN
+      - - STR_AUTOGUN_SLAANESH
+        - STR_AUTOGUN_SLAAN_CLIP
+        - STR_AUTOGUN_SLAAN_CLIP
+      - - STR_LASGUN_SLAANESH_ESCHER
+        - STR_LASGUN_CLIP_SLAAN
+        - STR_LASGUN_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_SACRIFICE_F  # Female version, transforms into Dire Daemonette
     race: STR_CIVILIAN
     stats:
@@ -3454,7 +3588,7 @@ units:
       psiSkill: 0
       melee: 0
     armor: SLAANESH_SACRIFICE_F_ARMOR
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     spawnUnit: STR_DIRE_DAEMONETTE
     value: 10
@@ -3479,7 +3613,7 @@ units:
       psiSkill: 0
       melee: 0
     armor: SLAANESH_SACRIFICE_M_ARMOR
-    standHeight: 21
+    standHeight: 20
     kneelHeight: 14
     spawnUnit: STR_DIRE_DAEMONETTE
     value: 10
@@ -3504,7 +3638,7 @@ units:
       psiSkill: 0
       melee: 36
     armor: CIVILIAN_HEDONITE_ARMOR_SACRIFICE
-    standHeight: 20
+    standHeight: 19
     kneelHeight: 13
     value: 10
     intelligence: 0
@@ -3533,7 +3667,7 @@ units:
       melee: 36
     armor: CIVILIAN_HEDONITE_ARMOR_BLESSED_SACRIFICE
     spawnUnit: STR_CHRYSSALID_TERRORISTSELENE
-    standHeight: 20
+    standHeight: 19
     kneelHeight: 13
     value: 10
     intelligence: 0
@@ -3558,7 +3692,7 @@ units:
       melee: 36
     armor: CIVILIAN_HEDONITE_ARMOR_BLESSED_ALPHA_SACRIFICE
     spawnUnit: STR_ALPHA_SOLDIER_CORVUS
-    standHeight: 20
+    standHeight: 19
     kneelHeight: 13
     value: 10
     intelligence: 3
@@ -3582,7 +3716,7 @@ units:
       psiSkill: 0
       melee: 36
     armor: SLAANESH_DEMIMONDE_ARMOR_SACRIFICE
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 2
@@ -3610,7 +3744,7 @@ units:
       psiSkill: 0
       melee: 36
     armor: SLAANESH_DEMIMONDE_ARMOR_BLESSED_SACRIFICE
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 2
@@ -3635,7 +3769,7 @@ units:
       psiSkill: 0
       melee: 65
     armor: SLAANESH_DEMIMONDE_ARMOR
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3672,7 +3806,7 @@ units:
       psiSkill: 0
       melee: 50
     armor: SLAANESH_DEMIMONDE_ARMOR_RITUALIST
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3703,7 +3837,7 @@ units:
       psiSkill: 0
       melee: 50
     armor: SLAANESH_DEMIMONDE_ARMOR_BLESSED_RITUALIST  # can move after timer
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3735,7 +3869,7 @@ units:
       psiSkill: 0
       melee: 50
     armor: SLAANESH_DEMIMONDE_ARMOR_BLESSED  # can move
-    standHeight: 21
+    standHeight: 19
     kneelHeight: 14
     value: 10
     intelligence: 1
@@ -3753,6 +3887,142 @@ units:
       - - STR_SLAAN_CONSTRICTOR_WEBBER
         - STR_CONSTRICTOR_WEBBER_AMMO
         - STR_SLAANESH_GRENADE
+
+  - type: STR_SLAANESH_CULTIST_BIGM  # SLAANESHI BIG BEEFY CULTIST MOHAWK MAN
+    race: STR_SLAANESH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 90
+      health: 80
+      bravery: 70
+      reactions: 50
+      firing: 50
+      throwing: 40
+      strength: 60
+      psiStrength: 20
+      psiSkill: 0
+      melee: 70
+    armor: STR_SLAANESH_CULTIST_BIGM_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    value: 8
+    deathSound: [2232, 2233]
+    intelligence: 0
+    aggression: 3
+    avoidsFire: true
+    berserkChance: 50
+    energyRecovery: 40
+    spotter: 0
+    sniper: 0
+    moraleLossWhenKilled: 75
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AUTOGUN_SLAANESH
+        - STR_AUTOGUN_SLAAN_CLIP
+        - STR_AUTOGUN_SLAAN_CLIP
+      - - STR_HEAVY_STUBBER_SLAAN
+        - STR_SLAAN_HEAVY_STUBBER_CLIP
+        - STR_SLAAN_HEAVY_STUBBER_CLIP
+      - - STR_HEAVY_STUBBER_SLAAN
+        - STR_SLAAN_HEAVY_STUBBER_CLIP
+        - STR_SLAAN_HEAVY_STUBBER_CLIP
+        - STR_SLAANESH_GRENADE
+
+  - type: STR_SLAANESH_SHARDSPEAKER #Shardspeaker
+    race: STR_SLAANESH
+    rank: STR_LIVE_LEADER
+    civilianRecoveryType: STR_CHAOS_WITCH_PLAYER #replace with slaanesh version?
+    stats:
+      tu: 65
+      stamina: 75
+      health: 40
+      bravery: 90
+      reactions: 50
+      firing: 60
+      throwing: 50
+      strength: 40
+      psiStrength: 60
+      psiSkill: 25
+      melee: 60
+    armor: STR_SLAANESH_SHARDSPEAKER_ARMOR
+    standHeight: 19
+    kneelHeight: 14
+    value: 15
+    berserkSound: 2213  # PlucktheLife from you
+    aggroSound: 2205  # laughter
+    deathSound: [2207, 2208, 2209, 2210]
+    intelligence: 3
+    aggression: 1
+    berserkChance: 50
+    sniper: 75
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BLISSFUL_THROES
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_BLISSFUL_THROES
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_BLISSFUL_THROES
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_DAEMONETTESPAWNER_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+
+  - type: STR_SLAANESH_SHARDSPEAKER_COMMANDER #Slaaneshi Sorceress
+    race: STR_SLAANESH
+    rank: STR_LIVE_COMMANDER
+    civilianRecoveryType: STR_CHAOS_WITCH_PLAYER #replace with slaanesh version?
+    stats:
+      tu: 75
+      stamina: 85
+      health: 65
+      bravery: 100
+      reactions: 55
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 85
+      psiSkill: 25
+      melee: 70
+    armor: STR_SLAANESH_SHARDSPEAKER_COMMANDER_ARMOR
+    standHeight: 19
+    kneelHeight: 14
+    value: 15
+    berserkSound: 2213  # PlucktheLife from you
+    aggroSound: 2205  # laughter
+    deathSound: [2207, 2208, 2209, 2210]
+    intelligence: 3
+    aggression: 0
+    berserkChance: 50
+    sniper: 75
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BLISSFUL_THROES
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_BLISSFUL_THROES
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+      - - STR_BLISSFUL_THROES
+        - STR_LASER_PISTOLCS
+        - STR_LASPISTOL_CLIP_SLAAN
+        - STR_DAEMONETTESPAWNER_GRENADE #placeholder for Slaaneshi spells
+        - STR_DAEMONETTESPAWNER_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
+        - STR_SLAANESH_GRENADE #placeholder for Slaaneshi spells
 
 # Slaanesh Traitor Guard units
   - type: STR_SLAANESH_SONIC_PLATFORM    # STR_ELDAR_ARMOR2                        RANK 7
@@ -4035,6 +4305,7 @@ units:
         - STR_DAEMONETTESPAWNER_GRENADE
         - STR_SLAANESH_GRENADE
         - STR_SONIC_GRENADE
+
   - type: STR_SLAANESH_SISTERASS     # Slaaneshi Assassin
     race: STR_SLAANESH
     rank: STR_LIVE_TERRORIST
@@ -4080,6 +4351,7 @@ units:
         - STR_DAEMONETTESPAWNER_GRENADE
         - STR_SLAANESH_GRENADE
         - STR_SONIC_GRENADE
+
   - type: STR_SLAANESH_SISDEVOTED     # Devoted Sisters of Slaanesh Weakly armored, but fast
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4126,6 +4398,7 @@ units:
         - STR_PLASMA_SPRAY_CLIP
         - STR_PLASMA_SPRAY_CLIP
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_FBLESSED     # Blessed by Slaanesh for being turned into DemiDeamonettes
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4176,6 +4449,7 @@ units:
         - STR_PLASMA_SPRAY_CLIP
         - STR_PLASMA_SPRAY_CLIP
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_FBLESSED_FALSE     # Blessed by Slaanesh for being turned into DemiDeamonettes
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4226,6 +4500,7 @@ units:
         - STR_PLASMA_SPRAY_CLIP
         - STR_PLASMA_SPRAY_CLIP
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_MBLESSED  # Blessed Slaanesh Marine RANK 5 weapons done             aggroSound
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4271,6 +4546,7 @@ units:
         - STR_PLASMA_RIFLE_CLIP
         - STR_PLASMA_RIFLE_CLIP
         - STR_SONIC_GRENADE
+
   - type: STR_DEMI_DAEMONETTE   # CHAOS Demi Daemonette                    RANK 5 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4308,6 +4584,7 @@ units:
       - - STR_SLAAN_LONGBLADE
         - STR_SLAANESH_GRENADE
         - STR_SLAANESH_GRENADE
+
   - type: STR_DEMI_DAEMONETTE_FALSE   # CHAOS Demi Daemonette                    RANK 5 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4344,6 +4621,7 @@ units:
       - - STR_SLAAN_LONGBLADE
         - STR_SLAANESH_GRENADE
         - STR_SLAANESH_GRENADE
+
   - type: STR_REPENTIA_SUPERIOR     # CHAOS REPENTIA SUPERIOR
     race: STR_KHRONE
     rank: STR_LIVE_LEADER
@@ -4391,6 +4669,7 @@ units:
         - STR_PLASMA_PISTOL_CLIP
         - STR_PHOSPHOR_GRENADE
         - STR_MGRENADE
+
   - type: STR_KHORNE_SISTERREPENT     # CHAOS REPENTIA
     race: STR_KHRONE
     rank: STR_LIVE_SOLDIER
@@ -4598,6 +4877,7 @@ units:
         - STR_LIGHT_MELTA_AMMO
         - STR_LIGHT_MELTA_AMMO
         - STR_MGRENADE
+
   - type: STR_SLAANESH_SISTERPALATINE   # CHAOS Heretic Sister of Battle    RANK 1 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_LEADER
@@ -4647,6 +4927,7 @@ units:
         - STR_PLASMA_TWINCORE_CLIP
         - STR_SLAANESH_GRENADE
       - - STR_CHOIR_GUN
+
   - type: STR_SLAANESH_SISTERDOM_SUPERIOR   # CHAOS Heretic Sister of Battle    RANK 1 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_LEADER
@@ -4742,6 +5023,7 @@ units:
         - STR_PLASMA_TWINCORE_CLIP
         - STR_PLASMA_TWINCORE_CLIP
         - STR_SONIC_GRENADE
+
   - type: STR_SLAANESH_PURPLESISTER   # CHAOS Slaaneshi SoB
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4788,6 +5070,7 @@ units:
       - - STR_LASCAN_MALTHUS
         - STR_LASCANNON_CLIP_MALTHUS
         - STR_LASCANNON_CLIP_MALTHUS
+
   - type: STR_SLAANESH_CANTUS     # CHAOS Turned Cantus Early Enemy                      RANK 5 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4829,6 +5112,7 @@ units:
         - STR_LIGHT_BOLTER_AMMO_SLAAN
         - STR_LIGHT_BOLTER_AMMO_SLAAN
         - STR_SLAANESH_GRENADE
+
   - type: STR_SLAANESH_NOVICE     # CHAOS Turned Novice Early Enemy                      RANK 5 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4866,6 +5150,7 @@ units:
         - STR_CANTUS_BOLTER_AMMO
         - STR_CANTUS_BOLTER_AMMO
         - STR_SLAANESH_GRENADE
+
   - type: STR_HERETIC_SISTERCELEST   # CHAOS Heretic Sister of Battle    RANK 1 NO weapons
     race: STR_SLAANESH_SISTER
     rank: STR_LIVE_LEADER
@@ -4910,6 +5195,7 @@ units:
         - STR_PLASMA_SPRAY_CLIP
         - STR_PLASMA_SPRAY_CLIP
         - STR_DAEMONETTESPAWNER_GRENADE
+
   - type: STR_SLAANESH_SISTER_SERAPH   # Slaanesh Fallen Seraphim
     race: STR_ADEPTAS
     rank: STR_LIVE_NAVIGATOR
@@ -4955,6 +5241,7 @@ units:
         - STR_PLASMA_PISTOL_CLIP_SLAAN
         - STR_SLAANESH_GRENADE
         - STR_SONIC_GRENADE
+
   - type: STR_FALLEN_SISTER   # CHAOS Slaan Corrupted Sister of Battle    RANK 5 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -4997,6 +5284,7 @@ units:
         - STR_LIGHT_BOLTER_AMMO_SLAAN
         - STR_SLAAN_CHAINSWORD
         - STR_SLAANESH_GRENADE
+
   - type: STR_FALLEN_SISTERDAEMONETTE   # CHAOS Slaan Infested Sister of Battle    RANK 5 NO weapons
     race: STR_SLAANESH
     rank: STR_LIVE_SOLDIER
@@ -5080,6 +5368,7 @@ units:
         - STR_LIGHT_BOLTER_AMMO
         - STR_LIGHT_BOLTER_AMMO
         - STR_ADEPTAS_HABORYM
+
   - type: STR_HERETIC_SISTER_SBLESSED   # CHAOS Heretic Sister of Battle Blessed by Slannesh   RANK 5 NO weapons
     race: STR_ADEPTAS
     rank: STR_LIVE_SOLDIER
@@ -5122,6 +5411,7 @@ units:
         - STR_PLASMA_SPRAY_CLIP
         - STR_PLASMA_SPRAY_CLIP
         - STR_PHOSPHOR_GRENADE
+
   - type: STR_HERETIC_SISTER_SBLESSED_LIE   # CHAOS Heretic Sister of Battle Blessed by Slannesh   RANK 5 NO weapons
     race: STR_ADEPTAS
     rank: STR_LIVE_SOLDIER
@@ -5165,6 +5455,7 @@ units:
         - STR_LIGHT_BOLTER_AMMO
         - STR_CPOWER_DAGGER
         - STR_GRENADE
+
   - type: STR_HERETIC_ELITE_SISTER   # CHAOS Heretic Sister of Battle    RANK 5 NO weapons
     race: STR_ADEPTAS
     rank: STR_LIVE_SOLDIER
@@ -5202,6 +5493,7 @@ units:
         - STR_LASCANNON_CLIP_MALTHUS
         - STR_LASCANNON_CLIP_MALTHUS
         - STR_HIGH_EXPLOSIVE
+
   - type: STR_HERETIC_SISTERHOSPITALLER   # CHAOS Heretic Sister of Battle    RANK 5 NO weapons
     race: STR_ADEPTAS
     rank: STR_LIVE_MEDIC
@@ -5285,6 +5577,7 @@ units:
         - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
         - STR_ADEPTAS_PANZERFAUST
         - STR_PHOSPHOR_GRENADE
+
   - type: STR_HAVOC  # CHAOS MUTON_ARMORHAVOC                        RANK 4 Navigator weapons done          aggroSound
     race: STR_ETHEREAL
     rank: STR_LIVE_NAVIGATOR
@@ -5315,6 +5608,7 @@ units:
       - - STR_ALIEN_GRENADE
       - - STR_ALIEN_GRENADE
       - - STR_ALIEN_GRENADE
+
   - type: STR_HAVOC_TZEENTCH  # CHAOS MUTON_ARMORHAVOC               RANK 4 Navigator weapons done          aggroSound
     race: STR_TZEENTCH
     rank: STR_LIVE_NAVIGATOR
@@ -5433,7 +5727,7 @@ units:
     stats:
       tu: 60
       stamina: 120  # saturnine stronk
-      health: 180  # saturnine stronk
+      health: 140  # saturnine stronk
       bravery: 110
       reactions: 45
       firing: 99  # great/elite but should not be greater than devoted sniper level
@@ -5477,7 +5771,7 @@ units:
     stats:
       tu: 80
       stamina: 80
-      health: 120
+      health: 100
       bravery: 110
       reactions: 80
       firing: 99  # great/elite but should not be greater than devoted sniper level
@@ -6027,7 +6321,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 30
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 5
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 1
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 3
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 2
       -  # Tier 2
@@ -6035,7 +6329,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 10
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 2
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 10
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 10
       -  # Tier 3
@@ -6043,7 +6337,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 2
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 3
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 15
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 3
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 25
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 15
 
@@ -6134,7 +6428,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 30
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 5
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 1
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 3
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 2
       -  # Tier 2
@@ -6142,7 +6436,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 5
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 25
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 2
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 10
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 10
       -  # Tier 3
@@ -6150,7 +6444,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 1
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 1
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 18
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 4
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 25
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 15
 
@@ -6275,7 +6569,7 @@ units:
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
     avoidsFire: false  # doesn't really care
     intelligence: 4  # elite
-    aggression: 8
+    aggression: 2
     spotter: 1
     sniper: 75
     canPanic: false
@@ -6392,7 +6686,7 @@ units:
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
     avoidsFire: false  # doesn't really care
     intelligence: 5  # elite
-    aggression: 8
+    aggression: 2
     spotter: 1
     sniper: 90
     canPanic: false
@@ -6744,8 +7038,8 @@ units:
       firing: 99
       throwing: 89
       strength: 89
-      psiStrength: 119
-      psiSkill: 99
+      psiStrength: 90
+      psiSkill: 30
       melee: 89
     armor: MUTON_ARMORTZS
     intelligence: 9  # this is a magus leader; it's smart asf
@@ -6795,6 +7089,69 @@ units:
         TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 5
         TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 5
 
+  - type: STR_TZEENTCH_SORCERERLORD  # TZEENTCH SORCERER LORD
+    race: STR_TZEENTCH
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 110
+      stamina: 100
+      health: 130
+      bravery: 110
+      reactions: 110
+      firing: 110
+      throwing: 90
+      strength: 90
+      psiStrength: 130
+      psiSkill: 100
+      melee: 95
+    armor: MUTON_ARMORTZSLORD
+    intelligence: 9  # this is a magus leader; it's smart asf
+    aggression: 1
+    spotter: 2
+    sniper: 90
+    value: 50
+    standHeight: 20
+    kneelHeight: 15
+    deathSound: [688, 689]
+    energyRecovery: 40
+    weightedBuiltInWeaponSets:
+      #Tier 1
+      - TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 10
+      #Tier 2
+      - TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 10
+      #Tier 3
+      - TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 2
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 3
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 2
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 3
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 30
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 35
+
 
   - type: STR_OBLITERATOR_COMMANDER  # OBLITERATOR COMMANDER
     race: STR_OBLITERATOR
@@ -6823,7 +7180,7 @@ units:
     weightedBuiltInWeaponSets:
       -
         CHAOS_PLASMA_PISTOL_AND_BLIGHT_GRENADE_SET: 30
-        CHAOS_GRAVGUN_AOE_SET: 20
+        CHAOS_GRAVGUN_AOE_SET: 4
         TERMINATOR_IW_AUTOCANNON: 50
 
   - type: STR_OBLITERATOR_SOLDIER  # OBLITERATOR                  weapons done
@@ -6890,14 +7247,14 @@ units:
         KHORNE_BERSERKER_AXE_BOLTPISTOL: 40
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 5
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 5
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 1
         KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 5
       #Tier 2
       - KHORNE_BERSERKER_AXE_INTIMIDATE: 30
         KHORNE_BERSERKER_AXE_BOLTPISTOL: 10
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 20
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 10
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 10
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
         KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 20
       #Tier 3
       - KHORNE_BERSERKER_AXE_INTIMIDATE: 15
@@ -6905,7 +7262,7 @@ units:
         KHORNE_BERSERKER_AXE_BOLTPISTOL: 1
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 15
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 20
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 19
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 4
 
   - type: STR_SECTOPOD2_TERRORIST  # DREADNOUGHT
     race: STR_SECTOPOD2
@@ -7560,7 +7917,7 @@ units:
     livingWeapon: true
     weightedBuiltInWeaponSets:
       -
-        CHAOS_GRAVGUN_SET: 10
+        CHAOS_GRAVGUN_SET: 2
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 60
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 30
 
@@ -7775,7 +8132,7 @@ units:
     value: 25
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
     intelligence: 2
-    aggression: 0  # quite defensive
+    aggression: 1
     spotter: 2
     energyRecovery: 40
     berserkChance: 60
@@ -7881,7 +8238,7 @@ units:
         TERMINATOR_IW_AUTOCANNON: 10
         BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 3
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
       -  # Tier 2
         TERMINATOR_IW_AUTOCANNON: 20
@@ -7889,7 +8246,7 @@ units:
         BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 20
         BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 10
         BASIC_CSM_MULTIMELTA_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 5
       -  # Tier 3
@@ -7899,7 +8256,7 @@ units:
         BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
         BASIC_CSM_MULTIMELTA_LOADOUT: 5
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
 
   - type: STR_IRON_WARRIOR_MEDIC  # IRON WARRIOR CSM MEDIC
@@ -7978,14 +8335,14 @@ units:
         KHORNE_BERSERKER_AXE_BOLTPISTOL: 40
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 5
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 5
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 1
         KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 5
       #Tier 2
       - KHORNE_BERSERKER_AXE_INTIMIDATE: 30
         KHORNE_BERSERKER_AXE_BOLTPISTOL: 10
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 20
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 10
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 10
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
         KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 20
       #Tier 3
       - KHORNE_BERSERKER_AXE_INTIMIDATE: 15
@@ -7993,7 +8350,7 @@ units:
         KHORNE_BERSERKER_AXE_BOLTPISTOL: 1
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 15
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 20
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 19
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 4
 
   - type: STR_IRON_TERMINATOR  # IRON WARRIOR CSM HEAVY WEAPONS; TERMINATOR
     race: STR_MUTON  # Terminator
@@ -8016,7 +8373,7 @@ units:
     value: 30
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
     intelligence: 5  # CSM elites
-    aggression: 0  # quite defensive
+    aggression: 1
     spotter: 2
     sniper: 75  # elite capable of squad sight
     energyRecovery: 50
@@ -8069,7 +8426,7 @@ units:
     intelligence: 5  # engineer + leader
     aggression: 0  # quite defensive
     spotter: 4
-    sniper: 50
+    sniper: 80
     energyRecovery: 50
     berserkChance: 60
     livingWeapon: true
@@ -8131,7 +8488,7 @@ units:
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 3
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 2
         BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
-        BASIC_CSM_GRAVGUN_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_LOADOUT: 1
         BASIC_CSM_GRAVGUN_AOE_LOADOUT: 3
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
       -  # Tier 2
@@ -8141,11 +8498,11 @@ units:
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
         BASIC_CSM_CHAOS_BOLTER_LOADOUT: 10
         BASIC_CSM_PLASMA_CARBINE_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
         BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 5
         BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT: 3
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 5
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
       -  # Tier 3
         BASIC_CSM_CHAOS_BOLTER_LOADOUT: 5
@@ -8155,8 +8512,8 @@ units:
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
         BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
         BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
         BASIC_CSM_PLASMA_CARBINE_LOADOUT: 10
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
@@ -8201,9 +8558,9 @@ units:
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
         BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 5
         BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 3
-        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 2
-        BASIC_CSM_GRAVGUN_LOADOUT: 5
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 3
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
       -  # Tier 2
         BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
@@ -8216,9 +8573,9 @@ units:
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
         BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 10
-        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 2
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
       -  # Tier 3
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 20
@@ -8228,12 +8585,12 @@ units:
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
         BASIC_CSM_SNIPER_RIFLE_LOADOUT: 10
         BASIC_CSM_MULTIMELTA_LOADOUT: 10
-        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 2
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 5
         BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 2
         BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 3
-        BASIC_CSM_GRAVGUN_LOADOUT: 5
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 25
 
   - type: STR_CHAOS_MARINE_LEADER  # Bald Armor Undivided CSM Champion
@@ -8419,32 +8776,32 @@ units:
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 20
         BASIC_CSM_MULTIMELTA_LOADOUT: 10
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_LOADOUT: 10
-        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 1
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
         BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 5
         BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 5
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 3
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
       -  # Tier 2
         BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 25
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
         BASIC_CSM_MULTIMELTA_LOADOUT: 10
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_LOADOUT: 10
-        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 2
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
         BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 5
         BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 5
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 5
       -  # Tier 3
         BASIC_CSM_HEAVY_PLASMA_LOADOUT: 40
         BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 20
         BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
         BASIC_CSM_MULTIMELTA_LOADOUT: 10
-        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 1
         BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 5
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 2
         BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 1
@@ -8772,20 +9129,20 @@ units:
         ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 10
         ALPHA_LEGION_CQC_PLASMAPISTOL_PDAGGER: 10
         ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 5
-        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 5
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 1
       -  # Tier 2
         ALPHA_LEGION_CQC_BOLTPISTOL_AXE: 10
         ALPHA_LEGION_CQC_TIGRUS_CLAWS: 10
         ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 30
         ALPHA_LEGION_CQC_PLASMAPISTOL_PDAGGER: 20
         ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 10
-        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 15
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 3
       -  # Tier 3
         ALPHA_LEGION_CQC_BOLTPISTOL_AXE: 5
         ALPHA_LEGION_CQC_TIGRUS_CLAWS: 5
         ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 15
         ALPHA_LEGION_CQC_PLASMAPISTOL_PDAGGER: 20
-        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 25
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 5
         ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 30
 
   - type: STR_ALPHA_SOLDIER_INFILTRATOR  # Alpha Legionnaire; Long Range; for amongus/infiltrator spawning
@@ -8824,7 +9181,7 @@ units:
         ALPHA_LEGION_CQC_TIGRUS_DAGGER: 15
         ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 15
         BASIC_CSM_PLASMA_CARBINE_LOADOUT: 15
-        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 15
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 3
 
   - type: STR_ALPHA_SOLDIER_CORVUS_INFILTRATOR  # Alpha Legionnaire BEAKIE; Assault/CQC; for amongus/infiltrator spawning
     race: STR_ETHEREAL
@@ -8862,7 +9219,7 @@ units:
         ALPHA_LEGION_CQC_TIGRUS_DAGGER: 15
         ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 15
         BASIC_CSM_PLASMA_CARBINE_LOADOUT: 15
-        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 15
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 3
 
   - type: STR_ALPHA_SOLDIER_ULTRA  # Alpha Legionnaire disguised as Ultramarine
     race: STR_ALPHA_SOLDIER_ULTRA  # Loyalist Marine fakeout
@@ -9265,6 +9622,9 @@ units:
     moraleLossWhenKilled: 50  # expected to die in droves
     energyRecovery: 40
     livingWeapon: true
+    standHeight: 21
+    kneelHeight: 16
+
   - type: STR_CHRYSSALID_TERRORIST_RECOVERABLE
     refNode: *DAEMONETTE
     liveAlien: STR_CHRYSSALID_TERRORIST
@@ -10624,7 +10984,7 @@ units:
       -
         CHAOS_BOLTPISTOL_AND_GRENADE_SET: 40
         BASIC_CSM_PLASMA_CARBINE_LOADOUT: 50
-        CHAOS_GRAVGUN_SET: 10
+        CHAOS_GRAVGUN_SET: 2
   - type: STR_FLOATER_NAVIGATOR                                         # RANK 4 weapons done
     race: STR_FLOATER
     rank: STR_LIVE_NAVIGATOR
@@ -10687,7 +11047,7 @@ units:
       -
         CHAOS_BOLTPISTOL_AND_GRENADE_SET: 40
         BASIC_CSM_PLASMA_RIFLE_LOADOUT: 50
-        CHAOS_GRAVGUN_SET: 10
+        CHAOS_GRAVGUN_SET: 2
   - type: STR_FLOATER_LEADER                                            # RANK 1 weapons done
     race: STR_FLOATER
     rank: STR_LIVE_LEADER
@@ -11202,7 +11562,7 @@ units:
       -
         CHAOS_FLAMETHROWER_AND_SCARE_GRENADE_SET: 40
         BASIC_CSM_MULTIMELTA_LOADOUT: 40
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 20
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 4
   - type: STR_NIGHTLORDS_RAPTOR_NAVIGATOR                                         # RANK 4 weapons done
     race: STR_NIGHTLORDS
     rank: STR_LIVE_NAVIGATOR
@@ -11503,7 +11863,7 @@ units:
       -   #Tier 1
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 10
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 10
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 5
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 1
         CHAOS_BOLTPISTOL_AP_AND_BERSERKER_AXE_SET: 25
         CHAOS_BOLTPISTOL_AP_AND_POWER_AXE_SET: 20
         CHAOS_BOLTPISTOL_AP_AND_LIGHTNINGCLAW_SET: 10
@@ -11513,7 +11873,7 @@ units:
       -       #Tier 2
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 10
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 10
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
         CHAOS_BOLTPISTOL_AP_AND_BERSERKER_AXE_SET: 5
         CHAOS_BOLTPISTOL_AP_AND_POWER_AXE_SET: 10
         CHAOS_BOLTPISTOL_AP_AND_LIGHTNINGCLAW_SET: 15
@@ -11523,7 +11883,7 @@ units:
       -      #Tier 3
         KHORNE_BERSERKER_AXE_PLASMAPISTOL: 10
         KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
-        KHORNE_BERSERKER_AXE_GRAVPISTOL: 10
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
         CHAOS_BOLTPISTOL_AP_AND_POWER_AXE_SET: 5
         CHAOS_BOLTPISTOL_AP_AND_LIGHTNINGCLAW_SET: 15
         CHAOS_PLASMA_PISTOL_AND_POWER_AXE_SET: 15
@@ -11716,8 +12076,8 @@ units:
     weightedBuiltInWeaponSets:
       -
         CHAOS_MORTAR_HEAVY_SET: 70
-        CHAOS_GRAVGUN_AOE_AND_KRAK_GRENADE_SET: 20
-        CHAOS_GRAVGUN_SET: 10
+        CHAOS_GRAVGUN_AOE_AND_KRAK_GRENADE_SET: 4
+        CHAOS_GRAVGUN_SET: 2
 
   - type: STR_CHAOS_SQUATS  # CHORF
     race: STR_CHAOS_SQUATS
@@ -11830,7 +12190,7 @@ units:
       -
         CHAOS_VOLLEYGUN_SET: 50
         CHAOS_HARMONIC_MELTAGUN_SET: 40
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
 
   - type: STR_CHAOS_SQUATS_EXO  # CHORF
     race: STR_CHAOS_SQUATS
@@ -11863,7 +12223,7 @@ units:
     livingWeapon: true
     weightedBuiltInWeaponSets:
       -
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
         CHAOS_COMBIBOLTER_SIMPLE_SET: 50
         CHAOS_ASSAULTCANNON_SIMPLE_SET: 40
 
@@ -11901,7 +12261,7 @@ units:
       -
         CHAOS_MULTIMELTA_SET: 40
         CHAOS_HARMONIC_MELTAGUN_SET: 40
-        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
 
 # catachan traitor
 
@@ -12663,21 +13023,21 @@ units:
       -  # Tier 1
         CATACHAN_CHAOS_STUB_SMG_KHORNE_AXE_WITH_FRAG_AND_KRAK_GRENADE_SET: 75
         CATACHAN_CHAOS_PLASMA_PISTOL_KHORNE_SPEAR_WITH_GRENADES_SET: 10
-        CATACHAN_GRAVPISTOL_WITH_MELTA_GRENADE_SET: 5
+        CATACHAN_GRAVPISTOL_WITH_MELTA_GRENADE_SET: 1
         CATACHAN_RIPPER_PISTOL_COMBI_BOLTER_WITH_MELTA_GRENADE_SET: 5
-        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 5
+        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 1
       -  # Tier 2
         CATACHAN_CHAOS_STUB_SMG_KHORNE_AXE_WITH_FRAG_AND_KRAK_GRENADE_SET: 20
         CATACHAN_CHAOS_PLASMA_PISTOL_KHORNE_SPEAR_WITH_GRENADES_SET: 50
         CATACHAN_RIPPER_PISTOL_COMBI_BOLTER_WITH_MELTA_GRENADE_SET: 10
         CATACHAN_RIPPER_PISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 10
-        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 10
+        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 2
       -  # Tier 3
         CATACHAN_CHAOS_PLASMA_PISTOL_KHORNE_SPEAR_WITH_GRENADES_SET: 10
         CATACHAN_CHAOS_STUB_SMG_KHORNE_AXE_WITH_FRAG_AND_KRAK_GRENADE_SET: 5
         CATACHAN_RIPPER_PISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 25
         CATACHAN_RIPPER_PISTOL_COMBI_BOLTER_WITH_MELTA_GRENADE_SET: 30
-        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 30
+        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 6
 
 #                 #                                        #                      #
 #Friendly and not-so friendly NPCs on chaos playthroughs
@@ -12801,7 +13161,8 @@ units:
 
   - type: STR_IMPERIAL_INQUISITOR_AI
     civilianRecoveryType: STR_IMPERIAL_INQUISITOR  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_COMMANDER
     stats:
       tu: 80
       stamina: 80
@@ -12814,11 +13175,11 @@ units:
       psiStrength: 75
       psiSkill: 75
       melee: 105
-    armor: STR_ADEPTAS_ARMORI_UC
+    armor: STR_IMPERIAL_INQUISITOR_AI_ARMOR
     standHeight: 21
     kneelHeight: 14
-    value: 100
-    intelligence: 8
+    value: 40
+    intelligence: 3
     aggression: 1
     sniper: 75
     spotter: 4
@@ -12847,7 +13208,8 @@ units:
 
   - type: STR_ADEPTAS_DCASSASSIN_AI
     civilianRecoveryType: STR_ADEPTAS_DCAssassin  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 120
       stamina: 110
@@ -12863,8 +13225,8 @@ units:
     armor: STR_DEATHCULT_ASSASSIN_ARMOR_NPC
     standHeight: 21
     kneelHeight: 14
-    value: 40
-    intelligence: 3
+    value: 25
+    intelligence: 1
     aggression: 8
     spotter: 1
     avoidsFire: false
@@ -12889,7 +13251,8 @@ units:
 
   - type: STR_IMPERIAL_ASSASSINFEM_AI
     civilianRecoveryType: STR_IMPERIAL_ASSASSINFEM  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_NAVIGATOR
     stats:
       tu: 80
       stamina: 110
@@ -12905,7 +13268,7 @@ units:
     armor: STR_ASSASSINNEUTRAL_FEMSUIT_NPC
     standHeight: 21
     kneelHeight: 14
-    value: 40
+    value: 30
     intelligence: 5
     aggression: 1
     spotter: 1
@@ -12921,37 +13284,28 @@ units:
         RANGED_IMPERIUM_ASSASSIN_BOLTER_LIGHT_SOLO_DMR: 20
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_ARCHI: 10
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_STANDARD: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 7
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 3
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_HEAVY: 5
-        RANGED_IMPERIUM_ASSASSIN_PLASMA_RIFLE_SEQUANA: 5
-        RANGED_IMPERIUM_ASSASSIN_SYNAPTIC_DISINTEGRATOR: 3
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 2
       -  # Tier 2
         RANGED_IMPERIUM_ASSASSIN_SCOPED_AUTOGUN: 10
         RANGED_IMPERIUM_ASSASSIN_BOLTER_LIGHT_SOLO_DMR: 15
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_ARCHI: 20
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_STANDARD: 10
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_HEAVY: 10
-        RANGED_IMPERIUM_ASSASSIN_PLASMA_RIFLE_SEQUANA: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 5
-        RANGED_IMPERIUM_ASSASSIN_SYNAPTIC_DISINTEGRATOR: 3
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 2
       -  # Tier 3
         RANGED_IMPERIUM_ASSASSIN_PLASMA_RIFLE_SEQUANA: 30
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_HEAVY: 30
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_STANDARD: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 15
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 3
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 2
         RANGED_IMPERIUM_ASSASSIN_SNIPER_RIFLE_ARCHI: 1
-        RANGED_IMPERIUM_ASSASSIN_SYNAPTIC_DISINTEGRATOR: 10
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 10
+        RANGED_IMPERIUM_ASSASSIN_SYNAPTIC_DISINTEGRATOR: 1
+        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 1
 
   - &INQ_STORMTROOPER_AI_TEMPLATE
     type: STR_INQ_STORMTROOPER_AI
     civilianRecoveryType: STR_INQ_STORMTROOPER  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_INQUISITION_FACTION
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 60
       stamina: 70
@@ -12967,8 +13321,8 @@ units:
     armor: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_AI
     standHeight: 22
     kneelHeight: 14
-    value: 30
-    intelligence: 4
+    value: 25
+    intelligence: 3
     aggression: 8
     spotter: 1
     sniper: 90
@@ -12980,45 +13334,32 @@ units:
       -  # Tier 1
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_HELLGUN: 50
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_FLAMER: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 10
         RANGED_INQUISITORIAL_STORMTROOPER_GRENADE_LAUNCHER: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_LIGHT_LASCANNON: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_PLASMA: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 1
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 1
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 1
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 1
-        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 1
       -  # Tier 2
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_HELLGUN: 25
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_FLAMER: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 20
+        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 4
         RANGED_INQUISITORIAL_STORMTROOPER_GRENADE_LAUNCHER: 15
         RANGED_INQUISITORIAL_STORMTROOPER_LIGHT_LASCANNON: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_PLASMA: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 3
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 1
-        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 1
       -  # Tier 3
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_PLASMA: 30
         RANGED_INQUISITORIAL_STORMTROOPER_LIGHT_LASCANNON: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 10
+        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 2
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_HELLGUN: 5
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_FLAMER: 1
         RANGED_INQUISITORIAL_STORMTROOPER_GRENADE_LAUNCHER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_CARBINE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_BLASTER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 5
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 3
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_CARBINE: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_BLASTER: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 1
+        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 1
 
 
   - type: STR_INQ_STORMTROOPER_AI_ELITE #has Rosarius and better stats
     refNode: *INQ_STORMTROOPER_AI_TEMPLATE
+    rank: STR_LIVE_SOLDIER
     stats:
       tu: 75
       stamina: 90
@@ -13031,8 +13372,8 @@ units:
       psiStrength: 90
       psiSkill: 0
       melee: 90
-    value: 40
-    intelligence: 5
+    value: 30
+    intelligence: 3
     aggression: 8
     spotter: 2
     sniper: 90
@@ -13042,55 +13383,39 @@ units:
       -  # Tier 1
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_HELLGUN: 29
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_FLAMER: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 10
+        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 2
         RANGED_INQUISITORIAL_STORMTROOPER_GRENADE_LAUNCHER: 10
         RANGED_INQUISITORIAL_STORMTROOPER_LIGHT_LASCANNON: 10
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_PLASMA: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_CARBINE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_BLASTER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 1
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 1
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 1
-        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 1
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_MC: 1
       -  # Tier 2
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_HELLGUN: 20
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_FLAMER: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 10
+        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 2
         RANGED_INQUISITORIAL_STORMTROOPER_GRENADE_LAUNCHER: 10
         RANGED_INQUISITORIAL_STORMTROOPER_LIGHT_LASCANNON: 10
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_PLASMA: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 2
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_CARBINE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_BLASTER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 5
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 2
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_MC: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_MC: 1
       -  # Tier 3
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_PLASMA: 20
         RANGED_INQUISITORIAL_STORMTROOPER_LIGHT_LASCANNON: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_MC: 10
+        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_AOE: 2
+        RANGED_INQUISITORIAL_STORMTROOPER_GRAV_GUN_MC: 2
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_HELLGUN: 2
         RANGED_INQUISITORIAL_STORMTROOPER_STR_INQ_FLAMER: 2
         RANGED_INQUISITORIAL_STORMTROOPER_GRENADE_LAUNCHER: 2
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 3
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_CARBINE: 3
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_BLASTER: 3
-        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 10
-        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 10
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 2
-        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 5
-        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 8
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_RIFLE: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_CARBINE: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_PULSE_BLASTER: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_STR_TAU_RAIL_RIFLE: 1
+        RANGED_IMPERIUM_ASSASSIN_GAUSS_BLASTER: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_FLAYER: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_GAUSS_REAPER: 1
+        RANGED_INQUISITORIAL_STORMTROOPER_SYNAPTIC_DISINTEGRATOR: 1
 
   - type: STR_GK_DREAD_AI_UNIT
     # civilianRecoveryType: STR_INQ_STORMTROOPER  # recovered if survives
-    race: STR_CIVILIAN
+    race: STR_GREYKNIGHT
+    rank: STR_LIVE_TERRORIST
     stats:
       tu: 110
       stamina: 200
@@ -13106,11 +13431,12 @@ units:
     armor: STR_GK_DREAD_ARMOR_AI
     standHeight: 22
     kneelHeight: 14
-    value: 100
-    intelligence: 5
+    value: 50
+    intelligence: 1
     aggression: 8
     spotter: 1
     sniper: 90
+    psiWeapon: STR_NONE
     energyRecovery: 200
     avoidsFire: false
     canBeMindControlled: false #it's still a Grey Knight; incorruptible
@@ -13156,13 +13482,14 @@ units:
     armor: STR_GREYKNIGHT_ARMOR
     standHeight: 20
     kneelHeight: 15
-    value: 0
-    intelligence: 5
+    value: 40
+    intelligence: 3
     aggression: 8
     sniper: 75
     avoidsFire: false
     spotter: 1
     energyRecovery: 60
+    psiWeapon: STR_NONE
     canBeMindControlled: false
     deathSound: [713, 714, 715, 716, 717, 718, 719, 720, 721, 722]
     builtInWeaponSets:
@@ -13201,8 +13528,8 @@ units:
     armor: STR_GREYKNIGHT_ARMOR_BA
     standHeight: 20
     kneelHeight: 15
-    value: 0
-    intelligence: 8
+    value: 40
+    intelligence: 3
     aggression: 8
     sniper: 100
     avoidsFire: false
@@ -13251,8 +13578,8 @@ units:
     armor: STR_GREYKNIGHT_ARMOR_NS
     standHeight: 20
     kneelHeight: 15
-    value: 0
-    intelligence: 8
+    value: 40
+    intelligence: 3
     aggression: 8
     sniper: 100
     avoidsFire: false

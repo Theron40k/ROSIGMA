@@ -87,25 +87,25 @@ units:
     race: STR_SECTOID  # trying to avoid setting them as civilians
     rank: STR_LIVE_SOLDIER
     stats:
-      tu: 75
+      tu: 70 #was 75
       stamina: 84
-      health: 55
+      health: 50 #was 55
       bravery: 80
-      reactions: 62
-      firing: 90
-      throwing: 70
+      reactions: 55 #was 62
+      firing: 80 #was 90
+      throwing: 60 #was 70
       strength: 30
       psiStrength: 50
       psiSkill: 0
-      melee: 50
+      melee: 40 #was 50
     armor: STR_TAUFIREWARRIOR_ARMOR
     standHeight: 21
     kneelHeight: 14
-    value: 10
+    value: 20 #was 10
     intelligence: 4
     aggression: 1
     spotter: 3
-    sniper: 100
+    sniper: 90 #was 100
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     # builtInWeaponSets: []
@@ -150,23 +150,23 @@ units:
     stats:
       tu: 80
       stamina: 90
-      health: 60
+      health: 55 #was 60
       bravery: 90
-      reactions: 70
-      firing: 90
-      throwing: 70
+      reactions: 60 #was 70
+      firing: 75 #was 90
+      throwing: 60 #was 70
       strength: 35 #more rugged than normal Firewarrior
       psiStrength: 50
       psiSkill: 0
-      melee: 55
+      melee: 45 #was 55
     armor: STR_TAUFIREWARRIORPATHFINDER_ARMOR
     standHeight: 21
     kneelHeight: 14
-    value: 11
+    value: 20 #was 11
     intelligence: 4
-    aggression: 8
+    aggression: 2 #was 8
     spotter: 4
-    sniper: 100
+    sniper: 50 #was 100
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     # builtInWeaponSets: []
@@ -200,12 +200,12 @@ units:
     race: STR_SECTOID  # trying to avoid setting them as civilians
     rank: STR_LIVE_SOLDIER
     stats:
-      tu: 120 #these are fast!
+      tu: 110 #was 120
       stamina: 100
-      health: 45
+      health: 40 #was 45
       bravery: 110
-      reactions: 90
-      firing: 70
+      reactions: 70 #was 90
+      firing: 60 #was 70
       throwing: 15
       strength: 20
       psiStrength: 200
@@ -214,11 +214,11 @@ units:
     armor: STR_TAUDRONE_ARMOR
     standHeight: 12
     kneelHeight: 12
-    value: 5
+    value: 10 #was 5
     intelligence: 1
-    aggression: 8
+    aggression: 2 #was 8
     spotter: 4
-    sniper: 100
+    sniper: 75 #was 100
     energyRecovery: 100 #tireless; it's a machine
     livingWeapon: true
     canBeMindControlled: false
@@ -242,25 +242,25 @@ units:
     race: STR_SECTOID  # trying to avoid setting them as civilians
     rank: STR_LIVE_SOLDIER
     stats:
-      tu: 85
+      tu: 80 #was 85
       stamina: 90
-      health: 65
+      health: 60 #was 65
       bravery: 100
-      reactions: 70
-      firing: 110
-      throwing: 75
+      reactions: 65 #was 70
+      firing: 90 #was 110
+      throwing: 65 #was 75
       strength: 40
       psiStrength: 70
       psiSkill: 0
-      melee: 65
+      melee: 55 #was 65
     armor: STR_TAUFIREWARRIORLEADER_ARMOR
     standHeight: 21
     kneelHeight: 14
-    value: 20
+    value: 25 #was 20
     intelligence: 5
     aggression: 1
     spotter: 3
-    sniper: 100
+    sniper: 90 #was 100
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     # builtInWeaponSets: []
@@ -300,25 +300,25 @@ units:
     race: STR_SECTOID  # trying to avoid setting them as civilians
     rank: STR_LIVE_SOLDIER
     stats:
-      tu: 100
+      tu: 90 #was 100
       stamina: 90
-      health: 80
+      health: 70 #was 80
       bravery: 100
-      reactions: 80
-      firing: 120
-      throwing: 75
+      reactions: 75 #was 80
+      firing: 95 #was 120
+      throwing: 70 #75
       strength: 50
       psiStrength: 80
       psiSkill: 0
-      melee: 80
+      melee: 70 #80
     armor: STR_TAUFIREWARRIORCAPTAIN_ARMOR
     standHeight: 21
     kneelHeight: 14
-    value: 30
+    value: 35 #30
     intelligence: 6
     aggression: 1
     spotter: 4
-    sniper: 100
+    sniper: 90 #was 100
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     # builtInWeaponSets: []
@@ -354,6 +354,127 @@ units:
         TAU_FIREWARRIORLEADER_PULSE_PISTOL_AND_FUSION_GRENADE_SET: 1
         TAU_FIREWARRIORLEADER_RAIL_RIFLE_AND_FUSION_GRENADE_SET: 25
 
+  - type: STR_TAU_CRISISBCX2AI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 85
+      stamina: 90
+      health: 65
+      bravery: 100
+      reactions: 65 #70
+      firing: 90 #110
+      throwing: 75
+      strength: 60 #40
+      psiStrength: 70
+      psiSkill: 0
+      melee: 65
+    armor: STR_TAU_CRISISBCX2AI_ARMOR
+    value: 30 #20
+    intelligence: 5
+    aggression: 1
+    spotter: 3
+    sniper: 80
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    energyRecovery: 100 #tireless; it's a machine
+
+  - type: STR_TAU_CRISISBCFLAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 85
+      stamina: 90
+      health: 65
+      bravery: 100
+      reactions: 65 #70
+      firing: 90 #110
+      throwing: 75
+      strength: 60 #40
+      psiStrength: 70
+      psiSkill: 0
+      melee: 65
+    armor: STR_TAU_CRISISBCFLAI_ARMOR
+    value: 30 #20
+    intelligence: 5
+    aggression: 1
+    spotter: 3
+    sniper: 80
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    energyRecovery: 100 #tireless; it's a machine
+
+  - type: STR_TAU_CRISISFLX2AI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 85
+      stamina: 90
+      health: 65
+      bravery: 100
+      reactions: 65 #70
+      firing: 90 #110
+      throwing: 75
+      strength: 60 #40
+      psiStrength: 70
+      psiSkill: 0
+      melee: 65
+    armor: STR_TAU_CRISISFLX2AI_ARMOR
+    value: 30 #20
+    intelligence: 5
+    aggression: 1
+    spotter: 3
+    sniper: 80
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    energyRecovery: 100 #tireless; it's a machine
+
+  - type: STR_TAU_CRISISCOMMANDERBCX2AI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 100
+      stamina: 90
+      health: 80
+      bravery: 100
+      reactions: 70 #80
+      firing: 90 #120
+      throwing: 75
+      strength: 70 #50
+      psiStrength: 80
+      psiSkill: 0
+      melee: 70 #80
+    armor: STR_TAU_CRISISCOMMANDERBCX2AI_ARMOR   # upgrade later
+    value: 50 #30
+    intelligence: 6
+    aggression: 1
+    spotter: 4
+    sniper: 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    energyRecovery: 100
+
+  - type: STR_TAU_CRISISCOMMANDERBCFLAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 100
+      stamina: 90
+      health: 80
+      bravery: 100
+      reactions: 70 #80
+      firing: 90 #120
+      throwing: 75
+      strength: 70 #50
+      psiStrength: 80
+      psiSkill: 0
+      melee: 70 #80
+    armor: STR_TAU_CRISISCOMMANDERBCFLAI_ARMOR
+    value: 50 #30
+    intelligence: 6
+    aggression: 1
+    spotter: 4
+    sniper: 90 #100
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    energyRecovery: 100
+
+
   # GueVasa
 
   - type: STR_TAU_GUEVESALV1AI
@@ -363,8 +484,8 @@ units:
       tu: 50
       stamina: 65
       health: 35
-      bravery: 80
-      reactions: 30
+      bravery: 70 #80
+      reactions: 25 #30
       firing: 50
       throwing: 50
       strength: 35
@@ -374,11 +495,11 @@ units:
     armor: STR_TAUGUEVESAFLAK_ARMOR
     standHeight: 21
     kneelHeight: 14
-    value: 5
+    value: 8 #5
     intelligence: 2
     aggression: 1
-    spotter: 1
-    sniper: 100
+    spotter: 0
+    sniper: 30 #100
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     # builtInWeaponSets: []
@@ -446,12 +567,12 @@ units:
     race: STR_SECTOID  # trying to avoid setting them as civilians
     rank: STR_LIVE_SOLDIER
     stats:
-      tu: 80
+      tu: 60 #80
       stamina: 90
-      health: 55
+      health: 50 #55
       bravery: 100
-      reactions: 75
-      firing: 80
+      reactions: 40 #70
+      firing: 60 #80
       throwing: 70
       strength: 45
       psiStrength: 60
@@ -460,11 +581,11 @@ units:
     armor: STR_TAUGUEVESACARAP_ARMOR
     standHeight: 21
     kneelHeight: 14
-    value: 9
+    value: 12 #9
     intelligence: 3
     aggression: 1
-    spotter: 2
-    sniper: 100
+    spotter: 1
+    sniper: 40 #100
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     # builtInWeaponSets: []

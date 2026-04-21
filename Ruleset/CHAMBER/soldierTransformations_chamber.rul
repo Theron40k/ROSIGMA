@@ -1,0 +1,103 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+
+soldierTransformation:
+
+  - name: STR_AWARD_INQ_ROSARIUS
+    forbiddenPreviousTransformations:
+      - STR_AWARD_INQ_ROSARIUS
+    cost: 80000
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 70
+      # STR_ALIEN_HABITAT: 1
+    keepSoldierArmor: true
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    transferTime: 0
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+    allowedSoldierTypes:
+      - STR_INQ_STORMTROOPER
+      - STR_IMPERIAL_INQUISITOR
+    soldierBonusType: STR_BONUS_INQ_ROSARIUS
+    requiredCommendations:
+      STR_VETERAN_COMMENDATION: 0
+
+    # Add support for bringing weaker Soldiers up to snuff at Token cost.
+  - name: STR_INQ_TRANSFORM_RETINUE_INDUCTION
+    cost: 0
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    upperBoundType: 1
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 100
+    flatOverallStatChange:
+      tu: 5
+      stamina: 5
+      health: 10
+      bravery: 10
+      reactions: 5
+      firing: 5
+      throwing: 5
+      strength: 10
+      psiStrength: 0
+      psiSkill: 20
+      melee: 5
+    allowedSoldierTypes:
+      # Try to include all the low grade Soldiers that you can get out of CMil Events
+      # Exclude Soldiers which are already sufficiently badass (Inq Stormtroopers, Canoness, etc)
+      #Arbites
+      - STR_GUARDPD
+      - STR_JUDGE
+      #Guard
+      - STR_GUARD_VETERAN
+      - STR_GUARD_OFFICER_VETERAN
+      - STR_PILOT_GUARD
+      - STR_GUARDSM
+      - STR_GUARDSL
+      - STR_GUARD_TANITH
+      - STR_GUARDSM_KRIEG
+      - STR_GUARD_KRIEG_GRENADIER
+      - STR_GUARD_PRIEST
+      - STR_PSYKER
+      - STR_CATACHANVET_FIGHTER
+      #Adeptas
+      - STR_ADEPTAS
+      - STR_ADEPTAS_NOVICE
+      - STR_ADEPTAS_REPENTIA
+      - STR_ADEPTAS_FRATERIS_MILITIA
+      - STR_ADEPTAS_FRATERIS_MILITIA_VETERAN
+      - STR_ADEPTAS_DCAssassin
+      #Abhumans
+      - STR_GUARD_BEASTMAN
+      - STR_GUARD_SQUAT
+      - STR_OGRYN
+      #Revisionists
+      - STR_CHAOSCULT_OGRYN
+      - STR_CHAOS_FANATIC_PLAYER
+      - STR_CHAOSCULT_SOLDIER_LV2
+      - STR_ADEPTAS_CHAOS
+      - STR_HERETIC_SISTER
+      - STR_CHAOSCULT_PRIEST_LV1
+      - STR_CHAOSCULT_PRIEST_LV2
+      - STR_SECTOID_FEMCULTIST
+      - STR_CHAOS_WITCH_PLAYER
+
+    # Instant recovery option for precious Inquisitors.
+  - name: STR_INQ_TRANSFORM_REJUVENATE
+    cost: 50000
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    recoveryTime: 100 # 100 days
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+    allowedSoldierTypes:
+      - STR_IMPERIAL_INQUISITOR

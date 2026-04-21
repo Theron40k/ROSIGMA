@@ -1,10 +1,13 @@
 alienMissions:
-# gameStart - cant touch because set at game start, not a big deal
-# Repeating Fallthrough Missions - these are IG actually but should be replaced with thematic one offs
-# SecondRepeatingFallthroughmissions - these are IG actually but should be replaced with thematic one offs
-# RepeatingUFOSpawnedMissions - these are IG actually but should be replaced with thematic one offs
-# SecondRepeatingUFOSpawnedMissions - these are IG actually but should be replaced with thematic one offs
-# - rescue convoy, defend cultists, defend beastmen, defend medicae shrine, Pathfinder ambush to match the Tanith? PDF defense, PDF assault, Tau defense, Tau assault?, rescue loyalist Guard? Destroy Arbites?
+# - rescue convoy
+# - defend cultists
+# - defend beastmen
+# - defend medicae shrine
+# - Pathfinder ambush to match the Tanith?
+# - Tau defense
+# - Tau assault?
+# - rescue loyalist Guard?
+# - Destroy Arbites?
 
 # Missions that contain Tau enemies are
 # STR_ALIEN_ARTIFACT - x replaced with alternate
@@ -24,8 +27,6 @@ alienMissions:
 # STR_CATACH_OUTPOST_DEFENSE - do these even fire? - no they upstream require Imperial Guard Operations
 # STR_TAU_ORCAEXPEDITION - only fires in warpstorms which are replaced
 # STR_TAU_ORCA_ASSAULT - does not appear to fire anywhere
-# STR_ALIEN_INFILTRATION - (but not hard) - this one is annoying to filter out because it's used by bases, other code. Can it be replaced?? Not easily, it is entwined in the code
-# STR_ALIEN_BASE - same deal here as STR_ALIEN_INFILTRATION, I may just have to suck this one up for now until the main team rejiggers things.
 
 
   - type: STR_ALIEN_ARTIFACT_TAU  # SPACE HULK
@@ -157,7 +158,6 @@ alienMissions:
         STR_DESERTERS_WITH_NIGHT_SISTERS: 20
         STR_ORK_EARLY: 5
         STR_ORK_DEATHSKULLS_EARLY: 5
-        # STR_TAUFIREWARRIORS_MID: 2
       6:
         STR_SNAKEMAN_DESERTERS_WITH_HRUD: 10
         STR_ADEPTAS_DESERTERS: 15
@@ -168,7 +168,6 @@ alienMissions:
         STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 10
         STR_IRON_PENETANTE_LEGION: 10
         STR_ORK_DEATHSKULLS_EARLY: 5
-        # STR_TAUFIREWARRIORS_MID: 5
         STR_TYRANID: 10
     waves:
       - ufo: STR_DESERTER_HIDEOUT_TAU_DEPLOYMENT_GV  # spawn this site directly
@@ -195,7 +194,6 @@ alienMissions:
         STR_ORK_DEATHSKULLS: 5
         STR_HRUD_EARLY_FORCE: 5
         STR_TYRANID: 5
-        # STR_TAUFIREWARRIORS_MID: 5
       6:
         STR_SNAKEMAN_DESERTERS_WITH_HRUD: 10
         STR_ADEPTAS_DESERTERS: 15
@@ -211,21 +209,17 @@ alienMissions:
         STR_ALPHA_COMMANDO_RAID: 1
         STR_TYRANID: 15
         STR_CSM_ASPIRANT_RACELIST: 5
-        # STR_TAUFIREWARRIORS_MID: 5
 
 
   - type: STR_ELDAR_ARTIFACT_TAU
     raceWeights:
       0:
         STR_ELDAR_EARLY: 95
-        # STR_TAUGUEVESATIER1: 5
       4:
         STR_ELDAR: 97
         STR_RADICAL_SISTERS: 1
         STR_CULTIST_SQUATS: 1
         STR_CHAOS_SQUATS: 1
-        # STR_TAUGUEVESATIER2: 1
-        # STR_TAUFIREWARRIORS_EARLY: 1
       8:
         STR_ELDAR_ADV: 95
         STR_RADICAL_SISTERS: 1
@@ -236,7 +230,6 @@ alienMissions:
         STR_ALPHA_LEGION_FALSE_FLAG2GREYK: 1
         STR_NIGHTLORDS_RACELIST: 1
         STR_WORDBEARERS_MID: 1
-        # STR_TAUFIREWARRIORS_MID: 1
       12:
         STR_ELDAR_ADV: 90
         STR_RADICAL_SISTERS: 1
@@ -248,7 +241,6 @@ alienMissions:
         STR_NIGHTLORDS_RACELIST_ELITE: 1
         STR_NECRON: 1
         STR_WORDBEARERS_LATE: 1
-        # STR_TAUFIREWARRIORS_MID: 1
     points: 10
     objective: 3
     spawnZone: 0
@@ -557,7 +549,6 @@ alienMissions:
         STR_NIGHT_SISTERS_RACELIST: 3
         STR_NIGHTLORDS_RACELIST_EARLY: 5
         STR_STORMVERMIN_FORCE: 3
-        STR_TAUFIREWARRIORS_MID: 3
       7:
         STR_SNAKEMAN: 2
         STR_CATACHAN_TRAITORS_EARLY: 2
@@ -625,9 +616,6 @@ alienMissions:
         trajectory: VALK_CRASH
         timer: 0
         objective: true
-
-
-
 
 ### Guevesa Campaign bases
   - type: STR_REDEEMEDBASE_L1_MISSION_GV
@@ -702,13 +690,12 @@ alienMissions:
         STR_IRON_GUARD_TESTLIST_GV: 100
     siteType: STR_TENAXBASE_L1_GV
 
-  - type: STR_TENAXBASE_LEVEL_1_MISSION_GV
+  - type: STR_TENAXBASE_LEVEL_2_MISSION_GV
     refNode: *STR_CAMPAIGN_BASES_GV
     raceWeights:
       0:
         STR_IRON_GUARD_TESTLIST_GV: 100
-    siteType: STR_TENAXBASE_L1_GV
-
+    siteType: STR_TENAXBASE_L2_GV
 
   - type: STR_TENAXBASE_LEVEL_3_MISSION_GV
     refNode: *STR_CAMPAIGN_BASES_GV
@@ -732,7 +719,7 @@ alienMissions:
         STR_NECRON: 100
     siteType: STR_TOMB_NECRON
 
-  - type: STR_WHITEPRINCEBASE_SINGLEFLOOR_MISSION_GV
+  - type: STR_PRINCEBISHOPBASE_SINGLEFLOOR_MISSION_GV
     refNode: *STR_CAMPAIGN_BASES_GV
     regionWeights:
       0:
@@ -769,7 +756,7 @@ alienMissions:
         STR_SLAANESHSISTERSD: 50
         STR_SLAANESHSISTERS_OH_NO: 50
         STR_SLAANESH: 50
-    siteType: STR_WHITEPRINCEBASE_SINGLEFLOOR_GV
+    siteType: STR_PRINCEBISHOPBASE_SINGLEFLOOR_GV
     points: 50
 
 
@@ -915,13 +902,13 @@ alienMissions:
         STR_CHAOS_HERETEK_FORCE: 2
       3:
         STR_SNAKEMAN_DESERTERS: 4
-        STR_SNAKEMAN_DESERTERS_MID: 4
+        STR_SNAKEMAN_DESERTERS_MEDIUM: 4
         STR_SNAKEMAN: 5
         STR_CHAOS_PENETANTE_LEGION: 3
         STR_IRON_PENETANTE_LEGION: 10
         STR_CHAOS_HERETEK_FORCE: 4
       4:
-        STR_SNAKEMAN_DESERTERS_MID: 6
+        STR_SNAKEMAN_DESERTERS_MEDIUM: 6
         STR_SNAKEMAN_DESERTERS_HARD: 2
         STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 2
         STR_IRON_PENETANTE_LEGION: 16
@@ -959,8 +946,8 @@ alienMissions:
     refNode: *STR_TENAX_MISSION_TYPES_GV
     spawnZone: 3   # Terror mission
 
-  - &STR_WHITEPRINCE_MISSION_TYPES_GV
-    type: STR_WHITEPRINCE_NORMAL_MISSION_GV
+  - &STR_PRINCEBISHOP_MISSION_TYPES_GV
+    type: STR_PRINCEBISHOP_NORMAL_MISSION_GV
     points: 10
     objective: 3
     spawnZone: 0  # Normal mission
@@ -975,7 +962,7 @@ alienMissions:
         STR_SOUTH_EAST_ASIA: 15
         STR_SIBERIA: 10
         STR_AUSTRALASIA: 10
-    interruptResearch: STR_WHITEPRINCE_DEFEATED_GV
+    interruptResearch: STR_PRINCEBISHOP_DEFEATED_GV
     raceWeights:
       0:
         STR_IMPERIAL_PDF_LIST: 24
@@ -1047,19 +1034,19 @@ alienMissions:
         STR_BRIDES_OF_THE_EMPEROR: 3
         STR_ALPHA_DAEMONETTE_FORCE: 3
     waves:
-      - ufo: STR_WHITEPRINCE_MISSION_UFO_TRICK_GV
+      - ufo: STR_PRINCEBISHOP_MISSION_UFO_TRICK_GV
         count: 1
         trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
         timer: 0
         objective: true
 
-  - type: STR_WHITEPRINCE_TERROR_MISSION_GV
-    refNode: *STR_WHITEPRINCE_MISSION_TYPES_GV
+  - type: STR_PRINCEBISHOP_TERROR_MISSION_GV
+    refNode: *STR_PRINCEBISHOP_MISSION_TYPES_GV
     spawnZone: 3   # Terror mission
 
 
-### NPC deathwatch and repentia would be good here
-### But this is good enough for now
+# ### NPC deathwatch and repentia would be good here
+# ### But this is good enough for now
   - &STR_CRUSADE_MISSION_TYPES_GV
     type: STR_CRUSADE_NORMAL_MISSION_GV
     points: 10
@@ -1148,18 +1135,50 @@ alienMissions:
     spawnZone: 3   # Terror mission
 
 
-# Story missions -- Track 1: Traitor
-
-  # FIRESTARTER : Redemptionist ambush in the shrine warrens
-  - type: STR_FIRESTARTER_MISSION_GV
-    points: 10
+# Story missions
+# Redemptionist intro missions
+# EVE OF DESTRUCTION : Redemptionist ambush on a truck convoy
+  - type: STR_EVE_OF_DESTRUCTION_MISSION_GV
+    points: 5
     objective: 3
     spawnZone: 0
     retaliationOdds: 0
     operationType: 0
-    # operationSpawnZone: 5
-    # operationBaseType: STR_CULTIST_BASE_LEVEL_2
-    siteType: STR_FIRESTARTER_GV
+    siteType: STR_EVE_OF_DESTRUCTION_GV
+    regionWeights:
+      0:
+        STR_NORTH_AMERICA: 18
+        STR_SOUTH_AMERICA: 10
+        STR_EUROPE: 16
+        STR_NORTH_AFRICA: 12
+        STR_SOUTHERN_AFRICA: 8
+        STR_CENTRAL_ASIA: 12
+        STR_SOUTH_EAST_ASIA: 15
+        STR_SIBERIA: 10
+        STR_AUSTRALASIA: 10
+    raceWeights:
+      0:
+        STR_SNAKEMAN_DESERTERS: 10
+        STR_FRATERIS_CRUSADERS_GV: 10
+        STR_EARLY_CULTISTS: 10
+        STR_BASIC_GANGERS: 10
+        STR_IMPERIAL_PDF_LIST: 10
+        STR_REDEMPTIONIST_START_GV: 30
+    waves:
+      - ufo: STR_FAKE_UFO_TRICK
+        count: 1
+        trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
+        timer: 0
+        objective: true
+
+# COUNTER-REDEMPTION : Attack a Redemptionist church
+  - type: STR_COUNTER_REDEMPTION_MISSION_GV
+    points: 5
+    objective: 3
+    spawnZone: 0
+    retaliationOdds: 0
+    operationType: 0
+    siteType: STR_COUNTER_REDEMPTION_GV
     regionWeights:
       0:
         STR_NORTH_AMERICA: 18
@@ -1175,16 +1194,76 @@ alienMissions:
       0:
         STR_REDEMPTIONIST_START_GV: 100
     waves:
-      - ufo: STR_FIRESTARTER_GV_TRICK # ufo does not exist so game skips to mission site creation
+      - ufo: STR_FAKE_UFO_TRICK
         count: 1
         trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
         timer: 0
         objective: true
 
+  - type: STR_REDEMPTIONIST_HIVE_TERROR_MISSION_GV
+    raceWeights:
+      0:
+        STR_REDEMPTIONIST_START_GV: 100
+    points: 5
+    objective: 3
+    spawnZone: 0
+    retaliationOdds: 0
+    operationType: 0
+    siteType: STR_REDEMPTIONIST_HIVE_TERROR_GV
+    regionWeights:
+      0:
+        STR_NORTH_AMERICA: 18
+        STR_SOUTH_AMERICA: 10
+        STR_EUROPE: 16
+        STR_NORTH_AFRICA: 12
+        STR_SOUTHERN_AFRICA: 8
+        STR_CENTRAL_ASIA: 12
+        STR_SOUTH_EAST_ASIA: 15
+        STR_SIBERIA: 10
+        STR_AUSTRALASIA: 10
+    waves:
+      - ufo: STR_FAKE_UFO_TRICK
+        count: 1
+        trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
+        timer: 0
+        objective: true
 
-  # Rescue a Sisters aid station that is under attack from Slaanesh cultists
+  - type: STR_EPIOUSION_MISSION_GV
+    raceWeights:
+      0:
+        STR_SNAKEMAN_DESERTERS: 10
+        STR_FRATERIS_CRUSADERS_GV: 10
+        STR_EARLY_CULTISTS: 10
+        STR_BASIC_GANGERS: 10
+        STR_IMPERIAL_PDF_LIST: 10
+        STR_REDEMPTIONIST_START_GV: 10
+    points: 5
+    objective: 3
+    spawnZone: 0
+    retaliationOdds: 0
+    operationType: 0
+    siteType: STR_EPIOUSION
+    regionWeights:
+      0:
+        STR_NORTH_AMERICA: 18
+        STR_SOUTH_AMERICA: 10
+        STR_EUROPE: 16
+        STR_NORTH_AFRICA: 12
+        STR_SOUTHERN_AFRICA: 8
+        STR_CENTRAL_ASIA: 12
+        STR_SOUTH_EAST_ASIA: 15
+        STR_SIBERIA: 10
+        STR_AUSTRALASIA: 10
+    waves:
+      - ufo: STR_FAKE_UFO_TRICK
+        count: 1
+        trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
+        timer: 0
+        objective: true
+
+  # Rescue a Sisters aid station that is under attack
   - type: STR_ARGENT_DAWN_MISSION_GV
-    points: 10
+    points: 1
     objective: 3
     spawnZone: 0
     retaliationOdds: 0
@@ -1205,14 +1284,14 @@ alienMissions:
       0:
         STR_ADEPTAS_SLAANESH_EARLY: 100
     waves:
-      - ufo: STR_ARGENT_DAWN_GV_TRICK
+      - ufo: STR_FAKE_UFO_TRICK
         count: 1
         trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
         timer: 0
         objective: true
 
 
-  # Rescue Guard that are falling back under attack from Tzeentch redeemed
+  # Rescue Guard that are falling back under attack
   - type: STR_LINEBACKER_MISSION_GV
     points: 10
     objective: 3
@@ -1235,7 +1314,7 @@ alienMissions:
       0:
         STR_REDEEMED_EARLY_GV: 100
     waves:
-      - ufo: STR_LINEBACKER_GV_TRICK
+      - ufo: STR_FAKE_UFO_TRICK
         count: 1
         trajectory: DIRECT_TO_MISSION_SITE_TRAJECTORY
         timer: 0
@@ -1247,12 +1326,1351 @@ alienMissions:
       0:
         STR_TZEENTCH_FINAL_HARD_GV: 100
     points: 0
-    siteType: STR_FINAL_MISSION_GUEVESA_GV
+    siteType: STR_FINAL_LANDING_GUEVESA_GV
     spawnZone: 0
     objective: 2
+    showAlienBase: true
     waves:
       - ufo: STR_FINAL_MISSION_GUEVESA_GV
         count: 1
         trajectory: P10
         timer: 0
         objective: true
+
+
+### copied from chaos missions, removed GK spawns, replace with BT and later DW
+  - type: STR_INQUISITION_OUTPOST_BUILD_INITIAL_GV  # creates a new inquisition outpost from space
+    retaliationOdds: 0
+    operationType: 0
+    spawnZone: 4
+    objective: 2
+    siteType: STR_INQUISITION_OUTPOST_GV
+    points: 0
+    waves:
+      - ufo: STR_SIGNAL_UFO
+        count: 1
+        trajectory: P5
+        timer: 30
+    raceWeights:
+      0:
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 100
+
+  - type: STR_INQUISITION_OUTPOST_BUILD_GV
+    retaliationOdds: 0
+    operationType: 1
+    spawnZone: 4
+    objective: 2
+    operationBaseType: STR_INQUISITION_OUTPOST_GV
+    siteType: STR_INQUISITION_OUTPOST_GV
+    points: 0
+    waves:
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        count: 2
+        trajectory: P7
+        timer: 6000
+        objective: true
+      - ufo: STR_IMP_MEDIUM_TRANSPORT
+        count: 1
+        trajectory: P7
+        timer: 7000
+        objective: true
+      - ufo: STR_IMP_LARGE_TRANSPORT
+        count: 1
+        trajectory: P7
+        timer: 6000
+        objective: true
+    raceWeights:
+      0:
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 100
+
+  - type: STR_INQUISITION_BASE_IFILTRATE_GV  # Establishes a new base while also taking a region
+    retaliationOdds: 20  # Stopping infiltration from an HQ has a chance to trigger retaliation
+    operationType: 1
+    spawnZone: 4
+    objective: 1
+    endlessInfiltration: false  # Infiltration mission can be stopped
+    operationBaseType: STR_INQUISITION_BASE_GV
+    siteType: STR_INQUISITION_BASE_GV
+    points: 0
+    waves:
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        count: 2
+        trajectory: P7
+        timer: 6000
+        objective: true
+      - ufo: STR_IMP_MEDIUM_TRANSPORT
+        count: 1
+        trajectory: P7
+        timer: 7000
+        objective: true
+      - ufo: STR_IMP_LARGE_TRANSPORT
+        count: 1
+        trajectory: P7
+        timer: 6000
+        objective: true
+    raceWeights:
+      0:
+        STR_IMPERIAL_INQUISITION_INFILTRATION_LIST_GV: 100
+
+  - type: STR_INQUISITION_HQ_BUILD_INITIAL_GV  # Takes a region for the inquisiiton, establishes an HQ
+    retaliationOdds: 0
+    operationType: 0
+    spawnZone: 4
+    objective: 2
+    endlessInfiltration: false
+    showAlienBase: true
+    siteType: STR_INQUISITION_HQ_GV
+    points: 0
+    waves:
+      - ufo: STR_SIGNAL_UFO
+        count: 1
+        trajectory: P5
+        timer: 30
+    raceWeights:
+      0:
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 100
+
+
+  - type: STR_INQUISITION_STORMRAVEN_PATROL_SINGLE_GV
+    operationType: 1
+    retaliationOdds: 0
+    raceWeights: &INQUISITION_GENMISSION_RACEMIX_GV
+      0:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 75
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 25
+      1:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 66
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 33
+      2:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 50
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 50
+      3:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 25
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 50
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 15
+      4:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 15
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 30
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 35
+      5:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 5
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 20
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 40
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 10
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 5
+        STR_BLOODYROPFOR_TIER0PLUS: 10
+        STR_BTOPFOR_TIER0PLUS: 10
+      6:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 10
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 10
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 30
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 30
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 20
+        STR_BLOODYROPFOR_TIER1: 15
+        STR_BTOPFOR_TIER1: 15
+      7:
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 5
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 10
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 30
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 20
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 30
+        STR_INQUISITION_ASSASSINATION_FORCE: 5
+        STR_BLOODYROPFOR_TIER1: 15
+        STR_BTOPFOR_TIER1: 15
+      8:
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 5
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 30
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 20
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 35
+        STR_BLOODYROPFOR_TIER1: 15
+        STR_BTOPFOR_TIER1: 15
+        STR_INQUISITION_ASSASSINATION_FORCE: 10
+      9:
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 5
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 10
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 10
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 10
+        STR_BLOODYROPFOR_TIER1: 30
+        STR_BTOPFOR_TIER1: 30
+        STR_INQUISITION_ASSASSINATION_FORCE: 30
+      10:
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 5
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 5
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 5
+        STR_IMPERIAL_INQUISITION_ADEPTAS_STORMTROOPERS_MIXLIST: 10
+        STR_INQUISITION_ASSASSINATION_FORCE: 30
+        STR_BLOODYROPFOR_TIER2: 30
+        STR_BTOPFOR_TIER2: 30
+    waves:
+      - ufo: STR_STORMRAVEN_UFO
+        count: 1
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 3000
+
+  - type: STR_INQUISITION_STORMRAVEN_PATROL_PAIR_GV
+    operationType: 1
+    retaliationOdds: 0
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_STORMRAVEN_UFO
+        count: 2
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 3000
+
+  - type: STR_INQUISITION_HUNT_WEAK_GV
+    operationType: 1
+    retaliationOdds: 0
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 2
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 0
+
+  - type: STR_INQUISITION_HUNT_GV
+    operationType: 1
+    retaliationOdds: 0
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 1
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 0
+      - ufo: STR_STORMRAVEN_UFO
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 1
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 12
+
+  - type: STR_INQUISITION_HUNT_LARGE_GV
+    operationType: 1
+    retaliationOdds: 0
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 2
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 0
+      - ufo: STR_STORMRAVEN_UFO
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 1
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 12
+
+  - type: STR_INQUISITION_AIR_SUPERIORITY_GV
+    operationType: 1
+    retaliationOdds: 0
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 2
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 0
+      - ufo: STR_STORMRAVEN_UFO
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 1
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 0
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 2
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 1440  # 1 day
+      - ufo: STR_STORMRAVEN_UFO
+        huntMode: 2
+        huntBehavior: 2
+        hunterKillerPercentage: 100
+        count: 1
+        trajectory: AIR_PATROL_TRAJECTORY
+        timer: 0
+
+  - type: STR_INTERCEPT_INQ_VALKYRIE_GV
+    points: 10
+    objective: 3
+    spawnZone: 0
+    siteType: STR_INTERCEPT_INQ_VALKYRIE_GV
+    raceWeights:
+      0:
+        STR_IMPERIAL_PDF_LIST: 75
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 25
+      1:
+        STR_IMPERIAL_PDF_LIST: 75
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 25
+      2:
+        STR_IMPERIAL_PDF_LIST: 75
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 25
+      3:
+        STR_IMPERIAL_PDF_LIST: 50
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 25
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 25
+      4:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 15
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 30
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 35
+      5:
+        STR_IMPERIAL_INQUISITION_FRATERIS_LIST: 5
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 20
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 40
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 10
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 5
+      6:
+        STR_IMPERIAL_INQUISITION_NOVICE_KILLTEAM_LIST: 10
+        STR_IMPERIAL_INQUISITION_ADEPTAS_LIST: 30
+        STR_IMPERIAL_INQUISITION_STORMTROOPER_LIST: 30
+        STR_IMPERIAL_INQUISITION_ADEPTAS_ELOHIM_LIST: 20
+    waves:
+      - ufo: STR_VALKYRIE_INTERCEPT
+        count: 1
+        trajectory: VALK_CRASH  # VALK_CRASH
+        timer: 0
+        objective: true
+
+  - type: STR_INQUISITION_PURGE_GV  # Terror type mission
+    points: 10
+    objective: 3
+    spawnZone: 6  # Mission zone used for patrol missions.
+    siteType: STR_INQUISITION_PURGE_MISSION_GV
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        count: 1
+        trajectory: P3
+        timer: 5000
+      - ufo: STR_IMP_LONG_TRANSPORT_SHIP
+        count: 1
+        trajectory: P3
+        timer: 3000
+      - ufo: STR_IMP_HEAVY_TRANSPORT_SHIP
+        count: 1
+        trajectory: P7
+        timer: 6000
+        objective: true
+
+  - type: STR_INQUISITION_SCORE_GV
+    points: 50
+    objective: 0 # Score
+    targetBaseOdds: 100
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_STORMRAVEN_UFO
+        count: 1
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        count: 2
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_STORMRAVEN_UFO
+        count: 2
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        count: 2
+        trajectory: P8
+        timer: 3000
+
+  - type: STR_INQUISITION_RETALIATION_GV
+    raceWeights: *INQUISITION_GENMISSION_RACEMIX_GV
+    waves:
+      - ufo: STR_STORMRAVEN_UFO
+        count: 1
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_STORMRAVEN_UFO
+        count: 2
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_IMP_MEDIUM_SCOUT
+        count: 2
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_IMP_TRANSPORT_BATTLESHIP
+        count: 1
+        trajectory: P8
+        timer: 3000
+
+
+
+### Tau themed early bases for Cultists
+  - type: STR_TS_CULTIST_BASE_START_GV
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_TZEENTCH_EARLY_CULT: 100
+        STR_SLAANESH_CULT_EARLY: 100
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_CULTIST_BASE_START
+    objective: 2
+    siteType: STR_CULTIST_BASE_START
+    points: 0
+
+  - type: STR_TS_CULTIST_BASE_GV
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_TZEENTCH_EARLY_CULT: 15
+        STR_SLAANESH_CULT_EARLY: 15
+      1:
+        STR_TZEENTCH_EARLY_CULT: 15
+        STR_TZEENTCH_MUTANT_CULT: 15
+        STR_SLAANESH_CULT_EARLY: 10
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 10
+        STR_SLAANGOR_EARLY: 5
+      2:
+        STR_TZEENTCH_EARLY_CULT: 10
+        STR_TZEENTCH_MUTANT_CULT: 10
+        STR_TZEENTCH_WITCH_MUTANT: 5
+        STR_SLAANESH_CULT_EARLY: 10
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 10
+        STR_SLAANGOR_EARLY: 5
+      3:
+        STR_TZEENTCH_EARLY_CULT: 5
+        STR_TZEENTCH_MUTANT_CULT: 7
+        STR_TZEENTCH_WITCH_MUTANT: 5
+        STR_TZEENTCH_TZAANGOR_WARBAND: 5
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 10
+        STR_SLAANESH_TRAITOR_GUARD_MID: 5
+        STR_ADEPTAS_SLAANESH_EARLY: 10
+        STR_SLAANGOR_EARLY: 5
+        STR_SLAANGOR_MIXED: 5
+      4:
+        STR_TZEENTCH_MUTANT_CULT: 1
+        STR_TZEENTCH_WITCH_MUTANT: 2
+        STR_TZEENTCH_SUBCULT: 4
+        STR_TZEENTCH_COVEN: 5
+        STR_TZEENTCH_TZAANGOR_WARBAND: 4
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 5
+        STR_SLAANESH_TRAITOR_GUARD_MID: 10
+        STR_ADEPTAS_SLAANESH_EARLY: 10
+        STR_SERAPH_SISTERS: 5
+        STR_SLAANESHSISTERS: 5
+        STR_SLAANGOR_MIXED: 5
+      5:
+        STR_TZEENTCH_TZAANGOR_WARBAND: 15
+        STR_TZEENTCH_COVEN: 10
+        STR_TZEENTCH_CULT_WSQUATS: 5
+        STR_TZEENTCH_CULT: 10
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+        STR_SLAANESH_TRAITOR_GUARD_MID: 15
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 5
+        STR_SLAANESHSISTERS: 8
+        STR_SLAANESHSISTERSD: 5
+        STR_SLAANESHASS: 5
+        STR_SERAPH_SISTERS: 5
+        STR_SLAANGOR_MIXED: 5
+        STR_SLAANESH_EARLY: 5
+      6:
+        STR_TZEENTCH_COVEN: 10
+        STR_TZEENTCH_CULT: 20
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_TZAANGOR_WARBAND: 5
+        STR_TZEENTCHSISTERS: 10
+        STR_TZEENTCH_CULT_WITH_SISTERS: 10
+        STR_TZEENTCH_CULT_BLUESTONE: 10
+        STR_SLAANESH_TRAITOR_GUARD_MID: 15
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 10
+        STR_SLAANESHSISTERS: 15
+        STR_SLAANESHSISTERSD: 7
+        STR_SLAANESHASS: 6
+        STR_SLAANGOR_LATE: 5
+        STR_SLAANESH_EARLY: 5
+      7:
+        STR_TZEENTCH_CULT: 15
+        STR_TZEENTCH_TRAITOR_SISTERS: 4
+        STR_TZEENTCH_TZAANGOR_WARBAND: 3
+        STR_TZEENTCH_CULT_WITH_SISTERS: 4
+        STR_TZEENTCH_CULT_BLUESTONE: 5
+        STR_TZEENTCHSISTERS: 12
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 15
+        STR_SLAANESH: 10
+        STR_BRIDES_OF_THE_EMPEROR: 8
+        STR_SLAANESHSISTERS: 12
+        STR_SLAANESHSISTERSD: 12
+        STR_SLAANESHASS: 7
+        STR_SLAANGOR_LATE: 3
+      8:
+        STR_TZEENTCH_CULT: 10
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_TRAITOR_GUARD_RUBRIC: 5
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+        STR_BLACKSTONE_WITH_TZEENTCH_FORCE: 5
+        STR_TZEENTCH_CULT_WITH_THOUSAND_SONS: 5
+        STR_TZEENTCHSISTERS: 20
+        STR_RADICAL_SISTERS: 5
+        STR_TZEENTCH: 5
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 15
+        STR_SLAANESH: 5
+        STR_BRIDES_OF_THE_EMPEROR: 15
+        STR_SLAANESHSISTERS: 17
+        STR_SLAANESHSISTERSD: 22
+        STR_SLAANESHASS: 15
+        STR_ALPHA_DAEMONETTE_FORCE: 2
+        STR_ALPHA_DAEMONETTE_FORCE_REAL: 2
+        STR_SLAANGOR_LATE: 3
+      9:
+        STR_TZEENTCH_CULT: 5
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_TRAITOR_GUARD_RUBRIC: 5
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+        STR_BLACKSTONE_WITH_TZEENTCH_FORCE: 5
+        STR_TZEENTCH_CULT_WITH_THOUSAND_SONS: 5
+        STR_TZEENTCHSISTERS: 15
+        STR_RADICAL_SISTERS: 5
+        STR_TZEENTCH: 10
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 10
+        STR_SLAANESH: 10
+        STR_BRIDES_OF_THE_EMPEROR: 10
+        STR_SLAANESHSISTERS: 6
+        STR_SLAANESHSISTERSD: 12
+        STR_SLAANESH_DEPRAVED_AND_THEBLESSED: 10
+        STR_ALPHA_DAEMONETTE_FORCE_REAL: 3
+      10:
+        STR_TZEENTCH_CULT: 5
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+        STR_TZEENTCH_TRAITOR_GUARD_RUBRIC: 5
+        STR_TZEENTCH_CULT_WITH_THOUSAND_SONS: 5
+        STR_TZEENTCHSISTERS: 15
+        STR_RADICAL_SISTERS: 5
+        STR_TZEENTCH: 25
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 10
+        STR_SLAANESH: 25
+        STR_BRIDES_OF_THE_EMPEROR: 5
+        STR_SLAANESHSISTERS: 5
+        STR_SLAANESHSISTERSD: 5
+        STR_SLAANESH_DEPRAVED_AND_THEBLESSED: 10
+        STR_ALPHA_DAEMONETTE_FORCE_REAL: 3
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_CULTIST_BASE_LEVEL_1
+    siteType: STR_CULTIST_BASE_LEVEL_1
+    objective: 2
+    spawnZone: 4
+    points: 0
+
+  - type: STR_KTS_TRAITOR_GUARD_BASE_START_GV
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_SNAKEMAN: 50
+        STR_SNAKEMAN_DESERTERS: 50
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 33
+        STR_TZEENTCH_EARLY_GUARD: 11
+        STR_TZEENTCH_EARLY_GUARD_WDESERTERS: 11
+        STR_TZEENTCH_EARLY_GUARD_WMUTANTS: 11
+    operationType: 3 # Creates a new base to start from if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_TRAITOR_GUARD_BASE_START
+    objective: 2
+    siteType: STR_TRAITOR_GUARD_BASE_START
+    points: 0
+
+  - type: STR_KTS_TRAITOR_GUARD_BASE_GV
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_SNAKEMAN: 50
+        STR_SNAKEMAN_DESERTERS: 50
+        STR_IRON_GUARD_TESTLIST_GV: 50
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 33
+        STR_TZEENTCH_EARLY_GUARD: 11
+        STR_TZEENTCH_EARLY_GUARD_WDESERTERS: 11
+        STR_TZEENTCH_EARLY_GUARD_WMUTANTS: 11
+      3:
+        STR_SNAKEMAN_DESERTERS_MEDIUM: 10
+        STR_IRON_PENETANTE_LEGION: 20
+        STR_IRON_GUARD_TESTLIST_GV: 20
+        STR_SNAKEMAN_ELITE: 10
+        STR_TZEENTCH_TRAITOR_GUARD: 5
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 10
+        STR_SLAANESH_TRAITOR_GUARD_MID: 5
+      5:
+        STR_CSM_ASPIRANT_RACELIST: 5
+        STR_IRON_PENETANTE_LEGION: 10
+        STR_IRONSTONE_LIST: 5
+        STR_IRON_GUARD_TESTLIST_GV: 10
+        STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 10
+        STR_EARLY_TRAITOR_GUARD_MARINES: 10
+        STR_BLACKSTONE_RECON_FORCE: 10
+        STR_SNAKEMAN_DESERTERS_HARD: 5
+        STR_CHAOS_HERETEK_FORCE: 5
+        STR_TZEENTCH_TRAITOR_GUARD: 5
+        STR_TZEENTCH_TRAITOR_GUARD_ELITE: 5
+        STR_SLAANESH_TRAITOR_GUARD_MID: 5
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 5
+      7:
+        STR_IRONSTONE_LIST: 20
+        STR_IRON_GUARD_TESTLIST_GV: 10
+        STR_BLACKSTONE_JUMOROOPERS_LIST: 5
+        STR_BLACKSTONE_WITH_KHORNE_FORCE: 5
+        STR_BLACKSTONE_WITH_CSM_BLACKGUARD: 5
+        STR_CHAOS_HERETEK_FORCE: 15
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 15
+        STR_TZEENTCH_CULT_BLUESTONE: 5
+        STR_BLACKSTONE_WITH_TZEENTCH_FORCE: 5
+        STR_TZEENTCH_TRAITOR_GUARD_STORMTROOPERS: 5
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    objective: 2
+    spawnZone: 4
+    points: 0
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
+    siteType: STR_TRAITOR_GUARD_BASE_LEVEL_1
+
+  - type: STR_SLAANESH_ABBEY_SCALING_GV
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_ALIEN_BASE_ASSAULT_SLAANESH
+    raceWeights:
+      0:
+        STR_ADEPTAS_SLAANESH_EARLY: 100
+      1:
+        STR_ADEPTAS_SLAANESH_EARLY: 100
+        STR_HERETIC_SISTERS: 50
+      3:
+        STR_HERETIC_SISTERS: 50
+        STR_ADEPTAS_SLAANESH_EARLY: 50
+      5:
+        STR_HERETIC_SISTERS: 50
+        STR_SLAANESHSISTERS: 50
+      7:
+        STR_SLAANESHSISTERSD: 50
+        STR_SERAPH_SISTERS: 50
+        STR_SLAANESHSISTERS: 50
+      10:
+        STR_SLAANESHSISTERSD: 50
+        STR_BRIDES_OF_THE_EMPEROR: 50
+        STR_SLAANESHSISTERS_OH_NO: 50
+        STR_SLAANESH_DEPRAVED_AND_THEBLESSED: 50
+    waves:
+      - ufo: STR_LARGE_SLAAN_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 4000
+      - ufo: STR_LARGE_SLAAN_SCOUT
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_BATTLESHIP_SLAAN
+        count: 1
+        trajectory: P7
+        timer: 5000
+
+
+  - type: STR_TZEENTCH_BASE_SCALING_GV
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_ALIEN_BASE_ASSAULT_TZEENTCH
+    raceWeights:
+      0:
+        STR_TZEENTCH_EARLY_CULT: 15
+        STR_TZEENTCH_SUBCULT: 5
+        STR_TZEENTCH_COVEN: 5
+      3:
+        STR_TZEENTCH_EARLY_CULT: 15
+        STR_TZEENTCH_SUBCULT: 15
+        STR_TZEENTCH_COVEN: 20
+        STR_TZEENTCH_CULT: 15
+        STR_TZEENTCH_CULT_WITH_SISTERS: 2
+        STR_TZEENTCH_TRAITOR_GUARD: 10
+        STR_TZEENTCH_TRAITOR_GUARD_TZAANGOR: 5
+      4:
+        STR_TZEENTCH_COVEN: 20
+        STR_TZEENTCH_CULT: 15
+        STR_TZEENTCH_TRAITOR_GUARD: 10
+        STR_TZEENTCH_TRAITOR_GUARD_TZAANGOR: 10
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+      5:
+        STR_BLACKSTONE_WITH_TZEENTCH_FORCE: 2
+        STR_TZEENTCH_COVEN: 15
+        STR_TZEENTCH_CULT: 10
+        STR_TZEENTCH_CULT_BLUESTONE: 5
+        STR_TZEENTCH_CULT_WITH_SISTERS: 10
+      6:
+        STR_TZEENTCH_COVEN: 20
+        STR_TZEENTCH_CULT: 20
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_TZAANGOR_WARBAND: 5
+        STR_TZEENTCHSISTERS: 10
+        STR_TZEENTCH_CULT_WITH_SISTERS: 10
+        STR_TZEENTCH_CULT_BLUESTONE: 10
+      7:
+        STR_TZEENTCH_CULT: 15
+        STR_TZEENTCH_TRAITOR_SISTERS: 4
+        STR_TZEENTCH_TZAANGOR_WARBAND: 3
+        STR_TZEENTCH_CULT_WITH_SISTERS: 4
+        STR_TZEENTCH_CULT_BLUESTONE: 5
+        STR_TZEENTCHSISTERS: 33
+      8:
+        STR_TZEENTCH_CULT: 10
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_TRAITOR_GUARD_RUBRIC: 5
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+        STR_BLACKSTONE_WITH_TZEENTCH_FORCE: 5
+        STR_TZEENTCH_CULT_WITH_THOUSAND_SONS: 5
+        STR_TZEENTCHSISTERS: 20
+        STR_RADICAL_SISTERS: 15
+        STR_TZEENTCH: 10
+      9:
+        STR_TZEENTCH_CULT: 5
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_TRAITOR_GUARD_RUBRIC: 5
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+        STR_BLACKSTONE_WITH_TZEENTCH_FORCE: 5
+        STR_TZEENTCH_CULT_WITH_THOUSAND_SONS: 5
+        STR_TZEENTCHSISTERS: 15
+        STR_RADICAL_SISTERS: 25
+        STR_TZEENTCH: 25
+      10:
+        STR_TZEENTCH_CULT: 5
+        STR_TZEENTCH_TRAITOR_SISTERS: 5
+        STR_TZEENTCH_CULT_WITH_SISTERS: 5
+        STR_TZEENTCH_TRAITOR_GUARD_RUBRIC: 5
+        STR_TZEENTCH_CULT_WITH_THOUSAND_SONS: 5
+        STR_TZEENTCHSISTERS: 15
+        STR_RADICAL_SISTERS: 50
+        STR_TZEENTCH: 50
+      11:
+        STR_TZEENTCH_TERMINATORS: 50
+        STR_TZEENTCH: 50
+        STR_RADICAL_SISTERS: 50
+    waves:
+      - ufo: TZEENTCH_SHIP_05
+        count: 1
+        trajectory: P5
+        timer: 4000
+      - ufo: TZEENTCH_SHIP_04
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: TZEENTCH_SHIP_01
+        count: 1
+        trajectory: P7
+        timer: 5000
+
+  - type: STR_ALIEN_BASE_SCALING_GV
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    siteType: STR_ALIEN_BASE_ASSAULT
+    raceWeights:
+      0:
+        STR_EARLY_CULTISTS: 15
+        STR_SNAKEMAN_DESERTERS: 10
+        STR_CHAOS_PENETANTE_LEGION: 10
+        STR_IRON_GUARD_TESTLIST_GV: 5
+        STR_WORDBEARERS_EARLY: 1
+      1:
+        STR_SECTOID: 5
+        STR_EARLY_CULTISTS: 15
+        STR_SNAKEMAN_DESERTERS: 10
+        STR_IRON_GUARD_TESTLIST_GV: 10
+        STR_IRON_PENETANTE_LEGION: 15
+      2:
+        STR_WORDBEARERS_EARLY: 10
+        STR_SECTOID: 5
+        STR_EARLY_CULTISTS: 5
+        STR_SNAKEMAN_DESERTERS: 5
+        STR_CHAOS_PENETANTE_LEGION: 10
+        STR_IRON_GUARD_TESTLIST_GV: 10
+        STR_SNAKEMAN: 5
+        STR_KHORNESISTERS_EARLY: 3
+      3:
+        STR_UNDIVIDED_CULT: 5
+        STR_WORDBEARERS_EARLY: 10
+        STR_SECTOID: 5
+        STR_SNAKEMAN: 5
+        STR_SNAKEMAN_DESERTERS: 5
+        STR_IRON_PENETANTE_LEGION: 15
+        STR_IRON_GUARD_TESTLIST_GV: 15
+        STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 5
+        STR_EARLY_CULTISTS_WITHSISTERS: 5
+        STR_ALPHA_CULT: 5
+      4:
+        STR_WORDBEARERS_MID: 5
+        STR_WORDBEARERS_EARLY: 5
+        STR_UNDIVIDED_CULT: 5
+        STR_SECTOID: 5
+        STR_SECTOID_ELITE: 3
+        STR_SNAKEMAN: 5
+        STR_SNAKEMAN_ELITE: 2
+        STR_IRON_PENETANTE_LEGION: 15
+        STR_IRON_GUARD_TESTLIST_GV: 15
+        STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 15
+        STR_EARLY_CULTISTS_MARINES: 2
+        STR_EARLY_CULTISTS_WITHSISTERS: 7
+        STR_BLACKSTONE_JUMOROOPERS_LIST: 5
+        STR_BLACKSTONE_RECON_FORCE: 5
+        STR_HERETIC_SISTERS: 10
+        STR_CHAOS_HERETEK_FORCE: 10
+      5:
+        STR_WORDBEARERS_MID: 10
+        STR_UNDIVIDED_CULT: 5
+        STR_SECTOID: 5
+        STR_SECTOID_ELITE: 5
+        STR_SNAKEMAN: 5
+        STR_SNAKEMAN_ELITE: 5
+        STR_FLOATER: 4
+        STR_ALPHA_CULT: 5
+        STR_ADEPTAS_DESERTERS_KINDERSURPRISE: 5
+        STR_CHAOS_HERETEK_FORCE: 10
+        STR_IRON_GUARD_TESTLIST_GV: 5
+        STR_BLACKSTONE_WITH_KHORNE_FORCE: 2
+        STR_BLACKSTONE_JUMOROOPERS_LIST: 5
+        STR_BLACKSTONE_RECON_FORCE: 5
+        STR_HERETIC_SISTERS: 5
+        STR_CHAOSSISTERSUNITED: 3
+        STR_EARLY_TRAITOR_GUARD_MARINES: 4
+        STR_EARLY_TRAITOR_GUARD_WITHSISTERS: 5
+        STR_KHORNESISTERS: 5
+        STR_ALPHA_COHORT: 3
+        STR_CSM_BASIC_RACELIST: 2
+        STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 10
+        STR_IRONSTONE_LIST: 15
+      6:
+        STR_WORDBEARERS_MID: 5
+        STR_UNDIVIDED_CULT: 5
+        STR_SECTOID_ELITE: 5
+        STR_SNAKEMAN_ELITE: 5
+        STR_IRON_GUARD_TESTLIST_GV: 5
+        STR_FLOATER: 5
+        STR_ALPHA_CULT: 5
+        STR_CHAOS_HERETEK_FORCE: 10
+        STR_BLACKSTONE_WITH_KHORNE_FORCE: 3
+        STR_BLACKSTONE_JUMOROOPERS_LIST: 5
+        STR_BLACKSTONE_RECON_FORCE: 5
+        STR_BLACKSTONE_WITH_CSM_BLACKGUARD: 5
+        STR_CSM_ASPIRANT_RACELIST: 5
+        STR_HERETIC_SISTERS: 3
+        STR_CHAOSSISTERSUNITED: 5
+        STR_EARLY_TRAITOR_GUARD_MARINES: 6
+        STR_EARLY_TRAITOR_GUARD_WITHSISTERS: 7
+        STR_KHORNESISTERS: 8
+        STR_ALPHA_COHORT: 3
+        STR_NEVERBORN_CULT: 5
+        STR_CSM_BASIC_RACELIST: 4
+        STR_IRONSTONE_LIST: 20
+        STR_IRON_SISTERS_RACELIST: 15
+      7:
+        STR_WORDBEARERS_LATE: 1
+        STR_WORDBEARERS_MID: 5
+        STR_UNDIVIDED_CULT: 5
+        STR_SECTOID_ELITE: 5
+        STR_SNAKEMAN_ELITE: 5
+        STR_FLOATER: 5
+        STR_MUTON: 5
+        STR_ALPHA_COHORT: 5
+        STR_CSM_ASPIRANT_RACELIST: 5
+        STR_BLACKSTONE_WITH_CSM_BLACKGUARD: 5
+        STR_BLACKSTONE_WITH_KHORNE_FORCE: 5
+        STR_KHORNESISTERS: 5
+        STR_KHORNE_SISTERS_HEAVY: 2
+        STR_KHORNE_SISTERS_CHOSEN: 5
+        STR_CHAOS_HERETEK_FORCE: 10
+        STR_ALPHA_DAEMONETTE_FORCE_REAL: 1
+        STR_ALPHA_LEGION_FALSE_FLAG: 2
+        STR_NEVERBORN_CULT: 5
+        STR_CSM_BASIC_RACELIST: 5
+        STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 10
+        STR_IRONSTONE_LIST: 10
+        STR_IRON_SISTERS_RACELIST: 15
+        STR_CSM_IRON_WARRIORS_RACELIST: 5
+      8:
+        STR_WORDBEARERS_LATE: 5
+        STR_WORDBEARERS_MID: 5
+        STR_SECTOID_ELITE: 5
+        STR_SNAKEMAN_ELITE: 5
+        STR_FLOATER: 2
+        STR_MUTON: 5
+        STR_ALPHA_COHORT: 5
+        STR_CSM_ASPIRANT_RACELIST: 5
+        STR_BLACKSTONE_WITH_CSM_BLACKGUARD: 2
+        STR_BLACKSTONE_WITH_KHORNE_FORCE: 5
+        STR_KHORNE_SISTERS_HEAVY: 3
+        STR_KHORNE_SISTERS_CHOSEN: 7
+        STR_NEVERBORN_CULT: 3
+        STR_ETHEREAL: 5
+        STR_DESERTERS_WITH_IRON_WARRIORS_RACELIST: 5
+        STR_CSM_BASIC_RACELIST: 3
+        STR_IRONSTONE_LIST: 10
+        STR_IRON_SISTERS_RACELIST: 10
+        STR_CSM_IRON_WARRIORS_RACELIST: 10
+      9:
+        STR_WORDBEARERS_LATE: 10
+        STR_FLOATER: 1
+        STR_MUTON: 4
+        STR_ALPHA_COHORT: 3
+        STR_CSM_ASPIRANT_RACELIST: 3
+        STR_BLACKSTONE_WITH_CSM_BLACKGUARD: 2
+        STR_KHORNE_SISTERS_HEAVY: 2
+        STR_KHORNE_SISTERS_CHOSEN: 2
+        STR_ETHEREAL: 7
+        STR_CSM_BASIC_RACELIST: 2
+        STR_CSM_IRON_WARRIORS_RACELIST: 10
+        STR_CSM_IRON_WARRIORS_W_TERMINATORS_RACELIST: 10
+      10:
+        STR_WORDBEARERS_LATE: 10
+        STR_FLOATER: 3
+        STR_MUTON: 5
+        STR_BLACKSTONE_WITH_CSM_BLACKGUARD: 5
+        STR_KHORNE_SISTERS_HEAVY: 1
+        STR_KHORNE_SISTERS_CHOSEN: 1
+        STR_KHRONE: 3
+        STR_ALPHA_DAEMONETTE_FORCE_REAL: 1
+        STR_ETHEREAL: 8
+        STR_MIXED: 5
+        STR_ALPHA_COMMANDO_RAID: 3
+        STR_CSM_IRON_WARRIORS_RACELIST: 5
+        STR_CSM_IRON_WARRIORS_W_TERMINATORS_RACELIST: 10
+    waves:
+      - ufo: STR_MEDIUM_SCOUT
+        count: 1
+        trajectory: P5
+        timer: 10000
+      - ufo: STR_SUPPLY_SHIP
+        count: 2
+        trajectory: P5
+        timer: 5000
+      - ufo: STR_BATTLESHIP
+        count: 1
+        trajectory: P6
+        timer: 5000
+
+
+### relevant alienDeployments here
+alienDeployments:
+  - type: STR_INQUISITION_OUTPOST_GV  # Small Inquisition Base
+    randomRace: [STR_IMPERIAL_INQUISITION_OUTPOST_LIST_GV]
+    markerIcon: 118
+    terrains:
+      - CITY
+    script: INQUISITION_OUTPOST_SCRIPT
+    alienBase: true
+    customUfo: STR_IMP_LARGE_TRANSPORT  # mixes ship into map
+    objectiveComplete: [STR_INQUISITION_OUTPOST_DESTROYED, 200]
+    objectiveFailed: [STR_INQUISITION_OUTPOST_NOT_DESTROYED, -100]
+    abortPenalty: 100
+    data:
+      - alienRank: 0  # Inquisitor
+        lowQty: 0
+        highQty: 0
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: &emptyItemSets
+          -
+            []
+          -
+            []
+          -
+            []
+      - alienRank: 1  # Elite Stormtrooper
+        lowQty: 1
+        highQty: 1
+        dQty: 2
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 2  # Stormtrooper
+        lowQty: 5
+        highQty: 5
+        dQty: 1
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 3  # Visiting Dignitaries
+        lowQty: 0
+        highQty: 0
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4  # Frateris Vet
+        lowQty: 2
+        highQty: 2  # 3
+        dQty: 1  # 1
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 5  # Frateris
+        lowQty: 4
+        highQty: 4  # 3
+        dQty: 6  # 1
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 6 # Assassins
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 7  # Civillian bystanders, most unarmed
+        lowQty: 5
+        highQty: 5
+        dQty: 2
+        percentageOutsideUfo: 90
+        itemSets: *emptyItemSets
+    briefing:
+      cutscene: TERROR
+      music: gmstory2
+      title: STR_INQUISITION_OUTPOST_ASSAULT_GV
+      textOffset: -16
+      background: InquisitionBG.SCR
+      showTarget: false
+      desc: STR_INQUISITION_OUTPOST_ASSAULT_BRIEFING_GV
+    markerName: STR_INQUISITION_OUTPOST_GV
+    genMission:  # no new base building or retaliations until its upgraded
+      STR_INQUISITION_STORMRAVEN_PATROL_SINGLE_GV: 50
+      STR_INQUISITION_STORMRAVEN_PATROL_PAIR_GV: 50
+      # Need some kind of site based mission
+    genMissionFreq: 2
+    alienBaseUpgrades:
+      0:
+        STR_INQUISITION_OUTPOST_GV: 100
+      1:
+        STR_INQUISITION_OUTPOST_GV: 50
+        STR_INQUISITION_BASE_GV: 50
+      2:
+        STR_INQUISITION_BASE_GV: 100
+    width: 50
+    length: 50
+    height: 12
+
+  - type: STR_INQUISITION_BASE_GV
+    randomRace: [STR_IMPERIAL_INQUISITION_BASE_LIST_GV]
+    markerIcon: 119
+    terrains:
+      - CITY
+    script: INQUISITION_BASE_SCRIPT
+    alienBase: true
+    customUfo: STR_IMP_HEAVY_TRANSPORT_SHIP
+    objectiveComplete: [STR_INQUISITION_BASE_DESTROYED, 300]
+    objectiveFailed: [STR_INQUISITION_BASE_NOT_DESTROYED, -150]
+    abortPenalty: 150
+    data:
+      - alienRank: 0  # Inquisitor
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1  # Dreadnought
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 2  # GK
+        lowQty: 3
+        highQty: 3
+        dQty: 2
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 3  # Visiting Dignitaries
+        lowQty: 0
+        highQty: 0
+        dQty: 3
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4  # Elites
+        lowQty: 3
+        highQty: 3  # 3
+        dQty: 1  # 1
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 5  # Frateris/Storm Troopers
+        lowQty: 6
+        highQty: 6  # 3
+        dQty: 8  # 1
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 6 # Assassins
+        lowQty: 3
+        highQty: 3
+        dQty: 1
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 7  # Penitent Engine
+        lowQty: 1
+        highQty: 1
+        dQty: 1
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+    briefing:
+      cutscene: TERROR
+      music: gmstory2
+      title: STR_INQUISITION_BASE_ASSAULT_GV
+      textOffset: -16
+      background: InquisitionBG.SCR
+      showTarget: false
+      desc: STR_INQUISITION_BASE_ASSAULT_BRIEFING_GV
+    markerName: STR_INQUISITION_BASE_GV
+    genMission:
+      STR_INQUISITION_OUTPOST_BUILD_GV: 20
+      STR_INQUISITION_STORMRAVEN_PATROL_SINGLE_GV: 15
+      STR_INQUISITION_STORMRAVEN_PATROL_PAIR_GV: 25
+      STR_INQUISITION_AIR_SUPERIORITY_GV: 25
+    genMissionFreq: 4
+    baseDetectionRange: 300
+    baseDetectionChance: 20
+    huntMissionMaxFrequency: 1800  # generate hunt mission max every 300 minutes (= 5 hours)
+    huntMissionRaceFromAlienBase: false
+    huntMissionWeights:
+      0:
+        STR_INQUISITION_HUNT_WEAK_GV: 100
+      3:
+        STR_INQUISITION_HUNT_GV: 50
+        STR_INQUISITION_HUNT_LARGE_GV: 50
+    alienBaseUpgrades:
+      0:
+        STR_INQUISITION_BASE_GV: 100
+      2:
+        STR_INQUISITION_BASE_GV: 90
+        STR_INQUISITION_HQ_GV: 10
+      4:
+        STR_INQUISITION_BASE_GV: 75
+        STR_INQUISITION_HQ_GV: 25
+    width: 50
+    length: 50
+    height: 12
+
+  - type: STR_INQUISITION_HQ_GV
+    randomRace: [STR_IMPERIAL_INQUISITION_BASE_LIST_GV]
+    markerIcon: 120
+    terrains:
+      - CITY
+    script: INQUISITION_HQ_SCRIPT
+    alienBase: true
+    customUfo: STR_IMP_LONG_TRANSPORT_SHIP
+    objectiveComplete: [STR_INQUISITION_HQ_DESTROYED, 300]
+    objectiveFailed: [STR_INQUISITION_HQ_NOT_DESTROYED, -150]
+    abortPenalty: 150
+    data:
+      - alienRank: 0  # Inquisitor
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1  # Dreadnought
+        lowQty: 2
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 2  # GK
+        lowQty: 4
+        highQty: 4
+        dQty: 4
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 3  # Visiting Dignitaries
+        lowQty: 1
+        highQty: 1
+        dQty: 3
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 4  # Elites
+        lowQty: 5
+        highQty: 5  # 3
+        dQty: 2  # 1
+        percentageOutsideUfo: 75
+        itemSets: *emptyItemSets
+      - alienRank: 5  # Frateris/Storm Troopers
+        lowQty: 8
+        highQty: 8  # 3
+        dQty: 8  # 1
+        percentageOutsideUfo: 80
+        itemSets: *emptyItemSets
+      - alienRank: 6 # Assassins
+        lowQty: 3
+        highQty: 3
+        dQty: 2
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 7  # Penitent Engine
+        lowQty: 1
+        highQty: 1
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+    briefing:
+      cutscene: TERROR
+      music: gmstory2
+      title: STR_INQUISITION_HQ_ASSAULT_GV
+      textOffset: -16
+      background: InquisitionBG.SCR
+      showTarget: false
+      desc: STR_INQUISITION_HQ_ASSAULT_BRIEFING_GV
+    markerName: STR_INQUISITION_HQ_GV
+    genMission:
+      STR_INQUISITION_OUTPOST_BUILD_GV: 7
+      STR_INQUISITION_STORMRAVEN_PATROL_SINGLE_GV: 7
+      STR_INQUISITION_STORMRAVEN_PATROL_PAIR_GV: 15
+      STR_INQUISITION_AIR_SUPERIORITY_GV: 20
+      STR_INQUISITION_SCORE_GV: 20  # XCOM Base Flyover
+      STR_INQUISITION_RETALIATION_GV: 1  # 1% at genMissionFreq: 8 is ~2.4% chance monthly for retalitation per HQ
+    genMissionFreq: 5
+    baseDetectionRange: 750
+    baseDetectionChance: 20
+    huntMissionMaxFrequency: 1800  # generate hunt mission max every 300 minutes (= 5 hours)
+    huntMissionWeights:
+      0:
+        STR_INQUISITION_HUNT_LARGE_GV: 50
+    width: 50
+    length: 50
+    height: 12
+
+  - type: STR_INTERCEPT_PDF_VALKYRIE_GV
+    alert: STR_INTERCEPT_PDF_VALKYRIE_ALERT_GV
+    alertBackground: VALKCRASHBG.SCR
+    alertDescription: STR_INTERCEPT_PDF_VALKYRIE_ALERT_DESCRIPTION_GV
+    duration: [200, 400]
+    despawnPenalty: 150
+    markerName: STR_INTERCEPTED_PDF_VALKYRIE_SITE_GV
+    briefing:
+      title: STR_INTERCEPT_PDF_VALKYRIE_GV
+      palette: 4
+      desc: STR_INTERCEPT_PDF_VALKYRIE_DESCRIPTION_GV
+      music: gmstory2
+      showCraft: true
+      showTarget: true
+      background: InquisitionBG.SCR
+    data:
+      - alienRank: 5
+        lowQty: 4
+        highQty: 4
+        dQty: 5
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 1
+        highQty: 1
+        dQty: 3
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 0
+        highQty: 0
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 1
+        highQty: 1
+        dQty: 2
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 1
+        lowQty: 0
+        highQty: 0
+        dQty: 1
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 0
+        lowQty: 0
+        highQty: 0
+        dQty: 1
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+    script: VALKYRIE_INTERCEPT
+    terrains:
+      - JUNGLE
+    width: 50
+    length: 50
+    height: 9
+    missionBountyItem: STR_REWARD_INTERCEPT_PDF_VALKYRIE
+
+  - type: STR_INQUISITION_PURGE_MISSION_GV
+    data:
+      - alienRank: 1
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2
+        lowQty: 1
+        highQty: 1
+        dQty: 2
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 3
+        lowQty: 3
+        highQty: 3
+        dQty: 2
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 4
+        lowQty: 1
+        highQty: 1
+        dQty: 2
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 5
+        lowQty: 7
+        highQty: 7
+        dQty: 5
+        percentageOutsideUfo: 70
+        itemSets: *emptyItemSets
+      - alienRank: 6
+        lowQty: 2
+        highQty: 2
+        dQty: 4
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 7
+        lowQty: 2
+        highQty: 2
+        dQty: 4
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+    width: 60
+    length: 60
+    height: 9
+    # TODO: Replace with Guevesa
+    # civiliansByType:  # Add more civilian variety, branch out from reusing Cult Strategy Soldiers
+    #   STR_SECTOID_FEMCULTIST: 4
+    #   STR_HERETIC_SISTER: 1
+    #   STR_CHAOSCULT_SOLDIERM_LV1_AI: 3
+    #   STR_CHAOSCULT_SOLDIERF_LV1_AI: 3
+    #   STR_CHAOSCULT_SOLDIERM_LV2_AI: 2
+    #   STR_CHAOSCULT_SOLDIERF_LV2_AI: 2
+    #   STR_CHAOSCULT_PILOTM_AI: 1
+    #   STR_CHAOSCULT_GUARDFLAKM_AI: 2
+    #   STR_CHAOSCULT_OGRYN_AI: 1
+    #   STR_TZEENTCH_CULT_WITCH: 1
+    terrains:
+      - URBAN
+      # - BDAIRPORT
+      - REFINERY
+      - INDUSTRIALURBANDIO
+    alert: STR_INQUISITION_PURGE_ALERT_GV
+    alertBackground: StormtroopersScionsBG.SCR
+    briefing:
+      cutscene: TERROR
+      music: gmstory2
+      palette: 2
+      desc: STR_INQUISITION_PURGE_DESCRIPTION_GV
+      title: STR_INQUISITION_PURGE_MISSION_GV
+    markerName: STR_INQUISITION_PURGE_MISSION_GV
+    duration: [4, 10]
+    despawnPenalty: 1200  # +200

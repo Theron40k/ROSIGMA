@@ -73,7 +73,6 @@ items:
     tags:
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
-
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
 
@@ -105,3 +104,12 @@ items:
     costSell: 12500
     transferTime: 10
     listOrder: 6661
+
+  - type: STR_BEASTGUARD_CARAPACE_ARMOR
+    requiresBuy:
+      - STR_IMPERIAL_GUARD_MIDTIER
+    requiresBuyBaseFunc: [IMPERIUM]
+    # no cost buy because i have no idea where this armor is coming from or its place in the abhuman balance
+    size: 0.6
+    costSell: 45000
+    listOrder: 7500

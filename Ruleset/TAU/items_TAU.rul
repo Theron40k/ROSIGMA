@@ -2,7 +2,6 @@ items:
   - &STR_TAUDRONE_ITEMBASE_GV
     type: STR_TAUDRONE_GUN_GV
     categories: [STR_CAT_DRONE, STR_CAT_AUXILIARY]
-    requiresBuyBaseFunc: [IMPERIUM]  # will be tackled later
     size: 2
     transferTime: 24
     requires:
@@ -43,35 +42,35 @@ items:
     invHeight: 3
     listOrder: 2100
 
-  - type: STR_TAUDRONE_GUN_GV
-    refNode: *STR_TAUDRONE_ITEMBASE_GV
-    listOrder: 2101
-
   - type: STR_TAUDRONE_MARKER_GV
     refNode: *STR_TAUDRONE_ITEMBASE_GV
-    listOrder: 2102
+    listOrder: 2101
 
   - type: STR_TAU_PULSE_CARBINE_DRONE_TWINLINKED
     floorSprite: 3146
     handSprite: 3708
 
 # tokens
-  - type: STR_THUNDERBOLT_INTERCEPTOR_TOKEN_GV
+  - type: STR_ARMORED_TRUCKS_GV_TOKEN
     size: 0.1
 
-  - type: STR_LIGHT_CHIMERA_TOKEN_GV
+  - type: STR_CHIMERAGV_TOKEN
+    size: 0.1
+
+# blackstone shards
+  - type: STR_NOCTILITH_SHARD_GV
     size: 0.1
 
 # spawner
   - type: STR_FRIENDLYLEMONRUSS_SPAWNER
     spawnUnit: STR_LEMONRUSS
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
-  - type: STR_FRIENDLY_DRONE_SPAWNER
-    spawnUnit: STR_TAUDRONE_GUN_GV
+  - type: STR_FRIENDLY_TURRET_DRONE_SPAWNER
+    spawnUnit: STR_DEVILFISH_DRONE_TURRET_GV
     spawnUnitChance: 100
     spawnUnitFaction: 0
     invWidth: 0
@@ -82,3 +81,196 @@ items:
     hitAnimation: {mod: 40k, index: 150}
     hitSound: {mod: 40k, index: 788}
     hiddenOnMinimap: true
+
+  - type: STR_ENEMY_TURRET_DRONE_SPAWNER
+    spawnUnit: STR_DEVILFISH_DRONE_TURRET_AI_GV
+    spawnUnitChance: 100
+    spawnUnitFaction: 1
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+    recover: false
+    hitAnimation: {mod: 40k, index: 150}
+    hitSound: {mod: 40k, index: 788}
+    hiddenOnMinimap: true
+
+  # Tau Chimera Guns and spawners
+
+  - type: STR_CHIMERAGV_HULL_ARMOR
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+  - type: STR_CHIMERAGV_BOLTER_TURRET_ARMOR
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+  - type: STR_CHIMERAGV_HULLGUN_SPAWNER
+    spawnUnit: STR_CHIMERAGV_HULLGUN
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CHIMERAGV_BOLTTURRET_SPAWNER
+    spawnUnit: STR_CHIMERAGV_BOLTER_TURRET
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_GVTRUCK_TURRET_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_GVTRUCK_SMALL_TURRET
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CIVILIAN_M0_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_M0
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CIVILIAN_M1_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_M1
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CIVILIAN_F0_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_F0
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_CIVILIAN_F1_SPAWNER
+    liveAlien: false
+    recover: false
+    spawnUnit: STR_CIVILIAN_F1
+    spawnUnitFaction: 2
+    spawnUnitChance: 80   # add a little randomness
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: INV_NULL_SENTINELGV_BLUE_BERRY
+    bigSprite: 3916
+    invWidth: 3
+    invHeight: 3
+    weight: 0
+    fixedWeapon: true
+    recover: false
+    defaultInventorySlot: STR_BACK_PACK
+
+  - type: INV_NULL_SENTINELGV_AUTOCANNON
+    bigSprite: 3924
+    invWidth: 3
+    invHeight: 3
+    weight: 0
+    fixedWeapon: true
+    recover: false
+    defaultInventorySlot: STR_BACK_PACK
+
+  - &STR_DEVILFISH_TURRET_SPAWNERS
+    type: STR_FRIENDLY_DEVILFISH_TURRET_SPAWNER
+    spawnUnit: STR_DEVILFISH_TURRET_GV
+    spawnUnitChance: 100
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+    recover: false
+    hitAnimation: {mod: 40k, index: 150}
+    hitSound: {mod: 40k, index: 788}
+    hiddenOnMinimap: true
+
+  - &STR_DEVILFISH_TURRET_SPAWNERS
+    type: STR_ENEMY_DEVILFISH_TURRET_SPAWNER
+    spawnUnit: STR_DEVILFISH_TURRET_GV
+    spawnUnitChance: 100
+    spawnUnitFaction: 1
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+    recover: false
+    hitAnimation: {mod: 40k, index: 150}
+    hitSound: {mod: 40k, index: 788}
+    hiddenOnMinimap: true
+
+  - type: STR_CRAFT_BURST_CANNON_GV
+    categories: [STR_CRAFT_WEAPONS]
+    ufopediaType: STR_CRAFT_BURST_CANNON_GV_UC
+    size: 0.8
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
+    costBuy: 30000
+    costSell: 12000
+    transferTime: 48
+    listOrder: 1100
+
+  - type: STR_CRAFT_SEEKER_MISSILE_RACK_GV
+    categories: [STR_CRAFT_WEAPONS]
+    ufopediaType: STR_CRAFT_SEEKER_MISSILE_RACK_GV
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
+    size: 0.8
+    costBuy: 50000
+    costSell: 12000
+    transferTime: 48
+    listOrder: 1100
+
+  - type: STR_CRAFT_SEEKER_MISSILE_GV
+    categories: [STR_CRAFT_WEAPONS]
+    ufopediaType: STR_CRAFT_SEEKER_MISSILE_RACK_GV
+    requiresBuy:
+      - STR_REMORA_INTERCEPTORS_GV
+    requiresBuyBaseFunc:
+      - HANGAR
+    size: 0.4
+    clipSize: 1
+    costBuy: 5000
+    costSell: 1200
+    transferTime: 48
+    listOrder: 1150
+
+#  - type: STR_CULTIST_ROBE_GV_SPAWNER
+#    liveAlien: false
+#    recover: false
+#    spawnUnit: STR_CULTIST_ROBE_GV
+#    spawnUnitFaction: 1
+#    invWidth: 0
+#    invHeight: 0
+#    battleType: 4
+
+  - type: STR_DEVILFISH_DRONE_TURRET_AI_GV
+    liveAlien: false
+    recover: false
+    size: 0.0
+    listOrder: 20400

@@ -11,8 +11,35 @@ skills:
     checkHandsOnly: false
 
   - type: STR_WBWARPSMITH_AUX_PROBE
+    targetMode: 8
     costUse:
-      time: 2
+      time: 8
     compatibleWeapons:
       - STR_WARPSMITHPOWER_TOKEN
+    checkHandsOnly: false
+
+  - type: STR_WB_ASHENPHOSPHEX
+    targetMode: 8
+    costUse:
+      time: 4
+    flatUse:
+      time: true
+    compatibleWeapons:
+      - STR_PHOSPHEX_ASHENGUN_TOKEN
+    checkHandsOnly: false
+
+  - type: STR_SKILL_PSI_PANICWB
+    targetMode: 14
+    costUse:
+      time: 25
+    compatibleWeapons:
+      - STR_PSI_AMP_TOKENWB
+    checkHandsOnly: false
+
+  - type: STR_SKILL_PSI_MIND_CONTROLWB
+    targetMode: 13
+    costUse:
+      time: 60
+    compatibleWeapons:
+      - STR_PSI_AMP_TOKENWB
     checkHandsOnly: false

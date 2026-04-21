@@ -74,7 +74,7 @@ manufacture:
     producedItems:
       STR_KILLPOINT_TOKEN: 1
 
-  - name: STR_CONVERT_GUARD_VETERAN
+  - name: STR_CONVERT_GUARD_VETERAN #actually officers
     category: STR_CAT_HERETICAL
     requires:
       - STR_NOT_CHAOSCULT
@@ -84,7 +84,7 @@ manufacture:
     cost: 20000
     requiredItems:
       STR_LIVE_CAPTURE_GUARDAI_VETERAN: 1  # Guard
-    spawnedPersonType: STR_GUARD_VETERAN
+    spawnedPersonType: STR_GUARD_OFFICER_VETERAN
     producedItems:
       STR_KILLPOINT_TOKEN: 1
 
@@ -264,6 +264,7 @@ manufacture:
     category: STR_CAT_REEDUCATE
     requires:
       - STR_NOT_CHAOSCULT
+      - STR_NOT_RADICAL  # radical road has an improved version
       - STR_REEDUCATION_RESEARCH
     space: 0
     time: 500
@@ -1704,3 +1705,20 @@ manufacture:
       STR_ALIEN_ALLOYS: 600  # was 1200
       STR_UFO_POWER_SOURCE: 2
       STR_UFO_NAVIGATION: 1
+
+
+  - name: STR_COMPLETSACRIFICEITEMPC
+    category: STR_MISSIONS_MANUFACTURING
+    requires:
+      - STR_NOTDONEBEFORE  # to avoid making more of those items
+      - STR_CHAOS_PATH
+      - STR_IMPERIALBASEDEAD
+      - STR_NOT_WORDBEARERS
+      - STR_NOT_CHAOSCULT
+    space: 1
+    time: 500
+    cost: 300000
+    requiredItems:
+      STR_IMPERIAL_BASE_DATA: 3
+    producedItems:
+      STR_GREAT_SACRIFICEPC: 1

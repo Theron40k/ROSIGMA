@@ -3821,7 +3821,7 @@ armors:
     visibilityAtDay: 40
     visibilityAtDark: 15
     spriteSheet: VALHALLAN_FLAK_BS.PCK
-    spriteInv: GUARD_VALHALLAN_ROOKIE #bit uncertain how to handle the sprite switching with the rookie and flak versions
+    spriteInv: GUARD_VALHALLAN_ROOKIE_33 #bit uncertain how to handle the sprite switching with the rookie and flak versions
     customArmorPreviewIndex: 920
     spriteFaceGroup: 6
     spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
@@ -3857,6 +3857,52 @@ armors:
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 2
+    spriteSheet: VALHALLAN_CARAPACE_BS.PCK
+    spriteInv: GUARD_VALHALLAN_CARAPACE_33
+    customArmorPreviewIndex: 921
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    corpseBattle:
+      - STR_VALHALLAN_CARAPACE_CORPSE
+    storeItem: STR_NONE
+    frontArmor: 70
+    sideArmor: 60
+    rearArmor: 30
+    underArmor: 60
+    stats:
+      tu: -5
+      stamina: -10
+      strength: 5
+      bravery: 10  # always multiples of 10
+    drawingRoutine: 0
+    weight: 15
+    damageModifier:  # GUARD ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.2  # FLAMES
+      - 1.0  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_GUARD_VALHALLAN
+    loftempsSet: [3]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
 
   # TURRETS AND SPONSONS
   - type: STR_CHIMERA_TURRET_ARMOR
@@ -4458,6 +4504,8 @@ armors:
     units:
       - STR_GUARD_VETERAN
       - STR_STORMTROOPER
+      - STR_GUEVESAUI_GV
+      - STR_GUEVESAVRE_GV
     stats:
       tu: -10  # Clunky Primitive Power Armor Interface
       stamina: 10  # Armor does help with stamina though
@@ -4537,6 +4585,8 @@ armors:
     units:
       - STR_GUARD_VETERAN
       - STR_STORMTROOPER
+      - STR_GUEVESAUI_GV
+      - STR_GUEVESAVRE_GV
     weight: 5  # medical apparatus
     stats:
       tu: -15  # Clunky Primitive Power Armor Interface; worsened by heavy medical gear
@@ -4557,8 +4607,7 @@ armors:
     #   ARMOR_ENERGY_SHIELD_HP_PER_TURN: 4  # 40 hp shields
     #   ARMOR_ENERGY_SHIELD_DECAY: 10
     refNode: *STR_GUARD_POWER_ARMOR_REF
-    # spriteSheet:  STR_GUARD_POWER_ARMOR_OFFICER_BS.PCK  # new
-    spriteSheet: IG_POWER_ARMOR_BS.PCK
+    spriteSheet: IG_OFFPOWER_ARMOR_BS.PCK
     customArmorPreviewIndex: 854
     loftempsSet: [4]  # bigger, PA
     ufopediaType: STR_GUARD_POWER_ARMOR
@@ -4583,6 +4632,7 @@ armors:
     units:
       - STR_STORMTROOPER_OFFICER
       - STR_GUARD_OFFICER_VETERAN
+      - STR_GUEVESAVRE_GV
     storeItem: STR_GUARD_POWER_ARMOR
     specialWeapon: STR_AIRSTRIKE_VOX_SPECIAL  # Officer armor equipped with Vox caster
     builtInWeapons:
@@ -4597,7 +4647,7 @@ armors:
     #   ARMOR_ENERGY_SHIELD_HP_PER_TURN: 4  # 40 hp shields
     #   ARMOR_ENERGY_SHIELD_DECAY: 10
     refNode: *STR_GUARD_POWER_ARMOR_REF
-    spriteSheet: IG_POWER_ARMOR_BS.PCK  # STR_GUARD_POWER_ARMOR_OFFICER_BS.PCK  # Uses the same as the officer one
+    spriteSheet: IG_COMMPOWER_ARMOR_BS.PCK
     customArmorPreviewIndex: 855
     loftempsSet: [4]  # bigger, PA
     ufopediaType: STR_GUARD_POWER_ARMOR
@@ -5178,6 +5228,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_XENO: 1 # was imperium
       UNIT_TYPE_ORK: 1 # was guard
+      INTIMIDATION_RESISTANCE: 75
 
   - type: STR_LE10_POWER_ARMOR_HULK_CHAOS  # Vault Armor
     refNode: *STR_GUARD_POWER_ARMOR_REF

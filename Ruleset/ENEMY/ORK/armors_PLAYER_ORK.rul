@@ -43,7 +43,7 @@ armors:
     allowsMoving: false
     tags:
       INFECTION_RESIST: 100  # infection immune
-      INTIMIDATION_RESISTANCE: 50  # intimidate resistance
+      INTIMIDATION_RESISTANCE: 66  # intimidate resistance
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_XENO: 1
@@ -91,7 +91,7 @@ armors:
     allowsMoving: false
     tags:
       INFECTION_RESIST: 100  # infection immune
-      INTIMIDATION_RESISTANCE: 50  # intimidate resistance
+      INTIMIDATION_RESISTANCE: 66  # intimidate resistance
       UNIT_SIZE: 200 # HUGE
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_XENO: 1
@@ -265,6 +265,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
+      INTIMIDATION_RESISTANCE: 25
 
   - type: STR_GUARD_ORK_FLAK_ARMOR
     refNode: *ORK_FLAK
@@ -322,6 +323,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 75 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_BLOODAXE_ARDBOY_KARAPACE_PLAYER_ARMOR
     refNode: *ORK_KARAPACE
@@ -368,6 +370,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 50 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_OFFICORK_NOB_ARMOR # same as nob armor for now
     refNode: *ORK_KARAPACE
@@ -395,6 +398,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 15 # much less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - &ORK_MEGANOB
     type: STR_BLOODAXE_MEGANOB_PLAYER_ARMOR
@@ -455,6 +459,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 35 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 66
 
   - type: STR_ASSAULT_MEGA_ARMOR # meganob armor with built in weapons
     refNode: *ORK_MEGANOB
@@ -606,6 +611,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 65 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_PLAYER_ORK_KILLA_ARMOR  # KILLA KAN
     group: 1 # to prevent it from going on the speed trukk
@@ -682,6 +688,7 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
+      INTIMIDATION_RESISTANCE: 75
 
   - type: STR_PLAYER_BIG_MEK_ARMOR  # ToDo: BALANCE
     visibilityAtDay: 40
@@ -753,6 +760,7 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50 # Mega Powa Field.
       ARMOR_ENERGY_SHIELD_DECAY: 25
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: -1  # too big and Orky to be anything other than an Ork
+      INTIMIDATION_RESISTANCE: 75
 
 ### Speed Kult
 
@@ -817,6 +825,7 @@ armors:
       FLIGHT_DODGE_CHANCE: 25
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 65 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_PLAYER_ORK_BIKE_ARMOR            # ORK WARBIKE
     visibilityAtDay: 40
@@ -889,6 +898,7 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_PLAYER_ORK_DEFFKOPTER_ARMOR  # Deffkopter Armour
     visibilityAtDay: 40  # good visibility from air
@@ -962,6 +972,7 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
+      INTIMIDATION_RESISTANCE: 50
 
 ### Spookum Kamp
 
@@ -1030,6 +1041,7 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 75 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_PLAYER_ORK_KOMMANDO_ARMOR  # ARMOR
     visibilityAtDay: 40
@@ -1098,6 +1110,7 @@ armors:
       DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 65 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_PLAYER_WEIRDORK_ARMOR
     movementType: 0
@@ -1186,6 +1199,7 @@ armors:
       UNIT_TYPE_PSYKER: 1
       DODGE_CHANCE: 25
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      INTIMIDATION_RESISTANCE: 50
 
 ### Dakka Gitz
 
@@ -1248,6 +1262,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 65 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_PLAYER_ORK_ARMOR_BURNA
     visibilityAtDay: 40
@@ -1307,3 +1322,4 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 65 # less likely to be alpha legion
+      INTIMIDATION_RESISTANCE: 50

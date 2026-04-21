@@ -90,6 +90,10 @@ items:
       basePercent: 50
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 7
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
 
   - type: STR_PISTOLS    # Stalker boltpistol
     armor: 200
@@ -100,7 +104,6 @@ items:
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
 
-
   - type: STR_PISTOLH  # BOLTER PISTOL  10130 TYPE HYBRID
     armor: 200
     requiresBuy:
@@ -109,6 +112,10 @@ items:
       basePercent: 50
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 7
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
 
   - type: STR_RIFLE  # BOLTER  #         10300
     armor: 200
@@ -177,7 +184,7 @@ items:
   - type: STR_MCRIFLE  # BOLTER                 10400                   MC no aim
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     size: 0.3
-    costSell: 2750
+    costSell: 10000
     weight: 20
     compatibleAmmo:
       - STR_RIFLE_CLIP
@@ -289,6 +296,13 @@ items:
       ITEM_RECOIL: 25
       ITEM_IS_HEAVY_WEAPON: 1  # infantry but not mounted/vehicle heavy weapons
 
+
+  - type: STR_HEAVY_LASER
+    costSell: 10000
+
+  - type: STR_HFLAMER
+    costSell: 35000
+
   - type: STR_SHOTGUN
     weight: 10  # +3 from 7 vanilla, makes the low weight carbines more attractive.
     armor: 200
@@ -303,6 +317,8 @@ items:
     compatibleAmmo:
       - STR_SHOTGUN_SHELLS
       - STR_SHOTGUN_SHELLS_MC
+      - STR_SHOTGUN_SHELLS_AP
+      - STR_SHOTGUN_SHELLS_INC
       - STR_STUN_SHELLS
       - STR_STUN_GAS_SHELLS
 
@@ -615,7 +631,7 @@ items:
   - type: STR_MFIST
     refNode: *STR_POWER_FIST_WEAPON
 
-  - type: STR_POWERFIST_STEEL_LEGION
+  - type: STR_LIGHT_POWERFIST
     refNode: *STR_POWER_FIST_WEAPON
     costBuy: 10000
     costSell: 2500
@@ -623,7 +639,7 @@ items:
     invWidth: 2
     size: 0.1
     requiresBuy:
-      - STR_STEEL_LEGION_STRATEGY_MIDTIER
+      - STR_IMPERIAL_GUARD_MIDTIER
     bigSprite: 938
     floorSprite: 918
     handSprite: 1032
@@ -1078,8 +1094,9 @@ items:
   - type: STR_BIKE_ARMOR
     requiresBuy:
       - STR_NOT_PRIMARIS
-      - STR_NOT_SPACEWOLVES #Until Swiftclaw bike armor is added
+      - STR_NOT_SPACEWOLVES  # Until Swiftclaw bike armor is added
       - STR_MARINES_STRATEGY
+      - STR_NOT_WORDBEARERS  # they have their own stuff
 
   - type: STR_GRAV_FLAMER
     powerRangeReduction: 15
@@ -1493,7 +1510,7 @@ items:
     size: 0.3
     dropoff: 5
     costBuy: 30000
-    costSell: 7500
+    costSell: 2500
     weight: 20
     bigSprite: 1050
     floorSprite: 979
@@ -1535,7 +1552,7 @@ items:
     refNode: *STR_PRIMARIS_CARBINE_TEMPLATE
     requiresBuyBaseFunc: [TRADE]
     costBuy: 60000
-    costSell: 15000
+    costSell: 5000
     dropoff: 4  # battle rifle dropoff
     bigSprite: 1051
     floorSprite: 980
@@ -1567,7 +1584,7 @@ items:
     size: 0.3
     dropoff: 4
     costBuy: 30000
-    costSell: 7500
+    costSell: 5000
     weight: 25
     bigSprite: {mod: 40k, index: 350}
     floorSprite: {mod: 40k, index: 204}
@@ -1599,6 +1616,10 @@ items:
     listOrder: 10330
     tags:
       ITEM_RECOIL: 40
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 7
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
 
   - type: STR_PRIMARIS_CAWL_UNDERSLUNG  # BOLTER  #        10330  TYPE RIFLE
     refNode: *STR_PRIMARIS_RIFLE_TEMPLATE
@@ -1610,7 +1631,7 @@ items:
     floorSprite: 983
     handSprite: 1196
     costBuy: 40000
-    costSell: 10000
+    costSell: 6000
     weight: 30
     aimRange: 16  # GL; snapshot accuracy
     accuracyAimed: 80
@@ -1630,7 +1651,7 @@ items:
   - type: STR_PRIMARIS_HEAVY_BOLT_PISTOL
     refNode: *STR_PRIMARIS_RIFLE_TEMPLATE
     costBuy: 20000
-    costSell: 5000
+    costSell: 4000
     dropoff: 6  # pistol
     bigSprite: 1052
     floorSprite: 981
@@ -1667,7 +1688,7 @@ items:
   - type: STR_PRIMARIS_ABSOLVER_PISTOL
     refNode: *STR_PRIMARIS_RIFLE_TEMPLATE
     costBuy: 60000
-    costSell: 15000
+    costSell: 6000
     dropoff: 6  # pistol
     bigSprite: 1047
     floorSprite: 976
@@ -1709,7 +1730,7 @@ items:
     floorSprite: 977
     handSprite: 1148
     costBuy: 100000
-    costSell: 25000
+    costSell: 7000
     weight: 30
     compatibleAmmo:
       - STR_PRIMARIS_EXECUTOR_RIFLE_DRUM_MAG  # to be expanded to include other damage types?
@@ -1741,7 +1762,7 @@ items:
     floorSprite: 982
     handSprite: 1188
     costBuy: 100000
-    costSell: 25000
+    costSell: 7000
     weight: 35
     compatibleAmmo:
       - STR_RIFLE_CLIP
@@ -1776,7 +1797,7 @@ items:
     floorSprite: 984
     handSprite: 1204
     costBuy: 100000
-    costSell: 25000
+    costSell: 7000
     weight: 30
     snapRange: 18
     aimRange: 25
@@ -1908,7 +1929,7 @@ items:
     categories: [STR_CAT_MELTA, STR_CAT_TACTICAL]
     size: 0.5
     dropoff: 6
-    costSell: 50000
+    costSell: 10000
     weight: 35
     bigSprite: 1049
     floorSprite: 978
@@ -1939,7 +1960,7 @@ items:
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
     size: 0.1
     dropoff: 6
-    costSell: 50000
+    costSell: 15000
     weight: 20
     floorSprite: 971
     handSprite: 1100
@@ -1993,7 +2014,7 @@ items:
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
     size: 0.2
     dropoff: 5
-    costSell: 100000
+    costSell: 5000
     weight: 40
     floorSprite: 973
     handSprite: 1116
@@ -2222,3 +2243,46 @@ items:
     invHeight: 3
     armor: 40
     battleType: 11
+
+  # primaris impulsor turret spawner
+
+  - type: STR_IMPULSORTURRET_SPAWNER
+    liveAlien: false
+    recover: true
+    spawnUnit: STR_IMPULSORTURRET_TURRETUNIT
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  # primaris repulsor turret spawner
+
+  - type: STR_REPULSORLASCANTURRET_SPAWNER
+    liveAlien: false
+    recover: true
+    spawnUnit: STR_REPULSOR_LASCANNONTURRET
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_REPULSORBATTLECANNON_SPAWNER
+    liveAlien: false
+    recover: true
+    spawnUnit: STR_REPULSOR_BATTLECANNON
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+
+  # deathwatch impulsor turret spawner
+
+  - type: STR_IMPULSORTURRET_SPAWNER_DW
+    liveAlien: false
+    recover: true
+    spawnUnit: STR_IMPULSORTURRET_TURRETUNIT_DW
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4

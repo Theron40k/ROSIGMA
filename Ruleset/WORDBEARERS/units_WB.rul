@@ -64,7 +64,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 30
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 5
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 1
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 3
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 2
       -  # Tier 2
@@ -72,7 +72,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 10
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 2
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 10
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 10
       -  # Tier 3
@@ -80,7 +80,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 2
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 3
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 15
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 3
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 25
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 15
 
@@ -119,7 +119,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 30
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 5
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 1
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 3
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 2
       -  # Tier 2
@@ -127,7 +127,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 5
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 25
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 2
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 10
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 10
       -  # Tier 3
@@ -135,7 +135,7 @@ units:
         BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 1
         BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
         BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 1
-        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 18
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 4
         BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 25
         BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 15
 
@@ -205,7 +205,7 @@ units:
     armor: STR_WORDBEARER_CULTIST_ARMOR
     moraleLossWhenKilled: 1  # chaff cultists
     intelligence: 1
-    aggression: 6
+    aggression: 2
     spotter: 1
     standHeight: 21
     kneelHeight: 16
@@ -223,6 +223,7 @@ units:
   - type: STR_WBHELBRUTE_AI
     race: STR_ETHEREAL  # CHAOS TRAITOR
     rank: STR_LIVE_TERRORIST
+    civilianRecoveryType: STR_WBHELBRUTE_PLAYER
     liveAlien: ""
     stats:
       tu: 140
@@ -272,7 +273,7 @@ units:
     kneelHeight: 16
     value: 200
     deathSound: {mod: 40k, index: 23}
-    intelligence: 4
+    intelligence: 2
     aggression: 7
     moveSound: {mod: 40k, index: 14}
     energyRecovery: 1
@@ -281,3 +282,287 @@ units:
       - - STR_VINDICATOR_WEAPON
       - - STR_VINDICATOR_WEAPON
       - - STR_VINDICATOR_WEAPON
+
+  # daemonic temporary host
+
+  - type: STR_KHORNEDEMONTEMPO
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    liveAlien: ""
+    stats:
+      tu: 110
+      stamina: 128
+      health: 90
+      bravery: 110
+      reactions: 88
+      firing: 48
+      throwing: 48
+      strength: 118
+      psiStrength: 118
+      psiSkill: 0
+      melee: 118
+    armor: STR_KHORNEDEMON_ARMORTEMPO
+    standHeight: 20
+    kneelHeight: 14
+    berserkChance: 99
+    value: 15
+    deathSound: 737
+    moveSound: -1
+    intelligence: 1
+    aggression: 8
+    aggroSound: [2413, 2414]
+    energyRecovery: 88
+    canPanic: false
+    specab: 2
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    avoidsFire: false
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+
+  - type: STR_NURGLEDEMONTEMPO
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    liveAlien: ""
+    stats:
+      tu: 110
+      stamina: 128
+      health: 90
+      bravery: 110
+      reactions: 88
+      firing: 48
+      throwing: 48
+      strength: 118
+      psiStrength: 118
+      psiSkill: 0
+      melee: 118
+    armor: STR_NURGLEDEMON_ARMORTEMPO
+    standHeight: 20
+    kneelHeight: 14
+    berserkChance: 99
+    value: 15
+    deathSound: 737
+    moveSound: -1
+    intelligence: 1
+    aggression: 8
+    aggroSound: [2413, 2414]
+    energyRecovery: 88
+    canPanic: false
+    specab: 2
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    avoidsFire: false
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+
+  - type: STR_SLAANESHDEMONTEMPO
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    liveAlien: ""
+    stats:
+      tu: 110
+      stamina: 110
+      health: 70
+      bravery: 110
+      reactions: 88
+      firing: 48
+      throwing: 48
+      strength: 118
+      psiStrength: 118
+      psiSkill: 0
+      melee: 118
+    armor: STR_SLAANESHDEMON_ARMORTEMPO
+    standHeight: 20
+    kneelHeight: 14
+    berserkChance: 99
+    value: 15
+    deathSound: 737
+    moveSound: -1
+    intelligence: 1
+    aggression: 8
+    aggroSound: [2413, 2414]
+    energyRecovery: 88
+    canPanic: false
+    specab: 2
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    avoidsFire: false
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+
+  - type: STR_TZEENTCHDEMONTEMPO
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    liveAlien: ""
+    stats:
+      tu: 110
+      stamina: 110
+      health: 70
+      bravery: 110
+      reactions: 88
+      firing: 48
+      throwing: 48
+      strength: 118
+      psiStrength: 118
+      psiSkill: 0
+      melee: 118
+    armor: STR_TZEENTCHDEMON_ARMORTEMPO
+    standHeight: 20
+    kneelHeight: 14
+    berserkChance: 99
+    value: 15
+    deathSound: 737
+    moveSound: -1
+    intelligence: 1
+    aggression: 8
+    aggroSound: [2413, 2414]
+    energyRecovery: 88
+    canPanic: false
+    specab: 2
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    avoidsFire: false
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+
+  - type: STR_UNDIVIDEDDEMONTEMPO
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    liveAlien: ""
+    stats:
+      tu: 110
+      stamina: 128
+      health: 80
+      bravery: 110
+      reactions: 88
+      firing: 48
+      throwing: 48
+      strength: 118
+      psiStrength: 118
+      psiSkill: 0
+      melee: 118
+    armor: STR_UNDIVIDEDDEMON_ARMORTEMPO
+    standHeight: 20
+    kneelHeight: 14
+    berserkChance: 99
+    value: 15
+    deathSound: 737
+    moveSound: -1
+    intelligence: 1
+    aggression: 8
+    aggroSound: [2413, 2414]
+    energyRecovery: 88
+    canPanic: false
+    specab: 2
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    avoidsFire: false
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+
+  - type: STR_UNDIVIDEDDEMONTEMPO2
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    liveAlien: ""
+    stats:
+      tu: 110
+      stamina: 130
+      health: 90
+      bravery: 110
+      reactions: 88
+      firing: 48
+      throwing: 48
+      strength: 118
+      psiStrength: 118
+      psiSkill: 0
+      melee: 118
+    armor: STR_UNDIVIDEDDEMON_ARMORTEMPO2
+    standHeight: 20
+    kneelHeight: 14
+    berserkChance: 99
+    value: 15
+    deathSound: 737
+    moveSound: -1
+    intelligence: 1
+    aggression: 8
+    aggroSound: [2413, 2414]
+    energyRecovery: 88
+    canPanic: false
+    specab: 2
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    avoidsFire: false
+    isLeeroyJenkins: true
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON  # basic loadouts
+
+  - type: STR_NEVERBORNLING
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    liveAlien: ""
+    stats:
+      tu: 68 #He got lil legs
+      stamina: 48 #He can't have big lungs
+      health: 48 # Little man
+      bravery: 100
+      reactions: 40
+      firing: 70
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 80
+    armor: STR_NEVERBORNLING_ARMOR
+    isLeeroyJenkins: true
+    capturable: false
+    standHeight: 10
+    kneelHeight: 10
+    value: 5
+    deathSound: 2445
+    moveSound: -1
+    intelligence: 3
+    aggression: 5
+    energyRecovery: 40
+#    specab: 2
+    livingWeapon: false
