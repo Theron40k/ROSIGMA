@@ -477,6 +477,37 @@ armors:
       - STR_TWIN_SHOOTAS
       - STR_POWER_KLAW2
 
+  - type: STR_ASSAULT_MEGA_ARMOR_BURNA # meganob armor with built in Burna
+    refNode: *ORK_MEGANOB
+    spriteSheet: BLOODAXE_ARMED_MEGANOB_BS.PCK
+    spriteInv: O6BLOODAXEARMEDMEGANOBINV.SPK
+    customArmorPreviewIndex: [1266, 1267]
+    drawingRoutine: 4
+    allowsKneeling: false
+    storeItem: STR_ASSAULT_MEGANOB_ARMOR
+    frontArmor: 155 # 15 better front/side
+    sideArmor: 125
+    rearArmor: 80 # 10 worse rear
+    underArmor: 110
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES Better fire resistance
+      - 0.8  # HE
+      - 0.9  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA
+    builtInWeapons:
+      - STR_BURNA_MOUNTED  # Infinite ammo version
+      - STR_BURNA_TANK_BUILTIN
+      - STR_SCORCHA_TANK_BUILTIN
+      - STR_POWER_KLAW2
+
   - type: STR_PLAYER_ORK_MEGAWARBOSS_ARMOR  # Warboss Mega Armour
     visibilityAtDay: 40
     visibilityAtDark: 30

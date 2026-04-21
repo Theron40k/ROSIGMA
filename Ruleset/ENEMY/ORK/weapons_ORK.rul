@@ -2363,17 +2363,29 @@ items:
       - STR_ORK_BASIC_WEAPONS
 #    requiresBuyBaseFunc: [TRADE]
     costSell: 3000
-    weight: 30
+    weight: 15 # was 30
     accuracySnap: 65
-    tuSnap: 55
+    tuSnap: 33 # was 55. Now similar to other disposable launchers
     battleType: 1
-    power: 100
+    power: 100 # 20 more than stikkbomb
+    damageAlter: # Didn't have any. now same as stikkbomb
+      FixRadius: 8 # stikkbomb is 7
+      ToArmorPre: 0.05  # small ablation
+      ArmorEffectiveness: 1.1  # concussive + shrapnel everywhere
+      ToHealth: 0.9  # higher health damage than a frag
+      ToTime: 0.15  # painful
+      ToStun: 0.3  # painful
+      ToMorale: 0.5  # painful
+      ToEnergy: 0.4  # painful
+      ToWound: 0.2  # less shrapnel than a frag
+      RandomWound: false
+      ToTile: 0.5  # higher terrain and item damage than a frag
+      ToItem: 0.5
     damageType: 3
     clipSize: 1
-    blastRadius: 8
     twoHanded: true
     blockBothHands: false
-    oneHandedPenalty: 100
+    oneHandedPenalty: 15 # 85 accuracy for using 1-handed
     invWidth: 2
     invHeight: 3
     accuracyMultiplier: # standard ork weapon multiplier
@@ -2392,14 +2404,14 @@ items:
       - STR_ORK_BASIC_WEAPONS
 #    requiresBuyBaseFunc: [TRADE]
     costSell: 3000
-    weight: 10
+    weight: 15 # was 10
     bigSprite: 2018
     floorSprite: 2110
     handSprite: 2216
     bulletSprite: {mod: 40k, index: 0}
     fireSound: {mod: 40k, index: 52}
-    accuracySnap: 55
-    tuSnap: 50
+    accuracySnap: 65 # was 55
+    tuSnap: 33 # was 50. Now similar to other disposable launchers
     battleType: 1
     hitSound: {mod: 40k, index: 0}
     hitAnimation: {mod: 40k, index: 0}
@@ -2418,7 +2430,7 @@ items:
     oneHandedPenalty: 25
     invWidth: 1
     invHeight: 3
-    maxRange: 12
+    maxRange: 18 # was 12
     accuracyMultiplier: # standard ork weapon multiplier
       firing: 0.75
       strength: [0.4, -0.0008]
@@ -2572,22 +2584,25 @@ items:
         compatibleAmmo: [STR_SCORCHA_TANK_BUILTIN]
       1:
         compatibleAmmo: [STR_BURNA_TANK_BUILTIN]
-    accuracyAuto: 25
-    tuAuto: 35 # same as imperial flamer. was 50.
-    autoRange: 8
     confAuto:  # flamer type weapon
       name: STR_SCORCHA_SHOT
       ammoSlot: 0  # Scorcha
       arcing: true
-      shots: 6
+      shots: 6 # 1 more than regular burna
     confSnap:  # MELTA BEAM
       name: STR_BURNA_SHOT
       ammoSlot: 1  # Burna tank
       arcing: false
+    accuracyAuto: 25
+    tuAuto: 30 # 5 faster than regular burna
+    autoRange: 8 # 1 more than regular burna
     accuracySnap: 75
-    tuSnap: 40
-    snapRange: 5
-    maxRange: 10
+    tuSnap: 35 # 5 faster than regular burna
+    snapRange: 5 # 2 better than regular burna
+    maxRange: 10 # 2 better than regular burna
+    accuracyMultiplier: # standard ork weapon multiplier
+      firing: 0.75
+      strength: [0.4, -0.0008]
     listOrder: 17110 # was 10500
     recover: false
     hiddenOnMinimap: true

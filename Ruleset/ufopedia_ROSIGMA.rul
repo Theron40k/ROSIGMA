@@ -7892,6 +7892,15 @@ ufopaedia:
     image_id: BEAKIE_NOBS_CODEX.SPK
     text: STR_ASSAULT_MEGA_ARMOR_UFOPEDIA
 
+  - id: STR_ASSAULT_MEGA_ARMOR_BURNA
+    type_id: 15
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORK_BOY_RECRUITMENT
+    image_id: BEAKIE_NOBS_CODEX.SPK
+    text: STR_ASSAULT_MEGA_ARMOR_BURNA_UFOPEDIA
+
   - id: STR_PLAYER_ORK_MEGAWARBOSS_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
@@ -14375,6 +14384,22 @@ ufopaedia:
   - id: STR_BURNA_TANK
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+  - id: STR_BURNA_MOUNTED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1OK10.SPK
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED # same as requirements for meganob armor that can use this.
+      - STR_ORK_BOY_RECRUITMENT
+    text: STR_BURNA_MOUNTED_UFOPEDIA
+    pages:
+      - title: STR_BURNA_MOUNTED
+        text: STR_BURNA_MOUNTED_UFOPEDIA
+        ammoSlot: 0
+      - title: STR_BURNA_MOUNTED
+        text: STR_BURNA_MOUNTED_UFOPEDIA
+        ammoSlot: 1
 
   - delete: STR_CHOPPA
   - id: STR_CHOPPA
