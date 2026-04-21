@@ -44,7 +44,7 @@
 # #CM.GK#             Grey Knights
 # #CM.RAD#            The Radical Road
 # #CM.OA#             Officio Assassinorum
-# #AT#              Adeptus Terra
+# #AT#              The Alien and the Heretic
 # #AT.LAW#            The Imperial Law Strategy
 # #AT.CULT#           Chaos Cult
 # #SOB#             Adeptas
@@ -1019,7 +1019,7 @@ research:
   - name: STR_NOT_SPACEWOLVES  # (Not Spacewolf Strategy)
   - name: STR_NOT_WORDBEARERS  # (Not Word Bearers Strategy)
 
-  - name: STR_NOT_ADEPTUS_TERRA  # (Not Adeptus Terra)
+  - name: STR_NOT_ADEPTUS_TERRA  # (Not Alien or Heretic)
   - delete: STR_NOT_THE_IMPERIAL_LAW
   - name: STR_NOT_THE_IMPERIAL_LAW  # (Not The Imperial Law)
   - name: STR_NOT_CHAOSCULT  # (Not Chaos Cult)
@@ -1794,11 +1794,7 @@ research:
       - STR_DEFAULT_CAMPAIGN
       - STR_XIPHON
       - STR_IMPERIUM_RESEARCH
-      - STR_MARINE_BOLTERS
-      - STR_MARINES_AND_INQUISITION
-      - STR_ADEPTAS_AND_INQUISITION
-      - STR_ADEPTAS_MARINES_AND_INQUISITION
-      - STR_HARDER_MISSIONS
+      # - STR_HARDER_MISSIONS
       - STR_INQ_STORMTROOPER_CODEX_UNLOCKER
       - STR_NORMAL_INQUISITION
     disables:
@@ -1822,6 +1818,7 @@ research:
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS
       - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
       - STR_INQ_STORMTROOPER_REQUISITION
       - STR_CORVUS_RESEARCH  # instead of STR_DEATHWATCH_AND_ADEPTAS setup
       - STR_POWER_ARMOR_SM_CODEX
@@ -1831,7 +1828,10 @@ research:
       - STR_PRIMARIS_AND_DEATHWATCH
       - STR_MARINES_AND_DEATHWATCH
       - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
       - STR_NOT_NORMAL_INQUISITION
+      - STR_HARDER_MISSIONS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     getOneFree:
       - STR_PERSONAL_ARMOR
@@ -1839,6 +1839,7 @@ research:
       - STR_NORMAL_INQUISITION
       - STR_NOT_DEATHWATCH
       - STR_GREYKNIGHTS
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
       - STR_ASSASSINORUM
@@ -1866,15 +1867,21 @@ research:
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS
       - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
       - STR_INQ_STORMTROOPER_REQUISITION
       - STR_NOT_NORMAL_INQUISITION
       - STR_GREYKNIGHTS
+      - STR_HARDER_MISSIONS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
     disables:
       - STR_NORMAL_INQUISITION
       - STR_NOT_GK
       - STR_PERSONAL_ARMOR
       - STR_DEATHWATCH
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
       - STR_DEFENSE_CORRIDORBR
@@ -1896,14 +1903,20 @@ research:
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS
       - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
       - STR_INQ_STORMTROOPER_REQUISITION
       - STR_CORVUS_RESEARCH
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_HARDER_MISSIONS
     disables:
       - STR_NOT_RADICAL
       - STR_GREYKNIGHTS
       - STR_DEATHWATCH
       - STR_ASSASSINORUM
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NORMAL_INQUISITION
     spawnedEvent: STR_REINFORCEMENTS_RADICAL_EVENT
 
@@ -1920,6 +1933,7 @@ research:
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS
       - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_MARINE_BOLTERS
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_GUARD_BARRACKS
@@ -1930,11 +1944,16 @@ research:
       - STR_IMPERIAL_ASSASSINS
       - STR_REPRISALIA_ACCESS
       - STR_MEDI_KIT_PREREQ
+      - STR_HARDER_MISSIONS
       - STR_EVEN_HARDER_MISSIONS
       - STR_NOT_NORMAL_INQUISITION
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
     disables:
       - STR_DEATHWATCH
       - STR_GREYKNIGHTS
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
       - STR_INQUISITION_VALKYRIE
@@ -1944,7 +1963,7 @@ research:
 
   - name: STR_OFFICIO_ASSASSINORUM_TIPS # PLEASE READ THE CODEX DEAR PLAYER
     dependencies:
-      - STR_GENERALLOCK
+      - STR_ASSASSINORUM
     cost: 0
     points: 0
 
@@ -1969,7 +1988,65 @@ research:
     cost: 0
     points: 0
 
-## Adeptus Terra #STRATEGY.AT#
+### The Imperial Law Strategy #STRATEGY.AT.LAW#
+  - name: STR_THE_IMPERIAL_LAW_STRATEGY  # The Imperial Law Strategy
+    cost: 5
+    points: 0
+    reenables:
+      - STR_CHAPTER_PURITY
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
+    dependencies:
+      - STR_CHAMBERMILITANT
+    unlocks:
+      - STR_DEFAULT_CAMPAIGN
+      - STR_LASER_WEAPONS
+      - STR_GUARD_AND_ARBITES
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_GUARD_BARRACKS
+      - STR_HEAVY_WEAPONS_IG
+      - STR_BASIC_SENTINEL_MISSILE
+      - STR_PILOT_GUARDSMEN
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_AWARD_PERSONAL_SHIELD
+      - STR_IMPERIUM_RESEARCH
+      - STR_NOT_NORMAL_INQUISITION
+      - STR_NOT_DEATHWATCH
+      - STR_NOT_GK
+      - STR_NOT_RADICAL
+    disables:
+      - STR_CHAMBER_NOT_ARBITES
+      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_NORMAL_INQUISITION
+      - STR_DEATHWATCH
+      - STR_GREYKNIGHTS
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_CHAOS_PATH
+      - STR_ASSASSINORUM
+      - STR_HB_DEP1
+      - STR_MARINE_BOLTERS
+      - STR_MARINES_AND_INQUISITION
+      - STR_ADEPTAS_AND_INQUISITION
+      - STR_ADEPTAS_MARINES_AND_INQUISITION
+      - STR_INQUISITION_VALKYRIE
+      - STR_XIPHON
+      #GG- STR_GREENEST_ORKZ
+      #GG- STR_TAU_GUEVESA_STRATEGY_GV
+    spawnedEvent: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
+
+# must be given with a researchList on an event or as a getOneFree
+# do NOT unlock with the non-Arbites Chamber strategy researches
+  - name: STR_CHAMBER_NOT_ARBITES
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+    disables:
+      # so you can't wait and get the free Inq and then pick it
+      - STR_THE_IMPERIAL_LAW_STRATEGY
+    spawnedEvent: STR_RECRUITS_CHAMBER_NOT_ARBITES
+
+## The Alien and the Heretic #STRATEGY.AT#
   - delete: STR_ARBITES
   - name: STR_ARBITES  # Arbites
     cost: 0
@@ -1979,7 +2056,6 @@ research:
       - STR_GENERALLOCK
     unlocks:
       - STR_IMPERIUM_RESEARCH
-      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_CHAOS_STRATEGY_ARBITES
     disables:
       - STR_NOT_ADEPTUS_TERRA
@@ -1991,36 +2067,6 @@ research:
       - STR_GUARD_SUPORT
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
 
-### The Imperial Law Strategy #STRATEGY.AT.LAW#
-  - name: STR_THE_IMPERIAL_LAW_STRATEGY  # The Imperial Law Strategy
-    # Added new arbites research used as a way to prevent arbites joining if you go chaos
-    cost: 5
-    points: 0
-    reenables:
-      - STR_CHAPTER_PURITY
-      - STR_THE_EMPEROR_PROTECTS_RESEARCH
-    dependencies:
-      - STR_ARBITES
-    unlocks:
-      - STR_DEFAULT_CAMPAIGN
-      - STR_LASER_WEAPONS
-      - STR_GUARD_AND_ARBITES
-      - STR_LIGHT_BOLTERS
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_GUARD_BARRACKS
-      - STR_HEAVY_WEAPONS_IG
-      - STR_BASIC_SENTINEL_MISSILE
-      - STR_PILOT_GUARDSMEN
-      - STR_NOT_STEEL_LEGION_STRATEGY
-      - STR_CHAPTER_PURITY
-      - STR_AWARD_PERSONAL_SHIELD
-    disables:
-      - STR_CHAOS_STRATEGY_ARBITES
-      - STR_NOT_THE_IMPERIAL_LAW
-      - STR_HB_DEP1
-      - STR_GREENEST_ORKZ
-      - STR_TAU_GUEVESA_STRATEGY_GV
-    spawnedEvent: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
 
 ### Chaos Cult #STRATEGY.AT.CULT#
   - name: STR_CHAOS_STRATEGY  # Ruinous Powers
@@ -2235,7 +2281,7 @@ research:
     dependencies:
       - STR_ADEPTAS  # - STR_GENERALLOCK
     lookup: STR_CHOSEN_ADEPTAS
-    getOneFree:
+    getOneFree: #WARNING do not add more than 1 getOneFree tech due to auto-repeatability issues
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
     unlocks:
       - STR_DEFAULT_CAMPAIGN
@@ -2253,6 +2299,7 @@ research:
       - STR_ADEPTAS_DROPPOD_RESEARCH
       - STR_ADEPTAS_ARMOR
       - STR_ADEPTAS_SOB_MOBILIZATION  # contains adeptas recruitment
+      - STR_TRAINING_BOLTERS_ADEPTAS
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
       - STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH  # recruitment
       - STR_ADEPTAS_SUPERIOR_RESEARCH
@@ -3555,6 +3602,7 @@ research:
       - STR_MEDI_KIT_PREREQ
       - STR_UFO_CONSTRUCTION
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
       - STR_NOT_GUARD
       - STR_NOT_PRIMARIS
@@ -3683,6 +3731,7 @@ research:
       - STR_UFO_CONSTRUCTION
       - STR_NOT_GUARD
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
 
   - name: STR_HELFROST_BLASTER_RESEARCH
@@ -3692,6 +3741,7 @@ research:
       - STR_SPACEWOLVES_MIDTIER_RESEARCH
       - STR_NOT_GUARD
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
 
   - name: STR_HELFROST_CANNON_RESEARCH
@@ -3703,6 +3753,7 @@ research:
       - STR_HELFROST_BLASTER_RESEARCH
       - STR_NOT_GUARD
       - STR_NOT_ADEPTUS_TERRA
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_NOT_ADEPTAS
 
   - name: STR_SWSTORMWOLF #Mid tier air transport for Space Wolves
@@ -3751,6 +3802,7 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_MIDTIER_PREREQ
+      - STR_NOT_THE_IMPERIAL_LAW
     getOneFree:
       - STR_IMPERIAL_INQUISITOR
   - name: STR_IMPERIAL_INQUISITOR  # Inquisitor
@@ -3814,6 +3866,7 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_NOT_THE_IMPERIAL_LAW
     getOneFree:
       - STR_INQ_STORMTROOPER
   - name: STR_INQ_STORMTROOPER  # Inquisition Storm Trooper
@@ -3912,6 +3965,7 @@ research:
     cost: 200
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_AGENTS_EVENT
 
@@ -3919,12 +3973,14 @@ research:
     cost: 400
     dependencies:
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_EVENT
 
   - name: STR_INQ_REQUISITION_ARBITES_RESEARCH  # Requisition Arbites Support
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_ARBITES_EVENT
 
@@ -3932,6 +3988,7 @@ research:
     cost: 600
     dependencies:
       - STR_INQ_REQUISITION_ARBITES_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     unlocks:
       - STR_PHOTON_GRENADE_REQUISITION
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ARBITES_EVENT
@@ -3942,6 +3999,7 @@ research:
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_ARBITES_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_250
     spawnedEvent: STR_INQ_REQUISITION_ARBITES_JUDGES_EVENT
 
@@ -3949,6 +4007,7 @@ research:
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_GUARD_EVENT
 
@@ -3956,6 +4015,7 @@ research:
     cost: 600
     dependencies:
       - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_SECURE_SUPPORT_GUARD_EVENT
 
   - name: STR_INQ_REQUISITION_HEAVY_GUARD_RESEARCH  # Requisition Heavy Guard
@@ -3964,6 +4024,7 @@ research:
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_100
     spawnedEvent: STR_INQ_REQUISITION_HEAVY_GUARD_EVENT
     unlocks:
@@ -3976,6 +4037,7 @@ research:
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_100
     spawnedEvent: STR_INQ_REQUISITION_KRIEG_GRENADIERS_EVENT
 
@@ -3985,6 +4047,7 @@ research:
     dependencies:
       - STR_UFO_CONSTRUCTION  # ceramite tier
       - STR_INQ_REQUISITION_KRIEG_GRENADIERS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_250
     spawnedEvent: STR_INQ_REQUISITION_KRIEG_PANZERGRENADIERS_EVENT
 
@@ -3992,6 +4055,7 @@ research:
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_SORORITAS_EVENT
 
@@ -3999,6 +4063,7 @@ research:
     cost: 700
     dependencies:
       - STR_NOT_RADICAL
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
     unlocks:
       - STR_SISTERS_TRANSFORMATIONS_DEP
@@ -4009,6 +4074,7 @@ research:
     points: -250
     dependencies:
       - STR_MIDTIER_PREREQ
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
       - STR_LOSE_250
     spawnedEvent: STR_INQ_REQUISITION_SORORITAS_VETERANS_EVENT
@@ -4017,6 +4083,7 @@ research:
     cost: 400
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_INQ_REQUISITION_GUARD_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_OGRYNS_EVENT
 
@@ -4031,6 +4098,7 @@ research:
     cost: 400
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
     spawnedEvent: STR_INQ_REQUISITION_ASSASSINS_EVENT  # Order Imperial Assassins
 
@@ -4038,12 +4106,14 @@ research:
     cost: 600
     dependencies:
       - STR_INQ_REQUISITION_ASSASSINS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT
 
   - name: STR_INQ_REQUISITION_GUARD_PILOTS_RESEARCH   # Requisition Guard Pilots
     cost: 200
     dependencies:
       - STR_INQ_REQUISITION_GUARD_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_REQUISITION_GUARD_PILOTS_EVENT
 
   - name: STR_INQ_REQUISITION_ADEPTAS_PILOTS_RESEARCH  # Requisition Adeptas Pilots
@@ -4051,6 +4121,7 @@ research:
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
+      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_REQUISITION_ADEPTAS_PILOTS_EVENT
 
   - name: STR_INQ_RR_CONTACT_THE_ABHUMANS_RESEARCH  # Contact the Abhuman Community
@@ -4622,9 +4693,10 @@ research:
       - STR_NECRONTECH_RESEARCH
       - STR_THUNDERHAWK_RAD_REQ # for final mission
 
-## Adeptus Terra #PROGRESSION.AT#
+## The Alien and the Heretic #PROGRESSION.AT#
   - name: STR_ENDGANGERSBASE
-    # for Adeptus Terra when ganger base destroyed to stop their base mission generating
+    # for Chaos Cult when ganger base destroyed to stop their base mission generating
+    # and for other STR_ARBITES friends
     dependencies:
       - STR_GENERALLOCK
 
@@ -4639,6 +4711,8 @@ research:
       - STR_MOTION_SCANNER
       - STR_INTERROGATION_COMPLETED
       - STR_THE_IMPERIAL_LAW_STRATEGY
+    reenables:
+      - STR_HARDER_MISSIONS
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_AIRSTRIKE_REQUISITION
@@ -4646,6 +4720,7 @@ research:
       - STR_HAND_FLAMETHROWER_REQUISITION
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
       - STR_BIONICS_OPERATION
+      - STR_LIGHT_BOLTERS_MIDTIER
     cutscene: c2
 
   - delete: STR_ARBITES_HIGHTIER
@@ -6429,6 +6504,8 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_PSI_AMP
+      - STR_NOT_THE_IMPERIAL_LAW
+
   - delete: STR_TEC_BAY_CHAMBER_R
   - name: STR_TEC_BAY_CHAMBER_R  # Techmarine Bay Requisition
     cost: 100
@@ -6437,6 +6514,7 @@ research:
       - STR_MIDTIER_PREREQ
       - STR_CHAMBERMILITANT
       - STR_APOC_BAY
+      - STR_NOT_THE_IMPERIAL_LAW
 
 ### Deathwatch #FACILITIES.CM.DW#
 ### Grey Knights #FACILITIES.CM.GK#
@@ -6452,7 +6530,7 @@ research:
       - STR_CHAMBERMILITANT
 
 ### The Radical Road #FACILITIES.CM.RAD#
-## Adeptus Terra #FACILITIES.AT#
+## The Alien and the Heretic #FACILITIES.AT#
 ### The Imperial Law Strategy #FACILITIES.AT.LAW#
 ### Chaos Cult #FACILITIES.AT.CULT#
 ## Adeptas #FACILITIES.SOB#
@@ -6677,6 +6755,7 @@ research:
     points: 0
     dependencies:
       - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
   - delete: STR_STORMRAVEN_GK
   - name: STR_STORMRAVEN_GK  # STORMRAVEN ¬
     dependencies:
@@ -6728,7 +6807,7 @@ research:
     cost: 0
     points: 0
 
-## Adeptus Terra #CRAFTS.AT#
+## The Alien and the Heretic #CRAFTS.AT#
 ### The Imperial Law Strategy #CRAFTS.AT.LAW#
   - delete: STR_LANDRAIDER_ARBITES
   - name: STR_LANDRAIDER_ARBITES  # Mobile Precint Requisition
@@ -7853,7 +7932,7 @@ research:
       - STR_ALIEN_ALLOYS
       - STR_ASSASSINORUM
 
-## Adeptus Terra #ARMORS.AT#
+## The Alien and the Heretic #ARMORS.AT#
 ### The Imperial Law Strategy #ARMORS.AT.LAW#
   - delete: STR_ARBITOR_ARMOR
   - name: STR_ARBITOR_ARMOR  # Arbitor Armor
@@ -8179,6 +8258,7 @@ research:
       - STR_NOT_GUARD
       - STR_NOT_PRIMARIS
       - STR_NOT_WORDBEARERS
+      - STR_NOT_CHAMBER # will be force unlocked in appropriate chamber strats
     unlocks:
       - STR_BOLTER_AMMO_PREREQ
 
@@ -8470,7 +8550,7 @@ research:
 
 ### The Radical Road #WEAPONS.CM.RAD#
 ### Officio Assassinorum #WEAPONS.CM.OA#
-## Adeptus Terra #WEAPONS.AT#
+## The Alien and the Heretic #WEAPONS.AT#
 ### The Imperial Law Strategy #WEAPONS.AT.LAW#
 ### Chaos Cult #WEAPONS.AT.CULT#
 ### Da Emprah's Greenest #WEAPONS.AT.ORKZ#
@@ -9737,7 +9817,7 @@ research:
 ### Deathwatch #ITEMS.CM.DW#
 ### Grey Knights #ITEMS.CM.GK#
 ### The Radical Road #ITEMS.CM.RAD#
-## Adeptus Terra #ITEMS.AT#
+## The Alien and the Heretic #ITEMS.AT#
 ### The Imperial Law Strategy #ITEMS.AT.LAW#
 ### Chaos Cult #ITEMS.AT.CULT#
 ## Adeptas #ITEMS.SOB#
@@ -10337,7 +10417,7 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
     destroyItem: true
-## Adeptus Terra #CAPTIVES.AT#
+## The Alien and the Heretic #CAPTIVES.AT#
 ### Chaos Cult #CAPTIVES.AT.CULT#
   - name: STR_LIVE_CAPTURE_PRIMORDIAL_CULTIST  # Chaos Cultist
     cost: 50
@@ -11728,6 +11808,7 @@ research:
     points: 100
     needItem: true
     unlocks:
+      - STR_LEADER_PLUS
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
       - STR_PSI_LAB
@@ -11739,6 +11820,7 @@ research:
     points: 150
     needItem: true
     unlocks:
+      - STR_LEADER_PLUS
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
       - STR_PSI_LAB
@@ -13640,7 +13722,7 @@ research:
     cost: 25
     points: 25
     needItem: true
-## Adeptus Terra #CORPSES.AT#
+## The Alien and the Heretic #CORPSES.AT#
 ### Chaos Cult #CORPSES.AT.CULT#
   - name: STR_CULTISTLV1_CORPSE_GEO
     refNode: *STR_CORPSE_BASIC
