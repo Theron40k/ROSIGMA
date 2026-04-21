@@ -2572,22 +2572,25 @@ items:
         compatibleAmmo: [STR_SCORCHA_TANK_BUILTIN]
       1:
         compatibleAmmo: [STR_BURNA_TANK_BUILTIN]
-    accuracyAuto: 25
-    tuAuto: 35 # same as imperial flamer. was 50.
-    autoRange: 8
     confAuto:  # flamer type weapon
       name: STR_SCORCHA_SHOT
       ammoSlot: 0  # Scorcha
       arcing: true
-      shots: 6
+      shots: 6 # 1 more than regular burna
     confSnap:  # MELTA BEAM
       name: STR_BURNA_SHOT
       ammoSlot: 1  # Burna tank
       arcing: false
+    accuracyAuto: 25
+    tuAuto: 30 # 5 faster than regular burna
+    autoRange: 8 # 1 more than regular burna
     accuracySnap: 75
-    tuSnap: 40
-    snapRange: 5
-    maxRange: 10
+    tuSnap: 35 # 5 faster than regular burna
+    snapRange: 5 # 2 better than regular burna
+    maxRange: 10 # 2 better than regular burna
+    accuracyMultiplier: # standard ork weapon multiplier
+      firing: 0.75
+      strength: [0.4, -0.0008]
     listOrder: 17110 # was 10500
     recover: false
     hiddenOnMinimap: true
