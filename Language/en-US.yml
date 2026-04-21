@@ -5257,7 +5257,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_MKX_TAC_UFOPEDIA: "This highly flexible protective system can be modified and upgraded to suit the needs of the battlefield. Mark X Tacticus Power Armor is the most common Mark X variant.{NEWLINE}{NEWLINE}Grants endurance by rank."
   STR_MKX_PHB_UFOPEDIA: "Mark X Phobos Power Armor is lighter and heavily streamlined. With greater mobility and servo-motors engineered to be silent, it is used most optimally in stealth and infiltration missions.{NEWLINE}{NEWLINE}Grants Agility by rank."
 
-
+  STR_ARBITES: "The Alien and the Heretic"
 
 
 ## Commendations
@@ -8968,8 +8968,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_NOT_PRIMARIS: "(Not Primaris Strategy)"
   STR_NOT_SPACEWOLVES: "(Not Space Wolves Strategy)"
 
-  STR_NOT_ADEPTUS_TERRA: "(Not Adeptus Terra)"
-  STR_NOT_THE_IMPERIAL_LAW: "(Not The Imperial Law)"
+  STR_NOT_ADEPTUS_TERRA: "(Not Alien or Cultist)"
   STR_NOT_CHAOSCULT: "(Not Chaos Cult)"
   STR_NOT_GREENEST_ORKZ: "(Not Greenest Orkz)"
 
@@ -8979,6 +8978,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_NOT_DEATHWATCH: "(Not Deathwatch Strategy)"
   STR_NOT_GK: "(Not Grey Knights Strategy)"
   STR_NOT_RADICAL: "(Not Radical Road Strategy)"
+  STR_NOT_THE_IMPERIAL_LAW: "(Not The Imperial Law)"
 
   STR_NOT_ADEPTAS: "(Not Adeptas Sororitas)"
   STR_NOT_NOVICE_STRATEGY_ADEPTAS: "(Not Novice Strategy)"
@@ -9089,6 +9089,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ASSASSINORUM_DAEMONHUNTER_REINFORCEMENTS_DESCRIPTION: "Responding to your call, a strike team of Grey Knights has arrived in a Null ship. They inform you that no further reinforcements will be possible until the warp storm has dissipated."
 
 
+
 # Research CM
 ##########################################
 # Section: Research
@@ -9191,8 +9192,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_EVENT_DESCRIPTION: "After tense negotiations with the stubborn Abhuman Squats, you have struck a lasting deal. A killteam of Veteran Squat prospectors have arrived to serve under your command."
   STR_INQ_SECURE_SUPPORT_ABHUMANS_RESEARCH: "Secure Abhuman Community Support"
 
-  STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH: "Indugle the Death Cults"
-  STR_INQ_RR_DEATHCULT_RITUAL_1_EVENT: "Indugle the Death Cults"
+  STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH: "Indulge the Death Cults"
+  STR_INQ_RR_DEATHCULT_RITUAL_1_EVENT: "Indulge the Death Cults"
   STR_INQ_RR_DEATHCULT_RITUAL_1_EVENT_DESCRIPTION: "The reclusive Death Cults have requested your witness to their rituals, and you have indulged in exchange for the requisition of their Assassins."
   STR_INQ_RR_DEATHCULT_RITUAL_2_RESEARCH: "Partake in Death Cult Rituals"
   STR_INQ_RR_DEATHCULT_RITUAL_2_EVENT: "Partake in Death Cult Rituals"
@@ -9434,6 +9435,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LONE_SISTER_ZWEI_EVENT_DESCRIPTION: "A lone Battle Sister, scarred and stoic, approaches your forces. Hefting a blade over her shoulder too big to be called a sword. Too big, too thick, too heavy, and too rough, it was more like a large hunk of iron. Bluntly, a Sister on a holy crusade."
   STR_LONE_SISTER_SUPERIOR_EVENT: "A Sister Superior Appears"
   STR_LONE_SISTER_SUPERIOR_EVENT_DESCRIPTION: "A towering Sister Superior approaches your base, features chiseled in stone. Her stated purpose, end Chaos."
+
+  STR_RECRUITS_CHAMBER_NOT_ARBITES: "Planetary Sanction Extremis"
+  STR_CHAMBER_NOT_ARBITES_DESCRIPTION: "Your Inquisitorial retinue accompanies you to this planet, faithful to the last, and you have been granted the honor of access to two ancient and holy Xiphon fighter-aeronautica. Behold them, like unto the twin heads of the blessed Eagle. What local weapons reliquaries we control have been opened unto your forces.{NEWLINE}{NEWLINE}Failure means death or worse. The Emperor's favor upon you, Inquisitor."
 
 
 # Technical General
@@ -10088,15 +10092,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SATCHEL_DETONATE: "DETONATE!"
 
 
-# arbites is now a strategy the faction becomes the adeptus terra
-  STR_3_VETERAN: "Adeptus Terra"
+# arbites has been moved to chamber militant
+  STR_3_VETERAN: "The Alien and the Heretic"
 
 # arbites research that start the arbites strategy
   STR_THE_IMPERIAL_LAW_STRATEGY: "The Imperial Law Strategy"
-  STR_THE_IMPERIAL_LAW_STRATEGY_CODEX: "The Adeptus Arbites enforce the Lex Imperialis, embodied within the great Book of Judgement. Their organisation represents the soldiers and police of the Adeptus Terra. You will now receive support to enforce the law."
+  STR_THE_IMPERIAL_LAW_STRATEGY_CODEX: "The Adeptus Arbites enforce the Lex Imperialis, embodied within the great Book of Judgement. Their organisation represents the most feared police force of the Imperium. You will now receive support to enforce the law."
 
   STR_RECRUITS_IMPERIAL_LAW_STRATEGY: "Imperial Law Strategy Chosen"
-  STR_RECRUITS_IMPERIAL_LAW_STRATEGY_DESCRIPTION: "The Adeptus Arbites enforce the Lex Imperialis, embodied within the great Book of Judgement. Their organisation represents the soldiers and police of the Adeptus Terra. You will now receive support to enforce the law."
+  STR_RECRUITS_IMPERIAL_LAW_STRATEGY_DESCRIPTION: "The Adeptus Arbites enforce the Lex Imperialis, embodied within the great Book of Judgement. Their organisation represents the most feared police force of the Imperium. You will now receive support to enforce the law."
 
 # player chaos cult
 
@@ -10624,7 +10628,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CHAOSCULTHINTS_CODEX_PAGE2: "{NEWLINE}- 3rd tier the Chaos Legion that see now the chaos space marines, terminators and etc with their high end equipment taking charge.{NEWLINE}{NEWLINE}The Chaos Cult gameplay is not based on getting new armors, but works on troop transformations.{NEWLINE}{NEWLINE}Those are available in the Base menu, select the -Soldiers- button and on the bottom click on -Soldier Info- to see the transformations currently available to you.{NEWLINE}>>> Continued on next page.>>>"
   STR_CHAOSCULTHINTS_CODEX_PAGE3: "{NEWLINE}Each research and unlock will add more information in the Codex.{NEWLINE}Some transformations will require researches to be unlocked but will allow chaos to mutate your weaklings into stronger and stronger chaos warriors.{NEWLINE}{NEWLINE}Each tier of upgrade gets progressively more and more expensive, but the higher end units are very powerful and worth their cost.{NEWLINE}>>> Continued on next page.>>>"
   STR_CHAOSCULTHINTS_CODEX_PAGE4: "{NEWLINE}During the progress of your game, when you move to a new tier you will be able to research a shortcut in the recruitment.{NEWLINE}{NEWLINE}This way a Chaos Guard or a Chaos Legion that wants to replace their fallen troops will not have to recruit some barely functional Chaos Cultist to transform him multiple time to replace their dead.{NEWLINE}You will then be able to recruit new unit corresponding to your current tier.{NEWLINE}>>> Continued on next page.>>>"
-  STR_CHAOSCULTHINTS_CODEX_PAGE5: "{NEWLINE}Early Game{NEWLINE}{NEWLINE}After choosing the Adeptus Terra faction, you will have to research the Chaos Cult Strategy to corrupt the administration of the planet and use their ressources.{NEWLINE}{NEWLINE}This to create your cult you will then receive cultists and some equipment, along with some token that will allow you in the Manufacture section to receive for free 2 Chaos Trucks and a Chaos Lighting.{NEWLINE}>>> Continued on next page.>>>"
+  STR_CHAOSCULTHINTS_CODEX_PAGE5: "{NEWLINE}Early Game{NEWLINE}{NEWLINE}After choosing the Alien and the Heretic faction, you will have to research the Chaos Cult Strategy to corrupt the administration of the planet and use their ressources.{NEWLINE}{NEWLINE}This to create your cult you will then receive cultists and some equipment, along with some token that will allow you in the Manufacture section to receive for free 2 Chaos Trucks and a Chaos Lighting.{NEWLINE}>>> Continued on next page.>>>"
   STR_CHAOSCULTHINTS_CODEX_PAGE6: "{NEWLINE}They will come with some free Chaos Pilots.{NEWLINE}{NEWLINE}Because you are given the ability to manufacture 2 chaos truck for free - Build them both as the default Chaos Trucks are slow and you'll need to have 2 of them to be sure to not miss an important mission.{NEWLINE}{NEWLINE}During the 1st month hostile gangers of the planet consider your Chaos Cult as just another gang and harass you.{NEWLINE}>>> Continued on next page.>>>"
   STR_CHAOSCULTHINTS_CODEX_PAGE7: "{NEWLINE}Locate their hidden base to put a stop to their operations.{NEWLINE}{NEWLINE}In the 2nd month, you will get the opportunity to raid a weakly defended Imperial Armory.{NEWLINE}{NEWLINE}Do not overlook that mission as if you manage to complete it, you will have blueprints needed to upgrade your Chaos Trucks into Armored Chaos Trucks that will come with more protection for your cultists and with support weapons.{NEWLINE}>>> Continued on next page.>>>"
   STR_CHAOSCULTHINTS_CODEX_PAGE8: "{NEWLINE}In further months, there will be a few more Imperial Armory to raid, but those may be better defended, but it could allow you to get another blueprint for stronger transport vehicles.{NEWLINE}{NEWLINE}Money is important for the chaos cult transformations, selling corpses and useless items after each mission is a good money maker.{NEWLINE}>>> Continued on next page.>>>"
@@ -11435,7 +11439,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CHAOSRESCUE_PDF_VALKYRIE: "Rescue Chaos Forces"
   STR_CHAOSPDF_VALK_SITE: "Downed Chaos Valkyrie"
 
-  # adeptus terra month 0 base
+  # alien & heretic month 0 base
   # for chaoscult
 
   STR_GANGER_BASE: "Gangers Hideout"
