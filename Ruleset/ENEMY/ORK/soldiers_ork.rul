@@ -903,3 +903,84 @@ soldiers:
     tags:
       SOLDIER_GAINS_EXTRA_STRENGTH: 6 # gets stronger faster
       SOLDIER_WOUND_TIME_MULTIPLIER: 20
+
+# Squigs
+
+  - type: STR_SQUIG  # Copied the cyber mastiff for a starting point
+    requires:
+      - STR_GREENEST_ORKZ
+      - STR_GENERALLOCK # Not finished
+    costBuy: 5000
+    costSalary: 1000
+    minStats:
+      tu: 70
+      stamina: 90
+      health: 50
+      bravery: 50 # generally too stupid to be afraid, but not really fearless
+      reactions: 60
+      firing: 0
+      throwing: 0
+      strength: 35
+      psiStrength: 30
+      psiSkill: 0
+      melee: 50
+    maxStats:
+      tu: 90
+      stamina: 110
+      health: 70
+      bravery: 80
+      reactions: 85
+      firing: 0
+      throwing: 0
+      strength: 55
+      psiStrength: 100
+      psiSkill: 0
+      melee: 85
+    statCaps:
+      tu: 120
+      stamina: 150
+      health: 90 # chonky puppers
+      bravery: 110
+      reactions: 110
+      firing: 0
+      throwing: 0
+      strength: 90
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    trainingStatCaps:
+      tu: 90
+      stamina: 110
+      health: 70
+      firing: 0
+      throwing: 0
+      strength: 65
+      psiStrength: 100
+      psiSkill: 50
+      melee: 85
+    armor: STR_SQUIG_ARMOR
+    # dogfightExperience:
+      # bravery: 10
+      # reactions: 30
+      # firing: 25
+    allowPiloting: false
+    allowPromotion: true
+    standHeight: 14
+    kneelHeight: 14
+    femaleFrequency: 50
+    avatarOffsetX: 91
+    avatarOffsetY: 87
+    soldierNames:
+      - delete
+      - Names/Ork_Squigs.nam
+    deathMale: [{mod: 40k, index: 50}]
+    deathFemale: [{mod: 40k, index: 50}]
+    rankStrings:
+      - STR_AUXILIARY_RANK
+    rankSprite: {mod: 40k, index: 1005}
+    rankBattleSprite: {mod: 40k, index: 1005}
+    rankTinySprite: {mod: 40k, index: 1005}
+    value: 2 # twice the value of a grot! squigs is cuter dan da runts
+    tags:
+      SOLDIER_GAINS_EXTRA_STRENGTH: 3 # orky strength growth
+      SOLDIER_WOUND_TIME_MULTIPLIER: 45 # balls of muscle heal rather quick
