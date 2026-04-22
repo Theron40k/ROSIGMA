@@ -172,6 +172,49 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_MECHANICAL: 1
 
+  - type: STR_OGRYN_UC_AI
+    visibilityAtDay: 40
+    visibilityAtDark: 9
+    spriteSheet: OGRYN.PCK
+    spriteInv: IGOPFOR_OGRYN_INV.PCK
+    corpseBattle:
+      - STR_OGRYN_CORPSE
+    drawingRoutine: 10
+    frontArmor: 20
+    sideArmor: 15
+    rearArmor: 10
+    underArmor: 10
+    damageModifier:  # OGRYN ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.2  # FLAMES
+      - 1.0  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.6  # STUN
+      - 0.7  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.5  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [5]
+    specialWeapon: STR_OGRYN_UNARMED
+    recovery:
+      morale:
+        flatOne: 2.0
+    psiDefence:
+      psiStrength: 1.0
+      moraleCurrent: 1.0
+      psiSkill: 0.2
+    tags:
+      INFECTION_RESIST: 33  # infection resistant
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_IS_DIEHARD: 1
+      DIEHARD_TEMP_MODIFIER_INCREMENT: -100  # Basic Diehard
+
   # IG TIER 2
 
   - type: GUARD_ARMOR_M_LV2
