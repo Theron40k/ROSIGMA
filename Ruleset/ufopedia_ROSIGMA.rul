@@ -9394,7 +9394,7 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_BASIC
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: STR_SMG_STUB_GUN.SPK
-    text: STR_SMG_STUB_GUN_CODEX
+    text: STR_SMG_STUB_GUN_CHAOS_CODEX
   - id: STR_HEAVY_STUBBER_CHAOS  # Chaos Heavy Stubber
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -9524,12 +9524,26 @@ ufopaedia:
     image_id: 1LB.SPK
     section: STR_WEAPONS_AND_EQUIPMENT
     text: STR_PUMP_SHOTGUN_CODEX
+  - id: STR_PUMP_SHOTGUN_CHAOS #chaos pump action shotgun
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_PUMP_SHOTGUN_CHAOS_CODEX
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
   - delete: STR_SHOTGUN
   - id: STR_SHOTGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1LB.SPK
     text: STR_SHOTGUN_UFOPEDIA
+  - id: STR_SHOTGUN_CHAOS
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT 
+    text: STR_SHOTGUN_CHAOS_CODEX
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
   - delete: STR_MCSHOTGUN
   - id: STR_MCSHOTGUN  #   # Master Crafted Shotgun
     type_id: 14
