@@ -9332,8 +9332,9 @@ ufopaedia:
 
   - id: STR_SMG_STUB_GUN  # AutoStubber ✔
     type_id: 14
-    section: STR_NOT_AVAILABLE
-    image_id: 1CH.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SMG_STUB_GUN.SPK
+    text: STR_SMG_STUB_GUN_CODEX
 
   - delete: STR_STUB_GUN_AMMO
   - id: STR_STUB_GUN_AMMO
@@ -9387,7 +9388,13 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: HYBRID_STUBBER_CODEX.SPK
     text: STR_HEAVY_STUBBER_HYBRID_CODEX
-
+  - id: STR_SMG_STUB_GUN_CHAOS  # Chaos AutoStubber ✔
+    type_id: 14
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SMG_STUB_GUN.SPK
+    text: STR_SMG_STUB_GUN_CODEX
   - id: STR_HEAVY_STUBBER_CHAOS  # Chaos Heavy Stubber
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
