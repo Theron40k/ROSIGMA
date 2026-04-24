@@ -313,6 +313,7 @@ research:
     dependencies:
       - STR_INFILTRATION_CADRE_GV
       - STR_TAU_XENOTECH
+      - STR_MASTER_CRAFTING
 
 ### Extract the Tau diplomatic staff to your base
   - name: STR_RELOCATION_SUPPORT_GV
@@ -414,11 +415,11 @@ research:
     dependencies:
       - STR_AUXILIARY_CADRE_GV
       - STR_THE_TERRAN_PROBLEM_GV
-      - STR_ADEPTAS_NOVICE_RESEARCH   # recruit novices
     reenables:
       - STR_PSI_LAB
     unlocks:
       - STR_PSI_LAB
+      - STR_ADEPTAS_NOVICE_RESEARCH   # recruit novices
     spawnedEvent: STR_COOPT_ECCLESIARCHY_EVENT_GV
 
   # - name: STR_CONTACT_NICASSAR_GV

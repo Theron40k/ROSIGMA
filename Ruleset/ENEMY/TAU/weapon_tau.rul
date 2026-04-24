@@ -200,6 +200,8 @@ items:
 
   - type: STR_TAU_PULSE_MAG_EXPORT
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
+    requires:
+      - STR_TAU_TRADING
     requiresBuy:
       - STR_TAU_TRADING
       - STR_NOT_TAU_GUEVESA_TRADING   # stop buying old one when new one arrives
@@ -219,6 +221,8 @@ items:
 
   - type: STR_TAU_PULSE_MAG_EXPORT_GUEVESA
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
+    requires:
+      - STR_TAU_GUEVESA_TRADING
     requiresBuy:
       - STR_TAU_GUEVESA_TRADING
     requiresBuyBaseFunc: [TRADE]
@@ -670,8 +674,8 @@ items:
     reloadSound: 2451
     costSell: 20000
     explosionSpeed: 10
-    bulletSpeed: 50
-    accuracySnap: 90  # Breachers are more accurate
+    bulletSpeed: 25
+    accuracySnap: 80  # Breachers are more accurate
     tuSnap: 25
     power: 100    # was 120 - too easy to get one shots
     damageType: 1
