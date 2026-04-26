@@ -9329,12 +9329,28 @@ ufopaedia:
     image_id: STUB_GUN.SPK
     text: STR_STUB_GUN_UFOPEDIA
 
-  - delete: STR_STUB_RIFLE  # Stub Rifle ✔
+  - id: STR_STUB_GUN_CHAOS # Chaos Stubber
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUB_GUN.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_STUB_GUN_CHAOS_CODEX
+
+  - delete: STR_STUB_RIFLE # Stub Rifle ✔
   - id: STR_STUB_RIFLE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: STUB_RIFLE.SPK
     text: STR_STUB_RIFLE_UFOPEDIA
+
+  - id: STR_STUB_RIFLE_CHAOS # Chaos stub rifle
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUB_RIFLE.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_STUB_RIFLE_CHAOS_CODEX
 
   - id: STR_SMG_STUB_GUN  # AutoStubber ✔
     type_id: 14
@@ -9816,6 +9832,14 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1SR.SPK
+    text: STR_HEAVY_CANNON_UFOPEDIA
+
+  - id: STR_SNIPER_CHAOS # Chaos sniper rifle
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1SR.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_HEAVY_CANNON_UFOPEDIA
 
   - id: STR_LONG_RIFLE_GUARD  # Long Rifle
@@ -11621,6 +11645,14 @@ ufopaedia:
     image_id: 1MF.SPK
     text: STR_FLAMETHROWER_UFOPEDIA
 
+  - id: STR_FLAMETHROWER_CHAOS #Chaos Flamer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MF.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_FLAMETHROWER_CHAOS_CODEX
+
   - delete: STR_FLAMETHROWER_CLIP
   - id: STR_FLAMETHROWER_CLIP
     type_id: 14
@@ -12359,7 +12391,14 @@ ufopaedia:
     text: STR_GRENADE_LAUNCHER_STEEL_LEGION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_GRENADE_LAUNCHER_STEEL_LEGION.SPK
-
+  - id: STR_GRENADE_LAUNCHER_CHAOS # chaos grenade launcher
+    requires:
+      - STR_GUARD_AND_ARBITES
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: GRENADE_LAUNCHER_VOSS.SPK
+    text: STR_GRENADE_LAUNCHER_CHAOS_CODEX
   - delete: STR_FRAG_GRENADE_DRUM
   - id: STR_FRAG_GRENADE_DRUM
     type_id: 14
@@ -12384,6 +12423,11 @@ ufopaedia:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_PHOTON_GRENADE_REQUISITION
+  - id: STR_NURGLE_GRENADE_DRUM
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+    requires:
+      - STR_NURGLE_OPTIONS
 
   - id: STR_CHERUBIM_GRENADE_LAUNCHER  # Cherubim Grenade Launcher
     type_id: 14
@@ -12742,6 +12786,18 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_SCARE_GRENADE_UFOPEDIA
+
+  - id: STR_MAKESHIFT_GRENADE # Makeshift grenade
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_MAKESHIFT_GRENADE.SPK
+    text: STR_MAKESHIFT_GRENADE_CODEX
+
+  - id: STR_MAKESHIFT_PIPEBOMB # Makeshift pipebomb
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_MAKESHIFT_PIPEBOMB.SPK
+    text: STR_MAKESHIFT_PIPEBOMB_CODEX
 
   # Bombs/Mines
   - delete: STR_HAYWIRE_MINE
