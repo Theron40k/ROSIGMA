@@ -7898,6 +7898,15 @@ ufopaedia:
     image_id: BEAKIE_NOBS_CODEX.SPK
     text: STR_ASSAULT_MEGA_ARMOR_UFOPEDIA
 
+  - id: STR_ASSAULT_MEGA_ARMOR_BURNA
+    type_id: 15
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORK_BOY_RECRUITMENT
+    image_id: BEAKIE_NOBS_CODEX.SPK
+    text: STR_ASSAULT_MEGA_ARMOR_BURNA_UFOPEDIA
+
   - id: STR_PLAYER_ORK_MEGAWARBOSS_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
@@ -9329,8 +9338,9 @@ ufopaedia:
 
   - id: STR_SMG_STUB_GUN  # AutoStubber ✔
     type_id: 14
-    section: STR_NOT_AVAILABLE
-    image_id: 1CH.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SMG_STUB_GUN.SPK
+    text: STR_SMG_STUB_GUN_CODEX
 
   - delete: STR_STUB_GUN_AMMO
   - id: STR_STUB_GUN_AMMO
@@ -9384,7 +9394,13 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: HYBRID_STUBBER_CODEX.SPK
     text: STR_HEAVY_STUBBER_HYBRID_CODEX
-
+  - id: STR_SMG_STUB_GUN_CHAOS  # Chaos AutoStubber ✔
+    type_id: 14
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SMG_STUB_GUN.SPK
+    text: STR_SMG_STUB_GUN_CHAOS_CODEX
   - id: STR_HEAVY_STUBBER_CHAOS  # Chaos Heavy Stubber
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -9514,12 +9530,26 @@ ufopaedia:
     image_id: 1LB.SPK
     section: STR_WEAPONS_AND_EQUIPMENT
     text: STR_PUMP_SHOTGUN_CODEX
+  - id: STR_PUMP_SHOTGUN_CHAOS #chaos pump action shotgun
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_PUMP_SHOTGUN_CHAOS_CODEX
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
   - delete: STR_SHOTGUN
   - id: STR_SHOTGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1LB.SPK
     text: STR_SHOTGUN_UFOPEDIA
+  - id: STR_SHOTGUN_CHAOS
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_SHOTGUN_CHAOS_CODEX
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
   - delete: STR_MCSHOTGUN
   - id: STR_MCSHOTGUN  #   # Master Crafted Shotgun
     type_id: 14
@@ -11158,7 +11188,7 @@ ufopaedia:
     image_id: 1LP.SPK
     text: STR_HELLPISTOL_UFOPEDIA
     requires:
-      - STR_MASTER_CRAFTING
+      - STR_MASTER_CRAFTING_AMMO  # same as manufacture
 
   - id: STR_LASER_PISTOLCS
     type_id: 14
@@ -12512,7 +12542,6 @@ ufopaedia:
     type_id: 14
     requires:
       - STR_GUARD_AND_ARBITES
-      - STR_NOT_CHAOSCULT
       - STR_HEAVY_WEAPONS_IG
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1ML.SPK
@@ -12783,6 +12812,12 @@ ufopaedia:
     image_id: 1CK.SPK
     text: STR_KNIF_UFOPEDIA
 
+  - id: STR_SHIVGANG
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SHIVGANG.SPK
+    text: STR_SHIVGANG_CODEX
+
   - delete: STR_CHAINSWORD
   - id: STR_CHAINSWORD
     type_id: 14
@@ -12872,8 +12907,9 @@ ufopaedia:
     image_id: 1MCPS.SPK
     text: STR_POWER_SWORD_MC_UFOPEDIA
     requires:
+      - STR_UFO_CONSTRUCTION # same as manufacture requirements.
+      - STR_CHAPTER_PURITY
       - STR_POWER_SWORD
-      - STR_MASTER_CRAFTING
 
   - delete: STR_HAMMER
   - id: STR_HAMMER
@@ -14380,6 +14416,22 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  - id: STR_BURNA_MOUNTED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1OK10.SPK
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED # same as requirements for meganob armor that can use this.
+      - STR_ORK_BOY_RECRUITMENT
+    text: STR_BURNA_MOUNTED_UFOPEDIA
+    pages:
+      - title: STR_BURNA_MOUNTED
+        text: STR_BURNA_MOUNTED_UFOPEDIA
+        ammoSlot: 0
+      - title: STR_BURNA_MOUNTED
+        text: STR_BURNA_MOUNTED_UFOPEDIA
+        ammoSlot: 1
+
   - delete: STR_CHOPPA
   - id: STR_CHOPPA
     type_id: 14
@@ -15811,6 +15863,14 @@ ufopaedia:
     text: IGOFF_ARMOR_M_LV3_UFOPEDIA
     requires:
       - STR_IGGUARDS_OFF_LV3_AI
+
+  - id: STR_OGRYN_UC_AI
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: IMPGUARDAI_CODEX.SPK
+    text: GUARD_ARMOR_M_LV1_AI_UFOPEDIA
+    requires:
+      - STR_OGRYN_IGOPFOR
 
 
   - id: SLGUARD_ARMOR_M_LV1_AI

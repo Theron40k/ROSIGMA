@@ -1098,6 +1098,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BLOODAXE_STORM_PLAYER_ARMOR: "Stormboy Armor"
   STR_BLOODAXE_MEGANOB_PLAYER_ARMOR: "Meganob Armor"
   STR_ASSAULT_MEGA_ARMOR: "Azzault Mega-Arma"
+  STR_ASSAULT_MEGA_ARMOR_BURNA: "Azzault Mega-Arma wif Burna"
 
   STR_BLOODAXE_CAPFLAK_PLAYER_ARMOR_UFOPEDIA: "{NEWLINE} Da Standard izzue arma' of Da Emprah's Greenest. Dis 'ere flakk will sometimes aktually stop dakka from pokin' 'oles in da boyz."
   STR_BLOODAXE_KARAPACE_PLAYER_ARMOR_UFOPEDIA: "{NEWLINE} Karapace arma' costs more teef, but kan be wirf it ta keep da boyz alive longa."
@@ -1105,6 +1106,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BLOODAXE_NOB_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Da biggest boyz iz kalled Nobs, and dey av even betta arma' dan da Ardboyz. Nobz is betta at fightin too."
   STR_BLOODAXE_MEGANOB_PLAYER_ARMOR_UFOPEDIA: "{NEWLINE} Da Mekboyz kan make speshul arma' for da Nobs to wear, to make em even 'arder dan before."
   STR_ASSAULT_MEGA_ARMOR_UFOPEDIA: "{NEWLINE} Dis 'ere Mega-Arma 'az gunz an' powa klaws stukk ta da armz, so da nobs wearin' it kan be even killier."
+  STR_ASSAULT_MEGA_ARMOR_BURNA_UFOPEDIA: "{NEWLINE} Wun o' da best bitz 'bout wearin' ded-ard arma iz dat it getz lotz 'arder ta blowz yerself up. Dis ere arma' 'az a burna stukk to it 'stead o' da gunz, but itz made tuff soze it don' burna da git uzin' it."
   STR_BLOODAXE_STORM_PLAYER_ARMOR_UFOPEDIA: "{NEWLINE} Ya eva' see da rokkitz flyin, and fink 'dat looks loik fun?' Well boss, Stormboyz do, so dey strap da rokkits to dere baks, an' fly at da enemies. I kud neva' figure out 'ow ta not blow up meself, but da Stormboyz seem ta be alright."
 
   STR_KARAPACE_ARMOR: "Ork Karapace Armor"
@@ -1521,7 +1523,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ORK_TANKBUSTAZ_MOB: "Tankbustaz Mob"
   STR_ORK_KOMMANDOZ_MOB: "Kommandoz Mob"  # WI
   STR_ORK_STORMBOYZ_MOB: "Stormboyz Mob"  # WIP
-  STR_SQUIG_TEST: "Squig Farm"  # WIP
+#  STR_SQUIG_TEST: "Squig Farm"  # WIP
   STR_ORK_WARBIKER_MOB: "Warbiker Mob"  # WIP
   STR_WEIRDBOYZ_TEST: "Weirdboyz"
   STR_GRETCHIN_EARLY: "Grot Gang"
@@ -1941,6 +1943,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BURNA_SHOT: "Melt"
   STR_BURNA_MOUNTED: "Mounted Burna"  # ORKMOD
   STR_BURNA_UFOPEDIA: "{NEWLINE}BURNA is a so called kombi-weapon of the greenskins, particularly the pyromaniac Burna Boyz. It has two fire modes dictated by pressure, one as a flamethrower, and a blue-hot cutting torch, capable of melting even our hardest armor. Promethium or chem-fueled, it is highly unstable."
+  STR_BURNA_MOUNTED_UFOPEDIA: "{NEWLINE} Dis burna is wut we stikk to da mega arma. It kan burn fasta, an' itz gotz plenty o' burny joose."
   STR_BURNA_KILLA: "Killa Burna"  # ORKMOD
   STR_BURNA_TANK: "Burna Tank"  # ORKMOD
   STR_SCORCHA_TANK: "Scorcha Tank"  # ORKMOD
@@ -2034,9 +2037,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ORK_KRAKSTIKKBOMB_UFOPEDIA: "{NEWLINE} Heavy Ork Krak Stikkbombs, lower throwing range but highly capable against armored targets."
   STR_TANKBUSTA_BOMB: "Tankbusta bomb"  # ORKMOD
   STR_TANKBUSTA_BOMB_UFOPEDIA: "{NEWLINE} Ork Tankbusta bombs are a mix of heavily loaded explosive, krak and melta grenades, none configured the same, but all mass-destructive."
-  STR_SQUIG: "Squig"  # ORKMOD
-  STR_BOMB_SQUIG: "Bomb Squig"  # ORKMOD
-  STR_SQUIG_CORPSE: "Squig Corpse"  # ORKMOD
   STR_ORK_STORMBOY: "Stormboy"  # ORKMOD
   STR_ORK_STORMBOYZ_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_ORK_STORMBOY_CORPSE: "Stormboy Corpse"  # ORKMOD
@@ -2267,6 +2267,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ORK_FORGE_SHIELD_UFOPEDIA: "{NEWLINE} Dat 'ard stuf makah iz 'spensive, Boss. Weze shood protekt it soze it don' get boomed.{NEWLINE}{NEWLINE}Immune to Bombardment and destruction.{NEWLINE}{NEWLINE}Can only be built over an existing 'Ard Stufz Makah."
 
   STR_ORK_ARMOR_TRAIN: "Kwa-li-tee o' Loif Trainin' Arma"
+
+  STR_SQUIG_TEST: "Squig TEST"
+  STR_SQUIG_TEST_ARMOR: "Squig TEST armor"
+
+  STR_SQUIG: "Squig"
+  STR_SQUIG_ARMOR: "Squig"
+  STR_BOMB_SQUIG: "Bomb Squig"  # ORKMOD
+  STR_SQUIG_CORPSE: "Squig Corpse"  # ORKMOD
 
   STR_PLAYER_GROT: "Gretchin"
   STR_PLAYER_GROTS_ARMOR: "Gretchin Arma"
@@ -7423,10 +7431,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PUMP_SHOTGUN: "Pump-Action Shotgun"
   STR_PUMP_SHOTGUN_CODEX: "As simple design as it is ancient, the pump-action shotgun provides buckshot solutions for close quarter encounters at a very low cost. This weapon type can be found throughout the Imperium and in the inventories of any urban gang or cult."
   STR_SMG_STUB_GUN: "AutoStubber"
+  STR_SMG_STUB_GUN_CODEX: "The term autostubber refers to a family of compact, fully automatic, stub guns firing low-velocity high-caliber rounds. Its high rate of fire makes it a favourite among gangers and sewer rats in the hive cities."
   STR_STUB_GUN_AMMO_LONG: "AutoStubber Magazine"
 
   STR_PUMP_SHOTGUN_CHAOS: "Chaos Pump-Action Shotgun"
+  STR_PUMP_SHOTGUN_CHAOS_CODEX: "Pump-action shotguns corrupted by Chaos become grinding, spiteful mechanisms that resist control. Each cycle drags with a will of its own, as though the weapon feeds on the wielder’s effort. When fired, it disgorges warped shot in savage, uneven spreads that tear through flesh at close range. These tainted arms are favoured by cultists who value their reliability."
+  #STR_SHOTGUN_CHAOS is already defined in base 40k mod
+  STR_SHOTGUN_CHAOS_CODEX: "Semi-automatic shotguns touched by Chaos, their actions cycling is frenzied with an unnatural cadence. They vomit corrupted shells in rapid succession, the recoil violent and erratic, as if the weapon itself hungers for excess. Prized by heretics and zealots of the Dark Gods"
   STR_SMG_STUB_GUN_CHAOS: "Chaos AutoStubber"
+  STR_SMG_STUB_GUN_CHAOS_CODEX: "Autostubbers touched by the taint of Chaos become profane instruments of excess and decay. Their mechanisms warp beyond proper function, spewing corrupted, ill-formed rounds in frenzied bursts. Favoured by heretics, cultists, and the dregs of the underhive who have surrendered to the Dark Gods."
 
   STR_MAKESHIFT_GRENADE: "Makeshift Grenade"
   STR_MAKESHIFT_PIPEBOMB: "Makeshift Pipebomb"
@@ -8114,6 +8127,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_REPRISALIA_MEDIC_ARMOR_UFOPEDIA: "{NEWLINE} The Adeptas Reprisalia train medicae within their own ranks to ensure that they do not need to rely on medical aid from outside sources.{NEWLINE} Whether for keeping their sisters alive or ensuring a target lives long enough for all useful information to be extracted, the Reprisalia Medicae are skilled at tending all battlefield injuries."
 
 ## Primaris Armor Bonuses
+
+  STR_PRIMARIS_ZOMBIE_DW_TAC: "Fallen Brother"
+  STR_PRIMARIS_ZOMBIE_DW_GRV: "Fallen Brother"
+  STR_PRIMARIS_ZOMBIE_DW_INC: "Fallen Brother"
+  STR_PRIMARIS_ZOMBIE_DW_PHB: "Fallen Brother"
+  STR_PRIMARIS_ZOMBIE_TAC: "Fallen Brother"
+  STR_PRIMARIS_ZOMBIE_GRV: "Fallen Brother"
+  STR_PRIMARIS_ZOMBIE_INC: "Fallen Brother"
+  STR_PRIMARIS_ZOMBIE_PHB: "Fallen Brother"
 
   STR_MKX_TAC_LEVELS_STATS_UFOPEDIA: >
     Promotion Stat Total Bonuses:
@@ -11523,13 +11545,14 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   # gangers
   STR_SHIVGANG: "Gangers Shiv"
+  STR_SHIVGANG_CODEX: "Gangers shiv are crude, improvised and not made to last blade carried as a last-resort weapon. Forged from scrap metal, broken tools, or shattered industrial components, they lacks balance, refinement, or durability. Usually modified by its owners, handles are often wrapped in fraying tape, strips of cloth, or lengths of paracord."
   STR_BASIC_GANGERS: "Gangers Troopers"
   STR_BASED_GANGERS: "Gangers Based"
-  STR_GANGERBASE_SOLDIERF0_AI: "Gang Trooper"
-  STR_GANGERBASE_SOLDIERF1_AI: "Gang Trooper"
-  STR_GANGERBASE_SOLDIERF2_AI: "Gang Trooper"
-  STR_GANGERBASE_SOLDIERM0_AI: "Gang Trooper"
-  STR_GANGERBASE_SOLDIERM1_AI: "Gang Trooper"
+  STR_GANGERBASE_SOLDIERF0_AI: "Gang Killer"
+  STR_GANGERBASE_SOLDIERF1_AI: "Gang Thief"
+  STR_GANGERBASE_SOLDIERF2_AI: "Gang Striker"
+  STR_GANGERBASE_SOLDIERM0_AI: "Gang Breaker"
+  STR_GANGERBASE_SOLDIERM1_AI: "Gang Cleaner"
   STR_GANGEROUSAI: "Gang Underboss"
   STR_GANGERBASE_GOLIATH_AI: "Gang Boss"
 
@@ -11541,8 +11564,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GANGEROUS_ARMOR: "Gang Underboss Armor"
   STR_GANGERGOLIATH_ARMOR: "Gang Boss Armor"
 
-  STR_GANGERBASE_SOLDIERF_GEO: "Gang Trooper Corpse"
-  STR_GANGERBASE_SOLDIERM_GEO: "Gang Trooper Corpse"
+  STR_GANGERBASE_SOLDIERF_GEO: "Gang Killer Corpse"
+  STR_GANGERBASE_SOLDIERM_GEO: "Gang Breaker Corpse"
   STR_GANGEROUS_GEO: "Gang Underboss Corpse"
   STR_GANGERGOLIATH_GEO: "Gang Boss Corpse"
 
