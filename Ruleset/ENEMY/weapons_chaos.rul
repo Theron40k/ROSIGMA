@@ -9,7 +9,7 @@ items:
       - STR_CHAOS_WEAPON_USE_DEP
     requiresBuy:
       - STR_CORRUPTED_REQUISITIONS
-      
+
   # refNode for common dependency on Chaos Heavy Weapon use/buy requirement
   - &CHAOS_LIGHT_BOLTERS
     type: STR_LIGHT_BOLTER_CHAOS  # Phobos
@@ -61,7 +61,7 @@ items:
   - type: STR_ALIEN_GRENADE                # 4010
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL]
     refNode: *CHAOS_WEAPON
-    requiresBuy: 
+    requiresBuy:
       - STR_RADICAL_INQUISITOR_STRATEGY #TODO test
     size: 0.1
     costBuy: 2000
@@ -4849,7 +4849,7 @@ items:
       - STR_NURGLE_OPTIONS
     categories: [STR_CAT_AUTO, STR_CAT_CHAOS, STR_CAT_NURGLE]
     size: 0.1
-    costBuy: 400    
+    costBuy: 400
     costSell: 100
     weight: 4
     bigSprite: 1042
