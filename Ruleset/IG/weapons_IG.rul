@@ -6,7 +6,7 @@ items:
     categories: [STR_CAT_AUTO]
     requiresBuy:
       - STR_MIDTIER_PREREQ
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 150000
     size: 0.3
     costSell: 50000
@@ -361,7 +361,7 @@ items:
     size: 0.3
     dropoff: 5  # Accatran lightweight
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 75000
     costSell: 20000
     weight: 30  # -20 weight, accatran airborne
@@ -401,7 +401,7 @@ items:
     size: 0.4
     dropoff: 4 #heavy weapon
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_IMPERIAL_GUARD_OPERATIONS
     costBuy: 100000
     costSell: 30000
     weight: 45  # 5 weight, guard vs marine
@@ -537,7 +537,7 @@ items:
     size: 0.5
     requiresBuy:
       - STR_MIDTIER_PREREQ
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 150000
     costSell: 20000
     weight: 45
@@ -927,7 +927,7 @@ items:
     size: 0.4
     requiresBuy:
       - STR_MIDTIER_PREREQ
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 35000  # cheaper than longlas
     costSell: 5000
     bigSprite: 278
@@ -983,7 +983,7 @@ items:
     size: 0.4
     requiresBuy:
       - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 300000
     costSell: 50000
     bigSprite: 255
@@ -1029,7 +1029,7 @@ items:
     armor: 200
     requiresBuy:
       - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 3000
     costSell: 500
     weight: 4
@@ -1058,7 +1058,7 @@ items:
     armor: 200
     requiresBuy:
       - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     weight: 5
     costBuy: 10000
     costSell: 2000
@@ -1089,7 +1089,7 @@ items:
     weight: 3
     armor: 200
     requiresBuy:
-      - STR_MIDTIER_PREREQ
+      - STR_40MM_AMMO_DEP
     costBuy: 2500
     costSell: 600
     bigSprite: 269
@@ -1364,12 +1364,13 @@ items:
       ITEM_RECOIL: 45
       ITEM_COLOR_CHANGES_WITH_AMMO_NON_GRAY: 6
 
-  - type: STR_ROTOR_CANNON_BLACK  # Imperial
+  - type: STR_ROTOR_CANNON_BLACK  # Imperial. Version accessible to Inquisition purchase.
     categories: [STR_CAT_AUTO]
     size: 0.2
     dropoff: 5
     requiresBuy:
       - STR_CHAMBER_NOT_ARBITES
+      - STR_NOT_RADICAL
     # recoveryTransformations:
     #   STR_ROTOR_CANNON: [1]  # Doesn´t work for player weapons as they don´t transform back
     costBuy: 300000
@@ -1500,6 +1501,7 @@ items:
     size: 0.1
     requiresBuy:
       - STR_CHAMBER_NOT_ARBITES
+      - STR_NOT_RADICAL
     costBuy: 10000
     costSell: 2000
     weight: 20  ## double heavy stubber belt
@@ -1557,7 +1559,7 @@ items:
     categories: [STR_CAT_SHOTGUN]
     weight: 3
     requiresBuy:
-      - STR_MIDTIER_PREREQ
+      - STR_40MM_AMMO_DEP
     costBuy: 5000
     costSell: 2000
     bigSprite: 904
@@ -1587,7 +1589,7 @@ items:
     categories: [STR_CAT_SHOTGUN]
     weight: 3
     requiresBuy:
-      - STR_MIDTIER_PREREQ
+      - STR_40MM_AMMO_DEP
     costBuy: 7500
     costSell: 2500
     bigSprite: 905
@@ -2118,8 +2120,8 @@ items:
 
   - type: STR_LASCARBINE
     requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
       - STR_LASER_WEAPONS
-      - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
     armor: 200  # to avoid item pile destruction
     meleePower: 50
@@ -2192,7 +2194,7 @@ items:
   - type: STR_LONGLAS  # Added higher energy drain for aimed shots
     requiresBuy:
       - STR_MIDTIER_PREREQ  # long rifle now basic guarad sniper at start
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 75000  # 28750
     armor: 200  # to avoid item pile destruction
     confAimed:
@@ -2283,8 +2285,8 @@ items:
     size: 0.3
     requiresBuyBaseFunc: [TRADE]
     requiresBuy:
-      - STR_MIDTIER_PREREQ  # long rifle now basic guard sniper at start
-      - STR_GUARD_AND_ARBITES
+      - STR_MIDTIER_PREREQ
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 250000  # mucho expensive
     costSell: 25000
     weight: 30  # heavy
@@ -3096,7 +3098,7 @@ items:
     size: 0.4
     dropoff: 8  # high drop off, inaccurate
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_HEAVY_WEAPONS_IG
       - STR_IMPERIAL_WEAPONS
     costBuy: 100000
@@ -3142,6 +3144,7 @@ items:
     type: STR_MORTAR_AMMO_HE  # HE munition
     size: 0.1
     requiresBuy:  # what tech is required for the item to be visible in the Hire/Purchase screen.
+      - STR_BASIC_BALLISTICS_DEP
       - STR_HEAVY_WEAPONS_IG
     ufopediaType: STR_MORTAR_AMMO_HE_EXPLOSION
     costBuy: 7500
@@ -3435,6 +3438,9 @@ items:
       - STR_INCENDIARY_GRENADE_DRUM
       - STR_SMOKE_GRENADE_DRUM
       - STR_PHOTON_GRENADE_DRUM
+    requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
     tags:
       ITEM_COLOR_CHANGES_WITH_AMMO: 14
       ITEM_GETS_FACTION_RECOLOR: 1
@@ -3448,6 +3454,9 @@ items:
     costSell: 4000
     bigSprite: 258
     armor: 200
+    requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
     tags:
       ITEM_AMMO_COLOR: 1
       ITEM_GETS_FACTION_RECOLOR: 1
@@ -3459,6 +3468,9 @@ items:
     bigSprite: 259
     explosionHitSound: 5
     armor: 200
+    requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
     tags:
       ITEM_AMMO_COLOR: 7
 
@@ -3484,7 +3496,7 @@ items:
   - &STR_GRENADE_DRUM
     type: STR_SMOKE_GRENADE_DRUM  # smoke munition
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
     categories: [STR_CAT_ROCKETL]
@@ -3514,7 +3526,7 @@ items:
   - type: STR_PHOTON_GRENADE_DRUM  # photon munition
     refNode: *STR_GRENADE_DRUM
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_PHOTON_GRENADE_REQUISITION
       - STR_HEAVY_WEAPONS_IG
     explosionHitSound: {mod: 40k, index: 803}
@@ -3570,6 +3582,7 @@ items:
 
   - type: STR_HEAVY_STUBBER_CLIP
     requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
       - STR_LASER_WEAPONS
     clipSize: 150
     armor: 200
@@ -3581,8 +3594,9 @@ items:
   # bring the range up to the IG Heavy Bolter; the stubber is already bad enough with 85% tu and low AP damage
   - type: STR_HEAVY_STUBBER
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
       - STR_IMPERIAL_WEAPONS
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_LASER_WEAPONS
     autoRange: 24  # was 18
     bigSprite: 212
     handSprite: 328
@@ -3735,7 +3749,7 @@ items:
     size: 0.1
     requiresBuy:
       - STR_MIDTIER_PREREQ
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     costBuy: 15000
     costSell: 5000
     weight: 5
@@ -4091,7 +4105,7 @@ items:
     categories: [STR_CAT_BOLTER, STR_CAT_MELTA]
     requiresBuy:
       - STR_LIGHT_BOLTERS_MIDTIER
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_IMPERIAL_GUARD_MIDTIER
       - STR_MELTAGUN_TECH  # meltagun tech
     size: 0.3
@@ -4465,6 +4479,9 @@ items:
   - type: STR_AUTOGUN
     armor: 200
     experienceTrainingMode: 4
+    requiresBuy:
+      - STR_IMPERIAL_WEAPONS
+      - STR_BASIC_BALLISTICS_DEP
     tags:
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
@@ -4475,6 +4492,9 @@ items:
   - type: STR_AUTOPISTOL
     armor: 200
     experienceTrainingMode: 4
+    requiresBuy:
+      - STR_IMPERIAL_WEAPONS
+      - STR_BASIC_BALLISTICS_DEP
     inventoryMoveCost: #quickdraw
       basePercent: 50
     tags:
@@ -4484,6 +4504,10 @@ items:
 
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
+      
+  - type: STR_AUTOPISTOL_CLIP
+    requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
 
 
   - type: STR_FLAMETHROWER
@@ -4914,7 +4938,7 @@ items:
     dropoff: 5  # accurate
     requiresBuy:
       - STR_UFO_CONSTRUCTION
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     requiresBuyBaseFunc: [TRADE]  # Delaque
     costBuy: 200000  # pricy end game pistol
     costSell: 30000
@@ -5095,7 +5119,8 @@ items:
     hidePower: true
     categories: [STR_CAT_EQUIPMENT]
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_IMPERIAL_GUARD_OPERATIONS
     size: 0.2
     costBuy: 500
     costSell: 50
@@ -5305,7 +5330,8 @@ items:
       ITEM_RECOIL: 40
       ITEM_HAS_BIPOD: 1
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_LASER_WEAPONS
       - STR_NOT_TAU_EMPIRE_GV
     size: 0.3
     weight: 30  # light heavy stubber is 15, HB is 40, heavy plasma is 35, Rippergun is 50
@@ -5330,7 +5356,8 @@ items:
 
   - type: STR_HEAVY_STUBBER_CLIP_KRIEG
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_LASER_WEAPONS
       - STR_NOT_TAU_EMPIRE_GV
     categories: [STR_CAT_AUTO]
     size: 0.1

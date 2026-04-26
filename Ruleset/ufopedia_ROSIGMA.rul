@@ -7189,6 +7189,12 @@ ufopaedia:
     requires:
       - STR_NOT_WORDBEARERS
 
+  - id: STR_IMPERIAL_INTERROGATOR #OPFOR Commander Inquisitor
+    type_id: 10
+    section: STR_ARMORPEDIA
+    image_id: INQ_INTERROGATOR_CODEX.SPK.SPK
+    text: STR_IMPERIAL_INTERROGATOR_UFOPEDIA
+
   - id: STR_IMPERIAL_INQUISITOR_AI #OPFOR Commander Inquisitor
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS
@@ -12420,8 +12426,7 @@ ufopaedia:
     text: STR_MISSILE_LAUNCHER_GUARD_CODEX
   - id: STR_ACCATRAN_ROCKET_LAUNCHER
     requires:
-      - STR_GUARD_AND_ARBITES
-      - STR_NOT_CHAOSCULT
+      - STR_BASIC_BALLISTICS_DEP
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: ROCKET_ACCATRAN_CODEX.SPK

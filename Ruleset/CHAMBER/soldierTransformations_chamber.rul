@@ -21,6 +21,7 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_INQ_STORMTROOPER
       - STR_IMPERIAL_INQUISITOR
+      - STR_IMPERIAL_INTERROGATOR
     soldierBonusType: STR_BONUS_INQ_ROSARIUS
     requiredCommendations:
       STR_VETERAN_COMMENDATION: 0
@@ -101,3 +102,36 @@ soldierTransformation:
       STR_KILLPOINT_TOKEN: 50
     allowedSoldierTypes:
       - STR_IMPERIAL_INQUISITOR
+      - STR_IMPERIAL_INTERROGATOR
+      
+  # Interrogator -> Inquisitor
+  # Currently only Radical Road, no one else has Interrogators involved
+  - name: STR_INQ_INQUISITOR_PROMOTION
+    cost: 100000
+    requires:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_MIDTIER_PREREQ
+    requiredCommendations:
+      STR_BATTLE_TESTED: 1
+    producedSoldierType: STR_IMPERIAL_INQUISITOR
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    recoveryTime: 100 # 100 days
+    upperBoundType: 1
+    flatOverallStatChange:
+      tu: 10
+      stamina: 10
+      health: 10
+      bravery: 10
+      reactions: 10
+      firing: 10
+      throwing: 10
+      strength: 10
+      psiStrength: 10
+      psiSkill: 10
+      melee: 10
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 100
+    allowedSoldierTypes:
+      - STR_IMPERIAL_INTERROGATOR

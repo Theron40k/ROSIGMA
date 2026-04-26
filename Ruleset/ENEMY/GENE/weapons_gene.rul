@@ -4,8 +4,6 @@ extended:
 items:
   - type: STR_LIBERATOR_AUTOSTUB_KELER  # big iron on his hips
     categories: [STR_CAT_AUTO]
-    # requires:
-    #   - STR_XENO_ONLY  # Is not recovered
     size: 0.1
     recoveryTransformations:
       STR_LIBERATOR_AUTOSTUB: [1]  # keeps the research clutter down
@@ -144,7 +142,7 @@ items:
   - type: STR_GSC_NEEDLER_RIFLE
     categories: [STR_CAT_SNIPER]
     requires:
-      - STR_XENO_ONLY
+      - STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS
     size: 0.2
     dropoff: 3  # light sniper rifle; scoped
     costSell: 20000
