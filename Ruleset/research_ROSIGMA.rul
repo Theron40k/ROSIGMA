@@ -234,7 +234,7 @@ research:
   - name: STR_CORRUPTED_REQUISITIONS  # Corrupted Requisitions
     dependencies:
       - STR_GENERALLOCK
-      
+
   # Weaponry of Chaos ; dependency the use of most Chaos weapons
   - name: STR_CHAOS_WEAPON_USE_DEP
     dependencies:
@@ -1914,7 +1914,7 @@ research:
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NORMAL_INQUISITION
       - STR_ELDAR_PATH
-    getOneFree: 
+    getOneFree:
       - STR_INQ_RECRUITS_RADICAL_ROAD2 # getOneFree so it will trigger its Event
     spawnedEvent: STR_INQ_RECRUITS_RADICAL_ROAD
 
@@ -1996,7 +1996,7 @@ research:
       - STR_GENERALLOCK
     cost: 0
     points: 0
-    
+
   - name: STR_40MM_AMMO_DEP
     # tied to purchase/manufacture of 40mm grenades
     dependencies:
@@ -2140,6 +2140,7 @@ research:
     unlocks:
       - STR_CHAOS_STRATEGY
       - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_IMPERIUM_RESEARCH
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2413,7 +2414,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_LASER_WEAPONS
-      #      - STR_GUARD_AND_ARBITES
       #      - STR_GUARD_SUPORT
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2463,7 +2463,6 @@ research:
       - STR_JUMP_CARAPACE_DEP1
       - STR_AIRSTRIKE_REQUISITION
       - STR_JUMP_CARAPACE_REQUISITION
-      #      - STR_GUARD_AND_ARBITES
       - STR_IMPERIAL_GUARD_MISSIONS
       - STR_KRIEG_GUARDSMEN
       - STR_CATACHAN_GUARDSMEN
@@ -2495,7 +2494,6 @@ research:
       - STR_REGIMENT_OFFICERS
       - STR_IMPERIAL_GUARD_MISSIONS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      #      - STR_GUARD_AND_ARBITES
       - STR_SQUAT_GUARDSMEN
       - STR_BEASTMEN_GUARDSMEN
       - STR_FELINID_GUARDSMEN
@@ -4015,7 +4013,7 @@ research:
     unlocks:
       - STR_LIGHT_BOLTERS
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ARBITES_EVENT
-    
+
   - name: STR_INQ_MIDTIER_SUPPORT_ARBITES_DEP
     cost: 0
     points: 0
@@ -4312,7 +4310,7 @@ research:
       - STR_TAU_FIREWARRIORCAPTAINAI
     disables:
       - STR_INQ_CONSORT_TAU_RESEARCH
-      
+
   - name: STR_INQ_CONSORT_ORKS_RESEARCH  # Consort with the Orks
     cost: 400
     points: -100
@@ -4692,7 +4690,7 @@ research:
       - STR_ELERIUM_115
     unlocks:
       - STR_INQUISITION_VALKYRIE
-      
+
   - name: STR_INQ_RR_CORVUS_ACCESS
     cost: 0
     points: 0
@@ -4701,6 +4699,12 @@ research:
       - STR_INQ_RR_CRAFT_ACQUISITIONS
     unlocks:
       - STR_CORVUS_RESEARCH
+
+  - name: STR_ARVUS_DEP
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ADEPTAS
 
   - name: STR_ARVUSSQUADRON_DEP
     cost: 0
@@ -4717,7 +4721,7 @@ research:
       - STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH
     unlocks:
       - STR_ARVUSSQUADRON_DEP
-      
+
   - name: STR_INQ_RR_VULTURE_ACCESS
     cost: 0
     points: 0
@@ -4745,10 +4749,10 @@ research:
       - STR_SIDEOPERATIONS
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_CHAOS
-      
+
   - name: STR_XENO_LEADER_INTERROGATED  # Xeno Leader Interrogation
     refNode: *STR_LOCKED
-      
+
   - name: STR_INQ_RR_MIDTIER_XENOS #Midtier Xenos Path
     # grant access to Xeno Weapons (not chaos)
     cost: 250

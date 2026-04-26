@@ -362,6 +362,7 @@ items:
     dropoff: 5  # Accatran lightweight
     requiresBuy:
       - STR_BASIC_BALLISTICS_DEP
+      - STR_NOT_CHAOSCULT
     costBuy: 75000
     costSell: 20000
     weight: 30  # -20 weight, accatran airborne
@@ -582,7 +583,7 @@ items:
     dropoff: 5
     requiresBuy:
       - STR_MIDTIER_PREREQ
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     size: 0.2
     costBuy: 20000
     costSell: 5000
@@ -3487,6 +3488,9 @@ items:
       ArmorEffectiveness: 1
       ToArmor: 0.1
       ToItem: 0.3
+    requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
     tags:
       ITEM_AMMO_COLOR: 2
       ITEM_GETS_FACTION_RECOLOR: 1
@@ -4905,7 +4909,7 @@ items:
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
     size: 0.4
     requires:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_HEAVY_WEAPONS_IG
     costBuy: 10000
     costSell: 3000
