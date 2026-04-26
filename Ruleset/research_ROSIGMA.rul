@@ -1993,7 +1993,7 @@ research:
 
   - name: STR_BASIC_BALLISTICS_DEP # tied to purchase of various basic weapons; Stubbers, some ML's, Grenade Launcher...
     dependencies:
-      - STR_GENERALLOCK
+      - STR_GUARD_AND_ARBITES # Should be STR_GENERALLOCK, but that will be a savebreaker. This preserves most old use cases.
     cost: 0
     points: 0
 
