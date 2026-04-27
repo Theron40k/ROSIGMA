@@ -312,8 +312,7 @@ manufacture:
   - name: STR_STORMBOLTER_DEAZ
     category: STR_WEAPON
     requires:
-      - STR_HB_DEP1
-      - STR_ADEPTAS
+      - STR_ADEPTAS_STORM_BOLTERS_DEP
     space: 0
     time: 700
     cost: 150000
@@ -486,6 +485,7 @@ manufacture:
   - name: STR_ADEPTAS_ARMOR_CELESTIAN_SACRESANT_STOREITEM               # 1 BADGE 5  Shield Close Combat
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_UFO_CONSTRUCTION
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
@@ -500,6 +500,7 @@ manufacture:
   - name: STR_ADEPTAS_ARMOR_CELESTIAN_ELITE_STOREITEM              # 1 BADGE 5 Retributor Elite
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_UFO_CONSTRUCTION
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
@@ -514,6 +515,7 @@ manufacture:
   - name: STR_ADEPTAS_ARMOR_HONOR  # special white armor for Elites
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_ADEPTAS_ARMOR_HONOR
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
@@ -527,6 +529,7 @@ manufacture:
   - name: STR_ADEPTAS_ARMORCEL                 # 1 BADGE 1
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_ADEPTAS_ARMOR
       - STR_ADEPTAS_ARMORCEL
       - STR_FAITHFUL_ARMORY

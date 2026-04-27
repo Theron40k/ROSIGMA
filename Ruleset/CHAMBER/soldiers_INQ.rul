@@ -154,6 +154,82 @@ soldiers:
     deathMale: [{mod: 40k, index: 836}, {mod: 40k, index: 837}, {mod: 40k, index: 838}]
     deathFemale: [{mod: 40k, index: 836}, {mod: 40k, index: 837}, {mod: 40k, index: 838}]
 
+  - type: STR_IMPERIAL_INTERROGATOR # baby Inquisitor
+    requires:
+      - STR_GENERALLOCK
+    flagOffset: 21
+    costSalary: 60000
+    minStats:
+      tu: 55
+      stamina: 45
+      health: 40
+      bravery: 60
+      reactions: 35
+      firing: 50
+      throwing: 40
+      strength: 30
+      psiStrength: 50
+      psiSkill: 50
+      melee: 45
+    maxStats:
+      tu: 65
+      stamina: 70
+      health: 60
+      bravery: 90
+      reactions: 65
+      firing: 70
+      throwing: 65
+      strength: 50
+      psiStrength: 90
+      psiSkill: 70
+      melee: 75
+    statCaps: # all 10 lower than full Inquisitor
+      tu: 80
+      stamina: 110
+      health: 80
+      bravery: 100
+      reactions: 90
+      firing: 100
+      throwing: 70
+      strength: 90
+      psiStrength: 110
+      psiSkill: 110
+      melee: 120
+    trainingStatCaps:
+      tu: 60
+      stamina: 80
+      health: 60
+      firing: 80
+      throwing: 65
+      strength: 50
+      psiStrength: 100
+      psiSkill: 100
+      melee: 80
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    armor: STR_INQ_INQUISITOR_INTERROGATOR_ARMOR
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 42
+    soldierNames:
+      - delete
+      - Names/chamber_inquisitor.nam
+    deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
+    rankStrings:
+      - STR_INTERROGATOR_RANK_0
+      - STR_INTERROGATOR_RANK_1
+      - STR_INTERROGATOR_RANK_2
+    rankSprite: {mod: 40k, index: 850}
+    rankBattleSprite: {mod: 40k, index: 233}
+    rankTinySprite: {mod: 40k, index: 115}
+
   - type: STR_IMPERIAL_INQUISITOR
     requires:
       - STR_IMPERIAL_INQUISITOR_REQUISITION
