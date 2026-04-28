@@ -12066,6 +12066,21 @@ ufopaedia:
       - STR_HEAVY_PLASMA_DEP1
 
   # Barrage Plasma
+  - id: STR_BARRAGE_PLASMA_TERRAN  # Barrage Plasma
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_HEAVY_PLASMA_DEP1
+    text: STR_BARRAGE_PLASMA_TERRAN_CODEX
+  - id: STR_BARRAGE_PLASMA  # Chaos Barrage Plasma
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_HEAVY_PLASMA_DEP1
+      - STR_CHAOS_ARMORY_EXAM_PLASMA_ADVANCED
+    text: STR_BARRAGE_PLASMA_CODEX
   - id: STR_BARRAGE_PLASMA_CLIP
     type_id: 14
     section: STR_NOT_AVAILABLE
@@ -12119,6 +12134,24 @@ ufopaedia:
     text: STR_GRAV_AMMO_UFOPEDIA
 
   # Grav Pistols
+  - id: STR_CHAOS_GRAVPISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1GG.SPK
+    requires:
+      - STR_GRAVITON_TECH
+      - STR_CORRUPTED_REQUISITIONS
+    text: STR_CHAOS_GRAVPISTOL_CODEX
+  - id: STR_CHAOS_MC_GRAVPISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1GG.SPK
+    requires:
+      - STR_GRAVITON_TECH
+      - STR_MASTER_CRAFTING_AMMO
+      - STR_CORRUPTED_REQUISITIONS
+    text: STR_CHAOS_MC_GRAVPISTOL_CODEX
+
   - id: STR_NURGLE_GRAVPISTOL
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
