@@ -1352,6 +1352,9 @@ mapScripts:
 ### organized row by row.
   - type: FINAL_SCRIPT_GUEVESA_GV
     commands:
+      - type: addCraft
+        rects:
+          - [2, 0, 1, 2]
       - type: addBlock
         rects:
           - [0, 0, 1, 1]
@@ -1360,9 +1363,6 @@ mapScripts:
         rects:
           - [1, 0, 1, 1]
         blocks: [8]
-      - type: addCraft
-        rects:
-          - [2, 0, 1, 2]
       - type: addBlock
         rects:
           - [2, 0, 1, 1]
