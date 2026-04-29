@@ -21,8 +21,8 @@ items:
       - STR_STUB_GUN_AMMO_HP
       - STR_STUB_GUN_AMMO_INC
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
       - STR_IMPERIAL_WEAPONS
+      - STR_BASIC_BALLISTICS_DEP
     tags:
       ITEM_COLOR_CHANGES_WITH_AMMO_NON_GRAY: 14
       ITEM_HAS_RANDOMIZED_SPRITES: 0
@@ -34,6 +34,9 @@ items:
     bigSprite: 1000
     tags:
       ITEM_COLOR_CHANGES_WITH_AMMO_NON_GRAY: 14
+    requiresBuy:
+      - STR_IMPERIAL_WEAPONS
+      - STR_BASIC_BALLISTICS_DEP
 
   - &STR_STUBBERS_AMMO
     type: STR_STUB_GUN_AMMO
@@ -53,7 +56,7 @@ items:
     armor: 30
     attraction: 1
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     tags:
       ITEM_AMMO_COLOR: 0
 
@@ -66,7 +69,7 @@ items:
     tags:
       ITEM_AMMO_COLOR: 3
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_ALIEN_ALLOYS  # adamantium research
 
   - type: STR_STUB_GUN_AMMO_WOUND
@@ -78,7 +81,7 @@ items:
     tags:
       ITEM_AMMO_COLOR: 2
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_MEDI_KIT_PREREQ
 
   - type: STR_STUB_GUN_AMMO_HP
@@ -90,7 +93,7 @@ items:
     tags:
       ITEM_AMMO_COLOR: 8
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_ELERIUM_115
 
   - type: STR_STUB_GUN_AMMO_INC
@@ -102,7 +105,7 @@ items:
     tags:
       ITEM_AMMO_COLOR: 1
     requiresBuy:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
 
 
 #  - type: STR_STUB_GUN_CHAOS
@@ -143,7 +146,7 @@ items:
 
   - type: STR_HEAVY_STUBBER_HANDHELD
     requiresBuy:
-      - STR_THE_IMPERIAL_LAW_STRATEGY
+      - STR_ARBITES_BASIC_GEAR_DEP
     armor: 200
     weight: 16
     bigSprite: 3200
@@ -169,7 +172,7 @@ items:
   - &STR_LAWBRINGER
     type: STR_SHOTGUNPD
     requiresBuy:
-      - STR_THE_IMPERIAL_LAW_STRATEGY
+      - STR_ARBITES_BASIC_GEAR_DEP
     armor: 200
     confAimed:
       name: STR_AP_SHOT
@@ -196,7 +199,7 @@ items:
     costBuy: 10000
     costSell: 5000
     requiresBuy:
-      - STR_THE_IMPERIAL_LAW_STRATEGY
+      - STR_ARBITES_BASIC_GEAR_DEP
 
   - type: STR_ENFORCER_HEAVY_ARMOR
     costBuy: 30000
