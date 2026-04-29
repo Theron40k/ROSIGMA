@@ -9765,6 +9765,13 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: AUTOGUN.SPK
     text: STR_AUTOGUN_UFOPEDIA
+  - id: STR_AUTOGUN_CHAOS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: AUTOGUN.SPK
+    requires:
+      - STR_ALIENS_ONLY
+    text: STR_AUTOGUN_CHAOS_CODEX
   - id: STR_AUTOGUN_HIGHGRADE
     requires:
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
@@ -12999,6 +13006,31 @@ ufopaedia:
       - STR_UFO_CONSTRUCTION # same as manufacture requirements.
       - STR_CHAPTER_PURITY
       - STR_POWER_SWORD
+
+  - id: STR_CPOWER_SWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PS.SPK
+    text: STR_CPOWER_SWORD_CODEX
+    requires:
+      - STR_CORRUPTED_REQUISITIONS
+      - STR_POWER_SWORD
+  - id: STR_CPOWER_DAGGER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CPOWER_DAGGER.SPK
+    text: STR_CPOWER_DAGGER_CODEX
+    requires:
+      - STR_CORRUPTED_REQUISITIONS
+      - STR_HIGHTIER_PREREQ
+  - id: STR_CPOWER_AXE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CPOWER_AXE.SPK
+    text: STR_CPOWER_AXE_CODEX
+    requires:
+      - STR_KHORNE_OPTIONS  # Favor of Khorne
+      - STR_HIGHTIER_PREREQ
 
   - delete: STR_HAMMER
   - id: STR_HAMMER
