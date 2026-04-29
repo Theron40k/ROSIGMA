@@ -31,6 +31,21 @@ manufacture:
     producedItems:
       STR_KILLPOINT_TOKEN: 1
 
+  - name: STR_INQ_INTERROGATOR_REQUISITION
+    category: STR_ADVANCEMENT
+    requires:
+      - STR_INQ_INTERROGATOR_REQUISITION
+    space: 0
+    time: 600
+    cost: 200000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_ELERIUM_115: 20
+      STR_KILLPOINT_TOKEN: 100
+    spawnedPersonType: STR_IMPERIAL_INQUISITOR
+    producedItems:
+      STR_KILLPOINT_TOKEN: 1
+
   - &STR_COLLAR_PENITENT
     name: STR_COLLAR_TRAITOR_GUARDSMAN_INQ
     category: STR_CAT_PENAL
@@ -267,7 +282,7 @@ manufacture:
   - name: STR_RECRUIT_CAPTIVE_TRAITOR_COMMANDER_INQ
     category: STR_CAT_RECRUIT_HERETIC
     requires:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_INQ_RR_MIDTIER_CHAOS
     space: 0
     time: 1000  # time consuming
     cost: 150000
@@ -281,7 +296,7 @@ manufacture:
   - name: STR_RECRUIT_CULTIST_HIGH_PRIEST_INQ
     category: STR_CAT_RECRUIT_HERETIC
     requires:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_INQ_RR_MIDTIER_CHAOS
     space: 0
     time: 750  # time consuming
     cost: 200000
@@ -409,6 +424,7 @@ manufacture:
     producedItems:
       STR_ARVUS_GK: 1
 
+
 # NECRON
 # Cannot build the Warscythe and Staff of Light; these are too complex even for Adepts to 'piece together' with considerable trial and error
 
@@ -476,3 +492,45 @@ manufacture:
       STR_UFO_CONSTRUCTION: 10
       STR_GAUSS_BLASTER_REMNANT: 25
       STR_KILLPOINT_TOKEN: 400
+
+  - name: STR_INQ_ABHUMANS_RIPPER_GUN
+    category: STR_WEAPON
+    requires:
+      - STR_INQ_SECURE_SUPPORT_ABHUMANS_RESEARCH
+    space: 0
+    time: 200
+    cost: 500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_RIPPER_GUN: 1
+
+  - name: STR_INQ_RR_RECRUIT_CHAOS_MARINE
+    category: STR_ADVANCEMENT
+    requires:
+      - STR_INQ_CONTACT_DEFECTOR_MARINES_RESEARCH
+    space: 0
+    time: 700
+    cost: 200000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+      STR_ELERIUM_115: 30
+      STR_KILLPOINT_TOKEN: 100
+    spawnedPersonType: STR_CHAOS_MARINE
+    producedItems:
+      STR_KILLPOINT_TOKEN: 1
+
+  # Manufacture for RadChaos Chaos Path to get ChaosCult Hellblades
+  - name: STR_HELLBLADE_INTERCEPTORS_CHAOS
+    category: STR_CRAFT
+    requires:
+      - STR_INQ_RR_MIDTIER_CHAOS
+      - STR_INQ_RR_CRAFT_ACQUISITIONS
+      - STR_UFO_CONSTRUCTION
+    space: 30
+    time: 14000
+    cost: 400000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 350
+      STR_UFO_POWER_SOURCE: 1
+      STR_UFO_NAVIGATION: 1
