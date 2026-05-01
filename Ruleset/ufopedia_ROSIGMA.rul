@@ -11450,6 +11450,13 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
     text: STR_CHAOS_LONGLAS_UFOPEDIA
+  - id: STR_ASSCTZ #soulreaper cannon
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_ASSCTZ.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_TZEENTCH
+    text: STR_ASSCTZ_CODEX
 
   - delete: STR_LASGUN_CLIP
   - id: STR_LASGUN_CLIP
@@ -13132,6 +13139,7 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_KHORNE_CHAINAXE_CODEX.SPK
+    text: STR_KHORNE_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -13139,6 +13147,7 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_GREAT_CHAINAXE_CODEX.SPK
+    text: STR_KHORNE_GREAT_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -13331,6 +13340,15 @@ ufopaedia:
       - STR_INQ_ST_ARMOR_PA_BREACHER_UNLOCKER
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+  # other: guard laser airstrike designator
+  - id: STR_AIRSTRIKE_VOX  # Laser airstrike designator
+    requires:
+      - STR_AIRSTRIKE_REQUISITION
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HEAVY_WEAPON_TOOLS.SPK
+    text: STR_AIRSTRIKE_UFOPEDIA
 
  # Assassinorum built in weapons
 # Vindicare
