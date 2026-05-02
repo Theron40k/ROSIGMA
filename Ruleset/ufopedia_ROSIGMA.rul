@@ -5757,7 +5757,7 @@ ufopaedia:
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: KhorneSisterChosenOrigin.SPK
-    text: STR_CHAOS_ADEPTAS_KHORNE_ARMOR_UFOPAEDIA
+    text: STR_KHORNE_SUPERIOR_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
 
@@ -5781,15 +5781,15 @@ ufopaedia:
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: TzeentchSisterChosenOrigin.SPK
-    text: STR_CHAOS_ADEPTAS_TZEENTCH_ARMOR_UFOPAEDIA
+    text: STR_TZEENTCH_SUPERIOR_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
 
   - id: STR_CHAOS_SORC_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_SORC_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_SORC_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5797,8 +5797,8 @@ ufopaedia:
   - id: STR_CHAOS_HAVOC_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_HAVOC_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_HAVOC_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5806,8 +5806,8 @@ ufopaedia:
   - id: STR_CHAOS_MARINE_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_MARINE_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_MARINE_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5815,8 +5815,8 @@ ufopaedia:
   - id: STR_CHAOS_SERGEANT_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_SERGEANT_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_SERGEANT_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5833,8 +5833,8 @@ ufopaedia:
   - id: STR_CHAOS_TERMINATOR_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_TERMINATOR_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_TERMINATOR_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5842,8 +5842,8 @@ ufopaedia:
   - id: STR_CHAOS_LORD_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_LORD_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_LORD_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -9833,6 +9833,12 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
     image_id: 1CH.SPK
 
+  - id: STR_AUTOCARBINE_NAVY
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: AUTOGUN.SPK
+    text: STR_AUTOCARBINE_NAVY_CODEX
+
 #WEAPONS.SNIPER#
   - delete: STR_HEAVY_CANNON
   - id: STR_HEAVY_CANNON  # Sniper Rifle
@@ -11450,6 +11456,13 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
     text: STR_CHAOS_LONGLAS_UFOPEDIA
+  - id: STR_ASSCTZ #soulreaper cannon
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_ASSCTZ.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_TZEENTCH
+    text: STR_ASSCTZ_CODEX
 
   - delete: STR_LASGUN_CLIP
   - id: STR_LASGUN_CLIP
@@ -11698,6 +11711,32 @@ ufopaedia:
 
   - delete: STR_HFLAMER_CLIP
   - id: STR_HFLAMER_CLIP  # Heavy Flamer Fuel
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  # chaos gods "flamers"
+  - id: STR_FLAMETHROWERTZ # warpflamer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MF.SPK #todo: find a better picture. it's fine as is for now
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    text: STR_FLAMETHROWERTZ_UFOPEDIA
+  - id: STR_FLAMETHROWER_WARPFIRE_CLIP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_PLAGUE_SPEWER # Plague Spewer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_PLAGUE_SPEWER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_NURGLE
+    text: STR_PLAGUE_SPEWER_UFOPEDIA
+  - id: STR_PLAGUE_SPEWER_TANK
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_PLAGUE_SPEWER_TANK_PLAYER
     type_id: 14
     section: STR_NOT_AVAILABLE
 
@@ -13107,6 +13146,18 @@ ufopaedia:
     image_id: 1MCPS.SPK
     text: STR_ADEPTAS_ZWEIHANDER_UFOPEDIA
 
+  - id: STR_POWER_PICK
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_POWER_PICK.SPK
+    text: STR_POWER_PICK_CODEX
+
+  - id: STR_POWER_HAMMER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_POWER_HAMMER.SPK
+    text: STR_POWER_HAMMER_CODEX
+
   - id: STR_SACRESANT_SHIELD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -13132,6 +13183,7 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_KHORNE_CHAINAXE_CODEX.SPK
+    text: STR_KHORNE_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -13139,6 +13191,7 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_GREAT_CHAINAXE_CODEX.SPK
+    text: STR_KHORNE_GREAT_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -13331,6 +13384,15 @@ ufopaedia:
       - STR_INQ_ST_ARMOR_PA_BREACHER_UNLOCKER
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+  # other: guard laser airstrike designator
+  - id: STR_AIRSTRIKE_VOX  # Laser airstrike designator
+    requires:
+      - STR_AIRSTRIKE_REQUISITION
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HEAVY_WEAPON_TOOLS.SPK
+    text: STR_AIRSTRIKE_UFOPEDIA
 
  # Assassinorum built in weapons
 # Vindicare
@@ -13762,16 +13824,6 @@ ufopaedia:
       - STR_PRIMARIS
       - STR_MASTER_CRAFTING
       - STR_MIDTIER_PREREQ
-
-  # Plague Spewer
-  - id: STR_PLAGUE_SPEWER
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_NURGLE
-  - id: STR_PLAGUE_SPEWER_TANK
-    type_id: 14
-    section: STR_NOT_AVAILABLE
 
   # Genestealer
   - id: STR_GSC_NEEDLER_RIFLE
