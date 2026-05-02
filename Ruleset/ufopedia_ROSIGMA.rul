@@ -9833,6 +9833,12 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
     image_id: 1CH.SPK
 
+  - id: STR_AUTOCARBINE_NAVY
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: AUTOGUN.SPK
+    text: STR_AUTOCARBINE_NAVY_CODEX
+
 #WEAPONS.SNIPER#
   - delete: STR_HEAVY_CANNON
   - id: STR_HEAVY_CANNON  # Sniper Rifle
@@ -11708,6 +11714,32 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  # chaos gods "flamers"
+  - id: STR_FLAMETHROWERTZ # warpflamer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MF.SPK #todo: find a better picture. it's fine as is for now
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    text: STR_FLAMETHROWERTZ_UFOPEDIA
+  - id: STR_FLAMETHROWER_WARPFIRE_CLIP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_PLAGUE_SPEWER # Plague Spewer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_PLAGUE_SPEWER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_NURGLE
+    text: STR_PLAGUE_SPEWER_UFOPEDIA
+  - id: STR_PLAGUE_SPEWER_TANK
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_PLAGUE_SPEWER_TANK_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
 #WEAPONS.MELT#    Meltas
   # Light Melta
   - id: STR_LIGHT_MELTAGUN_MYNERVA
@@ -13114,6 +13146,18 @@ ufopaedia:
     image_id: 1MCPS.SPK
     text: STR_ADEPTAS_ZWEIHANDER_UFOPEDIA
 
+  - id: STR_POWER_PICK
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_POWER_PICK.SPK
+    text: STR_POWER_PICK_CODEX
+
+  - id: STR_POWER_HAMMER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_POWER_HAMMER.SPK
+    text: STR_POWER_HAMMER_CODEX
+
   - id: STR_SACRESANT_SHIELD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -13780,16 +13824,6 @@ ufopaedia:
       - STR_PRIMARIS
       - STR_MASTER_CRAFTING
       - STR_MIDTIER_PREREQ
-
-  # Plague Spewer
-  - id: STR_PLAGUE_SPEWER
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_NURGLE
-  - id: STR_PLAGUE_SPEWER_TANK
-    type_id: 14
-    section: STR_NOT_AVAILABLE
 
   # Genestealer
   - id: STR_GSC_NEEDLER_RIFLE
