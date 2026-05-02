@@ -1914,6 +1914,7 @@ research:
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NORMAL_INQUISITION
       - STR_ELDAR_PATH
+      - STR_CHAOS_PATH # RadicalRoad has its own Chaos progression, don't allow IntoTheDarkGodsPath entry
     getOneFree:
       - STR_INQ_RECRUITS_RADICAL_ROAD2 # getOneFree so it will trigger its Event
     spawnedEvent: STR_INQ_RECRUITS_RADICAL_ROAD
@@ -3886,7 +3887,7 @@ research:
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_NOT_THE_IMPERIAL_LAW
-      - STR_INTERROGATION_COMPLETED
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
     getOneFree:
       - STR_INQ_STORMTROOPER
   - name: STR_INQ_STORMTROOPER  # Inquisition Storm Trooper
@@ -3983,7 +3984,7 @@ research:
       - STR_ALIEN_ORIGINS
 
   - name: STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH  # Summon Agents of the Inquisition
-    cost: 200
+    cost: 150
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_NOT_THE_IMPERIAL_LAW
