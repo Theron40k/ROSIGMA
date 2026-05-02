@@ -1794,7 +1794,6 @@ research:
       - STR_DEFAULT_CAMPAIGN
       - STR_XIPHON
       - STR_IMPERIUM_RESEARCH
-      # - STR_HARDER_MISSIONS
       - STR_INQ_STORMTROOPER_CODEX_UNLOCKER
       - STR_NORMAL_INQUISITION
     disables:
@@ -1913,7 +1912,7 @@ research:
       - STR_ASSASSINORUM
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NORMAL_INQUISITION
-      - STR_ELDAR_PATH
+      - STR_ELDAR_PATH # RadicalRoad has its own Xenos pathways.
       - STR_CHAOS_PATH # RadicalRoad has its own Chaos progression, don't allow IntoTheDarkGodsPath entry
     getOneFree:
       - STR_INQ_RECRUITS_RADICAL_ROAD2 # getOneFree so it will trigger its Event
@@ -4013,6 +4012,7 @@ research:
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
     unlocks:
       - STR_LIGHT_BOLTERS
+      - STR_ARBITES_BASIC_GEAR_DEP
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ARBITES_EVENT
 
   - name: STR_INQ_MIDTIER_SUPPORT_ARBITES_DEP
