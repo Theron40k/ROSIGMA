@@ -718,6 +718,55 @@ manufacture:
       transformationBonuses:
         STR_MARK_OF_CHAOS: 1
 
+  # Indoctrinate
+  - name: STR_RECRUIT_CULTIST
+    category: STR_CAT_INDOCTRINATE
+    requires:
+      - STR_CULTIST_ENHANCER_BLOCK
+    space: 0
+    time: 100  # Faster than recruiting fresh new cultist
+    cost: 0  # cultist cost 5k to recruit, cultist prisioner gives 10k to sell
+    requiredItems:
+      STR_LIVE_CAPTURE_CULTIST: 1
+    spawnedPersonType: STR_CHAOSCULT_SOLDIER_LV1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 20
+
+  - &STR_RECRUIT_GANGER
+    name: STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERF0_AI # Indoctrinate Ganger Killer
+    category: STR_CAT_INDOCTRINATE
+    requires:
+      - STR_CULTIST_ENHANCER_BLOCK
+    space: 0
+    time: 100  # Faster than recruiting fresh new cultist
+    cost: 0  # cultist cost 5k to recruit, ganger cost 5k to sell
+    requiredItems:
+      STR_GANGERBASE_SOLDIERF0_AI: 1
+    spawnedPersonType: STR_CHAOSCULT_SOLDIER_LV1
+    producedItems:
+      STR_KILLPOINT_TOKEN: 10
+  - name: STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERF0_AI # Indoctrinate Ganger Killer
+    refNode: *STR_RECRUIT_GANGER
+    requiredItems:
+      STR_GANGERBASE_SOLDIERF1_AI: 1
+  - name: STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERF1_AI # Indoctrinate Gang Thief
+    refNode: *STR_RECRUIT_GANGER
+    requiredItems:
+      STR_GANGERBASE_SOLDIERF0_AI: 1
+  - name: STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERF2_AI # Indoctrinate Gang Striker
+    refNode: *STR_RECRUIT_GANGER
+    requiredItems:
+      STR_GANGERBASE_SOLDIERF2_AI: 1
+  - name: STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERM0_AI # Indoctrinate Gang Breaker
+    refNode: *STR_RECRUIT_GANGER
+    requiredItems:
+      STR_GANGERBASE_SOLDIERM0_AI: 1
+  - name: STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERM1_AI # Indoctrinate Gang Cleaner
+    refNode: *STR_RECRUIT_GANGER
+    requiredItems:
+      STR_GANGERBASE_SOLDIERM1_AI: 1
+
+  # Recruit Heretics
   - &STR_RECRUIT_PSYKER
     name: STR_RECRUIT_TRAITOR_PSYKER
     category: STR_CAT_RECRUIT_HERETIC
@@ -1158,7 +1207,7 @@ manufacture:
     space: 2
     time: 40
     cost: 1250
-  
+
   - name: STR_LASCANNON_CHAOS_CELL
     category: STR_AMMUNITION
     requires:
