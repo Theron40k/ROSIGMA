@@ -466,6 +466,7 @@ items:
     weight: 5 # a bit heavier
     power: 150
     damageAlter:
+      RandomType: 6 # same as lascannon
       ToArmorPre: 0.4
       ToHealth: 0.8
       ToArmor: 0.2
@@ -478,7 +479,7 @@ items:
     powerRangeThreshold: 15
     powerRangeReduction: 7  # lowers power by 7 by each tile beyond 15, at range 20 it has lost 35 power. bit more damage loss than standard lascannon
     damageType: 4
-    RandomType: 6 # same as lascannon
+
     invWidth: 2
     invHeight: 1
     battleType: 2
