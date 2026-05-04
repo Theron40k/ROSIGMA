@@ -50,13 +50,12 @@ items:
     hitAnimation: {mod: 40k, index: 100}
     explosionSpeed: 10
     bulletSpeed: 30
-    # carbine accuracy
     accuracyAuto: 70
-    accuracySnap: 85
-    autoRange: 16
-    snapRange: 20
-    tuAuto: 35
-    tuSnap: 20
+    accuracySnap: 80
+    autoRange: 12
+    snapRange: 16
+    tuAuto: 40
+    tuSnap: 25
     autoShots: 8
     sprayWaypoints: 2
     clipSize: -1
@@ -99,7 +98,7 @@ items:
     damageAlter:  # DA PULSE AP
       RandomType: 6
       ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.85  # has armor penetration on tabletop
+      ArmorEffectiveness: 0.9  # has armor penetration on tabletop
     shotgunSpread: 10  # twin linked
     shotgunBehavior: 1  # twin linked
     shotgunPellets: 2
@@ -110,7 +109,7 @@ items:
     damageAlter:  # DA PULSE AP
       RandomType: 6
       ToArmorPre: 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.85  # has armor penetration on tabletop
+      ArmorEffectiveness: 0.9  # has armor penetration on tabletop
 
   - type: STR_TAU_SUIT_FLAMER_GV
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
@@ -448,6 +447,82 @@ items:
     fixedWeapon: true
     specialIconSprite: 100
 
+  # - type: STR_STEALTH_SUIT_BUILTIN_GV
+  #   categories: [STR_CAT_SPELLS]
+  #   battleType: 1
+  #   size: 0
+  #   weight: 0
+  #   invWidth: 3
+  #   invHeight: 3
+  #   armor: 255
+  #   recover: false
+  #   hiddenOnMinimap: true
+  #   fixedWeapon: true
+  #   defaultInventorySlot: STR_BACK_PACK
+  #   twoHanded: false
+    # clipSize: -1
+    # #*** Inspire
+    # fireSound: {mod: 40k, index: 787}
+    # hitSound: [{mod: 40k, index: 1110}, {mod: 40k, index: 1111}, {mod: 40k, index: 1112}, {mod: 40k, index: 1113}, {mod: 40k, index: 1114}, {mod: 40k, index: 1115}, {mod: 40k, index: 1116}, {mod: 40k, index: 1117}, {mod: 40k, index: 1118}, {mod: 40k, index: 1119}, {mod: 40k, index: 1120}, {mod: 40k, index: 1121}]
+    # hitAnimation: {mod: 40k, index: 1100}
+    # damageType: 0  # was 10
+    # power: 1
+    # damageBonus:
+    #   bravery: 0.5
+    #   psiSkill: 0.25
+    # damageAlter:
+    #   RandomType: 3
+    #   ArmorEffectiveness: 0.0  # was 0.25
+    #   ToStun: 0.2
+    #   ToMorale: -1.00
+    #   ToTime: -1.00
+    #   ToHealth: 0.0
+    #   ToWound: 0.0
+    #   ToArmor: 0.0
+    #   ToTile: 0.00  # this shouldn't blow up cover
+    #   ToItem: 0.00
+    # maxRange: 7
+    # aimRange: 3
+    # powerRangeThreshold: 3
+    # powerRangeReduction: 5.0
+    # flatRate: true
+    # accuracyAimed: 100
+    # accuracyMultiplier:
+    #   firing: 0.0
+    #   bravery: 2.2
+    # confAimed:
+    #   name: STR_INSPIRE
+    # costAimed:
+    #   time: 25
+    #   energy: 30
+    #   stun: 10
+    # experienceTrainingMode: 19  # trains Bravery
+    # dropoff: 1 #just to let you know where the falloff is
+    # noLOSAccuracyPenalty: 0 #have to be able to see the target
+    # #*** Melee bayonet
+    # meleeSound: {mod: 40k, index: 754}
+    # meleeHitSound: {mod: 40k, index: 773}
+    # meleeAnimation: {mod: 40k, index: 4}
+    # meleeType: 7
+    # meleePower: 40
+    # meleeBonus:
+    #   strength: 0.2
+    #   melee: 0.2
+    # meleeAlter:
+    #   ArmorEffectiveness: 0.9
+    # accuracyMelee: 70
+    # meleeMultiplier:
+    #   flatHundred: 0.5
+    #   melee: 0.5
+    # tuMelee: 10
+    # flatMelee:
+    #   time: true
+    # tags:
+    #   ITEM_IS_BUFF_WEAPON: 1
+    #   ITEM_DAMAGE_PERCENT_VS_MECHANICAL: 0
+    #   ITEM_DAMAGE_PERCENT_VS_PILOTED: 50
+    #   ITEM_DAMAGE_PERCENT_VS_NON_IMPERIAL_GUARD: 25
+
 
   - &STR_TAU_FUSION_BLASTERS
     type: STR_TAU_FUSION_BLASTER_SINGLE_GV #MELTAGUN                    2019
@@ -470,10 +545,10 @@ items:
     dropoff: 6
     autoRange: 0
     snapRange: 12
-    aimRange: 0
+    aimRange: 16
     accuracyAuto: 0
-    accuracySnap: 90
-    accuracyAimed: 100
+    accuracySnap: 80
+    accuracyAimed: 90
     tuAuto: 0
     tuSnap: 30
     tuAimed: 50
@@ -544,7 +619,7 @@ items:
     dropoff: 4
     autoRange: 0
     snapRange: 18
-    aimRange: 0
+    aimRange: 24
     accuracyAuto: 0
     accuracySnap: 80    # Fireknife targeting systems
     accuracyAimed: 90
@@ -552,7 +627,7 @@ items:
     tuSnap: 30
     tuAimed: 45
     power: 200  # always on maximal mode - hits very hard
-    powerForAnimation: 16  # 5 / 5 = 1
+    # powerForAnimation: 16  # 5 / 5 = 1
     damageType: 5
     damageAlter:
       # ToHealth: 0.9
@@ -561,7 +636,7 @@ items:
       ArmorEffectiveness: 0.65
       FireThreshold: 70  # can ignite at high damage
       ToArmor: 0.2
-      FixRadius: 1
+      FixRadius: 0
       IgnoreDirection: false
       RadiusReduction: 30.0
 
@@ -571,12 +646,12 @@ items:
       shots: 2
     confAimed:
       shots: 2
-    powerForAnimation: 5  # 5 / 5 = 1
+    # powerForAnimation: 5  # 5 / 5 = 1
     damageType: 5
     damageAlter:
       # ToHealth: 0.9
       # ToArmor: 0.1
-      FixRadius: 1
+      FixRadius: 0
       ArmorEffectiveness: 0.65
       FireThreshold: 70  # can ignite at high damage
       ToArmor: 0.2
@@ -601,8 +676,8 @@ items:
     dropoff: 4
     snapRange: 26
     aimRange: 33
-    accuracySnap: 90 # Fireknife targeting systems
-    accuracyAimed: 100
+    accuracySnap: 80 # Fireknife targeting systems
+    accuracyAimed: 90
     tuSnap: 25
     tuAimed: 45
     damageType: 3
