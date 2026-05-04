@@ -50,16 +50,15 @@ events:
     background: EcclessiarchyBG4.SCR
     timer: 1440  # between 1-3 days
     everyMultiItemList:
-      STR_LASER_RIFLE_G_HIGH_GRADE: 2
-      STR_LASGUN_CLIP_HOTSHOT: 8
-      STR_AUTOGUN_ADEPTAS_SCOPED: 2
-      STR_AUTOGUN_CLIP: 8
-      STR_MGRENADE: 2
+      STR_LASER_RIFLEG: 2
+      STR_LASGUN_CLIP: 8
+      STR_AUTOGUN_ADEPTAS_SCOPED: 3
+      STR_AUTOGUN_CLIP: 12
       STR_EVISCERATOR: 1
       STR_KNIF: 2
     everyMultiSoldierList:
       STR_GUARD_VETERAN: 2
-      STR_INQ_STORMTROOPER: 2
+      STR_GUARDPD: 2
       STR_PSYKER: 1
       STR_GUARD_PRIEST: 1
       STR_ADEPTAS_DCAssassin: 1
@@ -89,22 +88,22 @@ events:
         STR_SLAANESH_GRENADE: 2
       -
         STR_LIVE_CAPTURE_WITCH_LEADER: 1
-        STR_ALIEN_FOOD: 6
+        STR_ALIEN_FOOD: 10
       -
         STR_TZEENTCHINQ_CORPSE: 1
         STR_BOLTERR: 1
         STR_RIFLE_CLIP_R: 4
         STR_MIND_PROBE: 1
       -
-        STR_ADEPTAS_KHORNEREPENTIA_CORPSE: 2
+        STR_ADEPTAS_KHORNEREPENTIA_CORPSE: 4
         STR_CPOWER_AXE: 1
         STR_CHAOS_CHAIN_AXE: 1
       -
         STR_CATAPULT: 1
-        STR_SHURIKEN_CLIP: 2
+        STR_SHURIKEN_CLIP: 4
       -
-        STR_CHAOS_PENETANTE_CORPSE: 8
-        STR_KNIF: 8
+        STR_CHAOS_PENETANTE_CORPSE: 20
+        STR_KNIF: 20
         STR_SILACOID_CORPSE: 1
       -
         STR_PLAGUE_KNIFE: 1
@@ -116,17 +115,17 @@ events:
     background: AdministratumBG.SCR
     timer: 2440  # 2 days
     everyMultiItemList:
-      STR_SERVITOR: 4
+      STR_SERVITOR: 5
 
   - name: STR_INQ_AGENTS_BAD_PENAL_LEGION_EVENT
     description: STR_INQ_AGENTS_BAD_PENAL_LEGION_EVENT_DESCRIPTION
     background: ImperialPrisonersBG.SCR
     timer: 2440  # 2 days
     everyMultiItemList:
-      STR_KNIF: 2
+      STR_KNIF: 4
       STR_AUTOGUN: 4
-      STR_AUTOGUN_CLIP: 8
-    spawnedPersons: 6
+      STR_AUTOGUN_CLIP: 4
+    spawnedPersons: 8
     spawnedPersonType: STR_PENITENT_GUARD
 
   - name: STR_INQ_AGENTS_BAD_BEASTMEN_EVENT
@@ -182,7 +181,6 @@ events:
       STR_STUB_GUN_AMMO_AP: 8
       STR_SHOTGUN: 2
       STR_SHOTGUN_SHELLS: 8
-      STR_SMOKE_GRENADE: 2
       STR_MOTION_SCANNER: 1
     spawnedPersons: 2
     spawnedPersonType: STR_GUARDPD
@@ -268,14 +266,12 @@ events:
     timer: 2440  # 2 days
     everyMultiItemList:
       STR_EVISCERATOR: 1
-      STR_PURITY_SEAL: 1
-      STR_STUB_GUN: 4
-      STR_STUB_GUN_AMMO: 4
-      STR_AUTOGUN: 4
-      STR_AUTOGUN_CLIP: 4
+      STR_PURITY_SEAL: 2
+      STR_STUB_GUN: 10
+      STR_STUB_GUN_AMMO: 10
     everyMultiSoldierList:
       STR_GUARD_PRIEST: 1
-      STR_PENITENT: 6
+      STR_PENITENT: 10
 
   - name: STR_INQ_AGENTS_GOOD_FRATERIS_EVENT
     description: STR_INQ_AGENTS_GOOD_FRATERIS_EVENT_DESCRIPTION
@@ -297,13 +293,10 @@ events:
       STR_SHOTGUN_SHELLS: 4
       STR_SHOTGUN_SHELLS_AP: 4
       STR_SHOTGUN_SHELLS_INC: 4
-      STR_SHOTGUN_SHELLS_MC: 0
       STR_ARBITOR_ARMOR: 1
-      STR_STUB_GUN: 4
-      STR_STUB_GUN_AMMO: 8
     everyMultiSoldierList:
       STR_JUDGE: 1
-      STR_PENITENT: 4
+      STR_PENITENT: 5
 
   - name: STR_INQ_AGENTS_GOOD_PSYKER_EVENT
     description: STR_INQ_AGENTS_GOOD_PSYKER_EVENT_DESCRIPTION
@@ -328,8 +321,6 @@ events:
     everyMultiItemList:
       STR_AUTOCARBINE_NAVY: 1
       STR_AUTOGUN_CLIP_DRUM_KRAKEN: 4
-      STR_KRAK_GRENADE: 1
-      STR_MGRENADE: 1
       STR_MOTION_SCANNER: 1
     spawnedPersons: 1
     spawnedPersonType: STR_IMPERIAL_ASSASSINFEM
@@ -340,7 +331,6 @@ events:
     timer: 2440  # 2 days
     everyMultiItemList:
       STR_MC_BOLTER_DEAZ: 1
-      STR_LIGHT_BOLTPISTOL_AMMO_MC: 4
       STR_HOLOGRAM_GRENADE: 2
     spawnedPersons: 1
     spawnedPersonType: STR_IMPERIAL_INQUISITOR
@@ -386,40 +376,38 @@ events:
     timerRandom: 2880
     randomMultiSoldierList:
       - # Cadians
-        STR_GUARD_VETERAN: 5
+        STR_GUARD_VETERAN: 6
         STR_OGRYN: 1
       - # Krieg
-        STR_GUARDSM_KRIEG: 8
+        STR_GUARDSM_KRIEG: 10
       - # Steel Legion
-        STR_GUARDSL: 8
+        STR_GUARDSL: 10
       - # Catachans
-        STR_CATACHANVET_FIGHTER: 4
+        STR_CATACHANVET_FIGHTER: 6
     randomMultiItemList:
       - # Cadians
-        STR_MCLASER_RIFLE: 5
-        STR_LASGUN_CLIP_HOTSHOT: 16
-        STR_GRENADE: 10
+        STR_MCLASER_RIFLE: 6
+        STR_LASGUN_CLIP: 16
         STR_RIPPER_GUN: 1
         STR_RIPPER_GUN_CLIP: 8
         STR_OGRYN_CARAPACE: 1
         STR_BULLGRYN_ARMOR: 1
       - # Krieg
-        STR_LASGUN_LUCIUS: 6
-        STR_LASGUN_CLIP: 24
-        STR_KRAK_GRENADE: 8
+        STR_LASGUN_LUCIUS: 8
+        STR_LASGUN_CLIP: 32
         STR_HEAVY_STUBBER_KRIEG: 2
         STR_HEAVY_STUBBER_CLIP_KRIEG: 8
       - # Steel Legion
-        STR_LASGUN_STEEL_LEGION: 6
-        STR_LASGUN_CLIP: 24
+        STR_LASGUN_STEEL_LEGION: 8
+        STR_LASGUN_CLIP: 32
         STR_GRENADE_LAUNCHER_STEEL_LEGION: 2
         STR_FRAG_GRENADE_DRUM: 6
         STR_KRAK_GRENADE_DRUM: 6
       - # Catachans
-        STR_LASER_RIFLEG: 4
-        STR_LASGUN_CLIP: 12
+        STR_LASER_RIFLEG: 5
+        STR_LASGUN_CLIP: 20
         STR_FLAMETHROWER: 1
-        STR_FLAMETHROWER_CLIP: 3
+        STR_FLAMETHROWER_CLIP: 4
         STR_SATCHEL_CHARGE_HE: 3
   - name: STR_INQ_REQUISITION_OGRYNS_EVENT
     description: STR_INQ_REQUISITION_OGRYNS_EVENT_DESCRIPTION  # "The local Guard regiment have acquiesced to your request and dispatched Ogryn bodyguards."
@@ -427,11 +415,10 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_BULLGRYN_ARMOR: 1
-      STR_OGRYN_CARAPACE: 1
-      STR_RIPPER_GUN: 4
-      STR_RIPPER_GUN_CLIP: 16
-    spawnedPersons: 4
+      STR_OGRYN_CARAPACE: 2
+      STR_RIPPER_GUN: 5
+      STR_RIPPER_GUN_CLIP: 20
+    spawnedPersons: 5
     spawnedPersonType: STR_OGRYN
 
   - name: STR_INQ_REQUISITION_OGRYNS_BIGGER_EVENT
@@ -440,12 +427,10 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_BULLGRYN_ARMOR: 4
-      STR_OGRYN_CARAPACE: 4
-      STR_STUN_ROD: 4
-      STR_RIPPER_GUN: 4
-      STR_RIPPER_GUN_CLIP: 16
-    spawnedPersons: 4
+      STR_BULLGRYN_ARMOR: 5
+      STR_OGRYN_CARAPACE: 5
+      STR_STUN_ROD: 5
+    spawnedPersons: 5
     spawnedPersonType: STR_OGRYN
 
 
@@ -479,7 +464,7 @@ events:
     points: -100
     everyMultiItemList:
       STR_MCLASER_RIFLE: 2
-      STR_LASGUN_CLIP_HOTSHOT: 8
+      STR_LASGUN_CLIP: 8
     spawnedSoldier:
       currentStats:
         strength: 40
@@ -528,20 +513,6 @@ events:
       STR_LASGUN_CLIP_HOTSHOT: 8
     everyMultiSoldierList:
       STR_GUARD_TANITH: 2
-  - name: STR_INQ_SECURE_SUPPORT_GUARD_PILOTS_EVENT
-    description: STR_INQ_SECURE_SUPPORT_GUARD_PILOTS_EVENT_DESCRIPTION
-    background: ImperialCommandBG.scr
-    timer: 2440  # 2 days
-    points: -100
-    everyMultiItemList:
-      STR_LASER_PISTOL: 2
-      STR_LASPISTOL_CLIP: 4
-    spawnedPersonType: STR_PILOT_GUARD
-    spawnedPersons: 2
-    spawnedSoldier:
-      currentStats:
-        reactions: 60
-        firing: 70
 
 
   - name: STR_INQ_REQUISITION_KRIEG_GRENADIERS_EVENT
@@ -575,13 +546,13 @@ events:
       STR_MELTA_GRENADE40: 6
       STR_ROTOR_KOMBI_SLUG40: 6
       STR_INCENDIARY_GRENADE40: 6
-      STR_GUARD_POWER_ARMOR: 4
+      STR_GUARD_POWER_ARMOR: 6
     spawnedSoldier:
       rank: 2
       currentStats:
         tu: 60
         strength: 70
-    spawnedPersons: 4
+    spawnedPersons: 6
     spawnedPersonType: STR_GUARD_KRIEG_GRENADIER
 
 
@@ -591,22 +562,17 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_SHOTGUNPD: 6
-      STR_SHOTGUN_SHELLS: 14
-      STR_SHOTGUN_SHELLS_AP: 14
-      STR_SHOTGUN_SHELLS_INC: 14
+      STR_SHOTGUNPD: 2
+      STR_SHOTGUN_SHELLS: 8
+      STR_SHOTGUN_SHELLS_AP: 8
+      STR_SHOTGUN_SHELLS_INC: 8
       STR_HEAVY_STUBBER_HANDHELD: 2
       STR_HEAVY_STUBBER_CLIP: 10
-      STR_ENFORCER_ARMOR: 2
-      STR_ENFORCER_MEDIC_ARMOR: 2
-      STR_ENFORCER_SIGNAL_ARMOR: 1
+      STR_ENFORCER_MEDIC_ARMOR: 1
       STR_ENFORCER_HEAVY_ARMOR: 2
       STR_ENFORCER_SHIELD_ARMOR: 2
-    spawnedSoldier:
-      currentStats:
-        strength: 35
     everyMultiSoldierList:
-      STR_GUARDPD: 5
+      STR_GUARDPD: 8
       STR_JUDGE: 1
       STR_ARBITES_MASTIFF: 1
 
@@ -616,15 +582,12 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_SHOTGUNPD: 4
-      STR_MCSHOTGUNPD: 1
+      STR_SHOTGUNPD: 5
       STR_SHOTGUN_SHELLS: 12
       STR_SHOTGUN_SHELLS_AP: 12
       STR_SHOTGUN_SHELLS_INC: 12
-      STR_SHOTGUN_SHELLS_MC: 12
       STR_AUTOPISTOL_HIGHGRADE: 5
       STR_AUTOGUN_CLIP: 10
-      STR_JUDGE_BIKE_ARMOR: 2
       STR_ARBITOR_ARMOR: 1
     spawnedSoldier:
       currentStats:
@@ -647,13 +610,11 @@ events:
       STR_SHOTGUN_SHELLS: 14
       STR_SHOTGUN_SHELLS_AP: 14
       STR_SHOTGUN_SHELLS_INC: 14
-      STR_HEAVY_STUBBER_HANDHELD: 2
-      STR_HEAVY_STUBBER_CLIP: 10
-      STR_ENFORCER_ARMOR: 2
-      STR_ENFORCER_MEDIC_ARMOR: 2
-      STR_ENFORCER_SIGNAL_ARMOR: 1
-      STR_ENFORCER_HEAVY_ARMOR: 2
-      STR_ENFORCER_SHIELD_ARMOR: 2
+      STR_HEAVY_STUBBER_HANDHELD: 1
+      STR_HEAVY_STUBBER_CLIP: 4
+      STR_ENFORCER_MEDIC_ARMOR: 1
+      STR_ENFORCER_HEAVY_ARMOR: 6
+      STR_ENFORCER_SHIELD_ARMOR: 1
     everyMultiSoldierList:
       STR_GUARDPD: 6
       STR_JUDGE: 1
@@ -671,24 +632,16 @@ events:
     timer: 2440  # 2 days
     points: -100
     everyMultiItemList:
-      STR_AUTOGUN: 5
-      STR_AUTOGUN_CLIP: 5
+      STR_AUTOGUN: 6
+      STR_AUTOGUN_CLIP: 6
     everyMultiSoldierList:
-      STR_PENITENT_GUARD: 5
+      STR_PENITENT_GUARD: 6
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_DECENT_3_EVENT # Enforcer Patrol
     description: STR_INQ_SECURE_SUPPORT_ARBITES_DECENT_3_EVENT_DESCRIPTION
     background: ArbitesBG.SCR
     timer: 2440  # 2 days
     points: -100
-    everyMultiItemList:
-      STR_SHOTGUNPD: 4
-      STR_SHOTGUN_SHELLS: 4
-      STR_SHOTGUN_SHELLS_AP: 4
-      STR_SHOTGUN_SHELLS_INC: 4
-    spawnedSoldier:
-      currentStats:
-        strength: 30
-    spawnedPersons: 4
+    spawnedPersons: 5
     spawnedPersonType: STR_GUARDPD
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_DECENT_4_EVENT # Judges
     description: STR_INQ_SECURE_SUPPORT_ARBITES_DECENT_3_EVENT_DESCRIPTION
@@ -697,8 +650,6 @@ events:
     points: -100
     everyMultiItemList:
       STR_SHOTGUNPD: 2
-      STR_BOLTPISTOL_DEAZ: 2
-      STR_LIGHT_BOLTPISTOL_AMMO_EX: 8
     spawnedSoldier:
       currentStats:
         tu: 60
@@ -713,23 +664,23 @@ events:
     randomMultiItemList:
       -
         STR_MCPLASMA_PISTOL: 1
-        STR_PLASMA_PISTOL_CLIP: 3
+        STR_PLASMA_PISTOL_CLIP: 4
       -
         STR_PLASMA_RIFLE_TERRAN: 1
-        STR_PLASMA_RIFLE_CLIP: 3
+        STR_PLASMA_RIFLE_CLIP: 4
       -
         STR_MCRIFLE: 1
-        STR_RIFLE_CLIP: 3
+        STR_RIFLE_CLIP: 4
       -
         STR_HEAVY_LASER: 1
-        STR_MELTA_AMMO: 1
+        STR_MELTA_AMMO: 2
       -
         STR_MCSHOTGUNPD: 1
         STR_SHOTGUN_SHELLS: 8
       -
         STR_HAMMER: 1
       -
-        STR_POWER_PICK: 1
+        STR_POWER_PICK: 2
       -
         STR_STIMM_AUTOINJECTOR: 30
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_2_EVENT # Arbites Surplus Gear
@@ -738,26 +689,26 @@ events:
     timer: 2440  # 2 days
     randomMultiItemList:
       -
-        STR_SHOTGUNPD: 10
-        STR_SHOTGUN_SHELLS: 30
+        STR_SHOTGUNPD: 20
+        STR_SHOTGUN_SHELLS: 80
       -
-        STR_HEAVY_STUBBER_HANDHELD: 2
-        STR_HEAVY_STUBBER_CLIP: 8
+        STR_HEAVY_STUBBER_HANDHELD: 5
+        STR_HEAVY_STUBBER_CLIP: 20
       -
-        STR_STUN_ROD: 10
-        STR_PHOTON_GRENADE: 10
+        STR_STUN_ROD: 20
+        STR_PHOTON_GRENADE: 20
       -
-        STR_GRENADE: 10
-        STR_KRAK_GRENADE: 10
+        STR_GRENADE: 20
+        STR_KRAK_GRENADE: 20
       -
-        STR_STUB_GUN: 6
-        STR_STUB_GUN_AMMO_AP: 18
+        STR_STUB_GUN: 20
+        STR_STUB_GUN_AMMO: 80
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_3_EVENT # Penitents
     description: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_3_EVENT_DESCRIPTION
     background: ArbitesBG.SCR
     timer: 2440  # 2 days
     everyMultiSoldierList:
-      STR_PENITENT_GUARD: 4
+      STR_PENITENT_GUARD: 5
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_4_EVENT # lone junior Enforcer
     description: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_4_EVENT_DESCRIPTION
     background: ArbitesBG.SCR
@@ -823,10 +774,10 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_MCLASER_RIFLE: 4
-      STR_LASGUN_CLIP_HOTSHOT: 20
-      STR_GUARD_ARMORH: 4
-    spawnedPersons: 4
+      STR_MCLASER_RIFLE: 5
+      STR_LASGUN_CLIP: 20
+      STR_GUARD_ARMORH: 5
+    spawnedPersons: 5
     spawnedPersonType: STR_GUARD_SQUAT
 
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_EVENT
@@ -841,26 +792,32 @@ events:
     points: -50
     randomMultiItemList:
       -
-        STR_LASGUN_ACCATRAN: 1
-        STR_LASGUN_CLIP_HOTSHOT: 10
-        STR_GUARD_ARMORH: 1
+        STR_LASGUN_ACCATRAN: 2
+        STR_LASGUN_CLIP: 8
+        STR_GUARD_ARMORH: 2
+      -
+        STR_MCLASER_RIFLE: 2
+        STR_LASGUN_CLIP: 8
+        STR_GUARD_ARMORH: 2
       -
         STR_MCLASER_RIFLE: 1
-        STR_LASGUN_CLIP_HOTSHOT: 10
-        STR_GUARD_ARMORH: 1
-      -
+        STR_LASGUN_CLIP: 4
         STR_HEAVY_STUBBER_KRIEG: 1
         STR_HEAVY_STUBBER_CLIP_KRIEG: 4
-        STR_GUARD_ARMORH: 1
+        STR_GUARD_ARMORH: 2
       -
+        STR_MCLASER_RIFLE: 1
+        STR_LASGUN_CLIP: 4
         STR_GRENADE_LAUNCHER: 1
         STR_FRAG_GRENADE_DRUM: 4
         STR_KRAK_GRENADE_DRUM: 4
-        STR_GUARD_ARMORH: 1
+        STR_GUARD_ARMORH: 2
       -
+        STR_MCLASER_RIFLE: 1
+        STR_LASGUN_CLIP: 4
         STR_PLASMA_RIFLE_TERRAN: 1
         STR_PLASMA_RIFLE_CLIP: 4
-    spawnedPersons: 1
+    spawnedPersons: 2
     spawnedPersonType: STR_GUARD_SQUAT
 
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_BEASTMAN_EVENT
@@ -870,14 +827,14 @@ events:
     points: -50
     randomMultiItemList:
       -
-        STR_BEASTGUARD_HEAVY_ARMOR_SLAB: 1
+        STR_BEASTGUARD_HEAVY_ARMOR_SLAB: 2
       -
-        STR_BEASTGUARD_HEAVY_ARMOR: 1
+        STR_BEASTGUARD_HEAVY_ARMOR: 2
       -
-        STR_BEASTGUARD_CARAPACE_ARMOR: 1
+        STR_BEASTGUARD_CARAPACE_ARMOR: 2
       -
-        STR_BEASTGUARD_FLAK_ARMOR_MEDIC: 1
-    spawnedPersons: 1
+        STR_BEASTGUARD_FLAK_ARMOR_MEDIC: 2
+    spawnedPersons: 2
     spawnedPersonType: STR_GUARD_BEASTMAN
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_OGRYN_EVENT
     description: STR_INQ_SECURE_SUPPORT_ABHUMANS_OGRYN_EVENT_DESCRIPTION
@@ -907,10 +864,8 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_BOLTER_DEAZ: 4
-      STR_LIGHT_BOLTER_AMMO_MC: 16
-      STR_ADEPTAS_MELTAGUN_NECRO: 1
-      STR_MELTA_AMMO: 4
+      STR_BOLTER_DEAZ: 5
+      STR_LIGHT_BOLTER_AMMO_MC: 20
       STR_EVISCERATOR: 1
       STR_AUTO_CANNON_RETRIBUTOR: 1
       STR_AC_AP_ADEPTAS_AMMO: 4
@@ -984,19 +939,13 @@ events:
     points: -100
     randomMultiItemList:
       -
-        STR_AUTOGUN_ADEPTAS_SCOPED: 2
+        STR_AUTOGUN_ADEPTAS_SCOPED: 5
         STR_AUTOGUN_CLIP: 20
-        STR_ADEPTAS_CANTUSArmor: 2
       -
-        STR_BOLTER_CANTUS: 2
-        STR_CANTUS_BOLTER_AMMO: 12
-        STR_ADEPTAS_CANTUSArmor: 2
-      -
-        STR_BOLTPISTOL_DEAZ: 2
-        STR_LIGHT_BOLTPISTOL_AMMO: 6
-        STR_ADEPTAS_CANTUSArmor: 2
+        STR_BOLTPISTOL_DEAZ: 5
+        STR_LIGHT_BOLTPISTOL_AMMO: 20
     everyMultiSoldierList:
-      STR_ADEPTAS_NOVICE: 2
+      STR_ADEPTAS_NOVICE: 5
   - name: STR_INQ_SECURE_SUPPORT_SORORITAS_DECENT_5_EVENT  # Sister
     description: STR_INQ_SECURE_SUPPORT_SORORITAS_DECENT_5_EVENT_DESCRIPTION  # "With an Agenda of their own, the Witch Hunters have prepared some Sisters of Battle to assist your work on this planet."
     background: SistersBG.SCR
@@ -1276,14 +1225,12 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_AUTOGUN: 5
-      STR_AUTOGUN_CLIP: 20
-      STR_HEAVY_LASER: 1
-      STR_MELTA_AMMO: 4
+      STR_AUTOGUN: 6
+      STR_AUTOGUN_CLIP: 24
       STR_MAKESHIFT_PIPEBOMB: 24
       STR_POWER_PICK: 2
     everyMultiSoldierList:
-      STR_CHAOSCULT_SOLDIER_LV2: 4
+      STR_CHAOSCULT_SOLDIER_LV2: 6
       STR_CHAOS_FANATIC_PLAYER: 1
       STR_CHAOSCULT_OGRYN: 2
 
@@ -1498,6 +1445,7 @@ events:
     spawnedPersons: 2
     spawnedPersonType: STR_ADEPTAS_KHORNE
 
+
   # no gear because difficult to match random soldiers to their appropriate gear.
   - name: STR_INQ_RR_REQUISITION_XENOS_EVENT
     description: STR_INQ_RR_REQUISITION_XENOS_EVENT_DESCRIPTION
@@ -1596,12 +1544,10 @@ events:
     timerRandom: 2880
     everyMultiItemList:
       STR_BOLTER_DOMINION: 1
-      STR_RIFLE_CLIP: 8
       STR_RIFLE_CLIP_DOM: 8
       STR_MGRENADE: 2
       STR_BOLTPISTOL_SCOURGE: 1
       STR_LIGHT_BOLTPISTOL_AMMO_MC: 6
-      STR_KNIF: 1
     spawnedPersons: 1
     spawnedPersonType: STR_ADEPTAS_SUPERIOR
 
@@ -1692,7 +1638,7 @@ events:
     spawnedPersons: 15    # extra scientists
     everyMultiSoldierList:
       STR_IMPERIAL_INTERROGATOR: 1
-      STR_INQ_STORMTROOPER: 2
+      STR_INQ_STORMTROOPER: 4
       STR_GUARD_VETERAN: 2
       STR_ADEPTAS_PILOT: 2
     everyMultiItemList:

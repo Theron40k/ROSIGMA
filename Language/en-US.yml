@@ -23,7 +23,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_COUNTRIES_HAVE_SIGNED_A_SECRET_PACT: "{0} have fallen to Chaos and become corrupted. Expect no more requisition points from them until they are reclaimed."
 
   STR_BASIC_BALLISTICS_DEP: "(Basic Ballistic Weapons)"
-  STR_40MM_AMMO_DEP: "(40m Grenade Ammo)"
+  STR_40MM_AMMO_DEP: "(40mm Grenade Ammo)"
 
   STR_RADICAL_HIGHTIER: "Inquisition High-tier Requisitions"
 
@@ -808,19 +808,21 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SLAANESH_NOVICE_ARMOR_PLAYER: "Slaanesh Novice Habit"
   STR_TZEENTCH_NOVICE_ARMOR_PLAYER: "Warp Disciple"
   STR_ADEPTAS_HERETIC_MEDICAE_ARMOR_PLAYER: "Heretic Medicae Armor"
-  STR_CHAOS_ADEPTAS_UNDIVIDED_ARMOR: "Heretic Power Armor"
+  STR_CHAOS_ADEPTAS_UNDIVIDED_ARMOR: "Chaos Sister Armor"
   STR_CHAOS_NIGHTLORDS_SISTER_ARMOR: "Night Sister Armor"
   STR_CHAOS_ADEPTAS_IRON_MAIDEN_ARMOR: "Iron Maiden Armor"
-  STR_CHAOS_ADEPTAS_SLAANESH_ARMOR: "Slaanesh Sister"
-  STR_CHAOS_ADEPTAS_KHORNE_ARMOR: "Khorne Power Armor"
+  STR_CHAOS_ADEPTAS_SLAANESH_ARMOR: "Slaanesh Sister Armor"
+  STR_CHAOS_ADEPTAS_KHORNE_ARMOR: "Khorne Sister Armor"
   STR_CHAOS_ADEPTAS_NURGLE_ARMOR: "Plague Sister Armor"
   STR_CHAOS_ADEPTAS_TZEENTCH_ARMOR: "Twisted Sister Armor"
   STR_HERETIC_SUPERIOR_ARMOR_PLAYER: "Heretic Superior Armor"
   STR_KHORNE_SUPERIOR_ARMOR_PLAYER: "Khorne Superior Armor"
+  STR_KHORNE_SUPERIOR_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Khorne Superiors make up the volatile leadership of the Sisters of Rage. Granted boons by Khorne, they have increased strength and senses as well as carrying a cursed rosarius to further protect them in battle. {NEWLINE} CODEX ARMOR DETAIL"
   STR_NURGLE_SUPERIOR_ARMOR_PLAYER: "Putrid Hospitaler Superior"
   STR_NURGLE_SUPERIOR_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} A mockery of the Hospitallers of the Ecclisiarchy, the so called Sisters of Mercy tend to the growth of their Nurgle worshipping sisters. {NEWLINE}{NEWLINE}{ALT}This unit regenerates 10% of its current health each turn.{ALT}"
   STR_SLAANESH_SUPERIOR_ARMOR_PLAYER: "Slaaneshi Dominion Armor"
   STR_TZEENTCH_SUPERIOR_ARMOR_PLAYER: "Bride of Tzeentch"
+  STR_TZEENTCH_SUPERIOR_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} The Brides of Tzeentch are paradoxially the weakest willed of their sisterhood who submits fully to Tzeetnch. Because of their acceptance to change, these heretical Superiors can sense most opponents from afar. {NEWLINE} CODEX ARMOR DETAIL"
 
   STR_KHORNE_OGRYN_ARMOR_PLAYER: "Khorne Ogryn Carapace"
   STR_KHORNE_CULTIST_ARMOR_PLAYER: "Blood Cultist Armor"
@@ -907,10 +909,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CHAOS_STORMTROOPER_JUMP_ARMOR: "Chaos Jumptrooper Armor"
 
   # Player Chaos Manufacturing
-  STR_LASCANNON_CLIP_SMALL_CHAOS: Lascannon Power Cell
+  STR_LASCANNON_CLIP_SMALL_CHAOS: "Lascannon Power Cell"
   STR_BLACKGUARD_REQUISITION: "Requisition Blackguard"
 
   ## Player Chaos Codex
+
+  STR_CHAOS_MARINE_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Chaos Marines are the backbone of a competent Chaos Warband. These warriors are equipped in power armor with varying degrees of quality, with its parts sourced from scavenging and looting various battlefields or in deals made with the Dark Mechanicum.{NEWLINE} CODEX ARMOR DETAIL"
   STR_ALPHA_ARMOR_PLAYER_UFOPAEDIA: "{NEWLINE} The power armor employed by the operatives of the Alpha Legion is augmented with additional sensors and specialized cloaking technology."
   STR_NIGHTLORD_CSM_ARMOR_PLAYER_UFOPAEDIA: "{NEWLINE} The power armor of the Night Lords is patterned with designs meant to strike fear and awe into those that they hunt."
   STR_IRON_WARRIOR_ARMOR_PLAYER_UFOPAEDIA: "{NEWLINE} Iron Warrior power armor specializes in standing up to the toughest of punishments, featuring thicker armor than standard Astartes suits."
@@ -921,32 +925,40 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_KHORNE_ARMOR_PLAYER_UFOPAEDIA: "{NEWLINE} Decorated in the raiment of the god of blood, this armor has been adapted for close combat.{NEWLINE}{ALT}Returns 5% of damage dealt to the user as TU and Energy."
   STR_FLOATER_ARMOR_PLAYER_UFOPAEDIA: "{NEWLINE} The jump pack integrated into this allows for lightning fast assaults on unsuspecting foes, making the raptors the terrors of the sky."
 
+  STR_CHAOS_HAVOC_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Chaos Havocs are the equivalent of Space Marine Devastators. Unlike other types of Chaos Marines their power armor is optimized for long range engagements, delivering murderous firepower from afar.{NEWLINE} CODEX ARMOR DETAIL"
   STR_NURGLE_HAVOC_ARMOR_UFOPEDIA: "{NEWLINE} Plague havocs are outfitted to bear the burden of heavy weapons and deliver their pestilent ordinance directly to a target at a distance.{NEWLINE}{ALT}Regenerates wearers health up to a third of their maximum."
   STR_SLAANESH_HAVOC_ARMOR_UFOPEDIA: "{NEWLINE} More heavily armored and fitted with advanced targeting arrays, this havoc armor allows a noise marine to deliver punishment from a distance."
 
   STR_KHORNE_WARPTALON_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Dedicated to bloodshed and forever bound to their armor, the warptalons of Khorne are dedicated to endless bloodshed, forsaking all ranged weapons for the thrill of eviscerating their foes in melee. {NEWLINE}{ALT}Returns 5% of damage dealt to the user as TU and Energy. {NEWLINE}{ALT}Grants the wearer the ability to sense enemies within 10 tiles."
   STR_KHORNE_LIGHTNING_CLAWS_PLAYER_UFOPEDIA: "{NEWLINE} Lightning claws are terrifying power weapons designed to slice through hardened armor. {NEWLINE}{ALT}Returns Health, TUs, Stamina, Morale, and Stun to the user on damage and on kills."
 
+  STR_CHAOS_SERGEANT_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Chaos Sergeants, or Aspiring Champions are veteran Chaos Marines who aspire to become a Champion for the Dark Gods. These Chosen have better armor than their peers and have minor boons granting them enhanced speed and combat ability. {NEWLINE} CODEX ARMOR DETAIL"
   STR_KHORNE_SERGEANT_ARMOR_UFOPEDIA: "{NEWLINE} Those chosen by Khorne outfit themselves in customized armor making them even fiercer warriors in melee.{NEWLINE}{ALT}Returns 8% of damage dealt to the user as TU and Energy"
   STR_NURGLE_SERGEANT_ARMOR_UFOPEDIA: "{NEWLINE} The chosen warriors of Nurgle are oft looked upon by their dark father with favor, and he has gifted this one with a personal squire.{NEWLINE}{ALT}Regenerates wearers health up to half of their maximum."
   STR_SLAANESH_SERGEANT_ARMOR_UFOPEDIA: "{NEWLINE} The chosen of Slaanesh often take to the battlefield with the specialized sonic weapons to simultaneous glorify her while destroying his enemies. This specialized havoc armor includes integrated sonic weaponry."
   STR_TZEENTCH_SERGEANT_ARMOR_UFOPEDIA: "{NEWLINE} The sorcerers of Tzeentch often bless their favored servants, this set of Rubricae armor has been engraved with protective runes."
 
+  STR_CHAOS_TERMINATOR_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Chaos Terminators are veteran Chaos Marines handpicked by their Chaos Lord to wear Terminator armor. The suits of Terminator armor they wear protect them from all but the most powerful weapons. {NEWLINE} CODEX ARMOR DETAIL"
   STR_IRON_TERMINATOR_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} The Tyrant Terminator patter of armor was employed millennia ago during the Great Crusade. This armor specializes in fortress breaking, and is often seen in the vanguard of sieges laid by the Iron Warriors."
   STR_KHORNE_TERMINATOR_ARMOR_UFOPEDIA: "{NEWLINE} Fearsome to behold, the terminator armors employed by those dedicated to Khorne are well adapted for close quarters combat."
   STR_NURGLE_TERMINATOR_ARMOR_UFOPEDIA: "{NEWLINE} Heavily armored and festooned with strange growths, Plague Marine terminators are tenacious foes that can withstand incredible amounts of punishment.{NEWLINE}{ALT}Regenerates wearers health up to half of their maximum."
   STR_TZEENTCH_TERMINATOR_ARMOR_UFOPEDIA: "{NEWLINE} Blessed and anointed by the sorcerers of Tzeentch with dark sorcery, this terminator armor can deflect incoming damage before it ever reaches it."
   STR_TZEENTCH_SORCERER_ARMOR_UFOPEDIA: "{NEWLINE} This armor is reinforced with sorcerous sigils and mind twisting spells. The Sorcerers of Tzeentch that wear this armor possess the secrets required to reanimate and command the Rubricae. {NEWLINE}{ALT}Sorcerers Wearing this armor will have access to the Panic, Mind Control, and Warpfire powers."
 
-  STR_CHAOS_ADEPTAS_UNDIVIDED_ARMOR_UFOPAEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
-  STR_CHAOS_NIGHTLORDS_SISTER_ARMOR_UFOPAEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
-  STR_CHAOS_ADEPTAS_IRON_MAIDEN_ARMOR_UFOPAEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
-  STR_CHAOS_ADEPTAS_SLAANESH_ARMOR_UFOPAEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
-  STR_CHAOS_ADEPTAS_KHORNE_ARMOR_UFOPAEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
-  STR_CHAOS_ADEPTAS_NURGLE_ARMOR_UFOPAEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL{NEWLINE}{ALT}Regenerates wearers health up to half of their maximum."
-  STR_CHAOS_ADEPTAS_TZEENTCH_ARMOR_UFOPAEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
+  STR_CHAOS_SORC_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Chaos Sorcerers are Chaos Marines who practice sorcery. Their armor is inscribed with sigils and runes to grant them powerful abilities to use on their enemies, as well as seeking attention and boons from the Dark Gods.  {NEWLINE} CODEX ARMOR DETAIL"
+  STR_CHAOS_LORD_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Chaos Lords are the leaders of a Chaos Warband. These brutal champions lead their Warband through various conquests and raids in order to obtain glory and sacrifices to the Dark Gods, to one day ascend to Daemonhood. {NEWLINE} CODEX ARMOR DETAIL"
+
+  STR_CHAOS_ADEPTAS_UNDIVIDED_ARMOR_UFOPAEDIA: "{NEWLINE} The Chaos Sisterhood obtains its heretical armor either from fallen Sisters who have betrayed the God Emperor or from scavenging battlefields. Regardless, this dilapidated armor still retains its critical functions.{NEWLINE} CODEX ARMOR DETAIL"
+  STR_CHAOS_NIGHTLORDS_SISTER_ARMOR_UFOPAEDIA: "{NEWLINE} The Night Sisterhood is used by the Night Lords as a screening and reconnaissance force before the Night Lords arrive. To accomplish this, these false Sisters have advanced sensors to see in the night and to detect concealed units. {NEWLINE} CODEX ARMOR DETAIL"
+  STR_CHAOS_ADEPTAS_IRON_MAIDEN_ARMOR_UFOPAEDIA: "{NEWLINE} Iron Maidens are servitorized heretics in service to the Iron Warriors. This cybernetic mockery of the Adeptas Sororitas is heavily augmented and armored to serve their masters. {NEWLINE} CODEX ARMOR DETAIL"
+  STR_CHAOS_ADEPTAS_SLAANESH_ARMOR_UFOPAEDIA: "{NEWLINE} The Daughters of Pain is a heretical sisterhood dedicated to Slaanesh. These debased warriors seduce and then cut down any opponents that meets their blade.{NEWLINE} CODEX ARMOR DETAIL"
+  STR_CHAOS_ADEPTAS_KHORNE_ARMOR_UFOPAEDIA: "{NEWLINE} The Sisters of Rage are bloodthirsty servants to Khorne. These female berserkers reinforce their front armor in order to survive incoming rounds so they may engage in brutal melee.{NEWLINE} CODEX ARMOR DETAIL"
+  STR_CHAOS_ADEPTAS_NURGLE_ARMOR_UFOPAEDIA: "{NEWLINE} The Sisters of Filth is a chaos sisterhood afflicted by Nurgle. These diseased warriors can take heavy punishment and can slowly regenerate their wounds over time. {NEWLINE} CODEX ARMOR DETAIL{NEWLINE}{ALT}Regenerates wearers health up to half of their maximum."
+  STR_CHAOS_ADEPTAS_TZEENTCH_ARMOR_UFOPAEDIA: "{NEWLINE} The Sisters of Change is a sorcerous sisterhood in service to Tzeentch. These twisted sorcerers can conjure warpfire, protect themselves with an energy field, and can sense enemies through terrain. {NEWLINE} CODEX ARMOR DETAIL"
 
   STR_KHORNE_CULTIST_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Wearing scavenged armor, and with little thought for defenese, the blood cultists of Khorne concern themselves primarily with slaughter."
+  STR_KHORNE_FLAK_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} The Khorne Militia are slightly more disciplined troops than the typical Blood Cultist. The Flak Armor employed by these forces are of similar quality to the Imperial Guard, with the difference being that the wearer is empowered by bloodlust. {NEWLINE} CODEX ARMOR DETAIL"
+  STR_KHORNE_CARA_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} The Veterans and Officers of a Khorne Militia are sometimes seen with Carapace Armor. The Carapace Armor used by these troops are of similar quality to the Imperial Guard, but does not constrain their user unlike regular Imperial Guard forces. {NEWLINE} CODEX ARMOR DETAIL"
   STR_KHORNE_OGRYN_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Though simple of mind, ogryn are exceedingly easy to goad into rage fueled frenzies. Khorne worshipping cults often clad ogryns in armor and send them rampaging towards the enemy."
 
   STR_NURGLE_CULTIST_ARMOR_PLAYER_UFOPEDIA: "{NEWLINE} Wearing little more than scraps of armor and patched rags but festooned with growths gifted by their benevolent father, cultists of nurgle slowly march forth to spread his good news.{NEWLINE}{NEWLINE}{ALT}Regenerates wearers health up to a third of their maximum."
@@ -1246,6 +1258,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LIVE_CAPTURE_SERAPHIM: "Heretic Seraphim"
   STR_LIVE_CAPTURE_CHAOS_ASSASSIN: "Chaos Assassin"
   STR_LIVE_CAPTURE_CHAOS_BEASTMAN: "Chaos Beastman"
+  STR_LIVE_CAPTURE_GANGER: "Ganger"
+  STR_LIVE_CAPTURE_GANGER_UNDERBOSS: "Ganger Underboss"
+  STR_LIVE_CAPTURE_GANGER_BOSS: "Ganger Underboss"
   STR_LIVE_CAPTURE_CULTIST: "Cultist"
   STR_LIVE_CAPTURE_CULTIST_LEADER: "Cultist Leader"
   STR_LIVE_CAPTURE_WITCH: "Witch"
@@ -1348,7 +1363,17 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_RECRUIT_CAPTIVE_KHORNE_TERMINATOR: "Recruit Khorne Terminator"
   STR_RECRUIT_CAPTIVE_NURGLE_TERMINATOR: "Recruit Nurgle Terminator"
   STR_RECRUIT_CAPTIVE_IRON_TERMINATOR: "Recruit Tyrant Terminator"
-
+  # Indoctrinate. for cult to cult transformations
+  STR_CAT_INDOCTRINATE: "Indoctrinate into the cult"
+  STR_RECRUIT_INDOCTRINATE_CULTIST: "Indoctrinate Cultist"
+  STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERF0_AI: "Indoctrinate Ganger Killer"
+  STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERF1_AI: "Indoctrinate Gang Thief"
+  STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERF2_AI: "Indoctrinate Gang Striker"
+  STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERM0_AI: "Indoctrinate Gang Breaker"
+  STR_RECRUIT_INDOCTRINATE_GANGERBASE_SOLDIERM1_AI: "Indoctrinate Gang Cleaner"
+  #STR_RECRUIT_GANGER_BOSS: "Indoctrinate Ganger Underboss"
+  #STR_RECRUIT_GANGER_BOSS: "Indoctrinate Ganger Boss"
+  # Recruit Heretic
   STR_RECRUIT_TRAITOR_PSYKER: "Recruit Traitor Psyker"
   STR_RECRUIT_WITCH: "Recruit Witch"
   STR_RECRUIT_WITCH_LEADER: "Recruit Witch Leader"
@@ -1632,7 +1657,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GRAV_AMMO_SHOTGUN_UFOPEDIA: "{NEWLINE} This Graviton power pack powers the Graviton Burst Gun."
   STR_GRAVGUN_AOE_AMMO_SHOTGUN: "Graviton Burst Cell"
   STR_NURGLE_GRAVPISTOL: "Nurgle Gravpistol"
-  STR_NURGLE_GRAVPISTOL_UFOPEDIA: "{NEWLINE} The Gravpistol is based on the same ancient Graviton tech as the bigger Gravgun. Less potent, the Gravpistol sacrifices range to create similar gravity crushing fields against heavy armor wearers and fortifications, turning the targets weight against them. This"
+  STR_NURGLE_GRAVPISTOL_UFOPEDIA: "The Gravpistol is based on the same ancient Graviton tech as the bigger Gravgun. Less potent, the Gravpistol sacrifices range to create similar gravity crushing fields against heavy armor wearers and fortifications, turning the targets weight against them. This variant has been modified by the unholy energy and pestilence of nurgle"
   STR_NURGLE_KOMBIBOLTER_GRAV: "Nurgle Combi-gravgun"
   STR_USE_GRAV: "Fire Gravgun"
   STR_NURGLE_KOMBIBOLTER_GRAV_UFOPEDIA: "{NEWLINE} The Nurgle Combi-gravgun combines a gravgun with a underslung bolter attachment. While increasing weight, cost and complexity, it does add more tactical options. The Gravgun has been modified to fire a number of short range graviton blasts to crush armor users, while the Bolter is set for long range snapfire."
@@ -1790,7 +1815,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_MORTAR_PORTABLE_CHAOS: "Chaos Mortar"
   STR_MORTAR_PORTABLE_CHAOS_PLAYER: "Chaos Mortar"
   STR_BARRAGE_PLASMA: "Chaos Barrage Plasma"
+  STR_BARRAGE_PLASMA_CODEX: "Barrage Plasma Guns corrupted by Chaos are volatile relics of forbidden tampering, their sacred machine-spirits twisted into something far more dangerous. They retain their rapid-fire versatility, but their output is unstable and prone to violent overheating. Favoured by high ranking traitor marines, these weapons trade reliability for raw destructive power."
   STR_BARRAGE_PLASMA_TERRAN: "Barrage Plasma Gun"
+  STR_BARRAGE_PLASMA_TERRAN_CODEX: "Barrage Plasma Guns are rare and venerated weapons that are jealously guarded by the Techmarines and issued only to the most honoured Space Marines. They are highly tuned, rapid-fire plasma weapons able to fire in semi-automatic and automatic modes making them both versatile and deadly. They use an immense amount of energy and are more prone to overheating than a typical Plasma Weapon."
   STR_BARRAGE_PLASMA_CLIP: "Barrage Plasma Charge"
   STR_PLASMA_CARBINE_CHAOS: "Chaos Plasma Carbine"
   STR_PLASMA_CARBINE_ADEPTAS: "Plasma Carbine De'az pattern"
@@ -1889,6 +1916,13 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_POWER_SWORD_UFOPEDIA: "{NEWLINE} A Power Sword is a Power Weapon that has been shaped into a sword of varying lengths and designs crafted from one of any number of different materials, though the most common is Adamantium. When its power cell is activated, the blade is sheathed in a lethal corona of disruptive energy.{NEWLINE}{NEWLINE}Strength required: {ALT}80"
   STR_POWER_SWORD_MC_UFOPEDIA: "{NEWLINE} A Master crafted weapon is used by all of the Imperial armies and can be requisitioned by an exchange of foes' corpses. Any weapon may be master-crafted and due to the improved design of the weapon, it is more likely that a target will be hit by attacks from this weapon.{NEWLINE}{NEWLINE}Strength required: {ALT}70"
+  # STR_CPOWER_SWORD is already defined in base 40k mod
+  STR_CPOWER_SWORD_CODEX: "Power swords corrupted by Chaos retain their refined forms, but their energy fields become unstable and predatory. When activated, the energy field generated is jagged, disruptive and filled with chaos corruptive energies, resulting in cut that far resemble the clean precision of uncorrupted power swords."
+  # STR_CPOWER_DAGGER is already defined in base 40k mod
+  STR_CPOWER_DAGGER_CODEX: "Power daggers touched by Chaos are compact instruments of silent slaughter, their energized blades flickering with chaos energy and murderous intent. Designed for close work, they excel at slipping through armour and flesh with lethal efficiency. Favoured by traitor Astartes special operatives, Chaos assassins, and dark preachers."
+  # STR_CPOWER_AXE is already defined in base 40k mod
+  STR_CPOWER_AXE_CODEX: "Power axes tainted by Chaos emphasize raw brutality over finesse, their heavy blades surrounded by a crackling, unstable energy field. Each swing delivers devastating force, cleaving through armour with savage efficiency. Less precise than a power sword but far more punishing, these weapons are favoured by those who value overwhelming strength and destruction above all else."
+
 
   STR_LAUNCH_ROKKIT: "Fire Kombi-Rokkit"
   STR_FIRE_BLASTA: "Fire Kombi-Blasta"
@@ -2680,6 +2714,8 @@ en-US:  #  yamllint disable-line rule:empty-values
 # CHAOS WEAPONS
   STR_CHAOS_LASCANNON_HANDHELD: "Chaos Light Lascannon"
   STR_CHAOS_LASCANNON_HANDHELD_UFOPEDIA: "{NEWLINE} A handheld version of the Chaos Lascannon, weaker and less accurate than its full-size counterpart it is significantly lighter to wield."
+  STR_LASCANNON_CHAOS_CELL: "Chaos Lascannon Cell"
+  STR_LASCANNON_CHAOS_CELL_MANUFACTURE: "Chaos Lascannon Cell"
   STR_CHAOS_LASCANNON_BIPOD: "Chaos Light Lascannon/Bipod"
   STR_CHAOS_LASCANNON_BIPOD_UFOPEDIA: "{NEWLINE} A bipod equipped light lascannon used by the forces of Chaos. It has greater accuracy and range than its handheld counterpart."
   STR_CHAOS_HELLGUN: "Chaos Hellgun"
@@ -2699,7 +2735,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CHAOS_LONGLAS_UFOPEDIA: "{NEWLINE} This worn and rusty longlas is commonly found with deserter, heretic and chaos scout snipers. Despite its profaned state it can still operate fully, if not as accurately and fire hotshot rounds at long distances."
   STR_GRAVPISTOL_AMMO: "Gravpistol Cell"
   STR_CHAOS_GRAVPISTOL: "Chaos Grav Pistol"
+  STR_CHAOS_GRAVPISTOL_CODEX: "Grav pistols tainted by Chaos twist retain their compact form, but the gravity fields generated become erratic. They generate crushing fields that crush targets with disproportionate force, causing armour to buckle and bodies to collapse in sudden, uneven bursts of pressure."
   STR_CHAOS_MC_GRAVPISTOL: "Mastercrafted Chaos Grav Pistol"
+  STR_CHAOS_MC_GRAVPISTOL_CODEX: "Master-crafted Chaos grav pistols retain their compact form and the unnatural instability of all grav pistols tainted by chaos energies, creating unbalanced and uneven gravity fields, but corruption energies channel their gravity field to shift more erratically, with often increansed lethality. Prized by chaos champions and sorcerers."
   STR_CHAOS_AUTOCANNON_HANDHELD: "Armageddon Autocannon"
   STR_CHAOS_AUTOCANNON_HANDHELD_UFOPEDIA: "{NEWLINE} This pattern of autocannon spread through back channels after the Third War for Armageddon and can now be commonly found in the hands of traitors and even hive gangers."
   STR_AUTOCANNON_KALIBRAX: "Kalibrax Autocannon"
@@ -2714,6 +2752,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PUMP_SHOTGUN_CHAOS_CODEX: "Pump-action shotguns corrupted by Chaos become grinding, spiteful mechanisms that resist control. Each cycle drags with a will of its own, as though the weapon feeds on the wielder’s effort. When fired, it disgorges warped shot in savage, uneven spreads that tear through flesh at close range. These tainted arms are favoured by cultists who value their reliability."
   #STR_SHOTGUN_CHAOS is already defined in base 40k mod
   STR_SHOTGUN_CHAOS_CODEX: "Semi-automatic shotguns touched by Chaos, their actions cycling is frenzied with an unnatural cadence. They vomit corrupted shells in rapid succession, the recoil violent and erratic, as if the weapon itself hungers for excess. Prized by heretics and zealots of the Dark Gods."
+  # STR_AUTOGUN_CHAOS is already defined in base 40k mod
+  STR_AUTOGUN_CHAOS_CODEX: "Autoguns tainted by Chaos retain their ruggedness, but their function becomes subtly corrupted. They still fire in rapid succession, yet their shots may strike with uneven force or veer unpredictably. Cheap and dependable in form, they are favoured by cultists and renegades who value their familiarity, now edged with a quiet, destabilizing influence."
   STR_SMG_STUB_GUN_CHAOS: "Chaos AutoStubber"
   STR_SMG_STUB_GUN_CHAOS_CODEX: "Autostubbers touched by the taint of Chaos become profane instruments of excess and decay. Their mechanisms warp beyond proper function, spewing corrupted, ill-formed rounds in frenzied bursts. Favoured by heretics, cultists, and the dregs of the underhive who have surrendered to the Dark Gods."
   #STR_FLAMETHROWER_CHAOS is already defined in base 40k mod
@@ -4835,6 +4875,11 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_VALHALLAN_CODEX_ORIGINS_TEXT: "{NEWLINE} The Valhallan Ice Warriors is the Militarum Regimentum of the Astra Militarum that specialize in arctic and cold climate attritional fighting. Hailing from the frozen and desolate Ice World of Valhalla located in the Segmentum Ultima. Famed as some of the toughest regiments ever deployed by the Imperial Guard, these grim and tenacious troops never retreat and refuse to surrender, scoring many glorious victories against Orks and other enemies. Their preferred tactic is massed artillery barrages with infantry assault waves."
   STR_VALHALLAN_STRATEGY_IG_UFOPEDIA: "{NEWLINE} Lead the stubborn infantry of the imperium with this Valhallan regiment. Your forces suffer less morale penalties from losses and can call in artillery against entrenched foes that your masses of infantry cannot overcome with fixed bayonets alone. The key to victory is training your troops, keeping your veterans (within reason) alive while using your officers commands to boost your troops. At mid-tier you will gain access to the Leman Russ armored column and even larger transport options. {NEWLINE} You will receive 28 Valhallan troopers, a convoy and two officers within days of game start."
 
+  STR_VALHALLAN_STUBRIFLE: "Valhalla Pattern Stubrifle"
+  STR_VALHALLAN_STUBRIFLE_CODEX: "The basic Valhalla pattern stubrifle comes with a bayonet and is made for extreme cold climate fighting. Simple and rugged, this rifle is easy to operate and has decent accuracy while being cheap to mass-produce."
+  STR_VALHALLAN_AUTOGUN: "Valhalla Pattern Autogun"
+  STR_VALHALLAN_AUTOGUN_CODEX: "The Valhalla pattern autogun is a semi-automatic weapon of more complex design than most Valhallan weapons, nontheless designed with cold weather in mind for its operation."
+
 ### ADVANCED TURRETS  ###
   STR_LEMONRUSS: "Battle Cannon Turret"
   STR_CHIMERA_AC_TURRET: "Auto-Cannon Turret"
@@ -5755,6 +5800,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BATTLE_PLASMA_RIFLE_TZEENTCH: "Tzeentch Plasma Rifle"
   STR_TZEENTCH_FIEND_CLAWS: "Warp Claws"
   STR_FLAMETHROWER_WARPFIRE_CLIP: "Warpfire Canister"
+  # STR_ASSCTZ "Soulreaper Cannon" is already defined in base 40k mod
+  STR_ASSCTZ_CODEX: "The Soulreaper Cannon is a heavy rotary cannon very similar to the standard Assault Cannon, however, the Soulreaper Cannon uses ammunition enhanced by Tzeentch's sorcerous power and are able to melt through both flesh and ceramite. {NEWLINE}{NEWLINE} Recoil: {ALT}100"
+  # STR_FLAMETHROWERTZ is already defined in base 40k mod
+  STR_FLAMETHROWERTZ_UFOPEDIA: "Warpflamer is the main Flamer weapons used by the follower of Tzeentch, capable of using conventional flamer fuel and the warpflame fuel, a special mixture of promethium imbued with twisting malignant energies. Regardless of the fuel each flame from this weapon carries the corrupting touch of Tzeentch."
 
 # Alpha Legion Terminators
   STR_ALPHA_TERMINATOR: "Alpha Legion Terminator"
@@ -7433,8 +7482,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   #GSC weapons
 
   STR_POWER_PICK: "Power Pick"
+  STR_POWER_PICK_CODEX: "A Power Pick is a simple tool used for mining and construction activities on many Imperial worlds. Fitted with a low-grade molecular disruption field, its spike concentrates force into a narrow point, allowing it to punch through even hardened materials such as ceramite"
   STR_POWER_HAMMER: "Power Hammer"
-
+  STR_POWER_HAMMER_CODEX: "A Power Hammer is a simple tool used for mining and construction activities on many Imperial worlds. Fitted with a low-grade molecular disruption field, its blunt end paired with oversized coils allow to maximize the impact, allowing it to shatter through even hardened materials such as ceramite"
 
   STR_LIBERATOR_AUTOSTUB_KELER: "Liberator Autostubbers"
   STR_LIBERATOR_AUTOSTUB: "Liberator Autostubber"
@@ -8620,8 +8670,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   AUX_SERVITOR_KIT: "Servitor Kit"
   STR_SLASCANPD: "Lascannon"
   STR_KHORNE_CHAIN_AXE: "Khorne Chainaxe"
+  STR_KHORNE_CHAIN_AXE_CODEX: "A chainaxe blessed and marked by khorne is an whirring and brutal hand-to-hand single blade axe, which incorporates a powered chainsaw edge. The monomolecular teeth of these axes are usually intentily disaligned by their bloodthirsty khornate users to provide a blody spectacle for their god."
   STR_KHORNE_BERSERKER_AXE: "Khorne Berserker Chainaxe"
   STR_KHORNE_GREAT_CHAIN_AXE: "Khorne Great Chainaxe"
+  STR_KHORNE_GREAT_CHAIN_AXE_CODEX: "A two handed chainaxe designed as a two blade axe, blessed and marked by khorne. These axes are designed to be the pinnacle of khornate bloody excess, favoring those who seek carnage throght pure strenght. Favoured by the most crazed and bloodthirsty of the khorne legions."
   STR_KHORNE_BERSERKER_GREAT_AXE: "Khorne Berserker Great Chainaxe"
   STR_NURGLE_WEAPON: "Plaguesword"
   CELATID_WEAPON: "Plaguebearer Puke"
@@ -9263,7 +9315,8 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 ## Start CM Radical Road (Chaos)
   STR_INQ_RR_MIDTIER_CHAOS: "(Midtier) The Ends Justify the Means [Chaos]"
-  STR_INQ_RR_MIDTIER_EVENT_CHAOS: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to study it, understand it, and make use of it. No longer can heretical means be shunned; they must be embraced. The Ends Justify the Means."
+  STR_INQ_RR_MIDTIER_EVENT_CHAOS: "The Ends Justify the Means"
+  STR_INQ_RR_MIDTIER_EVENT_CHAOS_DESCRIPTION: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to study it, understand it, and make use of it. No longer can heretical means be shunned; they must be embraced. The Ends Justify the Means."
 
   STR_INQ_ARCHENEMY_ARMAMENTS_RESEARCH: "Armaments of the Archenemy"
   STR_ENTANGLE_ADEPTAS_RESEARCH: "Entangle the Adeptas Sororitas"
@@ -9369,8 +9422,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_SECURE_SUPPORT_GUARD_SLEGION_EVENT_DESCRIPTION: "The Imperial Guard has delivered a group of hardy Steel Legionnaires. The Steel Legion is famed for its valiant defense of Armageddon against against the Orks led by Ghazgkull Mag Thrakka. Their experience fighting the brutish Xenos will be invaluable.  (-100 Monthly Score)"
   STR_INQ_SECURE_SUPPORT_GUARD_KRIEG_EVENT: "Krieg Kill Team Arrives"
   STR_INQ_SECURE_SUPPORT_GUARD_KRIEG_EVENT_DESCRIPTION: "The Imperial Guard has delivered a kill team of Kriegsmen. Notoriously grim and fatalistic warriors, they seek to atone for their planet's past rebellion by dying glorious deaths in service to the Imperium.  (-100 Monthly Score)"
-  STR_INQ_SECURE_SUPPORT_GUARD_PILOTS_EVENT: "Ace Pilots Arrive"
-  STR_INQ_SECURE_SUPPORT_GUARD_PILOTS_EVENT_DESCRIPTION: "The Imperial Guard has delivered some of their best pilots to you. While cocky and reckless, their excellent combat record cannot be denied.  (-100 Monthly Score)"
   STR_INQ_SECURE_SUPPORT_GUARD_TANITH_EVENT: "Tanith Scouts Arrive"
   STR_INQ_SECURE_SUPPORT_GUARD_TANITH_EVENT_DESCRIPTION: "The Imperial Guard has delivered several Tanith Ghosts to you. The Tanith 1st Regiment, or the Tanith First and Only, was the only Regiment raised before that world was destroyed by Chaos.  (-100 Monthly Score)"
 
@@ -10184,6 +10235,8 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_RECRUITS_IMPERIAL_LAW_STRATEGY: "Imperial Law Strategy Chosen"
   STR_RECRUITS_IMPERIAL_LAW_STRATEGY_DESCRIPTION: "The Adeptus Arbites enforce the Lex Imperialis, embodied within the great Book of Judgement. Their organisation represents the most feared police force of the Imperium. You will now receive support to enforce the law."
+
+  STR_ARBITES_BASIC_GEAR_DEP: "(Arbites Basic Equipment)"
 
 # player chaos cult
 

@@ -28,6 +28,8 @@ soldierTransformation:
 
     # Add support for bringing weaker Soldiers up to snuff at Token cost.
   - name: STR_INQ_TRANSFORM_RETINUE_INDUCTION
+    forbiddenPreviousTransformations:
+      - STR_INQ_TRANSFORM_RETINUE_INDUCTION
     cost: 0
     requires:
       - STR_CHAMBER_NOT_ARBITES
@@ -36,7 +38,7 @@ soldierTransformation:
     allowsWoundedSoldiers: true
     upperBoundType: 1
     requiredItems:
-      STR_KILLPOINT_TOKEN: 100
+      STR_KILLPOINT_TOKEN: 75
     flatOverallStatChange:
       tu: 5
       stamina: 5
@@ -91,7 +93,7 @@ soldierTransformation:
 
     # Instant recovery option for precious Inquisitors.
   - name: STR_INQ_TRANSFORM_REJUVENATE
-    cost: 50000
+    cost: 25000
     requires:
       - STR_CHAMBER_NOT_ARBITES
     allowsDeadSoldiers: false
@@ -99,7 +101,7 @@ soldierTransformation:
     allowsWoundedSoldiers: true
     recoveryTime: 100 # 100 days
     requiredItems:
-      STR_KILLPOINT_TOKEN: 50
+      STR_KILLPOINT_TOKEN: 25
     allowedSoldierTypes:
       - STR_IMPERIAL_INQUISITOR
       - STR_IMPERIAL_INTERROGATOR

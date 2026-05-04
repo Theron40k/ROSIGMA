@@ -9,7 +9,7 @@ items:
       - STR_BASIC_BALLISTICS_DEP
     costBuy: 150000
     size: 0.3
-    costSell: 50000
+    costSell: 10000
     weight: 35
     bigSprite: 1016  # 200  # {mod: 40k, index: 1130}
     floorSprite: 937  # {mod: 40k, index: 1130}
@@ -68,7 +68,7 @@ items:
       - STR_UFO_CONSTRUCTION
     size: 0.3
     costBuy: 250000
-    costSell: 100000
+    costSell: 50000
     weight: 36  # Bit lighter than the godwyn.
     bigSprite: 1028
     floorSprite: 943
@@ -404,7 +404,7 @@ items:
     requiresBuy:
       - STR_IMPERIAL_GUARD_OPERATIONS
     costBuy: 100000
-    costSell: 30000
+    costSell: 20000
     weight: 45  # 5 weight, guard vs marine
     bigSprite: 268
     floorSprite: 231
@@ -491,7 +491,7 @@ items:
     requiresBuy:
       - STR_MIDTIER_PREREQ
     costBuy: 30000  # Expensive
-    costSell: 7500
+    costSell: 5000
     weight: 15  # very heavy
     bigSprite: 277
     floorSprite: {mod: 40k, index: 17}
@@ -519,7 +519,7 @@ items:
       - STR_MELTAGUN_TECH  # meltagun
       - STR_MIDTIER_PREREQ
     costBuy: 80000  # very expensive, 2x melta bomb
-    costSell: 10000
+    costSell: 7500
     weight: 15  # very heavy
     bigSprite: 275
     floorSprite: {mod: 40k, index: 16}
@@ -540,7 +540,7 @@ items:
       - STR_MIDTIER_PREREQ
       - STR_BASIC_BALLISTICS_DEP
     costBuy: 150000
-    costSell: 20000
+    costSell: 10000
     weight: 45
     bigSprite: 254
     floorSprite: 258
@@ -986,7 +986,7 @@ items:
       - STR_UFO_CONSTRUCTION  # ceramite tier
       - STR_BASIC_BALLISTICS_DEP
     costBuy: 300000
-    costSell: 50000
+    costSell: 20000
     bigSprite: 255
     floorSprite: 261
     handSprite: 540
@@ -1123,7 +1123,7 @@ items:
     requiresBuy:
       - STR_MULTILAS_HANDHELD_RESEARCH
     costBuy: 500000  # same as rotorcannon, requires expensive battery pack
-    costSell: 100000
+    costSell: 20000
     weight: 45  # heavier than rotor cannos and heavy bolters
     compatibleAmmo:
       - STR_PORTABLE_MULTILASER_BATTERY
@@ -1186,7 +1186,7 @@ items:
     #   - STR_CHAMBERMILITANT
     #   - STR_MT_GK  # Midtier Inquisition  # Guard gets a manufacturing option
     # costBuy: 1000000  # more than double initial cost vs rotor cannon, but no ammo cost
-    # costSell: 150000
+    # costSell: 15000
     weight: 50  # heavier than rotor cannos and heavy bolters, integrated power and what not.
     bigSprite: 910  # multilaser black
     floorSprite: 922
@@ -1247,7 +1247,7 @@ items:
     size: 0.5
     dropoff: 5
     # costBuy: 200000
-    costSell: 50000
+    costSell: 20000
     weight: 40  # similar to heavy bolter guard
     bigSprite: 900  # 900: Resources/Bigobs/ROTORCANNON_BIGOB.png
     floorSprite: 900  # 900: Resources/Floorobs/FLOOROB_ROTOR_CANNON.png
@@ -1297,7 +1297,7 @@ items:
     size: 0.5
     dropoff: 5
     # costBuy: 300000
-    costSell: 50000
+    costSell: 20000
     weight: 45  # similar to heavy bolter guard + grenade launcher
     bigSprite: 901  # 901: Resources/Bigobs/ROTORCANNON_KOMBI_BIGOB.png
     floorSprite: 901  # 901: Resources/Floorobs/FLOOROB_ROTOR_CANNON_KOMBI.png
@@ -1375,7 +1375,7 @@ items:
     # recoveryTransformations:
     #   STR_ROTOR_CANNON: [1]  # Doesn´t work for player weapons as they don´t transform back
     costBuy: 300000
-    costSell: 25000
+    costSell: 15000
     weight: 40  # similar to heavy bolter guard
     bigSprite: 908
     floorSprite: 904
@@ -1427,7 +1427,7 @@ items:
     size: 0.5
     dropoff: 5
     costBuy: 400000
-    costSell: 30000
+    costSell: 20000
     weight: 45  # similar to heavy bolter guard + grenade launcher
     bigSprite: 909
     floorSprite: 904
@@ -1639,7 +1639,7 @@ items:
   - type: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER
     size: 2
     costBuy: 250000
-    costSell: 100000
+    costSell: 50000
     transferTime: 50
     listOrder: 6910
     # FIXME: followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
@@ -1650,7 +1650,7 @@ items:
   - type: STR_GUARD_ARMORS_MOUNTED_MORTAR
     size: 2
     # costBuy: 300000  # don't allowing buying for now
-    costSell: 100000
+    costSell: 50000
     transferTime: 50
     listOrder: 6910
     # requiresBuy:
@@ -1659,7 +1659,7 @@ items:
 
   - type: STR_GUARD_ARMORS_MOUNTED_LASCANNON
     costBuy: 300000
-    costSell: 120000
+    costSell: 60000
     requiresBuy:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_HEAVY_WEAPONS_IG
@@ -1667,7 +1667,7 @@ items:
 
   - type: STR_GUARD_ARMORS_MOUNTED_AUTOCANNON
     costBuy: 400000
-    costSell: 150000
+    costSell: 50000
     requiresBuy:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_HEAVY_WEAPONS_IG
@@ -1675,7 +1675,7 @@ items:
 
   - type: STR_GUARD_ARMORS_MOUNTED_HEAVY_LASCANNON
     costBuy: 1000000
-    costSell: 250000
+    costSell: 60000
     requiresBuy:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_HEAVY_WEAPONS_IG
@@ -1688,7 +1688,7 @@ items:
       - STR_BASIC_SENTINEL
     size: 2
     costBuy: 320000
-    costSell: 100000
+    costSell: 60000
     transferTime: 50
     listOrder: 6799
 
@@ -1712,7 +1712,7 @@ items:
       - STR_LASCAN_TECH
     size: 2
     costBuy: 320000
-    costSell: 100000
+    costSell: 60000
     transferTime: 50
     listOrder: 6799
 
@@ -1721,7 +1721,7 @@ items:
       - STR_STEEL_LEGION_STRATEGY
     size: 2
     costBuy: 320000
-    costSell: 100000
+    costSell: 60000
     transferTime: 50
     listOrder: 6799
 
@@ -1731,7 +1731,7 @@ items:
       - STR_ELERIUM_115  # Promethium
     size: 2
     costBuy: 320000
-    costSell: 100000
+    costSell: 60000
     transferTime: 50
     listOrder: 6799
 
@@ -2230,7 +2230,7 @@ items:
     size: 0.2
     requiresBuyBaseFunc: [TRADE]
     # costBuy: 250000  # part of armor
-    costSell: 6000
+    costSell: 5000
     weight: 14
     # bigSprite: 342  # handled in scripts_plasma_heat.rul
     floorSprite: {mod: 40k, index: 1024}
@@ -2289,7 +2289,7 @@ items:
       - STR_MIDTIER_PREREQ
       - STR_BASIC_BALLISTICS_DEP
     costBuy: 250000  # mucho expensive
-    costSell: 25000
+    costSell: 10000
     weight: 30  # heavy
     compatibleAmmo:
       - STR_LASGUN_CLIP
@@ -2860,7 +2860,7 @@ items:
   - type: STR_EXITUS_AMMO_HELLFIRE  # attacks twice by being HE
     refNode: *STR_EXITUS_BULLETS
     costBuy: 0
-    costSell: 9000
+    costSell: 5000
     bigSprite: 226
     listOrder: 13104
     tags:
@@ -2870,7 +2870,7 @@ items:
   - type: STR_EXITUS_AMMO_TURBOPENETRATOR
     refNode: *STR_EXITUS_BULLETS
     costBuy: 0
-    costSell: 9000
+    costSell: 5000
     bigSprite: 227
     listOrder: 13104
     tags:
@@ -2879,7 +2879,7 @@ items:
   - type: STR_EXITUS_AMMO_SHELLBREAKER  # shield piercing
     refNode: *STR_EXITUS_BULLETS
     costBuy: 0
-    costSell: 9000
+    costSell: 5000
     bigSprite: 228
     listOrder: 13104
     # hitAnimation: 26  # and other may need correct values
@@ -2893,7 +2893,7 @@ items:
     requiresBuy:
       - STR_OA_MIDTIER
     costBuy: 150000
-    costSell: 40000
+    costSell: 25000
     weight: 5
     bigSprite: 1023
     floorSprite: 939
@@ -3103,7 +3103,7 @@ items:
       - STR_HEAVY_WEAPONS_IG
       - STR_IMPERIAL_WEAPONS
     costBuy: 100000
-    costSell: 20000
+    costSell: 10000
     weight: 40  # like heavy bolter
     bigSprite: 230
     floorSprite: 230
@@ -3657,7 +3657,7 @@ items:
       - STR_LIGHT_BOLTERS_MIDTIER
     size: 0.3
     costBuy: 75000  # more expensive than the Solo light bolters
-    costSell: 10000
+    costSell: 5000
     weight: 32  # HB at 40, krieg heavy stubber at 30
     bigSprite: 297  # ACCATRAN_LIGHT_BOLTER_BIPODFOLDED_BIGOB.png
     floorSprite: 257  # FLOOROB_ACCATRAN_LIGHT_BOLTER.png
@@ -3693,14 +3693,14 @@ items:
     size: 0.3
     # listOrder: 20
     # costBuy: 20000
-    costSell: 8000
+    costSell: 4000
     transferTime: 10
     listOrder: 7230
 
   - type: STR_HELLPISTOL_BUILTIN
     categories: [STR_CAT_LASGUN]
     size: 0.1
-    costSell: 20295
+    costSell: 10295
     weight: 5
     bigSprite: 208  # {mod: 40k, index: 570}
     # floorSprite: {mod: 40k, index: 570}
@@ -3755,7 +3755,7 @@ items:
       - STR_MIDTIER_PREREQ
       - STR_BASIC_BALLISTICS_DEP
     costBuy: 15000
-    costSell: 5000
+    costSell: 3000
     weight: 5
     bigSprite: 206
     floorSprite: 220
@@ -3815,7 +3815,7 @@ items:
       - STR_UFO_CONSTRUCTION  # ceramite tier
     size: 0.3
     costBuy: 50000
-    costSell: 2750
+    costSell: 3750
     weight: 15
     bigSprite: 246
     floorSprite: 254
@@ -3851,7 +3851,7 @@ items:
     size: 0.3
     dropoff: 5
     costBuy: 65000  # +15k for underslung capability
-    costSell: 25000
+    costSell: 5000
     weight: 25  # +10 weight for underslung
     bigSprite: 245
     floorSprite: 223
@@ -3943,7 +3943,7 @@ items:
     size: 0.3
     requiresBuyBaseFunc: [TRADE]
     costBuy: 100000
-    costSell: 2750
+    costSell: 3750
     weight: 15
     bigSprite: 202
     floorSprite: {mod: 40k, index: 1}
@@ -3977,7 +3977,7 @@ items:
     size: 0.2
     requiresBuyBaseFunc: [TRADE]
     costBuy: 75000
-    costSell: 1000
+    costSell: 2000
     weight: 10
     bigSprite: 203
     floorSprite: {mod: 40k, index: 3}
@@ -4009,7 +4009,7 @@ items:
     size: 0.3
     # requiresBuyBaseFunc: [TRADE]  # could skip this requirement
     costBuy: 30000  # Should be a fair bit pricier than both lasguns and heavy stubber, not a general purpose rifle unless bathing in cash
-    costSell: 10000
+    costSell: 3000
     weight: 15
     bigSprite: 285
     floorSprite: 250
@@ -4044,7 +4044,7 @@ items:
     size: 0.3
     # requiresBuyBaseFunc: [TRADE]  # Could skip this, but consider if SCOPES require something fancy to get
     costBuy: 50000  # Scoped version more expensive
-    costSell: 15000
+    costSell: 4000
     weight: 16  # scoped version slightly heavier than non scope
     bigSprite: 286
     floorSprite: 251
@@ -4078,7 +4078,7 @@ items:
     size: 0.3
     # requiresBuyBaseFunc: [TRADE]  # Could skip this, but consider if SCOPES require something fancy to get
     costBuy: 20000
-    costSell: 5000
+    costSell: 3000
     weight: 12
     bigSprite: 289
     floorSprite: 252
@@ -4114,7 +4114,7 @@ items:
       - STR_MELTAGUN_TECH  # meltagun tech
     size: 0.3
     costBuy: 100000  # Should be a fair bit pricier than both lasguns and heavy stubber, not a general purpose rifle unless bathing in cash
-    costSell: 30000
+    costSell: 5000
     weight: 30  # heavy
     bigSprite: 243
     floorSprite: 221
@@ -4230,7 +4230,7 @@ items:
       - STR_LIGHT_BOLTERS_MIDTIER
       - STR_MIDTIER_PREREQ
     costBuy: 30000  # costly ammo
-    costSell: 5000
+    costSell: 3000
     bigSprite: 907
     listOrder: 19181
     tags:
@@ -4860,7 +4860,7 @@ items:
     size: 0.3
     # listOrder: 20
     # costBuy: 20000
-    costSell: 8000
+    costSell: 5000
     transferTime: 10
     listOrder: 7230
     battleType: 11
@@ -4945,7 +4945,7 @@ items:
       - STR_BASIC_BALLISTICS_DEP
     requiresBuyBaseFunc: [TRADE]  # Delaque
     costBuy: 200000  # pricy end game pistol
-    costSell: 30000
+    costSell: 5000
     bigSprite: 274
     floorSprite: 225
     handSprite: 598
@@ -5015,7 +5015,7 @@ items:
       - STR_OGRYN_REQUISITION
     size: 0.1
     costBuy: 15000
-    costSell: 12000
+    costSell: 2000
     explosionHitSound: {mod: 40k, index: 792}  # 792 Smoke
     hitAnimation: {mod: 40k, index: 104}  # XSmoke
     weight: 20
@@ -5039,7 +5039,7 @@ items:
       - STR_GENERALLOCK  # these are too powerful to be able to purchase; gated with tokens
     size: 0.1
     costBuy: 15000
-    costSell: 12000
+    costSell: 2000
     bigSprite: 272
     floorSprite: 272
     handSprite: 272
@@ -6107,7 +6107,7 @@ items:
     floorSprite: 908
     handSprite: 960
     costBuy: 20000
-    costSell: 5000
+    costSell: 3000
     invWidth: 1  # bigob
     weight: 4
     requiresBuy:
@@ -6153,7 +6153,7 @@ items:
     floorSprite: 909
     handSprite: 976
     costBuy: 30000
-    costSell: 6000
+    costSell: 4000
     requiresBuy:
       - STR_STEEL_LEGION_STRATEGY
       - STR_STEEL_LEGION_STRATEGY_MIDTIER
@@ -6172,7 +6172,7 @@ items:
     floorSprite: 911
     handSprite: 984
     costBuy: 200000
-    costSell: 50000
+    costSell: 10000
     requiresBuyBaseFunc: [TRADE]  # Market exclusive
     requiresBuy:
       - STR_STEEL_LEGION_STRATEGY
@@ -6307,7 +6307,7 @@ items:
       - STR_STEEL_LEGION_STRATEGY_MIDTIER
       - STR_HEAVY_WEAPONS_IG
     costBuy: 20000
-    costSell: 5000
+    costSell: 4000
     weight: 15
     bigSprite: 933
     floorSprite: 915
@@ -6363,7 +6363,7 @@ items:
   - type: STR_MELTA_LAUNCHER_STEEL_LEGION
     refNode: *STR_DISPOSABLE_LAUNCHER_STEEL_LEGION_TEMPLATE
     costBuy: 40000
-    costSell: 10000
+    costSell: 5000
     requiresBuy:
       - STR_STEEL_LEGION_STRATEGY
       - STR_STEEL_LEGION_STRATEGY_CERAMITETIER
@@ -6393,7 +6393,7 @@ items:
       - STR_HEAVY_WEAPONS_IG
     size: 1.0
     costBuy: 150000
-    costSell: 35000
+    costSell: 15000
     weight: 70
     bigSprite: 937
     floorSprite: 917
@@ -6448,7 +6448,7 @@ items:
     size: 0.4
     dropoff: 4
     costBuy: 30000
-    costSell: 7000
+    costSell: 4000
     weight: 15
     bigSprite: 936
     floorSprite: {mod: 40k, index: 1005}
@@ -6810,7 +6810,7 @@ items:
     requiresBuyBaseFunc: [TRADE]
     size: 0.2
     costBuy: 20000
-    costSell: 5000
+    costSell: 2000
     weight: 10
     bigSprite: 3006
     floorSprite: 2992
@@ -6989,7 +6989,7 @@ items:
     floorSprite: {mod: 40k, index: 169}
     size: 0.2
     armor: 600
-    costSell: 20000
+    costSell: 10000
     supportedInventorySections:
       - STR_BACK_PACK
       - STR_GROUND
@@ -7088,7 +7088,7 @@ items:
     size: 0.05
     armor: 600
     floorSprite: {mod: 40k, index: 168}
-    costSell: 20000
+    costSell: 10000
     supportedInventorySections:
       - STR_BACK_PACK
       - STR_GROUND
