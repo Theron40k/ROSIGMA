@@ -2592,11 +2592,11 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_VALHALLAN_GUARDSMEN
+      - STR_VALHALLAN_WEAPONS
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
-      # STR_VALHALLAN_WEAPONS #Needs to be created + Midtier version?
       - STR_GUARD_BARRACKS
       - STR_REGIMENT_OFFICERS
       - STR_PENITENT_GUARD
@@ -9019,6 +9019,14 @@ research:
 ### Scion Strategy #WEAPONS.IG.SCION#
 ### Abhuman Strategy #WEAPONS.IG.ABHUMAN#
 ### Steel Legion Strategy #WEAPONS.IG.STEEL#
+### Valhallan Strategy #WEAPONS.IG.VALHALLA#
+  - name: STR_VALHALLAN_WEAPONS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_VALHALLAN_STRATEGY
+      - STR_GENERALLOCK
+
 ## Foes #WEAPONS.#WEAPONS.FOE#
 ###  Chaos #WEAPONS.FOE.CHAOS#
  ## Chaos weapons are grouped by type, instead of by subfaction, to facilitate easily adding new weapons to groups that unlock codex categories.
