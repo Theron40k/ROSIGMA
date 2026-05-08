@@ -1460,6 +1460,14 @@ ufopaedia:
       - STR_VALHALLAN_STRATEGY
     image_id: VALHALLAN_INTRO_CODEX.SPK
 
+  - id: STR_VALHALLAN_WEAPONS
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    text: STR_VALHALLAN_WEAPONS_CODEX
+    image_id: VALHALLAN_SNIPER_CODEX.SPK
+
 ####################################
 # #RESEARCH#
 ####################################
@@ -9790,7 +9798,7 @@ ufopaedia:
   - id: STR_VALHALLAN_STUBRIFLE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: AUTOGUN.SPK #placeholder
+    image_id: stub_rifle_ufopedia.SPK
     text: STR_VALHALLAN_STUBRIFLE_CODEX
   - id: STR_VALHALLAN_AUTOGUN
     type_id: 14
