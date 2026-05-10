@@ -1460,6 +1460,14 @@ ufopaedia:
       - STR_VALHALLAN_STRATEGY
     image_id: VALHALLAN_INTRO_CODEX.SPK
 
+  - id: STR_VALHALLAN_WEAPONS
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    text: STR_VALHALLAN_WEAPONS_CODEX
+    image_id: VALHALLAN_SNIPER_CODEX.SPK
+
 ####################################
 # #RESEARCH#
 ####################################
@@ -5872,7 +5880,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_GUARD_ARMORSM_UFOPEDIA
+    text: STR_KHORNE_FLAK_ARMOR_PLAYER_UFOPEDIA
 
   - id: STR_KHORNE_CARA_PLAYER
     type_id: 15
@@ -5880,7 +5888,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_GUARD_ARMORH_UC_UFOPEDIA
+    text: STR_KHORNE_CARA_ARMOR_PLAYER_UFOPEDIA
 
   - id: STR_KHORNE_CARA_OFF_PLAYER
     type_id: 15
@@ -5888,7 +5896,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_GUARD_ARMORH_UC_UFOPEDIA
+    text: STR_KHORNE_CARA_ARMOR_PLAYER_UFOPEDIA
 
   - id: STR_KHORNGOR_ARMOR_PLAYER
     type_id: 15
@@ -9787,6 +9795,17 @@ ufopaedia:
     image_id: AUTOGUN_HIGH_GRADE_UNDERSLUNG_CODEX.SPK
     text: STR_AUTOGUN_HIGHGRADE_UNDERSLUNG_CODEX
 
+  - id: STR_VALHALLAN_STUBRIFLE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: VALHALLAN_STUBRIFLE_CODEX.SPK
+    text: STR_VALHALLAN_STUBRIFLE_CODEX
+  - id: STR_VALHALLAN_AUTOGUN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ADEPTAS_AUTOGUN_SCOPED_CODEX2.SPK #placeholder
+    text: STR_VALHALLAN_AUTOGUN_CODEX
+
   - id: STR_AUTOGUN_ADEPTAS
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -11614,6 +11633,10 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1LC.SPK
     text: STR_CHAOS_LASCANNON_HANDHELD_UFOPEDIA
+  - id: STR_LASCANNON_CHAOS_CELL
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
   - id: STR_CHAOS_LASCANNON_BIPOD
     type_id: 14
     requires:

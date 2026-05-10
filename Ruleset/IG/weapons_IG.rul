@@ -6485,6 +6485,126 @@ items:
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
 
+#VALHALLAN Weapons
+
+  - type: STR_VALHALLAN_STUBRIFLE  # Rifle with Bayonet
+    categories: [STR_CAT_SCOUT, STR_CAT_SNIPER]
+    dropoff: 3  # bolt action
+    weight: 20
+    size: 0.3
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+    costBuy: 2500
+    costSell: 500
+    bigSprite: 980
+    floorSprite: 3510
+    handSprite: 4800
+    bulletSprite: {mod: 40k, index: 2}
+    bulletSpeed: 25
+    fireSound: {mod: 40k, index: 4}
+    compatibleAmmo:
+      - STR_STUB_GUN_AMMO
+      - STR_STUB_GUN_AMMO_AP
+      - STR_STUB_GUN_AMMO_WOUND
+      - STR_STUB_GUN_AMMO_HP
+      - STR_STUB_GUN_AMMO_INC
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 1
+    invHeight: 3
+    armor: 200
+    autoRange: 10
+    snapRange: 18 #-2 vs long rifle
+    aimRange: 25 #long rifle got 30
+    accuracySnap: 50
+    accuracyAimed: 75
+    accuracyAuto: 40
+    tuAuto: 50 #4 shots from standing still
+    tuSnap: 33 #3 shots
+    tuAimed: 85
+    confAuto:
+      shots: 2
+    confSnap:  # Double Shot
+      shots: 1
+    confAimed:  # Called Precision Shot to emphasize the added lethality
+      name: STR_PRECISION_SHOT
+    listOrder: 11897
+    kneelBonus: 125  # bolt action rifle
+    minRange: 5  # bolt action rifle
+    accuracyMultiplier:
+      firing: [0.5, 0.005]
+    attraction: 1
+    # *** Melee bayonet
+    meleeHitSound: {mod: 40k, index: 101}
+    meleeAnimation: 0
+    meleeType: 7
+    meleePower: 55
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+    meleeAlter:
+      ArmorEffectiveness: 0.9
+      RandomType: 1  # 0-200
+    accuracyMelee: 100  # lower due to weight
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.5
+    tuMelee: 12
+    costMelee:
+      energy: 2
+    flatMelee:
+      time: true
+    tags:
+      REACTION_MULTIPLIER: 60
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_RECOIL: 25
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 10
+
+  - type: STR_VALHALLAN_AUTOGUN #SVT DMR style
+    categories: [STR_CAT_AUTO]
+    dropoff: 4  # DMR
+    weight: 25
+    size: 0.4
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+    costBuy: 5000
+    costSell: 750
+    bigSprite: 981
+    floorSprite: 3511
+    handSprite: 4808
+    bulletSprite: {mod: 40k, index: 2}
+    bulletSpeed: 25
+    fireSound: {mod: 40k, index: 4}
+    compatibleAmmo:
+      - STR_AUTOGUN_CLIP
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    autoRange: 13
+    snapRange: 17
+    aimRange: 22
+    accuracySnap: 45
+    accuracyAimed: 70
+    accuracyAuto: 35
+    tuAuto: 40
+    tuSnap: 33 #3 shots
+    tuAimed: 85
+    confAuto:
+      shots: 3
+    confSnap:
+      shots: 1
+    listOrder: 11897
+    kneelBonus: 115 #DMR
+    attraction: 1
+    tags:
+      ITEM_RECOIL: 30
+
+
+#Baneblade
   - type: AUX_BOLTERBANE  # STR_BANE_BOLTER_TURRET
     dropoff: 4
     costAuto:

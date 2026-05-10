@@ -2592,11 +2592,11 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_VALHALLAN_GUARDSMEN
+      - STR_VALHALLAN_WEAPONS
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
-      # STR_VALHALLAN_WEAPONS #Needs to be created + Midtier version?
       - STR_GUARD_BARRACKS
       - STR_REGIMENT_OFFICERS
       - STR_PENITENT_GUARD
@@ -3540,6 +3540,9 @@ research:
       - STR_GSC_PENETANTE_FEMALE
       - STR_GSC_PENETANTE_LEEROY
       - STR_GSC_ENFORCER_MEDIC
+      - STR_GSC_MINER
+      - STR_GSC_ABERRANT
+
 
   - name: STR_GSC_DISCOVERY_INFECTION  # Xeno Taint Presence # 1B
     requires:
@@ -9026,6 +9029,14 @@ research:
 ### Scion Strategy #WEAPONS.IG.SCION#
 ### Abhuman Strategy #WEAPONS.IG.ABHUMAN#
 ### Steel Legion Strategy #WEAPONS.IG.STEEL#
+### Valhallan Strategy #WEAPONS.IG.VALHALLA#
+  - name: STR_VALHALLAN_WEAPONS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_VALHALLAN_STRATEGY
+      - STR_GENERALLOCK
+
 ## Foes #WEAPONS.#WEAPONS.FOE#
 ###  Chaos #WEAPONS.FOE.CHAOS#
  ## Chaos weapons are grouped by type, instead of by subfaction, to facilitate easily adding new weapons to groups that unlock codex categories.
@@ -9083,6 +9094,10 @@ research:
 
   # Shotguns
   - name: STR_CHAOS_RIPPERGUN  # Chaos Ripper Gun
+    refNode: *BASIC_CHAOS_WEAPON
+  - name: STR_SHOTGUN_CHAOS
+    refNode: *BASIC_CHAOS_WEAPON
+  - name: STR_PUMP_SHOTGUN_CHAOS
     refNode: *BASIC_CHAOS_WEAPON
 
   # Autoguns
@@ -9257,7 +9272,12 @@ research:
     refNode: *LASCAN_CHAOS_WEAPON
 
   # Flamers
-
+  - name: STR_FLAMETHROWER_CHAOS # chaos flamer
+    refNode: *BASIC_CHAOS_WEAPON
+  - name: STR_FLAMETHROWERTZ #warpflamer
+    refNode: *BASIC_CHAOS_WEAPON
+    unlocks: !add
+      - STR_CHAOS_ARMORY_EXAM_TZEENTCH
 
   # Meltas
   - delete: STR_CHAOS_MELTAGUN
@@ -13232,6 +13252,18 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
     destroyItem: true
+  - name: STR_GSC_MINER #Brood neophyte
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_ABERRANT  # Aberrant
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
   - name: STR_GSC_JUDGEF  # Arbites Judge
     cost: 100
     points: 25
@@ -14418,6 +14450,12 @@ research:
     refNode: *STR_CORPSE_BASIC
   - name: STR_GSC_ENFORCER_MEDIC_CORPSE
     refNode: *STR_CORPSE_BASIC
+#  - name: STR_GSC_MINER_CORPSE # they could be added as-is but they have no functionality attached right now
+#    refNode: *STR_CORPSE_BASIC
+#  - name: STR_GSC_ABERRANT_CORPSE
+#    refNode: *STR_CORPSE_BASIC
+#  - name: STR_LOCUS_CORPSE
+#    refNode: *STR_CORPSE_BASIC
   - name: STR_GSC_JUDGE_CORPSE
     refNode: *STR_CORPSE_BASIC
   - name: STR_GSC_ARBITOR_CORPSE
