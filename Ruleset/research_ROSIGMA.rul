@@ -4218,6 +4218,7 @@ research:
       - STR_ADEPTAS_STORM_BOLTERS_DEP
       - STR_LASCAN_MALTHUS
       - STR_HAND_FLAMETHROWER_REQUISITION
+      # - STR_FAITHFUL_ARMORY #TODO to do this right will require a real rework of the Sisters techs/items
     spawnedEvent: STR_REINFORCEMENTS_ADEPTAS_INQ_ENTANGLED
 
   - name: STR_INQ_RR_ENTICE_BRIBES_RESEARCH  # Deploy Blackmail and Entice Bribes
@@ -4411,7 +4412,6 @@ research:
       - STR_LEADER_PLUS
       - STR_LOSE_500
     unlocks:
-      - STR_CONVINCE_CHAOS_RESEARCH
       - STR_MARINE_BOLTERS
       - STR_BOLTER_AMMO_PREREQ
     getOneFree:
@@ -4444,6 +4444,8 @@ research:
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_NURGLE_OPTIONS
     disables:
@@ -4454,6 +4456,8 @@ research:
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_TZEENTCH_OPTIONS
   - name: STR_INQ_RR_LORE_KHORNE
@@ -4462,6 +4466,8 @@ research:
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_KHORNE_OPTIONS
     disables:
@@ -4472,6 +4478,8 @@ research:
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_SLAANESH_OPTIONS
 
@@ -6991,7 +6999,7 @@ research:
     points: 30
     dependencies:
       - STR_HIGHTIER_PREREQ
-      - STR_INQ_RR_ADVANCED_CRAFT
+      - STR_INQ_RR_CRAFT_ADVANCED
 
 ### Officio Assassinorum #CRAFTS.CM.OA#
   - name: STR_INQUISITION_DROPPODS # Drop pods at mid-tier

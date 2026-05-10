@@ -29,13 +29,13 @@ soldierTransformation:
       - STR_INQ_TRANSFORM_RETINUE_INDUCTION
 
   - &STR_INQ_TRANSFORM_SOLDIER_LIST
-    name: STR_INQ_TRANSFORM_SOLDIER_LIST_STUB #NOTE: Delete later so it doesn't show up itself.
+    name: STR_INQ_TRANSFORM_SOLDIER_LIST_STUB #NOTE delete: down below so it doesn't show up itself.
     allowedSoldierTypes:
       # Try to include all the low grade Soldiers that you can get out of CMil Events
       # Exclude Soldiers which are already sufficiently badass (Canoness, full SOB, etc)
       # Inquisition*
       # NOTE: These should receive STR_INQ_TRANSFORM_RETINUE_INDUCTION for free when given in Events/Manuf (use spawnedSoldier:)
-      # NOTE: This excludes them from the Stat Bonuses, as intended.
+      # NOTE: This excludes them from getting RetinueInduction stat bonuses, as intended.
       - STR_IMPERIAL_INQUISITOR
       - STR_IMPERIAL_INTERROGATOR
       - STR_INQ_STORMTROOPER
