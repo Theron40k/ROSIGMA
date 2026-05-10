@@ -191,6 +191,10 @@ events:
     timer: 2440  # 2 days
     spawnedPersons: 1
     spawnedPersonType: STR_INQ_STORMTROOPER
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+          STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
+
 
   - name: STR_INQ_AGENTS_BAD_SISTER_EVENT
     description: STR_INQ_AGENTS_BAD_SISTER_EVENT_DESCRIPTION
@@ -334,6 +338,9 @@ events:
       STR_HOLOGRAM_GRENADE: 2
     spawnedPersons: 1
     spawnedPersonType: STR_IMPERIAL_INQUISITOR
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+          STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
 
 
   - name: STR_INQ_REQUISITION_ASSASSINS_EVENT
@@ -344,27 +351,6 @@ events:
     everyMultiItemList:
       STR_KNIF: 2
     spawnedPersons: 2
-    spawnedPersonType: STR_IMPERIAL_ASSASSINFEM
-
-  # Secure Support (Imperial Assassins): Event to explain the mechanic
-  - name: STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT
-    description: STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT_DESCRIPTION
-    background: DeathCultBG.SCR
-    timer: 0
-
-  - name: STR_INQ_SECURE_SUPPORT_ASSASSIN_ARRIVES_EVENT
-    description: STR_INQ_SECURE_SUPPORT_ASSASSIN_ARRIVES_EVENT_DESCRIPTION
-    background: DeathCultBG.SCR
-    timer: 2440  # 2 days
-    funds: -300000
-    randomMultiItemList:
-      -
-        STR_AUTOCARBINE_NAVY: 1
-        STR_AUTOGUN_CLIP_DRUM_KRAKEN: 3
-        STR_KRAK_GRENADE: 1
-        STR_MGRENADE: 1
-        STR_MOTION_SCANNER: 1
-    spawnedPersons: 1
     spawnedPersonType: STR_IMPERIAL_ASSASSINFEM
 
 
@@ -865,7 +851,7 @@ events:
     timerRandom: 2880
     everyMultiItemList:
       STR_BOLTER_DEAZ: 5
-      STR_LIGHT_BOLTER_AMMO_MC: 20
+      STR_LIGHT_BOLTER_AMMO: 20
       STR_EVISCERATOR: 1
       STR_AUTO_CANNON_RETRIBUTOR: 1
       STR_AC_AP_ADEPTAS_AMMO: 4
@@ -1633,24 +1619,27 @@ events:
   - name: STR_INQ_RECRUITS_RADICAL_ROAD
     description: STR_INQ_RECRUITS_RADICAL_ROAD_DESCRIPTION
     spawnedCraftType: STR_ARVUS_ADEPTAS
-    timer: 60
+    timer: 30
     spawnedPersonType: STR_SCIENTIST
     spawnedPersons: 15    # extra scientists
     everyMultiSoldierList:
       STR_IMPERIAL_INTERROGATOR: 1
       STR_INQ_STORMTROOPER: 4
-      STR_GUARD_VETERAN: 2
-      STR_ADEPTAS_PILOT: 2
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+          STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
     everyMultiItemList:
-      STR_SERVITOR: 1
+      STR_SERVITOR: 2
       STR_LASER_RIFLEG: 10
       STR_LASGUN_CLIP: 20
-      STR_CHAINSWORD: 1
 
   - name: STR_INQ_RECRUITS_RADICAL_ROAD2
     description: STR_INQ_RECRUITS_RADICAL_ROAD_DESCRIPTION2
     spawnedCraftType: STR_XIPHON_GK
-    timer: 61
+    timer: 31
+    everyMultiSoldierList: # Separate from above so they do not get STR_INQ_TRANSFORM_RETINUE_INDUCTION
+      STR_GUARD_VETERAN: 2
+      STR_ADEPTAS_PILOT: 2
     everyMultiItemList:
       STR_AVALANCHE_LAUNCHER: 1
       STR_AVALANCHE_MISSILES: 4
@@ -1664,8 +1653,11 @@ events:
     timer: 60
     spawnedPersonType: STR_IMPERIAL_INTERROGATOR
     spawnedPersons: 1
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+          STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
 
-  # the Inquisitor finally arrives at Midtier
+  # (Radical Road) the Inquisitor finally arrives at Midtier
   - name: STR_INQ_RR_MIDTIER_EVENT_CHAOS
     description: STR_INQ_RR_MIDTIER_EVENT_CHAOS_DESCRIPTION
     background: CHAOSCULTRITUALRBG.SCR
@@ -1677,6 +1669,11 @@ events:
         STR_ADEPTAS_CHAOS: 1
       -
         STR_CHAOSCULT_PRIEST_LV2: 1
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+          STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
+
+  # (Radical Road) the Inquisitor finally arrives at Midtier
   - name: STR_INQ_RR_MIDTIER_EVENT_XENOS
     description: STR_INQ_RR_MIDTIER_EVENT_XENOS_DESCRIPTION
     background: GuardBG.SCR #TODO better bg
@@ -1690,6 +1687,9 @@ events:
         STR_ELDAR_F: 1
       -
         STR_FIREWARRIOR_GV: 1
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+          STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
 
   - name: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
     description: STR_RECRUITS_IMPERIAL_LAW_STRATEGY_DESCRIPTION
