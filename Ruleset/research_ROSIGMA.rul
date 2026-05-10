@@ -3592,6 +3592,7 @@ research:
     points: 20
     dependencies:
       - STR_NOT_PRIMARIS
+      - STR_NOT_RADICAL # Edge case cleanup; RadRoad Chaos gets STR_PERSONAL_ARMOR but doesn't want this.
       - STR_PERSONAL_ARMOR
     unlocks:
       - STR_MEDI_KIT_PREREQ
@@ -4150,7 +4151,8 @@ research:
     dependencies:
       - STR_INQ_REQUISITION_ASSASSINS_RESEARCH
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
-    spawnedEvent: STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT
+    unlocks:
+      - STR_IMPERIAL_ASSASSINS
 
   - name: STR_INQ_REQUISITION_GUARD_PILOTS_RESEARCH   # Requisition Guard Pilots
     cost: 200
@@ -4214,7 +4216,9 @@ research:
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
     unlocks:
       - STR_ADEPTAS_STORM_BOLTERS_DEP
-      - STR_FAITHFUL_ARMORY
+      - STR_LASCAN_MALTHUS
+      - STR_HAND_FLAMETHROWER_REQUISITION
+      # - STR_FAITHFUL_ARMORY #TODO to do this right will require a real rework of the Sisters techs/items
     spawnedEvent: STR_REINFORCEMENTS_ADEPTAS_INQ_ENTANGLED
 
   - name: STR_INQ_RR_ENTICE_BRIBES_RESEARCH  # Deploy Blackmail and Entice Bribes
@@ -4251,7 +4255,6 @@ research:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_LASER_WEAPONS
-      - STR_THREAT_ONE
     unlocks:
       - STR_ELDAR_ONLY
       - STR_ORK_ONLY
@@ -4369,7 +4372,7 @@ research:
       - STR_STAFF_OF_LIGHT
 
   - name: STR_FALSIFY_INQUISITION_REPORT  # Falsify Inquisition Statement
-    cost: 500
+    cost: 300
     points: 500
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
@@ -4377,7 +4380,7 @@ research:
       - STR_GAIN_500
     spawnedEvent: STR_REWARD_INQUISITION_STORMTROOPERS
   - name: STR_FALSIFY_INQUISITION_REPORT_2  # Falsify Inquisition Report
-    cost: 700
+    cost: 500
     points: 500
     dependencies:
       - STR_FALSIFY_INQUISITION_REPORT
@@ -4385,7 +4388,7 @@ research:
       - STR_GAIN_500
     spawnedEvent: STR_REWARD_INQUISITION_STORMTROOPERS
   - name: STR_FALSIFY_INQUISITION_REPORT_3  # Falsify Inquisition Records
-    cost: 900
+    cost: 700
     points: 500
     dependencies:
       - STR_FALSIFY_INQUISITION_REPORT_2
@@ -4408,8 +4411,11 @@ research:
       - STR_INQ_RR_MIDTIER_CHAOS
       - STR_LEADER_PLUS
       - STR_LOSE_500
+    unlocks:
+      - STR_MARINE_BOLTERS
+      - STR_BOLTER_AMMO_PREREQ
     getOneFree:
-      - STR_PERSONAL_ARMOR
+      - STR_PERSONAL_ARMOR # Open up pathway into Chaos Marine Armor manufactures
     spawnedEvent: STR_INQ_CONTACT_DEFECTOR_MARINES_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_REVISIONISTS_RESEARCH  # Secure Revisionists Support
@@ -4427,7 +4433,6 @@ research:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_LASER_WEAPONS
-      - STR_THREAT_ONE
       - STR_LOSE_100
     unlocks:
       - STR_CHAOS_WEAPON_USE_DEP
@@ -4439,40 +4444,44 @@ research:
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_NURGLE_OPTIONS
     disables:
-      - STR_INQ_RR_LORE_TZEENTCH
+      - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
   - name: STR_INQ_RR_LORE_TZEENTCH
     cost: 500
     points: -500
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_TZEENTCH_OPTIONS
-    disables:
-      - STR_INQ_RR_LORE_NURGLE
   - name: STR_INQ_RR_LORE_KHORNE
     cost: 500
     points: -500
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_KHORNE_OPTIONS
     disables:
-      - STR_INQ_RR_LORE_SLAANESH
+      - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
   - name: STR_INQ_RR_LORE_SLAANESH
     cost: 500
     points: -500
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
       - STR_LOSE_500
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_SLAANESH_OPTIONS
-    disables:
-      - STR_INQ_RR_LORE_KHORNE
 
 
 ### Deathwatch #PROGRESSION.CM.DW#
@@ -4681,7 +4690,6 @@ research:
 ### The Radical Road #PROGRESSION.CM.RAD#
   - name: STR_REEDUCATION_RESEARCH  # Reeducate Prisoners
     # Allows splitting some chaos recruitment off from Convince Chaos to hand it out without duplicates.
-    points: -200 #negative score moved from earlier entry research radical road for this path
     dependencies:
       - STR_CONVINCE_CHAOS_RESEARCH
       - STR_LOSE_200
@@ -4695,6 +4703,13 @@ research:
       - STR_ELERIUM_115
     unlocks:
       - STR_INQUISITION_VALKYRIE
+
+  - name: STR_INQ_RR_CRAFT_ADVANCED
+    cost: 400
+    dependencies:
+      - STR_INQ_RR_CRAFT_ACQUISITIONS
+      - STR_MIDTIER_PREREQ
+      - STR_UFO_CONSTRUCTION
 
   - name: STR_INQ_RR_CORVUS_ACCESS
     cost: 0
@@ -4749,10 +4764,15 @@ research:
       - STR_LOSE_200
     disables:
       - STR_INQ_RR_MIDTIER_XENOS
+      - STR_CHAOS_SORCERY # Not suited to RR Chaos progression; Tome of the Mind does almost nothing
     unlocks:
+      - STR_LIGHT_BOLTERS
       - STR_MIDTIER_PREREQ
-      - STR_SIDEOPERATIONS
+      - STR_ALIENS_ONLY # Chaos Corruption
+      - STR_ALIEN_ORIGINS
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
+    getOneFree:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_CHAOS
 
   - name: STR_XENO_LEADER_INTERROGATED  # Xeno Leader Interrogation
@@ -4772,11 +4792,11 @@ research:
     disables:
       - STR_INQ_RR_MIDTIER_CHAOS
     unlocks:
+      - STR_LIGHT_BOLTERS
       - STR_ORK_ONLY
       - STR_ELDAR_ONLY
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
       - STR_MIDTIER_PREREQ
-      - STR_SIDEOPERATIONS
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_XENOS
 
 
@@ -5667,7 +5687,7 @@ research:
     # Likely redundant if requirements are moved to STR_ADEPTAS_SOB_MOBILIZATION
 
   # NOTE: Imperial Agents Radical Road can get this Research too. For any options derived from this,
-  # if it's supposed to SistersOfBattle only, add STR_ADEPTAS alongside this.
+  # if it's actually SistersOfBattle only, add STR_ADEPTAS alongside this.
   - name: STR_FAITHFUL_ARMORY  # Arsenal of Faith
     cost: 300
     points: 15
@@ -6979,9 +6999,7 @@ research:
     points: 30
     dependencies:
       - STR_HIGHTIER_PREREQ
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_UFO_CONSTRUCTION
-      - STR_CHAMBERMILITANT
+      - STR_INQ_RR_CRAFT_ADVANCED
 
 ### Officio Assassinorum #CRAFTS.CM.OA#
   - name: STR_INQUISITION_DROPPODS # Drop pods at mid-tier
@@ -7542,7 +7560,7 @@ research:
       - STR_DEV_ARMOR
       - STR_ALIEN_ORIGINS
       - STR_LEADER_PLUS
-      - STR_CHAOS_MARINE_HIRE_RESEARCH
+      - STR_ALIENS_ONLY
     getOneFree:
       - STR_SARGENT_ARMOR
 

@@ -61,8 +61,6 @@ items:
   - type: STR_ALIEN_GRENADE                # 4010
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL]
     refNode: *CHAOS_WEAPON
-    requiresBuy:
-      - STR_RADICAL_INQUISITOR_STRATEGY #TODO test
     size: 0.1
     costBuy: 2000
     costSell: 1450
@@ -1523,7 +1521,7 @@ items:
     categories: [STR_CAT_GRENADES, STR_CAT_NURGLE, STR_CAT_TACTICAL]
     size: 0.1
     weight: 3
-    requiresBuy:
+    requires:
       - STR_NURGLE_OPTIONS
     costSell: 250
     bigSprite: 2608  # BigOB40mmRUSTgrenade.png
@@ -1557,7 +1555,8 @@ items:
       STR_ACIDRUST_GRENADE40_PLAYER: [1]
   - type: STR_ACIDRUST_GRENADE40_PLAYER
     refNode: *STR_ACIDRUST_GRENADE40
-    requires:
+    requiresBuy:
+      - STR_40MM_AMMO_DEP
       - STR_NURGLE_OPTIONS
     spawnUnitFaction: 2
     ufopediaType: STR_ACIDRUST_GRENADE40
@@ -3882,6 +3881,8 @@ items:
 
   - type: STR_HEAVY_PLASMA  # CHAOS
     refNode: *CHAOS_WEAPON
+    requires: !add
+      - STR_HEAVY_PLASMA_DEP1
     costSell: 45000
     accuracySnap: 70
     tuSnap: 30

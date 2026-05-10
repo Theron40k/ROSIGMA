@@ -1295,7 +1295,7 @@ manufacture:
     category: STR_WEAPON
     requires:
       - STR_NURGLE_PATH
-      - STR_CONTACT_CHAOS_MARINES
+      - STR_MIDTIER_PREREQ
     space: 2
     time: 800
     cost: 75000
@@ -1305,7 +1305,7 @@ manufacture:
     category: STR_AMMUNITION
     requires:
       - STR_NURGLE_PATH
-      - STR_CONTACT_CHAOS_MARINES
+      - STR_MIDTIER_PREREQ
     space: 0
     time: 300
     cost: 10000
@@ -1651,7 +1651,7 @@ manufacture:
   - name: STR_SONICKOMBI_CHARGE
     category: STR_AMMUNITION
     requires:
-      - STR_LIGHT_BOLTERS
+      - STR_MARINE_BOLTERS # because only available to STR_LARGE_KOMBIBOLTERSLAAN
       - STR_ALIEN_ALLOYS
       - STR_SLAANESH_OPTIONS  # Favor of Slaanesh
     space: 0
