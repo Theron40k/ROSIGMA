@@ -332,7 +332,7 @@ extended:
           var int duration;
 
           item.getTag activateFlight Tag.ActivateFlight;
-          if eq activateFlight 1;
+          if and eq activateFlight 1 eq medikit_action_type medikit_action_heal;
             battle_game.getTurn turn;
             actor.getTag maxFlight Tag.MaxFlight;
             actor.getTag maxCooldown Tag.MaxCoolDown;
