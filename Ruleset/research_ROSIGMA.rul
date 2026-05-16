@@ -1804,6 +1804,7 @@ research:
       - STR_ADEPTAS
       - STR_GUARD_SUPORT
       - STR_DREADNOUGHT_MARINE
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH  # pushed after strategies
 
 ### Deathwatch #STRATEGY.CM.DW#
   - delete: STR_DEATHWATCH
@@ -1844,6 +1845,7 @@ research:
       - STR_ASSASSINORUM
     reenables:
       - STR_DREADNOUGHT_MARINE
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_DEATHWATCH_CARE_PACKAGE
   - delete: STR_CHOSEN_DEATHWATCH
   - name: STR_CHOSEN_DEATHWATCH
@@ -1887,6 +1889,7 @@ research:
       - STR_ASSASSINORUM
     reenables:
       - STR_DREADNOUGHT_MARINE
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_REINFORCEMENTS_GK
 
 ### The Radical Road #STRATEGY.CM.RAD#
@@ -1914,6 +1917,8 @@ research:
       - STR_NORMAL_INQUISITION
       - STR_ELDAR_PATH # RadicalRoad has its own Xenos pathways.
       - STR_CHAOS_PATH # RadicalRoad has its own Chaos progression, don't allow IntoTheDarkGodsPath entry
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     getOneFree:
       - STR_INQ_RECRUITS_RADICAL_ROAD2 # getOneFree so it will trigger its Event
     spawnedEvent: STR_INQ_RECRUITS_RADICAL_ROAD
@@ -1962,6 +1967,8 @@ research:
       - STR_CHAOS_PATH
       - STR_INQ_STORMTROOPER_REQUISITION
       - STR_ENABLE_EVEN_HARDER_MISSIONS # starts with extra hard missions enabled, shouldn't see the redundant Salty Spitoon research.
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_ASSASSINORUM_CARE_PACKAGE
 
   - name: STR_OFFICIO_ASSASSINORUM_TIPS # PLEASE READ THE CODEX DEAR PLAYER
@@ -2050,6 +2057,8 @@ research:
       - STR_XIPHON
       #GG- STR_GREENEST_ORKZ
       #GG- STR_TAU_GUEVESA_STRATEGY_GV
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
 
   - name: STR_ARBITES_BASIC_GEAR_DEP # Tied to purchase of basic Arbites gear.
@@ -2233,6 +2242,7 @@ research:
       - STR_ARBITES
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_MARINES_STRATEGY
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH  # pushed after strategies
     dependencies:
       - STR_GENERALLOCK
 
@@ -2266,6 +2276,8 @@ research:
       - STR_NORMAL_STRATEGY_ADEPTAS
       - STR_ELITE_STRATEGY_ADEPTAS
       - STR_SMOKE
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_REPENTIA_STRATEGY_ADEPTAS
 
 ### Novice Strategy #STRATEGY.SOB.NOV#
@@ -2292,6 +2304,8 @@ research:
       - STR_NOT_ELITE_STRATEGY_ADEPTAS
       - STR_NOT_REPENTIA_STRATEGY_ADEPTAS
       - STR_NOT_NORMAL_STRATEGY_ADEPTAS
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     disables:
       - STR_NOT_NOVICE_STRATEGY_ADEPTAS
       - STR_ELITE_STRATEGY_ADEPTAS
@@ -2336,6 +2350,8 @@ research:
       - STR_ELITE_STRATEGY_ADEPTAS
       - STR_REPENTIA_STRATEGY_ADEPTAS
       - STR_NOVICE_STRATEGY_ADEPTAS
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_NORMAL_STRATEGY_ADEPTAS
 
 ### Dominion Strategy #STRATEGY.SOB.DOM#
@@ -2372,6 +2388,8 @@ research:
       - STR_NOT_NOVICE_STRATEGY_ADEPTAS
       - STR_NOT_NORMAL_STRATEGY_ADEPTAS
       - STR_INQ_STORMTROOPER_REQUISITION  # access to inquisitorial elites/stormtroopers
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     disables:
       - STR_NOT_ELITE_STRATEGY_ADEPTAS
       - STR_REPENTIA_STRATEGY_ADEPTAS
@@ -2391,7 +2409,7 @@ research:
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
-      - STR_RADICAL_RECRUITMENT_IG
+#      - STR_RADICAL_RECRUITMENT_IG  # pushed after strategies
       - STR_GUARD_AND_ARBITES
       - STR_BASIC_BALLISTICS_DEP
       # - STR_GUARD_SUPORT
@@ -2403,6 +2421,7 @@ research:
       - STR_ADEPTAS
       - STR_MARINES_STRATEGY
       - STR_HB_DEP1
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH  # re enable after strategy choice
 
 ### Guardsman Strategy #STRATEGY.IG.GUARD#
   - name: STR_NORMAL_STRATEGY_IG  # Guardsmen Strategy
@@ -2433,11 +2452,14 @@ research:
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_NORMAL_STRATEGY
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_NORMAL_STRATEGY_IG
 
 ### Scion Strategy #STRATEGY.IG.SCION#
@@ -2472,11 +2494,14 @@ research:
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_ELITE_STRATEGY
       - STR_NORMAL_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_ELITE_STRATEGY_IG
 
 ### Abhuman Strategy #STRATEGY.IG.ABHUMAN#
@@ -2505,11 +2530,14 @@ research:
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NORMAL_STRATEGY_IG
       - STR_ELITE_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_ABHUMAN_STRATEGY_IG
 
 ### Steel Legion Strategy #STRATEGY.IG.STEEL#
@@ -2539,11 +2567,14 @@ research:
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_NORMAL_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_STEELLEGION_STRATEGY_IG
 
 ### Krieg Strategy #STRATEGY.IG.KRIEG#
@@ -2574,12 +2605,15 @@ research:
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_KRIEG_STRATEGY
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_KRIEG_STRATEGY_IG
 
 ### Valhallan Strategy #STRATEGY.IG.VALHALLAN#
@@ -2609,6 +2643,7 @@ research:
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_NOT_KRIEG_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_VALHALLAN_STRATEGY
       - STR_KRIEG_STRATEGY
@@ -2616,6 +2651,8 @@ research:
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_VALHALLAN_STRATEGY_IG
 
 ####################################
