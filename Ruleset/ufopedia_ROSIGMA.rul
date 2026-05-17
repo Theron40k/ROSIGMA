@@ -7821,6 +7821,10 @@ ufopaedia:
     requires:
       - STR_CHAOSBEAST_RESEARCH
 
+  - id: STR_CHAOSBEAST_CLAW # built-in weapon for chaos beast, to allow stats to be seen
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
   - id: STR_CULTIST_HELBRUTE_ARMORPLAYER
     type_id: 15
     section: STR_ARMORPEDIA
@@ -13317,14 +13321,53 @@ ufopaedia:
     requires:
       - STR_PSYKER_RECRUITMENT
 
-  - delete: STR_CHAOS_CROZIUS
-  - id: STR_CHAOS_CROZIUS  # Chaos Sorcerer's Staff
+  - id: STR_PSYKER_STAFFCHAOS  # Chaos Priest staff
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: STR_PSYKER_STAFFCHAOS.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_PSYKER_STAFFCHAOS_CODEX
+
+  - delete: STR_CHAOS_CROZIUS
+  - id: STR_CHAOS_CROZIUS  # Chaos Sorcerer's Staff for OPFOR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_POWER
     text: STR_CHAOS_CROZIUS_UFOPEDIA
+
+  - id: STR_CHAOS_CROZIUS_PLAYER  # Chaos Sorcerer's Staff for PLAYER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_PLAYER_CODEX
+
+  - id: STR_CHAOS_CROZIUS_SORC_PLAYER  # Chaos Sorcerer's Staff
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_SORC_PLAYER_CODEX
+
+# chaos staff powers, to allow stats to be visible
+  - id: STR_CHAOS_CROZIUS_POWER1
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_CHAOS_CROZIUS_POWER2
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BRIMSTONE_HORROR_SPAWNER_GRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BLOODLETTERSPAWNER_GRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
 
 #WEAPONS.OTHER#   Other
   # Inquisition Stormtrooper Fixed Weapons
@@ -15903,6 +15946,12 @@ ufopaedia:
     section: STR_TOOLS_AND_RESOURCES
     text: STR_MARKET_GOODS_UFOPEDIA
     image_id: 2ARVUS.SPK
+
+  - id: STR_PURITY_SEAL
+    type_id: 10
+    section: STR_TOOLS_AND_RESOURCES
+    text: STR_PURITY_SEAL_CODEX
+    image_id: STR_PURITY_SEAL.SPK
 
   # Tools
   - delete: STR_ELECTRO_FLARE
