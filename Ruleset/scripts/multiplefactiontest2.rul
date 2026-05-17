@@ -368,7 +368,7 @@ extended:
 # ENEMY faction tokens will omit units with the related armor/unit type tag from targeting exclusion
 items:
   - &FACTION_SETUP_TOKEN_TEMPLATE
-    type: STR_FACTION_SETUP_TOKEN_ELDARvsCHAOSvsTYRANIDS_FFA
+    type: STR_FACTION_SETUP_TOKEN_ELDARvsChaosvsPlayer_FFA
     size: 0
     weight: 0
     invWidth: 0
@@ -384,6 +384,7 @@ items:
       # FFA does not override Civilian/Enemy alignment. So for example eldar that are enemies to the player at the engine level will attack Chaos and Tyranids AND the player.
 
   - type: STR_FACTION_SETUP_TOKEN_ELDARandPLAYERandCIVILIANvsORKSvsNECRONS
+    refNode: *FACTION_SETUP_TOKEN_TEMPLATE
     tags:
       ITEM_FACTION_SETUP_SIDE1: 1029  # Player, Civilians, and Eldar
       ITEM_FACTION_SETUP_SIDE2: 2048  # Orks

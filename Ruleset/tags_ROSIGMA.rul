@@ -191,6 +191,7 @@ extended:
       ITEM_IS_TOOL: int
       ITEM_IS_STR_BONEHEAD_ORDERS: int
       TURRET_RELOAD_CAPACITY: int  # reload capacity of turret
+      ITEM_IS_FAKE_MEDKIT: int
       # *** Perils of the Warp ***
       ITEM_IS_PSYCHIC_POWER: int  # is this item a psychic power/spell?
       ITEM_PSYCHIC_POWER_MODIFIER: int  # increments UNIT_PERILS_MODIFIER or our risk of perils by this much per use
@@ -245,6 +246,8 @@ extended:
       ITEM_FACTION_SETUP_NECRON_SETTING: int
       ITEM_FACTION_SETUP_ORK_SETTING: int
       ITEM_FACTION_SETUP_ELDAR_SETTING: int
+      # *** Stealth Items ***
+      ITEM_STIM_ACTIVATES_STEALTH: int
 
     RuleSkill:
       # *** Misc ***
