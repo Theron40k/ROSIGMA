@@ -3904,6 +3904,99 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
 
+  - &STR_VALHALLA_STORMTROOPER_TEMPLATE  # DAMAGE + STATS
+    type: STR_VALHALLA_STORMTROOPER_ARMOR
+    heatVision: 20  # stormtroopers have basic thermals
+    refNode: *STR_GUARD_ARMOR_CARAPACE_SCION
+    spriteSheet: VALHALLAN_STORMTROOPER_BS.PCK
+    spriteInv: GUARD_VALHALLAN_STORMTROOPER_33
+    customArmorPreviewIndex: 924 #Needs unique for Stormtroopers
+    corpseBattle:
+      - STR_VALHALLA_STORMTROOPER_CORPSE
+    storeItem: STR_VALHALLA_STORMTROOPER_ARMOR
+    frontArmor: 90  # same as Scions
+    sideArmor: 80  # reinforced armor
+    rearArmor: 50  # same as Scions
+    underArmor: 50  # same as Scions
+    damageModifier:  # SCION ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.9  # FLAMES
+      - 0.9  # HE
+      - 0.8  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    specialWeapon: STR_BAYONET  # change?
+    stats:
+      tu: -5  # heavy reinforced armor, even vs Scions
+      stamina: -5  # heavy
+    units:
+      - STR_GUARD_VALHALLAN_STORMTROOPER
+      - STR_GUARD_VALHALLAN_STORMTROOPER_OFFICER
+    loftempsSet: [3]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_VOLLEYGUN
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    weight: 20  # powerpack adds weight
+    builtInWeapons:
+      - STR_HOTSHOT_VOLLEY_GUN
+      - INV_NULL_STORM_TROOPER_BACKPACK
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_HELLGUN
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    weight: 20  # powerpack adds weight
+    builtInWeapons:
+      - STR_HELLGUN
+      - INV_NULL_STORM_TROOPER_BACKPACK
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    spriteSheet: VALHALLAN_STORMTROOPER_MEDIC_BS.PCK
+    spriteInv: GUARD_VALHALLAN_STORMTROOPERMEDIC_33
+    customArmorPreviewIndex: 924 #Needs unique for Stormtrooper Medic
+    weight: 30  # medical gear + narthecium adds a lot of weight
+    corpseBattle:
+      - STR_VALHALLA_STORMTROOPER_MEDIC_CORPSE
+    storeItem: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+    stats:
+      tu: -10  # heavy
+      stamina: -10  # heavy
+      reactions: -10  # heavy
+
+  - type: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    antiCamouflageAtDay: 8  # +3 vs normal scion officer
+    antiCamouflageAtDark: 8  # +3 vs normal scion officer
+    customArmorPreviewIndex: 927 #adding a 928 unique for this armor would be good
+    spriteSheet: VALHALLAN_STORMTROOPER_OFFICER_BS.PCK
+    spriteInv: GUARD_VALHALLAN_STORMTROOPEROFFICER_33F0.SPK #only 1 sheet so far
+    corpseBattle:
+      - STR_VALHALLAN_STORMTROOPER_OFFICER_CORPSE
+    storeItem: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    frontArmor: 115  # +25
+    sideArmor: 95  # +25
+    rearArmor: 70  # +20
+    underArmor: 95  # +25
+    units:
+      - STR_GUARD_VALHALLAN_STORMTROOPER_OFFICER
+    specialWeapon: STR_OFFICER_BASIC_VOX
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      UNIT_TYPE_IMPERIUM: 1
+
   # TURRETS AND SPONSONS
   - type: STR_CHIMERA_TURRET_ARMOR
     visibilityAtDay: 40
