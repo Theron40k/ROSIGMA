@@ -3862,8 +3862,33 @@ armors:
 
   - type: STR_VALHALLAN_REGULAR_FLAK_ARMOR #regular with helmet
     refNode: *STR_VALHALLA_FLAK_TEMPLATE
+    spriteSheet: VALHALLAN_FLAK_BS.PCK
+    spriteInv: GUARD_VALHALLAN_FLAK_33
+    customArmorPreviewIndex: 921
 
-  - type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
+  - type: STR_VALHALLAN_FLAK_MEDIC_ARMOR
+    refNode: *STR_VALHALLA_FLAK_TEMPLATE
+    spriteSheet: VALHALLAN_FLAK_MEDIC_BS.PCK
+    spriteInv: GUARD_VALHALLAN_FLAKMEDIC_33
+    customArmorPreviewIndex: 923
+    weight: 5
+    corpseBattle:
+      - STR_VALHALLAN_FLAK_MEDIC_CORPSE
+    storeItem: STR_GUARD_ARMORS_MEDIC
+    frontArmor: 40  # Medic heavy flak
+    sideArmor: 30  # Medic heavy flak
+    rearArmor: 20  # Medic a bit heavier
+    underArmor: 25  # medic
+    stats:
+      tu: -5  # heavy
+      stamina: -10  # heavy
+      reactions: -10  # heavy
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+
+  - &STR_VALHALLA_CARAPACE_TEMPLATE  # DAMAGE + STATS
+    type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
     visibilityAtDay: 40
     visibilityAtDark: 20
     antiCamouflageAtDay: 2
@@ -3907,6 +3932,30 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - type: STR_VALHALLAN_CARAPACE_MEDIC_ARMOR
+    refNode: *STR_VALHALLA_CARAPACE_TEMPLATE
+    spriteSheet: VALHALLAN_CARAPACE_MEDIC_BS.PCK
+    spriteInv: GUARD_VALHALLAN_CARAPACEMEDIC_33
+    customArmorPreviewIndex: 923 #needs unique
+    corpseBattle:
+      - STR_VALHALLAN_CARAPACE_MEDIC_CORPSE
+    storeItem: STR_MEDIC_CARAPACE_ARMOR
+    frontArmor: 70
+    sideArmor: 60
+    rearArmor: 50
+    underArmor: 60
+    weight: 20
+    stats:
+      tu: -5
+      stamina: -10
+      reactions: -10
+      strength: 5
+      bravery: 10  # always multiples of 10
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+
 
   - &STR_VALHALLA_STORMTROOPER_TEMPLATE  # DAMAGE + STATS
     type: STR_VALHALLA_STORMTROOPER_ARMOR
