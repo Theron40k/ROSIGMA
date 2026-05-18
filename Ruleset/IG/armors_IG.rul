@@ -3854,6 +3854,9 @@ armors:
       - 1.0  # MELTA
     units:
       - STR_GUARD_VALHALLAN
+      - STR_GUARD_VETERAN_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
     loftempsSet: [3]
     tags:
       UNIT_TYPE_LIVING: 1
@@ -3902,6 +3905,9 @@ armors:
     corpseBattle:
       - STR_VALHALLAN_OFFICER_FLAK_CORPSE
     specialWeapon: ""
+    units:
+      - STR_GUARD_VALHALLAN_OFFICER
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
 
   - &STR_VALHALLA_CARAPACE_TEMPLATE  # DAMAGE + STATS
     type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
@@ -3942,7 +3948,9 @@ armors:
       - 1.0  # IMPACT
       - 1.0  # MELTA
     units:
-      - STR_GUARD_VALHALLAN
+      - STR_GUARD_VETERAN_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
     loftempsSet: [3]
     tags:
       UNIT_TYPE_IMPERIUM: 1
@@ -3983,6 +3991,8 @@ armors:
     corpseBattle:
       - STR_VALHALLAN_OFFICER_CARAPACE_CORPSE
     specialWeapon: ""
+    units:
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
 
   - &STR_VALHALLA_STORMTROOPER_TEMPLATE  # DAMAGE + STATS
     type: STR_VALHALLA_STORMTROOPER_ARMOR
