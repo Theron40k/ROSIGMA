@@ -2320,7 +2320,7 @@ soldiers:
       - STR_GUARD_RANK_1
       - STR_GUARD_RANK_2
       - STR_GUARD_RANK_3
-    value: 5
+    value: 1 #valhallan bonus
     moraleLossWhenKilled: 66  # valhallans even less affected by friendlies
 
   - type: STR_GUARD_VALHALLAN_OFFICER  # Valhallan Flak Officer
@@ -2377,7 +2377,6 @@ soldiers:
       psiSkill: 100
       melee: 70
       mana: 0
-    value: 25
     armor: STR_VALHALLAN_OFFICER_FLAK_ARMOR
     dogfightExperience:
       bravery: 10
@@ -2405,6 +2404,8 @@ soldiers:
     rankSprite: {mod: 40k, index: 1012}
     rankBattleSprite: {mod: 40k, index: 1012}
     rankTinySprite: {mod: 40k, index: 1012}
+    value: 15 #-10 valhallan bonus
+    moraleLossWhenKilled: 90  # valhallans less affected by friendlies
     tags:
       SOLDIER_IS_OFFICER: 1
 
@@ -2482,7 +2483,8 @@ soldiers:
     rankSprite: {mod: 40k, index: 1006}
     rankBattleSprite: {mod: 40k, index: 1006}
     rankTinySprite: {mod: 40k, index: 1006}
-    value: 25
+    value: 15 #-10 valhallan bonus
+    moraleLossWhenKilled: 75  # valhallans less affected by friendlies
 
   - type: STR_GUARD_VALHALLAN_OFFICER_VETERAN  # Valhallan Carapace Veteran Officer
     requires:
@@ -2540,7 +2542,6 @@ soldiers:
       psiSkill: 100
       melee: 70
       mana: 0
-    value: 30
     armor: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR
     dogfightExperience:
       bravery: 10
@@ -2568,6 +2569,7 @@ soldiers:
     rankSprite: {mod: 40k, index: 1012}
     rankBattleSprite: {mod: 40k, index: 1012}
     rankTinySprite: {mod: 40k, index: 1012}
+    value: 20 #-10 valhallan bonus
     tags:
       SOLDIER_IS_OFFICER: 1
 
