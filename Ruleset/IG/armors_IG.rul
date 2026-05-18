@@ -3817,7 +3817,8 @@ armors:
       reactions: -10  # heavy
 
 #Valhallan Armors
-  - type: STR_VALHALLAN_FLAK_ARMOR  #Rookie Valhallan Guard armor
+  - &STR_VALHALLA_FLAK_TEMPLATE  # DAMAGE + STATS
+    type: STR_VALHALLAN_FLAK_ARMOR  #Rookie Valhallan Guard armor
     visibilityAtDay: 40
     visibilityAtDark: 15
     spriteSheet: VALHALLAN_FLAK_BS.PCK
@@ -3858,6 +3859,9 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - type: STR_VALHALLAN_REGULAR_FLAK_ARMOR #regular with helmet
+    refNode: *STR_VALHALLA_FLAK_TEMPLATE
 
   - type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
     visibilityAtDay: 40
