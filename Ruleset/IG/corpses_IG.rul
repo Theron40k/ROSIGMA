@@ -473,7 +473,6 @@ items:
     battleType: 11
 
   - type: STR_ENGINSEER_CORPSE
-    name: STR_CORPSE
     weight: 40
     bigSprite: 3600
     floorSprite: 3602
@@ -496,6 +495,16 @@ items:
     recover: true
     recoverCorpse: false
 
+  - type: STR_VALHALLAN_FLAK_MEDIC_CORPSE
+    refNode: *STR_CORPSE_VALHALLAN
+    bigSprite: 970
+    floorSprite: 3500
+
+  - type: STR_VALHALLAN_OFFICER_FLAK_CORPSE
+    refNode: *STR_CORPSE_VALHALLAN
+    bigSprite: 972
+    floorSprite: 3502
+
   - type: STR_VALHALLAN_CARAPACE_CORPSE
     weight: 20
     bigSprite: 971
@@ -506,3 +515,27 @@ items:
     armor: 20
     recover: true
     recoverCorpse: false
+
+  - type: STR_VALHALLAN_CARAPACE_MEDIC_CORPSE
+    refNode: *STR_CORPSE_VALHALLAN
+    bigSprite: 971
+    floorSprite: 3501
+
+  - type: STR_VALHALLAN_OFFICER_CARAPACE_CORPS
+    refNode: *STR_CORPSE_VALHALLAN
+    bigSprite: 973
+    floorSprite: 3503
+
+  - type: STR_VALHALLA_STORMTROOPER_CORPSE
+    refNode: *STR_CORPSE_VALHALLAN
+    bigSprite: 974
+    floorSprite: 3504
+
+  - type: STR_VALHALLA_STORMTROOPER_MEDIC_CORPSE
+    refNode: *STR_CORPSE_VALHALLAN
+    bigSprite: 974
+    floorSprite: 3504
+
+  - type: STR_VALHALLAN_STORMTROOPER_OFFICER_CORPSE
+    bigSprite: 975
+    floorSprite: 3505
