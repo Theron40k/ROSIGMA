@@ -6705,7 +6705,12 @@ items:
   - type: STR_AUTOGUN_CLIP_KRAKEN
     categories: [STR_CAT_AUTO]
     size: 0.1
-    costSell: 500
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+      - STR_ALIEN_ALLOYS
+      - STR_MIDTIER_PREREQ
+    costBuy: 500
+    costSell: 100
     weight: 6
     bigSprite: 987
     floorSprite: {mod: 40k, index: 1011}  # needs new
