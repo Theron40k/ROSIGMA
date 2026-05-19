@@ -6490,7 +6490,7 @@ items:
   - type: STR_VALHALLAN_STUBRIFLE  # Rifle with Bayonet
     categories: [STR_CAT_SCOUT, STR_CAT_SNIPER]
     dropoff: 3  # bolt action
-    weight: 20
+    weight: 15
     size: 0.3
     requiresBuy:
       - STR_VALHALLAN_WEAPONS
@@ -6560,6 +6560,45 @@ items:
       REACTION_PENALTY_KNEELING_BYPASS: 1
       ITEM_RECOIL: 25
       ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 10
+
+  - type: STR_VALHALLAN_AUTOSTUBBER #SoumiCarlGustavPPsh SMG
+    categories: [STR_CAT_AUTO]
+    dropoff: 6  # SMG
+    weight: 15
+    size: 0.3
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+    costBuy: 4000
+    costSell: 500
+    bigSprite: 982
+    floorSprite: 3512
+    handSprite: 4816
+    bulletSprite: {mod: 40k, index: 1}
+    fireSound: [{mod: 40k, index: 871}, {mod: 40k, index: 872}, {mod: 40k, index: 873}]
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 20
+    compatibleAmmo:
+      - STR_STUB_GUN_AMMO
+      - STR_STUB_GUN_AMMO_AP
+      - STR_STUB_GUN_AMMO_LONG #add drum mag
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    accuracySnap: 55
+    accuracyAuto: 40
+    tuSnap: 25
+    tuAuto: 33
+    autoShots: 10
+    confSnap:
+      shots: 4
+    snapRange: 10
+    autoRange: 7
+    listOrder: 11897
+    attraction: 1
+    tags:
+      ITEM_RECOIL: 20
 
   - type: STR_VALHALLAN_AUTOGUN #SVT DMR style
     categories: [STR_CAT_AUTO]
