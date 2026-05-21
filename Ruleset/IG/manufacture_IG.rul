@@ -87,12 +87,10 @@ manufacture:
     time: 500
     cost: 100000  # 100k
 
-
-
   - name: STR_VALHALLA_STORMTROOPER_ARMOR
     category: STR_PERSONAL_ARMOR
     requires:
-      - STR_STEEL_LEGION_STRATEGY_CERAMITETIER #needs Valhallan Version
+      - STR_VALHALLA_HIGHTIER
     requiredItems:
       STR_ALIEN_ALLOYS: 30
       STR_ELERIUM_115: 10
@@ -106,7 +104,7 @@ manufacture:
   - name: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
     category: STR_PERSONAL_ARMOR
     requires:
-      - STR_STEEL_LEGION_STRATEGY_CERAMITETIER #needs Valhallan Version
+      - STR_VALHALLA_HIGHTIER
     requiredItems:
       STR_ALIEN_ALLOYS: 40
       STR_ELERIUM_115: 20
@@ -120,7 +118,7 @@ manufacture:
   - name: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
     category: STR_PERSONAL_ARMOR
     requires:
-      - STR_STEEL_LEGION_STRATEGY_CERAMITETIER #needs Valhallan Version+someOfficer restriction
+      - STR_VALHALLA_HIGHTIER
     requiredItems:
       STR_ALIEN_ALLOYS: 40
       STR_ELERIUM_115: 20
