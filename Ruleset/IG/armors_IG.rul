@@ -90,6 +90,30 @@ items:
     transferTime: 50
     listOrder: 6860
 
+  # valhallan
+
+  - type: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+
 armors:
   - &STR_GUARD_ARMOR_FLAK_DAMAGE
     type: STR_GUARD_ARMORSM  # DR10 SPACE MARINE SUPORT
@@ -4026,8 +4050,8 @@ armors:
       tu: -5  # heavy reinforced armor, even vs Scions
       stamina: -5  # heavy
     units:
-      - STR_GUARD_VALHALLAN_STORMTROOPER
-      - STR_GUARD_VALHALLAN_STORMTROOPER_OFFICER
+      - STR_GUARD_VETERAN_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
     loftempsSet: [3]
     tags:
       UNIT_TYPE_IMPERIUM: 1
@@ -4080,7 +4104,7 @@ armors:
     rearArmor: 70  # +20
     underArmor: 95  # +25
     units:
-      - STR_GUARD_VALHALLAN_STORMTROOPER_OFFICER
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
     specialWeapon: STR_OFFICER_BASIC_VOX
     tags:
       UNIT_TYPE_LIVING: 1
