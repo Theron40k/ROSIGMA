@@ -3895,6 +3895,14 @@ ufopaedia:
       - STR_UNLOCK_CHAOSLEMAN
     type_id: 11
 
+  - id: STR_PCCHAOS_COLUMN
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: THECHAOSPATH.SPK
+    text: STR_CHAOS_COLUMN_CHAOS_CODEX
+    requires:
+      - STR_UNLOCK_CHAOSLEMAN
+    type_id: 11
+
   - id: STR_HELLBLADE_INTERCEPTORS_CHAOS
     section: STR_XCOM_CRAFT_ARMAMENT
     image_id: THECHAOSPATH.SPK
@@ -11236,13 +11244,13 @@ ufopaedia:
   - id: STR_CASSC  # Reaper Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: REAPER_AUTOCANNON.SPK
     requires:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_CASSC_UFOPEDIA
 
-  - id: STR_IW_AUTOCANNON
+  - id: STR_IW_AUTOCANNON  # Iron Warrior Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CH.SPK
@@ -11251,10 +11259,10 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_IW_AUTOCANNON_UFOPEDIA
 
-  - id: STR_IW_REAPER_AUTOCANNON
+  - id: STR_IW_REAPER_AUTOCANNON  # Iron Warrior Reaper Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: REAPER_AUTOCANNON.SPK
     requires:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
