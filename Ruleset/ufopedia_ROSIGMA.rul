@@ -3895,6 +3895,14 @@ ufopaedia:
       - STR_UNLOCK_CHAOSLEMAN
     type_id: 11
 
+  - id: STR_PCCHAOS_COLUMN
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: THECHAOSPATH.SPK
+    text: STR_CHAOS_COLUMN_CHAOS_CODEX
+    requires:
+      - STR_UNLOCK_CHAOSLEMAN
+    type_id: 11
+
   - id: STR_HELLBLADE_INTERCEPTORS_CHAOS
     section: STR_XCOM_CRAFT_ARMAMENT
     image_id: THECHAOSPATH.SPK
@@ -9458,6 +9466,15 @@ ufopaedia:
   - id: STR_STUB_GUN_AMMO_INC
     type_id: 14
     section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM_AP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM_AP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
 
   # Heavy Stubbers
   - delete: STR_HEAVY_STUBBER  # Heavy Stubber ✔
@@ -9913,6 +9930,9 @@ ufopaedia:
 
   - delete: STR_AUTOGUN_CLIP
   - id: STR_AUTOGUN_CLIP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_AUTOGUN_CLIP_KRAKEN
     type_id: 14
     section: STR_NOT_AVAILABLE
   - id: STR_AUTOGUN_CLIP_DRUM
@@ -10878,11 +10898,19 @@ ufopaedia:
   - delete: STR_GK_HB
   - id: STR_GK_HB
     type_id: 14
-    section: STR_NOT_AVAILABLE
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_GK_SOLDIER
+    image_id: STR_GK_HB.SPK
+    text: STR_GK_HB_CODEX
   - delete: STR_GK_HB_MC
   - id: STR_GK_HB_MC
     type_id: 14
-    section: STR_NOT_AVAILABLE
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_GK_SOLDIER
+    image_id: STR_GK_HB.SPK
+    text: STR_GK_HB_CODEX
 
   - delete: STR_CHB
   - id: STR_CHB
@@ -11228,13 +11256,13 @@ ufopaedia:
   - id: STR_CASSC  # Reaper Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: REAPER_AUTOCANNON.SPK
     requires:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_CASSC_UFOPEDIA
 
-  - id: STR_IW_AUTOCANNON
+  - id: STR_IW_AUTOCANNON  # Iron Warrior Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CH.SPK
@@ -11242,6 +11270,15 @@ ufopaedia:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_IW_AUTOCANNON_UFOPEDIA
+
+  - id: STR_IW_REAPER_AUTOCANNON  # Iron Warrior Reaper Autocannon
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: REAPER_AUTOCANNON.SPK
+    requires:
+      - STR_AUTOCANNON_TECH
+      - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
+    text: STR_IW_REAPER_AUTOCANNON_CODEX
 
   - delete: STR_AUTOCANNON_CLIP
   - id: STR_AUTOCANNON_CLIP
@@ -13129,6 +13166,15 @@ ufopaedia:
     text: STR_CLAWS_UFOPEDIA
     requires:
       - STR_TSARGENT
+
+  - id: STR_CLAW_TYRANT
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_CLAW_TYRANT_CODEX
+    requires:
+      - STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
 
   - delete: STR_POWER_SWORD
   - id: STR_POWER_SWORD
