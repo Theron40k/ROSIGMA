@@ -438,6 +438,7 @@ items:
 
   - &RIPPER_CORPSE_TEMPLATE
     type: RIPPER_CORPSE_TEMPLATE #UNUSED in game. use as template only.
+    battleType: 11
     invWidth: 2
     invHeight: 3
     recover: true
@@ -469,6 +470,14 @@ items:
     size: 0.4 # 0.1 per ripper
     weight: 4 # 1 per ripper
     recoveryPoints: 4 # 1 per ripper
+  - type: STR_RIP_CORPSE_6 #ripperswarm 6 corpses
+    refnode: *RIPPER_CORPSE_TEMPLATE
+    battleType: 11
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
+    size: 0.6 # 0.1 per ripper
+    weight: 6 # 1 per ripper
+    recoveryPoints: 6 # 1 per ripper
   - type: STR_RIP_CORPSE_8 #ripperswarm 4 corpses
     refnode: *RIPPER_CORPSE_TEMPLATE
     battleType: 11

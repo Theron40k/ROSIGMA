@@ -404,8 +404,10 @@ units:
 
   - type: STR_RIPPERSWARM_16
     refNode: *STR_RIPPERSWARM_REF
-    spawnUnit: STR_RIPPERSWARM_4
+    #spawnUnit: STR_RIPPERSWARM_4
     builtInWeaponSets:
+      - - STR_RIPPERSWARM_ATTACK
+        - STR_RIPPERSWARM_SPAWNER_8
       - - STR_RIPPERSWARM_ATTACK
         - STR_RIPPERSWARM_SPAWNER_4
         - STR_RIPPERSWARM_SPAWNER_4
@@ -425,9 +427,43 @@ units:
         - STR_RIPPERSWARM_SPAWNER_1
         - STR_RIPPERSWARM_SPAWNER_1
 
+  - type: STR_RIPPERSWARM_8
+    refNode: *STR_RIPPERSWARM_REF
+    stats:
+      health: 80 #10 per
+      strength: 80 #10 per
+      melee: 70
+    armor: STR_RIPPERSWARM_8_ARMOR
+    builtInWeaponSets:
+      - - STR_RIPPERSWARM_ATTACK
+        - STR_RIPPERSWARM_SPAWNER_4
+      - - STR_RIPPERSWARM_ATTACK
+        - STR_RIPPERSWARM_SPAWNER_2
+        - STR_RIPPERSWARM_SPAWNER_2
+      - - STR_RIPPERSWARM_ATTACK
+        - STR_RIPPERSWARM_SPAWNER_2
+        - STR_RIPPERSWARM_SPAWNER_1
+        - STR_RIPPERSWARM_SPAWNER_1
+
+  - type: STR_RIPPERSWARM_12
+    refNode: *STR_RIPPERSWARM_REF
+    stats:
+      health: 80 #10 per
+      strength: 120 #10 per
+      melee: 85
+    armor: STR_RIPPERSWARM_12_ARMOR
+    builtInWeaponSets:
+      - - STR_RIPPERSWARM_ATTACK
+        - STR_RIPPERSWARM_SPAWNER_4
+        - STR_RIPPERSWARM_SPAWNER_2
+      - - STR_RIPPERSWARM_ATTACK
+        - STR_RIPPERSWARM_SPAWNER_2
+        - STR_RIPPERSWARM_SPAWNER_2
+        - STR_RIPPERSWARM_SPAWNER_2
+
   - type: STR_RIPPERSWARM_4
     refNode: *STR_RIPPERSWARM_REF
-    spawnUnit: STR_RIPPERSWARM_2
+    #spawnUnit: STR_RIPPERSWARM_2
     stats:
       health: 40 #10 per
       strength: 40 #10 per
@@ -442,7 +478,7 @@ units:
 
   - type: STR_RIPPERSWARM_2
     refNode: *STR_RIPPERSWARM_REF
-    spawnUnit: STR_RIPPERSWARM_1
+    #spawnUnit: STR_RIPPERSWARM_1
     stats:
       health: 20 #10 per
       strength: 20 #10 per
