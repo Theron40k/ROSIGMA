@@ -344,6 +344,90 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
+  - type: STR_GSC_MAGUS #Just locus clone for now #change
+    visibilityAtDay: 40
+    visibilityAtDark: 30  # GSC BONUS
+    camouflageAtDay: 15
+    camouflageAtDark: 10
+    antiCamouflageAtDark: 7
+    antiCamouflageAtDay: 7
+    heatVision: 25
+    spriteSheet: BS_MAGUS.PCK
+    spriteInv: INV_MAGUS.SPK
+    corpseBattle:
+      - STR_MAGUS_CORPSE
+    frontArmor: 50
+    sideArmor: 40
+    rearArmor: 40
+    underArmor: 30
+    drawingRoutine: 0
+    deathFrames: 5
+    damageModifier:  # industrial + GSC
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.0  # FLAMES
+      - 1.0  # HE
+      - 1.1  # LASCANON
+      - 1.0  # PLASMA
+      - 0.8  # STUN
+      - 0.8  # MELEE
+      - 0.7  # ACID GSC BONUS
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      INFECTION_RESIST: 100
+      INFECTION_RESIST_TYPE: 2  # immune to GSC infection
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TYRANID: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_GSC_PRIMUS #Just locus clone for now #change
+    visibilityAtDay: 40
+    visibilityAtDark: 30  # GSC BONUS
+    camouflageAtDay: 15
+    camouflageAtDark: 10
+    antiCamouflageAtDark: 7
+    antiCamouflageAtDay: 7
+    heatVision: 25
+    spriteSheet: BS_PRIMUS.PCK
+    spriteInv: INV_PRIMUS.SPK
+    corpseBattle:
+      - STR_PRIMUS_CORPSE
+    frontArmor: 50
+    sideArmor: 40
+    rearArmor: 40
+    underArmor: 30
+    drawingRoutine: 0
+    deathFrames: 5
+    damageModifier:  # industrial + GSC
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.0  # FLAMES
+      - 1.0  # HE
+      - 1.1  # LASCANON
+      - 1.0  # PLASMA
+      - 0.8  # STUN
+      - 0.8  # MELEE
+      - 0.7  # ACID GSC BONUS
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      INFECTION_RESIST: 100
+      INFECTION_RESIST_TYPE: 2  # immune to GSC infection
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TYRANID: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
   - type: STR_GSC_ABERRANT_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 30  # darkvision boost from Infection

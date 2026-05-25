@@ -14291,7 +14291,7 @@ extraSprites:
     files:
       0: Resources/GENE/bs_locus_cloaked.png
 
-  - type: BS_LOCUS_FRENZIED.PCK  # DR4
+  - type: BS_LOCUS_FRENZIED.PCK  # DR0
     width: 512
     height: 720
     subX: 32
@@ -14305,7 +14305,45 @@ extraSprites:
   - typeSingle: ARMOR_LOCUS.SPK
     fileSingle: Resources/GENE/ARMOR_GSC_LOCUS.png
 
+#Primus
+
+  - typeSingle: INV_PRIMUS.SPK
+    fileSingle: Resources/GENE/INV_GSC_PRIMUS.png
+
+  - type: BS_PRIMUS.PCK # DR0
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/GENE/BS_GSC_MAGUS.png #change
+
+  - typeSingle: ORIGINS_PRIMUS.SPK
+    fileSingle: Resources/GENE/ORIGINS_GSC_MAGUS.png #change
+
+  - typeSingle: ARMOR_PRIMUS.SPK
+    fileSingle: Resources/GENE/ARMOR_GSC_MAGUS.png #change
+
 #magus
+
+  - typeSingle: INV_MAGUS.SPK
+    fileSingle: Resources/GENE/INV_GSC_MAGUS_M.png #add female variant #add morph variant
+
+  - type: BS_MAGUS.PCK  # DR0
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/GENE/BS_GSC_MAGUS.png
+
+  - typeSingle: ORIGINS_MAGUS.SPK
+    fileSingle: Resources/GENE/ORIGINS_GSC_MAGUS.png
+
+  - typeSingle: ARMOR_MAGUS.SPK
+    fileSingle: Resources/GENE/ARMOR_GSC_MAGUS.png
+
+#magus metamorph
 
 #aberrant
   - typeSingle: INV_ABERRANT.SPK
