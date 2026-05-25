@@ -858,8 +858,8 @@ armors:
     refNode: *STR_RIPPERSWARM_ARMOR_REF
     spriteSheet: RIPPERSWARM_2_BS.PCK  # DR4
     spriteInv: RIPPERSWARM_2_INV.SPK
-    corpseBattle:
-      - STR_RIPPERSWARM_CORPSE #change
+    corpseBattle:  #dying ripperswarm x2 leaves 1 body behind
+      - STR_RIPPERSWARM_CORPSE
     loftempsSet: [2]  # very small targets
     tags:
       ARMOR_DISABLE_OVERKILL_SELF_DESTRUCT: 1
@@ -871,8 +871,8 @@ armors:
     refNode: *STR_RIPPERSWARM_ARMOR_REF
     spriteSheet: RIPPERSWARM_4_BS.PCK  # DR4
     spriteInv: RIPPERSWARM_4_INV.SPK
-    corpseBattle:
-      - STR_RIPPERSWARM_CORPSE #change
+    corpseBattle: #dying ripperswarm x4 leaves 2 bodies behind
+      - STR_RIP_CORPSE_2
     loftempsSet: [2]  # very small targets
     tags:
       ARMOR_DISABLE_OVERKILL_SELF_DESTRUCT: 1
@@ -888,11 +888,11 @@ armors:
     spriteSheet: RIPPERSWARM_16_BS.PCK  # DR5
     spriteInv: RIPPERSWARM_16_INV.SPK
     drawingRoutine: 5
-    corpseBattle:
-      - STR_RIP_CORPSE_16_1
-      - STR_RIP_CORPSE_16_2
-      - STR_RIP_CORPSE_16_3
-      - STR_RIP_CORPSE_16_4
+    corpseBattle: #dying ripperswarm x16 leaves 12 bodies behind. must be 4 items for 2x2 units
+      - STR_RIP_CORPSE_4
+      - STR_RIP_CORPSE_4
+      - STR_RIP_CORPSE_2
+      - STR_RIP_CORPSE_2
     size: 2
     loftempsSet: [92, 89, 90, 91]  # apparently engine bug 2x2 units can only use these values
     damageModifier:  # Tyranid Layered Chitin

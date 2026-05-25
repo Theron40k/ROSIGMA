@@ -403,7 +403,7 @@ units:
 
   - type: STR_RIPPERSWARM_16
     refNode: *STR_RIPPERSWARM_REF
-    spawnUnit: STR_RIPPERSWARM_4
+    spawnUnit: STR_RIPPERSWARM_4 # 12 dies this way
     builtInWeaponSets:
       - - STR_RIPPERSWARM_ATTACK
         - STR_RIPPERSWARM_SPAWNER_2
@@ -423,11 +423,11 @@ units:
 
   - type: STR_RIPPERSWARM_4
     refNode: *STR_RIPPERSWARM_REF
-    spawnUnit: STR_RIPPERSWARM_1
+    spawnUnit: STR_RIPPERSWARM_2 # 2 dies this way
     stats:
-      health: 30
+      health: 40 #10 per
       strength: 40 #10 per
-      melee: 60 #10 per
+      melee: 60
     armor: STR_RIPPERSWARM_4_ARMOR
     builtInWeaponSets:
       - - STR_RIPPERSWARM_ATTACK
@@ -439,9 +439,9 @@ units:
 
   - type: STR_RIPPERSWARM_2
     refNode: *STR_RIPPERSWARM_REF
-    spawnUnit: STR_RIPPERSWARM_1
+    spawnUnit: STR_RIPPERSWARM_1 # 1 dies this way
     stats:
-      health: 20
+      health: 20 #10 per
       strength: 20 #10 per
       melee: 40
     armor: STR_RIPPERSWARM_2_ARMOR
@@ -456,10 +456,10 @@ units:
   - type: STR_RIPPERSWARM_1
     refNode: *STR_RIPPERSWARM_REF
     stats:
-      health: 20
-      strength: 20 #10 per
+      health: 10
+      strength: 10 #10 per
       melee: 40
-    armor: STR_RIPPERSWARM_2_ARMOR #change
+    armor: STR_RIPPERSWARM_1_ARMOR
     builtInWeaponSets:
       - - STR_RIPPERSWARM_ATTACK
 
