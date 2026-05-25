@@ -746,10 +746,10 @@ armors:
 
   - type: STR_RIPPERSWARM_1_ARMOR  # Tyranid
     refNode: *STR_RIPPERSWARM_ARMOR_REF
-    spriteSheet: RIPPERSWARM_2_BS.PCK  # change
-    spriteInv: RIPPERSWARM_2_INV.SPK  #change
+    spriteSheet: RIPPERSWARM_1_BS.PCK  # change
+    spriteInv: RIPPERSWARM_1_INV.SPK  #change
     corpseBattle:
-      - STR_RIPPERSWARM_CORPSE #change
+      - STR_RIPPERSWARM_CORPSE
     loftempsSet: [1]  # tiny target
     damageModifier:  # Tyranid Layered Chitin
       - 1.0  # untyped damage is supposed to be neutral
@@ -804,11 +804,11 @@ armors:
     spriteSheet: RIPPERSWARM_16_BS.PCK  # DR5
     spriteInv: RIPPERSWARM_16_INV.SPK
     drawingRoutine: 5
-    corpseBattle: #dying ripperswarm x16 leaves 12 bodies behind. must be 4 items for 2x2 units
+    corpseBattle: #dying ripperswarm x16 leaves 4 bodies behind. must be 4 items for 2x2 units
       - STR_RIP_CORPSE_4
-      - STR_RIP_CORPSE_4
-      - STR_RIP_CORPSE_2
-      - STR_RIP_CORPSE_2
+      - STR_RIP_CORPSE_PILE_FILLER
+      - STR_RIP_CORPSE_PILE_FILLER
+      - STR_RIP_CORPSE_PILE_FILLER
     size: 2
     loftempsSet: [92, 89, 90, 91]  # apparently engine bug 2x2 units can only use these values
     damageModifier:  # Tyranid Layered Chitin
