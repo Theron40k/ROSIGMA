@@ -791,7 +791,7 @@ armors:
     spriteInv: RIPPERSWARM_2_INV.SPK
     drawingRoutine: 4
     corpseBattle:
-      - STR_RIPPERSWARM_CORPSE
+      - STR_RIPPERSWARM_CORPSE #half the ripper swarm dies upon unit death (16 units -> spawn 8 leave 8 bodies)
     frontArmor: 30  # Flak equivalent, 5+ save
     sideArmor: 25
     rearArmor: 15
@@ -830,10 +830,10 @@ armors:
 
   - type: STR_RIPPERSWARM_1_ARMOR  # Tyranid
     refNode: *STR_RIPPERSWARM_ARMOR_REF
-    spriteSheet: RIPPERSWARM_2_BS.PCK  # change
-    spriteInv: RIPPERSWARM_2_INV.SPK  #change
+    spriteSheet: RIPPERSWARM_1_BS.PCK  # change
+    spriteInv: RIPPERSWARM_1_INV.SPK  #change
     corpseBattle:
-      - STR_RIPPERSWARM_CORPSE #change
+      - STR_RIPPERSWARM_CORPSE
     loftempsSet: [1]  # tiny target
     damageModifier:  # Tyranid Layered Chitin
       - 1.0  # untyped damage is supposed to be neutral
@@ -853,32 +853,63 @@ armors:
       ARMOR_IS_EXPLODE_ON_DEATH: 1
       ARMOR_IS_KAMIKAZI: 1
       ARMOR_REINFORCEMENT_TU_PERCENT: 60
+      ARMOR_REINFORCEMENT_TU_PERCENT_PENDING: 60
 
   - type: STR_RIPPERSWARM_2_ARMOR  # Tyranid
     refNode: *STR_RIPPERSWARM_ARMOR_REF
     spriteSheet: RIPPERSWARM_2_BS.PCK  # DR4
     spriteInv: RIPPERSWARM_2_INV.SPK
-    corpseBattle:
-      - STR_RIPPERSWARM_CORPSE #change
+    corpseBattle:  #dying ripperswarm x2 leaves 1 body behind
+      - STR_RIPPERSWARM_CORPSE
     loftempsSet: [2]  # very small targets
     tags:
       ARMOR_DISABLE_OVERKILL_SELF_DESTRUCT: 1
       ARMOR_IS_EXPLODE_ON_DEATH: 1
       ARMOR_IS_KAMIKAZI: 1
       ARMOR_REINFORCEMENT_TU_PERCENT: 50
+      ARMOR_REINFORCEMENT_TU_PERCENT_PENDING: 50
 
   - type: STR_RIPPERSWARM_4_ARMOR  # Tyranid
     refNode: *STR_RIPPERSWARM_ARMOR_REF
     spriteSheet: RIPPERSWARM_4_BS.PCK  # DR4
     spriteInv: RIPPERSWARM_4_INV.SPK
-    corpseBattle:
-      - STR_RIPPERSWARM_CORPSE #change
-    loftempsSet: [2]  # very small targets
+    corpseBattle: #dying ripperswarm x4 leaves 2 bodies behind
+      - STR_RIP_CORPSE_2
+    loftempsSet: [3]  # very small targets
     tags:
       ARMOR_DISABLE_OVERKILL_SELF_DESTRUCT: 1
       ARMOR_IS_EXPLODE_ON_DEATH: 1
       ARMOR_IS_KAMIKAZI: 1
       ARMOR_REINFORCEMENT_TU_PERCENT: 30
+      ARMOR_REINFORCEMENT_TU_PERCENT_PENDING: 30
+
+  - type: STR_RIPPERSWARM_8_ARMOR  # Tyranid
+    refNode: *STR_RIPPERSWARM_ARMOR_REF
+    spriteSheet: RIPPERSWARM_4_BS.PCK  # DR4 #To Change
+    spriteInv: RIPPERSWARM_4_INV.SPK #To Change
+    corpseBattle: #dying ripperswarm x8 leaves 4 bodies behind
+      - STR_RIP_CORPSE_4
+    loftempsSet: [4]  # very small targets
+    tags:
+      ARMOR_DISABLE_OVERKILL_SELF_DESTRUCT: 1
+      ARMOR_IS_EXPLODE_ON_DEATH: 1
+      ARMOR_IS_KAMIKAZI: 1
+      ARMOR_REINFORCEMENT_TU_PERCENT: 30
+      ARMOR_REINFORCEMENT_TU_PERCENT_PENDING: 30
+
+  - type: STR_RIPPERSWARM_12_ARMOR  # Tyranid
+    refNode: *STR_RIPPERSWARM_ARMOR_REF
+    spriteSheet: RIPPERSWARM_4_BS.PCK  # DR4 #To Change
+    spriteInv: RIPPERSWARM_4_INV.SPK #To Change
+    corpseBattle: #dying ripperswarm x12 leaves 4 bodies behind
+      - STR_RIP_CORPSE_6
+    loftempsSet: [5]  # very small targets
+    tags:
+      ARMOR_DISABLE_OVERKILL_SELF_DESTRUCT: 1
+      ARMOR_IS_EXPLODE_ON_DEATH: 1
+      ARMOR_IS_KAMIKAZI: 1
+      ARMOR_REINFORCEMENT_TU_PERCENT: 30
+      ARMOR_REINFORCEMENT_TU_PERCENT_PENDING: 30
 
     #   - type: STR_RIPPERSWARM_8_ARMOR  # Maybe
     #   - type: STR_RIPPERSWARM_12_ARMOR  # MAYBE
@@ -888,11 +919,11 @@ armors:
     spriteSheet: RIPPERSWARM_16_BS.PCK  # DR5
     spriteInv: RIPPERSWARM_16_INV.SPK
     drawingRoutine: 5
-    corpseBattle:
-      - STR_RIP_CORPSE_16_1
-      - STR_RIP_CORPSE_16_2
-      - STR_RIP_CORPSE_16_3
-      - STR_RIP_CORPSE_16_4
+    corpseBattle: #dying ripperswarm x16 leaves 8 bodies behind. must be 4 items for 2x2 units
+      - STR_RIP_CORPSE_8
+      - STR_RIP_CORPSE_PILE_FILLER
+      - STR_RIP_CORPSE_PILE_FILLER
+      - STR_RIP_CORPSE_PILE_FILLER
     size: 2
     loftempsSet: [92, 89, 90, 91]  # apparently engine bug 2x2 units can only use these values
     damageModifier:  # Tyranid Layered Chitin
@@ -913,6 +944,7 @@ armors:
       ARMOR_IS_EXPLODE_ON_DEATH: 1
       ARMOR_IS_KAMIKAZI: 1
       ARMOR_REINFORCEMENT_TU_PERCENT: 10
+      ARMOR_REINFORCEMENT_TU_PERCENT_PENDING: 10
 
   - &STR_SPOREMINE_ARMOR_TEMPLATE #POSSIBLE FUTURE USE
     type: STR_SPOREMINE_ARMOR  # Tyranid #ACID SPORE

@@ -450,37 +450,73 @@ items:
     floorSprite: 3260
     recoveryPoints: 25
 
-  - type: STR_RIPPERSWARM_CORPSE
-    refNode: *GSC_CORPSE_REF
+  - &RIPPER_CORPSE_TEMPLATE
+    type: RIPPER_CORPSE_TEMPLATE_DONOTUSE #UNUSED in game. use as template only.
+    battleType: 11
+    invWidth: 2
+    invHeight: 3
+    recover: true
+    recoveryPoints: 1 # 1 per ripper
+    listOrder: 19910
+    size: 0.1 # 0.1 per ripper
+    weight: 1 # 1 per ripper
+    armor: 20 # flat 20 for all sizes
+
+  - type: STR_RIPPERSWARM_CORPSE #Tyranid ripperswarm (x1)
+    refNode: *RIPPER_CORPSE_TEMPLATE
     bigSprite: 3035
     floorSprite: 3026
+    size: 0.1 # 0.1 per ripper
+    weight: 1 # 1 per ripper
+    recoveryPoints: 1 # 1 per ripper
+  - type: STR_RIP_CORPSE_2 #ripperswarm 2 corpses
+    refNode: *RIPPER_CORPSE_TEMPLATE
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
+    size: 0.2 # 0.1 per ripper
+    weight: 2 # 1 per ripper
+    recoveryPoints: 2 # 1 per ripper
+  - type: STR_RIP_CORPSE_4 #ripperswarm 4 corpses
+    refNode: *RIPPER_CORPSE_TEMPLATE
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
+    size: 0.4 # 0.1 per ripper
+    weight: 4 # 1 per ripper
+    recoveryPoints: 4 # 1 per ripper
+  - type: STR_RIP_CORPSE_6 #ripperswarm 6 corpses
+    refNode: *RIPPER_CORPSE_TEMPLATE
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
+    size: 0.6 # 0.1 per ripper
+    weight: 6 # 1 per ripper
+    recoveryPoints: 6 # 1 per ripper
+  - type: STR_RIP_CORPSE_8 #ripperswarm 4 corpses
+    refNode: *RIPPER_CORPSE_TEMPLATE
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
+    size: 0.8 # 0.1 per ripper
+    weight: 8 # 1 per ripper
+    recoveryPoints: 8 # 1 per ripper
+  - type: STR_RIP_CORPSE_12 #ripperswarm 4 corpses
+    refNode: *RIPPER_CORPSE_TEMPLATE
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
+    size: 1.2 # 0.1 per ripper
+    weight: 12 # 1 per ripper
+    recoveryPoints: 12 # 1 per ripper
+  - type: STR_RIP_CORPSE_16 #ripperswarm 16 corpses (UNUSED. for very large swarm implementations.).
+    refNode: *RIPPER_CORPSE_TEMPLATE
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
+    size: 1.6 # 0.1 per ripper
+    weight: 16 # 1 per ripper
+    recoveryPoints: 16 # 1 per ripper
 
-  - type: STR_RIP_CORPSE_16_1
-    name: STR_RIPPERSWARM_16_CORPSE
-    size: 0.1
-    weight: 30
-    armor: 20
-    floorSprite: 3026
-    invWidth: 0
-    invHeight: 0
-    battleType: 11
-    recover: true
-    recoveryPoints: 2
-  - type: STR_RIP_CORPSE_16_2
-    floorSprite: 3026
-    invWidth: 0
-    invHeight: 0
+  - type: STR_RIP_CORPSE_PILE_FILLER #ripperswarm pile filler item. (UNUSED. for very large swarm implementations.).
+    refNode: *RIPPER_CORPSE_TEMPLATE
     recover: false
-  - type: STR_RIP_CORPSE_16_3
-    floorSprite: 3026
-    invWidth: 0
-    invHeight: 0
-    recover: false
-  - type: STR_RIP_CORPSE_16_4
-    floorSprite: 3026
-    invWidth: 0
-    invHeight: 0
-    recover: false
+    bigSprite: 3035 #TODO: change
+    floorSprite: 3026 #TODO: change
 
   - &STR_SPOREMINE_CORPSE_REF
     type: STR_SPOREMINE_CORPSE #Generic sporemine

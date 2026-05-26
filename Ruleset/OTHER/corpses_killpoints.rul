@@ -1392,16 +1392,36 @@ items:
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [6]
       STR_BIOVORE_CORPSE: [1]
-  - type: STR_TYRANID_RIPPERSWARM_CORPSE
+  - type: STR_RIPPERSWARM_CORPSE
     costSell: 250
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [1]
-      STR_TYRANID_RIPPERSWARM_CORPSE: [1]
-  - type: STR_RIP_CORPSE_16_1
-    costSell: 1000
+      STR_RIPPERSWARM_CORPSE: [1]
+  - type: STR_RIP_CORPSE_16 # unused for now
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [16]
+      STR_RIPPERSWARM_CORPSE: [16]
+  - type: STR_RIP_CORPSE_12
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [12]
+      STR_RIPPERSWARM_CORPSE: [12]
+  - type: STR_RIP_CORPSE_8
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_RIPPERSWARM_CORPSE: [8]
+  - type: STR_RIP_CORPSE_4
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_RIPPERSWARM_CORPSE: [4]
+  - type: STR_RIP_CORPSE_2
+    # costSell: 1000 # no sell price it gets transformed
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
-      STR_TYRANID_RIPPERSWARM_CORPSE: [4]
+      STR_RIPPERSWARM_CORPSE: [2]
   - type: STR_TYRANID_WARRIOR_CORPSE
     costSell: 10000
     recoveryTransformations:
