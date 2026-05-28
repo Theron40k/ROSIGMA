@@ -6352,7 +6352,7 @@ ufopaedia:
     requires:
       - STR_CONTACT_CHAOS_MARINES
       - STR_PERSONAL_ARMOR
-      - STR_TZEENTCH_PATH
+      - STR_TZEENTCH_OPTIONS
       - STR_CHAOS_SORCERY
 
 # #ARMORS.SM# Space Marines
@@ -17235,8 +17235,22 @@ ufopaedia:
       - STR_LIVE_CAPTURE_CHAOSCULT
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
+    image_id: STR_CULTIST_ARMORPILOT.SPK
+    text: STR_CULTIST_ARMORPILOTPLAYER_CODEX
+  - id: STR_CHAOSCULT_PILOT #player chaos cult pilot
+    requires:
+      - STR_CHAOS_BOONS_LV2CULTISTS_RESEARCH # Same requirement to hire chaos cult pilots
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
     image_id: CHAOSCULTGENERIC.SPK
-    text: STR_SECTOID_UFOPEDIA
+    text: STR_CHAOSCULT_PILOTM_AI_CODEX
+  - id: STR_CULTIST_ARMORPILOTPLAYER
+    requires:
+      - STR_CHAOS_BOONS_LV2CULTISTS_RESEARCH # Same requirement to hire chaos cult pilots
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: STR_CULTIST_ARMORPILOT.SPK
+    text: STR_CULTIST_ARMORPILOTPLAYER_CODEX
 
   - id: STR_CHAOSCULT_PRIESTM_LV1_AI
     requires:
