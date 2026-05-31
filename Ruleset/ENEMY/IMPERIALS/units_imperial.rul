@@ -517,7 +517,7 @@ units:
       psiStrength: 50
       psiSkill: 0
       melee: 60
-    armor: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_UC
+    armor: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_UC #TODO: change in a version for opfor
     standHeight: 21
     kneelHeight: 14
     value: 20
@@ -546,7 +546,7 @@ units:
       psiStrength: 50
       psiSkill: 0
       melee: 80
-    armor: STR_BEASTGUARD_FLAK_ARMOR
+    armor: STR_BEASTGUARD_FLAK_ARMOR_OPFOR
     standHeight: 21
     kneelHeight: 15
     intelligence: 0
@@ -586,7 +586,7 @@ units:
       psiStrength: 50
       psiSkill: 0
       melee: 80
-    armor: STR_BEASTGUARD_FLAK_ARMOR_MEDIC
+    armor: STR_BEASTGUARD_FLAK_ARMOR_MEDIC_OPFOR
     standHeight: 21
     kneelHeight: 15
     intelligence: 0
@@ -626,7 +626,7 @@ units:
       psiStrength: 90
       psiSkill: 0
       melee: 60
-    armor: STR_SQUAT_FLAK_ARMOR
+    armor: STR_SQUAT_FLAK_ARMOR_OPFOR
     standHeight: 16
     kneelHeight: 12
     deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
@@ -687,7 +687,8 @@ units:
         FLAK_GUARDSMENOFF_SET2: 5
         FLAK_GUARDSMENOFF_SET3: 5
 
-  - type: STR_SHARPSHOOTER_FEMALE_IGOPFOR
+  - &STR_SHARPSHOOTER_TEMPLATE_OPFOR
+    type: STR_SHARPSHOOTER_FEMALE_IGOPFOR
     race: STR_IMPERIALGUARD_FACTION
     rank: STR_LIVE_NAVIGATOR
     stats:
@@ -702,7 +703,7 @@ units:
       psiStrength: 50
       psiSkill: 0
       melee: 40
-    armor: STR_TANITH_SCOUT_FEMALE
+    armor: STR_TANITH_SCOUT_FEMALE_OPFOR
     standHeight: 20
     kneelHeight: 14
     value: 20
@@ -724,27 +725,9 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_SHARPSHOOTER_MALE_IGOPFOR
-    race: STR_IMPERIALGUARD_FACTION
-    rank: STR_LIVE_NAVIGATOR
-    stats:
-      tu: 60
-      stamina: 75
-      health: 45
-      bravery: 80
-      reactions: 50
-      firing: 80
-      throwing: 50
-      strength: 50
-      psiStrength: 50
-      psiSkill: 0
-      melee: 40
-    armor: STR_TANITH_SCOUT_MALE
+    refNode: *STR_SHARPSHOOTER_TEMPLATE_OPFOR
+    armor: STR_TANITH_SCOUT_MALE_OPFOR
     standHeight: 21
-    kneelHeight: 14
-    value: 20
-    intelligence: 2
-    aggression: 1
-    energyRecovery: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets:
       - - STR_LONG_RIFLE_GUARD
@@ -809,7 +792,7 @@ units:
       psiStrength: 32
       psiSkill: 0
       melee: 70
-    armor: STR_BULLGRYN_BUCKLER_RIOT
+    armor: STR_BULLGRYN_BUCKLER_OPFOR
     standHeight: 22
     kneelHeight: 14
     value: 20
@@ -934,7 +917,7 @@ units:
       psiStrength: 65
       psiSkill: 0
       melee: 85
-    armor: STR_BEASTGUARD_CARAPACE_ARMOR
+    armor: STR_BEASTGUARD_CARAPACE_ARMOR_OPFOR
     standHeight: 21
     kneelHeight: 15
     intelligence: 0
@@ -974,7 +957,7 @@ units:
       psiStrength: 90
       psiSkill: 0
       melee: 60
-    armor: STR_SQUAT_CARAPACE_ARMOR
+    armor: STR_SQUAT_CARAPACE_ARMOR_OPFOR
     standHeight: 16
     kneelHeight: 12
     deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]
@@ -1048,7 +1031,7 @@ units:
       psiStrength: 32
       psiSkill: 0
       melee: 70
-    armor: STR_BULLGRYN_SLAB_RIOT
+    armor: STR_BULLGRYN_SLAB_OPFOR
     standHeight: 22
     kneelHeight: 14
     value: 25
@@ -1085,7 +1068,7 @@ units:
       psiStrength: 32
       psiSkill: 0
       melee: 70
-    armor: STR_BULLGRYN_BUCKLER_RIOT
+    armor: STR_BULLGRYN_BUCKLER_OPFOR
     standHeight: 22
     kneelHeight: 14
     value: 25
