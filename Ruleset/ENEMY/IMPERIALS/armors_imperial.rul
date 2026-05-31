@@ -178,7 +178,7 @@ armors:
     spriteSheet: OGRYN.PCK
     spriteInv: IGOPFOR_OGRYN_INV.PCK
     corpseBattle:
-      - STR_OGRYN_CORPSE
+      - STR_OGRYN_CORPSE_OPFOR
     drawingRoutine: 10
     frontArmor: 20
     sideArmor: 15
@@ -765,6 +765,103 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - &STR_GUARD_ARMOR_OGRYN_CARAPACE_OPFOR
+    type: STR_OGRYN_CARAPACE_OPFOR
+    corpseBattle:
+      - STR_OGRYN_CORPSE_ARMOR_OPFOR
+    visibilityAtDay: 40
+    visibilityAtDark: 9
+    frontArmor: 80
+    sideArmor: 60
+    rearArmor: 50
+    underArmor: 60
+    spriteSheet: OGRYN_CARAPACE_GOG.PCK
+    spriteInv: OGRYN_CARAPACE_FLAT.SPK
+    damageModifier:  # OGRYN ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.0  # FLAMES
+      - 1.0  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.6  # STUN
+      - 0.7  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.5  # IMPACT
+      - 1.0  # MELTA
+    weight: 15
+    stats:
+      tu: -5
+      stamina: -10
+    tags:
+      INFECTION_RESIST: 33  # infection resistant
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_IS_DIEHARD: 1
+      DIEHARD_TEMP_MODIFIER_INCREMENT: -100  # Basic Diehard
+    loftempsSet: [5]
+
+  - type: STR_BULLGRYN_SLAB_OPFOR
+    refNode: *STR_GUARD_ARMOR_OGRYN_CARAPACE_OPFOR
+    spriteSheet: BULLGRYN_BATTLESHEET.PCK
+    spriteInv: BULLGRYN_SLABinvent.SPK
+    corpseBattle:
+      - STR_OGRYN_CORPSE_ARMOR_SHIELD_OPFOR
+    frontArmor: 130
+    sideArmor: 110
+    rearArmor: 50
+    underArmor: 50
+    weight: 30
+    stats:
+      tu: -5
+      stamina: -15
+      reactions: -5
+      melee: 5
+    layersDefaultPrefix: BULLGRYN_SLAB
+    layersSpecificPrefix:
+      0: BULLGRYN_SLAB
+    layersDefinition:
+      M0: ["BULLGRYN_SLABinvent"]
+      M1: ["BULLGRYN_SLABinvent"]
+      M2: ["BULLGRYN_SLABinvent"]
+      M3: ["BULLGRYN_SLABinvent"]
+      F0: ["BULLGRYN_SLABinvent"]
+      F1: ["BULLGRYN_SLABinvent"]
+      F2: ["BULLGRYN_SLABinvent"]
+      F3: ["BULLGRYN_SLABinvent"]
+
+
+  - &STR_GUARD_ARMOR_BULLGRYN_BUCKLER  # DAMAGE + STATS
+    type: STR_BULLGRYN_BUCKLER_OPFOR
+    refNode: *STR_GUARD_ARMOR_OGRYN_CARAPACE_OPFOR
+    spriteSheet: BULLGRYN_BATTLESHEET.PCK
+    spriteInv: BULLGRYN_BUCKLERinvent.SPK
+    corpseBattle:
+      - STR_OGRYN_CORPSE_ARMOR_BUCKLER_OPFOR
+    frontArmor: 95
+    sideArmor: 75
+    rearArmor: 50
+    underArmor: 50
+    weight: 20
+    stats:
+      stamina: -10
+      melee: 10
+    layersDefaultPrefix: BULLGRYN_BUCKLER
+    layersSpecificPrefix:
+      0: BULLGRYN_BUCKLER
+    layersDefinition:
+      M0: ["BULLGRYN_BUCKLERinvent"]
+      M1: ["BULLGRYN_BUCKLERinvent"]
+      M2: ["BULLGRYN_BUCKLERinvent"]
+      M3: ["BULLGRYN_BUCKLERinvent"]
+      F0: ["BULLGRYN_BUCKLERinvent"]
+      F1: ["BULLGRYN_BUCKLERinvent"]
+      F2: ["BULLGRYN_BUCKLERinvent"]
+      F3: ["BULLGRYN_BUCKLERinvent"]
 
   # IG TANITH
 
@@ -5399,3 +5496,4 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 25
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
