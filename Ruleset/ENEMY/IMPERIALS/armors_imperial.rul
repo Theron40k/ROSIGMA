@@ -610,8 +610,10 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
 
-  - type: STR_BEASTGUARD_FLAK_ARMOR_MEDIC  # only available at midtier for abhuman strategy
+  - type: STR_BEASTGUARD_FLAK_ARMOR_MEDIC_OPFOR  # only available at midtier for abhuman strategy
     refNode: *BEASTGUARD_FLAK_ARMOR_OPFOR_REF
+    corpseBattle:
+      - STR_BEASTGUARD_CORPSE_MEDIC_OPFOR
     spriteSheet: GUARDBEASTMAN_MEDIC_BS.PCK
     spriteInv: BMFLAK_33
     #storeItem: STR_GUARD_ARMORS_MEDIC
@@ -640,7 +642,7 @@ armors:
     spriteInv: BCA_33
     #storeItem: STR_GUARD_ARMORH
     corpseBattle:
-      - STR_BEASTGUARD_CORPSE_OPFOR
+      - STR_BEASTGUARD_CORPSE_ARMOR_OPFOR
     frontArmor: 75  # 5 assault armor bonus
     sideArmor: 65  # 5 assault carapace armor bonus
     rearArmor: 20  # 10 assault malus
@@ -730,7 +732,7 @@ armors:
     spriteInv: SCA_33
     #storeItem: STR_GUARD_ARMORH
     corpseBattle:
-      - STR_GUARD_SQUAT_CORPSE_OPFOR
+      - STR_GUARD_SQUAT_ARMOR_CORPSE_OPFOR
     frontArmor: 80  # 10 armor bonus vs carapace
     sideArmor: 70  # 10 better side armor
     rearArmor: 40  # 10 better rear armor to compensate for slowness
@@ -769,7 +771,7 @@ armors:
   - &STR_GUARD_ARMOR_OGRYN_CARAPACE_OPFOR
     type: STR_OGRYN_CARAPACE_OPFOR
     corpseBattle:
-      - STR_OGRYN_CORPSE_ARMOR_OPFOR
+      - STR_OGRYN_CARAPACE_CORPSE_OPFOR
     visibilityAtDay: 40
     visibilityAtDark: 9
     frontArmor: 80
