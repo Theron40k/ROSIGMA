@@ -687,7 +687,8 @@ units:
         FLAK_GUARDSMENOFF_SET2: 5
         FLAK_GUARDSMENOFF_SET3: 5
 
-  - type: STR_SHARPSHOOTER_FEMALE_IGOPFOR
+  - &STR_SHARPSHOOTER_TEMPLATE_OPFOR
+    type: STR_SHARPSHOOTER_FEMALE_IGOPFOR
     race: STR_IMPERIALGUARD_FACTION
     rank: STR_LIVE_NAVIGATOR
     stats:
@@ -724,27 +725,9 @@ units:
         - STR_KRAK_GRENADE
 
   - type: STR_SHARPSHOOTER_MALE_IGOPFOR
-    race: STR_IMPERIALGUARD_FACTION
-    rank: STR_LIVE_NAVIGATOR
-    stats:
-      tu: 60
-      stamina: 75
-      health: 45
-      bravery: 80
-      reactions: 50
-      firing: 80
-      throwing: 50
-      strength: 50
-      psiStrength: 50
-      psiSkill: 0
-      melee: 40
+    refNode: *STR_SHARPSHOOTER_TEMPLATE_OPFOR
     armor: STR_TANITH_SCOUT_MALE_OPFOR
     standHeight: 21
-    kneelHeight: 14
-    value: 20
-    intelligence: 2
-    aggression: 1
-    energyRecovery: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets:
       - - STR_LONG_RIFLE_GUARD

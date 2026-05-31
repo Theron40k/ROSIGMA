@@ -768,7 +768,7 @@ armors:
 
   # IG TANITH
 
-  - &STR_GUARD_ARMOR_TANITH_OPFOR  # DAMAGE + STATS
+  - &STR_GUARD_ARMOR_TANITH_OPFOR  # TEMPLATE ARMOUR
     type: STR_TANITH_CAMO_ARMOR_OPFOR
     visibilityAtDay: 40
     visibilityAtDark: 20 #basic NV
@@ -782,7 +782,7 @@ armors:
     underArmor: 10
     loftempsSet: [3]
     spriteSheet: TANITH_CAMO_GOG.PCK
-    #spriteInv: TODOTODO TODO TODO # TODO
+    spriteInv: TANITH_SCOUT_MALE.SPK
     corpseBattle:
       - STR_TANITH_CAMO_CORPSE_OPFOR
     damageModifier:  # GUARD ARMOR
@@ -815,18 +815,11 @@ armors:
       ARMOR_RESTEALTH_TURN_REQUIREMENT: 2
       ARMOR_STEALTH_DETECTION_RANGE: 5
 
-  - type: STR_TANITH_MEDIC_ARMOR_OPFOR
+  - type: STR_TANITH_SCOUT_MALE_OPFOR
     refNode: *STR_GUARD_ARMOR_TANITH_OPFOR
-    weight: 5
-    stats:
-      tu: -5  # heavy
-      stamina: -10  # heavy
-      reactions: -10  # heavy
 
   - type: STR_TANITH_SCOUT_FEMALE_OPFOR
-    refNode: *STR_GUARD_ARMOR_TANITH_OPFOR
-
-  - type: STR_TANITH_SCOUT_MALE_OPFOR
+    spriteInv: TANITH_SCOUT_FEMALE.SPK
     refNode: *STR_GUARD_ARMOR_TANITH_OPFOR
 
   # ULTRA TIER 0
