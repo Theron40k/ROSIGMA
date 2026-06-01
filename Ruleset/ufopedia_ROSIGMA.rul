@@ -6876,6 +6876,18 @@ ufopaedia:
       - STR_DIABO_ARMOR_WB
       - STR_BOOK_EREBUS
 
+  - id: STR_CHAOS_CROZIUS_ARCHDIAB_PLAYER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_SORC_PLAYER_CODEX
+
+  - id: STR_WARPFIRE_IMPLOSION
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
   - id: STR_WBDARKAPOSTLE_ARMORPLAYER
     type_id: 15
     section: STR_WBARMORPEDIA
@@ -6885,6 +6897,24 @@ ufopaedia:
       - STR_WORDBEARERS_STRATEGY
       - STR_DARKAPO_SUIT
       - STR_BOOK_EREBUS
+
+  - id: STR_CHAOS_CROZIUS_APOSTLE_PLAYER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_APOSTLE_PLAYER_CODEX
+
+  - id: STR_CHAOS_CROZIUS_POWER3
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_WARPFIRE_RIFT
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BLOODLETTERSPAWNER_BIGGRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
 
   - id: STR_WBCHAOSLORD_ARMORPLAYER
     type_id: 15
@@ -13172,6 +13202,40 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1PC.SPK
     text: STR_CLAW_TYRANT_CODEX
+    requires:
+      - STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+
+  - id: STR_CHAOS_CLAWS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX
+    requires:
+      - STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+  - id: STR_CHAOS_CLAWS2  #duplicate for compatibility with warptalon 2nd claw
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX
+    requires:
+      - STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+
+  - id: STR_WARPTALON_CLAW
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX
+    requires:
+      - STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+  - id: STR_CHAOSMARKED_CLAW_TOKEN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX
     requires:
       - STR_POWER_SUIT
       - STR_CHAOS_ARMORY_EXAM_BASIC
