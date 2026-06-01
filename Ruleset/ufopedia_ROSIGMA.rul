@@ -788,7 +788,7 @@ ufopaedia:
     type_id: 10
     section: STR_STRATEGY
     requires:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     image_id: INQUISITOR_CODEX.SPK
     text: STR_INQUISITION_FAVOR_CODEX
 
@@ -1460,14 +1460,6 @@ ufopaedia:
       - STR_VALHALLAN_STRATEGY
     image_id: VALHALLAN_INTRO_CODEX.SPK
 
-  - id: STR_VALHALLAN_WEAPONS
-    type_id: 10
-    section: STR_STRATEGY
-    requires:
-      - STR_VALHALLAN_STRATEGY
-    text: STR_VALHALLAN_WEAPONS_CODEX
-    image_id: VALHALLAN_SNIPER_CODEX.SPK
-
 ####################################
 # #RESEARCH#
 ####################################
@@ -1879,22 +1871,6 @@ ufopaedia:
     text: STR_WBMUTILATOR_SUIT_CODEX
     requires:
       - STR_WBMUTILATOR_SUIT
-
-  - id: STR_STORMBOLTERS_WB
-    type_id: 10
-    section: STR_ALIEN_RESEARCH_UC
-    image_id: WBSPREADCODEX.SPK
-    text: STR_STORMBOLTERS_WB_CODEX
-    requires:
-      - STR_STORMBOLTERS_WB
-
-  - id: STR_AUTOCANNONS_WB
-    type_id: 10
-    section: STR_ALIEN_RESEARCH_UC
-    image_id: WBBEARINGCODEX.SPK
-    text: STR_AUTOCANNONS_WB_CODEX
-    requires:
-      - STR_AUTOCANNONS_WB
 
 ## #RESEARCH.CM#
 ### #RESEARCH.CM.DW#
@@ -3033,7 +3009,7 @@ ufopaedia:
     image_id: 036.SPK
     text: STR_PRISION_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ARMORY_ARBITES
   - id: STR_ARMORY_ARBITES
     type_id: 16
@@ -3042,7 +3018,7 @@ ufopaedia:
     text: STR_ARMORY_ARBITES_UFOPEDIA
     requires:
       - STR_ARBITES_MIDTIER
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_DEFENSE_HALL
   - id: STR_DEFENSE_HALL
     type_id: 16
@@ -3339,7 +3315,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_AIRCRAFT_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
 ## #CRAFTS.MULT#
   - delete: STR_VALKYRIE  # VALKYRIE
@@ -3778,7 +3754,7 @@ ufopaedia:
   - id: STR_VULTURE
     type_id: 11
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_VULTURE_UFOPEDIA
     image_id: 2VULTURE.SPK
@@ -3787,7 +3763,7 @@ ufopaedia:
   - id: STR_CHIMERAPD
     type_id: 11
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_CHIMERAPD_UFOPEDIA
     image_id: 2CHIMERAL.SPK
@@ -3797,7 +3773,6 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
       - STR_NEW_FIGHTER_PD
       - STR_THE_IMPERIAL_LAW_STRATEGY
     image_id: 2THUNDERBOLT.SPK
@@ -3808,7 +3783,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NEW_TRANSPORT_PD
     image_id: 2TAUROX.SPK
     text: STR_TAUROXPD_UFOPEDIA
@@ -3818,7 +3793,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ARBITES_HIGHTIER
     image_id: 2MANTICORE.SPK
     text: STR_CHIMERAPDH_UFOPEDIA
@@ -3828,7 +3803,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ARBITES_HIGHTIER
     image_id: 2CRASSUS.SPK
     text: STR_CASSIUMPD_UFOPEDIA
@@ -3838,7 +3813,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_PREATOR_PD_R
     image_id: 2PREATOR.SPK
     text: STR_PREATOR_UFOPEDIA
@@ -3859,7 +3834,7 @@ ufopaedia:
     text: STR_ARMYPD_UFOPEDIA
     image_id: 2MOBP.SPK
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_LANDRAIDER_ARBITES
 
 ### #CRAFTS.AT.CULT#
@@ -5425,7 +5400,7 @@ ufopaedia:
     text: STR_CMAS_UFOPEDIA
     weapon: STR_CMAS
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 ## #SOLDIERS.AT.CULT#      Chaos Cult Strategy
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
@@ -5773,7 +5748,7 @@ ufopaedia:
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: KhorneSisterChosenOrigin.SPK
-    text: STR_KHORNE_SUPERIOR_ARMOR_PLAYER_UFOPEDIA
+    text: STR_CHAOS_ADEPTAS_KHORNE_ARMOR_UFOPAEDIA
     requires:
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
 
@@ -5797,15 +5772,15 @@ ufopaedia:
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: TzeentchSisterChosenOrigin.SPK
-    text: STR_TZEENTCH_SUPERIOR_ARMOR_PLAYER_UFOPEDIA
+    text: STR_CHAOS_ADEPTAS_TZEENTCH_ARMOR_UFOPAEDIA
     requires:
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
 
   - id: STR_CHAOS_SORC_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK # Placeholder Image
-    text: STR_CHAOS_SORC_ARMOR_PLAYER_UFOPEDIA
+    image_id: 1CH.SPK
+    text: STR_CHAOS_SORC_ARMOR
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5813,8 +5788,8 @@ ufopaedia:
   - id: STR_CHAOS_HAVOC_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK # Placeholder Image
-    text: STR_CHAOS_HAVOC_ARMOR_PLAYER_UFOPEDIA
+    image_id: 1CH.SPK
+    text: STR_CHAOS_HAVOC_ARMOR
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5822,8 +5797,8 @@ ufopaedia:
   - id: STR_CHAOS_MARINE_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK # Placeholder Image
-    text: STR_CHAOS_MARINE_ARMOR_PLAYER_UFOPEDIA
+    image_id: 1CH.SPK
+    text: STR_CHAOS_MARINE_ARMOR
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5831,8 +5806,8 @@ ufopaedia:
   - id: STR_CHAOS_SERGEANT_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK # Placeholder Image
-    text: STR_CHAOS_SERGEANT_ARMOR_PLAYER_UFOPEDIA
+    image_id: 1CH.SPK
+    text: STR_CHAOS_SERGEANT_ARMOR
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5849,8 +5824,8 @@ ufopaedia:
   - id: STR_CHAOS_TERMINATOR_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK # Placeholder Image
-    text: STR_CHAOS_TERMINATOR_ARMOR_PLAYER_UFOPEDIA
+    image_id: 1CH.SPK
+    text: STR_CHAOS_TERMINATOR_ARMOR
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5858,8 +5833,8 @@ ufopaedia:
   - id: STR_CHAOS_LORD_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK # Placeholder Image
-    text: STR_CHAOS_LORD_ARMOR_PLAYER_UFOPEDIA
+    image_id: 1CH.SPK
+    text: STR_CHAOS_LORD_ARMOR
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5888,7 +5863,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_KHORNE_FLAK_ARMOR_PLAYER_UFOPEDIA
+    text: STR_GUARD_ARMORSM_UFOPEDIA
 
   - id: STR_KHORNE_CARA_PLAYER
     type_id: 15
@@ -5896,7 +5871,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_KHORNE_CARA_ARMOR_PLAYER_UFOPEDIA
+    text: STR_GUARD_ARMORH_UC_UFOPEDIA
 
   - id: STR_KHORNE_CARA_OFF_PLAYER
     type_id: 15
@@ -5904,7 +5879,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_KHORNE_CARA_ARMOR_PLAYER_UFOPEDIA
+    text: STR_GUARD_ARMORH_UC_UFOPEDIA
 
   - id: STR_KHORNGOR_ARMOR_PLAYER
     type_id: 15
@@ -7235,12 +7210,6 @@ ufopaedia:
     requires:
       - STR_NOT_WORDBEARERS
 
-  - id: STR_IMPERIAL_INTERROGATOR #OPFOR Commander Inquisitor
-    type_id: 10
-    section: STR_ARMORPEDIA
-    image_id: INQ_INTERROGATOR_CODEX.SPK.SPK
-    text: STR_IMPERIAL_INTERROGATOR_UFOPEDIA
-
   - id: STR_IMPERIAL_INQUISITOR_AI #OPFOR Commander Inquisitor
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS
@@ -7578,7 +7547,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_A_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
   - delete: STR_PENAL_ARMOR_UC
   - id: STR_PENAL_ARMOR_UC
@@ -7587,11 +7556,11 @@ ufopaedia:
     image_id: PENAL_LEGION.SPK
     text: STR_PENAL_ARMOR_BROWN_UC_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ENFORCER_ARMOR_UC
   - id: STR_ENFORCER_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF.SPK
@@ -7599,7 +7568,6 @@ ufopaedia:
   - delete: STR_ENFORCER_MEDIC_ARMOR_UC
   - id: STR_ENFORCER_MEDIC_ARMOR_UC
     requires:
-      - STR_ARBITES
       - STR_ENFORCER_ARMOR
       - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
@@ -7609,7 +7577,7 @@ ufopaedia:
   - delete: STR_ENFORCER_SIGNAL_ARMOR_UC
   - id: STR_ENFORCER_SIGNAL_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ENFORCER_ARMOR
       - STR_ARBITES_MIDTIER
     type_id: 15
@@ -7619,7 +7587,7 @@ ufopaedia:
   - delete: STR_ENFORCER_HEAVY_ARMOR_UC
   - id: STR_ENFORCER_HEAVY_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF2.SPK
@@ -7627,7 +7595,7 @@ ufopaedia:
   - delete: STR_ENFORCER_SHIELD_ARMOR_UC
   - id: STR_ENFORCER_SHIELD_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF2.SPK
@@ -7635,7 +7603,7 @@ ufopaedia:
   - delete: STR_JUDGE_ARMOR_UC
   - id: STR_JUDGE_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG.SPK
@@ -7647,11 +7615,11 @@ ufopaedia:
     image_id: C15.SPK
     text: STR_JUDGE_BIKE_ARMOR_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ARBITOR_ARMOR_UC
   - id: STR_ARBITOR_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG2.SPK
@@ -7659,7 +7627,7 @@ ufopaedia:
   - delete: STR_MARSHAL_ARMOR_UC
   - id: STR_MARSHAL_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG3.SPK
@@ -7947,15 +7915,6 @@ ufopaedia:
       - STR_ORK_BOY_RECRUITMENT
     image_id: BEAKIE_NOBS_CODEX.SPK
     text: STR_ASSAULT_MEGA_ARMOR_UFOPEDIA
-
-  - id: STR_ASSAULT_MEGA_ARMOR_BURNA
-    type_id: 15
-    section: STR_ARMORPEDIA
-    requires:
-      - STR_ORK_BASE_LEVEL5_DEFEATED
-      - STR_ORK_BOY_RECRUITMENT
-    image_id: BEAKIE_NOBS_CODEX.SPK
-    text: STR_ASSAULT_MEGA_ARMOR_BURNA_UFOPEDIA
 
   - id: STR_PLAYER_ORK_MEGAWARBOSS_ARMOR
     type_id: 15
@@ -9448,34 +9407,17 @@ ufopaedia:
     image_id: STUB_GUN.SPK
     text: STR_STUB_GUN_UFOPEDIA
 
-  - id: STR_STUB_GUN_CHAOS # Chaos Stubber
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STUB_GUN.SPK
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_BASIC
-    text: STR_STUB_GUN_CHAOS_CODEX
-
-  - delete: STR_STUB_RIFLE # Stub Rifle ✔
+  - delete: STR_STUB_RIFLE  # Stub Rifle ✔
   - id: STR_STUB_RIFLE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: STUB_RIFLE.SPK
     text: STR_STUB_RIFLE_UFOPEDIA
 
-  - id: STR_STUB_RIFLE_CHAOS # Chaos stub rifle
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STUB_RIFLE.SPK
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_BASIC
-    text: STR_STUB_RIFLE_CHAOS_CODEX
-
   - id: STR_SMG_STUB_GUN  # AutoStubber ✔
     type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_SMG_STUB_GUN.SPK
-    text: STR_SMG_STUB_GUN_CODEX
+    section: STR_NOT_AVAILABLE
+    image_id: 1CH.SPK
 
   - delete: STR_STUB_GUN_AMMO
   - id: STR_STUB_GUN_AMMO
@@ -9538,13 +9480,7 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: HYBRID_STUBBER_CODEX.SPK
     text: STR_HEAVY_STUBBER_HYBRID_CODEX
-  - id: STR_SMG_STUB_GUN_CHAOS  # Chaos AutoStubber ✔
-    type_id: 14
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_BASIC
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_SMG_STUB_GUN.SPK
-    text: STR_SMG_STUB_GUN_CHAOS_CODEX
+
   - id: STR_HEAVY_STUBBER_CHAOS  # Chaos Heavy Stubber
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -9674,26 +9610,12 @@ ufopaedia:
     image_id: 1LB.SPK
     section: STR_WEAPONS_AND_EQUIPMENT
     text: STR_PUMP_SHOTGUN_CODEX
-  - id: STR_PUMP_SHOTGUN_CHAOS #chaos pump action shotgun
-    type_id: 14
-    image_id: 1LB.SPK
-    section: STR_WEAPONS_AND_EQUIPMENT
-    text: STR_PUMP_SHOTGUN_CHAOS_CODEX
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_BASIC
   - delete: STR_SHOTGUN
   - id: STR_SHOTGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1LB.SPK
     text: STR_SHOTGUN_UFOPEDIA
-  - id: STR_SHOTGUN_CHAOS
-    type_id: 14
-    image_id: 1LB.SPK
-    section: STR_WEAPONS_AND_EQUIPMENT
-    text: STR_SHOTGUN_CHAOS_CODEX
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_BASIC
   - delete: STR_MCSHOTGUN
   - id: STR_MCSHOTGUN  #   # Master Crafted Shotgun
     type_id: 14
@@ -9738,7 +9660,7 @@ ufopaedia:
     image_id: 1LBMC.SPK
     text: STR_MASTER_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_MASTER_CRAFTING
     pages:
       - title: STR_MCSHOTGUNPD
@@ -9893,13 +9815,6 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: AUTOGUN.SPK
     text: STR_AUTOGUN_UFOPEDIA
-  - id: STR_AUTOGUN_CHAOS
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: AUTOGUN.SPK
-    requires:
-      - STR_ALIENS_ONLY
-    text: STR_AUTOGUN_CHAOS_CODEX
   - id: STR_AUTOGUN_HIGHGRADE
     requires:
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
@@ -9914,7 +9829,6 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: AUTOGUN_HIGH_GRADE_UNDERSLUNG_CODEX.SPK
     text: STR_AUTOGUN_HIGHGRADE_UNDERSLUNG_CODEX
-
   - id: STR_VALHALLAN_STUBRIFLE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -9930,7 +9844,6 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: AUTOPISTOL_HIGH_GRADE_CODEX.SPK
     text: STR_VALHALLAN_AUTOSTUBBER_CODEX
-
   - id: STR_AUTOGUN_ADEPTAS
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -9941,7 +9854,6 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: ADEPTAS_AUTOGUN_SCOPED_CODEX2.SPK
     text: STR_AUTOGUN_ADEPTAS_SCOPED_UFOPEDIA
-
   - id: STR_AUTOGUN_CHAOS_NURGLE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -9980,26 +9892,12 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
     image_id: 1CH.SPK
 
-  - id: STR_AUTOCARBINE_NAVY
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: AUTOGUN.SPK
-    text: STR_AUTOCARBINE_NAVY_CODEX
-
 #WEAPONS.SNIPER#
   - delete: STR_HEAVY_CANNON
   - id: STR_HEAVY_CANNON  # Sniper Rifle
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1SR.SPK
-    text: STR_HEAVY_CANNON_UFOPEDIA
-
-  - id: STR_SNIPER_CHAOS # Chaos sniper rifle
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1SR.SPK
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_HEAVY_CANNON_UFOPEDIA
 
   - id: STR_LONG_RIFLE_GUARD  # Long Rifle
@@ -11389,7 +11287,7 @@ ufopaedia:
     image_id: 1LP.SPK
     text: STR_HELLPISTOL_UFOPEDIA
     requires:
-      - STR_MASTER_CRAFTING_AMMO  # same as manufacture
+      - STR_MASTER_CRAFTING
 
   - id: STR_LASER_PISTOLCS
     type_id: 14
@@ -11620,13 +11518,6 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
     text: STR_CHAOS_LONGLAS_UFOPEDIA
-  - id: STR_ASSCTZ #soulreaper cannon
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_ASSCTZ.SPK
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_TZEENTCH
-    text: STR_ASSCTZ_CODEX
 
   - delete: STR_LASGUN_CLIP
   - id: STR_LASGUN_CLIP
@@ -11778,10 +11669,6 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1LC.SPK
     text: STR_CHAOS_LASCANNON_HANDHELD_UFOPEDIA
-  - id: STR_LASCANNON_CHAOS_CELL
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-
   - id: STR_CHAOS_LASCANNON_BIPOD
     type_id: 14
     requires:
@@ -11833,14 +11720,6 @@ ufopaedia:
     image_id: 1MF.SPK
     text: STR_FLAMETHROWER_UFOPEDIA
 
-  - id: STR_FLAMETHROWER_CHAOS #Chaos Flamer
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1MF.SPK
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_BASIC
-    text: STR_FLAMETHROWER_CHAOS_CODEX
-
   - delete: STR_FLAMETHROWER_CLIP
   - id: STR_FLAMETHROWER_CLIP
     type_id: 14
@@ -11879,32 +11758,6 @@ ufopaedia:
 
   - delete: STR_HFLAMER_CLIP
   - id: STR_HFLAMER_CLIP  # Heavy Flamer Fuel
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-
-  # chaos gods "flamers"
-  - id: STR_FLAMETHROWERTZ # warpflamer
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1MF.SPK #todo: find a better picture. it's fine as is for now
-    requires:
-      - STR_TZEENTCH_OPTIONS
-    text: STR_FLAMETHROWERTZ_UFOPEDIA
-  - id: STR_FLAMETHROWER_WARPFIRE_CLIP
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-
-  - id: STR_PLAGUE_SPEWER # Plague Spewer
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_PLAGUE_SPEWER.SPK
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_NURGLE
-    text: STR_PLAGUE_SPEWER_UFOPEDIA
-  - id: STR_PLAGUE_SPEWER_TANK
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-  - id: STR_PLAGUE_SPEWER_TANK_PLAYER
     type_id: 14
     section: STR_NOT_AVAILABLE
 
@@ -12280,21 +12133,6 @@ ufopaedia:
       - STR_HEAVY_PLASMA_DEP1
 
   # Barrage Plasma
-  - id: STR_BARRAGE_PLASMA_TERRAN  # Barrage Plasma
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1HP.SPK
-    requires:
-      - STR_HEAVY_PLASMA_DEP1
-    text: STR_BARRAGE_PLASMA_TERRAN_CODEX
-  - id: STR_BARRAGE_PLASMA  # Chaos Barrage Plasma
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1HP.SPK
-    requires:
-      - STR_HEAVY_PLASMA_DEP1
-      - STR_CHAOS_ARMORY_EXAM_PLASMA_ADVANCED
-    text: STR_BARRAGE_PLASMA_CODEX
   - id: STR_BARRAGE_PLASMA_CLIP
     type_id: 14
     section: STR_NOT_AVAILABLE
@@ -12348,24 +12186,6 @@ ufopaedia:
     text: STR_GRAV_AMMO_UFOPEDIA
 
   # Grav Pistols
-  - id: STR_CHAOS_GRAVPISTOL
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1GG.SPK
-    requires:
-      - STR_GRAVITON_TECH
-      - STR_CORRUPTED_REQUISITIONS
-    text: STR_CHAOS_GRAVPISTOL_CODEX
-  - id: STR_CHAOS_MC_GRAVPISTOL
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1GG.SPK
-    requires:
-      - STR_GRAVITON_TECH
-      - STR_MASTER_CRAFTING_AMMO
-      - STR_CORRUPTED_REQUISITIONS
-    text: STR_CHAOS_MC_GRAVPISTOL_CODEX
-
   - id: STR_NURGLE_GRAVPISTOL
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -12638,14 +12458,7 @@ ufopaedia:
     text: STR_GRENADE_LAUNCHER_STEEL_LEGION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_GRENADE_LAUNCHER_STEEL_LEGION.SPK
-  - id: STR_GRENADE_LAUNCHER_CHAOS # chaos grenade launcher
-    requires:
-      - STR_GUARD_AND_ARBITES
-      - STR_CHAOS_ARMORY_EXAM_BASIC
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: GRENADE_LAUNCHER_VOSS.SPK
-    text: STR_GRENADE_LAUNCHER_CHAOS_CODEX
+
   - delete: STR_FRAG_GRENADE_DRUM
   - id: STR_FRAG_GRENADE_DRUM
     type_id: 14
@@ -12670,11 +12483,6 @@ ufopaedia:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_PHOTON_GRENADE_REQUISITION
-  - id: STR_NURGLE_GRENADE_DRUM
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-    requires:
-      - STR_NURGLE_OPTIONS
 
   - id: STR_CHERUBIM_GRENADE_LAUNCHER  # Cherubim Grenade Launcher
     type_id: 14
@@ -12747,7 +12555,8 @@ ufopaedia:
     text: STR_MISSILE_LAUNCHER_GUARD_CODEX
   - id: STR_ACCATRAN_ROCKET_LAUNCHER
     requires:
-      - STR_BASIC_BALLISTICS_DEP
+      - STR_GUARD_AND_ARBITES
+      - STR_NOT_CHAOSCULT
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: ROCKET_ACCATRAN_CODEX.SPK
@@ -12833,7 +12642,8 @@ ufopaedia:
     type_id: 14
     requires:
       - STR_GUARD_AND_ARBITES
-      - STR_BASIC_BALLISTICS_DEP
+      - STR_NOT_CHAOSCULT
+      - STR_HEAVY_WEAPONS_IG
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1ML.SPK
     text: STR_DISPOSABLE_LAUNCHER_KRAK_UFOPEDIA
@@ -13034,18 +12844,6 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_SCARE_GRENADE_UFOPEDIA
 
-  - id: STR_MAKESHIFT_GRENADE # Makeshift grenade
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_MAKESHIFT_GRENADE.SPK
-    text: STR_MAKESHIFT_GRENADE_CODEX
-
-  - id: STR_MAKESHIFT_PIPEBOMB # Makeshift pipebomb
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_MAKESHIFT_PIPEBOMB.SPK
-    text: STR_MAKESHIFT_PIPEBOMB_CODEX
-
   # Bombs/Mines
   - delete: STR_HAYWIRE_MINE
   - id: STR_HAYWIRE_MINE
@@ -13114,12 +12912,6 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CK.SPK
     text: STR_KNIF_UFOPEDIA
-
-  - id: STR_SHIVGANG
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_SHIVGANG.SPK
-    text: STR_SHIVGANG_CODEX
 
   - delete: STR_CHAINSWORD
   - id: STR_CHAINSWORD
@@ -13253,34 +13045,8 @@ ufopaedia:
     image_id: 1MCPS.SPK
     text: STR_POWER_SWORD_MC_UFOPEDIA
     requires:
-      - STR_UFO_CONSTRUCTION # same as manufacture requirements.
-      - STR_CHAPTER_PURITY
       - STR_POWER_SWORD
-
-  - id: STR_CPOWER_SWORD
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1PS.SPK
-    text: STR_CPOWER_SWORD_CODEX
-    requires:
-      - STR_CORRUPTED_REQUISITIONS
-      - STR_POWER_SWORD
-  - id: STR_CPOWER_DAGGER
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_CPOWER_DAGGER.SPK
-    text: STR_CPOWER_DAGGER_CODEX
-    requires:
-      - STR_CORRUPTED_REQUISITIONS
-      - STR_HIGHTIER_PREREQ
-  - id: STR_CPOWER_AXE
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_CPOWER_AXE.SPK
-    text: STR_CPOWER_AXE_CODEX
-    requires:
-      - STR_KHORNE_OPTIONS  # Favor of Khorne
-      - STR_HIGHTIER_PREREQ
+      - STR_MASTER_CRAFTING
 
   - delete: STR_HAMMER
   - id: STR_HAMMER
@@ -13357,18 +13123,6 @@ ufopaedia:
     image_id: 1MCPS.SPK
     text: STR_ADEPTAS_ZWEIHANDER_UFOPEDIA
 
-  - id: STR_POWER_PICK
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_POWER_PICK.SPK
-    text: STR_POWER_PICK_CODEX
-
-  - id: STR_POWER_HAMMER
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_POWER_HAMMER.SPK
-    text: STR_POWER_HAMMER_CODEX
-
   - id: STR_SACRESANT_SHIELD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -13394,7 +13148,6 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_KHORNE_CHAINAXE_CODEX.SPK
-    text: STR_KHORNE_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -13402,7 +13155,6 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_GREAT_CHAINAXE_CODEX.SPK
-    text: STR_KHORNE_GREAT_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -13634,15 +13386,6 @@ ufopaedia:
       - STR_INQ_ST_ARMOR_PA_BREACHER_UNLOCKER
     type_id: 14
     section: STR_NOT_AVAILABLE
-
-  # other: guard laser airstrike designator
-  - id: STR_AIRSTRIKE_VOX  # Laser airstrike designator
-    requires:
-      - STR_AIRSTRIKE_REQUISITION
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: HEAVY_WEAPON_TOOLS.SPK
-    text: STR_AIRSTRIKE_UFOPEDIA
 
  # Assassinorum built in weapons
 # Vindicare
@@ -14074,6 +13817,16 @@ ufopaedia:
       - STR_PRIMARIS
       - STR_MASTER_CRAFTING
       - STR_MIDTIER_PREREQ
+
+  # Plague Spewer
+  - id: STR_PLAGUE_SPEWER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_NURGLE
+  - id: STR_PLAGUE_SPEWER_TANK
+    type_id: 14
+    section: STR_NOT_AVAILABLE
 
   # Genestealer
   - id: STR_GSC_NEEDLER_RIFLE
@@ -14838,22 +14591,6 @@ ufopaedia:
   - id: STR_BURNA_TANK
     type_id: 14
     section: STR_NOT_AVAILABLE
-
-  - id: STR_BURNA_MOUNTED
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1OK10.SPK
-    requires:
-      - STR_ORK_BASE_LEVEL5_DEFEATED # same as requirements for meganob armor that can use this.
-      - STR_ORK_BOY_RECRUITMENT
-    text: STR_BURNA_MOUNTED_UFOPEDIA
-    pages:
-      - title: STR_BURNA_MOUNTED
-        text: STR_BURNA_MOUNTED_UFOPEDIA
-        ammoSlot: 0
-      - title: STR_BURNA_MOUNTED
-        text: STR_BURNA_MOUNTED_UFOPEDIA
-        ammoSlot: 1
 
   - delete: STR_CHOPPA
   - id: STR_CHOPPA
@@ -15770,7 +15507,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_BOOKS_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
   # Spells
   - delete: STR_MIND_PROBE
@@ -16292,14 +16029,6 @@ ufopaedia:
     text: IGOFF_ARMOR_M_LV3_UFOPEDIA
     requires:
       - STR_IGGUARDS_OFF_LV3_AI
-
-  - id: STR_OGRYN_UC_AI
-    type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
-    image_id: IMPGUARDAI_CODEX.SPK
-    text: GUARD_ARMOR_M_LV1_AI_UFOPEDIA
-    requires:
-      - STR_OGRYN_IGOPFOR
 
 
   - id: SLGUARD_ARMOR_M_LV1_AI
@@ -16895,31 +16624,6 @@ ufopaedia:
       - STR_DARKANGEL_HONOR_AI
 
 #FOES.CM#              Chamber Militant Units
-
-  - id: STR_INQ_INQUISITOR_INTERROGATOR_ARMOR #Interrogator
-    type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
-    image_id: INQ_INTERROGATOR_CODEX.SPK
-    text: STR_INQ_INQUISITOR_INTERROGATOR_UFOPEDIA
-    requires:
-      - STR_INQ_INQUISITOR_INTERROGATOR
-
-  - id: STR_INQ_STORMTROOPER_OFFICER_ARMOR
-    type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
-    image_id: INQ_STORMTROOPER_OFFICER_CODEX.SPK
-    text: STR_INQ_STORMTROOPER_OFFICER_UFOPEDIA
-    requires:
-      - STR_INQ_STORMTROOPER_OFFICER
-
-  - id: STR_INQ_SLGUARD_ARMOR #INQ Trooper
-    type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
-    image_id: INQ_TROOPER_CODEX.SPK
-    text: STR_INQ_SLGUARD_UFOPEDIA
-    requires:
-      - STR_INQ_SLGUARD
-
 #FOES.CM.DW#             Deathwatch
 #FOES.CM.GK#             Grey Knights
   - delete: STR_GREYKNIGHT_AUTOPSY
