@@ -1460,6 +1460,14 @@ ufopaedia:
       - STR_VALHALLAN_STRATEGY
     image_id: VALHALLAN_INTRO_CODEX.SPK
 
+  - id: STR_VALHALLAN_WEAPONS
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    text: STR_VALHALLAN_WEAPONS_CODEX
+    image_id: VALHALLAN_SNIPER_CODEX.SPK
+
 ####################################
 # #RESEARCH#
 ####################################
@@ -3880,6 +3888,14 @@ ufopaedia:
     type_id: 11
 
   - id: STR_CHAOS_COLUMN
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: THECHAOSPATH.SPK
+    text: STR_CHAOS_COLUMN_CHAOS_CODEX
+    requires:
+      - STR_UNLOCK_CHAOSLEMAN
+    type_id: 11
+
+  - id: STR_PCCHAOS_COLUMN
     section: STR_XCOM_CRAFT_ARMAMENT
     image_id: THECHAOSPATH.SPK
     text: STR_CHAOS_COLUMN_CHAOS_CODEX
@@ -6336,7 +6352,7 @@ ufopaedia:
     requires:
       - STR_CONTACT_CHAOS_MARINES
       - STR_PERSONAL_ARMOR
-      - STR_TZEENTCH_PATH
+      - STR_TZEENTCH_OPTIONS
       - STR_CHAOS_SORCERY
 
 # #ARMORS.SM# Space Marines
@@ -7813,6 +7829,10 @@ ufopaedia:
     requires:
       - STR_CHAOSBEAST_RESEARCH
 
+  - id: STR_CHAOSBEAST_CLAW # built-in weapon for chaos beast, to allow stats to be seen
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
   - id: STR_CULTIST_HELBRUTE_ARMORPLAYER
     type_id: 15
     section: STR_ARMORPEDIA
@@ -8965,11 +8985,36 @@ ufopaedia:
 
 # #ARMORS.IG.VALHALLAN        Valhallan Ice Warriors Strategy
 
+
   - id: STR_VALHALLAN_FLAK_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: VALHALLAN_CODEX.SPK
     text: STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+
+  - id: STR_VALHALLAN_REGULAR_FLAK_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CODEX.SPK
+    text: STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+
+  - id: STR_VALHALLAN_FLAK_MEDIC_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_MEDIC_CODEX.SPK
+    text: STR_VALHALLAN_FLAK_MEDIC_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+
+  - id: STR_VALHALLAN_OFFICER_FLAK_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_OFFICER_CODEX.SPK
+    text: STR_VALHALLAN_OFFICER_FLAK_UFOPAEDIA
     requires:
       - STR_VALHALLAN_GUARDSMEN
 
@@ -8982,6 +9027,50 @@ ufopaedia:
       - STR_VALHALLAN_GUARDSMEN
       - STR_CARAPACE_ARMOR_IG
 
+  - id: STR_VALHALLAN_CARAPACE_MEDIC_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CARAPACE_MEDIC_CODEX.SPK
+    text: STR_VALHALLAN_CARAPACE_MEDIC_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CARAPACE_OFFICER_CODEX.SPK
+    text: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLA_STORMTROOPER_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_STORMTROOPER2_CODEX.SPK
+    text: STR_VALHALLA_STORMTROOPER_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_STORMTROOPER_MEDIC_CODEX.SPK
+    text: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_STORMTROOPER_OFFICER2_CODEX.SPK
+    text: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
 
 ####################################
 # #ARMORSOB# Weapons and Ammo
@@ -9375,6 +9464,15 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
   - id: STR_STUB_GUN_AMMO_INC
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM_AP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM_AP
     type_id: 14
     section: STR_NOT_AVAILABLE
 
@@ -9790,13 +9888,18 @@ ufopaedia:
   - id: STR_VALHALLAN_STUBRIFLE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: AUTOGUN.SPK #placeholder
+    image_id: VALHALLAN_STUBRIFLE_CODEX.SPK
     text: STR_VALHALLAN_STUBRIFLE_CODEX
   - id: STR_VALHALLAN_AUTOGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: ADEPTAS_AUTOGUN_SCOPED_CODEX2.SPK #placeholder
     text: STR_VALHALLAN_AUTOGUN_CODEX
+  - id: STR_VALHALLAN_AUTOSTUBBER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: AUTOPISTOL_HIGH_GRADE_CODEX.SPK
+    text: STR_VALHALLAN_AUTOSTUBBER_CODEX
 
   - id: STR_AUTOGUN_ADEPTAS
     type_id: 14
@@ -9827,6 +9930,9 @@ ufopaedia:
 
   - delete: STR_AUTOGUN_CLIP
   - id: STR_AUTOGUN_CLIP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_AUTOGUN_CLIP_KRAKEN
     type_id: 14
     section: STR_NOT_AVAILABLE
   - id: STR_AUTOGUN_CLIP_DRUM
@@ -10792,11 +10898,19 @@ ufopaedia:
   - delete: STR_GK_HB
   - id: STR_GK_HB
     type_id: 14
-    section: STR_NOT_AVAILABLE
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_GK_SOLDIER
+    image_id: STR_GK_HB.SPK
+    text: STR_GK_HB_CODEX
   - delete: STR_GK_HB_MC
   - id: STR_GK_HB_MC
     type_id: 14
-    section: STR_NOT_AVAILABLE
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_GK_SOLDIER
+    image_id: STR_GK_HB.SPK
+    text: STR_GK_HB_CODEX
 
   - delete: STR_CHB
   - id: STR_CHB
@@ -11142,13 +11256,13 @@ ufopaedia:
   - id: STR_CASSC  # Reaper Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: REAPER_AUTOCANNON.SPK
     requires:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_CASSC_UFOPEDIA
 
-  - id: STR_IW_AUTOCANNON
+  - id: STR_IW_AUTOCANNON  # Iron Warrior Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CH.SPK
@@ -11156,6 +11270,15 @@ ufopaedia:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_IW_AUTOCANNON_UFOPEDIA
+
+  - id: STR_IW_REAPER_AUTOCANNON  # Iron Warrior Reaper Autocannon
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: REAPER_AUTOCANNON.SPK
+    requires:
+      - STR_AUTOCANNON_TECH
+      - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
+    text: STR_IW_REAPER_AUTOCANNON_CODEX
 
   - delete: STR_AUTOCANNON_CLIP
   - id: STR_AUTOCANNON_CLIP
@@ -13044,6 +13167,15 @@ ufopaedia:
     requires:
       - STR_TSARGENT
 
+  - id: STR_CLAW_TYRANT
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_CLAW_TYRANT_CODEX
+    requires:
+      - STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+
   - delete: STR_POWER_SWORD
   - id: STR_POWER_SWORD
     type_id: 14
@@ -13309,14 +13441,53 @@ ufopaedia:
     requires:
       - STR_PSYKER_RECRUITMENT
 
-  - delete: STR_CHAOS_CROZIUS
-  - id: STR_CHAOS_CROZIUS  # Chaos Sorcerer's Staff
+  - id: STR_PSYKER_STAFFCHAOS  # Chaos Priest staff
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: STR_PSYKER_STAFFCHAOS.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_PSYKER_STAFFCHAOS_CODEX
+
+  - delete: STR_CHAOS_CROZIUS
+  - id: STR_CHAOS_CROZIUS  # Chaos Sorcerer's Staff for OPFOR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_POWER
     text: STR_CHAOS_CROZIUS_UFOPEDIA
+
+  - id: STR_CHAOS_CROZIUS_PLAYER  # Chaos Sorcerer's Staff for PLAYER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_PLAYER_CODEX
+
+  - id: STR_CHAOS_CROZIUS_SORC_PLAYER  # Chaos Sorcerer's Staff
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_SORC_PLAYER_CODEX
+
+# chaos staff powers, to allow stats to be visible
+  - id: STR_CHAOS_CROZIUS_POWER1
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_CHAOS_CROZIUS_POWER2
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BRIMSTONE_HORROR_SPAWNER_GRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BLOODLETTERSPAWNER_GRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
 
 #WEAPONS.OTHER#   Other
   # Inquisition Stormtrooper Fixed Weapons
@@ -15896,6 +16067,12 @@ ufopaedia:
     text: STR_MARKET_GOODS_UFOPEDIA
     image_id: 2ARVUS.SPK
 
+  - id: STR_PURITY_SEAL
+    type_id: 10
+    section: STR_TOOLS_AND_RESOURCES
+    text: STR_PURITY_SEAL_CODEX
+    image_id: STR_PURITY_SEAL.SPK
+
   # Tools
   - delete: STR_ELECTRO_FLARE
   - id: STR_ELECTRO_FLARE
@@ -17058,8 +17235,22 @@ ufopaedia:
       - STR_LIVE_CAPTURE_CHAOSCULT
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
+    image_id: STR_CULTIST_ARMORPILOT.SPK
+    text: STR_CULTIST_ARMORPILOTPLAYER_CODEX
+  - id: STR_CHAOSCULT_PILOT #player chaos cult pilot
+    requires:
+      - STR_CHAOS_BOONS_LV2CULTISTS_RESEARCH # Same requirement to hire chaos cult pilots
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
     image_id: CHAOSCULTGENERIC.SPK
-    text: STR_SECTOID_UFOPEDIA
+    text: STR_CHAOSCULT_PILOTM_AI_CODEX
+  - id: STR_CULTIST_ARMORPILOTPLAYER
+    requires:
+      - STR_CHAOS_BOONS_LV2CULTISTS_RESEARCH # Same requirement to hire chaos cult pilots
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: STR_CULTIST_ARMORPILOT.SPK
+    text: STR_CULTIST_ARMORPILOTPLAYER_CODEX
 
   - id: STR_CHAOSCULT_PRIESTM_LV1_AI
     requires:
@@ -17558,7 +17749,7 @@ ufopaedia:
   - id: STR_TZEENTCH_WARP_THRALL
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS
-    image_id: tzeentch_warp_thrall_armor.SPK
+    image_id: tzeentch_warp_thrall.SPK
     text: STR_TZEENTCH_WARP_THRALL_UFOPEDIA
   - id: STR_TZEENTCH_WARP_THRALL_AUTOPSY
     type_id: 10

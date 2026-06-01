@@ -90,6 +90,30 @@ items:
     transferTime: 50
     listOrder: 6860
 
+  # valhallan
+
+  - type: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    size: 0.2
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6661
+
+
 armors:
   - &STR_GUARD_ARMOR_FLAK_DAMAGE
     type: STR_GUARD_ARMORSM  # DR10 SPACE MARINE SUPORT
@@ -3817,7 +3841,8 @@ armors:
       reactions: -10  # heavy
 
 #Valhallan Armors
-  - type: STR_VALHALLAN_FLAK_ARMOR  #Rookie Valhallan Guard armor
+  - &STR_VALHALLA_FLAK_TEMPLATE  # DAMAGE + STATS
+    type: STR_VALHALLAN_FLAK_ARMOR  #Rookie Valhallan Guard armor
     visibilityAtDay: 40
     visibilityAtDark: 15
     spriteSheet: VALHALLAN_FLAK_BS.PCK
@@ -3853,25 +3878,75 @@ armors:
       - 1.0  # MELTA
     units:
       - STR_GUARD_VALHALLAN
+      - STR_GUARD_VETERAN_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
     loftempsSet: [3]
     tags:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
 
-  - type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
+  - type: STR_VALHALLAN_REGULAR_FLAK_ARMOR #regular with helmet
+    refNode: *STR_VALHALLA_FLAK_TEMPLATE
+    spriteSheet: VALHALLAN_FLAK_BS.PCK
+    spriteInv: GUARD_VALHALLAN_FLAK_33
+    customArmorPreviewIndex: 921
+
+  - type: STR_VALHALLAN_FLAK_MEDIC_ARMOR
+    refNode: *STR_VALHALLA_FLAK_TEMPLATE
+    spriteSheet: VALHALLAN_FLAK_MEDIC_BS.PCK
+    spriteInv: GUARD_VALHALLAN_FLAKMEDIC_33
+    customArmorPreviewIndex: 923
+    weight: 5
+    corpseBattle:
+      - STR_VALHALLAN_FLAK_MEDIC_CORPSE
+    storeItem: STR_GUARD_ARMORS_MEDIC
+    frontArmor: 40  # Medic heavy flak
+    sideArmor: 30  # Medic heavy flak
+    rearArmor: 20  # Medic a bit heavier
+    underArmor: 25  # medic
+    stats:
+      tu: -5  # heavy
+      stamina: -10  # heavy
+      reactions: -10  # heavy
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+
+  - &STR_VALHALLAN_OFFICER_FLAK_ARMOR_TEMPLATE  # DAMAGE + STATS
+    type: STR_VALHALLAN_OFFICER_FLAK_ARMOR
+    refNode: *STR_VALHALLA_FLAK_TEMPLATE
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 2
+    spriteSheet: VALHALLAN_FLAK_OFFICER_BS.PCK
+    spriteInv: GUARD_VALHALLAN_FLAKOFFICER_33
+    customArmorPreviewIndex: 926
+    stats:
+      tu: 5
+      stamina: 10
+      bravery: 10
+    corpseBattle:
+      - STR_VALHALLAN_OFFICER_FLAK_CORPSE
+    specialWeapon: ""
+    units:
+      - STR_GUARD_VALHALLAN_OFFICER
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
+
+  - &STR_VALHALLA_CARAPACE_TEMPLATE  # DAMAGE + STATS
+    type: STR_VALHALLAN_CARAPACE_ARMOR  #Valhallan Carapace armor
     visibilityAtDay: 40
     visibilityAtDark: 20
     antiCamouflageAtDay: 2
     antiCamouflageAtDark: 2
     spriteSheet: VALHALLAN_CARAPACE_BS.PCK
     spriteInv: GUARD_VALHALLAN_CARAPACE_33
-    customArmorPreviewIndex: 921
+    customArmorPreviewIndex: 924
     spriteFaceGroup: 6
     spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
     corpseBattle:
       - STR_VALHALLAN_CARAPACE_CORPSE
-    storeItem: STR_NONE
+    storeItem: STR_GUARD_ARMORH
     frontArmor: 70
     sideArmor: 60
     rearArmor: 30
@@ -3897,12 +3972,144 @@ armors:
       - 1.0  # IMPACT
       - 1.0  # MELTA
     units:
-      - STR_GUARD_VALHALLAN
+      - STR_GUARD_VETERAN_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
     loftempsSet: [3]
     tags:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - type: STR_VALHALLAN_CARAPACE_MEDIC_ARMOR
+    refNode: *STR_VALHALLA_CARAPACE_TEMPLATE
+    spriteSheet: VALHALLAN_CARAPACE_MEDIC_BS.PCK
+    spriteInv: GUARD_VALHALLAN_CARAPACEMEDIC_33
+    customArmorPreviewIndex: 925
+    corpseBattle:
+      - STR_VALHALLAN_CARAPACE_MEDIC_CORPSE
+    storeItem: STR_MEDIC_CARAPACE_ARMOR
+    frontArmor: 70
+    sideArmor: 60
+    rearArmor: 50
+    underArmor: 60
+    weight: 20
+    stats:
+      tu: -5
+      stamina: -10
+      reactions: -10
+      strength: 5
+      bravery: 10  # always multiples of 10
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+
+  - &STR_VALHALLAN_OFFICER_CARAPACE_ARMOR_TEMPLATE # DAMAGE + STATS
+    type: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR
+    refNode: *STR_VALHALLA_CARAPACE_TEMPLATE
+    antiCamouflageAtDay: 4
+    antiCamouflageAtDark: 4
+    spriteSheet: VALHALLAN_CARAPACE_OFFICER_BS.PCK
+    spriteInv: GUARD_VALHALLAN_CARAPACEOFFICER_33
+    customArmorPreviewIndex: 927
+    corpseBattle:
+      - STR_VALHALLAN_OFFICER_CARAPACE_CORPSE
+    specialWeapon: ""
+    units:
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
+
+  - &STR_VALHALLA_STORMTROOPER_TEMPLATE  # DAMAGE + STATS
+    type: STR_VALHALLA_STORMTROOPER_ARMOR
+    heatVision: 20  # stormtroopers have basic thermals
+    refNode: *STR_GUARD_ARMOR_CARAPACE_SCION
+    spriteSheet: VALHALLAN_STORMTROOPER_BS.PCK
+    spriteInv: GUARD_VALHALLAN_STORMTROOPER_33
+    customArmorPreviewIndex: 917
+    corpseBattle:
+      - STR_VALHALLA_STORMTROOPER_CORPSE
+    storeItem: STR_VALHALLA_STORMTROOPER_ARMOR
+    frontArmor: 90  # same as Scions
+    sideArmor: 80  # reinforced armor
+    rearArmor: 50  # same as Scions
+    underArmor: 50  # same as Scions
+    damageModifier:  # SCION ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.9  # FLAMES
+      - 0.9  # HE
+      - 0.8  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    specialWeapon: STR_BAYONET  # change?
+    stats:
+      tu: -5  # heavy reinforced armor, even vs Scions
+      stamina: -5  # heavy
+    units:
+      - STR_GUARD_VETERAN_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
+    loftempsSet: [3]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_VOLLEYGUN
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    weight: 20  # powerpack adds weight
+    builtInWeapons:
+      - STR_HOTSHOT_VOLLEY_GUN
+      - INV_NULL_STORM_TROOPER_BACKPACK
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_HELLGUN
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    weight: 20  # powerpack adds weight
+    builtInWeapons:
+      - STR_HELLGUN
+      - INV_NULL_STORM_TROOPER_BACKPACK
+
+  - type: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    spriteSheet: VALHALLAN_STORMTROOPER_MEDIC_BS.PCK
+    spriteInv: GUARD_VALHALLAN_STORMTROOPERMEDIC_33
+    customArmorPreviewIndex: 918
+    weight: 30  # medical gear + narthecium adds a lot of weight
+    corpseBattle:
+      - STR_VALHALLA_STORMTROOPER_MEDIC_CORPSE
+    storeItem: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+    stats:
+      tu: -10  # heavy
+      stamina: -10  # heavy
+      reactions: -10  # heavy
+
+  - type: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    refNode: *STR_VALHALLA_STORMTROOPER_TEMPLATE
+    antiCamouflageAtDay: 8  # +3 vs normal scion officer
+    antiCamouflageAtDark: 8  # +3 vs normal scion officer
+    customArmorPreviewIndex: 928
+    spriteSheet: VALHALLAN_STORMTROOPER_OFFICER_BS.PCK
+    spriteInv: GUARD_VALHALLAN_STORMTROOPEROFFICER_33F0.SPK #only 1 sheet so far
+    corpseBattle:
+      - STR_VALHALLAN_STORMTROOPER_OFFICER_CORPSE
+    storeItem: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    frontArmor: 115  # +25
+    sideArmor: 95  # +25
+    rearArmor: 70  # +20
+    underArmor: 95  # +25
+    units:
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
+    specialWeapon: STR_OFFICER_BASIC_VOX
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      UNIT_TYPE_IMPERIUM: 1
 
   # TURRETS AND SPONSONS
   - type: STR_CHIMERA_TURRET_ARMOR

@@ -12,7 +12,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 #
 
 # *** MISC **********************************************************************
-  STR_OPENXCOM: "40000 - ROSIGMA 3.2"
+  STR_OPENXCOM: "40000 - ROSIGMA 3.2A"
   IMPERIUM: "IMPERIUM"
   ARMO: "ARMORY"
   MILL: "FORGE"
@@ -776,6 +776,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_IRON_TERMINATOR_ARMOR_PLAYER: "Tyrant Terminator Armor"
   STR_CLAW_TYRANT: "Tyrant Power Claw"
+  STR_CLAW_TYRANT_CODEX: "Power Claws similarly to Power Fist generate an energy field that is capable of violently disrupting any solid matter it touches. This variat is usually part of the Tyrant Terminators Power Armor and is designed to rip and tear vehicles, fortification and anything stopping the Iron Warrior weilding it."
   STR_KHORNE_TERMINATOR_ARMOR: "Khorne Terminator Armor"
   STR_NURGLE_TERMINATOR_ARMOR: "Plague Terminator Armor"
   STR_TZEENTCH_TERMINATOR_ARMOR: "Rubric Terminator Armor"
@@ -2713,6 +2714,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 # CHAOS WEAPONS
   STR_CHAOS_LASCANNON_HANDHELD: "Chaos Light Lascannon"
+  STR_INQ_RR_CHAOS_LASCANNON_HANDHELD: "Chaos Light Lascannon" # Radical Road Manufacture
   STR_CHAOS_LASCANNON_HANDHELD_UFOPEDIA: "{NEWLINE} A handheld version of the Chaos Lascannon, weaker and less accurate than its full-size counterpart it is significantly lighter to wield."
   STR_LASCANNON_CHAOS_CELL: "Chaos Lascannon Cell"
   STR_LASCANNON_CHAOS_CELL_MANUFACTURE: "Chaos Lascannon Cell"
@@ -4282,6 +4284,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_AWARD_INQ_ROSARIUS: "Award Inquisitorial Rosarius"
   STR_BONUS_INQ_ROSARIUS: "Inquisitorial Rosarius"
+  STR_INQ_INQUISITOR_PROMOTION: "Promote to Inquisitor"
 
   STR_GUARD_BACKGROUND_INFANTRY: "Infantry"
   STR_GUARD_BACKGROUND_SCION: "Scion"
@@ -4422,6 +4425,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PHOTON_SHOT_TAURUS: "Launch Photon"
 
   STR_KILLPOINT_TOKEN: "Imperial Token"
+  #STR_PURITY_SEAL is already defined in base 40k mod
+  STR_PURITY_SEAL_CODEX: "Purity seals are parchment or similar material inscribed with declarations or prayers then coated with protective sealants and affixed to a surface with red or black wax. They are prominently displayed on armour and indicate that the wearer is free of corruption. They're used in various rituals imperial forces but also by the chaos forces in heretical ritual resulting in the corruption or destruction of the seal itself"
   STR_TURN_KILLTOKENS_IN: "Turn Imperial Tokens to Badges"
   STR_TURN_BADGES_TO_KILLTOKENS: "Turn Badges to Imperial Tokens"
 
@@ -4497,6 +4502,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_GUARD_SQUAT: "Guardsquat"
   STR_GUARD_SQUAT_CORPSE: "Guardsquat Corpse"
+  STR_GUARD_SQUAT_CORPSE_OPFOR: "Guardsquat Corpse"
   STR_SQUAT_FLAK_ARMOR: "Guardsquat Flak"
   STR_SQUAT_CARAPACE_ARMOR: "Guardsquat Carapace"
   STR_SQUAT_GUARDSMEN: "Squat Guard Recruitment"
@@ -4513,7 +4519,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BEASTGUARD_CARAPACE_ARMOR: "Beastmen Carapace"
   STR_BEASTGUARD_HEAVY_ARMOR: "Beastguard Heavy Armor"
   STR_BEASTGUARD_HEAVY_ARMOR_SLAB: "Beastguard Slab Shield"
-  STR_BEASTGUARD_CORPSE: "Beastman corpse"
+  STR_BEASTGUARD_CORPSE: "Beastman Corpse"
+  STR_BEASTGUARD_CORPSE_OPFOR: "Beastman Corpse"
   STR_BEASTGUARD_FLAK_ARMOR_UFOPAEDIA: "{NEWLINE} The Beastmen are abhumans, stable offspring from human or abhuman parents. They are deemed an official and approved Imperium abhuman subspecies. Their tough upbringing and strong physique make for excellent, fast, soldiers that rarely tire."
   STR_BEASTGUARD_FLAK_ARMOR_MEDIC_UFOPAEDIA: "{NEWLINE} The Beastmen Medics have to learn their skills on their own, and with the help of their other abhumans procure medical supplies and equipment that is not readily provided by the higher ups to Abhuman units."
   STR_BEASTGUARD_CARAPACE_ARMOR_UFOPAEDIA: "{NEWLINE} Beastmen armor is a variation on the standard Guard armor, while not afforded any advanced armor, what is available is made to fit the Beastmen body as best as possible and arranged for frontal and flanking assault tasks, leaving their backs poorly armored to encourage their offensive spirit."
@@ -4583,6 +4590,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_TANITH_REQUISITION: "Tanith Requisition"
   STR_TANITH_LASGUN_UPGRADE: "Tanith Lasgun Upgrade"
   STR_TANITH_REQUISITIONS: "Tanith Requisitions"
+  STR_TANITH_CAMO_CORPSE: "Tanith Guardsman Corpse"
+  STR_TANITH_CAMO_CORPSE_OPFOR: "Tanith Guardsman Corpse"
 
   STR_LASGUN_ESCHER: "Escher Lasgun"
   STR_LASGUN_ESCHER_CODEX: "{NEWLINE}House Escher produces countless lasguns for the Departmento Munitorum, local designs are intended for internal use or off-world sale. The elegant appearance and high quality of these weapons makes them attractive hunting and sharpshooting weapons for wealthier individuals or organizations without access to full-power long-las."
@@ -4846,39 +4855,90 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_STEELLEGION_STORMTROOPER_ARMOR_MEDIC_CODEX: "{NEWLINE}Steel Legion Storm Trooper medics have the best medical gear and carapace armor of Armageddon, to ensure the survival of their best troopers in the field."
 
 # VALHALLAN
-  STR_GUARD_VALHALLAN: "Valhallan Guard"
   STR_VALHALLAN_GUARDSMEN: "Valhallan Recruitment"
+  STR_VALHALLAN_GUARD_AI: "Valhallan Guard"
+  STR_PARDON_PENITENT_VALHALLA: "Pardon Penitent /VAL"
+  STR_VETERAN_PROMOTION_VALHALLA: "Promote Veteran"
+  STR_PROMOTE_VETERAN_OFFICER_VALHALLA: "Promote Veteran to Veteran Officer"
+  STR_PROMOTE_OFFICER_VETERAN_VALHALLA: "Promote Officer to Veteran Officer"
+
+  STR_GUARD_VALHALLAN: "Valhallan Guard"
   STR_VALHALLAN_FLAK_ARMOR: "Valhallan Flak Armor"
+  STR_VALHALLAN_REGULAR_FLAK_ARMOR: "Valhallan Flak Armor"
   STR_VALHALLAN_FLAK_CORPSE: "Valhallan Corpse"
+  STR_VALHALLAN_REGULAR_FLAK_CORPSE: "Valhallan Corpse"
+  STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA: "{NEWLINE}The Guardsmen of the Regiment Valhallan Ice Warriors hail from their namesake planet of Valhalla. Grim and tenacious troops never retreat and refuse to surrender. They are particularly successful at cold weather combat and are often used by the Imperium when a campaign of attrition must be fought on an Ice World that is similar in climate to their frigid homeworld or when an operation involves combat against Orks."
+
+  STR_VALHALLAN_FLAK_MEDIC_ARMOR: "Valhallan Flak Medic Armor"
+  STR_VALHALLAN_FLAK_MEDIC_CORPSE: "Valhallan Medic Corpse"
+  STR_VALHALLAN_FLAK_MEDIC_ARMOR_UFOPAEDIA: "{NEWLINE} Valhallan Regimental Medics are equipped to operate in extreme cold conditions, carrying thermal blankets, pads, injectors and bonesaws to ensure that anyone that falls in the deep snow can be recovered and survive."
+
   STR_VALHALLAN_VETERAN: "Valhallan Veteran"
+  STR_GUARD_VETERAN_VALHALLAN: "Valhallan Veteran"
   STR_VALHALLAN_CARAPACE_ARMOR: "Valhallan Carapace Armor"
   STR_VALHALLAN_CARAPACE_CORPSE: "Valhallan Veteran Corpse"
+  STR_VALHALLAN_GUARD_CARAPACE_ARMOR_UFOPAEDIA: "{NEWLINE}Valhallan Ice Warrior veterans wear carapace armor adapted for cold climate combat, integrated to be worn with their long coats and other gear."
+
+  STR_VALHALLAN_CARAPACE_MEDIC_ARMOR: "Valhallan Carapace Medic"
+  STR_VALHALLAN_CARAPACE_MEDIC_CORPSE: "Valhallan Veteran Medic Corpse"
+  STR_VALHALLAN_CARAPACE_MEDIC_ARMOR_UFOPAEDIA: "{NEWLINE} Valhallan Veteran Medics carry everything needed to recover and care for those wounded in sub-arctic conditions, from experience knowing which toes and fingers can be dispensed with to increase efficiency and odds of survival."
+
   STR_VALHALLAN_SHARPSHOOTER: "Valhallan Sniper Gear"
   STR_VALHALLAN_SHARPSHOOTER_ARMOR: "Valhallan Sniper Gear"
   STR_VALHALLAN_SHARPSHOOTER_CORPSE: "Valhallan Sniper Corpse"
+
   STR_VALHALLAN_OFFICER_FLAK: "Valhallan Officer"
+  STR_GUARD_VALHALLAN_OFFICER: "Valhallan Officer"
   STR_VALHALLAN_OFFICER_FLAK_ARMOR: "Valhallan Officer Armor"
   STR_VALHALLAN_OFFICER_FLAK_CORPSE: "Valhallan Officer Corpse"
+
   STR_VALHALLAN_OFFICER_VETERAN: "Valhallan Veteran Officer"
+  STR_GUARD_VALHALLAN_OFFICER_VETERAN: "Valhallan Veteran Officer"
   STR_VALHALLAN_OFFICER_CARAPACE_ARMOR: "Valhallan Veteran Officer Carapace"
   STR_VALHALLAN_OFFICER_CARAPACE_CORPSE: "Valhallan Veteran Officer Corpse"
-  STR_VALHALLAN_GUARD_AI: "Valhallan Guard"
-  STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA: "{NEWLINE}The Guardsmen of the Regiment Valhallan Ice Warriors hail from their namesake planet of Valhalla. Grim and tenacious troops never retreat and refuse to surrender. They are particularly successful at cold weather combat and are often used by the Imperium when a campaign of attrition must be fought on an Ice World that is similar in climate to their frigid homeworld or when an operation involves combat against Orks."
-  STR_VALHALLAN_GUARD_CARAPACE_ARMOR_UFOPAEDIA: "{NEWLINE}Valhallan Ice Warrior veterans wear carapace armor adapted for cold climate combat, integrated to be worn with their long coats and other gear."
 
-  STR_RECRUITS_VALHALLA_STRATEGY_IG: "Valhalla Strategy Chosen"
-  STR_RECRUITS_VALHALLA_STRATEGY_IG_DESCRIPTION: "We have chosen the Valhallan Ice Warriors as the main force. Our first recruits will arrive soon."
-  STR_VALHALLA_OFFICERS_EVENT: "Officers Arrive"
-  STR_VALHALLA_OFFICERS_EVENT_DESCRIPTION: "Valhallan Officers have arrived to command your troopers in the field. User their officer swords and COMMANDS to motivate your troopers."
+  STR_VALHALLAN_STORMTROOPER: "Valhallan Stormtrooper"
+  STR_GUARD_VALHALLAN_STORMTROOPER: "Valhallan Stormtrooper"
+  STR_VALHALLA_STORMTROOPER_ARMOR: "Valhallan Stormtrooper Armor"
+  STR_VALHALLA_STORMTROOPER_ARMOR_VOLLEYGUN: "Volleygun Loadout"
+  STR_VALHALLA_STORMTROOPER_ARMOR_HELLGUN: "Hellgun Loadout"
+  STR_VALHALLA_STORMTROOPER_CORPSE: "Valhallan Stormtrooper Corpse"
+  STR_VALHALLA_STORMTROOPER_ARMOR_UFOPAEDIA: "{NEWLINE} Valhallan Stormtroopers are equipped with the very best and heaviest armor than Valhalla can muster. Capable of operating in absolute zero for a limited time span, these special forces troops can carry out missions no other Valhallan is expected to survive."
+
+  STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC: "Valhallan ST. Medic Armor"
+  STR_VALHALLA_STORMTROOPER_MEDIC_CORPSE: "Valhallan ST. Medic Corpse"
+  STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC_UFOPAEDIA: "{NEWLINE} Valhallan Stormtrooper Medics are equipped to care for wounded stormtroopers in the middle of battle in extreme conditions. Their gear includes chainsaws to get through armor and thermal wraps to protect even from void conditions."
+
+  STR_VALHALLAN_STORMTROOPER_OFFICER: "Valhallan Commander"
+  STR_GUARD_VALHALLAN_STORMTROOPER_OFFICER: "Valhallan Commander"
+  STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR: "Valhallan Commander Armor"
+  STR_VALHALLAN_STORMTROOPER_OFFICER_CORPSE: "Valhallan Commander Corpse"
+  STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR_UFOPAEDIA: "{NEWLINE} Valhallan Officers are expected to lead from the front, even higher ranking ones like Colonels. As such they spare no expense on their equipment, knowing the inspirational surge in their troops is short-lived following their glorious battlefield death."
 
   STR_VALHALLAN_CODEX_ORIGINS: "THE VALHALLAN ICE WARRIORS"
   STR_VALHALLAN_CODEX_ORIGINS_TEXT: "{NEWLINE} The Valhallan Ice Warriors is the Militarum Regimentum of the Astra Militarum that specialize in arctic and cold climate attritional fighting. Hailing from the frozen and desolate Ice World of Valhalla located in the Segmentum Ultima. Famed as some of the toughest regiments ever deployed by the Imperial Guard, these grim and tenacious troops never retreat and refuse to surrender, scoring many glorious victories against Orks and other enemies. Their preferred tactic is massed artillery barrages with infantry assault waves."
   STR_VALHALLAN_STRATEGY_IG_UFOPEDIA: "{NEWLINE} Lead the stubborn infantry of the imperium with this Valhallan regiment. Your forces suffer less morale penalties from losses and can call in artillery against entrenched foes that your masses of infantry cannot overcome with fixed bayonets alone. The key to victory is training your troops, keeping your veterans (within reason) alive while using your officers commands to boost your troops. At mid-tier you will gain access to the Leman Russ armored column and even larger transport options. {NEWLINE} You will receive 28 Valhallan troopers, a convoy and two officers within days of game start."
+  STR_RECRUITS_VALHALLA_STRATEGY_IG: "Valhalla Strategy Chosen"
+  STR_RECRUITS_VALHALLA_STRATEGY_IG_DESCRIPTION: "We have chosen the Valhallan Ice Warriors as the main force. Our first recruits will arrive soon."
+  STR_VALHALLA_MIDTIER: "Valhalla Mid Tier"
+  STR_VALHALLA_HIGHTIER: "Valhalla High Tier"
 
+  STR_VALHALLA_OFFICERS_EVENT: "Officers Arrive"
+  STR_VALHALLA_OFFICERS_EVENT_DESCRIPTION: "Valhallan Officers have arrived to command your troopers in the field. User their officer swords and COMMANDS to motivate your troopers."
+  STR_VALHALLAN_VETERANS_EVENT: "Veterans Join"
+  STR_VALHALLAN_VETERANS_EVENT_DESCRIPTION: "With your recent successes in the war effort more Steel Legion veteran troopers have been freed up to join your forces."
+
+  STR_VALHALLAN_WEAPONS: "Valhallan Arsenal"
+  STR_VALHALLAN_WEAPONS_CODEX: "{NEWLINE} Valhalla produces a few patterns of imperial weaponry modified for extreme cold climate fighting. Rugged, robust and simple to operate and maintain, these weapons will be found in most Valhallan regiments arsenals."
   STR_VALHALLAN_STUBRIFLE: "Valhalla Pattern Stubrifle"
-  STR_VALHALLAN_STUBRIFLE_CODEX: "The basic Valhalla pattern stubrifle comes with a bayonet and is made for extreme cold climate fighting. Simple and rugged, this rifle is easy to operate and has decent accuracy while being cheap to mass-produce."
+  STR_VALHALLAN_STUBRIFLE_CODEX: "{NEWLINE}The basic Valhalla pattern stubrifle comes with a bayonet and is made for extreme cold climate fighting. Simple and rugged, this rifle is easy to operate and has decent accuracy while being cheap to mass-produce."
   STR_VALHALLAN_AUTOGUN: "Valhalla Pattern Autogun"
-  STR_VALHALLAN_AUTOGUN_CODEX: "The Valhalla pattern autogun is a semi-automatic weapon of more complex design than most Valhallan weapons, nontheless designed with cold weather in mind for its operation."
+  STR_VALHALLAN_AUTOGUN_CODEX: "{NEWLINE}The Valhalla pattern autogun is a semi-automatic weapon of more complex design than most Valhallan weapons, nontheless designed with cold weather in mind for its operation."
+  STR_VALHALLAN_AUTOSTUBBER: "Valhalla Pattern Autostubber"
+  STR_VALHALLAN_AUTOSTUBBER_CODEX: "{NEWLINE} The Valhalla pattern autostubber is a rapid firing close quarters weapon firing small calibre stub rounds usually used for pistols. It is highly effective against unarmored humans and grots in urban or trench fighting, and may take down or at least slow a Ork Boy through volume of fire."
+  STR_STUB_GUN_AMMO_DRUM: "Stubber Drum Mag."
+  STR_STUB_GUN_AMMO_DRUM_AP: "Stubber Drum AP Mag."
+  STR_AUTOGUN_CLIP_KRAKEN: "Autogun Penetrator Clip"
 
 ### ADVANCED TURRETS  ###
   STR_LEMONRUSS: "Battle Cannon Turret"
@@ -5584,16 +5644,16 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TZEENTCH_WARP_THRALL: "Warped Thrall"
   STR_TZEENTCH_WARP_THRALL_ARMOR: "Warped Thrall"
   STR_TZEENTCH_WARP_THRALL_CORPSE: "Warped Thrall Corpse"
-  STR_TZEENTCH_WARP_THRALL_UFOPEDIA: "{NEWLINE}Warp Thralls are offered only rudimentary gear, and use whatever looted or improvised equipment they can find."
-  STR_TZEENTCH_WARP_THRALL_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
+  STR_TZEENTCH_WARP_THRALL_UFOPEDIA: "{NEWLINE}Warp Thralls are enslaved servants to their Coven Lords in the warband. They are either manipulated or enslaved to serve their new masters and then changed and twisted physically and mentally to deprive the Thralls of their free will. They are primarily used as meat shields in combat."
+  STR_TZEENTCH_WARP_THRALL_ARMOR_UFOPEDIA: "{NEWLINE}Warp Thralls are offered only rudimentary gear, and use whatever looted or improvised equipment they can find.{NEWLINE} CODEX ARMOR DETAIL"
   STR_TZEENTCH_WARP_THRALL_AUTOPSY: "Warped Thrall Origins"
   STR_TZEENTCH_WARP_THRALL_AUTOPSY_UFOPEDIA: "{NEWLINE}The Warped Thralls are created from human captives and victims turned by Tzeentchian sorcery into twisted mutants, their minds dominated and driven to near madness. Slaves to the will of their Coven Lords, they do anything their masters demand and are used as cannon fodder and labor."
 
   STR_TZEENTCH_MUTANT: "Chaos Mutant"
   STR_TZEENTCH_MUTANT_ARMOR: "Chaos Mutant"
   STR_TZEENTCH_MUTANT_CORPSE: "Chaos Mutant Corpse"
-  STR_TZEENTCH_MUTANT_UFOPEDIA: "{NEWLINE}Chaos Mutants are equipped with whatever their chaos masters can bother diverting, used as fodder the Mutants are often hardy opponents, already used to pain and driven into a frenzy into imperial forces by their cultist leaders."
-  STR_TZEENTCH_MUTANT_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
+  STR_TZEENTCH_MUTANT_UFOPEDIA: "{NEWLINE}Chaos Mutants are gripped by madness from their constant exposure to the warp, only following their cult masters due to either enslavement of their already fractured mind or out of desperation to be granted boons for their service."
+  STR_TZEENTCH_MUTANT_ARMOR_UFOPEDIA: "{NEWLINE}Chaos Mutants are equipped with whatever their chaos masters can bother diverting, used as fodder the Mutants are often hardy opponents, already used to pain and driven into a frenzy into imperial forces by their cultist leaders.{NEWLINE} CODEX ARMOR DETAIL"
   STR_TZEENTCH_MUTANT_AUTOPSY: "Mutant origins"
   STR_TZEENTCH_MUTANT_AUTOPSY_UFOPEDIA: "{NEWLINE}Chaos Mutants are most often the result of exposure to warp energies or chaos sorcery, by unfortunate circumstance or deliberate witchcraft that result in mutants born. Those who survive Imperial purges to adulthood live as outcasts from society, touched by chaos since birth they easily fall under the sway of chaos cults."
 
@@ -5890,6 +5950,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CASS_R: "Assault Cannon Technology"
 
   STR_IW_REAPER_AUTOCANNON: "Iron Warrior Reaper Autocannon"
+  STR_IW_REAPER_AUTOCANNON_CODEX: "This reinforced double barrel autocannon variant of the Reaper Autocannon produced by Warpsmith of the Iron Warriors can withstand incredible punishment and it's ideal for continuous fire aganist enemy fortifications. Favoured by the heavy support weapons squads and Terminator of the Iron Warrior legion."
 
   STR_IWCOMBIBOLTER: "Iron Warrior Combi-Bolter"
   STR_IWCOMBIBOLTER_UFOPEDIA: "{NEWLINE}Though it has fallen out of common use in favor of the storm bolter, the combi-bolter is still in use by the Iron Warriors, filling a compromise role between the need for firepower and portability,"
@@ -6859,6 +6920,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SECTOID_ELITE: "Chosen Chaos Cult"
   STR_SECTOID_DARKDISCIPLE_AUTOPSY: "Dark Disciple Origins"
   STR_SECTOID_DARKDISCIPLE_AUTOPSY_UFOPEDIA: "{NEWLINE}Dark Disciples are designated agents of Chaos, cultists that have proven themselves capable. They infiltrate society at large on missions of espionage, sabotage and seduction. "
+  STR_PRIEST_UFOPEDIA: "{NEWLINE}Cultist High Priests are some of the most devoted mortal servants of the Chaos Gods. These deceiving leaders only wear simple rags like their underlings in order to hide amongst society. {NEWLINE} CODEX ARMOR DETAIL"
+  STR_PRIEST_AUTOPSY_UFOPEDIA: "{NEWLINE}Cultist High Priests are some of the most devoted mortal servants of the Chaos Gods. These charismatic Leaders coordinate with other Chaos Cults and Warbands on Pelega IV to spread Chaos influence across the planet."
   STR_NEVERBORN_CULT: "Daemon Cult"
   STR_NEVERBORN: "Neverborn Daemon"
   STR_NEVERBORN_WEAPON: "Daemon Talons"
@@ -6972,7 +7035,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_CHAOSCULT_SOLDIERM_LV1_AI_CODEX: "Chaos Cultists are the lowest rung of the ladder, who joined the chaos cults for a myriad of reasons, some even being forcibly recruited. They're used as cannon fodder for the Chaos Cult attacks, probing enemy defenses or overwhelming them with numbers."
   STR_CHAOSCULT_SOLDIERM_LV2_AI_CODEX: "Chaos Veteran Cultists are experienced cult members, survivors of several battles and willing participants in chaos rituals that have tainted their very souls, for the prize of the True Chaos blessing."
-  STR_CHAOSCULT_PILOTM_AI_CODEX: "Chaos Pilot Male often come from former Imperium flight schools, with at least some experience of flying most common craft. Having joined the Chaos Cult they provide their services for the advancement of Chaos."
+  STR_CHAOSCULT_PILOTM_AI_CODEX: "Chaos Pilots often come from former Imperium flight schools, with at least some experience of flying most common craft. Having joined the Chaos Cult they provide their services for the advancement of Chaos."
   STR_CHAOSCULT_PRIESTM_LV1_AI_CODEX: "Chaos Priests are often former novices and trainees in the Ecclesiarchy, at some point learning the truth about the warp made them embrace heretical means. Avoiding persecution they either join or form Chaos Cults of their own to spread the true word."
   STR_CHAOSCULT_PRIESTM_LV2_AI_CODEX: "Chaos Empowered Priests have been subjecting themselves to various unholy rituals that provide immense potential to those that managed to survive the influx of warp energy. With such rituals comes an intense need for ever more power."
   STR_CHAOSCULT_OGRYN_AI_CODEX: "Chaos Ogryns are corrupted versions of their abhuman kin, they're as lethal in battle as their imperial brethren, but their already formidable strength enhanced by the power of Chaos."
@@ -7429,7 +7492,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_MEDICAE_ARMOR: "Sister Medicae"
   STR_GSC_MEDICAE_CORPSE: "Medicae Corpse"
   STR_GSC_MEDICAE_UFOPEDIA: "{NEWLINE}This Medicae carry xeno contaminated vials, injector needles and other nursing equipment. They wear Imperial Carapace armor."
-  STR_GSC_MEDICAE_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
+  STR_GSC_MEDICAE_ARMOR_UFOPEDIA: "{NEWLINE}These brainwashed, infected Sister Medicae believe they are serving the God-Emperor by spreading xeno-tainted blood to other Imperials. These Medicae wear their Medicae power armor; equipped with an narthecium that is contaminated with xeno-tainted blood. {NEWLINE} CODEX ARMOR DETAIL"
   STR_GSC_MEDICAE_AUTOPSY: "Infected Medicae Origins"
   STR_GSC_MEDICAE_AUTOPSY_UFOPEDIA: "{NEWLINE}Interrogation of these xeno-infected Medicae reveal an obsession with spreading their some form of blessings, equipped with vials of xeno-tainted blood we can determine their favored vector. These medics cannot be reasoned with, and they ignore all their former duties in favor of their newfound purpose."
 
@@ -7453,6 +7516,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_MINER_CORPSE: "Brood Neophyte Corpse"
   STR_GSC_ABERRANT_CORPSE: "Aberrant Corpse"
   STR_LOCUS_CORPSE: "Locus Corpse"
+  STR_LOCUS_CLOAKED: "Suspicious Hooded Figure"
+  STR_LOCUS_FRENZIED: "Frenzied Locus"
   STR_GSC_INFECTED_HUMAN_CORPSE: "Infected Human Corpse"
 
   STR_GSC_KELERMORPH: "Kelermorph"
@@ -7528,6 +7593,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BIOVORE_TESTLIST: "Biovore Testlist"
   STR_TYRANID_WARRIOR_TESTLIST: "Warrior Testlist"
   STR_RIPPERSWARM_TESTLIST: "Ripperswarm Testlist"
+  STR_RIPPERSWARM_HORDES: "Ripperswarm Hordes"
   STR_TYRANID_HORMAGAUNT_TESTLIST: "Hormagaunt Testlist"
   STR_BROODNEST_TESTLIST: "Broodnest Testlist"
   STR_TYRANID_OUTPOST_SITE: ""
@@ -7571,9 +7637,17 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_RIPPERSWARM_1: "Tyranid Ripper"
   STR_RIPPERSWARM_2: "Tyranid Ripperswarm x2"
   STR_RIPPERSWARM_4: "Ripperswarm x4"
+  STR_RIPPERSWARM_8: "Ripperswarm x8"
+  STR_RIPPERSWARM_12: "Ripperswarm x12"
   STR_RIPPERSWARM_16: "Ripperswarm x16"
   STR_RIPPERSWARM_ARMOR: "Ripperswarm Armor"
   STR_RIPPERSWARM_CORPSE: "Ripperswarm Corpse"
+  STR_RIP_CORPSE_2: "Ripperswarms Corpses x2"
+  STR_RIP_CORPSE_4: "Ripperswarms Corpses x4"
+  STR_RIP_CORPSE_6: "Ripperswarms Corpses x6"
+  STR_RIP_CORPSE_8: "Ripperswarms Corpses x8"
+  STR_RIP_CORPSE_12: "Ripperswarms Corpses x12"
+  STR_RIP_CORPSE_PILE_FILLER: "Ripperswarms Giblets"
   STR_RIPPERSWARM_ARMOR_UFOPEDIA: "{NEWLINE} The Ripper is lightly armored through a tough chitin carapace, offering it minor protection from attacks."
   STR_RIPPERSWARM_AUTOPSY: "Ripperswarm Origins"
   STR_RIPPERSWARM_UFOPEDIA: "{NEWLINE} Rippers are the smallest of Tyranid bioforms but also by the far the most numerous to compose the Hive's hosts, used for the specific function of devouring all biologial mass from invaded planets. They appear as great swarms of writhing and crawling creatures, and are well capable of overwhelming far larger opponents through relentless and utterly mindless attacks."
@@ -7802,6 +7876,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ASSC_CLIP_AP: "Assault Cannon AP Rounds"
   STR_ASSC_CLIP_HE: "Assault Cannon HE Rounds"
   STR_HFLAMERR_GK: "Heavy Flamer Requisition"
+
+## Grey Knights Weapons
+  #STR_GK_HB is already defined in base 40k mod
+  STR_GK_HB_CODEX: "The Bolt Gauntlet family of weapons consists of a Power Fist with built-in Bolter, inspired in form and function by Roboute Guilliman's famed weapon Hand of Dominion. This version used by Grey knighs features a build-in Storm Bolter and it's capable of using bolts infused with psychic energy. Its lethality at close range its undisputed."
 
 ## Gun Specials
 
@@ -8848,6 +8926,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_RIPPER_GUN_CLIP_AP_UFOPEDIA: "{NEWLINE}Specialized armor piercing flechettes for the Ogryn Ripper Gun. Intended to puncture and defeat heavy armor and ceramite, these costly rounds trade the legendary stopping power of Ripper Gun buckshot for better shot grouping and greatly improved armor penetration."
   STR_RIPPER_GUN_CLIP_INC: "Ripper Gun Incendiary Drum"
   STR_RIPPER_GUN_CLIP_INC_UFOPEDIA: "{NEWLINE}Specialized incendiary rounds for the Ripper Gun. Each shell contains a potent phosphor and promethium payload meant for target marking and maximal lethality against lightly armored personnel. {NEWLINE}Due to the notable risk of fire and accidental discharge, these rounds are strongly recommended for Bone'ead use only."
+  STR_OGRYN_CORPSE_OPFOR: "Ogryn Corpse"
 
   STR_THUNDERFIRE_SHELL_P: "Thunderfire Shells"  # for the unrecoverable thunderfire shells that spawn with deployable thundefire drones
 
@@ -8997,7 +9076,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 # Section: Research
 # Faction: General
 ##########################################
-  STR_PERSONAL_ARMOR: "Astartes Power Armor"
+  STR_PERSONAL_ARMOR: "Power Armor Technology"
   STR_POWER_ARMOR_SM_CODEX: "Power Armor Analysis"
   STR_TERMINATOR_ARMOR_SM_CODEX: "Terminator Armor Analysis"
 
@@ -9260,9 +9339,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_REQUISITION_ASSASSINS_RESEARCH: "Order Imperial Assassins"
   STR_INQ_REQUISITION_ASSASSINS_EVENT: "Imperial Assassins Arrive"
   STR_INQ_REQUISITION_ASSASSINS_EVENT_DESCRIPTION: "The Officio Assassinorum have received your request and taken payment, two assassins have been dispatched to your location."
-  STR_INQ_SECURE_SUPPORT_ASSASSINS_RESEARCH: "Secure Imperial Assassins Support"
-  STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT: "Imperial Assassins Support Secured"
-  STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT_DESCRIPTION: "The Imperial Assassins academy has agreed in principle to regularly providing you with Imperial Assassins, but will only do so if they trust you are capable of repayment. They will provide an Imperial Assassin each Month at the cost of $300,000, but only if you have at least $2,000,000 in funds to work with."
+  STR_INQ_SECURE_SUPPORT_ASSASSINS_RESEARCH: "Establish Imperial Assassins Contract"
 
   STR_INQ_REQUISITION_GUARD_PILOTS_RESEARCH: "Requisition Guard Pilots"
   STR_INQ_REQUISITION_GUARD_PILOTS_EVENT: "Guard Pilots Have Arrived"
@@ -9275,6 +9352,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_MIDTIER_SUPPORT_ARBITES_DEP: "(INQ Midtier Arbites Support)"
 
   STR_INQ_RR_CRAFT_ACQUISITIONS: "Inquisitorial Craft Acquisitions"
+  STR_INQ_RR_CRAFT_ADVANCED: "Advanced Inquisitorial Craft"
 
 ## Start CM Radical Road Researches
   STR_INQ_RR_CONTACT_THE_ABHUMANS_RESEARCH: "Contact the Abhuman Community"
@@ -9312,6 +9390,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_RR_ARVUSSQUADRON_ACCESS: "(ARVUS SQUADRON Radical Road Access)"
   STR_INQ_ABHUMANS_RIPPER_GUN: "Ripper Gun" # manufacture
   STR_INQ_INTERROGATOR_REQUISITION: "Interrogator Indoctrination"
+
+  STR_INQ_RR_HELLBLADE_INTERCEPTORS_CHAOS: "HELLBLADES"
+  STR_INQ_RR_STORMRAVEN: "STORMRAVEN ±"
 
 ## Start CM Radical Road (Chaos)
   STR_INQ_RR_MIDTIER_CHAOS: "(Midtier) The Ends Justify the Means [Chaos]"
@@ -9351,6 +9432,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_INQ_CONSORT_AELDARI_RESEARCH: "Consort with the Aeldari"
   STR_INQ_CONSORT_TAU_RESEARCH: "Consort with the Tau"
+  STR_INQ_CONSORT_ORKS_RESEARCH: "Consort with the Orks"
   STR_INQ_XENOTECH_ANALYSIS_RESEARCH: "Xenotech Synthetic Analysis"
 
   STR_INQ_BLACK_MARKET_XENOTECH_RESEARCH: "Acquire Black Market Xenotech"
@@ -10395,6 +10477,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CULTIST_ARMORLV1PLAYER: "Chaos Cultist Clothes"
   STR_CULTIST_ARMORLV2PLAYER: "Chaos Cultist Armor"
   STR_CULTIST_ARMORPILOTPLAYER: "Chaos Cultist Pilot Armor"
+  STR_CULTIST_ARMORPILOTPLAYER_CODEX: "{NEWLINE} Stolen basic vest originally worn by pilots of the Imperial Guard, this vest provides protection in the cockpit against freezing temperatures high in the atmosphere. An outdated model usually brought in by pilots defecting to chaos warbands or scavenged during raids to imperial depots."
   STR_CULTISTLV1_CORPSE_GEO: "Chaos Cultist Corpse"
   STR_CULTISTLV2_CORPSE_GEO: "Chaos Veteran Cultist Corpse"
   STR_CULTISTPILOT_CORPSE_GEO: "Chaos Cultist Pilot Corpse"
@@ -10651,13 +10734,16 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BLOODLETTERSPAWNER_GRENADE_PLAYER: "Summon Bloodletter"
 
   STR_CHAOS_CROZIUS_PLAYER: "Chaos Crozius"
+  STR_CHAOS_CROZIUS_PLAYER_CODEX: "The Chaos Crozius or Accursed Crozium is a special form of Daemon Weapon, and serves as the mark of office and primary melee weapon high ranking chaos priest and Dark Apostoles of the Word Bearers Traitor Legion. The weapon is often bound a Lesser Daemon of Chaos Undivided, put there as a reward to the user for his travails spreading the corrupting influence of Chaos"
   STR_CHAOS_CROZIUS_SORC_PLAYER: "Chaos Blessed Crozius"
+  STR_CHAOS_CROZIUS_SORC_PLAYER_CODEX: "When a Chaos Priests successfully transform into a Chaos Sorcerer its Crozium also becomes a blessed instrument of chaos, allowing the Sorcerer to imbue even more chaos energy in its summon and abilities"
   STR_CHAOS_CROZIUS_POWER1: "Warpfire"
   STR_CHAOS_CROZIUS_POWER2: "High Warpfire"
   STR_SUMMON_THINGS: "Summon"
   STR_SUMMON_HIGH_THINGS: "High Summon"
   STR_CHAOS_HELLGUN_UNCHAINED: "Chaos Hellgun Unchained"
   STR_PSYKER_STAFFCHAOS: "Chaos Priest Staff"
+  STR_PSYKER_STAFFCHAOS_CODEX: "Psyker staffs, or Force Staves, are specialized melee weapons used to amplify a psyker mental powers, enabling devastating ranged attacks like fire, lightning or telekinetic blasts. When corrupted by chaos these staff no longer shield the user from the dangers of the warp but amplify it without any protection, leaving the user at the mercy or blessing of the chaos gods"
   STR_CULTOBLITERATOR_WEAPON: "Obliterator Weapon"
   STR_LASCANONATOR: "Lascannon Destroyer"
   STR_PLASMANATOR: "Plasma Executor"
@@ -11910,17 +11996,17 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ADV_DROPPODS: "Firestorm Drop Pods Requisition"
   STR_DROPPOD_ARMOR: "Firestorm Drop Pod"
 
-  STR_GAIN_500: "(+500 Monthly Score)"
-  STR_GAIN_250: "(+250 Monthly Score)"
-  STR_GAIN_100: "(+100 Monthly Score)"
+  STR_GAIN_500: "(+500 Score This Month)"
+  STR_GAIN_250: "(+250 Score This Month)"
+  STR_GAIN_100: "(+100 Score This Month)"
 
-  STR_LOSE_50: "(-50 Monthly Score)"
-  STR_LOSE_100: "(-100 Monthly Score)"
-  STR_LOSE_200: "(-200 Monthly Score)"
-  STR_LOSE_250: "(-250 Monthly Score)"
-  STR_LOSE_500: "(-500 Monthly Score)"
-  STR_LOSE_750: "(-750 Monthly Score)"
-  STR_LOSE_1000: "(-1000 Monthly Score)"
+  STR_LOSE_50: "(-50 Score This Month)"
+  STR_LOSE_100: "(-100 Score This Month)"
+  STR_LOSE_200: "(-200 Score This Month)"
+  STR_LOSE_250: "(-250 Score This Month)"
+  STR_LOSE_500: "(-500 Score This Month)"
+  STR_LOSE_750: "(-750 Score This Month)"
+  STR_LOSE_1000: "(-1000 Score This Month)"
 
   # imperial ai bases
 

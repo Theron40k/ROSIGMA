@@ -148,7 +148,7 @@ events:
     background: VALHALLANICEWARRIORSBG.SCR
     everyMultiSoldierList:
       STR_GUARD_VALHALLAN: 28
-      STR_GUARDSL_OFFICER: 2 #replace with Valhallan officers
+      STR_GUARD_VALHALLAN_OFFICER: 2
     timer: 780
     timerRandom: 0
     researchList: [STR_VALHALLAN_STRATEGY]
@@ -156,19 +156,22 @@ events:
     everyMultiItemList:
       STR_CHIMERA_LIGHT_TOKEN: 1 #replace with Valhallan transport
       STR_LIGHTNING_TOKEN: 1
-      STR_GUARD_ARMORS_MEDIC: 2 #need Valhallan Medics
-      STR_LONG_RIFLE_GUARD: 4
+      STR_GUARD_ARMORS_MEDIC: 2
+      STR_VALHALLAN_AUTOSTUBBER: 4
+      STR_VALHALLAN_STUBRIFLE: 20
+      STR_STUB_GUN_AMMO: 16
+      STR_STUB_GUN_AMMO_DRUM: 8
       STR_STUB_GUN_AMMO_AP: 8
       STR_STUB_GUN_AMMO_HP: 8
       STR_STUB_GUN_AMMO_INC: 8
-      STR_HC_AP_AMMO: 8
-      STR_LASCARBINE_STEEL_LEGION: 6
-      STR_LASER_RIFLE: 18
-      STR_LASGUN_CLIP: 24
+      STR_VALHALLAN_AUTOGUN: 6
+      STR_AUTOGUN_CLIP: 12
+      STR_LASER_RIFLE: 6
+      STR_LASGUN_CLIP: 12
       STR_FLAMETHROWER: 2
       STR_FLAMETHROWER_CLIP: 8
       STR_DISPOSABLE_LAUNCHER_KRAK: 10
-      STR_GRENADE_LAUNCHER: 4
+      STR_GRENADE_LAUNCHER: 2 #Repalce with Valhallan Pattern GL
       STR_FRAG_GRENADE_DRUM: 8
       STR_KRAK_GRENADE_DRUM: 4
       STR_INCENDIARY_GRENADE_DRUM: 2
@@ -206,6 +209,16 @@ events:
     background: SLBG1.SCR
     spawnedPersons: 3
     spawnedPersonType: STR_GUARDSL_VETERAN
+    spawnedSoldier:
+      rank: 1
+    timer: 720
+    timerRandom: 60
+
+  - name: STR_VALHALLAN_VETERANS_EVENT
+    description: STR_VALHALLAN_VETERANS_EVENT_DESCRIPTION
+    background: VALHALLANICEWARRIORSBG.SCR
+    spawnedPersons: 3
+    spawnedPersonType: STR_GUARD_VETERAN_VALHALLAN
     spawnedSoldier:
       rank: 1
     timer: 720

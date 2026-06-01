@@ -2992,14 +2992,35 @@ extraSprites:
   - typeSingle: VALHALLAN_CARAPACE_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_CARAPACE_CODEX.png
 
+  - typeSingle: VALHALLAN_STORMTROOPER2_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STORMTROOPER2_CODEX.png
+
   - typeSingle: VALHALLAN_OFFICER_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_OFFICER_CODEX.png
+
+  - typeSingle: VALHALLAN_CARAPACE_OFFICER_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_CARAPACE_OFFICER_CODEX.png
+
+  - typeSingle: VALHALLAN_STORMTROOPER_OFFICER2_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STORMTROOPER_OFFICER2_CODEX.png
 
   - typeSingle: VALHALLAN_SNIPER_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_SNIPER_CODEX.png
 
   - typeSingle: VALHALLAN_VETERAN2_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_VETERAN2_CODEX.png
+
+  - typeSingle: VALHALLAN_MEDIC_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_MEDIC_CODEX.png
+
+  - typeSingle: VALHALLAN_CARAPACE_MEDIC_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_CARAPACE_MEDIC_CODEX.png
+
+  - typeSingle: VALHALLAN_STORMTROOPER_MEDIC_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STORMTROOPER_MEDIC_CODEX.png
+
+  - typeSingle: VALHALLAN_STUBRIFLE_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STUBRIFLE_CODEX.png
 
   - type: VALHALLAN_FLAK_BS.PCK
     width: 512
@@ -3054,6 +3075,34 @@ extraSprites:
     files:
       0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_caraprace_officer.png
       1000: Resources/UnitSprites/bs_valhalla_carapace_officer_sb.png
+
+  - type: VALHALLAN_STORMTROOPER_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_stormtrooper.png
+      1000: Resources/UnitSprites/bs_valhalla_stormtrooper_sb.png
+
+  - type: VALHALLAN_STORMTROOPER_MEDIC_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_stormtrooper_medic.png
+      1000: Resources/UnitSprites/bs_valhalla_stormtrooper_medic_sb.png
+
+  - type: VALHALLAN_STORMTROOPER_OFFICER_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_stormtrooper_officer.png
+      1000: Resources/UnitSprites/bs_valhalla_stormtrooper_officer_sb.png
+
 
   # VALHALLAN ROOKIE Inventory
   - typeSingle: GUARD_VALHALLAN_ROOKIE_33F0.SPK
@@ -3139,6 +3188,90 @@ extraSprites:
   - typeSingle: GUARD_VALHALLAN_FLAK_33M9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m9.png
 
+ # VALHALLAN FLAK MEDIC Inventory
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m9.png
+
+ # VALHALLAN FLAK OFFICER Inventory
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m9.png
+
  # VALHALLAN CARAPACE Inventory
   - typeSingle: GUARD_VALHALLAN_CARAPACE_33F0.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f0.png
@@ -3180,6 +3313,180 @@ extraSprites:
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m8.png
   - typeSingle: GUARD_VALHALLAN_CARAPACE_33M9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m9.png
+
+ # VALHALLAN CARAPACE MEDIC Inventory
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m9.png
+
+ # VALHALLAN CARAPACE OFFICER Inventory
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m9.png
+
+ # VALHALLAN STORMTROOPER Inventory
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m9.png
+
+ # VALHALLAN STORMTROOPER MEDIC Inventory
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m9.png
+
+ # VALHALLAN STORMTROOPER OFFICER Inventory
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPEROFFICER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPEROFFICER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPEROFFICER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPEROFFICER/man_0m0.png
 
   # Elite guard armors PCKs
   - type: STORMTROOPER_CARAPACE.PCK
@@ -4097,6 +4404,9 @@ extraSprites:
   - typeSingle: INQUISITOR_CODEX.SPK
     fileSingle: Resources/CODEX/INQUISITOR_CODEX.png
 
+  - typeSingle: STR_GK_HB.SPK
+    fileSingle: Resources/CODEX/GREY_KNIGHTS_HANDBOLTER_CODEX.png
+
   # INQ STORMTROOPER Inventory
   - typeSingle: INQ_STORMTROOPER_INV_F0.SPK
     fileSingle: Resources/GREY/INQ_STORMTROOPER_INV/INQ_STORMTROOPER_INV_F0.png
@@ -4989,6 +5299,48 @@ extraSprites:
   - typeSingle: CDREAD_LASCAN.SPK
     fileSingle: Resources/UnitSprites/Armors/CDREAD_LASCAN_INV.png
 
+  # Chaos Aspirant Paperdoll
+  - typeSingle: PCASPIRANT__DECO_PAULDRON_MARK_R
+    fileSingle: Resources/LAYER/PCASPIRANT/DECORATIONS/PCASPIRANT_DECO_PAULDRON_MARK_R.png
+  - typeSingle: PCASPIRANT__DECO_PAULDRON_WIDE_MARK_R
+    fileSingle: Resources/LAYER/PCASPIRANT/DECORATIONS/PCASPIRANT_DECO_PAULDRON_WIDE_MARK_R.png
+
+  - typeSingle: PCASPIRANT__TORSO_CARAPACE
+    fileSingle: Resources/LAYER/PCASPIRANT/PCASPIRANT_TORSO_CARAPACE.png
+
+  - typeSingle: PCASPIRANT__HEAD_HELMET
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_HEAD_HELMET.png
+  - typeSingle: PCASPIRANT__MHEAD_BLACK
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_BLACK.png
+  - typeSingle: PCASPIRANT__MHEAD_BLACK2
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_BLACK2.png
+  - typeSingle: PCASPIRANT__MHEAD_PALE
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_PALE.png
+  - typeSingle: PCASPIRANT__MHEAD_TAN
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_TAN.png
+
+  - typeSingle: PCASPIRANT__SHOULDERS_PAULDRONS
+    fileSingle: Resources/LAYER/PCASPIRANT/SHOULDERS/PCASPIRANT_SHOULDERS_PAULDRONS.png
+  - typeSingle: PCASPIRANT__SHOULDERS_PAULDRONS_WIDE
+    fileSingle: Resources/LAYER/PCASPIRANT/SHOULDERS/PCASPIRANT_SHOULDERS_PAULDRONS_WIDE.png
+
+  - typeSingle: PCASPIRANT__ARMS_GAUNTLET
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_GAUNTLET.png
+  - typeSingle: PCASPIRANT__ARMS_BLACK
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_BLACK.png
+  - typeSingle: PCASPIRANT__ARMS_BLACK2
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_BLACK2.png
+  - typeSingle: PCASPIRANT__ARMS_PALE
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_PALE.png
+  - typeSingle: PCASPIRANT__ARMS_TAN
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_TAN.png
+
+  - typeSingle: PCASPIRANT__LEGS_ARMORED
+    fileSingle: Resources/LAYER/PCASPIRANT/LEGS/PCASPIRANT_LEGS_ARMORED.png
+  - typeSingle: PCASPIRANT__LEGS_BOOTS
+    fileSingle: Resources/LAYER/PCASPIRANT/LEGS/PCASPIRANT_LEGS_BOOTS.png
+  - typeSingle: PCASPIRANT__LEGS_UNARMORED
+    fileSingle: Resources/LAYER/PCASPIRANT/LEGS/PCASPIRANT_LEGS_UNARMORED.png
 
   # Khorne Berserker
   - type: KHORNE_BERSERKER_HORNS.PCK
@@ -6608,6 +6960,10 @@ extraSprites:
   - typeSingle: SLAANESH_CSM_CHAMPION_ARMOR_CODEX.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/SLAANESH_CSM_CHAMPION_ARMOR_CODEX.png
 
+  # Cultist High Priest Codex art Port + Update from 40k mod
+  - typeSingle: UP102.SPK # Cultist High Priest
+    fileSingle: Resources/FOESPEDIAADEPTAS/UP102.png
+
   # Behemoth Codex art porting from 40k due to SPKs not submodding.
   - typeSingle: UP126.SPK  # BEHEMOTH
     fileSingle: Resources/FOESPEDIAADEPTAS/UP126.png
@@ -7302,6 +7658,9 @@ extraSprites:
 
   - typeSingle: STR_PLAGUE_SPEWER.SPK
     fileSingle: Resources/CODEX/PLAGUE_SPEWER_CODEX.png
+
+  - typeSingle: REAPER_AUTOCANNON.SPK
+    fileSingle: Resources/CODEX/REAPER_AUTOCANNON.png
 
   - typeSingle: TG_BATTLESERVITORArmorPedia.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/BattleServitorHBArmorCodex.png
@@ -8071,6 +8430,8 @@ extraSprites:
     fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_helot_armor_codex.png
   - typeSingle: tzeentch_warp_thrall2.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_warp_thrall2.png
+  - typeSingle: tzeentch_warp_thrall.SPK
+    fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_warp_thrall.png
   - typeSingle: tzeentch_warp_thrall_armor.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_warp_thrall_armor.png
 
@@ -8784,16 +9145,16 @@ extraSprites:
   - typeSingle: WBMISSION09.SCR
     fileSingle: Resources/Backgrounds/wbmission09.png
 
-  - type: INFILTRATOR_MISSION.SPK
+  - typeSingle: INFILTRATOR_MISSION.SPK
     fileSingle: Resources/CODEX/infiltratormission.png
 
-  - type: SPYIMPNET.SPK
+  - typeSingle: SPYIMPNET.SPK
     fileSingle: Resources/CODEX/spyimperialnet.png
 
-  - type: CHAOSRHINOLOC.SPK
+  - typeSingle: CHAOSRHINOLOC.SPK
     fileSingle: Resources/CODEX/chaosrhinoloc.png
 
-  - type: SACREDARTIFACTSECUR.SPK
+  - typeSingle: SACREDARTIFACTSECUR.SPK
     fileSingle: Resources/CODEX/chaosartifactsecur.png
 
   - typeSingle: WBVINDI.SPK
@@ -8898,6 +9259,11 @@ extraSprites:
 
   - typeSingle: CHAOSCULT_PRIESTFLV2invent.SPK
     fileSingle: Resources/UnitSprites/Armors/CULTISTpriestFLV2invent.png
+
+  - typeSingle: STR_PSYKER_STAFFCHAOS.SPK
+    fileSingle: Resources/CODEX/STR_PSYKER_STAFFCHAOS_CODEX.png
+  - typeSingle: STR_CHAOS_CROZIUS_PLAYER.SPK
+    fileSingle: Resources/CODEX/CHAOS_CROZIUM_CODEX.png
 
   - type: CHAOSCULT_GUARDCARAPbattle.PCK
     width: 512
@@ -9034,6 +9400,9 @@ extraSprites:
 
   - typeSingle: CHAOSCULTGENERIC.SPK
     fileSingle: Resources/CODEX/genericchaoscult.png
+
+  - typeSingle: STR_CULTIST_ARMORPILOT.SPK
+    fileSingle: Resources/CODEX/CHAOS_CULTIST_PILOT_SUIT_CODEX.png
 
   - type: CHAOSCULT_OBLITERATORbattle.PCK
     subX: 32
@@ -12353,7 +12722,7 @@ extraSprites:
       0: Resources/FOES/Battlesprites/gangergoliathbattle.png
 
   - typeSingle: STR_SHIVGANG.SPK
-    fileSingle: Resources/CODEX/GANGERS_SHIV_CODEX.png
+    fileSingle: Resources/CODEX/GANGERS_SHIV2_CODEX.png
 
   - typeSingle: STR_MAKESHIFT_PIPEBOMB.SPK
     fileSingle: Resources/CODEX/PIPEBOMB_CODEX.png
@@ -13931,7 +14300,7 @@ extraSprites:
     files:
       0: Resources/GENE/bs_locus_cloaked.png
 
-  - type: BS_LOCUS_FRENZIED.PCK  # DR4
+  - type: BS_LOCUS_FRENZIED.PCK  # DR0
     width: 512
     height: 720
     subX: 32
@@ -13945,7 +14314,45 @@ extraSprites:
   - typeSingle: ARMOR_LOCUS.SPK
     fileSingle: Resources/GENE/ARMOR_GSC_LOCUS.png
 
+#Primus
+
+  - typeSingle: INV_PRIMUS.SPK
+    fileSingle: Resources/GENE/INV_GSC_PRIMUS.png
+
+  - type: BS_PRIMUS.PCK # DR0
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/GENE/BS_GSC_MAGUS.png #change
+
+  - typeSingle: ORIGINS_PRIMUS.SPK
+    fileSingle: Resources/GENE/ORIGINS_GSC_MAGUS.png #change
+
+  - typeSingle: ARMOR_PRIMUS.SPK
+    fileSingle: Resources/GENE/ARMOR_GSC_MAGUS.png #change
+
 #magus
+
+  - typeSingle: INV_MAGUS.SPK
+    fileSingle: Resources/GENE/INV_GSC_MAGUS_M.png #add female variant #add morph variant
+
+  - type: BS_MAGUS.PCK  # DR0
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/GENE/BS_GSC_MAGUS.png
+
+  - typeSingle: ORIGINS_MAGUS.SPK
+    fileSingle: Resources/GENE/ORIGINS_GSC_MAGUS.png
+
+  - typeSingle: ARMOR_MAGUS.SPK
+    fileSingle: Resources/GENE/ARMOR_GSC_MAGUS.png
+
+#magus metamorph
 
 #aberrant
   - typeSingle: INV_ABERRANT.SPK
@@ -16537,3 +16944,6 @@ extraSprites:
 
   - typeSingle: TECHPRIEST_CODEX.SPK
     fileSingle: Resources/CODEX/TECHPRIEST_CODEX.png
+
+  - typeSingle: STR_PURITY_SEAL.SPK
+    fileSingle: Resources/CODEX/STR_PURITY_SEAL_CODEX.png

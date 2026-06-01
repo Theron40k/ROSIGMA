@@ -1392,16 +1392,36 @@ items:
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [6]
       STR_BIOVORE_CORPSE: [1]
-  - type: STR_TYRANID_RIPPERSWARM_CORPSE
+  - type: STR_RIPPERSWARM_CORPSE
     costSell: 250
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [1]
-      STR_TYRANID_RIPPERSWARM_CORPSE: [1]
-  - type: STR_RIP_CORPSE_16_1
-    costSell: 1000
+      STR_RIPPERSWARM_CORPSE: [1]
+  - type: STR_RIP_CORPSE_16 # unused for now
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [16]
+      STR_RIPPERSWARM_CORPSE: [16]
+  - type: STR_RIP_CORPSE_12
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [12]
+      STR_RIPPERSWARM_CORPSE: [12]
+  - type: STR_RIP_CORPSE_8
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_RIPPERSWARM_CORPSE: [8]
+  - type: STR_RIP_CORPSE_4
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_RIPPERSWARM_CORPSE: [4]
+  - type: STR_RIP_CORPSE_2
+    # costSell: 1000 # no sell price it gets transformed
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
-      STR_TYRANID_RIPPERSWARM_CORPSE: [4]
+      STR_RIPPERSWARM_CORPSE: [2]
   - type: STR_TYRANID_WARRIOR_CORPSE
     costSell: 10000
     recoveryTransformations:
@@ -2004,6 +2024,68 @@ items:
       STR_KILLPOINT_TOKEN: [5]
       STR_STEELLEGION_CARAPACE_OFFICER_CORPSEAI: [1]
 
+  - type: STR_BEASTGUARD_CORPSE_OPFOR
+    costSell: 1000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [1]
+      STR_BEASTGUARD_CORPSE_OPFOR: [1]
+
+  - type: STR_BEASTGUARD_CORPSE_MEDIC_OPFOR
+    #costSell: 1000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_BEASTGUARD_CORPSE_OPFOR: [1]
+
+  - type: STR_BEASTGUARD_CORPSE_ARMOR_OPFOR
+    #costSell: 1000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_ALIEN_ALLOYS: [1]
+      STR_BEASTGUARD_CORPSE_OPFOR: [1]
+
+  - type: STR_GUARD_SQUAT_CORPSE_OPFOR
+    costSell: 1500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_GUARD_SQUAT_CORPSE_OPFOR: [1]
+
+  - type: STR_GUARD_SQUAT_ARMOR_CORPSE_OPFOR
+    #costSell: 1500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [3]
+      STR_ALIEN_ALLOYS: [1]
+      STR_GUARD_SQUAT_CORPSE_OPFOR: [1]
+
+  - type: STR_TANITH_CAMO_CORPSE_OPFOR
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_TANITH_CAMO_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CORPSE_OPFOR
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CARAPACE_CORPSE_OPFOR
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_ALIEN_ALLOYS: [1]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CORPSE_ARMOR_SHIELD_OPFOR
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_ALIEN_ALLOYS: [2]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CORPSE_ARMOR_BUCKLER_OPFOR
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_ALIEN_ALLOYS: [2]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
   - type: STR_SCOUT_AICORPSE
     costSell: 7500
     recoveryTransformations:
@@ -2222,6 +2304,11 @@ items:
       STR_ALIEN_ALLOYS: [3]
       STR_WHITESCARSCAP_AICORPSE: [1]
 
+  - type: STR_WSBIKE_CORPSE
+    costSell: 4500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_WSBIKE_CORPSE: [1]
 
   - type: STR_SALAMANDERSCOUT_AICORPSE
     costSell: 7500
@@ -2276,6 +2363,13 @@ items:
       STR_KILLPOINT_TOKEN: [15]
       STR_ALIEN_ALLOYS: [2]
       STR_SALAMANDERHONOR_AICORPSE: [1]
+
+# adeptas soritas
+  - type: STR_REPRISALIA_AI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_REPRISALIA_AI_CORPSE: [1]
 
   # adeptas bloody roses AI
 
@@ -2356,6 +2450,22 @@ items:
       STR_KILLPOINT_TOKEN: [15]
       STR_ALIEN_ALLOYS: [2]
       STR_DARKANGELHONOR_AICORPSE: [1]
+# inquisition troopers
+  - type: STR_INQ_SLGUARD_CORPSE
+    costSell: 2500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_INQ_SLGUARD_CORPSE: [1]
+  - type: STR_IMPERIAL_INQUISITOR_AI_CORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_INQ_INQUISITOR_INTERROGATOR_CORPSE: [1]
+  - type: STR_INQ_INQUISITOR_INTERROGATOR_CORPSE
+    costSell: 7500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_INQ_INQUISITOR_INTERROGATOR_CORPSE: [1]
 
 # inquisition stormtroopers
   - type: STR_INQ_STORMTROOPER_AI_CORPSE
@@ -2371,6 +2481,11 @@ items:
       STR_ALIEN_ALLOYS: [1]
       STR_INQ_STORMTROOPER_ELITE_AI_CORPSE: [1]
 
+  - type: STR_INQ_STORMTROOPER_OFFICER_CORPSE
+    costSell: 9000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_INQ_STORMTROOPER_OFFICER_CORPSE: [1]
 
 # redemptionist + redeemed cultist AI
   - type: STR_REDEMPTIONIST_CORPSE
@@ -2385,6 +2500,12 @@ items:
       STR_KILLPOINT_TOKEN: [7]
       STR_REDEEMED_CORPSE: [1]
 
+## ADMECH ADEPTUS MECHANICUS
+  - type: STR_ENGINSEER_OPFOR_CORPSE
+    costSell: 15000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ENGINSEER_OPFOR_CORPSE: [1]
 
   # tau enemies
 
