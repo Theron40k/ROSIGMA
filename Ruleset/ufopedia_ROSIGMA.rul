@@ -9658,6 +9658,14 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  - id: STR_ROTORATOR
+    requires:
+      - STR_ROTOR_CANNON_RESEARCH
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ROTOR_CANNON_CODEX.SPK
+    text: STR_ROTORATOR_CODEX #brass scorpion rotor annihilator
+
   # Stubcannons
   - id: STR_STUBCANNON_GUARD
     type_id: 14
@@ -11822,6 +11830,17 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  # WB obliterator Lascannons
+  - id: STR_WBLASCANONATOR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1LC.SPK
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBOBLITERATOR_SUIT
+      - STR_BOOK_KORPHAERON
+    text: STR_WBLASCANONATOR_CODEX
+
 #WEAPONS.FLAME#  Flamers
   # Flamers
   - delete: STR_FLAMETHROWER
@@ -11905,6 +11924,23 @@ ufopaedia:
   - id: STR_PLAGUE_SPEWER_TANK_PLAYER
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+  # Phospex weapons
+  - &PHOSPEX_GENERIC_TEMPLATE
+    id: STR_PHOSPHEXCANNON
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: PHOSPEX_BOMB_CODEX.SPK
+    text: STR_PHOSPHEX_GENERIC_CODEX
+
+  - id: STR_PHOSPHEX_ASHENGUN_TOKEN
+    refNode: PHOSPEX_GENERIC_TEMPLATE
+  - id: STR_BURN_PHOSPHEX
+    refNode: PHOSPEX_GENERIC_TEMPLATE
+  - id: STR_PHOSPHEXGUN_SKILL
+    refNode: PHOSPEX_GENERIC_TEMPLATE
+  - id: STR_WB_ASHENPHOSPHEX
+    refNode: PHOSPEX_GENERIC_TEMPLATE
 
 #WEAPONS.MELT#    Meltas
   # Light Melta
@@ -12334,6 +12370,17 @@ ufopaedia:
   - id: STR_PLASMA_TWINCORE_CLIP
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+  # WB obliterator Plasma cannon
+  - id: STR_WBPLASMANATOR  # Heavy Plasma
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBOBLITERATOR_SUIT
+      - STR_BOOK_KORPHAERON
+    text: STR_WBPLASMANATOR_CODEX
 
 #WEAPONS.GRAV#    Graviton
   - delete: STR_GRAV_AMMO
@@ -12928,6 +12975,17 @@ ufopaedia:
     text: STR_MORTAR_AMMO_FRAG_EXPLOSION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
 
+#WEAPONS.EXPLO.WB#   WB exclusive explosives
+  - id: STR_WBOBLITERATOR_WEAPON
+    type_id: 14
+    image_id: WARPFIRE_MISSILE_LAUNCHER_CODEX.SPK
+    text: STR_WBOBLITERATOR_WEAPON_CODEX
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBOBLITERATOR_SUIT
+      - STR_BOOK_KORPHAERON
+
 #WEAPONS.GREN#    Grenades
   # Grenades
   - delete: STR_GRENADE
@@ -13237,6 +13295,11 @@ ufopaedia:
     requires:
       - STR_POWER_SUIT
       - STR_CHAOS_ARMORY_EXAM_BASIC
+  - id: STR_WBMUTILATOR_CLAW
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX # TODO develop a better description since it's a pincer claw instead of simple power claw
 
   - delete: STR_POWER_SWORD
   - id: STR_POWER_SWORD
