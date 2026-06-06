@@ -66,8 +66,8 @@
 # #CM.DW#             Deathwatch
 # #CM.GK#             Grey Knights
 # #CM.RAD#            The Radical Road
+# #CM.LAW#            The Imperial Law Strategy
 # #AT#              Adeptus Terra
-# #AT.LAW#            The Imperial Law Strategy
 # #AT.CULT#           Chaos Cult
 # #AT.ORKZ#           Da Emprah's Greenest
 # #SOB#             Adeptas
@@ -119,8 +119,8 @@
   #FOES.CM.DW#             Deathwatch
   #FOES.CM.GK#             Grey Knights
   #FOES.CM.RAD#            The Radical Road
+  #FOES.CM.LAW#            The Imperial Law Strategy
   #FOES.AT#              Adeptus Terra Units
-  #FOES.AT.LAW#            The Imperial Law Strategy
   #FOES.AT.CULT#           Chaos Cult
   #FOES.SOB#             Adeptas Units
   #FOES.IG#              Imperial Guard Units
@@ -963,18 +963,8 @@ ufopaedia:
       - title: STR_OA_MIDTIER_REPORT
         text: STR_OA_MIDTIER_UFOPEDIA_PAGE2
 
-## #STRATEGY.AT#
-  # The topics in this section should be reworked. Need top level adeptus terra articles.
+### #STRATEGY.CM.LAW#
 
-### #STRATEGY.AT.LAW#
-  - delete: STR_STRATEGY_INTROPD
-  - id: STR_STRATEGY_INTROPD
-    type_id: 10
-    section: STR_STRATEGY
-    image_id: 2ARB.SPK
-    text: STR_STRATEGY_TEXT_INTRO
-    requires:
-      - STR_ARBITES
   - delete: STR_CHOSEN_ARBITES
   - id: STR_CHOSEN_ARBITES
     type_id: 10
@@ -983,11 +973,22 @@ ufopaedia:
       - STR_THE_IMPERIAL_LAW_STRATEGY
     image_id: 4ARR.SPK
   - delete: STR_ARBITES
-  - id: STR_ARBITES
+  - id: STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 10
     section: STR_STRATEGY
     image_id: 4ARB.SPK
     text: STR_ARBITES_TEXT
+    requires:
+      - STR_CHAMBERMILITANT
+
+## #STRATEGY.AT#
+  # The topics in this section should be reworked. Need top level adeptus terra articles.
+  - delete: STR_STRATEGY_INTROPD
+  - id: STR_STRATEGY_INTROPD
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: 2ARB.SPK
+    text: STR_STRATEGY_TEXT_INTRO
     requires:
       - STR_ARBITES
 
@@ -1919,9 +1920,7 @@ ufopaedia:
     section: STR_ALIEN_RESEARCH_UC
     image_id: INQUISITOR_CODEX.SPK
     text: STR_SUMMON_DAEMONS_RESEARCH_DESCRIPTION
-
-## #RESEARCH.AT#
-### #RESEARCH.AT.LAW#
+### #RESEARCH.CM.LAW#
   - delete: STR_ARBITES_BUST
   - id: STR_ARBITES_BUST
     type_id: 10
@@ -1934,6 +1933,8 @@ ufopaedia:
         text: STR_ARBITES_BUST_UFOPEDIA
       - title: STR_ARBITES_BUST
         text: STR_ARBITES_BUST_UFOPEDIA_PAGE2
+
+## #RESEARCH.AT#
 ### #RESEARCH.AT.CULT#
 
   - id: STR_SACRIFICE_TO_CHAOS
@@ -3024,8 +3025,7 @@ ufopaedia:
     requires:
       - STR_DEFENSE_CORRIDORGK
 ### #FACILITIES.CM.RAD#
-## #FACILITIES.AT#
-### #FACILITIES.AT.LAW#
+### #FACILITIES.CM.LAW#
   - delete: STR_PRISION
   - id: STR_PRISION
     type_id: 16
@@ -3043,6 +3043,7 @@ ufopaedia:
     requires:
       - STR_ARBITES_MIDTIER
       - STR_THE_IMPERIAL_LAW_STRATEGY
+## #FACILITIES.AT#
   - delete: STR_DEFENSE_HALL
   - id: STR_DEFENSE_HALL
     type_id: 16
@@ -3772,8 +3773,7 @@ ufopaedia:
     image_id: 3CONTA.SPK # need better image
     text: STR_ADVANCED_TELEPORTARIUM_UFOPEDIA
 
-## #CRAFTS.AT#
-### #CRAFTS.AT.LAW#
+### #CRAFTS.CM.LAW#
   - delete: STR_VULTURE
   - id: STR_VULTURE
     type_id: 11
@@ -3861,6 +3861,7 @@ ufopaedia:
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_LANDRAIDER_ARBITES
 
+## #CRAFTS.AT#
 ### #CRAFTS.AT.CULT#
   - id: STR_VALKYRIE_CHAOS
     section: STR_XCOM_CRAFT_ARMAMENT
@@ -5060,8 +5061,7 @@ ufopaedia:
       - STR_GREYKNIGHTS
     text: STR_DREAD_ARMOR5_UC_UFOPEDIA
 #HWPS.CM.RAD#          Radical Road Strategy
-#HWPS.AT#            Adeptus Terra HWPs
-#HWPS.AT.LAW#          The Imperial Law Strategy
+#HWPS.CM.LAW#          The Imperial Law Strategy
   - id: AUX_ARBITES_OUTBOLTER  # Double Bolters
     # Arbites Bike
     type_id: 14
@@ -5081,6 +5081,7 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+#HWPS.AT#            Adeptus Terra HWPs
 #HWPS.AT.CULT#         Chaos Cult Strategy
 #HWPS.SOB#           Adeptas HWPs
   - delete: STR_PENITENT_ENGINE
@@ -5414,8 +5415,7 @@ ufopaedia:
 ## #SOLDIERS.CM.DW#        Deathwatch Strategy
 ## #SOLDIERS.CM.GK#        Grey Knights Strategy
 ## #SOLDIERS.CM.RAD#       Radical Road Strategy
-# #SOLDIERS.AT#         Adeptus Terra Soldiers
-## #SOLDIERS.AT.LAW#       The Imperial Law Strategy
+## #SOLDIERS.CM.LAW#       The Imperial Law Strategy
   - delete: STR_CMAS
   - id: STR_CMAS  # Cyber Mastiff
     type_id: 14
@@ -5425,6 +5425,7 @@ ufopaedia:
     weapon: STR_CMAS
     requires:
       - STR_THE_IMPERIAL_LAW_STRATEGY
+# #SOLDIERS.AT#         Adeptus Terra Soldiers
 ## #SOLDIERS.AT.CULT#      Chaos Cult Strategy
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
@@ -7567,8 +7568,7 @@ ufopaedia:
     image_id: REPRISALIA_ARMOR_CODEX.SPK
     text: STR_REPRISALIA_MEDIC_ARMOR_UFOPEDIA
 
-# #ARMORS.AT#               Adeptus Terra
-# #ARMORS.AT.LAW#             The Imperial Law Strategy
+# #ARMORS.CM.LAW#             The Imperial Law Strategy
   - delete: STR_PD
   - id: STR_PD
     # Intro
@@ -7670,6 +7670,7 @@ ufopaedia:
     requires:
       - STR_THE_IMPERIAL_LAW_STRATEGY
 
+# #ARMORS.AT#               Adeptus Terra
 # #ARMORS.AT.CULT#            Chaos Cult
   - id: STR_CULTIST_ARMORLV1PLAYER
     type_id: 15
@@ -16206,8 +16207,8 @@ ufopaedia:
     requires:
       - STR_DONTSHOWYET
       - STR_NEVERBORN_SPAWNER_GRENADE_PLAYER
+### #ITEMS.CM.LAW#
 ## #ITEMS.AT#
-### #ITEMS.AT.LAW#
 ### #ITEMS.AT.CULT#
 ## #ITEMS.SOB#
 ### #ITEMS.SOB.REP#
@@ -16936,8 +16937,8 @@ ufopaedia:
     image_id: UP131.SPK
     text: STR_NOT_DONE
 #FOES.CM.RAD#            The Radical Road
+#FOES.CM.LAW#            The Imperial Law Strategy
 #FOES.AT#              Adeptus Terra Units
-#FOES.AT.LAW#            The Imperial Law Strategy
 #FOES.AT.CULT#           Chaos Cult
 #FOES.SOB#             Adeptas Units
 
@@ -22105,8 +22106,8 @@ ufopaedia:
   #UFO.CIV#             General Imperial UFOs (Even if other factions use them)
   #UFO.SM#              Space Marines Units
   #UFO.CM#              Chamber Militant Units
+  #UFO.CM.LAW#            The Imperial Law Strategy
   #UFO.AT#              Adeptus Terra Units
-  #UFO.AT.LAW#            The Imperial Law Strategy
   #UFO.AT.CULT#           Chaos Cult
   #UFO.SOB#             Adeptas Units
   #UFO.IG#              Imperial Guard Units
