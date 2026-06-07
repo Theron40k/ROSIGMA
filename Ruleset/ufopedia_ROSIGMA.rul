@@ -7002,6 +7002,10 @@ ufopaedia:
       - STR_POWER_ARMOR_WB_CODEX
       - STR_BOOK_EREBUS
 
+  - id: STR_WB_FLYING_TOKEN
+    type_id: 15
+    section: STR_NOT_AVAILABLE
+
   - id: STR_WORDBEARER_TECHMARINE_ARMORPLAYER
     type_id: 15
     section: STR_WBARMORPEDIA
@@ -7031,7 +7035,7 @@ ufopaedia:
     text: STR_WBHELBRUTE_CODEX
     requires:
       - STR_WORDBEARERS_STRATEGY
-      - STR_WORDBEARER_HELBRUTE_ARMORPLAYER
+      - STR_DREADNOUGHT_MARINE
 
   - id: STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
     type_id: 15
@@ -7039,7 +7043,9 @@ ufopaedia:
     image_id: WORDBEARERSPOSSESSED.SPK
     text: STR_WORDBEARERPOSS_ARMOR_UFOPEDIA
     requires:
-      - STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
+      #- STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_CONSECRATE
 
   - id: STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
     type_id: 10
@@ -7047,7 +7053,9 @@ ufopaedia:
     image_id: WORDBEARERSMARINEELITECODEX.SPK
     text: STR_WORDBEARERMARINEELITE_CODEX
     requires:
-      - STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
+      #- STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_FAVOURS
 
   - id: STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
     type_id: 15
@@ -7055,7 +7063,9 @@ ufopaedia:
     image_id: WORDBEARERSELITEMARINE.SPK
     text: STR_WORDBEARERELITE_ARMOR_UFOPEDIA
     requires:
-      - STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
+      #- STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
+      - STR_WORDBEARERS_STRATEGY
+      - STR_DARKAPO_SUIT
 
   - id: STR_KHORNEDEMON_ARMORTEMPO
     type_id: 15
@@ -11841,6 +11851,16 @@ ufopaedia:
       - STR_BOOK_KORPHAERON
     text: STR_WBLASCANONATOR_CODEX
 
+  - id: STR_LASCANONATOR #Lascannon Destroyer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1LC.SPK
+    requires:
+      - STR_CHAOS_HIGHTIER
+      - STR_CHAOS_STRATEGY
+      - STR_BOONS_OBLITERATE_RESEARCH
+    text: STR_WBLASCANONATOR_CODEX
+
 #WEAPONS.FLAME#  Flamers
   # Flamers
   - delete: STR_FLAMETHROWER
@@ -12367,7 +12387,7 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
 
   # WB obliterator Plasma cannon
-  - id: STR_WBPLASMANATOR  # Heavy Plasma
+  - id: STR_WBPLASMANATOR
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1HP.SPK
@@ -12376,6 +12396,25 @@ ufopaedia:
       - STR_WBOBLITERATOR_SUIT
       - STR_BOOK_KORPHAERON
     text: STR_WBPLASMANATOR_CODEX
+
+  - id: STR_PLASMANATOR  # Cult obliterator plasma executor
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_CHAOS_HIGHTIER
+      - STR_CHAOS_STRATEGY
+      - STR_BOONS_OBLITERATE_RESEARCH
+    text: STR_WBPLASMANATOR_CODEX
+
+  - delete: AUX_HOVERTANK_PLASMA # Plasma cannon (for Dreadnaughts & other)
+  - id: AUX_HOVERTANK_PLASMA
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_HEAVY_PLASMA_DEP1
+    text: AUX_HOVERTANK_PLASMA_CODEX
 
 #WEAPONS.GRAV#    Graviton
   - delete: STR_GRAV_AMMO
@@ -12970,7 +13009,7 @@ ufopaedia:
     text: STR_MORTAR_AMMO_FRAG_EXPLOSION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
 
-#WEAPONS.EXPLO.WB#   WB exclusive explosives
+# Obliterator(s) exclusive explosives
   - id: STR_WBOBLITERATOR_WEAPON
     type_id: 14
     image_id: WARPFIRE_MISSILE_LAUNCHER_CODEX.SPK
@@ -12980,6 +13019,15 @@ ufopaedia:
       - STR_WORDBEARERS_STRATEGY
       - STR_WBOBLITERATOR_SUIT
       - STR_BOOK_KORPHAERON
+  - id: STR_CULTOBLITERATOR_WEAPON
+    type_id: 14
+    image_id: 1CH.SPK
+    text: STR_CULTOBLITERATOR_WEAPON_CODEX
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_CHAOS_HIGHTIER
+      - STR_CHAOS_STRATEGY
+      - STR_BOONS_OBLITERATE_RESEARCH
 
 #WEAPONS.GREN#    Grenades
   # Grenades
@@ -13294,7 +13342,13 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1PC.SPK
-    text: STR_GENERIC_POWER_CLAWS_CODEX # TODO develop a better description since it's a pincer claw instead of simple power claw
+    text: STR_MUTILATOR_CLAW_CODEX
+
+  - id: STR_HELBRUTE_CLAW
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK #TODO: find better immage
+    text: STR_HELBRUTE_CLAW_CODEX
 
   - delete: STR_POWER_SWORD
   - id: STR_POWER_SWORD
@@ -13337,6 +13391,28 @@ ufopaedia:
     requires:
       - STR_KHORNE_OPTIONS  # Favor of Khorne
       - STR_HIGHTIER_PREREQ
+
+  - id: STR_WBEXECUTIONER_AXE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: EXECUTIONER_AXE_CODEX.SPK
+    text: STR_WBEXECUTIONER_AXE_CODEX
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
+
+  - id: STR_WBEXECUTIONER_AXETRICK
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: EXECUTIONER_AXE_CODEX.SPK
+    text: STR_WBEXECUTIONER_AXE_CODEX
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
 
   - delete: STR_HAMMER
   - id: STR_HAMMER
@@ -14177,10 +14253,6 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
   - delete: AUX_HOVERTANK_LASER
   - id: AUX_HOVERTANK_LASER
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-  - delete: AUX_HOVERTANK_PLASMA
-  - id: AUX_HOVERTANK_PLASMA
     type_id: 14
     section: STR_NOT_AVAILABLE
   - delete: AUX_MEDI_KIT
