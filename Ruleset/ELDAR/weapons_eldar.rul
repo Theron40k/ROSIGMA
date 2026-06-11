@@ -1,0 +1,34 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+items:
+  - delete: STR_ELDAR_LAUNCHER
+  - type: STR_ELDAR_LAUNCHER
+    categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_PATH
+    size: 0.4
+    dropoff: 5
+    weight: 30
+    bigSprite: {mod: 40k, index: 405}
+    floorSprite: {mod: 40k, index: 419}
+    handSprite: 4850
+    bulletSprite: 0
+    fireSound: 52
+    clipSize: -1
+    power: 100
+    damageType: 3
+    accuracySnap: 70
+    accuracyAimed: 115
+    accuracyAuto: 55
+    tuSnap: 55
+    tuAimed: 85
+    tuAuto: 55
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    listOrder: 12100
