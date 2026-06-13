@@ -1,23 +1,6 @@
 extended:
   tagsFile: Ruleset/tags_ROSIGMA.rul
 
-units:
-  - type: STR_ELDAR_PLAT_P     # STR_ELDAR_ARMOR2                        RANK 7
-    race: STR_ELDAR
-    stats:
-      tu: 60
-      stamina: 30
-      health: 80
-      bravery: 110
-      reactions: 64
-      firing: 80
-      throwing: 0
-      strength: 90
-      psiStrength: 150
-      psiSkill: 0
-      melee: 0
-    energyRecovery: 30
-    livingWeapon: true
 
 soldiers:
 #Male eldars paths
@@ -180,6 +163,77 @@ soldiers:
       - delete
       - Names/eldar_reaper.nam
 
+  - type: STR_ELDAR_REAPER_EXARCH_M
+    group: 4
+    flagOffset: 100
+    costSalary: 25000
+    minStats:
+      tu: 60
+      stamina: 60
+      health: 60
+      bravery: 70
+      reactions: 40
+      firing: 65
+      throwing: 40
+      strength: 35
+      psiStrength: 55
+      psiSkill: 35
+      melee: 40
+    maxStats:
+      tu: 80
+      stamina: 80
+      health: 80
+      bravery: 90
+      reactions: 60
+      firing: 80
+      throwing: 55
+      strength: 60
+      psiStrength: 100
+      psiSkill: 70
+      melee: 50
+    statCaps:
+      stamina: 120
+      health: 120
+      bravery: 110
+      reactions: 85
+      firing: 130
+      throwing: 80
+      strength: 75
+      psiStrength: 110
+      psiSkill: 110
+      melee: 80
+    trainingStatCaps:
+      tu: 90
+      stamina: 90
+      health: 90
+      bravery: 90
+      reactions: 60
+      firing: 90
+      throwing: 60
+      strength: 65
+      psiStrength: 100
+      psiSkill: 100
+      melee: 65
+    armor: STR_ELDAR_ARMOR_EXARCH_P
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 0
+    avatarOffsetX: 66
+    avatarOffsetY: 42
+    rankStrings:
+      - STR_ASPECT_RANK_0
+      - STR_ASPECT_RANK_1
+      - STR_ASPECT_RANK_2
+      - STR_ASPECT_RANK_3
+      - STR_ASPECT_RANK_4
+    rankSprite: {mod: 40k, index: 951}
+    rankBattleSprite: {mod: 40k, index: 290}
+    rankTinySprite: {mod: 40k, index: 205}
+    soldierNames:
+      - delete
+      - Names/eldar_reaper.nam
 
 # Female eldars paths
   - type: STR_ELDAR_F
