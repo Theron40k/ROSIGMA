@@ -1,0 +1,448 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+
+soldiers:
+#Male eldars paths
+  - &ELDAR_GUARDIAN
+    type: STR_ELDAR_M
+    costBuy: 30000
+    costSalary: 15000
+    minStats:
+      tu: 45
+      stamina: 30
+      health: 25
+      bravery: 50
+      reactions: 40
+      firing: 55  # +5
+      throwing: 30
+      strength: 20
+      psiStrength: 50
+      psiSkill: 20
+      melee: 40
+    maxStats:
+      tu: 65
+      stamina: 65
+      health: 40
+      bravery: 80
+      reactions: 70
+      firing: 75
+      throwing: 60
+      strength: 30  # +5
+      psiStrength: 100
+      psiSkill: 10
+      melee: 50
+    statCaps:
+      tu: 80
+      stamina: 100
+      health: 70  # +10
+      bravery: 100
+      reactions: 80
+      firing: 110
+      throwing: 70
+      strength: 60
+      psiStrength: 100
+      psiSkill: 100
+      melee: 100
+    trainingStatCaps:
+      tu: 60
+      stamina: 80
+      health: 60
+      firing: 70
+      throwing: 65
+      strength: 30
+      psiStrength: 100
+      psiSkill: 100
+      melee: 80
+    soldierNames:
+      - delete
+      - Names/eldar_guardian_male.nam
+
+
+# Male eldar upgrade paths
+  - type: STR_ELDAR_SCORPION_M
+    costSalary: 20000
+    minStats:
+      tu: 40
+      stamina: 30
+      health: 45  # +10
+      bravery: 65  # +15
+      reactions: 40  # +10
+      firing: 40
+      throwing: 30
+      strength: 20
+      psiStrength: 50
+      psiSkill: 20
+      melee: 40
+    maxStats:
+      tu: 60  # +5
+      stamina: 65
+      health: 70  # +30
+      bravery: 80
+      reactions: 60  # +10
+      firing: 75  # +10
+      throwing: 60
+      strength: 40  # +15
+      psiStrength: 100
+      psiSkill: 10
+      melee: 60  # +10
+    statCaps:
+      tu: 80
+      stamina: 100
+      health: 75  # +15
+      bravery: 100
+      reactions: 90  # +10
+      firing: 110  # +10
+      throwing: 70
+      strength: 65  # +10
+      psiStrength: 100
+      psiSkill: 100
+      melee: 100
+    trainingStatCaps:
+      tu: 70  # +10
+      stamina: 80
+      health: 70  # +10
+      firing: 80  # +10
+      throwing: 65
+      strength: 45  # +15
+      psiStrength: 100
+      psiSkill: 100
+      melee: 80
+    soldierNames:
+      - delete
+      - Names/eldar_scorpion.nam
+  - type: STR_ELDAR_REAPER_M
+    costSalary: 20000
+    minStats:
+      tu: 40
+      stamina: 40  # +10
+      health: 40  # +5
+      bravery: 60  # +10
+      reactions: 30
+      firing: 50  # +10
+      throwing: 30
+      strength: 20
+      psiStrength: 50
+      psiSkill: 20
+      melee: 30  # -10
+    maxStats:
+      tu: 55
+      stamina: 70  # +5
+      health: 70  # +30
+      bravery: 80
+      reactions: 50
+      firing: 80  # +15
+      throwing: 50  # -10
+      strength: 40  # +15
+      psiStrength: 100
+      psiSkill: 10
+      melee: 40  # -10
+    statCaps:
+      tu: 80
+      stamina: 100
+      health: 75  # +15
+      bravery: 100
+      reactions: 90  # +10
+      firing: 110  # +10
+      throwing: 70
+      strength: 65  # +10
+      psiStrength: 100
+      psiSkill: 100
+      melee: 80  # -20
+    trainingStatCaps:
+      tu: 70  # +10
+      stamina: 80
+      health: 70  # +10
+      firing: 80  # +10
+      throwing: 65
+      strength: 45  # +15
+      psiStrength: 100
+      psiSkill: 100
+      melee: 70
+    soldierNames:
+      - delete
+      - Names/eldar_reaper.nam
+
+  - type: STR_ELDAR_REAPER_EXARCH_M
+    group: 4
+    flagOffset: 100
+    costSalary: 25000
+    minStats:
+      tu: 60
+      stamina: 60
+      health: 60
+      bravery: 70
+      reactions: 40
+      firing: 65
+      throwing: 40
+      strength: 35
+      psiStrength: 55
+      psiSkill: 35
+      melee: 40
+    maxStats:
+      tu: 80
+      stamina: 80
+      health: 80
+      bravery: 90
+      reactions: 60
+      firing: 80
+      throwing: 55
+      strength: 60
+      psiStrength: 100
+      psiSkill: 70
+      melee: 50
+    statCaps:
+      stamina: 120
+      health: 120
+      bravery: 110
+      reactions: 85
+      firing: 130
+      throwing: 80
+      strength: 75
+      psiStrength: 110
+      psiSkill: 110
+      melee: 80
+    trainingStatCaps:
+      tu: 90
+      stamina: 90
+      health: 90
+      bravery: 90
+      reactions: 60
+      firing: 90
+      throwing: 60
+      strength: 65
+      psiStrength: 100
+      psiSkill: 100
+      melee: 65
+    armor: STR_ELDAR_ARMOR_EXARCH_P
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 0
+    avatarOffsetX: 66
+    avatarOffsetY: 42
+    rankStrings:
+      - STR_ASPECT_RANK_0
+      - STR_ASPECT_RANK_1
+      - STR_ASPECT_RANK_2
+      - STR_ASPECT_RANK_3
+      - STR_ASPECT_RANK_4
+    rankSprite: {mod: 40k, index: 951}
+    rankBattleSprite: {mod: 40k, index: 290}
+    rankTinySprite: {mod: 40k, index: 205}
+    soldierNames:
+      - delete
+      - Names/eldar_reaper.nam
+
+# Female eldars paths
+  - type: STR_ELDAR_F
+    refNode: *ELDAR_GUARDIAN
+    soldierNames:
+      - delete
+      - Names/eldar_guardian_female.nam
+
+  - type: STR_ELDAR_BANSHEE_F
+    costSalary: 20000
+    minStats:
+      tu: 50  # +10
+      stamina: 40  # +10
+      health: 40  # +5
+      bravery: 60  # +10
+      reactions: 40  # +10
+      firing: 35  # -5
+      throwing: 30
+      strength: 20
+      psiStrength: 50
+      psiSkill: 20
+      melee: 60  # +20
+    maxStats:
+      tu: 80  # +25
+      stamina: 80  # +15
+      health: 70  # +30
+      bravery: 80
+      reactions: 50
+      firing: 50  # -10
+      throwing: 60
+      strength: 40  # +15
+      psiStrength: 100
+      psiSkill: 10
+      melee: 80  # +20
+    statCaps:
+      tu: 110  # +30
+      stamina: 100
+      health: 75  # +15
+      bravery: 100
+      reactions: 90  # +10
+      firing: 90
+      throwing: 70
+      strength: 65  # +10
+      psiStrength: 100
+      psiSkill: 100
+      melee: 110  # 10
+    trainingStatCaps:
+      tu: 70  # +10
+      stamina: 80
+      health: 70  # +10
+      firing: 80  # +10
+      throwing: 65
+      strength: 45  # +15
+      psiStrength: 100
+      psiSkill: 100
+      melee: 80
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    soldierNames:
+      - delete
+      - Names/eldar_banshee.nam
+
+  - type: STR_ELDAR_SEER_F
+    costSalary: 20000
+    minStats:
+      tu: 65
+      stamina: 96
+      health: 30
+      bravery: 80
+      reactions: 90
+      firing: 60
+      throwing: 50
+      strength: 30
+      psiStrength: 50
+      psiSkill: 0
+      melee: 75
+    maxStats:
+      tu: 85
+      stamina: 96
+      health: 50
+      bravery: 80
+      reactions: 90
+      firing: 80
+      throwing: 80
+      strength: 60
+      psiStrength: 90
+      psiSkill: 0
+      melee: 90
+    statCaps:
+      tu: 120
+      stamina: 120
+      health: 75
+      bravery: 120
+      reactions: 140
+      firing: 120
+      throwing: 120
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    trainingStatCaps:
+      tu: 60
+      stamina: 70
+      health: 30
+      firing: 70
+      throwing: 65
+      strength: 20
+      psiStrength: 100
+      psiSkill: 100
+      melee: 50
+    soldierNames:
+      - delete
+      - Names/eldar_seer.nam
+
+# unisex eldar path
+  - type: STR_ELDAR_AVANGER_MF
+    costSalary: 20000
+    minStats:
+      tu: 40
+      stamina: 30
+      health: 40  # +5
+      bravery: 60  # +10
+      reactions: 30
+      firing: 40
+      throwing: 30
+      strength: 20
+      psiStrength: 50
+      psiSkill: 20
+      melee: 40
+    maxStats:
+      tu: 60  # +5
+      stamina: 65
+      health: 70  # +30
+      bravery: 80
+      reactions: 50
+      firing: 75  # +10
+      throwing: 60
+      strength: 40  # +15
+      psiStrength: 100
+      psiSkill: 10
+      melee: 50
+    statCaps:
+      tu: 80
+      stamina: 100
+      health: 75  # +15
+      bravery: 100
+      reactions: 90  # +10
+      firing: 110  # +10
+      throwing: 70
+      strength: 65  # +10
+      psiStrength: 100
+      psiSkill: 100
+      melee: 100
+    trainingStatCaps:
+      tu: 70  # +10
+      stamina: 80
+      health: 70  # +10
+      firing: 80  # +10
+      throwing: 65
+      strength: 45  # +15
+      psiStrength: 100
+      psiSkill: 100
+      melee: 80
+    soldierNames:
+      - delete
+      - Names/eldar_avanger.nam
+
+# dead eldar path (resurrections)
+
+  - type: STR_ELDAR_FALLEN
+    costSalary: 20000
+    minStats:
+      tu: 60
+      stamina: 60  # +10
+      health: 60  # +10
+      bravery: 50  # +30
+      reactions: 40
+      firing: 50
+      throwing: 60
+      strength: 30
+      psiStrength: 10
+      psiSkill: 10
+      melee: 60
+    maxStats:
+      tu: 80  # +10
+      stamina: 80
+      health: 80  # +10
+      bravery: 80  # +10
+      reactions: 70
+      firing: 80
+      throwing: 90
+      strength: 60  # +10
+      psiStrength: 110
+      psiSkill: 26
+      melee: 90
+    statCaps:
+      tu: 110
+      stamina: 130
+      health: 150  # +50
+      bravery: 120
+      reactions: 120
+      firing: 140
+      throwing: 130
+      strength: 110
+      psiStrength: 110
+      psiSkill: 110
+      melee: 140
+    soldierNames:
+      - delete
+      - Names/eldar_wraithguard.nam

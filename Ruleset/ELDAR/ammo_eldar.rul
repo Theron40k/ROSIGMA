@@ -1,0 +1,16 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+items:
+  - &ELDAR_AMMO_TEMPLATE
+    type: STR_SHURIKEN_CLIP  #                 16200
+    damageAlter:  # DA SHURIKEN
+      ToArmorPre: 0.1  # was ToArmor, i.e doesn't damage high armor it can't pen, making certain units invincible.
+      RandomType: 2  # TFTD [50% - 150%]
+      ToHealth: 0.5
+      ToStun: 0.2
+      ArmorEffectiveness: 0.3
+    requires:
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    weight: 15
