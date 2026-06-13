@@ -2,12 +2,54 @@ extended:
   tagsFile: Ruleset/tags_ROSIGMA.rul
 
 items:
+# FILE STRUCTURE
+#--- ELDAR.WEAPONS ---
+#--- ELDAR.GRENADES ---
+#--- ELDAR.MELEE ---
+#---------------------
+
+#--- ELDAR.WEAPONS ---
+  - delete: STR_CATAPULT
+  - &ELDAR_WEAPON_TEMPLATE
+    type: STR_CATAPULT
+    requires:
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    requiresBuyBaseFunc: [ELDAROUT]
+    weight: 15
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    size: 0.3
+    dropoff: 5
+    costBuy:  6000
+    costSell: 2750
+    bigSprite: {mod: 40k, index: 391}
+    floorSprite: {mod: 40k, index: 243}
+    handSprite: {mod: 40k, index: 832}
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+    accuracySnap: 80
+    accuracyAuto: 66
+    tuSnap: 25
+    tuAuto: 40
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 3
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16100
+
   - delete: STR_ELDAR_LAUNCHER
-  - type: STR_ELDAR_LAUNCHER
+  - &STR_ELDAR_LAUNCHER_REF
+    type: STR_ELDAR_LAUNCHER
     categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
     requiresBuyBaseFunc: []
     requires:
-      - STR_ELDAR_PATH
+      - STR_ELDAR_ONLY
     size: 0.4
     dropoff: 5
     weight: 30
@@ -15,7 +57,7 @@ items:
     floorSprite: {mod: 40k, index: 419}
     handSprite: 4850
     bulletSprite: 0
-    fireSound: 52
+    fireSound: {mod: 40k, index: 52}
     clipSize: -1
     power: 100
     damageType: 3
@@ -32,3 +74,183 @@ items:
     invHeight: 3
     recover: false
     listOrder: 12100
+
+  - type: STR_ELDAR_LAUNCHER_FIXED  # Fixed weapon version for use on player armor.
+    ufopediaType: STR_ELDAR_LAUNCHER # link to the same ufopedia page as normal STR_ELDAR_LAUNCHER.
+    refNode: *STR_ELDAR_LAUNCHER_REF
+    fixedWeapon: true
+    fixedWeaponShow: true
+
+  - type: STR_CATAPULT_PISTOL  #              16000
+    refNode: *ELDAR_WEAPON_TEMPLATE
+    weight: 10
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [ELDAROUT]
+    requires:
+      - STR_ELDAR_PATH
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.2
+    dropoff: 5
+    costBuy:  3500
+    costSell: 1000
+    bigSprite: {mod: 40k, index: 390}
+    floorSprite: {mod: 40k, index: 242}
+    handSprite: {mod: 40k, index: 824}
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+    accuracySnap: 75
+#    accuracyAimed: 100
+    tuSnap: 21
+#    tuAimed: 35
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16000
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200
+
+#--- ELDAR.GRENADES ---
+
+  - delete: STR_ELDAR_GRENADE
+  - type: STR_ELDAR_GRENADE  # Eldar Plasma Granade          16320
+    requires:
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    requiresBuyBaseFunc: [ELDAROUT]
+    categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
+    weight: 2
+    primeSound: 2426
+    throwRange: 18
+    fuseType: -2
+    costThrow:
+      time: 55
+      energy: 5
+    costPrime:
+      time: 5
+    costUnprime:
+      time: 5
+    unprimeActionName: STR_UNPRIME_GRENADE
+    flatThrow:
+      time: false
+      energy: true
+    flatPrime:
+      time: false
+      energy: true
+    damageType: 5
+    power: 90
+    damageAlter:  # DA PLASMA
+      RandomType: 6
+      ToArmorPre: 0.2  # melts some armor on the way in
+      ArmorEffectiveness: 0.75  # *** PLASMA rebalance
+      FireThreshold: 70  # can ignite at high damage
+      FixRadius: 5
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    size: 0.1
+    costBuy:  20000
+    costSell: 5000
+    bigSprite: {mod: 40k, index: 397}
+    floorSprite: {mod: 40k, index: 252}
+    handSprite: {mod: 40k, index: 888}
+    battleType: 4
+    invWidth: 1
+    invHeight: 2
+    blastRadius: 5
+    explosionHitSound: {mod: 40k, index: 690}
+    hitAnimation: {mod: 40k, index: 112} #XPLASMA
+    listOrder: 16320
+
+  - delete: STR_ELDAR_MGRENADE
+  - type: STR_ELDAR_MGRENADE  # eldar melta grenade         16310
+    requires:
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    requiresBuyBaseFunc: [ELDAROUT]
+    categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
+    throwRange: 15
+    primeSound: 2426
+    weight: 4
+    fuseType: -2
+    costThrow:
+      time: 60
+      energy: 20
+    costPrime:
+      time: 5
+    costUnprime:
+      time: 5
+    unprimeActionName: STR_UNPRIME_GRENADE
+    flatThrow:
+      time: false
+      energy: true
+    flatPrime:
+      time: false
+      energy: true
+    flatUnprime:
+      time: false
+      energy: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    power: 140
+    damageType: 11
+    damageAlter:
+      RandomType: 6
+      ToArmorPre: 1.0  # it's a melta grenade; it will melt armor
+      ToTile: 1.0
+      ToItem: 1.0
+      ToArmor: 0.0
+      ToHealth: 0.7
+      ToWound: 0.05
+      RadiusReduction: 15 # melta explosions decay at twice the normal rate; coheres somewhat better than Imperium melta
+      RandomWound: false
+      FireThreshold: 0
+      FixRadius: 5
+    size: 0.1
+    costBuy:  50000
+    costSell: 15000
+    bigSprite: {mod: 40k, index: 398}
+    floorSprite: {mod: 40k, index: 253}
+    handSprite: {mod: 40k, index: 896}
+    battleType: 4
+    invWidth: 2
+    invHeight: 2
+    blastRadius: 4
+    listOrder: 16310
+
+#--- ELDAR.MELEE ---
+
+  - type: STR_EPOWER_SWORD  # eldar mirrorsword
+    requires:
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    requiresBuyBaseFunc: [ELDAROUT]
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 80
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1

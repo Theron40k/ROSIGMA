@@ -1,0 +1,544 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+armors:
+  - &WRAITHGUARD_ARMOR
+    type: STR_WRAITHGUARD_ARMOR_P
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    allowInv: true
+    frontArmor: 120
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 120
+    size: 2
+    units:
+      - STR_ELDAR_FALLEN
+    damageModifier:  # CENT ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.4  # FLAMES
+      - 0.9  # HE
+      - 0.9  # LASCANON
+      - 0.8  # PLASMA  # -10%
+      - 0.9  # STUN
+      - 0.9  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 5
+    allowsRunning: false  # Mechanical
+    tags:
+      INFECTION_RESIST: 100
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_MECHANICAL: 1
+  - type: STR_WRAITHGUARD_ARMOR_P_SHIELD
+    refNode: *WRAITHGUARD_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    frontArmor: 125
+    sideArmor: 110
+    rearArmor: 100
+    underArmor: 120
+    units:
+      - STR_ELDAR_FALLEN
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      INFECTION_RESIST: 100
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_MECHANICAL: 1
+
+  - &GUARDIAN_ARMOR
+    type: STR_ELDAR_ARMOR_M               # GUARDIAN
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 15
+    frontArmor: 30
+    sideArmor: 25
+    rearArmor: 16
+    underArmor: 15
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_M
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+  - type: STR_ELDAR_ARMOR_M_SHIELD        # GUARDIAN
+    refNode: *GUARDIAN_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_ELDAR_ARMOR_F               # GUARDIAN
+    refNode: *GUARDIAN_ARMOR
+    units:
+      - STR_ELDAR_F
+  - type: STR_ELDAR_ARMOR_FH        # GUARDIAN
+    refNode: *GUARDIAN_ARMOR
+    units:
+      - STR_ELDAR_F
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_KIT
+  - type: STR_ELDAR_ARMOR_F_SHIELD        # GUARDIAN
+    refNode: *GUARDIAN_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    units:
+      - STR_ELDAR_F
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - &BANSHEE_ARMOR
+    type: STR_ELDAR_ARMOR2_P       # BANSHEE PLAYER
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    frontArmor: 60
+    sideArmor: 50
+    rearArmor: 40
+    underArmor: 45
+    drawingRoutine: 0
+    forcedTorso: 1  # USE MALE
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_BANSHEE_F
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
+
+  - type: STR_ELDAR_ARMOR2_P_SHIELD       # BANSHEE PLAYER
+    refNode: *BANSHEE_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
+
+  - &SEER_ARMOR
+    type: STR_ELDAR_ARMOR3_P        # SEER  PLAYER
+    storeItem: STR_NONE
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 10  # Farseer bonus
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    frontArmor: 60
+    sideArmor: 50
+    rearArmor: 40
+    underArmor: 45
+    drawingRoutine: 1
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    specialWeapon: STR_ELDAR_LIGHT
+    units:
+      - STR_ELDAR_SEER_F
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 50
+      ARMOR_MAX_SUCCESSFUL_DODGES: 5
+  - type: STR_ELDAR_ARMOR3_P_SHIELD        # SEER  PLAYER
+    refNode: *SEER_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 50
+      ARMOR_MAX_SUCCESSFUL_DODGES: 5
+
+  - &SCORPION_ARMOR
+    type: STR_ELDAR_ARMOR5_P       # SCORPION PLAYER
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    camouflageAtDay: -15  # you need to be 10 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: -10  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 8
+    frontArmor: 60
+    sideArmor: 50
+    rearArmor: 40
+    underArmor: 45
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_SCORPION_M
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+  - type: STR_ELDAR_ARMOR5_P_SHIELD       # SCORPION PLAYER
+    refNode: *SCORPION_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
+  - &AVENGER_ARMOR
+    type: STR_ELDAR_ARMOR4_P       # DIRE AVANGER
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    frontArmor: 60
+    sideArmor: 50
+    rearArmor: 40
+    underArmor: 45
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_AVANGER_MF
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+  - type: STR_ELDAR_ARMOR4_P_SHIELD        # DIRE AVANGER
+    refNode: *AVENGER_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
+  - &REAPER_ARMOR
+    type: STR_ELDAR_ARMOR6_P       # REAPER
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 144, 144, 245, 245, 144, 144, 160, 160] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5
+    spriteSheet: ELDARDR6.PCK
+    layersDefaultPrefix: "70"
+    layersSpecificPrefix:
+      70: ELDAR
+    layersDefinition:
+      M0: ["0", "ELDARR", "M0_FACE", "MASK"]
+      M1: ["0", "ELDARR", "M1_FACE", "MASK"]
+      M2: ["0", "ELDARR", "M2_FACE", "MASK"]
+      M3: ["0", "ELDARR", "M3_FACE", "MASK"]
+      M4: ["0", "ELDARR", "M4_FACE", "MASK"]
+      M5: ["0", "ELDARR", "M5_FACE", "MASK"]
+      F0: ["0", "ELDARR", "M0_FACE", "MASK"]
+      F1: ["0", "ELDARR", "M1_FACE", "MASK"]
+      F2: ["0", "ELDARR", "M2_FACE", "MASK"]
+      F3: ["0", "ELDARR", "M3_FACE", "MASK"]
+      F4: ["0", "ELDARR", "M4_FACE", "MASK"]
+      F5: ["0", "ELDARR", "M5_FACE", "MASK"]
+    ufopediaType: STR_ELDAR_ARMOR6
+    customArmorPreviewIndex: 264
+    corpseBattle:
+      - STR_ELDAR_REAPER_CORPSE_P
+    selectUnitMale:       [{mod: 40k, index: 1413}, {mod: 40k, index: 1414}, {mod: 40k, index: 1415}, {mod: 40k, index: 1416}, {mod: 40k, index: 1417}]  # yamllint disable-line rule:colons
+    selectUnitFemale:     [{mod: 40k, index: 1413}, {mod: 40k, index: 1414}, {mod: 40k, index: 1415}, {mod: 40k, index: 1416}, {mod: 40k, index: 1417}]  # yamllint disable-line rule:colons
+    startMovingMale:      [{mod: 40k, index: 1408}, {mod: 40k, index: 1409}, {mod: 40k, index: 1410}, {mod: 40k, index: 1411}, {mod: 40k, index: 1412}]  # yamllint disable-line rule:colons
+    startMovingFemale:    [{mod: 40k, index: 1408}, {mod: 40k, index: 1409}, {mod: 40k, index: 1410}, {mod: 40k, index: 1411}, {mod: 40k, index: 1412}]  # yamllint disable-line rule:colons
+    selectWeaponMale:     [{mod: 40k, index: 1403}, {mod: 40k, index: 1404}, {mod: 40k, index: 1405}, {mod: 40k, index: 1406}, {mod: 40k, index: 1407}]  # yamllint disable-line rule:colons
+    selectWeaponFemale:   [{mod: 40k, index: 1403}, {mod: 40k, index: 1404}, {mod: 40k, index: 1405}, {mod: 40k, index: 1406}, {mod: 40k, index: 1407}]  # yamllint disable-line rule:colons
+    annoyedMale:          [{mod: 40k, index: 1418}, {mod: 40k, index: 1419}, {mod: 40k, index: 1420}, {mod: 40k, index: 1421}, {mod: 40k, index: 1422}]  # yamllint disable-line rule:colons
+    annoyedFemale:        [{mod: 40k, index: 1418}, {mod: 40k, index: 1419}, {mod: 40k, index: 1420}, {mod: 40k, index: 1421}, {mod: 40k, index: 1422}]  # yamllint disable-line rule:colons
+    deathMale:            [{mod: 40k, index: 1423}, {mod: 40k, index: 1424}, {mod: 40k, index: 1425}, {mod: 40k, index: 1426}]  # yamllint disable-line rule:colons
+    deathFemale:          [{mod: 40k, index: 1423}, {mod: 40k, index: 1424}, {mod: 40k, index: 1425}, {mod: 40k, index: 1426}]  # yamllint disable-line rule:colons
+    frontArmor: 110
+    sideArmor: 90
+    rearArmor: 80
+    underArmor: 70
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_REAPER_M
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+  - type: STR_ELDAR_ARMOR6_P_LAUNCHER
+    refNode: *REAPER_ARMOR
+    builtInWeapons:
+      - STR_ELDAR_LAUNCHER_FIXED
+      - INV_NULL_3X3
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+  - type: STR_ELDAR_ARMOR6_P_SHIELD
+    refNode: *REAPER_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    builtInWeapons:
+      - AUX_ELDAR_SHIELD
+      - INV_NULL_3X3
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_ELDAR_PLAT_ARMOR_P   # FLYING PLATFORM
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    bleedImmune: true
+    fearImmune: false
+    recovery:  # Manned turrets recover morale rapidly
+      morale:
+        flatHundred: 0.5
+    scripts:
+      selectUnitSprite: |
+        var int temp;
+        var int walking;
+        var int floating;
+        unit.isWalking walking;
+        unit.isFloating floating;
+        if and eq walking 0 eq floating 1;
+          unit.getId temp;
+          offsetmod temp 11 0 8; # desync animation of different units
+          add temp anim_frame;
+          wavegen_saw temp 4 4 4;
+          add sprite_offset 1;
+          add sprite_offset temp;
+          add sprite_index sprite_offset;
+        else;
+          add sprite_index sprite_offset;
+        end;
+        return sprite_index;
+    frontArmor: 50
+    sideArmor: 50
+    rearArmor: 50
+    underArmor: 50
+    drawingRoutine: 20
+    constantAnimation: false
+    movementType: 1
+    size: 2
+    damageModifier:  # VEHICLE ARMOR LARGE
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    allowsRunning: false
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 50  # intimidate immune
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_MECHANICAL: 1
+
+  - type: ELDAR_TURRET_ARMOR_P
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    visibilityAtDay: 40
+    visibilityAtDark: 40
+    zombiImmune: true
+    bleedImmune: true
+    painImmune: true
+    fearImmune: false
+    recovery:  # Manned turrets recover morale rapidly
+      morale:
+        flatHundred: 0.5
+    frontArmor: 130
+    sideArmor: 130
+    rearArmor: 130
+    underArmor: 150
+    size: 2
+    damageModifier:  # VEHICLE ARMOR LARGE
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 3
+    allowsKneeling: false
+    allowsMoving: false
+    allowsRunning: false
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 12
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidate immune
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_MECHANICAL: 1
