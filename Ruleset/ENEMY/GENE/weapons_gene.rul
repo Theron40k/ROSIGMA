@@ -313,30 +313,54 @@ items:
 
   - type: STR_ROCKTOSS
     categories: [STR_CAT_GRENADES]
-    size: 0.1
-    weight: 6
-    bigSprite: 2715 #change
-    bulletSprite: 25 #change
-    bulletSpeed: -5
-    accuracyAimed: 50
+    #size: 0.1 #rocks... are around- no need for pet rock
+    weight: 10
+    bigSprite: 3250
+    bulletSprite: 25 # TODO: change, to understand if it can be applied to grenades
+    # handSprite # TODO: to add
+    # explosionHitSound # todo: add
+    # itemThrow # TODO: needs a chunky throw sound.
+    # hitAnimation: # todo
+    specialIconSprite: 204  # TODO: change the icon
+    specialUseEmptyHand: true # TODO: understand why it does not show
+    bulletSpeed: -30 #todo: fix this
+    accuracyThrow: 70
     accuracyMultiplier:
       throwing: 1.0
-    costAimed:
+    costThrow:
       time: 20
       energy: 30
-    flatRate: true
-    power: 0
+    flatThrow:
+      time: false
+      energy: true
+    #flatRate: true
+    RandomType: 8
+    power: 40
     damageBonus:
-      strength: 1.0
-    damageType: 1
-    battleType: 2
-    invWidth: 1
+      strength: 0.3
+    damageType: 7 #it's a rock
+    battleType: 4
+    invWidth: 2
     invHeight: 2
     listOrder: 17100
     throwRange: 8
+    fuseType: -3
+    fuseTriggerEvents:
+      defaultBehavior: false
+      throwTrigger: true
+      throwExplode: true
+      proximityTrigger: false
+      proximityExplode: false
     damageAlter:
-      FireThreshold: 25
-    costSell: 400
+      FixRadius: 1
+      RadiusReduction: 300 # fragment don't do damage if any damage at all
+      FireThreshold: 10000 #rock not molotov cocktail
+      SmokeThreshold: 10000 #not smoke grenade
+      ToTile: 0.01 # rock, not power drill
+      IgnoreDirection: true # hits the normal armor
+      TileDamageLimit: 10
+    explosiveDamageRange: 1
+    #costSell: 400 # rocks should not be bought or sold
 
   - type: STR_NEUROTRAUMAL_ROD
 
