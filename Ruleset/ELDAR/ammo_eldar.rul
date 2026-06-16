@@ -2,8 +2,10 @@ extended:
   tagsFile: Ruleset/tags_ROSIGMA.rul
 
 items:
+  - delete: STR_SHURIKEN_CLIP
   - &ELDAR_AMMO_TEMPLATE
     type: STR_SHURIKEN_CLIP  #                 16200
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
     damageAlter:  # DA SHURIKEN
       ToArmorPre: 0.1  # was ToArmor, i.e doesn't damage high armor it can't pen, making certain units invincible.
       RandomType: 2  # TFTD [50% - 150%]
@@ -13,4 +15,21 @@ items:
     requires:
       - STR_ELDAR_ONLY
     requiresBuy: []  # Already requires the eldar base service
-    weight: 15
+    weight: 10
+    requiresBuyBaseFunc: [ELDAROUT]
+    size: 0.1
+    costBuy:  500
+    costSell: 250
+    bigSprite: {mod: 40k, index: 393}
+    floorSprite: {mod: 40k, index: 245}
+    handSprite: {mod: 40k, index: 464}
+    hitSound: {mod: 40k, index: 708}
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    power: 50
+    damageType: 1
+    clipSize: 20
+    battleType: 2
+    armor: 30
+    attraction: 1
+    listOrder: 16200
