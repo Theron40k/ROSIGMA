@@ -254,3 +254,29 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      
+  - delete: STR_WRAITH_MELEE_WEAPON
+  - type: STR_WRAITH_MELEE_WEAPON
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_AUXILIARY]
+    weight: 3
+    bigSprite: 4950
+    meleeAnimation: 4
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #754 Powerswrod hit
+    power: 140
+    damageAlter:     #DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 2 #TFTD [50% - 150%]
+    damageType: 7
+    clipSize: -1
+    strengthApplied: false
+    accuracyMelee: 100
+    tuMelee: 15
+    battleType: 3
+    fixedWeapon: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    flatRate: true
