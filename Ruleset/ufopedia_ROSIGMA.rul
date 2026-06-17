@@ -61,6 +61,7 @@
 # #SM.PRIM#           Primaris Strategy
 # #SM.SCOUT#          Scout Strategy
 # #SM.TAC#            Tactical Strategy
+# #SM.BT#             Black Templars Strategy
 # #SM.WB#             Word Bearers Strategy
 # #CM#              Chamber Militant
 # #CM.DW#             Deathwatch
@@ -738,6 +739,23 @@ ufopaedia:
       - STR_SPACEWOLVES_STRATEGY
     image_id: SPACEWOLVES_INTRO_CODEX.SPK
   - id: STR_SPACEWOLVES_STRATEGY #equivalent of STR_TATICAL
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: SW_STRATEGY.SPK
+    text: STR_SW_STRATEGY_INFO
+    requires:
+      - STR_MARINES_STRATEGY
+
+
+## #STRATEGY.BT#
+  - id: STR_CHOSEN_BLACKTEMPLARS
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_SPACEWOLVES_STRATEGY
+    image_id: SPACEWOLVES_INTRO_CODEX.SPK
+
+  - id: STR_BLACKTEMPLAR_STRATEGY #equivalent of STR_TATICAL
     type_id: 10
     section: STR_STRATEGY
     image_id: SW_STRATEGY.SPK
@@ -11681,7 +11699,7 @@ ufopaedia:
   - id: STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT
     type_id: 14
     section: STR_NOT_AVAILABLE
-    
+
   - delete: STR_HOTSHOT_VOLLEY_GUN
   - id: STR_HOTSHOT_VOLLEY_GUN
     requires:

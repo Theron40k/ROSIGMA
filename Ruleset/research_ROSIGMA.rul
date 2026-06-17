@@ -38,6 +38,7 @@
 # #SM.SCOUT#          Scout Strategy
 # #SM.TAC#            Tactical Strategy
 # #SM.WOLF#           Space Wolf Strategy
+# #SM.BT#             Black Templars Strategy
 # #SM.WB#             Word Bearers Strategy
 # #CM#              Chamber Militant
 # #CM.DW#             Deathwatch
@@ -984,6 +985,8 @@ research:
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_SPACEWOLVES  # Space Wolves Selected
     refNode: *STR_LOCKED
+  - name: STR_CHOSEN_BLACKTEMPLARS  # Black Templars Selected
+    refNode: *STR_LOCKED
   - name: STR_CHOSEN_WORDBEARERS  # Word Bearers Selected
     refNode: *STR_LOCKED
   - delete: STR_CHOSEN_IGS
@@ -1018,6 +1021,7 @@ research:
   - name: STR_NOT_TACTICAL  # (Not Tactical Strategy)
   - name: STR_NOT_SPACEWOLVES  # (Not Spacewolf Strategy)
   - name: STR_NOT_WORDBEARERS  # (Not Word Bearers Strategy)
+  - name: STR_NOT_BLACKTEMPLARS  # (Not Black Templar Strategy)
 
   - name: STR_NOT_ADEPTUS_TERRA  # (Not Alien or Heretic)
   - delete: STR_NOT_THE_IMPERIAL_LAW
@@ -1529,6 +1533,42 @@ research:
     dependencies:
       - STR_SPACEWOLVES_STRATEGY
       - STR_GENERALLOCK
+
+
+### Black Templars  #STRATEGY.SM.BT#
+
+  - name: STR_BLACKTEMPLAR_STRATEGY  # WIP Black Templar Strategy
+    cost: 5
+    points: 0
+    dependencies:
+      - STR_MARINES_STRATEGY
+    lookup: STR_CHOSEN_BLACKTEMPLARS
+    unlocks:
+      - STR_DEFAULT_CAMPAIGN
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_LASER_WEAPONS
+      - STR_HOLOGRAM_GRENADE_REQUISITION
+      - STR_THUNDERHAWKTYPE1
+      - STR_STORMHAWKR
+      - STR_PERSONAL_ARMOR
+      - STR_MELTABOMB
+      - STR_CRATED_DROPPODS
+      - STR_CRATED_RHINO
+      - STR_MARINE_BOLTERS
+      - STR_HARDER_MISSIONS
+      - STR_MARINESCHOICEDONE
+    disables:
+      - STR_NOT_TACTICAL
+      - STR_PRIMARIS
+      - STR_TATICAL
+      - STR_ASSAULT
+      - STR_DEVASTATOR
+      - STR_SCOUT
+      - STR_SPACEWOLVES_STRATEGY
+      - STR_WORDBEARERS_STRATEGY
+      - STR_NOT_BLACKTEMPLARS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
+    spawnedEvent: STR_BLACKTEMPLAR_CARE_PACKAGE
 
 
 ### Word Bearers #STRATEGY.SM.WB#

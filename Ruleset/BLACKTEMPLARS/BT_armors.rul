@@ -60,8 +60,8 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
       INTIMIDATION_RESISTANCE: 50 #lwoer than tac marine
 
-
-  - type: STR_BTMARINEARMOR_PLAYER  # BT MARINE
+  - &STR_BTMARINE_BASEARMOR
+    type: STR_BTMARINEARMOR_PLAYER  # BT MARINE
     isPilotArmor: true
     customArmorPreviewIndex: 960
     visibilityAtDay: 40
@@ -105,6 +105,7 @@ armors:
       - 0.2  # IMPACT
       - 1.0  # MELTA
     builtInWeapons:
+      - STR_RIFLE_BT
       - INV_NULL_3X1_BACKPACK
     units:
       - STR_BTMARINE_PLAYER
@@ -116,7 +117,18 @@ armors:
       UNIT_SIZE: 150 # LARGE
       INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
 
-  - type: STR_BTMARINEASSAULTARMOR_PLAYER  # BT MARINE ASSAULT
+  - type: STR_BTMARINEARMORUPD_PLAYER  # BT MARINE PLASMA
+    refNode: *STR_BTMARINE_BASEARMOR
+    storeItem: STR_BTMARINEARMOR_PLAYER
+    requires: STR_MIDTIER_PREREQ
+    builtInWeapons:
+      - STR_PLASMA_RIFLE_BT
+      - STR_PLASMA_RIFLE_CLIP
+      - STR_PLASMA_RIFLE_CLIP
+      - INV_NULL_3X1_BACKPACK
+
+  - &STR_BTASSAULT_BASEARMOR
+    type: STR_BTMARINEASSAULTARMOR_PLAYER  # BT MARINE ASSAULT
     isPilotArmor: true
     customArmorPreviewIndex: 960
     visibilityAtDay: 40
@@ -161,6 +173,8 @@ armors:
       - 1.0  # MELTA
     specialWeapon: STR_JUMP_GAUNTLET_PLUS
     builtInWeapons:
+      - STR_PISTOL_BT
+      - STR_CHAINSWORD_BT
       - INV_NULL_3X1_BACKPACK
     units:
       - STR_BTMARINE_PLAYER
@@ -173,6 +187,17 @@ armors:
       FLIGHT_DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
       INTIMIDATION_RESISTANCE: 66
+
+  - type: STR_BTMARINEASSAULTARMORUPD_PLAYER  # BT ASSAULT PLASMA
+    refNode: *STR_BTASSAULT_BASEARMOR
+    storeItem: STR_BTMARINEASSAULTARMOR_PLAYER
+    requires: STR_MIDTIER_PREREQ
+    builtInWeapons:
+      - STR_PLASMA_PISTOL_BT
+      - STR_PLASMA_PISTOL_CLIP
+      - STR_PLASMA_PISTOL_CLIP
+      - STR_CHAINSWORD_BT
+      - INV_NULL_3X1_BACKPACK
 
   - type: STR_BTAPOTHARMOR_PLAYER  # BT APOTHECARY
     isPilotArmor: true
@@ -219,6 +244,7 @@ armors:
       - 1.0  # MELTA
     specialWeapon: STR_UNARMED_GAUNTLET_PLUS
     builtInWeapons:
+      - STR_PISTOL_BT
       - INV_NULL_3X3
       - AUX_MEDI_KIT
     units:
@@ -451,6 +477,8 @@ armors:
     allowsKneeling: false
     loftempsSet: [5]
     specialWeapon: STR_MFIST
+    builtInWeapons:
+      - STR_HAMMER_BT
     tags:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_LIVING: 1
@@ -504,6 +532,10 @@ armors:
       - 0.9  # MELTA
     units:
       - STR_BTHONORED_PLAYER
+    builtInWeapons:
+      - STR_PISTOL_BT
+      - STR_PLASMA_PISTOL_CLIP
+      - STR_PLASMA_PISTOL_CLIP
     allowsRunning: false
     allowsKneeling: false
     loftempsSet: [5]

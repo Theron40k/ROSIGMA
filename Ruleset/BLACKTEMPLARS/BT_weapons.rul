@@ -1,0 +1,219 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+items:
+
+  - type: STR_PISTOL_BT  # BT BOLTER PISTOL
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [IMPERIUM]
+    size: 0.2
+    armor: 200
+    dropoff: 6
+    autoRange: 0
+    snapRange: 11
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 21
+    tuAimed: 0
+    weight: 15
+    bigSprite: 4000
+    floorSprite: 4000
+    handSprite: 4128
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_PISTOL_CLIP_MC
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10100
+    inventoryMoveCost:  # quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+
+  - type: STR_RIFLE_BT  # BT BOLTER
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [IMPERIUM]
+    size: 0.3
+    armor: 200
+    dropoff: 5
+    autoRange: 9
+    snapRange: 14
+    aimRange: 0
+    accuracyAuto: 66
+    accuracySnap: 80
+    accuracyAimed: 0
+    tuAuto: 40
+    tuSnap: 25
+    tuAimed: 0
+    weight: 20
+    bigSprite: 4001
+    floorSprite: 4001
+    handSprite: 4144
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_RIFLE_CLIP
+      - STR_RIFLE_CLIP_EX
+      - STR_RIFLE_CLIP_AP
+      - STR_RIFLE_CLIP_MC
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    autoShots: 3
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10300
+
+  - type: STR_PLASMA_RIFLE_BT  # BT PLASMA RIFLE
+    categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
+    size: 0.2
+    armor: 200
+    dropoff: 5
+    autoRange: 8
+    snapRange: 14
+    aimRange: 14
+    accuracyAuto: 55
+    accuracySnap: 70
+    tuAuto: 40
+    tuSnap: 30
+    weight: 20
+    bigSprite: 4002
+    floorSprite: 4002
+    handSprite: 4160
+    bulletSprite: {mod: 40k, index: 11}
+    fireSound: {mod: 40k, index: 18}
+    compatibleAmmo:
+      - STR_PLASMA_RIFLE_CLIP
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    attraction: 1
+    listOrder: 11400
+
+  - type: STR_PLASMA_PISTOL_BT  # BT PLASMA PISTOL
+    categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
+    size: 0.1
+    armor: 200
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    accuracyAuto: 0
+    accuracySnap: 60
+    tuAuto: 0
+    tuSnap: 25
+    weight: 10
+    bigSprite: 4004
+    floorSprite: 4003
+    handSprite: 4168
+    bulletSprite: {mod: 40k, index: 11}
+    fireSound: {mod: 40k, index: 18}
+    compatibleAmmo:
+      - STR_PLASMA_PISTOL_CLIP
+    battleType: 1
+    invWidth: 1
+    invHeight: 2
+    attraction: 1
+    listOrder: 11200
+
+
+  # Melee
+
+  - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    requiresBuyBaseFunc: [IMPERIUM]
+    size: 0.2
+    armor: 200
+    weight: 15
+    bigSprite: 4005
+    floorSprite: 4004
+    handSprite: 4176
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 709}
+    meleeAnimation: {mod: 40k, index: 44}
+    power: 60
+    damageType: 7
+    accuracyMelee: 90
+    tuMelee: 15  # medium melee weapon
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    damageBonus:
+      melee: 0.2
+      strength: 0.2
+    damageAlter:
+      ToArmorPre: 0.3
+      ToHealth: 0.9
+      RandomType: 2  # TFTD [50% - 150%]
+      ToWound: 0.3
+      ToEnergy: 0.5
+      RandomWound: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+
+  - type: STR_HAMMER_BT  # BT THUNDER HAMMER
+    categories: [STR_CAT_MELEE, STR_CAT_TERMINATOR]
+    size: 0.3
+    armor: 200
+    weight: 80
+    bigSprite: {mod: 40k, index: 226}
+    floorSprite: {mod: 40k, index: 114}
+    handSprite: {mod: 40k, index: 280}
+    meleeAnimation: {mod: 40k, index: 28}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 743}
+    power: 120
+    damageAlter:    #DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+    damageType: 3
+    accuracyMelee: 80
+    flatRate: true
+    tuMelee: 15
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    attraction: 6
+    skillApplied: true
+    costMelee:
+      time: 25
+      energy: 8  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    damageBonus:
+      strength: 1.0
+      melee: 0.2
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.6  # armor breaking
+      ToArmorPre: 0.3
+    meleeMultiplier:  # very heavy and cumbersome; strength matters a lot for hitting
+      melee: 0.6
+      strength: 0.4
+    strengthApplied: false
+    listOrder: 13400
+    flatMelee: true
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 80 # was 100
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
