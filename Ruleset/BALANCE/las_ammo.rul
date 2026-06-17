@@ -129,7 +129,8 @@ items:
     refNode: *LASCANNON_MAGAZINE_TEMPLATE
     clipSize: 2  # it's 1/3rd the size of the large power pack and has a much easier to fit profile; needed downgrade
 
-  - type: STR_PORTABLE_MULTILASER_BATTERY  # MULTILAS POWER PACK
+  - &PORTABLE_MULTILASER_BATTERY_TEMPLATE
+    type: STR_PORTABLE_MULTILASER_BATTERY  # MULTILAS POWER PACK
     categories: [STR_CAT_LASGUN]
     size: 0.2
     requiresBuy:
@@ -151,9 +152,7 @@ items:
       ToArmor: 0.1  # 40k 0.0
       ToStun: 0.3  # painful las burns
       ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
-    clipSize: 120 # 10 Multilas Auto Bursts before needing to reload
-    powerRangeThreshold: 16
-    powerRangeReduction: 5  # lowers power by 5 by each tile beyond
+    clipSize: 180 # 15 Multilas Auto Bursts before needing to reload; 3 times cap of Hotshot
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3981
@@ -162,7 +161,7 @@ items:
     bulletSpeed: 50
     explosionSpeed: 3 # makes it shoot faster/take less time per shot
     vaporColorSurface: 4  # red laser
-    vaporDensitySurface: 6
+    vaporDensitySurface: 2
     vaporProbabilitySurface: 100
     scripts:
       vaporParticleAmmo: |
@@ -172,20 +171,13 @@ items:
         return;
 
   - type: STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT  # MULTILAS HOTSHOT POWER PACK
-    categories: [STR_CAT_LASGUN]
-    size: 0.2
+    refNode: *PORTABLE_MULTILASER_BATTERY_TEMPLATE
     requiresBuy:
       - STR_MULTILAS_HANDHELD_RESEARCH
       - STR_LASGUN_HOTSHOT # Hotshot ammo
     costBuy: 50000 # Expensive
     costSell: 10000
-    invWidth: 3
-    invHeight: 2
-    weight: 20
-    battleType: 2
     bigSprite: 1110  # Hotshot battery pack 3x2 wide
-    floorSprite: {mod: 40k, index: 1021}
-    handSprite: {mod: 40k, index: 1168}
     power: 65
     damageType: 1  # AP instead of LAS
     damageAlter:
@@ -196,18 +188,10 @@ items:
       ToStun: 0.3  # painful las burns
       ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
     clipSize: 60 # 5 Multilas Auto Bursts before needing to reload
-    powerRangeThreshold: 16
-    powerRangeReduction: 5  # lowers power by 5 by each tile beyond
     # lasgun aesthetics
-    hitSound: 3986
     fireSound: 3983
-    hitAnimation: 2220
-    bulletSprite: {mod: 40k, index: 22}
     bulletSpeed: 50
-    explosionSpeed: 3 # makes it shoot faster/take less time per shot
-    vaporColorSurface: 4  # red laser
-    vaporDensitySurface: 6
-    vaporProbabilitySurface: 100
+    vaporDensitySurface: 3 # hotshot, but not lascannon thicc
     scripts:
       vaporParticleAmmo: |
         # noting
@@ -215,4 +199,4 @@ items:
         set subvoxel_drift 0;
         return;
     tags:
-     ITEM_AMMO_REPEATED_ACCURACY_FALLOFF_MULTIPLIER: 3  # Hotshot strains the barrel, decreasing accuracy
+      ITEM_AMMO_REPEATED_ACCURACY_FALLOFF_MULTIPLIER: 3  # Hotshot strains the barrel, decreasing accuracy
