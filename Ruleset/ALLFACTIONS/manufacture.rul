@@ -110,6 +110,7 @@ manufacture:
       - STR_RES_WARPED_HULK_LOOT
       - STR_MARINES_STRATEGY
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     listOrder: 50
     requiredItems:
       STR_WARPED_HULK_LOOT: 1
@@ -346,6 +347,25 @@ manufacture:
       STR_saturnine_ARMOR: 1
       STR_cataphract_ARMOR: 3
       STR_REQUISITION_BOUNTY_500K: 2
+      STR_ALIEN_ALLOYS: 400
+      STR_ELERIUM_115: 400
+      STR_KILLPOINT_TOKEN: 3000
+    points: 1000
+
+  - name: STR_WARPED_LOOT_BT
+    category: STR_FOES_FOR_HONOR
+    requires:
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_MARINES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
+    listOrder: 50
+    requiredItems:
+      STR_WARPED_HULK_LOOT: 1
+    space: 0
+    time: 10
+    cost: 100
+    producedItems:
+      STR_cataphract_ARMOR: 4
       STR_ALIEN_ALLOYS: 400
       STR_ELERIUM_115: 400
       STR_KILLPOINT_TOKEN: 3000
