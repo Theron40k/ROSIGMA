@@ -6,6 +6,7 @@ items:
   - type: STR_PISTOL_BT  # BT BOLTER PISTOL
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     fixedWeapon: true
+    fixedWeaponShow: true
     size: 0.2
     armor: 200
     dropoff: 6
@@ -43,6 +44,7 @@ items:
 
   - type: STR_RIFLE_BT  # BT BOLTER
     fixedWeapon: true
+    fixedWeaponShow: true
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     size: 0.3
     armor: 200
@@ -78,6 +80,7 @@ items:
 
   - type: STR_PLASMA_RIFLE_BT  # BT PLASMA RIFLE
     fixedWeapon: true
+    fixedWeaponShow: true
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
     size: 0.2
     armor: 200
@@ -106,6 +109,7 @@ items:
 
   - type: STR_PLASMA_PISTOL_BT  # BT PLASMA PISTOL
     fixedWeapon: true
+    fixedWeaponShow: true
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
     size: 0.1
     armor: 200
@@ -118,7 +122,7 @@ items:
     tuSnap: 25
     weight: 10
     bigSprite: 4004
-    floorSprite: 4003
+    floorSprite: 4006
     handSprite: 4168
     bulletSprite: {mod: 40k, index: 11}
     fireSound: {mod: 40k, index: 18}
@@ -135,6 +139,7 @@ items:
 
   - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
     fixedWeapon: true
+    fixedWeaponShow: true
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
     size: 0.2
     armor: 200
@@ -178,6 +183,7 @@ items:
 
   - type: STR_HAMMER_BT  # BT THUNDER HAMMER
     fixedWeapon: true
+    fixedWeaponShow: true
     size: 0.3
     armor: 200
     weight: 80
@@ -221,3 +227,66 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 80 # was 100
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+
+  - type: STR_BLACKSWORD_BT  # BT BLACK SWORD
+    fixedWeapon: true
+    fixedWeaponShow: true
+    twohanded: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    armor: 200
+    weight: 10
+    bigSprite: 4006
+    floorSprite: 4005
+    handSprite: 4184
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    power: 100
+    damageType: 11  # melta
+    accuracyMelee: 90
+    tuMelee: 10
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    accuracyMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    meleeBonus:
+      psi: 0.1
+    meleeMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    damageBonus:
+      psi: 0.2
+      strength: 0.2
+      melee: 0.3
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.5
+      FireThreshold: 0
+      ToHealth: 0.7
+      ToMorale: 1.0
+      ToWound: 0.0
+      RandomWound: false
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.5
+      FireThreshold: 0
+      ToHealth: 0.75
+      ToMorale: 1.0
+      ToWound: 0.0
+      RandomWound: false
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 20
+      REACTION_MULTIPLIER: 200
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 150 #1.5x damage vs Daemons

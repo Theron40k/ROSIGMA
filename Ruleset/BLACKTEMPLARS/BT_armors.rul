@@ -106,6 +106,7 @@ armors:
       - 1.0  # MELTA
     builtInWeapons:
       - STR_RIFLE_BT
+      - STR_RIFLE_CLIP_AP
       - INV_NULL_3X1_BACKPACK
     units:
       - STR_BTMARINE_PLAYER
@@ -123,7 +124,6 @@ armors:
     requires: STR_MIDTIER_PREREQ
     builtInWeapons:
       - STR_PLASMA_RIFLE_BT
-      - STR_PLASMA_RIFLE_CLIP
       - STR_PLASMA_RIFLE_CLIP
       - INV_NULL_3X1_BACKPACK
 
@@ -174,6 +174,7 @@ armors:
     specialWeapon: STR_JUMP_GAUNTLET_PLUS
     builtInWeapons:
       - STR_PISTOL_BT
+      - STR_PISTOL_CLIP_AP
       - STR_CHAINSWORD_BT
       - INV_NULL_3X1_BACKPACK
     units:
@@ -194,7 +195,6 @@ armors:
     requires: STR_MIDTIER_PREREQ
     builtInWeapons:
       - STR_PLASMA_PISTOL_BT
-      - STR_PLASMA_PISTOL_CLIP
       - STR_PLASMA_PISTOL_CLIP
       - STR_CHAINSWORD_BT
       - INV_NULL_3X1_BACKPACK
@@ -245,6 +245,7 @@ armors:
     specialWeapon: STR_UNARMED_GAUNTLET_PLUS
     builtInWeapons:
       - STR_PISTOL_BT
+      - STR_PISTOL_CLIP_AP
       - INV_NULL_3X3
       - AUX_MEDI_KIT
     units:
@@ -533,8 +534,7 @@ armors:
     units:
       - STR_BTHONORED_PLAYER
     builtInWeapons:
-      - STR_PISTOL_BT
-      - STR_PLASMA_PISTOL_CLIP
+      - STR_PLASMA_PISTOL_BT
       - STR_PLASMA_PISTOL_CLIP
     allowsRunning: false
     allowsKneeling: false
@@ -656,6 +656,8 @@ armors:
     allowsKneeling: true
     loftempsSet: [4]
     specialWeapon: STR_MFIST
+    builtInWeapons:
+      - STR_BLACKSWORD_BT
     tags:
       INFECTION_RESIST: 50  # infection immune
       INFECTION_RESIST_TYPE: 13
@@ -721,7 +723,7 @@ armors:
     loftempsSet: [92, 89, 90, 91]
     drawingRoutine: 20
     builtInWeapons:
-      - AUX_HOVERTANK_PLASMA
+      - STR_DREAD_MELEE_WEAPON
       - AUX_DREAD_FLAMER
       - INV_NULL_3X3
       - INV_NULL_2X1_RL
@@ -820,3 +822,55 @@ armors:
       - INV_NULL_4X2
     psiDefence:
       psiStrength: 5.0               # 500% the psiStrength dread protected
+
+  - type: STR_BTCATAPHRACTARMOR_PLAYER  #~BT CATAPHRACT ARMOR
+    customArmorPreviewIndex: 1012
+    visibilityAtDay: 40  # equivalent to Scion gear
+    visibilityAtDark: 40  # advanced sensors
+    antiCamouflageAtDay: 5  # advanced sensors
+    antiCamouflageAtDark: 5
+    heatVision: 20  # per daemon senses
+    loftempsSet: [5]
+    storeItem: STR_cataphract_ARMOR
+    spriteInv: BTCATAPHINV.SPK
+    spriteSheet: BLACKTEMPLARCATAPHRACTbattle.PCK
+    units:
+      - STR_BTHONORED_PLAYER
+    drawingRoutine: 0
+    stats:
+      tu: 40
+      health: 30
+      stamina: 45
+      strength: 45
+      bravery: 40
+      firing: 25
+      melee: 40
+    frontArmor: 180
+    sideArmor: 170
+    rearArmor: 170
+    underArmor: 180
+    allowsKneeling: false
+    corpseBattle:
+      - STR_BTcataphract_CORPSE_GEO
+    damageModifier:
+      - 1.0  # none
+      - 0.5  # AP; Cataphract reduces by 0.2
+      - 0.3  # FLAMES
+      - 0.5  # HE; Cataphract reduces by 0.2
+      - 1.0  # LASCANON; Cataphract increases by 0.2
+      - 1.0  # PLASMA
+      - 0.8  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA; Cataphract increases by 0.1
+    specialWeapon: STR_MFIST
+    allowsRunning: false
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 60  # 50% better than standard terminator shielding
+      ARMOR_ENERGY_SHIELD_DECAY: 20
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_SIZE: 200 # HUGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
