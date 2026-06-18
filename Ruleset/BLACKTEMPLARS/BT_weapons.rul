@@ -238,7 +238,7 @@ items:
     weight: 10
     bigSprite: 4006
     floorSprite: 4005
-    handSprite: 4184
+    handSprite: 4406
     meleeAnimation: {mod: 40k, index: 4}
     meleeSound: {mod: 40k, index: 753}
     meleeHitSound: {mod: 40k, index: 754}
@@ -290,3 +290,20 @@ items:
       ITEM_STRENGTH_REQUIREMENT: 20
       REACTION_MULTIPLIER: 200
       DAMAGE_BONUS_PERCENT_DAEMONIC: 150 #1.5x damage vs Daemons
+    scripts:
+      selectItemSprite: |
+
+        var int temp;
+        var int numOfFrames;
+        set numOfFrames 4;
+
+        if or eq blit_part blit_item_lefthand eq blit_part blit_item_righthand;
+
+            add temp anim_frame;
+            mod temp numOfFrames;
+            mul temp 8;
+            add sprite_index temp;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+        return sprite_index;
