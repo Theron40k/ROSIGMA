@@ -16,7 +16,7 @@ items:
       - STR_ELDAR_ONLY
     requiresBuy: [] # Already requires the eldar base service
     requiresBuyBaseFunc: [ELDAROUT]
-    weight: 15
+    weight: 17
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
     size: 0.3
     dropoff: 5
@@ -83,7 +83,7 @@ items:
 
   - type: STR_CATAPULT_PISTOL #              16000
     refNode: *ELDAR_WEAPON_TEMPLATE
-    weight: 10
+    weight: 12
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: [ELDAROUT]
     requires:
@@ -254,7 +254,7 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
-      
+
   - delete: STR_WRAITH_MELEE_WEAPON
   - type: STR_WRAITH_MELEE_WEAPON
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_AUXILIARY]
