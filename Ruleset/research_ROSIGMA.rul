@@ -1940,7 +1940,7 @@ research:
     unlocks:
       - STR_REEDUCATION_RESEARCH
       - STR_BASIC_BALLISTICS_DEP
-      - STR_ARVUS_ADEPTAS
+      - STR_ARVUS_DEP
       - STR_LASER_WEAPONS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_MARINES_AND_INQUISITION
@@ -4070,7 +4070,7 @@ research:
     spawnedEvent: STR_INQ_REQUISITION_AGENTS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH # Secure Inquisitorial Agents Network
-    cost: 400
+    cost: 300
     dependencies:
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_NOT_THE_IMPERIAL_LAW
@@ -4085,7 +4085,7 @@ research:
     spawnedEvent: STR_INQ_REQUISITION_ARBITES_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH  # Secure Arbites Support
-    cost: 600
+    cost: 500
     dependencies:
       - STR_INQ_REQUISITION_ARBITES_RESEARCH
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
@@ -4105,7 +4105,7 @@ research:
       - STR_PHOTON_GRENADE_REQUISITION
 
   - name: STR_INQ_REQUISITION_ARBITES_JUDGES_RESEARCH  # Requisition Judges
-    cost: 600
+    cost: 500
     points: -250
     dependencies:
       - STR_MIDTIER_PREREQ
@@ -4122,7 +4122,7 @@ research:
     spawnedEvent: STR_INQ_REQUISITION_GUARD_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_GUARD_RESEARCH  # Secure Guard Veterans
-    cost: 600
+    cost: 500
     dependencies:
       - STR_INQ_REQUISITION_GUARD_RESEARCH
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
@@ -4181,7 +4181,7 @@ research:
     spawnedEvent: STR_INQ_REQUISITION_SORORITAS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_SORORITAS_RESEARCH
-    cost: 700
+    cost: 600
     dependencies:
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
@@ -4191,7 +4191,7 @@ research:
     spawnedEvent: STR_INQ_SECURE_SUPPORT_SORORITAS_EVENT
 
   - name: STR_INQ_REQUISITION_SORORITAS_VETERANS_RESEARCH  # Requisition Further Adeptas Sororitas
-    cost: 700
+    cost: 600
     points: -250
     dependencies:
       - STR_MIDTIER_PREREQ
@@ -4200,21 +4200,21 @@ research:
     spawnedEvent: STR_INQ_REQUISITION_SORORITAS_VETERANS_EVENT
 
   - name: STR_INQ_REQUISITION_OGRYNS_RESEARCH  # Request Ogryn Bodyguards
-    cost: 400
+    cost: 350
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_INQ_REQUISITION_GUARD_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_OGRYNS_EVENT
 
   - name: STR_INQ_REQUISITION_OGRYNS_BIGGER_RESEARCH  # Request Bigger Ogryn Bodyguards
-    cost: 600
+    cost: 550
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_OGRYNS_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_OGRYNS_BIGGER_EVENT
 
   - name: STR_INQ_REQUISITION_ASSASSINS_RESEARCH  # Order Imperial Assassins
-    cost: 400
+    cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
@@ -4222,7 +4222,7 @@ research:
     spawnedEvent: STR_INQ_REQUISITION_ASSASSINS_EVENT  # Order Imperial Assassins
 
   - name: STR_INQ_SECURE_SUPPORT_ASSASSINS_RESEARCH
-    cost: 600
+    cost: 400
     dependencies:
       - STR_INQ_REQUISITION_ASSASSINS_RESEARCH
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
@@ -4252,7 +4252,7 @@ research:
     spawnedEvent: STR_INQ_RR_CONTACT_THE_ABHUMANS_EVENT
 
   - name: STR_INQ_RR_RECRUIT_OGRYN_RESEARCH  # Recruit Local Ogryn
-    cost: 400
+    cost: 350
     points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
@@ -4261,7 +4261,7 @@ research:
     spawnedEvent: STR_INQ_RR_RECRUIT_OGRYN_EVENT
 
   - name: STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_RESEARCH  # A Deal With The Squats
-    cost: 400
+    cost: 350
     points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
@@ -4270,7 +4270,7 @@ research:
     spawnedEvent: STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_RESEARCH  # Secure Abhuman Community Support
-    cost: 600
+    cost: 500
     points: -250
     dependencies:
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
@@ -4281,7 +4281,7 @@ research:
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ABHUMANS_EVENT
 
   - name: STR_ENTANGLE_ADEPTAS_RESEARCH  # Entangle the Adeptas
-    cost: 700
+    cost: 500
     disables:
       - STR_INQ_SECURE_SUPPORT_SORORITAS_RESEARCH
     dependencies:
@@ -4297,7 +4297,7 @@ research:
     spawnedEvent: STR_REINFORCEMENTS_ADEPTAS_INQ_ENTANGLED
 
   - name: STR_INQ_RR_ENTICE_BRIBES_RESEARCH  # Deploy Blackmail and Entice Bribes
-    cost: 700
+    cost: 600
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_MIDTIER_PREREQ
@@ -4305,19 +4305,19 @@ research:
 
 
   - name: STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH  # Indulge the Deathcults
-    cost: 700
+    cost: 500
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_1_EVENT
   - name: STR_INQ_RR_DEATHCULT_RITUAL_2_RESEARCH  # Partake in Deathcult Rituals
-    cost: 800
+    cost: 650
     dependencies:
       - STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH
       - STR_MIDTIER_PREREQ
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_2_EVENT
   - name: STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH  # Embrace the Deathcults
-    cost: 900
+    cost: 800
     dependencies:
       - STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH
       - STR_HIGHTIER_PREREQ
@@ -4472,7 +4472,7 @@ research:
     spawnedEvent: STR_REWARD_INQUISITION_STORMTROOPERS
 
   - name: STR_INQ_CONTACT_REVISIONISTS_RESEARCH  # Contact Revisionists
-    cost: 300
+    cost: 250
     points: -100
     dependencies:
       - STR_INQ_ARCHENEMY_ARMAMENTS_RESEARCH
@@ -4480,7 +4480,7 @@ research:
     spawnedEvent: STR_INQ_CONTACT_REVISIONISTS_EVENT
 
   - name: STR_INQ_CONTACT_DEFECTOR_MARINES_RESEARCH  # Heretical Marines Contacted
-    cost: 900
+    cost: 800
     points: -500
     dependencies:
       - STR_INQ_RR_MIDTIER_CHAOS

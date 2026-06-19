@@ -148,7 +148,7 @@ events:
     timer: 2440  # 2 days
     everyMultiItemList:
       STR_EVISCERATOR: 1
-      STR_PURITY_SEAL: 1
+      STR_PURITY_SEAL: 2
     spawnedPersons: 1
     spawnedPersonType: STR_GUARD_PRIEST
 
@@ -194,7 +194,6 @@ events:
     spawnedSoldier:
       previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
         STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
-
 
   - name: STR_INQ_AGENTS_BAD_SISTER_EVENT
     description: STR_INQ_AGENTS_BAD_SISTER_EVENT_DESCRIPTION
@@ -251,7 +250,6 @@ events:
       STR_BOLTPISTOL_DEAZ: 1
       STR_LIGHT_BOLTPISTOL_AMMO: 8
       STR_MGRENADE: 2
-      STR_KNIF: 1
       STR_ADEPTAS_ARMOR_ELOHIM: 1
     spawnedSoldier:
       rank: 3
@@ -271,8 +269,6 @@ events:
     everyMultiItemList:
       STR_EVISCERATOR: 1
       STR_PURITY_SEAL: 2
-      STR_STUB_GUN: 10
-      STR_STUB_GUN_AMMO: 10
     everyMultiSoldierList:
       STR_GUARD_PRIEST: 1
       STR_PENITENT: 10
@@ -313,8 +309,6 @@ events:
     description: STR_INQ_AGENTS_GOOD_DEATHCULTIST_EVENT_DESCRIPTION
     background: DeathCultBG.SCR
     timer: 2440  # 2 days
-    everyMultiItemList:
-      STR_KNIF: 2
     spawnedPersons: 1
     spawnedPersonType: STR_ADEPTAS_DCAssassin
 
@@ -639,10 +633,10 @@ events:
     spawnedSoldier:
       currentStats:
         tu: 60
-        health: 40
-        strength: 35
+        health: 45
+        strength: 30
     spawnedPersons: 2
-    spawnedPersonType: STR_GUARDPD
+    spawnedPersonType: STR_JUDGE
   - name: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_1_EVENT # Confiscations
     description: STR_INQ_SECURE_SUPPORT_ARBITES_GOOD_1_EVENT_DESCRIPTION  # "The Arbites have provided you with a Kill Team of Veteran Enforcers."
     background: ArbitesBG.SCR
@@ -734,10 +728,6 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_AUTOGUN: 3
-      STR_AUTOGUN_CLIP: 12
-      STR_SHOTGUN: 3
-      STR_SHOTGUN_SHELLS: 12
       STR_GUARD_ARMORH: 4
     spawnedPersons: 6
     spawnedPersonType: STR_GUARD_BEASTMAN
@@ -887,7 +877,7 @@ events:
     description: STR_INQ_SECURE_SUPPORT_SORORITAS_DECENT_1_EVENT_DESCRIPTION
     background: SistersBG.SCR
     timer: 2440  # 2 days
-    funds: 50000
+    funds: 100000
   - name: STR_INQ_SECURE_SUPPORT_SORORITAS_DECENT_2_EVENT  # Medicae
     description: STR_INQ_SECURE_SUPPORT_SORORITAS_DECENT_2_EVENT_DESCRIPTION
     background: SistersBG.SCR
