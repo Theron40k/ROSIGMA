@@ -103,7 +103,7 @@ soldierTransformation:
       psiSkill: 20
       melee: 5
 
-    # Instant recovery option for precious Retinue
+    # fast recovery option for precious Retinue
   - refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
     name: STR_INQ_TRANSFORM_REJUVENATE
     cost: 25000
@@ -112,7 +112,7 @@ soldierTransformation:
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
-    recoveryTime: 200 # 200 days
+    recoveryTime: 5 # set Recovery Time to 5 days
     requiredItems:
       STR_KILLPOINT_TOKEN: 15
     requiredPreviousTransformations:
