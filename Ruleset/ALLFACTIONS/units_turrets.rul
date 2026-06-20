@@ -554,15 +554,6 @@ units:
       - - STR_GORGON_HEAVY_STUBBER
       - - STR_GORGON_HEAVY_STUBBER
 
-  - type: STR_TAUROS_TURRET
-    refNode: *STR_TURRET_DEFAULT
-    value: 60
-    energyRecovery: 10
-    builtInWeaponSets:
-      - - STR_GORGON_HEAVY_FLAMER
-      - - STR_GORGON_HEAVY_FLAMER
-      - - STR_GORGON_HEAVY_FLAMER
-
   - type: STR_TAUROS_SMALL_TURRET
     refNode: *STR_TURRET_DEFAULT
     stats:
@@ -665,6 +656,16 @@ units:
       - - STR_LASCANNON_TAUROS
       - - STR_LASCANNON_TAUROS
       - - STR_LASCANNON_TAUROS
+
+#   Duplicated unit type, here in case we need this again
+#  - type: STR_TAUROS_TURRET
+#    refNode: *STR_TURRET_DEFAULT
+#    value: 60
+#    energyRecovery: 10
+#    builtInWeaponSets:
+#      - - STR_GORGON_HEAVY_FLAMER
+#      - - STR_GORGON_HEAVY_FLAMER
+#      - - STR_GORGON_HEAVY_FLAMER
 
   - type: STR_TANK_ROCKET_LAUNCHER                 # TARANTULA
     stats:
