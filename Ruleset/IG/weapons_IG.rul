@@ -1120,10 +1120,6 @@ items:
     categories: [STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
     size: 0.3
     dropoff: 4  #
-    requiresBuy:
-      - STR_MULTILAS_HANDHELD_RESEARCH
-    costBuy: 200000  # same as Rotor Cannon in weapon price, Hotshot ammo variant requires research + expensive
-    costSell: 20000
     weight: 45  # heavier than rotor cannons and heavy bolters
     compatibleAmmo:
       - STR_PORTABLE_MULTILASER_BATTERY
@@ -1165,40 +1161,24 @@ items:
       REACTION_MULTIPLIER: 50
       REACTION_PENALTY_KNEELING_BYPASS: 1
 
+  - type: STR_HAND_MULTILASER
+    refNode: *STR_HAND_MULTILASER_TEMPLATE
+    requiresBuy:
+      - STR_MULTILAS_HANDHELD_RESEARCH
+    costBuy: 200000  # same as Rotor Cannon in weapon price, Hotshot ammo variant requires research + expensive
+    costSell: 20000
+
   - type: STR_HAND_MULTILASER_PA  # Black Version, for Power Armors.
+    refNode: *STR_HAND_MULTILASER_TEMPLATE
     categories: [STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
+    compatibleAmmo: !remove
+      - STR_PORTABLE_MULTILASER_BATTERY
+      - STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT
     size: 0.2
-    dropoff: 4
-    # requiresBuy: # armor attached specialWeapon, the armor is bought with the gun
-    #   - STR_CHAMBERMILITANT
-    #   - STR_MT_GK  # Midtier Inquisition  # Guard gets a manufacturing option
-    # costBuy: 1000000  # more than double initial cost vs rotor cannon, but no ammo cost
-    # costSell: 15000
+    costBuy: 0
     weight: 50  # heavier than rotor cannons and heavy bolters, integrated power and what not.
-    bigSprite: 910  # multilaser black
-    floorSprite: 922
-    handSprite: 650
     bulletSpeed: 50
     explosionSpeed: 3 # Makes it shoot faster/less time per shot
-    battleType: 1
-    twoHanded: true
-    blockBothHands: true
-    invWidth: 2
-    invHeight: 3
-    armor: 200
-    accuracySnap: 50  # -5 vs Inquisition Multilas
-    accuracyAuto: 40  # -5 vs Inquisition Multilas
-    tuSnap: 30
-    tuAuto: 45
-    tuAimed: 0
-    confSnap:  # 5 shot burst
-      shots: 5
-      name: STR_BURST_SNAP_SHOT
-      arcing: false
-    autoShots: 12  # -3 vs Rotorcannon, +5 vs volleygun
-    autoRange: 11  # Hellgun +2 -1 vs Inquisitor Multilas
-    snapRange: 15 # -1 vs Inquisitor Multilas
-    aimRange: 0
     clipSize: -1  # infinite ammo is a boon vs rotorcannon
     power: 65  #
     damageType: 1  # AP instead of LAS
@@ -1213,12 +1193,7 @@ items:
     recover: false  # armor attached specialWeapon
     fixedWeapon: true  # armor attached specialWeapon
     fixedWeaponShow: true  # armor attached specialWeapon
-    listOrder: 10761
     minRange: 3 # heavy weapon; cumbersome, not suited to CQC; power armor helps with maneuverability
-    tags:
-      ITEM_IS_HEAVY_WEAPON: 1
-      REACTION_MULTIPLIER: 50
-      REACTION_PENALTY_KNEELING_BYPASS: 1
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3983
