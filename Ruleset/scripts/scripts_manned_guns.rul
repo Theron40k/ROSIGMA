@@ -1,0 +1,35 @@
+extended:
+  scripts:
+    newTurnUnit:
+#*** Handles resetting crewed weapons ***
+      - override: 40k_nTU_crew_served_weapons_reset
+        offset: 11
+        code: |
+          var ptr RuleArmor turretArmor;
+          var int checkedTag;
+
+          # Validation:
+          #   1. Player's turn
+          if neq 0 side;
+
+            return;
+
+          end;
+
+          # Reset crewed weapon accuracy and reactions, and energy
+          unit.getRuleArmor turretArmor;
+          turretArmor.getTag checkedTag Tag.ARMOR_IS_CREWED_WEAPON;
+          if neq 0 checkedTag;
+
+            unit.Stats.setFiring 0;
+            unit.Stats.setReactions 0;
+            unit.setEnergy 0;
+            unit.setTimeUnits 0; # unmanned turrets shouldn't be able to scout and fire at 0% accuracy which can still hit, especially at close range
+
+          end;
+
+          # Reset tags on crewed weapons and soldiers
+          unit.setTag Tag.UNIT_CREWED_WEAPON_ID 0;
+          unit.setTag Tag.UNIT_IS_USING_CREWED_WEAPON 0;
+
+          return;

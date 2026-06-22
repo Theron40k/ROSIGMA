@@ -780,9 +780,18 @@ items:
       TURRET_RELOAD_TURNS: 4
       DAMAGE_RESIST_PENETRATION_PERCENT: 25
 
-  - type: STR_GORGON_HEAVY_STUBBER
+  - type: STR_GORGON_HEAVY_STUBBER_UNMANNED #variant of the heavy stubber emplacement weapon that uses munitions for unmanned turrets
     refNode: *STR_TURRET_DEFAULT
     dropoff: 4
+    weight: 100
+    bigSprite: {mod: 40k, index: 1003}
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: {mod: 40k, index: 4}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: -1
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
     bulletSpeed: 50
     # Snap
     accuracySnap: 75
@@ -827,11 +836,45 @@ items:
       energy: true
       mana: true
     power: 42
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.90
+    sprayWaypoints: 2
+    clipSize: -1
+    fixedWeapon: true
+    recover: false
+    tags:
+      TURRET_RELOAD_TURNS: 2
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+
+  - type: STR_GORGON_HEAVY_STUBBER #updated stats
+    dropoff: 4
+    bulletSpeed: 50
+    # Snap
+    accuracySnap: 75
+    snapRange: 25
+    confSnap:
+      shots: 5
+      name: STR_BURST_SNAP_SHOT
+    # Auto (Full Auto)
+    accuracyAuto: 50
+    autoRange: 15
+    autoShots: 40
+    confAuto:
+      name: STR_FULL_AUTO
+    # Aimed (Standard Auto)
+    accuracyAimed: 60
+    aimRange: 20
+    confAimed:
+      shots: 15
+      name: STR_AUTOFIRE
+    power: 42
     damageAlter:
       ToArmorPre: 0.05
       ArmorEffectiveness: 0.90
     tags:
-      TURRET_RELOAD_TURNS: 2
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
 
