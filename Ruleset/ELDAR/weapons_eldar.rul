@@ -52,34 +52,44 @@ items:
       - STR_ELDAR_ONLY
     size: 0.4
     dropoff: 5
-    weight: 30
+    weight: 25
     bigSprite: 4850
     floorSprite: {mod: 40k, index: 419}
     handSprite: 4850
     bulletSprite: 0
     fireSound: {mod: 40k, index: 52}
-    clipSize: -1
-    power: 100
-    damageType: 3
+    clipSize: 1
+    #power: 100
+    compatibleAmmo:
+      - STR_LARGE_ROCKET_ELDAR
+    #damageType: 3
     accuracySnap: 70
     accuracyAimed: 115
-    accuracyAuto: 55
+    accuracyAuto: 0
     tuSnap: 55
     tuAimed: 85
-    tuAuto: 55
+    tuAuto: 0
+    snapRange: 20
+    aimRange: 30
     battleType: 1
     twoHanded: true
     blockBothHands: true
     invWidth: 2
     invHeight: 3
-    recover: false
+    recover: true
     listOrder: 12100
+    costBuy: 15000
+    costSell: 4000
 
+  # DEPRECATED
   - type: STR_ELDAR_LAUNCHER_FIXED # Fixed weapon version for use on player armor.
     ufopediaType: STR_ELDAR_LAUNCHER # link to the same ufopedia page as normal STR_ELDAR_LAUNCHER.
     refNode: *STR_ELDAR_LAUNCHER_REF
     fixedWeapon: true
     fixedWeaponShow: true
+    recover: false
+    costBuy: 0
+    costSell: 0
 
   - type: STR_CATAPULT_PISTOL #              16000
     refNode: *ELDAR_WEAPON_TEMPLATE
