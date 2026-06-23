@@ -1120,7 +1120,7 @@ items:
     categories: [STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
     size: 0.3
     dropoff: 4  #
-    weight: 45  # heavier than rotor cannons and heavy bolters
+    weight: 40  # Same weight as Rotor Cannon and Heavy Bolter
     compatibleAmmo:
       - STR_PORTABLE_MULTILASER_BATTERY
       - STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT
@@ -1146,8 +1146,8 @@ items:
       name: STR_BURST_SNAP_SHOT
       arcing: false
     autoShots: 12  # -3 vs Rotorcannon, +5 vs volleygun
-    autoRange: 11  # Hellgun +2 -1 vs Inquisitor Multilas
-    snapRange: 15 # -1 vs Inquisitor Multilas
+    autoRange: 12  # -2 vs Inquisitor Multilas
+    snapRange: 16 # -2 vs Inquisitor Multilas
     aimRange: 0
     kneelBonus: 150  # big accuracy benefit from deploying
     # FIXME: followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
