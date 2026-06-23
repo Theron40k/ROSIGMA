@@ -1539,6 +1539,23 @@ manufacture:
     producedItems:
       STR_AUTOCANNON_AP_AMMO: 5
 
+  - name: STR_HAND_MC_MULTILASER
+    category: STR_WEAPON
+    requires:
+      - STR_UFO_CONSTRUCTION # Ceramite
+      - STR_MULTILAS_HANDHELD_RESEARCH
+      - STR_MASTER_CRAFTING
+    space: 0
+    time: 2000
+    cost: 250000
+    listOrder: 13500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_UFO_CONSTRUCTION: 10
+      STR_KILLPOINT_TOKEN: 200
+    producedItems:
+      STR_HAND_MC_MULTILASER: 1
+
   - name: STR_MC_UMBRA_GL
     category: STR_WEAPON
     requires:
