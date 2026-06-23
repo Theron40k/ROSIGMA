@@ -106,7 +106,7 @@ items:
     armor: 200
     accuracySnap: 55 # +10 accuracy due to scope
     accuracyAuto: 45 # +10 accuracy due to scope
-    accuracyAimed: 70 # Accurate 2 shot burst fire
+    accuracyAimed: 65 # Accurate 3 shot burst fire
     tuSnap: 35 # +5 cost due to scope
     tuAuto: 50 # +5 cost due to scope
     tuAimed: 50 # Scoped Shot, 2 shot burst
@@ -115,11 +115,11 @@ items:
       name: STR_BURST_SNAP_SHOT
       arcing: false
     dropoff: 4
-    confAimed: # 2 shot burst
-      shots: 2
-      name: STR_AIMED_SHOT
+    confAimed: # 3 shot burst
+      shots: 3
+      name: STR_CONTROLLED_SHOT
       arcing: false
-    aimRange: 22 # Scoped aim, 2 shot burst
+    aimRange: 20 # Scoped aim, 3 shot burst
     autoShots: 12  # -3 vs Rotorcannon, +5 vs volleygun
     autoRange: 14  # Scope +2 range
     snapRange: 18 # Scope +2 range
@@ -141,7 +141,6 @@ items:
     fixedWeaponShow: true  # armor attached specialWeapon
     listOrder: 10761
     tags:
-      ITEM_AIMED_FLAT_POWER_BONUS: 15
       ITEM_IS_HEAVY_WEAPON: 1
       REACTION_MULTIPLIER: 50
       REACTION_PENALTY_KNEELING_BYPASS: 1

@@ -1168,6 +1168,21 @@ items:
     costBuy: 200000  # same as Rotor Cannon in weapon price, Hotshot ammo variant requires research + expensive
     costSell: 20000
 
+  - type: STR_HAND_MC_MULTILASER
+    refNode: *STR_HAND_MULTILASER_TEMPLATE
+    costBuy: 0
+    costSell: 35000
+    bigSprite: 2652
+    floorSprite: 301
+    handSprite: 670
+    accuracySnap: 60 # +15 MC bonus
+    accuracyAuto: 50 # +15 MC bonus
+    autoRange: 14 # Same Range as Inq. Multilaser, +2 MC Bonus
+    snapRange: 18 # Same Range as Inq. Multilaser, +2 MC Bonus
+    listOrder: 10762
+    minRange: 3
+
+
   - type: STR_HAND_MULTILASER_PA  # Black Version, for Power Armors.
     refNode: *STR_HAND_MULTILASER_TEMPLATE
     categories: [STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
