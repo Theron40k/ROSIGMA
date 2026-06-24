@@ -102,8 +102,9 @@ soldierTransformation:  ############## NOT DONE
       - STR_ELDAR_REAPER_M
     requiredMinStats:
       firing: 65
-    requiredCommendations:
-      STR_VETERAN_COMMENDATION: 0
+    resetRank: true
+    #TESTING requiredCommendations:
+    #TESTING  STR_VETERAN_COMMENDATION: 0
     percentOverallStatChange:
       tu: 10
       stamina: 10
@@ -148,7 +149,7 @@ soldierTransformation:  ############## NOT DONE
       psiStrength: 0
       psiSkill: 0
       melee: 0
-  - name: STR_PROMOTE_TO_FIREDRAGON
+  - name: STR_PROMOTE_TO_DRAGON
     # FIXME: requiresBuyBaseFunc: [ASPECT]
     requires:
       - STR_ELDAR_PATH
@@ -178,6 +179,37 @@ soldierTransformation:  ############## NOT DONE
       strength: 10
       psiStrength: 0
       psiSkill: 0
+      melee: 0
+  - name: STR_PROMOTE_TO_DRAGON_EXARCH
+    # FIXME: requiresBuyBaseFunc: [ASPECT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ASPECT_RESEARCH
+    cost: 50000
+    minRank: 1
+    producedSoldierType: STR_ELDAR_DRAGON_EXARCH_SOLDIER
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsWoundedSoldiers: true
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ELDAR_DRAGON_MF
+    requiredMinStats:
+      firing: 65
+    #TESTING requiredCommendations: 
+      #TESTING STR_VETERAN_COMMENDATION: 0
+    resetRank: true
+    percentOverallStatChange:
+      tu: 10
+      stamina: 10
+      health: 20
+      bravery: 0
+      reactions: 0
+      firing: 20
+      throwing: 5
+      strength: 10
+      psiStrength: 10
+      psiSkill: 10
       melee: 0
   - name: STR_PROMOTE_TO_SEER
     # FIXME: requiresBuyBaseFunc: [ASPECT]
