@@ -62,6 +62,7 @@
 # #SM.SCOUT#          Scout Strategy
 # #SM.TAC#            Tactical Strategy
 # #SM.BT#             Black Templars Strategy
+# #SOB.BR#            Bloody Roses Strategy
 # #SM.WB#             Word Bearers Strategy
 # #CM#              Chamber Militant
 # #CM.DW#             Deathwatch
@@ -763,6 +764,23 @@ ufopaedia:
     text: STR_SW_STRATEGY_INFO
     requires:
       - STR_MARINES_STRATEGY
+
+## #STRATEGY.BR#
+
+  - id: STR_CHOSEN_BLOODYROSES
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_BLOODYROSE_STRATEGY
+    image_id: BRINTRO_CODEX.SPK
+
+  - id: STR_BLOODYROSE_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: SW_STRATEGY.SPK
+    text: STR_SW_STRATEGY_INFO
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
 
 ## #STRATEGY.WB#
   - id: STR_CHOSEN_WORDBEARERS
@@ -6936,7 +6954,115 @@ ufopaedia:
       - STR_MARINES_STRATEGY
 
 
+### #ARMORS.SOB.BR#  Bloody Roses Armors
 
+  - id: STR_NOVICE_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_NOVICE_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_REPENTIA_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_REPENTIA_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_HOSPITALIER_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_HOSPITALIER_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_ADEPTAS_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_ADEPTAS_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_SERAPHIM_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_SERAPHIM_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_SUPERIOR_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_SUPERIOR_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_ELOHIM_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_ELOHIM_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_RETRIBUTOR_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_RETRIBUTOR_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_CELESTIAN_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_CELESTIAN_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_SACRESANT_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_SACRESANT_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_CANONESS_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_CANONESS_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_PENITENT_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_PENITENT_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
 
 ### #SM.WB#
 
