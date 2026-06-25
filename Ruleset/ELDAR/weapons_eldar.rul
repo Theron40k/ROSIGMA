@@ -127,6 +127,88 @@ items:
     tags:
       REACTION_MULTIPLIER: 200
 
+  - type: STR_FUSION_GUN                 #STR_ADEPTAS_MELTAGUN_NECRO stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
+    weight: 15
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [ELDAROUT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.3
+    costBuy: 10000
+    costSell: 3000
+    bigSprite: 4951
+    floorSprite: 4951
+    handSprite: 4900
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: {mod: 40k, index: 739}
+    compatibleAmmo:
+      - STR_FUSION_AMMO            
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 70
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 33
+    tuAimed: 0
+    maxRange: 18
+    damageBonus:
+      flatHundred: 0.2
+    confSnap:
+      shots: 1
+      spendPerShot: 2  # double ammo consumption 5 shots per clip
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+    listOrder: 16500
+
+  - type: STR_DRAGON_FUSION_GUN                 #STR_HARMONIC_MELTAGUN stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16510
+    weight: 20
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [ELDAROUT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.3  
+    costBuy: 50000 
+    costSell: 25000
+    bigSprite: 4952
+    floorSprite: 4952
+    handSprite: 4908
+    bulletSpeed: 100
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: {mod: 40k, index: 739}
+    compatibleAmmo:
+      - STR_FUSION_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 20 
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 75
+    maxRange: 20
+    minRange: 5
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+    listOrder: 16510
+
 #--- ELDAR.GRENADES ---
 
   - delete: STR_ELDAR_GRENADE
