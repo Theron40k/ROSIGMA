@@ -346,7 +346,7 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
-  - type: STR_ELDAR_ARMOR7_P       # DRAGON ARMOR
+  - type: STR_ELDAR_DRAGON_ARMOR_P       # DRAGON ARMOR
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
@@ -418,6 +418,73 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
+  - type: STR_ELDAR_DRAGONEX_ARMOR_P
+    ufopediaType: ""
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARD
+      2: DRAGON_EXARCH_HELMET
+      3: ELDARDEX_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY2"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY3"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY4"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY5"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY1"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY2"]
+      M9: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M10: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY5"]
+      M11: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY2"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY1"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY2"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY2"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY1"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY3"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY3"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY4"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY4"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY5"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY5"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY1"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY2"]
+    spriteSheet: ELDAR_DRAGON_EXARCH.SPK
+    visibilityAtDay: 42 #+2
+    visibilityAtDark: 30 #+5
+    antiCamouflageAtDay: 8 #+3
+    antiCamouflageAtDark: 8 #+3
+    frontArmor: 130 #+20
+    sideArmor: 110 #+20
+    rearArmor: 100 #+20
+    underArmor: 100 #+30
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_DRAGON_EXARCH_SOLDIER
+    customArmorPreviewIndex: 1352
+    corpseBattle:
+      - STR_ELDAR_DRAGON_EXARCH_CORPSE_P
+    damageModifier:  # ELDAR ARMOR
+      - 0.9  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 0.9  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 20 #+5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
 
   - delete: STR_ELDAR_ARMOR6_P
   - &REAPER_ARMOR
