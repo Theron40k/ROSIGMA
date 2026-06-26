@@ -61,7 +61,7 @@ armors:
     spriteFaceGroup: 6
     spriteFaceColor: [96, 160, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6
     stats:
-      tu: 20
+      tu: 25
       stamina: 30
       firing: -30  # melee focused armor
       health: 10
@@ -119,7 +119,6 @@ armors:
     corpseBattle:
       - STR_ADEPTASA_CORPSE
     stats:
-      tu: 20
       stamina: 40
       health: 20
       bravery: 0  # always multiples of 10
@@ -131,10 +130,10 @@ armors:
       psiSkill: 20
       melee: 5
     storeItem: STR_HOSPITALIER_ARMOR_BLOODYROSE
-    frontArmor: 130
-    sideArmor: 100
-    rearArmor: 80
-    underArmor: 100
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -170,7 +169,7 @@ armors:
     corpseBattle:
       - STR_ADEPTAS_CORPSE
     stats:
-      tu: 5
+      tu: 10
       stamina: 20
       health: 5
       bravery: 10  # always multiples of 10
@@ -182,10 +181,10 @@ armors:
       psiSkill: 10
       melee: 5
     storeItem: STR_ADEPTAS_ARMOR_BLOODYROSE
-    frontArmor: 100
-    sideArmor: 90
-    rearArmor: 55
-    underArmor: 90
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 60
+    underArmor: 70
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -221,7 +220,7 @@ armors:
     corpseBattle:
       - STR_ADEPTAS_CORPSE
     stats:
-      tu: 30
+      tu: 20
       stamina: 20
       health: 10
       bravery: 0  # always multiples of 10
@@ -233,10 +232,10 @@ armors:
       psiSkill: 15
       melee: 15
     storeItem: STR_SERAPHIM_ARMOR_BLOODYROSE
-    frontArmor: 110
-    sideArmor: 100
-    rearArmor: 80
-    underArmor: 100
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 60
+    underArmor: 70
     movementType: 1
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
@@ -287,10 +286,10 @@ armors:
       psiSkill: 15
       melee: 15
     storeItem: STR_SUPERIOR_ARMOR_BLOODYROSE
-    frontArmor: 130
-    sideArmor: 110
-    rearArmor: 80
-    underArmor: 110
+    frontArmor: 90
+    sideArmor: 80
+    rearArmor: 60
+    underArmor: 80
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.9  # AP
@@ -337,10 +336,10 @@ armors:
       psiSkill: 10
       melee: 10
     storeItem: STR_ELOHIM_ARMOR_BLOODYROSE
-    frontArmor: 115
-    sideArmor: 105
+    frontArmor: 110
+    sideArmor: 90
     rearArmor: 70
-    underArmor: 105
+    underArmor: 90
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -385,10 +384,10 @@ armors:
       psiSkill: 10
       melee: -10
     storeItem: STR_RETRIBUTOR_ARMOR_BLOODYROSE
-    frontArmor: 125
-    sideArmor: 110
-    rearArmor: 60
-    underArmor: 110
+    frontArmor: 110
+    sideArmor: 90
+    rearArmor: 70
+    underArmor: 90
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.9  # AP
@@ -422,7 +421,7 @@ armors:
       - STR_ADEPTAS_CELESTIAN_ELITE_CORPSE
     storeItem: STR_CELESTIAN_ARMOR_BLOODYROSE
     stats:
-      tu: 20
+      tu: 10
       stamina: 20
       health: 30
       bravery: 30  # always multiples of 10
@@ -433,10 +432,10 @@ armors:
       psiStrength: 0
       psiSkill: 25
       melee: 15  # -10 Long ranged replacement
-    frontArmor: 140
-    sideArmor: 120
+    frontArmor: 130
+    sideArmor: 110
     rearArmor: 90
-    underArmor: 120
+    underArmor: 110
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.9  # AP
@@ -474,7 +473,7 @@ armors:
       - STR_ADEPTAS_CELESTIAN_SACRESANT_CORPSE
     storeItem: STR_SACRESANT_ARMOR_BLOODYROSE
     stats:
-      tu: 30
+      tu: 5
       stamina: 30
       health: 30
       bravery: 30  # always multiples of 10
@@ -485,10 +484,10 @@ armors:
       psiStrength: 0
       psiSkill: 25
       melee: 30
-    frontArmor: 165  # built in gunshield
-    sideArmor: 150  # reinforced for close combat
-    rearArmor: 110  # reinforced for close combat
-    underArmor: 110  # reinforced for close combat
+    frontArmor: 150  # built in gunshield
+    sideArmor: 120  # reinforced for close combat
+    rearArmor: 90
+    underArmor: 120  # reinforced for close combat
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.9  # AP
@@ -527,7 +526,7 @@ armors:
       - STR_ADEPTASC_CORPSE
     storeItem: STR_CANONESS_ARMOR_BLOODYROSE
     stats:
-      tu: 35
+      tu: 30
       stamina: 35
       health: 35
       bravery: 50  # always multiples of 10
@@ -538,10 +537,10 @@ armors:
       psiStrength: 25
       psiSkill: 50
       melee: 30
-    frontArmor: 155
-    sideArmor: 140
-    rearArmor: 110
-    underArmor: 140
+    frontArmor: 140
+    sideArmor: 115
+    rearArmor: 100
+    underArmor: 115
     damageModifier:  # MARINE ARMOR
       - 1.0  # none
       - 0.8  # AP
