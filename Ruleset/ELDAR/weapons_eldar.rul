@@ -52,34 +52,44 @@ items:
       - STR_ELDAR_ONLY
     size: 0.4
     dropoff: 5
-    weight: 30
+    weight: 25
     bigSprite: 4850
-    floorSprite: {mod: 40k, index: 419}
+    floorSprite: 4850
     handSprite: 4850
     bulletSprite: 0
     fireSound: {mod: 40k, index: 52}
-    clipSize: -1
-    power: 100
-    damageType: 3
+    clipSize: 1
+    #power: 100
+    compatibleAmmo:
+      - STR_LARGE_ROCKET_ELDAR
+    #damageType: 3
     accuracySnap: 70
     accuracyAimed: 115
-    accuracyAuto: 55
+    accuracyAuto: 0
     tuSnap: 55
     tuAimed: 85
-    tuAuto: 55
+    tuAuto: 0
+    snapRange: 20
+    aimRange: 30
     battleType: 1
     twoHanded: true
     blockBothHands: true
     invWidth: 2
     invHeight: 3
-    recover: false
+    recover: true
     listOrder: 12100
+    costBuy: 15000
+    costSell: 4000
 
+  # DEPRECATED
   - type: STR_ELDAR_LAUNCHER_FIXED # Fixed weapon version for use on player armor.
     ufopediaType: STR_ELDAR_LAUNCHER # link to the same ufopedia page as normal STR_ELDAR_LAUNCHER.
     refNode: *STR_ELDAR_LAUNCHER_REF
     fixedWeapon: true
     fixedWeaponShow: true
+    recover: false
+    costBuy: 0
+    costSell: 0
 
   - type: STR_CATAPULT_PISTOL #              16000
     refNode: *ELDAR_WEAPON_TEMPLATE
@@ -116,6 +126,88 @@ items:
       basePercent: 50
     tags:
       REACTION_MULTIPLIER: 200
+
+  - type: STR_FUSION_GUN                 #STR_ADEPTAS_MELTAGUN_NECRO stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
+    weight: 15
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [ELDAROUT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.3
+    costBuy: 10000
+    costSell: 3000
+    bigSprite: 4951
+    floorSprite: 4951
+    handSprite: 4900
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: {mod: 40k, index: 739}
+    compatibleAmmo:
+      - STR_FUSION_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 70
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 33
+    tuAimed: 0
+    maxRange: 18
+    damageBonus:
+      flatHundred: 0.2
+    confSnap:
+      shots: 1
+      spendPerShot: 2  # double ammo consumption 5 shots per clip
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+    listOrder: 16500
+
+  - type: STR_DRAGON_FUSION_GUN                 #STR_HARMONIC_MELTAGUN stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16510
+    weight: 20
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [ELDAROUT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.3
+    costBuy: 50000
+    costSell: 25000
+    bigSprite: 4952
+    floorSprite: 4952
+    handSprite: 4908
+    bulletSpeed: 100
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: {mod: 40k, index: 739}
+    compatibleAmmo:
+      - STR_FUSION_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 20
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 75
+    maxRange: 20
+    minRange: 5
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+    listOrder: 16510
 
 #--- ELDAR.GRENADES ---
 

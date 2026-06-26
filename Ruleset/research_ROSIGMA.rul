@@ -39,6 +39,7 @@
 # #SM.TAC#            Tactical Strategy
 # #SM.WOLF#           Space Wolf Strategy
 # #SM.BT#             Black Templars Strategy
+# #SOB.BR#            Bloody Rose Strategy
 # #SM.WB#             Word Bearers Strategy
 # #CM#              Chamber Militant
 # #CM.DW#             Deathwatch
@@ -987,6 +988,8 @@ research:
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_BLACKTEMPLARS  # Black Templars Selected
     refNode: *STR_LOCKED
+  - name: STR_CHOSEN_BLOODYROSES  # Bloody Roses Selected
+    refNode: *STR_LOCKED
   - name: STR_CHOSEN_WORDBEARERS  # Word Bearers Selected
     refNode: *STR_LOCKED
   - delete: STR_CHOSEN_IGS
@@ -1022,6 +1025,7 @@ research:
   - name: STR_NOT_SPACEWOLVES  # (Not Spacewolf Strategy)
   - name: STR_NOT_WORDBEARERS  # (Not Word Bearers Strategy)
   - name: STR_NOT_BLACKTEMPLARS  # (Not Black Templar Strategy)
+  - name: STR_NOT_BLOODYROSES  # (Not Bloody Rose Strategy)
 
   - name: STR_NOT_ADEPTUS_TERRA  # (Not Alien or Heretic)
   - delete: STR_NOT_THE_IMPERIAL_LAW
@@ -1569,6 +1573,48 @@ research:
       - STR_NOT_BLACKTEMPLARS
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_BLACKTEMPLAR_CARE_PACKAGE
+
+ ### Bloody Roses #STRATEGY.SOB.BR#
+
+  - name: STR_BLOODYROSE_STRATEGY  #  Request Commandery Support
+    points: 0
+    cost: 50
+    requiresBaseFunc: [BLOODYORDER]
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    lookup: STR_CHOSEN_BLOODYROSES
+    getOneFree: #WARNING do not add more than 1 getOneFree tech due to auto-repeatability issues
+      - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
+    unlocks:
+      - STR_DEFAULT_CAMPAIGN
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_MEDICAE_RESEARCH  # see research40k.rul
+      - STR_PHOSPHOR_GRENADE
+      - STR_HOLOGRAM_GRENADE_REQUISITION
+      - STR_LASER_WEAPONS
+      - STR_MELTAGUN_TECH
+      - STR_ADEPTAS_NOVICE_RESEARCH
+      - STR_CORVUS_RESEARCH
+      - STR_FAITHFUL_ARMORY
+      - STR_PENITENT_ENGINE_RESEARCH
+      - STR_ALIEN_ALLOYS
+      - STR_ADEPTAS_DROPPOD_RESEARCH
+      - STR_ADEPTAS_ARMOR
+      - STR_ADEPTAS_SOB_MOBILIZATION  # contains adeptas recruitment
+      - STR_TRAINING_BOLTERS_ADEPTAS
+      - STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH  # recruitment
+      - STR_ADEPTAS_SUPERIOR_RESEARCH
+      - STR_NOT_ELITE_STRATEGY_ADEPTAS
+      - STR_NOT_REPENTIA_STRATEGY_ADEPTAS
+      - STR_NOT_NOVICE_STRATEGY_ADEPTAS
+    disables:
+      - STR_NOT_BLOODYROSES
+      - STR_NOT_NORMAL_STRATEGY_ADEPTAS
+      - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_REPENTIA_STRATEGY_ADEPTAS
+      - STR_NOVICE_STRATEGY_ADEPTAS
+      - STR_NORMAL_STRATEGY_ADEPTAS
+    spawnedEvent: STR_RECRUITS_BLOODYROSES
 
 
 ### Word Bearers #STRATEGY.SM.WB#
