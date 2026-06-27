@@ -11987,6 +11987,15 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  - id: STR_HAND_MC_MULTILASER # Mastercrafted Multilas
+    requires:
+      - STR_MULTILAS_HANDHELD_RESEARCH
+      - STR_MASTER_CRAFTING
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HAND_MULTILASER_CODEX.SPK
+    text: STR_HAND_MC_MULTILASER_CODEX
+
   - delete: STR_HOTSHOT_VOLLEY_GUN
   - id: STR_HOTSHOT_VOLLEY_GUN
     requires:
@@ -21046,15 +21055,52 @@ ufopaedia:
     requires:
       - STR_ELDAR_REAPER
     image_id: UP167.SPK
-    text: STR_NURGLE_UFOPEDIA
+    text: STR_ELDAR_REAPER_ARMOR_CODEX
 
+  - id: STR_ELDAR_REAPEREX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_REAPER_EXARCH_CORPSE
+    image_id: ELDAR_REAPEREX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_REAPEREX_AUTOPSY_CODEX
   - id: STR_ELDAR_ARMOR_EXARCH_P
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
     requires:
-      - STR_ELDAR_REAPER
-    image_id: UP167.SPK
-    text: STR_NURGLE_UFOPEDIA
+      - STR_ELDAR_REAPEREX
+    image_id: ELDAR_REAPEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_REAPEREX_ARMOR_CODEX
+
+  - id: STR_ELDAR_DRAGON_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGON_CORPSE
+    image_id: ELDAR_DRAGON_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_DRAGON_AUTOPSY_CODEX
+  - id: STR_ELDAR_DRAGON_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGON
+    image_id: ELDAR_DRAGON_ARMOR_CODEX.SPK
+    text: STR_ELDAR_DRAGON_ARMOR_CODEX
+
+  - id: STR_ELDAR_DRAGONEX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGONEX_CORPSE
+    image_id: ELDAR_DRAGONEX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_DRAGONEX_AUTOPSY_CODEX
+  - id: STR_ELDAR_DRAGONEX_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGONEX
+    image_id: ELDAR_DRAGONEX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_DRAGONEX_ARMOR_CODEX
 
   - delete: STR_WRAITHGUARD_AUTOPSY
   - id: STR_WRAITHGUARD_AUTOPSY
@@ -21071,7 +21117,7 @@ ufopaedia:
     requires:
       - STR_WRAITHGUARD_CORPSE
     image_id: UP171.SPK
-    text: STR_NURGLE_UFOPEDIA
+    text: STR_WRAITHGUARD_ARMOR_UFOPEDIA
 
   - delete: STR_ELDAR_PLAT_AUTOPSY
   - id: STR_ELDAR_PLAT_AUTOPSY
