@@ -7,6 +7,7 @@ soldierTransformation:
 #TIER2.PSI.Transformations #transformation from tier 1 to tier 2 for PSI unit (path of the psyker)
 #TIER3.PSI.transformations
 #TIER4.PSI.transformations
+#TIER3.MIXED.transformations # Path of the warlock
 #NOTIER.resurrections #resurrection to wraithguard
 #-------------
 
@@ -149,8 +150,112 @@ soldierTransformation:
 
 #TIER4.transformations
 #TIER2.PSI.Transformations #transformation from tier 1 to tier 2 for PSI unit (path of the psyker)
+  - name: STR_PROMOTE_TO_PSYKER
+    requires:
+      - STR_ELDAR_PATH
+      - STR_MIDTIER_PREREQ
+      - STR_ELDAR_ASPECT_RESEARCH
+    cost: 10000
+    minRank: 0
+    producedSoldierType: STR_ELDAR_PSYKER_PLAYER
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsWoundedSoldiers: true
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ELDAR_GUARDIAN_PLAYER
+    resetRank: true
+    #TESTING requiredCommendations:
+    #TESTING  STR_BATTLE_TESTED: 0
+    percentOverallStatChange:
+      tu: 10
+      stamina: 10
+      health: 10
+      bravery: 5
+      reactions: 0
+      firing: 5
+      throwing: 5
+      strength: 5
+      psiStrength: 15
+      psiSkill: 15
+      melee: 5
+
 #TIER3.PSI.transformations
+
+  - name: STR_PROMOTE_TO_BANSHEE_EXARCH
+    # FIXME: requiresBuyBaseFunc: [ASPECT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ASPECT_RESEARCH
+    cost: 50000
+    minRank: 1
+    producedSoldierType: STR_ELDAR_BANSHEE_EXARCH_PLAYER
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsWoundedSoldiers: true
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ELDAR_PSYKER_PLAYER
+      - STR_ELDAR_BANSHEE_F
+    #requiredMinStats:
+    #  firing: 65
+    #TESTING requiredCommendations:
+      #TESTING STR_VETERAN_COMMENDATION: 0
+    resetRank: true
+    percentOverallStatChange:
+      tu: 10
+      stamina: 10
+      health: 5
+      bravery: 0
+      reactions: 0
+      firing: 0
+      throwing: 5
+      strength: 5
+      psiStrength: 10
+      psiSkill: 20
+      melee: 20
 #TIER4.PSI.transformations
+#TIER3.MIXED.transformations # Path of the warlock
+
+  - name: STR_PROMOTE_TO_ELDAR_WARLOCK
+    # FIXME: requiresBuyBaseFunc: [ASPECT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ASPECT_RESEARCH
+    cost: 50000
+    minRank: 1
+    producedSoldierType: STR_ELDAR_WARLOCK_PLAYER
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsWoundedSoldiers: true
+    allowsLiveSoldiers: true
+    allowedSoldierTypes: #aspect warrior and psyker can go the hybrid path
+      - STR_ELDAR_PSYKER_PLAYER
+      - STR_ELDAR_ASPECT_WARRIOR_PLAYER
+      - STR_ELDAR_BANSHEE_F
+      - STR_ELDAR_SEER_F
+      - STR_ELDAR_AVANGER_MF
+      - STR_ELDAR_SCORPION_M
+      - STR_ELDAR_REAPER_M
+      - STR_ELDAR_DRAGON_MF
+    #requiredMinStats:
+    #  firing: 65
+    #TESTING requiredCommendations:
+      #TESTING STR_VETERAN_COMMENDATION: 0
+    resetRank: true
+    percentOverallStatChange:
+      tu: 10
+      stamina: 10
+      health: 5
+      bravery: 0
+      reactions: 10
+      firing: 10
+      throwing: 10
+      strength: 10
+      psiStrength: 10
+      psiSkill: 20
+      melee: 0
+
 #NOTIER.resurrections #resurrection to wraithguard
 
   - name: STR_RESURRECT_ELDAR

@@ -11,6 +11,7 @@ extended:
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
 # ELDAR.TIER3_PSY # PSY WARRIORS (Mastery of psychic power)
 # ELDAR.TIER4 # special units (example: avatar of khaine)
+# ELDAR.TIER3_MIXED # Path of the warlock
 # ELDAR.WRAITHGUARD # Wraithguards
 
 armors:
@@ -699,14 +700,16 @@ armors:
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
-    antiCamouflageAtDay: 3
-    antiCamouflageAtDark: 3
-    frontArmor: 60
-    sideArmor: 50
-    rearArmor: 40
-    underArmor: 45
+    antiCamouflageAtDay: 5 # banshee bonus
+    antiCamouflageAtDark: 5  # banshee bonus
+    psiVision: 4 # minor PSY vision
+    psiCamouflage: 4 # minor PSY camuflage
+    frontArmor: 85
+    sideArmor: 75
+    rearArmor: 60
+    underArmor: 65
     drawingRoutine: 0
-    forcedTorso: 1  # USE MALE
+    #forcedTorso: 1  # USE MALE
     damageModifier:  # ELDAR ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -723,8 +726,21 @@ armors:
     loftempsSet: [3]
     units:
       - STR_ELDAR_BANSHEE_F
+      - STR_ELDAR_PSYKER_PLAYER
     builtInWeapons:
       - INV_NULL_3X3
+    stats: #banshe get bonus to PSY, TU, stamina, health and melee, malus for shooting & throwing
+      tu: 5
+      stamina: 5
+      health: 5
+      bravery: 5 # in the face of danger
+      reactions: 0
+      firing: -12
+      throwing: -12
+      strength: 0
+      melee: 10
+      psiStrength: 7
+      psiSkill: 7
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -739,8 +755,8 @@ armors:
       - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
-      ARMOR_ENERGY_SHIELD_DECAY: 10
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
@@ -750,14 +766,16 @@ armors:
   - &SEER_ARMOR
     type: STR_ELDAR_ARMOR3_P        # SEER  PLAYER
     storeItem: STR_NONE
-    antiCamouflageAtDay: 5
+    antiCamouflageAtDay: 10 # Farseer bonus
     antiCamouflageAtDark: 10  # Farseer bonus
     visibilityAtDay: 40
     visibilityAtDark: 25
-    frontArmor: 60
-    sideArmor: 50
-    rearArmor: 40
-    underArmor: 45
+    psiVision: 5 # minor PSY vision
+    psiCamouflage: 5 # minor PSY camuflage
+    frontArmor: 85
+    sideArmor: 75
+    rearArmor: 60
+    underArmor: 65
     drawingRoutine: 1
     damageModifier:  # ELDAR ARMOR
       - 1.0  # none
@@ -776,8 +794,21 @@ armors:
     specialWeapon: STR_ELDAR_LIGHT
     units:
       - STR_ELDAR_SEER_F
+      - STR_ELDAR_PSYKER_PLAYER
     builtInWeapons:
       - INV_NULL_3X3
+    stats: #Seer get bonus to PSY, health malus for melee and throwing
+      tu: 0
+      stamina: 0
+      health: 5
+      bravery: 0
+      reactions: 0
+      firing: 5
+      throwing: 0
+      strength: 0
+      melee: -10
+      psiStrength: 15
+      psiSkill: 15
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
@@ -786,25 +817,29 @@ armors:
       UNIT_TYPE_PSYKER: 1
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 50
-      ARMOR_MAX_SUCCESSFUL_DODGES: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
+
   - type: STR_ELDAR_ARMOR3_P_SHIELD        # SEER  PLAYER
     refNode: *SEER_ARMOR
+    customArmorPreviewIndex: {mod: 40k, index: 255}
+    spriteSheet: ELDARDR12S.PCK
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
       - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
-      ARMOR_ENERGY_SHIELD_DECAY: 10
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_PSYKER: 1
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 50
-      ARMOR_MAX_SUCCESSFUL_DODGES: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
 
 # ELDAR.TIER3_PSY # PSY WARRIORS (Mastery of psychic power)
 # ELDAR.TIER4 # special units (example: avatar of khaine)
+# ELDAR.TIER3_MIXED # Path of the warlock
 
 # ELDAR.WRAITHGUARD # Wraithguards
 
