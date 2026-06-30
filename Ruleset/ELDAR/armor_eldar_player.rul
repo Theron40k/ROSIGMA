@@ -55,24 +55,37 @@ armors:
     ufopediaType: STR_ELDAR_ARMOR
     customArmorPreviewIndex: {mod: 40k, index: 261}
     corpseBattle:
-      - STR_GUARDIANP_CORPSE
-    layersDefaultPrefix: "70"
-    #layersSpecificPrefix:
-    #  1: "70"
-    #  2: "70"
+      - STR_ELDAR_GUARDIAN_CORPSE_P
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARG
+      2: GUARDIAN_HELMET
+      3: ELDARG_ACCESSORY
     layersDefinition:
-      M0: ["", "ELDARM", "M0_FACE"]
-      M1: ["", "ELDARM", "M1_FACE"]
-      M2: ["", "ELDARM", "M2_FACE"]
-      M3: ["", "ELDARM", "M3_FACE"]
-      M4: ["", "ELDARM", "M4_FACE"]
-      M5: ["", "ELDARM", "M5_FACE"]
-      F0: ["", "ELDARF", "F0_FACE"]
-      F1: ["", "ELDARF", "F1_FACE"]
-      F2: ["", "ELDARF", "F2_FACE"]
-      F3: ["", "ELDARF", "F3_FACE"]
-      F4: ["", "ELDARF", "F4_FACE"]
-      F5: ["", "ELDARF", "F5_FACE"]
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY11"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY1"]
+      M2: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY12"]
+      M4: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY4"]
+      M6: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY5"]
+      M7: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY6"]
+      M8: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY7"]
+      M9: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY9"]
+      M11: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY10"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY11"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY5"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY12"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY7"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY11"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY1"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY2"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY3"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY4"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY12"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
 
   - type: STR_ELDAR_ARMOR_GUARDIAN_SHIELD_PLAYER        # GUARDIAN
     refNode: *GUARDIAN_ARMOR
