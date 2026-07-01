@@ -2120,31 +2120,6 @@ items:
     tags:
       DAMAGE_RESIST_PENETRATION_PERCENT: 99
 
-  - type: STR_AXE  #                 3011           DA CHAIN
-    refNode: *CHAOS_WEAPON
-    costBuy: 4000
-    power: 66
-    armor: 100
-    damageAlter:  # DA CHAIN
-      RandomType: 1
-      ToArmorPre: 0.3
-      ToHealth: 0.9
-      ToWound: 0.3
-      ToMorale: 0.4  # demoralizing and painful
-      ToEnergy: 0.5
-      RandomWound: false
-    strengthApplied: false
-    damageBonus:
-      strength: 0.3
-      melee: 0.2
-    meleeMultiplier:
-      melee: 1.0
-      flatHundred: 0.0
-    costMelee:
-      time: 15
-      energy: 2
-    flatMelee: true
-
   - &STR_KHORNE_AXE_TEMPLATE
     type: STR_KHORNE_CHAIN_AXE #                  Unchanged from 40k chainaxe #a more finely crafted chainaxe
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_KHORNE]
@@ -5313,6 +5288,7 @@ items:
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
     refNode: *CHAOS_WEAPON
     size: 0.2
+    costBuy: 4000
     costSell: 2050
     weight: 15
     power: 100 #was 90
@@ -5322,6 +5298,8 @@ items:
       RandomType: 2 #TFTD [50% - 150%]
       ToWound: 0.3
       ToEnergy: 0.3 #was 0.5
+      ToMorale: 0.4  # demoralizing and painful
+      RandomWound: false
       IgnoreSelfDestruct: false # default true for HE, fire, smoke, stun, mel
     damageType: 7
     accuracyMelee: 90 #was 110
@@ -5331,13 +5309,20 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 12
+    armor: 200
     recover: true
     skillApplied: true
     strengthApplied: false
     meleeMultiplier:
       melee: 1.0
       flatHundred: 0.0
+    damageBonus:
+      strength: 0.3
+      melee: 0.2
+    costMelee:
+      time: 15
+      energy: 2
+    flatMelee: true
     attraction: 7
     listOrder: 15000
 
