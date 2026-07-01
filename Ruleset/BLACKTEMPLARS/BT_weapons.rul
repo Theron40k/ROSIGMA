@@ -42,6 +42,7 @@ items:
       basePercent: 50
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+      ITEM_FIRING_SPRITE: 4136
 
   - type: STR_PISTOLS_BT  # BT SCOPED BOLTPISTOL
     fixedWeapon: true
@@ -82,6 +83,7 @@ items:
       basePercent: 50
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+      ITEM_FIRING_SPRITE: 4192
 
   - type: STR_PISTOLH_BT # BT TIGRUS BOLTPISTOL
     fixedWeapon: true
@@ -166,6 +168,8 @@ items:
     bulletSpeed: 30
     attraction: 1
     listOrder: 10300
+    tags:
+      ITEM_FIRING_SPRITE: 4152
 
   - type: STR_FLAMETHROWER_BT  # BT FLAMER
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
