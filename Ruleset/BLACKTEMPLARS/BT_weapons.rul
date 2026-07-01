@@ -4,6 +4,7 @@ extended:
 items:
 
   - type: STR_PISTOL_BT  # BT BOLTER PISTOL
+    recover: false # weapon attached to armor cant add this in recovery
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     fixedWeapon: true
     fixedWeaponShow: true
@@ -42,7 +43,95 @@ items:
     tags:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
 
+  - type: STR_PISTOLS_BT  # BT SCOPED BOLTPISTOL
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # weapon attached to armor cant add this in recovery
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    dropoff: 5  # scoped pistol; dropoff reduced from 6 to 5.
+    autoRange: 0
+    snapRange: 11
+    aimRange: 17
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 21
+    tuAimed: 35
+    size: 0.2
+    weight: 20
+    bigSprite: 4007
+    floorSprite: 4008
+    handSprite: 4184
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_PISTOL_CLIP_MC
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 200
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10120
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+
+  - type: STR_PISTOLH_BT # BT TIGRUS BOLTPISTOL
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # weapon attached to armor cant add this in recovery
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    dropoff: 5  # scoped pistol; dropoff reduced from 6 to 5.
+    autoRange: 7
+    snapRange: 11
+    aimRange: 17
+    accuracyAuto: 55
+    accuracySnap: 75
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 21
+    tuAimed: 356
+    autoShots: 2
+    size: 0.2
+    weight: 20
+    bigSprite: 4008
+    floorSprite: 4008
+    handSprite: 4400
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_PISTOL_CLIP_MC
+      - STR_RIFLE_CLIP
+      - STR_RIFLE_CLIP_MC
+      - STR_RIFLE_CLIP_AP
+      - STR_RIFLE_CLIP_EX
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10130
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # Scoped carbine
+      ITEM_SNAP_ACCURACY_POWER_BONUS_PERCENT: 10  # Scoped carbine
+      REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+
   - type: STR_RIFLE_BT  # BT BOLTER
+    recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
@@ -78,7 +167,46 @@ items:
     attraction: 1
     listOrder: 10300
 
+  - type: STR_FLAMETHROWER_BT  # BT FLAMER
+    categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # weapon attached to armor cant add this in recovery
+    size: 0.2
+    weight: 10
+    bigSprite: 4009
+    floorSprite: 4009
+    handSprite: 4408
+    bulletSprite: {mod: 40k, index: 5}
+    fireSound: {mod: 40k, index: 706}
+    compatibleAmmo:
+      - STR_FLAMETHROWER_CLIP
+      - STR_FLAMETHROWER_PROMETHIUM_CLIP
+    dropoff: 5
+    autoRange: 8
+    snapRange: 0
+    aimRange: 0
+    accuracyAuto: 30  # 40k 20
+    accuracySnap: 0
+    accuracyAimed: 0
+    tuAuto: 35
+    tuSnap: 0
+    tuAimed: 0
+    battleType: 1
+    twoHanded: true
+    experienceTrainingMode: 6
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    maxRange: 9
+    autoShots: 6
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    attraction: 7
+    listOrder: 10500
+
   - type: STR_PLASMA_RIFLE_BT  # BT PLASMA RIFLE
+    recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
@@ -108,6 +236,7 @@ items:
     listOrder: 11400
 
   - type: STR_PLASMA_PISTOL_BT  # BT PLASMA PISTOL
+    recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
     categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
@@ -138,6 +267,7 @@ items:
   # Melee
 
   - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
+    recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
@@ -182,6 +312,7 @@ items:
       ITEM_STRENGTH_REQUIREMENT: 20
 
   - type: STR_HAMMER_BT  # BT THUNDER HAMMER
+    recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
     size: 0.3
@@ -229,6 +360,7 @@ items:
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
 
   - type: STR_BLACKSWORD_BT  # BT BLACK SWORD
+    recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
     twohanded: true

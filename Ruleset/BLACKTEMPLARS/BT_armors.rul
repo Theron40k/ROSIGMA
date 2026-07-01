@@ -51,6 +51,10 @@ armors:
     units:
       - STR_BTMARINE_PLAYER
       - STR_BTHONORED_PLAYER
+    builtInWeapons:
+      - STR_PISTOL_BT
+      - STR_PISTOL_CLIP
+      - STR_CHAINSWORD_BT
     loftempsSet: [2]
     tags:
       UNIT_TYPE_IMPERIUM: 1
@@ -61,7 +65,7 @@ armors:
       INTIMIDATION_RESISTANCE: 50 #lwoer than tac marine
 
   - &STR_BTMARINE_BASEARMOR
-    type: STR_BTMARINEARMOR_PLAYER  # BT MARINE
+    type: STR_BTMARINEARMOR_PLAYER  # BT MARINE BOLTER
     isPilotArmor: true
     customArmorPreviewIndex: 960
     visibilityAtDay: 40
@@ -118,6 +122,14 @@ armors:
       UNIT_SIZE: 150 # LARGE
       INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
 
+  - type: STR_BTMARINEARMORFLAMER_PLAYER  # BT MARINE FLAMER
+    refNode: *STR_BTMARINE_BASEARMOR
+    storeItem: STR_BTMARINEARMOR_PLAYER
+    builtInWeapons:
+      - STR_FLAMETHROWER_BT
+      - STR_FLAMETHROWER_CLIP
+      - INV_NULL_3X1_BACKPACK
+
   - type: STR_BTMARINEARMORUPD_PLAYER  # BT MARINE PLASMA
     refNode: *STR_BTMARINE_BASEARMOR
     storeItem: STR_BTMARINEARMOR_PLAYER
@@ -173,7 +185,7 @@ armors:
       - 1.0  # MELTA
     specialWeapon: STR_JUMP_GAUNTLET_PLUS
     builtInWeapons:
-      - STR_PISTOL_BT
+      - STR_PISTOLS_BT
       - STR_PISTOL_CLIP_AP
       - STR_CHAINSWORD_BT
       - INV_NULL_3X1_BACKPACK
@@ -194,8 +206,8 @@ armors:
     storeItem: STR_BTMARINEASSAULTARMOR_PLAYER
     requires: STR_MIDTIER_PREREQ
     builtInWeapons:
-      - STR_PLASMA_PISTOL_BT
-      - STR_PLASMA_PISTOL_CLIP
+      - STR_PISTOLH_BT
+      - STR_PISTOL_CLIP_MC
       - STR_CHAINSWORD_BT
       - INV_NULL_3X1_BACKPACK
 
