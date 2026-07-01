@@ -105,7 +105,7 @@ items:
     weight: 20
     bigSprite: 4008
     floorSprite: 4008
-    handSprite: 4400
+    handSprite: 4443
     bulletSprite: {mod: 40k, index: 6}
     fireSound: {mod: 40k, index: 707}
     compatibleAmmo:
@@ -180,7 +180,7 @@ items:
     weight: 10
     bigSprite: 4009
     floorSprite: 4009
-    handSprite: 4408
+    handSprite: 4451
     bulletSprite: {mod: 40k, index: 5}
     fireSound: {mod: 40k, index: 706}
     compatibleAmmo:
@@ -234,7 +234,7 @@ items:
       - STR_PLASMA_RIFLE_CLIP
     battleType: 1
     twoHanded: true
-    invWidth: 1
+    invWidth: 2
     invHeight: 3
     attraction: 1
     listOrder: 11400
@@ -312,8 +312,54 @@ items:
       RandomWound: false
     experienceTrainingMode: 13
     listOrder: 12400
-    tags:
-      ITEM_STRENGTH_REQUIREMENT: 20
+
+  - type: STR_CHAIN_AXE_BT  # BT CHAINAXE
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    weight: 10
+    bigSprite: 4010
+    floorSprite: 4010
+    handSprite: 4459
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 709} #709 chainhit
+    meleeAnimation: {mod: 40k, index: 48}
+    power: 88
+    damageBonus:
+      strength: 0.3
+      melee: 0.2
+    damageType: 7
+    damageAlter:  # DA CHAIN
+      RandomType: 1
+      ToArmorPre: 0.4  # shreds armor
+      ToHealth: 1.1
+      ToMorale: 0.5  # demoralizing and painful
+      ToEnergy: 0.5
+      IgnoreSelfDestruct: false  # default true for HE, fire, smoke, stun, mel
+      ToWound: 0.4  # spills blood
+      RandomWound: false
+    accuracyMelee: 108
+    costMelee:
+      time: 15
+      energy: 2
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    recover: true
+    skillApplied: false
+    strengthApplied: false
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    attraction: 8
+    experienceTrainingMode: 13
+    listOrder: 15000
 
   - type: STR_HAMMER_BT  # BT THUNDER HAMMER
     recover: false # weapon attached to armor cant add this in recovery
