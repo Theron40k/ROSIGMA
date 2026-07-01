@@ -53,7 +53,7 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
     spriteSheet: ELDARDR21.PCK
     ufopediaType: STR_ELDAR_ARMOR
-    customArmorPreviewIndex: {mod: 40k, index: 261}
+    customArmorPreviewIndex: 261
     corpseBattle:
       - STR_ELDAR_GUARDIAN_CORPSE_P
     layersDefaultPrefix: "1"
@@ -91,6 +91,7 @@ armors:
     refNode: *GUARDIAN_ARMOR
     storeItem: STR_ELDAR_SHIELD
     spriteSheet: ELDARDR21S.PCK
+    customArmorPreviewIndex: 250
     builtInWeapons:
       - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
@@ -111,6 +112,7 @@ armors:
 
   - type: STR_ELDAR_ARMOR_GUARDIAN_HEALER_PLAYER        # GUARDIAN
     refNode: *GUARDIAN_ARMOR
+    customArmorPreviewIndex: 262
     builtInWeapons:
       - INV_NULL_3X3
       - AUX_ELDAR_KIT
@@ -132,6 +134,7 @@ armors:
     refNode: *GUARDIAN_ARMOR
     storeItem: STR_ELDAR_SHIELD
     spriteSheet: ELDARDR21S.PCK
+    customArmorPreviewIndex: 250
     units:
       - STR_ELDAR_M
     builtInWeapons:
@@ -153,6 +156,7 @@ armors:
 
   - type: STR_ELDAR_ARMOR_FH        # GUARDIAN
     refNode: *GUARDIAN_ARMOR
+    customArmorPreviewIndex: 262
     units:
       - STR_ELDAR_F
     builtInWeapons:
@@ -161,6 +165,7 @@ armors:
   - type: STR_ELDAR_ARMOR_F_SHIELD        # GUARDIAN
     refNode: *GUARDIAN_ARMOR
     spriteSheet: ELDARDR21S.PCK
+    customArmorPreviewIndex: 250
     storeItem: STR_ELDAR_SHIELD
     units:
       - STR_ELDAR_F
