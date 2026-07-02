@@ -4,6 +4,7 @@ extended:
 items:
 
   - type: STR_PISTOL_BT  # BT BOLTER PISTOL
+    ufopediaType: STR_PISTOL
     recover: false # weapon attached to armor cant add this in recovery
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     fixedWeapon: true
@@ -45,6 +46,7 @@ items:
       ITEM_FIRING_SPRITE: 4136
 
   - type: STR_PISTOLS_BT  # BT SCOPED BOLTPISTOL
+    ufopediaType: STR_PISTOLS
     fixedWeapon: true
     fixedWeaponShow: true
     recover: false # weapon attached to armor cant add this in recovery
@@ -86,6 +88,7 @@ items:
       ITEM_FIRING_SPRITE: 4192
 
   - type: STR_PISTOLH_BT # BT TIGRUS BOLTPISTOL
+    ufopediaType: STR_PISTOLH
     fixedWeapon: true
     fixedWeaponShow: true
     recover: false # weapon attached to armor cant add this in recovery
@@ -133,6 +136,7 @@ items:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
 
   - type: STR_RIFLE_BT  # BT BOLTER
+    ufopediaType: STR_RIFLE
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -172,6 +176,7 @@ items:
       ITEM_FIRING_SPRITE: 4152
 
   - type: STR_FLAMETHROWER_BT  # BT FLAMER
+    ufopediaType: STR_FLAMETHROWER
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
     fixedWeapon: true
     fixedWeaponShow: true
@@ -210,6 +215,7 @@ items:
     listOrder: 10500
 
   - type: STR_PLASMA_RIFLE_BT  # BT PLASMA RIFLE
+    ufopediaType: STR_PLASMA_RIFLE_TERRAN
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -222,8 +228,13 @@ items:
     aimRange: 14
     accuracyAuto: 55
     accuracySnap: 70
+    accuracyAimed: 70
     tuAuto: 40
     tuSnap: 30
+    tuAimed: 30
+    confAimed:
+      spendPerShot: 4
+      name: STR_MAXIMAL_SHOT
     weight: 20
     bigSprite: 4002
     floorSprite: 4002
@@ -238,8 +249,11 @@ items:
     invHeight: 3
     attraction: 1
     listOrder: 11400
+    tags:
+      ITEM_AIMED_FLAT_POWER_BONUS_PERCENT: 50  # Maximal Shot Bonus
 
   - type: STR_PLASMA_PISTOL_BT  # BT PLASMA PISTOL
+    ufopediaType: STR_PLASMA_PISTOL_TERRAN
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -249,8 +263,11 @@ items:
     dropoff: 6
     autoRange: 0
     snapRange: 12
+    aimRange: 12
     accuracyAuto: 0
     accuracySnap: 60
+    accuracyAimed: 60
+    tuAimed: 25
     tuAuto: 0
     tuSnap: 25
     weight: 10
@@ -261,16 +278,25 @@ items:
     fireSound: {mod: 40k, index: 18}
     compatibleAmmo:
       - STR_PLASMA_PISTOL_CLIP
+    confAimed:
+      spendPerShot: 4
+      name: STR_MAXIMAL_SHOT
     battleType: 1
     invWidth: 1
     invHeight: 2
     attraction: 1
     listOrder: 11200
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
+
 
 
   # Melee
 
   - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
+    ufopediaType: STR_CHAINSWORD
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -314,6 +340,7 @@ items:
     listOrder: 12400
 
   - type: STR_CHAIN_AXE_BT  # BT CHAINAXE
+    ufopediaType: STR_SW_CHAINAXE
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -361,6 +388,7 @@ items:
     listOrder: 15000
 
   - type: STR_HAMMER_BT  # BT THUNDER HAMMER
+    ufopediaType: STR_POWER_HAMMER
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -409,6 +437,7 @@ items:
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
 
   - type: STR_BLACKSWORD_BT  # BT BLACK SWORD
+    ufopediaType: STR_POWER_SWORD
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -488,3 +517,82 @@ items:
 
         add sprite_index sprite_offset; # add direction
         return sprite_index;
+
+  - type: AUX_CROZIUS_BT # BT CROZIUS
+    ufopediaType: AUX_CROZIUS
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    dropoff: 5
+    aimRange: 20
+    snapRange: 15
+    powerRangeThreshold: 20
+    powerRangeReduction: 5
+    size: 0.2
+    weight: 5
+    bigSprite: 4011
+    floorSprite: 4011
+    handSprite: 4467
+    bulletSprite: {mod: 40k, index: 19}
+    fireSound: [{mod: 40k, index: 758}, {mod: 40k, index: 759}, {mod: 40k, index: 760}, {mod: 40k, index: 761}, {mod: 40k, index: 762}, {mod: 40k, index: 763}]
+    explosionHitSound: {mod: 40k, index: 771}
+    accuracyAimed: 100
+    arcingShot: false
+    costAimed:
+      time: 40
+      energy: 40
+      morale: 20
+    accuracySnap: 50
+    costSnap:
+      time: 20
+      energy: 40
+      morale: 20
+    battleType: 1
+    twoHanded: false
+    power: 10
+    damageType: 2
+    damageAlter:
+      RandomType: 6
+      FireBlastCalc: false
+      IgnoreOverKill: false
+      IgnoreSelfDestruct: false  # default true for HE, fire, smoke, stun, mel
+      ToHealth: 1.0
+      ToTile: 0.3
+      ToItem: 0.3
+      ToMorale: 5.0
+      ArmorEffectiveness: 0.5
+      FixRadius: -1
+    damageBonus:
+      bravery: 0.5
+      psiSkill: 0.5
+    clipSize: -1
+    bulletSpeed: 50
+    explosionSpeed: 10
+    maxRange: 60
+    invWidth: 2
+    invHeight: 3
+    armor: 40
+    flatRate: true
+    #*** Melee
+    skillApplied: true
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 743} #743 T hammer Hit
+    meleeAnimation: {mod: 40k, index: 28} # 28 bolt anitmation
+    meleeType: 5
+    meleePower: 100
+    accuracyMelee: 100
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+      bravery: 0.1
+    costMelee:
+      time: 20
+      energy: 4  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 2  # TFTD [50% - 150%]
+    tuMelee: 25
+    flatMelee:
+      time: true
