@@ -100,7 +100,6 @@ armors:
       bravery: 10
       firing: -3
       throwing: -3
-
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
@@ -122,6 +121,84 @@ armors:
       firing: -3
       throwing: -3
       melee: 3
+
+  - type: STR_ELDAR_RANGER_ARMOR_P # Eldar Ranger Armor
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    camouflageAtDay: 25  # you need to be 15 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: 15  # you need to be 10 tiles closer than max vision range (at night!) to see this unit in the dark
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 8
+    frontArmor: 60
+    sideArmor: 50
+    rearArmor: 40
+    underArmor: 40
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_RANGER_PLAYER
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 25
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+    spriteSheet: ELDAR_GUARDIAN.SPK # TODO: change
+    #ufopediaType: STR_ELDAR_ARMOR # TODO: add as regular ufopedia in the right file
+    customArmorPreviewIndex: 260
+    corpseBattle:
+      - STR_ELDAR_RANGER_CORPSE_P
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDAR_RGR
+      2: RANGER_HELMET
+      3: ELDAR_RGR_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY2"]
+      M2: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY3"]
+      M3: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY4"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY5"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY6"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY7"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY8"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY9"]
+      M9: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY10"]
+      M10: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY11"]
+      M11: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY12"]
+      M12: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY1"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY12"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY11"]
+      F2: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY10"]
+      F3: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY9"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY8"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY7"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY6"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY5"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY4"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY3"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY2"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY1"]
+      F12: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY11"]
+    stats: #some stat changes for ranger
+      firing: 7
+      melee: -7
 
 # DEPRECATED. in future version (3.4 onward) please add - delete: name to keep rosigma clean
 
@@ -253,8 +330,8 @@ armors:
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
-    camouflageAtDay: -15  # you need to be 10 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: -10  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 25  # you need to be 15 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: 15  # you need to be 10 tiles closer than max vision range (at night!) to see this unit in the dark
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 8
     frontArmor: 85
