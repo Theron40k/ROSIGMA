@@ -214,6 +214,43 @@ items:
     attraction: 7
     listOrder: 10500
 
+  - type: STR_HAND_FLAMETHROWER_BT  # BT HAND FLAMER
+    ufopediaType: STR_HAND_FLAMETHROWER
+    categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    fixedWeapon: true
+    fixedWeaponShow: true
+    dropoff: 6
+    autoRange: 6
+    snapRange: 0
+    aimRange: 0
+    accuracyAuto: 20
+    accuracySnap: 0
+    accuracyAimed: 0
+    tuAuto: 24
+    tuSnap: 0
+    tuAimed: 0
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    maxRange: 7
+    autoShots: 3
+    size: 0.15
+    weight: 9
+    bigSprite: 4015
+    floorSprite: 4015
+    handSprite: 4499
+    fireSound: {mod: 40k, index: 706}
+    bulletSprite: 5
+    compatibleAmmo:
+      - STR_HAND_FLAMETHROWER_CLIP
+    battleType: 1
+    twoHanded: false
+    experienceTrainingMode: 6
+    invWidth: 2
+    invHeight: 2
+    armor: 300
+    attraction: 7
+    listOrder: 10495
+
   - type: STR_PLASMA_RIFLE_BT  # BT PLASMA RIFLE
     ufopediaType: STR_PLASMA_RIFLE_TERRAN
     recover: false # weapon attached to armor cant add this in recovery
@@ -340,7 +377,7 @@ items:
     listOrder: 12400
 
   - type: STR_CHAIN_AXE_BT  # BT CHAINAXE
-    ufopediaType: STR_SW_CHAINAXE
+    ufopediaType: STR_SW_CHAINAXE  # placeholder
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -353,7 +390,7 @@ items:
     meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
     meleeHitSound: {mod: 40k, index: 709} #709 chainhit
     meleeAnimation: {mod: 40k, index: 48}
-    power: 88
+    power: 70
     damageBonus:
       strength: 0.3
       melee: 0.2
@@ -370,6 +407,55 @@ items:
     accuracyMelee: 108
     costMelee:
       time: 15
+      energy: 2
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    skillApplied: false
+    strengthApplied: false
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    attraction: 8
+    experienceTrainingMode: 13
+    listOrder: 15000
+
+
+  - type: STR_POWERMACE_BT  # BT POWER MACE
+    ufopediaType: STR_SW_CHAINAXE  # placeholder
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    weight: 10
+    bigSprite: 4014
+    floorSprite: 4014
+    handSprite: 4491
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    power: 90
+    damageBonus:
+      strength: 0.2
+      melee: 0.3
+    damageType: 7
+    damageAlter:
+      ArmorEffectiveness: 0.5
+      FireThreshold: 0
+      ToHealth: 0.7
+      ToStun: 0.7
+      ToTime: 0.1
+      RandomWound: false
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    accuracyMelee: 100
+    costMelee:
+      time: 10
       energy: 2
     flatMelee: true
     clipSize: -1
@@ -437,7 +523,7 @@ items:
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
 
   - type: STR_BLACKSWORD_BT  # BT BLACK SWORD
-    ufopediaType: STR_POWER_SWORD
+    ufopediaType: STR_POWER_SWORD  # placeholder
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -480,15 +566,6 @@ items:
       ArmorEffectiveness: 0.5
       FireThreshold: 0
       ToHealth: 0.7
-      ToMorale: 1.0
-      ToWound: 0.0
-      RandomWound: false
-      RandomType: 6
-      IgnoreSelfDestruct: false
-    meleeAlter:     # DA POWER
-      ArmorEffectiveness: 0.5
-      FireThreshold: 0
-      ToHealth: 0.75
       ToMorale: 1.0
       ToWound: 0.0
       RandomWound: false
@@ -645,7 +722,7 @@ items:
       ITEM_IS_HEAVY_WEAPON: 1
 
   - type: AUX_SHIELD_BT  # BT TERMINATOR SHIELD
-    ufopediaType: STR_ASSC
+    ufopediaType: AUX_SHIELD
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
