@@ -313,15 +313,15 @@ items:
 
   - type: STR_ROCKTOSS
     categories: [STR_CAT_GRENADES]
-    #size: 0.1 #rocks... are around- no need for pet rock
+    size: 0.0 #rocks occupy no space, they can be put in a pile in a dirty angle
     weight: 10
     bigSprite: 3250
     handSprite: 1366
     bulletSprite: {mod: 40k, index: 20} # TODO: change, find fitting sprite
-    # explosionHitSound # todo: add
+    explosionHitSound: 1873
     # itemThrow # TODO: needs a chunky throw sound.
-    # hitAnimation: # todo
-    bulletSpeed: -5 #todo: fix this
+    hitAnimation: {mod: 40k, index: 104}
+    bulletSpeed: -20
     battleType: 4
     accuracyThrow: 70
     accuracyMultiplier:
@@ -359,7 +359,7 @@ items:
       TileDamageLimit: 10
     #explosiveDamageRange: 1
     powerForAnimation: 1
-    #costSell: 400 # rocks should not be bought or sold
+    costSell: 0 # rocks should be just thrown away
 
   - type: STR_NEUROTRAUMAL_ROD
 

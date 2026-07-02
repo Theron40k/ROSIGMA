@@ -102,6 +102,61 @@ soldiers:
       - delete
       - Names/eldar_guardian.nam
 
+  - type: STR_ELDAR_RANGER_PLAYER # Eldar Ranger
+    refNode: *ELDAR_GUARDIAN
+    armor: STR_ELDAR_RANGER_ARMOR_P
+    #costBuy: 35000 #eldar ranger are manufactured via recipie
+    costSalary: 15000
+    minStats:
+      tu: 55
+      stamina: 40
+      health: 25
+      bravery: 50
+      reactions: 40
+      firing: 65
+      throwing: 30
+      strength: 20
+      psiStrength: 15
+      psiSkill: 20
+      melee: 30
+    maxStats:
+      tu: 70
+      stamina: 65
+      health: 30
+      bravery: 80
+      reactions: 70
+      firing: 80
+      throwing: 40
+      strength: 25
+      psiStrength: 100
+      psiSkill: 20
+      melee: 50
+    statCaps:
+      tu: 100
+      stamina: 100
+      health: 70
+      bravery: 100
+      reactions: 80
+      firing: 110
+      throwing: 75
+      strength: 60
+      psiStrength: 100
+      psiSkill: 100
+      melee: 100
+    rankSprite: 4018
+    rankBattleSprite: 4018
+    rankTinySprite: 4018
+    rankStrings:
+      - STR_ELDAR_RANGER_RANK_0
+      - STR_ELDAR_RANGER_RANK_1
+      - STR_ELDAR_RANGER_RANK_2
+      - STR_ELDAR_RANGER_RANK_3
+      - STR_ELDAR_RANGER_RANK_4
+      - STR_ELDAR_RANGER_RANK_5
+    soldierNames:
+      - delete
+      - Names/eldar_ranger.nam
+
 # DEPRECATED. in future version (3.4 onward) please add - delete: name to keep rosigma clean
 
 #Male eldar guardian
