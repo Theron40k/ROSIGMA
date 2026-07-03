@@ -439,7 +439,7 @@ items:
     meleeAnimation: {mod: 40k, index: 4}
     meleeSound: {mod: 40k, index: 753}
     meleeHitSound: {mod: 40k, index: 754}
-    power: 90
+    power: 80
     damageBonus:
       strength: 0.2
       melee: 0.3
@@ -472,6 +472,132 @@ items:
     attraction: 8
     experienceTrainingMode: 13
     listOrder: 15000
+
+  - type: STR_ADEPTAS_ZWEIHANDER_BT  # BT ZWEIHANDER
+    ufopediaType: STR_ADEPTAS_ZWEIHANDER
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ADEPTAS]
+    size: 0.3
+    weight: 35
+    bigSprite: 4016
+    floorSprite: 4016
+    handSprite: 4507
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    scripts:
+      selectItemSprite: |
+
+        var int temp;
+        var int numOfFrames;
+        set numOfFrames 4;
+
+        if or eq blit_part blit_item_lefthand eq blit_part blit_item_righthand;
+
+            add temp anim_frame;
+            mod temp numOfFrames;
+            mul temp 8;
+            add sprite_index temp;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+        return sprite_index;
+    power: 120  # melee
+    damageBonus:
+      strength: 0.6
+      melee: 0.2
+    meleeMultiplier:
+      melee: 0.8
+      strength: 0.2
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.4
+      ToHealth: 0.9
+      RandomType: 7  # TFTD [50% - 200%]
+      IgnoreSelfDestruct: false
+    damageType: 5
+    accuracyMelee: 80
+    twoHanded: false  # using trick to block both hands
+    flatRate: true
+    costMelee:
+      time: 20
+      energy: 8  # very heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    attraction: 6
+    armor: 200
+    skillApplied: true
+    strengthApplied: false
+    listOrder: 13400
+
+  - type: STR_ADEPTAS_ZWEIHANDERTRICK_BT  # BT ZWEIHANDER
+    ufopediaType: STR_ADEPTAS_ZWEIHANDER
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ADEPTAS]
+    size: 0.3
+    weight: 35
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powersword miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powersword hit
+    scripts:
+      selectItemSprite: |
+
+        var int temp;
+        var int numOfFrames;
+        set numOfFrames 4;
+
+        if or eq blit_part blit_item_lefthand eq blit_part blit_item_righthand;
+
+            add temp anim_frame;
+            mod temp numOfFrames;
+            mul temp 8;
+            add sprite_index temp;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+        return sprite_index;
+    power: 120  # melee
+    damageBonus:
+      strength: 0.6
+      melee: 0.2
+    meleeMultiplier:
+      melee: 0.8
+      strength: 0.2
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.4
+      ToHealth: 0.9
+      RandomType: 7  # TFTD [50% - 200%]
+      IgnoreSelfDestruct: false
+    damageType: 5
+    accuracyMelee: 80
+    twoHanded: false  # using trick to block both hands
+    flatRate: true
+    costMelee:
+      time: 20
+      energy: 8  # very heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    attraction: 6
+    armor: 200
+    skillApplied: true
+    strengthApplied: false
+    listOrder: 13400
+
 
   - type: STR_HAMMER_BT  # BT THUNDER HAMMER
     ufopediaType: STR_POWER_HAMMER
@@ -527,7 +653,7 @@ items:
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
-    twoHanded: true
+    twoHanded: false  # irrelevant for this case
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
     size: 0.2
     armor: 200
@@ -594,6 +720,58 @@ items:
 
         add sprite_index sprite_offset; # add direction
         return sprite_index;
+
+  - type: STR_BLACKSWORDTRICK_BT  # BT BLACK SWORD BLOCKER # EXIST ONLY TO BLOCK OTHER HAND
+    ufopediaType: STR_POWER_SWORD  # placeholder
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    twoHanded: false  # irrelevant for this case
+    size: 0.2
+    armor: 200
+    weight: 10
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    power: 100
+    damageType: 11  # melta
+    accuracyMelee: 90
+    tuMelee: 10
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    accuracyMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    meleeBonus:
+      psi: 0.1
+    meleeMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    damageBonus:
+      psi: 0.2
+      strength: 0.2
+      melee: 0.3
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.5
+      FireThreshold: 0
+      ToHealth: 0.7
+      ToMorale: 1.0
+      ToWound: 0.0
+      RandomWound: false
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 20
+      REACTION_MULTIPLIER: 200
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 150 #1.5x damage vs Daemons
 
   - type: AUX_CROZIUS_BT # BT CROZIUS
     ufopediaType: AUX_CROZIUS

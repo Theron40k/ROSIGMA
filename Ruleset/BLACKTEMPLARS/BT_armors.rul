@@ -388,7 +388,8 @@ armors:
       UNIT_SIZE: 150 # LARGE
       INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
-  - type: STR_BTHONORARMOR_PLAYER  # BT SWORD BRETHREN
+  - &STR_BTHONOR_BASEARMOR
+    type: STR_BTHONORARMOR_PLAYER  # BT SWORD BRETHREN
     isPilotArmor: true
     customArmorPreviewIndex: 960
     visibilityAtDay: 40
@@ -443,6 +444,14 @@ armors:
       INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+
+  - type: STR_BTHONORARMORALT_PLAYER  # BT SWORD BRETHERN
+    refNode: *STR_BTHONOR_BASEARMOR
+    storeItem: STR_BTTERMINATORARMOR_PLAYER
+    builtInWeapons:
+      - STR_ADEPTAS_ZWEIHANDER_BT
+      - STR_ADEPTAS_ZWEIHANDERTRICK_BT
 
   - &STR_BTTERMI_BASEARMOR
     type: STR_BTTERMINATORARMOR_PLAYER  # BT TERMINATOR AC
@@ -699,6 +708,7 @@ armors:
     specialWeapon: STR_MFIST
     builtInWeapons:
       - STR_BLACKSWORD_BT
+      - STR_BLACKSWORDTRICK_BT
     tags:
       INFECTION_RESIST: 50  # infection immune
       INFECTION_RESIST_TYPE: 13
