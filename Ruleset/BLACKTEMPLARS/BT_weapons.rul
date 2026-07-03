@@ -4,7 +4,10 @@ extended:
 items:
 
   - type: STR_PISTOL_BT  # BT BOLTER PISTOL
-    ufopediaType: STR_PISTOL
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 60
+    damageBonus:
+      psiStrength: 0.1
     recover: false # weapon attached to armor cant add this in recovery
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
     fixedWeapon: true
@@ -46,7 +49,10 @@ items:
       ITEM_FIRING_SPRITE: 4136
 
   - type: STR_PISTOLS_BT  # BT SCOPED BOLTPISTOL
-    ufopediaType: STR_PISTOLS
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 60
+    damageBonus:
+      psiStrength: 0.1
     fixedWeapon: true
     fixedWeaponShow: true
     recover: false # weapon attached to armor cant add this in recovery
@@ -88,7 +94,10 @@ items:
       ITEM_FIRING_SPRITE: 4192
 
   - type: STR_PISTOLH_BT # BT TIGRUS BOLTPISTOL
-    ufopediaType: STR_PISTOLH
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 60
+    damageBonus:
+      psiStrength: 0.1
     fixedWeapon: true
     fixedWeaponShow: true
     recover: false # weapon attached to armor cant add this in recovery
@@ -116,10 +125,6 @@ items:
       - STR_PISTOL_CLIP_EX
       - STR_PISTOL_CLIP_AP
       - STR_PISTOL_CLIP_MC
-      - STR_RIFLE_CLIP
-      - STR_RIFLE_CLIP_MC
-      - STR_RIFLE_CLIP_AP
-      - STR_RIFLE_CLIP_EX
     battleType: 1
     twoHanded: false
     invWidth: 2
@@ -136,7 +141,10 @@ items:
       REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
 
   - type: STR_RIFLE_BT  # BT BOLTER
-    ufopediaType: STR_RIFLE
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 70
+    damageBonus:
+      psiStrength: 0.1
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -176,7 +184,10 @@ items:
       ITEM_FIRING_SPRITE: 4152
 
   - type: STR_FLAMETHROWER_BT  # BT FLAMER
-    ufopediaType: STR_FLAMETHROWER
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 55
+    damageBonus:
+      psiStrength: 0.1
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
     fixedWeapon: true
     fixedWeaponShow: true
@@ -215,7 +226,10 @@ items:
     listOrder: 10500
 
   - type: STR_HAND_FLAMETHROWER_BT  # BT HAND FLAMER
-    ufopediaType: STR_HAND_FLAMETHROWER
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 50
+    damageBonus:
+      psiStrength: 0.1
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
     fixedWeapon: true
     fixedWeaponShow: true
@@ -252,7 +266,10 @@ items:
     listOrder: 10495
 
   - type: STR_PLASMA_RIFLE_BT  # BT PLASMA RIFLE
-    ufopediaType: STR_PLASMA_RIFLE_TERRAN
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 100
+    damageBonus:
+      psiStrength: 0.1
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -290,7 +307,10 @@ items:
       ITEM_AIMED_FLAT_POWER_BONUS_PERCENT: 50  # Maximal Shot Bonus
 
   - type: STR_PLASMA_PISTOL_BT  # BT PLASMA PISTOL
-    ufopediaType: STR_PLASMA_PISTOL_TERRAN
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 90
+    damageBonus:
+      psiStrength: 0.1
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -329,11 +349,59 @@ items:
       REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
 
+  - type: STR_ASSC_BT  # BT ASSAULT CANNON
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 100
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_TERMINATOR]
+    size: 0.6
+    dropoff: 5
+    minRange: 5
+    weight: 50
+    bigSprite: 4012
+    floorSprite: 4012
+    handSprite: 4475
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 12}
+    compatibleAmmo:
+      - STR_ASSC_CLIP
+      - STR_ASSC_CLIP_AP
+      - STR_ASSC_CLIP_HE
+    accuracySnap: 60
+    tuSnap: 40
+    snapRange: 20
+    confSnap:
+      shots: 5
+      name: STR_BURST_SNAP_SHOT
+    accuracyAuto: 50
+    tuAuto: 45
+    autoRange: 16
+    autoShots: 10
+    sprayWaypoints: 2
+    battleType: 1
+    twoHanded: false # BT Termi chained to one
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    attraction: 8
+    armor: 200
+    listOrder: 13200
+    aimRange: 0
+    accuracyAimed: 0
+    tuAimed: 0
+    tags:
+      REACTION_MULTIPLIER: 100
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_RECOIL: 70
+      ITEM_IS_HEAVY_WEAPON: 1
 
   # Melee
 
   - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
-    ufopediaType: STR_CHAINSWORD
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -377,7 +445,6 @@ items:
     listOrder: 12400
 
   - type: STR_CHAIN_AXE_BT  # BT CHAINAXE
-    ufopediaType: STR_SW_CHAINAXE  # placeholder
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -426,7 +493,6 @@ items:
 
 
   - type: STR_POWERMACE_BT  # BT POWER MACE
-    ufopediaType: STR_SW_CHAINAXE  # placeholder
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -474,7 +540,6 @@ items:
     listOrder: 15000
 
   - type: STR_ADEPTAS_ZWEIHANDER_BT  # BT ZWEIHANDER
-    ufopediaType: STR_ADEPTAS_ZWEIHANDER
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -538,7 +603,7 @@ items:
     listOrder: 13400
 
   - type: STR_ADEPTAS_ZWEIHANDERTRICK_BT  # BT ZWEIHANDER
-    ufopediaType: STR_ADEPTAS_ZWEIHANDER
+    ufopediaType: STR_ADEPTAS_ZWEIHANDER_BT
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -600,7 +665,6 @@ items:
 
 
   - type: STR_HAMMER_BT  # BT THUNDER HAMMER
-    ufopediaType: STR_POWER_HAMMER
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -649,7 +713,6 @@ items:
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
 
   - type: STR_BLACKSWORD_BT  # BT BLACK SWORD
-    ufopediaType: STR_POWER_SWORD  # placeholder
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -722,7 +785,7 @@ items:
         return sprite_index;
 
   - type: STR_BLACKSWORDTRICK_BT  # BT BLACK SWORD BLOCKER # EXIST ONLY TO BLOCK OTHER HAND
-    ufopediaType: STR_POWER_SWORD  # placeholder
+    ufopediaType: STR_BLACKSWORD_BT  # placeholder
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -774,7 +837,6 @@ items:
       DAMAGE_BONUS_PERCENT_DAEMONIC: 150 #1.5x damage vs Daemons
 
   - type: AUX_CROZIUS_BT # BT CROZIUS
-    ufopediaType: AUX_CROZIUS
     recover: false # weapon attached to armor cant add this in recovery
     fixedWeapon: true
     fixedWeaponShow: true
@@ -851,53 +913,6 @@ items:
     tuMelee: 25
     flatMelee:
       time: true
-
-  - type: STR_ASSC_BT  # BT ASSAULT CANNON
-    ufopediaType: STR_ASSC
-    recover: false # weapon attached to armor cant add this in recovery
-    fixedWeapon: true
-    fixedWeaponShow: true
-    categories: [STR_CAT_TERMINATOR]
-    size: 0.6
-    dropoff: 5
-    minRange: 5
-    weight: 50
-    bigSprite: 4012
-    floorSprite: 4012
-    handSprite: 4475
-    bulletSprite: {mod: 40k, index: 6}
-    fireSound: {mod: 40k, index: 12}
-    compatibleAmmo:
-      - STR_ASSC_CLIP
-      - STR_ASSC_CLIP_AP
-      - STR_ASSC_CLIP_HE
-    accuracySnap: 60
-    tuSnap: 40
-    snapRange: 20
-    confSnap:
-      shots: 5
-      name: STR_BURST_SNAP_SHOT
-    accuracyAuto: 50
-    tuAuto: 45
-    autoRange: 16
-    autoShots: 10
-    sprayWaypoints: 2
-    battleType: 1
-    twoHanded: false # BT Termi chained to one
-    invWidth: 2
-    invHeight: 3
-    bulletSpeed: 50
-    attraction: 8
-    armor: 200
-    listOrder: 13200
-    aimRange: 0
-    accuracyAimed: 0
-    tuAimed: 0
-    tags:
-      REACTION_MULTIPLIER: 100
-      REACTION_PENALTY_KNEELING_BYPASS: 1
-      ITEM_RECOIL: 70
-      ITEM_IS_HEAVY_WEAPON: 1
 
   - type: AUX_SHIELD_BT  # BT TERMINATOR SHIELD
     ufopediaType: AUX_SHIELD
