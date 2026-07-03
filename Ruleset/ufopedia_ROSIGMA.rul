@@ -20986,15 +20986,30 @@ ufopaedia:
     requires:
       - STR_GUARDIAN_CORPSE
     image_id: UP112.SPK
-    text: STR_GUARDIAN_AUTOPSY_UFOPEDIA
+    text: STR_ELDAR_GUARDIAN_AUTOPSY_CODEX
   - delete: STR_ELDAR_ARMOR
-  - id: STR_ELDAR_ARMOR
+  - id: STR_ELDAR_ARMOR_GUARDIAN_PLAYER
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
     requires:
       - STR_ELDAR_GUARDIAN
     image_id: UP111.SPK
-    text: STR_NURGLE_UFOPEDIA
+    text: STR_ELDAR_GUARDIAN_ARMOR_CODEX
+
+  - id: STR_RANGER_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_RANGER_CORPSE
+    image_id: ELDAR_RANGER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_RANGER_AUTOPSY_CODEX
+  - id: STR_ELDAR_RANGER_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_RANGER
+    image_id: ELDAR_RANGER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_RANGER_ARMOR_CODEX
 
   - delete: STR_BANSHEE_AUTOPSY
   - id: STR_BANSHEE_AUTOPSY
