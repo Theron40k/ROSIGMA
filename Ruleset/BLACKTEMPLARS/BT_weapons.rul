@@ -203,7 +203,7 @@ items:
       - STR_FLAMETHROWER_CLIP
       - STR_FLAMETHROWER_PROMETHIUM_CLIP
     dropoff: 5
-    autoRange: 8
+    autoRange: 10  # BT special flamer it is 8 on normal flamer
     snapRange: 0
     aimRange: 0
     accuracyAuto: 30  # 40k 20
@@ -217,7 +217,7 @@ items:
     experienceTrainingMode: 6
     arcingShot: true
     noLOSAccuracyPenalty: 75  # indirect fire weapon
-    maxRange: 9
+    maxRange: 11  # BT special flamer it is 9 on normal flamer
     autoShots: 6
     invWidth: 2
     invHeight: 3
@@ -234,7 +234,7 @@ items:
     fixedWeapon: true
     fixedWeaponShow: true
     dropoff: 6
-    autoRange: 6
+    autoRange: 7  # BT special handflamer it is 6 on normal handflamer
     snapRange: 0
     aimRange: 0
     accuracyAuto: 20
@@ -245,7 +245,7 @@ items:
     tuAimed: 0
     arcingShot: true
     noLOSAccuracyPenalty: 75  # indirect fire weapon
-    maxRange: 7
+    maxRange: 7  # BT special handflamer it is 6 on normal handflamer
     autoShots: 3
     size: 0.15
     weight: 9
@@ -439,6 +439,44 @@ items:
     tags:
       ITEM_RECOIL: 50
       ITEM_FIRING_SPRITE: 4542
+
+  - type: STR_BLASTER_LAUNCHER_BT  # BT MULTIMELTA
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELTA, STR_CAT_DEVASTATOR]
+    dropoff: 5
+    autoRange: 0
+    snapRange: 15  # -3 for snap shot count > 1
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 80
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 50
+    tuAimed: 0
+    maxRange: 40
+    size: 0.3
+    weight: 50
+    bigSprite: 4018
+    floorSprite: 4018
+    handSprite: 4550
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: {mod: 40k, index: 739}
+    compatibleAmmo:
+      - STR_BLASTER_BOMB
+    confSnap:
+      shots: 2
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    listOrder: 12310
+    tags:
+      ITEM_IS_HEAVY_WEAPON: 1
 
   # Melee
 
