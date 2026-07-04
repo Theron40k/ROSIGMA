@@ -22,7 +22,7 @@ items:
     bigSprite: {mod: 40k, index: 393}
     floorSprite: {mod: 40k, index: 245}
     handSprite: {mod: 40k, index: 464}
-    hitSound: {mod: 40k, index: 708}
+    hitSound: 1874 #{mod: 40k, index: 708} old sound
     hitAnimation: {mod: 40k, index: 26}
     explosionSpeed: 5
     power: 50
@@ -31,9 +31,49 @@ items:
     battleType: 2
     armor: 30
     attraction: 1
-    listOrder: 16200
+    listOrder: 16115
 
-  - type: STR_FUSION_AMMO  # 16550   # MELTAGUN HARMONIC AMMO
+  - type: STR_RANGER_LONG_RIFLE_MAG #TEMPORARY copied STR_TAU_PULSE_MAG
+    categories: [STR_CAT_ELDAR, STR_CAT_SNIPER]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ONLY
+    requiresBuy: []
+    requiresBuyBaseFunc: [ELDAROUT]
+    size: 0.2
+    weight: 1 #light weight
+    invHeight: 2
+    invWidth: 1
+    bigSprite: 4859
+    floorSprite: 4859
+    handSprite: 4874
+    bulletSprite: {mod: 40k, index: 12}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 100}
+    vaporColorSurface: {mod: 40k, index: 2}
+    vaporDensitySurface: 3
+    vaporProbabilitySurface: 50
+    costBuy: 2000
+    costSell: 1000
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 20;
+        set subvoxel_drift 3;
+        return;
+    explosionSpeed: 10
+    bulletSpeed: 25 # slow it down some
+    battleType: 2
+    clipSize: 20
+    power: 95
+    damageType: 1 # was 5
+    damageAlter:  # DA PULSE
+      RandomType: 6
+      ToArmorPre: 0.2 # was 0.1-0.3  # melts some armor on the way in
+      # ArmorEffectiveness: 0.9  # some armor penetration
+    listOrder: 16620
+
+  - type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_MELTA]
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: [ELDAROUT]
@@ -50,7 +90,7 @@ items:
     bigSprite: 4953
     floorSprite: 4953
     handSprite: 4916
-    hitSound: {mod: 40k, index: 19}
+    hitSound: 1882
     hitAnimation: {mod: 40k, index: 110}
     power: 80
     damageType: 11
@@ -69,7 +109,7 @@ items:
     invWidth: 1
     invHeight: 2
     armor: 300
-    listOrder: 16550
+    listOrder: 16520
 
   - type: STR_SMALL_ROCKET_TEMPEST_ELDAR  # eldar tempest rocket launcher clip
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
