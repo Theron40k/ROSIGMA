@@ -399,6 +399,47 @@ items:
       ITEM_RECOIL: 70
       ITEM_IS_HEAVY_WEAPON: 1
 
+  - type: STR_HB_BT # BT STORMBOLTER
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 75
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_TERMINATOR, STR_CAT_BOLTER]
+    size: 0.6
+    dropoff: 4
+    autoRange: 0
+    snapRange: 15
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 0
+    weight: 40
+    bigSprite: 4017
+    floorSprite: 4017
+    handSprite: 4534
+    bulletSprite: {mod: 40k, index: 15}
+    fireSound: {mod: 40k, index: 12}
+    compatibleAmmo:
+      - STR_HB_CLIP
+      - STR_HB_CLIP_MC
+    battleType: 1
+    twoHanded: false  # will only ever be used by the BT termi
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 50
+    attraction: 8
+    listOrder: 13100
+    tags:
+      ITEM_RECOIL: 50
+      ITEM_FIRING_SPRITE: 4542
+
   # Melee
 
   - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
