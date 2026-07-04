@@ -99,6 +99,7 @@ items:
         set particle_lifetime 20;
         set subvoxel_drift 3;
         return;
+    recover: true
     listOrder: 16600
 
   - type: STR_RANGER_LONG_RIFLE_SCOPED #TEMPORARY COPY STR_TAU_PULSE_RIFLE
@@ -157,6 +158,7 @@ items:
         set particle_lifetime 20;
         set subvoxel_drift 3;
         return;
+    recover: true
     listOrder: 16610
 
   - delete: STR_ELDAR_LAUNCHER
@@ -260,7 +262,7 @@ items:
     handSprite: 4900
     bulletSprite: {mod: 40k, index: 16}
     bulletSpeed: 100
-    fireSound: {mod: 40k, index: 739}
+    fireSound: [1879, 1880, 1881]
     compatibleAmmo:
       - STR_FUSION_AMMO
     dropoff: 6
@@ -303,7 +305,7 @@ items:
     handSprite: 4908
     bulletSpeed: 100
     hitAnimation: {mod: 40k, index: 110}
-    fireSound: {mod: 40k, index: 739}
+    fireSound: [1879, 1880, 1881]
     compatibleAmmo:
       - STR_FUSION_AMMO
     dropoff: 6
