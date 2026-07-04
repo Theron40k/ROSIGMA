@@ -1002,7 +1002,7 @@ research:
   - name: STR_CHOSEN_VALHALLA # Valhallan Selected
     refNode: *STR_LOCKED
   - delete: STR_CHOSEN_ELDAR
-  - name: STR_CHOSEN_ELDAR  # Eldar Path
+  - name: STR_CHOSEN_ELDAR  # Eldar Path - Inquisition xeno path
     refNode: *STR_LOCKED
   - delete: STR_CHOSEN_GREYKNIGHTS
   - name: STR_CHOSEN_GREYKNIGHTS  # Grey Knights Selected
@@ -2930,6 +2930,11 @@ research:
       - STR_MARINE_CHAOS_PATH
     unlocks:
       - STR_ELDAR_ARMORY_EXAM
+      # eldar exclusive research unlocks
+      # TODO: add eldar research locks as soon as they added. if any missing look at research_eldar.rul
+      - STR_RECRUIT_ELDAR_T1
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SHIELD
     getOneFree:
       - STR_ELDAR_WAVESERPENT_UFO_DATA
     lookup: STR_CHOSEN_ELDAR
@@ -2954,11 +2959,6 @@ research:
     # The craft, not the unit
     cost: 1000
     points: 500
-    dependencies:
-      - STR_ELDAR_PATH
-
-  - name: STR_ELDAR_ASPECT_RESEARCH  # Aspect Warrior Promotions
-    cost: 1000
     dependencies:
       - STR_ELDAR_PATH
 
@@ -7923,14 +7923,6 @@ research:
       - STR_WBMISSION9DONE
       - STR_HIGHTIER_PREREQ
       - STR_NEW_FIGHTER_TRANSPORTERLOCK
-
-### Eldar Alliance
-  - delete: STR_ELDAR_SHIELD
-  - name: STR_ELDAR_SHIELD  # Eldar Personal Shield
-    cost: 200
-    points: 50
-    dependencies:
-      - STR_ELDAR_PATH
 
 ## Space Marines #ARMORS.SM#
   - delete: STR_PERSONAL_ARMOR

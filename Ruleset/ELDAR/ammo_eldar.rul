@@ -12,7 +12,7 @@ items:
       ToStun: 0.2
       ArmorEffectiveness: 0.3
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_WEAPONS_ACQUISITION
     requiresBuy: []  # Already requires the eldar base service
     weight: 5
     requiresBuyBaseFunc: [ELDAROUT]
@@ -36,8 +36,7 @@ items:
   - type: STR_RANGER_LONG_RIFLE_MAG #TEMPORARY copied STR_TAU_PULSE_MAG
     categories: [STR_CAT_ELDAR, STR_CAT_SNIPER]
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ONLY
+      - STR_RECRUIT_ELDAR_OUTCAST
     requiresBuy: []
     requiresBuyBaseFunc: [ELDAROUT]
     size: 0.2
@@ -78,8 +77,8 @@ items:
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: [ELDAROUT]
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 6
     vaporProbabilitySurface: 18
@@ -116,7 +115,7 @@ items:
     requiresBuyBaseFunc: [ELDAROUT]
     requiresBuy: []
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_REAPER_RESEARCH
     size: 0.5
     costBuy: 10000
     costSell: 6000
@@ -150,7 +149,7 @@ items:
     requiresBuyBaseFunc: [ELDAROUT]
     requiresBuy: []
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_REAPER_RESEARCH
     power: 120  # +20 over krak rocket
     size: 0.1
     battleType: 2
