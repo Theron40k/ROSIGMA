@@ -38,9 +38,12 @@ items:
     invWidth: 2
     invHeight: 3
     armor: 30
-    autoShots: 3
+    autoShots: 9
     bulletSpeed: 30
     attraction: 1
+    confSnap:
+      shots: 3
+    experiencetrainingmode: 6
     listOrder: 16100
 
   - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
@@ -161,6 +164,43 @@ items:
     recover: true
     listOrder: 16610
 
+  - type: STR_SHURIKEN_CANNON             # tentative start, needs fixing
+    refNode: *ELDAR_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_MIDTIER_PREREQ
+    requiresBuy: [] # Already requires the eldar base service
+    requiresBuyBaseFunc: [ELDAROUT]
+    weight: 50
+    categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
+    size: 0.3
+    dropoff: 5
+    costBuy: 50000
+    costSell: 20000
+    bigSprite: 4861
+    floorSprite: 4861
+    handSprite: 4890
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    compatibleAmmo:
+      - STR_SHURIKEN_CANNON_MAG
+    accuracySnap: 80
+    accuracyAuto: 66
+    tuSnap: 25
+    tuAuto: 40
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 12
+    bulletSpeed: 30
+    attraction: 1
+    confSnap:
+      shots: 4
+    experiencetrainingmode: 6
+    listOrder: 16200 # either with reaper/heavy weapons or shuriken
+
   - delete: STR_ELDAR_LAUNCHER
   - &STR_ELDAR_LAUNCHER_REF
     type: STR_ELDAR_LAUNCHER
@@ -259,7 +299,7 @@ items:
     costSell: 3000
     bigSprite: 4951
     floorSprite: 4951
-    handSprite: 4900
+    handSprite: 4906
     bulletSprite: {mod: 40k, index: 16}
     bulletSpeed: 100
     fireSound: [1879, 1880, 1881]
@@ -302,7 +342,7 @@ items:
     costSell: 25000
     bigSprite: 4952
     floorSprite: 4952
-    handSprite: 4908
+    handSprite: 4914
     bulletSpeed: 100
     hitAnimation: {mod: 40k, index: 110}
     fireSound: [1879, 1880, 1881]

@@ -25,9 +25,9 @@ items:
     hitSound: 1874 #{mod: 40k, index: 708} old sound
     hitAnimation: {mod: 40k, index: 26}
     explosionSpeed: 5
-    power: 50
+    power: 17 #50 originally
     damageType: 1
-    clipSize: 20
+    clipSize: 60
     battleType: 2
     armor: 30
     attraction: 1
@@ -89,7 +89,7 @@ items:
     weight: 3
     bigSprite: 4953
     floorSprite: 4953
-    handSprite: 4916
+    handSprite: 4922
     hitSound: 1882
     hitAnimation: {mod: 40k, index: 110}
     power: 80
@@ -110,6 +110,39 @@ items:
     invHeight: 2
     armor: 300
     listOrder: 16520
+
+  - type: STR_SHURIKEN_CANNON_MAG  #                 16200
+    categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATPR]
+    damageAlter:  # DA SHURIKEN
+      ToArmorPre: 0.1  # was ToArmor, i.e doesn't damage high armor it can't pen, making certain units invincible.
+      RandomType: 2  # TFTD [50% - 150%]
+      ToHealth: 0.5
+      ToStun: 0.2
+      ArmorEffectiveness: 0.3
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_MIDTIER_PREREQ
+    requiresBuy: []  # Already requires the eldar base service
+    weight: 20
+    requiresBuyBaseFunc: [ELDAROUT]
+    size: 0.1
+    costBuy: 500
+    costSell: 250
+    bigSprite: 4862
+    floorSprite: 4862
+    handSprite: 4898
+    hitSound: 1874 #{mod: 40k, index: 708} old sound
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    power: 50
+    damageType: 1
+    clipSize: 200
+    battleType: 2
+    armor: 30
+    attraction: 1
+    invWidth: 1
+    invHeight: 3
+    listOrder: 16215
 
   - type: STR_SMALL_ROCKET_TEMPEST_ELDAR  # eldar tempest rocket launcher clip
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
