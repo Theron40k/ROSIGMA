@@ -324,6 +324,45 @@ items:
     armor: 300
     listOrder: 16510
 
+  - type: STR_FIREPIKE                #STR_HARMONIC_MELTAGUN stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16515
+    weight: 30 # +10 weight
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: [ELDAROUT]
+    requires:
+      - STR_ELDAR_PATH
+      - STR_ELDAR_ONLY
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.3
+    costBuy: 100000
+    costSell: 50000
+    bigSprite: 4860
+    floorSprite: 4860
+    handSprite: 4882
+    bulletSpeed: 100
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: 1883
+    compatibleAmmo:
+      - STR_FUSION_AMMO
+    dropoff: 5 # -1 dropoff
+    autoRange: 0
+    snapRange: 17 # +5 range
+    aimRange: 25 # +5 range
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 75
+    maxRange: 25 # +5 range
+    minRange: 5
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+    listOrder: 16515
+
 #--- ELDAR.GRENADES ---
 
   - delete: STR_ELDAR_GRENADE
