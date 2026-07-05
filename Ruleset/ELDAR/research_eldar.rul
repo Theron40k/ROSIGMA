@@ -1,0 +1,277 @@
+###
+
+research:
+### core tech tree research
+  - name: STR_ELDAR_SELECTED        # (Eldar selected)
+    dependencies:
+      - STR_GENERALLOCK
+  - name: STR_ELDAR_ASURYANI_CAMPAING         # (Asuryani campaign)
+    dependencies:
+      - STR_GENERALLOCK
+
+# Everyone has these by default.
+  - name: STR_NOT_ELDAR_STRATEGY         # (Not Eldar and friends)
+
+### The Eldar starting condition is
+### STR_CHAPTER_PURITY: true # Disabled by going chaos
+### STR_ARBITES: true
+
+### the big strategy that allows to start an eldar campaign
+  - name: STR_ELDAR_STRATEGY
+    points: 0
+    cost: 5
+    dependencies:
+      - STR_ARBITES
+    reenables:
+      - STR_CHAPTER_PURITY    # not all who wander are lost
+    unlocks:
+      - STR_GUARD_BARRACKS
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      #- STR_PILOT_GUARDSMEN # TODO: understand how we want to manage Eldar pilots
+      - STR_RECRUIT_ELDAR_T1
+      #- STR_LASER_WEAPONS     # easiest way to activate heavy stubbers (???)
+      #- STR_IMPERIAL_WEAPONS  # Flamer/Shotgun/Guard Laspistol/Guard Lasgun
+      #- STR_GUARD_AND_ARBITES # easiest way to activate stub rifles
+      #- STR_NOT_STEEL_LEGION_STRATEGY # needed to activate normal chimeras (???)
+      #- STR_TAU_EMPIRE_GV
+      #- STR_TAU_GUEVESA_GV
+      #- STR_TAU_AUXILIARY_GV
+      - STR_CHAPTER_PURITY
+      #- STR_NOT_IMPERIUM
+      #- STR_NOT_CHAOSCULT
+      #- STR_NOT_THE_IMPERIAL_LAW
+      #- STR_ENDGANGERSBASE    # Stop the onslaught of gang events
+      #- STR_GENESTEALERS_INACTIVE # no genestealers
+      #- STR_GSC_ARBITES_SPAWNED   # prevent GSC arbites spawn
+      - STR_ELDAR_SELECTED
+      - STR_ELDAR_ARMORY_EXAM # unlock all eldar armory codex
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_RECRUIT_ELDAR_T1
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_OUTPOST_BUILDING_RESEARCH
+      - STR_ELDAR_BASE_BUILDING_RESEARCH
+      # TEMP ADDITIONS for future campaign splitting
+      - STR_ELDAR_ASURYANI_CAMPAING # TEMPORARY addition until there are multiple eldar campaigns
+    disables:
+      - STR_NOT_ELDAR_STRATEGY
+      - STR_GENESTEALERS_ACTIVE
+      - STR_CHAOS_PATH
+      - STR_CHAOS_STRATEGY_ARBITES
+      - STR_CHAOS_STRATEGY
+      - STR_GREENEST_ORKZ
+      - STR_TAU_GUEVESA_STRATEGY_GV
+      #- STR_PSI_LAB # we need to develop a proper psyker chamber
+      - STR_PSI_AMP # eldar won't get normal tome of the mind and other stuff
+      - STR_COMBAT_SERVITOR_PROGRAM # eldar don't use such barbaric tech
+      - STR_THE_MARTIAN_SOLUTION  # More like a Monke problem! Eldar care about Slaneesh
+      #- STR_DEFAULT_CAMPAIGN      # we need to develop a Eldar versions of this content
+      - STR_DIFFICULTY_OPTIONS    # does not have harder missions
+
+    #spawnedEvent: STR_TAU_GUEVESA_STRATEGY_EVENT_GV
+
+  - name: STR_ELDAR_WEAPONS_ACQUISITION
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ELDAR_OUTPOST_BUILDING_RESEARCH #allow you to build outpost building for eldar
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ELDAR_BASE_BUILDING_RESEARCH #allow you to build base buildings for eldar
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_RECRUIT_ELDAR_T1
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_RECRUIT_ELDAR_OUTCAST # recruit eldar outcast
+    cost: 5
+    points: 0
+    dependencies:
+      - STR_ELDAR_STRATEGY
+
+  ### Eldar Alliance imports
+  - delete: STR_ELDAR_SHIELD
+  - name: STR_ELDAR_SHIELD  # Eldar Personal Shield
+    cost: 200
+    points: 50
+    dependencies:
+      - STR_ELDAR_STRATEGY # todo: change dependency
+
+#------------------------------------------------------------------
+# TIER 2
+  - name: STR_ELDAR_ASURYANI_CAMPAING_T2
+    points: 0
+    cost: 5
+    dependencies:
+      - STR_ELDAR_ASURYANI_CAMPAING
+      # TODO: add prerequisite to go T2
+    unlocks:
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_ELDAR_ASPECT_RESEARCH  # Aspect Warrior Promotions
+    cost: 1000
+    dependencies:
+      - STR_RECRUIT_ELDAR_T1
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_ELDAR_DIRE_AVENGER_RESEARCH #dire avenger will always be the entry point. this must not have a cost
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_ELDAR_SCORPION_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_ELDAR_REAPER_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_ELDAR_FIREDRAGON_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_FUSION_TECH_RESEARCH
+    cost: 10
+    points: 0
+    dependencies:
+      - STR_MELTAGUN_TECH
+
+  - name: STR_ELDAR_PSYKER_RESEARCH  # path of the psyker research
+    cost: 1000
+    dependencies:
+      - STR_RECRUIT_ELDAR_T1
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_ELDAR_BANSHEE_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_PSYKER_RESEARCH
+
+  - name: STR_ELDAR_SEER_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_PSYKER_RESEARCH
+
+  - name: STR_ELDAR_FALLEN_RESURRECTION_RESEARCH  # eldar fallen resurrection
+    cost: 1000
+    dependencies:
+      - STR_RECRUIT_ELDAR_T1
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_ELDAR_POWER_WEAPONS_ACQUISITION
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+#------------------------------------------------------------------
+# TIER 3
+  - name: STR_ELDAR_ASURYANI_CAMPAING_T3
+    points: 0
+    cost: 5
+    dependencies:
+      - STR_ELDAR_ASURYANI_CAMPAING_T2
+      # TODO: add prerequisite to go T2
+    unlocks:
+      - STR_HIGHTIER_PREREQ
+
+  - name: STR_ELDAR_AUTARCH_EXARCH_RESEARCH  # Promotions to exarch and autarch
+    cost: 1000
+    dependencies:
+      - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
+      - STR_ELDAR_ASPECT_RESEARCH
+      - STR_HIGHTIER_PREREQ
+
+  - name: STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH #dire avenger will always be the entry point. this must not have a cost
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
+  - name: STR_ELDAR_SCORPION_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_SCORPION_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
+  - name: STR_ELDAR_REAPER_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_REAPER_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
+  - name: STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
+  - name: STR_ELDAR_PSYKER_MASTERY_RESEARCH  # Promotions to exarch psykers
+    cost: 1000
+    dependencies:
+      - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
+      - STR_ELDAR_PSYKER_RESEARCH
+      - STR_HIGHTIER_PREREQ
+
+  - name: STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_BANSHEE_RESEARCH
+      - STR_ELDAR_PSYKER_MASTERY_RESEARCH
+
+  - name: STR_ELDAR_SEER_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_SEER_RESEARCH
+      - STR_ELDAR_PSYKER_MASTERY_RESEARCH
+
+  - name: STR_ELDAR_WARLOCK_PATH_RESEARCH  # Promotions to warlock
+    cost: 1000
+    dependencies:
+      - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
+      - STR_ELDAR_PSYKER_RESEARCH
+      - STR_ELDAR_ASPECT_RESEARCH
+      - STR_HIGHTIER_PREREQ
+
+  - name: STR_ELDAR_WARLOCK_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_WARLOCK_PATH_RESEARCH
+
+#--------------------------------------------------------------------
+# TIER 4 # TODO: related to summoning the avatar of Khaine
+  - name: STR_ELDAR_KHAINE_SUMMONING_RESEARCH  # Promotions Allow to summon the avatar
+    cost: 1000
+    dependencies:
+      - STR_ELDAR_PSYKER_MASTERY_RESEARCH
+      - STR_ELDAR_WARLOCK_PATH_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+      - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
+
+#--------------------------------------------------------------------

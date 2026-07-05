@@ -13,7 +13,7 @@ items:
   - &ELDAR_WEAPON_TEMPLATE
     type: STR_CATAPULT
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_WEAPONS_ACQUISITION
     requiresBuy: [] # Already requires the eldar base service
     requiresBuyBaseFunc: [ELDAROUT]
     weight: 17
@@ -45,8 +45,7 @@ items:
 
   - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ONLY
+      - STR_RECRUIT_ELDAR_OUTCAST
     requiresBuy: []
     requiresBuyBaseFunc: [ELDAROUT]
     weight: 7
@@ -104,8 +103,7 @@ items:
 
   - type: STR_RANGER_LONG_RIFLE_SCOPED #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ONLY
+      - STR_RECRUIT_ELDAR_OUTCAST
     requiresBuy: []
     requiresBuyBaseFunc: [ELDAROUT]
     weight: 7
@@ -167,7 +165,7 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
     requiresBuyBaseFunc: []
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_REAPER_RESEARCH
     size: 0.4
     dropoff: 5
     weight: 25
@@ -215,7 +213,7 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: [ELDAROUT]
     requires:
-      - STR_ELDAR_PATH
+      - STR_ELDAR_WEAPONS_ACQUISITION
     requiresBuy: []  # Already requires the eldar base service
     size: 0.2
     dropoff: 5
@@ -251,8 +249,7 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: [ELDAROUT]
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ONLY
+      - STR_FUSION_TECH_RESEARCH
     requiresBuy: []  # Already requires the eldar base service
     size: 0.3
     costBuy: 10000
@@ -294,8 +291,8 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: [ELDAROUT]
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+      - STR_FUSION_TECH_RESEARCH
     requiresBuy: []  # Already requires the eldar base service
     size: 0.3
     costBuy: 50000
@@ -333,8 +330,8 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: [ELDAROUT]
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+      - STR_FUSION_TECH_RESEARCH
     requiresBuy: []  # Already requires the eldar base service
     size: 0.3
     costBuy: 100000
@@ -371,7 +368,8 @@ items:
   - delete: STR_ELDAR_GRENADE
   - type: STR_ELDAR_GRENADE  # Eldar Plasma Granade          16320
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_MIDTIER_PREREQ
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: [ELDAROUT]
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
@@ -419,7 +417,9 @@ items:
   - delete: STR_ELDAR_MGRENADE
   - type: STR_ELDAR_MGRENADE  # eldar melta grenade         16310
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_MELTAGUN_TECH
+      - STR_MIDTIER_PREREQ
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: [ELDAROUT]
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
@@ -475,7 +475,7 @@ items:
 
   - type: STR_EPOWER_SWORD  # eldar mirrorsword
     requires:
-      - STR_ELDAR_ONLY
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: [ELDAROUT]
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
@@ -503,6 +503,23 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+    size: 0.2
+    costBuy: 50000
+    costSell: 15000
+    weight: 10
+    bigSprite: {mod: 40k, index: 392}
+    floorSprite: {mod: 40k, index: 244}
+    handSprite: {mod: 40k, index: 840}
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    tuMelee: 10
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    listOrder: 16300
+
 
   - delete: STR_WRAITH_MELEE_WEAPON
   - type: STR_WRAITH_MELEE_WEAPON
