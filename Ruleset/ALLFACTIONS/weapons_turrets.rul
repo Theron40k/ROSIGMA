@@ -858,18 +858,30 @@ items:
     confSnap:
       shots: 5
       name: STR_BURST_SNAP_SHOT
+    costSnap:
+      mana: 5
+    flatSnap:
+      mana: true
     # Auto (Full Auto)
     accuracyAuto: 50
     autoRange: 15
     autoShots: 40
     confAuto:
       name: STR_FULL_AUTO
+    costAuto:
+      mana: 40
+    flatAuto:
+      mana: true
     # Aimed (Standard Auto)
     accuracyAimed: 60
     aimRange: 20
     confAimed:
       shots: 15
       name: STR_AUTOFIRE
+    costAimed:
+      mana: 15
+    flatAimed:
+      mana: true
     power: 42
     damageAlter:
       ToArmorPre: 0.05
@@ -877,6 +889,7 @@ items:
     tags:
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
+      TURRET_RELOAD_MANNED: 1
 
   # AUX_BOLTER is Razorback Turret
   # Used for Emplacement and Arbites Chimera

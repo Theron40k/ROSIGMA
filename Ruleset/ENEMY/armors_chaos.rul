@@ -1958,3 +1958,852 @@ armors:
       UNIT_TYPE_CHAOS: 1
       UNIT_TYPE_LIVING: 1
 
+  # Word Bearers
+
+  - type: STR_WORDBEARER_GALVWARRIOR_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    heatVision: 20
+    spriteSheet: WORDBEARERGALVbattle.PCK
+    spriteInv: WORDBEARERGALVinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_GALV_CORPSE
+    frontArmor: 120
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 110
+    damageModifier:  # CHAOS ARMOR WEAKER
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.6  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE Weakness
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_POSSESSION_TYPE: 1 #1 means it will spawn STR_WORDBEARER_GALVWARRIORPOSS
+      UNIT_POSSESSION_MANIFESTATION_CHANCE: 5 #this is a percent
+      INFECTION_RESIST: 50 #is possessed by a daemon
+      INTIMIDATION_RESISTANCE: 50 #too zealous to be easily intimidated
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_WORDBEARER_GALVWARRIOR_POSSARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 40 #daemonic
+    heatVision: 33 #daemonic
+    psiVision: 5 #daemonic
+    antiCamouflageAtDay: 5  #Keen senses
+    antiCamouflageAtDark: 5  #Keen senses
+    spriteSheet: WORDBEARERGALVPOSSbattle.PCK
+    spriteInv: WORDBEARERGALVPOSSinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_GALV_POSSCORPSE
+    frontArmor: 120
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 120
+    damageModifier:  # CHAOS ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.6  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN
+      - 0.9  # MELEE Weakness
+      - 0.5  # ACID; Daemons resistant to poison
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    recovery: #these daemons have slow regeneration
+      health:
+        healthCurrent: 0.1
+        fatalWounds: 1
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_PSYKER: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 50
+      INFECTION_RESIST: 100 #is a daemon
+      INTIMIDATION_RESISTANCE: 75 #too crazy to be easily intimidated
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_WORDBEARER_GALVWARRIORELITE_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30 #artificer armor
+    heatVision: 30 #artificer armor
+    antiCamouflageAtDay: 5  #Keen senses
+    antiCamouflageAtDark: 5  #Keen senses
+    spriteSheet: WORDBEARERGALVelitebattle.PCK
+    spriteInv: WORDBEARERGALVeliteinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_GALVELITE_CORPSE
+    frontArmor: 130 #artificer armor
+    sideArmor: 120
+    rearArmor: 90
+    underArmor: 130
+    damageModifier:  # CHAOS ARMOR WEAKER
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.6  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE Weakness
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_POSSESSION_TYPE: 2 #1 means it will spawn STR_WORDBEARER_GALVWARRIORPOSSELITE
+      UNIT_POSSESSION_MANIFESTATION_CHANCE: 10 #this is a percent
+      INFECTION_RESIST: 50 #is possessed by a daemon
+      INTIMIDATION_RESISTANCE: 50 #too zealous to be easily intimidated
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_WORDBEARER_GALVWARRIORELITE_POSSARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 40 #daemonic
+    heatVision: 33 #daemonic
+    psiVision: 10 #daemonic
+    antiCamouflageAtDay: 10  #Keen senses
+    antiCamouflageAtDark: 10  #Keen senses
+    spriteSheet: WORDBEARERGALVPOSSelitebattle.PCK
+    spriteInv: WORDBEARERGALVPOSSeliteinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_GALVELITE_POSSCORPSE
+    frontArmor: 130
+    sideArmor: 120
+    rearArmor: 90
+    underArmor: 130
+    damageModifier:  # CHAOS ARMOR
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.6  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN
+      - 0.8  # MELEE Weakness
+      - 0.5  # ACID; Daemons innately resist acid/poison
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    allowsKneeling: false  # cant do that
+    recovery: #these daemons have slow regeneration
+      health:
+        healthCurrent: 0.1
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_PSYKER: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 100
+      ARMOR_REGENERATES_WOUNDS: 1
+      INFECTION_RESIST: 100 #is a daemon
+      INTIMIDATION_RESISTANCE: 75 #too crazy to be easily intimidated
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_WORDBEARER_DARKAPOSTLE_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30 #artificer armor
+    heatVision: 30 #artificer armor
+    antiCamouflageAtDark: 10
+    antiCamouflageAtDay: 10
+    psiVision: 5
+    spriteSheet: WORDBEARERdarkapostlebattle.PCK
+    spriteInv: WORDBEARERdarkapostleinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_DARKAPOSTLE_ARMOR_CORPSE
+    frontArmor: 130 #artificer armor
+    sideArmor: 120
+    rearArmor: 100
+    underArmor: 130
+    damageModifier:  # CHAOS ARMOR WEAKER
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.5  # FLAMES
+      - 0.6  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_HAS_RUINOUS_BLESSING: 1
+      INFECTION_RESIST: 100 #blessed by the dark gods
+      INTIMIDATION_RESISTANCE: 75 #zealous convictions
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 25  # Basic energy field (25 * 100 / 25) = 100. Regenerates from 25 (at 0) to 0 (at 100) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+    scripts:
+      selectUnitSprite: |
+        # https://openxcom.org/forum/index.php/topic, 4322.msg75634.html# msg75634
+        # and power pack for veterans/scions
+        var int temp;
+        var int walking;
+        var int floating;
+        var int isFemale;
+
+        var int numOfFrames;
+
+        unit.isWalking walking;
+        unit.isFloating floating;
+        unit.getGender isFemale;
+
+        set numOfFrames 6;
+
+
+        unit.getId temp;
+
+        add temp anim_frame;
+        mod temp numOfFrames;
+        mul temp 8;
+
+
+        if eq blit_part blit_torso; # if torso to be drawn
+            if eq floating 0;
+
+              set sprite_index 288; # position after female and flying legs (8+8 + some extra offset so it's multiple of 16)
+              add sprite_index temp;
+              if neq 0 isFemale;
+                # using isFemale differently for now;
+                set isFemale 8;
+                mul isFemale numOfFrames;
+                add sprite_index isFemale;
+              end;
+            end;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+
+        return sprite_index;
+
+  - type: STR_WORDBEARER_TERMINATOR_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30  # terminator sensors
+    antiCamouflageAtDay: 5  # terminator sensors
+    antiCamouflageAtDark: 5  # terminator sensors
+    heatVision: 35  # terminator sensors
+    spriteSheet: WORDBEARERterminatorbattle.PCK
+    spriteInv: WORDBEARERterminatorinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_TERMINATOR_CORPSE
+    frontArmor: 150
+    sideArmor: 140
+    rearArmor: 100
+    underArmor: 150
+    specialWeapon: STR_POWERFIST
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.7  # AP;
+      - 0.2  # FLAMES; Word Bearer Resistance -0.1
+      - 0.6  # HE
+      - 0.9  # LASCANON
+      - 1.0  # PLASMA
+      - 0.7  # STUN; Word Bearer Resistance -0.1
+      - 0.7  # MELEE; Word Bearer Resistance -0.1
+      - 0.7  # ACID; Word Bearer Resistance -0.1
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA Word Bearer Weakness +0.1
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 50 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+      INFECTION_RESIST: 100 #blessed by the dark gods
+      INTIMIDATION_RESISTANCE: 75 #zealous convictions
+
+  - type: STR_WORDBEARER_SCOUT_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    heatVision: 35
+    antiCamouflageAtDark: 5 #minor spotting
+    antiCamouflageAtDay: 5
+    camouflageAtDark: -5 #minor camo
+    camouflageAtDay: -10
+    spriteSheet: WORDBEARERscoutbattle.PCK
+    spriteInv: WORDBEARERscoutinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_SCOUT_CORPSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
+    drawingRoutine: 0
+    damageModifier:  # CULTIST ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.9  # FLAMES
+      - 1.0  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 1.0  # STUN
+      - 0.9  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [2]
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 30
+      INFECTION_RESIST: 100 #blessed by the dark gods
+      INTIMIDATION_RESISTANCE: 50 #zealous convictions
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - &STR_DAEMON_PORTAL_TEMPLATE
+    type: STR_DAEMON_PORTAL_ARMOR
+    visibilityAtDay: 1
+    visibilityAtDark: 1
+    psiVision: 10
+    spriteSheet: DAEMONICPORTAL.PCK
+    corpseBattle:
+      - STR_INVISIBLE_CORPSE
+    frontArmor: 0
+    sideArmor: 0
+    rearArmor: 0
+    underArmor: 0
+    allowInv: false
+    fearImmune: true
+    zombiImmune: true
+    painImmune: true
+    bleedImmune: true
+    allowsMoving: false
+    movementType: 1 #can float
+    size: 1
+    damageModifier:  # CHAOS ARMOR WEAKER
+      - 1.0  # none
+      - 0.5  # AP
+      - 0.5  # FLAMES
+      - 0.5  # HE
+      - 0.5  # LASCANON
+      - 0.5  # PLASMA
+      - 0.0  # STUN
+      - 0.5  # MELEE
+      - 0.0  # ACID; it's not alive and can't suffer chemical burns
+      - 0.0  # SMOKE; it's not alive and can't suffer chemical burns
+      - 0.0  # IMPACT
+      - 0.5  # MELTA
+      - 0.0  # GRAV; it has no mass to manipulate
+    constantAnimation: true
+    loftempsSet: [1]
+    drawingRoutine: 4
+    scripts:
+      selectUnitSprite: |
+        # this script will always run move animation of unit.
+        var int temp;
+        var int walking;
+        unit.isWalking walking;
+        if eq walking 0;
+          unit.getId temp;
+          offsetmod temp 11 0 8; # desync animation of different units
+          add temp anim_frame;
+          wavegen_saw temp 8 8 7;
+          mul sprite_offset 8;
+          add sprite_offset 8;
+          add sprite_offset temp;
+          set sprite_index sprite_offset;
+        else;
+          add sprite_index sprite_offset;
+        end;
+        return sprite_index;
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_NURGLE
+    type: STR_DAEMON_PORTAL_ARMOR_NURGLE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats: #better health, worse TU/reactions; portal health regenerates
+      health: 100
+      reactions: -25
+      tu: -25
+    recovery: #standard nurgle daemon regeneration
+      health:
+        healthCurrent: 0.2
+    damageModifier:  # More resistant to non-heat based attacks, weaker to heat based attacks
+      - 1.0  # none
+      - 0.3  # AP
+      - 0.7  # FLAMES
+      - 0.3  # HE
+      - 0.3  # LASCANON
+      - 0.7  # PLASMA
+      - 0.0  # STUN
+      - 0.3  # MELEE
+      - 0.0  # ACID; it's not alive and can't suffer chemical burns
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 0.7  # MELTA
+      - 0.0  # GRAV; it has no mass to manipulate
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_NURGLE: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_TZEENTCH
+    type: STR_DAEMON_PORTAL_ARMOR_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    psiVision: 15
+    stats: #better shields, psi, worse health; more fragile ultimately
+      health: -99
+      psiStrength: 10
+      psiSkill: 10
+    damageModifier:  # immune to fire
+      - 1.0  # none
+      - 0.5  # AP
+      - 0.0  # FLAMES
+      - 0.5  # HE
+      - 0.5  # LASCANON
+      - 0.5  # PLASMA
+      - 0.0  # STUN
+      - 0.5  # MELEE
+      - 0.0  # ACID; it's not alive and can't suffer chemical burns
+      - 0.0  # SMOKE; it's not alive and can't suffer chemical burns
+      - 0.0  # IMPACT
+      - 0.5  # MELTA
+      - 0.0  # GRAV; it has no mass to manipulate
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_TZEENTCH: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 125  # (125 * 100 / 25) = 500. Regenerates from 125 (at 0) to 0 (at 500) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_SLAANESH
+    type: STR_DAEMON_PORTAL_ARMOR_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats: #better reactions, TU, less health
+      health: -50
+      tu: 50
+      reactions: 50
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_SLAANESH: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_KHORNE
+    type: STR_DAEMON_PORTAL_ARMOR_KHORNE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats: #stronger intimidation via higher bravery, but does not inflict corruption
+      bravery: 100
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_KHORNE: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_NURGLE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_NURGLE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_NURGLE: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_TZEENTCH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_TZEENTCH: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_SLAANESH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_SLAANESH: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_KHORNE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_KHORNE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_KHORNE: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_NURGLE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_NURGLE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_NURGLE: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_TZEENTCH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_TZEENTCH: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_SLAANESH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_SLAANESH: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_KHORNE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_KHORNE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_KHORNE: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_WORDBEARER_TERMINATORELITE_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 35  # terminator sensors + artificer
+    antiCamouflageAtDay: 10  # terminator sensors + keen senses
+    antiCamouflageAtDark: 10  # terminator sensors + keen senses
+    heatVision: 40  # terminator sensors + artificer
+    spriteSheet: WORDBEARERterminatorelitebattle.PCK
+    spriteInv: WORDBEARERterminatoreliteinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_TERMINATORELITE_CORPSE
+    frontArmor: 160 #+10 from artificer armor
+    sideArmor: 150
+    rearArmor: 110
+    underArmor: 160
+    specialWeapon: STR_POWERFIST
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.7  # AP;
+      - 0.2  # FLAMES; Word Bearer Resistance -0.1
+      - 0.6  # HE
+      - 0.9  # LASCANON
+      - 1.0  # PLASMA
+      - 0.7  # STUN; Word Bearer Resistance -0.1
+      - 0.7  # MELEE; Word Bearer Resistance -0.1
+      - 0.7  # ACID; Word Bearer Resistance -0.1
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA Word Bearer Weakness +0.1
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 200. Regenerates from 75 (at 0) to 0 (at 200) / Turn; artificer shields
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+      UNIT_POSSESSION_TYPE: 3 #1 means it will spawn STR_WORDBEARER_GALVWARRIORPOSSELITE
+      UNIT_POSSESSION_MANIFESTATION_CHANCE: 4 #this is a percent
+      INFECTION_RESIST: 100 #blessed by the dark gods
+      INTIMIDATION_RESISTANCE: 75 #zealous convictions
+
+  - type: STR_WORDBEARER_DEMONLORD_ARMOR
+    movementType: 1  # flying
+    visibilityAtDay: 40
+    visibilityAtDark: 40  # terminator sensors + artificer + daemonic senses
+    antiCamouflageAtDay: 10  # terminator sensors + keen senses
+    antiCamouflageAtDark: 10  # terminator sensors + keen senses
+    heatVision: 50  # terminator sensors + artificer
+    psiVision: 10 #daemonic senses
+    spriteSheet: WORDBEARERdemonlordbattle.PCK
+    spriteInv: WORDBEARERdemonlordinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_DEMONLORD_CORPSE
+    frontArmor: 120 #-40 from shredded terminator armor across the board; has much higher HP in compensation
+    sideArmor: 110
+    rearArmor: 70
+    underArmor: 120
+    specialWeapon: STR_POWERFIST
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.7  # AP;
+      - 0.1  # FLAMES; Word Bearer Resistance -0.1
+      - 0.6  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.7  # STUN; Word Bearer Resistance -0.1
+      - 0.7  # MELEE; Word Bearer Resistance -0.1
+      - 0.2  # ACID; Word Bearer Resistance -0.1 + Daemonic resistance
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA Word Bearer Weakness +0.1
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    recovery: #loses shield but regenerates rapidly
+      health:
+        healthCurrent: 0.5
+        fatalWounds: 5
+    tags:
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_PSYKER: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 100
+      INFECTION_RESIST: 100 #blessed by the dark gods
+      INTIMIDATION_RESISTANCE: 100 #zealous convictions
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
+  - type: STR_WORDBEARER_DIABOLIST_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    heatVision: 20
+    spriteSheet: WORDBEARERdiabolistbattle.PCK
+    spriteInv: WORDBEARERdiabolistinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_DIABOLIST_CORPSE
+    frontArmor: 120
+    sideArmor: 110
+    rearArmor: 80
+    underArmor: 120
+    damageModifier:  # CHAOS ARMOR WEAKER
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.6  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE Weakness
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_PSYKER: 1
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 50
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_WORDBEARER_DIABOLISTELITE_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30 #artificer armor
+    heatVision: 30 #artificer armor
+    antiCamouflageAtDay: 5  #Keen senses
+    antiCamouflageAtDark: 5  #Keen senses
+    spriteSheet: WORDBEARERarchdiabolistbattle.PCK
+    spriteInv: WORDBEARERarchdiabolistinvent.SPK
+    corpseBattle:
+      - STR_WORDBEARER_DIABOLISTELITE_CORPSE
+    frontArmor: 130
+    sideArmor: 120
+    rearArmor: 90
+    underArmor: 130
+    damageModifier:  # CHAOS ARMOR WEAKER
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.5  # FLAMES
+      - 0.6  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA
+    loftempsSet: [4]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_PSYKER: 1
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 50
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+    scripts:
+      selectUnitSprite: |
+        # https://openxcom.org/forum/index.php/topic, 4322.msg75634.html# msg75634
+        # and power pack for veterans/scions
+        var int temp;
+        var int walking;
+        var int floating;
+        var int isFemale;
+
+        var int numOfFrames;
+
+        unit.isWalking walking;
+        unit.isFloating floating;
+        unit.getGender isFemale;
+
+        set numOfFrames 6;
+
+
+        unit.getId temp;
+
+        add temp anim_frame;
+        mod temp numOfFrames;
+        mul temp 8;
+
+
+        if eq blit_part blit_torso; # if torso to be drawn
+            if eq floating 0;
+
+              set sprite_index 288; # position after female and flying legs (8+8 + some extra offset so it's multiple of 16)
+              add sprite_index temp;
+              if neq 0 isFemale;
+                # using isFemale differently for now;
+                set isFemale 8;
+                mul isFemale numOfFrames;
+                add sprite_index isFemale;
+              end;
+            end;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+
+        return sprite_index;

@@ -9,6 +9,7 @@ extended:
       INTIMIDATION_STUN_DAMAGE_MULTIPLIER: int  # stun damage multiplier 100 = baseline
       DARK_SERMON_CORRUPTION: int #stun and health damage becomes corruption damage; put this on intimidation weapons
       DARK_SERMON_REACTION_ONLY: int #only use this weapon on reactions; set this value to equal the ammo to be restored
+      DARK_SERMON_GOD: int # which Chaos god the Dark Sermon cleaves to; 1 = Nurgle, 3 = Slaanesh 4 = Tzeentch
     RuleArmor:
       INTIMIDATION_RESISTANCE: int  # Reduces the effectiveness of Intimidate attacks by this percentage
 
@@ -19,6 +20,7 @@ extended:
         code: |
           var int temp;
           var int temp2;
+          var int sermonGod;
           var int isSermon;
           var int intimidateResistPenalty;
           var int intimidateDamage;
@@ -170,21 +172,29 @@ extended:
               end;
             else;
               set infectionDamage temp;
+              weapon_item.getTag sermonGod Tag.DARK_SERMON_GOD;
               unit.getTag temp Tag.CURRENT_INFECTION_TYPE;
               if and gt temp 0 neq temp 2; #if the existing infection type is Chaos, increase it
                 unit.getTag temp Tag.CURRENT_INFECTION_DAMAGE;
                 add temp infectionDamage;
                 unit.setTag Tag.CURRENT_INFECTION_DAMAGE temp;
-              else;
-                battle_game.randomRange temp 1 3;
-                if eq temp 1;
-                  unit.setTag Tag.CURRENT_INFECTION_TYPE 1;
-                else eq temp 2;
-                  unit.setTag Tag.CURRENT_INFECTION_TYPE 3;
-                else;
-                  unit.setTag Tag.CURRENT_INFECTION_TYPE 4;
+                if gt sermonGod 0;
+                  unit.setTag Tag.CURRENT_INFECTION_DAMAGE sermonGod;
                 end;
-                unit.setTag Tag.CURRENT_INFECTION_DAMAGE infectionDamage;
+              else;
+                if gt sermonGod 0;
+                  unit.setTag Tag.CURRENT_INFECTION_TYPE sermonGod;
+                else;
+                  battle_game.randomRange temp 1 3;
+                  if eq temp 1;
+                    unit.setTag Tag.CURRENT_INFECTION_TYPE 1;
+                  else eq temp 2;
+                    unit.setTag Tag.CURRENT_INFECTION_TYPE 3;
+                  else;
+                    unit.setTag Tag.CURRENT_INFECTION_TYPE 4;
+                  end;
+                  unit.setTag Tag.CURRENT_INFECTION_DAMAGE infectionDamage;
+                end;
               end;
               attacker.getFaction temp;
               unit.setTag Tag.CURRENT_INFECTION_FACTION temp; #override the old faction with ours
@@ -286,9 +296,9 @@ extended:
           end;
 
           battle_game.getTurnSide temp;
-          if neq temp FACTION_PLAYER; #we trigger at the start of the player's turn
+          if eq temp FACTION_HOSTILE; #we trigger at the start of a hostile turn
             item.setAmmoQuantity 1;
-            # debug_log "newTurnUnit | ROSIGMA_nTU_intimidation_enemy_turn_only | offset: 2 | Turn isn't player turn.";
+            # debug_log "newTurnUnit | ROSIGMA_nTU_intimidation_enemy_turn_only | offset: 2 | Setting ammo to 1; turn isn't player turn.";
             return;
           end;
 
