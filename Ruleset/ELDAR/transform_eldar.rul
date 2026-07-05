@@ -150,9 +150,7 @@ soldierTransformation:
 #TIER2.PSI.Transformations #transformation from tier 1 to tier 2 for PSI unit (path of the psyker)
   - name: STR_PROMOTE_TO_PSYKER
     requires:
-      - STR_ELDAR_PATH
-      - STR_MIDTIER_PREREQ
-      - STR_ELDAR_ASPECT_RESEARCH
+      - STR_ELDAR_PSYKER_RESEARCH
     cost: 10000
     minRank: 0
     producedSoldierType: STR_ELDAR_PSYKER_PLAYER
@@ -181,10 +179,9 @@ soldierTransformation:
 #TIER3.PSI.transformations
 
   - name: STR_PROMOTE_TO_BANSHEE_EXARCH
-    # FIXME: requiresBuyBaseFunc: [ASPECT]
+    # requiresBuyBaseFunc: [PSI]
     requires:
-      - STR_ELDAR_PATH
-      - STR_ELDAR_ASPECT_RESEARCH
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
     cost: 50000
     minRank: 1
     producedSoldierType: STR_ELDAR_BANSHEE_EXARCH_PLAYER
@@ -212,6 +209,12 @@ soldierTransformation:
       psiStrength: 10
       psiSkill: 20
       melee: 20
+
+  # - name: STR_PROMOTE_TO_SEER_EXARCH
+  #   # requiresBuyBaseFunc: [PSI]
+  #   requires:
+  #     - STR_ELDAR_SEER_EXARCH_RESEARCH
+
 #TIER4.PSI.transformations
 #TIER3.MIXED.transformations # Path of the warlock
 
@@ -258,7 +261,7 @@ soldierTransformation:
 
   - name: STR_RESURRECT_ELDAR
     requires:
-      - STR_ELDAR_PATH
+      - STR_ELDAR_FALLEN_RESURRECTION_RESEARCH
     cost: 1000000
     minRank: 0
     producedSoldierType: STR_ELDAR_FALLEN

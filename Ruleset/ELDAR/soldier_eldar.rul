@@ -644,10 +644,9 @@ soldiers:
   - &PSYKER_TEMPLATE
     type: STR_ELDAR_PSYKER_PLAYER
     requires:
-      - STR_ELDAR_PATH
-      - STR_MIDTIER_PREREQ
+      - STR_ELDAR_PSYKER_RESEARCH
     flagOffset: 100
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: [PSI]
     costBuy: 60000
     costSalary: 25000
     minStats:
@@ -744,11 +743,10 @@ soldiers:
 
   - &EXARCH_PSY_TEMPLATE
     type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
-    requires:
-      - STR_ELDAR_PATH
-      - STR_HIGHTIER_PREREQ
+    # requires:
+    #   - STR_ELDAR_PATH
+    #   - STR_HIGHTIER_PREREQ
     flagOffset: 100
-    #requiresBuyBaseFunc: [ELDAROUT]
     costSalary: 30000
     minStats:
       tu: 90
@@ -827,15 +825,14 @@ soldiers:
       - Names/eldar_avanger.nam
 
 #  - type: STR_ELDAR_SEER_EXARCH_PLAYER # farseer
-#    refNode: *EXARCH_PSY_TEMPLATE
 
 # ELDAR.TIER4 # special units (example: avatar of khaine)
 
 # ELDAR.TIER3_MIXED # Path of the warlock
   - type: STR_ELDAR_WARLOCK_PLAYER
-    requires:
-      - STR_ELDAR_PATH
-      - STR_HIGHTIER_PREREQ
+    # requires:
+    #   - STR_ELDAR_PATH
+    #   - STR_HIGHTIER_PREREQ
     flagOffset: 100
     #requiresBuyBaseFunc: [ELDAROUT]
     costSalary: 30000
