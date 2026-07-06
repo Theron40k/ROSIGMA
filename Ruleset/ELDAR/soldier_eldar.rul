@@ -23,9 +23,9 @@ soldiers:
   - &ELDAR_GUARDIAN
     type: STR_ELDAR_GUARDIAN_PLAYER
     requires:
-      - STR_ELDAR_PATH
+      - STR_RECRUIT_ELDAR_T1
     flagOffset: 100
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuyBaseFunc: [ELDAROUT] #eldar guardian now will be recruitable in a base
     costBuy: 30000
     costSalary: 15000
     minStats:
@@ -105,7 +105,7 @@ soldiers:
   - type: STR_ELDAR_RANGER_PLAYER # Eldar Ranger
     refNode: *ELDAR_GUARDIAN
     armor: STR_ELDAR_RANGER_ARMOR_P
-    #costBuy: 35000 #eldar ranger are manufactured via recipie
+    costBuy: 0 #eldar ranger are requested via recipie
     costSalary: 15000
     minStats:
       tu: 55
@@ -183,10 +183,9 @@ soldiers:
   - &ASPECT_WARRIOR_TEMPLATE
     type: STR_ELDAR_ASPECT_WARRIOR_PLAYER
     requires:
-      - STR_ELDAR_PATH
-      - STR_MIDTIER_PREREQ
+      - STR_ELDAR_ASPECT_RESEARCH
     flagOffset: 100
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: [ASPECT]
     costBuy: 50000
     costSalary: 20000
     minStats:
@@ -250,11 +249,11 @@ soldiers:
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
     rankStrings:
-      - STR_ASPECT_WARRIOR_RANK_0
-      - STR_ASPECT_WARRIOR_RANK_1
-      - STR_ASPECT_WARRIOR_RANK_2
-      - STR_ASPECT_WARRIOR_RANK_3
-      - STR_ASPECT_WARRIOR_RANK_4
+      - STR_ELDAR_ASPECT_WARRIOR_RANK_0
+      - STR_ELDAR_ASPECT_WARRIOR_RANK_1
+      - STR_ELDAR_ASPECT_WARRIOR_RANK_2
+      - STR_ELDAR_ASPECT_WARRIOR_RANK_3
+      - STR_ELDAR_ASPECT_WARRIOR_RANK_4
     rankSprite: {mod: 40k, index: 966}
     rankBattleSprite: {mod: 40k, index: 302}
     rankTinySprite: {mod: 40k, index: 217}
@@ -470,9 +469,6 @@ soldiers:
 
   - &EXARCH_TEMPLATE
     type: STR_ELDAR_AUTARCH_PLAYER
-    requires:
-      - STR_ELDAR_PATH
-      - STR_HIGHTIER_PREREQ
     flagOffset: 100
     #requiresBuyBaseFunc: [ELDAROUT]
     costSalary: 30000
@@ -539,11 +535,12 @@ soldiers:
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
     rankStrings: # todo, give proper rank strings
-      - STR_ASPECT_RANK_0
-      - STR_ASPECT_RANK_1
-      - STR_ASPECT_RANK_2
-      - STR_ASPECT_RANK_3
-      - STR_ASPECT_RANK_4
+      - STR_ELDAR_AUTARCH_RANK_0
+      - STR_ELDAR_AUTARCH_RANK_1
+      - STR_ELDAR_AUTARCH_RANK_2
+      - STR_ELDAR_AUTARCH_RANK_3
+      - STR_ELDAR_AUTARCH_RANK_4
+      - STR_ELDAR_AUTARCH_RANK_5
     rankSprite: {mod: 40k, index: 966}
     rankBattleSprite: {mod: 40k, index: 302}
     rankTinySprite: {mod: 40k, index: 217}
@@ -648,10 +645,9 @@ soldiers:
   - &PSYKER_TEMPLATE
     type: STR_ELDAR_PSYKER_PLAYER
     requires:
-      - STR_ELDAR_PATH
-      - STR_MIDTIER_PREREQ
+      - STR_ELDAR_PSYKER_RESEARCH
     flagOffset: 100
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: [PSI]
     costBuy: 60000
     costSalary: 25000
     minStats:
@@ -748,11 +744,10 @@ soldiers:
 
   - &EXARCH_PSY_TEMPLATE
     type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
-    requires:
-      - STR_ELDAR_PATH
-      - STR_HIGHTIER_PREREQ
+    # requires:
+    #   - STR_ELDAR_PATH
+    #   - STR_HIGHTIER_PREREQ
     flagOffset: 100
-    #requiresBuyBaseFunc: [ELDAROUT]
     costSalary: 30000
     minStats:
       tu: 90
@@ -817,12 +812,12 @@ soldiers:
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
     rankStrings: # todo, give proper rank strings
-      - STR_SEER_RANK_0
-      - STR_SEER_RANK_1
-      - STR_SEER_RANK_2
-      - STR_SEER_RANK_3
-      - STR_SEER_RANK_4
-      - STR_SEER_RANK_5
+      - STR_ELDAR_BANSHEE_RANK_0
+      - STR_ELDAR_BANSHEE_RANK_1
+      - STR_ELDAR_BANSHEE_RANK_2
+      - STR_ELDAR_BANSHEE_RANK_3
+      - STR_ELDAR_BANSHEE_RANK_4
+      - STR_ELDAR_BANSHEE_RANK_5
     rankSprite: {mod: 40k, index: 966}
     rankBattleSprite: {mod: 40k, index: 302}
     rankTinySprite: {mod: 40k, index: 217}
@@ -831,15 +826,14 @@ soldiers:
       - Names/eldar_avanger.nam
 
 #  - type: STR_ELDAR_SEER_EXARCH_PLAYER # farseer
-#    refNode: *EXARCH_PSY_TEMPLATE
 
 # ELDAR.TIER4 # special units (example: avatar of khaine)
 
 # ELDAR.TIER3_MIXED # Path of the warlock
   - type: STR_ELDAR_WARLOCK_PLAYER
-    requires:
-      - STR_ELDAR_PATH
-      - STR_HIGHTIER_PREREQ
+    # requires:
+    #   - STR_ELDAR_PATH
+    #   - STR_HIGHTIER_PREREQ
     flagOffset: 100
     #requiresBuyBaseFunc: [ELDAROUT]
     costSalary: 30000
@@ -906,12 +900,12 @@ soldiers:
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
     rankStrings: # todo, give proper rank strings. these are borrowed from seer
-      - STR_SEER_RANK_0
-      - STR_SEER_RANK_1
-      - STR_SEER_RANK_2
-      - STR_SEER_RANK_3
-      - STR_SEER_RANK_4
-      - STR_SEER_RANK_5
+      - STR_ELDAR_WARLOCK_RANK_0
+      - STR_ELDAR_WARLOCK_RANK_1
+      - STR_ELDAR_WARLOCK_RANK_2
+      - STR_ELDAR_WARLOCK_RANK_3
+      - STR_ELDAR_WARLOCK_RANK_4
+      - STR_ELDAR_WARLOCK_RANK_5
     rankSprite: {mod: 40k, index: 966}
     rankBattleSprite: {mod: 40k, index: 302}
     rankTinySprite: {mod: 40k, index: 217}

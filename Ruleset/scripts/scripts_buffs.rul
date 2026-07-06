@@ -10,7 +10,8 @@ extended:
     RuleArmor:
       NO_BENEFIT_FROM_INSPIRE: int
     RuleSoldier:
-      SOLDIER_IS_OFFICER: int  # do we count as an officer?
+      SOLDIER_IS_OFFICER: int  # do we count as an officer for the purposes of Command Point calculations and Officer's Sword?
+      SOLDIER_IS_SERGEANT: int # allows us to count as an officer for the purposes of the Officer's Sword but not CP calculations.
 
   scripts:
     hitUnit:
@@ -73,6 +74,8 @@ extended:
           if gt temp 0; # if we work with officers, check the attacker
             attacker.getRuleSoldier attackerSoldier;
             attackerSoldier.getTag temp2 Tag.SOLDIER_IS_OFFICER;
+            attackerSoldier.getTag temp Tag.SOLDIER_IS_SERGEANT;
+            add temp2 temp;
             # debug_log "ROSIGMA_hU_buffs Scripts; damageUnit, offset 1: Item is for officers:" weapon_item;
             if lt temp2 1;
               weapon_item.getTag temp Tag.ITEM_NON_OFFICER_PENALTY_PERCENT;

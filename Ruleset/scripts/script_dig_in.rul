@@ -314,8 +314,8 @@ extended:
           if lt TriggerChance 1;
             # debug_log "Dig In Scripts; hitUnit, offset 1: Aborting. No chance for Dig In to trigger. TriggerChance:" TriggerChance;
             return power part side;
-          else neq side SIDE_FRONT; # if we got hit from the side, halve our negation chance.
-            div TriggerChance 2;
+          # else neq side SIDE_FRONT; # if we got hit from the side, halve our negation chance.
+          #  div TriggerChance 2;
           end;
 
           # debug_log "Dig In Scripts; hitUnit, offset 1: Dig In Rolling. TriggerChance:" TriggerChance;
@@ -326,6 +326,14 @@ extended:
             unit.setTag Tag.TimesHit NoTimesHit;
             # debug_log "Dig In Scripts; hitUnit, offset 1: Dug in triggered! New NoTimesHit:" NoTimesHit;
             battle_game.flashMessage "Dug In!";
+          else; # consolation prize
+            battle_game.getTag temp Tag.CHOICE_ACTIVE_COMMAND;
+            if neq temp 4;
+              # debug_log "Dig In Scripts; offset 1, Hunker Down damage reduction. Hunker Down command not issued; CHOICE_ACTIVE_COMMAND:" temp;
+              muldiv power 3 4; # 25% damage reduction as a consolation
+            else;
+              muldiv power 9 10; # 10% additional damage reduction if Hunker Down is active
+            end;
           end;
 
           return power part side;

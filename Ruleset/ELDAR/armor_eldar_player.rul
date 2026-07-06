@@ -264,6 +264,7 @@ armors:
 
   - &AVENGER_ARMOR
     type: STR_ELDAR_ARMOR4_P       # DIRE AVANGER
+    requires: STR_ELDAR_DIRE_AVENGER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
@@ -327,6 +328,7 @@ armors:
 
   - &SCORPION_ARMOR
     type: STR_ELDAR_ARMOR5_P       # SCORPION PLAYER
+    requires: STR_ELDAR_SCORPION_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
@@ -392,6 +394,7 @@ armors:
 
   - &DRAGON_ARMOR
     type: STR_ELDAR_DRAGON_ARMOR_P       # DRAGON ARMOR
+    requires: STR_ELDAR_FIREDRAGON_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
@@ -478,6 +481,7 @@ armors:
   - delete: STR_ELDAR_ARMOR6_P
   - &REAPER_ARMOR
     type: STR_ELDAR_ARMOR6_P       # REAPER
+    requires: STR_ELDAR_REAPER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
@@ -654,6 +658,7 @@ armors:
 
   - type: STR_ELDAR_ARMOR_EXARCH_P # REAPER EXARCH ARMOR
     refNode: *REAPER_ARMOR
+    requires: STR_ELDAR_REAPER_EXARCH_RESEARCH
     visibilityAtDay: 44
     visibilityAtDark: 28
     antiCamouflageAtDay: 7
@@ -722,6 +727,7 @@ armors:
 
   - type: STR_ELDAR_DRAGONEX_ARMOR_P
     refNode: *DRAGON_ARMOR
+    requires: STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH
     layersDefaultPrefix: "1"
     layersSpecificPrefix:
       1: ELDARD
@@ -792,6 +798,7 @@ armors:
 
   - &BANSHEE_ARMOR
     type: STR_ELDAR_ARMOR2_P       # BANSHEE PLAYER
+    requires: STR_ELDAR_BANSHEE_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
@@ -860,6 +867,7 @@ armors:
 
   - &SEER_ARMOR
     type: STR_ELDAR_ARMOR3_P        # SEER  PLAYER
+    requires: STR_ELDAR_SEER_RESEARCH
     storeItem: STR_NONE
     antiCamouflageAtDay: 10 # Farseer bonus
     antiCamouflageAtDark: 10  # Farseer bonus

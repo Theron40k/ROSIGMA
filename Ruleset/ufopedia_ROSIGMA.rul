@@ -69,9 +69,11 @@
 # #CM.GK#             Grey Knights
 # #CM.RAD#            The Radical Road
 # #CM.LAW#            The Imperial Law Strategy
-# #AT#              Adeptus Terra
+# #AT#              The Alien and the Heretic
 # #AT.CULT#           Chaos Cult
 # #AT.ORKZ#           Da Emprah's Greenest
+# #AT.TAU#            The greater good strategy
+# #AT.ELDAR#          Eldar Strategy
 # #SOB#             Adeptas
 # #SOB.REP#           Repentia Strategy
 # #SOB.NOV#           Novice Strategy
@@ -1363,6 +1365,38 @@ ufopaedia:
       - STR_COOPT_ECCLESIARCHY_GV
     text: STR_TAU_ADEPTAS_ARMOR_NOVSUPERIOR_CODEX_DESCRIPTION_GV
 
+### #STRATEGY.AT.ELDAR# # Eldar Strategy
+
+  - id: STR_CHOSEN_ELDAR_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_ELDAR_STRATEGY
+    image_id: ELDAR_STRATEGY_GENERIC.SPK
+
+  - id: STR_ELDAR_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    requires:
+      - STR_ARBITES
+    pages:
+      - title: STR_ELDAR_STRATEGY
+        text: STR_ELDAR_STRATEGY_CODEX
+      - title: STR_ELDAR_STRATEGY_TITLE_PAGE2
+        text: STR_ELDAR_STRATEGY_CODEX_PAGE2
+
+  - id: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    requires:
+      - STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+    pages:
+      - title: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+        text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX
+      - title: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+        text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX_PAGE2
 
 ## #STRATEGY.SOB#
   - delete: STR_CHOSEN_ADEPTAS
@@ -14940,6 +14974,14 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_DRAGON_FUSION_GUN_CODEX
+
+  - id: STR_FIREPIKE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_FIREPIKE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_FIREPIKE_CODEX
   - id: STR_FUSION_AMMO
     type_id: 4
     section: STR_NOT_AVAILABLE
