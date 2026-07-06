@@ -338,7 +338,8 @@ armors:
       UNIT_SIZE: 150 # LARGE
       INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
-  - type: STR_BTTECHARMOR_PLAYER  # BT TECHMARINE
+  - &STR_BTTECH_BASEARMOR
+    type: STR_BTTECHARMOR_PLAYER  # BT TECHMARINE PLASMA
     isPilotArmor: true
     customArmorPreviewIndex: 1414
     visibilityAtDay: 40
@@ -397,6 +398,14 @@ armors:
       UNIT_TYPE_CONSECRATED: 1
       UNIT_SIZE: 150 # LARGE
       INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
+
+  - type: STR_BTTECHGRAVARMOR_PLAYER  # BT TECHMARINE GRAVGUN
+    refNode: *STR_BTTECH_BASEARMOR
+    storeItem: STR_BTTECHARMOR_PLAYER
+    requires: STR_HIGHTIER_PREREQ
+    builtInWeapons:
+      - STR_SMALL_LAUNCHER_TERRAN_BT
+      - STR_STUN_BOMB
 
   - &STR_BTHONOR_BASEARMOR
     type: STR_BTHONORARMOR_PLAYER  # BT SWORD BRETHREN

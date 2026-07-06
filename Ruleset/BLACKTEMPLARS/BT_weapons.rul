@@ -528,6 +528,39 @@ items:
       ITEM_FIRING_SPRITE: 4566
       REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100
 
+  - type: STR_SMALL_LAUNCHER_TERRAN_BT  # BT GRAVITON GUN
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
+    armor: 200
+    dropoff: 5
+    autoRange: 0
+    snapRange: 15
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 40
+    tuAimed: 0
+    size: 0.2
+    weight: 10
+    bigSprite: 4020
+    floorSprite: 4020
+    handSprite: 4574
+    bulletSprite: {mod: 40k, index: 14}
+    fireSound: {mod: 40k, index: 829}
+    compatibleAmmo:
+      - STR_STUN_BOMB
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    listOrder: 11800
+    tags:
+      ITEM_IS_HEAVY_WEAPON: 1
+
   # Melee
 
   - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
