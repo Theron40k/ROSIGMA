@@ -1,0 +1,29 @@
+events:
+  - name: STR_ELDAR_ASURYANI_CAMPAING_START
+    description: STR_ELDAR_ASURYANI_CAMPAING_START_SHORT_DESCRIPTION
+    background: GuardOffensiveBG.SCR # todo: replace with eldar one
+    #adhocMissionScriptTags: ["gameStartAsuryani", "adhocStarterBaseCultistGV", "adhocStarterBaseTraitorGuardGV"]
+    # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
+    spawnedPersons: 20
+    spawnedPersonType: STR_ELDAR_GUARDIAN_PLAYER
+    spawnedCraftType: STR_WAVESERPENT
+    everyMultiItemList: # todo: review list of equipment
+      #STR_FLAMETHROWER: 5
+      #STR_FLAMETHROWER_CLIP: 15
+      STR_SHOTGUN: 5
+      STR_SHOTGUN_SHELLS: 10
+      #STR_STUN_SHELLS: 10
+      STR_STUB_RIFLE: 5
+      STR_STUB_GUN_AMMO: 15
+      STR_LASER_RIFLEG: 5
+      STR_LASGUN_CLIP: 10
+      STR_CATAPULT: 5
+      STR_CATAPULT_PISTOL: 3
+      STR_SHURIKEN_CLIP: 15
+      #STR_CHAINSWORD: 5
+      STR_KNIF: 10
+      STR_STUN_ROD: 5
+      STR_GRENADE: 10
+      #STR_KRAK_GRENADE: 10
+      STR_TRAUMA_PACK: 5
+    researchList: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
