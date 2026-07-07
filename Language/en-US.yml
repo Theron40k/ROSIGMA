@@ -1228,6 +1228,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_GUARDIAN_PLAYER: "Eldar Guardian"
   STR_ELDAR_ARMOR_GUARDIAN_PLAYER: "Guardian Armor"
   STR_ELDAR_RANGER_PLAYER: "Eldar Outcast Ranger"
+  STR_ELDAR_RANGER_ARMOR_P: "Eldar Ranger Armor"
+  STR_ELDAR_RANGER_CORPSE_P: "Eldar Ranger Corpse"
   STR_RANGER_AUTOPSY: "Eldar Ranger Origin"
   STR_ENLIST_ELDAR_OUTCAST_RANGER: "Enlist Outcast Ranger"
   STR_ELDAR_ARMOR_GUARDIAN_SHIELD_PLAYER: "Force Shield Guardian Armor"
@@ -1243,21 +1245,21 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_DRAGONEX: "Eldar Dragon Exarch"
   STR_ELDAR_DRAGON_AUTOPSY: "Eldar Dragon Origin"
   STR_ELDAR_DRAGONEX_AUTOPSY: "Eldar Dragon Exarch Origin"
-  STR_ELDAR_DRAGON_MF: "Dragon Soldier"
-  STR_ELDAR_DRAGON_EXARCH_SOLDIER: "Dragon Exarch Soldier"
+  STR_ELDAR_DRAGON_MF: "Dragon Warrior"
+  STR_ELDAR_DRAGON_EXARCH_SOLDIER: "Dragon Exarch Warrior"
   STR_PROMOTE_TO_ASPECT_WARRIOR: "Path of the Warrior"
   STR_PROMOTE_TO_AUTARCH: "Path of Command"
   STR_PROMOTE_TO_DRAGON_EXARCH: "Engulfed by the Dragon Path"
-  STR_ELDAR_RANGER_ARMOR_P: "Eldar Ranger Armor"
   STR_ELDAR_DRAGON_ARMOR: "Eldar Dragon Armor"
   STR_ELDAR_DRAGONEX_ARMOR: "Eldar Dragon Exarch Armor"
   STR_ELDAR_DRAGON_ARMOR_P: "Dragon Armor"
   STR_ELDAR_DRAGONEX_ARMOR_P: "Dragon Exarch Armor"
-  STR_ELDAR_RANGER_CORPSE_P: "Eldar Ranger Corpse"
   STR_ELDAR_DRAGON_CORPSE: "Eldar Dragon Corpse"
   STR_ELDAR_DRAGONEX_CORPSE: "Eldar Dragon Exarch Corpse"
   STR_ELDAR_DRAGON_CORPSE_P: "Dragon Corpse"
   STR_ELDAR_DRAGON_EXARCH_CORPSE_P: "Dragon Exarch Corpse"
+  STR_ELDAR_SPIDER_PLAYER: "Spider Warrior"
+  STR_ELDAR_SPIDER_ARMOR_P: "Spider Armor"
   STR_ELDAR_REAPEREX: "Eldar Reaper Exarch"
   STR_ELDAR_REAPEREX_AUTOPSY: "Eldar Reaper Exarch Origin"
   STR_ELDAR_ARMOR_EXARCH_P: "Reaper Exarch Armor"
@@ -1332,6 +1334,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_DRAGONEX_RANK_3: DgX Firestorm
   STR_ELDAR_DRAGONEX_RANK_4: DgX Eruption
   STR_ELDAR_DRAGONEX_RANK_5: DgX Hellfire
+  STR_ELDAR_SPIDEREX_RANK_0: SpdX Twitch
+  STR_ELDAR_SPIDEREX_RANK_1: SpdX Scuttle
+  STR_ELDAR_SPIDEREX_RANK_2: SpdX Flicker
+  STR_ELDAR_SPIDEREX_RANK_3: SpdX Shift
+  STR_ELDAR_SPIDEREX_RANK_4: SpdX Blink
+  STR_ELDAR_SPIDEREX_RANK_5: SpdX Phase
   STR_ELDAR_REAPER_RANK_O: Rp Barrow
   STR_ELDAR_REAPER_RANK_1: Rp Grave
   STR_ELDAR_REAPER_RANK_2: Rp Tomb
@@ -4822,25 +4830,30 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_HEAVY_WEAPON_TEAMS_UFOPEDIA: " {NEWLINE} Troops with heavy weapons, who do not have sufficient strength to wield them, will require to set up their guns. They can do it on their own but will require time until the next turn for the heavy weapon to become fully operational. {NEWLINE}As an alternative a fellow Guardsmen with the Heavy Weapons Toolkit can help deploy the weapon. The supporting soldier can also help pack up the weapon so it can be moved in the same turn again."
 
   STR_COMMANDS_IG_PART1: "Commanding Officers"
-  STR_COMMANDS_IG_PART1_UFOPEDIA: "{NEWLINE} Regimental Officers are capable of issuing battle wide commands. All commands use command points which depend on the composition of the committed forces. Depending on rank and soldier type, each soldier contributes to the command point pool. The higher the seniority the more command points they contribute. Soldiers such as Penitents or Ogryns do not contribute any points. The cost of a command depends on the number of all soldiers committed (dead or alive). Commands can only be issued by Officers."
+  STR_COMMANDS_IG_PART1_UFOPEDIA: >
+    {NEWLINE}Regimental Officers are capable of issuing battle wide commands. Commands use Command Points (CP) which are allocated upon deployment for each Imperial Guard soldier relative to their rank and soldier type; the higher a unit's rank/seniority, the more CP they grant. Non-Guard units and those such as Penitents or Ogryns contribute minimal if any CP. The CP cost of a command scales with the number of soldiers committed (dead or alive). Commands can only be issued by Officers.
 
-  STR_COMMANDS_IG_PART2: "Commands"
+  STR_COMMANDS_IG_PART2: "Commanding Officers Cont..."
   STR_COMMANDS_IG_PART2_UFOPEDIA: >
-    {NEWLINE} Following commands can be given per turn. Only one command can be active per turn.
-    {NEWLINE}{NEWLINE}- Blitzkrieg: The reaction score of all troops is increased. All enemies will be slower to react but will also react in greater force once they get the opportunity to do so.
+    {NEWLINE}{ALT}Sergeants:{ALT} >>> Sergeants are a subtype of Officer. They can't issue orders but generally provide more CP and can also fully utilize Officer exclusive weapons such as the Officer's Sword. These include Commissars, Regimental Priests and Ogryn Boneheads. {NEWLINE}{NEWLINE} {ALT}Diminishing Returns:{ALT} >>> Officers and Sergeants feature diminishing CP in the event of too many: Each Officer beyond 2 in a deployment will result in a cumulative reduction to the CP generated by all Officers. This is likewise true of Sergeants in excess of 4.
 
-  STR_COMMANDS_IG_PART2_2_UFOPEDIA: >
-    {NEWLINE}- Fix Bayonets: All troops will get a melee accuracy and damage bonus. The accuracy shown will not reflect on the actual (improved) melee chance.
-    {NEWLINE}{NEWLINE}- Hunker Down: All soldiers will take defensive positions. Incoming damage will be reduced, even more so when kneeling.
+  STR_COMMANDS_IG_PART3: "Commands"
+  STR_COMMANDS_IG_PART3_UFOPEDIA: >
+    {NEWLINE} Following commands can be given per turn. Only one command can be active per turn and only Imperial Guard units benefit from them.
+    {NEWLINE}{NEWLINE}{ALT}Blitzkrieg:{ALT} >>> The effective Reaction score of your units is doubled until the end of the current turn, allowing you to scout and attack with reduced risk of hostile reaction fire.
+
+  STR_COMMANDS_IG_PART3_2_UFOPEDIA: >
+    {NEWLINE}{ALT}Fix Bayonets:{ALT} >>> All troops will get a melee accuracy and damage bonus. The accuracy shown will not reflect on the actual (improved) melee chance.
+    {NEWLINE}{NEWLINE}{ALT}Hunker Down:{ALT} >>> All soldiers will take defensive positions. Incoming damage will be reduced by 25% or 50% when kneeling. Additional damage reduction from Dig In is reduced from 25% to 10%.
 
   STR_MEND_WOUNDS_SPELL: "Mend/Inflict Wounds"
-  STR_MEND_WOUNDS_SPELL_UFOPEDIA: "{NEWLINE} Psykers following the arts of Biomancy can use the powers of the warp to close all the wounds of an injured soldier. But by doing so they risk that they will also inflict damage on the target. The further away the injured soldier and the less brave the Biomancer is, the higher the chance for doing more harm than good becomes."
+  STR_MEND_WOUNDS_SPELL_UFOPEDIA: "{NEWLINE} Psykers invoking the school of Biomancy can use the powers of the warp to close all the wounds of an injured soldier. But by doing so they risk that they will also inflict damage on the target. The further away the injured soldier and the less brave the Biomancer is, the higher the chance for doing more harm than good becomes."
   STR_PSI_MEND_WOUNDS_HEAL_CAP: "Maximum HP Healed For This Unit: {0}"
 
   STR_DAMAGE_TIME_UNITS_CARRY_OVER: "Carrying Over TU Damage"
   STR_DAMAGE_TIME_UNITS_CARRY_OVER_UFOPEDIA: "{NEWLINE} Any weapons doing Time Units damage such as the Webber, Photon Flash or Shotgun Stun ammunition will carry 50 % of the TU damage to the next turn. This means that by continuing applying TU damage a unit will not be able to act at all. Once all TUs for the next turn are depleted by the carry over damage, a unit will flash in a grey color similar to the blue shield flash."
 
-  STR_EXECUTING_TRAITORS: "Executing for Morale"
+  STR_EXECUTING_TRAITORS: "Executing for Morale" #Depreciated/not used
   STR_EXECUTING_TRAITORS_UFOPEDIA: "{NEWLINE} It is a Commissar's duty to ensure the purity of the regiment to which they are assigned. As such, they have been trained to execute anyone displaying cowardice in battle. {NEWLINE}{NEWLINE} Commissars can elect to execute anyone to bring the fighting spirits up again. The higher value and rank the target has, the more fear the execution will instill in the remaining Guardsmen. The next turn after the execution the remaining loyal troops will gain a morale boost scaling with the Commissar's bravery."
 
   STR_PROMOTE_BY_COMMENDATION: "Promotion by Commendation"
@@ -4876,7 +4889,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_OVERHEATING_REACTION_NOTICE: "Overwatch skipped due to dangerous plasma heat!"
 
   STR_GRAV_DAMAGE_BONUS: "Graviton Damage"
-  STR_GRAV_DAMAGE_BONUS_UFOPEDIA: "{NEWLINE} Graviton Weapons utilize the weight of their targets to inflict damage. {NEWLINE}{NEWLINE} These types of weapons receive an additional health damage bonus, ranging from {ALT}2%{ALT} to {ALT}4%{ALT} (depending on the weapon) of the total armor (the sum of all sides) of the target."
+  STR_GRAV_DAMAGE_BONUS_UFOPEDIA: "{NEWLINE} Graviton Weapons utilize the weight of their targets to inflict damage. {NEWLINE}{NEWLINE} These types of weapons ignore armor and receive an additional health damage bonus, ranging from {ALT}2%{ALT} to {ALT}4%{ALT} (depending on the weapon) of the total armor (the sum of all sides) of the target, multiplied by their size. Physically larger units (such as Orks, Space Marines, Ogryns, Terminators, etc), especially 2x2 units, will take more damage due to their increased mass, while smaller units (Ratlings, Squats, etc) take less."
 
   STR_JETPACK_MECHANIC: "Limited Flight Jetpacks"
   STR_JETPACK_MECHANIC_UFOPEDIA: "{NEWLINE}Jetpacks need to be enabled before a unit can fly. Depending on the armor the jetpack will shutdown at the beginning of the new turn and can only be restarted once the cooldown has passed."
@@ -4897,7 +4910,11 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_EXECUTION_MODE_MECHANICS: "Execution Mode"
   STR_EXECUTION_MODE_MECHANICS_CODEX: >
     {NEWLINE}Commissars of the Imperial Guard are charged with the critical duty of upkeeping the morale of its troops, enforcing battlefield discipline, and making examples of those who succumb to deviance or cowardice.
-    {NEWLINE}{NEWLINE}While Execution Mode is active for a Commissar, they may instantly kill friendly units with an attack that have Corruption or less than 50 Morale (highlighted in red) within 5 tiles, thus replenishing the Morale of all Imperial Guard units next turn and granting Command Points for one order.
+    {NEWLINE}{NEWLINE}While Execution Mode is active for a Commissar, they may instantly kill friendly units with an attack that have Corruption or less than 50 Morale (highlighted in red) within 5 tiles, thus fully replenishing the Morale of all Imperial Guard units next turn and granting Command Points for one order.
+
+  STR_DIG_IN_MECHANICS: "Dig In"
+  STR_DIG_IN_MECHANICS_CODEX: >
+    {NEWLINE}Typically found on Imperial Guard infantry, Dig In allows a kneeling unit to fortify their position at the cost of TU, Energy and mobility. {NEWLINE}{NEWLINE}While Dug In and kneeling, there's a 50% chance for non-Melee/AoE hits against a unit's front and side to miss due to their cover, and they gain 25% Damage Reduction against them otherwise (10% DR for Dug In Imperial Guard units benefitting from Hunker Down orders). This miss chance is lowered by 10% each time it triggers.
 
   STR_HELP_RESEARCH_PIPS: "Understanding Your Researches"
   STR_HELP_RESEARCH_PIPS_CODEX: "{NEWLINE}Your scientist will do the best they can to give your troops an advantage on the battefield, but each research takes time to perform. If you middle click each research you'll have a summary of its dependencies, unlocks and {ALT}an average estimate{ALT} of the number of days needed for a single scientist to complete the research in the form of {ALT}RESEARCH PIPS{ALT} shown under the research name. Each Pip represent a different number of days {NEWLINE}{NEWLINE} {ALT}∧{ALT} = 100 days {NEWLINE} {ALT}={ALT} = 20 days {NEWLINE} {ALT}-{ALT} = 5 days {NEWLINE}{NEWLINE}Please remember that your scientist give you an estimate, the real number of days needed can be 50-150% of the initial estimate. "
@@ -13927,7 +13944,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BTMARINEASSAULTARMORUPD_PLAYER: "Templar Assault Adv. Armor"
   STR_BTAPOTHARMOR_PLAYER: "Templar Apothecary Armor"
   STR_BTCHAPLAINARMOR_PLAYER: "Templar Chaplain Armor"
-  STR_BTTECHARMOR_PLAYER: "Templar Techmarine Armor"
+  STR_BTTECHARMOR_PLAYER: "Templar Techmarine (PLASMA)"
+  STR_BTTECHGRAVARMOR_PLAYER: "Templar Techmarine (GRAV)"
   STR_BTHONORARMOR_PLAYER: "Templar Sword Brethren (MACE)"
   STR_BTHONORARMORALT_PLAYER: "Templar Sword Brethren (ZWEI)"
   STR_BTTERMINATORARMOR_PLAYER: "Templar Terminator (AC)"
@@ -14005,6 +14023,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   AUX_SHIELD_BT: "BT Storm Shield"
   STR_BLASTER_LAUNCHER_BT: "BT Multimelta"
   STR_COMBIMELTA_BT: "BT Combi Melta"
+  STR_SMALL_LAUNCHER_TERRAN_BT: "BT Graviton Gun"
+  STR_TECHPRIEST_POWERAXE_BT: "Omnissian Axe"
 
   # Black Templar Researches
 
@@ -14059,6 +14079,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_HB_BT_CODEX: "{NEWLINE} The Storm Bolter is a double-barrelled version of the standard .75 caliber Bolter. As it is heavier and has more recoil than a normal Bolter, Storm Bolters are generally only employed by Space Marine Terminators or as a vehicle-mounted weapon."
   STR_BLASTER_LAUNCHER_BT_CODEX: "{NEWLINE} The Multimelta is a heavier version of the standard Imperial Meltagun, composed of multiple barrels and effective at longer ranges than the standard version."
   STR_COMBIMELTA_BT_CODEX: "{NEWLINE}This weapon has the ability to fire two full-strength melta shots on top of affording the versatility of a bolter, perfect for weakening the targets armor before going in for a kill."
+  STR_SMALL_LAUNCHER_TERRAN_BT_CODEX: "{NEWLINE} The Grav-Gun, also known as a Graviton Gun, is a devastating weapon based on ancient and forgotten technology dating back to the time of the Dark Age of Technology. Manipulating the very nature of gravity itself, a Grav-Gun turns a target's mass against it, crushing it to pulp under its own weight."
   STR_CHAINSWORD_BT_CODEX: "{NEWLINE} The Chainsword is the preferred close combat melee weapon of many of the military forces of the Imperium of Man. The Chainsword is essentially a sword with powered teeth that run along a single-edged blade like that of a chainsaw."
   STR_CHAIN_AXE_BT_CODEX: "{NEWLINE} A Chainaxe is a brutal hand-to-hand chain weapon crafted in the form of a great one or two-handed axe which incorporates a powered chainsaw edge. The biting action of the monomolecular teeth means these weapons can hack through both flesh and armor with ease."
   STR_POWERMACE_BT_CODEX: "{NEWLINE} Pwer Maces are primarily used by Black Templars Sword Brethern. This large mace incorporates an energy field emitter within its head that activates only when the mace strikes its target."
@@ -14067,8 +14088,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BLACKSWORD_BT_CODEX: "{NEWLINE} The Black Swords are massive, two-handed power swords, wielded by the Emperor's Champions of the Black Templars chapter."
   AUX_CROZIUS_BT_CODEX: "{NEWLINE} A Crozius Arcanum is a mace or staff surrounded by a power field that is used as both a melee weapon and the primary badge of office of Space Marine Chaplains."
   AUX_CROZIUS_HIGH_BT_CODEX: "{NEWLINE} A Sacred Crozius Arcanum is a chapter relic surrounded by a power field that is used as both a melee weapon and the primary badge of office of Space Marine Reclussarch."
-
-
+  STR_TECHPRIEST_POWERAXE_BT_CODEX: "{NEWLINE} An Omnisian Axe is a power weapon, usually in the form of an axe or polearm. A holy icon of the Cult Mechanicus, the Omnisian axe is gifted to valued servants and close allies of the Adeptus Mechanicus. Each is a masterwork, forged with the finest materials and arcane secrets of tempering and power field generation."
 
 
   ### Black Templar Strategy End

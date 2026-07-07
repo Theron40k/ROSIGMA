@@ -478,6 +478,92 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
+  #- &SPIDER_ARMOR                       # uncomment when Spider Exarch uses this template
+  - type: STR_ELDAR_SPIDER_ARMOR_P       # DRAGON ARMOR Copy Paste edit later
+    #requires: STR_ELDAR_SPIDER_RESEARCH
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    frontArmor: 110
+    sideArmor: 90
+    rearArmor: 80
+    underArmor: 70
+    #spriteHairGroup: 2
+    #spriteHairColor: [0, 0, 164, 164, 245, 245, 0, 0, 164, 164, 245, 245, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] #M0 F0 M1 F1 M2 F2 M3 F3 ....
+    spriteSheet: ELDAR_DRAGON.SPK
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARSPIDER
+      2: SPIDER_HELMET
+      3: ELDARSPIDER_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY11"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY1"]
+      M2: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY12"]
+      M4: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY4"]
+      M6: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY5"]
+      M7: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY6"]
+      M8: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY7"]
+      M9: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY9"]
+      M11: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY10"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY12"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY5"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY12"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY7"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY11"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY1"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY2"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY3"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY4"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY5"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+    #ufopediaType: ""
+    customArmorPreviewIndex: 1351
+    corpseBattle:
+      - STR_ELDAR_DRAGON_CORPSE_P
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.3  # FLAMES # very flame resistant
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_SPIDER_PLAYER
+      - STR_ELDAR_ASPECT_WARRIOR_PLAYER
+    builtInWeapons:
+      - INV_NULL_3X3
+    stats: #fire dragon are very brave, but better armor, less bonus stat for them
+      tu: 5
+      stamina: 5
+      health: 5
+      bravery: 15 # in the face of danger
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 0
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
   - delete: STR_ELDAR_ARMOR6_P
   - &REAPER_ARMOR
     type: STR_ELDAR_ARMOR6_P       # REAPER

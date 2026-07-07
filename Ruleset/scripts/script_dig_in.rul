@@ -210,6 +210,7 @@ extended:
           var int isKneeling;
           var int temp;
           var int temp2;
+          var ptr RuleArmor armorRule;
 
           unit.getTag HasBonus Tag.DugInBonus;
           if neq HasBonus 1; # don't bother if we don't have the dug-in bonus
@@ -328,11 +329,14 @@ extended:
             battle_game.flashMessage "Dug In!";
           else; # consolation prize
             battle_game.getTag temp Tag.CHOICE_ACTIVE_COMMAND;
-            if neq temp 4;
-              # debug_log "Dig In Scripts; offset 1, Hunker Down damage reduction. Hunker Down command not issued; CHOICE_ACTIVE_COMMAND:" temp;
-              muldiv power 3 4; # 25% damage reduction as a consolation
-            else;
+            unit.getRuleArmor armorRule;
+            armorRule.getTag temp2 Tag.UNIT_TYPE_IMPERIAL_GUARD;
+            if and eq temp 4 eq temp2 1; #If Hunker Down is active AND we're an Imperial Guard unit benefitting from it, reduce the damage reduction to 10%
+              # debug_log "Dig In Scripts; offset 1, Hunker Down damage reduction. Hunker Down command issued and unit is Imperial Guard; CHOICE_ACTIVE_COMMAND:" temp;
               muldiv power 9 10; # 10% additional damage reduction if Hunker Down is active
+            else;
+              # debug_log "Dig In Scripts; offset 1, Dig In applying normal 25% damage reduction; CHOICE_ACTIVE_COMMAND:" temp;
+              muldiv power 3 4; # 25% damage reduction as a consolation
             end;
           end;
 
