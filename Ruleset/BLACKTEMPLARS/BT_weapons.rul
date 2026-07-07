@@ -1182,3 +1182,50 @@ items:
     tags:
       ITEM_SHIELD_BLOCKING_STRENGTH: 20
       ITEM_SHIELD_RECHARGES: 1
+
+  - type: STR_TECHPRIEST_POWERAXE_BT  # BT OMNISSIAN AXE
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    defaultInventorySlot: STR_LEFT_HAND
+    categories: [STR_CAT_MELEE, STR_CAT_TECHPRIEST]
+    size: 0.2
+    weight: 20
+    bigSprite: 4021
+    floorSprite: 4021
+    handSprite: 4582
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    power: 80  # melee
+    damageBonus:
+      strength: 0.3
+      melee: 0.2
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.5  # axe you a question
+      ToHealth: 0.9
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    damageType: 5
+    accuracyMelee: 110
+    costMelee:
+      time: 15
+      energy: 4  # heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    twoHanded: false
+    armor: 200
+    skillApplied: true
+    meleeMultiplier:
+      melee: 0.9
+      strength: 0.1
+    strengthApplied: false
+    attraction: 8
+    listOrder: 15201
