@@ -263,20 +263,23 @@ ufopaedia:
     type_id: 10
     section: STR_HELP
     image_id: REGIMENT_ATTENTION.SPK
-    text: STR_COMMANDS_IG_PART1_UFOPEDIA
+    pages:
+      - title: STR_COMMANDS_IG_PART1
+        text: STR_COMMANDS_IG_PART1_UFOPEDIA
+      - title: STR_COMMANDS_IG_PART2
+        text: STR_COMMANDS_IG_PART2_UFOPEDIA
 
-  - id: STR_COMMANDS_IG_PART2
+  - id: STR_COMMANDS_IG_PART3
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
     type_id: 10
     section: STR_HELP
     image_id: REGIMENT_ATTENTION.SPK
-    text: STR_COMMANDS_IG_PART2_UFOPEDIA
     pages:
-      - title: STR_COMMANDS_IG_PART2
-        text: STR_COMMANDS_IG_PART2_UFOPEDIA
-      - title: STR_COMMANDS_IG_PART2
-        text: STR_COMMANDS_IG_PART2_2_UFOPEDIA
+      - title: STR_COMMANDS_IG_PART3
+        text: STR_COMMANDS_IG_PART3_UFOPEDIA
+      - title: STR_COMMANDS_IG_PART3
+        text: STR_COMMANDS_IG_PART3_2_UFOPEDIA
 
   - id: STR_ARMOR_EXTENDED_FRONT
     type_id: 10
@@ -290,14 +293,14 @@ ufopaedia:
     image_id: 1WEB.SPK
     text: STR_DAMAGE_TIME_UNITS_CARRY_OVER_UFOPEDIA
 
-  - delete: STR_EXECUTING_TRAITORS
-  - id: STR_EXECUTING_TRAITORS
-    requires:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-    type_id: 10
-    section: STR_HELP
-    image_id: EXECUTING_TRAITORS.SPK
-    text: STR_EXECUTING_TRAITORS_UFOPEDIA
+  - delete: STR_EXECUTING_TRAITORS #this has outlived its usefulness unless it's repurposed
+  #- id: STR_EXECUTING_TRAITORS
+  #  requires:
+  #    - STR_IMPERIAL_GUARD_OPERATIONS
+  #  type_id: 10
+  #  section: STR_HELP
+  #  image_id: EXECUTING_TRAITORS.SPK
+  #  text: STR_EXECUTING_TRAITORS_UFOPEDIA
 
   - id: STR_GRAV_DAMAGE_BONUS
     type_id: 10
@@ -388,6 +391,12 @@ ufopaedia:
     section: STR_HELP
     image_id: COMMISSAR.SPK
     text: STR_EXECUTION_MODE_MECHANICS_CODEX
+
+  - id: STR_DIG_IN_MECHANICS
+    type_id: 10
+    section: STR_HELP
+    image_id: GUARDSMEN_WEAPONS.SPK
+    text: STR_DIG_IN_MECHANICS_CODEX
 
   - id: STR_HELP_RESEARCH_PIPS
     type_id: 10
@@ -3902,7 +3911,7 @@ ufopaedia:
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
       - STR_THE_IMPERIAL_LAW_STRATEGY
-      - STR_ARBITES_HIGHTIER
+      - STR_MANTICORE_REQUISITION
     image_id: 2MANTICORE.SPK
     text: STR_CHIMERAPDH_UFOPEDIA
 
@@ -3914,7 +3923,7 @@ ufopaedia:
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ARBITES_HIGHTIER
     image_id: 2CRASSUS.SPK
-    text: STR_CASSIUMPD_UFOPEDIA
+    text: STR_CASSIUM_UFOPEDIA
 
   - delete: STR_PREATORPD
   - id: STR_PREATORPD
