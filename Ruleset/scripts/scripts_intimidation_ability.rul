@@ -77,6 +77,7 @@ extended:
           # debug_log "Intimidation Scripts; damageUnit, offset 24: target Bravery:" temp2;
           # Culexus Horror Storm enhancement START
           attacker.getTag temp Tag.UNIT_CULEXUS_HORROR_STORM_ACTIVE;
+          unit.getRuleArmor armorRule;
           if gt temp 0;
             add intimidateDamage temp;
             # debug_log "Intimidation Scripts; damageUnit, offset 24: Horror storm empowered!";
@@ -86,9 +87,9 @@ extended:
             if or gt temp2 0 gt infectionDamage 0;
               add intimidateResistPenalty temp;
             else;
-              armorRule.getTag temp2 Tag.UNIT_TYPE_MECHANICAL; # If we're mechanical and non-living we're unaffected
+              armorRule.getTag temp2 Tag.UNIT_TYPE_MECHANICAL; # If we're mechanical AND non-living we're completely unaffected; otherwise half the intimidate reduction applies
               armorRule.getTag infectionDamage Tag.UNIT_TYPE_LIVING;
-              if or lt temp2 1 gt infectionDamage 0;
+              if and lt temp2 1 gt infectionDamage 0;
                 div temp 2;
                 add intimidateResistPenalty temp;
               end;
@@ -101,7 +102,6 @@ extended:
           end;
           # debug_log "Intimidation Scripts; damageUnit, offset 24: intimidateDamage after Bravery:" intimidateDamage;
 
-          unit.getRuleArmor armorRule;
           if lt isSermon 1;
             armorRule.getTag intimidateResist Tag.INTIMIDATION_RESISTANCE; # if our intimidate resist is 100% and applies to all infection types we're immune; abort
             sub intimidateResist intimidateResistPenalty;
