@@ -409,7 +409,7 @@ armors:
       - STR_STUN_BOMB
 
   - &STR_BTHONOR_BASEARMOR
-    type: STR_BTHONORARMOR_PLAYER  # BT SWORD BRETHREN
+    type: STR_BTHONORARMOR_PLAYER  # BT SWORD BRETHREN MACE
     isPilotArmor: true
     customArmorPreviewIndex: 1420
     visibilityAtDay: 40
@@ -466,13 +466,33 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
 
-  - type: STR_BTHONORARMORALT_PLAYER  # BT SWORD BRETHERN
+  - type: STR_BTHONORARMORALT_PLAYER  # BT SWORD BRETHREN ZWEI
     refNode: *STR_BTHONOR_BASEARMOR
     storeItem: STR_BTHONORARMOR_PLAYER
     ufopediaType: STR_BTHONORARMOR_PLAYER
     builtInWeapons:
       - STR_ADEPTAS_ZWEIHANDER_BT
       - STR_ADEPTAS_ZWEIHANDERTRICK_BT
+
+  - type: STR_BTHONORARMORSHIELD_PLAYER  # BT SWORD BRETHREN SHIELD
+    refNode: *STR_BTHONOR_BASEARMOR
+    storeItem: STR_BTHONORARMOR_PLAYER
+    spriteSheet: BLACKTEMPLARHONORSHIELDbattle.PCK
+    stats:
+      tu: 10  # less due to shield
+      stamina: 20
+      health: 15 # more due to shield
+      bravery: 10  # always multiples of 10
+      reactions: 10
+      strength: 10
+      melee: 35
+    frontArmor: 165
+    sideArmor: 130
+    rearArmor: 90
+    underArmor: 135
+    builtInWeapons:
+      - STR_MCCHAINSWORD_BT
+      - AUX_SHIELD2_BT
 
   - &STR_BTTERMI_BASEARMOR
     type: STR_BTTERMINATORARMOR_PLAYER  # BT TERMINATOR AC
