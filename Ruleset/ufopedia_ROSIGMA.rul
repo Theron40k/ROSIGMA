@@ -10803,7 +10803,8 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
-    image_id: 1CH.SPK
+    image_id: STR_LIGHT_BOLTERSLAAN.SPK
+    text: STR_LIGHT_BOLTERSLAAN_CODEX
 
   - id: STR_BOLTPISTOL_SLAAN #Slaanesh Boltpistol
     type_id: 14
@@ -10811,7 +10812,8 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
-    image_id: 1CH.SPK
+    image_id: STR_BOLTPISTOL_SLAAN.SPK
+    text: STR_BOLTPISTOL_SLAAN_CODEX
 
   - delete: STR_LIGHT_BOLTER_AMMO
   - id: STR_LIGHT_BOLTER_AMMO  # Light Bolter Clip
@@ -13573,6 +13575,12 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: STR_MAKESHIFT_PIPEBOMB.SPK
     text: STR_MAKESHIFT_PIPEBOMB_CODEX
+
+  - id: STR_IMPROVISED_PLASMA_GRENADE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_IMPROVISED_PLASMA_GRENADE.SPK
+    text: STR_IMPROVISED_PLASMA_GRENADE_CODEX
 
   # Bombs/Mines
   - delete: STR_HAYWIRE_MINE
@@ -16951,6 +16959,13 @@ ufopaedia:
     section: STR_TOOLS_AND_RESOURCES
     image_id: HEAVY_WEAPON_TOOLS.SPK
     text: STR_HEAVY_WEAPON_TOOLS_UFOPEDIA
+
+  # servo skull STR_SKULL
+  - id: STR_SKULL
+    type_id: 14
+    section: STR_TOOLS_AND_RESOURCES
+    image_id: SERVO_SKULL.SPK
+    text: STR_TECH_SKULL_SPAWNER_CODEX
 
   # Medical
   - id: AUX_MEDI_KIT_ADVANCED  # Advanced Narthecium
