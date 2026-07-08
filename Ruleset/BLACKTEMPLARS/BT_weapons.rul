@@ -422,7 +422,7 @@ items:
     weight: 40
     bigSprite: 4017
     floorSprite: 4017
-    handSprite: 4534
+    handSprite: 4544
     bulletSprite: {mod: 40k, index: 15}
     fireSound: {mod: 40k, index: 12}
     compatibleAmmo:
@@ -438,7 +438,7 @@ items:
     listOrder: 13100
     tags:
       ITEM_RECOIL: 50
-      ITEM_FIRING_SPRITE: 4542
+      ITEM_FIRING_SPRITE: 4552
 
   - type: STR_BLASTER_LAUNCHER_BT  # BT MULTIMELTA
     recover: false # weapon attached to armor cant add this in recovery
@@ -460,7 +460,7 @@ items:
     weight: 50
     bigSprite: 4018
     floorSprite: 4018
-    handSprite: 4550
+    handSprite: 4560
     bulletSprite: {mod: 40k, index: 16}
     bulletSpeed: 100
     fireSound: {mod: 40k, index: 739}
@@ -513,7 +513,7 @@ items:
     weight: 20
     bigSprite: 4019
     floorSprite: 4019
-    handSprite: 4558
+    handSprite: 4568
     bulletSprite: {mod: 40k, index: 6}
     fireSound: {mod: 40k, index: 707}
     battleType: 1
@@ -525,7 +525,7 @@ items:
     attraction: 1
     listOrder: 10300
     tags:
-      ITEM_FIRING_SPRITE: 4566
+      ITEM_FIRING_SPRITE: 4576
       REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100
 
   - type: STR_SMALL_LAUNCHER_TERRAN_BT  # BT GRAVITON GUN
@@ -548,7 +548,7 @@ items:
     weight: 10
     bigSprite: 4020
     floorSprite: 4020
-    handSprite: 4574
+    handSprite: 4584
     bulletSprite: {mod: 40k, index: 14}
     fireSound: {mod: 40k, index: 829}
     compatibleAmmo:
@@ -595,6 +595,49 @@ items:
       flatHundred: 0.0
     damageBonus:
       melee: 0.2
+      strength: 0.2
+    damageAlter:
+      ToArmorPre: 0.3
+      ToHealth: 0.9
+      RandomType: 2  # TFTD [50% - 150%]
+      ToWound: 0.3
+      ToEnergy: 0.5
+      RandomWound: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+
+  - type: STR_MCCHAINSWORD_BT  # BT MASTER CHAINSWORD
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    armor: 200
+    weight: 7
+    bigSprite: 4023
+    floorSprite: 4023
+    handSprite: 4600
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 709}
+    meleeAnimation: {mod: 40k, index: 44}
+    power: 70
+    damageType: 7
+    accuracyMelee: 110
+    tuMelee: 12  # faster to swing
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    damageBonus:
+      melee: 0.3
       strength: 0.2
     damageAlter:
       ToArmorPre: 0.3
@@ -670,7 +713,7 @@ items:
     power: 80
     damageBonus:
       strength: 0.2
-      melee: 0.3
+      melee: 0.2
     damageType: 7
     damageAlter:
       ArmorEffectiveness: 0.5
@@ -683,7 +726,7 @@ items:
       IgnoreSelfDestruct: false
     accuracyMelee: 100
     costMelee:
-      time: 10
+      time: 14
       energy: 2
     flatMelee: true
     clipSize: -1
@@ -1173,7 +1216,7 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 12
+    armor: 200
     skillApplied: true
     strengthApplied: false
     attraction: 0
@@ -1181,6 +1224,34 @@ items:
     tuMelee: 0
     tags:
       ITEM_SHIELD_BLOCKING_STRENGTH: 20
+      ITEM_SHIELD_RECHARGES: 1
+
+  - type: AUX_SHIELD2_BT  # BT SWORD BRETHERN SHIELD
+    ufopediaType: AUX_SHIELD
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    defaultInventorySlot: STR_LEFT_HAND
+    weight: 5
+    bigSprite: 4022
+    floorSprite: 4022
+    hitSound: 0
+    meleeAnimation: 0
+    power: 40
+    damageType: 7
+    accuracyMelee: 110
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    skillApplied: true
+    strengthApplied: false
+    attraction: 0
+    clipSize: 41  # Shield HP + 1
+    tuMelee: 0
+    tags:
+      ITEM_SHIELD_BLOCKING_STRENGTH: 10
       ITEM_SHIELD_RECHARGES: 1
 
   - type: STR_TECHPRIEST_POWERAXE_BT  # BT OMNISSIAN AXE
@@ -1193,7 +1264,7 @@ items:
     weight: 20
     bigSprite: 4021
     floorSprite: 4021
-    handSprite: 4582
+    handSprite: 4592
     meleeAnimation: {mod: 40k, index: 4}
     meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
     meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
