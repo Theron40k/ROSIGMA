@@ -1,0 +1,56 @@
+crafts:
+
+  - type: STR_BTDROPPODS  # black templars drop pods
+    maxSkinIndex: 0
+    groups: [80]
+    costBuy: 600000
+    costRent: 600000
+    costSell: 100000
+    takeoffSound: {mod: 40k, index: 59}
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    requiresBuyBaseFunc: [HANGAR]
+    sprite: 2205
+    marker: 9
+    fuelMax: 1800
+    damageMax: 200
+    speedMax: 20000
+    repairRate: 5
+    accel: 20
+    weapons: 0
+    soldiers: 8
+    vehicles: 1
+    refuelRate: 600
+    transferTime: 10
+    score: 200
+    listOrder: 120
+    mapVisible: false
+    battlescapeTerrainData:
+      name: BTDROPPODS
+      mapDataSets:
+        - BLANKS
+        - BTDROPPOD
+      mapBlocks:
+        - name: BTDROPPODS
+          width: 10
+          length: 20
+          items:
+            STR_DROPPOD_DEPLOY_CHARGE:
+              - [2, 2, 0]
+              - [5, 8, 0]
+              - [2, 15, 0]
+              - [1, 1, 1]
+              - [5, 8, 1]
+              - [2, 15, 1]
+          fuseTimers:
+            STR_DROPPOD_DEPLOY_CHARGE: [1, 1]
+    deployment:
+      - [1, 15, 0, 0]
+      - [1, 14, 0, 0]
+      - [2, 15, 0, 0]
+      - [2, 14, 0, 0]
+      - [4, 8, 0, 0]
+      - [4, 7, 0, 0]
+      - [5, 8, 0, 0]
+      - [5, 7, 0, 0]
+    spacecraft: true
