@@ -7,6 +7,7 @@ items:
     size: 0.1
     recoveryTransformations:
       STR_LIBERATOR_AUTOSTUB: [1]  # keeps the research clutter down
+    ufopediaType: STR_LIBERATOR_AUTOSTUB #send to ufopedia for single stubber
     dropoff: 4  # special ammo
     # costSell: 10000
     weight: 5
@@ -737,20 +738,25 @@ items:
     categories: [STR_CAT_GRENADES]
     size: 0.1
     weight: 6
-    bigSprite: 2715
-    floorSprite: {mod: 40k, index: 304}
-    handSprite: {mod: 40k, index: 904}
+    bigSprite: 204
+    floorSprite: 202
+    handSprite: 1374
     power: 80  # Frag Grenade is 70
-    damageType: 3
+    damageType: 5
     battleType: 4
     invWidth: 1
     invHeight: 2
-    blastRadius: 6
+    blastRadius: 5
     listOrder: 17100
     throwRange: 8
-    damageAlter:
-      FireThreshold: 25
-    costSell: 400
+    fuseType: -2
+    damageAlter: # Da Plasma - nerfed due to being improvised
+      RandomType: 6
+      ToArmorPre: 0.05  # melts some armor on the way in - nerfed due to being improvised
+      ArmorEffectiveness: 0.9  # *** PLASMA rebalance - nerfed due to being improvised
+      FireThreshold: 90  # can ignite at high damage - nerfed due to being improvised
+      ToArmor: 0.07 #- nerfed due to being improvised
+    costSell: 600
 
   - type: STR_GSC_FLAMETHROWER
     categories: [STR_CAT_FLAMER]
