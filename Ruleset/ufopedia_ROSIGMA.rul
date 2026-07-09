@@ -4,6 +4,7 @@
 #
 # Before adding or modifying entries in this file, please review the information in this header.
 # See the header for each chapter for further guidelines specific to entries for those areas.
+# See the header for each chapter for further guidelines specific to entries for those areas.
 #
 # The use of listOrder to order codex entries has been depriciated for now,
 #   entries must appear in this file in the order you want them to be viewed in the codex.
@@ -3539,6 +3540,7 @@ ufopaedia:
       - STR_MARINES_STRATEGY
       - STR_NOT_PRIMARIS
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     text: STR_DROPPOD_UFOPEDIA
 
   - delete: STR_SKYRANGER  # DROPPODS
@@ -3550,6 +3552,7 @@ ufopaedia:
       - STR_MARINES_STRATEGY
       - STR_NOT_PRIMARIS
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     text: STR_DROPPOD_UFOPEDIA
 
   - delete: STR_INTERCEPTOR  # STORMTALON
@@ -3594,6 +3597,7 @@ ufopaedia:
       - STR_NOT_PRIMARIS
       - STR_MARINES_STRATEGY
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     image_id: RHINO_NOTT.SPK
     text: STR_RHINO_NO_TT_UFOPAEDIA
 
@@ -3606,6 +3610,7 @@ ufopaedia:
     requires:
       - STR_STORMEAGLE_INTERCEPTOR
       - STR_MARINES_STRATEGY
+      - STR_NOT_BLACKTEMPLARS
 
   - delete: STR_CHAPTERARMY
   - id: STR_CHAPTERARMY  # 1st COMPANY
@@ -3616,6 +3621,7 @@ ufopaedia:
     requires:
       - STR_NOT_PRIMARIS
       - STR_CHAPTERARMYR
+      - STR_NOT_BLACKTEMPLARS
 
   - delete: STR_SPEEDC
   - id: STR_SPEEDC
@@ -3634,6 +3640,7 @@ ufopaedia:
       - STR_MARINES_STRATEGY
       - STR_NEW_FIGHTER_CRAFT
       - STR_NOT_PRIMARIS
+      - STR_NOT_BLACKTEMPLARS
     image_id: STORMRAVEN.SPK
     text: STR_FIRESTORM_UFOPEDIA
 
@@ -3644,6 +3651,7 @@ ufopaedia:
     requires:
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_THUNDERHAWKTYPE2
+      - STR_NOT_BLACKTEMPLARS
     image_id: THUNDERHAWK.SPK
     text: STR_THUNDERHAWK_UFOPEDIA
     rect_stats:
@@ -3664,6 +3672,7 @@ ufopaedia:
     requires:
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_THUNDERHAWKTYPE1
+      - STR_NOT_BLACKTEMPLARS
     image_id: THUNDERHAWK.SPK
     text: STR_THUNDERHAWK_UFOPEDIA
     rect_stats:
@@ -3685,6 +3694,7 @@ ufopaedia:
     requires:
       - STR_ULTIMATE_CRAFT
       - STR_ASSAULT
+      - STR_NOT_BLACKTEMPLARS
     image_id: RHINO.SPK
     text: STR_AVENGER_UFOPEDIA
 ### #CRAFTS.SM.DEV#
@@ -3695,6 +3705,7 @@ ufopaedia:
     requires:
       - STR_ULTIMATE_CRAFT
       - STR_DEVASTATOR
+      - STR_NOT_BLACKTEMPLARS
     image_id: RHINO.SPK
     text: STR_AVENGER_UFOPEDIA
 ### #CRAFTS.SM.PRIM#
@@ -3765,6 +3776,16 @@ ufopaedia:
     requires:
       - STR_BLACKTEMPLAR_STRATEGY
     text: STR_BTDROPPODS_CODEX
+
+## #CRAFTS.SOB.BR#
+
+  - id: STR_BRARVUS_ADEPTAS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: 2ARVUS.SPK
+    requires:
+      - STR_BLOODYROSE_STRATEGY
+    text: STR_BRARVUS_ADEPTAS_CODEX
 
 ## #CRAFTS.CM#
   - id: STR_VALKYRIE_INQ
@@ -3973,6 +3994,7 @@ ufopaedia:
     type_id: 11
     requires:
       - STR_ARBITES_MIDTIER
+      - STR_NOT_BLACKTEMPLARS
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_ARVUS_UFOPEDIA
     image_id: 2ARVUS.SPK

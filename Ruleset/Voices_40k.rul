@@ -2071,6 +2071,9 @@ armors:
   - type: STR_BTMARINEARMORUPD_PLAYER
     refNode: *STR_BTMARINE_BASEARMOR
 
+  - type: STR_BTMARINEARMORUPDHIGH_PLAYER
+    refNode: *STR_BTMARINE_BASEARMOR
+
   - &STR_BTASSAULT_BASEARMOR
     type: STR_BTMARINEASSAULTARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
@@ -2111,7 +2114,8 @@ armors:
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
     deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
 
-  - type: STR_BTTECHARMOR_PLAYER
+  - &STR_BTTECH_BASEARMOR
+    type: STR_BTTECHARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
@@ -2122,6 +2126,9 @@ armors:
     annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
     deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+
+  - type: STR_BTTECHGRAVARMOR_PLAYER
+    refNode: *STR_BTTECH_BASEARMOR
 
   - &STR_BTHONOR_BASEARMOR
     type: STR_BTHONORARMOR_PLAYER
@@ -2139,6 +2146,9 @@ armors:
   - type: STR_BTHONORARMORALT_PLAYER
     refNode: *STR_BTHONOR_BASEARMOR
 
+  - type: STR_BTHONORARMORSHIELD_PLAYER
+    refNode: *STR_BTHONOR_BASEARMOR
+
   - &STR_BTTERMI_BASEARMOR
     type: STR_BTTERMINATORARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
@@ -2153,6 +2163,9 @@ armors:
     deathFemale:        [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
 
   - type: STR_BTTERMINATORMELEEARMOR_PLAYER
+    refNode: *STR_BTTERMI_BASEARMOR
+
+  - type: STR_BTTERMINATORSTORMARMOR_PLAYER
     refNode: *STR_BTTERMI_BASEARMOR
 
   - type: STR_BTCAPTAINARMOR_PLAYER
