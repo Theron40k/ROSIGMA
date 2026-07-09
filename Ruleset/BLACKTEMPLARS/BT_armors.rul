@@ -4,6 +4,7 @@ extended:
 armors:
 
   - type: STR_BTSCOUTARMOR_PLAYER  # BT NOVICE
+    group: 1
     isPilotArmor: true
     customArmorPreviewIndex: 1410
     visibilityAtDay: 40
@@ -62,6 +63,7 @@ armors:
 
   - &STR_BTMARINE_BASEARMOR
     type: STR_BTMARINEARMOR_PLAYER  # BT MARINE BOLTER
+    group: 1
     isPilotArmor: true
     customArmorPreviewIndex: 1411
     visibilityAtDay: 40
@@ -149,6 +151,7 @@ armors:
 
   - &STR_BTASSAULT_BASEARMOR
     type: STR_BTMARINEASSAULTARMOR_PLAYER  # BT MARINE ASSAULT
+    group: 1
     isPilotArmor: true
     customArmorPreviewIndex: 1412
     visibilityAtDay: 40
@@ -221,6 +224,7 @@ armors:
       - INV_NULL_3X1_BACKPACK
 
   - type: STR_BTAPOTHARMOR_PLAYER  # BT APOTHECARY
+    group: 1
     isPilotArmor: true
     customArmorPreviewIndex: 1415
     visibilityAtDay: 40
@@ -280,6 +284,7 @@ armors:
       INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
 
   - type: STR_BTCHAPLAINARMOR_PLAYER  # BT CHAPLAIN
+    group: 1
     isPilotArmor: true
     customArmorPreviewIndex: 1413
     visibilityAtDay: 40
@@ -340,6 +345,7 @@ armors:
 
   - &STR_BTTECH_BASEARMOR
     type: STR_BTTECHARMOR_PLAYER  # BT TECHMARINE PLASMA
+    group: 1
     isPilotArmor: true
     customArmorPreviewIndex: 1414
     visibilityAtDay: 40
@@ -410,6 +416,7 @@ armors:
 
   - &STR_BTHONOR_BASEARMOR
     type: STR_BTHONORARMOR_PLAYER  # BT SWORD BRETHREN MACE
+    group: 1
     isPilotArmor: true
     customArmorPreviewIndex: 1420
     visibilityAtDay: 40
@@ -496,6 +503,7 @@ armors:
 
   - &STR_BTTERMI_BASEARMOR
     type: STR_BTTERMINATORARMOR_PLAYER  # BT TERMINATOR AC
+    group: 2
     customArmorPreviewIndex: 1416
     visibilityAtDay: 40
     visibilityAtDark: 30
@@ -598,6 +606,7 @@ armors:
       - STR_HB_CLIP
 
   - type: STR_BTCAPTAINARMOR_PLAYER  # BT CAPTAIN ARMOR
+    group: 2
     customArmorPreviewIndex: 1419
     visibilityAtDay: 40
     visibilityAtDark: 30
@@ -659,6 +668,7 @@ armors:
 
 
   - type: STR_BTRECLUSARMOR_PLAYER  # BT RECLUSIARCH ARMOR
+    group: 2
     customArmorPreviewIndex: 1418
     visibilityAtDay: 40
     visibilityAtDark: 30
@@ -719,6 +729,7 @@ armors:
       INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
 
   - type: STR_BTCHAMPIONARMOR_PLAYER  # BT CHAMPION ARMOR
+    group: 2
     customArmorPreviewIndex: 1421
     visibilityAtDay: 40
     visibilityAtDark: 30
@@ -790,6 +801,7 @@ armors:
 
   - &STR_BTDREADNODE
     type: STR_BTDREAD_ARMOR_PLAYER           # BT DREADNOUGHT NORMAL
+    group: 3
     visibilityAtDay: 40
     visibilityAtDark: 30
     antiCamouflageAtDay: 5
@@ -936,6 +948,7 @@ armors:
       psiStrength: 5.0               # 500% the psiStrength dread protected
 
   - type: STR_BTCATAPHRACTARMOR_PLAYER  #~BT CATAPHRACT ARMOR
+    group: 2
     customArmorPreviewIndex: 1012
     visibilityAtDay: 40  # equivalent to Scion gear
     visibilityAtDark: 40  # advanced sensors

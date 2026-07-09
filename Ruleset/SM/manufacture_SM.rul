@@ -16,6 +16,7 @@ manufacture:
   - name: STR_STORMHAWKS
     requires:
       - STR_STORMHAWKR
+      - STR_NOT_BLACKTEMPLARS
     category: STR_CRAFT
     space: 0
     time: 500
@@ -917,6 +918,10 @@ manufacture:
       STR_UFO_NAVIGATION: 2
 
   - name: STR_STORMEAGLE
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_STORMEAGLE_INTERCEPTOR
+      - STR_NOT_BLACKTEMPLARS
     requiredItems:
       STR_ALIEN_ALLOYS: 500  # was 1000
       STR_UFO_POWER_SOURCE: 4
@@ -928,6 +933,7 @@ manufacture:
       - STR_CHAPTERARMYR
       - STR_CHAPTER_PURITY
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_BLACKTEMPLARS
     requiredItems:
       STR_ALIEN_ALLOYS: 750  # was 1500
       STR_UFO_POWER_SOURCE: 4
@@ -939,6 +945,7 @@ manufacture:
       - STR_NEW_FIGHTER_CRAFT
       - STR_MARINES_STRATEGY
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_BLACKTEMPLARS
     requiredItems:
       STR_ALIEN_ALLOYS: 350  # was 650
       STR_UFO_POWER_SOURCE: 1
@@ -950,6 +957,7 @@ manufacture:
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_THUNDERHAWKTYPE2
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_BLACKTEMPLARS
     requiredItems:
       STR_ALIEN_ALLOYS: 450  # was 850
       STR_UFO_POWER_SOURCE: 1
@@ -961,6 +969,7 @@ manufacture:
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_THUNDERHAWKTYPE1
       - STR_NOT_SPACEWOLVES
+      - STR_NOT_BLACKTEMPLARS
     requiredItems:
       STR_ALIEN_ALLOYS: 850
       STR_UFO_POWER_SOURCE: 1
@@ -1403,6 +1412,7 @@ manufacture:
     category: STR_CRAFT
     requires:
       - STR_CRATED_RHINO
+      - STR_NOT_BLACKTEMPLARS
     space: 0
     time: 100
     cost: 1000

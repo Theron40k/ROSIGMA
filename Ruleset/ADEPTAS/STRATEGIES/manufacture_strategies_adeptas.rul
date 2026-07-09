@@ -4,6 +4,7 @@ manufacture:
     category: STR_CRAFT
     requires:
       - STR_NOVICE_STRATEGY_ADEPTAS
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_ARVUS_ADEPTAS_TOKEN: 1
     space: 0
@@ -14,6 +15,7 @@ manufacture:
     refNode: *STR_CRAFT_START
     requires:
       - STR_ADEPTAS  # Can be bought by anyone, this is just for the free starting craft for certain strategies
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_RHINO_ADEPTAS_TOKEN: 1
 
@@ -21,6 +23,7 @@ manufacture:
     refNode: *STR_CRAFT_START
     requires:
       - STR_CORVUS_RESEARCH  # add, midtier requirement unless starting as Adeptas/Dominion.
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_CRATED_CORVUS: 1
     producedItems:
@@ -30,6 +33,7 @@ manufacture:
     refNode: *STR_CRAFT_START
     requires:
       - STR_ADEPTAS_DROPPOD_RESEARCH
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_DROPPODS_ADEPTAS_TOKEN: 1
 
@@ -37,6 +41,7 @@ manufacture:
     refNode: *STR_CRAFT_START
     requires:
       - STR_TTA_RESEARCH  # add to craft requirement, replace the high tier stuff
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_TTA_TOKEN: 1
 
