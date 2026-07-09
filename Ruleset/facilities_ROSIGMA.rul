@@ -618,11 +618,12 @@ facilities:
       - STR_OUTPOST_MARINES
       - STR_OUTPOST_CHAOSCULT
 
-  - type: STR_BRCOMMAND_ADEPTAS
+  - type: STR_BRCOMMAND_ADEPTAS  # BR Commandery
     placeSound: {mod: 40k, index: 98}
     requires:
       - STR_BLACKTEMPLAR_STRATEGY
-    requiresBaseFunc: [OUTP]
+      - STR_REQIMPERIAL_SUPPORT
+    requiresBaseFunc: [BASE]
     provideBaseFunc: [HANGAR, IMPERIUM, RESE, MANU, PSI, BLOODYORDER]
     labs: 20
     workshops: 20

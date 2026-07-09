@@ -2,6 +2,7 @@ crafts:
   - type: STR_DROPPODS_ADEPTAS  # dropod´s Adeptas
     requires:
       - STR_INQUISITION_DROPPODS
+      - STR_NOT_BLOODYROSES
     marker: 9
     sprite: 300
     costBuy: 600000
@@ -67,6 +68,7 @@ crafts:
     marker: 30
     requires:
       - STR_ADEPTAS  # available to all Adeptas strategies
+      - STR_NOT_BLOODYROSES
     sprite: 1701
     fuelMax: 12000
     damageMax: 8000
@@ -127,6 +129,10 @@ crafts:
     spacecraft: true
 
   - type: STR_STORMRAVEN_ADEPTAS
+    requires:
+      - STR_DEATHWATCH_AND_ADEPTAS
+      - STR_NEW_FIGHTER_CRAFT
+      - STR_NOT_BLOODYROSES
     fuelMax: 600  # was 1200
     refuelRate: 15  # was 5
     repairRate: 5  # was 1
@@ -134,6 +140,10 @@ crafts:
     maxLargeUnits: 1
 
   - type: STR_STORMEAGLE_ADEPTAS
+    requires:
+      - STR_DEATHWATCH_AND_ADEPTAS
+      - STR_STORMEAGLE_INTERCEPTOR
+      - STR_NOT_BLOODYROSES
     fuelMax: 500  # was 1000
     refuelRate: 15  # was 5
     repairRate: 5
@@ -150,6 +160,7 @@ crafts:
     repairRate: 10
     requires:
       - STR_LANDRAIDER_ADEPTAS
+      - STR_NOT_BLOODYROSES
     battlescapeTerrainData:
       name: LANDRAIDER
       mapDataSets:
@@ -177,6 +188,7 @@ crafts:
     marker: 30
     requires:
       - STR_ADEPTAS_CASTIGATOR_AC_RESEARCH
+      - STR_NOT_BLOODYROSES
     sprite: 1702
     fuelMax: 12000
     damageMax: 12000  # +2000 castigator armor
@@ -240,6 +252,10 @@ crafts:
 
   - &STR_THUNDERHAWK
     type: STR_ADEPTAS_THUNDERHAWNK
+    requires:
+      - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     fuelMax: 700  # was 1400
     refuelRate: 10  # was 5
     repairRate: 5  # was 1
@@ -254,12 +270,14 @@ crafts:
     repairRate: 5  # was 1
     requires:
       - STR_TTA_RESEARCH
+      - STR_NOT_BLOODYROSES
     vehicles: 999
     maxLargeUnits: 2
 
   - type: STR_CORVUS  # has rent and buy cost from base 40k.
     requires: !add
       - STR_CORVUS_RESEARCH
+      - STR_NOT_BLOODYROSES
 
     weaponStrings:
       - STR_WEAPON_ONE
@@ -295,6 +313,9 @@ crafts:
       - STR_DEATHWATCH_AND_ADEPTAS
 
   - type: STR_THUNDERBOLT_ADEPTAS
+    requires:
+      - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     armor: 2  # was 0; gets some armor in lieu of the Lightning's higher avoid bonus
     avoidBonus: 5
     repairRate: 3  # was 1
@@ -302,6 +323,9 @@ crafts:
     fuelMax: 1500  # was 1000
 
   - type: STR_AVENGER_ADEPTAS
+    requires:
+      - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     avoidBonus: 10  # was 0; to bring it in line with Lightning Interceptor
     repairRate: 5  # was 1; to bring it in line with Lightning Interceptor
     hitBonus: 7  # was 0; this benefit accrues because it requires 2 pilots versus the Lightning Interceptor's 1. Having a devoted gunner helps
@@ -311,6 +335,7 @@ crafts:
     costRent: 360000
     requires:
       - STR_ARVUS_DEP
+      - STR_NOT_BLOODYROSES
     requiresBuyBaseFunc: [HANGAR]
     marker: 74
     sprite: 202

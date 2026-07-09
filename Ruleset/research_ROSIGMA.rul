@@ -1556,8 +1556,7 @@ research:
       - STR_STORMHAWKR
       - STR_PERSONAL_ARMOR
       - STR_MELTABOMB
-      - STR_CRATED_DROPPODS
-      - STR_CRATED_RHINO
+      - STR_CRATED_BTDROPPODS
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
@@ -1574,14 +1573,21 @@ research:
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_BLACKTEMPLAR_CARE_PACKAGE
 
+  - name: STR_REQIMPERIAL_SUPPORT  # Request Imperial Support
+    cost: 50
+    points: 0
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+
  ### Bloody Roses #STRATEGY.SOB.BR#
 
   - name: STR_BLOODYROSE_STRATEGY  #  Request Commandery Support
     points: 0
     cost: 50
-    requiresBaseFunc: [BLOODYORDER]
+    requiresBaseFunc: [BLOODYORDER]  # must be done in the Commandery outpost
     dependencies:
       - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
     lookup: STR_CHOSEN_BLOODYROSES
     getOneFree: #WARNING do not add more than 1 getOneFree tech due to auto-repeatability issues
       - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
@@ -1604,6 +1610,7 @@ research:
       - STR_TRAINING_BOLTERS_ADEPTAS
       - STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH  # recruitment
       - STR_ADEPTAS_SUPERIOR_RESEARCH
+      - STR_CRATED_BRARVUS
       - STR_NOT_ELITE_STRATEGY_ADEPTAS
       - STR_NOT_REPENTIA_STRATEGY_ADEPTAS
       - STR_NOT_NOVICE_STRATEGY_ADEPTAS
@@ -1615,6 +1622,17 @@ research:
       - STR_NOVICE_STRATEGY_ADEPTAS
       - STR_NORMAL_STRATEGY_ADEPTAS
     spawnedEvent: STR_RECRUITS_BLOODYROSES
+
+  - name: STR_CRATED_BTDROPPODS  # Drop Pods Requisition
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_CRATED_BRARVUS  # Arvus Requisition
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+      - STR_GENERALLOCK
 
 
 ### Word Bearers #STRATEGY.SM.WB#

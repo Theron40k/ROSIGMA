@@ -625,6 +625,12 @@ ufopaedia:
     image_id: COMMENDATION_CHAOS_APOTHEOSIS.SPK
     text: STR_CHAOS_APOTHEOSIS_DESCRIPTION
 
+  - id: STR_PARDON_COMMENDATION
+    type_id: 10
+    section: STR_HELP_CAMPAIGN
+    image_id: COMMENDATION_PARDON_BRREPENTIA.SPK
+    text: STR_PARDON_COMMENDATION_DESCRIPTION
+
 ####################################
 # #STRATEGY#
 ####################################
@@ -781,6 +787,14 @@ ufopaedia:
     text: STR_SW_STRATEGY_INFO
     requires:
       - STR_MARINES_STRATEGY
+
+  - id: STR_REQIMPERIAL_SUPPORT   # Request Imperial Support
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: BTSUPPORT_CODEX.SPK
+    text: STR_REQIMPERIAL_SUPPORT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
 
 ## #STRATEGY.BR#
 
@@ -2963,6 +2977,15 @@ ufopaedia:
     section: STR_BASE_FACILITIES
     image_id: 045.SPK
     text: STR_POWERG_UFOPEDIA
+
+  - id: STR_BRCOMMAND_ADEPTAS
+    type_id: 16
+    section: STR_BASE_FACILITIES
+    image_id: 042.SPK
+    text: STR_BRCOMMAND_ADEPTAS_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
 
   # Chaos Facilities
   - id: STR_ARMORY_CHAOS
@@ -14863,6 +14886,14 @@ ufopaedia:
     text: STR_TECHPRIEST_POWERAXE_BT_CODEX
     requires:
       - STR_BLACKTEMPLAR_STRATEGY
+
+#SOB.BR.WEAPONS#
+
+  - id: STR_EVISCERATOR_BR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1EV.SPK
+    text: STR_EVISCERATOR_BR_CODEX
 
   # Unsorted fixed weapons for Stats For Nerds
   # Need to figure out where these all go, but they don't have articles. Low priority.
