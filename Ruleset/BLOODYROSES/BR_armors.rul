@@ -10,7 +10,7 @@ armors:
     spriteSheet: BLOODYROSE_CANTUS_battle.PCK
     customArmorPreviewIndex: 1422
     corpseBattle:
-      - STR_ADEPTASN_CORPSE
+      - STR_BRNOVICE_CORPSE
     stats:
       tu: 15
       stamina: 5
@@ -61,7 +61,7 @@ armors:
     spriteSheet: BLOODYROSE_REPENT_battle.PCK
     customArmorPreviewIndex: 1425
     spriteFaceGroup: 6
-    spriteFaceColor: [96, 160, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6
+    spriteFaceColor: [96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6
     stats:
       tu: 25
       stamina: 30
@@ -75,7 +75,7 @@ armors:
       psiSkill: 10  # repentia garb greatly heightens bravery and devotion; not as much as true repentia
       melee: 10
     corpseBattle:
-      - STR_ADEPTASR_CORPSE
+      - STR_BRREPENTIA_CORPSE
     storeItem: STR_REPENTIA_ARMOR_BLOODYROSE
     frontArmor: 50
     sideArmor: 25
@@ -120,7 +120,7 @@ armors:
     spriteSheet: BLOODYROSE_HOSPI_battle.PCK
     customArmorPreviewIndex: 1426
     corpseBattle:
-      - STR_ADEPTASA_CORPSE
+      - STR_BRHOSPITAL_CORPSE
     stats:
       stamina: 40
       health: 20
@@ -171,7 +171,7 @@ armors:
     spriteSheet: BLOODYROSE_SISTER_battle.PCK
     customArmorPreviewIndex: 1423
     corpseBattle:
-      - STR_ADEPTAS_CORPSE
+      - STR_BRADEPTAS_CORPSE
     stats:
       tu: 10
       stamina: 20
@@ -223,7 +223,7 @@ armors:
     spriteSheet: BLOODYROSE_SERAPH_battle.PCK
     customArmorPreviewIndex: 1427
     corpseBattle:
-      - STR_ADEPTAS_CORPSE
+      - STR_BRSERAPH_CORPSE
     stats:
       tu: 20
       stamina: 20
@@ -278,7 +278,7 @@ armors:
     spriteSheet: BLOODYROSE_SISTERSUP_battle.PCK
     customArmorPreviewIndex: 1428
     corpseBattle:
-      - STR_SUPERIOR_CORPSE
+      - STR_BRSUPERIO_CORPSE
     stats:
       tu: 15
       stamina: 20
@@ -329,7 +329,7 @@ armors:
     spriteSheet: BLOODYROSE_ELOHIM_battle.PCK
     customArmorPreviewIndex: 1430
     corpseBattle:
-      - STR_ELOHIM_CORPSE
+      - STR_BRELOHIM_CORPSE
     stats:
       tu: 15
       stamina: 20
@@ -378,7 +378,7 @@ armors:
     spriteSheet: BLOODYROSE_RETRIB_battle.PCK
     customArmorPreviewIndex: 1431
     corpseBattle:
-      - STR_RETRIBUTOR_CORPSE
+      - STR_BRRETRIB_CORPSE
     stats:
       tu: 10
       stamina: 20
@@ -427,7 +427,7 @@ armors:
     spriteSheet: BLOODYROSE_CELEST_battle.PCK
     customArmorPreviewIndex: 1432
     corpseBattle:
-      - STR_ADEPTAS_CELESTIAN_ELITE_CORPSE
+      - STR_BRCELEST_CORPSE
     storeItem: STR_CELESTIAN_ARMOR_BLOODYROSE
     stats:
       tu: 10
@@ -480,7 +480,7 @@ armors:
     spriteSheet: BLOODYROSE_SACRE_battle.PCK
     customArmorPreviewIndex: 1433
     corpseBattle:
-      - STR_ADEPTAS_CELESTIAN_SACRESANT_CORPSE
+      - STR_BRSACRE_CORPSE
     storeItem: STR_SACRESANT_ARMOR_BLOODYROSE
     stats:
       tu: 5
@@ -534,7 +534,7 @@ armors:
     spriteSheet: BLOODYROSE_CANONESS_battle.PCK
     customArmorPreviewIndex: 1429
     corpseBattle:
-      - STR_ADEPTASC_CORPSE
+      - STR_BRCANON_CORPSE
     storeItem: STR_CANONESS_ARMOR_BLOODYROSE
     stats:
       tu: 30
@@ -584,6 +584,8 @@ armors:
     visibilityAtDark: 20
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6
     spriteSheet: BLOODYROSE_PENITENTENGINE_battle.PCK
     instantWoundRecovery: true
     corpseGeo: STR_DREAD_CORPSE
