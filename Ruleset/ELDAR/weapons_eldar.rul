@@ -179,7 +179,7 @@ items:
     floorSprite: 4861
     handSprite: 4890
     bulletSprite: {mod: 40k, index: 20}
-    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    fireSound: [1884, 1885, 1886]
     compatibleAmmo:
       - STR_SHURIKEN_CANNON_MAG
     accuracySnap: 80
@@ -405,6 +405,39 @@ items:
     invHeight: 3
     armor: 300
     listOrder: 16515
+
+  - type: STR_DEATH_SPINNER  # Chaos ripper gun stats temporary
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    requires:
+    - STR_ELDAR_WEAPONS_ACQUISITION
+    # Warpspider weapons research
+    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuy: []
+    size: 0.4
+    dropoff: 5
+    costBuy: 10000
+    costSell: 1000
+    weight: 30
+    bigSprite: 4863
+    floorSprite: 4863
+    handSprite: 4930
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: 1888
+    compatibleAmmo:
+      - STR_SPINNER_SPOOL
+    accuracyAuto: 50
+    tuAuto: 30
+    accuracySnap: 65
+    tuSnap: 25
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 75
+    invWidth: 2
+    invHeight: 3
+    armor: 100
+    autoRange: 8
+    snapRange: 12
+    listOrder: 16600
 
 #--- ELDAR.GRENADES ---
 
