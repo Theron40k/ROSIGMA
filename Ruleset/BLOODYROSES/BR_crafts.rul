@@ -1,14 +1,11 @@
 crafts:
 
   - type: STR_BRARVUS_ADEPTAS  # bloody rose-only arvus
-    #wating until figure out how to make groups work
-    #limitArmorGroups:
-    #  1: 0
-    #  2: 0
-    #  3: 0
-    #  4: 12
-    #  5: 6
-    #  6: 2
+    allowedArmorGroups: [4, 5, 6]
+    limitArmorGroups:
+      4: 12
+      5: 6
+      6: 2
     costBuy: 600000
     costRent: 360000
     requires:
