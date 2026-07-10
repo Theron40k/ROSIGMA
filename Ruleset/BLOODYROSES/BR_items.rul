@@ -91,21 +91,11 @@ items:
 
   # other items
 
-  - type: STR_CRATED_BRARVUS
-    size: 0
-
-  - type: STR_ARVUSSMOKE
-    fuseType: -3
-    fuseTriggerEvents:
-      defaultBehavior: true
-    size: 0.1
-    weight: 1
-    hitAnimation: {mod: 40k, index: 104}
-    hiddenOnMinimap: false
-    power: 40
-    damageType: 9
+  - type: STR_ARVUS_SMOKER_SPAWNER
+    spawnUnit: STR_ARVUSSMOKER_UNIT
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
     battleType: 4
-    blastRadius: 5
-    invWidth: 1
-    invHeight: 1
     recover: false
+    hitAnimation: {mod: 40k, index: 1992}
