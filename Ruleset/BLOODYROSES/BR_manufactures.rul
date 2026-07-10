@@ -2,17 +2,32 @@ manufacture:
 
   # Vehicles
 
-  - name: STR_CRATED_BRARVUS
-    category: STR_CRAFT
+# no more crated arvus player must buy it at commandery now
+#  - name: STR_CRATED_BRARVUS
+#    category: STR_CRAFT
+#    requires:
+#      - STR_BLACKTEMPLAR_STRATEGY
+#      - STR_REQIMPERIAL_SUPPORT
+#      - STR_BLOODYROSE_STRATEGY
+#    requiresBaseFunc: [BLOODYORDER]
+#    space: 0
+#    time: 100
+#    cost: 1000
+#    requiredItems:
+#      STR_CRATED_BRARVUS: 1
+#    producedItems:
+#      STR_BRARVUS_ADEPTAS: 1
+
+  - name: STR_PENITENT_ARMOR_BLOODYROSE
+    category: STR_HEAVY_WEAPONS_PLATFORM
     requires:
-      - STR_BLACKTEMPLAR_STRATEGY
-      - STR_REQIMPERIAL_SUPPORT
-      - STR_BLOODYROSE_STRATEGY
-    requiresBaseFunc: [BLOODYORDER]
-    space: 0
-    time: 100
-    cost: 1000
+      - STR_ADEPTAS
+      - STR_PLASMA_CANNON
+      - STR_NEW_FIGHTER_CRAFT
+    space: 30
+    time: 1200
+    cost: 850000
     requiredItems:
-      STR_CRATED_BRARVUS: 1
-    producedItems:
-      STR_BRARVUS_ADEPTAS: 1
+      STR_ALIEN_ALLOYS: 50
+      STR_ELERIUM_115: 30
+      STR_KILLPOINT_TOKEN: 60
