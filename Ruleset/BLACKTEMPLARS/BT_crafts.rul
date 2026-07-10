@@ -1,14 +1,11 @@
 crafts:
 
   - type: STR_BTDROPPODS  # black templars-only drop pods
-    #wating until figure out how to make groups work
-    #limitArmorGroups:
-    #  1: 8
-    #  2: 4
-    #  3: 1
-    #  4: 0
-    #  5: 0
-    #  6: 0
+    allowedArmorGroups: [1, 2, 3]
+    limitArmorGroups:
+      1: 8
+      2: 4
+      3: 1
     maxSkinIndex: 0
     groups: [80]
     costBuy: 600000
