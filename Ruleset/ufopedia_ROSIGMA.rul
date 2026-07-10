@@ -15127,6 +15127,28 @@ ufopaedia:
     type_id: 4
     section: STR_NOT_AVAILABLE
 
+  - id: STR_DEATH_SPINNER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DEATH_SPINNER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DEATH_SPINNER_CODEX
+  - id: STR_SPINNER_SPOOL
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_SHURIKEN_CANNON
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_SHURIKEN_CANNON_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_SHURIKEN_CANNON_CODEX
+  - id: STR_SHURIKEN_CANNON_MAG
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
   - delete: STR_ELDAR_LAUNCHER
   - id: STR_ELDAR_LAUNCHER
     type_id: 14
@@ -21542,6 +21564,21 @@ ufopaedia:
       - STR_ELDAR_DRAGONEX
     image_id: ELDAR_DRAGONEX_ARMOR_CODEX.SPK
     text: STR_ELDAR_DRAGONEX_ARMOR_CODEX
+
+  - id: STR_ELDAR_SPIDER_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER_CORPSE
+    image_id: ELDAR_SPIDER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_SPIDER_AUTOPSY_CODEX
+  - id: STR_ELDAR_SPIDER_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER
+    image_id: ELDAR_SPIDER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SPIDER_ARMOR_CODEX
 
   - delete: STR_WRAITHGUARD_AUTOPSY
   - id: STR_WRAITHGUARD_AUTOPSY
