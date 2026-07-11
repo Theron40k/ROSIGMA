@@ -48,6 +48,7 @@ research:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_ELDAR_OUTPOST_BUILDING_RESEARCH
       - STR_ELDAR_BASE_BUILDING_RESEARCH
+      - STR_ELDAR_CRAFT_RESEARCH
       # TEMP ADDITIONS for future campaign splitting
       - STR_ELDAR_ASURYANI_CAMPAING # TEMPORARY addition until there are multiple eldar campaigns
       #- STR_CHOSEN_ELDAR_STRATEGY
@@ -87,6 +88,12 @@ research:
       - STR_GENERALLOCK
 
   - name: STR_ELDAR_WEAPONS_ACQUISITION
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ELDAR_CRAFT_RESEARCH
     cost: 0
     points: 0
     dependencies:
