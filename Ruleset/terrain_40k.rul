@@ -846,6 +846,9 @@
             - [6, 6, 1]
         fuseTimers:
           STR_TARANTULAGK_SPAWNER: [0, 0]
+      - name: XBASE_78
+        width: 40
+        length: 40
 
   - name: XBASE_FILL # copied from 40k to add Ork map blocks to it.
     mapDataSets:
@@ -15576,3 +15579,27 @@
           STR_GORGON_HEAVY_FLAMER_BACK_RIGHT_SPAWNER: [0, 0]
           STR_GORGON_HEAVY_STUBBER_LEFT_SPAWNER: [0, 0]
           STR_GORGON_HEAVY_STUBBER_RIGHT_SPAWNER: [0, 0]
+
+  # BR arvus to add to commandery  XBASE_78 mapblock as vertical level
+
+  - name: BRAVUS4X4
+    mapDataSets:
+      - BLANKS
+      - BRARVUS
+      - BRARVUS_DOORS
+      - BRARVUSLIFT
+    mapBlocks:
+      - name: BRAVUS4X4
+        width: 40
+        length: 40
+
+# to have some muddy floor in the bottom of the commandery
+
+  - name: COMMANDSOIL
+    mapDataSets:
+      - BLANKS
+      - MOUNTMUD
+    mapBlocks:
+      - name: COMMANDSOIL
+        width: 40
+        length: 40
