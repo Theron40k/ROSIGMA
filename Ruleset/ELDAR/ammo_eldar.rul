@@ -13,9 +13,9 @@ items:
       ArmorEffectiveness: 0.3
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    requiresBuy: []  # Already requires the eldar base service
+    #requiresBuy: []  # Already requires the eldar base service
     weight: 5
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1
     costBuy: 500
     costSell: 250
@@ -37,8 +37,8 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_SNIPER]
     requires:
       - STR_RECRUIT_ELDAR_OUTCAST
-    requiresBuy: []
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []
+    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.2
     weight: 1 #light weight
     invHeight: 2
@@ -74,8 +74,8 @@ items:
 
   - type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_MELTA]
-    requiresBuy: []  # Already requires the eldar base service
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []  # Already requires the eldar base service
+    #requiresBuyBaseFunc: [ELDAROUT]
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_FUSION_TECH_RESEARCH
@@ -158,7 +158,7 @@ items:
       - STR_MIDTIER_PREREQ
     requiresBuy: []  # Already requires the eldar base service
     weight: 20
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1
     costBuy: 500
     costSell: 250
@@ -180,8 +180,8 @@ items:
 
   - type: STR_SMALL_ROCKET_TEMPEST_ELDAR  # eldar tempest rocket launcher clip
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
-    requiresBuyBaseFunc: [ELDAROUT]
-    requiresBuy: []
+    #requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []
     requires:
       - STR_ELDAR_REAPER_RESEARCH
     size: 0.5
@@ -214,8 +214,8 @@ items:
 
   - type: STR_LARGE_ROCKET_ELDAR  # Reaper Rocket
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
-    requiresBuyBaseFunc: [ELDAROUT]
-    requiresBuy: []
+    #requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []
     requires:
       - STR_ELDAR_REAPER_RESEARCH
     power: 120  # +20 over krak rocket
