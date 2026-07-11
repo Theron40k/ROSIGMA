@@ -15,6 +15,7 @@ extended:
         code: |
           var ptr RuleArmor armorRule;
           var int temp;
+          var int faction;
           var int reinforcementTU;
 
           # might mess with spawner grenades but seems to be handled differently anyhow
@@ -23,8 +24,8 @@ extended:
             return;
           end;
 
-          unit.getFaction temp;
-          if eq temp FACTION_PLAYER;
+          unit.getFaction faction;
+          if eq faction FACTION_PLAYER;
             # debug_log "createUnit | ROSIGMA_cU_reinforcements_less_tus | offset: 2 | Player unit. Aborting.";
             return;
           end;
@@ -46,10 +47,15 @@ extended:
           # debug_log "createUnit | ROSIGMA_cU_reinforcements_less_tus | offset: 2 | Unit: " unit;
           # debug_log "createUnit | ROSIGMA_cU_reinforcements_less_tus | offset: 2 | Set time units to " temp;
 
-          armorRule.getTag temp Tag.ARMOR_REINFORCEMENT_TU_PERCENT_PENDING;
-          unit.setTag Tag.UNIT_REINFORCEMENT_TU_PERCENT_PENDING temp;
-          # debug_log "createUnit | ROSIGMA_cU_reinforcements_less_tus | offset: 2 | Unit: " unit;
-          # debug_log "createUnit | ROSIGMA_cU_reinforcements_less_tus | offset: 2 | Pending TU value set to " 25;
+          armorRule.getTag reinforcementTU Tag.ARMOR_REINFORCEMENT_TU_PERCENT_PENDING;
+          if gt reinforcementTU 0;
+            battle_game.getTurnSide temp;
+            if neq faction temp;
+              unit.setTag Tag.UNIT_REINFORCEMENT_TU_PERCENT_PENDING reinforcementTU;
+              # debug_log "createUnit | ROSIGMA_cU_reinforcements_less_tus | offset: 2 | UNIT_REINFORCEMENT_TU_PERCENT_PENDING | Unit: " unit;
+              # debug_log "createUnit | ROSIGMA_cU_reinforcements_less_tus | offset: 2 | UNIT_REINFORCEMENT_TU_PERCENT_PENDING | Pending TU value set to " reinforcementTU;
+            end;
+          end;
 
           return;
 

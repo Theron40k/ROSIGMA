@@ -81,6 +81,40 @@ soldierTransformation:
       psiSkill: 5
       melee: 5
 
+#  - name: STR_PROMOTE_TO_SCORPION_EXARCH
+
+  - name: STR_PROMOTE_TO_BANSHEE_EXARCH
+    # requiresBuyBaseFunc: [PSI]
+    requires:
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+    cost: 50000
+    minRank: 1
+    producedSoldierType: STR_ELDAR_BANSHEE_EXARCH_PLAYER
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsWoundedSoldiers: true
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ELDAR_ASPECT_WARRIOR_PLAYER
+      - STR_ELDAR_BANSHEE_F
+    #requiredMinStats:
+    #  firing: 65
+    #TESTING requiredCommendations:
+      #TESTING STR_VETERAN_COMMENDATION: 0
+    resetRank: true
+    percentOverallStatChange:
+      tu: 10
+      stamina: 10
+      health: 5
+      bravery: 0
+      reactions: 0
+      firing: 0
+      throwing: 5
+      strength: 5
+      psiStrength: 10
+      psiSkill: 20
+      melee: 20
+
   - name: STR_PROMOTE_TO_REAPER_EXARCH
     # FIXME: requiresBuyBaseFunc: [ASPECT]
     requires:
@@ -177,38 +211,6 @@ soldierTransformation:
       melee: 5
 
 #TIER3.PSI.transformations
-
-  - name: STR_PROMOTE_TO_BANSHEE_EXARCH
-    # requiresBuyBaseFunc: [PSI]
-    requires:
-      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
-    cost: 50000
-    minRank: 1
-    producedSoldierType: STR_ELDAR_BANSHEE_EXARCH_PLAYER
-    keepSoldierArmor: false
-    allowsDeadSoldiers: false
-    allowsWoundedSoldiers: true
-    allowsLiveSoldiers: true
-    allowedSoldierTypes:
-      - STR_ELDAR_PSYKER_PLAYER
-      - STR_ELDAR_BANSHEE_F
-    #requiredMinStats:
-    #  firing: 65
-    #TESTING requiredCommendations:
-      #TESTING STR_VETERAN_COMMENDATION: 0
-    resetRank: true
-    percentOverallStatChange:
-      tu: 10
-      stamina: 10
-      health: 5
-      bravery: 0
-      reactions: 0
-      firing: 0
-      throwing: 5
-      strength: 5
-      psiStrength: 10
-      psiSkill: 20
-      melee: 20
 
   # - name: STR_PROMOTE_TO_SEER_EXARCH
   #   # requiresBuyBaseFunc: [PSI]

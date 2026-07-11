@@ -43,8 +43,6 @@ armors:
     loftempsSet: [3]
     units:
       - STR_ELDAR_GUARDIAN_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -151,8 +149,6 @@ armors:
     loftempsSet: [3]
     units:
       - STR_ELDAR_RANGER_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -326,14 +322,15 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
+  # scorpion units will rely on camo and quick movement to strike
   - &SCORPION_ARMOR
     type: STR_ELDAR_ARMOR5_P       # SCORPION PLAYER
     requires: STR_ELDAR_SCORPION_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 25
-    camouflageAtDay: 25  # you need to be 15 tiles closer than max vision range to see this unit in the light
-    camouflageAtDark: 15  # you need to be 10 tiles closer than max vision range (at night!) to see this unit in the dark
+    camouflageAtDay: 20  # you need to be 20 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: 13  # you need to be 12 tiles closer than max vision range (at night!) to see this unit in the dark
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 8
     frontArmor: 85
@@ -361,12 +358,12 @@ armors:
     builtInWeapons:
       - INV_NULL_3X3
     stats: #Scorpion armor get better bonus to melee
-      tu: 5
-      stamina: 5
+      tu: 12
+      stamina: 10
       health: 5
       bravery: 15 # in the face of danger
       reactions: 0
-      firing: -15
+      firing: -10
       throwing: -10
       strength: 5
       melee: 10
@@ -391,6 +388,76 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
+  # banshee units will rely on minor psy and dodge
+  - &BANSHEE_ARMOR
+    type: STR_ELDAR_ARMOR2_P       # BANSHEE PLAYER
+    requires: STR_ELDAR_BANSHEE_RESEARCH
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5 # banshee bonus
+    antiCamouflageAtDark: 5  # banshee bonus
+    psiVision: 4 # minor PSY vision
+    psiCamouflage: 4 # minor PSY camuflage
+    frontArmor: 85
+    sideArmor: 75
+    rearArmor: 60
+    underArmor: 65
+    drawingRoutine: 0
+    #forcedTorso: 1  # USE MALE
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_BANSHEE_F
+      - STR_ELDAR_ASPECT_WARRIOR_PLAYER
+    builtInWeapons:
+      - INV_NULL_3X3
+    stats: #banshe get bonus to PSY, TU, stamina, health and melee, malus for shooting & throwing
+      tu: 5
+      stamina: 5
+      health: 5
+      bravery: 0 # in the face of danger
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 10
+      psiStrength: 7
+      psiSkill: 7
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
+
+  - type: STR_ELDAR_ARMOR2_P_SHIELD       # BANSHEE PLAYER
+    refNode: *BANSHEE_ARMOR
+    storeItem: STR_ELDAR_SHIELD
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ELDAR_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 20
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 4
 
   - &DRAGON_ARMOR
     type: STR_ELDAR_DRAGON_ARMOR_P       # DRAGON ARMOR
@@ -881,75 +948,6 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
 
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
-
-  - &BANSHEE_ARMOR
-    type: STR_ELDAR_ARMOR2_P       # BANSHEE PLAYER
-    requires: STR_ELDAR_BANSHEE_RESEARCH
-    storeItem: STR_NONE
-    visibilityAtDay: 40
-    visibilityAtDark: 25
-    antiCamouflageAtDay: 5 # banshee bonus
-    antiCamouflageAtDark: 5  # banshee bonus
-    psiVision: 4 # minor PSY vision
-    psiCamouflage: 4 # minor PSY camuflage
-    frontArmor: 85
-    sideArmor: 75
-    rearArmor: 60
-    underArmor: 65
-    drawingRoutine: 0
-    #forcedTorso: 1  # USE MALE
-    damageModifier:  # ELDAR ARMOR
-      - 1.0  # none
-      - 1.0  # AP
-      - 0.5  # FLAMES
-      - 1.0  # HE
-      - 0.7  # LASCANON
-      - 0.7  # PLASMA
-      - 1.0  # STUN
-      - 1.0  # MELEE
-      - 0.5  # ACID
-      - 0.0  # SMOKE
-      - 1.0  # IMPACT
-      - 1.0  # MELTA
-    loftempsSet: [3]
-    units:
-      - STR_ELDAR_BANSHEE_F
-      - STR_ELDAR_PSYKER_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
-    stats: #banshe get bonus to PSY, TU, stamina, health and melee, malus for shooting & throwing
-      tu: 5
-      stamina: 5
-      health: 5
-      bravery: 5 # in the face of danger
-      reactions: 0
-      firing: -12
-      throwing: -12
-      strength: 0
-      melee: 10
-      psiStrength: 7
-      psiSkill: 7
-    tags:
-      UNIT_TYPE_XENO: 1
-      UNIT_TYPE_ELDAR: 1
-      UNIT_TYPE_LIVING: 1
-      DODGE_CHANCE: 40
-      ARMOR_MAX_SUCCESSFUL_DODGES: 4
-
-  - type: STR_ELDAR_ARMOR2_P_SHIELD       # BANSHEE PLAYER
-    refNode: *BANSHEE_ARMOR
-    storeItem: STR_ELDAR_SHIELD
-    builtInWeapons:
-      - INV_NULL_3X3
-      - AUX_ELDAR_SHIELD
-    tags:
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
-      ARMOR_ENERGY_SHIELD_DECAY: 20
-      UNIT_TYPE_XENO: 1
-      UNIT_TYPE_ELDAR: 1
-      UNIT_TYPE_LIVING: 1
-      DODGE_CHANCE: 40
-      ARMOR_MAX_SUCCESSFUL_DODGES: 4
 
   - &SEER_ARMOR
     type: STR_ELDAR_ARMOR3_P        # SEER  PLAYER

@@ -25,5 +25,12 @@ items:
     recover: false
     fixedWeapon: true
 
-  - type: STR_ELDAR_SHIELD #todo: import this from 40k mod
+  - delete: STR_ELDAR_SHIELD
+  - type: STR_ELDAR_SHIELD
     costBuy: 300000
+    costSell: 100000
+    size: 0.8
+    requiresBuy:
+      - STR_ELDAR_SHIELD
+    listOrder: 5457
+

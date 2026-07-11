@@ -13,9 +13,9 @@ items:
       ArmorEffectiveness: 0.3
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    requiresBuy: []  # Already requires the eldar base service
+    #requiresBuy: []  # Already requires the eldar base service
     weight: 5
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1
     costBuy: 500
     costSell: 250
@@ -37,8 +37,8 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_SNIPER]
     requires:
       - STR_RECRUIT_ELDAR_OUTCAST
-    requiresBuy: []
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []
+    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.2
     weight: 1 #light weight
     invHeight: 2
@@ -74,8 +74,8 @@ items:
 
   - type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_MELTA]
-    requiresBuy: []  # Already requires the eldar base service
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []  # Already requires the eldar base service
+    #requiresBuyBaseFunc: [ELDAROUT]
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_FUSION_TECH_RESEARCH
@@ -110,6 +110,41 @@ items:
     armor: 300
     listOrder: 16520
 
+  - type: STR_SPINNER_SPOOL  #STR_RIPPER_GUN_CLIP_AP stats temporary
+    costBuy: 6000
+    costSell: 1000
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      # Warpspider weapons research
+    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuy: []
+    armor: 200
+    size: 0.3
+    weight: 10
+    bigSprite: 4864
+    floorSprite: 4864
+    handSprite: 4938
+    hitSound: 1889
+    hitAnimation: {mod: 40k, index: 26}
+    invWidth: 1
+    invHeight: 2
+    clipSize: 24
+    battleType: 2
+    power: 50
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.02  # AP ammo; small armor ablation
+      ToArmor: 0.02  # AP ammo; small armor damage
+      ArmorEffectiveness: 0.5  # has significant armor penetration
+      ToHealth: 0.7  # AP weapon features reduced health damage
+      ToTime: 0.05  # shotguns have impact shock; the Ripper especially so; reduced due to AP ammo
+      ToEnergy: 0.05  # impact shock; reduced due to AP ammo
+      ToStun: 0.25  # impact shock; reduced due to AP ammo
+    shotgunBehavior: 1
+    shotgunSpread: 20  # these flechettes are more aerodynamic and have improved grouping
+    shotgunPellets: 6
+    listOrder: 16620
+
   - type: STR_SHURIKEN_CANNON_MAG  #                 16200
     categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATPR]
     damageAlter:  # DA SHURIKEN
@@ -123,14 +158,14 @@ items:
       - STR_MIDTIER_PREREQ
     requiresBuy: []  # Already requires the eldar base service
     weight: 20
-    requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1
     costBuy: 500
     costSell: 250
     bigSprite: 4862
     floorSprite: 4862
     handSprite: 4898
-    hitSound: 1874 #{mod: 40k, index: 708} old sound
+    hitSound: 1887 #{mod: 40k, index: 708} old sound
     hitAnimation: {mod: 40k, index: 26}
     explosionSpeed: 5
     power: 50
@@ -145,8 +180,8 @@ items:
 
   - type: STR_SMALL_ROCKET_TEMPEST_ELDAR  # eldar tempest rocket launcher clip
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
-    requiresBuyBaseFunc: [ELDAROUT]
-    requiresBuy: []
+    #requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []
     requires:
       - STR_ELDAR_REAPER_RESEARCH
     size: 0.5
@@ -179,8 +214,8 @@ items:
 
   - type: STR_LARGE_ROCKET_ELDAR  # Reaper Rocket
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
-    requiresBuyBaseFunc: [ELDAROUT]
-    requiresBuy: []
+    #requiresBuyBaseFunc: [ELDAROUT]
+    #requiresBuy: []
     requires:
       - STR_ELDAR_REAPER_RESEARCH
     power: 120  # +20 over krak rocket

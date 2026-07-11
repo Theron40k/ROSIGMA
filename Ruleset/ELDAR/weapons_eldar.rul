@@ -15,7 +15,7 @@ items:
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
     requiresBuy: [] # Already requires the eldar base service
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     weight: 17
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
     size: 0.3
@@ -50,7 +50,7 @@ items:
     requires:
       - STR_RECRUIT_ELDAR_OUTCAST
     requiresBuy: []
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     weight: 7
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
     size: 0.4
@@ -108,7 +108,7 @@ items:
     requires:
       - STR_RECRUIT_ELDAR_OUTCAST
     requiresBuy: []
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     weight: 7
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
     size: 0.4
@@ -168,7 +168,7 @@ items:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_MIDTIER_PREREQ
     requiresBuy: [] # Already requires the eldar base service
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     weight: 50
     categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
     size: 0.3
@@ -179,7 +179,7 @@ items:
     floorSprite: 4861
     handSprite: 4890
     bulletSprite: {mod: 40k, index: 20}
-    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    fireSound: [1884, 1885, 1886]
     compatibleAmmo:
       - STR_SHURIKEN_CANNON_MAG
     accuracySnap: 80
@@ -251,7 +251,7 @@ items:
     refNode: *ELDAR_WEAPON_TEMPLATE
     weight: 12
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
     requiresBuy: []  # Already requires the eldar base service
@@ -287,7 +287,7 @@ items:
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
     weight: 15
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_FUSION_TECH_RESEARCH
@@ -330,7 +330,7 @@ items:
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16510
     weight: 20
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     requires:
       - STR_ELDAR_FIREDRAGON_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
@@ -370,7 +370,7 @@ items:
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16515
     weight: 30 # +10 weight
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     requires:
       - STR_ELDAR_FIREDRAGON_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
@@ -406,6 +406,39 @@ items:
     armor: 300
     listOrder: 16515
 
+  - type: STR_DEATH_SPINNER  # Chaos ripper gun stats temporary
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    # Warpspider weapons research
+    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuy: []
+    size: 0.4
+    dropoff: 5
+    costBuy: 10000
+    costSell: 1000
+    weight: 30
+    bigSprite: 4863
+    floorSprite: 4863
+    handSprite: 4930
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: 1888
+    compatibleAmmo:
+      - STR_SPINNER_SPOOL
+    accuracyAuto: 50
+    tuAuto: 30
+    accuracySnap: 65
+    tuSnap: 25
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 75
+    invWidth: 2
+    invHeight: 3
+    armor: 100
+    autoRange: 8
+    snapRange: 12
+    listOrder: 16600
+
 #--- ELDAR.GRENADES ---
 
   - delete: STR_ELDAR_GRENADE
@@ -414,7 +447,7 @@ items:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_MIDTIER_PREREQ
     requiresBuy: []  # Already requires the eldar base service
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
     weight: 2
     primeSound: 2426
@@ -464,7 +497,7 @@ items:
       - STR_MELTAGUN_TECH
       - STR_MIDTIER_PREREQ
     requiresBuy: []  # Already requires the eldar base service
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
     throwRange: 15
     primeSound: 2426
@@ -520,7 +553,7 @@ items:
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
     requiresBuy: []  # Already requires the eldar base service
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
     battleType: 3
     damageType: 5
