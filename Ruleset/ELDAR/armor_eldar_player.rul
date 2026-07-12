@@ -545,8 +545,8 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
-  #- &SPIDER_ARMOR                       # uncomment when Spider Exarch uses this template
-  - type: STR_ELDAR_SPIDER_ARMOR_P       # DRAGON ARMOR Copy Paste edit later
+  - &SPIDER_ARMOR
+    type: STR_ELDAR_SPIDER_ARMOR_P       # DRAGON ARMOR Copy Paste edit later
     #requires: STR_ELDAR_SPIDER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
@@ -614,7 +614,7 @@ armors:
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
     builtInWeapons:
       - INV_NULL_3X3
-    stats: #fire dragon are very brave, but better armor, less bonus stat for them
+    stats: # Warpspiders slightly better armor slowest foot movement among AW
       tu: 5
       stamina: 5
       health: 5
@@ -630,6 +630,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+
 
   - delete: STR_ELDAR_ARMOR6_P
   - &REAPER_ARMOR
@@ -946,6 +947,147 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 20 #+5
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+
+  - type: STR_ELDAR_SPIDEREXDS_ARMOR_P # FIX LATER Stats from DragonEx
+    refNode: *SPIDER_ARMOR
+    #requires: #STR_ELDAR_SPIDER_EXARCH_DEATH_SPINNERS_RESEARCH
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARSPIDEREX
+      2: SPIDEREX_HELMET
+      3: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY12"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY11"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY10"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY9"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY5"]
+      M9: ["", "ELDAR", "CLOSEDHELMET6", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET7", "ACCESSORY6"]
+      M11: ["", "ELDAR", "CLOSEDHELMET8", "ACCESSORY7"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY4"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY10"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY5"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY11"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY12"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY7"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY1"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    spriteSheet: ELDAR_SPIDER.SPK
+    visibilityAtDay: 42 #+2
+    visibilityAtDark: 30 #+5
+    antiCamouflageAtDay: 8 #+3
+    antiCamouflageAtDark: 8 #+3
+    frontArmor: 130 #+20
+    sideArmor: 110 #+20
+    rearArmor: 100 #+20
+    underArmor: 100 #+30
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_ASPECT_WARRIOR_PLAYER #TESTING PURPOSES REMOVE
+      - STR_ELDAR_SPIDEREX_PLAYER
+      - STR_ELDAR_AUTARCH_PLAYER
+    customArmorPreviewIndex: 1352
+    corpseBattle:
+      - STR_ELDAR_SPIDEREXDS_CORPSE_P
+    damageModifier:  # ELDAR ARMOR
+      - 0.9  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 0.9  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 20 #+5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+
+  - type: STR_ELDAR_SPIDEREXPB_ARMOR_P # FIX LATER Stats from DragonEx
+    refNode: *SPIDER_ARMOR
+    #requires: #STR_ELDAR_SPIDER_EXARCH_POWER_BLADES_RESEARCH
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARSPIDEREXPB
+      2: SPIDEREX_HELMET
+      3: ELDARSPIDEREX_POWER_BLADES_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY12"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY11"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY10"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY9"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY5"]
+      M9: ["", "ELDAR", "CLOSEDHELMET6", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET7", "ACCESSORY6"]
+      M11: ["", "ELDAR", "CLOSEDHELMET8", "ACCESSORY7"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY4"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY10"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY5"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY11"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY12"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY7"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY1"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    spriteSheet: ELDAR_SPIDER.SPK
+    visibilityAtDay: 42 #+2
+    visibilityAtDark: 30 #+5
+    antiCamouflageAtDay: 8 #+3
+    antiCamouflageAtDark: 8 #+3
+    frontArmor: 130 #+20
+    sideArmor: 110 #+20
+    rearArmor: 100 #+20
+    underArmor: 100 #+30
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_ASPECT_WARRIOR_PLAYER #TESTING PURPOSES REMOVE
+      - STR_ELDAR_SPIDEREX_PLAYER
+      - STR_ELDAR_AUTARCH_PLAYER
+    customArmorPreviewIndex: 1352
+    corpseBattle:
+      - STR_ELDAR_SPIDEREXPB_CORPSE_P
+    damageModifier:  # ELDAR ARMOR
+      - 0.9  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 0.9  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 20 #+5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+
 
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
 
