@@ -1316,6 +1316,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1350,6 +1351,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1384,6 +1386,7 @@ research:
       - STR_SPACEWOLVES_STRATEGY
       - STR_CASS_R
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_PRIMARIS_CARE_PACKAGE
@@ -1416,6 +1419,7 @@ research:
       - STR_TATICAL
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1451,6 +1455,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1493,6 +1498,7 @@ research:
       - STR_SCOUT
       - STR_TATICAL
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_SPACEWOLVES_INITIAL_SITREP
@@ -1666,6 +1672,7 @@ research:
       - STR_DEVASTATOR
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
       - STR_HARDER_MISSIONS # they get enabled a bit later
       - STR_ENABLE_EVEN_HARDER_MISSIONS
       - STR_ENABLE_EXTRA_RETALIATIONS  # for now
@@ -1676,6 +1683,15 @@ research:
     getOneFree:
       - STR_SMOKE
     spawnedEvent: STR_WORDBEARERS_BURNTHEM
+
+  - name: STR_WORDBEARERS_HELPER #needed for compatibility with STR_WORDBEARERS_BURNTHEM event
+    cost: 0
+    dependencies:
+      - STR_GENERALLOCK
+    reenables:
+      - STR_PHOSPHOR_GRENADE
+    getOneFree:
+      - STR_PHOSPHOR_GRENADE
 
   - name: STR_BOOK_EREBUS
     cost: 1
@@ -1697,7 +1713,7 @@ research:
       - STR_MARINE_BOLTERS
     reenables:
       - STR_MOTION_SCANNER
-      - STR_PHOSPHOR_GRENADE
+      #- STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_KORPHAERON
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGEMK3
@@ -1722,7 +1738,7 @@ research:
       - STR_MARINE_BOLTERS
     reenables:
       - STR_MOTION_SCANNER
-      - STR_PHOSPHOR_GRENADE
+      #- STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_EREBUS
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGE
