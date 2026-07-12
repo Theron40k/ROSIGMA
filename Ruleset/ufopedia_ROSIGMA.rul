@@ -772,7 +772,7 @@ ufopaedia:
       - STR_MARINES_STRATEGY
 
 
-## #STRATEGY.BT#
+## #STRATEGY.SM.BT#
 
   - id: STR_CHOSEN_BLACKTEMPLARS
     type_id: 10
@@ -784,8 +784,8 @@ ufopaedia:
   - id: STR_BLACKTEMPLAR_STRATEGY #equivalent of STR_TATICAL
     type_id: 10
     section: STR_STRATEGY
-    image_id: SW_STRATEGY.SPK
-    text: STR_SW_STRATEGY_INFO
+    image_id: BLACKTEMPLARPLAYER_CODEX.SPK
+    text: STR_BT_STRATEGY_INFO
     requires:
       - STR_MARINES_STRATEGY
 
@@ -796,6 +796,19 @@ ufopaedia:
     text: STR_REQIMPERIAL_SUPPORT_CODEX
     requires:
       - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BLACKTEMPLAR_HELP  # Black Templar Guide
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: BLACKTEMPLARPLAYER_CODEX.SPK
+    text: STR_BT_STRATEGY_INFO
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    pages:
+      - title: STR_BLACKTEMPLAR_HELP
+        text: STR_BLACKTEMPLARHINTS_CODEX_PAGE1
+      - title: STR_BLACKTEMPLAR_HELP
+        text: STR_BLACKTEMPLARHINTS_CODEX_PAGE2
 
 ## #STRATEGY.BR#
 
@@ -809,10 +822,10 @@ ufopaedia:
   - id: STR_BLOODYROSE_STRATEGY
     type_id: 10
     section: STR_STRATEGY
-    image_id: SW_STRATEGY.SPK
-    text: STR_SW_STRATEGY_INFO
+    image_id: BLOODYROSEPLAYER_CODEX.SPK
+    text: STR_BR_STRATEGY_INFO
     requires:
-      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
 
 ## #STRATEGY.WB#
   - id: STR_CHOSEN_WORDBEARERS
