@@ -714,6 +714,53 @@ soldiers:
       - delete
       - Names/eldar_dragon.nam
 
+  - type: STR_ELDAR_SPIDEREX_PLAYER
+    refNode: *EXARCH_TEMPLATE
+    flagOffset: 100
+    costSalary: 25000
+    minStats: #higher min stats with changes relevant to the role
+      tu: 90
+      stamina: 80
+      health: 85
+      bravery: 90
+      reactions: 90
+      firing: 85
+      throwing: 65
+      strength: 70
+      psiStrength: 100
+      psiSkill: 40
+      melee: 70
+    statCaps: # lower stat caps based on exarch type
+      tu: 140
+      stamina: 135
+      health: 115
+      bravery: 160
+      reactions: 140
+      firing: 120
+      throwing: 100
+      strength: 110
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_ELDAR_SPIDEREXDS_ARMOR_P
+    allowPiloting: true
+    allowPromotion: true
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    rankStrings:
+      - STR_ELDAR_SPIDEREX_RANK_0
+      - STR_ELDAR_SPIDEREX_RANK_1
+      - STR_ELDAR_SPIDEREX_RANK_2
+      - STR_ELDAR_SPIDEREX_RANK_3
+      - STR_ELDAR_SPIDEREX_RANK_4
+      - STR_ELDAR_SPIDEREX_RANK_5
+    rankSprite: 4006
+    rankBattleSprite: 4006
+    rankTinySprite: 4006
+    soldierNames:
+      - delete
+      - Names/eldar_spider.nam
+
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
 
   - &PSYKER_TEMPLATE
