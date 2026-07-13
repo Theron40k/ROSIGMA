@@ -62,3 +62,88 @@ crafts:
       - [5, 8, 0, 0]
       - [5, 7, 0, 0]
     spacecraft: true
+
+# shared craft BT BR
+
+  - type: STR_BTBR_RHINO_CRAFT  # Rhino Convoy
+    allowedArmorGroups: [1, 2, 3, 4, 5, 6]
+    limitArmorGroups:
+      1: 12
+      2: 6
+      3: 2
+      4: 12
+      5: 6
+      6: 2
+    takeoffSound: {mod: 40k, index: 63}
+    selectSound: [{mod: 40k, index: 65}, {mod: 40k, index: 66}, {mod: 40k, index: 67}, {mod: 40k, index: 68}]   # HEAVY TRANSPORT SOUND
+    marker: 30
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+      - STR_BLOODYROSE_STRATEGY
+    sprite: 2207
+    fuelMax: 12000
+    damageMax: 8000
+    speedMax: 240
+    maxAltitude: 1
+    costBuy: 800000  # temp
+    costRent: 420000  # temp
+    costSell: 400000  # temp
+    accel: 10
+    weapons: 1
+    weaponTypes:
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+    soldiers: 24
+    vehicles: 999
+    maxLargeUnits: 2
+    refuelRate: 100
+    repairRate: 10
+    score: 800
+    listOrder: 700
+    battlescapeTerrainData:
+      name: BTBRRHINOCONVOY
+      mapDataSets:
+        - BLANKS
+        - BTBRRHINOCONVOY
+        - BTRHINO
+      mapBlocks:
+        - name: BTBRRHINOCONVOY
+          width: 10
+          length: 20
+          items:
+            STR_BTRAZORBACK_SPAWNER:
+              - [6, 14, 1]
+              - [2, 3, 1]
+          fuseTimers:
+            STR_BTRAZORBACK_SPAWNER: [0, 0]
+    deployment:
+      - [2, 4, 0, 0]  # BT Rhino NW
+      - [3, 5, 0, 0]
+      - [2, 4, 0, 0]
+      - [3, 4, 0, 0]
+      - [2, 3, 0, 0]
+      - [3, 3, 0, 0]
+
+      - [6, 16, 0, 0]  # BT Rhino NE
+      - [7, 16, 0, 0]
+      - [6, 15, 0, 0]
+      - [7, 15, 0, 0]
+      - [6, 14, 0, 0]
+      - [7, 14, 0, 0]
+
+      - [7, 8, 0, 0]
+      - [8, 8, 0, 0]
+      - [7, 7, 0, 0]
+      - [8, 7, 0, 0]
+      - [7, 6, 0, 0]
+      - [8, 6, 0, 0]
+
+      - [1, 13, 0, 0]
+      - [2, 13, 0, 0]
+      - [1, 12, 0, 0]
+      - [2, 12, 0, 0]
+      - [1, 11, 0, 0]
+      - [2, 11, 0, 0]
+    spacecraft: true
