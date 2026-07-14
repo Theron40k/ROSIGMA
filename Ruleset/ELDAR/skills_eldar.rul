@@ -1,0 +1,29 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+skills:
+  # STEALTH SKILLS
+  - type: STR_SKILL_WARPSPIDER_STEALTH_TELEPORT  # Allows unit to enter stealth mode again at the cost of their turn
+    tags:
+      SKILL_LIKE_FIGHTING_A_SHADOW_ID: 2
+      SKILL_LIKE_FIGHTING_A_SHADOW_RESTEALTH_DURATION: 3
+      SKILL_IS_PSYCHIC_POWER: 80
+    costUse:
+      time: 70 # allows to walk a bit during the same turn
+      energy: 30 # taxing to use
+      stun: 20 # entering the warp for eldar is risking its soul stolen from slaanesh
+    flatUse:
+      time: false
+      energy: true
+      stun: true
+
+soldiers:
+  - type: STR_ELDAR_SPIDER_PLAYER
+    skillIconSprite: 221  #
+    skills:
+      - STR_SKILL_WARPSPIDER_STEALTH_TELEPORT
+
+  - type: STR_ELDAR_SPIDEREX_PLAYER
+    skillIconSprite: 221
+    skills:
+      - STR_SKILL_WARPSPIDER_STEALTH_TELEPORT
