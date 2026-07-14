@@ -1205,9 +1205,11 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_FIREDRAGON_RESEARCH: "Fire Dragon unlock"
   STR_FUSION_TECH_RESEARCH: "Fusion Weaponry Requisition"
   STR_ELDAR_AUTARCH_EXARCH_RESEARCH: "Pinnacle of the Eldar Warrior Paths"
+  STR_ELDAR_AUTARCH_PLAYER: "Eldar Autarch"
   STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH: "Dire Avenger Exarch unlock"
   STR_ELDAR_SCORPION_EXARCH_RESEARCH: "Scorpion Exarch unlock"
   STR_ELDAR_REAPER_EXARCH_RESEARCH: "Reaper Exarch unlock"
+  STR_ELDAR_REAPER_EXARCH_M: "Eldar Reaper"
   STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH: "Fire Dragon Exarch unlock"
   STR_ELDAR_PSYKER_RESEARCH: "Psyker Promotions"
   STR_ELDAR_BANSHEE_RESEARCH: "Banshee unlock"
@@ -1264,6 +1266,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SPIDEREXDS_CORPSE_P: "Spider Exarch Death Spinner Corpse"
   STR_ELDAR_SPIDEREXPB_ARMOR_P: "Spider Exarch Power Blade Armor"
   STR_ELDAR_SPIDEREXPB_CORPSE_P: "Spider Exarch Power Blade Corpse"
+  STR_SKILL_WARPSPIDER_STEALTH_TELEPORT: "Warp-jump"
   STR_ELDAR_REAPEREX: "Eldar Reaper Exarch"
   STR_ELDAR_ARMOR_EXARCH_P: "Reaper Exarch Armor"
   STR_ELDAR_ARMOR_EXARCH: "Eldar Reaper Exarch"
@@ -1287,7 +1290,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SPINNER_SPOOL: "Spinner Spool Ammo"
 
 
-#Eldar Codex Strings
+#Eldar Units Codex Strings
   STR_ELDAR_GUARDIAN_AUTOPSY_CODEX: "{NEWLINE} Guardians are the militia of the Eldar Craftworlds. In times of peace the Guardians pursue their normal civilian roles, however, all Eldar are trained in warfare and can be called to arms if their Craftworld is threatened. Guardians in battle, form the bulk of the Eldar armies. That these citizen levies are capable of engaging and defeating other races' warriors is a testament to Eldar skill and technology."
   STR_ELDAR_GUARDIAN_ARMOR_CODEX: "{NEWLINE} All Guardians wear Mesh Armor formed of tens of thousands of individual pieces of thermoplas or microscopic wraithbone interwoven to produce a dense material resembling reptile scales or chainmail. It becomes momentarily rigid when hit, spreading force across a larger area, thereby reducing the damage. The thermoplas also disperses heat rapidly, giving reasonable protection against energy weapons. Guardian mesh armor contains additional features, including an independent air supply and heat-sensing lenses."
   STR_RANGER_AUTOPSY: "Eldar Ranger Origin"
@@ -1306,6 +1309,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SPIDER_AUTOPSY: "Eldar Spider Origin"
   STR_ELDAR_SPIDER_AUTOPSY_CODEX: "{NEWLINE} The Warp Spiders are Craftworld Aeldari who specialise in the use of personal teleportation devices built into their Aspect Armor to make a series of rapid jumps through the Immaterium. This makes them nearly impossible to target and allows them to attack their enemies suddenly and disappear before they can strike back."
   STR_ELDAR_SPIDER_ARMOR_CODEX: "{NEWLINE} Warp Spider Aspect Armour is much bulkier compared to that worn by other Aspect Warriors, making the Warp Spiders more heavily armoured than average but also among the slowest of the usually highly mobile Asuryani Aspects. While this would be more constricting for the movements of other Aeldari warriors, the Warp Spiders' unique teleportation abilities negate this disadvantage. Warp Spider Aspect Armour is also further warded to allow for safer travel through the Warp, which provides some protection against psychic powers when in realspace."
+  STR_ELDAR_SPIDEREX_AUTOPSY: "Eldar Spider Exarch Origin"
+  STR_ELDAR_SPIDEREX_AUTOPSY_CODEX: "{NEWLINE} Taking their name from the arachnoid creatures who protect the Infinity Circuits the Exarchs of the Warp Spider shrines have honed their deadly skills as ambushers to a high degree. Passing on this knowledge to the Warp Spider squads that they personally lead, they are experts in surprise assaults. They teleport onto the battlefield in a storm of crackling psychic lightning, but also know when it is prudent to withdraw from combat and regroup preparing for further guerrilla attacks."
+  STR_ELDAR_SPIDEREXDS_ARMOR_CODEX: "{NEWLINE} Some Exarchs will go into battle with two armor mounted Death Spinners, wielding them as ably as they would a single weapon. These weapons eject a mass of rigid molecular wire strands that slices through armour and mutilates whatever is within."
+  STR_ELDAR_SPIDEREXPB_ARMOR_CODEX: "{NEWLINE} In addition to ranged weaponry, some Warp Spider Exarch armor will also be equipped with Powerblades, a form of Asuryani Power Weapons usually only available to Warp Spider Exarchs. They are also mounted on the forearm or retrofitted to the vambrace of the Warp Spider's Exarch Armour rather than being hand-held."
+
+# Eldar Weapon Codex
   STR_EPOWER_SWORD_UFOPEDIA: "{NEWLINE} This is an Eldar Power Sword employed by a Howling Banshee Exarch. Two Mirrorswords are commonly employed by Exarchs who have mastered a deadly ambidextrous form of melee combat that uses the matching pair of blades.{NEWLINE}{NEWLINE}Strength required: {ALT}30"
   STR_WRAITHGUARD_ARMOR_UFOPEDIA: "{NEWLINE} Towering above the battlefield, Wraithguard Armor is constructed entirely from Wraithbone making it one of the most impenetrable armors available to the Aeldari. Over time the armor shapes, grows and hardens itself guided by the psychic energies of the warrior soulstone entombed within."
   STR_WRAITH_MELEE_WEAPON_UFOPEDIA: "{NEWLINE} The Ghostaxe is one form of large power weapon wielded by the Wraithguard. All Ghost weapons hold inside their core a spiritstone, the sentience within guiding strikes towards the most vulnerable areas of their foes."
@@ -6111,6 +6120,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TZEENTCH_LASGUN_UFOPEDIA: "Nihilus Weapon does not refer to one pattern or even type of weapon, but a whole range of archeotech the mechanics has deemed defiled but not in need of immediate need of purification. And as such it has become a locally accepted pattern of item."
   STR_TZEENTCH_LONGLAS: "Nihilus Longlas"
   STR_PLASMA_PISTOL_TZEENTCH: "Enchanted Plasma Pistol"
+  STR_PLASMA_PISTOL_TZEENTCH_CODEX: "Enchanted Plasma Pistol CODEX"
   STR_BOLTPISTOL_TZEENTCH: "Rubric Boltpistol"
   STR_TZEENTCH_BOLTER_LIGHT_SOLO: "Rubric Light Bolter"
   STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED: "Rubric Light Bolter (Scoped)"
@@ -6810,6 +6820,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ANTIWB_FINAL_SALAMANDER: "ANTI WB SALAMANDER"
 
   STR_WORDBEARERS_HELP: "Word Bearers Guide"
+  STR_WORDBEARERS_HELPER: "Word Bearers Guide"
 
   STR_WORDBEARER_STRATEGY_CODEX: "The Word Bearers, originally known as the Imperial Heralds and the Iconoclasts, is the XVII Legion of the original twenty Space Marine Legions.{NEWLINE}{NEWLINE} They were the first of the nine Legions which betrayed the Emperor, becoming the first known Chaos Space Marines, pledging their allegiance to their Primarch Lorgar and to Chaos Undivided."
 
@@ -14050,6 +14061,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CRATED_BTDROPPODS: "Drop Pods Requisition"
   STR_BTDROPPODS: "BT DROP PODS"
 
+  # Black Templar Shared Vehicles
+
+  STR_BTBR_RHINO_CRAFT: "BT RHINO CONVOY"
+
+  STR_BTRAZORBACK_SPAWNER: "BT Razorback Spawner"
+  STR_BTBRRAZORBACK_WITH_SMOKE: "BT Razorback Turret"
+  BTBRRAZORBACK_ARMOR: "BT Razorback Wreck"
+
   # Black Templar Researches
 
   STR_BLACKTEMPLAR_CARE_PACKAGE: "Black Templar Initial Requisition"
@@ -14123,6 +14142,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_BTDROPPODS_CODEX: "{NEWLINE} Drop Pods are atmospheric assault transports primarily used by the Black Templars for orbital insertion and planetary assaults. Use by non-Astartes units such as Imperial Guardsmen is not recommended."
 
+  STR_BTBR_RHINO_CRAFT_CODEX: "{NEWLINE} The Rhino are armoured personnel carriers widely used by the most elite Imperial forces. Black Templars and Bloody Rose Rhino variants of the chassis takes part of this convoy in order to fight the enemies of the Imperium for the greater glory of the Emperor. The Black Templar Rhino features a top-mounted weapon system."
 
 
   ## Black Templar CODEX HINTS

@@ -665,7 +665,30 @@ armors:
   - type: STR_ELDAR_DRAGONEX_ARMOR_P
     refNode: *STR_ELDAR_DRAGON_ARMOR_VOICE
 
+  #- &STR_ELDAR_SPIDER_VOICE          INEXPLICABLY I CANNOT GET THE REFNODES TO WORK HERE DESPITE IT WORKING FOR THE DRAGON EXARCH, TEST TO SEE IF IT WORKS INGAME
   - type: STR_ELDAR_SPIDER_ARMOR_P
+    selectUnitMale:       [3117, 3118, 3119, 3120, 3121]  # yamllint disable-line rule:colons
+    selectUnitFemale:     [3122, 3123, 3124, 3125, 3126]  # yamllint disable-line rule:colons
+    startMovingMale:      [3127, 3128, 3129, 3130, 3131]  # yamllint disable-line rule:colons
+    startMovingFemale:    [3132, 3133, 3134, 3135, 3136]  # yamllint disable-line rule:colons
+    selectWeaponMale:     [3137, 3138, 3139, 3140, 3141]  # yamllint disable-line rule:colons
+    selectWeaponFemale:   [3142, 3143, 3144, 3145, 3146]  # yamllint disable-line rule:colons
+    annoyedMale:          [3147, 3148, 3149] # yamllint disable-line rule:colons
+    annoyedFemale:        [3150, 3151, 3152]  # yamllint disable-line rule:colons
+    deathMale:            [3153, 3154, 3155]  # yamllint disable-line rule:colons
+    deathFemale:          [3153, 3154, 3155]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_SPIDEREXDS_ARMOR_P
+    selectUnitMale:       [3117, 3118, 3119, 3120, 3121]  # yamllint disable-line rule:colons
+    selectUnitFemale:     [3122, 3123, 3124, 3125, 3126]  # yamllint disable-line rule:colons
+    startMovingMale:      [3127, 3128, 3129, 3130, 3131]  # yamllint disable-line rule:colons
+    startMovingFemale:    [3132, 3133, 3134, 3135, 3136]  # yamllint disable-line rule:colons
+    selectWeaponMale:     [3137, 3138, 3139, 3140, 3141]  # yamllint disable-line rule:colons
+    selectWeaponFemale:   [3142, 3143, 3144, 3145, 3146]  # yamllint disable-line rule:colons
+    annoyedMale:          [3147, 3148, 3149] # yamllint disable-line rule:colons
+    annoyedFemale:        [3150, 3151, 3152]  # yamllint disable-line rule:colons
+    deathMale:            [3153, 3154, 3155]  # yamllint disable-line rule:colons
+    deathFemale:          [3153, 3154, 3155]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_SPIDEREXPB_ARMOR_P
     selectUnitMale:       [3117, 3118, 3119, 3120, 3121]  # yamllint disable-line rule:colons
     selectUnitFemale:     [3122, 3123, 3124, 3125, 3126]  # yamllint disable-line rule:colons
     startMovingMale:      [3127, 3128, 3129, 3130, 3131]  # yamllint disable-line rule:colons
