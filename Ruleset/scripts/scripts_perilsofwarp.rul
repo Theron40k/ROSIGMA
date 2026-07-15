@@ -23,7 +23,7 @@ extended:
   scripts:
     skillUseUnit:
       - new: ROSIGMA_hU_perils_skillUseUnit
-        offset: 1
+        offset: 2
         code: |
           var int randomNumber;
           var int skillPsyPower;
@@ -36,27 +36,33 @@ extended:
 
           skill.getTag skillPsyPower Tag.SKILL_IS_PSYCHIC_POWER;
           if eq skillPsyPower 0;
-            # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Aborting. Skill is not psychic power. Temp: " skillPsyPower;
+            # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Aborting. Skill is not psychic power. Temp: " skillPsyPower;
             #return power part side;
             return;
           end;
           #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; Skill is psychic power. Temp:" skillPsyPower;
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; dumping variables. have_tu:" have_tu;
+          if eq have_tu 0;
+            #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; No Resources. Aborted.";
+            set continue_action 0;
+            return;
+          end;
 
           actor.getRuleArmor rArmor;
           rArmor.getTag temp Tag.UNIT_TYPE_NULL; # we don't affect nulls
           if eq temp 1;
             battle_game.flashMessage "STR_PSYCHIC_TARGET_NULL"; # let the player know the power was resisted
-            # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Aborting. Target is a null. temp:" temp;
+            # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Aborting. Target is a null. temp:" temp;
             return;
           end;
 
           actor.getMorale perilsMagnitude;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Initial Morale:" perilsMagnitude;
+          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Initial Morale:" perilsMagnitude;
           actor.getTag perilsModifier Tag.UNIT_PERILS_MODIFIER;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: UNIT_PERILS_MODIFIER:" perilsModifier;
+          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: UNIT_PERILS_MODIFIER:" perilsModifier;
           add perilsMagnitude 10; # offset for morale cost
           sub perilsMagnitude perilsModifier;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Effective Morale after perils modifier:" perilsMagnitude;
+          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Effective Morale after perils modifier:" perilsMagnitude;
 
           skill.getTag temp Tag.SKILL_PSYCHIC_POWER_MODIFIER; # increment our Perils of the Warp chance
           actor.getRuleArmor rArmor;
@@ -68,9 +74,9 @@ extended:
           #.getTag temp2 Tag.UNIT_PERILS_MODIFIER;
           #add temp2 temp;
           actor.setTag Tag.UNIT_PERILS_MODIFIER temp2;
-
           battle_game.randomRange randomNumber 0 100; # if we roll greater than our Morale + offsets, we trigger Perils
-          debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Perils of the Warp roll:" randomNumber;
+          #add randomNumber 200; # FOR DEBUG ONLY
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Perils of the Warp roll:" randomNumber;
           if le randomNumber perilsMagnitude;
             #return power part side;
             return;
@@ -85,15 +91,15 @@ extended:
           sub perilsMagnitude 100; # potency scales with the amount we're under max Morale
           mul perilsMagnitude -1;
           actor.getTag temp Tag.CURRENT_INFECTION_DAMAGE; # add infection damage equal to PerilsMagnitude
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Infection damage before Perils increment:" temp;
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Infection damage before Perils increment:" temp;
           add temp perilsMagnitude;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Infection damage after Perils increment:" temp;
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Infection damage after Perils increment:" temp;
           actor.getRuleArmor rArmor;
           rArmor.getTag temp2 Tag.ARMOR_PERILS_EFFECTS_RESISTANCE;
           if gt temp2 0;
             muldiv temp temp2 100;
           end;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Infection damage after Perils resistance:" temp;
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Infection damage after Perils resistance:" temp;
 
           actor.setTag Tag.CURRENT_INFECTION_DAMAGE temp;
 
@@ -108,12 +114,12 @@ extended:
             end;
             actor.setTag Tag.CURRENT_INFECTION_FACTION 1; # infection faction is hostile
             # actor.getTag temp Tag.CURRENT_INFECTION_TYPE; # randomize our infection type
-            # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Infection type after Perils increment:" temp;
+            #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Infection type after Perils increment:" temp;
           end;
 
           actor.getHealth temp; # deplete health in proportion to perilMagnitude
           battle_game.randomRange temp2 1 perilsMagnitude;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Health loss from Perils:" temp2;
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Health loss from Perils:" temp2;
           sub temp temp2;
           limit_lower temp 1; # don't go below 1 hp... at least not now.
           actor.setHealth temp;
@@ -123,18 +129,20 @@ extended:
           sub temp perilsMagnitude;
           limit_lower temp 0;
           actor.setMorale temp;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Morale loss from Perils:" perilsMagnitude;
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Morale loss from Perils:" perilsMagnitude;
 
           # attacker.getHealth temp; # apply fatal wounds to head in proportion to perilMagnitude
           # battle_game.randomRange temp2 1 perilsMagnitude;
           # attacker.getFatalwounds temp 1; # add fatal wounds to any we currently have in this location
           # add temp temp2;
           # attacker.setFatalwounds 1 temp;
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Fatal wounds from Perils:" temp;
+          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Fatal wounds from Perils:" temp;
 
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Rolled more or equal to Perils target value." temp;
+          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Rolled more or equal to Perils target value." temp;
+          #battle_game.randomRange randomNumber 0 100; # determine our random perils result; lower is worse.
+          #FOR DEBUG ONLY
           battle_game.randomRange randomNumber 0 100; # determine our random perils result; lower is worse.
-          # debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; hitUnit, offset 1: Perils result roll:" randomNumber;
+          #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: Perils result roll for worsening:" randomNumber;
           if and lt randomNumber 6 lt temp2 50; # can only happen if morale is less than 50; psyker is instantly corrupted and transforms into a random higher end daemon
             battle_game.randomRange randomNumber 0 4;
             if eq randomNumber 0;
@@ -175,9 +183,9 @@ extended:
 
           actor.getFaction temp;
           if eq temp FACTION_PLAYER;
+            #debug_log "ROSIGMA_hU_perils_skillUseUnit Scripts; skillUseUnit, offset 1: trigger the player message:" ;
             battle_game.flashMessage "STR_SCRIPT_PERILS_TRIGGERED"; # let the player know we have suffered perils of the warp
           end;
-
           return;
 # ---------------------------------
     hitUnit:
