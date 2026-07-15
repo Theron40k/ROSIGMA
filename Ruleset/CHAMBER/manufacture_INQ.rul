@@ -562,6 +562,11 @@ manufacture:
     spawnedPersonType: STR_CHAOS_MARINE
     producedItems:
       STR_KILLPOINT_TOKEN: 1
+    spawnedSoldier:
+      transformationBonusesCount: 1
+      randomTransformationBonuses:
+        STR_MARK_OF_CHAOS: 100 # Soldiers via Event don't get their startingTransforms; give these ChaosMarines their big stat boost
+
 
   # Manufacture for RadChaos Chaos Path to get ChaosCult Hellblades
   - name: STR_INQ_RR_HELLBLADE_INTERCEPTORS_CHAOS
