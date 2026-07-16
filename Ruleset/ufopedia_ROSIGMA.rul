@@ -15032,10 +15032,6 @@ ufopaedia:
   - id: AUX_ADEPTAS_PROBE
     type_id: 14
     section: STR_NOT_AVAILABLE
-  - delete: STR_SKULL_SPAWNER
-  - id: STR_SKULL_SPAWNER
-    type_id: 14
-    section: STR_NOT_AVAILABLE
   - delete: AUX_RAM
   - id: AUX_RAM
     type_id: 14
@@ -17105,7 +17101,8 @@ ufopaedia:
     text: STR_HEAVY_WEAPON_TOOLS_UFOPEDIA
 
   # servo skull STR_SKULL
-  - id: STR_SKULL
+  - delete: STR_SKULL_SPAWNER
+  - id: STR_SKULL_SPAWNER
     type_id: 14
     section: STR_TOOLS_AND_RESOURCES
     image_id: SERVO_SKULL.SPK

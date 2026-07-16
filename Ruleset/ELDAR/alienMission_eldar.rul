@@ -1,0 +1,36 @@
+alienMissions:
+
+# example copied from current tau
+# - rescue convoy
+# - defend cultists
+# - defend beastmen
+# - defend medicae shrine
+# - Pathfinder ambush to match the Tanith?
+# - Tau defense
+# - Tau assault?
+# - rescue loyalist Guard?
+# - Destroy Arbites?
+
+  - type: STR_TS_CULTIST_BASE_START_ELDAR
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_SLAANESH_CULT_EARLY: 100 # todo: add slaanesh variants
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 0
+    operationBaseType: STR_CULTIST_BASE_START
+    objective: 2
+    siteType: STR_CULTIST_BASE_START
+    points: 0
+
+  - type: STR_TS_GANGER_BASE_START_ELDAR
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_SLAANESH_CORRUPTED_GANGERS: 100 # todo: add slaanesh variants
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 0
+    operationBaseType: STR_CULTIST_BASE_START  # todo: change to ganger base
+    objective: 2
+    siteType: STR_CULTIST_BASE_START # todo: change to ganger base
+    points: 0
