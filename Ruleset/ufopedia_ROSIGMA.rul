@@ -3796,6 +3796,79 @@ ufopaedia:
       - STR_TATICAL
     image_id: RHINO.SPK
     text: STR_AVENGER_UFOPEDIA
+
+## #CRAFTS.SM.WB#
+
+  - id: STR_WBDROPPODS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+    image_id: WBDROPPODS.SPK
+    text: STR_WBDROPPODS_UFOPEDIA
+
+  - id: STR_WBLIGHTNING
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+    text: STR_LIGHTNING_INTERCEPTOR_UFOPEDIA
+    image_id: 2VOSS.SPK
+
+  - id: STR_WBRHINOS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_CONTACT
+    image_id: WBRHINOS.SPK
+    text: STR_WBRHINOS_UFOPEDIA
+
+  - id: STR_WBDROPPODSUPGRADE
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_SACRIFICE
+    image_id: WBDROPPODS.SPK
+    text: STR_WBDROPPODSUPGRADE_UFOPEDIA
+
+  - id: STR_WBHELLBLADE_INTERCEPTORS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBNEW_FIGHTER_CRAFT
+    image_id: WBHELBLADES.SPK
+    text: STR_WBHELLBLADE_UFOPEDIA
+
+  - id: STR_WBTHUNDERHAWK
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBTHUNDERABILTY
+    image_id: CHAOS_THUNDERHAWK.SPK #placeholder
+    text: STR_WBTHUNDERHAWK_UFOPEDIA
+
+  - id: STR_WBWARSHIPFINAL
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBHOLYWARSHIPFINALEREBUS
+    image_id: WBWARSHIPCODEX.SPK
+    text: STR_WBWARSHIPFINAL_UFOPEDIA
+
+  - id: STR_WBWARSHIPFINALKR
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBHOLYWARSHIPFINAL
+    image_id: WBWARSHIPCODEX.SPK
+    text: STR_WBWARSHIPFINAL_UFOPEDIA
+
 ## #CRAFTS.SM.BT#
 
   - id: STR_BTDROPPODS
@@ -4556,71 +4629,6 @@ ufopaedia:
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_GORGON_UFOPEDIA
     image_id: 2GORGON.SPK  # needs porting, submodding no bueno
-
-
-## #CRAFTS.SM.WB#
-
-  - id: STR_WBDROPPODS
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-    image_id: WBDROPPODS.SPK
-    text: STR_WBDROPPODS_UFOPEDIA
-
-  - id: STR_WBRHINOS
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_RITUAL_CONTACT
-    image_id: WBRHINOS.SPK
-    text: STR_WBRHINOS_UFOPEDIA
-
-  - id: STR_WBDROPPODSUPGRADE
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_RITUAL_SACRIFICE
-    image_id: WBDROPPODS.SPK
-    text: STR_WBDROPPODSUPGRADE_UFOPEDIA
-
-  - id: STR_WBHELLBLADE_INTERCEPTORS
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBNEW_FIGHTER_CRAFT
-    image_id: WBHELBLADES.SPK
-    text: STR_WBHELLBLADE_UFOPEDIA
-
-  - id: STR_WBTHUNDERHAWK
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBTHUNDERABILTY
-    image_id: CHAOS_THUNDERHAWK.SPK #placeholder
-    text: STR_WBTHUNDERHAWK_UFOPEDIA
-
-  - id: STR_WBWARSHIPFINAL
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBHOLYWARSHIPFINALEREBUS
-    image_id: WBWARSHIPCODEX.SPK
-    text: STR_WBWARSHIPFINAL_UFOPEDIA
-
-  - id: STR_WBWARSHIPFINALKR
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBHOLYWARSHIPFINAL
-    image_id: WBWARSHIPCODEX.SPK
-    text: STR_WBWARSHIPFINAL_UFOPEDIA
 
 ####################################
 # #ARM# Craft Armaments
