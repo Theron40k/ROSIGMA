@@ -15174,6 +15174,15 @@ ufopaedia:
     type_id: 4
     section: STR_NOT_AVAILABLE
 
+  - id: STR_ELDAR_POWER_BLADE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_POWER_BLADE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_ELDAR_POWER_BLADE_CODEX
+
+
   - id: STR_SHURIKEN_CANNON
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -15196,9 +15205,17 @@ ufopaedia:
   - id: STR_LARGE_ROCKET_ELDAR
     type_id: 14
     section: STR_NOT_AVAILABLE
+  - id: STR_ELDAR_TEMPEST_LAUNCHER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_TEMPEST_LAUNCHER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_ELDAR_TEMPEST_LAUNCHER_CODEX
   - id: STR_SMALL_ROCKET_TEMPEST_ELDAR
     type_id: 14
     section: STR_NOT_AVAILABLE
+
   - delete: STR_ELDAR_CHAINSWORD
   - id: STR_ELDAR_CHAINSWORD
     type_id: 14
