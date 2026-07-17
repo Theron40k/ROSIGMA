@@ -188,6 +188,7 @@ items:
     tuAuto: 40
     battleType: 1
     twoHanded: true
+    blockBothHands: true
     invWidth: 2
     invHeight: 3
     armor: 30
@@ -234,6 +235,44 @@ items:
     invHeight: 3
     recover: true
     listOrder: 12100
+    costBuy: 15000
+    costSell: 4000
+
+  - type: STR_ELDAR_TEMPEST_LAUNCHER              #INITIAL IMPLEMENT FIX ME
+    refNode: *STR_ELDAR_LAUNCHER_REF
+    categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_REAPER_RESEARCH
+    size: 0.4
+    dropoff: 5
+    weight: 25
+    bigSprite: 4866
+    floorSprite: 4866
+    handSprite: 4954
+    bulletSprite: 0
+    fireSound: {mod: 40k, index: 52}
+    #clipSize: 1
+    #power: 100
+    compatibleAmmo:
+      - STR_SMALL_ROCKET_TEMPEST_ELDAR
+    #damageType: 3
+    #accuracySnap: 70
+    #accuracyAimed: 115
+    accuracyAuto: 60
+    tuSnap: 0
+    tuAimed: 0
+    tuAuto: 75
+    #snapRange: 20
+    #aimRange: 30
+    autoRange: 30
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    recover: true
+    listOrder: 12110
     costBuy: 15000
     costSell: 4000
 
@@ -425,8 +464,8 @@ items:
     fireSound: 1888
     compatibleAmmo:
       - STR_SPINNER_SPOOL
-    accuracyAuto: 50
-    tuAuto: 30
+    #accuracyAuto: 50         #Removed auto, damage output nerf and fits in with weapon description
+    #tuAuto: 30
     accuracySnap: 65
     tuSnap: 25
     battleType: 1
@@ -642,7 +681,7 @@ items:
     invHeight: 3
     flatRate: true
     attraction: 8
-    listOrder: 16620
+    listOrder: 16630
 
 
   - delete: STR_WRAITH_MELEE_WEAPON
