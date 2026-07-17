@@ -1,8 +1,75 @@
+adhocScripts:
+
+  # - type: adhocGameStartGV
+  #   # initial mission in player region
+  #   adhocMissionScriptTags: ["gameStartGV"]
+  #   missionWeights:
+  #     0:
+  #       STR_ALIEN_RESEARCH: 10
+  #       STR_ALIEN_HARVEST: 10
+  #       STR_ALIEN_ABDUCTION: 10
+  #       STR_SLAANESH_ABDUCTION: 20
+  #       STR_SLAANESH_HARVEST: 8
+  #       STR_ALIEN_RESEARCH_TZEENTCH: 15
+  #       STR_ALIEN_HARVEST_TZEENTCH: 8
+  #   targetBaseOdds: 100
+  #   startDelay: 4320  # 3 days
+  #   randomDelay: 4320  # additional random 0 to 3 days
+  #   useTable: true
+  #   maxRuns: 1
+  #   varName: GameStartGV
+
+#### starter base missions
+  - type: adhocStarterBaseSlaaneeshCultist_Eldar
+    missionWeights:
+      0:
+        # STR_SLAANESH_ABBEY_SCALING_GV: 100
+        STR_TS_CULTIST_BASE_GV: 100
+    regionWeights:
+      0:
+        STR_NORTH_AMERICA: 18
+        STR_ARCTIC: 4
+        STR_ANTARCTICA: 4
+        STR_SOUTH_AMERICA: 10
+        STR_EUROPE: 16
+        STR_NORTH_AFRICA: 12
+        STR_SOUTHERN_AFRICA: 8
+        STR_CENTRAL_ASIA: 12
+        STR_SOUTH_EAST_ASIA: 15
+        STR_SIBERIA: 10
+        STR_AUSTRALASIA: 10
+    useTable: false
+    startDelay: 20080  # 2-3 weeks
+    randomDelay: 10040
+    adhocMissionScriptTags: ["adhocStarterBaseSlaan_eldar"]
+
+  - type: adhocStarterBaseGangers_eldar
+    missionWeights:
+      0:
+        STR_TS_GANGER_BASE_START_ELDAR: 100
+    regionWeights:
+      0:
+        STR_NORTH_AMERICA: 18
+        STR_ARCTIC: 4
+        STR_ANTARCTICA: 4
+        STR_SOUTH_AMERICA: 10
+        STR_EUROPE: 16
+        STR_NORTH_AFRICA: 12
+        STR_SOUTHERN_AFRICA: 8
+        STR_CENTRAL_ASIA: 12
+        STR_SOUTH_EAST_ASIA: 15
+        STR_SIBERIA: 10
+        STR_AUSTRALASIA: 10
+    useTable: false
+    startDelay: 20080  # 2-3 weeks
+    randomDelay: 10040
+    adhocMissionScriptTags: ["adhocStarterBaseGangers_eldar"]
+
 events:
   - name: STR_ELDAR_ASURYANI_CAMPAING_START
     description: STR_ELDAR_ASURYANI_CAMPAING_START_SHORT_DESCRIPTION
     background: GuardOffensiveBG.SCR # todo: replace with eldar one
-    #adhocMissionScriptTags: ["gameStartAsuryani", "adhocStarterBaseCultistGV", "adhocStarterBaseTraitorGuardGV"]
+    adhocMissionScriptTags: ["adhocStarterBaseSlaan_eldar", "adhocStarterBaseGangers_eldar"]
     # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
     spawnedPersonType: STR_ELDAR_GUARDIAN_PLAYER

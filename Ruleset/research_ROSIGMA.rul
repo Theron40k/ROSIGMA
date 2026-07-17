@@ -4414,9 +4414,9 @@ research:
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_LASER_WEAPONS
     unlocks:
-      - STR_ELDAR_ONLY
-      - STR_ORK_ONLY
-      - STR_TAU_XENOTECH # unsure, Tau tech usually highend. but not like Eldar is chumps
+      - STR_ELDAR_ONLY # Eldar Weapons Training
+      - STR_ORK_ONLY # Dakka
+      #- STR_TAU_XENOTECH # TODO need a new Tech for Tau Weapon Training. this tech is tied to unrelated things
       - STR_ELDAR_GRENADE
 
   - name: STR_INQ_RR_REQUISITION_XENOS
@@ -4924,11 +4924,13 @@ research:
       - STR_INQ_RR_MIDTIER_XENOS
       - STR_CHAOS_SORCERY # Not suited to RR Chaos progression; Tome of the Mind does almost nothing
     unlocks:
-      - STR_LIGHT_BOLTERS
       - STR_MIDTIER_PREREQ
       - STR_ALIENS_ONLY # Chaos Corruption
-      - STR_ALIEN_ORIGINS
+      - STR_ALIEN_ORIGINS # Warp Origins
+      - STR_INQ_INTERROGATOR_REQUISITION # Alternate path; the THREAT_ONE depends allows earlier unlock
+      - STR_LIGHT_BOLTERS
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
+      - STR_HARDER_MISSIONS
     getOneFree:
       - STR_CONVERT_TO_CHAOS_RESEARCH
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_CHAOS
@@ -4950,11 +4952,11 @@ research:
     disables:
       - STR_INQ_RR_MIDTIER_CHAOS
     unlocks:
-      - STR_LIGHT_BOLTERS
-      - STR_ORK_ONLY
-      - STR_ELDAR_ONLY
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE
       - STR_MIDTIER_PREREQ
+      - STR_INQ_INTERROGATOR_REQUISITION # Alternate path; the THREAT_ONE depends allows earlier unlock
+      - STR_LIGHT_BOLTERS
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE
+      - STR_HARDER_MISSIONS
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_XENOS
 
 

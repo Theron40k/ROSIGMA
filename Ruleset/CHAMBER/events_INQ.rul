@@ -208,7 +208,7 @@ events:
     spawnedPersonType: STR_ADEPTAS
 
   - name: STR_INQ_AGENTS_BAD_OGRYN_EVENT
-    description: STR_INQ_AGENTS_BAD_OGRYN_DESCRIPTION
+    description: STR_INQ_AGENTS_BAD_OGRYN_EVENT_DESCRIPTION
     background: OgrynBG.SCR
     timer: 2440  # 2 days
     everyMultiItemList:
@@ -807,9 +807,7 @@ events:
       -
         STR_BEASTGUARD_HEAVY_ARMOR: 2
       -
-        STR_BEASTGUARD_CARAPACE_ARMOR: 2
-      -
-        STR_BEASTGUARD_FLAK_ARMOR_MEDIC: 2
+        STR_GUARD_ARMORH: 2
     spawnedPersons: 2
     spawnedPersonType: STR_GUARD_BEASTMAN
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_OGRYN_EVENT
@@ -826,9 +824,7 @@ events:
         STR_POWERFIST: 1
         STR_OGRYN_CARAPACE: 2
       -
-        STR_BULLGRYN_ARMOR: 1
-        STR_BULLGRYN_BUCKLER: 1
-        STR_STUN_ROD: 2
+        STR_BULLGRYN_ARMOR: 2
     spawnedPersons: 2
     spawnedPersonType: STR_OGRYN
 
@@ -1201,13 +1197,13 @@ events:
     timer: 1440  # between 1-3 days
     timerRandom: 2880
     everyMultiItemList:
-      STR_AUTOGUN: 6
+      STR_AUTOGUN: 8
       STR_AUTOGUN_CLIP: 24
       STR_MAKESHIFT_PIPEBOMB: 24
       STR_POWER_PICK: 2
     everyMultiSoldierList:
       STR_CHAOSCULT_SOLDIER_LV2: 6
-      STR_CHAOS_FANATIC_PLAYER: 1
+      STR_CHAOS_FANATIC_PLAYER: 2
       STR_CHAOSCULT_OGRYN: 2
 
   - name: STR_INQ_CONTACT_DEFECTOR_MARINES_EVENT
@@ -1222,6 +1218,10 @@ events:
       STR_RIFLE_CLIP_EX: 10
     spawnedPersons: 5
     spawnedPersonType: STR_CHAOS_MARINE
+    spawnedSoldier:
+      transformationBonusesCount: 1
+      randomTransformationBonuses:
+        STR_MARK_OF_CHAOS: 100 # Soldiers via Event don't get their startingTransforms; give these ChaosMarines their big stat boost
 
 
   # Secure Support (Revisionists): Event to explain the mechanic
@@ -1324,6 +1324,10 @@ events:
       STR_CHAINSWORD: 2
     everyMultiSoldierList:
       STR_CHAOS_MARINE: 2
+    spawnedSoldier:
+      transformationBonusesCount: 1
+      randomTransformationBonuses:
+        STR_MARK_OF_CHAOS: 100 # Soldiers via Event don't get their startingTransforms; give these ChaosMarines their big stat boost
   - name: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT  # Chaos Witches
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT_DESCRIPTION
     background: CHAOSCULTSORCERESSBG.SCR
@@ -1352,7 +1356,7 @@ events:
       STR_LIGHT_BOLTER_AMMO: 16
       STR_ADEPTAS_MELTAGUN_NECRO: 1
       STR_MELTA_AMMO: 4
-      STR_ADEPTAS_ARMOR_ELOHIM: 1
+      STR_ADEPTAS_ARMOR_ELOHIM: 2
     spawnedPersons: 6
     spawnedPersonType: STR_ADEPTAS
 
@@ -1634,7 +1638,7 @@ events:
 
   - name: STR_INQ_RR_INTERROGATOR_REPLACEMENT_EVENT
     description: STR_INQ_RR_INTERROGATOR_REPLACEMENT_EVENT_DESCRIPTION
-    timer: 60
+    timer: 2439  # 2 days; right before other Chamber monthly reinforces
     spawnedPersonType: STR_IMPERIAL_INTERROGATOR
     spawnedPersons: 1
     spawnedSoldier:

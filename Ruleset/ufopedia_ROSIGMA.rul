@@ -12678,11 +12678,12 @@ ufopaedia:
   - id: STR_PLASMA_PISTOL_TZEENTCH
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1PP.SPK
+    image_id: STR_PLASMA_PISTOL_TZEENTCH.SPK
     requires:
       - STR_PLASMA_PISTOL_DEP1
       - STR_CHAOS_ARMORY_EXAM_PLASMA_PISTOL
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
+    text: STR_PLASMA_PISTOL_TZEENTCH_CODEX
 
   - delete: STR_PLASMA_PISTOL_CLIP
   - id: STR_PLASMA_PISTOL_CLIP
@@ -14085,7 +14086,7 @@ ufopaedia:
   - id: STR_PLAGUE_KNIFE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CK.SPK
+    image_id: STR_PLAGUE_KNIFE.SPK
     text: STR_PLAGUE_KNIFE_UFOPEDIA
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
@@ -15029,10 +15030,6 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
   - delete: AUX_ADEPTAS_PROBE
   - id: AUX_ADEPTAS_PROBE
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-  - delete: STR_SKULL_SPAWNER
-  - id: STR_SKULL_SPAWNER
     type_id: 14
     section: STR_NOT_AVAILABLE
   - delete: AUX_RAM
@@ -17104,7 +17101,8 @@ ufopaedia:
     text: STR_HEAVY_WEAPON_TOOLS_UFOPEDIA
 
   # servo skull STR_SKULL
-  - id: STR_SKULL
+  - delete: STR_SKULL_SPAWNER
+  - id: STR_SKULL_SPAWNER
     type_id: 14
     section: STR_TOOLS_AND_RESOURCES
     image_id: SERVO_SKULL.SPK
@@ -21618,6 +21616,28 @@ ufopaedia:
       - STR_ELDAR_SPIDER
     image_id: ELDAR_SPIDER_ARMOR_CODEX.SPK
     text: STR_ELDAR_SPIDER_ARMOR_CODEX
+
+  - id: STR_ELDAR_SPIDEREX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDEREXDS_CORPSE # powerblade corpse can also be used
+    image_id: ELDAR_SPIDEREX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_SPIDEREX_AUTOPSY_CODEX
+  - id: STR_ELDAR_SPIDEREXDS_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER
+    image_id: ELDAR_SPIDEREXDS_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SPIDEREXDS_ARMOR_CODEX
+  - id: STR_ELDAR_SPIDEREXPB_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER
+    image_id: ELDAR_SPIDEREXPB_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SPIDEREXPB_ARMOR_CODEX
 
   - delete: STR_WRAITHGUARD_AUTOPSY
   - id: STR_WRAITHGUARD_AUTOPSY
