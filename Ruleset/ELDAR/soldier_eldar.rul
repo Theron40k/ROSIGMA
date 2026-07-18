@@ -180,13 +180,14 @@ soldiers:
 
 # ELDAR.TIER2 # ASPECT WARRIORS (path of the warrior)
 
+  # this is to be used only as template for all other aspect warriors.
   - &ASPECT_WARRIOR_TEMPLATE
     type: STR_ELDAR_ASPECT_WARRIOR_PLAYER
     requires:
       - STR_ELDAR_ASPECT_RESEARCH
     flagOffset: 100
     requiresBuyBaseFunc: [ASPECT]
-    costBuy: 50000
+    costBuy: 0
     costSalary: 20000
     minStats:
       tu: 75
@@ -262,18 +263,19 @@ soldiers:
       - delete
       - Names/eldar_aspect.nam
 
+# ELDAR ASPECT WARRIOR(S)
+
   # Dire avenger .
   - type: STR_ELDAR_AVANGER_MF
     refNode: *ASPECT_WARRIOR_TEMPLATE
-    costBuy: 0
     soldierNames:
       - delete
       - Names/eldar_avanger.nam
 
-# Male eldar upgrade paths
+
+# ELDAR SCORPION
   - type: STR_ELDAR_SCORPION_M
     refNode: *ASPECT_WARRIOR_TEMPLATE
-    costBuy: 0
     minStats:
       tu: 75
       stamina: 55
