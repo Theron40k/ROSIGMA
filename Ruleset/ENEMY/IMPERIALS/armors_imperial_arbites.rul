@@ -1,0 +1,54 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+armors:
+
+
+  - type: STR_CMAS_ARMOR_AI
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    allowInv: true
+    builtInWeapons:
+      - STR_CMAS
+      - STR_CMAS
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_3X3
+      - INV_NULL_4X2
+    frontArmor: 30  # was 10
+    sideArmor: 25  # was 10
+    rearArmor: 20  # was 10
+    underArmor: 20  # was 10
+    damageModifier:  # NURGLE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 1.5  # FLAMES
+      - 0.9  # HE
+      - 0.9  # LASCANON
+      - 0.9  # PLASMA
+      - 0.9  # STUN
+      - 0.9  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    storeItem: STR_NONE
+    #units:
+    #  - STR_CMAS_AI
+    customArmorPreviewIndex: 838  # 600
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+    visibilityAtDay: 60
+    visibilityAtDark: 60
+    spriteSheet: MAS.PCK
+    spriteInv: MAS.SPK
+    zombiImmune: true
+    bleedImmune: false
+    fearImmune: true
+    painImmune: false
+    corpseBattle:
+      - STR_CMAS_CORPSE_AI
+    drawingRoutine: 4
+    constantAnimation: false
+    loftempsSet: [ 3 ]
