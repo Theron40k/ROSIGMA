@@ -130,7 +130,7 @@ items:
     hitAnimation: {mod: 40k, index: 26}
     invWidth: 1
     invHeight: 2
-    clipSize: 24
+    clipSize: 12
     battleType: 2
     power: 50
     damageType: 1
@@ -145,7 +145,42 @@ items:
     shotgunBehavior: 1
     shotgunSpread: 20  # these flechettes are more aerodynamic and have improved grouping
     shotgunPellets: 6
-    listOrder: 16620
+    listOrder: 16610
+
+  - type: STR_SPINNERET_RIFLE_SPOOL  #T3 of spinner spool, testing and balance needed
+    costBuy: 12000
+    costSell: 2000
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      # Warpspider Exarch weapons research
+    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuy: []
+    armor: 200
+    size: 0.3
+    weight: 10
+    bigSprite: 4869
+    floorSprite: 4869
+    handSprite: 4978
+    hitSound: 1889
+    hitAnimation: {mod: 40k, index: 26}
+    invWidth: 1
+    invHeight: 2
+    clipSize: 12
+    battleType: 2
+    power: 50
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.02  # AP ammo; small armor ablation
+      ToArmor: 0.02  # AP ammo; small armor damage
+      ArmorEffectiveness: 0.3  # Great armor Penetration monomolecular strand
+      ToHealth: 0.7  # AP weapon features reduced health damage
+      ToTime: 0.2  # shoots a strong thread that can disrupt movement
+      ToEnergy: 0.05  # impact shock; reduced due to AP ammo
+      ToStun: 0.25  # impact shock; reduced due to AP ammo
+    shotgunBehavior: 1
+    shotgunSpread: 10  # fires a single strand that spirals on impact.
+    shotgunPellets: 4
+    listOrder: 16625
 
   - type: STR_SHURIKEN_CANNON_MAG  #                 16200
     categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATPR]
