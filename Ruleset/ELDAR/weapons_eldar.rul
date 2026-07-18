@@ -272,6 +272,7 @@ items:
     invWidth: 2
     invHeight: 3
     recover: true
+    experienceTrainingMode: 6
     listOrder: 12110
     costBuy: 15000
     costSell: 4000
@@ -474,9 +475,42 @@ items:
     invWidth: 2
     invHeight: 3
     armor: 100
-    autoRange: 8
+    #autoRange: 8
     snapRange: 12
     listOrder: 16600
+
+  - type: STR_SPINNERET_RIFLE  # T3 Deathspinner upgrade : Longer range, slightly less damage, TU damage increase, better AP
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    # Warpspider Exarch weapons research
+    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuy: []
+    size: 0.4
+    dropoff: 5
+    costBuy: 30000
+    costSell: 3000
+    weight: 30
+    bigSprite: 4868
+    floorSprite: 4868
+    handSprite: 4970
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: 1890
+    compatibleAmmo:
+      - STR_SPINNERET_RIFLE_SPOOL
+    accuracyAimed: 80         #Removed auto, damage output nerf and fits in with weapon description
+    tuAimed: 40
+    accuracySnap: 65
+    tuSnap: 25
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 75
+    invWidth: 2
+    invHeight: 3
+    armor: 100
+    aimRange: 20
+    snapRange: 16
+    listOrder: 16620
 
 #--- ELDAR.GRENADES ---
 
