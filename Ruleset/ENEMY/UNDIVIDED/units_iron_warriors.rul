@@ -1,0 +1,530 @@
+units: 
+
+  - type: STR_IRON_GUARD_SOLDIER                                          # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 45
+      stamina: 84
+      health: 55
+      bravery: 80
+      reactions: 50
+      firing: 55
+      throwing: 65
+      strength: 35
+      psiStrength: 50
+      psiSkill: 0
+      melee: 70
+    armor: STR_IRON_GUARD_ARMOR
+    deathSound: [44, 45, 46]
+    intelligence: 1
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    value: 10
+    moraleLossWhenKilled: 80  # expendable
+    energyRecovery: 40
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SHOTGUN_CHAOS
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_KRAK_GRENADE
+      - - STR_AUTOGUN_CHAOS
+        - STR_AUTOGUN_CLIP
+        - STR_AUTOGUN_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER_CHAOS
+        - STR_FRAG_GRENADE_DRUM
+        - STR_FRAG_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+
+  - type: STR_IRON_GUARD_ENGINEER                                         # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 45
+      stamina: 84
+      health: 55
+      bravery: 80
+      reactions: 50
+      firing: 55
+      throwing: 65
+      strength: 75  # strong for carrying heavy weapons
+      psiStrength: 50
+      psiSkill: 0
+      melee: 70
+    armor: STR_IRON_GUARD_ARMOR
+    deathSound: [44, 45, 46]
+    intelligence: 2
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    sniper: 75
+    value: 15
+    moraleLossWhenKilled: 80  # expendable
+    energyRecovery: 40
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_CLIP
+        - STR_FLAMETHROWER_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER_CHAOS
+        - STR_FRAG_GRENADE_DRUM
+        - STR_FRAG_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+      - - STR_MORTAR_PORTABLE_CHAOS
+        - STR_MORTAR_AMMO_HE
+        - STR_MORTAR_AMMO_HE
+        - STR_MORTAR_AMMO_FRAG
+        - STR_MORTAR_AMMO_FRAG
+        - STR_MORTAR_AMMO_PHOSPHOR
+        - STR_MGRENADE
+
+  - type: STR_IRONGUARD_TURRET_AUTOCANNON
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 100
+      stamina: 1
+      health: 60
+      bravery: 100
+      reactions: 120
+      firing: 120
+      throwing: 0
+      strength: 90
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IRON_GUARD_ARMOR_MOUNTED_AUTOCANNON
+    standHeight: 23
+    kneelHeight: 16
+    value: 25
+    deathSound: 23
+    intelligence: 4
+    aggression: 5
+    spotter: 1
+    sniper: 50
+    energyRecovery: 34
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AUTOCANNON_CLIP
+        - STR_AUTOCANNON_CLIP
+
+  - type: STR_IRONGUARD_TURRET_LASCANNON
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 100
+      stamina: 1
+      health: 60
+      bravery: 100
+      reactions: 120
+      firing: 120
+      throwing: 0
+      strength: 90
+      psiStrength: 50
+      psiSkill: 0
+      melee: 0
+    armor: STR_IRON_GUARD_ARMOR_MOUNTED_LASCANNON
+    standHeight: 23
+    kneelHeight: 16
+    value: 25
+    deathSound: 23
+    intelligence: 4
+    aggression: 5
+    spotter: 1
+    sniper: 50
+    energyRecovery: 34
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASCAN_CLIP
+        - STR_LASCANNON_CLIP_SMALL
+        - STR_LASCANNON_CLIP_SMALL
+        - STR_LASCANNON_CLIP_SMALL
+
+  - type: STR_IRON_MAIDEN_SISTER   # Iron Warrior Sister
+    race: STR_ADEPTAS
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 55
+      stamina: 90  # cybernetics
+      health: 60  # cybernetics
+      bravery: 110  # cybernetics
+      reactions: 45
+      firing: 70  # Augmented
+      throwing: 60
+      strength: 60  # enhanced cybernetics
+      psiStrength: 40
+      psiSkill: 0
+      melee: 45
+    armor: STR_IRON_MAIDEN_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    aggroSound: 2254  # FemServitorTargetAcquired.wav
+    moraleLossWhenKilled: 80  # expendable
+    value: 15
+    deathSound: [2258, 2259, 2260]  # CSERVITORDEATH
+    intelligence: 1
+    aggression: 2
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_CLIP
+        - STR_FLAMETHROWER_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_BOLTER_HERETIC_DEAZ
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_MGRENADE
+
+  - type: STR_IRON_WARRIOR  # IRON WARRIOR CSM SOLDIER
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 60  # slower
+      stamina: 100
+      health: 80  # tough for a CSM +20
+      bravery: 110  # unyielding
+      reactions: 50  # low reactions
+      firing: 75  # accurate
+      throwing: 70  # good
+      strength: 75  # strong
+      psiStrength: 50
+      psiSkill: 1
+      melee: 70  # lower
+    armor: STR_IRON_WARRIOR_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 2
+    aggression: 1
+    spotter: 2
+    energyRecovery: 40
+    berserkChance: 60
+    livingWeapon: true
+    psiWeapon: STR_NONE
+    builtInWeaponSets:
+      - - STR_LIGHT_BOLTER_CHAOS
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_KRAK_GRENADE
+      - - STR_BOLTERC
+        - STR_RIFLE_CLIP_EX
+        - STR_RIFLE_CLIP_AP
+        - STR_KRAK_GRENADE
+      - - STR_IWCOMBIBOLTER
+        - STR_RIFLE_CLIP_EX
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_ROCKET_LAUNCHER
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_SMALL_ROCKET
+        - STR_KRAK_GRENADE
+
+  - type: STR_IRON_WARRIOR_BREACHER  # IRON WARRIOR CSM SOLDIER
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 50  # slower
+      stamina: 100
+      health: 110  # tough for a CSM +40
+      bravery: 110  # unyielding
+      reactions: 55  # low reactions
+      firing: 80  # accurate
+      throwing: 80  # good
+      strength: 80  # strong
+      psiStrength: 50
+      psiSkill: 0
+      melee: 70  # lower
+    armor: STR_IRON_WARRIOR_ARMOR_BREACHER
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 2
+    aggression: 2  # quite defensive
+    spotter: 2
+    energyRecovery: 60
+    berserkChance: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+
+  - type: STR_IRON_WARRIOR_HEAVY  # IRON WARRIOR CSM HEAVY WEAPONS
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 60  # slower
+      stamina: 100
+      health: 100
+      bravery: 110  # unyielding
+      reactions: 45  # low reactions
+      firing: 80  # accurate
+      throwing: 80  # good
+      strength: 90  # strong
+      psiStrength: 50
+      psiSkill: 0
+      melee: 70  # lower
+    armor: STR_IRON_WARRIOR_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 2
+    aggression: 0  # quite defensive
+    spotter: 2
+    sniper: 75
+    energyRecovery: 60
+    berserkChance: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 30
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 20
+        BASIC_CSM_MULTIMELTA_LOADOUT: 20
+        TERMINATOR_IW_AUTOCANNON: 10
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 2
+        TERMINATOR_IW_AUTOCANNON: 20
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 20
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 20
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 5
+      -  # Tier 3
+        TERMINATOR_IW_AUTOCANNON: 40
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 5
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 5
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
+
+  - type: STR_IRON_WARRIOR_MEDIC  # IRON WARRIOR CSM MEDIC
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 60  # slower
+      stamina: 100
+      health: 100  # tough for a CSM +20
+      bravery: 110  # unyielding
+      reactions: 50  # low reactions
+      firing: 80  # accurate
+      throwing: 80  # good
+      strength: 80  # strong
+      psiStrength: 50
+      psiSkill: 0
+      melee: 70  # lower
+    armor: STR_IRON_WARRIOR_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 2
+    aggression: 0  # quite defensive
+    spotter: 2
+    energyRecovery: 60
+    berserkChance: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_LIGHT_BOLTER_CHAOS
+        - STR_LIGHT_BOLTER_AMMO_MC
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_KRAK_GRENADE
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+
+  - type: STR_IRON_BERSERKER  # KHORNE IRON WARRIOR BERSERKER                                          aggroSound
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    avoidsFire: false
+    isLeeroyJenkins: true
+    stats:
+      tu: 90  # 30 less
+      stamina: 105
+      health: 110  # 10 more
+      bravery: 110
+      reactions: 88  # 10 less
+      firing: 80
+      throwing: 80
+      strength: 88
+      psiStrength: 100
+      psiSkill: 0
+      melee: 108
+    armor: STR_IRON_BERSERKER_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    intelligence: 2
+    aggression: 8
+    aggroSound: 2136  # bloodlust
+    energyRecovery: 88
+    canPanic: false
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    value: 30
+    canBeMindControlled: false
+    moraleLossWhenKilled: 75  # expected to die
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      #Tier 1
+      - KHORNE_BERSERKER_AXE_INTIMIDATE: 40
+        KHORNE_BERSERKER_AXE_BOLTPISTOL: 40
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 5
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 1
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 5
+      #Tier 2
+      - KHORNE_BERSERKER_AXE_INTIMIDATE: 30
+        KHORNE_BERSERKER_AXE_BOLTPISTOL: 10
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 20
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 10
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 20
+      #Tier 3
+      - KHORNE_BERSERKER_AXE_INTIMIDATE: 15
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 30
+        KHORNE_BERSERKER_AXE_BOLTPISTOL: 1
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 15
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 20
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 4
+
+  - type: STR_IRON_TERMINATOR  # IRON WARRIOR CSM HEAVY WEAPONS; TERMINATOR
+    race: STR_MUTON  # Terminator
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 60
+      stamina: 120
+      health: 120
+      bravery: 110
+      reactions: 60
+      firing: 110  # plodding but accurate
+      throwing: 90
+      strength: 180  # so they can actually carry their bigass weapons
+      psiStrength: 80
+      psiSkill: 0
+      melee: 110
+    armor: STR_IRON_TERMINATOR_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 5  # CSM elites
+    aggression: 1
+    spotter: 2
+    sniper: 75  # elite capable of squad sight
+    energyRecovery: 50
+    berserkChance: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 30
+        TERMINATOR_HEAVYFLAMER: 30
+        TERMINATOR_IW_AUTOCANNON: 15
+        TERMINATOR_LASCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+      -  # Tier 2
+        TERMINATOR_IW_AUTOCANNON: 40
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 10
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 30
+        TERMINATOR_IW_AUTOCANNON: 30
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+
+  - type: STR_IRON_WARRIOR_WARSMITH  # IRON WARRIOR LEADER
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 70  # slower
+      stamina: 120
+      health: 120  # tough
+      bravery: 110  # unyielding
+      reactions: 60  # low reactions
+      firing: 90  # accurate
+      throwing: 80  # good
+      strength: 90  # strong
+      psiStrength: 80
+      psiSkill: 0
+      melee: 85  # lower
+    armor: STR_IRON_WARRIOR_WARSMITH_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 40
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 5  # engineer + leader
+    aggression: 0  # quite defensive
+    spotter: 4
+    sniper: 80
+    energyRecovery: 50
+    berserkChance: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_HFLAMER_CLIP
+        - STR_HIGH_EXPLOSIVE
+      - - STR_BLASTER_LAUNCHER
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_HIGH_EXPLOSIVE
+      - - STR_IW_AUTOCANNON
+        - STR_AUTOCANNON_CLIP
+        - STR_AUTOCANNON_CLIP
+        - STR_HIGH_EXPLOSIVE
+        - STR_HIGH_EXPLOSIVE
+      - - STR_IWCOMBIMELTA
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP

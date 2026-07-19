@@ -1,0 +1,433 @@
+
+units: 
+
+  - type: STR_TZEENTCH_SORCERERLORD  # TZEENTCH SORCERER LORD
+    race: STR_TZEENTCH
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 110
+      stamina: 100
+      health: 130
+      bravery: 110
+      reactions: 110
+      firing: 110
+      throwing: 90
+      strength: 90
+      psiStrength: 130
+      psiSkill: 100
+      melee: 95
+    armor: MUTON_ARMORTZSLORD
+    intelligence: 9  # this is a magus leader; it's smart asf
+    aggression: 1
+    spotter: 2
+    sniper: 90
+    value: 50
+    standHeight: 20
+    kneelHeight: 15
+    deathSound: [688, 689]
+    energyRecovery: 40
+    weightedBuiltInWeaponSets:
+      #Tier 1
+      - TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 20
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 20
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 5
+      #Tier 2
+      - TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_PORTAL: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_PORTAL_STORMOFCHANGE: 5
+      #Tier 3
+      - TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 30
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 30
+        TZEENTCH_SORCERER_PORTAL_STORMOFCHANGE: 30
+        TZEENTCH_SORCERER_BOLTOFCHANGE_PORTAL: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 1
+
+  - type: STR_TZEENTCH_LEADER  # SORCERER MUTON_ARMOR1                    RANK 1 weapons done
+    race: STR_TZEENTCH
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 99
+      stamina: 99
+      health: 109
+      bravery: 110
+      reactions: 99
+      firing: 99
+      throwing: 89
+      strength: 89
+      psiStrength: 90
+      psiSkill: 69
+      melee: 89
+    armor: MUTON_ARMORTZS
+    intelligence: 9  # this is a magus leader; it's smart asf
+    aggression: 1
+    spotter: 2
+    sniper: 90
+    value: 35
+    moraleLossWhenKilled: 110  # leader malus
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      #Tier 1
+      - TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 20
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 20
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 5
+      #Tier 2
+      - TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 5
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SORCERER_BOLTOFCHANGE_PORTAL: 10
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 5
+        TZEENTCH_SORCERER_PORTAL_STORMOFCHANGE: 5
+      #Tier 3
+      - TZEENTCH_SORCERER_PINKMAGICMISSILE_STORMOFCHANGE: 30
+        TZEENTCH_SORCERER_BOLTOFCHANGE_STORMOFCHANGE: 30
+        TZEENTCH_SORCERER_PORTAL_STORMOFCHANGE: 30
+        TZEENTCH_SORCERER_BOLTOFCHANGE_PORTAL: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_PINKFLAME: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_PINKFLAME: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_FLAMERBLUE: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_CORUSCATINGFLAMES: 1
+        TZEENTCH_SORCERER_BOLTOFCHANGE_GLIMMERINGRAPIDFIRE: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_FLAMERBLUE: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_CORUSCATINGFLAMES: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_BOLTOFCHANGE: 1
+        TZEENTCH_SORCERER_PINKMAGICMISSILE_GLIMMERINGRAPIDFIRE: 1
+
+  - type: STR_TZEENTCH_SOLDIER  #rubric marine
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 68
+      stamina: 110
+      health: 50
+      bravery: 110
+      reactions: 65
+      firing: 75
+      throwing: 80
+      strength: 60
+      psiStrength: 200
+      psiSkill: 0
+      melee: 70
+    armor: MUTON_ARMORTZEENTCH
+    intelligence: 2
+    aggression: 1
+    moraleLossWhenKilled: 50  # Dust boon
+    spotter: 1
+    sniper: 25
+    value: 25
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTERR
+        - STR_RIFLE_CLIP_R
+        - STR_RIFLE_CLIP_R
+        - STR_ALIEN_GRENADE
+      - - STR_BOLTERR
+        - STR_RIFLE_CLIP_R
+        - STR_RIFLE_CLIP_R
+        - STR_PHOSPHOR_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_TZ_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_MGRENADE
+
+
+  - type: STR_TZEENTCH_BLESSED  # CHAOS MUTON_ARMOR0                        RANK 5 weapons done             aggroSound; long ranged blessed
+    race: STR_TZEENTCH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 68
+      stamina: 96
+      health: 40
+      bravery: 110
+      reactions: 50
+      firing: 65
+      throwing: 80
+      strength: 60
+      psiStrength: 200
+      psiSkill: 0
+      melee: 65
+    armor: MUTON_ARMORTZEENTCH_BLESSED
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 50  # transformer modifier
+    value: 28
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    aggroSound: {mod: 40k, index: 805}
+    intelligence: 2
+    aggression: 3
+    spotter: 1
+    sniper: 25
+    energyRecovery: 40
+    livingWeapon: true
+    spawnUnit: STR_PINK_HORROR_TERRORIST
+    builtInWeaponSets:
+      - - STR_BOLTERR
+        - STR_RIFLE_CLIP_R
+        - STR_RIFLE_CLIP_R
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_PINKHORRORSPAWNER_GRENADE
+      - - STR_TZ_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PINKHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_BLESSED2  # Spawns a Tzeentch Demon Flamer on death CQC Tzeentch Blessed
+    race: STR_TZEENTCH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 68
+      stamina: 96
+      health: 40
+      bravery: 110
+      reactions: 50
+      firing: 65
+      throwing: 80
+      strength: 60
+      psiStrength: 200
+      psiSkill: 0
+      melee: 65
+    armor: MUTON_ARMORTZEENTCH_BLESSED
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 50  # transformer modifier
+    value: 28
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    aggroSound: {mod: 40k, index: 805}
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    sniper: 25
+    energyRecovery: 40
+    spawnUnit: STR_FLAMER_TERRORIST
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_FLAMETHROWERTZ
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+      - - STR_PLASMA_PISTOL_TZEENTCH
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+      - - STR_PLASMA_PISTOL_TZEENTCH
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_FLAMETHROWERTZ
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+        - STR_FLAMERSPAWNER_GRENADE
+
+  - type: STR_HAVOC_TZEENTCH  # CHAOS MUTON_ARMORHAVOC               RANK 4 Navigator weapons done          aggroSound
+    race: STR_TZEENTCH
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 68
+      stamina: 96
+      health: 75
+      bravery: 110
+      reactions: 65
+      firing: 89  # long range specialist; also should be higher than Rubric Soldier
+      throwing: 80
+      strength: 120
+      psiStrength: 70
+      psiSkill: 0
+      melee: 85
+    armor: MUTON_ARMORHAVOCT
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    value: 30
+    sniper: 75  # long range fire support
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_ASSCTZ
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+      - - STR_ASSCTZ
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_ASSCTZ
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_MGRENADE
+
+  - type: STR_TZEENTCH_SATURNER
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST  # so it comes up less
+    stats:
+      tu: 60
+      stamina: 120  # saturnine stronk
+      health: 140  # saturnine stronk
+      bravery: 110
+      reactions: 45
+      firing: 99  # great/elite but should not be greater than devoted sniper level
+      throwing: 0
+      strength: 200  # saturnine stronk
+      psiStrength: 100
+      psiSkill: 0
+      melee: 85
+    armor: STR_SATURNINErubric_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8  # aggressive for Tzeentch
+    moraleLossWhenKilled: 50  # Dust boon
+    spotter: 2
+    sniper: 75  # long range fire support
+    value: 40
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_TZ_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_MGRENADE
+      - - STR_ASSCTZ
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_MGRENADE
+      - - STR_ASSCTZ  # Tzeentch Soul Reaper AC
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_TZEENTCH_TERMINATOR
+    race: STR_TZEENTCH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 80
+      health: 100
+      bravery: 110
+      reactions: 80
+      firing: 99  # great/elite but should not be greater than devoted sniper level
+      throwing: 80
+      strength: 120
+      psiStrength: 200
+      psiSkill: 0
+      melee: 109  # lower than normal
+    armor: STR_TZEENTCHterminator_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8  # aggressive for Tzeentch
+    moraleLossWhenKilled: 50  # Dust boon
+    spotter: 2
+    sniper: 75  # long range fire support
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_TZ_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_MGRENADE
+      - - STR_ASSCTZ
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_MGRENADE
+      - - STR_ASSCTZ  # Tzeentch Soul Reaper AC
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_TZEENTCH_CATAPHRACT_AI
+    race: STR_TZEENTCH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 180
+      health: 180
+      bravery: 110
+      reactions: 70
+      firing: 110
+      throwing: 80
+      strength: 180
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    armor: STR_TZEENTCHcataphract_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 6
+    aggression: 5
+    spotter: 2
+    sniper: 60
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_TZ_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_MGRENADE
+      - - STR_ASSCTZ
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_MGRENADE
+      - - STR_ASSCTZ  # Tzeentch Soul Reaper AC
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_ASSC_CLIP_INFERNO
+        - STR_MGRENADE
+        - STR_MGRENADE

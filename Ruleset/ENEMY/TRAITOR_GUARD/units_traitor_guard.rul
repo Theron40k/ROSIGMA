@@ -1,0 +1,1486 @@
+units: 
+
+  - type: STR_SNAKEMAN_LEADER                                           # RANK 1 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 55
+      stamina: 84
+      health: 55
+      bravery: 90
+      reactions: 62
+      firing: 64
+      throwing: 65
+      strength: 40
+      psiStrength: 50
+      psiSkill: 0
+      melee: 84
+    armor: SNAKEMAN_ARMORC
+    intelligence: 2
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 2
+    energyRecovery: 40
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_KRAK_GRENADE
+        - STR_KNIF
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+      - - STR_PLASMA_CARBINE_CHAOS
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_KRAK_GRENADE
+
+  - type: STR_SNAKEMAN_COMMANDER                                        # RANK 0 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 60
+      stamina: 96
+      health: 60
+      bravery: 90
+      reactions: 65
+      firing: 70
+      throwing: 65
+      strength: 40
+      psiStrength: 50
+      psiSkill: 0
+      melee: 92
+    armor: SNAKEMAN_ARMORC
+    intelligence: 2
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 2
+    energyRecovery: 40
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_KRAK_GRENADE
+        - STR_KNIF
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_KRAK_GRENADE
+        - STR_AXE
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_MGRENADE
+        - STR_AXE
+
+  - type: STR_TRAITORGUARD_BATTLE_SERVITOR_HB                                           # RANK 1 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 60
+      stamina: 120
+      health: 80  # toughcyboy, +15 from leader.
+      bravery: 110  # unbreakable
+      reactions: 35  # dropped low
+      firing: 75  # Accurate aiming sensors
+      throwing: 30  # No arms to toss with
+      strength: 80  # RobotStrong
+      psiStrength: 75  # Not sure if easy or hard to mind control a Servitor. Hardened at least
+      psiSkill: 0
+      melee: 25  # poor melee
+    armor: TG_BATTLESERVITOR_HBARMOR
+    standHeight: 20
+    kneelHeight: 15
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    intelligence: 0
+    deathSound: {mod: 40k, index: 376}
+    aggression: 1
+    spotter: 1
+    value: 30
+    energyRecovery: 60
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CSERVITOR_HB  # Chaos servitor heavybolter
+        - STR_CSERVITOR_HB_AMMO  # standard "weak" rounds
+      - - STR_CSERVITOR_HB  # Chaos servitor heavybolter
+        - STR_CSERVITOR_HBAP_AMMO  # AP rounds
+      - - STR_CSERVITOR_HB  # Chaos servitor heavybolter
+        - STR_CSERVITOR_HBHEAT_AMMO  # High explosive anti armor rounds
+
+  - type: STR_TRAITORGUARD_BATTLE_SERVITOR_MISSILE                                         # RANK 1 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 60
+      stamina: 120
+      health: 80  # toughcyboy, +15 from leader.
+      bravery: 110  # unbreakable
+      reactions: 30  # low
+      firing: 75  # Accurate aiming sensors
+      throwing: 30  # No arms to toss with
+      strength: 80  # RobotStrong
+      psiStrength: 75  # Not sure if easy or hard to mind control a Servitor. Hardened at least
+      psiSkill: 0
+      melee: 20  # poor melee
+    armor: TG_BATTLESERVITOR_MIARMOR
+    standHeight: 20
+    kneelHeight: 15
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    intelligence: 0
+    deathSound: {mod: 40k, index: 376}
+    aggression: 0
+    spotter: 1
+    value: 30
+    energyRecovery: 60
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CSERVITOR_MILAUNCHER  # Chaos servitor MISSILE LAUNCHER
+        - STR_CSERVITOR_MIHE_AMMO  # Missile Massacre "weak" HE rounds
+      - - STR_CSERVITOR_MILAUNCHER  # Chaos servitor MISSILE LAUNCHER
+        - STR_CSERVITOR_MIKRAK_AMMO  # Missile Massacre "KRAK" rounds
+      - - STR_CSERVITOR_MILAUNCHER  # Chaos servitor MISSILE LAUNCHER
+        - STR_CSERVITOR_MIMELTA_AMMO  # Missile Massacre "MELTA" rounds
+
+  - type: STR_SNAKEMAN_SENTINEL                                         # RANK 7
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 85
+      stamina: 100
+      health: 75
+      bravery: 80
+      reactions: 50
+      firing: 58
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 0
+      melee: 50
+    armor: STR_CHAOS_SENTINEL_ARMOR
+    deathSound: {mod: 40k, index: 23}
+    intelligence: 1
+    aggression: 2
+    spotter: 2
+    sniper: 50
+    energyRecovery: 80
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOS_SENTINEL_SUPERFRAG_ROCKET_POD
+        - AUX_CHAOS_SENTINEL_STOMP
+      - - STR_CHAOS_SENTINEL_INC_ROCKET_POD
+        - AUX_CHAOS_SENTINEL_STOMP
+      - - STR_CHAOS_SENTINEL_KRAK_ROCKET_POD
+        - AUX_CHAOS_SENTINEL_STOMP
+
+  - type: STR_BLACKSTONE_STORMTROOPER                                          # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 95
+      health: 65
+      bravery: 110
+      reactions: 75
+      firing: 70
+      throwing: 70
+      strength: 45
+      psiStrength: 80
+      psiSkill: 0
+      melee: 80
+    armor: STR_BLACKSTONE_ARMOR  # create
+    intelligence: 2
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    energyRecovery: 45
+    moveSound: -1
+    value: 15
+    deathSound: [41, 42, 43]
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOS_VOLLEYGUN
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_HELLGUN
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_HELLGUN
+        - STR_MGRENADE
+        - STR_ALIEN_GRENADE
+
+  - type: STR_BLACKSTONE_JUMPTROOPER                                        # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 120
+      stamina: 95
+      health: 60
+      bravery: 110
+      reactions: 75
+      firing: 70
+      throwing: 65
+      strength: 45
+      psiStrength: 80
+      psiSkill: 0
+      melee: 80
+    armor: STR_BLACKSTONE_JUMP_ARMOR
+    intelligence: 2
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    value: 20
+    energyRecovery: 60
+    moveSound: -1
+    deathSound: [44, 45, 46]
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_VOLLEYGUN
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_HELLGUN
+        - STR_ALIEN_GRENADE
+        - STR_ALIEN_GRENADE
+
+  - type: STR_BLACKSTONE_STORMTROOPER_HEAVY                                       # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 55
+      stamina: 95
+      health: 70
+      bravery: 110
+      reactions: 65
+      firing: 70
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 80
+    armor: STR_BLACKSTONE_ARMOR  # create
+    intelligence: 2
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    sniper: 90  # long range heavy weapons man
+    energyRecovery: 45
+    value: 20
+    moveSound: -1
+    deathSound: [41, 42, 43]
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOS_VOLLEYGUN
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_LASCANNON_HANDHELD
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_MGRENADE
+      - - STR_ACCATRAN_ROCKET_LAUNCHER
+        - STR_INCENDIARY_ROCKET  # first shot, warning shot + illumination
+        - STR_SMALL_ROCKET  # KRAK
+        - STR_LARGE_ROCKET  # HE
+        - STR_SMALL_ROCKET  # KRAK
+        - STR_LARGE_ROCKET  # HE
+
+  - type: STR_BLACKSTONE_STORMTROOPER_SNIPER                                          # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 65
+      stamina: 95
+      health: 60
+      bravery: 110
+      reactions: 70
+      firing: 100
+      throwing: 80
+      strength: 45
+      psiStrength: 80
+      psiSkill: 0
+      melee: 80
+    armor: STR_BLACKSTONE_ARMOR_SNIPER
+    intelligence: 4
+    aggression: 1  # hangs back
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 2
+    sniper: 90  # it's a sniper
+    energyRecovery: 45
+    value: 20
+    moveSound: -1
+    deathSound: [41, 42, 43]
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LONGLAS_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_GRENADE
+      - - STR_LONGLAS_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+      - - STR_LONGLAS_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_MGRENADE
+
+  - type: STR_BLACKSTONE_STORMTROOPER_ELITE                                          # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 65
+      stamina: 95
+      health: 65
+      bravery: 110
+      reactions: 80
+      firing: 80
+      throwing: 80
+      strength: 45
+      psiStrength: 90
+      psiSkill: 0
+      melee: 80
+    armor: STR_BLACKSTONE_ARMOR  # create
+    intelligence: 4  # these are elites
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    sniper: 75  # can shoot from the backline
+    energyRecovery: 40
+    value: 22
+    moveSound: -1
+    deathSound: [41, 42, 43]
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOS_HELLGUN
+        - STR_ALIEN_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_CARBINE_CHAOS
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_MGRENADE
+
+  - type: STR_SNAKEMAN_SOLDIER                                          # RANK 5 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 45
+      stamina: 84
+      health: 55
+      bravery: 80
+      reactions: 55
+      firing: 50
+      throwing: 65
+      strength: 30
+      psiStrength: 50
+      psiSkill: 0
+      melee: 76
+    armor: SNAKEMAN_ARMOR0
+    intelligence: 0
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    energyRecovery: 40
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_PISTOLC
+        - STR_LASPISTOL_CLIP
+        - STR_LASPISTOL_CLIP
+        - STR_KNIF
+        - STR_GRENADE
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+
+  - type: STR_TRAITORGUARD_OGRYN
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 100
+      health: 130
+      bravery: 90
+      reactions: 45
+      firing: 45
+      throwing: 65
+      strength: 80
+      psiStrength: 40
+      psiSkill: 0
+      melee: 80
+    armor: STR_TRAITORGUARD_OGRYN_ARMOR
+    standHeight: 21
+    kneelHeight: 14
+    aggression: 7
+    berserkChance: 80
+    berserkSound: 2136
+    value: 25
+    energyRecovery: 50
+    moveSound: -1
+    livingWeapon: true
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP
+        - STR_RIPPER_GUN_CLIP
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP
+        - STR_RIPPER_GUN_CLIP
+        - STR_GRENADE
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_KRAK_GRENADE
+        - STR_GRENADE
+
+  - type: STR_TRAITORGUARD_OGRYN_REDBLACK
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 100
+      health: 140
+      bravery: 90
+      reactions: 45
+      firing: 50
+      throwing: 65
+      strength: 80
+      psiStrength: 40
+      psiSkill: 0
+      melee: 80
+    armor: STR_TRAITORGUARD_OGRYN_REDBLACK_ARMOR
+    standHeight: 21
+    kneelHeight: 14
+    aggression: 6
+    berserkChance: 80
+    berserkSound: 2136
+    value: 25
+    energyRecovery: 50
+    moveSound: -1
+    livingWeapon: true
+    deathSound: [{mod: 40k, index: 281}, {mod: 40k, index: 282}, {mod: 40k, index: 283}, {mod: 40k, index: 284}, {mod: 40k, index: 285}]
+    builtInWeaponSets:
+      - - STR_HEAVY_STUBBER_CHAOS
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_HEAVY_STUBBER_CLIP
+      - - STR_HEAVY_STUBBER_CHAOS
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_GRENADE
+      - - STR_HEAVY_STUBBER_CHAOS
+        - STR_HEAVY_STUBBER_CLIP_MC
+        - STR_HEAVY_STUBBER_CLIP_MC
+        - STR_KRAK_GRENADE
+        - STR_GRENADE
+
+  - type: STR_SNAKEMAN_NAVIGATOR                                        # RANK 4 weapons done
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 55
+      stamina: 84
+      health: 55
+      bravery: 80
+      reactions: 60
+      firing: 60
+      throwing: 65
+      strength: 30
+      psiStrength: 50
+      psiSkill: 0
+      melee: 76
+    armor: SNAKEMAN_ARMORN
+    intelligence: 1
+    aggression: 2
+    spotter: 1
+    energyRecovery: 40
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_MGRENADE
+      - - STR_SNIPER_CHAOS
+        - STR_HC_AP_AMMO  # only 3 shots per, so we have 4 units for 12 shots total.
+        - STR_HC_AP_AMMO
+        - STR_HC_AP_AMMO
+        - STR_HC_AP_AMMO
+        - STR_ALIEN_GRENADE
+
+  - type: STR_SNAKEMAN_ENGINEER
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 45
+      stamina: 84
+      health: 55
+      bravery: 80
+      reactions: 55
+      firing: 55
+      throwing: 60
+      strength: 40
+      psiStrength: 50
+      psiSkill: 0
+      melee: 76
+    armor: SNAKEMAN_ARMORH
+    intelligence: 2
+    aggression: 2
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 1
+    sniper: 50
+    energyRecovery: 40
+    livingWeapon: true
+    moveSound: -1
+    builtInWeaponSets:
+      - - STR_SHOTGUN_CHAOS
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_KRAK_GRENADE
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_CLIP
+        - STR_FLAMETHROWER_CLIP
+        - STR_MGRENADE
+      - - STR_GRENADE_LAUNCHER_CHAOS
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_MGRENADE
+
+  - type: STR_CHAOS_HERETEK
+    race: STR_HERETEK
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 60
+      stamina: 80
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 70
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 25
+    armor: STR_CHAOS_HERETEK_ARMOR
+    intelligence: 4
+    aggression: 0
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 2
+    sniper: 75
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOSHARMONIC_MELTAGUN
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_MELTA_AMMO_HARMONIC
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+      - - STR_CHAOS_LASCANNON_HANDHELD
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_MGRENADE
+      # - - STR_GRAVGUN_AOE_CHAOS    # alt loadout -  - STR_SMALL_LAUNCHER - STR_STUN_BOMB
+      #  - STR_GRAVGUN_AOE_AMMO
+      #  - STR_GRAVGUN_AOE_AMMO
+
+  - type: STR_CHAOS_PENETANTE
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 50
+      stamina: 40
+      health: 25
+      bravery: 40
+      reactions: 30
+      firing: 35
+      throwing: 35
+      strength: 20
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    armor: STR_CHAOS_PENETANTE_ARMOR
+    standHeight: 20
+    kneelHeight: 14
+    moraleLossWhenKilled: 10
+    aggression: 6
+    value: 1
+    specab: 1  # explodes on death
+    energyRecovery: 40
+    moveSound: -1
+    deathSound: [41, 42, 43]
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_KNIF
+        - STR_GRENADE
+        - STR_EXPLOSIVE_COLLAR_CHAOS
+      - - STR_STUB_GUN_CHAOS
+        - STR_STUB_GUN_AMMO
+        - STR_GRENADE
+        - STR_EXPLOSIVE_COLLAR_CHAOS
+      - - STR_STUB_GUN_CHAOS
+        - STR_STUB_GUN_AMMO
+        - STR_GRENADE
+        - STR_EXPLOSIVE_COLLAR_CHAOS
+
+  - type: STR_CHAOS_PENETANTE_LEEROY
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 60
+      stamina: 540
+      health: 25
+      bravery: 50
+      reactions: 30
+      firing: 35
+      throwing: 35
+      strength: 20
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    armor: STR_CHAOS_PENETANTE_ARMOR
+    standHeight: 20
+    kneelHeight: 14
+    moraleLossWhenKilled: 10
+    aggression: 8
+    avoidsFire: false
+    isLeeroyJenkins: true
+    value: 1
+    specab: 1  # explodes on death
+    energyRecovery: 40
+    moveSound: -1
+    deathSound: [41, 42, 43]
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_KNIF
+        - STR_GRENADE
+        - STR_EXPLOSIVE_COLLAR_CHAOS
+      - - STR_KNIF
+        - STR_GRENADE
+        - STR_EXPLOSIVE_COLLAR_CHAOS
+      - - STR_AXE
+        - STR_GRENADE
+        - STR_EXPLOSIVE_COLLAR_CHAOS
+
+# catachan traitor
+
+  - type: STR_CATACHAN_FIGHTER_TRAITOR  # rifle - shotgun
+    race: STR_ALIEN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 80
+      health: 60
+      bravery: 70
+      reactions: 70
+      firing: 60
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITOR_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 10
+    energyRecovery: 40
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_AUTOGUN_CHAOS
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_GRENADE
+      - - STR_AUTOSHOTGUN
+        - STR_SHOTGUN_DRUM
+        - STR_SHOTGUN_DRUM
+        - STR_KRAK_GRENADE
+        - STR_GRENADE
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_KRAK_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTER_TRAITOR2  # flamer - melta
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 80
+      stamina: 80
+      health: 60
+      bravery: 70
+      reactions: 70
+      firing: 60
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITOR_ARMOR2
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 10
+    energyRecovery: 40
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_CLIP
+        - STR_FLAMETHROWER_CLIP
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_CLIP
+        - STR_FLAMETHROWER_CLIP
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_CLIP
+        - STR_FLAMETHROWER_CLIP
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_CATACHAN_FIGHTER_TRAITOR3  # heavy gun
+    race: STR_ALIEN
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 80
+      stamina: 80
+      health: 60
+      bravery: 70
+      reactions: 70
+      firing: 60
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITOR_ARMOR2
+    intelligence: 2
+    aggression: 2  # hangs back to provide fire support
+    spotter: 1
+    sniper: 80
+    value: 10
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_HEAVY_STUBBER_CHAOS
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_GRENADE
+      - - STR_HEAVY_STUBBER_CHAOS
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_HEAVY_STUBBER_CHAOS
+        - STR_HEAVY_STUBBER_CLIP_MC
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_CATACHAN_FIGHTER_TRAITOR4  # explosion
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 80
+      stamina: 80
+      health: 60
+      bravery: 70
+      reactions: 70
+      firing: 60
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITOR_ARMOR
+    intelligence: 2
+    aggression: 2  # hangs back to provide fire support
+    spotter: 1
+    sniper: 80
+    value: 10
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_ACCATRAN_ROCKET_LAUNCHER
+        - STR_SMALL_ROCKET
+        - STR_SMALL_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_PHOSPHOR_GRENADE
+      - - STR_ACCATRAN_ROCKET_LAUNCHER
+        - STR_SMALL_ROCKET
+        - STR_SMALL_ROCKET
+        - STR_LARGE_ROCKET
+      - - STR_ACCATRAN_ROCKET_LAUNCHER
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_MGRENADE
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_CATACHAN_FIGHTER_TRAITOR5  # explosion
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 80
+      stamina: 80
+      health: 60
+      bravery: 70
+      reactions: 70
+      firing: 60
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITOR_ARMOR
+    intelligence: 2
+    aggression: 1  # hangs back to provide fire support
+    spotter: 1
+    sniper: 80
+    value: 10
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_GRENADE_LAUNCHER_CHAOS
+        - STR_FRAG_GRENADE_DRUM
+        - STR_FRAG_GRENADE_DRUM
+        - STR_FRAG_GRENADE_DRUM
+      - - STR_GRENADE_LAUNCHER_CHAOS
+        - STR_PHOSPHOR_GRENADE_DRUM
+        - STR_PHOSPHOR_GRENADE_DRUM
+        - STR_PHOSPHOR_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER_CHAOS
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTER_TRAITOR6  # assault
+    race: STR_ALIEN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 80
+      health: 60
+      bravery: 70
+      reactions: 70
+      firing: 60
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITOR_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 10
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_SMG_STUB_GUN_CHAOS
+        - STR_AXE
+        - STR_STUB_GUN_AMMO_LONG
+        - STR_STUB_GUN_AMMO_LONG
+      - - STR_SMG_STUB_GUN_CHAOS
+        - STR_AXE
+        - STR_STUB_GUN_AMMO_AP
+        - STR_STUB_GUN_AMMO_AP
+        - STR_STUB_GUN_AMMO_AP
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_RIPPER_PISTOL
+        - STR_AXE
+        - STR_RIPPER_PISTOL_AMMO
+        - STR_RIPPER_PISTOL_AMMO
+        - STR_RIPPER_PISTOL_AMMO
+        - STR_RIPPER_PISTOL_AMMO
+        - STR_KRAK_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERVET_TRAITOR  # Veteran rifle - shotgun
+    race: STR_ALIEN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90  # 80
+      stamina: 90  # 80
+      health: 70  # 60
+      bravery: 80  # 70
+      reactions: 80  # 70
+      firing: 70  # 60
+      throwing: 80  # 70
+      strength: 80  # 70
+      psiStrength: 90  # 80
+      psiSkill: 0
+      melee: 100  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORVET_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 3
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 20
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_SHOTGUN_CHAOS
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_GRENADE
+      - - STR_AUTOCARBINE_NAVY
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_KRAK_GRENADE
+      - - STR_AUTOCARBINE_NAVY
+        - STR_AUTOGUN_CLIP_DRUM_KRAKEN
+        - STR_AUTOGUN_CLIP_DRUM_KRAKEN
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERVET_TRAITOR2  # Veteran flamer - melta
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 90  # 80
+      stamina: 90  # 80
+      health: 70  # 60
+      bravery: 80  # 70
+      reactions: 80  # 70
+      firing: 70  # 60
+      throwing: 80  # 70
+      strength: 80  # 70
+      psiStrength: 90  # 80
+      psiSkill: 0
+      melee: 100  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORVET_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 3
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 20
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_GRENADE
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERVET_TRAITOR3  # heavy gun
+    race: STR_ALIEN
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 90  # 80
+      stamina: 90  # 80
+      health: 70  # 60
+      bravery: 80  # 70
+      reactions: 80  # 70
+      firing: 70  # 60
+      throwing: 80  # 70
+      strength: 80  # 70
+      psiStrength: 90  # 80
+      psiSkill: 0
+      melee: 100  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORVET_ARMOR
+    intelligence: 3
+    aggression: 2
+    spotter: 1
+    sniper: 80
+    value: 20
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_HEAVY_STUBBER_CHAOS
+        - STR_AC_AP_AMMO
+        - STR_AC_AP_AMMO
+        - STR_GRENADE
+      - - STR_ROTOR_CANNON_BLACK
+        - STR_ROTOR_CANNON_AMMO
+        - STR_ROTOR_CANNON_AMMO
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+      - - STR_ROTOR_CANNON_BLACK
+        - STR_ROTOR_CANNON_AMMO
+        - STR_ROTOR_CANNON_AMMO
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERVET_TRAITOR4  # explosion
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 90  # 80
+      stamina: 90  # 80
+      health: 70  # 60
+      bravery: 80  # 70
+      reactions: 80  # 70
+      firing: 70  # 60
+      throwing: 80  # 70
+      strength: 80  # 70
+      psiStrength: 90  # 80
+      psiSkill: 0
+      melee: 100  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORVET_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 3
+    aggression: 1
+    spotter: 1
+    sniper: 80
+    value: 20
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_CHAOS_ROCKET_LAUNCHER
+        - STR_SMALL_ROCKET
+        - STR_SMALL_ROCKET
+        - STR_SMALL_ROCKET
+        - STR_SMALL_ROCKET
+        - STR_SMALL_ROCKET
+        - STR_MGRENADE
+      - - STR_CHAOS_ROCKET_LAUNCHER
+        - STR_INCENDIARY_ROCKET
+        - STR_INCENDIARY_ROCKET
+        - STR_INCENDIARY_ROCKET
+        - STR_INCENDIARY_ROCKET
+        - STR_INCENDIARY_ROCKET
+        - STR_MGRENADE
+      - - STR_CHAOS_ROCKET_LAUNCHER
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_CATACHAN_FIGHTERVET_TRAITOR5  # grenadier
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 90  # 80
+      stamina: 90  # 80
+      health: 70  # 60
+      bravery: 80  # 70
+      reactions: 80  # 70
+      firing: 70  # 60
+      throwing: 80  # 70
+      strength: 80  # 70
+      psiStrength: 90  # 80
+      psiSkill: 0
+      melee: 100  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORVET_ARMOR
+    avoidsFire: true
+    intelligence: 3
+    aggression: 1
+    spotter: 1
+    sniper: 80
+    value: 20
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_STUBCANNON_GUARD
+        - STR_INCENDIARY_GRENADE40
+        - STR_INCENDIARY_GRENADE40
+        - STR_INCENDIARY_GRENADE40
+        - STR_INCENDIARY_GRENADE40
+        - STR_INCENDIARY_GRENADE40
+        - STR_INCENDIARY_GRENADE40
+        - STR_INCENDIARY_GRENADE40
+        - STR_GRENADE
+      - - STR_STUBCANNON_GUARD
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE40
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+      - - STR_STUBCANNON_GUARD
+        - STR_MELTA_GRENADE40
+        - STR_MELTA_GRENADE40
+        - STR_MELTA_GRENADE40
+        - STR_MELTA_GRENADE40
+        - STR_MELTA_GRENADE40
+        - STR_MELTA_GRENADE40
+        - STR_MELTA_GRENADE40
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERVET_TRAITOR6  # assault
+    race: STR_ALIEN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90  # 80
+      stamina: 90  # 80
+      health: 70  # 60
+      bravery: 80  # 70
+      reactions: 80  # 70
+      firing: 70  # 60
+      throwing: 80  # 70
+      strength: 80  # 70
+      psiStrength: 90  # 80
+      psiSkill: 0
+      melee: 100  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORVET_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 3
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 20
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP
+        - STR_RIPPER_GUN_CLIP
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_INC
+        - STR_RIPPER_GUN_CLIP_INC
+        - STR_KRAK_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_KRAK_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERTOP_TRAITOR  # Heavy Stubber Assault
+    race: STR_ALIEN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 100  # 90
+      stamina: 100  # 90
+      health: 80  # 70
+      bravery: 90  # 80
+      reactions: 90  # 80
+      firing: 80  # 70
+      throwing: 90  # 80
+      strength: 90  # 80
+      psiStrength: 90  # 90
+      psiSkill: 0
+      melee: 110  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORTOP_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 4
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 40
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_MGRENADE
+      - - STR_AUTOGUN_HIGHGRADE_UNDERSLUNG
+        - STR_AUTOGUN_CLIP_DRUM_KRAKEN
+        - STR_AUTOGUN_CLIP_DRUM_KRAKEN
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE40
+        - STR_KRAK_GRENADE
+        - STR_MGRENADE
+      - - STR_AUTOGUN_HIGHGRADE_UNDERSLUNG
+        - STR_AUTOGUN_CLIP_DRUM_KRAKEN
+        - STR_AUTOGUN_CLIP_DRUM_KRAKEN
+        - STR_MELTA_GRENADE40
+        - STR_MELTA_GRENADE40
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERTOP_TRAITOR2  # flamer
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 100  # 90
+      stamina: 100  # 90
+      health: 80  # 70
+      bravery: 90  # 80
+      reactions: 90  # 80
+      firing: 80  # 70
+      throwing: 90  # 80
+      strength: 90  # 80
+      psiStrength: 90  # 90
+      psiSkill: 0
+      melee: 110  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORTOP_ARMOR
+    intelligence: 4
+    aggression: 2
+    spotter: 1
+    sniper: 80
+    value: 40
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+      - - STR_BLASTER_LAUNCHER  # Multimelta
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERTOP_TRAITOR3  # gunner
+    race: STR_ALIEN
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 100  # 90
+      stamina: 100  # 90
+      health: 80  # 70
+      bravery: 90  # 80
+      reactions: 90  # 80
+      firing: 80  # 70
+      throwing: 90  # 80
+      strength: 90  # 80
+      psiStrength: 90  # 90
+      psiSkill: 0
+      melee: 110  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORTOP_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 4
+    aggression: 1
+    spotter: 1
+    sniper: 80
+    value: 40
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_ROTOR_CANNON_BLACK
+        - STR_ROTOR_CANNON_KRAKEN_AMMO
+        - STR_ROTOR_CANNON_KRAKEN_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_ROTOR_CANNON_BLACK
+        - STR_ROTOR_CANNON_KRAKEN_AMMO
+        - STR_ROTOR_CANNON_KRAKEN_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_ROTOR_CANNON_BLACK
+        - STR_ROTOR_CANNON_KRAKEN_AMMO
+        - STR_ROTOR_CANNON_KRAKEN_AMMO
+        - STR_MGRENADE
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_CATACHAN_FIGHTERTOP_TRAITOR4  # explosion
+    race: STR_ALIEN
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 100  # 90
+      stamina: 100  # 90
+      health: 80  # 70
+      bravery: 90  # 80
+      reactions: 90  # 80
+      firing: 80  # 70
+      throwing: 90  # 80
+      strength: 90  # 80
+      psiStrength: 90  # 90
+      psiSkill: 0
+      melee: 110  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORTOP_ARMOR
+    intelligence: 4
+    aggression: 1
+    spotter: 1
+    sniper: 100
+    value: 40
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        CHAOS_LAUNCHER_HE_WITH_MELTA_GRENADE_SET: 70
+        CHAOS_LAUNCHER_KRAK_WITH_MELTA_GRENADE_SET: 20
+        CHAOS_LAUNCHER_MELTA_WITH_MELTA_GRENADE_SET: 10
+      -  # Tier 2
+        CHAOS_LAUNCHER_HE_WITH_MELTA_GRENADE_SET: 20
+        CHAOS_LAUNCHER_KRAK_WITH_MELTA_GRENADE_SET: 60
+        CHAOS_LAUNCHER_MELTA_WITH_MELTA_GRENADE_SET: 20
+      -  # Tier 3
+        CHAOS_SNIPER_HE_WITH_MELTA_GRENADE_SET: 10
+        CHAOS_LAUNCHER_MELTA_WITH_MELTA_GRENADE_SET: 70
+        CHAOS_LAUNCHER_KRAK_WITH_MELTA_GRENADE_SET: 20
+
+  - type: STR_CATACHAN_FIGHTERTOP_TRAITOR5  # grenadier
+    race: STR_ALIEN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 100  # 90
+      stamina: 100  # 90
+      health: 80  # 70
+      bravery: 90  # 80
+      reactions: 90  # 80
+      firing: 80  # 70
+      throwing: 90  # 80
+      strength: 90  # 80
+      psiStrength: 90  # 90
+      psiSkill: 0
+      melee: 110  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORTOP_ARMOR
+    intelligence: 4
+    aggression: 1
+    spotter: 1
+    sniper: 80
+    value: 40
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_GRENADE_LAUNCHER_STEEL_LEGION
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_GRENADE
+      - - STR_GRENADE_LAUNCHER_STEEL_LEGION
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+      - - STR_GRENADE_LAUNCHER_STEEL_LEGION
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_KRAK_GRENADE_DRUM
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_CATACHAN_FIGHTERTOP_TRAITOR6  # assault
+    race: STR_ALIEN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 100  # 90
+      stamina: 100  # 90
+      health: 80  # 70
+      bravery: 90  # 80
+      reactions: 90  # 80
+      firing: 80  # 70
+      throwing: 90  # 80
+      strength: 90  # 80
+      psiStrength: 90  # 90
+      psiSkill: 0
+      melee: 110  # 90
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    armor: STR_CATACHAN_TRAITORTOP_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 4
+    aggression: 8
+    spotter: 1
+    sniper: 80
+    value: 40
+    energyRecovery: 30
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        CATACHAN_CHAOS_STUB_SMG_KHORNE_AXE_WITH_FRAG_AND_KRAK_GRENADE_SET: 75
+        CATACHAN_CHAOS_PLASMA_PISTOL_KHORNE_SPEAR_WITH_GRENADES_SET: 10
+        CATACHAN_GRAVPISTOL_WITH_MELTA_GRENADE_SET: 1
+        CATACHAN_RIPPER_PISTOL_COMBI_BOLTER_WITH_MELTA_GRENADE_SET: 5
+        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 1
+      -  # Tier 2
+        CATACHAN_CHAOS_STUB_SMG_KHORNE_AXE_WITH_FRAG_AND_KRAK_GRENADE_SET: 20
+        CATACHAN_CHAOS_PLASMA_PISTOL_KHORNE_SPEAR_WITH_GRENADES_SET: 50
+        CATACHAN_RIPPER_PISTOL_COMBI_BOLTER_WITH_MELTA_GRENADE_SET: 10
+        CATACHAN_RIPPER_PISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 10
+        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 2
+      -  # Tier 3
+        CATACHAN_CHAOS_PLASMA_PISTOL_KHORNE_SPEAR_WITH_GRENADES_SET: 10
+        CATACHAN_CHAOS_STUB_SMG_KHORNE_AXE_WITH_FRAG_AND_KRAK_GRENADE_SET: 5
+        CATACHAN_RIPPER_PISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 25
+        CATACHAN_RIPPER_PISTOL_COMBI_BOLTER_WITH_MELTA_GRENADE_SET: 30
+        CATACHAN_GRAVPISTOL_KHORNE_SPEAR_WITH_MELTA_GRENADE_SET: 6
