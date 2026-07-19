@@ -38,6 +38,63 @@ units:
         - STR_SMOKE_GRENADE_BELT_TAUROS
         - STR_PHOTON_GRENADE_BELT_TAUROS
 
+  - type: STR_BTBOLTER_SPONSON1
+    race: STR_CHIMERA_TURRET
+    stats:
+      health: 50
+      tu: 20
+      stamina: 10
+      reactions: 20
+      bravery: 110
+      firing: 100
+      throwing: 0
+      strength: 100
+      psiStrength: 250
+      psiSkill: 0
+      melee: 0
+      mana: 100
+    armor: BTSPONSON_ARMOR_N
+    standHeight: 16
+    kneelHeight: 16
+    value: 100
+    deathSound: {mod: 40k, index: 23}
+    intelligence: 4
+    aggression: 2
+    sniper: 50
+    spotter: 1
+    moveSound: {mod: 40k, index: 14}
+    energyRecovery: 1
+    builtInWeaponSets:
+      - - STR_BTSPONSON_HB
+
+  - type: STR_BTBOLTER_SPONSON2
+    race: STR_CHIMERA_TURRET
+    stats:
+      health: 50
+      tu: 20
+      stamina: 10
+      reactions: 20
+      bravery: 110
+      firing: 100
+      throwing: 0
+      strength: 100
+      psiStrength: 250
+      psiSkill: 0
+      melee: 0
+      mana: 100
+    armor: BTSPONSON_ARMOR_S
+    standHeight: 16
+    kneelHeight: 16
+    value: 100
+    deathSound: {mod: 40k, index: 23}
+    intelligence: 4
+    aggression: 2
+    sniper: 50
+    spotter: 1
+    moveSound: {mod: 40k, index: 14}
+    energyRecovery: 1
+    builtInWeaponSets:
+      - - STR_BTSPONSON_HB
 
 armors:
 
@@ -125,6 +182,142 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_SIZE: 200 # HUGE
 
+  - type: BTSPONSON_ARMOR_N
+    visibilityAtDay: 60
+    visibilityAtDark: 60
+    spriteSheet: BTSPONSONN.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    spriteInv: DEF.SPK
+    corpseGeo: STR_PREDATOR_CORPSE
+    corpseBattle:
+      - PB_CORPSE1
+      - PB_CORPSE2
+      - PB_CORPSE3
+      - PB_CORPSE4
+    frontArmor: 80
+    sideArmor: 80
+    rearArmor: 80
+    underArmor: 150
+    size: 2
+    allowsMoving: false
+    movementType: 1
+    damageModifier: #VEHICLE ARMOR LARGE
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.4 #FLAMES
+      - 1.0 #HE
+      - 1.4 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 3
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_SIZE: 200 # HUGE
+
+  - type: BTSPONSON_ARMOR_S
+    visibilityAtDay: 60
+    visibilityAtDark: 60
+    spriteSheet: BTSPONSONS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    spriteInv: DEF.SPK
+    corpseGeo: STR_PREDATOR_CORPSE
+    corpseBattle:
+      - PB_CORPSE1
+      - PB_CORPSE2
+      - PB_CORPSE3
+      - PB_CORPSE4
+    frontArmor: 80
+    sideArmor: 80
+    rearArmor: 80
+    underArmor: 150
+    size: 2
+    allowsMoving: false
+    movementType: 1
+    damageModifier: #VEHICLE ARMOR LARGE
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.4 #FLAMES
+      - 1.0 #HE
+      - 1.4 #LASCANON
+      - 1.0 #PLASMA
+      - 0.0 #STUN
+      - 0.8 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.2 #MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 3
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 100  # intimidation immune
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_SIZE: 200 # HUGE
+
+items:
+
+  - type: STR_BTSPONSON_HB
+    dropoff: 4
+    weight: 0
+    size: 0
+    bigSprite: {mod: 40k, index: 640}
+    bulletSprite: 6
+    fireSound: {mod: 40k, index: 707}
+    explosionSpeed: 5
+    bulletSpeed: 50
+    hitSound: {mod: 40k, index: 708}
+    hitAnimation: {mod: 40k, index: 26}
+    autoRange: 15
+    accuracyAuto: 50
+    costAuto:
+      time: 1
+      energy: 10
+      mana: 10
+    flatUse:
+      time: true
+      energy: true
+      mana: true
+    battleType: 1
+    damageType: 1
+    power: 100
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.15
+      ArmorEffectiveness: 0.85
+      ToArmor: 0.15
+      ToHealth: 1.1
+      ToStun: 0.5
+      ToEnergy: 0.4
+      ToWound: 0.3
+      RandomWound: false
+    autoShots: 12
+    sprayWaypoints: 2
+    invWidth: 2
+    invHeight: 3
+    clipSize: -1
+    twoHanded: false
+    fixedWeapon: true
+    recover: false
+    tags:
+      TURRET_RELOAD_TURNS: 2
+
 extraSprites:
 
   - type: BTRAZORB.PCK  # space wolves razorback turret
@@ -134,3 +327,19 @@ extraSprites:
     height: 320
     files:
       0: Resources/UnitSprites/BTRAZB.png
+
+  - type: BTSPONSONN.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/Advanced Turrets/btsponN.png
+
+  - type: BTSPONSONS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/Advanced Turrets/btsponS.png
