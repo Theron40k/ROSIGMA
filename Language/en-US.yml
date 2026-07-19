@@ -1165,11 +1165,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_ARMOR_FH: "Healer Armor (Deprecated)"
   STR_ELDAR_ARMOR6_P_LAUNCHER: "Reaper Armor (Launcher) (Deprecated)"
   STR_ELDAR_LAUNCHER_FIXED: "Reaper Launcher (Deprecated)"
-  STR_PROMOTE_TO_DRAGON: "Path of the Dragon (Deprecated)"
-  STR_PROMOTE_TO_SCORPION: "Path of the Scorpion (Deprecated)"
-  STR_PROMOTE_TO_REAPER: "Path of the Reaper (Deprecated)"
-  STR_PROMOTE_TO_DIREAVENGER: "Path of the Avenger (Deprecated)"
-  STR_PROMOTE_TO_BANSHEE: "Path of the Banshee (Deprecated)"
   STR_PROMOTE_TO_SEER: "Path of the Psyker (Deprecated)"
 
 # player Eldar campaign research
@@ -1238,18 +1233,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_ARMOR_GUARDIAN_HEALER_PLAYER: "Healer Kit Guardian Armor"
   STR_ELDAR_ASPECT_WARRIOR_PLAYER: "Eldar Aspect Warrior"
   STR_ELDAR_PSYKER_PLAYER: "Eldar Psyker"
-  STR_PROMOTE_TO_PSYKER: "Path of the Psyker"
-  STR_PROMOTE_TO_ELDAR_WARLOCK: "Path of the Warlock"
   STR_ELDAR_WARLOCK_PLAYER: "Eldar Warlock"
-  STR_PROMOTE_TO_BANSHEE_EXARCH: "Bewitched by the Banshee Path"
   STR_ELDAR_BANSHEE_EXARCH_PLAYER: "Eldar Banshee Exarch"
   STR_ELDAR_DRAGON: "Eldar Dragon"
   STR_ELDAR_DRAGONEX: "Eldar Dragon Exarch"
   STR_ELDAR_DRAGON_MF: "Dragon Warrior"
   STR_ELDAR_DRAGON_EXARCH_SOLDIER: "Dragon Exarch Warrior"
-  STR_PROMOTE_TO_ASPECT_WARRIOR: "Path of the Warrior"
-  STR_PROMOTE_TO_AUTARCH: "Path of Command"
-  STR_PROMOTE_TO_DRAGON_EXARCH: "Engulfed by the Dragon Path"
   STR_ELDAR_DRAGON_ARMOR: "Eldar Dragon Armor"
   STR_ELDAR_DRAGONEX_ARMOR: "Eldar Dragon Exarch Armor"
   STR_ELDAR_DRAGON_ARMOR_P: "Dragon Armor"
@@ -1261,7 +1250,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SPIDER_PLAYER: "Spider Warrior"
   STR_ELDAR_SPIDER_ARMOR_P: "Spider Armor"
   STR_ELDAR_SPIDER_CORPSE_P: "Warp Spider Corpse"
-  STR_PROMOTE_TO_SPIDER_EXARCH: "Ensnared by the Spider Path"
   STR_ELDAR_SPIDEREX_PLAYER: "Spider Exarch"
   STR_ELDAR_SPIDEREXDS_ARMOR_P: "Spider Exarch Death Spinner Armor"
   STR_ELDAR_SPIDEREXDS_CORPSE_P: "Spider Exarch Death Spinner Corpse"
@@ -1271,25 +1259,77 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_REAPEREX: "Eldar Reaper Exarch"
   STR_ELDAR_ARMOR_EXARCH_P: "Reaper Exarch Armor"
   STR_ELDAR_ARMOR_EXARCH: "Eldar Reaper Exarch"
+
+  # eldar transformations
+  #STR_PROMOTE_TO_ASPECT_WARRIOR: "Path of the Warrior" #(unused)
+  STR_PROMOTE_BEGIN_AUTARCH_PATH: "Walk the path of Command"
+  STR_PROMOTE_TO_DRAGON: "Path of the Dragon"
+  STR_PROMOTE_TO_DRAGON_AUTARCH: "Path of the Dragon (Path of Command)"
+  STR_PROMOTE_TO_SCORPION: "Path of the Scorpion"
+  STR_PROMOTE_TO_SCORPION_AUTARCH: "Path of the Scorpion (Path of Command)"
+  STR_PROMOTE_TO_REAPER: "Path of the Reaper"
+  STR_PROMOTE_TO_REAPER_AUTARCH: "Path of the Reaper (Path of Command)"
+  STR_PROMOTE_TO_DIREAVENGER: "Path of the Avenger"
+  STR_PROMOTE_TO_DIREAVENGER_AUTARCH: "Path of the Avenger (Path of Command)"
+  STR_PROMOTE_TO_BANSHEE: "Path of the Banshee"
+  STR_PROMOTE_TO_BANSHEE_AUTARCH: "Path of the Banshee (Path of Command)"
+  STR_PROMOTE_TO_SPIDER: "Path of the Spider"
+  STR_PROMOTE_TO_SPIDER_AUTARCH: "Path of the Spider (Path of Command)"
+  STR_PROMOTE_TO_AUTARCH: "Path of Command"
+  STR_PROMOTE_TO_DRAGON_EXARCH: "Engulfed by the Dragon Path"
   STR_PROMOTE_TO_REAPER_EXARCH: "Shrouded by the Reaper Path"
+  STR_PROMOTE_TO_SPIDER_EXARCH: "Ensnared by the Spider Path"
+  STR_PROMOTE_TO_BANSHEE_EXARCH: "Bewitched by the Banshee Path"
+  STR_PROMOTE_TO_PSYKER: "Path of the Psyker"
+  STR_PROMOTE_TO_ELDAR_WARLOCK: "Path of the Warlock"
   STR_RESURRECT_ELDAR: "Wraithguard Spirit Stone Infusion"
+
+#Eldar Boons (bonuses) - lore friendly runes+
+  # Channeling Runes
+  # Runes of Battle
+  # Runes of Deception
+  # Runes of Evasion
+  # Runes of Fate
+  # Runes of Fleetness
+  # Runes of Fortune
+  # Runes of the Harlequin
+  # Runes of Reaping
+  # Runes of the Spider
+  # Runes of Vigor
+  # Runes of War
+  # Runes of the Warp
+  STR_RUNE_OF_WARDING: "Rune of Warding" # Runes of Warding
+  # Runes of Witnessing # vision?
+  # Runes of Wrath
+#Eldar Boons (bonuses) - rule of cool runes
+  STR_RUNE_OF_COMMAND_START: "Rune of the First Command"  # Rune of command
+  #STR_RUNE_OF_COMMAND_AUTARCH: "Rune of Sovereign Command" # Rune of command 2 when autarch
 
   #Eldar Weapons
   STR_EPOWER_SWORD: "Eldar Mirrorsword"
   STR_SHURIKEN_CANNON: "Shuriken Cannon"
   STR_SHURIKEN_CANNON_MAG: "Shuriken Cannon Mag"
   STR_LARGE_ROCKET_ELDAR: "Eldar Reaper Rocket"
-  STR_SMALL_ROCKET_TEMPEST_ELDAR: "Eldar Tempest Rocket Pack"
+  STR_SMALL_ROCKET_TEMPEST_ELDAR: "Eldar Tempest Rocket Pods"
+  STR_AELDARI_FLAMER: "Aeldari Flamer"
+  STR_AELDARI_FLAMER_FUEL: "Aeldari Flamer Fuel"
+  STR_DRAGON_BREATH_FLAMER: "Dragon's Breath Flamer"
+  STR_DRAGON_BREATH_FLAMER_FUEL: "Dragon's Breath Flamer Fuel"
   STR_FUSION_GUN: "Fusion Gun"
   STR_DRAGON_FUSION_GUN: "Dragon Fusion Gun"
   STR_FIREPIKE: "Firepike"
-  STR_FUSION_AMMO: "Fusion Cannister"
+  STR_FUSION_AMMO: "Fusion Canister"
+  STR_DRAGON_FUSION_AMMO: "Dragon Fusion Canister"
+  STR_FIREPIKE_AMMO: "Firepike Canister"
   STR_RANGER_LONG_RIFLE: "Ranger Long Rifle"
   STR_RANGER_LONG_RIFLE_SCOPED: "Scoped Ranger Long Rifle"
   STR_RANGER_LONG_RIFLE_MAG: "Long Rifle Magazine"
   STR_DEATH_SPINNER: "Death Spinner"
   STR_SPINNER_SPOOL: "Spinner Spool Ammo"
   STR_ELDAR_POWER_BLADE: "Power Blade (RHand)"
+  STR_ELDAR_TEMPEST_LAUNCHER: "Tempest Launcher"
+  STR_SPINNERET_RIFLE: "Spinneret Rifle"
+  STR_SPINNERET_RIFLE_SPOOL: "Spinneret Rifle Spool"
 
 #Eldar Units Codex Strings
   STR_ELDAR_GUARDIAN_AUTOPSY_CODEX: "{NEWLINE} Guardians are the militia of the Eldar Craftworlds. In times of peace the Guardians pursue their normal civilian roles, however, all Eldar are trained in warfare and can be called to arms if their Craftworld is threatened. Guardians in battle, form the bulk of the Eldar armies. That these citizen levies are capable of engaging and defeating other races' warriors is a testament to Eldar skill and technology."
@@ -1326,6 +1366,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_FIREPIKE_CODEX: "{NEWLINE} The Firepike is an upgrade to the Dragon Fusion Gun typically reserved for Fire Dragon Exarchs. This weapon utilizes sophisticated Eldar technology, with a distinctive long barrel that projects it's deadly fusion-based melta beam a considerable distance."
   STR_SHURIKEN_CANNON_CODEX: "{NEWLINE} The Shuriken Cannon works in a similar way to the Shuriken Catapult, but has an ammunition coil to load the weapon more quickly and uses a triple accelerator field for improved rate of fire and power. While the Shuriken weapons above are all hand-held weapons, the Shuriken cannon is very large and needs stabilising gyroscopes to allow any accuracy."
   STR_DEATH_SPINNER_CODEX: "{NEWLINE}  A Death Spinner is the ritual armament of the Warp Spiders Aspect; a highly advanced ranged weapon that extrudes a thick cloud of razor-sharp monofilament wire. The spinner's magnetic containment field then spools the wire together and hurls it toward the enemy. The wire's own tension causes it to writhe and lash, and where it touches flesh or soft tissue it slices through the victim's body, causing an agonising and exceptionally messy death."
+  STR_ELDAR_POWER_BLADE_CODEX: "{NEWLINE} Power Blades are Eldar power weapons commonly wielded by Warp Spider Exarchs. A blade is fixed to the forearm and can be skillfully used to slash at the enemy."
+  STR_ELDAR_TEMPEST_LAUNCHER_CODEX: "{NEWLINE} The Tempest Launcher is an advanced Eldar Missile Launcher used by Exarchs of the Dark Reaper Warrior Aspect. These ancient versions of the Dark Reapers' Reaper Launchers fire clusters of small reaper missiles in a much greater arc. They are able to affect a larger target area and be used in an indirect fire role."
+  STR_SPINNERET_RIFLE_CODEX: "{NEWLINE} The Spinneret Rifle is a variant of the Death Spinner used by Warp Spider Exarchs. Spinneret Rifles operate by ejecting a single, rigid strand of monomolecular wire that punches through armour, before recoiling in a tight spiral. Spinneret Rifles have a more consistent armour penetration ability than standard Death Spinners, and a longer range. However, they will usually only affect a single target at a time."
 
   #Eldar Ranks
   STR_ELDAR_GUARDIAN_RANK_0: Gd Cadet
@@ -5623,6 +5666,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_STUB_GUN_AMMO_INC: "Stubber Tracer Magazine"
   STR_CMAS_ARMOR: "Cyber Mastiff"
   STR_ARBITES_MASTIFF: "Cyber Mastiff"
+  STR_CMAS_AI: "Cyber Mastiff"
+  STR_CMAS_ARMOR_AI: "Cyber Mastiff"
+  STR_CMAS_CORPSE: "Cyber Mastiff Corpse"
+  STR_CMAS_CORPSE_AI: "Cyber Mastiff Corpse"
   STR_PILOT_ARBITES: "Pilot"
   STR_PILOT_ARBITES_ARMOR_UC: "Pilot Vest"
   STR_PROMOTE_PILOT_ARBITES: "Train Trooper to Pilot"
@@ -6454,6 +6501,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WORDBEARER_POSSESSEDLV3: "Transcendent"
 
   STR_WORDBEARER_CULTISTAI: "WB Cultist"
+  STR_WBHELBRUTE_PLAYER: "WB Helbrute"
   STR_WBHELBRUTE_AI: "WB Helbrute"
 
   STR_WBSOLDIER_QUORVONDAR: "Chaos Sorcerer"

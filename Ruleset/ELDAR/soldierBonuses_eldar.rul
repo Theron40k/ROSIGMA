@@ -1,0 +1,61 @@
+soldierBonuses:
+
+# Lore friendly runes to use:
+  # Channeling Runes
+  # Runes of Battle # Warlock related
+  # Runes of Deception #Scorpion
+  # Runes of Evasion # Banshee
+  # Runes of Fate #Seer
+  # Runes of Fleetness # TU bonus
+  # Runes of Fortune # dodge & dodge change bonuses ? to analyze if it's possible
+  # Runes of the Harlequin
+  # Runes of Reaping # Reaper
+  # Runes of the Spider # Spider
+  # Runes of Vigor # HP,  Energy bonus
+  # Runes of War
+  # Runes of the Warp # to lower peril of the warp chance
+  # Runes of Warding # shield
+  # Runes of Witnessing # vision?
+  # Runes of Wrath
+
+# Rule of cool runes we've added
+  # Rune of Command #autarch starting small bonuses
+  # Rune of Sovereign Command" # Rune of command 2 when autarch
+
+##################################################
+
+  # Runes of Battle # Warlock related
+  # Runes of Deception #Scorpion
+  # Runes of Evasion # Banshee
+  # Runes of Fate #Seer
+  # Runes of Fleetness # TU bonus
+  # Runes of Fortune # dodge & dodge change bonuses ? to analyze if it's possible
+  # Runes of the Harlequin
+  # Runes of Reaping # Reaper
+  # Runes of the Spider # Spider
+  # Runes of Vigor # HP,  Energy bonus
+  # Runes of War
+  # Runes of the Warp # to lower peril of the warp chance
+  - name: STR_RUNE_OF_WARDING #Runes of Warding # shield
+    tags:
+      BONUS_ENERGY_SHIELD_HP_PER_TURN: 50
+      BONUS_ENERGY_SHIELD_DECAY: 50
+  # Runes of Witnessing # vision?
+  # Runes of Wrath
+
+# Rule of cool runes we've added
+  # Rune of command #autarch starting small bonuses
+  - name: STR_RUNE_OF_COMMAND_START # Rune of command #autarch starting small bonuses
+    stats:
+      tu: 0
+      stamina: 0
+      health: 5
+      bravery: 5  # always multiples of 10
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+  #STR_RUNE_OF_COMMAND_AUTARCH: "Rune of Sovereign Command" # Rune of command 2 when autarch

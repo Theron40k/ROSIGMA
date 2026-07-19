@@ -12,8 +12,9 @@ items:
       ToStun: 0.2
       ArmorEffectiveness: 0.3
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    #requiresBuy: []  # Already requires the eldar base service
     weight: 5
     #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1
@@ -33,12 +34,47 @@ items:
     attraction: 1
     listOrder: 16115
 
+  - type: STR_AELDARI_FLAMER_FUEL #STR_FLAMETHROWER_CLIP stats needs rework
+    categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    listOrder: 16152
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    size: 0.2
+    costBuy: 500
+    costSell: 400
+    vaporColorSurface: {mod: 40k, index: 0}
+    vaporDensitySurface: 4
+    vaporProbabilitySurface: 100
+    weight: 5
+    bigSprite: 4873
+    floorSprite: 4873
+    handSprite: 1382
+    hitSound: {mod: 40k, index: 12}
+    hitAnimation: {mod: 40k, index: 88}
+    power: 60
+    damageType: 2
+    damageAlter:
+      IgnoreSelfDestruct: false
+    blastRadius: 2
+    clipSize: 40
+    battleType: 2
+    invWidth: 1
+    invHeight: 2
+    bulletSpeed: 50
+    explosionSpeed: 10
+    armor: 15
+    attraction: 7
+
   - type: STR_RANGER_LONG_RIFLE_MAG #TEMPORARY copied STR_TAU_PULSE_MAG
     categories: [STR_CAT_ELDAR, STR_CAT_SNIPER]
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_RECRUIT_ELDAR_OUTCAST
-    #requiresBuy: []
-    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.2
     weight: 1 #light weight
     invHeight: 2
@@ -72,7 +108,61 @@ items:
       # ArmorEffectiveness: 0.9  # some armor penetration
     listOrder: 16620
 
-  - type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
+  - type: STR_DRAGON_BREATH_FLAMER_FUEL
+    categories: [STR_CAT_ELDAR, STR_CAT_FLAMER]
+    listOrder: 16532
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.2
+    costBuy: 10000 # expensive materials
+    costSell: 5000
+    vaporColorSurface: {mod: 40k, index: 0}
+    vaporDensitySurface: 4
+    vaporProbabilitySurface: 100
+    weight: 5
+    bigSprite: 4875
+    floorSprite: 4875
+    handSprite: 1390
+    hitSound: {mod: 40k, index: 12}
+    hitAnimation: {mod: 40k, index: 88}
+    power: 65 # between normal and heavy flamers
+    powerRangeReduction: 12
+    powerRangeThreshold: 15
+    damageType: 2
+    damageAlter:
+      FireBlastCalc: false
+      IgnoreOverKill: false
+      RandomType: 6  # Gaussian
+     # IgnoreSelfDestruct: false
+      IgnoreDirection: false
+      FixRadius: 3
+      ToHealth: 1.70
+      ToArmor: 0.0  # damages armor on the way in
+      ToMorale: 8.0 # flame and Null terror
+      ToStun: 0.4
+      ToTime: 0.2  # debilitating pain
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.1
+      ToItem: 0.5
+      ToTile: 0.5
+    blastRadius: 2
+    clipSize: 40
+    battleType: 2
+    invWidth: 2
+    invHeight: 2
+    bulletSpeed: 50
+    explosionSpeed: 10
+    armor: 50
+    attraction: 7
+    tags:
+      ITEM_DOESNT_HURT_USER: 1
+      DAMAGE_RESIST_PENETRATION_PERCENT: 35
+
+  - &FUSION_AMMO_TEMPLATE
+    type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_MELTA]
     #requiresBuy: []  # Already requires the eldar base service
     #requiresBuyBaseFunc: [ELDAROUT]
@@ -108,14 +198,40 @@ items:
     invWidth: 1
     invHeight: 2
     armor: 300
-    listOrder: 16520
+    listOrder: 16505
+
+  - type: STR_DRAGON_FUSION_AMMO             # Same stats as fusion ammo needs work tier upgrade
+    refNode: *FUSION_AMMO_TEMPLATE
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: [] # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    bigSprite: 4870
+    floorSprite: 4870
+    handSprite: 4986
+    listOrder: 16515
+
+  - type: STR_FIREPIKE_AMMO             # Maybe unnecessary but gives us an option to better balance firepike
+    refNode: *FUSION_AMMO_TEMPLATE
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+      - STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH
+    requiresBuy: [] # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    bigSprite: 4871
+    floorSprite: 4871
+    handSprite: 4842
+    listOrder: 16525
 
   - type: STR_SPINNER_SPOOL  #STR_RIPPER_GUN_CLIP_AP stats temporary
     costBuy: 6000
     costSell: 1000
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
-      # Warpspider weapons research
+      - STR_ELDAR_SPIDER_RESEARCH
     requiresBuyBaseFunc: [ELDAROUT]
     requiresBuy: []
     armor: 200
@@ -128,7 +244,7 @@ items:
     hitAnimation: {mod: 40k, index: 26}
     invWidth: 1
     invHeight: 2
-    clipSize: 24
+    clipSize: 12
     battleType: 2
     power: 50
     damageType: 1
@@ -143,7 +259,42 @@ items:
     shotgunBehavior: 1
     shotgunSpread: 20  # these flechettes are more aerodynamic and have improved grouping
     shotgunPellets: 6
-    listOrder: 16620
+    listOrder: 16610
+
+  - type: STR_SPINNERET_RIFLE_SPOOL  #T3 of spinner spool, testing and balance needed
+    costBuy: 12000
+    costSell: 2000
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SPIDER_EXARCH_RESEARCH
+    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuy: []
+    armor: 200
+    size: 0.3
+    weight: 10
+    bigSprite: 4869
+    floorSprite: 4869
+    handSprite: 4978
+    hitSound: 1889
+    hitAnimation: {mod: 40k, index: 26}
+    invWidth: 1
+    invHeight: 2
+    clipSize: 12
+    battleType: 2
+    power: 50
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.02  # AP ammo; small armor ablation
+      ToArmor: 0.02  # AP ammo; small armor damage
+      ArmorEffectiveness: 0.3  # Great armor Penetration monomolecular strand
+      ToHealth: 0.7  # AP weapon features reduced health damage
+      ToTime: 0.2  # shoots a strong thread that can disrupt movement
+      ToEnergy: 0.05  # impact shock; reduced due to AP ammo
+      ToStun: 0.25  # impact shock; reduced due to AP ammo
+    shotgunBehavior: 1
+    shotgunSpread: 10  # fires a single strand that spirals on impact.
+    shotgunPellets: 4
+    listOrder: 16625
 
   - type: STR_SHURIKEN_CANNON_MAG  #                 16200
     categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATPR]
@@ -154,9 +305,10 @@ items:
       ToStun: 0.2
       ArmorEffectiveness: 0.3
     requires:
+      - STR_ELDAR_ONLY
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_MIDTIER_PREREQ
-    requiresBuy: []  # Already requires the eldar base service
     weight: 20
     #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1
@@ -176,7 +328,7 @@ items:
     attraction: 1
     invWidth: 1
     invHeight: 3
-    listOrder: 16215
+    listOrder: 16932
 
   - type: STR_SMALL_ROCKET_TEMPEST_ELDAR  # eldar tempest rocket launcher clip
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
@@ -187,13 +339,13 @@ items:
     size: 0.5
     costBuy: 10000
     costSell: 6000
-    bigSprite: 4856
-    floorSprite: {mod: 40k, index: 238} #TODO
-    handSprite: {mod: 40k, index: 816} # TODO
+    bigSprite: 4867
+    floorSprite: 4867
+    handSprite: 4962
     bulletSprite: 0
     hitSound: 0
     weight: 12 # 3*4
-    power: 60
+    power: 50
     damageType: 3
     damageAlter:
       ToArmorPre: 0.2
@@ -206,11 +358,11 @@ items:
       ToTile: 0.75  # high explosive
       ToItem: 0.75  # high explosive
       FixRadius: 4 #lower explosion range from normal rockets
-    clipSize: 3
+    clipSize: 9 # increased x3 due to autofire
     battleType: 2
     invWidth: 2
     invHeight: 2
-    listOrder: 12130
+    listOrder: 16922
 
   - type: STR_LARGE_ROCKET_ELDAR  # Reaper Rocket
     categories: [STR_CAT_ROCKETL, STR_CAT_ELDAR]
@@ -246,4 +398,5 @@ items:
       FixRadius: 1
     tags:
       DAMAGE_RESIST_PENETRATION_PERCENT: 50
+    listOrder: 16902
 
