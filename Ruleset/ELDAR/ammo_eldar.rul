@@ -12,8 +12,9 @@ items:
       ToStun: 0.2
       ArmorEffectiveness: 0.3
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    #requiresBuy: []  # Already requires the eldar base service
     weight: 5
     #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1
@@ -36,9 +37,10 @@ items:
   - type: STR_RANGER_LONG_RIFLE_MAG #TEMPORARY copied STR_TAU_PULSE_MAG
     categories: [STR_CAT_ELDAR, STR_CAT_SNIPER]
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_RECRUIT_ELDAR_OUTCAST
-    #requiresBuy: []
-    #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.2
     weight: 1 #light weight
     invHeight: 2
@@ -115,7 +117,7 @@ items:
     costSell: 1000
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
-      # Warpspider weapons research
+      - STR_ELDAR_SPIDER_RESEARCH
     requiresBuyBaseFunc: [ELDAROUT]
     requiresBuy: []
     armor: 200
@@ -150,7 +152,7 @@ items:
     costSell: 2000
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
-      # Warpspider Exarch weapons research
+      - STR_ELDAR_SPIDER_EXARCH_RESEARCH
     requiresBuyBaseFunc: [ELDAROUT]
     requiresBuy: []
     armor: 200
@@ -189,9 +191,10 @@ items:
       ToStun: 0.2
       ArmorEffectiveness: 0.3
     requires:
+      - STR_ELDAR_ONLY
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_MIDTIER_PREREQ
-    requiresBuy: []  # Already requires the eldar base service
     weight: 20
     #requiresBuyBaseFunc: [ELDAROUT]
     size: 0.1

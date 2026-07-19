@@ -172,6 +172,18 @@ research:
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
 
+  - name: STR_ELDAR_BANSHEE_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_ELDAR_SPIDER_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+
   - name: STR_FUSION_TECH_RESEARCH
     cost: 10
     points: 0
@@ -184,12 +196,6 @@ research:
     dependencies:
       - STR_RECRUIT_ELDAR_T1
       - STR_MIDTIER_PREREQ
-
-  - name: STR_ELDAR_BANSHEE_RESEARCH
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_ELDAR_PSYKER_RESEARCH
 
   - name: STR_ELDAR_SEER_RESEARCH
     cost: 0
@@ -254,19 +260,26 @@ research:
       - STR_ELDAR_FIREDRAGON_RESEARCH
       - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
 
+  - name: STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_BANSHEE_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
+  - name: STR_ELDAR_SPIDER_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_SPIDER_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
   - name: STR_ELDAR_PSYKER_MASTERY_RESEARCH  # Promotions to exarch psykers
     cost: 1000
     dependencies:
       - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
       - STR_ELDAR_PSYKER_RESEARCH
       - STR_HIGHTIER_PREREQ
-
-  - name: STR_ELDAR_BANSHEE_EXARCH_RESEARCH
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_ELDAR_BANSHEE_RESEARCH
-      - STR_ELDAR_PSYKER_MASTERY_RESEARCH
 
   - name: STR_ELDAR_SEER_EXARCH_RESEARCH
     cost: 0

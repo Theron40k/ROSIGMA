@@ -13,8 +13,9 @@ items:
   - &ELDAR_WEAPON_TEMPLATE
     type: STR_CATAPULT
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    requiresBuy: [] # Already requires the eldar base service
     requiresBuyBaseFunc: []
     weight: 17
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
@@ -48,8 +49,10 @@ items:
 
   - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_RECRUIT_ELDAR_OUTCAST
-    requiresBuy: []
     requiresBuyBaseFunc: []
     weight: 7
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
@@ -106,8 +109,10 @@ items:
 
   - type: STR_RANGER_LONG_RIFLE_SCOPED #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_RECRUIT_ELDAR_OUTCAST
-    requiresBuy: []
     requiresBuyBaseFunc: []
     weight: 7
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
@@ -165,9 +170,10 @@ items:
   - type: STR_SHURIKEN_CANNON             # tentative start, needs fixing
     refNode: *ELDAR_WEAPON_TEMPLATE
     requires:
+      - STR_ELDAR_ONLY
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_MIDTIER_PREREQ
-    requiresBuy: [] # Already requires the eldar base service
     requiresBuyBaseFunc: []
     weight: 50
     categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
@@ -293,8 +299,9 @@ items:
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: []
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    requiresBuy: []  # Already requires the eldar base service
     size: 0.2
     dropoff: 5
     costBuy: 3500
@@ -450,7 +457,7 @@ items:
     categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    # Warpspider weapons research
+      - STR_ELDAR_SPIDER_RESEARCH
     requiresBuyBaseFunc: [ELDAROUT]
     requiresBuy: []
     size: 0.4
@@ -483,7 +490,7 @@ items:
     categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    # Warpspider Exarch weapons research
+      - STR_ELDAR_SPIDER_EXARCH_RESEARCH
     requiresBuyBaseFunc: [ELDAROUT]
     requiresBuy: []
     size: 0.4
@@ -517,9 +524,10 @@ items:
   - delete: STR_ELDAR_GRENADE
   - type: STR_ELDAR_GRENADE  # Eldar Plasma Granade          16320
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_MIDTIER_PREREQ
-    requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: []
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
     weight: 2
@@ -566,10 +574,11 @@ items:
   - delete: STR_ELDAR_MGRENADE
   - type: STR_ELDAR_MGRENADE  # eldar melta grenade         16310
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_MELTAGUN_TECH
       - STR_MIDTIER_PREREQ
-    requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: []
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
     throwRange: 15
@@ -624,8 +633,9 @@ items:
 
   - type: STR_EPOWER_SWORD  # eldar mirrorsword
     requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-    requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: []
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
     battleType: 3
@@ -672,7 +682,7 @@ items:
   - type: STR_ELDAR_POWER_BLADE  # eldar mirrorsword stats, REWORK required
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-      #- SPIDER RESEARCH
+      - STR_ELDAR_SPIDER_RESEARCH
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: []
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
