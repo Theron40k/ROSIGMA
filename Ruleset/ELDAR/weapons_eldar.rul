@@ -204,7 +204,7 @@ items:
     confSnap:
       shots: 4
     experienceTrainingMode: 6
-    listOrder: 16200 # either with reaper/heavy weapons or shuriken
+    listOrder: 16930 # either with reaper/heavy weapons or shuriken
 
   - delete: STR_ELDAR_LAUNCHER
   - &STR_ELDAR_LAUNCHER_REF
@@ -240,7 +240,7 @@ items:
     invWidth: 2
     invHeight: 3
     recover: true
-    listOrder: 12100
+    listOrder: 16900
     costBuy: 15000
     costSell: 4000
 
@@ -250,6 +250,7 @@ items:
     requiresBuyBaseFunc: []
     requires:
       - STR_ELDAR_REAPER_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
     size: 0.4
     dropoff: 5
     weight: 25
@@ -272,6 +273,8 @@ items:
     #snapRange: 20
     #aimRange: 30
     autoRange: 30
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
     battleType: 1
     twoHanded: true
     blockBothHands: true
@@ -279,8 +282,8 @@ items:
     invHeight: 3
     recover: true
     experienceTrainingMode: 6
-    listOrder: 12110
-    costBuy: 15000
+    listOrder: 16920
+    costBuy: 50000
     costSell: 4000
 
   # DEPRECATED
@@ -330,8 +333,87 @@ items:
     tags:
       REACTION_MULTIPLIER: 200
 
+  - type: STR_AELDARI_FLAMER #STR_FLAMETHROWER stats REWORK NEEDED
+    categories: [ STR_CAT_FLAMER, STR_CAT_TACTICAL, STR_CAT_ELDAR]
+    listOrder: 16150
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    size: 0.2
+    costBuy: 8000
+    costSell: 6500
+    weight: 10
+    bigSprite: 4872
+    floorSprite: 4872
+    handSprite: 4826
+    bulletSprite: {mod: 40k, index: 5}
+    fireSound: {mod: 40k, index: 706}
+    compatibleAmmo:
+      - STR_AELDARI_FLAMER_FUEL
+    accuracyAuto: 20
+    tuAuto: 35
+    battleType: 1
+    twoHanded: true
+    experienceTrainingMode: 6
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    maxRange: 9
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 6
+    attraction: 7
+    listOrder: 16150
+
+  - type: STR_DRAGON_BREATH_FLAMER # stats from STR_PURIFIER_FLAMER rework needed (very fun weapon haha)
+    categories: [STR_CAT_ELDAR, STR_CAT_FLAMER]
+    listOrder: 16530
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    costBuy: 50000
+    costSell: 10000
+    battleType: 1
+    weight: 10
+    bigSprite: 4874
+    floorSprite: 4874
+    handSprite: 4834
+    bulletSprite: {mod: 40k, index: 5}
+    fireSound: {mod: 40k, index: 706}
+    compatibleAmmo:
+      - STR_DRAGON_BREATH_FLAMER_FUEL
+    accuracySnap: 70
+    accuracyAuto: 40
+    tuSnap: 20
+    tuAuto: 30
+    snapRange: 12
+    autoRange: 10
+    aimRange: 0
+    confSnap:  # Double Shot
+      shots: 2
+      arcing: true
+    maxRange: 15
+    dropoff: 5
+    twoHanded: true
+    experienceTrainingMode: 6
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    autoShots: 6
+    attraction: 7
+   # tags:
+      #ITEM_DOESNT_HURT_USER: 1 # Temple Assassins are too skilled to shoot themselves. Staying in flames can be bad though.
+
+
   - type: STR_FUSION_GUN                 #STR_ADEPTAS_MELTAGUN_NECRO stats
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
+    listOrder: 16500
     weight: 15
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: []
@@ -371,7 +453,7 @@ items:
     invWidth: 2
     invHeight: 3
     armor: 300
-    listOrder: 16500
+
 
   - type: STR_DRAGON_FUSION_GUN                 #STR_HARMONIC_MELTAGUN stats
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16510
