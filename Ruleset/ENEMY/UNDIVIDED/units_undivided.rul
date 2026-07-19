@@ -1,67 +1,7 @@
 
 units:
 
-  - &CULTIST_RITUALIST
-    type: STR_CULTIST_RITUALIST_SACRIFICES
-    race: STR_SECTOID
-    rank: STR_LIVE_MEDIC
-    stats:
-      tu: 54
-      stamina: 90
-      health: 30
-      bravery: 80
-      reactions: 63
-      firing: 52
-      throwing: 58
-      strength: 30
-      psiStrength: 40
-      psiSkill: 0
-      melee: 76
-    armor: CULTIST_RITUAL_SACRIFICE_ARMOR
-    standHeight: 21
-    kneelHeight: 16
-    value: 14
-    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]
-    intelligence: 5
-    aggression: 1
-    spotter: 1
-    builtInWeaponSets:
-      - - STR_KNIF
-      - - STR_KNIF
-      - - STR_KNIF
-    liveAlien: STR_SECTOID_SOLDIER
 
-  - type: STR_CULTIST_RITUALIST_SUMMONING
-    refNode: *CULTIST_RITUALIST
-    armor: CULTIST_RITUAL_SUMMONING_ARMOR
-
-  - type: STR_CIVILIAN_SACRIFICE_F0
-    race: STR_CIVILIAN
-    stats:
-      tu: 52
-      stamina: 65
-      health: 30
-      bravery: 60
-      reactions: 40
-      firing: 48
-      throwing: 42
-      strength: 18
-      psiStrength: 50
-      psiSkill: 0
-      melee: 36
-    armor: SACRIFICE_F0
-    standHeight: 21
-    kneelHeight: 14
-    value: 10
-    intelligence: 4
-    aggression: 3
-    energyRecovery: 20
-    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
-    builtInWeaponSets:
-      - []
-      - []
-      - - STR_SACRIFICE_FLAMER_SPAWNER
-    capturable: false
 
   - &NEVERBORN_TERRORIST
     type: STR_NEVERBORN_TERRORIST  # CHAOS UNDIVIDED DAEMON NEVERBORN
@@ -988,7 +928,7 @@ units:
         BASIC_CSM_GRAVGUN_LOADOUT: 1
         BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 1
 
-  - type: STR_ETHEREAL_COMMANDER  # Chaos Undivided champion in terminator armor 
+  - type: STR_ETHEREAL_COMMANDER  # Chaos Undivided champion in terminator armor
     race: STR_ETHEREAL
     rank: STR_LIVE_COMMANDER
     stats:
