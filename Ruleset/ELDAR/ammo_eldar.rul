@@ -74,7 +74,8 @@ items:
       # ArmorEffectiveness: 0.9  # some armor penetration
     listOrder: 16620
 
-  - type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
+  - &FUSION_AMMO_TEMPLATE
+    type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_MELTA]
     #requiresBuy: []  # Already requires the eldar base service
     #requiresBuyBaseFunc: [ELDAROUT]
@@ -110,7 +111,33 @@ items:
     invWidth: 1
     invHeight: 2
     armor: 300
-    listOrder: 16520
+    listOrder: 16505
+
+  - type: STR_DRAGON_FUSION_AMMO             # Same stats as fusion ammo needs work tier upgrade
+    refNode: *FUSION_AMMO_TEMPLATE
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: [] # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    bigSprite: 4870
+    floorSprite: 4870
+    handSprite: 4986
+    listOrder: 16515
+
+  - type: STR_FIREPIKE_AMMO             # Maybe unnecessary but gives us an option to better balance firepike
+    refNode: *FUSION_AMMO_TEMPLATE
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+      - STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH
+    requiresBuy: [] # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    bigSprite: 4871
+    floorSprite: 4871
+    handSprite: 4842
+    listOrder: 16525
 
   - type: STR_SPINNER_SPOOL  #STR_RIPPER_GUN_CLIP_AP stats temporary
     costBuy: 6000
