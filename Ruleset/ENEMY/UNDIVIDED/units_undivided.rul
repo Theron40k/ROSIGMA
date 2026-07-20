@@ -1,0 +1,1614 @@
+
+units:
+
+
+
+  - &NEVERBORN_TERRORIST
+    type: STR_NEVERBORN_TERRORIST  # CHAOS UNDIVIDED DAEMON NEVERBORN
+    race: STR_NEVERBORN
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 100
+      health: 120  # less health than Bloodletter
+      bravery: 110  # it's a daemon; it's fearless
+      reactions: 70  # hard to react against
+      firing: 60
+      throwing: 70
+      strength: 70
+      psiStrength: 95
+      psiSkill: 0
+      melee: 80
+    armor: STR_NEVERBORN_TERRORIST_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    deathSound: {mod: 40k, index: 737}  # change?
+    moveSound: -1
+    intelligence: 3
+    aggression: 8
+    berserkChance: 90
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_NEVERBORN_WEAPON
+      - - STR_NEVERBORN_WEAPON
+      - - STR_NEVERBORN_WEAPON
+
+  - type: STR_NEVERBORN_TERRORIST_RECOVERABLE
+    refNode: *NEVERBORN_TERRORIST
+    liveAlien: STR_NEVERBORN_TERRORIST
+    civilianRecoveryType: STR_DAEMON_SOLDIER_NEVERBORN
+    armor: STR_NEVERBORN_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - type: STR_TRAITOR_CHIMERA_TURRET
+    stats:
+      reactions: 10  # was 20
+      firing: 40  # was 50
+
+  - type: STR_CHAOSFURY
+    race: STR_ETHEREAL
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 150
+      stamina: 120
+      health: 80
+      bravery: 110
+      reactions: 100
+      firing: 0
+      throwing: 30
+      strength: 90
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    armor: STR_CHAOSFURY_ARMOR
+    standHeight: 12
+    kneelHeight: 12
+    value: 15
+    spotter: 2
+    deathSound: [{mod: 40k, index: 686}, {mod: 40k, index: 687}]
+    intelligence: 1
+    aggression: 8
+    isLeeroyJenkins: true
+    avoidsFire: false
+    canBeMindControlled: false
+    energyRecovery: 80
+    livingWeapon: true
+    moraleLossWhenKilled: 10
+    builtInWeaponSets:
+      - - STR_GENOCLAWS
+
+  - type: STR_HERETIC_SISTERCANONESS   # CHAOS Heretic Sister of Battle    RANK 1 NO weapons
+    race: STR_ADEPTAS
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 90
+      stamina: 100
+      health: 60
+      bravery: 80
+      reactions: 60
+      firing: 75
+      throwing: 45
+      strength: 45
+      psiStrength: 40
+      psiSkill: 0
+      melee: 55
+    armor: STR_HERETIC_CANONESS_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 125  # leader panic malus
+    value: 30
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 4
+    aggression: 1
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_INFERNO_PISTOL
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_CPOWER_SWORD
+      - - STR_BLASTER_LAUNCHER
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_PHOSPHOR_GRENADE
+      - - STR_STORMBOLTER_DEAZ
+        - STR_CPOWER_SWORD
+        - STR_STORMBOLTER_CLIP
+        - STR_STORMBOLTER_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_HERETIC_SISTERPALATINE   # CHAOS Heretic Sister of Battle    RANK 1 NO weapons
+    race: STR_ADEPTAS
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 80
+      stamina: 90
+      health: 55
+      bravery: 70
+      reactions: 55
+      firing: 70
+      throwing: 45
+      strength: 45
+      psiStrength: 40
+      psiSkill: 0
+      melee: 50
+    armor: STR_ADEPTAS_ARMORREDWHITE
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 110  # leader malus
+    value: 25
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 3
+    aggression: 1
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CPOWER_SWORD
+        - STR_PHOSPHOR_GRENADE
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_MGRENADE
+      - - STR_AUTO_CANNON_POTESTAS
+        - STR_AC_AP_ADEPTAS_BOXAMMO
+        - STR_LIGHT_MELTA_AMMO
+        - STR_LIGHT_MELTA_AMMO
+        - STR_MGRENADE
+
+  - type: STR_HERETIC_SISTER   # CHAOS Heretic Sister of Battle    RANK 5 NO weapons
+    race: STR_ADEPTAS
+    rank: STR_LIVE_SOLDIER
+    civilianRecoveryType: STR_ADEPTAS_CHAOS
+    stats:
+      tu: 60
+      stamina: 75
+      health: 45
+      bravery: 60
+      reactions: 45
+      firing: 55
+      throwing: 40
+      strength: 40
+      psiStrength: 40
+      psiSkill: 0
+      melee: 45
+    armor: STR_ADEPTAS_HERETIC_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 80  # expendable
+    value: 15
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 1
+    aggression: 2
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_KNIF
+        - STR_PHOSPHOR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_BOLTER_CANTUS
+        - STR_CANTUS_BOLTER_AMMO
+        - STR_CANTUS_BOLTER_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTER_HERETIC_DEAZ
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_ADEPTAS_HABORYM
+
+  - type: STR_HERETIC_ELITE_SISTER   # CHAOS Heretic Sister of Battle    RANK 5 NO weapons
+    race: STR_ADEPTAS
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 85
+      health: 55
+      bravery: 70
+      reactions: 50
+      firing: 60
+      throwing: 45
+      strength: 45
+      psiStrength: 50
+      psiSkill: 0
+      melee: 50
+    armor: STR_ADEPTAS_ARMORREDBLACK
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 3
+    spotter: 1
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTER_HERETIC_DEAZ
+        - STR_LIGHT_BOLTER_AMMO_MC
+        - STR_PHOSPHOR_GRENADE
+      - - STR_AUTO_CANNON_CHAOSRETRIBUTOR
+        - STR_AC_HE_AMMO
+        - STR_AC_I_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_LASCAN_MALTHUS
+        - STR_LASCANNON_CLIP_MALTHUS
+        - STR_LASCANNON_CLIP_MALTHUS
+        - STR_HIGH_EXPLOSIVE
+
+  - type: STR_HERETIC_SISTERHOSPITALLER   # CHAOS Heretic Sister of Battle    RANK 5 NO weapons
+    race: STR_ADEPTAS
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 70
+      stamina: 80
+      health: 55
+      bravery: 70
+      reactions: 40
+      firing: 55
+      throwing: 40
+      strength: 40
+      psiStrength: 45
+      psiSkill: 0
+      melee: 45
+    armor: STR_ADEPTAS_HERETIC_HOSPITALLER_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 110  # medic death malus
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+      - - STR_BOLTER_HERETIC_DEAZ
+        - STR_LIGHT_BOLTER_AMMO_MC
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTER_ELOHIM
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_LIGHT_BOLTER_AMMO_AP
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_HERETIC_SISTER_SERAPH    # HERETIC Heretic Sister of Battle    RANK 5 NO weapons
+    race: STR_ADEPTAS
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 80
+      stamina: 80
+      health: 40
+      bravery: 70
+      reactions: 50
+      firing: 55
+      throwing: 40
+      strength: 40
+      psiStrength: 40
+      psiSkill: 0
+      melee: 55
+    armor: STR_HERETIC_SERAPHIM_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 1
+    aggression: 4
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_SERAPHIM
+        - STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO
+        - STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO
+        - STR_PHOSPHOR_GRENADE
+        - STR_KRAK_GRENADE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTPISTOL_SERAPHIM
+        - STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO
+        - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
+        - STR_BOLTPISTOL_SERAPHIM
+        - STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO
+        - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
+        - STR_MGRENADE
+      - - STR_BOLTPISTOL_SERAPHIM
+        - STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO
+        - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
+        - STR_ADEPTAS_PANZERFAUST
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_HAVOC  # CHAOS MUTON_ARMORHAVOC                        RANK 4 Navigator weapons done          aggroSound
+    race: STR_ETHEREAL
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 68
+      stamina: 96
+      health: 90
+      bravery: 100
+      reactions: 65
+      firing: 70
+      throwing: 80
+      strength: 80
+      psiStrength: 50
+      psiSkill: 1
+      melee: 85
+    armor: MUTON_ARMORHAVOC
+    standHeight: 20
+    kneelHeight: 15
+    value: 25
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    sniper: 50
+    energyRecovery: 40
+    livingWeapon: false
+    psiWeapon: STR_NONE
+    builtInWeaponSets:
+      - - STR_ALIEN_GRENADE
+      - - STR_ALIEN_GRENADE
+      - - STR_ALIEN_GRENADE
+
+  - type: STR_BLACKLEG_CATAPHRACT  # these are basically the best of the best among Chaos forces
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 75
+      stamina: 180
+      health: 180
+      bravery: 110
+      reactions: 65  #
+      firing: 110
+      throwing: 90
+      strength: 190
+      psiStrength: 110
+      psiSkill: 0
+      melee: 110
+    armor: STR_BLACKLEGcataphract_ARMOR
+    aggroSound: {mod: 40k, index: 805}
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    avoidsFire: false  # doesn't really care
+    intelligence: 5
+    aggression: 8
+    spotter: 2
+    sniper: 90
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets: #long range focused
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 30
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_IW_AUTOCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+        TERMINATOR_ASSAULTCANNON: 5
+      -  # Tier 2
+        TERMINATOR_IW_AUTOCANNON: 40
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 5
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_HEAVYPLASMA: 10
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 30
+        TERMINATOR_IW_AUTOCANNON: 30
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_ASSAULTCANNON: 5
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+
+  - type: STR_BLACKLEG_SATURNINE  # these are basically the best of the best among Chaos forces
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 60
+      stamina: 180
+      health: 200
+      bravery: 110
+      reactions: 50
+      firing: 110
+      throwing: 90
+      strength: 200
+      psiStrength: 110
+      psiSkill: 0
+      melee: 110
+    armor: STR_BLACKLEGsaturn_ARMOR
+    aggroSound: {mod: 40k, index: 805}
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    avoidsFire: false  # doesn't really care
+    intelligence: 5
+    aggression: 8
+    spotter: 2
+    sniper: 90
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets: #long range focused
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 30
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_IW_AUTOCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+        TERMINATOR_ASSAULTCANNON: 5
+      -  # Tier 2
+        TERMINATOR_IW_AUTOCANNON: 40
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 5
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_HEAVYPLASMA: 10
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 30
+        TERMINATOR_IW_AUTOCANNON: 30
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_ASSAULTCANNON: 5
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+
+  - type: STR_OBLITERATOR_COMMANDER  # OBLITERATOR COMMANDER
+    race: STR_OBLITERATOR
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 58
+      stamina: 96
+      health: 160
+      bravery: 110
+      reactions: 45
+      firing: 110  # it's an elite obliterator; it should be stated like one
+      throwing: 0
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 85
+    armor: MUTON_ARMOR5
+    intelligence: 4
+    aggression: 2
+    moraleLossWhenKilled: 125  # leader malus
+    spotter: 2
+    sniper: 90
+    value: 40
+    livingWeapon: true
+    energyRecovery: 60
+    weightedBuiltInWeaponSets:
+      -
+        CHAOS_PLASMA_PISTOL_AND_BLIGHT_GRENADE_SET: 30
+        CHAOS_GRAVGUN_AOE_SET: 4
+        TERMINATOR_IW_AUTOCANNON: 50
+
+  - type: STR_OBLITERATOR_SOLDIER  # OBLITERATOR                  weapons done
+    race: STR_OBLITERATOR
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 58
+      stamina: 96
+      health: 140
+      bravery: 100
+      reactions: 35
+      firing: 76
+      throwing: 0
+      strength: 200
+      psiStrength: 80
+      psiSkill: 0
+      melee: 85
+    armor: OBLITERATOR_ARMOR
+    intelligence: 2
+    aggression: 2
+    spotter: 1
+    sniper: 75
+    value: 30
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_OBLITERATOR_WEAPON
+        - STR_OBLITERATOR_MELEE_WEAPON
+      - - STR_OBLITERATOR_WEAPON
+        - STR_OBLITERATOR_MELEE_WEAPON
+      - - STR_OBLITERATOR_WEAPON
+        - STR_OBLITERATOR_MELEE_WEAPON
+
+  - type: STR_SECTOPOD2_TERRORIST  # UNDIVIDED DREADNOUGHT
+    race: STR_SECTOPOD2
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 200
+      health: 300
+      bravery: 110
+      reactions: 64
+      firing: 100
+      throwing: 0
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    armor: SECTOPOD_ARMOR2
+    intelligence: 2
+    aggression: 8
+    moraleLossWhenKilled: 110  # dread malus
+    canPanic: false
+    value: 50
+    sniper: 75
+    spotter: 1
+    canBeMindControlled: false
+    energyRecovery: 200  # infatiguable
+    moveSound: {mod: 40k, index: 700}
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      - STANDARD_DREADNOUGHT_MISSILE_LAUNCHER_AND_MELEE: 50
+        STANDARD_DREADNOUGHT_HEAVY_FLAMER_AND_MISSILE_LAUNCHER: 20
+        STANDARD_DREADNOUGHT_MULTIMELTA_AND_MISSILE_LAUNCHER: 10
+        STANDARD_DREADNOUGHT_LASCANNON_AND_MISSILE_LAUNCHER: 10
+        STANDARD_DREADNOUGHT_AUTOCANNON_AND_MISSILE_LAUNCHER: 5
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MISSILE_LAUNCHER: 5
+      - STANDARD_DREADNOUGHT_MISSILE_LAUNCHER_AND_MELEE: 10
+        STANDARD_DREADNOUGHT_HEAVY_FLAMER_AND_MISSILE_LAUNCHER: 30
+        STANDARD_DREADNOUGHT_MULTIMELTA_AND_MISSILE_LAUNCHER: 20
+        STANDARD_DREADNOUGHT_LASCANNON_AND_MISSILE_LAUNCHER: 20
+        STANDARD_DREADNOUGHT_AUTOCANNON_AND_MISSILE_LAUNCHER: 10
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MISSILE_LAUNCHER: 10
+      - STANDARD_DREADNOUGHT_HEAVY_FLAMER_AND_MISSILE_LAUNCHER: 12
+        STANDARD_DREADNOUGHT_MULTIMELTA_AND_MISSILE_LAUNCHER: 22
+        STANDARD_DREADNOUGHT_LASCANNON_AND_MISSILE_LAUNCHER: 22
+        STANDARD_DREADNOUGHT_AUTOCANNON_AND_MISSILE_LAUNCHER: 22
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MISSILE_LAUNCHER: 22
+
+  - type: STR_SECTOPOD_TERRORIST  # UNDIVIDED DREADNOUGHT
+    race: STR_SECTOPOD
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 200
+      health: 300
+      bravery: 110
+      reactions: 64
+      firing: 100
+      throwing: 0
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    armor: SECTOPOD_ARMOR
+    intelligence: 2
+    aggression: 8
+    energyRecovery: 200
+    canPanic: false
+    value: 50
+    sniper: 75
+    spotter: 1
+    canBeMindControlled: false
+    moraleLossWhenKilled: 110  # dread malus
+    moveSound: {mod: 40k, index: 700}
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MELEE: 50
+        STANDARD_DREADNOUGHT_HEAVY_FLAMER_AND_HEAVY_PLASMA: 20
+        STANDARD_DREADNOUGHT_LASCANNON_AND_HEAVY_PLASMA: 10
+        STANDARD_DREADNOUGHT_AUTOCANNON_AND_HEAVY_PLASMA: 10
+        STANDARD_DREADNOUGHT_MULTIMELTA_AND_HEAVY_PLASMA: 5
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MISSILE_LAUNCHER: 5
+      -  # Tier 2
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MELEE: 10
+        STANDARD_DREADNOUGHT_HEAVY_FLAMER_AND_HEAVY_PLASMA: 30
+        STANDARD_DREADNOUGHT_MULTIMELTA_AND_HEAVY_PLASMA: 20
+        STANDARD_DREADNOUGHT_LASCANNON_AND_HEAVY_PLASMA: 20
+        STANDARD_DREADNOUGHT_AUTOCANNON_AND_HEAVY_PLASMA: 10
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MISSILE_LAUNCHER: 10
+      -  # Tier 3
+        STANDARD_DREADNOUGHT_HEAVY_FLAMER_AND_HEAVY_PLASMA: 12
+        STANDARD_DREADNOUGHT_MULTIMELTA_AND_HEAVY_PLASMA: 22
+        STANDARD_DREADNOUGHT_LASCANNON_AND_HEAVY_PLASMA: 22
+        STANDARD_DREADNOUGHT_AUTOCANNON_AND_HEAVY_PLASMA: 22
+        STANDARD_DREADNOUGHT_HEAVY_PLASMA_AND_MISSILE_LAUNCHER: 22
+
+  - type: STR_MUTON_SOLDIER  # Chaos Undivided Terminator
+    race: STR_MUTON
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 100
+      health: 110
+      bravery: 110
+      reactions: 70
+      firing: 90
+      throwing: 80
+      strength: 150
+      psiStrength: 75
+      psiSkill: 0
+      melee: 90
+    armor: STR_MUTON_ARMOR2
+    avoidsFire: false
+    intelligence: 4
+    aggression: 8
+    berserkChance: 75
+    spotter: 1
+    sniper: 75
+    value: 25
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHB
+        - STR_CHAOS_CLAWS2
+        - STR_HB_CLIP
+        - STR_HB_CLIP
+      - - STR_CHB
+        - STR_CHAOS_CLAWS2
+        - STR_HB_CLIP
+        - STR_HB_CLIP
+        - STR_MGRENADE
+      - - STR_CHB
+        - STR_CHAOS_CLAWS2
+        - STR_HB_CLIP_MC
+        - STR_HB_CLIP
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_MUTON_SOLDIER_NW  # Chaos Undivided Terminator w reaperautocannon
+    race: STR_MUTON
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 100
+      health: 110
+      bravery: 110
+      reactions: 70
+      firing: 90
+      throwing: 80
+      strength: 150
+      psiStrength: 75
+      psiSkill: 0
+      melee: 90
+    armor: STR_MUTON_ARMOR2
+    avoidsFire: false
+    intelligence: 4  # terminators; these are elite CSM
+    aggression: 2
+    berserkChance: 75
+    spotter: 1
+    sniper: 75
+    value: 25
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHB
+        - STR_HB_CLIP
+        - STR_HB_CLIP
+      - - STR_CASSC
+        - STR_AUTOCANNON_BOX_AMMO
+        - STR_AUTOCANNON_BOX_AMMO
+        - STR_MGRENADE
+      - - STR_CASSC
+        - STR_AUTOCANNON_AP_AMMO
+        - STR_AUTOCANNON_AP_AMMO
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+  - type: STR_MUTON_NAVIGATOR  # Chaos Undivided Marine
+    race: STR_MUTON
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 65
+      stamina: 90
+      health: 90
+      bravery: 100
+      reactions: 70
+      firing: 80
+      throwing: 62
+      strength: 60
+      psiStrength: 70
+      psiSkill: 0
+      melee: 76
+    armor: MUTON_ARMOR3
+    intelligence: 3
+    aggression: 2
+    berserkChance: 75
+    spotter: 2
+    sniper: 75
+    value: 28
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTERC
+        - STR_RIFLE_CLIP
+        - STR_RIFLE_CLIP
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_ALIEN_GRENADE
+
+  - type: STR_ETHEREAL_SOLDIER # Chaos Undivided Marine w horned helmet
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 100
+      health: 100
+      bravery: 100
+      reactions: 80
+      firing: 80
+      throwing: 80
+      strength: 80
+      psiStrength: 70
+      psiSkill: 1  # if set to 0, will inherit values from X-Com
+      melee: 80
+    armor: STR_MUTON_ARMOR0
+    aggroSound: {mod: 40k, index: 805}
+    intelligence: 4
+    aggression: 1
+    berserkChance: 70
+    value: 28
+    spotter: 1
+    sniper: 50
+    energyRecovery: 60
+    livingWeapon: true
+    psiWeapon: STR_NONE
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 45
+        BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT: 10
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_MELTAGUN_LOADOUT: 5
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 5
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 3
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 2
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 3
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 2
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 20
+        BASIC_CSM_MELTAGUN_LOADOUT: 10
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT: 3
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 3
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 3
+        BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT: 2
+        BASIC_CSM_MELTAGUN_LOADOUT: 10
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+
+  - type: STR_ETHEREAL_LEADER  # Chaos Undivided Sorceror
+    race: STR_ETHEREAL
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 68
+      stamina: 96
+      health: 110
+      bravery: 110
+      reactions: 75
+      firing: 80
+      throwing: 80
+      strength: 80
+      psiStrength: 98  # chaos god sacred numbers; chaos undivided
+      psiSkill: 76  # chaos god sacred numbers; chaos undivided
+      melee: 85
+    armor: STR_MUTON_ARMOR1
+    intelligence: 5
+    aggression: 1
+    canBeMindControlled: false
+    moraleLossWhenKilled: 120  # leader malus
+    spotter: 2
+    sniper: 90
+    value: 35
+    berserkChance: 75
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOS_CROZIUS
+        - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_ALIEN_GRENADE
+        - STR_PINKHORRORSPAWNER_GRENADE
+      - - STR_CHAOS_CROZIUS
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL
+        - STR_PLAGUEBEARERSPAWNER_GRENADE
+        - STR_PINKHORRORSPAWNER_GRENADE
+      - - STR_CHAOS_CROZIUS
+        - STR_DOOM_BOLTS
+        - STR_DAEMONETTESPAWNER_GRENADE
+        - STR_BLOODLETTERSPAWNER_GRENADE
+        - STR_PLAGUEBEARERSPAWNER_GRENADE
+        - STR_PINKHORRORSPAWNER_GRENADE
+
+  - type: STR_BLACK_LEGION_CSM_SOLDIER  # Black Legion ELITE CSM LATE GAME TIER5
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 85
+      stamina: 110
+      health: 150
+      bravery: 100
+      reactions: 85
+      firing: 85
+      throwing: 90
+      strength: 75
+      psiStrength: 80
+      psiSkill: 0
+      melee: 95
+    armor: STR_BLACK_LEGION_CSM_ARMOR
+    aggroSound: {mod: 40k, index: 805}
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    standHeight: 21
+    kneelHeight: 16
+    intelligence: 3
+    aggression: 2
+    berserkChance: 90
+    sniper: 50
+    spotter: 3
+    value: 32
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 25
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 20
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 1
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 5
+        BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 2
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 25
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 2
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 5
+        BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 5
+      -  # Tier 3
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 40
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 20
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 1
+        BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 2
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_LOADOUT: 1
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 1
+
+  - type: STR_ETHEREAL_COMMANDER  # Chaos Undivided champion in terminator armor
+    race: STR_ETHEREAL
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 106
+      stamina: 157
+      health: 157
+      bravery: 110
+      reactions: 116
+      firing: 119
+      throwing: 109
+      strength: 170
+      psiStrength: 90
+      psiSkill: 70
+      melee: 118
+    armor: MUTON_ARMOR5
+    intelligence: 5
+    aggression: 8
+    berserkChance: 90
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 125  # leader malus
+    spotter: 4
+    sniper: 90
+    value: 40
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 30
+        TERMINATOR_HEAVYFLAMER: 30
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_LASCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+        TERMINATOR_IW_AUTOCANNON: 5
+      -  # Tier 2
+        TERMINATOR_ASSAULTCANNON: 30
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_IW_AUTOCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 10
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 30
+        TERMINATOR_IW_AUTOCANNON: 20
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+
+  - type: STR_CHAOS_MARINE_LEADER  # Bald Armor Undivided CSM Champion
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 90
+      stamina: 90
+      health: 110
+      bravery: 110
+      reactions: 90
+      firing: 90
+      throwing: 90
+      strength: 90
+      psiStrength: 70
+      psiSkill: 0
+      melee: 90
+    armor: STR_CHAOS_MARINE_LEADER_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 30
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 4
+    aggression: 2
+    spotter: 2
+    energyRecovery: 40
+    berserkChance: 70
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_AXE
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CPOWER_SWORD
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CHAOS_CLAWS
+        - STR_MGRENADE
+        - STR_MGRENADE
+
+
+  - type: STR_ETHEREAL_SOLDIER_NW  # Chaos Undivided Marine w horned helmet & different loadout
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 100
+      health: 100
+      bravery: 100
+      reactions: 80
+      firing: 80
+      throwing: 80
+      strength: 80
+      psiStrength: 70
+      psiSkill: 1  # if set to 0, will inherit values from X-Com
+      melee: 80
+    armor: STR_MUTON_ARMOR0
+    aggroSound: {mod: 40k, index: 806}
+    intelligence: 4
+    aggression: 1
+    berserkChance: 70
+    spotter: 1
+    value: 28
+    sniper: 75
+    energyRecovery: 60
+    livingWeapon: true
+    psiWeapon: STR_NONE
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 20
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 20
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 5
+        BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 3
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 1
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 2
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 10
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 5
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 2
+        BASIC_CSM_GRAVGUN_LOADOUT: 2
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 10
+      -  # Tier 3
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 20
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 15
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT: 2
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 5
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 2
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 3
+        BASIC_CSM_GRAVGUN_LOADOUT: 1
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 25
+
+  - type: STR_MUTON_ENGINEER  # Chaos Undivided Terminator w gravgun
+    race: STR_MUTON
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 65
+      stamina: 90
+      health: 110
+      bravery: 110
+      reactions: 65
+      firing: 75
+      throwing: 70
+      strength: 120
+      psiStrength: 70
+      psiSkill: 0
+      melee: 76
+    armor: MUTON_ARMOR4
+    intelligence: 2
+    aggression: 2
+    berserkChance: 75
+    value: 30
+    spotter: 1
+    sniper: 33
+    energyRecovery: 40
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      -
+        CHAOS_GRAVGUN_SET: 2
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 60
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 30
+
+  - type: STR_FLOATER_SOLDIER     #CSM Raptor
+    race: STR_FLOATER
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 120
+      stamina: 90
+      health: 80
+      bravery: 100
+      reactions: 65
+      firing: 60
+      throwing: 62
+      strength: 60
+      psiStrength: 25
+      psiSkill: 0
+      melee: 76
+    armor: STR_FLOATER_ARMOR0
+    intelligence: 2
+    aggression: 2
+    berserkChance: 75
+    spotter: 1
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_AXE
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_AXE
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_CARBINE_CHAOS
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_AXE
+        - STR_ALIEN_GRENADE
+
+  - type: STR_FLOATER_ENGINEER     #CSM Raptor
+    race: STR_FLOATER
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 120
+      stamina: 90
+      health: 80
+      bravery: 100
+      reactions: 65
+      firing: 65
+      throwing: 62
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 76
+    armor: STR_FLOATER_ARMOR0
+    intelligence: 2
+    aggression: 2
+    berserkChance: 80
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      -
+        CHAOS_BOLTPISTOL_AND_GRENADE_SET: 40
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 50
+        CHAOS_GRAVGUN_SET: 2
+
+
+  - type: STR_FLOATER_NAVIGATOR     #CSM Raptor
+    race: STR_FLOATER
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 120
+      stamina: 90
+      health: 80
+      bravery: 100
+      reactions: 65
+      firing: 65
+      throwing: 62
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 76
+    armor: STR_FLOATER_ARMOR0
+    intelligence: 2
+    aggression: 2
+    berserkChance: 70
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_ALIEN_GRENADE
+        - STR_MGRENADE
+      - - STR_CHAOSHARMONIC_MELTAGUN
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_ALIEN_GRENADE
+
+  - type: STR_FLOATER_MEDIC
+    race: STR_FLOATER
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 120
+      stamina: 90
+      health: 90
+      bravery: 100
+      reactions: 60
+      firing: 65
+      throwing: 62
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 76
+    armor: STR_FLOATER_ARMOR0
+    intelligence: 2
+    aggression: 2
+    berserkChance: 65
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      -
+        CHAOS_BOLTPISTOL_AND_GRENADE_SET: 40
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 50
+        CHAOS_GRAVGUN_SET: 2
+
+  - type: STR_FLOATER_LEADER     #CSM Raptor
+    race: STR_FLOATER
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 120
+      stamina: 90
+      health: 95
+      bravery: 110
+      reactions: 60
+      firing: 65
+      throwing: 62
+      strength: 80
+      psiStrength: 50
+      psiSkill: 0
+      melee: 76
+    armor: FLOATER_ARMOR2
+    intelligence: 3
+    aggression: 2
+    berserkChance: 75
+    spotter: 1
+    livingWeapon: true
+    energyRecovery: 40
+    builtInWeaponSets:
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_ALIEN_GRENADE
+        - STR_MGRENADE
+      - - STR_CHAOSHARMONIC_MELTAGUN
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_CARBINE_CHAOS
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PLASMA_SPRAY_CLIP
+
+  - type: STR_FLOATER_COMMANDER     #CSM Raptor
+    race: STR_FLOATER
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 120
+      stamina: 90
+      health: 110
+      bravery: 110
+      reactions: 90  # raptor commander; this should be very high
+      firing: 90
+      throwing: 65
+      strength: 80
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: FLOATER_ARMOR2
+    intelligence: 5  # commander
+    aggression: 8
+    canPanic: false
+    canBeMindControlled: false
+    berserkChance: 75
+    spotter: 2
+    livingWeapon: true
+    energyRecovery: 40
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_AXE
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_AXE
+        - STR_MGRENADE
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_AXE
+        - STR_MGRENADE
+
+  - type: STR_TRAITOR_SQUATS  # CHORF
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 40
+      stamina: 95
+      health: 80
+      bravery: 90
+      reactions: 50
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_TRAITOR_SQUATS_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    moraleLossWhenKilled: 75
+    intelligence: 2
+    aggression: 2
+    value: 16
+    spotter: 2
+    sniper: 25
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_ALIEN_GRENADE
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_HELLGUN
+        - STR_ALIEN_GRENADE
+
+  - type: STR_TRAITOR_SQUATS_HEAVY  # CHORF
+    race: STR_SNAKEMAN
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 40
+      stamina: 95
+      health: 80
+      bravery: 90
+      reactions: 55
+      firing: 65
+      throwing: 50
+      strength: 55
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_TRAITOR_SQUATS_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    intelligence: 2
+    aggression: 2
+    spotter: 2
+    value: 20
+    sniper: 75  # artillery
+    energyRecovery: 50
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      -
+        CHAOS_MORTAR_HEAVY_SET: 70
+        CHAOS_GRAVGUN_AOE_AND_KRAK_GRENADE_SET: 4
+        CHAOS_GRAVGUN_SET: 2
+
+  - type: STR_CHAOS_SQUATS  # CHORF
+    race: STR_CHAOS_SQUATS
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 40
+      stamina: 100
+      health: 90
+      bravery: 100
+      reactions: 55
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_CHAOS_SQUATS_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    intelligence: 3
+    aggression: 2
+    value: 25
+    spotter: 2
+    sniper: 25
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+      - - STR_LASER_RIFLEC
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_VOLLEYGUN
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_HELLGUN
+        - STR_ALIEN_GRENADE
+
+  - type: STR_CHAOS_SQUATS_RANGER  # CHORF
+    race: STR_CHAOS_SQUATS
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 50
+      stamina: 100
+      health: 90
+      bravery: 100
+      reactions: 60
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_CHAOS_SQUATS_ARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    intelligence: 3
+    aggression: 2
+    value: 25
+    spotter: 2
+    sniper: 25
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LONGLAS_CHAOS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_HELLGUN
+      - - STR_LONGLAS_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_LASCANNON_HANDHELD
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_MGRENADE
+
+  - type: STR_CHAOS_SQUATS_HEAVY  # CHORF
+    race: STR_CHAOS_SQUATS
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 40
+      stamina: 100
+      health: 100
+      bravery: 100
+      reactions: 50
+      firing: 70
+      throwing: 55
+      strength: 55
+      psiStrength: 90
+      psiSkill: 0
+      melee: 60
+    armor: STR_CHAOS_SQUATS_ARMOR_HEAVY
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    intelligence: 3
+    aggression: 2
+    value: 25
+    spotter: 2
+    sniper: 50
+    energyRecovery: 50
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      -
+        CHAOS_VOLLEYGUN_SET: 50
+        CHAOS_HARMONIC_MELTAGUN_SET: 40
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+
+  - type: STR_CHAOS_SQUATS_EXO  # CHORF
+    race: STR_CHAOS_SQUATS
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 60
+      stamina: 110
+      health: 110
+      bravery: 110
+      reactions: 60
+      firing: 65
+      throwing: 60
+      strength: 80
+      psiStrength: 95
+      psiSkill: 0
+      melee: 70
+    armor: STR_CHAOS_SQUATS_EXOARMOR
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    canPanic: false
+    canBeMindControlled: false
+    berserkChance: 90
+    intelligence: 3
+    value: 30
+    aggression: 2
+    spotter: 1
+    sniper: 25
+    energyRecovery: 40
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      -
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2
+        CHAOS_COMBIBOLTER_SIMPLE_SET: 50
+        CHAOS_ASSAULTCANNON_SIMPLE_SET: 40
+
+  - type: STR_CHAOS_SQUATS_LEADER  # CHORF
+    race: STR_CHAOS_SQUATS
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 60
+      stamina: 110
+      health: 110
+      bravery: 110
+      reactions: 60
+      firing: 70
+      throwing: 60
+      strength: 60
+      psiStrength: 95
+      psiSkill: 0
+      melee: 70
+    armor: STR_CHAOS_SQUATS_ARMOR_LEADER
+    standHeight: 16
+    kneelHeight: 12
+    deathSound: [{mod: 40k, index: 733}, {mod: 40k, index: 734}, {mod: 40k, index: 735}, {mod: 40k, index: 736}]  # [2150, 2151, 2152, 2153]
+    moveSound: -1
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 110
+    intelligence: 3
+    value: 28
+    aggression: 2
+    spotter: 2
+    sniper: 50
+    energyRecovery: 50
+    livingWeapon: true
+    weightedBuiltInWeaponSets:
+      -
+        CHAOS_MULTIMELTA_SET: 40
+        CHAOS_HARMONIC_MELTAGUN_SET: 40
+        BASIC_CSM_GRAVGUN_AOE_LOADOUT: 2

@@ -1,0 +1,849 @@
+units:
+
+  - type: STR_ALPHA_CATAPHRACT
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 170
+      health: 170
+      bravery: 110
+      reactions: 60  #
+      firing: 110
+      throwing: 80
+      strength: 180
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    armor: STR_ALPHAcataphract_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 5  # elite alpha legion
+    aggression: 1
+    spotter: 4  # AL has high spotting
+    sniper: 90  # sniping Cataphract
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets: #long range focused
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 25
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_IW_AUTOCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+        TERMINATOR_ASSAULTCANNON: 3
+        TERMINATOR_ASSAULTCANNON_HE: 2
+      -  # Tier 2
+        TERMINATOR_IW_AUTOCANNON: 40
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 3
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_HEAVYPLASMA: 10
+        TERMINATOR_ASSAULTCANNON_HE: 2
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 20
+        TERMINATOR_IW_AUTOCANNON: 40
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_ASSAULTCANNON: 4
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+        TERMINATOR_ASSAULTCANNON_HE: 1
+
+  - type: STR_ALPHA_SOLDIER  # Alpha Legionnaire; Long Range
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 96
+      health: 90
+      bravery: 100
+      reactions: 85
+      firing: 100
+      throwing: 80
+      strength: 80
+      psiStrength: 70
+      psiSkill: 0
+      melee: 75
+    armor: STR_ALPHA_ARMOR
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 4
+    aggression: 1  # longer range
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 75  # longer range
+    energyRecovery: 60
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    value: 25
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 40
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 15
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 3
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 2
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 25
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 15
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 5
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 5
+      -  # Tier 3
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 35
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 20
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 3
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 1
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 1
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+
+  - type: STR_ALPHA_SOLDIER_CORVUS  # Alpha Legionnaire BEAKIE; Assault/CQC
+    race: STR_ETHEREAL
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 80
+      stamina: 96
+      health: 90
+      bravery: 100
+      reactions: 90
+      firing: 80
+      throwing: 80
+      strength: 80
+      psiStrength: 70
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHA_CORVUS_ARMOR
+    aggroSound: {mod: 40k, index: 457}  # Praise the Emperor female version
+    intelligence: 4
+    aggression: 8  # CQC
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 50
+    energyRecovery: 60
+    deathSound: [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]
+    value: 25
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PISTOLS
+        - STR_CHAOS_CLAWS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_ALIEN_GRENADE
+      - - STR_PISTOLH
+        - STR_CHAOS_CLAWS
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
+        - STR_ALIEN_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_PLASMA_PISTOL  # Chaos Plasma Pistol
+        - STR_CHAOS_CLAWS
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_MGRENADE
+
+  - type: STR_ALPHACSM_OFFICER  # Alpha Legionnaire officer
+    race: STR_ETHEREAL
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 90
+      stamina: 100
+      health: 110
+      bravery: 110
+      reactions: 90
+      firing: 110
+      throwing: 90
+      strength: 90
+      psiStrength: 80
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHAOFF_ARMOR
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 5
+    aggression: 1
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 90  # longer range
+    energyRecovery: 60
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    value: 25
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 40
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 5
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 5
+        ALPHA_LEGION_CQC_TIGRUS_DAGGER: 3
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 2
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 25
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 20
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+        ALPHA_LEGION_CQC_TIGRUS_DAGGER: 5
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 5
+      -  # Tier 3
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 40
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 25
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 20
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 5
+        BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT: 2
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 2
+        ALPHA_LEGION_CQC_TIGRUS_DAGGER: 3
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 3
+
+  - type: STR_ALPHA_TERMINATOR
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90  # higher movement than normal terminators
+      stamina: 100
+      health: 100  # lower toughness than normal terminators to compensate for stealth/Dodge
+      bravery: 110
+      reactions: 70
+      firing: 100
+      throwing: 80
+      strength: 160
+      psiStrength: 76
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHAterminator_ARMOR
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    avoidsFire: false  # doesn't really care
+    intelligence: 4  # elite
+    aggression: 8
+    spotter: 4
+    sniper: 90
+    canPanic: false
+    value: 30
+    canBeMindControlled: false
+    berserkChance: 90
+    energyRecovery: 80
+    livingWeapon: true
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets: #long range focused
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 30
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_IW_AUTOCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+        TERMINATOR_ASSAULTCANNON: 5
+      -  # Tier 2
+        TERMINATOR_IW_AUTOCANNON: 40
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 5
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_HEAVYPLASMA: 10
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 30
+        TERMINATOR_IW_AUTOCANNON: 30
+        TERMINATOR_LASCANNON: 30
+        TERMINATOR_ASSAULTCANNON: 5
+        TERMINATOR_MULTIMELTA: 5
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+
+
+  - type: STR_ALPHA_SOLDIER_POSSESSED  # Alpha Legionnaire; Long Range; this one is possessed: AL terror unit
+    race: STR_ETHEREAL
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 100
+      stamina: 100
+      health: 100
+      bravery: 110
+      reactions: 80
+      firing: 100
+      throwing: 80
+      strength: 100  # possessed
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    armor: STR_ALPHA_ARMOR_POSSESSED
+    spawnUnit: STR_NEVERBORN_TERRORIST
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 4
+    aggression: 8  # possessed
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 75  # longer range
+    energyRecovery: 100
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    value: 25
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 40
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 15
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 3
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 2
+      -  # Tier 2
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 25
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 15
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 5
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 5
+      -  # Tier 3
+        BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT: 35
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 20
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 3
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 1
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 1
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 5
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+
+  - type: STR_ALPHA_SOLDIER_CORVUS_POSSESSED  # Alpha Legionnaire BEAKIE; Assault/CQC; this one is possessed: AL terror unit
+    race: STR_ETHEREAL
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 100
+      stamina: 100
+      health: 100
+      bravery: 110
+      reactions: 80
+      firing: 90
+      throwing: 80
+      strength: 100  # possessed
+      psiStrength: 100
+      psiSkill: 0
+      melee: 110
+    armor: STR_ALPHA_ARMOR_CORVUS_POSSESSED
+    spawnUnit: STR_NEVERBORN_TERRORIST
+    aggroSound: {mod: 40k, index: 457}  # Praise the Emperor female version
+    intelligence: 4
+    aggression: 8  # CQC
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 50
+    energyRecovery: 60
+    deathSound: [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]
+    value: 25
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        ALPHA_LEGION_CQC_BOLTPISTOL_AXE: 40
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 30
+        ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 10
+        ALPHA_LEGION_CQC_PLASMAPISTOL_PDAGGER: 10
+        ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 5
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 1
+      -  # Tier 2
+        ALPHA_LEGION_CQC_BOLTPISTOL_AXE: 10
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 10
+        ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 30
+        ALPHA_LEGION_CQC_PLASMAPISTOL_PDAGGER: 20
+        ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 10
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 3
+      -  # Tier 3
+        ALPHA_LEGION_CQC_BOLTPISTOL_AXE: 5
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 5
+        ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 15
+        ALPHA_LEGION_CQC_PLASMAPISTOL_PDAGGER: 20
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 5
+        ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 30
+
+  - type: STR_ALPHA_SOLDIER_INFILTRATOR  # Alpha Legionnaire; Long Range; for amongus/infiltrator spawning
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 96
+      health: 90
+      bravery: 100
+      reactions: 85
+      firing: 100
+      throwing: 80
+      strength: 80
+      psiStrength: 70
+      psiSkill: 0
+      melee: 80
+    armor: STR_ALPHA_ARMOR
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 4
+    aggression: 8  # engaged
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 75  # longer range
+    energyRecovery: 60
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    value: 0  # to minimize farming
+    livingWeapon: true
+    builtInWeaponSets: [] # one set because spawn loadouts don't vary with tech level
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 20
+        ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 20
+        ALPHA_LEGION_CQC_TIGRUS_DAGGER: 15
+        ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 15
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 15
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 3
+
+  - type: STR_ALPHA_SOLDIER_CORVUS_INFILTRATOR  # Alpha Legionnaire BEAKIE; Assault/CQC; for amongus/infiltrator spawning
+    race: STR_ETHEREAL
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 80
+      stamina: 96
+      health: 90
+      bravery: 100
+      reactions: 90
+      firing: 80
+      throwing: 80
+      strength: 80
+      psiStrength: 70
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHA_CORVUS_ARMOR
+    aggroSound: {mod: 40k, index: 457}  # Praise the Emperor female version
+    intelligence: 4
+    aggression: 8  # CQC
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 50
+    energyRecovery: 60
+    deathSound: [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]
+    value: 0  # to minimize farming
+    livingWeapon: true
+    builtInWeaponSets: [] # one set because spawn loadouts don't vary with tech level
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        ALPHA_LEGION_CQC_TIGRUS_CLAWS: 20
+        ALPHA_LEGION_CQC_PLASMAPISTOL_CLAWS: 20
+        ALPHA_LEGION_CQC_TIGRUS_DAGGER: 15
+        ALPHA_LEGION_CQC_COMBIBOLTER_PDAGGER: 15
+        BASIC_CSM_PLASMA_CARBINE_LOADOUT: 15
+        ALPHA_LEGION_CQC_GRAVPISTOL_CLAWS: 3
+
+  - type: STR_ALPHA_SOLDIER_ULTRA  # Alpha Legionnaire disguised as Ultramarine
+    race: STR_ALPHA_SOLDIER_ULTRA  # Loyalist Marine fakeout
+    rank: STR_LIVE_SOLDIER
+    liveAlien: ""
+    stats:
+      tu: 80
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 85
+      firing: 80
+      throwing: 80
+      strength: 80
+      psiStrength: 70
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHA_ARMOR_ULTRA
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 4
+    aggression: 1  # longer range
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 50
+    energyRecovery: 60
+    deathSound: {mod: 40k, index: 826}  # need a suitable decloaking noise right now its Feel the Hand of Chaos
+    specab: 1
+    # spawnUnitFaction: -1
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_RIFLEB
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
+        - STR_KRAK_GRENADE
+      - - STR_RIFLED
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+
+  - type: STR_ALPHA_SCOUT_ULTRA  # Alpha Legionnaire disguised as Ultramarine
+    race: STR_ALPHA_SOLDIER_ULTRA  # Loyalist Marine fakeout
+    rank: STR_LIVE_SOLDIER
+    liveAlien: ""
+    stats:
+      tu: 80
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 75
+      firing: 100
+      throwing: 80
+      strength: 60
+      psiStrength: 70
+      psiSkill: 0
+      melee: 80
+    armor: STR_ALPHA_SCOUT_ARMOR_ULTRA
+    aggroSound: {mod: 40k, index: 144}  # For the Emperor Haughty FemInq version
+    intelligence: 4
+    aggression: 1
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 5
+    sniper: 90
+    energyRecovery: 60
+    deathSound: {mod: 40k, index: 540}  # Female Stealth Mode Engaged
+    specab: 1 #need this for Alpha Legionnaire ninja vanish
+    # spawnUnitFaction: -1
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PISTOLH
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
+        - STR_CHAINSWORD
+        - STR_KRAK_GRENADE
+      - - STR_RIFLEC
+        - STR_RIFLE_CLIP_AP
+        - STR_RIFLE_CLIP_AP
+        - STR_KRAK_GRENADE
+      - - STR_SNIPER_CHAOS  # because the AI can't deal with the Heavy Weapon tag
+        - STR_HC_AP_AMMO
+        - STR_HC_AP_AMMO
+        - STR_HC_AP_AMMO
+        - STR_HC_AP_AMMO
+        - STR_ALIEN_GRENADE
+
+  - type: STR_ALPHA_SARGE_ULTRA  # Alpha Legionnaire disguised as Ultramarine
+    race: STR_ALPHA_SOLDIER_ULTRA  # Loyalist Marine fakeout
+    rank: STR_LIVE_LEADER
+    liveAlien: ""
+    stats:
+      tu: 80
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 85
+      firing: 80
+      throwing: 80
+      strength: 60
+      psiStrength: 70
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHA_SARGE_ARMOR_ULTRA
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 4
+    aggression: 8
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 50
+    energyRecovery: 60
+    deathSound: {mod: 40k, index: 826}  # need a suitable decloaking noise right now its Feel the Hand of Chaos
+    specab: 1 #need this for Alpha Legionnaire ninja vanish
+    # spawnUnitFaction: -1
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CHAINSWORD
+        - STR_KRAK_GRENADE
+      - - STR_CHAOSHARMONIC_MELTAGUN
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_KRAK_GRENADE
+      - - STR_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_ALIEN_GRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_ALPHA_DEV_ULTRA  # Alpha Legionnaire disguised as Ultramarine Devastator
+    race: STR_ALPHA_SOLDIER_ULTRA  # Loyalist Marine fakeout
+    rank: STR_LIVE_LEADER
+    liveAlien: ""
+    stats:
+      tu: 80
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 75
+      firing: 100
+      throwing: 80
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 80
+    armor: STR_ALPHA_DEV_ARMOR_ULTRA
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 4
+    aggression: 1
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 90
+    energyRecovery: 60
+    deathSound: {mod: 40k, index: 826}  # need a suitable decloaking noise right now its Feel the Hand of Chaos
+    specab: 1
+    # spawnUnitFaction: -1
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AUTO_CANNON  # heavy bolter
+        - STR_AC_AP_AMMO
+        - STR_KRAK_GRENADE
+        - STR_ALIEN_GRENADE
+      - - STR_ROCKET_LAUNCHER  # missile launcher
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_LARGE_ROCKET
+        - STR_INCENDIARY_ROCKET
+        - STR_INCENDIARY_ROCKET
+        - STR_ALIEN_GRENADE
+      - - STR_CHAOS_LASCANNON_HANDHELD
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_LASCANNON_CHAOS_CELL
+        - STR_MGRENADE
+        - STR_ALIEN_GRENADE
+
+  - type: STR_ALPHA_ELOHIM  # Alpha Legionnaire disguised as SoB Elohim
+    race: STR_ALPHA_ELOHIM
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 75
+      firing: 100
+      throwing: 80
+      strength: 60
+      psiStrength: 70
+      psiSkill: 0
+      melee: 80
+    armor: STR_ALPHA_ARMOR_ELOHIM
+    aggroSound: {mod: 40k, index: 457}  # Praise the Emperor female version
+    intelligence: 4
+    aggression: 8
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 5
+    sniper: 50
+    energyRecovery: 60
+    specab: 1 #need this for Alpha Legionnaire ninja vanish
+    deathSound: {mod: 40k, index: 540}  # Female Stealth Mode Engaged
+    # spawnUnitFaction: -1
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTER_HERETIC_DEAZ
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTER_HERETIC_DEAZ
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_AUTO_CANNON_CHAOSRETRIBUTOR
+        - STR_AC_I_AMMO
+        - STR_AC_AP_AMMO
+        - STR_MGRENADE
+
+  - type: STR_ALPHA_DAEMONETTE  # Alpha Legionnaire disguised as Daemonette
+    race: STR_CHRYSSALID
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 120
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 75
+      firing: 0
+      throwing: 60
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHA_ARMOR_DAEMONETTE
+    aggroSound: 2125  # naughty
+    intelligence: 4
+    aggression: 8
+    avoidsFire: false
+    isLeeroyJenkins: true
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    energyRecovery: 60
+    specab: 1 #need this for Alpha Legionnaire ninja vanish
+    deathSound: {mod: 40k, index: 540}  # Female Stealth Mode Engaged
+    # spawnUnitFaction: -1
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PHOTON_GRENADE
+      - - STR_PHOTON_GRENADE
+      - - STR_PHOTON_GRENADE
+
+  - type: STR_ALPHA_DAEMONETTE_RITUALIST  # Alpha Legionnaire disguised as Daemonette
+    race: STR_CHRYSSALID
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 120
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 75
+      firing: 0
+      throwing: 60
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 90
+    armor: STR_ALPHA_ARMOR_DAEMONETTE_RITUALIST
+    aggroSound: 2125  # naughty
+    intelligence: 4
+    aggression: 8
+    avoidsFire: false
+    isLeeroyJenkins: true
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    energyRecovery: 60
+    specab: 1 #need this for Alpha Legionnaire ninja vanish
+    deathSound: {mod: 40k, index: 540}  # Female Stealth Mode Engaged
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PHOTON_GRENADE
+      - - STR_PHOTON_GRENADE
+      - - STR_PHOTON_GRENADE
+
+  - &STR_ALPHA_GK_TEMPLATE
+    type: STR_ALPHA_GREYKNIGHT  # FAKE GREY KNIGHT                     RANK 5 weapons done
+    race: STR_GREYKNIGHT
+    rank: STR_LIVE_SOLDIER
+    liveAlien: ""
+    stats:
+      tu: 80
+      stamina: 96
+      health: 45  # decoy health is half normal health
+      bravery: 100
+      reactions: 75
+      firing: 100
+      throwing: 80
+      strength: 60
+      psiStrength: 70
+      psiSkill: 0
+      melee: 80
+    armor: STR_ALPHA_GREYKNIGHT_ARMOR
+    aggroSound: {mod: 40k, index: 404}  # for the emperor
+    intelligence: 4
+    aggression: 1
+    berserkChance: 70
+    standHeight: 20
+    kneelHeight: 15
+    spotter: 4
+    sniper: 75
+    energyRecovery: 60
+    specab: 1 #need this for Alpha Legionnaire ninja vanish
+    deathSound: {mod: 40k, index: 826}  # need a suitable decloaking noise right now its Feel the Hand of Chaos
+    value: 10  # these don't actually die
+    moraleLossWhenKilled: 50  # these don't actually die
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHB
+        - STR_HB_CLIP
+        - STR_HB_CLIP
+      - - STR_CHB
+        - STR_HB_CLIP_MC
+        - STR_HB_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_CASSC
+        - STR_AUTOCANNON_BOX_AMMO
+        - STR_AUTOCANNON_BOX_AMMO
+        - STR_MGRENADE
+
+  - type: STR_ALPHA_GREYKNIGHT_CATAPHRACT  # FAKE GREY KNIGHT                     RANK 5 weapons done
+    refNode: *STR_ALPHA_GK_TEMPLATE
+    liveAlien: ""
+    stats:
+      tu: 70
+      stamina: 170
+      health: 85  # decoy health is half normal health
+      bravery: 110
+      reactions: 60  #
+      firing: 110
+      throwing: 80
+      strength: 180
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    armor: STR_ALPHA_GREYKNIGHT_ARMOR_CATAPHRACT
+    intelligence: 5
