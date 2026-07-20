@@ -494,6 +494,88 @@ items:
     armor: 300
     listOrder: 16510
 
+  - type: STR_FUSION_PISTOL                 #STR_ADEPTAS_MELTAGUN_NECRO stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
+    listOrder: 16490
+    weight: 5
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.3
+    costBuy: 10000
+    costSell: 3000
+    bigSprite: 4876
+    floorSprite: 4876
+    handSprite: 1398
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: [1879, 1880, 1881]
+    compatibleAmmo:
+      - STR_FUSION_PISTOL_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 9
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 70
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 33
+    tuAimed: 0
+    maxRange: 13
+    damageBonus:
+      flatHundred: 0.2
+    confSnap:
+      shots: 1
+      spendPerShot: 2  # double ammo consumption 5 shots per clip
+    battleType: 1
+    invWidth: 1
+    invHeight: 3
+    armor: 300
+
+
+  - type: STR_DRAGON_FUSION_PISTOL                 #STR_HARMONIC_MELTAGUN stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE
+    weight: 10
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    listOrder: 16495
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.3
+    costBuy: 50000
+    costSell: 25000
+    bigSprite: 4877
+    floorSprite: 4877
+    handSprite: 1406
+    bulletSpeed: 100
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: [1879, 1880, 1881]
+    compatibleAmmo:
+      - STR_DRAGON_FUSION_PISTOL_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 15
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 75
+    maxRange: 15
+    minRange: 0
+    battleType: 1
+    invWidth: 1
+    invHeight: 3
+    armor: 300
+
   - type: STR_FIREPIKE                #STR_HARMONIC_MELTAGUN stats
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16515
     weight: 30 # +10 weight
@@ -807,6 +889,55 @@ items:
     flatRate: true
     attraction: 8
     listOrder: 16630
+
+  - type: STR_DRAGON_AXE  # eldar mirrorsword stats, REWORK required think fire damage
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    listOrder: 16499
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 80
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+    size: 0.2
+    costBuy: 50000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4880
+    floorSprite: 4880
+    handSprite: 1430
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    tuMelee: 10
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+
 
 
   - delete: STR_WRAITH_MELEE_WEAPON
