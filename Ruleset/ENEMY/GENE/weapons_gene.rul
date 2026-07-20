@@ -578,6 +578,20 @@ items:
     requires:
       - STR_ALIENS_ONLY
 
+  - type: STR_TRENCHGUN_LUCIUS #Krieg Pump shotgun
+    refNode: *STR_PUMP
+    weight: 12 #Heavier build to handle rack fire
+    bigSprite: 1111
+    floorSprite: 302
+    handSprite: 1400
+    accuracyAuto: 30
+    tuAuto: 45
+    autoShots: 3 #rackfire
+    autoRange: 7
+    armor: 200
+    requiresBuy:
+      - STR_KRIEG_STRATEGY
+
   - &STR_SMG_STUB
     type: STR_SMG_STUB_GUN
     categories: [STR_CAT_AUTO]

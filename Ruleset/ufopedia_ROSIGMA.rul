@@ -10220,6 +10220,18 @@ ufopaedia:
     image_id: STUBCANNON_CODEX.SPK
     text: STR_STUBCANNON_GUARD_CODEX
 
+  - id: STR_GRENADELAUNCHER_LUCIUS_T1
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUBCANNON_CODEX.SPK
+    text: STR_GRENADELAUNCHER_LUCIUS_T1_CODEX
+
+  - id: STR_GRENADELAUNCHER_LUCIUS_T2
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUBCANNON_CODEX.SPK
+    text: STR_GRENADELAUNCHER_LUCIUS_T2_CODEX
+
 #WEAPONS.SHOT#    Shotguns
   # Standard Shotguns
   - id: STR_PUMP_SHOTGUN
@@ -10234,6 +10246,11 @@ ufopaedia:
     text: STR_PUMP_SHOTGUN_CHAOS_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
+  - id: STR_TRENCHGUN_LUCIUS
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_TRENCHGUN_LUCIUS_CODEX
   - delete: STR_SHOTGUN
   - id: STR_SHOTGUN
     type_id: 14
@@ -12010,6 +12027,18 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_LASGUN_STEEL_LEGION_HIGH.SPK
 
+  - id: STR_LASER_RIFLE_KRIEG_TIER2  # High-Quality Lucius Krieg T2 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom lucius art
+    text: STR_LASER_RIFLE_KRIEG_TIER2_UFOPEDIA
+
+  - id: STR_LASER_RIFLE_KRIEG_TIER2_SCOPED  # High-Quality Lucius Krieg T2 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom scoped art
+    text: STR_LASER_RIFLE_KRIEG_TIER2_SCOPED_UFOPEDIA
+
   - delete: STR_MCLASER_RIFLE
   - id: STR_MCLASER_RIFLE
     type_id: 14
@@ -12240,6 +12269,16 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_VOLLEYGUN_STEEL_LEGION.SPK
 
+  - id: STR_VOLLEYGUN_KRIEG
+    requires:
+      - STR_HOTSHOT_VOLLEY_GUN
+      - STR_KRIEG_STRATEGY #mid-tier or even ceramite req
+      - STR_LASER_WEAPONS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HELLGUN.SPK
+    text: STR_VOLLEYGUN_KRIEG_UFOPEDIA
+
   - id: STR_CHAOS_VOLLEYGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -12257,6 +12296,7 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: HELLGUN.SPK
     text: STR_HELLGUN_UFOPEDIA
+
   - id: STR_HELLGUN_STEEL_LEGION  # Armageddon Hellgun
     type_id: 14
     requires:
@@ -12264,6 +12304,15 @@ ufopaedia:
     text: STR_HELLGUN_STEEL_LEGION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_HELLGUN_STEEL_LEGION.SPK
+
+  - id: STR_HELLGUN_KRIEG
+    requires:
+      - STR_HELLGUN
+      - STR_KRIEG_STRATEGY #mid-tier or even ceramite req
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HELLGUN.SPK
+    text: STR_HELLGUN_KRIEG_UFOPEDIA
 
   - id: STR_CHAOS_HELLGUN
     type_id: 14
@@ -15155,6 +15204,29 @@ ufopaedia:
   - id: STR_RANGER_LONG_RIFLE_MAG
     type_id: 4
     section: STR_NOT_AVAILABLE
+
+  - id: STR_AELDARI_FLAMER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_FLAMER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_FLAMER_CODEX
+  - id: STR_AELDARI_FLAMER_FUEL
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_DRAGON_BREATH_FLAMER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_BREATH_FLAMER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_BREATH_FLAMER_CODEX
+  - id: STR_DRAGON_BREATH_FLAMER_FUEL
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
   - id: STR_FUSION_GUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -15162,6 +15234,9 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_FUSION_GUN_CODEX
+  - id: STR_FUSION_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
   - id: STR_DRAGON_FUSION_GUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -15169,6 +15244,37 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_DRAGON_FUSION_GUN_CODEX
+  - id: STR_DRAGON_FUSION_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_FUSION_PISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_FUSION_PISTOL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_FUSION_PISTOL_CODEX
+  - id: STR_FUSION_PISTOL_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+  - id: STR_DRAGON_FUSION_PISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_FUSION_PISTOL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_FUSION_PISTOL_CODEX
+  - id: STR_DRAGON_FUSION_PISTOL_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+  - id: STR_DRAGON_AXE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_AXE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_AXE_CODEX
 
   - id: STR_FIREPIKE
     type_id: 14
@@ -15177,7 +15283,7 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_FIREPIKE_CODEX
-  - id: STR_FUSION_AMMO
+  - id: STR_FIREPIKE_AMMO
     type_id: 4
     section: STR_NOT_AVAILABLE
 
