@@ -2037,6 +2037,7 @@ research:
       - STR_NORMAL_INQUISITION
       - STR_ELDAR_PATH # RadicalRoad has its own Xenos pathways.
       - STR_CHAOS_PATH # RadicalRoad has its own Chaos progression, don't allow IntoTheDarkGodsPath entry
+      - STR_ORK_DEAL # Ork Arms Trade; they'll be getting this from the Secure Support tech
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     getOneFree:
@@ -4403,7 +4404,7 @@ research:
   - name: STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH  # Embrace the Deathcults
     cost: 800
     dependencies:
-      - STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH
+      - STR_INQ_RR_DEATHCULT_RITUAL_2_RESEARCH
       - STR_HIGHTIER_PREREQ
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_3_EVENT
 
@@ -4423,7 +4424,6 @@ research:
   - name: STR_INQ_RR_REQUISITION_XENOS
     cost: 250
     dependencies:
-      - STR_GENERALLOCK #TODO [WIP]: Block off the start of the Xenos path.
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_RR_REQUISITION_XENOS
@@ -4440,7 +4440,7 @@ research:
     repeatable: true
 
   - name: STR_INQ_CONSORT_AELDARI_RESEARCH  # Consort with the Aledari
-    cost: 400
+    cost: 300
     points: -100
     dependencies:
       - STR_INQ_RR_MIDTIER_XENOS
@@ -4460,25 +4460,26 @@ research:
       - STR_INQ_CONSORT_AELDARI_RESEARCH
 
   - name: STR_INQ_CONSORT_TAU_RESEARCH  # Consort with the Tau
-    cost: 400
+    cost: 300
     points: -100
     dependencies:
+      - STR_GENERALLOCK # TODO Tau temporarily locked off [WIP]
       - STR_INQ_RR_MIDTIER_XENOS
       - STR_LOSE_100
     unlocks:
       - STR_XENO_LEADER_INTERROGATED
       - STR_TAU_FIREWARRIORCAPTAINAI
-
   - name: STR_INQ_RR_CONSORTED_TAU_DEP #use this Dep to allow bypassing the Consort with a traditional interrogate
     cost: 0
     dependencies:
+      - STR_GENERALLOCK # TODO Tau temporarily locked off [WIP]
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_TAU_FIREWARRIORCAPTAINAI
     disables:
       - STR_INQ_CONSORT_TAU_RESEARCH
 
   - name: STR_INQ_CONSORT_ORKS_RESEARCH  # Consort with the Orks
-    cost: 400
+    cost: 300
     points: -100
     dependencies:
       - STR_INQ_RR_MIDTIER_XENOS
@@ -4495,6 +4496,62 @@ research:
       - STR_ORK_LEADER_INTERROGATED
     disables:
       - STR_INQ_CONSORT_ORKS_RESEARCH
+
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
+    cost: 400
+    points: -100
+    dependencies:
+      - STR_INQ_RR_CONSORTED_AELDARI_DEP
+      - STR_LOSE_100
+    disables:
+      - STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
+    unlocks:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ELDAR_EVENT
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
+      - STR_LEADER_PLUS
+      - STR_LOSE_100
+    unlocks:
+      # TODO Eldar research tree is in flux; revisit when more stable
+      #- STR_ELDAR_SPIDER_RESEARCH
+      #- STR_ELDAR_FIREDRAGON_RESEARCH
+      #- STR_ELDAR_REAPER_RESEARCH
+      - STR_FUSION_TECH_RESEARCH
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
+    cost: 400
+    points: -100
+    dependencies:
+      - STR_INQ_RR_CONSORTED_ORKS_DEP
+      - STR_LOSE_100
+    disables:
+      - STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
+      - STR_ORK_BOY_RECRUITMENT # disable Ork soldier recruitment
+    reenables:
+      - STR_ORK_DEAL # Will be granted by STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT ; getOneFree doesn't work
+    unlocks:
+      # - STR_ORK_MERCENARIES # note: this is only for the normal DefeatOrkBases pathway.
+      - STR_SPOOKUM_KAMP_RECRUITED
+      - STR_DAKKA_GITZ_RECRUITED
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT #TODO
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
+      - STR_UFO_POWER_SOURCE
+      - STR_LOSE_100
+    unlocks:
+      - STR_MEK_KLAN_RECRUITED
+      - STR_SPEED_KULT_RECRUITED
+      - STR_ORKZ_MASTER_CRAFTING
+
 
   # Acquires a new Xeno tech topic. Should include all requirements for STR_NECRONTECH_RESEARCH and STR_TAU_XENOTECH
   # Orks/Eldar excluded because their item topics don't contribute to their path/weapon usage (their path starts only with a Leader Interrogation)
@@ -4529,6 +4586,7 @@ research:
       - STR_GAUSS_REAPER
       - STR_NECRON_WARSCYTHE
       - STR_STAFF_OF_LIGHT
+
 
   - name: STR_FALSIFY_INQUISITION_REPORT  # Falsify Inquisition Statement
     cost: 300
@@ -4599,10 +4657,10 @@ research:
   # RadicalRoad Chaos path: alternate God Devotions access
   - name: STR_INQ_RR_LORE_NURGLE
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
@@ -4611,20 +4669,20 @@ research:
       - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
   - name: STR_INQ_RR_LORE_TZEENTCH
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_TZEENTCH_OPTIONS
   - name: STR_INQ_RR_LORE_KHORNE
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
@@ -4633,10 +4691,10 @@ research:
       - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
   - name: STR_INQ_RR_LORE_SLAANESH
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
@@ -4913,17 +4971,17 @@ research:
 
   - name: STR_INQ_RR_MIDTIER_CHAOS #Midtier Chaos Path
     cost: 250
-    points: -200
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_CONTACT_REVISIONISTS_RESEARCH
       - STR_MELTAGUN_TECH
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
-      - STR_LOSE_200
     disables:
       - STR_INQ_RR_MIDTIER_XENOS
       - STR_CHAOS_SORCERY # Not suited to RR Chaos progression; Tome of the Mind does almost nothing
+      - STR_CORRUPTED_REQUISITIONS # Avoid swapping to Chaos basics;  disruptive to switch basic weapons and ammo for no real gain;  doesn't hinder special chaos weapons from Lores
+                                   # See STR_INQ_RR_MIDTIER_EVENT_CHAOS which
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_ALIENS_ONLY # Chaos Corruption
@@ -4936,20 +4994,26 @@ research:
       - STR_CONVERT_TO_CHAOS_RESEARCH
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_CHAOS
 
+  # Workaround to get STR_ALIENS_ONLY , but keep Imperial basic weapons. Combine with the disables in STR_INQ_RR_MIDTIER_CHAOS
+  - name: STR_INQ_RR_MIDTIER_CHAOS_MAINTAIN_IMPERIAL_DEP
+    cost: 0
+    dependencies:
+      - STR_INQ_RR_MIDTIER_CHAOS
+    reenables:
+      - STR_IMPERIAL_WEAPONS
+
   - name: STR_XENO_LEADER_INTERROGATED  # Xeno Leader Interrogation
     refNode: *STR_LOCKED
 
   - name: STR_INQ_RR_MIDTIER_XENOS #Midtier Xenos Path
     # grant access to Xeno Weapons (not chaos)
     cost: 250
-    points: -200
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_RR_REQUISITION_XENOS
       - STR_MELTAGUN_TECH
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
-      - STR_LOSE_200
     disables:
       - STR_INQ_RR_MIDTIER_CHAOS
     unlocks:

@@ -284,6 +284,60 @@ eventScripts:
     researchTriggers:
       STR_INQ_SECURE_SUPPORT_REVISIONISTS_RESEARCH: true
 
+  # Xenos path;  Ork reinforcements
+  - type: STR_INQ_SECURE_SUPPORT_ORKS_BAD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_1_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_2_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_3_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_4_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_5_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH: false
+
+  - type: STR_INQ_SECURE_SUPPORT_ORKS_GOOD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_1_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_2_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_3_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_4_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_5_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_6_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_7_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_8_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH: true
+
+  # Xenos path;  Eldar reinforcements
+  # TODO Player Eldar is in flux. revisit with more variety when settled
+  - type: STR_INQ_SECURE_SUPPORT_ELDAR_BAD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH: false
+
+  - type: STR_INQ_SECURE_SUPPORT_ELDAR_GOOD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH: true
+
 
   - type: STR_INQ_BRIBES_RANDOMIZED_SCRIPT
     eventWeights:
