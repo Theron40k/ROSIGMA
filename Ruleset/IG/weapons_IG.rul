@@ -2118,6 +2118,7 @@ items:
   - type: STR_LASER_RIFLEG  # LASGUN GUARD
     requiresBuy:
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_KRIEG_STRATEGY
       - STR_IMPERIAL_WEAPONS
     weight: 8
     bigSprite: 207
@@ -2153,6 +2154,7 @@ items:
       - STR_MIDTIER_PREREQ
       - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_KRIEG_STRATEGY
     costBuy: 20000  # 3500 for basic, so more expensive, longlas is still more expensive.
     costSell: 1500
     weight: 8
@@ -2196,10 +2198,94 @@ items:
       time: true
       energy: true
 
+  - type: STR_LASER_RIFLE_KRIEG_TIER2  # mid-tier basic lasgun lucius pattern
+    categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
+    size: 0.2
+    requiresBuy:
+      - STR_MIDTIER_PREREQ
+      - STR_KRIEG_STRATEGY
+      - STR_NOT_STEEL_LEGION_STRATEGY
+    costBuy: 20000
+    costSell: 1500
+    weight: 9 #+1 weight
+    bigSprite: 1114
+    floorSprite: 305
+    handSprite: 1424
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+      - STR_LASGUN_CLIP_HOTSHOT
+    clipSize: 0
+    bulletSpeed: 50
+    armor: 200  # to avoid item pile destruction
+    listOrder: 10912
+    # *** Melee bayonet
+    meleeHitSound: {mod: 40k, index: 101}
+    meleeAnimation: 0
+    meleeType: 7
+    meleePower: 50
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+    meleeAlter:
+      ArmorEffectiveness: 0.9
+      RandomType: 1
+    accuracyMelee: 100  # lower due to weight
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.5
+    tuMelee: 12
+    costMelee:
+      energy: 2
+    flatMelee:
+      time: true
+      energy: true
+
+  - type: STR_LASER_RIFLE_KRIEG_TIER2_SCOPED  # mid-tier basic lasgun lucius pattern scoped
+    categories: [STR_CAT_LASGUN, STR_CAT_SNIPER]
+    size: 0.2
+    requiresBuy:
+      - STR_MIDTIER_PREREQ
+      - STR_KRIEG_STRATEGY
+      - STR_NOT_STEEL_LEGION_STRATEGY
+    costBuy: 30000
+    costSell: 2500
+    weight: 10 #+2 weight, scoped
+    bigSprite: 1115
+    floorSprite: 306
+    handSprite: 1432
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+      - STR_LASGUN_CLIP_HOTSHOT
+    clipSize: 0
+    bulletSpeed: 50
+    armor: 200  # to avoid item pile destruction
+    listOrder: 10913
+    confAimed:
+      spendPerShot: 2
+    tags:
+      ITEM_AIMED_FLAT_POWER_BONUS: 33
+
   - type: STR_LASCARBINE
     requiresBuy:
       - STR_BASIC_BALLISTICS_DEP
       - STR_LASER_WEAPONS
+      - STR_NOT_KRIEG_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
     armor: 200  # to avoid item pile destruction
     meleePower: 50
