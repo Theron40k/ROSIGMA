@@ -626,6 +626,99 @@ items:
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
 
+  - type: STR_GRENADELAUNCHER_LUCIUS_T1 #KRIEG
+    categories: [STR_CAT_GRENADES]
+    dropoff: 6
+    requiresBuy:
+      - STR_KRIEG_STRATEGY
+      - STR_BASIC_BALLISTICS_DEP
+    size: 0.2
+    costBuy: 20000
+    costSell: 5000
+    weight: 15
+    bigSprite: 247 #change to Resources/Bigobs/grenade_lucius_tier1.png
+    floorSprite: 262 #change
+    handSprite: 668 #change
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_INCENDIARY_GRENADE40
+      - STR_KRAK_GRENADE40
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 3
+    armor: 200
+    autoRange: 0
+    snapRange: 15
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 40
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 0
+    autoShots: 1
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 19170
+    tags:
+      ITEM_RECOIL: 35
+      ITEM_COLOR_CHANGES_WITH_AMMO: 14
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
+
+  - type: STR_GRENADELAUNCHER_LUCIUS_T2 #KRIEG tier 2
+    categories: [STR_CAT_GRENADES]
+    dropoff: 5 #-1
+    requiresBuy:
+      - STR_KRIEG_STRATEGY
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_MIDTIER_PREREQ
+    size: 0.2
+    costBuy: 30000
+    costSell: 7500
+    weight: 15
+    bigSprite: 247 #change to Resources/Bigobs/grenade_lucius_tier2.png
+    floorSprite: 262 #change
+    handSprite: 668 #change
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_ROTOR_KOMBI_BUCKSHOT40
+      - STR_ROTOR_KOMBI_SLUG40  # clipsize 3
+      - STR_INCENDIARY_GRENADE40
+      - STR_KRAK_GRENADE40
+      - STR_MELTA_GRENADE40
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 3
+    armor: 200
+    autoRange: 0
+    snapRange: 17 #+2
+    aimRange: 20
+    accuracyAuto: 0
+    accuracySnap: 40
+    accuracyAimed: 50
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 40
+    autoShots: 1
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 19170
+    tags:
+      ITEM_RECOIL: 35
+      ITEM_COLOR_CHANGES_WITH_AMMO: 14
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
 
   - type: STR_AUTOPISTOL_HIGHGRADE
     categories: [STR_CAT_AUTO]
