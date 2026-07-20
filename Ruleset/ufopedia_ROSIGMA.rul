@@ -12257,6 +12257,16 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_VOLLEYGUN_STEEL_LEGION.SPK
 
+  - id: STR_VOLLEYGUN_KRIEG
+    requires:
+      - STR_HOTSHOT_VOLLEY_GUN
+      - STR_KRIEG_STRATEGY #mid-tier or even ceramite req
+      - STR_LASER_WEAPONS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HELLGUN.SPK
+    text: STR_VOLLEYGUN_KRIEG_UFOPEDIA
+
   - id: STR_CHAOS_VOLLEYGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -12274,6 +12284,7 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: HELLGUN.SPK
     text: STR_HELLGUN_UFOPEDIA
+
   - id: STR_HELLGUN_STEEL_LEGION  # Armageddon Hellgun
     type_id: 14
     requires:
@@ -12281,6 +12292,15 @@ ufopaedia:
     text: STR_HELLGUN_STEEL_LEGION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_HELLGUN_STEEL_LEGION.SPK
+
+  - id: STR_HELLGUN_KRIEG
+    requires:
+      - STR_HELLGUN
+      - STR_KRIEG_STRATEGY #mid-tier or even ceramite req
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HELLGUN.SPK
+    text: STR_HELLGUN_KRIEG_UFOPEDIA
 
   - id: STR_CHAOS_HELLGUN
     type_id: 14
