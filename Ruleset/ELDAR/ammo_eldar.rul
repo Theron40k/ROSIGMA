@@ -164,6 +164,7 @@ items:
   - &FUSION_AMMO_TEMPLATE
     type: STR_FUSION_AMMO  # 16550   # TEMPORARY MELTAGUN HARMONIC AMMO
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_MELTA]
+    listOrder: 16505
     #requiresBuy: []  # Already requires the eldar base service
     #requiresBuyBaseFunc: [ELDAROUT]
     requires:
@@ -198,7 +199,7 @@ items:
     invWidth: 1
     invHeight: 2
     armor: 300
-    listOrder: 16505
+
 
   - type: STR_DRAGON_FUSION_AMMO             # Same stats as fusion ammo needs work tier upgrade
     refNode: *FUSION_AMMO_TEMPLATE
@@ -212,6 +213,35 @@ items:
     floorSprite: 4870
     handSprite: 4986
     listOrder: 16515
+
+  - type: STR_FUSION_PISTOL_AMMO             # Same stats as fusion ammo needs work
+    refNode: *FUSION_AMMO_TEMPLATE
+    listOrder: 16492
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: [] # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    bigSprite: 4878
+    floorSprite: 4878
+    handSprite: 1514
+    invWidth: 1
+    invHeight: 1
+
+  - type: STR_DRAGON_FUSION_PISTOL_AMMO             # Same stats as fusion ammo needs work tier upgrade
+    refNode: *FUSION_AMMO_TEMPLATE
+    listOrder: 16497
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: [] # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    bigSprite: 4879
+    floorSprite: 4879
+    handSprite: 1522
+    invWidth: 1
+    invHeight: 1
 
   - type: STR_FIREPIKE_AMMO             # Maybe unnecessary but gives us an option to better balance firepike
     refNode: *FUSION_AMMO_TEMPLATE
