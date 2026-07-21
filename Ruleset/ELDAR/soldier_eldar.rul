@@ -331,6 +331,16 @@ soldiers:
       - delete
       - Names/eldar_scorpion.nam
 
+  # Banshee
+
+  - type: STR_ELDAR_BANSHEE_F
+    refNode: *ASPECT_WARRIOR_TEMPLATE
+    costBuy: 0
+    armor: STR_ELDAR_ARMOR2_P
+    soldierNames:
+      - delete
+      - Names/eldar_banshee.nam
+
   - type: STR_ELDAR_REAPER_M
     refNode: *ASPECT_WARRIOR_TEMPLATE
     costBuy: 0
@@ -846,14 +856,6 @@ soldiers:
     soldierNames:
       - delete
       - Names/eldar_seer.nam
-
-  - type: STR_ELDAR_BANSHEE_F
-    refNode: *PSYKER_TEMPLATE
-    costBuy: 0
-    armor: STR_ELDAR_ARMOR2_P
-    soldierNames:
-      - delete
-      - Names/eldar_banshee.nam
 
   - type: STR_ELDAR_SEER_F
     refNode: *PSYKER_TEMPLATE
