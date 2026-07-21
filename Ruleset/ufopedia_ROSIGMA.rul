@@ -646,15 +646,6 @@ ufopaedia:
     requires:
       - STR_PICK_STRATEGY
 
-  # Eldar Path
-  - delete: STR_HELP15
-  - id: STR_HELP15
-    type_id: 10
-    requires:
-      - STR_ELDAR_PATH
-    section: STR_STRATEGY
-    image_id: 3PROMO.SPK
-    text: STR_HELP_PROMO
   - delete: STR_CHOSEN_ELDAR
   - id: STR_CHOSEN_ELDAR
     requires:
@@ -1442,6 +1433,36 @@ ufopaedia:
         text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX
       - title: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
         text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX_PAGE2
+
+  # Eldar Promotion helper
+  - delete: STR_HELP15
+  - id: STR_HELP15
+    type_id: 10
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    section: STR_STRATEGY
+    image_id: ELDAR_PATH_HELPER.SPK
+    text: STR_HELP_PROMO
+
+  - id: STR_ELDAR_RUNES_TITLE
+    type_id: 10
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    section: STR_STRATEGY
+    image_id: ELDAR_RUNES_CODEX.SPK
+    text: STR_ELDAR_RUNE_CODEX
+
+  - id: STR_ELDAR_EXARCH_AND_AUTARCH
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_AUTARCH_BACKGROUND.SPK
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    pages:
+      - title: STR_ELDAR_EXARCH_AND_AUTARCH
+        text: STR_ELDAR_EXARCH_AND_AUTARCH_PAGE1
+      - title: STR_ELDAR_EXARCH_AND_AUTARCH
+        text: STR_ELDAR_EXARCH_AND_AUTARCH_PAGE2
 
 ## #STRATEGY.SOB#
   - delete: STR_CHOSEN_ADEPTAS
@@ -2379,6 +2400,14 @@ ufopaedia:
     text: STR_CHAOSREWARD_REQUISITIONS_CODEX
     requires:
       - STR_CHAOSREWARD_REQUISITIONS
+### #RESEARCH.AT.ELDAR#
+  - id: STR_RECRUIT_ELDAR_OUTCAST
+    type_id: 10
+    section: STR_ALIEN_RESEARCH_UC
+    image_id: STR_RECRUIT_ELDAR_OUTCAST.SPK
+    text: STR_RECRUIT_ELDAR_OUTCAST_CODEX
+    requires:
+      - STR_RECRUIT_ELDAR_OUTCAST
 
 ## #RESEARCH.SOB#
   - id: STR_FAITHFUL_ARMORY  # SoB Weapons Requisition
@@ -5647,6 +5676,50 @@ ufopaedia:
       - STR_THE_IMPERIAL_LAW_STRATEGY
 # #SOLDIERS.AT#         Adeptus Terra Soldiers
 ## #SOLDIERS.AT.CULT#      Chaos Cult Strategy
+# #SOLDIERS.AT.ELDAR#
+  - id: STR_PROMOTE_TO_SCORPION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP165.SPK # SCORPION_ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_SCORPIONS
+    requires:
+      - STR_ELDAR_SCORPION_RESEARCH
+  - id: STR_PROMOTE_TO_BANSHEE
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP113.SPK # BANSHEE ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_BANSHEE
+    requires:
+      - STR_ELDAR_BANSHEE_RESEARCH
+  - id: STR_PROMOTE_TO_REAPER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP167.SPK # REAPER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_REAPER
+    requires:
+      - STR_ELDAR_REAPER_RESEARCH
+  - id: STR_PROMOTE_TO_DIREAVENGER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP164.SPK # DIRE AVENGER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_AVENGER
+    requires:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
+  - id: STR_PROMOTE_TO_DRAGON
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_DRAGON_ARMOR_CODEX.SPK # fire dragon ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_DRAGON
+    requires:
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+  - id: STR_PROMOTE_TO_SPIDER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_SPIDER_ARMOR_CODEX.SPK # SPIDER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER
+    requires:
+      - STR_ELDAR_SPIDER_RESEARCH
+
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
   - id: STR_INDUCT_CANTUS
