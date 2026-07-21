@@ -2551,6 +2551,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ORK_FIGHTA_BOMMA: "FIGHTA BOMMER"
   STR_ORK_FIGHTA_BOMMA_CODEX: "{NEWLINE} Da flyboyz got to finkin, what is betta dan dakka? Even MORE dakka! so dey went to da meks an' got em ta make da fighta bommers, wif even more dakka per dakka. Dey iz a bit slowa dan da fightas, but dey iz ded ard."
   STR_ORK_SPECHUL_FIGHTA: "SPECHUL FIGHTA"
+  STR_INQ_RR_ORK_SPECHUL_FIGHTA: "SPECHUL FIGHTA" # Radical Road (Xenos) manufacture option
   STR_ORK_SPECHUL_FIGHTA_CODEX: "{NEWLINE} Da mek boys we rekruited iz propa cleva. Dey found a way to make da fightas tougha, fasta, and even got rid of somma da useless bitz like ejektion seats so weze can put spechul gubbins in dere instead."
   STR_ORK_LOOTED_UFO: "FUNKY FLYIN' FING"
   STR_ORK_LOOTED_UFO_CODEX: "{NEWLINE} Dis iz a weird fingy dat flyz gud. It kan get da boyz ta fights real speedy Boss, doh ev'n da mekz dunno 'ow it wurkz. I kant 'member werez we ev'n gotz it frum. Maybe wun o' doze warpy rekkz 'ad it?"
@@ -9434,6 +9435,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   # intimidation scripts
   STR_SILACOID_WEAPON: "Hellblade"
   STR_INTIMIDATION_WEAPON: "Terrify"
+  STR_INTIMIDATION_WEAPON_REACT_ONLY: "Terrify"
   SILACOID_WEAPON: "Terrify"
   STR_SILACOID: "Khorne Daemon"  # Race name
   STR_SILACOID_TERRORIST: "Bloodletter"  # "Chaos Daemon", used by final mission summoning hordes + spawner grenades
@@ -9810,6 +9812,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_RECRUITS_RADICAL_ROAD2: "Air Support Assets"
   STR_INQ_RECRUITS_RADICAL_ROAD_DESCRIPTION2: "You have delegated your few air support assets to this investigation. Make good use of them."
 
+  STR_INQ_RR_BLACK_MARKET: "Black Market"
+  STR_INQ_RR_BLACK_MARKET_CODEX: "{NEWLINE}  The Inquisition has a natural interest in Black Markets, which facilitate the illicit trade of exotic, unusual, and usually illegal wares. Whereas the Puritan Inquisitor may simply execute those involved, the Radical easily sees the potential of overlooking petty crime, if it might lead to the discovery of greater heresy."
+
   # Inquisition Storm Trooper Armor Research unlocks
   STR_INQ_STORMTROOPER_ARMOR_1_RESEARCH: "Advanced Storm Trooper Armor"
   STR_INQ_STORMTROOPER_ARMOR_2_RESEARCH: "Storm Trooper Power Armor"
@@ -9937,6 +9942,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 ## Start CM Radical Road (Chaos)
   STR_INQ_RR_MIDTIER_CHAOS: "(Midtier) The Ends Justify the Means [Chaos]"
+  STR_INQ_RR_MIDTIER_CHAOS_MAINTAIN_IMPERIAL_DEP: "(Maintain Imperial Weapons)"
   STR_INQ_RR_MIDTIER_EVENT_CHAOS: "The Ends Justify the Means"
   STR_INQ_RR_MIDTIER_EVENT_CHAOS_DESCRIPTION: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to study it, understand it, and make use of it. No longer can heretical means be shunned; they must be embraced. The Ends Justify the Means."
 
@@ -9961,11 +9967,13 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 ## Start CM Radical Road (Xenos)
   STR_INQ_RR_MIDTIER_XENOS: "(Midtier) Xeno Embrace"
-  STR_INQ_RR_MIDTIER_EVENT_XENOS: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to enlist the aid of Xenos. Some, like the Aeldari, are old foes of Chaos themselves. Others, like the brute Orks, may be wielded like a blunt weapon to your own ends. These resources must not be wasted. The Ends Justify the Means."
+  STR_INQ_RR_MIDTIER_EVENT_XENOS: "Xenos Embrace"
+  STR_INQ_RR_MIDTIER_EVENT_XENOS_DESCRIPTION: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to enlist the aid of Xenos. Some, like the Aeldari, are old foes of Chaos themselves. Others, like the brute Orks, may be wielded like a blunt weapon to your own ends. These resources must not be wasted. The Ends Justify the Means."
 
   STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS: "Xenotech Weapon Analysis"
   STR_INQ_RR_REQUISITION_XENOS: "Seek Xenos Allies"
-  STR_INQ_RR_REQUISITION_XENOS_EVENT: "Xenos Allies Arrive"
+  STR_INQ_RR_REQUISITION_XENOS_ELDAR_EVENT: "Xenos Allies Arrive"
+  STR_INQ_RR_REQUISITION_XENOS_ORKS_EVENT: "Xenos Allies Arrive"
   STR_INQ_RR_REQUISITION_XENOS_EVENT_DESCRIPTION: "Your discreet inquiries and careful diplomacy has yielded the aid of Xenos mercenaries. Though heretical by nature, it would be foolish not to make use of them in the battle against the Archenemy."
   STR_INQ_RR_CONSORTED_AELDARI_DEP: "(Consorted with Aeldari)"
   STR_INQ_RR_CONSORTED_TAU_DEP: "(Consorted with Tau)"
@@ -9980,7 +9988,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_BLACK_MARKET_XENOTECH_EVENT: "Black Market Xenotech Acquired"
   STR_INQ_BLACK_MARKET_XENOTECH_EVENT_DESCRIPTION: "The Imperium as a whole shuns the Xenos and their foul technologies, but you recognize the need to utilize their own weapons against them. You have acquired Xenos technology from this planet's Black Market, where this is always a supply of such exotic and illegal items."
 
-
+  STR_INQ_RR_WAVE_SERPENT: "WAVE SERPENT TRANSPORT" # Radical Road (Xenos) manufacture option
 
 # Events CM
 ##########################################
@@ -10151,27 +10159,63 @@ en-US:  #  yamllint disable-line rule:empty-values
   # STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_SCRIPT
   # STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_SCRIPT
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_1_EVENT: "Revisionist Activists Arrive"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_1_EVENT_DESCRIPTION: "Your revisionist contacts have sent along only a pair of militant 'activists'. You'll have to overlook their past indiscretions to justify their use. (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_1_EVENT_DESCRIPTION: "Your revisionist contacts have sent along only a pair of militant 'activists'. You'll have to overlook their past indiscretions to justify their use."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_2_EVENT: "Forsaken Sister Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_2_EVENT_DESCRIPTION: "A wayward Sister of Battle has contacted you, seeking haven from the persecution of her Order. She refuses to tell of what heresy led to her exile, but by your grace she may yet be led into penance... or damnation. (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_2_EVENT_DESCRIPTION: "A wayward Sister of Battle has contacted you, seeking haven from the persecution of her Order. She refuses to tell of what heresy led to her exile, but by your grace she may yet be led into penance... or damnation."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_3_EVENT: "Unsanctioned Psyker Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_3_EVENT_DESCRIPTION: "You have received aid from your revisionist allies, ostenibly a local priest, but there is no doubt that they possess the curse of the psyker, however small. (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_3_EVENT_DESCRIPTION: "You have received aid from your revisionist allies, ostenibly a local priest, but there is no doubt that they possess the curse of the psyker, however small."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_4_EVENT: "Radical Priest Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_4_EVENT_DESCRIPTION: "A firebrand priest has joined your retinue, sent by your revisionist contacts. His fervent preaching often borders on heresy, but certainly such conviction and leadership is worth the risk.  (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_4_EVENT_DESCRIPTION: "A firebrand priest has joined your retinue, sent by your revisionist contacts. His fervent preaching often borders on heresy, but certainly such conviction and leadership is worth the risk."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_5_EVENT: "Offerings"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_5_EVENT_DESCRIPTION: "You have received a shipment of unusual reagants from your Revisionist contacts, accompanied by tomes which describe rituals between objectionable and outright heretical.  (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_5_EVENT_DESCRIPTION: "You have received a shipment of unusual reagants from your Revisionist contacts, accompanied by tomes which describe rituals between objectionable and outright heretical."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_6_EVENT: "Revisionist Fanatic Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_6_EVENT_DESCRIPTION: "Your costly promises of revisionist support have produced only a lone Fanatic, lacking armor and wargear. These groups must lack either competent individuals, or respect for your cause.  (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_6_EVENT_DESCRIPTION: "Your costly promises of revisionist support have produced only a lone Fanatic, lacking armor and wargear. These groups must lack either competent individuals, or respect for your cause."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT: "Underhive Gangers Swear Fealty"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT_DESCRIPTION: "Your revisionist contact has led to an oath of fealty from an underhive gang, who promise to support you in exchange for overlooking their illicit activities. The needs must, it seems.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT_DESCRIPTION: "Your revisionist contact has led to an oath of fealty from an underhive gang, who promise to support you in exchange for overlooking their illicit activities. The needs must, it seems."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_2_EVENT: "Heretical Sisters Arrive"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_2_EVENT_DESCRIPTION: "Your unusual sympathy towards those accused of heresy has become known in the right circles. A secretive coven of Sisters of Battle, long since exiled from their Order, has emerged from hiding to join your cause.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_2_EVENT_DESCRIPTION: "Your unusual sympathy towards those accused of heresy has become known in the right circles. A secretive coven of Sisters of Battle, long since exiled from their Order, has emerged from hiding to join your cause."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_3_EVENT: "Respect of the Fallen Astartes"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_3_EVENT_DESCRIPTION: "With the help of your revisionist allies, you have been able to contact a group of Space Marines disaffected with the Imperium. They will assist you, so long as you tolerate their heretical ideals and your enemies remain the same.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_3_EVENT_DESCRIPTION: "With the help of your revisionist allies, you have been able to contact a group of Space Marines disaffected with the Imperium. They will assist you, so long as you tolerate their heretical ideals and your enemies remain the same."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT: "The Twin Witches"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT_DESCRIPTION: "The sudden arrival of two Witches comes as a surprise to you. Ostensibly they are allied with your revisionist contacts. Whenever near each other, one whispers of the past, and the other screams of the future. Such rare psychic talent necessitates tolerating their worrying quirks.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT_DESCRIPTION: "The sudden arrival of two Witches comes as a surprise to you. Ostensibly they are allied with your revisionist contacts. Whenever near each other, one whispers of the past, and the other screams of the future. Such rare psychic talent necessitates tolerating their worrying quirks."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_5_EVENT: "Herald of the Lost"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_5_EVENT_DESCRIPTION: "Your revisionist contacts have borne fruit, as one of their charismatic leaders has pledged themselves to you. They promise their flock will fervently follow your example, and they await to be led to either salvation or damnation.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_5_EVENT_DESCRIPTION: "Your revisionist contacts have borne fruit, as one of their charismatic leaders has pledged themselves to you. They promise their flock will fervently follow your example, and they await to be led to either salvation or damnation."
+
+
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH: "Secure Ork Mercenary Support"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT: "Ork Mercenaries"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT_DESCRIPTION: "You have contracted the brutish Ork Mercenaries. These simpleminded creatures are easy to manipulate, promising them the brutal warfare their kind desires. Their kin now flock to your banner, awaiting restlessly for the next fight."
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH: "Bargain with Ork Mek Klans"
+
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_1_EVENT: "Ork Boys Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_2_EVENT: "Gaggle of Grots"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_3_EVENT: "'Ard Boys are Here"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_4_EVENT: "Ork Mercenaries"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_5_EVENT: "Ork Weirdboy"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_1_EVENT: "Ork Boys Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_2_EVENT: "Gaggle of Grots"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_3_EVENT: "'Ard Boys are Here"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_4_EVENT: "Ork Mercenaries"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_5_EVENT: "Ork Weirdboys Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_6_EVENT: "Killa Kans Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_7_EVENT: "Ork Nobs Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_8_EVENT: "Ork Big Meks Arrive"
+
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_EVENT_DESCRIPTION: "More Ork Mercenaries arrive to fight for you, seeking the intense battles you have promised them."
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION: "More Ork Mercenaries arrive to fight for you, seeking the intense battles you have promised them. Having proven your might to them, now more and stronger Orks arrive each month."
+
+  STR_INQ_RR_SECURE_ELDAR_SUPPORT_RESEARCH: "Secure Aeldari Support"
+  STR_INQ_RR_SECURE_ELDAR_SUPPORT_EVENT: "You have made a secret pact with the mysterious Aeldari, united against the common enemy; Chaos. They have allowed access to their advanced technology, and their proud warriors will lend their assistance."
+  STR_INQ_RR_SECURE_ELDAR_SUPPORT_2_RESEARCH: "Trust of the Aeldari"
+
+  STR_INQ_RR_ELDAR_MEDITATION_RITUAL: "Aeldari Meditation Ritual"
+
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT: "Aid of the Aeldari"
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT_DESCRIPTION: "Your Aeldari allies have sent their warriors to join you in the unending fight against Chaos."
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT: "Aid of the Aeldari"
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT_DESCRIPTION: "Your Aeldari allies have sent their warriors to join you in the unending fight against Chaos. Having earned a small measure of trust, you notice they now send yet more exotic warriors and weapons."
+
+
 
   STR_FAILURE_REINFORCEMENT_DESCRIPTION: "The monthly sweep has not gone entirely according to plan. Your call for human resources have taken an odd turn, but perhaps this can still be salvaged."
   STR_REINFORCEMENTS_ADEPTAS_WANDERING_MEDICAE: "Wandering Medicae Offer their Services"

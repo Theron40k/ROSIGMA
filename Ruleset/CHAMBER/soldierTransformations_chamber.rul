@@ -151,5 +151,24 @@ soldierTransformation:
       - STR_IMPERIAL_INTERROGATOR
 
 
+  - refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
+    name: STR_INQ_RR_ELDAR_MEDITATION_RITUAL
+    forbiddenPreviousTransformations:
+      - STR_INQ_RR_ELDAR_MEDITATION_RITUAL
+    cost: 0
+    requires:
+      - STR_INQ_RR_SECURE_ELDAR_SUPPORT_2
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    upperBoundType: 1
+    transferTime: 10
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+    flatOverallStatChange:
+      bravery: 10
+      psiStrength: 20
+
+
   # Clean up the unused type from refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
   - delete: STR_INQ_TRANSFORM_SOLDIER_LIST_STUB

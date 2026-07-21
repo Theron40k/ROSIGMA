@@ -298,9 +298,10 @@ extended:
           battle_game.getTurnSide temp;
           if eq temp FACTION_HOSTILE; #we trigger at the start of a hostile turn
             item.setAmmoQuantity 1;
-            # debug_log "newTurnUnit | ROSIGMA_nTU_intimidation_enemy_turn_only | offset: 2 | Setting ammo to 1; turn isn't player turn.";
+            # debug_log "newTurnUnit | ROSIGMA_nTU_intimidation_enemy_turn_only | offset: 2 | Setting ammo to 1; turn is user's turn.";
             return;
           end;
 
           item.setAmmoQuantity ammoValue;
+          # debug_log "newTurnUnit | ROSIGMA_nTU_intimidation_enemy_turn_only | offset: 2 | Resetting ammo. Turn isn't user's turn." ammoValue;
           return;

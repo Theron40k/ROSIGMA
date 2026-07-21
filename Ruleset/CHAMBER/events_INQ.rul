@@ -389,6 +389,7 @@ events:
         STR_FLAMETHROWER: 1
         STR_FLAMETHROWER_CLIP: 4
         STR_SATCHEL_CHARGE_HE: 3
+
   - name: STR_INQ_REQUISITION_OGRYNS_EVENT
     description: STR_INQ_REQUISITION_OGRYNS_EVENT_DESCRIPTION  # "The local Guard regiment have acquiesced to your request and dispatched Ogryn bodyguards."
     background: OgrynBG.SCR
@@ -1234,7 +1235,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_1_EVENT_DESCRIPTION
     background: CHAOSCULTHAGGLEBG.SCR
     timer: 2440  # 2 days
-    points: -100
     everyMultiItemList:
       STR_AUTOGUN: 4
       STR_AUTOGUN_CLIP: 16
@@ -1245,7 +1245,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_2_EVENT_DESCRIPTION
     background: CHAOSCULTSISTERCORRUPTBG.SCR
     timer: 2440  # 2 days
-    points: -100
     everyMultiItemList:
       STR_BOLTER_DEAZ: 1
       STR_LIGHT_BOLTER_AMMO: 4
@@ -1255,7 +1254,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_3_EVENT_DESCRIPTION
     background: WorldControlBG.SCR
     timer: 2440  # 2 days
-    points: -100
     everyMultiItemList:
       STR_ALIEN_FOOD: 5
     everyMultiSoldierList:
@@ -1264,7 +1262,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_4_EVENT_DESCRIPTION
     background: WorldControlBG.SCR
     timer: 2440  # 2 days
-    points: -100
     everyMultiItemList:
       STR_INFERNO_PISTOL: 1
       STR_INFERNO_PISTOL_AMMO: 4
@@ -1274,7 +1271,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_5_EVENT_DESCRIPTION
     background: WorldControlBG.SCR
     timer: 2440  # 2 days
-    points: -100
     everyMultiItemList:
       STR_EXAMINATION_ROOM: 5
       STR_ALIEN_FOOD: 5
@@ -1282,14 +1278,12 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_6_EVENT_DESCRIPTION
     background: WorldControlBG.SCR
     timer: 2440  # 2 days
-    points: -100
     everyMultiSoldierList:
       STR_CHAOS_FANATIC_PLAYER: 2
   - name: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT  # Cultists Gang
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT_DESCRIPTION
     background: Gangerbase.SCR
     timer: 2440  # 2 days
-    points: -200
     everyMultiItemList:
       STR_AUTOGUN: 4
       STR_AUTOGUN_CLIP: 16
@@ -1305,7 +1299,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_2_EVENT_DESCRIPTION
     background: SoBBG1.SCR
     timer: 2440  # 2 days
-    points: -200
     everyMultiItemList:
       STR_BOLTER_DEAZ: 4
       STR_LIGHT_BOLTER_AMMO: 16
@@ -1315,7 +1308,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_3_EVENT_DESCRIPTION
     background: WorldControlBG.SCR
     timer: 2440  # 2 days
-    points: -200
     everyMultiItemList:
       STR_RIFLE: 4
       STR_RIFLE_CLIP_AP: 10
@@ -1332,7 +1324,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT_DESCRIPTION
     background: CHAOSCULTSORCERESSBG.SCR
     timer: 2440  # 2 days
-    points: -200
     everyMultiItemList:
       STR_ALIEN_FOOD: 10
     everyMultiSoldierList:
@@ -1341,7 +1332,6 @@ events:
     description: STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_5_EVENT_DESCRIPTION
     background: CHAOSPSYKERBG.SCR
     timer: 2440  # 2 days
-    points: -200
     everyMultiSoldierList:
       STR_CHAOSCULT_PRIEST_LV2: 1
 
@@ -1420,33 +1410,190 @@ events:
     spawnedPersonType: STR_ADEPTAS_KHORNE
 
 
-  # no gear because difficult to match random soldiers to their appropriate gear.
-  - name: STR_INQ_RR_REQUISITION_XENOS_EVENT
-    description: STR_INQ_RR_REQUISITION_XENOS_EVENT_DESCRIPTION
-    background: InquisitionBG.SCR
-    timer: 2440
-    randomMultiSoldierList:
-      -
-        STR_GUARD_ORK_BOY: 4
-      -
-        STR_ELDAR_M: 2
-        STR_ELDAR_F: 2
-      -
-        STR_FIREWARRIOR_GV: 4
-
   - name: STR_INQ_RR_REQUISITION_XENOS_ELDAR_EVENT
-    description: STR_INQ_RR_REQUISITION_XENOS_ELDAR_EVENT_DESCRIPTION
-    background: InquisitionBG.SCR
-    timer: 2440
+    description: STR_INQ_RR_REQUISITION_XENOS_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
     randomMultiSoldierList:
       -
-        STR_ELDAR_M: 2
-        STR_ELDAR_F: 2
+        STR_ELDAR_GUARDIAN_PLAYER: 5
+        STR_ELDAR_RANGER_PLAYER: 2
+    everyMultiItemList:
+      STR_CATAPULT: 7
+      STR_SHURIKEN_CLIP: 21
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_ELDAR_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_ELDAR_AVANGER_MF: 8
+        STR_ELDAR_WARLOCK_PLAYER: 2
+    everyMultiItemList:
+      STR_CATAPULT: 6
+      STR_SHURIKEN_CLIP: 24
+      STR_EPOWER_SWORD: 1
+
+  # TODO Player Eldar is in flux. Revisit reinforcement events when settled.
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_ELDAR_AVANGER_MF: 5
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_ELDAR_AVANGER_MF: 6
+        STR_ELDAR_WARLOCK_PLAYER: 1
+
+
+  - name: STR_INQ_RR_REQUISITION_XENOS_ORKS_EVENT
+    description: STR_INQ_RR_REQUISITION_XENOS_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    everyMultiSoldierList:
+      STR_BLOOD_AXE_ORK_BOY: 6
+      STR_GUARD_ORK_NOB: 1
+    everyMultiItemList:
+      STR_SLUGGA: 3
+      STR_AMMO_BIT10: 12
+      STR_SHOOTA: 3
+      STR_AMMO_BIT20: 8
+      STR_BIG_SHOOTA: 1
+      STR_AMMO_BIT50: 4
+      STR_CHOPPA: 7
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    everyMultiItemList:
+      STR_SLUGGA: 3
+      STR_AMMO_BIT10: 12
+      STR_SHOOTA: 2
+      STR_AMMO_BIT20: 8
+      STR_BIG_SHOOTA: 1
+      STR_AMMO_BIT50: 4
+      STR_CHOPPA: 6
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 4
+      STR_BLOOD_AXE_ORK_BOY: 8
+      STR_GUARD_ORK_NOB: 2
+    researchList: [STR_ORK_DEAL]
+
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_1_EVENT # Lots o' boys
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_BLOOD_AXE_ORK_BOY: 6
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_2_EVENT # Lots o' grots
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 12
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_3_EVENT # 'Ard Boys
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_GUARD_ORK_ARDBOY: 5
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_4_EVENT # Mix
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_BLOOD_AXE_ORK_BOY: 4
+      STR_GUARD_ORK_NOB: 1
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_5_EVENT # Weirdboy
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 4
+      STR_GUARD_ORK_WEIRDBOY: 1
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_1_EVENT # Lots o' boys++
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_BLOOD_AXE_ORK_BOY: 6
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_2_EVENT # Lots o' grots++
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 16
+      STR_GUARD_ORK_NOB: 1
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_3_EVENT # 'Ard Boys++
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_GUARD_ORK_ARDBOY: 6
+      STR_GUARD_ORK_NOB: 1
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_4_EVENT # Mix++
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_BLOOD_AXE_ORK_BOY: 6
+      STR_GUARD_ORK_NOB: 2
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_5_EVENT # Weirdboys++
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 4
+      STR_GUARD_ORK_WEIRDBOY: 3
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_6_EVENT # Killa Kans
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_GUARD_ORK_KAN_BOY: 2
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_7_EVENT # Nob Squad
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
+    everyMultiItemList:
+      STR_BIGCHOPPA: 2
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_GUARD_ORK_NOB: 5
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_8_EVENT # Big Meks
+    description: STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    timer: 2440  # 2 days
     randomMultiItemList:
       -
-        STR_CATAPULT: 3
-        STR_SHURIKEN_CLIP: 12
-        STR_ELDAR_GRENADE: 4
+        STR_ZOG_GUN: 2
+        STR_ZOG_GUN_AMMO: 8
+      -
+        STR_SNAZZY_BIG_SHOOTA: 2
+        STR_AMMO_BIT50: 8
+      -
+        STR_SNAZZY_TWIN_SHOOTA: 2
+        STR_BOOMY_AMMO_BIT20: 8
+      -
+        STR_DAKKA_DEFFGUN: 2
+        STR_ASSC_CLIP: 4
+        STR_AUTOCANNON_AMMO: 4
+    everyMultiSoldierList:
+      STR_GUARD_ORK_GRETCHIN: 2
+      STR_GUARD_ORK_BIG_MEK: 2
+
+
 
   - name: STR_FAILURE_OFFICER_VETERAN_EVENT
     description: STR_FAILURE_REINFORCEMENT_VETERAN_OFFICER_DESCRIPTION  # "A Haggardly Guard Officer staggers up to your base, armor scorched and scuffed. The lone survivor of a Guard company wiped out by Chaos Forces."
