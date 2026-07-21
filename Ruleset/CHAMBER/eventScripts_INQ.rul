@@ -11,8 +11,7 @@ eventScripts:
 
     ## Secure Support (Agents) Scripts:
     ## Theme: Wide range of possibilities. On a Good Score, better results are added (below)
-  - &STR_INQ_SECURE_SUPPORT_AGENTS_BAD_SCRIPT_TEMPLATE
-    type: STR_INQ_SECURE_SUPPORT_AGENTS_BAD_SCRIPT
+  - type: STR_INQ_SECURE_SUPPORT_AGENTS_BAD_SCRIPT
     eventWeights:
       0:
         STR_INQ_AGENTS_BAD_ASSASSINATION_EVENT: 1
@@ -32,9 +31,25 @@ eventScripts:
     researchTriggers:
       STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH: true
 
-  # At Midtier, trigger an additional Bad result.
+  # At Midtier, trigger an additional Bad result
   - type: STR_INQ_SECURE_SUPPORT_AGENTS_BAD_MIDTIER_SCRIPT
-    refnode: *STR_INQ_SECURE_SUPPORT_AGENTS_BAD_SCRIPT_TEMPLATE
+    eventWeights:
+      0:
+        #note these Events should match STR_INQ_SECURE_SUPPORT_AGENTS_BAD_SCRIPT
+        STR_INQ_AGENTS_BAD_ASSASSINATION_EVENT: 1
+        STR_INQ_AGENTS_BAD_SERVITORS_EVENT: 1
+        STR_INQ_AGENTS_BAD_COLLECTOR_EVENT: 1
+        STR_INQ_AGENTS_BAD_PENAL_LEGION_EVENT: 1
+        STR_INQ_AGENTS_BAD_BEASTMEN_EVENT: 1
+        STR_INQ_AGENTS_BAD_CRAZYPRIEST_EVENT: 1
+        STR_INQ_AGENTS_BAD_FRATERIS_EVENT: 1
+        STR_INQ_AGENTS_BAD_OFFICER_EVENT: 1
+        STR_INQ_AGENTS_BAD_ENFORCERS_EVENT: 1
+        STR_INQ_AGENTS_BAD_STORMTROOPER_EVENT: 1
+        STR_INQ_AGENTS_BAD_SISTER_EVENT: 1
+        STR_INQ_AGENTS_BAD_OGRYN_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
     researchTriggers:
       STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH: true
       STR_MIDTIER_PREREQ: true
@@ -283,6 +298,60 @@ eventScripts:
     maxScore: 999
     researchTriggers:
       STR_INQ_SECURE_SUPPORT_REVISIONISTS_RESEARCH: true
+
+  # Xenos path;  Ork reinforcements
+  - type: STR_INQ_SECURE_SUPPORT_ORKS_BAD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_1_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_2_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_3_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_4_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_5_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH: false
+
+  - type: STR_INQ_SECURE_SUPPORT_ORKS_GOOD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_1_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_2_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_3_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_4_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_5_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_6_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_7_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_8_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH: true
+
+  # Xenos path;  Eldar reinforcements
+  # TODO Player Eldar is in flux. revisit with more variety when settled
+  - type: STR_INQ_SECURE_SUPPORT_ELDAR_BAD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH: false
+
+  - type: STR_INQ_SECURE_SUPPORT_ELDAR_GOOD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH: true
 
 
   - type: STR_INQ_BRIBES_RANDOMIZED_SCRIPT

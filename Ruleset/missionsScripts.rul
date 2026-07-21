@@ -2267,7 +2267,7 @@ missionScripts:
       STR_CHAOS_PATH: false
       STR_NOT_CHAOSCULT: true
 
-  # Grey Knights
+  # Grey Knights / Deathwatch
   - type: MMEarlyGK
     refNode: *STR_MONTHLY_MISSIONS
     missionWeights:
@@ -2287,6 +2287,30 @@ missionScripts:
     researchTriggers:
       STR_CHAMBER_NOT_ARBITES: true
       STR_NOT_CHAOSCULT: true
+      STR_RADICAL_INQUISITOR_STRATEGY: false # Radical Road has their own table, MMRadicalRoad
+
+  # Radical Road (presently flip back to MMElse; future tilt towards new Xenos/Chaos missions)
+  - type: MMRadicalRoad
+    refNode: *STR_MONTHLY_MISSIONS
+    missionWeights:
+      0:
+        STR_CATACOMBS: 40
+        STR_RESCUE_PDF_VALKYRIE: 20  # grounded valkyrie, replace with Inquisition Valkyrie? Different troops to rescue
+      4:
+        STR_CATACOMBS: 30
+        STR_ALIEN_ARTIFACT: 10  # Space Hulk recurring mission, after initial script
+        STR_RESCUE_PDF_VALKYRIE: 20  # grounded valkyrie appears on radar, go to support to get some free troops, maybe include an officer?
+        STR_SUPPORT_PDF_ASSAULT: 10  # PDF assaulting chaos base of cult or traitor guard
+      7:
+        STR_CATACOMBS: 10
+        STR_ALIEN_ARTIFACT: 10
+        STR_ALIEN_WAR: 10
+        STR_SUPPORT_MARINE_ASSAULT: 10  # Marines assaulting chaos base of traitor marines or raptors
+        STR_SUPPORT_CATAMARINE_ASSAULT: 10  # Marines Cataphractii assaulting chaos base of traitor marines or raptors
+    researchTriggers:
+      STR_RADICAL_INQUISITOR_STRATEGY: true
+      STR_CHAMBER_NOT_ARBITES: true
+      # STR_CHAOS_PATH: false  # note: current MidtierChaos path does not modify STR_CHAOS_PATH, so it keeps using this MM Table. possible future review
 
   # Officio Assassinorum
   - type: MMAssassinorum # should be in addition to standard chamber militant missions. Will make adjustments as I go
