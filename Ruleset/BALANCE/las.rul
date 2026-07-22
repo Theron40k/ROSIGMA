@@ -161,12 +161,46 @@ items:
     snapRange: 17  # +1
     aimRange: 27 #worse than longlas
 
-    accuracyAuto: 60  # +10 vs RIFLEG, -5 vs mastercrafted
+    accuracyAuto: 55  # +5 vs RIFLEG, -5 vs mastercrafted
     accuracySnap: 75  # +5 vs RIFLEG, -15 vs MC
     accuracyAimed: 90 #-10 vs longlas
     tuAuto: 37 #worse autofire
     tuSnap: 28 #worse snapfire
     tuAimed: 60
+
+    autoShots: 2  # another downside vs basic rifle version
+    minRange: 6  # long arm; unwieldy in CQC
+    oneHandedPenalty: 25  # too long and unwieldy to use effectively one-handed
+
+    tags:
+      REACTION_MULTIPLIER: 75  # awkward long arm
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+
+  - type: STR_LASER_RIFLE_KRIEG_TIER3  # ceramite tier basic krieg lasgun
+    dropoff: 4
+    autoRange: 11  # +1
+    snapRange: 18  # +1
+    aimRange: 0
+
+    accuracyAuto: 60  # +10 vs RIFLEG, -5 vs mastercrafted
+    accuracySnap: 80  # +5 vs RIFLEG, -10 vs MC
+    accuracyAimed: 0
+    tuAuto: 32
+    tuSnap: 24
+    tuAimed: 0
+
+  - type: STR_LASER_RIFLE_KRIEG_TIER3_SCOPED  # ceramite tier scoped krieg lasgun
+    dropoff: 4
+    autoRange: 9 #-1
+    snapRange: 17  # +1
+    aimRange: 27 #worse than longlas
+
+    accuracyAuto: 60  # +10 vs RIFLEG, -5 vs mastercrafted
+    accuracySnap: 85  # +5 vs RIFLEG, -5 vs MC
+    accuracyAimed: 90 #-10 vs longlas
+    tuAuto: 36 #worse autofire
+    tuSnap: 27 #worse snapfire
+    tuAimed: 55 #-5
 
     autoShots: 2  # another downside vs basic rifle version
     minRange: 6  # long arm; unwieldy in CQC
