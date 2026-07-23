@@ -1145,7 +1145,9 @@ armors:
       F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
       F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
       F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
-    drawingRoutine: 1
+    drawingRoutine: 0
+    spriteSheet: ELDAR_SEER.SPK
+    #customArmorPreviewIndex: {mod: 40k, index: 255}
     damageModifier:  # ELDAR ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -1164,6 +1166,8 @@ armors:
     units:
       - STR_ELDAR_SEER_F
       - STR_ELDAR_PSYKER_PLAYER
+    corpseBattle:
+      - STR_ELDAR_SEER_CORPSE_P
     builtInWeapons:
       - INV_NULL_3X3
     stats: #Seer get bonus to PSY, health malus for melee and throwing
