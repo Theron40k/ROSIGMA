@@ -548,7 +548,6 @@ units:
     spotter: 4
     sniper: 100
     energyRecovery: 200
-    # spawnUnit: STR_NECRON_IMORTAL
     builtInWeaponSets:
       - - STR_STAFF_OF_LIGHT
         - STR_NECRON_RESURRECTION_ORB
@@ -1502,6 +1501,7 @@ armors:
   - type: STR_NECRON_LORD_ARMOR_REVIVES
     refNode: *NECRON_LORD_ARMOR_TEMPLATE
     spriteSheet: STR_NECRON_LORD_REVIVE_BS.PCK
+    deathFrames: 6
     tags:
       INFECTION_RESIST: 100  # infection immune
       INTIMIDATION_RESISTANCE: 100  # intimidate immune
