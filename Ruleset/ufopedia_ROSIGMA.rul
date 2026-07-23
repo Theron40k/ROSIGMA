@@ -5684,7 +5684,64 @@ ufopaedia:
       - STR_THE_IMPERIAL_LAW_STRATEGY
 # #SOLDIERS.AT#         Adeptus Terra Soldiers
 ## #SOLDIERS.AT.CULT#      Chaos Cult Strategy
+
+  - id: STR_CONVERT_TO_CHAOS_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: STR_CONVERT_TO_CHAOS_ADEPTAS.SPK
+    text: STR_CONVERT_TO_CHAOS_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+
+  - id: STR_CONVERT_TO_SLAANESH_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: SlaaneshSisterOrigins.SPK
+    text: STR_CONVERT_TO_SLAANESH_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_SLAANESH_OPTIONS
+  - id: STR_CONVERT_TO_KHORNE_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UPKhorneDevotedSisterOrigins.SPK
+    text: STR_CONVERT_TO_KHORNE_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_KHORNE_OPTIONS
+  - id: STR_CONVERT_TO_NURGLE_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: NurgleSisterOrigin2.SPK
+    text: STR_CONVERT_TO_NURGLE_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_NURGLE_OPTIONS
+  - id: STR_CONVERT_TO_TZEENTCH_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: TzeentchSisterOriginsSaturated2.SPK
+    text: STR_CONVERT_TO_TZEENTCH_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_TZEENTCH_OPTIONS
+
 # #SOLDIERS.AT.ELDAR#
+  #aspect warrior transformations
+  - id: STR_PROMOTE_BEGIN_AUTARCH_PATH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    text: STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+  - id: STR_PROMOTE_TO_DIREAVENGER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP164.SPK # DIRE AVENGER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_AVENGER
+    requires:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
   - id: STR_PROMOTE_TO_SCORPION
     type_id: 10
     section: STR_SOLDIERS_UC
@@ -5706,13 +5763,6 @@ ufopaedia:
     text: STR_ELDAR_ASPECT_HELPER_REAPER
     requires:
       - STR_ELDAR_REAPER_RESEARCH
-  - id: STR_PROMOTE_TO_DIREAVENGER
-    type_id: 10
-    section: STR_SOLDIERS_UC
-    image_id: UP164.SPK # DIRE AVENGER ARMOR CODEX IMAGE
-    text: STR_ELDAR_ASPECT_HELPER_AVENGER
-    requires:
-      - STR_ELDAR_DIRE_AVENGER_RESEARCH
   - id: STR_PROMOTE_TO_DRAGON
     type_id: 10
     section: STR_SOLDIERS_UC
@@ -5727,6 +5777,19 @@ ufopaedia:
     text: STR_ELDAR_ASPECT_HELPER_SPIDER
     requires:
       - STR_ELDAR_SPIDER_RESEARCH
+  # Eldar exarch/autarch
+  #- id: STR_PROMOTE_TO_AUTARCH
+  #- id: #dire avenger ex
+  #- id: #scorpion ex.
+  #- id: STR_PROMOTE_TO_BANSHEE_EXARCH
+  #- id: STR_PROMOTE_TO_REAPER_EXARCH
+  #- id: STR_PROMOTE_TO_DRAGON_EXARCH
+  #- id: STR_PROMOTE_TO_SPIDER_EXARCH
+  # ELDAR psyker transf.
+  #- id: STR_PROMOTE_TO_PSYKER
+  #- id: STR_PROMOTE_TO_ELDAR_WARLOCK
+  # dead eldar
+  #- id: STR_RESURRECT_ELDAR
 
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
