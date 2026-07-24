@@ -1,0 +1,89 @@
+alienDeployments:
+
+    # month 0 ganger base for chaos cult
+
+  - type: STR_GANGER_BASE_CHAOSCORRUPTED
+    markerIcon: 54
+    #baseSelfDestructCode: STR_NOT_CHAOSCULT #STR_THE_IMPERIAL_LAW_STRATEGY
+    terrains:
+      - MUNDAINDUSTRIALURBANDIO
+      #- CULTIST_TEMPLE
+    script: MUNDAINDUSTRIALURBANDIO
+    alienBase: true
+    objectiveType: 100
+    objectiveComplete: [STR_GANGER_BASE_DESTROYED, 250]
+    objectivePopup: STR_GANGER_BASE_KILLED
+    data:
+      - alienRank: 0
+        lowQty: 1
+        highQty: 2
+        dQty: 1
+        percentageOutsideUfo: 0
+        itemSets: [[], [], []]
+      - alienRank: 1
+        lowQty: 2
+        highQty: 4
+        dQty: 3
+        percentageOutsideUfo: 50
+        itemSets: [[], [], []]
+      - alienRank: 2
+        lowQty: 2
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 50
+        itemSets: [[], [], []]
+      - alienRank: 3
+        lowQty: 3
+        highQty: 6
+        dQty: 4
+        percentageOutsideUfo: 75
+        itemSets: [[], [], []]
+      - alienRank: 4
+        lowQty: 3
+        highQty: 3
+        dQty: 3
+        percentageOutsideUfo: 75
+        itemSets: [[], [], []]
+      - alienRank: 5
+        lowQty: 3
+        highQty: 6
+        dQty: 3
+        percentageOutsideUfo: 75
+        itemSets: [[], [], []]
+      - alienRank: 6
+        lowQty: 3
+        highQty: 3
+        dQty: 3
+        percentageOutsideUfo: 75
+        itemSets: [[], [], []]
+      - alienRank: 7
+        lowQty: 3
+        highQty: 6
+        dQty: 4
+        percentageOutsideUfo: 75
+        itemSets: [[], [], []]
+    briefing:
+      cutscene: CULTBASE
+      music: gmstory2
+      title: STR_GANGER_BASE_ASSAULT
+      textOffset: -16
+      background: GANGERBASE.SCR
+      showTarget: false
+      desc: STR_GANGER_BASE_CHAOSCORRUPTED_ASSAULT_BRIEFING
+    missionBountyItem: STR_KILLPOINT_TOKEN
+    missionBountyItemCount: 100
+    markerName: STR_GANGER_BASE_SITE
+    genMissionRaceFromAlienBase: false
+    genMission:
+      STR_ALIEN_SABOTAGECHAOSCULT: 12
+      STR_RIOTCHAOSCULT: 20
+      STR_RIOTCHAOSCULTALTERNATE: 20
+      STR_GANGERSCITYCONVOYDEF: 20
+      STR_GANGERSCITYCONVOYALT: 20
+      STR_TS_GANGER_BASE_START_ELDAR: 8
+    genMissionFreq: 3
+    width: 50
+    length: 50
+    height: 12
+    points: 0
+    #unlockedResearch: STR_ENDGANGERSBASE

@@ -331,6 +331,16 @@ soldiers:
       - delete
       - Names/eldar_scorpion.nam
 
+  # Banshee
+
+  - type: STR_ELDAR_BANSHEE_F
+    refNode: *ASPECT_WARRIOR_TEMPLATE
+    costBuy: 0
+    armor: STR_ELDAR_ARMOR2_P
+    soldierNames:
+      - delete
+      - Names/eldar_banshee.nam
+
   - type: STR_ELDAR_REAPER_M
     refNode: *ASPECT_WARRIOR_TEMPLATE
     costBuy: 0
@@ -829,7 +839,7 @@ soldiers:
     standHeight: 22
     kneelHeight: 14
     avatarOffsetX: 66
-    avatarOffsetY: 42
+    avatarOffsetY: 30
     femaleFrequency: 50
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
@@ -846,14 +856,6 @@ soldiers:
     soldierNames:
       - delete
       - Names/eldar_seer.nam
-
-  - type: STR_ELDAR_BANSHEE_F
-    refNode: *PSYKER_TEMPLATE
-    costBuy: 0
-    armor: STR_ELDAR_ARMOR2_P
-    soldierNames:
-      - delete
-      - Names/eldar_banshee.nam
 
   - type: STR_ELDAR_SEER_F
     refNode: *PSYKER_TEMPLATE

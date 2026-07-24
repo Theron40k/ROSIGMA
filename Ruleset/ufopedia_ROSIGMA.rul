@@ -646,15 +646,6 @@ ufopaedia:
     requires:
       - STR_PICK_STRATEGY
 
-  # Eldar Path
-  - delete: STR_HELP15
-  - id: STR_HELP15
-    type_id: 10
-    requires:
-      - STR_ELDAR_PATH
-    section: STR_STRATEGY
-    image_id: 3PROMO.SPK
-    text: STR_HELP_PROMO
   - delete: STR_CHOSEN_ELDAR
   - id: STR_CHOSEN_ELDAR
     requires:
@@ -1442,6 +1433,36 @@ ufopaedia:
         text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX
       - title: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
         text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX_PAGE2
+
+  # Eldar Promotion helper
+  - delete: STR_HELP15
+  - id: STR_HELP15
+    type_id: 10
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    section: STR_STRATEGY
+    image_id: ELDAR_PATH_HELPER.SPK
+    text: STR_HELP_PROMO
+
+  - id: STR_ELDAR_RUNES_TITLE
+    type_id: 10
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    section: STR_STRATEGY
+    image_id: ELDAR_RUNES_CODEX.SPK
+    text: STR_ELDAR_RUNE_CODEX
+
+  - id: STR_ELDAR_EXARCH_AND_AUTARCH
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_AUTARCH_BACKGROUND.SPK
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    pages:
+      - title: STR_ELDAR_EXARCH_AND_AUTARCH
+        text: STR_ELDAR_EXARCH_AND_AUTARCH_PAGE1
+      - title: STR_ELDAR_EXARCH_AND_AUTARCH
+        text: STR_ELDAR_EXARCH_AND_AUTARCH_PAGE2
 
 ## #STRATEGY.SOB#
   - delete: STR_CHOSEN_ADEPTAS
@@ -2379,6 +2400,14 @@ ufopaedia:
     text: STR_CHAOSREWARD_REQUISITIONS_CODEX
     requires:
       - STR_CHAOSREWARD_REQUISITIONS
+### #RESEARCH.AT.ELDAR#
+  - id: STR_RECRUIT_ELDAR_OUTCAST
+    type_id: 10
+    section: STR_ALIEN_RESEARCH_UC
+    image_id: STR_RECRUIT_ELDAR_OUTCAST.SPK
+    text: STR_RECRUIT_ELDAR_OUTCAST_CODEX
+    requires:
+      - STR_RECRUIT_ELDAR_OUTCAST
 
 ## #RESEARCH.SOB#
   - id: STR_FAITHFUL_ARMORY  # SoB Weapons Requisition
@@ -5655,6 +5684,113 @@ ufopaedia:
       - STR_THE_IMPERIAL_LAW_STRATEGY
 # #SOLDIERS.AT#         Adeptus Terra Soldiers
 ## #SOLDIERS.AT.CULT#      Chaos Cult Strategy
+
+  - id: STR_CONVERT_TO_CHAOS_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: STR_CONVERT_TO_CHAOS_ADEPTAS.SPK
+    text: STR_CONVERT_TO_CHAOS_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+
+  - id: STR_CONVERT_TO_SLAANESH_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: SlaaneshSisterOrigins.SPK
+    text: STR_CONVERT_TO_SLAANESH_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_SLAANESH_OPTIONS
+  - id: STR_CONVERT_TO_KHORNE_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UPKhorneDevotedSisterOrigins.SPK
+    text: STR_CONVERT_TO_KHORNE_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_KHORNE_OPTIONS
+  - id: STR_CONVERT_TO_NURGLE_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: NurgleSisterOrigin2.SPK
+    text: STR_CONVERT_TO_NURGLE_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_NURGLE_OPTIONS
+  - id: STR_CONVERT_TO_TZEENTCH_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: TzeentchSisterOriginsSaturated2.SPK
+    text: STR_CONVERT_TO_TZEENTCH_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_TZEENTCH_OPTIONS
+
+# #SOLDIERS.AT.ELDAR#
+  #aspect warrior transformations
+  - id: STR_PROMOTE_BEGIN_AUTARCH_PATH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    text: STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+  - id: STR_PROMOTE_TO_DIREAVENGER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP164.SPK # DIRE AVENGER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_AVENGER
+    requires:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
+  - id: STR_PROMOTE_TO_SCORPION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP165.SPK # SCORPION_ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_SCORPIONS
+    requires:
+      - STR_ELDAR_SCORPION_RESEARCH
+  - id: STR_PROMOTE_TO_BANSHEE
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP113.SPK # BANSHEE ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_BANSHEE
+    requires:
+      - STR_ELDAR_BANSHEE_RESEARCH
+  - id: STR_PROMOTE_TO_REAPER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP167.SPK # REAPER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_REAPER
+    requires:
+      - STR_ELDAR_REAPER_RESEARCH
+  - id: STR_PROMOTE_TO_DRAGON
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_DRAGON_ARMOR_CODEX.SPK # fire dragon ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_DRAGON
+    requires:
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+  - id: STR_PROMOTE_TO_SPIDER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_SPIDER_ARMOR_CODEX.SPK # SPIDER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER
+    requires:
+      - STR_ELDAR_SPIDER_RESEARCH
+  # Eldar exarch/autarch
+  #- id: STR_PROMOTE_TO_AUTARCH
+  #- id: #dire avenger ex
+  #- id: #scorpion ex.
+  #- id: STR_PROMOTE_TO_BANSHEE_EXARCH
+  #- id: STR_PROMOTE_TO_REAPER_EXARCH
+  #- id: STR_PROMOTE_TO_DRAGON_EXARCH
+  #- id: STR_PROMOTE_TO_SPIDER_EXARCH
+  # ELDAR psyker transf.
+  #- id: STR_PROMOTE_TO_PSYKER
+  #- id: STR_PROMOTE_TO_ELDAR_WARLOCK
+  # dead eldar
+  #- id: STR_RESURRECT_ELDAR
+
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
   - id: STR_INDUCT_CANTUS
@@ -12054,6 +12190,18 @@ ufopaedia:
     image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom scoped art
     text: STR_LASER_RIFLE_KRIEG_TIER2_SCOPED_UFOPEDIA
 
+  - id: STR_LASER_RIFLE_KRIEG_TIER3  # Ceramite Lucius Krieg T3 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom lucius art
+    text: STR_LASER_RIFLE_KRIEG_TIER3_UFOPEDIA
+
+  - id: STR_LASER_RIFLE_KRIEG_TIER3_SCOPED  # Ceramite Lucius Krieg T3 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom scoped art
+    text: STR_LASER_RIFLE_KRIEG_TIER3_SCOPED_UFOPEDIA
+
   - delete: STR_MCLASER_RIFLE
   - id: STR_MCLASER_RIFLE
     type_id: 14
@@ -13205,7 +13353,7 @@ ufopaedia:
   - id: STR_BLASTMASTER
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: STR_BLASTMASTER.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_SONIC
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
@@ -22636,7 +22784,7 @@ ufopaedia:
     section: STR_ALIEN_LIFE_FORMS
     requires:
       - STR_DONTSHOWYET
-      - STR_TYRANID_WARRIOR
+      - STR_TYRANID_PRIME
     image_id: TYRANID_PRIME_ORIGINS.SPK
     text: STR_TYRANID_PRIME_UFOPEDIA
   - id: STR_TYRANID_PRIME_AUTOPSY
@@ -22714,7 +22862,7 @@ ufopaedia:
     section: STR_ALIEN_LIFE_FORMS
     requires:
       - STR_DONTSHOWYET
-      - STR_BIVOORE
+      - STR_BIOVORE
     image_id: BIOVORE_ORIGINS.SPK
     text: STR_BIOVORE_UFOPEDIA
   - id: STR_BIOVORE_AUTOPSY

@@ -1115,7 +1115,39 @@ armors:
     sideArmor: 75
     rearArmor: 60
     underArmor: 65
-    drawingRoutine: 1
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARSEER
+      2: SEER_HELMET
+      3: ELDARSEER_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY12"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY11"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY10"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY9"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY5"]
+      M9: ["", "ELDAR", "CLOSEDHELMET6", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET7", "ACCESSORY6"]
+      M11: ["", "ELDAR", "CLOSEDHELMET8", "ACCESSORY7"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY4"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY10"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY5"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY11"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY12"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY7"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY1"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    drawingRoutine: 0
+    spriteSheet: ELDAR_SEER.SPK
+    #customArmorPreviewIndex: {mod: 40k, index: 255}
     damageModifier:  # ELDAR ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -1134,6 +1166,8 @@ armors:
     units:
       - STR_ELDAR_SEER_F
       - STR_ELDAR_PSYKER_PLAYER
+    corpseBattle:
+      - STR_ELDAR_SEER_CORPSE_P
     builtInWeapons:
       - INV_NULL_3X3
     stats: #Seer get bonus to PSY, health malus for melee and throwing
