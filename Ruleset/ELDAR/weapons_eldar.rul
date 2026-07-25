@@ -842,7 +842,7 @@ items:
     attraction: 8
     listOrder: 16300
 
-  - type: STR_ELDAR_POWER_BLADE  # eldar mirrorsword stats, REWORK required
+  - type: STR_ELDAR_POWER_BLADE  # STR_EPOWER_SWORD stats, REWORK required
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
       - STR_ELDAR_SPIDER_RESEARCH
@@ -920,7 +920,7 @@ items:
       reactions: 0.3
     accuracyMelee: 100
     tags:
-      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_STRENGTH_REQUIREMENT: 30
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
     size: 0.2
     costBuy: 50000
@@ -938,7 +938,148 @@ items:
     flatRate: true
     attraction: 8
 
+  - type: STR_WITCHBLADE  # NEEDS REWORK (A LOT?)
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      - STR_ELDAR_SEER_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    listOrder: 16999
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 30
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+      psiSkill: 1  # Force weapon
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    size: 0.2
+    costBuy: 50000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4881
+    floorSprite: 4881
+    handSprite: 1538
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: 1891
+    meleeHitSound: 1892
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      DAMAGE_RESIST_PENETRATION_PERCENT: 35
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 220
+      DAMAGE_BONUS_PERCENT_PSYKER: 170
+      DAMAGE_BONUS_PERCENT_SYNAPSE: 150 # among already vulnerable tyranids, synapse creatures are the most vulnerable; often also psykers
+      DAMAGE_BONUS_PERCENT_TZEENTCH: 120 # higher psychic sensitivity
+      DAMAGE_BONUS_PERCENT_NURGLE: 170 # durable because of warp magic, take away the magic, you have a dead body
+      DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
+      DAMAGE_BONUS_PERCENT_ELDAR: 140
 
+  - type: STR_SINGING_SPEAR  #Needs WORK
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      - STR_ELDAR_SEER_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    requiresBuyBaseFunc: []
+    listOrder: 17000
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 1
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costAimed:
+      time: 40
+      energy: 20
+    accuracyAimed: 100
+    confAimed:
+      name: STR_SINGING_SPEAR_AIMED_THROW
+      shortName: STR_SINGING_SPEAR_AIMED_THROW
+    aimRange: 12
+    costSnap:
+      time: 30
+      energy: 15
+    accuracySnap: 80
+    confSnap:
+      name: STR_SINGING_SPEAR_SNAP_THROW
+      shortName: STR_SINGING_SPEAR_SNAP_THROW
+    snapRange: 9
+    maxRange: 18
+    accuracyMultiplier:
+      firing: 0.0
+      throwing: 1.0
+    arcingShot: true
+    powerRangeThreshold: 21
+    powerRangeReduction: 99
+    bulletSpeed: -2
+    kneelBonus: 100
+    dropoff: 5
+    vaporColor: 10
+    vaporDensity: 3
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    flatRate: true
+    power: 30
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+      psiSkill: 1  # Force weapon
+    size: 0.2
+    costBuy: 100000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4882
+    floorSprite: 4882
+    handSprite: 1546
+    bulletSprite: 32
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: 1893
+    hitSound: 1892
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: 1891
+    meleeHitSound: 1892
+    invWidth: 2
+    invHeight: 3
+    attraction: 8
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      DAMAGE_RESIST_PENETRATION_PERCENT: 35
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 220
+      DAMAGE_BONUS_PERCENT_PSYKER: 170
+      DAMAGE_BONUS_PERCENT_SYNAPSE: 150 # among already vulnerable tyranids, synapse creatures are the most vulnerable; often also psykers
+      DAMAGE_BONUS_PERCENT_TZEENTCH: 120 # higher psychic sensitivity
+      DAMAGE_BONUS_PERCENT_NURGLE: 170 # durable because of warp magic, take away the magic, you have a dead body
+      DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
+      DAMAGE_BONUS_PERCENT_ELDAR: 140
 
   - delete: STR_WRAITH_MELEE_WEAPON
   - type: STR_WRAITH_MELEE_WEAPON
