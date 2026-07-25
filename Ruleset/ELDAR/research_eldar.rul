@@ -190,7 +190,7 @@ research:
     cost: 150
     points: 0
     dependencies:
-      #- STR_MELTAGUN_TECH  #comment for testing, not accessible currently
+      - STR_MELTAGUN_TECH
       - STR_ELDAR_WEAPONS_ACQUISITION
 
   - name: STR_ELDAR_PSYKER_RESEARCH  # path of the psyker research
@@ -198,6 +198,7 @@ research:
     dependencies:
       - STR_RECRUIT_ELDAR_T1
       - STR_MIDTIER_PREREQ
+    spawnedEvent: STR_SLAANESH_PALACE_ACTIVITY_DETECTED
 
   - name: STR_ELDAR_SEER_RESEARCH
     cost: 0
@@ -216,6 +217,19 @@ research:
     points: 0
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_SLAANESH_PALACE_ACTIVITY_DETECTED
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
 #------------------------------------------------------------------
 # TIER 3
   - name: STR_ELDAR_ASURYANI_CAMPAING_T3
@@ -225,7 +239,7 @@ research:
       - STR_ELDAR_ASURYANI_CAMPAING_T2
       - STR_ELDAR_ASPECT_RESEARCH
       - STR_ELDAR_PSYKER_RESEARCH
-      # some event should be completed
+      - STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED # event to be completed
     unlocks:
       - STR_HIGHTIER_PREREQ
 

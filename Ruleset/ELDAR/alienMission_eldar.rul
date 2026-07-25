@@ -34,3 +34,27 @@ alienMissions:
     objective: 2
     siteType: STR_GANGER_BASE_CHAOSCORRUPTED # todo: change to ganger base
     points: 0
+
+  - type: STR_SLAANESH_BASE_ELDAR
+    points: 50
+    objective: 2
+    spawnZone: 4  # Mission zone for alien bases
+    operationType: 2
+    operationSpawnZone: 0
+    siteType: STR_ALIEN_BASE_ASSAULT_SLAANESH_ELDAR
+    raceWeights:
+      0:
+        STR_SLAANESH: 100 #todo: change with slaanesh list for eldar
+    waves:
+      # - ufo: STR_LARGE_SLAAN_SCOUT
+      #   count: 1
+      #   trajectory: P5
+      #   timer: 4000
+      # - ufo: STR_LARGE_SLAAN_SCOUT
+      #   count: 2
+      #   trajectory: P5
+      #   timer: 5000
+      - ufo: STR_BATTLESHIP_SLAAN
+        count: 1
+        trajectory: P7
+        timer: 60
