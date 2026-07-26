@@ -938,13 +938,14 @@ items:
     flatRate: true
     attraction: 8
 
-  - type: STR_WITCHBLADE  # NEEDS REWORK (A LOT?)
+  - &STR_WITCHWEAPON_REF
+    type: STR_WITCHBLADE  # NEEDS REWORK (A LOT?)
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-      - STR_ELDAR_SEER_RESEARCH
+      #- STR ELDAR WARLOCK RESEARCH
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: []
-    listOrder: 16999
+    listOrder: 16995
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
     battleType: 3
     damageType: 5
@@ -963,10 +964,10 @@ items:
     damageBonus:
       strength: 0.1
       melee: 0.4
-      psiSkill: 1  # Force weapon
+      psiStrength: 0.5  # Force weapon
     meleeMultiplier:
       melee: 0.7
-      reactions: 0.3
+      psiSkill: 0.3
     accuracyMelee: 100
     size: 0.2
     costBuy: 50000
@@ -994,13 +995,35 @@ items:
       DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
       DAMAGE_BONUS_PERCENT_ELDAR: 140
 
+  - type: STR_WITCH_STAFF # WITCH BLADE UPGRADE, Could add extra functions not just dmg increase
+    refNode: *STR_WITCHWEAPON_REF
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # PSYKER UPGRADE RESEARCH
+    listOrder: 16996
+    damageBonus:
+      strength: 0.1
+      melee: 0.2
+      psiStrength: 1  # Force weapon higher reliance on psychicStrength
+    meleeMultiplier:
+      melee: 0.5
+      psiSkill: 0.5 # more psyker focus over witchBlade
+    costBuy: 100000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4883
+    floorSprite: 4883
+    handSprite: 1554
+    meleeHitSound: 1894
+    experienceTrainingMode: 30 #psiStrength or psiSkill DOES NOT TRAIN MELEEb
+
   - type: STR_SINGING_SPEAR  #Needs WORK
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-      - STR_ELDAR_SEER_RESEARCH
+      # ELDAR FARSEER RESEARCH
     requiresBuy: []  # Already requires the eldar base service
     requiresBuyBaseFunc: []
-    listOrder: 17000
+    listOrder: 16997
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
     battleType: 1
     damageType: 5
@@ -1045,6 +1068,7 @@ items:
     kneelBonus: 100
     dropoff: 5
     # melee profile
+    meleeType: 5
     meleePower: 30
     meleeBonus:
       strength: 0.1
