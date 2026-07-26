@@ -21882,7 +21882,7 @@ ufopaedia:
     image_id: UP113.SPK
     text: STR_NURGLE_UFOPEDIA
 
-  - delete: STR_SEER_AUTOPSY
+  - delete: STR_SEER_AUTOPSY         # FARSEER, rename in future to FARSEER
   - id: STR_SEER_AUTOPSY
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS
@@ -21898,6 +21898,21 @@ ufopaedia:
       - STR_ELDAR_SEER
     image_id: UP115.SPK
     text: STR_NURGLE_UFOPEDIA
+
+  - id: STR_ELDAR_SEER_AUTOPSY    #Lower tier seer healer unit
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SEER_CORPSE
+    image_id: ELDAR_SEER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_SEER_AUTOPSY_CODEX
+  - id: STR_ELDAR_SEER_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SEER
+    image_id: ELDAR_SEER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SEER_ARMOR_CODEX
 
   - delete: STR_DAVENGER_AUTOPSY
   - id: STR_DAVENGER_AUTOPSY

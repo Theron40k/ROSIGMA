@@ -1009,8 +1009,15 @@ items:
       ToArmorPre: 0.2
       ToHealth: 0.9
       RandomType: 6
+    power: 30
+    damageBonus:
+      strength: 0.1
+      throwing: 0.4
+      psiStrength: 0.5  # Force weapon
     clipSize: -1
     armor: 200
+    flatRate: true
+    #Throwing Profile
     costAimed:
       time: 40
       energy: 20
@@ -1037,21 +1044,24 @@ items:
     bulletSpeed: -2
     kneelBonus: 100
     dropoff: 5
-    vaporColor: 10
-    vaporDensity: 3
+    # melee profile
+    meleePower: 30
+    meleeBonus:
+      strength: 0.1
+      melee: 0.4
+      psiStrength: 0.5  # Force weapon
+    meleeAlter:
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
     costMelee:
       time: 12
       energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
     meleeMultiplier:
       melee: 0.7
-      reactions: 0.3
+      psiSkill: 0.3
     accuracyMelee: 100
-    flatRate: true
-    power: 30
-    damageBonus:
-      strength: 0.1
-      melee: 0.4
-      psiSkill: 1  # Force weapon
     size: 0.2
     costBuy: 100000
     costSell: 15000
@@ -1060,6 +1070,8 @@ items:
     floorSprite: 4882
     handSprite: 1546
     bulletSprite: 32
+    vaporColor: 10
+    vaporDensity: 3
     hitAnimation: {mod: 40k, index: 110}
     fireSound: 1893
     hitSound: 1892
