@@ -5805,6 +5805,70 @@ ufopaedia:
   #- id: STR_PROMOTE_TO_ELDAR_WARLOCK
   # dead eldar
   #- id: STR_RESURRECT_ELDAR
+# #SOLDIERS.AT.ORKZ#
+  - id: STR_BLOODAXE_ARDBOY_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_BLOODAXE_ARDBOY_PROMOTION_CODEX
+    requires:
+      - STR_ORK_ONLY
+  - id: STR_BLOODAXE_NOB_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_BLOODAXE_NOB_PROMOTION_CODEX
+    requires:
+      - STR_ORK_ONLY
+      - STR_MIDTIER_PREREQ
+  - id: STR_RESURRECT_ORK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_RESURRECT_ORK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_RESURRECT_ORK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP135.SPK
+    text: STR_RESURRECT_ORK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_PLAYER_WARBOSS_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_PLAYER_WARBOSS_PROMOTION_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_REPLACE_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_REPLACE_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_REPLACE_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: WARBOSS_WEAKSAUCE.SPK
+    text: STR_REPLACE_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_RECOVER_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: WarbossOrigins.SPK
+    text: STR_RECOVER_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
 
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles

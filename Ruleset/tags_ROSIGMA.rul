@@ -279,6 +279,9 @@ extended:
       SKILL_CULEXUS_HORROR_STORM_ID: int
       # Vindicare Skills
       SKILL_VINDICARE_KILLSHOT_ID: int
+      # perils of the warp
+      SKILL_IS_PSYCHIC_POWER: int # is the skill psychic power or interacting with the warp? if yes this is the power
+      SKILL_PSYCHIC_POWER_MODIFIER: int # increments UNIT_PERILS_MODIFIER or our risk of perils by this much per use
 
     BattleUnit:
       # *** Tags for handling energy shields on units ***
