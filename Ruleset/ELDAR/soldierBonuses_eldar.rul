@@ -1,3 +1,6 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
 soldierBonuses:
 
 # Lore friendly runes to use:
@@ -47,12 +50,12 @@ soldierBonuses:
   #- name: STR_RUNE_OF_THE_HARLEQUIN #Harlequin
   - name: STR_RUNE_OF_REAPING # Reaper
     leftArmorDiff: 5 #reaper lucky palundron
-    tags:
-      SOLDIER_WOUND_TIME_MULTIPLIER: 75  #slighly improved heal time
+    #tags:
+    #  SOLDIER_WOUND_TIME_MULTIPLIER: 75  #slighly improved heal time #TODO: fix this
 
   - name: STR_RUNE_OF_THE_SPIDER # Spider
-    tags:
-      UNIT_PERILS_MODIFIER: -50 #only applies to the first turn
+    #tags:
+    #  UNIT_PERILS_MODIFIER: -50 #only applies to the first turn # todo: fix this
   - name: STR_RUNE_OF_VIGOR # HP, stun Energy bonus
     recovery:
       health:
