@@ -1,13 +1,16 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
 soldierBonuses:
 
 # Lore friendly runes to use:
   # Channeling Runes
-  # Runes of Battle # Warlock related
+  # Runes of Battle
   # Runes of Deception #Scorpion
   # Runes of Evasion # Banshee
   # Runes of Fate #Seer
   # Runes of Fleetness # TU bonus
-  # Runes of Fortune # dodge & dodge change bonuses ? to analyze if it's possible
+  # Runes of Fortune # dodge & dodge change bonuses
   # Runes of the Harlequin
   # Runes of Reaping # Reaper
   # Runes of the Spider # Spider
@@ -15,47 +18,99 @@ soldierBonuses:
   # Runes of War
   # Runes of the Warp # to lower peril of the warp chance
   # Runes of Warding # shield
-  # Runes of Witnessing # vision?
+  # Runes of Witnessing # vision ##CURRENTLY UNUSED
   # Runes of Wrath
 
 # Rule of cool runes we've added
   # Rune of Command #autarch starting small bonuses
   # Rune of Sovereign Command" # Rune of command 2 when autarch
+  # Rune of the dragon # since nothing really fit the fire dragon right now
 
 ##################################################
 
-  # Runes of Battle # Warlock related
-  # Runes of Deception #Scorpion
-  # Runes of Evasion # Banshee
-  # Runes of Fate #Seer
-  # Runes of Fleetness # TU bonus
-  # Runes of Fortune # dodge & dodge change bonuses ? to analyze if it's possible
-  # Runes of the Harlequin
-  # Runes of Reaping # Reaper
-  # Runes of the Spider # Spider
-  # Runes of Vigor # HP,  Energy bonus
-  # Runes of War
-  # Runes of the Warp # to lower peril of the warp chance
-  - name: STR_RUNE_OF_WARDING #Runes of Warding # shield
+  - name: STR_RUNE_OF_BATTLE
+    heatVision: 30
+    stats:
+      psiSkill: 5
+      psiStrength: 5
+      firing: 5
+  #- name: STR_RUNE_OF_DECEPTION #Scorpion
+  #- name: STR_RUNE_OF_EVASION # Banshee # dodge max bonuses #not possible, script needs adapting
+  - name: STR_RUNE_OF_FATE #Seer
+    psiVision: 3
+    heatVision: 30
+
+  - name: STR_RUNE_OF_FLEETNESS # TU bonus
+    stats:
+      tu: 10
+    recovery:
+      energy:
+        flatOne: 7
+  #- name: STR_RUNE_OF_FORTUNE # dodge change bonuses #not possible, script needs adapting
+  #- name: STR_RUNE_OF_THE_HARLEQUIN #Harlequin
+  - name: STR_RUNE_OF_REAPING # Reaper
+    leftArmorDiff: 5 #reaper lucky palundron
+    #tags:
+    #  SOLDIER_WOUND_TIME_MULTIPLIER: 75  #slighly improved heal time #TODO: fix this
+
+  - name: STR_RUNE_OF_THE_SPIDER # Spider
+    #tags:
+    #  UNIT_PERILS_MODIFIER: -50 #only applies to the first turn # todo: fix this
+  - name: STR_RUNE_OF_VIGOR # HP, stun Energy bonus
+    recovery:
+      health:
+        flatOne: 4
+      stun:
+        flatOne: 4
+    stats:
+      stamina: 5
+  - name: STR_RUNE_OF_WAR # Runes of War
+    stats:
+      reactions: 5
+      bravery: 5
+  #- name: STR_RUNE_OF_THE_WARP # to lower peril of the warp chance
+  - name: STR_RUNE_OF_WARDING #Runes of Warding
+    recovery:
+      stun:
+        flatOne: 1
+      health:
+        flatOne: 1
     tags:
       BONUS_ENERGY_SHIELD_HP_PER_TURN: 50
       BONUS_ENERGY_SHIELD_DECAY: 50
-  # Runes of Witnessing # vision?
-  # Runes of Wrath
+  - name: STR_RUNE_OF_WITNESSING # vision
+    visibilityAtDark: 7
+    visibilityAtDay: 5
+  # - name: STR_RUNE_OF_WRATH # Runes of Wrath. #not possible, script needs adapting
+  #   tags:
+  #     UNIT_IS_DIEHARD: 1 # basic Feel No Pain
+  #     DIEHARD_TEMP_MODIFIER_INCREMENT: -100
+  #     INFECTION_RESIST: 25
 
 # Rule of cool runes we've added
   # Rune of command #autarch starting small bonuses
   - name: STR_RUNE_OF_COMMAND_START # Rune of command #autarch starting small bonuses
     stats:
-      tu: 0
-      stamina: 0
       health: 5
-      bravery: 5  # always multiples of 10
-      reactions: 0
-      firing: 0
-      throwing: 0
-      strength: 0
-      psiStrength: 0
-      psiSkill: 0
-      melee: 0
-  #STR_RUNE_OF_COMMAND_AUTARCH: "Rune of Sovereign Command" # Rune of command 2 when autarch
+      bravery: 5
+
+  - name: STR_RUNE_OF_COMMAND_AUTARCH # Rune of command 2 when autarch
+    recovery:
+      energy:
+        flatOne: 10
+      morale:
+        flatOne: 5
+      stun:
+        flatOne: 1
+      health:
+        flatOne: 1
+    tags:
+      BONUS_ENERGY_SHIELD_HP_PER_TURN: 66
+      BONUS_ENERGY_SHIELD_DECAY: 66
+
+  - name: STR_RUNE_OF_THE_DRAGON
+    heatVision: 30
+    stats:
+      health: 5
+      strength: 5
+      bravery: 2
