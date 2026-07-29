@@ -5327,26 +5327,28 @@ items:
     attraction: 7
     listOrder: 15000
 
-  - type: STR_CHAOS_CHAIN_AXE #                  Unchanged from 40k chainaxe #A more finely crafted chainaxe
+  - type: STR_CHAOS_CHAIN_AXE #                  Unchanged from 40k chainaxe #A scrappier chain axe for heretics
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
     refNode: *CHAOS_WEAPON
     size: 0.2
-    costBuy: 7500
-    costSell: 2050
-    weight: 15
+    costBuy: 3000
+    costSell: 1500
+    weight: 8
     bigSprite: 3088
     floorSprite: 3037
     handSprite: 3010
     meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
     meleeHitSound: {mod: 40k, index: 709} #709 chainhit
     meleeAnimation: {mod: 40k, index: 48}
-    power: 60
-    damageAlter: #DA CHAIN
-      ToArmorPre: 0.3
+    power: 55
+    damageAlter:
+      ToArmorPre: 0.2 #was 0.3
       ToHealth: 0.9
       RandomType: 2 #TFTD [50% - 150%]
       ToWound: 0.3
-      ToEnergy: 0.5
+      ToEnergy: 0.3 #was 0.5
+      ToMorale: 0.4  # demoralizing and painful
+      RandomWound: false
       IgnoreSelfDestruct: false # default true for HE, fire, smoke, stun, mel
     damageType: 7
     accuracyMelee: 110
@@ -5356,7 +5358,7 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 12
+    armor: 100 # half of a chaos chain axe
     recover: true
     skillApplied: true
     strengthApplied: false
@@ -5364,12 +5366,12 @@ items:
       melee: 1.0
       flatHundred: 0.0
     damageBonus:
-      melee: 0.1
+      melee: 0.2
       strength: 0.3
-    attraction: 7
+    attraction: 5
     listOrder: 15000
-    tags:
-      ITEM_STRENGTH_REQUIREMENT: 35
+    # tags:
+    #   ITEM_STRENGTH_REQUIREMENT: 35
 
 
   - type: STR_HEAVY_STUBBER_SLAAN

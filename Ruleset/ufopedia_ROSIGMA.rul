@@ -11413,7 +11413,7 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
-    image_id: STR_BOLTPISTOL_TZEENTCH.SPK
+    image_id: 1CH.SPK
 
   - id: STR_BOLTPISTOL_WORDBEARER  # Warpfire Boltpistol
     type_id: 14
@@ -11604,7 +11604,7 @@ ufopaedia:
   - id: STR_BOLTERR  # Rubric Inferno Bolter
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_BOLTERR.SPK
+    image_id: 1CH.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
@@ -14427,6 +14427,14 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: Neuralwhip.SPK
     text: STR_NEURAL_WHIP_UFOPEDIA
+
+  - id: STR_CHAOS_CHAIN_AXE  # Heretical chain axe
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HERETICAL_CHAINAXE.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_CHAOS_CHAIN_AXE_CODEX
 
   - delete: STR_AXE
   - id: STR_AXE  # Chaos Chain Axe
