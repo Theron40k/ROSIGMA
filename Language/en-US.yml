@@ -1112,7 +1112,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ORK_NOB: "Blood Axe Nob"
 
   STR_BLOODAXE_ARDBOY_PROMOTION: "Ork 'ardboy Promotion"
+  STR_BLOODAXE_ARDBOY_PROMOTION_CODEX: "An 'Ardboy (or 'Ard Boy) iz an elite speciualist ork 'oo iz betta armoured an' more skilled 'n kombat due ta his long 'perience kompared ta a runty ork. Dese orkz have zurvived many scraps an equip demselves wit' a karapace, da propa ork version uv 'perial karapace arma. Dey boldly charge forward throo hails uv enemy fire ta kome ta grips wit' 'da foe 'n close kombat. {NEWLINE}{NEWLINE} Ta promote an Ork ta 'Ardboy dey must have 'da follow'n prerequizites: {ALT}strength: 70{ALT}" # An 'Ardboy (or 'Ard Boy) is an elite specialist Ork who is better armoured and more skilled in combat due to his long experience compared to a runty ork. These Ork warriors have survived many battles and equip themselves with a Karapace, the proper Ork version of imperial Carapace armour. They boldly charge forward through hails of enemy fire to come to grips with the foe in close combat. {NEWLINE}{NEWLINE}To promote an Ork to 'Ardboy they must have the following prerequisites: {ALT}strength: 70{ALT}
   STR_BLOODAXE_NOB_PROMOTION: "Ork Nob Promotion"
+  STR_BLOODAXE_NOB_PROMOTION_CODEX: "A Nob iz an even bigga an stronga ork 'oo 'as access ta 'da best armors 'n 'da ork arsenal an 'as kilt way more enemiez dan 'e iz will'n ta kount. neva ask a nob if 'e 'as krumped enough enemiez as yer will become da next, so don't be a git. {NEWLINE}{NEWLINE} ta promote an 'Ardboy ta Nob dey must have 'da follow'n prerequisites: {ALT}strength: 100, commendations: Veteran{ALT}" #A Nob is an even bigger and stronger Ork who has access to the best armors in the ork arsenal and has killed way more enemies than he is willing to count. never ask a nob if he has crumped enough enemies as you will become the next, so don't be an idiot. {NEWLINE}{NEWLINE}To promote an 'Ardboy to Nob they must have the following prerequisites: {ALT}strength: 100, commendations: Veteran{ALT}
 
   STR_BLOODAXE_CAPFLAK_PLAYER_ARMOR: "Ork Flakk Armor"
   STR_BLOODAXE_KARAPACE_PLAYER_ARMOR: "Ork Karapace Armor"
@@ -1170,7 +1172,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_ARMOR_FH: "Healer Armor (Deprecated)"
   STR_ELDAR_ARMOR6_P_LAUNCHER: "Reaper Armor (Launcher) (Deprecated)"
   STR_ELDAR_LAUNCHER_FIXED: "Reaper Launcher (Deprecated)"
-  STR_PROMOTE_TO_SEER: "Path of the Psyker (Deprecated)"
 
 # player Eldar campaign research
   STR_ELDAR_ONLY: "Eldar Weapons Training"
@@ -1279,16 +1280,17 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_REAPEREX: "Eldar Reaper Exarch"
   STR_ELDAR_ARMOR_EXARCH_P: "Reaper Exarch Armor"
   STR_ELDAR_ARMOR_EXARCH: "Eldar Reaper Exarch"
+  STR_ELDAR_SEER_ARMOR_P: "Seer Armor"
   STR_ELDAR_SEER_CORPSE_P: "Seer Corpse"
 
   # ELDAR SOLDIER TRANSFORMATIONS CODEX (lore fluff plus transformation requirements)
-  STR_ELDAR_ASPECT_HELPER_SCORPIONS: "The Striking Scorpions are the form of Aspect Warriors focused on close combat, stealth, and assassination. They epitomise the deadly attributes of their namesake, which can sting and kill a creature many times its size. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Scorpion are {NEWLINE}{ALT}STAT1: WORK IN PROGRESS, STAT2: WORK IN PROGRESS{ALT}" # The history of the Striking Scorpions is shrouded in infamy from their very beginning from the story of their founder, Phoenix Lord Arhra, Father of the Scorpions, now known as the Fallen Phoenix"
-  STR_ELDAR_ASPECT_HELPER_BANSHEE: "Howling Banshees are the form of Aspect Warriors that represents the fury of the Murder God as well as his cunning. According to Eldar mythology, Banshees are the harbingers of woe and death whose cry, it is said, heralds ill fate, calling forth dead spirits from the Warp and forewarning certain death. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Bansee are {NEWLINE}{ALT}STAT1: WORK IN PROGRESS, STAT2: WORK IN PROGRESS{ALT}"
-  STR_ELDAR_ASPECT_HELPER_REAPER: "Dark Reapers are the most sinister types of Eldar Aspect Warrior. They emulate Khaine in his aspect as \"the Destroyer\" and the harvester of souls. They are the most heavily equipped of all Aspect Warriors, they specialize in the use of destructive, long-range weaponry.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Reaper are {NEWLINE}{ALT}STAT1: WORK IN PROGRESS, STAT2: WORK IN PROGRESS{ALT}"
-  STR_ELDAR_ASPECT_HELPER_AVENGER: "Dire Avengers, or Fian Dialcaman, are the form of Aspect Warriors representing Khaine's aspect of the noble and merciless warrior, who punishes the unworthy and shows true devotion to his own people. They are the most tactically flexible and numerous of all the Aspect Warriors.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Dire Avenger are {NEWLINE}{ALT}STAT1: WORK IN PROGRESS, STAT2: WORK IN PROGRESS{ALT}"
-  STR_ELDAR_ASPECT_HELPER_DRAGON: "The Fire Dragons are the form of Aspect Warriors embodying the writhing, sinewy dragon of Eldar myths as well as the elemental destruction of Khaine. Fire Dragons are aggressive and warlike close combat fighters who utilized heat weapons to destroy enemy vehicles and strongpoints.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Fire Dragon are {NEWLINE}{ALT}STAT1: WORK IN PROGRESS, STAT2: WORK IN PROGRESS{ALT}"
-  STR_ELDAR_ASPECT_HELPER_SPIDER: "The Warp Spiders epitomise the concept of an aggressive defence. They specialise in the use of a personal teleportation device built into their Aspect Armour to make a series of rapid jumps through the warp making nearly impossible to target them. {NEWLINE}Beware: {ALT}repeated usage of the personal teleportation device risk exposing the user to the dangerous energies of the warp{ALT} {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Warp Spider are {NEWLINE}{ALT}STAT1: WORK IN PROGRESS, STAT2: WORK IN PROGRESS{ALT}"
-  STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER: "Any Eldar who wished to become an Autarch has to start by declaring and adopting its discipline and make their purpose to master the art of warcraft, command, and tactical supremacy. This declaration will move them toward their goal and will allow them to experience every aspect in the path of warrior. {NEWLINE}Walking the path of command will grand severely reduced bonuses when adopting a specific aspect compared to warriors who embrace that aspect for life. {NEWLINE}{NEWLINE}Requirement for a guardian to start the path of command are {NEWLINE}{ALT}STAT1: WORK IN PROGRESS, STAT2: WORK IN PROGRESS{ALT}"
+  STR_ELDAR_ASPECT_HELPER_SCORPIONS: "The Striking Scorpions are the form of Aspect Warriors focused on close combat, stealth, and assassination. They epitomise the deadly attributes of their namesake, which can sting and kill a creature many times its size. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Scorpion are {NEWLINE}{ALT}bravery: 70, melee: 50{ALT}" # The history of the Striking Scorpions is shrouded in infamy from their very beginning from the story of their founder, Phoenix Lord Arhra, Father of the Scorpions, now known as the Fallen Phoenix"
+  STR_ELDAR_ASPECT_HELPER_BANSHEE: "Howling Banshees are the form of Aspect Warriors that represents the fury of the Murder God as well as his cunning. According to Eldar mythology, Banshees are the harbingers of woe and death whose cry, it is said, heralds ill fate, calling forth dead spirits from the Warp and forewarning certain death. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Banshee are {NEWLINE}{ALT}bravery: 60, reactions: 65{ALT}"
+  STR_ELDAR_ASPECT_HELPER_REAPER: "Dark Reapers are the most sinister types of Eldar Aspect Warrior. They emulate Khaine in his aspect as \"the Destroyer\" and the harvester of souls. They are the most heavily equipped of all Aspect Warriors, they specialize in the use of destructive, long-range weaponry.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Reaper are {NEWLINE}{ALT}firing: 65, strength: 40{ALT}"
+  STR_ELDAR_ASPECT_HELPER_AVENGER: "Dire Avengers, or Fian Dialcaman, are the form of Aspect Warriors representing Khaine's aspect of the noble and merciless warrior, who punishes the unworthy and shows true devotion to his own people. They are the most tactically flexible and numerous of all the Aspect Warriors.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Dire Avenger are {NEWLINE}{ALT}firing: 60{ALT}"
+  STR_ELDAR_ASPECT_HELPER_DRAGON: "The Fire Dragons are the form of Aspect Warriors embodying the writhing, sinewy dragon of Eldar myths as well as the elemental destruction of Khaine. Fire Dragons are aggressive and warlike close combat fighters who utilized heat weapons to destroy enemy vehicles and strongpoints.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Fire Dragon are {NEWLINE}{ALT}bravery: 70, health: 40{ALT}"
+  STR_ELDAR_ASPECT_HELPER_SPIDER: "The Warp Spiders epitomise the concept of an aggressive defence. They specialise in the use of a personal teleportation device built into their Aspect Armour to make a series of rapid jumps through the warp making nearly impossible to target them. {NEWLINE}Beware: {ALT}repeated usage of the personal teleportation device risk exposing the user to the dangerous energies of the warp{ALT} {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Warp Spider are {NEWLINE}{ALT}health: 55, strength: 40, bravery: 70{ALT}"
+  STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER: "Any Eldar who wished to become an Autarch has to start by declaring and adopting its discipline and make their purpose to master the art of warcraft, command, and tactical supremacy. This declaration will move them toward their goal and will allow them to experience every aspect in the path of warrior. {NEWLINE}Walking the path of command will grand severely reduced bonuses when adopting a specific aspect compared to warriors who embrace that aspect for life. {NEWLINE}{NEWLINE}Requirement for a guardian to start the path of command are {NEWLINE}{ALT}bravery: 70{ALT}"
 
   # eldar transformations
   #STR_PROMOTE_TO_ASPECT_WARRIOR: "Path of the Warrior" #(unused)
@@ -1310,30 +1312,31 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PROMOTE_TO_REAPER_EXARCH: "Shrouded by the Reaper Path"
   STR_PROMOTE_TO_SPIDER_EXARCH: "Ensnared by the Spider Path"
   STR_PROMOTE_TO_BANSHEE_EXARCH: "Bewitched by the Banshee Path"
-  STR_PROMOTE_TO_PSYKER: "Path of the Psyker"
+  #STR_PROMOTE_TO_PSYKER: "Path of the Psyker" #(unused)
+  STR_PROMOTE_TO_SEER: "Path of the Seer"
   STR_PROMOTE_TO_ELDAR_WARLOCK: "Path of the Warlock"
   STR_RESURRECT_ELDAR: "Wraithguard Spirit Stone Infusion"
 
-#Eldar Boons (bonuses) - lore friendly runes+
-  # Channeling Runes
-  # Runes of Battle
+#Eldar Boons (bonuses) - lore friendly runes
+  STR_RUNE_OF_BATTLE: "Rune of Battle"
   # Runes of Deception
   # Runes of Evasion
-  # Runes of Fate
-  # Runes of Fleetness
+  STR_RUNE_OF_FATE: "Rune of Fate"
+  STR_RUNE_OF_FLEETNESS: "Rune of Fleetness"
   # Runes of Fortune
   # Runes of the Harlequin
-  # Runes of Reaping
-  # Runes of the Spider
-  # Runes of Vigor
-  # Runes of War
+  STR_RUNE_OF_REAPING: "Rune of Reaping"
+  STR_RUNE_OF_THE_SPIDER: "Rune of the Spider"
+  STR_RUNE_OF_VIGOR: "Rune of Vigor"
+  STR_RUNE_OF_WAR: "Rune of War"
   # Runes of the Warp
   STR_RUNE_OF_WARDING: "Rune of Warding" # Runes of Warding
-  # Runes of Witnessing # vision?
+  STR_RUNE_OF_WITNESSING: "Rune of Witnessing" # vision
   # Runes of Wrath
 #Eldar Boons (bonuses) - rule of cool runes
   STR_RUNE_OF_COMMAND_START: "Rune of the First Command"  # Rune of command
-  #STR_RUNE_OF_COMMAND_AUTARCH: "Rune of Sovereign Command" # Rune of command 2 when autarch
+  STR_RUNE_OF_COMMAND_AUTARCH: "Rune of Sovereign Command" # Rune of command 2 when autarch
+  STR_RUNE_OF_THE_DRAGON: "Rune of the Dragon"
 
   #Eldar Weapons
   STR_EPOWER_SWORD: "Banshee Blade"
@@ -1369,6 +1372,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SINGING_SPEAR: "Singing Spear"
   STR_SINGING_SPEAR_AIMED_THROW: "Aimed Throw"
   STR_SINGING_SPEAR_SNAP_THROW: "Snap Throw"
+  STR_WITCH_STAFF: "Witch Staff"
 
 #Eldar Units Codex Strings
   STR_ELDAR_GUARDIAN_AUTOPSY_CODEX: "{NEWLINE} Guardians are the militia of the Eldar Craftworlds. In times of peace the Guardians pursue their normal civilian roles, however, all Eldar are trained in warfare and can be called to arms if their Craftworld is threatened. Guardians in battle, form the bulk of the Eldar armies. That these citizen levies are capable of engaging and defeating other races' warriors is a testament to Eldar skill and technology."
@@ -1393,9 +1397,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SPIDEREX_AUTOPSY_CODEX: "{NEWLINE} Taking their name from the arachnoid creatures who protect the Infinity Circuits the Exarchs of the Warp Spider shrines have honed their deadly skills as ambushers to a high degree. Passing on this knowledge to the Warp Spider squads that they personally lead, they are experts in surprise assaults. They teleport onto the battlefield in a storm of crackling psychic lightning, but also know when it is prudent to withdraw from combat and regroup preparing for further guerrilla attacks."
   STR_ELDAR_SPIDEREXDS_ARMOR_CODEX: "{NEWLINE} Some Exarchs will go into battle with two armor mounted Death Spinners, wielding them as ably as they would a single weapon. These weapons eject a mass of rigid molecular wire strands that slices through armour and mutilates whatever is within."
   STR_ELDAR_SPIDEREXPB_ARMOR_CODEX: "{NEWLINE} In addition to ranged weaponry, some Warp Spider Exarch armor will also be equipped with Powerblades, a form of Asuryani Power Weapons usually only available to Warp Spider Exarchs. They are also mounted on the forearm or retrofitted to the vambrace of the Warp Spider's Exarch Armour rather than being hand-held."
+  STR_ELDAR_SEER_AUTOPSY: "Eldar Seer Origin"
+  STR_ELDAR_SEER_AUTOPSY_CODEX: "{NEWLINE} Eldar that walk down the Path of the Seer gain proper training and experience in the use of their natural psyker-based abilities. Each Seer explores their potential in their own way, some learning to move objects through kinetic forces , create living symphonies of shape and movement. Others use their empathic powers for healing purposes or to counsel others The range of abilities is vast and largely depends on the paths the Seer has explored previously."
+  STR_ELDAR_SEER_ARMOR_CODEX: "{NEWLINE} Early on the Path of the Psyker, Seers have yet to obtain a full set of Rune Armor. Instead they are protected by Rune infused Mesh armor that provides shielding and much greater protection than what is expected from standard mesh armor."
 
 # Eldar Weapon Codex
-  STR_EPOWER_SWORD_UFOPEDIA: "{NEWLINE} This is an Eldar Power Sword employed by a Howling Banshee Exarch. Two Mirrorswords are commonly employed by Exarchs who have mastered a deadly ambidextrous form of melee combat that uses the matching pair of blades.{NEWLINE}{NEWLINE}Strength required: {ALT}30"
+  STR_EPOWER_SWORD_UFOPEDIA: "{NEWLINE} This is an Eldar Power Sword employed by a Howling Banshee Exarch. Two Banshee Blades are commonly employed by Exarchs who have mastered a deadly ambidextrous form of melee combat that uses the matching pair of blades.{NEWLINE}{NEWLINE}Strength required: {ALT}30"
   STR_WRAITHGUARD_ARMOR_UFOPEDIA: "{NEWLINE} Towering above the battlefield, Wraithguard Armor is constructed entirely from Wraithbone making it one of the most impenetrable armors available to the Aeldari. Over time the armor shapes, grows and hardens itself guided by the psychic energies of the warrior soulstone entombed within."
   STR_WRAITH_MELEE_WEAPON_UFOPEDIA: "{NEWLINE} The Ghostaxe is one form of large power weapon wielded by the Wraithguard. All Ghost weapons hold inside their core a spiritstone, the sentience within guiding strikes towards the most vulnerable areas of their foes."
   STR_RANGER_LONG_RIFLE_CODEX: "{NEWLINE} The Ranger Long Rifle is the favoured weapon of Aeldari Rangers and Pathfinders. It is a long-barrelled rifle that fires energy bolts capable of piercing most armour when aimed correctly. It works by projecting a minuscule needle from the barrel, suspended in a laser beam."
@@ -1413,6 +1420,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SPINNERET_RIFLE_CODEX: "{NEWLINE} Spinneret Rifles operate by ejecting a single, rigid strand of monomolecular wire that punches through armour, before recoiling in a tight spiral. Spinneret Rifles have a more consistent armour penetration ability than standard Death Spinners, and a longer range. However, they will usually only affect a single target at a time."
   STR_AELDARI_FLAMER_CODEX: "{NEWLINE} Aeldari Flamers are a type of Flamethrower used by the Craftworld Eldar which works similar to their Imperial counterparts. These flamers unleash a stream of highly refined and adhesive fuel, which ignites upon leaving the barrel of the weapon."
   STR_DRAGON_BREATH_FLAMER_CODEX: "{NEWLINE} Aeldari master-crafted Flamer weapons are sometimes used by Fire Dragons if there is a high chance of encountering swarms of enemies during anti armor and tank operations. They unleash a raging inferno upon nearby foes and block enemy movement."
+  STR_WITCHBLADE_CODEX: "{NEWLINE} A potent Force Weapon, these swords resonate with their users, enhancing their physical strength to terrifying levels, Farseers have been known to slash through the heaviest of power armour or cleave battle tanks clean in half with devastating blows from these weapons. Witchblades are most effective against psyker targets; humanoid, xenos, beast or Daemon."
+  STR_SINGING_SPEAR_CODEX: " {NEWLINE} A silver spear formed of unknown materials and when held by a psyker emits a constant low hum. This weapon is essentially a Witchblade that can be thrown a short distance, automatically returning to the user's hand after each throw and is thus both a melee and a limited ranged weapon."
+  STR_WITCH_STAFF_CODEX: "{NEWLINE} The Witch Staff is an Eldar Force Weapon, containing a helix-shaped crystalline psychic matrix embedded with runes to channel and focus a wielders psychic energies. Those struck by the psychically imbued weapon risk having their very souls set aflame, even if their bodies are not broken."
 
   #Eldar Ranks
   STR_ELDAR_GUARDIAN_RANK_0: Gd Cadet
@@ -1469,12 +1479,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_REAPEREX_RANK_3: RpX Execute
   STR_ELDAR_REAPEREX_RANK_4: RpX Murder
   STR_ELDAR_REAPEREX_RANK_5: RpX Massacre
-  STR_ELDAR_WARLOCK_RANK_0: Wlk Initiate
-  STR_ELDAR_WARLOCK_RANK_1: Wlk Apprentice
-  STR_ELDAR_WARLOCK_RANK_2: Wlk Acolyte
-  STR_ELDAR_WARLOCK_RANK_3: Wlk Adept
-  STR_ELDAR_WARLOCK_RANK_4: Wlk Maestro
-  STR_ELDAR_WARLOCK_RANK_5: Wlk Archmage
+  STR_ELDAR_WARLOCK_RANK_0: Wlk Spellsword
+  STR_ELDAR_WARLOCK_RANK_1: Wlk Hexblade
+  STR_ELDAR_WARLOCK_RANK_2: Wlk Mystic Duelyst
+  STR_ELDAR_WARLOCK_RANK_3: Wlk Mageknight
+  STR_ELDAR_WARLOCK_RANK_4: Wlk Witchguard
+  STR_ELDAR_WARLOCK_RANK_5: Wlk Eldritch Aegis
   STR_ELDAR_AUTARCH_RANK_0: Atc Captain
   STR_ELDAR_AUTARCH_RANK_1: Atc Chief
   STR_ELDAR_AUTARCH_RANK_2: Atc Commander
@@ -2738,6 +2748,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_EADBANGER: "Eadbanger"
 
   STR_RESURRECT_ORK: "Make Killa Kan"
+  STR_RESURRECT_ORK_CODEX: "When 'da body uv a gud fight'n' ork iz recovered, 'da Warboss kan decide ta put im 'n a Killa Kan ta give im a second chance ta krump more enemiez. Da procedure requires da Mek Boy an' da Pain Boy work'n togetha ta chop all da 'tra bits an' hardwire da \"volunteer\" brain an' nerves directly into da kontrol panel. All dis while shock'n da ork brain back alive. It's not pretty boss, i liked it when we put grots 'n it.." #When the body of a good fighting ork is recovered, the warboss can decide to put them in a killa kan to give them a second chance to crump more enemies. The procedure requires the Mek boy and the Pain boy working together to chop all the extra bits and hardwire the \"volunteer\" brain and nerves directly into the control panel. All this while shocking the ork brain back alive. It's not pretty boss, i liked it when we put grots in it.
   STR_GUARD_ORK_KAN_BOY: "Killa Kan Boy"
   STR_KILLA_RANK_0: "Kan Boy"
   STR_KILLA_RANK_1: "Killa Kan Boy"
@@ -2751,11 +2762,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WARBOSS_AVAILABLE_DESCRIPTION: "{NEWLINE} Boss, da boyz haz been gettin' stronga. You kan chooze one o' da biggest nobz ta be a new warboss ta lead da boyz ta battle."
   STR_GUARD_ORK_WARBOSS: "Da Emprah's Greenest Warboss"
   STR_PLAYER_WARBOSS_PROMOTION: "Promote to Warboss"
+  STR_PLAYER_WARBOSS_PROMOTION_CODEX: "When a nob 'as 'da size, da' green, an killiness, but also on 'da favor uv Gork an Mork, den it kan become 'da Warboss. 'Der kan be only wun Warboss for a warband, so most only live untill a bigga an' meana ork arrive. {NEWLINE}This promotion allow yer ta promote a Nob ta Warboss if yer have a warboss token. {NEWLINE}{NEWLINE}To promote a Nob ta Warboss dey must have da follow'n prerequisites: {ALT}strength: 120, commendations: Veteran{ALT}"
+  #When a nob has the size, green, and killiness, but also on the favor of gork and mork, then it can become the Warboss. There can be only one warboss for a warband, so Most boss only live untill a bigger and meaner ork arrive. {NEWLINE}This promotion allow you to promote a Nob to Warboss if you have a warboss token {NEWLINE}{NEWLINE}To promote a Nob to Warboss they must have the following prerequisites: {ALT}strength: 120, commendations: Veteran{ALT}
   STR_PLAYER_ORK_MEGAWARBOSS_ARMOR: "Warboss Armor"
   STR_PLAYER_ORK_MEGAWARBOSS_ARMOR_UFOPEDIA: "{NEWLINE} Da biggest, greenest, meanest leadas of Da Emprah's Greenest iz kalled warbosses. Dey is ded-ard, fast, and got bof dakka and choppas."
   STR_WARBOSS_TOKEN: "Warboss Token"
   STR_REPLACE_WARBOSS: "Replace Dead Boss"
+  STR_REPLACE_WARBOSS_CODEX: "'Da Warboss was a weak git! send 'da body ta 'da Pain Boy an ask 'em nicely if 'e kan give me da warboss token back. Br'n 'da biggest shoota wit' yer so yer kan be nice if 'e needs help. If yer kan't find 'da body 'n 'da pile shoot 'da doc an' give me annuver token!{NEWLINE}{NEWLINE}Dis promotion allow ya ta get yer warboss token back from 'da dead warboss" #The Warboss was a weak git! Send the body to the Pain Boy and ask him nicely if he can give me da warboss token back. Bring the biggest shoota with you so you can be nice if he needs help. If you can't find the body in the pile shoot the doc and give me another token! {NEWLINE} {NEWLINE} This promotion allow you to get your warboss token back from the dead warboss
   STR_RECOVER_WARBOSS: "Get da Boss Back"
+  STR_RECOVER_WARBOSS_CODEX: "'Da Warboss was 'da best! send 'da kommando ta find 'em, I'z sure 'e iz jus enjoy'n stomp'n' eldar, humies an all sort uv demon wit' 'da new klaw! {NEWLINE} {NEWLINE}Dis promotion allow yer ta get yer Warboss back once, at 'da kost uv some temporary stats" #The Warboss was the best! Send the kommando to find him, i'm sure he is just enjoying killing eldar humand and all sort of demon with the new klaw! {NEWLINE} {NEWLINE} This promotion allow you to get your warboss back once, at the cost of some temporary stats
   STR_WARBOSS_RANK_0: "Warboss"
   STR_WARBOSS_RANK_1: "Meanest Warboss"
   STR_WARBOSS_RANK_2: "Toughest Warboss"
@@ -2767,7 +2782,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PLAYER_BIG_MEK_ARMOR: "Big Mek Arma"
   STR_PLAYER_BIG_MEK_ARMOR_UFOPEDIA: "{NEWLINE} Da Big Mek is da biggest, Finkiest o' da Mekz. Dey 'az spechul weponz an' arma jus' fer demselves.{NEWLINE}{NEWLINE}One Nob or Offiz-Ork with the Veteran commendation can be promoted to a Big Mek. Dead Big Meks can be replaced via soldier transformations."
   STR_PLAYER_BIG_MEK_PROMOTION: "Promote to Big Mek"
+  STR_PLAYER_BIG_MEK_PROMOTION_CODEX: "Da Big Mek is da biggest, Finkiest o' da Mekz. Dey 'az spechul weponz an' arma jus' fer demselves.{NEWLINE}{NEWLINE}One Nob or Offiz-Ork with the Veteran commendation can be promoted to a Big Mek if ya have da Big Mek Token and dey have da follow'n prerequisites: {ALT}strength: 120, commendations: Veteran{ALT}"
   STR_REPLACE_BIG_MEK: "Replace Dead Big Mek"
+  STR_REPLACE_BIG_MEK_CODEX: "'Da Big Mek was the laziest and weakest git of all Ork-kind! Ask a mek boy ta get da Big Mek Token from 'da dead Big Mek stash. An' if 'da Big Mek somehow showz up again, shot 'em 'n da back, 'e's not green enough! {NEWLINE}{NEWLINE}Dis promotion allow ya ta get yer Big Mek Token back from 'da dead Big Mek"
   STR_BIG_MEK_TOKEN: "Big Mek Token"
   STR_BIG_MEK_RANK_0: "Big Mek"
   STR_BIG_MEK_RANK_1: "Smarta Big Mek"
@@ -2779,16 +2796,22 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ORK_ARDBOY_REQUISITION: "Rekruit Ardboy"
   STR_GUARD_ORK_NOB_REQUISITION: "Rekruit Nob"
   STR_SPARKY_POWER_FIELD: "Giv' Sparky Powa' Field"
+  STR_SPARKY_POWER_FIELD_CODEX: "We kan give da best Orks uv our regiment a kustom sparky field to help im krump enemiez without get'n kruped. Rememba 'dat propa orks fire furst an' worry about gett'n krumped later! We kan't give it ta scared runty orks, it's not propa.{NEWLINE}{NEWLINE}Dis promotion gives a Nob, Offiz-Ork, Warboss, Kan Boy or Vindi-Grot a Powar Field if dey have da follow'n prerequisites: {ALT}commendations: Ded Gud Krumper{ALT}"
   STR_BONUS_SPARKY_POWER_FIELD: "Sparky Powa' Field"
   STR_CYBORK_OPERATION: "Make Cybork"
+  STR_CYBORK_OPERATION_CODEX: "When an Ork iz too injured, or a Pain Boy 'as lost a bet ta 'da Mek Boy, cybernetic modifikations kan be made instead uv wait'n for 'da natural heal'n uv da orks by add'n \"Bioniks\", same 'f ta a 'umie bionics but betta an' greenar. Every Mek Boy insist 'dat Bioniks are betta shootin', stompin', an' smashin'! Don't let da Mek Boy konvince ta take all yer green off or ya kan become git Tin-Boy{NEWLINE}{NEWLINE}Dis promotion grants Bioniks to yer Ork at da kost uv significant time ta recovery"
   STR_BONUS_CYBORK: "Cybork"
   STR_ASSIGN_STASIS_TOMB: "Make Kustom Deff Stoppa"
+  STR_ASSIGN_STASIS_TOMB_CODEX: "Oi boss! 'Da Pain Boi 'as done it! Da Deff Stoppa 'as worked! 'Da test-grot 'as kome back afta be'n stomped! It was ugly but it was alive! We had ta stomp it again ta be sure it worked propa, but it worked! {NEWLINE}{NEWLINE}Dis promotion grants a single use Kustom Deff Stoppa ta yer greenest ork an' assign some kustom stasis pod them, allow'n it ta revive once by kross'n Da Rew-Bee-Kawn Primorkus an' becom'n a Primork... if 'da body iz still 'der afta 'e diez 'da furst time"
   STR_STASIS_TOMB_BONUS: "'Az Kustom Deff Stoppa"
   STR_MAD_DOC_RECOVERY: "Da Rew-Bee-Kawn Primorkus"
+  STR_MAD_DOC_RECOVERY_CODEX: "Don't ask why da Doc 'as ta open up yer head ta toe, stuff yer inside da pod an fill yer wit' squig dump ta turn on da Deff Stoppa. Koudn't 'e jus put a big red button ta turn 'da damn fing on??? {NEWLINE}{NEWLINE}Dis promotion revives one of your orks once by kross'n Da Rew-Bee-Kawn Primorkus an' become a Primork. {NEWLINE}Jus don't start mumbl'n about \"'da ship uv Da-Seu-s\", ORK IZ ORK! All 'dat iz all 'da Ork fha-lo-sah-fy ya need"
   STR_MAD_DOC_BONUS: "Primorkus'd"
   STR_MEGA_CYBORK_RECOVERY: "Mega Cyborkin'"
+  STR_MEGA_CYBORK_RECOVERY_CODEX: "Big Ork need big bioniks right? it must work, it's propa logik! {NEWLINE}{NEWLINE}dis promotion grants BIG Bioniks ta yar Big Orkz at da kost uv some stats gain. Yer'll have time ta get all 'em bhack stompin' gits!"
   STR_MEGA_CYBORK_BONUS: "Mega Cybork"
   STR_ARMOR_OF_FATE_RECOVERY: "Arma o' Fight"
+  STR_ARMOR_OF_FATE_RECOVERY_CODEX: "WAAAGH! 'E IZ BACK! 'E iz even greena dan before! 'Da greenest bestest Ork I've neva seen! {NEWLINE}{NEWLINE}dis promotion grants bring back one of yar Big Orkz wit' da powa an' protection of Gork and Mork at da kost uv some stats gained. Yer'll kan get all 'em bhack shootin' an' smashin'!"
   STR_ARMOR_OF_FATE_BONUS: "Arma'd Fer Fightin'"
 
   STR_RECRUIT_ORK_BOY: "Rekruit Ork Boy"
@@ -11580,6 +11603,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SHARPSHOOTER_MALE_IGOPFOR: "Guard Sharpshooter"
 
   STR_OGRYN_IGOPFOR: "Ogryn"
+  STR_OGRYN_UC_AI: "Ogryn Fatigues"
   STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR: "Buckler Bullgryn"
   STR_BULLGRYN_BUCKLER_IGOPFOR: "Buckler Bullgryn"
   STR_BULLGRYN_SLAB_IGOPFOR: "Slab Bullgryn"

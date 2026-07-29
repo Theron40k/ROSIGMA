@@ -5805,6 +5805,132 @@ ufopaedia:
   #- id: STR_PROMOTE_TO_ELDAR_WARLOCK
   # dead eldar
   #- id: STR_RESURRECT_ELDAR
+# #SOLDIERS.AT.ORKZ#
+  - id: STR_BLOODAXE_ARDBOY_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_BLOODAXE_ARDBOY_PROMOTION_CODEX
+    requires:
+      - STR_ORK_ONLY
+  - id: STR_BLOODAXE_NOB_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_BLOODAXE_NOB_PROMOTION_CODEX
+    requires:
+      - STR_ORK_ONLY
+      - STR_MIDTIER_PREREQ
+  - id: STR_RESURRECT_ORK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_RESURRECT_ORK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_RESURRECT_ORK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP135.SPK
+    text: STR_RESURRECT_ORK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_PLAYER_WARBOSS_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_PLAYER_WARBOSS_PROMOTION_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_REPLACE_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_REPLACE_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_REPLACE_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: WARBOSS_WEAKSAUCE.SPK
+    text: STR_REPLACE_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_RECOVER_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: WarbossOrigins.SPK
+    text: STR_RECOVER_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_PLAYER_BIG_MEK_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: DEATHSKULLS_BIGMEK_SHOKK_CODEX.SPK
+    text: STR_PLAYER_BIG_MEK_PROMOTION_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_REPLACE_BIG_MEK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: DEATHSKULLS_BIGMEK_SHOKK_CODEX.SPK
+    text: STR_REPLACE_BIG_MEK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_SPARKY_POWER_FIELD
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_SPARKY_FIELD.SPK
+    text: STR_SPARKY_POWER_FIELD_CODEX
+    requires:
+      - STR_ORKZ_HIGHTIER
+  - id: STR_CYBORK_OPERATION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: BADMOONS_MEKBOSS_CODEX.SPK
+    text: STR_CYBORK_OPERATION_CODEX
+    requires:
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_ASSIGN_STASIS_TOMB
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_CAPSULE.SPK
+    text: STR_ASSIGN_STASIS_TOMB_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_ALIEN_REPRODUCTION
+  - id: STR_MAD_DOC_RECOVERY
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_CAPSULE.SPK
+    text: STR_MAD_DOC_RECOVERY_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_ALIEN_REPRODUCTION
+  - id: STR_MEGA_CYBORK_RECOVERY
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: BADMOONS_MEKBOSS_CODEX.SPK
+    text: STR_MEGA_CYBORK_RECOVERY_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_ARMOR_OF_FATE_RECOVERY
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP125.SPK
+    text: STR_ARMOR_OF_FATE_RECOVERY_CODEX
+    requires:
+      - STR_ORKZ_HIGHTIER
+
 
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
@@ -11287,7 +11413,7 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
-    image_id: 1CH.SPK
+    image_id: STR_BOLTPISTOL_TZEENTCH.SPK
 
   - id: STR_BOLTPISTOL_WORDBEARER  # Warpfire Boltpistol
     type_id: 14
@@ -11478,7 +11604,7 @@ ufopaedia:
   - id: STR_BOLTERR  # Rubric Inferno Bolter
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: STR_BOLTERR.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
@@ -14102,14 +14228,14 @@ ufopaedia:
     requires:
       - STR_POWER_SUIT
       - STR_CHAOS_ARMORY_EXAM_BASIC
-  - id: STR_CHAOS_CLAWS2  #duplicate for compatibility with warptalon 2nd claw
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1PC.SPK
-    text: STR_GENERIC_POWER_CLAWS_CODEX
-    requires:
-      - STR_POWER_SUIT
-      - STR_CHAOS_ARMORY_EXAM_BASIC
+  # - id: STR_CHAOS_CLAWS2  #duplicate for compatibility with warptalon 2nd claw
+  #   type_id: 14
+  #   section: STR_WEAPONS_AND_EQUIPMENT
+  #   image_id: 1PC.SPK
+  #   text: STR_GENERIC_POWER_CLAWS_CODEX
+  #   requires:
+  #     - STR_POWER_SUIT
+  #     - STR_CHAOS_ARMORY_EXAM_BASIC
 
   - id: STR_WARPTALON_CLAW
     type_id: 14
@@ -15544,6 +15670,27 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_EPOWER_SWORD_UFOPEDIA
+  - id: STR_WITCHBLADE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_WITCHBLADE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_WITCHBLADE_CODEX
+  - id: STR_SINGING_SPEAR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_SINGING_SPEAR_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_SINGING_SPEAR_CODEX
+  - id: STR_WITCH_STAFF
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_WITCH_STAFF_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_WITCH_STAFF_CODEX
   - delete: STR_SHURIKEN_CLIP
   - id: STR_SHURIKEN_CLIP
     type_id: 4
@@ -21818,7 +21965,7 @@ ufopaedia:
     image_id: UP113.SPK
     text: STR_NURGLE_UFOPEDIA
 
-  - delete: STR_SEER_AUTOPSY
+  - delete: STR_SEER_AUTOPSY         # FARSEER, rename in future to FARSEER
   - id: STR_SEER_AUTOPSY
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS
@@ -21834,6 +21981,21 @@ ufopaedia:
       - STR_ELDAR_SEER
     image_id: UP115.SPK
     text: STR_NURGLE_UFOPEDIA
+
+  - id: STR_ELDAR_SEER_AUTOPSY    #Lower tier seer healer unit
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SEER_CORPSE
+    image_id: ELDAR_SEER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_SEER_AUTOPSY_CODEX
+  - id: STR_ELDAR_SEER_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SEER
+    image_id: ELDAR_SEER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SEER_ARMOR_CODEX
 
   - delete: STR_DAVENGER_AUTOPSY
   - id: STR_DAVENGER_AUTOPSY

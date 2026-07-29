@@ -19,7 +19,6 @@ soldierTransformation:
       - STR_ELDAR_ASPECT_RESEARCH
     cost: 20000
     minRank: 1
-
     producedSoldierType: STR_ELDAR_GUARDIAN_PLAYER
     keepSoldierArmor: false
     allowsDeadSoldiers: false
@@ -33,8 +32,10 @@ soldierTransformation:
     forbiddenPreviousTransformations:
       - STR_PROMOTE_BEGIN_AUTARCH_PATH
     requiredMinStats:
-      bravery: 60
-      melee: 50
+      bravery: 70
+      #melee: 50
+    requiredCommendations:
+      STR_BATTLE_TESTED: 0
     flatOverallStatChange:
       tu: 0
       stamina: 0
@@ -116,7 +117,7 @@ soldierTransformation:
       psiStrength: 0
       psiSkill: 0
       melee: 20
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_VIGOR
 
   - name: STR_PROMOTE_TO_SCORPION_AUTARCH
     refNode: *ELDAR_TRANSFORMATION_SCORPION
@@ -171,7 +172,7 @@ soldierTransformation:
       - STR_PROMOTE_BEGIN_AUTARCH_PATH
     requiredMinStats:
       bravery: 60
-      melee: 50
+      reactions: 65
     percentOverallStatChange:
       tu: 10
       stamina: 20
@@ -184,7 +185,7 @@ soldierTransformation:
       psiStrength: 0
       psiSkill: 0
       melee: 30
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_FLEETNESS
 
   - name: STR_PROMOTE_TO_BANSHEE_AUTARCH
     refNode: *ELDAR_TRANSFORMATION_BANSHEE
@@ -240,6 +241,7 @@ soldierTransformation:
       - STR_PROMOTE_BEGIN_AUTARCH_PATH
     requiredMinStats:
       firing: 65
+      strength: 40
     percentOverallStatChange:
       tu: 10
       stamina: 10
@@ -252,7 +254,7 @@ soldierTransformation:
       psiStrength: 10
       psiSkill: 10
       melee: -20
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_REAPING
 
   - name: STR_PROMOTE_TO_REAPER_AUTARCH
     refNode: *ELDAR_TRANSFORMATION_REAPER
@@ -307,9 +309,9 @@ soldierTransformation:
     forbiddenPreviousTransformations:
       - STR_PROMOTE_BEGIN_AUTARCH_PATH
     requiredMinStats:
-      bravery: 40
-      strength: 10
-      firing: 30
+      #bravery: 40
+      #strength: 10
+      firing: 60
     percentOverallStatChange:
       tu: 10
       stamina: 0
@@ -322,7 +324,7 @@ soldierTransformation:
       psiStrength: 0
       psiSkill: 0
       melee: 0
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_WAR
 
   - name: STR_PROMOTE_TO_DIREAVENGER_AUTARCH
     refNode: *ELDAR_TRANSFORMATION_DIREAVENGER
@@ -377,9 +379,8 @@ soldierTransformation:
     forbiddenPreviousTransformations:
       - STR_PROMOTE_BEGIN_AUTARCH_PATH
     requiredMinStats:
-      bravery: 40
-      strength: 10
-      firing: 30
+      bravery: 70
+      health: 40
     percentOverallStatChange:
       tu: 10
       stamina: 0
@@ -392,7 +393,7 @@ soldierTransformation:
       psiStrength: 0
       psiSkill: 0
       melee: 0
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_THE_DRAGON
 
   - name: STR_PROMOTE_TO_DRAGON_AUTARCH
     refNode: *ELDAR_TRANSFORMATION_DRAGON
@@ -447,9 +448,9 @@ soldierTransformation:
     forbiddenPreviousTransformations:
       - STR_PROMOTE_BEGIN_AUTARCH_PATH
     requiredMinStats:
-      bravery: 40
-      strength: 10
-      firing: 30
+      health: 55
+      strength: 40
+      bravery: 70
     percentOverallStatChange:
       tu: 5
       stamina: 5
@@ -462,7 +463,7 @@ soldierTransformation:
       psiStrength: 0
       psiSkill: 0
       melee: 20
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_THE_SPIDER
 
   - name: STR_PROMOTE_TO_SPIDER_AUTARCH
     refNode: *ELDAR_TRANSFORMATION_SPIDER
@@ -529,8 +530,8 @@ soldierTransformation:
     #requiredMinStats:
     #  firing: 65
     resetRank: true
-    #TESTING requiredCommendations:
-    #TESTING  STR_VETERAN_COMMENDATION: 0
+    # requiredCommendations:
+    #   STR_LONG_SERVICE_TIME: 0
     percentOverallStatChange:
       tu: 5
       stamina: 5
@@ -543,7 +544,7 @@ soldierTransformation:
       psiStrength: 5
       psiSkill: 5
       melee: 5
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_COMMAND_AUTARCH
 
 #  - name: STR_PROMOTE_TO_SCORPION_EXARCH
 
@@ -562,8 +563,9 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
       - STR_ELDAR_BANSHEE_F
-    #requiredMinStats:
-    #  firing: 65
+    requiredMinStats:
+      bravery: 80
+      reactions: 75
     #TESTING requiredCommendations:
       #TESTING STR_VETERAN_COMMENDATION: 0
     resetRank: true
@@ -579,7 +581,7 @@ soldierTransformation:
       psiStrength: 10
       psiSkill: 20
       melee: 20
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_WARDING
 
   - name: STR_PROMOTE_TO_REAPER_EXARCH
     # FIXME: requiresBuyBaseFunc: [ASPECT]
@@ -597,10 +599,9 @@ soldierTransformation:
       - STR_ELDAR_REAPER_M
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
     requiredMinStats:
-      firing: 65
+      firing: 85
+      strength: 50
     resetRank: true
-    #TESTING requiredCommendations:
-    #TESTING  STR_VETERAN_COMMENDATION: 0
     percentOverallStatChange:
       tu: 10
       stamina: 10
@@ -613,7 +614,7 @@ soldierTransformation:
       psiStrength: 10
       psiSkill: 10
       melee: 0
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_WARDING
 
   - name: STR_PROMOTE_TO_DRAGON_EXARCH
     # FIXME: requiresBuyBaseFunc: [ASPECT]
@@ -630,9 +631,8 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_ELDAR_DRAGON_MF
     requiredMinStats:
-      firing: 65
-    #TESTING requiredCommendations:
-      #TESTING STR_VETERAN_COMMENDATION: 0
+      bravery: 85
+      health: 65
     resetRank: true
     percentOverallStatChange:
       tu: 10
@@ -646,7 +646,7 @@ soldierTransformation:
       psiStrength: 10
       psiSkill: 10
       melee: 0
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_WARDING
 
   - name: STR_PROMOTE_TO_SPIDER_EXARCH
     # FIXME: requiresBuyBaseFunc: [ASPECT]
@@ -663,10 +663,10 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_ELDAR_SPIDER_PLAYER
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    #requiredMinStats:
-      #firing: 65
-    #TESTING requiredCommendations:
-      #TESTING STR_VETERAN_COMMENDATION: 0
+    requiredMinStats: # to be reviewed once spider get rebalanced
+      health: 55
+      strength: 40
+      bravery: 70
     resetRank: true
     percentOverallStatChange:
       tu: 10
@@ -680,25 +680,56 @@ soldierTransformation:
       psiStrength: 10
       psiSkill: 10
       melee: 0
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_WARDING
 
 #TIER4.transformations
 #TIER2.PSI.Transformations #transformation from tier 1 to tier 2 for PSI unit (path of the psyker)
-  - name: STR_PROMOTE_TO_PSYKER
+  # - name: STR_PROMOTE_TO_PSYKER
+  #   requires:
+  #     - STR_ELDAR_PSYKER_RESEARCH
+  #   cost: 10000
+  #   minRank: 0
+  #   producedSoldierType: STR_ELDAR_PSYKER_PLAYER
+  #   keepSoldierArmor: false
+  #   allowsDeadSoldiers: false
+  #   allowsWoundedSoldiers: true
+  #   allowsLiveSoldiers: true
+  #   allowedSoldierTypes:
+  #     - STR_ELDAR_GUARDIAN_PLAYER
+  #   resetRank: true
+  #   #TESTING requiredCommendations:
+  #   #TESTING  STR_BATTLE_TESTED: 0
+  #   percentOverallStatChange:
+  #     tu: 10
+  #     stamina: 10
+  #     health: 10
+  #     bravery: 5
+  #     reactions: 0
+  #     firing: 5
+  #     throwing: 5
+  #     strength: 5
+  #     psiStrength: 15
+  #     psiSkill: 15
+  #     melee: 5
+  #   soldierBonusType: STR_RUNE_OF_FATE
+
+  - name: STR_PROMOTE_TO_SEER
+    # FIXME: requiresBuyBaseFunc: [ASPECT]
     requires:
       - STR_ELDAR_PSYKER_RESEARCH
     cost: 10000
-    minRank: 0
-    producedSoldierType: STR_ELDAR_PSYKER_PLAYER
+    minRank: 2
+    producedSoldierType: STR_ELDAR_SEER_F
     keepSoldierArmor: false
     allowsDeadSoldiers: false
     allowsWoundedSoldiers: true
     allowsLiveSoldiers: true
     allowedSoldierTypes:
+      - STR_ELDAR_F
       - STR_ELDAR_GUARDIAN_PLAYER
-    resetRank: true
-    #TESTING requiredCommendations:
-    #TESTING  STR_BATTLE_TESTED: 0
+    requiredMinStats:
+      psiStrength: 50
+      psiSkill: 50
     percentOverallStatChange:
       tu: 10
       stamina: 10
@@ -711,7 +742,7 @@ soldierTransformation:
       psiStrength: 15
       psiSkill: 15
       melee: 5
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_FATE
 
 #TIER3.PSI.transformations
 
@@ -719,6 +750,7 @@ soldierTransformation:
   #   # requiresBuyBaseFunc: [PSI]
   #   requires:
   #     - STR_ELDAR_SEER_EXARCH_RESEARCH
+  #   soldierBonusType: STR_RUNE_OF_WARDING
 
 #TIER4.PSI.transformations
 #TIER3.MIXED.transformations # Path of the warlock
@@ -744,10 +776,11 @@ soldierTransformation:
       - STR_ELDAR_SCORPION_M
       - STR_ELDAR_REAPER_M
       - STR_ELDAR_DRAGON_MF
-    #requiredMinStats:
-    #  firing: 65
-    #TESTING requiredCommendations:
-      #TESTING STR_VETERAN_COMMENDATION: 0
+    requiredMinStats:
+      psiStrength: 50
+      psiSkill: 30
+      firing: 55
+      melee: 55
     resetRank: true
     percentOverallStatChange:
       tu: 10
@@ -761,7 +794,7 @@ soldierTransformation:
       psiStrength: 10
       psiSkill: 20
       melee: 0
-    #soldierBonusType: STR_RUNE_OF_COMMAND
+    soldierBonusType: STR_RUNE_OF_BATTLE
 
 #NOTIER.resurrections #resurrection to wraithguard
 
@@ -775,49 +808,25 @@ soldierTransformation:
     allowsDeadSoldiers: true
     allowsLiveSoldiers: false
     needsCorpseRecovered: true
+    # forbiddenPreviousTransformations:
+    #   - STR_RESURRECT_ELDAR #no infinite resurrections
     allowedSoldierTypes:
       - STR_ELDAR_M
       - STR_ELDAR_F
+      - STR_ELDAR_GUARDIAN_PLAYER
       - STR_ELDAR_SCORPION_M
       - STR_ELDAR_SEER_F
       - STR_ELDAR_BANSHEE_F
       - STR_ELDAR_AVANGER_MF
       - STR_ELDAR_REAPER_M
+      - STR_ELDAR_DRAGON_MF
+      - STR_ELDAR_SPIDER_PLAYER
+      - STR_ELDAR_AUTARCH_PLAYER
+      - STR_ELDAR_REAPER_EXARCH_M
+      - STR_ELDAR_DRAGON_EXARCH_SOLDIER
+      - STR_ELDAR_SPIDEREX_PLAYER
+      - STR_ELDAR_BANSHEE_EXARCH_PLAYER
+      - STR_ELDAR_WARLOCK_PLAYER
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
-
-
-# TODO: DEPRECATE
-
-  - name: STR_PROMOTE_TO_SEER
-    # FIXME: requiresBuyBaseFunc: [ASPECT]
-    requires:
-      - STR_ELDAR_ASPECT_RESEARCH
-    cost: 50000
-    minRank: 2
-    producedSoldierType: STR_ELDAR_SEER_F
-    keepSoldierArmor: false
-    allowsDeadSoldiers: false
-    allowsWoundedSoldiers: true
-    allowsLiveSoldiers: true
-    allowedSoldierTypes:
-      - STR_ELDAR_F
-      - STR_ELDAR_BANSHEE_F
-    requiredMinStats:
-      bravery: 70
-      strength: 30
-      melee: 50
-    percentOverallStatChange:
-      tu: 20
-      stamina: 20
-      health: 20
-      bravery: 30
-      reactions: 30
-      firing: 20
-      throwing: 20
-      strength: 20
-      psiStrength: 20
-      psiSkill: 20
-      melee: 20
-
