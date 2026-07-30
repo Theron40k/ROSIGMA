@@ -1384,19 +1384,21 @@ crafts:
     requiresBuyBaseFunc: [HANGAR]
     requires:
       - STR_KRIEG_STRATEGY  # placeholder
-    sprite: 1715
+    sprite: 2301
     fuelMax: 1500
     damageMax: 800
     speedMax: 250
     repairRate: 10
     vehicles: 999
     accel: 2
-    weapons: 1
+    weapons: 2
     weaponTypes:
+      - 3
       - 3
     weaponStrings:
       - STR_ANTI_AIR_WEAPONS
-    fixedWeapons: ["STR_CRAFT_MULTILASER_UC"]
+      - STR_ANTI_AIR_WEAPONS
+    fixedWeapons: ["STR_CANNON_UC", "STR_CANNON_UC"]
     soldiers: 20
     maxLargeUnits: 2
     costSell: 10000
@@ -1443,5 +1445,193 @@ crafts:
       - [3, 3, 1, 0]  # truck2
       - [2, 2, 1, 0]  # truck2
       - [3, 2, 1, 0]  # truck2
+    listOrder: 800
+    spacecraft: false
+
+
+  # Valhallan player craft
+
+  - type: STR_TRUCKARMOR_VALHALLA_STARTER
+    takeoffSound: -1
+    selectSound: -1
+    marker: 30
+    requiresBuyBaseFunc: [HANGAR]
+    requires:
+      - STR_VALHALLAN_STRATEGY  # placeholder
+    sprite: 2300
+    fuelMax: 1500
+    damageMax: 1200
+    speedMax: 300
+    repairRate: 10
+    vehicles: 999
+    accel: 2
+    weapons: 3
+    weaponTypes:
+      - 3
+      - 3
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+      - STR_ANTI_AIR_WEAPONS
+      - STR_ANTI_AIR_WEAPONS
+    fixedWeapons: ["STR_CANNON_UC", "STR_CANNON_UC", "STR_CRAFT_MULTILASER_UC"]
+    soldiers: 20
+    maxLargeUnits: 2
+    costSell: 10000
+    refuelRate: 1000
+    transferTime: 45
+    score: 100
+    craftInventoryTile: [6, 7, 1]
+    battlescapeTerrainData:
+      name: VALHALLAN_ARMORTRUCK_STARTER
+      mapDataSets:
+        - BLANKS
+        - VAL_TRUCK2
+        - WAGVL
+        - VAL_TRUCK
+        - TRUCKVAL
+      mapBlocks:
+        - name: VALHALLAN_ARMORTRUCK_STARTER
+          width: 10
+          length: 20
+          items:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS:  # placeholder
+              - [6, 3, 2]
+              - [6, 7, 2]
+            STR_VALHALLAN_AI_ROOKIESPAWNER:
+              - [0, 7, 0] #left ground
+              - [1, 5, 0] #left ground
+              - [2, 4, 0] #left ground
+              - [1, 11, 1] #left truck bed
+              - [2, 10, 1] #left truck bed
+              - [7, 0, 0] #rear right
+              - [9, 1, 0] #rear right
+              - [0, 16, 0] #front left
+              - [4, 14, 0] #front left door side
+              - [9, 11, 0] #front right
+          fuseTimers:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS: [0, 0]  # placeholder
+            STR_VALHALLAN_AI_ROOKIESPAWNER: [0, 0]
+    deployment:
+      - [6, 3, 1, 0]  # BigTruck
+      - [7, 3, 1, 0]  # BigTruck
+      - [6, 4, 1, 0]  # BigTruck
+      - [7, 4, 1, 0]  # BigTruck
+      - [6, 5, 1, 0]  # BigTruck
+      - [7, 5, 1, 0]  # BigTruck
+      - [6, 6, 1, 0]  # BigTruck
+      - [7, 6, 1, 0]  # BigTruck
+      - [6, 7, 1, 0]  # BigTruck
+      - [7, 7, 1, 0]  # BigTruck
+      - [6, 8, 1, 0]  # BigTruck
+      - [7, 8, 1, 0]  # BigTruck
+      - [6, 9, 1, 0]  # BigTruck
+      - [7, 9, 1, 0]  # BigTruck
+      - [7, 10, 1, 0]  # BigTruck
+      - [8, 3, 1, 0] # BigTruck Bulge
+      - [8, 6, 1, 0] # BigTruck Bulge
+      - [8, 7, 1, 0] # BigTruck Bulge
+      - [2, 13, 1, 0] # Small Open Truck
+      - [2, 14, 1, 0] # Small Open Truck
+    listOrder: 800
+    spacecraft: false
+
+  - type: STR_TRUCKARMOR_VALHALLA_MIDTIER
+    takeoffSound: -1
+    selectSound: -1
+    marker: 30
+    requiresBuyBaseFunc: [HANGAR]
+    requires:
+      - STR_VALHALLAN_STRATEGY
+      - STR_VALHALLA_MIDTIER
+    sprite: 2301
+    fuelMax: 1500
+    damageMax: 1400
+    speedMax: 300
+    repairRate: 10
+    vehicles: 999
+    accel: 2
+    weapons: 2
+    weaponTypes:
+      - 3
+      - 3
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+      - STR_ANTI_AIR_WEAPONS
+    fixedWeapons: ["STR_LASER_CANNON_UC", "STR_LASER_CANNON_UC"]
+    soldiers: 32 #can maybe squeeze in 34
+    maxLargeUnits: 2
+    costSell: 10000
+    refuelRate: 1000
+    transferTime: 45
+    score: 100
+    craftInventoryTile: [6, 7, 1]
+    battlescapeTerrainData:
+      name: VALHALLAN_ARMORTRUCK_TWOBIG
+      mapDataSets:
+        - BLANKS
+        - VAL_TRUCK2
+        - WAGVL
+        - VAL_TRUCK
+        - TRUCKVAL
+      mapBlocks:
+        - name: VALHALLAN_ARMORTRUCK_TWOBIG
+          width: 10
+          length: 20
+          items:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS:  # placeholder
+              - [6, 3, 2] #Rear Truck 2
+              - [6, 7, 2] #Front Truck 2
+              - [1, 11, 2] #Front Truck 1
+              - [1, 7, 2] #Rear Truck 1
+            STR_VALHALLAN_AI_ROOKIESPAWNER_MIDTIER:
+              - [0, 4, 0] #left ground
+              - [1, 3, 0] #left ground
+              - [2, 2, 0] #left ground
+              - [3, 0, 0] #left ground
+              - [5, 0, 0] #left ground
+              - [7, 0, 0] #rear right
+              - [9, 1, 0] #rear right
+              - [0, 17, 0] #front left
+              - [4, 16, 0] #front left door side
+              - [9, 11, 0] #front right
+          fuseTimers:
+            STR_CHAOSTRUCKTURRET_SPAWNERCHAOS: [0, 0]  # placeholder
+            STR_VALHALLAN_AI_ROOKIESPAWNER_MIDTIER: [0, 0]
+    deployment:
+      - [6, 3, 1, 0]  # BigTruck 2
+      - [7, 3, 1, 0]  # BigTruck 2
+      - [6, 4, 1, 0]  # BigTruck 2
+      - [7, 4, 1, 0]  # BigTruck 2
+      - [6, 5, 1, 0]  # BigTruck 2
+      - [7, 5, 1, 0]  # BigTruck 2
+      - [6, 6, 1, 0]  # BigTruck 2
+      - [7, 6, 1, 0]  # BigTruck 2
+      - [6, 7, 1, 0]  # BigTruck 2
+      - [7, 7, 1, 0]  # BigTruck 2
+      - [6, 8, 1, 0]  # BigTruck 2
+      - [7, 8, 1, 0]  # BigTruck 2
+      - [6, 9, 1, 0]  # BigTruck 2
+      - [7, 9, 1, 0]  # BigTruck 2
+      - [7, 10, 1, 0]  # BigTruck 2
+      - [8, 6, 1, 0] # BigTruck 2 Bulge
+      - [8, 7, 1, 0] # BigTruck 2 Bulge
+      - [1, 7, 1, 0]  # BigTruck
+      - [2, 7, 1, 0]  # BigTruck
+      - [1, 8, 1, 0]  # BigTruck
+      - [2, 8, 1, 0]  # BigTruck
+      - [1, 9, 1, 0]  # BigTruck
+      - [2, 9, 1, 0]  # BigTruck
+      - [1, 10, 1, 0]  # BigTruck
+      - [2, 10, 1, 0]  # BigTruck
+      - [1, 11, 1, 0]  # BigTruck
+      - [2, 11, 1, 0]  # BigTruck
+      - [1, 12, 1, 0]  # BigTruck
+      - [2, 12, 1, 0]  # BigTruck
+      - [2, 13, 1, 0]  # BigTruck
+      - [2, 14, 1, 0]  # BigTruck
+      - [3, 10, 1, 0] # BigTruck Bulge
+      - [3, 11, 1, 0] # BigTruck Bulge
+
     listOrder: 800
     spacecraft: false
