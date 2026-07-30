@@ -37,7 +37,6 @@ jobs:
           separator: ","
           files: |
             **/*.rul
-          sha: ${{ github.event.pull_request.head.sha }} 
 
       # Step 4b
       - name: Prepare schema files for check_jsonschema  # probably should be cached?

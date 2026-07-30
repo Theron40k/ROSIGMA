@@ -32,7 +32,6 @@ jobs:
             **/*.rul
             **/*.yml
             **/*.yaml
-          sha: ${{ github.event.pull_request.head.sha }} 
 
       # Step 3: Run yamllint on all YAML files
       - name: Lint YAML files
