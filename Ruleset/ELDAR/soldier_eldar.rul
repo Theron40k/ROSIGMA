@@ -956,11 +956,12 @@ soldiers:
 
 # ELDAR.TIER3_MIXED # Path of the warlock
   - type: STR_ELDAR_WARLOCK_PLAYER
-    # requires:
-    #   - STR_ELDAR_PATH
-    #   - STR_HIGHTIER_PREREQ
+    requires:
+       - STR_ELDAR_PATH
+       - STR_HIGHTIER_PREREQ
     flagOffset: 100
-    #requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: [ELDAROUT]
+    costBuy: 60000
     costSalary: 30000
     minStats:
       tu: 90
@@ -1021,7 +1022,7 @@ soldiers:
     avatarOffsetX: 66
     avatarOffsetY: 30
     #femaleFrequency: 50
-    armor: STR_ELDAR_ARMOR3_P # TEMPORARY ARMOR. base armor will be banshee or seer exarch
+    armor: STR_ELDAR_WARLOCK_ARMOR_P
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
     rankStrings: # todo, give proper rank strings. these are borrowed from seer
@@ -1036,7 +1037,7 @@ soldiers:
     rankTinySprite: {mod: 40k, index: 217}
     soldierNames:
       - delete
-      - Names/eldar_avanger.nam
+      - Names/eldar_warlock.nam
 
 # ELDAR.WRAITHGUARD # special units (example: avatar of khaine)
 
