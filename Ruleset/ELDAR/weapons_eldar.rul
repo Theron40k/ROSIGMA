@@ -32,8 +32,7 @@ items:
       - STR_SHURIKEN_CLIP
     accuracySnap: 80
     accuracyAuto: 66
-    tuSnap: 25
-    tuAuto: 40
+
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -48,11 +47,10 @@ items:
       shots: 3
     experienceTrainingMode: 6
     listOrder: 16100
-
-  - type: STR_DEBUG_CATAPULT_DONOTUSE
-    refNode: *ELDAR_WEAPON_TEMPLATE
-    requires:
-      - STR_GENERALLOCK
+    # NORMAL COST VERSION
+    #tuSnap: 25
+    #tuAuto: 40
+    # FLAT COST VERSION, FOR TESTING
     tuSnap: 20
     tuAuto: 35
     flatSnap:
