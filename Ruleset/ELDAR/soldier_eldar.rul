@@ -634,6 +634,88 @@ soldiers:
       - delete
       - Names/eldar_avanger.nam
 
+  - type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
+    # requires:
+    #   - STR_ELDAR_PATH
+    #   - STR_HIGHTIER_PREREQ
+    flagOffset: 100
+    costSalary: 30000
+    minStats:
+      tu: 90
+      stamina: 80
+      health: 75
+      bravery: 80
+      reactions: 80
+      firing: 85
+      throwing: 65
+      strength: 65
+      psiStrength: 100
+      psiSkill: 55
+      melee: 70
+    maxStats:
+      tu: 100
+      stamina: 95
+      health: 95
+      bravery: 95
+      reactions: 100
+      firing: 100
+      throwing: 75
+      strength: 80
+      psiStrength: 100
+      psiSkill: 30
+      melee: 95
+    statCaps: # very high stat caps for autarch
+      tu: 120
+      stamina: 115
+      health: 125
+      bravery: 125
+      reactions: 150
+      firing: 140
+      throwing: 120
+      strength: 110
+      psiStrength: 160
+      psiSkill: 160
+      melee: 140
+    trainingStatCaps:
+      tu: 100
+      stamina: 95
+      health: 95
+      bravery: 95
+      reactions: 100
+      firing: 100
+      throwing: 75
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 95
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    #femaleFrequency: 50
+    armor: STR_ELDAR_ARMOR2_P # TEMPORARY ARMOR. base armor will be banshee or seer exarch
+    deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
+    rankStrings: # todo, give proper rank strings
+      - STR_ELDAR_BANSHEE_RANK_0
+      - STR_ELDAR_BANSHEE_RANK_1
+      - STR_ELDAR_BANSHEE_RANK_2
+      - STR_ELDAR_BANSHEE_RANK_3
+      - STR_ELDAR_BANSHEE_RANK_4
+      - STR_ELDAR_BANSHEE_RANK_5
+    rankSprite: {mod: 40k, index: 966}
+    rankBattleSprite: {mod: 40k, index: 302}
+    rankTinySprite: {mod: 40k, index: 217}
+    soldierNames:
+      - delete
+      - Names/eldar_banshee.nam
+
   - type: STR_ELDAR_REAPER_EXARCH_M
     refNode: *EXARCH_TEMPLATE
     flagOffset: 100
@@ -775,13 +857,13 @@ soldiers:
 
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
 
-  - &PSYKER_TEMPLATE
+  - &PSYKER_TEMPLATE # TEMPLATE ONLY
     type: STR_ELDAR_PSYKER_PLAYER
     requires:
       - STR_ELDAR_PSYKER_RESEARCH
     flagOffset: 100
     requiresBuyBaseFunc: [PSI]
-    costBuy: 60000
+    #costBuy: 60000
     costSalary: 25000
     minStats:
       tu: 65
@@ -866,89 +948,6 @@ soldiers:
       - Names/eldar_seer.nam
 
 # ELDAR.TIER3_PSY # PSY WARRIORS (Mastery of psychic power)
-
-  - &EXARCH_PSY_TEMPLATE
-    type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
-    # requires:
-    #   - STR_ELDAR_PATH
-    #   - STR_HIGHTIER_PREREQ
-    flagOffset: 100
-    costSalary: 30000
-    minStats:
-      tu: 90
-      stamina: 80
-      health: 75
-      bravery: 80
-      reactions: 80
-      firing: 85
-      throwing: 65
-      strength: 65
-      psiStrength: 100
-      psiSkill: 55
-      melee: 70
-    maxStats:
-      tu: 100
-      stamina: 95
-      health: 95
-      bravery: 95
-      reactions: 100
-      firing: 100
-      throwing: 75
-      strength: 80
-      psiStrength: 100
-      psiSkill: 30
-      melee: 95
-    statCaps: # very high stat caps for autarch
-      tu: 120
-      stamina: 115
-      health: 125
-      bravery: 125
-      reactions: 150
-      firing: 140
-      throwing: 120
-      strength: 110
-      psiStrength: 160
-      psiSkill: 160
-      melee: 140
-    trainingStatCaps:
-      tu: 100
-      stamina: 95
-      health: 95
-      bravery: 95
-      reactions: 100
-      firing: 100
-      throwing: 75
-      strength: 80
-      psiStrength: 100
-      psiSkill: 100
-      melee: 95
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
-    allowPiloting: true
-    allowPromotion: true
-    standHeight: 22
-    kneelHeight: 14
-    avatarOffsetX: 66
-    avatarOffsetY: 30
-    #femaleFrequency: 50
-    armor: STR_ELDAR_ARMOR2_P # TEMPORARY ARMOR. base armor will be banshee or seer exarch
-    deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
-    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
-    rankStrings: # todo, give proper rank strings
-      - STR_ELDAR_BANSHEE_RANK_0
-      - STR_ELDAR_BANSHEE_RANK_1
-      - STR_ELDAR_BANSHEE_RANK_2
-      - STR_ELDAR_BANSHEE_RANK_3
-      - STR_ELDAR_BANSHEE_RANK_4
-      - STR_ELDAR_BANSHEE_RANK_5
-    rankSprite: {mod: 40k, index: 966}
-    rankBattleSprite: {mod: 40k, index: 302}
-    rankTinySprite: {mod: 40k, index: 217}
-    soldierNames:
-      - delete
-      - Names/eldar_banshee.nam
 
 #  - type: STR_ELDAR_SEER_EXARCH_PLAYER # farseer
 
