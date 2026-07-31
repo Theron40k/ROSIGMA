@@ -32,8 +32,7 @@ items:
       - STR_SHURIKEN_CLIP
     accuracySnap: 80
     accuracyAuto: 66
-    tuSnap: 25
-    tuAuto: 40
+
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -41,11 +40,24 @@ items:
     armor: 30
     autoShots: 9
     bulletSpeed: 30
-    attraction: 1
+    attraction: 5
+    snapRange: 16
+    autoRange: 12
     confSnap:
       shots: 3
     experienceTrainingMode: 6
     listOrder: 16100
+    # NORMAL COST VERSION
+    #tuSnap: 25
+    #tuAuto: 40
+    # FLAT COST VERSION, FOR TESTING
+    tuSnap: 20
+    tuAuto: 35
+    flatSnap:
+      time: true
+    flatAimed:
+      time: true
+
 
   - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
@@ -54,7 +66,7 @@ items:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_RECRUIT_ELDAR_OUTCAST
     requiresBuyBaseFunc: []
-    weight: 7
+    weight: 17
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
     size: 0.4
     bigSprite: 4857
@@ -73,24 +85,24 @@ items:
     accuracySnap: 90
     accuracyAimed: 110
     tuAimed: 70
-    tuAuto: 50
+    tuAuto: 45
     tuSnap: 30
     autoShots: 3
-    power: 95
-    damageType: 1 # was 5
-    damageAlter:  # DA PULSE
-      RandomType: 6
-      ToArmorPre: 0.2 # was 0.1 or 0.3, depending # melts some armor on the way in
+    #power: 95
+    #damageType: 1 # was 5
+    #damageAlter:  # DA PULSE
+    #  RandomType: 6
+    #  ToArmorPre: 0.2 # was 0.1 or 0.3, depending # melts some armor on the way in
     battleType: 1
     twoHanded: true
-    oneHandedPenalty: 25
+    oneHandedPenalty: 75
     invWidth: 2
     invHeight: 3
     arcingShot: false
     minRange: 5
     aimRange: 25
     snapRange: 20
-    autoRange: 16
+    autoRange: 14
     dropoff: 3 #tau rifle has exceptional range
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 3
@@ -114,7 +126,7 @@ items:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_RECRUIT_ELDAR_OUTCAST
     requiresBuyBaseFunc: []
-    weight: 7
+    weight: 20
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
     size: 0.4
     bigSprite: 4858
@@ -132,25 +144,25 @@ items:
     accuracyAuto: 70
     accuracySnap: 90
     accuracyAimed: 110
-    tuAimed: 70
-    tuAuto: 50
-    tuSnap: 30
+    tuAimed: 85
+    tuAuto: 60
+    tuSnap: 40
     autoShots: 3
-    power: 95
-    damageType: 1 # was 5
-    damageAlter:  # DA PULSE
-      RandomType: 6
-      ToArmorPre: 0.2 # was 0.1 or 0.3, depending # melts some armor on the way in
+    # power: 95
+    # damageType: 1 # was 5
+    # damageAlter:  # DA PULSE
+    #   RandomType: 6
+    #   ToArmorPre: 0.2 # was 0.1 or 0.3, depending # melts some armor on the way in
     battleType: 1
     twoHanded: true
-    oneHandedPenalty: 25
+    oneHandedPenalty: 75
     invWidth: 2
     invHeight: 3
     arcingShot: false
     minRange: 5
-    aimRange: 25
+    aimRange: 40
     snapRange: 20
-    autoRange: 16
+    autoRange: 14
     dropoff: 3 #tau rifle has exceptional range
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 3
@@ -328,6 +340,8 @@ items:
     bulletSpeed: 30
     attraction: 1
     listOrder: 16000
+    snapRange: 15
+    autoRange: 10
     inventoryMoveCost: #quickdraw
       basePercent: 50
     tags:
@@ -352,18 +366,18 @@ items:
     fireSound: {mod: 40k, index: 706}
     compatibleAmmo:
       - STR_AELDARI_FLAMER_FUEL
-    accuracyAuto: 20
+    accuracyAuto: 35
     tuAuto: 35
     battleType: 1
     twoHanded: true
     experienceTrainingMode: 6
     arcingShot: true
     noLOSAccuracyPenalty: 75  # indirect fire weapon
-    maxRange: 9
+    maxRange: 12
     invWidth: 2
     invHeight: 3
     armor: 30
-    autoShots: 6
+    autoShots: 3
     attraction: 7
 
   - type: STR_DRAGON_BREATH_FLAMER # stats from STR_PURIFIER_FLAMER rework needed (very fun weapon haha)
@@ -389,13 +403,13 @@ items:
     accuracyAuto: 40
     tuSnap: 20
     tuAuto: 30
-    snapRange: 12
-    autoRange: 10
+    snapRange: 14
+    autoRange: 12
     aimRange: 0
     confSnap:  # Double Shot
       shots: 2
       arcing: true
-    maxRange: 15
+    maxRange: 16
     dropoff: 5
     twoHanded: true
     experienceTrainingMode: 6
