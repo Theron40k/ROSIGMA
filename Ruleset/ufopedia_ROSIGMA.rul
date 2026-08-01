@@ -5697,11 +5697,16 @@ ufopaedia:
 ## #SOLDIERS.CM.DW#        Deathwatch Strategy
 ## #SOLDIERS.CM.GK#        Grey Knights Strategy
 ## #SOLDIERS.CM.RAD#       Radical Road Strategy
+  - id: STR_IMPERIAL_INTERROGATOR #OPFOR Commander Inquisitor
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQ_INTERROGATOR_CODEX.SPK
+    text: STR_IMPERIAL_INTERROGATOR_UFOPEDIA
 ## #SOLDIERS.CM.LAW#       The Imperial Law Strategy
   - delete: STR_CMAS
-  - id: STR_CMAS  # Cyber Mastiff
-    type_id: 14
-    section: STR_NOT_AVAILABLE
+  - id: STR_ARBITES_MASTIFF  # Cyber Mastiff
+    type_id: 10
+    section: STR_SOLDIERS_UC
     image_id: C13.SPK
     text: STR_CMAS_UFOPEDIA
     weapon: STR_CMAS
@@ -8089,12 +8094,6 @@ ufopaedia:
     text: STR_ADEPTAS_ARMORI_UFOPEDIA
     requires:
       - STR_NOT_WORDBEARERS
-
-  - id: STR_IMPERIAL_INTERROGATOR #OPFOR Commander Inquisitor
-    type_id: 10
-    section: STR_ARMORPEDIA
-    image_id: INQ_INTERROGATOR_CODEX.SPK.SPK
-    text: STR_IMPERIAL_INTERROGATOR_UFOPEDIA
 
   - id: STR_IMPERIAL_INQUISITOR_AI #OPFOR Commander Inquisitor
     type_id: 10
