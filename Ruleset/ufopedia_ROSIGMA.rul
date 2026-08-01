@@ -3902,6 +3902,16 @@ ufopaedia:
     image_id: CHAOS_THUNDERHAWK.SPK #placeholder
     text: STR_WBTHUNDERHAWK_UFOPEDIA
 
+  - id: STR_WBDEMONHOST
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_WORDBEARERS_STRATEGY
+      - STR_DIABO_ARMOR_WB
+    image_id: DAEMON_INCURSION_WB_LOGO.SPK #placeholder
+    text: STR_WBDEMONHOST_CODEX
+
   - id: STR_WBWARSHIPFINAL
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
@@ -5792,8 +5802,14 @@ ufopaedia:
     text: STR_ELDAR_ASPECT_HELPER_SPIDER
     requires:
       - STR_ELDAR_SPIDER_RESEARCH
+  - id: STR_PROMOTE_TO_AUTARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AUTARCH_BACKGROUND.SPK
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER
+    requires:
+      - STR_PROMOTE_TO_AUTARCH_HELPER
   # Eldar exarch/autarch
-  #- id: STR_PROMOTE_TO_AUTARCH
   #- id: #dire avenger ex
   #- id: #scorpion ex.
   #- id: STR_PROMOTE_TO_BANSHEE_EXARCH
