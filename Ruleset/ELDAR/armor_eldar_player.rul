@@ -1216,9 +1216,12 @@ armors:
 
   - type: STR_ELDAR_WARLOCK_ARMOR_P # WORK NEEDED
     refNode: *SEER_ARMOR
-    #requires: # SPIDER EXARCH RESEARCH
+    #requires: # WARLOCK RESEARCH
+    customArmorPreviewIndex: 268
     units:
       - STR_ELDAR_WARLOCK_PLAYER
+    corpseBattle:
+      - STR_ELDAR_WARLOCK_CORPSE_P
     layersDefaultPrefix: "1"
     layersSpecificPrefix:
       1: ELDARWARLOCK
