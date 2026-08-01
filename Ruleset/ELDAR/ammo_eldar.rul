@@ -26,7 +26,9 @@ items:
     hitSound: 1874 #{mod: 40k, index: 708} old sound
     hitAnimation: {mod: 40k, index: 26}
     explosionSpeed: 5
-    power: 17 #50 originally
+    power: 20 #50 originally
+    damageBonus:
+      reactions: 0.1
     damageType: 1
     clipSize: 60
     battleType: 2
@@ -57,9 +59,14 @@ items:
     power: 60
     damageType: 2
     damageAlter:
-      IgnoreSelfDestruct: false
+      ToHealth: 1.2
+      ToMorale: 1.5 # flame terror
+      ToTime: 0.1  # debilitating pain
+      ToArmorPre: 0.1
+      ToItem: 0.5
+      ToTile: 0.5
     blastRadius: 2
-    clipSize: 40
+    clipSize: 20
     battleType: 2
     invWidth: 1
     invHeight: 2
@@ -76,7 +83,7 @@ items:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_RECRUIT_ELDAR_OUTCAST
     size: 0.2
-    weight: 1 #light weight
+    weight: 2 #light weight
     invHeight: 2
     invWidth: 1
     bigSprite: 4859
@@ -88,7 +95,7 @@ items:
     vaporColorSurface: {mod: 40k, index: 2}
     vaporDensitySurface: 3
     vaporProbabilitySurface: 50
-    costBuy: 2000
+    costBuy: 4000
     costSell: 1000
     scripts:
       vaporParticleAmmo: |
@@ -102,10 +109,13 @@ items:
     clipSize: 20
     power: 95
     damageType: 1 # was 5
-    damageAlter:  # DA PULSE
-      RandomType: 6
-      ToArmorPre: 0.2 # was 0.1-0.3  # melts some armor on the way in
-      # ArmorEffectiveness: 0.9  # some armor penetration
+    damageAlter:
+      #RandomType: 6
+      ToArmorPre: 0.3 # melts some armor on the way in
+      ToArmor: 0
+      ArmorEffectiveness: 0.65
+      ToHealth: 0.8
+      IgnoreSelfDestruct: true
     listOrder: 16620
 
   - type: STR_DRAGON_BREATH_FLAMER_FUEL

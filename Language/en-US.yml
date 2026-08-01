@@ -1254,7 +1254,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_ARMOR_GUARDIAN_HEALER_PLAYER: "Healer Kit Guardian Armor"
   STR_ELDAR_ASPECT_WARRIOR_PLAYER: "Eldar Aspect Warrior"
   STR_ELDAR_PSYKER_PLAYER: "Eldar Psyker"
-  STR_ELDAR_WARLOCK_PLAYER: "Eldar Warlock"
+  STR_ELDAR_WARLOCK_PLAYER: "Warlock"
+  STR_ELDAR_WARLOCK_ARMOR_P: "Warlock Armor"
+  STR_ELDAR_WARLOCK_CORPSE_P: "Warlock Corpse"
   STR_ELDAR_BANSHEE_EXARCH_PLAYER: "Eldar Banshee Exarch"
   STR_ELDAR_DRAGON: "Eldar Dragon"
   STR_ELDAR_DRAGONEX: "Eldar Dragon Exarch"
@@ -1284,14 +1286,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SEER_CORPSE_P: "Seer Corpse"
 
   # ELDAR SOLDIER TRANSFORMATIONS CODEX (lore fluff plus transformation requirements)
-  STR_ELDAR_ASPECT_HELPER_SCORPIONS: "The Striking Scorpions are the form of Aspect Warriors focused on close combat, stealth, and assassination. They epitomise the deadly attributes of their namesake, which can sting and kill a creature many times its size. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Scorpion are {NEWLINE}{ALT}bravery: 70, melee: 50{ALT}" # The history of the Striking Scorpions is shrouded in infamy from their very beginning from the story of their founder, Phoenix Lord Arhra, Father of the Scorpions, now known as the Fallen Phoenix"
-  STR_ELDAR_ASPECT_HELPER_BANSHEE: "Howling Banshees are the form of Aspect Warriors that represents the fury of the Murder God as well as his cunning. According to Eldar mythology, Banshees are the harbingers of woe and death whose cry, it is said, heralds ill fate, calling forth dead spirits from the Warp and forewarning certain death. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Banshee are {NEWLINE}{ALT}bravery: 60, reactions: 65{ALT}"
-  STR_ELDAR_ASPECT_HELPER_REAPER: "Dark Reapers are the most sinister types of Eldar Aspect Warrior. They emulate Khaine in his aspect as \"the Destroyer\" and the harvester of souls. They are the most heavily equipped of all Aspect Warriors, they specialize in the use of destructive, long-range weaponry.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Reaper are {NEWLINE}{ALT}firing: 65, strength: 40{ALT}"
-  STR_ELDAR_ASPECT_HELPER_AVENGER: "Dire Avengers, or Fian Dialcaman, are the form of Aspect Warriors representing Khaine's aspect of the noble and merciless warrior, who punishes the unworthy and shows true devotion to his own people. They are the most tactically flexible and numerous of all the Aspect Warriors.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Dire Avenger are {NEWLINE}{ALT}firing: 60{ALT}"
-  STR_ELDAR_ASPECT_HELPER_DRAGON: "The Fire Dragons are the form of Aspect Warriors embodying the writhing, sinewy dragon of Eldar myths as well as the elemental destruction of Khaine. Fire Dragons are aggressive and warlike close combat fighters who utilized heat weapons to destroy enemy vehicles and strongpoints.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Fire Dragon are {NEWLINE}{ALT}bravery: 70, health: 40{ALT}"
-  STR_ELDAR_ASPECT_HELPER_SPIDER: "The Warp Spiders epitomise the concept of an aggressive defence. They specialise in the use of a personal teleportation device built into their Aspect Armour to make a series of rapid jumps through the warp making nearly impossible to target them. {NEWLINE}Beware: {ALT}repeated usage of the personal teleportation device risk exposing the user to the dangerous energies of the warp{ALT} {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Warp Spider are {NEWLINE}{ALT}health: 55, strength: 40, bravery: 70{ALT}"
-  STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER: "Any Eldar who wished to become an Autarch has to start by declaring and adopting its discipline and make their purpose to master the art of warcraft, command, and tactical supremacy. This declaration will move them toward their goal and will allow them to experience every aspect in the path of warrior. {NEWLINE}Walking the path of command will grand severely reduced bonuses when adopting a specific aspect compared to warriors who embrace that aspect for life. {NEWLINE}{NEWLINE}Requirement for a guardian to start the path of command are {NEWLINE}{ALT}bravery: 70{ALT}"
-
+  STR_ELDAR_ASPECT_HELPER_SCORPIONS: "The Striking Scorpions are the form of Aspect Warriors focused on close combat, stealth, and assassination. They epitomise the deadly attributes of their namesake, which can sting and kill a creature many times its size. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Scorpion are: Combat experience (rank 1 or higher) and {ALT}bravery: 70, melee: 50{ALT}" # The history of the Striking Scorpions is shrouded in infamy from their very beginning from the story of their founder, Phoenix Lord Arhra, Father of the Scorpions, now known as the Fallen Phoenix"
+  STR_ELDAR_ASPECT_HELPER_BANSHEE: "Howling Banshees are the form of Aspect Warriors that represents the fury of the Murder God as well as his cunning. According to Eldar mythology, Banshees are the harbingers of woe and death whose cry, it is said, heralds ill fate, calling forth dead spirits from the Warp and forewarning certain death. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Banshee are: Combat experience (rank 1 or higher) and{ALT}bravery: 60, reactions: 65{ALT}"
+  STR_ELDAR_ASPECT_HELPER_REAPER: "Dark Reapers are the most sinister types of Eldar Aspect Warrior. They emulate Khaine in his aspect as \"the Destroyer\" and the harvester of souls. They are the most heavily equipped of all Aspect Warriors, they specialize in the use of destructive, long-range weaponry.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Reaper are: Combat experience (rank 1 or higher) and {ALT}firing: 65, strength: 40{ALT}"
+  STR_ELDAR_ASPECT_HELPER_AVENGER: "Dire Avengers, or Fian Dialcaman, are the form of Aspect Warriors representing Khaine's aspect of the noble and merciless warrior, who punishes the unworthy and shows true devotion to his own people. They are the most tactically flexible and numerous of all the Aspect Warriors.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Dire Avenger are: Combat experience (rank 1 or higher) and {ALT}firing: 60{ALT}"
+  STR_ELDAR_ASPECT_HELPER_DRAGON: "The Fire Dragons are the form of Aspect Warriors embodying the writhing, sinewy dragon of Eldar myths as well as the elemental destruction of Khaine. Fire Dragons are aggressive and warlike close combat fighters who utilized heat weapons to destroy enemy vehicles and strongpoints.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Fire Dragon are: Combat experience (rank 1 or higher) and {ALT}bravery: 70, health: 40{ALT}"
+  STR_ELDAR_ASPECT_HELPER_SPIDER: "The Warp Spiders epitomise the concept of an aggressive defence. They specialise in the use of a personal teleportation device built into their Aspect Armour to make a series of rapid jumps through the warp making nearly impossible to target them. {NEWLINE}Beware: {ALT}repeated usage of the personal teleportation device risk exposing the user to the dangerous energies of the warp{ALT} {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Warp Spider are: Combat experience (rank 1 or higher) and {ALT}health: 55, strength: 40, bravery: 70{ALT}"
+  STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER: "Any Eldar who wished to become an Autarch has to start by declaring and adopting its discipline and make their purpose to master the art of warcraft, command, and tactical supremacy. This declaration will move them toward their goal and will allow them to experience every aspect in the path of warrior. {NEWLINE}Walking the path of command will grand severely reduced bonuses when adopting a specific aspect compared to warriors who embrace that aspect for life. {NEWLINE}{NEWLINE}Requirement for a guardian to start the path of command are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}bravery: 70{ALT}"
+  STR_PROMOTE_TO_AUTARCH_HELPER: "When aspiring Autarchs Complete their journey, their knowledge allow them to coordinate disparate Aspect shrines and Guardian forces without losing control of the flow of battle, no matter what atrocities the enemy may commit. {NEWLINE}{NEWLINE}Requirement for an Aspiring Autarch to become a true autarch are: Combat experience (rank 1 or higher) in the current aspect and experience in all other aspect warrior paths{NEWLINE}{ALT}Stinging Scorpion, Howling Banshee, Dark Reaper, Dire Avenger, Fire Dragon, Warp Spider{ALT}"
   # eldar transformations
   #STR_PROMOTE_TO_ASPECT_WARRIOR: "Path of the Warrior" #(unused)
   STR_PROMOTE_BEGIN_AUTARCH_PATH: "Walk the path of Command"
@@ -3112,6 +3114,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_AUTOCANNON_AP_AMMO: "Autocannon AP Drum Magazine"
   STR_AUTOCANNON_BOX_AMMO: "Autocannon Box Magazine"
   STR_CHAOS_CHAIN_AXE: "Heretic Chain Axe"
+  STR_CHAOS_CHAIN_AXE_CODEX: "{NEWLINE}A low quality Chainaxe used by the Heretical force during brutal hand-to-hand combact, an axe shaped chain weapon with a powered chainsaw edge. These heretical version tend to have a mix of monomolecular teeth and scrappier and lower quality steel teeths, means these weapons tend to rip through flesh and armour instead of cutting clearly. While inferior to a normal chain axe this should not be underestimated"
   STR_PUMP_SHOTGUN_CHAOS: "Chaos Pump-Action Shotgun"
   STR_PUMP_SHOTGUN_CHAOS_CODEX: "Pump-action shotguns corrupted by Chaos become grinding, spiteful mechanisms that resist control. Each cycle drags with a will of its own, as though the weapon feeds on the wielder’s effort. When fired, it disgorges warped shot in savage, uneven spreads that tear through flesh at close range. These tainted arms are favoured by cultists who value their reliability."
   #STR_SHOTGUN_CHAOS is already defined in base 40k mod
@@ -3228,6 +3231,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SLAANESH_EARLY: "Children of Slaanesh" #First quarter chaos base
   STR_SLAANESH_LATE: "Slaanesh Chosen"  # Month 10-12+
   # The slick soil shivers beneath our sabatons, send the scantily clad servants of Slaanesh scurrying and locate the shimmering entrance inside their scandalous halls!"
+  #slaanesh lists for eldar mid tier assault
+  STR_ALIEN_BASE_ASSAULT_SLAANESH_ELDAR: "SLAANESH PALACE ASSAULT"
+  STR_SLAANESH_PALACE_ELDARS_LV1: "Slaanesh Palace Hedonist"
+  STR_SLAANESH_PALACE_ELDARS_LV2: "Slaanesh Palace Inner Circle"
 
   STR_SLAANESH_TRAITOR_GUARD: "Slaanesh Traitor Guard"
   STR_SLAANESH_TRAITOR_GUARD_EARLY: "Decadent Guard"
@@ -5266,6 +5273,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 # VALHALLAN
   STR_VALHALLAN_GUARDSMEN: "Valhallan Recruitment"
   STR_VALHALLAN_GUARD_AI: "Valhallan Guard"
+  STR_VALHALLAN_GUARD_AI_MIDTIER: "Valhallan Guard"
   STR_PARDON_PENITENT_VALHALLA: "Pardon Penitent /VAL"
   STR_VETERAN_PROMOTION_VALHALLA: "Promote Veteran"
   STR_PROMOTE_VETERAN_OFFICER_VALHALLA: "Promote Veteran to Veteran Officer"
@@ -5348,6 +5356,11 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_STUB_GUN_AMMO_DRUM: "Stubber Drum Mag."
   STR_STUB_GUN_AMMO_DRUM_AP: "Stubber Drum AP Mag."
   STR_AUTOGUN_CLIP_KRAKEN: "Autogun Penetrator Clip"
+
+  STR_TRUCKARMOR_VALHALLA_STARTER: "Valhallan Truck Convoy"
+  STR_TRUCKARMOR_VALHALLA_MIDTIER: "Valhallan Motorised Convoy"
+  STR_VALHALLAN_COMMAND_TURRET: "Command Turret"
+  STR_VALHALLAN_MORTAR_TURRET: "Artillery Turret"
 
 ### ADVANCED TURRETS  ###
   STR_LEMONRUSS: "Battle Cannon Turret"
@@ -6786,6 +6799,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WBRHINOS_UFOPEDIA: "{NEWLINE}Chaos Rhinos are Rhino vehicles in the service of Chaos Space Marines. Serving as their most common vehicle, over the ten thousand years since the Long War began, Chaos Marines have continued to use the robust Rhino as their favored main transport."
   STR_WBHELLBLADE_UFOPEDIA: "{NEWLINE}The Hell Blade is an interceptor and air superiority fighter aircraft that is used by the forces of Chaos, including the Word Bearers."
   STR_WBTHUNDERHAWK_UFOPEDIA: "{NEWLINE}The Chaos Thunderhawk gunship is a multi-use aircraft in wide use by Word Bearers that still employ them in great numbers, either dating back to the Great Crusade or aquired since the Horus Heresy."
+  STR_WBDEMONHOST_CODEX: "{NEWLINE}Word Bearer mastery over demon summoning is so advanced that they are capable of building mobile altars, soaked in the blood of their sacrifices, to quickly summon demons in the middle of the battlefield. {NEWLINE}{NEWLINE}In battle the altar will be guarded by 2 cultist who have already finished the daemonic ritual, and will begin summoning chaos daemon starting from minor demons up to chaos undivided demons for a limited amout of time"
 
   STR_WBSSCOUT_ARMORPLAYER_CODEX: "Aspirants are the novices Word Bearers aspiring to become full fledged Chaos Marines for their legion."
   STR_WBMARINE_ARMORPLAYER_CODEX: "Chaos Marines are the warrior monks of the Word Bearers equipped to fight using a variety of ranged weapons across a broad range of combat conditions."
@@ -8327,7 +8341,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 ## Grey Knights Weapons
   #STR_GK_HB is already defined in base 40k mod
   STR_GK_HB_CODEX: "The Bolt Gauntlet family of weapons consists of a Power Fist with built-in Bolter, inspired in form and function by Roboute Guilliman's famed weapon Hand of Dominion. This version used by Grey knighs features a build-in Storm Bolter and it's capable of using bolts infused with psychic energy. Its lethality at close range its undisputed."
-
+  STR_GK_HB_MC: "Master Crafted Storm Bolter Gauntlet"
 ## Gun Specials
 
   STR_MASTER_CRAFTING: "High-tier Master Crafting"
@@ -12352,6 +12366,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   # for chaoscult
 
   STR_GANGER_BASE: "Gangers Hideout"
+  STR_SLAANESH_CORRUPTED_GANGERS: "Slaanesh Corrupted Gangers"
   STR_GANGER_BASE_CHAOSCORRUPTED: "Gangers Hideout"
   STR_GANGER_BASE_DESTROYED: "Gangers Hideout has been destroyed"
   STR_GANGER_BASE_KILLED: "Gangers Hideout eliminated"

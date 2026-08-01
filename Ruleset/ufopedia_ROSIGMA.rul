@@ -3902,6 +3902,16 @@ ufopaedia:
     image_id: CHAOS_THUNDERHAWK.SPK #placeholder
     text: STR_WBTHUNDERHAWK_UFOPEDIA
 
+  - id: STR_WBDEMONHOST
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_WORDBEARERS_STRATEGY
+      - STR_DIABO_ARMOR_WB
+    image_id: DAEMON_INCURSION_WB_LOGO.SPK #placeholder
+    text: STR_WBDEMONHOST_CODEX
+
   - id: STR_WBWARSHIPFINAL
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
@@ -5687,11 +5697,16 @@ ufopaedia:
 ## #SOLDIERS.CM.DW#        Deathwatch Strategy
 ## #SOLDIERS.CM.GK#        Grey Knights Strategy
 ## #SOLDIERS.CM.RAD#       Radical Road Strategy
+  - id: STR_IMPERIAL_INTERROGATOR #OPFOR Commander Inquisitor
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQ_INTERROGATOR_CODEX.SPK
+    text: STR_IMPERIAL_INTERROGATOR_UFOPEDIA
 ## #SOLDIERS.CM.LAW#       The Imperial Law Strategy
   - delete: STR_CMAS
-  - id: STR_CMAS  # Cyber Mastiff
-    type_id: 14
-    section: STR_NOT_AVAILABLE
+  - id: STR_ARBITES_MASTIFF  # Cyber Mastiff
+    type_id: 10
+    section: STR_SOLDIERS_UC
     image_id: C13.SPK
     text: STR_CMAS_UFOPEDIA
     weapon: STR_CMAS
@@ -5792,8 +5807,14 @@ ufopaedia:
     text: STR_ELDAR_ASPECT_HELPER_SPIDER
     requires:
       - STR_ELDAR_SPIDER_RESEARCH
+  - id: STR_PROMOTE_TO_AUTARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AUTARCH_BACKGROUND.SPK
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER
+    requires:
+      - STR_PROMOTE_TO_AUTARCH_HELPER
   # Eldar exarch/autarch
-  #- id: STR_PROMOTE_TO_AUTARCH
   #- id: #dire avenger ex
   #- id: #scorpion ex.
   #- id: STR_PROMOTE_TO_BANSHEE_EXARCH
@@ -8073,12 +8094,6 @@ ufopaedia:
     text: STR_ADEPTAS_ARMORI_UFOPEDIA
     requires:
       - STR_NOT_WORDBEARERS
-
-  - id: STR_IMPERIAL_INTERROGATOR #OPFOR Commander Inquisitor
-    type_id: 10
-    section: STR_ARMORPEDIA
-    image_id: INQ_INTERROGATOR_CODEX.SPK.SPK
-    text: STR_IMPERIAL_INTERROGATOR_UFOPEDIA
 
   - id: STR_IMPERIAL_INQUISITOR_AI #OPFOR Commander Inquisitor
     type_id: 10
@@ -11413,7 +11428,7 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
-    image_id: STR_BOLTPISTOL_TZEENTCH.SPK
+    image_id: 1CH.SPK
 
   - id: STR_BOLTPISTOL_WORDBEARER  # Warpfire Boltpistol
     type_id: 14
@@ -11572,7 +11587,7 @@ ufopaedia:
   - id: STR_BOLTERC  # Chaos Bolter
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: CHAOS_BOLTER.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
     text: STR_BOLTERC_UFOPEDIA
@@ -11604,7 +11619,7 @@ ufopaedia:
   - id: STR_BOLTERR  # Rubric Inferno Bolter
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: STR_BOLTERR.SPK
+    image_id: 1CH.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
@@ -14000,7 +14015,7 @@ ufopaedia:
   - id: STR_ALIEN_GRENADE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: CHAOS_HE_GRENADE.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_ALIEN_GRENADE_UFOPEDIA
@@ -14016,7 +14031,7 @@ ufopaedia:
   - id: STR_SONIC_GRENADE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: SONIC_GRENADE.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_SONIC
     text: STR_SONIC_GRENADE
@@ -14427,6 +14442,14 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: Neuralwhip.SPK
     text: STR_NEURAL_WHIP_UFOPEDIA
+
+  - id: STR_CHAOS_CHAIN_AXE  # Heretical chain axe
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HERETICAL_CHAINAXE.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_CHAOS_CHAIN_AXE_CODEX
 
   - delete: STR_AXE
   - id: STR_AXE  # Chaos Chain Axe

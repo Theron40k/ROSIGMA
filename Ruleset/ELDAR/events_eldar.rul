@@ -68,7 +68,7 @@ adhocScripts:
 events:
   - name: STR_ELDAR_ASURYANI_CAMPAING_START
     description: STR_ELDAR_ASURYANI_CAMPAING_START_SHORT_DESCRIPTION
-    background: GuardOffensiveBG.SCR # todo: replace with eldar one
+    background: ELDAR_GUARDIAN_ASSAULTING.SCR
     adhocMissionScriptTags: ["adhocStarterBaseSlaan_eldar", "adhocStarterBaseGangers_eldar"]
     # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
@@ -97,14 +97,14 @@ events:
 
   - name: STR_SLAANESH_PALACE_ACTIVITY_DETECTED
     description: STR_SLAANESH_PALACE_ACTIVITY_DETECTED_DESCRIPTION
-    background: GuardOffensiveBG.SCR # todo: replace with eldar one
+    background: SLAANESH_PALACE.SCR
     spawnedPersonType: STR_ELDAR_SEER_F
     spawnedPersons: 1
     researchList: [STR_SLAANESH_PALACE_ACTIVITY_DETECTED]
 
   - name: STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED
     description: STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED_DEBRIEFING
-    background: GuardOffensiveBG.SCR # todo: replace with eldar one
+    background: ELDAR_ASPECT_WARRIOR_ASSAULTING.SCR
     spawnedPersonType: STR_ELDAR_SEER_F
     researchList: [STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED]
 

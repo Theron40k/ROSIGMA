@@ -57,10 +57,10 @@ units:
       tu: 55
       stamina: 65
       health: 35
-      bravery: 85
+      bravery: 80
       reactions: 35
-      firing: 55
-      throwing: 55
+      firing: 50
+      throwing: 50
       strength: 35
       psiStrength: 5
       psiSkill: 0
@@ -74,15 +74,45 @@ units:
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     builtInWeaponSets:
-      - - STR_LASER_RIFLE
-        - STR_LASGUN_CLIP
-        - STR_LASGUN_CLIP
-      - - STR_LASER_RIFLE
-        - STR_LASGUN_CLIP
-        - STR_LASGUN_CLIP
-      - - STR_LASER_RIFLE
-        - STR_LASGUN_CLIP
-        - STR_LASGUN_CLIP
+      - - STR_VALHALLAN_STUBRIFLE
+        - STR_STUB_GUN_AMMO
+      - - STR_VALHALLAN_STUBRIFLE
+        - STR_STUB_GUN_AMMO
+      - - STR_VALHALLAN_STUBRIFLE
+        - STR_STUB_GUN_AMMO_AP
+        - STR_GRENADE
+
+  - type: STR_VALHALLAN_GUARD_AI_MIDTIER
+    civilianRecoveryType: STR_GUARD_VALHALLAN #recovered if he survives
+    race: STR_VALHALLAN_FACTION
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 55
+      stamina: 65
+      health: 45
+      bravery: 85
+      reactions: 40
+      firing: 55
+      throwing: 55
+      strength: 40
+      psiStrength: 5
+      psiSkill: 0
+      melee: 50
+    armor: STR_VALHALLAN_REGULAR_FLAK_ARMOR
+    standHeight: 21
+    kneelHeight: 14
+    value: 5
+    intelligence: 3
+    aggression: 2
+    energyRecovery: 30
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    builtInWeaponSets:
+      - - STR_VALHALLAN_STUBRIFLE
+        - STR_STUB_GUN_AMMO_AP
+      - - STR_VALHALLAN_AUTOSTUBBER
+        - STR_STUB_GUN_AMMO_DRUM
+      - - STR_VALHALLAN_AUTOGUN
+        - STR_AUTOGUN_CLIP_KRAKEN
         - STR_GRENADE
 
   - type: STR_STEELLEGION_AI  # Steel Legion Trooper AI mode
