@@ -5656,10 +5656,10 @@ armors:
     spriteInv: CHIMPD.SPK  # doesnt show up
     corpseGeo: STR_CHIMERA_TURRET_CORPSE
     corpseBattle:
-      - STR_CHIMERA_TURRET_CORPSE_1  # will need yellow replacement
-      - STR_CHIMERA_TURRET_CORPSE_2
-      - STR_CHIMERA_TURRET_CORPSE_3
-      - STR_CHIMERA_TURRET_CORPSE_4
+      - STR_CHIMERASL_TURRET_CORPSE_1
+      - STR_CHIMERASL_TURRET_CORPSE_2
+      - STR_CHIMERASL_TURRET_CORPSE_3
+      - STR_CHIMERASL_TURRET_CORPSE_4
     size: 2
     specialWeapon: STR_TURRET_RELOAD
 
@@ -5669,15 +5669,16 @@ armors:
     spriteInv: CHIMPD.SPK  # doesnt show up
     corpseGeo: STR_CHIMERA_TURRET_CORPSE
     corpseBattle:
-      - STR_CHIMERA_TURRET_CORPSE_1
-      - STR_CHIMERA_TURRET_CORPSE_2
-      - STR_CHIMERA_TURRET_CORPSE_3
-      - STR_CHIMERA_TURRET_CORPSE_4
+      - STR_CHIMERASL_TURRET_CORPSE_1
+      - STR_CHIMERASL_TURRET_CORPSE_2
+      - STR_CHIMERASL_TURRET_CORPSE_3
+      - STR_CHIMERASL_TURRET_CORPSE_4
     size: 2
     specialWeapon: STR_TURRET_RELOAD
 
   # SL GORGON TURRETS
-  - type: STR_GORGONSL_HEAVY_FLAMER_FRONT_LEFT_ARMOR
+  - &STR_GORGON_HEAVY_FLAMER_FRONT_LEFT_ARMOR_REF
+    type: STR_GORGONSL_HEAVY_FLAMER_FRONT_LEFT_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 20
     antiCamouflageAtDay: 6
@@ -5722,7 +5723,8 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
 
-  - type: STR_GORGONSL_HEAVY_FLAMER_BACK_LEFT_ARMOR
+  - &STR_GORGON_HEAVY_FLAMER_BACK_LEFT_ARMOR_REF
+    type: STR_GORGONSL_HEAVY_FLAMER_BACK_LEFT_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 20
     antiCamouflageAtDay: 6
@@ -5767,7 +5769,8 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
 
-  - type: STR_GORGONSL_HEAVY_FLAMER_FRONT_RIGHT_ARMOR
+  - &STR_GORGON_HEAVY_FLAMER_FRONT_RIGHT_ARMOR_REF
+    type: STR_GORGONSL_HEAVY_FLAMER_FRONT_RIGHT_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 20
     antiCamouflageAtDay: 6
@@ -5812,7 +5815,8 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
 
-  - type: STR_GORGONSL_HEAVY_FLAMER_BACK_RIGHT_ARMOR
+  - &STR_GORGON_HEAVY_FLAMER_BACK_RIGHT_ARMOR_REF
+    type: STR_GORGONSL_HEAVY_FLAMER_BACK_RIGHT_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 20
     antiCamouflageAtDay: 6
@@ -5857,7 +5861,8 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
 
-  - type: STR_GORGONSL_HEAVY_STUBBER_LEFT_ARMOR
+  - &STR_GORGON_HEAVY_STUBBER_LEFT_ARMOR_REF
+    type: STR_GORGONSL_HEAVY_STUBBER_LEFT_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 20
     personalLight: 0
@@ -5909,7 +5914,8 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       ARMOR_IS_CREWED_WEAPON: 1
 
-  - type: STR_GORGONSL_HEAVY_STUBBER_RIGHT_ARMOR
+  - &STR_GORGON_HEAVY_STUBBER_RIGHT_ARMOR_REF
+    type: STR_GORGONSL_HEAVY_STUBBER_RIGHT_ARMOR
     visibilityAtDay: 40
     visibilityAtDark: 20
     personalLight: 0
@@ -5961,6 +5967,185 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       ARMOR_IS_CREWED_WEAPON: 1
 
+###VALHALLAN TURRET ARMORS###
+  - &STR_VLCOMMAND_TURRET_DEFAULT
+    type: STR_CHIMERAVL_COMMAND_TURRET_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    heatVision: 30
+    spriteSheet: CHIMERA_TURRET_VL_COMMAND_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseBattle:
+      - STR_CHIMERA_TURRET_CORPSE_1
+      - STR_CHIMERA_TURRET_CORPSE_2
+      - STR_CHIMERA_TURRET_CORPSE_3
+      - STR_CHIMERA_TURRET_CORPSE_4
+    frontArmor: 130
+    sideArmor: 130
+    rearArmor: 130
+    underArmor: 150
+    size: 2
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 5
+    allowsKneeling: false
+    alwaysVisible: true
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_CHIMERAVL_TWIN_HB_TURRET_ARMOR  # Valhalla
+    refNode: *STR_CHIMERA_TURRET_REF
+    spriteSheet: CHIMERA_TURRET_VL_HB_BS.PCK
+    spriteInv: CHIMPD.SPK  # doesnt show up
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERA_TURRET_CORPSE_1  # will need white/blue replacement
+      - STR_CHIMERA_TURRET_CORPSE_2
+      - STR_CHIMERA_TURRET_CORPSE_3
+      - STR_CHIMERA_TURRET_CORPSE_4
+    size: 2
+    specialWeapon: STR_TURRET_RELOAD
+
+  - type: STR_CHIMERAVL_TWIN_AC_TURRET_ARMOR  # Valhalla
+    refNode: *STR_CHIMERA_TURRET_REF
+    spriteSheet: CHIMERA_TURRET_VL_AC_BS.PCK
+    spriteInv: CHIMPD.SPK  # doesnt show up
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERA_TURRET_CORPSE_1  # will need white/blue replacement
+      - STR_CHIMERA_TURRET_CORPSE_2
+      - STR_CHIMERA_TURRET_CORPSE_3
+      - STR_CHIMERA_TURRET_CORPSE_4
+    size: 2
+    specialWeapon: STR_TURRET_RELOAD
+
+  - &STR_VLEXECUTIONER_ARMOR_DEFAULT
+    type: STR_LEMANVL_EXECUTIONER_ARMOR
+    allowsMoving: false
+    spriteSheet: VALHALLAN_LEMAN_PLASMATURRET_BS.PCK
+    allowInv: false
+    spriteInv: LR.SPK  # replace?
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE #change
+    corpseBattle:
+      - STR_CHIMERA_TURRET_CORPSE_1 #change
+      - STR_CHIMERA_TURRET_CORPSE_2
+      - STR_CHIMERA_TURRET_CORPSE_3
+      - STR_CHIMERA_TURRET_CORPSE_4
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    heatVision: 30
+    frontArmor: 150
+    sideArmor: 150
+    rearArmor: 150
+    underArmor: 150
+    movementType: 1
+    size: 2
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}, {mod: 40k, index: 593}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}, {mod: 40k, index: 593}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    damageModifier:  # VEHICLE ARMOR LARGE
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    specialWeapon: STR_TURRET_RELOAD
+    drawingRoutine: 3
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_LEMANVL_BATTLECANNON_TURRET_ARMOR
+    refNode: *STR_VLEXECUTIONER_ARMOR_DEFAULT
+    spriteSheet: VALHALLAN_LEMAN_BCTURRET_BS.PCK
+    spriteInv: LR.SPK  # replace?
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE #Replace
+    corpseBattle:
+      - STR_CHIMERASL_TURRET_CORPSE_1 #change
+      - STR_CHIMERASL_TURRET_CORPSE_2
+      - STR_CHIMERASL_TURRET_CORPSE_3
+      - STR_CHIMERASL_TURRET_CORPSE_4
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_GORGONVL_HEAVY_FLAMER_FRONT_LEFT_ARMOR
+    refNode: *STR_GORGON_HEAVY_FLAMER_FRONT_LEFT_ARMOR_REF
+    spriteSheet: GORGONVL_HEAVY_FLAMER_FRONT_LEFT.PCK
+    corpseBattle:
+      - STR_GORGONVL_HEAVY_FLAMER_FRONT_LEFT_CORPSE
+
+  - type: STR_GORGONVL_HEAVY_FLAMER_BACK_LEFT_ARMOR
+    refNode: *STR_GORGON_HEAVY_FLAMER_BACK_LEFT_ARMOR_REF
+    spriteSheet: GORGONVL_HEAVY_FLAMER_BACK_LEFT.PCK
+    corpseBattle:
+      - STR_GORGONVL_HEAVY_FLAMER_BACK_LEFT_CORPSE
+
+  - type: STR_GORGONVL_HEAVY_FLAMER_FRONT_RIGHT_ARMOR
+    refNode: *STR_GORGON_HEAVY_FLAMER_FRONT_RIGHT_ARMOR_REF
+    spriteSheet: GORGONVL_HEAVY_FLAMER_FRONT_RIGHT.PCK
+    corpseBattle:
+      - STR_GORGONVL_HEAVY_FLAMER_FRONT_RIGHT_CORPSE
+
+  - type: STR_GORGONVL_HEAVY_FLAMER_BACK_RIGHT_ARMOR
+    refNode: *STR_GORGON_HEAVY_FLAMER_BACK_RIGHT_ARMOR_REF
+    spriteSheet: GORGONVL_HEAVY_FLAMER_BACK_RIGHT.PCK
+    corpseBattle:
+      - STR_GORGONVL_HEAVY_FLAMER_FRONT_RIGHT_CORPSE
+
+  - type: STR_GORGONVL_HEAVY_STUBBER_LEFT_ARMOR
+    refNode: *STR_GORGON_HEAVY_STUBBER_LEFT_ARMOR_REF
+    spriteSheet: GORGONVL_HEAVY_STUBBER_LEFT.PCK
+    corpseBattle:
+      - STR_GORGONVL_HEAVY_STUBBER_LEFT_CORPSE
+
+  - type: STR_GORGONVL_HEAVY_STUBBER_RIGHT_ARMOR
+    refNode: *STR_GORGON_HEAVY_STUBBER_RIGHT_ARMOR_REF
+    spriteSheet: GORGONVL_HEAVY_STUBBER_RIGHT.PCK
+    corpseBattle:
+      - STR_GORGONVL_HEAVY_STUBBER_RIGHT_CORPSE
+
+##TAURUS ARMOR###
   - &STR_ARMOR_TAUROS
     type: STR_GUARD_ARMORS_TAUROS_HEAVY_STUBBER
     refNode: *STR_GUARD_ARMOR_SENTINEL_CLOSED
@@ -6013,6 +6198,8 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
 
+
+##OGRYN BONHEAD ARMORS
   - &STR_OGRYN_BONEHEAD_CARAPACE_LAYER
     type: STR_OGRYN_BONEHEAD_CARAPACE_ARMOR
     visibilityAtDay: 40
