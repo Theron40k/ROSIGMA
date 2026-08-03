@@ -4883,6 +4883,26 @@ extraSprites:
   - typeSingle: GROT_HEAD_ACCESSORY__13__HEAD_ACCESSORY_02
     fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_Accessory_02.png
 
+  ### ORK
+  ### AUTHOR NOTE: each body will have dedicated layers for everything. base bodies are too different
+  ### all layers except the one with [ARMORTYPE] will be generic and reusable for future paperdolls
+  ### LAYERS ORDER:
+  # 1: ORK_BODY
+  # 2: ORK_PANTS #not implemented yet
+  # 3: ORK_PANTS_[ARMORTYPE]_PANTSACCESSORY # can be empty
+  # 4: ORK_SHOES
+  # 5: SHIRT_SHIRT
+  # 6: ORK_[ARMORTYPE]_ARMOR
+  # 7: ORK_[ARMORTYPE]_ARMOR_ACCESSORY #empty accessory layer for the future if a madman want to give them more drip
+  # 8: ORK_FACE
+  # 9: ORK_EARS
+  # 10: ORK_HEAD_INJURY #empty accessory layer for the future if a madman want to give them more drip
+  # 11: ORK_HEAD_JAW #empty accessory layer for the future if a madman want to give them more drip
+  # 12: ORK_HEAD_[ARMORTYPE]_HELMET
+  # 13: ORK_HEAD_[ARMORTYPE]_ACCESSORY #empty accessory layer for the future if a madman want to give them more drip
+  - typeSingle: ORK_BODY__1__ORK_BODY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01.png
+
   # Deathskulls INV
 
   - typeSingle: MEGANOB_DEATHSKULL_INV.SPK  # FOES INV
