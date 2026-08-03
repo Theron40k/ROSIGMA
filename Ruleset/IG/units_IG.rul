@@ -557,8 +557,8 @@ units:
     refNode: *STR_VL_TURRET_DEFAULT
     stats:
       health: 200
-      mana: 0  # half the capacity of a turret
-    armor: STR_CHIMERA_HULL_ARMOR #create STR_CHIMERA_VL_HULL_ARMOR
+      mana: 0
+    armor: STR_CHIMERA_VL_HULL_ARMOR
     standHeight: 20
     kneelHeight: 20
 
@@ -567,32 +567,62 @@ units:
     refNode: *STR_VL_TURRET_DEFAULT
     stats:
       health: 75
-      mana: 50  # half the capacity of a turret
+      mana: 50
     value: 20
-    armor: STR_CHIMERA_HULL_BOLTER_ARMOR #create STR_CHIMERA_VL_HULL_BOLTER_ARMOR
+    armor: STR_CHIMERA_VL_HULL_BOLTER_ARMOR
     standHeight: 20
     kneelHeight: 20
-    spawnUnit: STR_CHIMERA_HULL
+    spawnUnit: STR_CHIMERAVL_HULL
     ignoredByAI: false
     builtInWeaponSets:
       - - STR_SPONSON_HB
-
-  - type: STR_LEMANVL_SPONSON
-    race: STR_LEMONRUSS
-    refNode: *STR_VL_TURRET_DEFAULT
-    stats:
-      mana: 0  # half the capacity of a turret
-    armor: STR_SPONSON_ARMOR #create STR_SPONSON_VL_ARMOR
-    standHeight: 20
-    kneelHeight: 20
 
   - type: STR_LEMANVL_HULL
     race: STR_LEMONRUSS
     refNode: *STR_VL_TURRET_DEFAULT
     stats:
       health: 200
+      mana: 0
+    armor: STR_LEMANVL_HULL_ARMOR
+    standHeight: 20
+    kneelHeight: 20
+
+  - type: STR_LEMANVL_HULL_BOLTER
+    race: STR_LEMONRUSS
+    refNode: *STR_VL_TURRET_DEFAULT
+    stats:
+      health: 75
+      mana: 50
+    value: 20
+    armor: STR_LEMANVL_HULL_BOLTER_ARMOR
+    standHeight: 20
+    kneelHeight: 20
+    spawnUnit: STR_LEMANVL_HULL
+    ignoredByAI: false
+    builtInWeaponSets:
+      - - STR_SPONSON_HB
+
+  - type: STR_LEMANVL_HULL_LAS
+    race: STR_LEMONRUSS
+    refNode: *STR_VL_TURRET_DEFAULT
+    stats:
+      health: 75
+      mana: 20
+    value: 20
+    armor: STR_LEMANVL_HULL_LAS_ARMOR
+    spawnUnit: STR_LEMANVL_HULL
+    standHeight: 20
+    kneelHeight: 20
+    ignoredByAI: false
+    builtInWeaponSets:
+      - - STR_HULL_LASCANNON
+
+  - type: STR_LEMANVL_SPONSON
+    race: STR_LEMONRUSS
+    refNode: *STR_VL_TURRET_DEFAULT
+    stats:
       mana: 0  # half the capacity of a turret
-    armor: STR_LEMAN_HULL_ARMOR #create STR_LEMANVL_HULL_ARMOR
+    armor: STR_SPONSON_VL_ARMOR
     standHeight: 20
     kneelHeight: 20
 
@@ -603,12 +633,26 @@ units:
       health: 75
       mana: 50  # half the capacity of a turret
     value: 20
-    armor: STR_BOLTER_SPONSON_ARMOR #Create STR_SPONSON_VL_BOLTER_ARMOR
+    armor: STR_SPONSON_VL_BOLTER_ARMOR
     standHeight: 20
     kneelHeight: 20
     ignoredByAI: false
     builtInWeaponSets:
       - - STR_SPONSON_HB
+
+  - type: STR_VL_FLAMER_SPONSON
+    race: STR_LEMONRUSS
+    refNode: *STR_VL_TURRET_DEFAULT
+    stats:
+      health: 75
+      mana: 30
+    value: 20
+    armor: STR_FLAMER_SPONSON_VL_ARMOR
+    standHeight: 20
+    kneelHeight: 20
+    ignoredByAI: false
+    builtInWeaponSets:
+      - - STR_SPONSON_HEAVY_FLAMER
 
   - type: STR_LEMANVL_BATTLECANNON_TURRET  # Valhallan Leman Rus turret
     refNode: *STR_VL_TURRET_DEFAULT
