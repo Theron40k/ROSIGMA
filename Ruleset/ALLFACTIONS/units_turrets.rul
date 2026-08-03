@@ -548,6 +548,17 @@ units:
     builtInWeaponSets:
       - - STR_EXECUTIONER_CANNON
 
+  - type: STR_LEMANVL_MORTAR_TURRET  # Valhallan Mortar Turret
+    refNode: *STR_VL_TURRET_DEFAULT
+    race: STR_LEMONRUSS
+    stats:
+      mana: 40
+    armor: STR_LEMANVL_MORTAR_TURRET_ARMOR
+    value: 100
+    ignoredByAI: false
+    builtInWeaponSets:
+      - - STR_MORTAR_PORTABLE
+
   - type: STR_CHIMERASL_TWIN_HB_TURRET
     refNode: *STR_TURRET_DEFAULT
     race: STR_CHIMERA_TURRET
