@@ -176,6 +176,23 @@ soldierTransformation:
       bravery: 50
       tu: 1
 
+  - name: STR_TAU_PROMOTE_NOVICE_GV
+    cost: 10000
+    requires:
+      - STR_COOPT_ECCLESIARCHY_GV
+    producedSoldierType: STR_ADEPTAS
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_ADEPTAS_NOVICE
+    minRank: 1
+    requiredCommendations:
+      STR_BATTLE_TESTED: 0
+    requiredMinStats:
+      bravery: 40
+      firing: 40
+      melee: 40
 
   - name: STR_TAU_PROMOTE_SUPERIOR_GV
     cost: 100000
