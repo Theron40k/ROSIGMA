@@ -6046,6 +6046,101 @@ armors:
     size: 2
     specialWeapon: STR_TURRET_RELOAD
 
+  - &STR_CHIMERA_VL_HULL_ARMOR_DEFAULT
+    type: STR_CHIMERA_VL_HULL_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    alwaysVisible: true
+    personalLight: 0
+    camouflageAtDark: -999
+    camouflageAtDay: -999
+    psiCamouflage: -999
+    spriteSheet: CHIMERA_HULL_VL_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 150
+    sideArmor: 150
+    rearArmor: 150
+    underArmor: 150
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [20]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - &STR_CHIMERA_VL_HULL_BOLTER_ARMOR_DEFAULT
+    type: STR_CHIMERA_VL_HULL_BOLTER_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    personalLight: 0
+    spriteSheet: CHIMERA_HULL_VL_HB_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 100
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 100
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [5]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
   - &STR_VLEXECUTIONER_ARMOR_DEFAULT
     type: STR_LEMANVL_EXECUTIONER_ARMOR
     allowsMoving: false
@@ -6106,6 +6201,300 @@ armors:
       - STR_CHIMERAVL_TURRET_CORPSE_4
     tags:
       INFECTION_RESIST: 100  # infection immune
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - &STR_LEMANVL_HULL_ARMOR_DEFAULT
+    type: STR_LEMANVL_HULL_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    alwaysVisible: true
+    personalLight: 0
+    camouflageAtDark: -999
+    camouflageAtDay: -999
+    psiCamouflage: -999
+    spriteSheet: VL_LEMON_HULLEMPTY_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 200
+    sideArmor: 200
+    rearArmor: 200
+    underArmor: 200
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [20]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - &STR_LEMANVL_HULL_BOLTER_ARMOR_DEFAULT
+    type: STR_LEMANVL_HULL_BOLTER_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    personalLight: 0
+    spriteSheet: VL_LEMON_HULL_HB_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 100
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 100
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [5]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}, {mod: 40k, index: 593}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}, {mod: 40k, index: 593}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - &STR_LEMANVL_HULL_LASCANNON_ARMOR_DEFAULT
+    type: STR_LEMANVL_HULL_LAS_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    personalLight: 0
+    spriteSheet: VL_LEMON_HULL_LASC_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 100
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 100
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [5]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}, {mod: 40k, index: 593}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}, {mod: 40k, index: 593}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+
+  - &STR_VL_SPONSON_ARMOR_DEFAULT
+    type: STR_SPONSON_VL_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    alwaysVisible: true
+    personalLight: 0
+    spriteSheet: LEMAN_VL_SPONSON.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 100
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 100
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [5]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - &STR_VL_BOLTER_SPONSON_ARMOR_DEFAULT
+    type: STR_SPONSON_VL_BOLTER_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    personalLight: 0
+    spriteSheet: VL_LEMON_RSPONSON_HB_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 100
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 100
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [5]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+
+  - &STR_VL_FLAMER_SPONSON_ARMOR_DEFAULT
+    type: STR_FLAMER_SPONSON_VL_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    personalLight: 0
+    spriteSheet: VL_LEMON_RSPONSON_FLAMER_BS.PCK
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseGeo: STR_CHIMERA_TURRET_CORPSE
+    corpseBattle:
+      - STR_CHIMERAVL_TURRET_CORPSE_1
+    frontArmor: 100
+    sideArmor: 100
+    rearArmor: 100
+    underArmor: 100
+    damageModifier:  # VEICULE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.1  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [5]
+    drawingRoutine: 19
+    allowsKneeling: false
+    allowsRunning: false
+    allowsMoving: false
+    selectUnitMale:     [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 590}, {mod: 40k, index: 591}, {mod: 40k, index: 592}]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 585}, {mod: 40k, index: 586}, {mod: 40k, index: 587}, {mod: 40k, index: 588}, {mod: 40k, index: 589}]  # yamllint disable-line rule:colons
+    annoyedMale:        [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 606}, {mod: 40k, index: 607}, {mod: 40k, index: 608}, {mod: 40k, index: 609}]  # yamllint disable-line rule:colons
+    specialWeapon: STR_TURRET_RELOAD
+    tags:
+      INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIUM: 1
 
