@@ -268,9 +268,16 @@ soldiers:
   # Dire avenger .
   - type: STR_ELDAR_AVANGER_MF
     refNode: *ASPECT_WARRIOR_TEMPLATE
+    rankStrings:
+      - STR_ELDAR_AVENGER_RANK_0
+      - STR_ELDAR_AVENGER_RANK_1
+      - STR_ELDAR_AVENGER_RANK_2
+      - STR_ELDAR_AVENGER_RANK_3
+      - STR_ELDAR_AVENGER_RANK_4
+      - STR_ELDAR_AVENGER_RANK_5
     soldierNames:
       - delete
-      - Names/eldar_avanger.nam
+      - Names/eldar_avenger.nam
 
 
 # ELDAR SCORPION
@@ -632,7 +639,7 @@ soldiers:
     rankTinySprite: {mod: 40k, index: 217}
     soldierNames:
       - delete
-      - Names/eldar_avanger.nam
+      - Names/eldar_avenger.nam
 
   - type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
     # requires:
@@ -1024,7 +1031,7 @@ soldiers:
     armor: STR_ELDAR_WARLOCK_ARMOR_P
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
-    rankStrings: # todo, give proper rank strings. these are borrowed from seer
+    rankStrings:
       - STR_ELDAR_WARLOCK_RANK_0
       - STR_ELDAR_WARLOCK_RANK_1
       - STR_ELDAR_WARLOCK_RANK_2
