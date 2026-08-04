@@ -749,32 +749,55 @@ items:
     hitAnimation: 2210
     reloadSound: 2427
     weight: 50
-    compatibleAmmo:
-      - STR_MORTAR_AMMO_HE
-      - STR_MORTAR_AMMO_KRAK
-      - STR_MORTAR_AMMO_PHOSPHOR
-      - STR_MORTAR_AMMO_SMOKE
-      - STR_MORTAR_AMMO_ILLUMINATION
-      - STR_MORTAR_AMMO_PHOTON
-      - STR_MORTAR_AMMO_FRAG
+    clipSize: -1
+    costAuto:
+      time: 1
+      energy: 10
+      mana: 20
+    costSnap:
+      time: 1
+      energy: 10
+      mana: 20
     costAimed:
       energy: 10
       time: 1
       mana: 20
     dropoff: 8
     noLOSAccuracyPenalty: 75  # indirect fire weapon
-    autoRange: 0
-    snapRange: 0  # no snap, to prevent reactions
+    autoRange: 35
+    snapRange: 35
     aimRange: 35 # Equal to Battlecannon
-    accuracyAuto: 0
-    accuracySnap: 0
+    accuracyAuto: 30 #reduced for waypoint system
+    accuracySnap: 30 #reduced for waypoint system
     accuracyAimed: 30 #reduced for waypoint system
-    tuSnap: 0
+    ammo:
+      0:
+        compatibleAmmo:
+          - STR_MORTAR_AMMO_HE
+      1:
+        compatibleAmmo:
+          - STR_MORTAR_AMMO_KRAK
+      2:
+        compatibleAmmo:
+          - STR_MORTAR_AMMO_ILLUMINATION
+    confAimed:
+      name: STR_MORTAR_SHOT_HE_VALHALLA  # name of attack in action menu.
+      ammoSlot: 0           # with ammo slot is used by this attack. Default 0
+      shots: 1
+    confSnap:
+      name: STR_MORTAR_SHOT_KRAK_VALHALLA  # name of attack in action menu.
+      ammoSlot: 1
+      shots: 1
+    confAuto:
+      name: STR_MORTAR_SHOT_ILLUMINATION_VALHALLA  # name of attack in action menu.
+      ammoSlot: 2
+      shots: 1
     arcingShot: false
     waypoints: 2  # 1 waypoint, loitering munitions to mimic mortar indirect fire
     battleType: 1
     listOrder: 11871
     armor: 200
+    minRange: 5
     tags:
       TURRET_RELOAD_TURNS: 2
       ITEM_COLOR_CHANGES_WITH_AMMO: 14
