@@ -135,6 +135,8 @@ extended:
             # debug_log "ROSIGMA_dU_alpha_infiltration Scripts; damageUnit, offset 90: Bonus to AL trigger chance from kill:" rollBonus;
           else; # if we don't kill, the chance of a reveal is proportional to the damage we deal; half the to_health value, capping at 50%.
             set rollBonus to_health;
+            unit.getHealth temp;
+            limit_upper rollBonus temp; # first, we can't exceed the victim's current health
             div rollBonus 4;
             limit_upper rollBonus 50; # cap the chance from damage at 50
             # debug_log "ROSIGMA_dU_alpha_infiltration Scripts; damageUnit, offset 90: Bonus to AL trigger chance from damage:" rollBonus;
