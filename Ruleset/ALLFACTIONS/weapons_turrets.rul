@@ -736,6 +736,49 @@ items:
     tags:
       TURRET_RELOAD_TURNS: 2
 
+  - type: STR_VALHALLAN_TURRET_MORTAR_WEAPON
+    categories: [STR_CAT_ROCKETL]
+    bigSprite: 230 #change to new
+    floorSprite: 230
+    handSprite: 400
+    invWidth: 2
+    invHeight: 3
+    bulletSprite: {mod: 40k, index: 0}
+    fireSound: {mod: 40k, index: 4}
+    hitSound: {mod: 40k, index: 704}
+    hitAnimation: 2210
+    reloadSound: 2427
+    weight: 50
+    compatibleAmmo:
+      - STR_MORTAR_AMMO_HE
+      - STR_MORTAR_AMMO_KRAK
+      - STR_MORTAR_AMMO_PHOSPHOR
+      - STR_MORTAR_AMMO_SMOKE
+      - STR_MORTAR_AMMO_ILLUMINATION
+      - STR_MORTAR_AMMO_PHOTON
+      - STR_MORTAR_AMMO_FRAG
+    costAimed:
+      energy: 10
+      time: 1
+      mana: 20
+    dropoff: 8
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    autoRange: 0
+    snapRange: 0  # no snap, to prevent reactions
+    aimRange: 35 # Equal to Battlecannon
+    accuracyAuto: 0
+    accuracySnap: 0
+    accuracyAimed: 30 #reduced for waypoint system
+    tuSnap: 0
+    arcingShot: false
+    waypoints: 2  # 1 waypoint, loitering munitions to mimic mortar indirect fire
+    battleType: 1
+    listOrder: 11871
+    armor: 200
+    tags:
+      TURRET_RELOAD_TURNS: 2
+      ITEM_COLOR_CHANGES_WITH_AMMO: 14
+
   - type: STR_GORGON_HEAVY_FLAMER
     refNode: *STR_TURRET_DEFAULT
     costAuto:
