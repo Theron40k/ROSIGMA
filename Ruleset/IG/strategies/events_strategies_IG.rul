@@ -154,7 +154,7 @@ events:
     researchList: [STR_VALHALLAN_STRATEGY]
     interruptResearch: STR_NOT_VALHALLAN_STRATEGY
     everyMultiItemList:
-      STR_TRUCKSTARTER_VL_TOKEN 1
+      STR_TRUCKSTARTER_VL_TOKEN: 1
       STR_GUARD_ARMORS_MEDIC: 2
       STR_VALHALLAN_AUTOSTUBBER: 4
       STR_VALHALLAN_STUBRIFLE: 20
@@ -222,3 +222,28 @@ events:
       rank: 1
     timer: 720
     timerRandom: 60
+
+  - name: STR_SPACEWOLVES_VALHALLANS_EVENT
+    description: STR_SPACEWOLVES_VALHALLANS_EVENT_DESCRIPTION
+    background: BLOODCLAW.SCR
+    spawnedPersons: 4
+    spawnedPersonType: STR_SPACEWOLVES_SOLDIER
+    spawnedSoldier:
+      transformationBonusesCount: 1
+      randomTransformationBonuses:
+        STR_SPACEWOLVES_REGULAR: 80
+        STR_SPACEWOLVES_WULFENMARKED: 20
+    timer: 720
+    timerRandom: 60
+    everyMultiItemList:
+      STR_BOLTER_FENRIS: 2
+      STR_RIFLE_CLIP_EX: 6
+      STR_RIFLE_CLIP_AP: 6
+      STR_BOLTER_HELFROST_CLIP: 6
+      STR_KNIF: 2
+      STR_SW_CHAINAXE: 2
+      STR_BOLTPISTOL_FENRIS: 2
+      STR_PISTOL_CLIP_EX: 6
+      STR_PISTOL_CLIP_AP: 6
+      STR_BOLTPISTOL_HELFROST_CLIP: 6
+      STR_KRAK_GRENADE: 4
