@@ -385,6 +385,19 @@ missionScripts:
       STR_ELDAR_ACTIVE: true
       STR_ELDAR_INACTIVE: false
 
+  - type: EldarBASESValhallan #Scouring of Gnosis
+    missionWeights:
+      0:
+        STR_ELDAR_BASE: 100
+    firstMonth: 4 #earlier, may-june likely
+    startDelay: 120
+    randomDelay: 40160 # Up to 4 weeks random delay
+    executionOdds: 50
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
+      STR_ELDAR_ACTIVE: true
+      STR_ELDAR_INACTIVE: false
+
 ### Warp Storm scripts #STORM#
   # These are recurring missions that continue to cause alien activity,
   #  ensuring there is some geoscape activity regardless of alien bases, etc.
@@ -1697,8 +1710,9 @@ missionScripts:
     targetBaseOdds: 100
     raceWeights:
       0:
-        STR_SLAANESH_CULT_EARLY: 33
+        STR_SLAANESH_CULT_EARLY: 33  #Traitor's Hand
         STR_SLAANGOR_MIXED: 10
+        STR_CULTIST_SQUATS: 15 #Porretta campaign
     startDelay: 3000
     randomDelay: 4320  # additional random 0 to 3 days
     label: 100
@@ -1751,11 +1765,13 @@ missionScripts:
         STR_SLAANGOR_MIXED: 10
         STR_SNAKEMAN_DESERTERS_GSC: 10
         STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+        STR_TRAITOR_SQUATS:15
       7:
         STR_SLAANESH_TRAITOR_GUARD_LATE: 33
         STR_SLAANGOR_LATE: 10
         STR_SNAKEMAN_DESERTERS_GSC: 10
         STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+        STR_TRAITOR_SQUATS: 15
     useTable: false
     executionOdds: 30
     startDelay: 4320  # 3 days
@@ -1828,6 +1844,28 @@ missionScripts:
     label: 101
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: true
+      STR_EVEN_HARDER_MISSIONS: false
+
+  - type: gameStartTraitorGuard_VL #Traitor's Hand slaanesh tilt
+    executionOdds: 75  #
+    firstMonth: 3  # was 2
+    lastMonth: 3  # was 2
+    conditionals: [-100]
+    missionWeights:
+      0:
+        STR_TRAITOR_GUARD_BASE_START: 100
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_SNAKEMAN: 5
+        STR_SLAANESH_TRAITOR_GUARD_MID: 50
+        STR_TRAITOR_SQUATS: 40
+        STR_HRUD_WARRIOR_FORCE: 5
+    startDelay: 3000
+    randomDelay: 4320  # additional random 0 to 3 days
+    label: 101
+    researchTriggers:
+      STR_SVALHALLAN_STRATEGY: true
       STR_EVEN_HARDER_MISSIONS: false
 
   - type: gameStartTraitorGuardExtraHard # high end traitor guard. Probably easier than the word bearers
@@ -1933,6 +1971,7 @@ missionScripts:
     raceWeights:
       0:
         STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
     startDelay: 4320  # 3 days
     randomDelay: 4320  # additional random 0 to 3 days
     executionOdds: 100
@@ -1940,9 +1979,26 @@ missionScripts:
       STR_STEEL_LEGION_STRATEGY: true  # only triggers for steel legion  playthroughs
     label: 102
 
+  - type: gameStartOrkVL #War for Survival
+    # Orkz as starting enemy for VL
+    missionWeights:
+      0:
+        STR_ORK_BASE_START: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+    executionOdds: 100
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true  # only triggers for valhallan playthroughs
+    label: 102
+
   # Eldar
   - type: eldarActivity
-    # Orkz as starting enemy for SL
     missionWeights:
       0:
         STR_ELDAR_ARTIFACT: 100
@@ -1988,6 +2044,7 @@ missionScripts:
     startDelay: 3000
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_ALIENS_ONLY: false
       STR_NOT_THE_IMPERIAL_LAW: true
       STR_NOT_CHAOSCULT: true
@@ -2029,6 +2086,7 @@ missionScripts:
       STR_HARDER_MISSIONS: false
       STR_EVEN_HARDER_MISSIONS: false
       STR_STEEL_LEGION_STRATEGY: false  # get their own ork tilted list
+      STR_VALHALLAN_STRATEGY: false # get their own ork/slaanesh/eldar tilted list
       STR_ALIENS_ONLY: false
       STR_NOT_THE_IMPERIAL_LAW: true
       STR_NOT_CHAOSCULT: true
@@ -2055,6 +2113,7 @@ missionScripts:
       STR_NOT_THE_IMPERIAL_LAW: true
       STR_NOT_CHAOSCULT: true
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_SPACEWOLVES_STRATEGY: false
     useTable: false
     startDelay: 150
@@ -2155,6 +2214,74 @@ missionScripts:
         STR_CIVILIAN_SHRINE_TERROR_ADEPTAS: 15
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: true
+      STR_HARDER_MISSIONS: true
+      STR_ALIENS_ONLY: false
+    useTable: false
+    startDelay: 150
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  # Valhallan Campaign
+  - type: firstMonthOrkTerrorVL  # for Valhallan
+    missionWeights:
+      0:
+        STR_ORK_TERROR: 100
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
+    executionOdds: 100
+    lastMonth: 0
+    useTable: false
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: recurringOrkTerrorVL  # for Valhallan
+    missionWeights:
+      0:
+        STR_ORK_TERROR: 100
+      4:
+        STR_ORK_TERROR: 100
+        STR_ALIEN_TERROR: 16
+        STR_NURGLE_TERROR: 11
+        STR_ALIEN_TERROR_TZEENTCH: 11
+        STR_TERROR_MISSION_SLAAN: 50
+        STR_CIVILIAN_TERROR: 30
+        STR_SHRINE_TERROR: 5
+        STR_CIVILIAN_SHRINE_TERROR_NOVICES: 5
+        STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS: 4
+        STR_CIVILIAN_TERROR_GSC: 30
+      6:
+        STR_ORK_TERROR: 100
+        STR_ALIEN_TERROR: 25
+        STR_NURGLE_TERROR: 11
+        STR_TERROR_MISSION_SLAAN: 50
+        STR_ALIEN_TERROR_TZEENTCH: 11
+        STR_CIVILIAN_TERROR: 30
+        STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS: 25
+        STR_CIVILIAN_SHRINE_TERROR_ADEPTAS: 35
+        STR_CIVILIAN_TERROR_GSC: 25
+    executionOdds: 70
+    firstMonth: 1
+    lastMonth: 99
+    useTable: false
+    startDelay: 150
+    randomDelay: 4320  # additional random 0 to 3 days
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
+
+  - type: recurringOrkTerrorHardVL  # For VL
+    executionOdds: 80
+    firstMonth: 1
+    missionWeights:
+      0:
+        STR_ORK_TERROR: 100
+        STR_ALIEN_TERROR_HARD: 25
+        STR_NURGLE_TERROR: 11
+        STR_ALIEN_TERROR_TZEENTCH: 11
+        STR_TERROR_MISSION_SLAAN: 50
+        STR_SHRINE_TERROR: 10
+        STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS: 25
+        STR_CIVILIAN_SHRINE_TERROR_ADEPTAS: 15
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
       STR_HARDER_MISSIONS: true
       STR_ALIENS_ONLY: false
     useTable: false
