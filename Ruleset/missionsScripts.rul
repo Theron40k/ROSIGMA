@@ -1634,6 +1634,7 @@ missionScripts:
     startDelay: 3000
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_EVEN_HARDER_MISSIONS: false
       STR_NOT_TAU_EMPIRE_GV: true
       STR_NOT_WORDBEARERS: true
@@ -1654,6 +1655,7 @@ missionScripts:
     randomDelay: 4320  # additional random 0 to 3 days
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_EVEN_HARDER_MISSIONS: true
       STR_NOT_WORDBEARERS: true
     maxRuns: 1
@@ -1685,6 +1687,26 @@ missionScripts:
       STR_STEEL_LEGION_STRATEGY: true
       STR_EVEN_HARDER_MISSIONS: false
 
+  - type: gameStartCultist_VL #Valhallan
+    executionOdds: 33
+    firstMonth: 1
+    lastMonth: 3
+    missionWeights:
+      0:
+        STR_CULTIST_BASE_START: 100
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_SLAANESH_CULT_EARLY: 33
+        STR_SLAANGOR_MIXED: 10
+    startDelay: 3000
+    randomDelay: 4320  # additional random 0 to 3 days
+    label: 100
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
+      STR_STEEL_LEGION_STRATEGY: false
+      STR_EVEN_HARDER_MISSIONS: false
+
   # Rebels
   - &STR_DESERTER_HIDEOUT
     type: deserterHideout
@@ -1706,6 +1728,45 @@ missionScripts:
       STR_NOT_TAU_EMPIRE_GV: true  # Gue'vesa have missions without Tau - can still fire month 0
       STR_EVEN_HARDER_MISSIONS: false
       STR_NOT_WORDBEARERS: true
+
+  - type: deserterHideoutVL
+    refNode: *STR_DESERTER_HIDEOUT
+    regionWeights: #could be used for arctic only? REGION_VALHALLA_SITES missionzones.rul
+      0:
+        STR_SIBERIA: 34
+        STR_ANTARCTICA: 33
+        STR_ARCTIC: 33
+    missionWeights:
+      # 0 is just for safety
+      0:
+        STR_DESERTER_HIDEOUT: 100
+    raceWeights:
+      0:
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 33
+        STR_SLAANGOR_EARLY: 10
+        STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+      4:
+        STR_SLAANESH_TRAITOR_GUARD_MID: 33
+        STR_ADEPTAS_DESERTERS: 10
+        STR_SLAANGOR_MIXED: 10
+        STR_SNAKEMAN_DESERTERS_GSC: 10
+        STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+      7:
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 33
+        STR_SLAANGOR_LATE: 10
+        STR_SNAKEMAN_DESERTERS_GSC: 10
+        STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+    useTable: false
+    executionOdds: 30
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+    researchTriggers:
+      STR_HARDER_MISSIONS: false
+      STR_VALHALLAN_STRATEGY: true
+      STR_NOT_TAU_EMPIRE_GV: true  # Gue'vesa have missions without Tau - can still fire month 0
+      STR_EVEN_HARDER_MISSIONS: false
+      STR_NOT_WORDBEARERS: true
+
   - type: deserterHideoutHard
     refNode: *STR_DESERTER_HIDEOUT
     missionWeights:
