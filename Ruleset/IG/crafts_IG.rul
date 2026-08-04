@@ -1639,6 +1639,102 @@ crafts:
     listOrder: 805
     spacecraft: false
 
+  - type: STR_ARMOR_COLUMNVL  # Valhallan Leman Russ Executioner with 12 NPC rider spawns
+    marker: 30
+    requiresBuyBaseFunc: [HANGAR]
+    requires:
+      - STR_VALHALLAN_STRATEGY
+      - STR_VALHALLA_MIDTIER
+      - STR_UFO_CONSTRUCTION #ceramite
+      - STR_HEAVY_PLASMA_DEP1
+    sprite: 2304
+    fuelMax: 1400
+    damageMax: 1500
+    vehicles: 999
+    maxLargeUnits: 1
+    speedMax: 150
+    maxAltitude: 1
+    craftInventoryTile: [1, 5, 0]
+    soldiers: 16 #+12 NPC
+    costBuy: 1200000
+    costRent: 640000
+    repairRate: 10
+    refuelRate: 1000
+    transferTime: 96
+    score: 250
+    weapons: 2
+    weaponTypes:
+      - 3
+      - 1
+    weaponStrings:
+      - STR_ANTI_AIR_WEAPONS
+      - STR_THUNDER_CANNON
+    fixedWeapons: ["STR_CRAFT_MULTILASER_UC", "STR_THUNDER_CANNON_UC"]
+    battlescapeTerrainData:
+      name: CHIMERA
+      mapDataSets:
+        - BLANKS
+        - CHIMERAVL
+        - HIDRA
+        - LEMONVL
+        - REPULSOR
+      mapBlocks:
+        - name: CHIMERA_LEMAN_NON_HYDRASL
+          width: 10
+          length: 20
+          items:
+            STR_CHIMERAVL_TWINAC_TURRET_SPAWNER:
+              - [1, 4, 1]
+              - [7, 9, 1]
+            STR_LEMANVL_EXECUTIONER_SPAWNER:
+              - [2, 16, 1]
+            STR_VL_FLAMER_SPONSON_SPAWNER:
+              - [0, 16, 0]
+              - [5, 16, 0]
+            STR_LEMANVL_HULL_LASCANNON_SPAWNER:
+              - [3, 18, 0]
+            STR_CHIMERAVL_HULL_BOLTER_SPAWNER:
+              - [8, 11, 0]
+              - [2, 6, 0]
+            STR_VALHALLAN_AI_ROOKIESPAWNER_MIDTIER:
+              - [5, 8, 0]  # side of chimera 2
+              - [5, 9, 0]  # side of chimera 2
+              - [2, 13, 0]  # behind Leman
+              - [3, 13, 0]  # behind Leman
+              - [1, 2, 1]  # roof of chimera 1
+              - [2, 2, 1]  # roof of chimera 1
+              - [1, 3, 1]  # roof of chimera 1
+              - [2, 3, 1]  # roof of chimera 1
+              - [7, 7, 1]  # roof of chimera 2
+              - [8, 7, 1]  # roof of chimera 2
+              - [7, 8, 1]  # roof of chimera 2
+              - [8, 8, 1]  # roof of chimera 2
+          fuseTimers:
+            STR_CHIMERAVL_TWINAC_TURRET_SPAWNER: [0, 0]
+            STR_LEMANVL_EXECUTIONER_SPAWNER: [0, 0]
+            STR_VL_FLAMER_SPONSON_SPAWNER: [0, 0]
+            STR_LEMANVL_HULL_LASCANNON_SPAWNER: [0, 0]
+            STR_CHIMERAVL_HULL_BOLTER_SPAWNER: [0, 0]
+            STR_VALHALLAN_AI_ROOKIESPAWNER_MIDTIER: [0, 0]
+    deployment:
+      - [1, 5, 0, 0]  # chimera 1 back
+      - [2, 5, 0, 0]
+      - [1, 4, 0, 0]
+      - [2, 4, 0, 0]
+      - [1, 3, 0, 0]
+      - [2, 3, 0, 0]
+      - [1, 2, 0, 0]
+      - [2, 2, 0, 0]  # chimera 1 front
+      - [7, 10, 0, 0]  # chimera 2 back
+      - [8, 10, 0, 0]
+      - [7, 9, 0, 0]
+      - [8, 9, 0, 0]
+      - [7, 8, 0, 0]
+      - [8, 8, 0, 0]
+      - [7, 7, 0, 0]
+      - [8, 7, 0, 0]  # chimera 2 front
+    listOrder: 810
+    spacecraft: true
 
   - type: STR_GORGONVL                          # TIER V  Valhallan version
     marker: 42
