@@ -2529,6 +2529,7 @@ research:
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+      - STR_VALHALLAN_STRATEGY
 #      - STR_RADICAL_RECRUITMENT_IG  # pushed after strategies
       - STR_GUARD_AND_ARBITES
       - STR_BASIC_BALLISTICS_DEP
@@ -2756,7 +2757,6 @@ research:
       - STR_REGIMENT_OFFICERS
       - STR_PENITENT_GUARD
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_CHIMERASL #REPLACE WITH VALHALLAN BASIC TRANSPORT, TRUCKS? WHITE CAMO CHIMERA?
       - STR_IMPERIAL_GUARD_BASIC_TRAINING
       - STR_PILOT_GUARDSMEN #Replace these later with Valhallan version?
       - STR_NOT_ELITE_STRATEGY
@@ -6775,19 +6775,18 @@ research:
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
       - STR_VALHALLAN_STRATEGY
-     #Insert Valhalla Mid-tier Craft Research Topic Here
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_CARAPACE_ARMOR_IG
-      - STR_TAUROX_IG  # Placeholder
       - STR_GUARDSMEN_VETERAN
       - STR_GUARD_PRIEST_REQUISITION
-      - STR_AIRSTRIKE_REQUISITION
       - STR_HOLOGRAM_GRENADE_REQUISITION
-      - STR_VULTURE_IG_REQUISITION  # Placeholder?
       - STR_HARDER_MISSIONS
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
       - STR_AUTOCANNON_TECH
+
+#3 Valhallan Mid-tier+ Craft. One unlocks right away from having STR_VALHALLA_MIDTIER (trucks)
+#The Valhallan Crassus require STR_UFO_CONSTRUCTION and the Executioner Tank Convoy needs Heavy Plasma DEP1 too
 
   - name: STR_VALHALLA_HIGHTIER  # Valhalla High-tier Requisitions
     cost: 900
@@ -6796,10 +6795,11 @@ research:
       - STR_VALHALLA_MIDTIER
       - STR_CYDONIA_OR_BUST
       - STR_REGIMENT_OFFICERS
-      - STR_MARAUDER_REQUISITION #?
-      #Insert Valhalla End Game Craft Research Topic Here
+      - STR_UFO_CONSTRUCTION
     unlocks:
       - STR_HIGHTIER_PREREQ
+
+#Valhallans unlock GORGON by having STR_VALHALLA_HIGHTIER
 
 ####################################
 #FLAVOR# Flavor Topics

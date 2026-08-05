@@ -32,7 +32,6 @@ items:
       - STR_SHURIKEN_CLIP
     accuracySnap: 80
     accuracyAuto: 66
-
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -41,23 +40,58 @@ items:
     autoShots: 9
     bulletSpeed: 30
     attraction: 5
-    snapRange: 16
-    autoRange: 12
+    snapRange: 12
+    autoRange: 9
     confSnap:
       shots: 3
     experienceTrainingMode: 6
     listOrder: 16100
-    # NORMAL COST VERSION
-    #tuSnap: 25
-    #tuAuto: 40
-    # FLAT COST VERSION, FOR TESTING
-    tuSnap: 20
-    tuAuto: 35
+    tuSnap: 19
+    tuAuto: 32
     flatSnap:
       time: true
     flatAimed:
       time: true
 
+ # %TU COST SHURIKEN CATAPULT
+ #         type: STR_CATAPULT
+ #   requires:
+ #     - STR_ELDAR_ONLY # eldar weapon training
+ #   requiresBuy:
+ #     - STR_ELDAR_WEAPONS_ACQUISITION
+ #   requiresBuyBaseFunc: []
+ #   weight: 17
+ #   categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+ #   size: 0.3
+ #   dropoff: 5
+ #   costBuy: 6000
+ #   costSell: 2750
+ #   bigSprite: {mod: 40k, index: 391}
+ #   floorSprite: {mod: 40k, index: 243}
+ #   handSprite: {mod: 40k, index: 832}
+ #   bulletSprite: {mod: 40k, index: 20}
+ #   fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+ #   compatibleAmmo:
+ #     - STR_SHURIKEN_CLIP
+ #   accuracySnap: 80
+ #   accuracyAuto: 66
+ #   battleType: 1
+ #   twoHanded: true
+ #   invWidth: 2
+ #   invHeight: 3
+ #   armor: 30
+ #   autoShots: 9
+ #   bulletSpeed: 30
+ #   attraction: 5
+ #   snapRange: 16
+ #   autoRange: 12
+ #   confSnap:
+ #     shots: 3
+ #   experienceTrainingMode: 6
+ #   listOrder: 16100
+    #tuSnap: 25
+    #tuAuto: 40
+    # FLAT COST VERSION, FOR TESTING
 
   - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
@@ -340,8 +374,8 @@ items:
     bulletSpeed: 30
     attraction: 1
     listOrder: 16000
-    snapRange: 15
-    autoRange: 10
+    snapRange: 10
+    autoRange: 8
     inventoryMoveCost: #quickdraw
       basePercent: 50
     tags:
