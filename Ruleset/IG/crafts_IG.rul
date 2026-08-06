@@ -349,6 +349,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_MIDTIER
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     fuelMax: 1400
     vehicles: 999
     maxLargeUnits: 1
@@ -642,6 +643,7 @@ crafts:
     requires:
       - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_NOT_CHAOSCULT
       - STR_NOT_TAU_GUEVESA_GV
     soldiers: 19
@@ -751,6 +753,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
 
 
   - delete: STR_GORGON  # to make sure it's not dependant of 40K in case the blocker is defeated by submodding oddities
@@ -766,6 +769,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_HIGHTIER
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     marker: 42
     requiresBuyBaseFunc: [HANGAR]
     maxSkinIndex: 1              # default 0
@@ -994,6 +998,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_MIDTIER  # was high tier, but in rosigma it competes with the armor column
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     sprite: 1924
     maxSkinIndex: 2            # default 0
     skinSprites: [1925, 1926]  # default empty, contains all sprites except for the first (index zero)
@@ -1015,9 +1020,9 @@ crafts:
     soldiers: 28  # 25?
     vehicles: 999
     maxLargeUnits: 4
-    costBuy: 1500000
-    costRent: 1000000  # TIER IV
-    costSell: 1000000
+    costBuy: 1200000
+    costRent: 640000
+    costSell: 500000
     refuelRate: 1000
     transferTime: 96
     score: 250
@@ -1113,9 +1118,9 @@ crafts:
     soldiers: 28
     vehicles: 999
     maxLargeUnits: 4
-    costBuy: 1500000
-    costRent: 1000000  # TIER IV
-    costSell: 1000000
+    costBuy: 1100000 #SL discount mechanized
+    costRent: 640000
+    costSell: 500000
     refuelRate: 1000
     repairRate: 10  # was 8
     transferTime: 96
@@ -1283,6 +1288,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
 
   - type: STR_LIGHTNING_SL_INTERCEPTOR           # Steel Legion Lightning
     requires:
@@ -1458,6 +1464,9 @@ crafts:
     requiresBuyBaseFunc: [HANGAR]
     requires:
       - STR_VALHALLAN_STRATEGY  # placeholder
+    costBuy: 700000
+    costRent: 400000
+    costSell: 400000
     sprite: 2300
     fuelMax: 1500
     damageMax: 1200
@@ -1503,8 +1512,8 @@ crafts:
               - [0, 7, 0] #left ground
               - [1, 5, 0] #left ground
               - [2, 4, 0] #left ground
-              - [1, 11, 1] #left truck bed
-              - [2, 10, 1] #left truck bed
+              - [1, 6, 0] #left ground
+              - [6, 13, 0] #front
               - [7, 0, 0] #rear right
               - [9, 1, 0] #rear right
               - [0, 16, 0] #front left
@@ -1530,9 +1539,9 @@ crafts:
       - [6, 9, 1, 0]  # BigTruck
       - [7, 9, 1, 0]  # BigTruck
       - [7, 10, 1, 0]  # BigTruck
-      - [8, 3, 1, 0] # BigTruck Bulge
-      - [8, 6, 1, 0] # BigTruck Bulge
-      - [8, 7, 1, 0] # BigTruck Bulge
+      - [2, 10, 1, 0] # Small Open Truck
+      - [2, 11, 1, 0] # Small Open Truck
+      - [2, 12, 1, 0] # Small Open Truck
       - [2, 13, 1, 0] # Small Open Truck
       - [2, 14, 1, 0] # Small Open Truck
     listOrder: 800
@@ -1546,6 +1555,9 @@ crafts:
     requires:
       - STR_VALHALLAN_STRATEGY
       - STR_VALHALLA_MIDTIER
+    costBuy: 1000000
+    costRent: 800000
+    costSell: 450000
     sprite: 2301
     fuelMax: 1500
     damageMax: 1400
@@ -1561,7 +1573,7 @@ crafts:
       - STR_ANTI_AIR_WEAPONS
       - STR_ANTI_AIR_WEAPONS
     fixedWeapons: ["STR_LASER_CANNON_UC", "STR_LASER_CANNON_UC"]
-    soldiers: 32 #can maybe squeeze in 34
+    soldiers: 28
     maxLargeUnits: 2
     costSell: 10000
     refuelRate: 1000
@@ -1615,11 +1627,8 @@ crafts:
       - [7, 7, 1, 0]  # BigTruck 2
       - [6, 8, 1, 0]  # BigTruck 2
       - [7, 8, 1, 0]  # BigTruck 2
-      - [6, 9, 1, 0]  # BigTruck 2
       - [7, 9, 1, 0]  # BigTruck 2
       - [7, 10, 1, 0]  # BigTruck 2
-      - [8, 6, 1, 0] # BigTruck 2 Bulge
-      - [8, 7, 1, 0] # BigTruck 2 Bulge
       - [1, 7, 1, 0]  # BigTruck
       - [2, 7, 1, 0]  # BigTruck
       - [1, 8, 1, 0]  # BigTruck
@@ -1634,8 +1643,7 @@ crafts:
       - [2, 12, 1, 0]  # BigTruck
       - [2, 13, 1, 0]  # BigTruck
       - [2, 14, 1, 0]  # BigTruck
-      - [3, 10, 1, 0] # BigTruck Bulge
-      - [3, 11, 1, 0] # BigTruck Bulge
+
     listOrder: 805
     spacecraft: false
 
@@ -1645,6 +1653,9 @@ crafts:
     requires:
       - STR_VALHALLA_MIDTIER
       - STR_UFO_CONSTRUCTION #delayed intro
+    costBuy: 1200000
+    costRent: 640000
+    costSell: 500000
     sprite: 2305
     fuelMax: 1400
     damageMax: 1440
@@ -1664,9 +1675,6 @@ crafts:
     soldiers: 28
     vehicles: 999
     maxLargeUnits: 4
-    costBuy: 1500000
-    costRent: 1000000  # TIER IV
-    costSell: 1000000
     refuelRate: 1000
     repairRate: 10  # was 8
     transferTime: 96
@@ -1764,8 +1772,9 @@ crafts:
     maxAltitude: 1
     craftInventoryTile: [1, 5, 0]
     soldiers: 16 #+12 NPC
-    costBuy: 1200000
-    costRent: 640000
+    costBuy: 1800000 #Executioner turret included
+    costRent: 900000 #Executioner plasma variant
+    costSell: 800000
     repairRate: 10
     refuelRate: 1000
     transferTime: 96

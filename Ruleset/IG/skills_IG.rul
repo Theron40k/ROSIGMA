@@ -181,6 +181,12 @@ soldiers:
   - type: STR_GUARDSL_OFFICER_VETERAN
     refNode: *STR_OFFICER
 
+  - type: STR_GUARD_VALHALLAN_OFFICER
+    refNode: *STR_OFFICER
+
+  - type: STR_GUARD_VALHALLAN_OFFICER_VETERAN
+    refNode: *STR_OFFICER
+
   # COMMISSAR SKILLS
   - &COMMISSAR_SKILLS
     type: STR_COMMISSAR
@@ -262,6 +268,14 @@ soldiers:
     skills:
       - STR_DIG_IN
   - type: STR_GUARDSL_VETERAN
+    skillIconSprite: 995
+    skills:
+      - STR_DIG_IN
+  - type: STR_GUARD_VALHALLAN
+    skillIconSprite: 995
+    skills:
+      - STR_DIG_IN
+  - type: STR_GUARD_VETERAN_VALHALLAN
     skillIconSprite: 995
     skills:
       - STR_DIG_IN

@@ -3543,6 +3543,7 @@ missionScripts:
       STR_CYDONIA_OR_BUST: true
       STR_IMPERIAL_GUARD_OPERATIONS: true
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
     useTable: false
     maxRuns: 1
     varName: finalMissionGuard
@@ -3558,6 +3559,21 @@ missionScripts:
     researchTriggers:
       STR_CYDONIA_OR_BUST: true
       STR_STEEL_LEGION_STRATEGY: true
+    useTable: false
+    maxRuns: 1
+    varName: finalMissionGuard
+
+  # Valhallan Ice Warriors
+  - type: finalMissionGuard_VL
+    missionWeights:
+      0:
+        STR_FINAL_MISSION_GUARD_VL: 100
+    regionWeights:
+      0:
+        REGION_FINAL_MISSION: 100
+    researchTriggers:
+      STR_CYDONIA_OR_BUST: true
+      STR_VALHALLAN_STRATEGY: true
     useTable: false
     maxRuns: 1
     varName: finalMissionGuard
