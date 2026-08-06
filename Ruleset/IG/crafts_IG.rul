@@ -349,6 +349,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_MIDTIER
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     fuelMax: 1400
     vehicles: 999
     maxLargeUnits: 1
@@ -642,6 +643,7 @@ crafts:
     requires:
       - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_NOT_CHAOSCULT
       - STR_NOT_TAU_GUEVESA_GV
     soldiers: 19
@@ -751,6 +753,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
 
 
   - delete: STR_GORGON  # to make sure it's not dependant of 40K in case the blocker is defeated by submodding oddities
@@ -766,6 +769,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_HIGHTIER
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     marker: 42
     requiresBuyBaseFunc: [HANGAR]
     maxSkinIndex: 1              # default 0
@@ -994,6 +998,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_MIDTIER  # was high tier, but in rosigma it competes with the armor column
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     sprite: 1924
     maxSkinIndex: 2            # default 0
     skinSprites: [1925, 1926]  # default empty, contains all sprites except for the first (index zero)
@@ -1283,6 +1288,7 @@ crafts:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
 
   - type: STR_LIGHTNING_SL_INTERCEPTOR           # Steel Legion Lightning
     requires:
