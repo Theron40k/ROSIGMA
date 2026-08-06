@@ -4707,7 +4707,57 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_GORGON_UFOPEDIA
-    image_id: 2GORGON.SPK  # needs porting, submodding no bueno
+    image_id: 2GORGON.SPK
+### #CRAFTS.IG.VALHALLAN#
+  - id: STR_TRUCKARMOR_VALHALLA_STARTER
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: VALTRUCK_CODEX.SPK
+    pages:
+      - title: STR_TRUCKARMOR_VALHALLA_STARTER
+        text: STR_TRUCKARMOR_VALHALLA_STARTER_UFOPEDIA
+
+  - id: STR_TRUCKARMOR_VALHALLA_MIDTIER
+    requires:
+      - STR_VALHALLA_MIDTIER
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: VALTRUCK_CODEX.SPK
+    pages:
+      - title: STR_TRUCKARMOR_VALHALLA_MIDTIER
+        text: STR_TRUCKARMOR_VALHALLA_MIDTIER_UFOPEDIA
+
+  - id: STR_CASSIUMVL  # CRASSUS
+    requires:
+      - STR_VALHALLA_MIDTIER
+      - STR_UFO_CONSTRUCTION #delayed intro
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: 2CRASSUS.SPK
+    text: STR_CASSIUM_UFOPEDIA
+
+  - id: STR_ARMOR_COLUMNVL    # with tank riders
+    requires:
+      - STR_VALHALLAN_STRATEGY
+      - STR_VALHALLA_MIDTIER
+      - STR_UFO_CONSTRUCTION #ceramite
+      - STR_HEAVY_PLASMA_DEP1
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: 2LEMON.SPK
+    pages:
+      - title: STR_ARMOR_COLUMNVL
+        text: STR_ARMOR_COLUMNVL_UFOPEDIA
+
+  - id: STR_GORGONVL
+    requires:
+      - STR_VALHALLA_HIGHTIER
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    text: STR_GORGON_UFOPEDIA
+    image_id: 2GORGON.SPK
 
 ####################################
 # #ARM# Craft Armaments
