@@ -36,6 +36,41 @@ items:
     attraction: 1
     listOrder: 16115
 
+  - type: STR_AVENGER_SHURIKEN_CLIP  #                 16200
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    damageAlter:  # DA SHURIKEN
+      ToArmorPre: 0.1  # was ToArmor, i.e doesn't damage high armor it can't pen, making certain units invincible.
+      RandomType: 2  # TFTD [50% - 150%]
+      ToHealth: 0.5
+      ToStun: 0.2
+      ArmorEffectiveness: 0.3
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      # Avenger Research
+    weight: 5
+    #requiresBuyBaseFunc: [ELDAROUT]
+    size: 0.1
+    costBuy: 1000
+    costSell: 500
+    bigSprite: 4888
+    floorSprite: 4888
+    handSprite: 1594
+    bulletSprite: 33
+    hitSound: 1874 #{mod: 40k, index: 708} old sound
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    power: 25 # +5 to standard catapult
+    damageBonus:
+      reactions: 0.1 # same as standard catapult for now
+    damageType: 1
+    clipSize: 60
+    battleType: 2
+    armor: 30
+    attraction: 1
+    listOrder: 16116
+
   - type: STR_AELDARI_FLAMER_FUEL #STR_FLAMETHROWER_CLIP stats needs rework
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
     listOrder: 16152
@@ -204,7 +239,7 @@ items:
       TileDamageMethod: 2
     powerRangeReduction: 7
     powerRangeThreshold: 12.0
-    clipSize: 8
+    clipSize: 5
     battleType: 2
     invWidth: 1
     invHeight: 2
