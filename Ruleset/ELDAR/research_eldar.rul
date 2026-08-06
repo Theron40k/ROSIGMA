@@ -52,6 +52,7 @@ research:
       # TEMP ADDITIONS for future campaign splitting
       - STR_ELDAR_ASURYANI_CAMPAING # TEMPORARY addition until there are multiple eldar campaigns
       #- STR_CHOSEN_ELDAR_STRATEGY
+      - STR_FUSION_TECH_RESEARCH # Eldar Meltagun equivalent
     disables:
       - STR_NOT_ELDAR_STRATEGY
       - STR_GENESTEALERS_ACTIVE
@@ -138,7 +139,8 @@ research:
     cost: 200
     dependencies:
       - STR_ELDAR_ASURYANI_CAMPAING
-      - STR_MELTAGUN_TECH
+      #- STR_MELTAGUN_TECH
+      - STR_FUSION_TECH_RESEARCH
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
     unlocks:
@@ -186,11 +188,11 @@ research:
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
 
-  - name: STR_FUSION_TECH_RESEARCH
+  - name: STR_FUSION_TECH_RESEARCH # Eldar Meltagun Equivalent
     cost: 150
     points: 0
     dependencies:
-      - STR_MELTAGUN_TECH
+      #- STR_MELTAGUN_TECH
       - STR_ELDAR_WEAPONS_ACQUISITION
 
   - name: STR_ELDAR_PSYKER_RESEARCH  # path of the psyker research

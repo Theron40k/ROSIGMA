@@ -45,13 +45,10 @@ items:
     confSnap:
       shots: 3
     experienceTrainingMode: 6
-    listOrder: 16100
     tuSnap: 19
     tuAuto: 32
-    flatSnap:
-      time: true
-    flatAimed:
-      time: true
+    flatRate: true
+    listOrder: 16100
 
  # %TU COST SHURIKEN CATAPULT
  #         type: STR_CATAPULT
@@ -92,6 +89,187 @@ items:
     #tuSnap: 25
     #tuAuto: 40
     # FLAT COST VERSION, FOR TESTING
+  - type: STR_AVENGER_CATAPULT
+    refNode: *ELDAR_WEAPON_TEMPLATE
+    weight: 20
+    requiresBuy:
+    - STR_ELDAR_WEAPONS_ACQUISITION
+    # Avenger Research
+    costBuy: 15000
+    costSell: 5000
+    bigSprite: 4884
+    floorSprite: 4884
+    handSprite: 1562
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    invWidth: 2
+    invHeight: 3
+    snapRange: 14
+    autoRange: 10
+    listOrder: 16103
+    tags:
+      REACTION_MULTIPLIER: 150 # +50 Avenger Trait
+
+  - type: STR_AVENGER_CATAPULT_SCOPED
+    refNode: *ELDAR_WEAPON_TEMPLATE
+    weight: 20
+    requiresBuy:
+    - STR_ELDAR_WEAPONS_ACQUISITION
+    # Avenger Research
+    costBuy: 15000
+    costSell: 5000
+    bigSprite: 4885
+    floorSprite: 4885
+    handSprite: 1570
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    invWidth: 2
+    invHeight: 3
+    tuSnap: 19
+    snapRange: 14
+    tuAimed: 40
+    aimRange: 19
+    accuracyAimed: 100
+    tuAuto: 0
+    confAimed:
+      shots: 3
+    listOrder: 16103
+    tags:
+      REACTION_MULTIPLIER: 150 # +50 Avenger Trait
+
+  - &ELDAR_PISTOL_TEMPLATE
+    type: STR_CATAPULT_PISTOL #              16000
+    weight: 12
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    size: 0.2
+    dropoff: 5
+    costBuy: 3500
+    costSell: 1000
+    bigSprite: {mod: 40k, index: 390}
+    floorSprite: {mod: 40k, index: 242}
+    handSprite: {mod: 40k, index: 824}
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+    accuracySnap: 75
+#    accuracyAimed: 100
+    tuSnap: 18 # Slightly less than catapult
+    tuAuto: 30 # Slightly less than catapult
+#    tuAimed: 35
+    flatRate: true
+    snapRange: 10
+    autoRange: 8
+    confSnap:
+      shots: 3
+    experienceTrainingMode: 6
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16000
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200
+
+  - type: STR_AVENGER_PISTOL
+    refNode: *ELDAR_PISTOL_TEMPLATE
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      #Avenger Research
+    costBuy: 12000
+    costSell: 4000
+    bigSprite: 4886
+    floorSprite: 4886
+    handSprite: 1578
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # slightly better accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    tuSnap: 18
+    tuAuto: 30
+    flatRate: true
+    accuracySnap: 75
+    accuracyAuto: 60
+    snapRange: 11
+    autoRange: 9
+    autoShots: 9
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16001
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 250 # +50 Avenger Trait +100 Pistol
+
+  - type: STR_AVENGER_PISTOL_SCOPED
+    refNode: *ELDAR_PISTOL_TEMPLATE
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      #Avenger Research
+    costBuy: 12000
+    costSell: 4000
+    bigSprite: 4887
+    floorSprite: 4887
+    handSprite: 1586
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    tuSnap: 19
+    tuAimed: 40
+    tuAuto: 0
+    flatRate: true
+    accuracySnap: 75
+    accuracyAimed: 100
+    snapRange: 11
+    aimRange: 16
+    confAimed:
+      shots: 3
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16002
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 250
 
   - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
@@ -342,45 +520,6 @@ items:
     costBuy: 0
     costSell: 0
 
-  - type: STR_CATAPULT_PISTOL #              16000
-    refNode: *ELDAR_WEAPON_TEMPLATE
-    weight: 12
-    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
-    requiresBuyBaseFunc: []
-    requires:
-      - STR_ELDAR_ONLY # eldar weapon training
-    requiresBuy:
-      - STR_ELDAR_WEAPONS_ACQUISITION
-    size: 0.2
-    dropoff: 5
-    costBuy: 3500
-    costSell: 1000
-    bigSprite: {mod: 40k, index: 390}
-    floorSprite: {mod: 40k, index: 242}
-    handSprite: {mod: 40k, index: 824}
-    bulletSprite: {mod: 40k, index: 20}
-    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
-    compatibleAmmo:
-      - STR_SHURIKEN_CLIP
-    accuracySnap: 75
-#    accuracyAimed: 100
-    tuSnap: 21
-#    tuAimed: 35
-    battleType: 1
-    twoHanded: false
-    invWidth: 2
-    invHeight: 3
-    armor: 30
-    bulletSpeed: 30
-    attraction: 1
-    listOrder: 16000
-    snapRange: 10
-    autoRange: 8
-    inventoryMoveCost: #quickdraw
-      basePercent: 50
-    tags:
-      REACTION_MULTIPLIER: 200
-
   - type: STR_AELDARI_FLAMER #STR_FLAMETHROWER stats REWORK NEEDED
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL, STR_CAT_ELDAR]
     listOrder: 16150
@@ -458,7 +597,7 @@ items:
       #ITEM_DOESNT_HURT_USER: 1 # Temple Assassins are too skilled to shoot themselves. Staying in flames can be bad though.
 
 
-  - type: STR_FUSION_GUN                 #STR_ADEPTAS_MELTAGUN_NECRO stats
+  - type: STR_FUSION_GUN
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
     listOrder: 16500
     weight: 15
@@ -467,7 +606,7 @@ items:
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_FUSION_TECH_RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     size: 0.3
     costBuy: 10000
     costSell: 3000
@@ -481,20 +620,18 @@ items:
       - STR_FUSION_AMMO
     dropoff: 6
     autoRange: 0
-    snapRange: 12
+    snapRange: 10 # Range between Light Melta and Meltagun
     aimRange: 0
     accuracyAuto: 0
     accuracySnap: 70
     accuracyAimed: 0
     tuAuto: 0
-    tuSnap: 33
+    tuSnap: 30
     tuAimed: 0
+    flatRate: true
     maxRange: 18
     damageBonus:
       flatHundred: 0.2
-    confSnap:
-      shots: 1
-      spendPerShot: 2  # double ammo consumption 5 shots per clip
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -511,7 +648,7 @@ items:
       - STR_ELDAR_FIREDRAGON_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_FUSION_TECH_RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     size: 0.3
     costBuy: 50000
     costSell: 25000
@@ -551,7 +688,7 @@ items:
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_FUSION_TECH_RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     size: 0.3
     costBuy: 10000
     costSell: 3000
@@ -565,20 +702,18 @@ items:
       - STR_FUSION_PISTOL_AMMO
     dropoff: 6
     autoRange: 0
-    snapRange: 9
+    snapRange: 8 # -2 range vs fusion gun
     aimRange: 0
     accuracyAuto: 0
     accuracySnap: 70
     accuracyAimed: 0
     tuAuto: 0
-    tuSnap: 33
+    tuSnap: 30
     tuAimed: 0
+    flatRate: true
     maxRange: 13
     damageBonus:
       flatHundred: 0.2
-    confSnap:
-      shots: 1
-      spendPerShot: 2  # double ammo consumption 5 shots per clip
     battleType: 1
     invWidth: 1
     invHeight: 3
@@ -595,7 +730,7 @@ items:
       - STR_ELDAR_FIREDRAGON_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_FUSION_TECH_RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     size: 0.3
     costBuy: 50000
     costSell: 25000
@@ -669,7 +804,7 @@ items:
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_ELDAR_SPIDER_RESEARCH
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     requiresBuy: []
     size: 0.4
     dropoff: 5
@@ -702,7 +837,7 @@ items:
     requires:
       - STR_ELDAR_WEAPONS_ACQUISITION
       - STR_ELDAR_SPIDER_EXARCH_RESEARCH
-    requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     requiresBuy: []
     size: 0.4
     dropoff: 5
@@ -894,7 +1029,7 @@ items:
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
       - STR_ELDAR_SPIDER_RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     requiresBuyBaseFunc: []
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
     battleType: 3
@@ -942,7 +1077,7 @@ items:
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
       - STR_ELDAR_FIREDRAGON_RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     requiresBuyBaseFunc: []
     listOrder: 16499
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
@@ -991,7 +1126,7 @@ items:
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
       #- STR ELDAR WARLOCK RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     requiresBuyBaseFunc: []
     listOrder: 16995
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
@@ -1069,7 +1204,7 @@ items:
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
       # ELDAR FARSEER RESEARCH
-    requiresBuy: []  # Already requires the eldar base service
+    requiresBuy: []
     requiresBuyBaseFunc: []
     listOrder: 16997
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
