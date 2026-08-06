@@ -8848,7 +8848,7 @@ alienMissions:
 
 
 # *** Final Mission Bases ***
-  - type: STR_FINAL_MISSION_GUARD_SL
+  - type: STR_FINAL_MISSION_GUARD_SL #Steel Legion
     retaliationOdds: 0
     raceWeights:
       0:
@@ -8859,6 +8859,22 @@ alienMissions:
     objective: 2
     waves:
       - ufo: STR_MARS_CYDONIA_LANDING_GUARD_SL
+        count: 1
+        trajectory: P10
+        timer: 0
+        objective: true
+
+  - type: STR_FINAL_MISSION_GUARD_VL #Valhallans
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    points: 0
+    siteType: STR_MARS_CYDONIA_LANDING_GUARD_SL #PlaceHolder
+    spawnZone: 0
+    objective: 2
+    waves:
+      - ufo: STR_MARS_CYDONIA_LANDING_GUARD_SL #PlaceHolder
         count: 1
         trajectory: P10
         timer: 0
