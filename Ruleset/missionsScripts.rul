@@ -634,7 +634,7 @@ missionScripts:
     useTable: true
 
   # Space Wolves Campaign
-  - &STR_HARD_MISSION_TABLE
+  - &STR_HARD_SW_MISSION_TABLE
     type: warpStormHardSW
     # For space Wolves, weighted towards tzeentch missions
     missionWeights:
@@ -689,13 +689,13 @@ missionScripts:
       STR_EVEN_HARDER_MISSIONS: false
       STR_CHAPTER_PURITY: true
   - type: warpStormBuildingHardSW
-    refNode: *STR_HARD_MISSION_TABLE
+    refNode: *STR_HARD_SW_MISSION_TABLE
     firstMonth: 3
     lastMonth: 5
     executionOdds: 50
     useTable: true
   - type: warpStormRagingHardSW
-    refNode: *STR_HARD_MISSION_TABLE
+    refNode: *STR_HARD_SW_MISSION_TABLE
     firstMonth: 6
     useTable: true
 
