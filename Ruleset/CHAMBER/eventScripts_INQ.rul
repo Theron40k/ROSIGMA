@@ -354,6 +354,30 @@ eventScripts:
       STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH: true
 
 
+  - type: STR_INQ_SECURE_SUPPORT_TAU_BAD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_1_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_2_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH: false
+
+  - type: STR_INQ_SECURE_SUPPORT_TAU_GOOD_SCRIPT
+    eventWeights:
+      0:
+        STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_1_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_2_EVENT: 1
+        STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_3_EVENT: 1
+    firstMonth: 0
+    executionOdds: 100
+    researchTriggers:
+      STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH: true
+      STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH: true
+
+
   - type: STR_INQ_BRIBES_RANDOMIZED_SCRIPT
     eventWeights:
       0:
