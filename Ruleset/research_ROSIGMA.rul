@@ -4416,94 +4416,29 @@ research:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_LASER_WEAPONS
+    getOneFree:
+      - STR_TAU_XENOTECH
     unlocks:
       - STR_ELDAR_ONLY # Eldar Weapons Training
       - STR_ORK_ONLY # Dakka
-      #- STR_TAU_XENOTECH # TODO need a new Tech for Tau Weapon Training. this tech is tied to unrelated things
       - STR_ELDAR_GRENADE
 
   - name: STR_INQ_RR_REQUISITION_XENOS
     cost: 250
     dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
-    spawnedEvent: STR_INQ_RR_REQUISITION_XENOS
-
-  - name: STR_INQ_BLACK_MARKET_XENOTECH_RESEARCH  # Acquire Black Market Xenotech
-    cost: 250
-    points: -50
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_INQ_RR_MIDTIER_XENOS
-      - STR_HIGHTIER_PREREQ
-      - STR_LOSE_50
-    spawnedEvent: STR_INQ_BLACK_MARKET_XENOTECH_EVENT
-    repeatable: true
-
-  - name: STR_INQ_CONSORT_AELDARI_RESEARCH  # Consort with the Aledari
-    cost: 300
-    points: -100
-    dependencies:
-      - STR_INQ_RR_MIDTIER_XENOS
-      - STR_LOSE_100
-    unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_ELDAR_LEADER_INTERROGATED
-      - STR_INQ_RR_CONSORTED_AELDARI_DEP
-    disables:
-      - STR_INQ_CONSORT_ORKS_RESEARCH
-  - name: STR_INQ_RR_CONSORTED_AELDARI_DEP #use this Dep to allow bypassing the Consort with a traditional interrogate
-    cost: 0
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_ELDAR_LEADER_INTERROGATED
-    disables:
-      - STR_INQ_CONSORT_AELDARI_RESEARCH
-
-  - name: STR_INQ_CONSORT_TAU_RESEARCH  # Consort with the Tau
-    cost: 300
-    points: -100
-    dependencies:
-      - STR_GENERALLOCK # TODO Tau temporarily locked off [WIP]
-      - STR_INQ_RR_MIDTIER_XENOS
-      - STR_LOSE_100
-    unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_TAU_FIREWARRIORCAPTAINAI
-  - name: STR_INQ_RR_CONSORTED_TAU_DEP #use this Dep to allow bypassing the Consort with a traditional interrogate
-    cost: 0
-    dependencies:
-      - STR_GENERALLOCK # TODO Tau temporarily locked off [WIP]
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_TAU_FIREWARRIORCAPTAINAI
-    disables:
-      - STR_INQ_CONSORT_TAU_RESEARCH
-
-  - name: STR_INQ_CONSORT_ORKS_RESEARCH  # Consort with the Orks
-    cost: 300
-    points: -100
-    dependencies:
-      - STR_INQ_RR_MIDTIER_XENOS
-      - STR_LOSE_100
-    unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_ORK_LEADER_INTERROGATED
-    disables:
-      - STR_INQ_CONSORT_AELDARI_RESEARCH
-  - name: STR_INQ_RR_CONSORTED_ORKS_DEP #use this Dep to allow bypassing the Consort with a traditional interrogate
-    cost: 0
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_ORK_LEADER_INTERROGATED
-    disables:
-      - STR_INQ_CONSORT_ORKS_RESEARCH
+      - STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS
+    events:
+      STR_INQ_RR_REQUISITION_XENOS_ORKS_EVENT: 1
+      STR_INQ_RR_REQUISITION_XENOS_ELDAR_EVENT: 1
+      STR_INQ_RR_REQUISITION_XENOS_TAU_EVENT: 1
 
 
   - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
     cost: 400
     points: -100
     dependencies:
-      - STR_INQ_RR_CONSORTED_AELDARI_DEP
+      - STR_INQ_RR_MIDTIER_XENOS
       - STR_LOSE_100
     disables:
       - STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
@@ -4528,7 +4463,7 @@ research:
     cost: 400
     points: -100
     dependencies:
-      - STR_INQ_RR_CONSORTED_ORKS_DEP
+      - STR_INQ_RR_MIDTIER_XENOS
       - STR_LOSE_100
     disables:
       - STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
@@ -4539,7 +4474,7 @@ research:
       # - STR_ORK_MERCENARIES # note: this is only for the normal DefeatOrkBases pathway.
       - STR_SPOOKUM_KAMP_RECRUITED
       - STR_DAKKA_GITZ_RECRUITED
-    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT #TODO
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT
 
   - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH
     cost: 600
@@ -4554,39 +4489,46 @@ research:
       - STR_ORKZ_MASTER_CRAFTING
 
 
-  # Acquires a new Xeno tech topic. Should include all requirements for STR_NECRONTECH_RESEARCH and STR_TAU_XENOTECH
-  # Orks/Eldar excluded because their item topics don't contribute to their path/weapon usage (their path starts only with a Leader Interrogation)
-  # If new Xenos things in future, add to list.
-  - name: STR_INQ_XENOTECH_ANALYSIS_RESEARCH  # Xenotech Sythetic Analysis
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH
     cost: 400
+    points: -100
     dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_HIGHTIER_PREREQ
       - STR_INQ_RR_MIDTIER_XENOS
-    spawnedEvent: STR_INQ_XENOTECH_ANALYSIS_EVENT
-    repeatable: true
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
+    unlocks:
+      - STR_TAU_STRIKE_TEAMS_GV
+      - STR_TAU_BREACHERS_GV
+      - STR_TAU_PATHFINDERS_GV
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_TAU_EVENT
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH
+      - STR_NAVY_COMUNICATIONS
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
     getOneFree:
-      # Tau
-      - STR_TAU_PULSE_MAG
-      - STR_TAU_PULSE_BLASTER_MAG
-      - STR_TAU_RAIL_MAG
-      - STR_TAU_PULSE_RIFLE
-      - STR_TAU_PULSE_CARBINE
-      - STR_TAU_PULSE_BLASTER
-      - STR_TAU_PULSE_PISTOL
-      - STR_TAU_RAIL_RIFLE
-      - STR_TAU_PHOTON_GRENADE
-      - STR_TAU_FUSION_GRENADE
-      - STR_TAU_EMP_GRENADE
-      - STR_TAU_DRONEAI
-      # Necrons
-      - STR_GAUSS_BLASTER
-      - STR_HYPERPHASESWORD
-      - STR_SYNAPTIC_DISINTEGRATOR
-      - STR_GAUSS_FLAYER
-      - STR_GAUSS_REAPER
-      - STR_NECRON_WARSCYTHE
-      - STR_STAFF_OF_LIGHT
+      - STR_FORM_KILL_TEAMS_GV
+    unlocks:
+      - STR_DEVILFISH_TRANSPORTS_GV
+      - STR_STEALTH_SUIT_OPERATIONS_GV
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_3_RESEARCH
+    cost: 800
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH
+      - STR_MASTER_CRAFTING
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
+    unlocks:
+      - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
+      - STR_FIREKNIFE_CRISIS_OPERATIONS_GV
+      - STR_SUNFORGE_CRISIS_OPERATIONS_GV
+      - STR_ORCA_DROPSHIPS_GV
 
 
   - name: STR_FALSIFY_INQUISITION_REPORT  # Falsify Inquisition Statement
@@ -4974,6 +4916,7 @@ research:
     cost: 250
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
       - STR_INQ_CONTACT_REVISIONISTS_RESEARCH
       - STR_MELTAGUN_TECH
       - STR_ALIEN_ALLOYS
@@ -5011,6 +4954,7 @@ research:
     cost: 250
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
       - STR_INQ_RR_REQUISITION_XENOS
       - STR_MELTAGUN_TECH
       - STR_ALIEN_ALLOYS
@@ -5026,27 +4970,12 @@ research:
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_XENOS
 
 
-  # TODO dependencies might just be "STR_GENERALLOCK" now. will RR use this method?
   - name: STR_TAU_XENOTECH  # Tau Xenotech
     # grant access to Tau Weapons
     cost: 1000
     points: -250
     dependencies:
       - STR_GENERALLOCK
-      - STR_TAU_PULSE_MAG
-      - STR_TAU_PULSE_BLASTER_MAG
-      - STR_TAU_RAIL_MAG
-      - STR_TAU_PULSE_RIFLE
-      - STR_TAU_PULSE_RIFLE_EXPORT
-      - STR_TAU_PULSE_CARBINE
-      - STR_TAU_PULSE_BLASTER
-      - STR_TAU_PULSE_PISTOL
-      - STR_TAU_RAIL_RIFLE
-      - STR_TAU_PHOTON_GRENADE
-      - STR_TAU_FUSION_GRENADE
-      - STR_TAU_EMP_GRENADE
-      - STR_TAU_DRONEAI
-      - STR_TAU_FIREWARRIORCAPTAINAI
       - STR_LOSE_250
 
   - name: STR_SUMMON_DAEMONS_RESEARCH  # The Summoning of Daemons
