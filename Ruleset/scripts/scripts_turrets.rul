@@ -3492,14 +3492,14 @@ items:
 #Valhallan Turret Spawners
   - type: STR_CHIMERAVL_COMMAND_TURRET_SPAWNER
     spawnUnit: STR_CHIMERAVL_COMMAND_TURRET
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_LEMANVL_SPONSON_SPAWNER
     spawnUnit: STR_LEMANVL_SPONSON
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
@@ -3508,84 +3508,84 @@ items:
 
   - type: STR_CHIMERAVL_HULL_SPAWNER
     spawnUnit: STR_CHIMERAVL_HULL
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_LEMANVL_HULL_SPAWNER
     spawnUnit: STR_LEMANVL_HULL
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_CHIMERAVL_TWINBOLTER_TURRET_SPAWNER
     spawnUnit: STR_CHIMERAVL_TWIN_HB_TURRET
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_CHIMERAVL_TWINAC_TURRET_SPAWNER
     spawnUnit: STR_CHIMERAVL_TWINAC_TURRET
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_CHIMERAVL_HULL_BOLTER_SPAWNER
     spawnUnit: STR_CHIMERAVL_HULL_BOLTER
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_LEMANVL_BATTLECANNON_TURRET_SPAWNER
     spawnUnit: STR_LEMANVL_BATTLECANNON_TURRET
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_LEMANVL_EXECUTIONER_SPAWNER
     spawnUnit: STR_LEMANVL_EXECUTIONER_TURRET
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_LEMANVL_MORTAR_TURRET_SPAWNER
     spawnUnit: STR_LEMANVL_MORTAR_TURRET 
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_LEMANVL_HULL_BOLTER_SPAWNER
     spawnUnit: STR_LEMANVL_HULL_BOLTER
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_LEMANVL_HULL_LASCANNON_SPAWNER
     spawnUnit: STR_LEMANVL_HULL_LAS
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_VL_BOLTER_SPONSON_SPAWNER
     spawnUnit: STR_VL_BOLTER_SPONSON
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
 
   - type: STR_VL_FLAMER_SPONSON_SPAWNER
     spawnUnit: STR_VL_FLAMER_SPONSON
-    spawnUnitFaction: 2
+    spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
     battleType: 4
@@ -3651,6 +3651,22 @@ items:
   - type: STR_LEMONRUSS_HULL_SPAWNER_FINAL
     refNode: *STR_LEMAN_RUSS_FINAL
     spawnUnit: STR_LEMAN_HULL_BOLTER  # Bolter
+
+  - &STR_LEMANSL_RUSS_FINAL  # DO NOT TOUCH; FINAL MISSION DOESN'T CARE ABOUT THIS SCRIPT
+    type: STR_LEMONSLRUSS_SPAWNER_FINAL
+    spawnUnit: STR_LEMANSL_BATTLECANNON_TURRET
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+  - type: STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL  # DO NOT TOUCH; FINAL MISSION DOESN'T CARE ABOUT THIS SCRIPT
+    refNode: *STR_LEMANSL_RUSS_FINAL
+    spawnUnit: STR_SL_SPONSON_BOLTER  # Bolter
+
+  - type: STR_LEMONSLRUSS_HULL_SPAWNER_FINAL
+    refNode: *STR_LEMANSL_RUSS_FINAL
+    spawnUnit: STR_LEMANSL_HULL_BOLTER  # Bolter
 
   - type: STR_CHIMERA_HULL_SPAWNER
     spawnUnit: STR_CHIMERA_HULL

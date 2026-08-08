@@ -9926,14 +9926,6 @@ ufopaedia:
     requires:
       - STR_VALHALLAN_GUARDSMEN
 
-  - id: STR_VALHALLAN_REGULAR_FLAK_ARMOR
-    type_id: 15
-    section: STR_ARMORPEDIA
-    image_id: VALHALLAN_CODEX.SPK
-    text: STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA
-    requires:
-      - STR_VALHALLAN_GUARDSMEN
-
   - id: STR_VALHALLAN_FLAK_MEDIC_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
@@ -15549,6 +15541,8 @@ ufopaedia:
 
 
 #WEAPONS.ELDAR#       Eldar Weapons
+
+
   - delete: STR_CATAPULT_PISTOL
   - id: STR_CATAPULT_PISTOL
     type_id: 14
@@ -15557,6 +15551,21 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_CATAPULT_PISTOL_UFOPEDIA
+  - id: STR_AVENGER_PISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_PISTOL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_PISTOL_CODEX
+  - id: STR_AVENGER_PISTOL_SCOPED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_PISTOL_SCOPED_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_PISTOL_SCOPED_CODEX
+
   - delete: STR_CATAPULT
   - id: STR_CATAPULT
     type_id: 14
@@ -15565,6 +15574,23 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_CATAPULT_UFOPEDIA
+  - id: STR_AVENGER_CATAPULT
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_CATAPULT_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_CATAPULT_CODEX
+  - id: STR_AVENGER_CATAPULT_SCOPED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_CATAPULT_SCOPED_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_CATAPULT_SCOPED_CODEX
+  - id: STR_AVENGER_SHURIKEN_CLIP
+    type_id: 4
+    section: STR_NOT_AVAILABLE
 
   - id: STR_RANGER_LONG_RIFLE
     type_id: 14
@@ -15647,6 +15673,7 @@ ufopaedia:
   - id: STR_DRAGON_FUSION_PISTOL_AMMO
     type_id: 4
     section: STR_NOT_AVAILABLE
+
   - id: STR_DRAGON_AXE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -15729,6 +15756,27 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  - id: STR_AELDARI_SWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_SWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_SWORD_CODEX
+  - id: STR_AELDARI_CHAINSWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_CHAINSWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_CHAINSWORD_CODEX
+  - id: STR_AELDARI_POWERSWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_POWERSWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_POWERSWORD_CODEX
   - delete: STR_ELDAR_CHAINSWORD
   - id: STR_ELDAR_CHAINSWORD
     type_id: 14

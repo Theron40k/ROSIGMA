@@ -1036,99 +1036,6 @@ events:
       STR_ADEPTAS_DCAssassin: 8
 
 
-  # Acquires a random Xenos Item (Tau, Eldar). If new Xenos in future, why not add an entry
-  - name: STR_INQ_BLACK_MARKET_XENOTECH_EVENT
-    description: STR_INQ_BLACK_MARKET_XENOTECH_EVENT_DESCRIPTION
-    background: CHAOSCULTHAGGLEBG.SCR
-    timer: 1440  # between 1-3 days
-    timerRandom: 2880
-    randomMultiItemList:
-      # Tau
-      -
-        STR_TAU_PULSE_RIFLE_EXPORT: 1
-        STR_TAU_PULSE_MAG_EXPORT: 3
-      -
-        STR_TAU_PULSE_RIFLE: 1
-        STR_TAU_PULSE_MAG: 3
-      -
-        STR_TAU_PULSE_CARBINE: 1
-        STR_TAU_PULSE_MAG: 3
-      -
-        STR_TAU_PULSE_BLASTER: 1
-        STR_TAU_PULSE_BLASTER_MAG: 3
-      -
-        STR_TAU_PULSE_PISTOL: 1
-        STR_TAU_PULSE_MAG: 3
-      -
-        STR_TAU_RAIL_RIFLE: 1
-        STR_TAU_RAIL_MAG: 2
-      -
-        STR_TAU_PHOTON_GRENADE: 4
-      -
-        STR_TAU_FUSION_GRENADE: 4
-      -
-        STR_TAU_EMP_GRENADE: 4
-      # Eldar
-      -
-        STR_CATAPULT_PISTOL: 1
-        STR_SHURIKEN_CLIP: 3
-      -
-        STR_CATAPULT: 1
-        STR_SHURIKEN_CLIP: 3
-      -
-        STR_EPOWER_SWORD: 1
-      -
-        STR_ELDAR_MGRENADE: 4
-      -
-        STR_ELDAR_GRENADE: 4
-      -
-        STR_ELDAR_CHAINSWORD: 1
-      # Orks
-      -
-        STR_SLUGGA: 2
-        STR_AMMO_BIT10: 8
-      -
-        STR_KUSTOM_SLUGGA: 2
-        STR_AMMO_BIT20: 4
-      -
-        STR_SHOOTA: 2
-        STR_AMMO_BIT20: 8
-      -
-        STR_SNAZZY_SHOOTA_KOMBI_BLASTA: 1
-        STR_AMMO_BIT20: 6
-        STR_PLASMA_PISTOL_CLIP: 3
-      -
-        STR_ORK_GRENADE: 6
-        STR_ORK_KRAKSTIKKBOMB: 6
-        STR_TANKBUSTA_BOMB: 4
-      -
-        STR_BIG_SHOOTA: 1
-        STR_AMMO_BIT50: 4
-      -
-        STR_BIGCHOPPA: 1
-        STR_CHOPPA: 4
-      -
-        STR_ORK_CHAINSWORD: 1
-      -
-        STR_TANKHAMMER: 2
-      -
-        STR_ORK_SNIPER_RIFLE: 1
-        STR_ORK_AUTOCANNON_CLIP: 1
-      -
-        STR_SNAZZY_SHOOTA_KOMBI_ROKKIT: 1
-        STR_AMMO_BIT50: 3
-        STR_LARGE_ROCKET: 2
-      -
-        STR_ORK_RL: 1
-      -
-        STR_ORK_GORKFAUST: 1
-      -
-        STR_SNAZZY_MEGA_BLASTA: 1
-        STR_HEAVY_PLASMA_CLIP: 2
-      -
-        STR_SNAZZ_GUN: 1
-        STR_AMMO_TWINBIT50: 3
-
   - name: STR_INQ_RR_ENTICE_BRIBES_EVENT
     description: STR_INQ_RR_ENTICE_BRIBES_EVENT_DESCRIPTION
     background: InquisitionBG.SCR
@@ -1593,6 +1500,65 @@ events:
       STR_GUARD_ORK_GRETCHIN: 2
       STR_GUARD_ORK_BIG_MEK: 2
 
+  - name: STR_INQ_RR_REQUISITION_XENOS_TAU_EVENT
+    description: STR_INQ_RR_REQUISITION_XENOS_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_FIREWARRIOR_GV: 2
+        STR_GUEVESALA_GV: 8
+    everyMultiItemList:
+      STR_TAU_PULSE_RIFLE_EXPORT: 2
+      STR_TAU_PULSE_MAG_EXPORT: 8
+
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_TAU_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_FIREWARRIOR_SHASVRE_GV: 1
+        STR_FIREWARRIOR_GV: 5
+        STR_GUEVESALA_GV: 6
+    everyMultiItemList:
+      STR_TAU_PULSE_RIFLE: 4
+      STR_TAU_PULSE_MAG: 12
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_1_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_GUEVESALA_GV: 8
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_2_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_FIREWARRIOR_SHASUI_GV: 1
+        STR_FIREWARRIOR_GV: 5
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_1_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_GUEVESAUI_GV: 2
+        STR_GUEVESALA_GV: 8
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_2_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiSoldierList:
+      -
+        STR_FIREWARRIOR_SHASVRE_GV: 1
+        STR_FIREWARRIOR_GV: 5
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_3_EVENT
+    description: STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_EVENT_DESCRIPTION
+    background: InquisitionBG.SCR # TODO bg
+    randomMultiItemList:
+      -
+        STR_CRISIS_SUIT_ITEM_GV: 1
+      -
+        STR_STEALTH_SUIT_ITEM_GV: 1
 
 
   - name: STR_FAILURE_OFFICER_VETERAN_EVENT
