@@ -32,9 +32,9 @@ jobs:
       #    grep -E '\.rul$' > .changed_yaml_files.txt || true  # true will always return success to codeberg
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v47
         with:
-          fetch_missing_history_max_retries: "0"
+          fetch_missing_history_max_retries: "1"
           separator: ","
           files: |
             **/*.rul
