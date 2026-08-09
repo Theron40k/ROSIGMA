@@ -798,53 +798,86 @@ armors:
 
 # ELDAR.TIER3 # EXARCH / AUTARCH
 
-#  - type: STR_ELDAR_DIREAVENGER_EX_ARMOR_P       # DIRE AVANGER
+  - type: STR_ELDAR_AVENGEREX_ARMOR_P       # DIRE AVENGER
 #    refNode: *AVENGER_ARMOR
-#    storeItem: STR_NONE
-#    visibilityAtDay: 40
-#    visibilityAtDark: 25
-#    antiCamouflageAtDay: 5
-#    antiCamouflageAtDark: 5
-#    frontArmor: 110
-#    sideArmor: 90
-#    rearArmor: 80
-#    underArmor: 70
-#    drawingRoutine: 0
-#    damageModifier:  # ELDAR ARMOR
-#      - 0.9  # none
-#      - 0.9  # AP
-#      - 0.5  # FLAMES
-#      - 0.9  # HE
-#      - 0.65  # LASCANON
-#      - 0.65  # PLASMA
-#      - 0.65  # STUN
-#      - 1.0  # MELEE
-#      - 0.5  # ACID
-#      - 0.0  # SMOKE
-#      - 1.0  # IMPACT
-#      - 1.0  # MELTA
-#    loftempsSet: [3]
-#    stats: #overall nice bonuses for dire avenger
-#      tu: 5
-#      stamina: 5
-#      health: 0
-#      bravery: 5
-#      reactions: 10
-#      firing: 15
-#      throwing: 5
-#      strength: 0
-#      melee: 0
-#    units:
-#      - STR_ELDAR_AUTARCH_PLAYER
-#      # - STR_ELDAR_ASPECT_WARRIOR_PLAYER # TODO: add dire avenger exarch
-#    builtInWeapons:
-#      - INV_NULL_3X3
-#    tags:
-#      UNIT_TYPE_XENO: 1
-#      UNIT_TYPE_ELDAR: 1
-#      UNIT_TYPE_LIVING: 1
-#      DODGE_CHANCE: 33
-#      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    frontArmor: 110           # Avengers have average armor
+    sideArmor: 90
+    rearArmor: 80
+    underArmor: 70
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 0.9  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 0.9  # HE
+      - 0.65  # LASCANON
+      - 0.65  # PLASMA
+      - 0.65  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    stats: #overall nice bonuses for dire avenger
+      tu: 5
+      stamina: 5
+      health: 0
+      bravery: 5
+      reactions: 20 # Avenger Main stat
+      firing: 10
+      throwing: 5
+      strength: 0
+      melee: 0
+    units:
+      - STR_ELDAR_AUTARCH_PLAYER
+      - STR_ELDAR_AVENGEREX_P
+    builtInWeapons:
+      - INV_NULL_3X3
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARAVENGEREX
+      2: AVENGEREX_HELMET
+      3: ELDARAVENGEREX_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY12"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY11"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY10"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY9"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY5"]
+      M9: ["", "ELDAR", "CLOSEDHELMET6", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET7", "ACCESSORY6"]
+      M11: ["", "ELDAR", "CLOSEDHELMET8", "ACCESSORY7"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY4"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY10"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY5"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY11"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY12"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY7"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY1"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    spriteSheet: ELDAR_AVENGER.SPK
+    corpseBattle:
+      - STR_ELDAR_AVENGER_CORPSE_P
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   - type: STR_ELDAR_ARMOR_EXARCH_P # REAPER EXARCH ARMOR
     refNode: *REAPER_ARMOR
