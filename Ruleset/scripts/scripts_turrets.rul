@@ -3513,7 +3513,7 @@ items:
     battleType: 4
 
   - type: STR_LEMANVL_MORTAR_TURRET_SPAWNER
-    spawnUnit: STR_LEMANVL_MORTAR_TURRET 
+    spawnUnit: STR_LEMANVL_MORTAR_TURRET
     spawnUnitFaction: 0
     invWidth: 0
     invHeight: 0
@@ -6159,7 +6159,7 @@ extended:
     damageUnit:
       - new: ROSIGMA_dU_adv_turret_prime_dummy_items  # primes dummy items when corresponding turret is killed
         offset: 1
-        code: | 
+        code: |
           var int turretunit;
           var int turretitem;
           var int health;
@@ -6183,7 +6183,6 @@ extended:
 
                   unit.getRuleUnit rule_unit;
                   rule_unit.getType turretname;
-                  
 
                   if eq itemname turretname;
                     turret_item.isFuseEnabled fuseactive;
