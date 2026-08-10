@@ -5744,6 +5744,27 @@ ufopaedia:
 ## #SOLDIERS.SM.SCOUT#     Scout Strategy
 ## #SOLDIERS.SM.TAC#       Tactical Strategy
 # #SOLDIERS.CM#         Chamber Militant Soldiers
+  - id: STR_AWARD_INQ_ROSARIUS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQUISITORIAL_ROSARIUS.SPK
+    text: STR_AWARD_INQ_ROSARIUS_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+  - id: STR_INQ_TRANSFORM_RETINUE_INDUCTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQUISITORIAL_RETINUE.SPK
+    text: STR_INQ_TRANSFORM_RETINUE_INDUCTION_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+  - id: STR_INQ_TRANSFORM_REJUVENATE
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: MEDICAE_STATION.SPK
+    text: STR_INQ_TRANSFORM_REJUVENATE_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
 ## #SOLDIERS.CM.DW#        Deathwatch Strategy
 ## #SOLDIERS.CM.GK#        Grey Knights Strategy
 ## #SOLDIERS.CM.RAD#       Radical Road Strategy
