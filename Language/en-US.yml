@@ -16,6 +16,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   IMPERIUM: "IMPERIUM"
   ARMO: "ARMORY"
   MILL: "FORGE"
+  MANU: "MANUFACTURING"
   STR_XCOM_AGENTS_HAVE_LOCATED_AN_ALIEN_BASE_IN_REGION: "We have detected a enemy presence on the planet"
 
   STR_HWP_CAPACITY: " "  # uncomment to check for HWP: -1  # SpeedC is an exception
@@ -692,7 +693,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_NURGLE_TERM_CORPSE_PLAYER: "Plague Terminator Corpse"
   STR_TZEENTCH_CORPSE_PLAYER: "A Pile of Dust"
   STR_TZEENTCH_TERM_CORPSE_PLAYER: "Rubric Terminator Corpse"
-  STR_KHORNE_WARPTALON_CORPSE_PLAYER: "Warptalon Corpse"
+  STR_KHORNE_WARPTALON_CORPSE_PLAYER: "Khorne Warptalon Corpse"
   STR_KHORNECHAMP_CORPSE_PLAYER: "Khorne Marine Corpse"
   STR_KHORNE_TERM_CORPSE_PLAYER: "Khorne Terminator Corpse"
   STR_FLOATER_CORPSE_PLAYER: "Raptor Corpse"
@@ -1253,7 +1254,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_ARMOR_GUARDIAN_SHIELD_PLAYER: "Force Shield Guardian Armor"
   STR_ELDAR_ARMOR_GUARDIAN_HEALER_PLAYER: "Healer Kit Guardian Armor"
   STR_ELDAR_ASPECT_WARRIOR_PLAYER: "Eldar Aspect Warrior"
-  STR_ELDAR_PSYKER_PLAYER: "Eldar Psyker"
+  STR_ELDAR_PSYKER_PLAYER: "Eldar Seer"
   STR_ELDAR_WARLOCK_PLAYER: "Warlock"
   STR_ELDAR_WARLOCK_ARMOR_P: "Warlock Armor"
   STR_ELDAR_WARLOCK_CORPSE_P: "Warlock Corpse"
@@ -1262,6 +1263,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_ARMOR4_P: "Avenger Armor"
   STR_ELDAR_AVENGEREX_ARMOR_P: "Avenger Exarch Armor"
   STR_ELDAR_AVENGER_CORPSE_P: "Avenger Corpse"
+  STR_ELDAR_AVENGEREX_CORPSE_P: "Avenger Exarch Corpse"
   STR_ELDAR_BANSHEE_EXARCH_PLAYER: "Eldar Banshee Exarch"
   STR_ELDAR_DRAGON: "Eldar Dragon"
   STR_ELDAR_DRAGONEX: "Eldar Dragon Exarch"
@@ -1618,7 +1620,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_STORMTROOPER_CODEX_UNLOCKER: "(Stormtrooper Intelligence)"
 
   STR_INQ_TRANSFORM_RETINUE_INDUCTION: "Retinue Induction"
+  STR_INQ_TRANSFORM_RETINUE_INDUCTION_CODEX: "Inquisitors have the right to call on the services of any citizen or servant of the Emperor. Often an experienced Inquisitor, or one in need of specific services, will have a retinue of henchmen that he has deemed most useful. These retinues are made up of individuals drawn from citizens with unique and useful talents, and from the ranks of all Imperial institutions. {NEWLINE}{NEWLINE}This promotion will induct one of your soldiers into the inquisitorial retinue, granting them some stat bonus and allowing further transformations"
   STR_INQ_TRANSFORM_REJUVENATE: "Rejuvenat Treatment"
+  STR_INQ_TRANSFORM_REJUVENATE_CODEX: "Being part of an inquisitorial retinue grants access to special medical treatments like the use of rejuvenating drugs and stem cell-derived genetic repair treatments, usually referred to as \"rejuvenat\" treatments. These treatments can slow or even reverse human aging to an extent, and also speed up the recovery of gravous injuries. {NEWLINE}{NEWLINE}This treatment will allow one of your soldiers inducted in your retinue (Retinue Induction transformation) to recover from any injury in 5 days ad the cost of some resources"
 
   STR_RADICAL_INQUISITOR_STRATEGY: "The Radical Road"
   STR_RADICAL_INQUISITOR_STRATEGY_DESCRIPTION: "{NEWLINE} A dire situation requires dire solutions. You understand that the Inquisition must consider the use of any tool, even the Xenos and the Heretic. By means of psycho-indoctrination, captives with potential may once again serve the Emperor.{NEWLINE}{NEWLINE}The Radical Road invariably leads to Heretical Means. To fight the Archenemy, will you accept the aid of the hated Xenos, or even Chaos itself?"
@@ -4705,6 +4709,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BONUS_BIONICS: "Bionics"
 
   STR_AWARD_INQ_ROSARIUS: "Award Inquisitorial Rosarius"
+  STR_AWARD_INQ_ROSARIUS_CODEX: "Inquisitorial Rosarius are amulets that incorporates a powerful energy conversion field to defend the wearer from attack, efectively acting as an energy shield. To an untrained eye Inquisitorial Rosarius are easily confused as normal Inquisitorial Rosette, but instead they are a rare and highly prized piece of technology disguised as badges of office of Inquisitors.{NEWLINE}{NEWLINE}This transformation grants the Inquisitiorial Rosarius to Inquisition Stormtroopers, Inquisitor or Interrogator that have already been inducted into the inquisitorial retinue (Retinue Induction transformation) and have the following prerequisites: {ALT}commendations: Veteran{ALT}"
   STR_BONUS_INQ_ROSARIUS: "Inquisitorial Rosarius"
   STR_INQ_INQUISITOR_PROMOTION: "Promote to Inquisitor"
 
@@ -5405,9 +5410,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_VALHALLAN_AUTOGUN_CODEX: "{NEWLINE}The Valhalla pattern autogun is a semi-automatic weapon of more complex design than most Valhallan weapons, nontheless designed with cold weather in mind for its operation."
   STR_VALHALLAN_AUTOSTUBBER: "Valhalla Pattern Autostubber"
   STR_VALHALLAN_AUTOSTUBBER_CODEX: "{NEWLINE} The Valhalla pattern autostubber is a rapid firing close quarters weapon firing small calibre stub rounds usually used for pistols. It is highly effective against unarmored humans and grots in urban or trench fighting, and may take down or at least slow a Ork Boy through volume of fire."
+  STR_VALHALLAN_HEAVYSTUBBER: "Valhalla Pattern Heavy Stubber/Bipod"
+  STR_VALHALLAN_HEAVYSTUBBER_CODEX: "{NEWLINE} The Valhalla pattern heavy stubber is a rugged but lighter design intended for support fire and suppression, using a bipod to deploy and drum magazines for ammunition."
+
   STR_STUB_GUN_AMMO_DRUM: "Stubber Drum Mag."
   STR_STUB_GUN_AMMO_DRUM_AP: "Stubber Drum AP Mag."
   STR_AUTOGUN_CLIP_KRAKEN: "Autogun Penetrator Clip"
+  STR_VL_HEAVYSTUBBER_DRUM: "Heavy Stubber Drum Mag."
+  STR_VL_HEAVYSTUBBER_DRUM_KRAKEN: "Heavy Stubber Drum AP Mag."
 
   STR_TRUCKARMOR_VALHALLA_STARTER: "Valhallan Truck Convoy"
   STR_TRUCKARMOR_VALHALLA_MIDTIER: "Valhallan Motorised Convoy"
@@ -7694,10 +7704,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_NIGHTLORD_RAPTOR_CORPSE: "Night Raptor Corpse"
   STR_NIGHTLORD_RAPTOR_OFFICER_CORPSE: "Night Lords Officer Corpse"
 
-  STR_NIGHTLORDS_WARPTALON_SOLDIER: "Night Warp Talon"
-  STR_NIGHTLORDS_WARPTALON_COMMANDER: "Night Warp Talon Officer"
-  STR_NIGHTLORDS_WARPTALON_ARMOR: "Night Warp Talon"
-  STR_NIGHTLORD_WARPTALON_CORPSE: "Warp Talon Corpse"
+  STR_NIGHTLORDS_WARPTALON_SOLDIER: "Night Warptalon"
+  STR_NIGHTLORDS_WARPTALON_COMMANDER: "Night Warptalon Officer"
+  STR_NIGHTLORDS_WARPTALON_ARMOR: "Night Warptalon"
+  STR_NIGHTLORD_WARPTALON_CORPSE: "Night Warptalon Corpse"
 
   STR_SCARE_GRENADE: "Scare Gas Grenade"
   STR_SCARE_GRENADE_UFOPEDIA: "{NEWLINE}Scare Gas Grenades produce a form of non-persistent nerve gas. The effects generated are the psychological and physical symptoms of anxiety and terror. Scare gas can be absorbed through the skin, rapid-acting and highly dangerous. It dissipates rapidly in ordinary atmospheres."
@@ -9486,7 +9496,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PLAGUE_SPRAY: "Plague Spray"
 
 # Script Text
-
+  STR_SCRIPT_MEDIKIT_EXTINGUISH: "Target Extinguished."
   STR_SCRIPT_IG_COMMAND_FIX_BAYONETS: "Remaining Command Points: {0} - Soldiers {1} Current Command: Fix Bayonets"
   STR_SCRIPT_IG_COMMAND_BLITZKRIEG: "Remaining Command Points: {0} - Soldiers {1} Current Command: Blitzkrieg"
   STR_SCRIPT_IG_COMMAND_HUNKER_DOWN: "Remaining Command Points: {0} - Soldiers {1} Current Command: Hunker Down"
@@ -9924,7 +9934,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SPACEWOLVES_OFFICER_PACKAGE_TRIGGER: "Space Wolves Package trigger 2"
   STR_SPACEWOLVES_WOLFPRIEST_PACKAGE_TRIGGER: "Space Wolves Package trigger 3"
 
-  STR_RESEARCH_SWLANDRAIDER : "Landraider Requisition"
+  STR_RESEARCH_SWLANDRAIDER: "Landraider Requisition"
 
 # Research Strategies Adeptas
 ##########################################

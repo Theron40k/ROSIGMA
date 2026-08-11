@@ -5744,6 +5744,27 @@ ufopaedia:
 ## #SOLDIERS.SM.SCOUT#     Scout Strategy
 ## #SOLDIERS.SM.TAC#       Tactical Strategy
 # #SOLDIERS.CM#         Chamber Militant Soldiers
+  - id: STR_AWARD_INQ_ROSARIUS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQUISITORIAL_ROSARIUS.SPK
+    text: STR_AWARD_INQ_ROSARIUS_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+  - id: STR_INQ_TRANSFORM_RETINUE_INDUCTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQUISITORIAL_RETINUE.SPK
+    text: STR_INQ_TRANSFORM_RETINUE_INDUCTION_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+  - id: STR_INQ_TRANSFORM_REJUVENATE
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: MEDICAE_STATION.SPK
+    text: STR_INQ_TRANSFORM_REJUVENATE_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
 ## #SOLDIERS.CM.DW#        Deathwatch Strategy
 ## #SOLDIERS.CM.GK#        Grey Knights Strategy
 ## #SOLDIERS.CM.RAD#       Radical Road Strategy
@@ -10842,13 +10863,18 @@ ufopaedia:
   - id: STR_VALHALLAN_AUTOGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: ADEPTAS_AUTOGUN_SCOPED_CODEX2.SPK #placeholder
+    image_id: VALHALLAN_AUTOGUN_CODEX.SPK
     text: STR_VALHALLAN_AUTOGUN_CODEX
   - id: STR_VALHALLAN_AUTOSTUBBER
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: AUTOPISTOL_HIGH_GRADE_CODEX.SPK
+    image_id: VALHALLAN_AUTOSTUBBER_CODEX.SPK
     text: STR_VALHALLAN_AUTOSTUBBER_CODEX
+  - id: STR_VALHALLAN_HEAVYSTUBBER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: VALHALLAN_HEAVY_STUBBER_CODEX.SPK
+    text: STR_VALHALLAN_HEAVYSTUBBER_CODEX
 
   - id: STR_AUTOGUN_ADEPTAS
     type_id: 14
@@ -22168,20 +22194,20 @@ ufopaedia:
     image_id: ELDAR_AVENGER_ARMOR_CODEX.SPK
     text: STR_ELDAR_AVENGER_ARMOR_CODEX
 
-  #- id: STR_ELDAR_AVENGEREX_AUTOPSY
-  #  type_id: 10
-  #  section: STR_ALIEN_LIFE_FORMS
-  #  requires:
-  #    - STR_ELDAR_AVENGEREX_CORPSE
-  #  image_id: ELDAR_AVENGEREX_AUTOPSY_CODEX.SPK
-  #  text: STR_ELDAR_AVENGEREX_AUTOPSY_CODEX
-  #- id: STR_ELDAR_AVENGEREX_ARMOR_P
-  #  type_id: 15
-  #  section: STR_ALIEN_LIFE_FORMS
-  #  requires:
-  #    - STR_ELDAR_AVENGEREX
-  #  image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK
-  #  text: STR_ELDAR_AVENGEREX_ARMOR_CODEX
+  - id: STR_ELDAR_AVENGEREX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_AVENGEREX_CORPSE
+    image_id: ELDAR_AVENGEREX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_AVENGEREX_AUTOPSY_CODEX
+  - id: STR_ELDAR_AVENGEREX_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_AVENGEREX
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_AVENGEREX_ARMOR_CODEX
 
   - delete: STR_SCORPION_AUTOPSY
   - id: STR_SCORPION_AUTOPSY

@@ -7003,6 +7003,52 @@ items:
     tags:
       ITEM_RECOIL: 30
 
+  - type: STR_VALHALLAN_HEAVYSTUBBER
+    categories: [STR_CAT_AUTO]
+    dropoff: 4
+    size: 0.5
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+    costBuy: 25000
+    costSell: 5000
+    weight: 35
+    autoRange: 24
+    bigSprite: 983
+    handSprite: 4784
+    floorSprite: 3513
+    bulletSprite: {mod: 40k, index: 2}
+    bulletSpeed: 25
+    fireSound: {mod: 40k, index: 4}
+    armor: 200  # to avoid item pile destruction
+    compatibleAmmo:
+      - STR_VL_HEAVYSTUBBER_DRUM
+      - STR_VL_HEAVYSTUBBER_DRUM_KRAKEN
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    snapRange: 20
+    aimRange: 0
+    accuracyAuto: 40
+    accuracySnap: 55
+    accuracyAimed: 0
+    tuAuto: 50  # 2x bursts
+    tuSnap: 30
+    tuAimed: 0
+    autoShots: 10  # 2x autoshots per round if static, flexible. Rotor cannon is 25 aimed, but inflexible
+    confSnap:
+      shots: 5  #
+      followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
+    confAuto:
+      followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
+    sprayWaypoints: 2
+    listOrder: 10765 #    listOrder: 10766 and 10767 for its ammo
+    tags:
+      ITEM_RECOIL: 35 #offset by bipod
+      ITEM_HAS_BIPOD: 1
+      ITEM_COLOR_CHANGES_WITH_AMMO_NON_GRAY: 6
+
   - type: STR_STUB_GUN_AMMO_DRUM #Valhallan Autostubber SMG
     categories: [STR_CAT_AUTO]
     requiresBuy:
@@ -7012,7 +7058,7 @@ items:
     costSell: 75
     weight: 5
     bigSprite: 985
-    floorSprite: {mod: 40k, index: 1118}
+    floorSprite: 3515
     handSprite: {mod: 40k, index: 1896}
     hitSound: {mod: 40k, index: 22}
     hitAnimation: {mod: 40k, index: 26}
@@ -7041,7 +7087,7 @@ items:
     costSell: 100
     weight: 5
     bigSprite: 986
-    floorSprite: {mod: 40k, index: 1118}
+    floorSprite: 3516
     handSprite: {mod: 40k, index: 1896}
     hitSound: {mod: 40k, index: 22}
     hitAnimation: {mod: 40k, index: 26}
@@ -7071,7 +7117,7 @@ items:
     costSell: 100
     weight: 6
     bigSprite: 987
-    floorSprite: {mod: 40k, index: 1011}  # needs new
+    floorSprite: 3514
     handSprite: {mod: 40k, index: 1088}
     hitSound: {mod: 40k, index: 22}
     hitAnimation: {mod: 40k, index: 26}
@@ -7085,12 +7131,61 @@ items:
     clipSize: 10
     battleType: 2
     armor: 200
-    listOrder: 11898
+    listOrder: 11897
     tags:
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
+
+  - type: STR_VL_HEAVYSTUBBER_DRUM
+    categories: [STR_CAT_AUTO]
+    size: 0.1
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+    costBuy: 500
+    costSell: 125
+    weight: 10
+    bigSprite: 989
+    floorSprite: 3517
+    handSprite: {mod: 40k, index: 1088}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    power: 50
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.02
+    clipSize: 40
+    battleType: 2
+    armor: 200
+    listOrder: 10766
+
+  - type: STR_VL_HEAVYSTUBBER_DRUM_KRAKEN
+    categories: [STR_CAT_AUTO]
+    size: 0.1
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+      - STR_ALIEN_ALLOYS
+      - STR_MIDTIER_PREREQ
+    costBuy: 750
+    costSell: 200
+    weight: 10
+    bigSprite: 990
+    floorSprite: 3518
+    handSprite: {mod: 40k, index: 1088}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    power: 65
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.10
+      ArmorEffectiveness: 0.6
+    clipSize: 40
+    battleType: 2
+    armor: 200
+    listOrder: 10767
 
 #Baneblade
   - type: AUX_BOLTERBANE  # STR_BANE_BOLTER_TURRET
