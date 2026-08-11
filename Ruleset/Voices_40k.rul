@@ -675,6 +675,33 @@ armors:
     annoyedFemale:      [3212, 3213, 3214]  # yamllint disable-line rule:colons
     deathMale: [3215, 3216, 3217]  # yamllint disable-line rule:colons
     deathFemale: [3218, 3219, 3220]  # yamllint disable-line rule:colons
+    # GUARDIAN
+  - type: STR_ELDAR_ARMOR_GUARDIAN_PLAYER
+    selectUnitMale:     [3263, 3264, 3265, 3266, 3267]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3268, 3269, 3270, 3271, 3272]  # yamllint disable-line rule:colons
+    startMovingMale:    [3273, 3274, 3275, 3276, 3277]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3278, 3279, 3280, 3281, 3282]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3283, 3284, 3285, 3286, 3287]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3288, 3289, 3290, 3291, 3292]  # yamllint disable-line rule:colons
+    annoyedMale:        [3293, 3294, 3295]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3296, 3297, 3298]  # yamllint disable-line rule:colons
+    deathMale: [3257, 3258, 3259]  # yamllint disable-line rule:colons
+    deathFemale: [3260, 3261, 3262]  # yamllint disable-line rule:colons
+# AVENGER
+  - &STR_ELDAR_GENERIC_ASPECT_ARMOR_VOICE  #GENERIC ASPECT WARRIOR VOICES
+    type: STR_ELDAR_ARMOR4_P
+    selectUnitMale:     [3221, 3222, 3223, 3224, 3225]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3226, 3227, 3228, 3229, 3230]  # yamllint disable-line rule:colons
+    startMovingMale:    [3231, 3232, 3233, 3234, 3235]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3236, 3237, 3238, 3239, 3240]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3241, 3242, 3243, 3244, 3245]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3246, 3247, 3248, 3249, 3250]  # yamllint disable-line rule:colons
+    annoyedMale:        [3251, 3252, 3253]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3254, 3255, 3256]  # yamllint disable-line rule:colons
+    deathMale: [3257, 3258, 3259]  # yamllint disable-line rule:colons
+    deathFemale: [3260, 3261, 3262]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_AVENGEREX_ARMOR_P
+    refNode: *STR_ELDAR_GENERIC_ASPECT_ARMOR_VOICE
 # DRAGON
   - &STR_ELDAR_DRAGON_ARMOR_VOICE
     type: STR_ELDAR_DRAGON_ARMOR_P
