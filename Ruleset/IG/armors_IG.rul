@@ -4118,6 +4118,61 @@ armors:
       UNIT_TYPE_IMPERIAL_GUARD: 1
       UNIT_TYPE_IMPERIUM: 1
 
+  - type: STR_VALHALLAN_WOLFHOUND_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    camouflageAtDay: 5
+    camouflageAtDark: 5
+    heatVision: 20
+    allowInv: true
+    storeItem: STR_NONE
+    customArmorPreviewIndex: 838
+    spriteSheet: SPACEWOLVESWOLFYbattle.PCK
+    spriteInv: SPACEWOLVESARMOR_WOLFY.PCK
+    zombiImmune: true
+    bleedImmune: false
+    fearImmune: true
+    painImmune: false
+    corpseBattle:
+      - STR_VALHALLAN_WOLFHOUND_CORPSE
+    frontArmor: 20  # was 10
+    sideArmor: 15  # was 10
+    rearArmor: 15  # was 10
+    underArmor: 20  # was 10
+    drawingRoutine: 4
+    constantAnimation: false
+    damageModifier:
+      - 1.0  # none
+      - 0.9  # AP
+      - 1.5  # FLAMES
+      - 0.9  # HE
+      - 0.9  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN
+      - 0.9  # MELEE
+      - 0.7  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_VALHALLAN_WOLFHOUND
+    builtInWeapons:
+      - STR_CMAS
+      - STR_CMAS
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_3X3
+      - INV_NULL_4X2
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 30
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
   # TURRETS AND SPONSONS
   - type: STR_CHIMERA_TURRET_ARMOR
     visibilityAtDay: 40
