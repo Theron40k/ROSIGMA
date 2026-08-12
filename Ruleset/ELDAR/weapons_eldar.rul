@@ -997,7 +997,7 @@ items:
       reactions: 0.3
     accuracyMelee: 100
     damageType: 7
-    damageAlter:     # DA POWER
+    damageAlter:
       ArmorEffectiveness: 0.8
       ToArmorPre: 0.05
       ToHealth: 0.8
@@ -1214,6 +1214,203 @@ items:
     flatRate: true
     attraction: 8
     listOrder: 16630
+
+  - type: STR_DIRESWORD_VESSEL  # EMPTY DIRESWORD VESSEL, Weak
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # AVENGER EXARCH RESEARCH
+      # DIRESWORD RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    listOrder: 16497
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 7
+    damageAlter:     # DA Melee
+      ArmorEffectiveness: 0.8
+      ToArmorPre: 0.05
+      ToHealth: 0.8
+      ToWound: 0.5
+      RandomWound: false
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 4  # heavy melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 30
+    damageBonus:
+      melee: 0.2
+      reactions: 0.2 # AVENGER Stat
+    meleeMultiplier:
+      melee: 0.4
+      reactions: 0.6 # AVENGER Stat
+    accuracyMelee: 100
+    size: 0.2
+    costBuy: 0        # Manufacture only
+    costSell: 0       # Taboo reliclike weapon, not to be traded like a commodity
+    weight: 10
+    bigSprite: 4894
+    floorSprite: 4894
+    handSprite: 1642
+    meleeAnimation: 4
+    meleeSound: {mod: 40k, index: 754}
+    meleeHitSound: {mod: 40k, index: 773}
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100 AVENGER BONUS
+
+  - type: STR_DIRESWORD  # T2 Avenger Nemesis FORCE weapon that depends on soul inside spiritstone not wielder.
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # AVENGER RESEARCH
+      # DIRESWORD RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    listOrder: 16497
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    experienceTrainingMode: 2         # 50% Melee, slower development of skills because user is aided
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 4  # heavy melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 80
+    damageBonus:
+      melee: 0.2
+      reactions: 0.3 # AVENGER Stat
+    meleeMultiplier:  # Helps low melee troops, but worse for high melee. Soul sandbagging the wielder.
+      flatHundred: .5 # Soulstone directing attacks
+      melee: 0.2
+      reactions: 0.3 # AVENGER Stat
+    accuracyMelee: 100
+    size: 0.2
+    costBuy: 0  # Transform only
+    costSell: 0     # Taboo reliclike weapon, not to be traded like a commodity
+    weight: 10
+    bigSprite: 4892
+    floorSprite: 4892
+    handSprite: 1626
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: 1891
+    meleeHitSound: 1892
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    twoHanded: false
+    tags:                                       # Force weapon that relies on soulstone
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      DAMAGE_RESIST_PENETRATION_PERCENT: 35
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 220
+      DAMAGE_BONUS_PERCENT_PSYKER: 170
+      DAMAGE_BONUS_PERCENT_SYNAPSE: 150 # among already vulnerable tyranids, synapse creatures are the most vulnerable; often also psykers
+      DAMAGE_BONUS_PERCENT_TZEENTCH: 120 # higher psychic sensitivity
+      DAMAGE_BONUS_PERCENT_NURGLE: 170 # durable because of warp magic, take away the magic, you have a dead body
+      DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
+      DAMAGE_BONUS_PERCENT_ELDAR: 140
+      REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100 AVENGER BONUS
+
+  - type: STR_ELDAR_POWER_GLAIVE  #  T3 Avenger melee weapon  BASED ON STR_DOMINION_HALBERD
+    categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # AVENGER EXARCH RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 85000
+    costSell: 12000
+    weight: 35
+    bigSprite: 4893
+    floorSprite: 4893
+    handSprite: 1634
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    fireSound: {mod: 40k, index: 753}
+    explosionHitSound: {mod: 40k, index: 101}  # stabhit
+    hitAnimation: 2040  # Bloodgush sprite, X1.pck for ranged attacks, was 1070  # AOEMELEEGENE.png
+    hitAnimFrames: 8
+    powerForAnimation: 10
+    hitSound: {mod: 40k, index: 101}  # stabhit
+    bulletSprite: 5
+    clipSize: -1
+    invWidth: 2
+    invHeight: 3
+    snapRange: 2  # has reach
+    maxRange: 2
+    powerRangeThreshold: 3
+    powerRangeReduction: 99
+    battleType: 1
+    damageType: 5
+    meleeType: 5
+    confSnap:
+      name: STR_HALLEBARD_SNAPSHOT_LUNGE
+      shots: 1
+    costSnap:
+      time: 30
+      energy: 10
+    accuracySnap: 80
+    accuracyMelee: 100
+    accuracyMultiplier:
+      melee: 0.3
+      strength: 0.2
+      reactions: 0.5 # Avenger stat
+    meleeMultiplier:
+      melee: 0.3
+      strength: 0.2
+      reactions: 0.5 # Avenger stat
+    power: 110
+    meleePower: 110
+    damageBonus:
+      strength: 0.2  # strength matters more than skill given weapon size in terms of damage scaling
+      reactions: 0.3 # Avenger Stat
+      melee: 0.1
+    meleeBonus:
+      strength: 0.2  # strength matters more than skill given weapon size in terms of damage scaling
+      reactions: 0.3 # Avenger Stat
+      melee: 0.1
+    costMelee:
+      time: 25
+      energy: 8  # heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    twoHanded: false
+    oneHandedPenalty: 50
+    attraction: 6
+    armor: 200
+    listOrder: 16498
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
   - type: STR_DRAGON_AXE  # eldar mirrorsword stats, REWORK required think fire damage
     requires:

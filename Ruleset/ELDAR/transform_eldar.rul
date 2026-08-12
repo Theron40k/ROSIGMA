@@ -894,3 +894,39 @@ soldierTransformation:
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+
+# DIRESWORD CREATION
+
+  - name: STR_DIRESWORD_VESSEL_TRANSFORM
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+      #- STR_ELDAR_DIRESWORD_FORGING_RESEARCH
+    cost: 0  #Cost is in manufacturing
+    minRank: 0
+    producedItem: STR_DIRESWORD
+    allowsDeadSoldiers: true
+    allowsLiveSoldiers: false
+    needsCorpseRecovered: true
+    requiredMinStats:
+    # melee: 80 # requires a worthy warrior soul
+    # forbiddenPreviousTransformations:
+    #   - STR_RESURRECT_ELDAR #no infinite resurrections
+    requiredItems:
+      STR_DIRESWORD_VESSEL: 1
+    allowedSoldierTypes:
+      - STR_ELDAR_M
+      - STR_ELDAR_F
+      - STR_ELDAR_GUARDIAN_PLAYER
+      - STR_ELDAR_SCORPION_M
+      - STR_ELDAR_SEER_F
+      - STR_ELDAR_BANSHEE_F
+      - STR_ELDAR_AVANGER_MF
+      - STR_ELDAR_REAPER_M
+      - STR_ELDAR_DRAGON_MF
+      - STR_ELDAR_SPIDER_PLAYER
+      - STR_ELDAR_AUTARCH_PLAYER
+      - STR_ELDAR_REAPER_EXARCH_M
+      - STR_ELDAR_DRAGON_EXARCH_SOLDIER
+      - STR_ELDAR_SPIDEREX_PLAYER
+      - STR_ELDAR_BANSHEE_EXARCH_PLAYER
+      - STR_ELDAR_WARLOCK_PLAYER
