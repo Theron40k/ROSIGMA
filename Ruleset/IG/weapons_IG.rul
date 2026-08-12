@@ -3955,6 +3955,7 @@ items:
       - STR_IMPERIAL_WEAPONS
       - STR_BASIC_BALLISTICS_DEP
       - STR_LASER_WEAPONS
+      - STR_NOT_VALHALLAN_STRATEGY
     autoRange: 24  # was 18
     bigSprite: 212
     handSprite: 328
@@ -4009,6 +4010,7 @@ items:
     categories: [STR_CAT_BOLTER]
     requiresBuy:
       - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_NOT_VALHALLAN_STRATEGY
     size: 0.3
     costBuy: 75000  # more expensive than the Solo light bolters
     costSell: 5000
@@ -4558,6 +4560,7 @@ items:
     categories: [STR_CAT_BOLTER]
     requiresBuy:
       - STR_LIGHT_BOLTERS_LOWTIER
+      - STR_NOT_VALHALLAN_STRATEGY
     size: 0.1
     # requiresBuyBaseFunc: [TRADE]
     costBuy: 10000  # Intention is costly ammo vs lasguns
@@ -4583,6 +4586,7 @@ items:
     requiresBuy:
       - STR_LIGHT_BOLTERS_MIDTIER
       - STR_MIDTIER_PREREQ
+      - STR_NOT_VALHALLAN_STRATEGY
     costBuy: 30000  # costly ammo
     costSell: 3000
     bigSprite: 907
@@ -6916,7 +6920,7 @@ items:
     tags:
       REACTION_MULTIPLIER: 60
       REACTION_PENALTY_KNEELING_BYPASS: 1
-      ITEM_RECOIL: 25
+      ITEM_RECOIL: 22
       ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 10
 
   - type: STR_VALHALLAN_AUTOSTUBBER #SoumiCarlGustavPPsh SMG
@@ -6958,7 +6962,7 @@ items:
     listOrder: 11898
     attraction: 1
     tags:
-      ITEM_RECOIL: 35
+      ITEM_RECOIL: 33
 
   - type: STR_VALHALLAN_AUTOGUN #SVT DMR style
     categories: [STR_CAT_AUTO]
@@ -7001,7 +7005,7 @@ items:
     kneelBonus: 115 #DMR
     attraction: 1
     tags:
-      ITEM_RECOIL: 30
+      ITEM_RECOIL: 28
 
   - type: STR_VALHALLAN_HEAVYSTUBBER
     categories: [STR_CAT_AUTO]
