@@ -2333,7 +2333,7 @@ armors:
       - 0.0  # SMOKE; it's not alive and can't suffer chemical burns
       - 0.0  # IMPACT
       - 0.5  # MELTA
-      - 0.0  # GRAV; it has no mass to maniplate
+      - 0.0  # GRAV; it has no mass to manipulate
     constantAnimation: true
     loftempsSet: [1]
     drawingRoutine: 4
@@ -2364,7 +2364,109 @@ armors:
       IS_DAEMONIC_PORTAL: 3
       INFECTION_RESIST: 100 #it's a hell portal
       INTIMIDATION_RESISTANCE: 100 #it's a hell portal
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 500) / Turn
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_NURGLE
+    type: STR_DAEMON_PORTAL_ARMOR_NURGLE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats: #better health, worse TU/reactions; portal health regenerates
+      health: 100
+      reactions: -25
+      tu: -25
+    recovery: #standard nurgle daemon regeneration
+      health:
+        healthCurrent: 0.2
+    damageModifier:  # More resistant to non-heat based attacks, weaker to heat based attacks
+      - 1.0  # none
+      - 0.3  # AP
+      - 0.7  # FLAMES
+      - 0.3  # HE
+      - 0.3  # LASCANON
+      - 0.7  # PLASMA
+      - 0.0  # STUN
+      - 0.3  # MELEE
+      - 0.0  # ACID; it's not alive and can't suffer chemical burns
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 0.7  # MELTA
+      - 0.0  # GRAV; it has no mass to manipulate
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_NURGLE: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_TZEENTCH
+    type: STR_DAEMON_PORTAL_ARMOR_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    psiVision: 15
+    stats: #better shields, psi, worse health; more fragile ultimately
+      health: -99
+      psiStrength: 10
+      psiSkill: 10
+    damageModifier:  # immune to fire
+      - 1.0  # none
+      - 0.5  # AP
+      - 0.0  # FLAMES
+      - 0.5  # HE
+      - 0.5  # LASCANON
+      - 0.5  # PLASMA
+      - 0.0  # STUN
+      - 0.5  # MELEE
+      - 0.0  # ACID; it's not alive and can't suffer chemical burns
+      - 0.0  # SMOKE; it's not alive and can't suffer chemical burns
+      - 0.0  # IMPACT
+      - 0.5  # MELTA
+      - 0.0  # GRAV; it has no mass to manipulate
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_TZEENTCH: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 125  # (125 * 100 / 25) = 500. Regenerates from 125 (at 0) to 0 (at 500) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_SLAANESH
+    type: STR_DAEMON_PORTAL_ARMOR_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats: #better reactions, TU, less health
+      health: -50
+      tu: 50
+      reactions: 50
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_SLAANESH: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - &STR_DAEMON_PORTAL_TEMPLATE_KHORNE
+    type: STR_DAEMON_PORTAL_ARMOR_KHORNE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats: #stronger intimidation via higher bravery, but does not inflict corruption
+      bravery: 100
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_KHORNE: 1
+      IS_DAEMONIC_PORTAL: 3
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 100  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 400) / Turn
       ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_DAEMON_PORTAL_ARMOR_LESSER
@@ -2376,7 +2478,59 @@ armors:
       IS_DAEMONIC_PORTAL: 2
       INFECTION_RESIST: 100 #it's a hell portal
       INTIMIDATION_RESISTANCE: 100 #it's a hell portal
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (100 * 100 / 25) = 300. Regenerates from 100 (at 0) to 0 (at 500) / Turn
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_NURGLE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_NURGLE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_NURGLE: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_TZEENTCH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_TZEENTCH: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (100 * 100 / 25) = 400. Regenerates from 100 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_SLAANESH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_SLAANESH: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_LESSER_KHORNE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_KHORNE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_KHORNE: 1
+      IS_DAEMONIC_PORTAL: 2
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 300) / Turn
       ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_DAEMON_PORTAL_ARMOR_MINOR
@@ -2388,7 +2542,59 @@ armors:
       IS_DAEMONIC_PORTAL: 1
       INFECTION_RESIST: 100 #it's a hell portal
       INTIMIDATION_RESISTANCE: 100 #it's a hell portal
-      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (100 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 500) / Turn
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_NURGLE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_NURGLE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_NURGLE: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_TZEENTCH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_TZEENTCH: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 75  # (75 * 100 / 25) = 300. Regenerates from 75 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_SLAANESH
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_SLAANESH: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
+      ARMOR_ENERGY_SHIELD_DECAY: 25
+
+  - type: STR_DAEMON_PORTAL_ARMOR_MINOR_KHORNE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE_KHORNE
+    tags:
+      UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_PSYKER: 1
+      UNIT_TYPE_DAEMONIC: 1
+      UNIT_TYPE_KHORNE: 1
+      IS_DAEMONIC_PORTAL: 1
+      INFECTION_RESIST: 100 #it's a hell portal
+      INTIMIDATION_RESISTANCE: 100 #it's a hell portal
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 50  # (50 * 100 / 25) = 200. Regenerates from 100 (at 0) to 0 (at 200) / Turn
       ARMOR_ENERGY_SHIELD_DECAY: 25
 
   - type: STR_WORDBEARER_TERMINATORELITE_ARMOR

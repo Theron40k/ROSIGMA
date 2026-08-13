@@ -22,6 +22,9 @@ items:
   - type: STR_LIGHTNING_SL_TOKEN  # steel legion version
     size: 0.1
 
+  - type: STR_TRUCKSTARTER_VL_TOKEN
+    size: 0.1
+
   - type: STR_CHIMEDON_SPAWNER
     spawnUnit: STR_CHIMEDON_TURRET
     spawnUnitFaction: 0
@@ -41,40 +44,6 @@ items:
     armor: 255
 
   ## IG Heavy Weapons
-  - type: STR_GRENADE_LAUNCHER
-    requiresBuy:
-      - STR_GUARD_AND_ARBITES
-      # - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_HEAVY_WEAPONS_IG
-
-  - type: STR_FRAG_GRENADE_DRUM
-    requiresBuy:
-      - STR_GUARD_AND_ARBITES
-      # - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_HEAVY_WEAPONS_IG
-
-  - type: STR_KRAK_GRENADE_DRUM
-    requiresBuy:
-      - STR_GUARD_AND_ARBITES
-      # - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_HEAVY_WEAPONS_IG
-
-  - type: STR_INCENDIARY_GRENADE_DRUM
-    requiresBuy:
-      - STR_GUARD_AND_ARBITES
-      # - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_HEAVY_WEAPONS_IG
-
-  - type: STR_HEAVY_BOLTER_GUARD
-    requiresBuy:
-      - STR_GUARD_AND_ARBITES
-      # - STR_IMPERIAL_GUARD_OPERATIONS
-      - STR_HEAVY_WEAPONS_IG
-    tags:
-      ITEM_GETS_FACTION_RECOLOR: 1
-      ITEM_BASE_COLOR: 4
-      ITEM_GETS_ACCENT_RECOLOR: 1
-      ITEM_ACCENT_COLOR: 1
 
   - type: STR_BEASTGUARD_HEAVY_ARMOR
     requiresBuy:

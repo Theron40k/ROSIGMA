@@ -6,6 +6,7 @@ soldiers:
     requires:
       - STR_ADEPTAS_NOVICE_RESEARCH
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     minStats:
       tu: 40
       stamina: 40
@@ -85,6 +86,7 @@ soldiers:
     requires:
       - STR_ADEPTAS
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     minStats:
       tu: 40
       stamina: 35
@@ -166,6 +168,7 @@ soldiers:
     requires:
       - STR_ADEPTAS_RECRUITMENT_REQ
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     requiresBuyBaseFunc:
       - STR_ADEPTAS_RECRUITMENT
     minStats:
@@ -249,6 +252,7 @@ soldiers:
     requires:  # can insert some special Repentia only requirement requirement here, for specific Sister strategies or facilities
       - STR_ADEPTAS_REPENTIA_RESEARCH
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     # requiresBuyBaseFunc:
     #   - STR_ADEPTAS_RECRUITMENT
     minStats:
@@ -333,6 +337,7 @@ soldiers:
       - STR_ADEPTAS_RECRUITMENT_REQ
       - STR_CHAPTER_PURITY
       - STR_DOMINION_ADEPTAS_RECRUITMENT_RESEARCH
+      - STR_NOT_BLOODYROSES
     requiresBuyBaseFunc:
       - STR_ADEPTAS_RECRUITMENT
     minStats:
@@ -415,6 +420,7 @@ soldiers:
       - STR_ADEPTAS_RECRUITMENT_REQ
       - STR_CHAPTER_PURITY
       - STR_ADEPTAS_ARMORCEL
+      - STR_NOT_BLOODYROSES
     requiresBuyBaseFunc:
       - STR_ADEPTAS_RECRUITMENT
     minStats:
@@ -494,6 +500,7 @@ soldiers:
     costSalary: 30000
     requires:
       - STR_DEATHCULT_ASSASSIN_ARMOR
+      - STR_NOT_BLOODYROSES
     minStats:
       tu: 50
       stamina: 45
@@ -575,6 +582,7 @@ soldiers:
       - STR_ADEPTAS
       - STR_INQOFF
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     minStats:
       tu: 70
       stamina: 80
@@ -652,6 +660,7 @@ soldiers:
     flagOffset: 21
     requires:
       - STR_CALLIDUS_ASSASSIN_REQUISITION
+      - STR_NOT_BLOODYROSES
     value: 250
     costSalary: 500000  # was 100k
     minStats:
@@ -731,6 +740,7 @@ soldiers:
     costSalary: 50000
     requires:
       - STR_IMPERIAL_ASSASSINS
+      - STR_NOT_BLOODYROSES
     minStats:
       tu: 70
       stamina: 80
@@ -807,6 +817,7 @@ soldiers:
   - type: STR_ADEPTAS_FRATERIS_MILITIA
     requires:
       - STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH
+      - STR_NOT_BLOODYROSES
     flagOffset: 42
     costBuy: 8000
     costSalary: 2500
@@ -887,6 +898,7 @@ soldiers:
   - type: STR_ADEPTAS_FRATERIS_MILITIA_VETERAN
     requires:
       - STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH
+      - STR_NOT_BLOODYROSES
     flagOffset: 42
     costSalary: 5000  # double salary
     minStats:
@@ -1044,6 +1056,7 @@ soldiers:
     flagOffset: 21
     requires:
       - STR_ADEPTAS_SUPERIOR_RESEARCH
+      - STR_NOT_BLOODYROSES
     costBuy: 1000000  # 1 million, alternatively a manufacturing project that costs kill tokens too. Want to avoid whole squads of these running around.
     costSalary: 50000
     minStats:
@@ -1127,6 +1140,7 @@ soldiers:
     requires:
       - STR_ADEPTAS_REPENTIA_SUPERIOR_RESEARCH
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     minStats:
       tu: 60
       stamina: 70
@@ -1208,6 +1222,7 @@ soldiers:
     requires:
       - STR_ADEPTAS_NOVITIATE_SUPERIOR_RESEARCH
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     minStats:
       tu: 60
       stamina: 70

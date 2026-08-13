@@ -1,0 +1,628 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+armors:
+
+  - type: STR_NOVICE_ARMOR_BLOODYROSE # Novice
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 12
+    spriteSheet: BLOODYROSE_CANTUS_battle.PCK
+    customArmorPreviewIndex: 1422
+    corpseBattle:
+      - STR_BRNOVICE_CORPSE
+    stats:
+      tu: 15
+      stamina: 5
+      health: 0
+      bravery: 0  # always multiples of 10
+      reactions: 5
+      firing: 5
+      throwing: 5
+      strength: 5
+      psiStrength: 0
+      psiSkill: 5
+      melee: 0
+    storeItem: STR_NOVICE_ARMOR_BLOODYROSE
+    frontArmor: 60
+    sideArmor: 50
+    rearArmor: 30
+    underArmor: 30
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.0  # FLAMES
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE
+      - 1.2  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    builtInWeapons:
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_REPENTIA_ARMOR_BLOODYROSE    # Repentia
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    spriteSheet: BLOODYROSE_REPENT_battle.PCK
+    customArmorPreviewIndex: 1425
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6
+    stats:
+      tu: 25
+      stamina: 30
+      firing: -30  # melee focused armor
+      health: 10
+      bravery: 10  # repentia garb greatly heightens bravery and devotion; not as much as true repentia
+      reactions: 10
+      throwing: 0
+      strength: 0
+      psiStrength: 10
+      psiSkill: 10  # repentia garb greatly heightens bravery and devotion; not as much as true repentia
+      melee: 10
+    corpseBattle:
+      - STR_BRREPENTIA_CORPSE
+    storeItem: STR_REPENTIA_ARMOR_BLOODYROSE
+    frontArmor: 50
+    sideArmor: 25
+    rearArmor: 10
+    underArmor: 10
+    damageModifier:  # CULTIST ARMOR
+      - 1.0  # none
+      - 0.9  # AP; why would this armor have massive AP resistance?
+      - 1.2  # FLAMES
+      - 1.2  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 0.7  # MELEE; freedom of movement to minimize melee damage
+      - 1.2  # ACID
+      - 1.0  # SMOKE; no filtration
+      - 0.0  # IMPACT
+      - 0.5  # MELTA
+    units:
+      - STR_REPENTIA_PLAYERBLOODYROSE
+    builtInWeapons:
+      - STR_EVISCERATOR_BR
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    loftempsSet: [3]
+    meleeDodge:
+      reactions: 0.1
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 10
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_HOSPITALIER_ARMOR_BLOODYROSE # Hospitalier
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5  # heartbeat sensor
+    spriteSheet: BLOODYROSE_HOSPI_battle.PCK
+    customArmorPreviewIndex: 1426
+    corpseBattle:
+      - STR_BRHOSPITAL_CORPSE
+    stats:
+      stamina: 40
+      health: 20
+      bravery: 0  # always multiples of 10
+      reactions: -20
+      firing: -10
+      throwing: 20
+      strength: 20
+      psiStrength: 0
+      psiSkill: 20
+      melee: 5
+    storeItem: STR_HOSPITALIER_ARMOR_BLOODYROSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 50
+    underArmor: 70
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 0.7  # PLASMA
+      - 0.7  # STUN
+      - 1.2  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.7  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_ADEPTAS_MEDI_KIT
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_ADEPTAS_ARMOR_BLOODYROSE  # Sister of Battle
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 2
+    spriteSheet: BLOODYROSE_SISTER_battle.PCK
+    customArmorPreviewIndex: 1423
+    corpseBattle:
+      - STR_BRADEPTAS_CORPSE
+    stats:
+      tu: 10
+      stamina: 20
+      health: 5
+      bravery: 10  # always multiples of 10
+      reactions: 5
+      firing: 5
+      throwing: 5
+      strength: 5
+      psiStrength: 0
+      psiSkill: 10
+      melee: 5
+    storeItem: STR_ADEPTAS_ARMOR_BLOODYROSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 60
+    underArmor: 70
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.6  # FLAMES
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    builtInWeapons:
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_SERAPHIM_ARMOR_BLOODYROSE    # Seraphim
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    spriteSheet: BLOODYROSE_SERAPH_battle.PCK
+    customArmorPreviewIndex: 1427
+    corpseBattle:
+      - STR_BRSERAPH_CORPSE
+    stats:
+      tu: 20
+      stamina: 20
+      health: 10
+      bravery: 0  # always multiples of 10
+      reactions: 10
+      firing: 10
+      throwing: 5
+      strength: 20
+      psiStrength: 0
+      psiSkill: 15
+      melee: 15
+    storeItem: STR_SERAPHIM_ARMOR_BLOODYROSE
+    frontArmor: 80
+    sideArmor: 70
+    rearArmor: 60
+    underArmor: 70
+    movementType: 1
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.8  # FLAMES
+      - 1.0  # HE
+      - 0.9  # LASCANON
+      - 0.9  # PLASMA
+      - 0.8  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    builtInWeapons:
+      - INV_NULL_3X3
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      DODGE_CHANCE: 0
+      FLIGHT_DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_SUPERIOR_ARMOR_BLOODYROSE     # Sister Superior Armor
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteSheet: BLOODYROSE_SISTERSUP_battle.PCK
+    customArmorPreviewIndex: 1428
+    corpseBattle:
+      - STR_BRSUPERIO_CORPSE
+    stats:
+      tu: 15
+      stamina: 20
+      health: 15
+      bravery: 20  # always multiples of 10
+      reactions: 12
+      firing: 12
+      throwing: 15
+      strength: 15
+      psiStrength: 0
+      psiSkill: 15
+      melee: 15
+    storeItem: STR_SUPERIOR_ARMOR_BLOODYROSE
+    frontArmor: 90
+    sideArmor: 80
+    rearArmor: 60
+    underArmor: 80
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.6  # FLAMES
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    specialWeapon: STR_LEAD_BY_EXAMPLE
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      NO_BENEFIT_FROM_INSPIRE: 1
+
+  - type: STR_ELOHIM_ARMOR_BLOODYROSE  # Elohim
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    spriteSheet: BLOODYROSE_ELOHIM_battle.PCK
+    customArmorPreviewIndex: 1430
+    corpseBattle:
+      - STR_BRELOHIM_CORPSE
+    stats:
+      tu: 15
+      stamina: 20
+      health: 10
+      bravery: 10  # always multiples of 10
+      reactions: 10
+      firing: 10
+      throwing: 10
+      strength: 10
+      psiStrength: 0
+      psiSkill: 10
+      melee: 10
+    storeItem: STR_ELOHIM_ARMOR_BLOODYROSE
+    frontArmor: 110
+    sideArmor: 90
+    rearArmor: 70
+    underArmor: 90
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.6  # FLAMES
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_RETRIBUTOR_ARMOR_BLOODYROSE  # Retributor
+    group: 4
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 4
+    antiCamouflageAtDark: 4
+    spriteSheet: BLOODYROSE_RETRIB_battle.PCK
+    customArmorPreviewIndex: 1431
+    corpseBattle:
+      - STR_BRRETRIB_CORPSE
+    stats:
+      tu: 10
+      stamina: 20
+      health: 5
+      bravery: 10  # always multiples of 10
+      reactions: 0
+      firing: 20
+      throwing: 0
+      strength: 15
+      psiStrength: 0
+      psiSkill: 10
+      melee: -10
+    storeItem: STR_RETRIBUTOR_ARMOR_BLOODYROSE
+    frontArmor: 110
+    sideArmor: 90
+    rearArmor: 70
+    underArmor: 90
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.7  # FLAMES
+      - 0.8  # HE
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.2  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    loftempsSet: [3]
+    tags:
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_CELESTIAN_ARMOR_BLOODYROSE    # Celestian
+    group: 5
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteSheet: BLOODYROSE_CELEST_battle.PCK
+    customArmorPreviewIndex: 1432
+    corpseBattle:
+      - STR_BRCELEST_CORPSE
+    storeItem: STR_CELESTIAN_ARMOR_BLOODYROSE
+    stats:
+      tu: 10
+      stamina: 20
+      health: 30
+      bravery: 30  # always multiples of 10
+      reactions: 15  # Long ranged replacement
+      firing: 25  # long range gunnery
+      throwing: 20
+      strength: 40  # heavy weapons capability
+      psiStrength: 0
+      psiSkill: 25
+      melee: 15  # -10 Long ranged replacement
+    frontArmor: 130
+    sideArmor: 110
+    rearArmor: 90
+    underArmor: 110
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.3  # FLAMES
+      - 0.6  # HE
+      - 0.8  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE Long range debuff
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.8  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    builtInWeapons:
+      - INV_NULL_3X3
+    loftempsSet: [3]
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 5
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_SACRESANT_ARMOR_BLOODYROSE  # Sacresant
+    group: 5
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteSheet: BLOODYROSE_SACRE_battle.PCK
+    customArmorPreviewIndex: 1433
+    corpseBattle:
+      - STR_BRSACRE_CORPSE
+    storeItem: STR_SACRESANT_ARMOR_BLOODYROSE
+    stats:
+      tu: 5
+      stamina: 30
+      health: 30
+      bravery: 30  # always multiples of 10
+      reactions: 30  # +5
+      firing: 5  # -20
+      throwing: 20
+      strength: 30
+      psiStrength: 0
+      psiSkill: 25
+      melee: 30
+    frontArmor: 150  # built in gunshield
+    sideArmor: 120  # reinforced for close combat
+    rearArmor: 90
+    underArmor: 120  # reinforced for close combat
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.3  # FLAMES
+      - 0.6  # HE
+      - 0.8  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 0.8  # MELEE BUFF
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.8  # MELTA
+    units:
+      - STR_ADEPTAS_PLAYERBLOODYROSE
+      - STR_CANONESS_PLAYERBLOODYROSE
+    loftempsSet: [4]
+    builtInWeapons:
+      - STR_SACRESANT_SHIELD
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 5
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_CANONESS_ARMOR_BLOODYROSE  # Canoness
+    group: 5
+    specialWeapon: STR_LEAD_BY_EXAMPLE
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    spriteSheet: BLOODYROSE_CANONESS_battle.PCK
+    customArmorPreviewIndex: 1429
+    corpseBattle:
+      - STR_BRCANON_CORPSE
+    storeItem: STR_CANONESS_ARMOR_BLOODYROSE
+    stats:
+      tu: 30
+      stamina: 35
+      health: 35
+      bravery: 50  # always multiples of 10
+      reactions: 30
+      firing: 30
+      throwing: 25
+      strength: 35
+      psiStrength: 25
+      psiSkill: 50
+      melee: 30
+    frontArmor: 140
+    sideArmor: 115
+    rearArmor: 100
+    underArmor: 115
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.3  # FLAMES
+      - 0.5  # HE
+      - 0.7  # LASCANON
+      - 0.6  # PLASMA
+      - 1.0  # STUN
+      - 0.9  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.7  # MELTA
+    units:
+      - STR_CANONESS_PLAYERBLOODYROSE
+    builtInWeapons:
+      - INV_NULL_3X3
+    loftempsSet: [3]
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+      ARMOR_GAINS_PSISKILL_SECONDARY_EXPERIENCE: 6
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      NO_BENEFIT_FROM_INSPIRE: 1
+
+  - type: STR_PENITENT_ARMOR_BLOODYROSE  # BR PENITENT MACHINE
+    group: 6
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6
+    spriteSheet: BLOODYROSE_PENITENTENGINE_battle.PCK
+    instantWoundRecovery: true
+    corpseGeo: STR_DREAD_CORPSE
+    corpseBattle:
+      - PEN_CORPSE1
+      - PEN_CORPSE2
+      - PEN_CORPSE3
+      - PEN_CORPSE4
+    frontArmor: 160
+    sideArmor: 140
+    rearArmor: 130
+    underArmor: 160
+    size: 2
+    moveSound: {mod: 40k, index: 700}
+    damageModifier:  # DREADNOUGHT ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES
+      - 0.8  # HE
+      - 1.2  # LASCANON
+      - 0.8  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    units:
+      - STR_BRPENITENT_PLAYERENGINE
+    drawingRoutine: 5
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_PENITENT_FLAMER
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_IMPERIUM: 1

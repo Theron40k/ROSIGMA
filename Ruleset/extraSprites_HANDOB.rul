@@ -23,7 +23,8 @@ extraSprites:
       2800: Resources/Psword/handOBAdeptasZweihander.png
       2840: Resources/Psword/handOBMCPSwordBlue.png
       3630: Resources/Psword/HELLSWORDhandob.png #needs 36 indexes
-
+      4406: Resources/Handobs/blacksword_handob.png  # needs 36 indices so takes every id between 4406 and 4442
+      4507: Resources/Handobs/btzweihanderhandob.png  # needs 36 indices so takes every id between 4507 and 4543
 
   # Normal non-animated handobs
   - type: HANDOB.PCK
@@ -92,6 +93,7 @@ extraSprites:
       724: Resources/Handobs/HANDOB_AUTOCARBINE_NAVY.png
       732: Resources/Handobs/HANDOB_HIVEHAMMER.png
       740: Resources/Handobs/HANDOB_COMBIPISTOL.png
+      752: Resources/Bolter/752.png  # restores blue ultra handob
 
 # Gap left for the extra bolter?
       760: Resources/Handobs/HANDOB_JAWSNAPPER.png
@@ -160,12 +162,56 @@ extraSprites:
       1334: Resources/Handobs/handob_lucius_t1.png  # STR_LASGUN_LUCIUS
       1342: Resources/Necron/NECRON_WARSCYTHE_HANDOB.png  # STR_NECRON_WARSCYTHE
 
+# 1350 is overlapping something. do no use
+# 1358-1381
+      1358: Resources/Handobs/HANDOB_MC_MULTILASER.png
+      1366: Resources/Handobs/STR_ROCKTOSS_handObj.png
+      1374: Resources/Handobs/HANDOB_IMPROVISED_PLASMA_GRENADE.png
+
+# Eldar 1382-1400 more at 4826
+      1382: Resources/Eldar/weapons/flamers/aeldari_flamer_fuel_handObj.png
+      1390: Resources/Eldar/weapons/flamers/dragon_breath_flamer_fuel_handObj.png
+
+# Krieg 1400-1498
+      1400: Resources/Handobs/handob_lucius_trenchgun.png
+      1408: Resources/Handobs/handob_lucius_grenade1.png
+      1416: Resources/Handobs/handob_lucius_grenade2.png
+      1424: Resources/Handobs/handob_lucius_t2.png
+      1432: Resources/Handobs/handob_lucius_t2_scope.png
+      1440: Resources/Handobs/handob_lucius_t3.png
+      1448: Resources/Handobs/handob_lucius_t3_scope.png
+      1456: Resources/Handobs/handob_lucius_MC.png
+      1464: Resources/Handobs/handob_lucius_MC_scope.png
+      1472: Resources/Handobs/handob_lucius_hellgun.png
+      1480: Resources/Handobs/handob_lucius_volleygun.png
+
+# ELDAR 1498-1698
+      1498: Resources/Eldar/weapons/fusionpistols/fusion_pistol_handObj.png
+      1506: Resources/Eldar/weapons/fusionpistols/dragon_fusion_pistol_handObj.png
+      1514: Resources/Eldar/weapons/fusionpistols/fusion_pistol_canister_handObj.png
+      1522: Resources/Eldar/weapons/fusionpistols/dragon_fusion_pistol_canister_handObj.png
+      1530: Resources/Eldar/weapons/dragonaxe_handObj.png
+      1538: Resources/Eldar/weapons/witchblade_handObj.png
+      1546: Resources/Eldar/weapons/singingspear_handObj.png
+      1554: Resources/Eldar/weapons/witchstaff_handObj.png
+      1562: Resources/Eldar/weapons/avenger_shurikencatapult_handObj.png
+      1570: Resources/Eldar/weapons/avenger_shurikencatapultscoped_handObj.png
+      1578: Resources/Eldar/weapons/avenger_shurikenpistol_handObj.png
+      1586: Resources/Eldar/weapons/avenger_shurikenpistolscoped_handObj.png
+      1594: Resources/Eldar/weapons/avenger_shurikenclip_handObj.png
+      1602: Resources/Eldar/weapons/aeldarimelee/aeldarisword_handObj.png
+      1610: Resources/Eldar/weapons/aeldarimelee/aeldarichainsword_handObj.png
+      1618: Resources/Eldar/weapons/aeldarimelee/aeldaripowersword_handObj.png
+      1626: Resources/Eldar/weapons/diresword_handObj.png
+      1634: Resources/Eldar/weapons/powerglaive_handObj.png
+      1642: Resources/Eldar/weapons/direswordvessel_handObj.png
+
 # Arbites; 1900-2000
       # Arbites' heavy stubber and ammo
       1900: Resources/Handobs/handob_handheld_heavy_stubber.png  # STR_HEAVY_STUBBER_HANDHELD replacement
 
 # ADEPTAS EXTRA
-      752: Resources/Bolter/752.png  # restores blue ultra handob
+
       2004: Resources/Adeptas/RetributorHandOB.png  # 2005
       2012: Resources/Adeptas/1496elohim.png  # 2008
       2020: Resources/Adeptas/PHGRENADE.png  # 2030
@@ -343,6 +389,39 @@ extraSprites:
       4110: Resources/Handobs/HELFROST_FANG_CANNON_HANDOB.png
       4118: Resources/hbolter/HBOLTER_SW_MC_HANDOB.png
 
+  # Black Templars Weapons
+
+
+
+      4128: Resources/Handobs/btboltpistolhandobA.png
+      4136: Resources/Handobs/btboltpistolhandobB.png
+      4144: Resources/Handobs/btbolterhandobA.png
+      4152: Resources/Handobs/btbolterhandobB.png
+      4160: Resources/Handobs/btplasmariflehandob.png
+      4168: Resources/Handobs/btplasmapistolhandob.png
+      4176: Resources/Handobs/btchainswordhandob.png
+      4184: Resources/Handobs/btstalkerboltpistolhandobA.png
+      4192: Resources/Handobs/btstalkerboltpistolhandobB.png
+  # note the black sword needs 36 indices and will take every id between 4406 and 4442
+      4443: Resources/Handobs/bttigrusboltpistolhandob.png
+      4451: Resources/Handobs/btflamerhandob.png
+      4459: Resources/Handobs/btchainaxehandob.png
+      4467: Resources/Handobs/btcroziushandob.png
+      4475: Resources/Handobs/btassaultcannonhandob.png
+      4483: Resources/Handobs/bthunderhammerhandob.png
+      4491: Resources/Handobs/btpowermacehandob.png
+      4499: Resources/Handobs/bthandflamerhandob.png
+  # note the zweihander needs 36 indices and will take every id between 4507 and 4543
+      4544: Resources/Handobs/btstormbolterhandobA.png
+      4552: Resources/Handobs/btstormbolterhandobB.png
+      4560: Resources/Handobs/btmultimeltahandob.png
+      4568: Resources/Handobs/btcombimeltaA.png
+      4576: Resources/Handobs/btcombimeltaB.png
+      4584: Resources/Handobs/btgravgunhandob.png
+      4592: Resources/Handobs/btomnisaxehandob.png
+      4600: Resources/Handobs/btMCchainswordhandob.png
+
+
 # Officio Assassinorum Weapons
       4200: Resources/Handobs/ADEPTAS_STUB_SNIPER_HANDOB.png # Repressor DMR
       4208: Resources/Handobs/ADEPTAS_STUB_SNIPER_HANDOB_DEPLOYED.png
@@ -364,3 +443,35 @@ extraSprites:
       4382: Resources/ORK/snazzy_big_shoota_handob.png
       4390: Resources/ORK/zog_gun_handob.png
       4398: Resources/ORK/hammer_hand_handob.png
+
+# Valhallan Weapons
+      4784: Resources/Handobs/HEAVY_STUBBER_VL_HANDOB.png
+      4792: Resources/Handobs/HEAVY_STUBBER_VL_HANDOB_BIPOD.png
+      4800: Resources/Handobs/AutogunsExpanded/VALHALLAN_STUBRIFLE_HANDOB.png
+      4808: Resources/Handobs/AutogunsExpanded/VALHALLAN_AUTOGUN_HANDOB.png
+      4816: Resources/Handobs/AutogunsExpanded/VALHALLAN_AUTOSTUBBER_HANDOB.png
+
+# Eldars - more at 1382
+      4826: Resources/Eldar/weapons/flamers/aeldari_flamer_handObj.png
+      4834: Resources/Eldar/weapons/flamers/dragon_breath_flamer_handObj.png
+      4842: Resources/Eldar/weapons/firepike_canister_handObj.png
+      4850: Resources/Eldar/weapons/Reaper_launcher_handObj.png #reaper launcher
+      4858: Resources/Eldar/weapons/ranger_longrifle_handObj.png
+      4866: Resources/Eldar/weapons/ranger_longriflescoped_handObj.png
+      4874: Resources/Eldar/weapons/ranger_longrifle_mag_handObj.png
+      4882: Resources/Eldar/weapons/firepike_handObj.png
+      4890: Resources/Eldar/weapons/shurikencannon_handObj.png
+      4898: Resources/Eldar/weapons/shurikencannon_mag_handObj.png
+      4906: Resources/Eldar/weapons/fusion_gun_handObj.png
+      4914: Resources/Eldar/weapons/dragon_fusion_gun_handObj.png
+      4922: Resources/Eldar/weapons/fusion_canister_handObj.png
+      4930: Resources/Eldar/weapons/deathspinner/deathspinner_handObj.png
+      4938: Resources/Eldar/weapons/deathspinner/deathspinner_spool_handObj.png
+      4946: Resources/Eldar/weapons/powerblades/eldar_powerblade_handObj.png
+      4954: Resources/Eldar/weapons/tempestlauncher/eldar_tempest_launcher_handObj.png
+      4962: Resources/Eldar/weapons/tempestlauncher/eldar_tempest_pods_handObj.png
+      4970: Resources/Eldar/weapons/spinneretrifle/spinneretrifle_handObj.png
+      4978: Resources/Eldar/weapons/spinneretrifle/spinneretrifle_spool_handObj.png
+      4986: Resources/Eldar/weapons/dragon_fusion_gun_canister_handObj.png
+
+      # 1698-1899 many free spaces here, make sure to double check

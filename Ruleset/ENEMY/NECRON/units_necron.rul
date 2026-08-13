@@ -548,7 +548,6 @@ units:
     spotter: 4
     sniper: 100
     energyRecovery: 200
-    # spawnUnit: STR_NECRON_IMORTAL
     builtInWeaponSets:
       - - STR_STAFF_OF_LIGHT
         - STR_NECRON_RESURRECTION_ORB
@@ -632,13 +631,13 @@ units:
     energyRecovery: 200
     builtInWeaponSets:
       - - STR_NECRON_FLAYED_ONE_CLAW
-        - STR_INTIMIDATION_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
         - STR_KILLPOINT_TOKEN_7
       - - STR_NECRON_FLAYED_ONE_CLAW
-        - STR_INTIMIDATION_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
         - STR_KILLPOINT_TOKEN_7
       - - STR_NECRON_FLAYED_ONE_CLAW
-        - STR_INTIMIDATION_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
         - STR_KILLPOINT_TOKEN_7
 
   - type: STR_NECRON_FLAYED_ONE_REVIVES  # STR_NECRON_FLAYED_ONE
@@ -1502,6 +1501,7 @@ armors:
   - type: STR_NECRON_LORD_ARMOR_REVIVES
     refNode: *NECRON_LORD_ARMOR_TEMPLATE
     spriteSheet: STR_NECRON_LORD_REVIVE_BS.PCK
+    deathFrames: 6
     tags:
       INFECTION_RESIST: 100  # infection immune
       INTIMIDATION_RESISTANCE: 100  # intimidate immune
@@ -1590,7 +1590,7 @@ armors:
     corpseBattle:
       - STR_NECRON_FLAYED_ONE_CORPSE
     drawingRoutine: 0
-    specialWeapon: STR_INTIMIDATION_WEAPON
+    specialWeapon: STR_INTIMIDATION_WEAPON_REACT_ONLY
     allowsRunning: false  # NPC limits for BAI
     damageModifier:  # NECRON ARMOR
       - 1.0  # none

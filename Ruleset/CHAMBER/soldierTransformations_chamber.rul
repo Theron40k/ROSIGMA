@@ -21,36 +21,24 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_INQ_STORMTROOPER
       - STR_IMPERIAL_INQUISITOR
+      - STR_IMPERIAL_INTERROGATOR
     soldierBonusType: STR_BONUS_INQ_ROSARIUS
     requiredCommendations:
       STR_VETERAN_COMMENDATION: 0
+    requiredPreviousTransformations:
+      - STR_INQ_TRANSFORM_RETINUE_INDUCTION
 
-    # Add support for bringing weaker Soldiers up to snuff at Token cost.
-  - name: STR_INQ_TRANSFORM_RETINUE_INDUCTION
-    cost: 0
-    requires:
-      - STR_CHAMBER_NOT_ARBITES
-    allowsDeadSoldiers: false
-    allowsLiveSoldiers: true
-    allowsWoundedSoldiers: true
-    upperBoundType: 1
-    requiredItems:
-      STR_KILLPOINT_TOKEN: 100
-    flatOverallStatChange:
-      tu: 5
-      stamina: 5
-      health: 10
-      bravery: 10
-      reactions: 5
-      firing: 5
-      throwing: 5
-      strength: 10
-      psiStrength: 0
-      psiSkill: 20
-      melee: 5
+  - &STR_INQ_TRANSFORM_SOLDIER_LIST
+    name: STR_INQ_TRANSFORM_SOLDIER_LIST_STUB #NOTE delete: down below so it doesn't show up itself.
     allowedSoldierTypes:
       # Try to include all the low grade Soldiers that you can get out of CMil Events
-      # Exclude Soldiers which are already sufficiently badass (Inq Stormtroopers, Canoness, etc)
+      # Exclude Soldiers which are already sufficiently badass (Canoness, full SOB, etc)
+      # Inquisition*
+      # NOTE: These should receive STR_INQ_TRANSFORM_RETINUE_INDUCTION for free when given in Events/Manuf (use spawnedSoldier:)
+      # NOTE: This excludes them from getting RetinueInduction stat bonuses, as intended.
+      - STR_IMPERIAL_INQUISITOR
+      - STR_IMPERIAL_INTERROGATOR
+      - STR_INQ_STORMTROOPER
       #Arbites
       - STR_GUARDPD
       - STR_JUDGE
@@ -67,7 +55,7 @@ soldierTransformation:
       - STR_PSYKER
       - STR_CATACHANVET_FIGHTER
       #Adeptas
-      - STR_ADEPTAS
+      #- STR_ADEPTAS # Full SOB excluded, would overshadow like all other options
       - STR_ADEPTAS_NOVICE
       - STR_ADEPTAS_REPENTIA
       - STR_ADEPTAS_FRATERIS_MILITIA
@@ -81,23 +69,106 @@ soldierTransformation:
       - STR_CHAOSCULT_OGRYN
       - STR_CHAOS_FANATIC_PLAYER
       - STR_CHAOSCULT_SOLDIER_LV2
-      - STR_ADEPTAS_CHAOS
-      - STR_HERETIC_SISTER
+      #- STR_ADEPTAS_CHAOS # Full SOB excluded, would overshadow like all other options
       - STR_CHAOSCULT_PRIEST_LV1
       - STR_CHAOSCULT_PRIEST_LV2
       - STR_SECTOID_FEMCULTIST
       - STR_CHAOS_WITCH_PLAYER
 
-    # Instant recovery option for precious Inquisitors.
-  - name: STR_INQ_TRANSFORM_REJUVENATE
-    cost: 50000
+
+    # Add support for bringing weaker Soldiers up to snuff at Token cost.
+  - refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
+    name: STR_INQ_TRANSFORM_RETINUE_INDUCTION
+    forbiddenPreviousTransformations:
+      - STR_INQ_TRANSFORM_RETINUE_INDUCTION
+    cost: 0
     requires:
       - STR_CHAMBER_NOT_ARBITES
     allowsDeadSoldiers: false
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
-    recoveryTime: 100 # 100 days
+    upperBoundType: 1
     requiredItems:
       STR_KILLPOINT_TOKEN: 50
+    flatOverallStatChange:
+      tu: 5
+      stamina: 5
+      health: 10
+      bravery: 10
+      reactions: 5
+      firing: 5
+      throwing: 5
+      strength: 10
+      psiStrength: 10
+      psiSkill: 20
+      melee: 5
+
+    # fast recovery option for precious Retinue
+  - refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
+    name: STR_INQ_TRANSFORM_REJUVENATE
+    cost: 25000
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    recoveryTime: 5 # set Recovery Time to 5 days
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 15
+    requiredPreviousTransformations:
+      - STR_INQ_TRANSFORM_RETINUE_INDUCTION
+
+  # Interrogator -> Inquisitor
+  # Currently only Radical Road, no one else has Interrogators involved
+  - name: STR_INQ_INQUISITOR_PROMOTION
+    cost: 100000
+    requires:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_MIDTIER_PREREQ
+    requiredCommendations:
+      STR_BATTLE_TESTED: 1
+    producedSoldierType: STR_IMPERIAL_INQUISITOR
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    recoveryTime: 100 # 100 days
+    upperBoundType: 1
+    flatOverallStatChange:
+      tu: 10
+      stamina: 10
+      health: 10
+      bravery: 10
+      reactions: 10
+      firing: 10
+      throwing: 10
+      strength: 10
+      psiStrength: 10
+      psiSkill: 10
+      melee: 10
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 100
     allowedSoldierTypes:
-      - STR_IMPERIAL_INQUISITOR
+      - STR_IMPERIAL_INTERROGATOR
+
+
+  - refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
+    name: STR_INQ_RR_ELDAR_MEDITATION_RITUAL
+    forbiddenPreviousTransformations:
+      - STR_INQ_RR_ELDAR_MEDITATION_RITUAL
+    cost: 0
+    requires:
+      - STR_INQ_RR_SECURE_ELDAR_SUPPORT_2
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    upperBoundType: 1
+    transferTime: 10
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+    flatOverallStatChange:
+      bravery: 10
+      psiStrength: 20
+
+
+  # Clean up the unused type from refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
+  - delete: STR_INQ_TRANSFORM_SOLDIER_LIST_STUB

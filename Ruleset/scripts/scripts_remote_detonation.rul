@@ -8,10 +8,11 @@ extended:
 
   scripts:
     healUnit:
-      - new: ROSIGMA_healU_activate_detonation
+      - new: ROSIGMA_hU_activate_detonation
         offset: 20
         code: |
           var int temp;
+          var int temp2;
 
 
           item.getTag temp Tag.ITEM_IS_REMOTE_DETONATOR;
@@ -19,8 +20,15 @@ extended:
             return;
           end;
 
+          battle_game.getTag temp2 Tag.BATTLE_GAME_DETONATOR_ACTIVE; # toggle remote detonation off if it's active
+          if gt temp2 0;
+            battle_game.setTag Tag.BATTLE_GAME_DETONATOR_ACTIVE 0;
+            battle_game.flashMessage "Remote Detonator Has Been Dectivated!";
+            return;
+          end;
+
           battle_game.setTag Tag.BATTLE_GAME_DETONATOR_ACTIVE temp; # activate the frequency
-          battle_game.flashMessage "WARNING: Detonator Has Been Activated!";
+          battle_game.flashMessage "WARNING: Remote Detonator Has Been Activated!";
           return;
 
     newTurnItem:
@@ -43,6 +51,10 @@ extended:
 
           item.getTag itemFrequency Tag.ITEM_IS_REMOTE_DETONATED;
           if lt itemFrequency 1;
+            item.getTag itemFrequency Tag.ITEM_IS_REMOTE_DETONATOR;
+            if ge itemFrequency 0;
+              item.setHealQuantity 999; #reset the number of uses for our detonators
+            end;
             return;
           end;
 

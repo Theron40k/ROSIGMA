@@ -87,6 +87,49 @@ manufacture:
     time: 500
     cost: 100000  # 100k
 
+  - name: STR_VALHALLA_STORMTROOPER_ARMOR
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_VALHALLA_HIGHTIER
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+      STR_ELERIUM_115: 10
+      STR_KILLPOINT_TOKEN: 40
+    producedItems:
+      STR_VALHALLA_STORMTROOPER_ARMOR: 1
+    space: 0
+    time: 500
+    cost: 100000  # 100k
+
+  - name: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_VALHALLA_HIGHTIER
+    requiredItems:
+      STR_ALIEN_ALLOYS: 40
+      STR_ELERIUM_115: 20
+      STR_KILLPOINT_TOKEN: 50
+    producedItems:
+      STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC: 1
+    space: 0
+    time: 500
+    cost: 100000  # 100k
+
+  - name: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_VALHALLA_HIGHTIER
+    requiredItems:
+      STR_ALIEN_ALLOYS: 40
+      STR_ELERIUM_115: 20
+      STR_KILLPOINT_TOKEN: 50
+    producedItems:
+      STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR: 1
+    space: 0
+    time: 500
+    cost: 250000  # 250k
+
+
   - name: STR_COMBIPISTOL_STUBPLASMA
     category: STR_WEAPON
     requires:
@@ -114,6 +157,7 @@ manufacture:
     category: STR_WEAPON
     requires:
       - STR_PLASMA_RIFLE_DEP1
+      - STR_NOT_VALHALLAN_STRATEGY
     space: 0
     time: 820
     cost: 88000
@@ -222,7 +266,7 @@ manufacture:
     category: STR_AMMUNITION
     requires:
       - STR_UFO_CONSTRUCTION  # ceramite tier
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
     space: 0
     time: 50
     cost: 40000  # 4k per drum
@@ -372,6 +416,7 @@ manufacture:
     category: STR_WEAPON
     requires:
       - STR_MIDTIER_PREREQ
+      - STR_NOT_VALHALLAN_STRATEGY
     space: 0
     time: 10
     cost: 100000
@@ -384,6 +429,7 @@ manufacture:
     category: STR_WEAPON
     requires:
       - STR_MIDTIER_PREREQ
+      - STR_NOT_VALHALLAN_STRATEGY
     space: 0
     time: 600
     cost: 20000
@@ -400,6 +446,7 @@ manufacture:
     category: STR_AMMUNITION
     requires:
       - STR_MIDTIER_PREREQ
+      - STR_NOT_VALHALLAN_STRATEGY
     space: 0
     time: 200
     cost: 500
@@ -655,6 +702,7 @@ manufacture:
     category: STR_WEAPON
     requires:
       - STR_GUARD_AND_ARBITES
+      - STR_NOT_VALHALLAN_STRATEGY
     space: 0
     time: 10
     cost: 0
@@ -665,6 +713,7 @@ manufacture:
     category: STR_WEAPON
     requires:
       - STR_GUARD_AND_ARBITES
+      - STR_NOT_VALHALLAN_STRATEGY
     space: 0
     time: 10
     cost: 0
@@ -697,6 +746,7 @@ manufacture:
     requires:
       - STR_KRIEG_GUARDSMEN
       - STR_CHAPTER_PURITY
+      - STR_NOT_VALHALLAN_STRATEGY
     space: 0
     time: 1
     cost: 20000
@@ -1495,6 +1545,23 @@ manufacture:
       STR_UFO_CONSTRUCTION: 2
     producedItems:
       STR_AUTOCANNON_AP_AMMO: 5
+
+  - name: STR_HAND_MC_MULTILASER
+    category: STR_WEAPON
+    requires:
+      - STR_UFO_CONSTRUCTION # Ceramite
+      - STR_MULTILAS_HANDHELD_RESEARCH
+      - STR_MASTER_CRAFTING
+    space: 0
+    time: 2000
+    cost: 250000
+    listOrder: 13500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_UFO_CONSTRUCTION: 10
+      STR_KILLPOINT_TOKEN: 200
+    producedItems:
+      STR_HAND_MC_MULTILASER: 1
 
   - name: STR_MC_UMBRA_GL
     category: STR_WEAPON

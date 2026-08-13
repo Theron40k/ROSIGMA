@@ -38,6 +38,7 @@ soldierTransformation:
 
   - name: STR_CONVERT_TO_CHAOS
     requires:
+      - STR_CHAOS_PATH
       - STR_CONVERT_TO_CHAOS_RESEARCH
     requiresBaseFunc: [CHAOS]  # Requires Chaos Shrine
     cost: 1000
@@ -429,7 +430,6 @@ soldierTransformation:
     requires:
       - STR_CHAOS_PATH
       - STR_CONVERT_TO_CHAOS_RESEARCH
-      - STR_CONVERT_TO_CHAOS_ADEPTAS
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
     requiresBaseFunc: [CHAOS]  # Requires Chaos Shrine
     cost: 25000
@@ -963,7 +963,6 @@ soldierTransformation:
   - name: STR_CONVERT_TO_PLAGUE_OGRYN
     cost: 40000
     requires:
-      - STR_CONVERT_TO_CHAOS_RESEARCH
       - STR_NURGLE_OPTIONS
     requiresBaseFunc: [CHAOS]
     requiredItems:

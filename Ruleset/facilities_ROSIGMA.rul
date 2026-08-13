@@ -69,6 +69,9 @@ facilities:
     refundValue: 250000
     canBeBuiltOver: true
     destroyedFacility: STR_CORRIDOR
+    rightClickActionType: 1
+    requires:
+      - STR_CHAMBERMILITANT
 
   - type: STR_MISSILE_DEFENSES
     refundValue: 100000
@@ -614,3 +617,48 @@ facilities:
       - STR_OUTPOST_ADEPTAS
       - STR_OUTPOST_MARINES
       - STR_OUTPOST_CHAOSCULT
+
+  - type: STR_BRCOMMAND_ADEPTAS  # BR Commandery
+    placeSound: {mod: 40k, index: 98}
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+    requiresBaseFunc: [BASE]
+    provideBaseFunc: [HANGAR, IMPERIUM, RESE, MANU, PSI, BLOODYORDER]
+    labs: 20
+    workshops: 20
+    psiLabs: 10
+    connectorsDisabled: false
+    spriteShape: {mod: 40k, index: 600}
+    spriteFacility: {mod: 40k, index: 600}
+    size: 4
+    buildCost: 1000000
+    crafts: 1
+    buildTime: 10
+    monthlyCost: 300000
+    personnel: 60
+    storage: 100
+    radarRange: 2577
+    radarChance: 20
+    mapName: XBASE_78
+    storageTiles:
+      - [24, 6, 1]
+      - [25, 6, 1]
+      - [27, 6, 1]
+      - [22, 4, 1]
+      - [34, 10, 1]
+      - [28, 3, 1]
+      - [27, 3, 2]
+    verticalLevels:
+      - type: ground
+        terrain: COMMANDSOIL
+        blocks: [0]
+        size: [4, 4, 0]
+      - type: middle
+        blocks: [78] # XBASE_78 should be block 78 too
+        size: [4, 4, 1] # if the craft is going on z = 1, the height here needs to be 1
+      - type: ceiling
+        size: [4, 4, 3] # x and y need to match the size of the facility, and all of the heights should add up to the deployment height
+        terrain: BRAVUS4X4 # the BR Arvus
+        blocks: [0]
+    listOrder: 800

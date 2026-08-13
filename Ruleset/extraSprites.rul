@@ -146,6 +146,15 @@ extraSprites:
   - typeSingle: LOOTED_UFO_CODEX.SPK
     fileSingle: Resources/ORK/looted_ufo_codex.png
 
+  - typeSingle: ORK_EVOLUTION_TREE.SPK
+    fileSingle: Resources/ORK/ORK_TRANSFORMATION_BACKGROUND_CODEX.png
+  - typeSingle: WARBOSS_WEAKSAUCE.SPK
+    fileSingle: Resources/ORK/ORK_WARBOSS_DEFEATED.png
+  - typeSingle: ORK_SPARKY_FIELD.SPK
+    fileSingle: Resources/ORK/SPARKY_POWER_FIELD_CODEX.png
+  - typeSingle: ORK_CAPSULE.SPK
+    fileSingle: Resources/ORK/ORK_CAPSULE.png
+
   - typeSingle: IMPERIAL_GENERIC.SPK
     fileSingle: Resources/CODEX/imperialgen.png
 
@@ -437,11 +446,42 @@ extraSprites:
       2168: Resources/TAU/TAU_devilfish_minimised.png
       2169: Resources/TAU/TAU_remora_minimised.png
       2170: Resources/TAU/TAU_barracuda_minimised.png
+      2171: Resources/TAU/TAU_orca_minimised.png
       2178: Resources/Crafts/TruckArmorTau_dogfight.png
       2179: Resources/TAU/TAU_devilfish_dogfight.png
       2180: Resources/TAU/TAU_remora_dogfight.png
       2181: Resources/TAU/TAU_barracuda_dogfight.png
+      2182: Resources/TAU/TAU_orca_dogfight.png
 
+
+  # player BT BR
+
+      2205: Resources/Crafts/BTdroppods_minimised.png
+      2216: Resources/Crafts/BTdroppods_dogfight.png
+      2206: Resources/Crafts/BRarvus_minimised.png
+      2217: Resources/Crafts/BRarvus_dogfight.png
+      2207: Resources/Crafts/BTBRrhino_minimised.png
+      2218: Resources/Crafts/BTBRrhino_dogfight.png
+      2208: Resources/Crafts/BTlandraid_minimised.png
+      2219: Resources/Crafts/BTlandraid_dogfight.png
+      2209: Resources/Crafts/BTspeeder_minimised.png
+      2220: Resources/Crafts/BTspeeder_dogfight.png
+
+  # player Valhallan Guard craft
+      2300: Resources/Crafts/TruckChaos_minimised.png #for VL Starter
+      2301: Resources/Crafts/TruckArmorChaos_minimised.png #for VL MidTier Trucks
+      2302: Resources/Crafts/Chimera_minimised.png
+      2303: Resources/Crafts/Leman_minimised.png
+      2304: Resources/Crafts/Leman_minimised.png
+      2305: Resources/Crafts/Cassium_minimised.png
+      2306: Resources/Crafts/Gorgon_minimised.png
+      2311: Resources/Crafts/TruckChaos_dogfight.png #for VL Starter
+      2312: Resources/Crafts/TruckArmorChaos_dogfight.png #for VL MidTier Trucks
+      2313: Resources/Crafts/Chimera_dogfight.png
+      2314: Resources/Crafts/Leman_dogfight.png
+      2315: Resources/Crafts/Leman_dogfight.png
+      2316: Resources/Crafts/Cassium_dogfight.png
+      2317: Resources/Crafts/Gorgon_dogfight.png
 
   - type: BASEBITS.PCK
     width: 192
@@ -450,7 +490,8 @@ extraSprites:
     subY: 32
     files:
       1100: Resources/Ranks/ranks_basescape.png
-
+      4000: Resources/Eldar/Ranks/eldar_ranks_basescape.png         #smoke.pck is in the ExtraspritesAnimation ruleset
+      4036: Resources/Eldar/Ranks/eldar_ranks_basescape2.png
   - type: BASEBITS.PCK
     files:
       135: Resources/Crafts/Valkyrieinq_base.png
@@ -618,8 +659,25 @@ extraSprites:
       2201: Resources/TAU/TAU_devilfish_base.png
       2202: Resources/TAU/TAU_remora_base.png
       2203: Resources/TAU/TAU_barracuda_base.png
+      2204: Resources/TAU/TAU_orca_base.png
 
-  # chaos cult end
+  # player BT BR
+
+      2238: Resources/Crafts/BTdroppods_base.png
+      2239: Resources/Crafts/BRarvus_base.png
+      2240: Resources/Crafts/BTBRrhino_base.png
+      2241: Resources/Crafts/BTlandraid_base.png
+      2242: Resources/Crafts/BTspeeder_base.png
+
+  # player Valhallan Guard
+      2333: Resources/Crafts/wagonvlstarter_baseui.png
+      2334: Resources/Crafts/wagonvl_baseui.png
+      2335: Resources/Crafts/vl_chimera_baseui.png
+      2336: Resources/Crafts/vl_lemon_baseui.png
+      2337: Resources/Crafts/vl_lemon_riders_baseui.png
+      2338: Resources/Crafts/Cassium_base_vl.png
+      2339: Resources/Crafts/vl_gorgon_baseui.png
+
   - typeSingle: 07_TEMP.SPK  # base2
     fileSingle: Resources/Basebits/07_TEMP.png
 
@@ -810,6 +868,9 @@ extraSprites:
   - typeSingle: HEAVY_WEAPON_TOOLS.SPK
     fileSingle: Resources/Pedia/heavyweapontools.png
 
+  - typeSingle: SERVO_SKULL.SPK
+    fileSingle: Resources/CODEX/SERVO_SKULL_CODEX.png
+
   - typeSingle: HEAVY_WEAPON_TEAMS.SPK
     fileSingle: Resources/Pedia/heavybolterassembly.png
 
@@ -824,6 +885,12 @@ extraSprites:
 
   - typeSingle: COMMENDATION_CHAOS_ATTENTION.SPK
     fileSingle: Resources/Pedia/wbchaosattention.png
+
+  - typeSingle: COMMENDATION_CHAOS_APOTHEOSIS.SPK
+    fileSingle: Resources/Pedia/chaosapotheosis.png
+
+  - typeSingle: COMMENDATION_PARDON_BRREPENTIA.SPK
+    fileSingle: Resources/Pedia/BRpardonned.png
 
 
   - typeSingle: VINDICAREINV.SPK  # MONK INV
@@ -1390,6 +1457,187 @@ extraSprites:
     height: 320
     files:
       0: Resources/UnitSprites/chimera_turret_hb2_bs.png
+
+  # *** VALHALLAN turrets ***
+##VL CHIMERA TURRETS AND SPONSONS
+  - type: CHIMERAVL_TURRET_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/Advanced Turrets/chimera_turret_hb2_vl_bs.png
+
+  - type: CHIMERA_TURRET_VL_HB_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/Advanced Turrets/chimera_turret_vl_bs.png
+
+  - type: CHIMERA_TURRET_VL_AC_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/Advanced Turrets/chimeravl_AC_turret_camo_bs.png
+
+  - type: CHIMERA_TURRET_VL_COMMAND_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/Advanced Turrets/VALHALLAN_COMMANDTURRET_BS.png
+
+  - type: CHIMERA_HULL_VL_BS.PCK
+    subX: 32
+    subY: 40
+    width: 512
+    height: 80
+    files:
+      0: Resources/Advanced Turrets/chimera_vl_hull_bs.png
+
+  - type: CHIMERA_HULL_VL_HB_BS.PCK
+    subX: 32
+    subY: 40
+    width: 512
+    height: 80
+    files:
+      0: Resources/Advanced Turrets/chimera_hull_HB_vl.png
+
+##VL LEMAN TURRETS AND SPONSONS
+
+  - type: VALHALLAN_BIG_WHITE_LEMAN_TURRET_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/Advanced Turrets/valhallan_big_white_leman_turret.png
+
+  - type: VALHALLAN_BIG_BLUE_LEMAN_TURRET_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/Advanced Turrets/valhallan_big_leman_turret.png
+
+  - type: VALHALLAN_LEMAN_BCTURRET_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/Advanced Turrets/VL_LEMON_BCTURRET_BS.png
+
+  - type: VALHALLAN_LEMAN_PLASMATURRET_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/Advanced Turrets/VL_LEMON_PLASMATURRET_BS.png
+
+  - type: LEMAN_VL_SPONSON.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/leman_vl_sponson_bs.png
+
+  - type: VL_LEMON_RSPONSON_HB_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/VL_LEMON_RSPONSON_HB_BS.png
+
+  - type: VL_LEMON_RSPONSON_FLAMER_BS.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/VL_LEMON_RSPONSON_FLAMER_BS.png
+
+  - type: VL_LEMON_HULL_HB_BS.PCK
+    subX: 32
+    subY: 40
+    width: 512
+    height: 80
+    files:
+      0: Resources/Advanced Turrets/VL_LEMON_HULL_HB_BS.png
+
+  - type: VL_LEMON_HULL_LASC_BS.PCK
+    subX: 32
+    subY: 40
+    width: 512
+    height: 80
+    files:
+      0: Resources/Advanced Turrets/VL_LEMON_HULL_LASC_BS.png
+
+  - type: VL_LEMON_HULLEMPTY_BS.PCK
+    subX: 32
+    subY: 40
+    width: 512
+    height: 80
+    files:
+      0: Resources/Advanced Turrets/VL_LEMON_HULLEMPTY_BS.png
+
+###VL GORGON SPONSONS
+  - type: GORGONVL_HEAVY_FLAMER_FRONT_LEFT.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/gorgonvl_heavy_flamer_front_left.png
+
+  - type: GORGONVL_HEAVY_FLAMER_BACK_LEFT.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/gorgonvl_heavy_flamer_back_left.png
+
+  - type: GORGONVL_HEAVY_FLAMER_FRONT_RIGHT.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/gorgonvl_heavy_flamer_front_right.png
+
+  - type: GORGONVL_HEAVY_FLAMER_BACK_RIGHT.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/gorgonvl_heavy_flamer_back_right.png
+
+  - type: GORGONVL_HEAVY_STUBBER_LEFT.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/gorgonvl_heavy_stubber_left.png
+
+  - type: GORGONVL_HEAVY_STUBBER_RIGHT.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 120
+    files:
+      0: Resources/Advanced Turrets/gorgonvl_heavy_stubber_right.png
 
   # SQUAT Inventory
   - typeSingle: SFLAK_33F0.SPK
@@ -2885,6 +3133,9 @@ extraSprites:
   - typeSingle: ARMAGEDDON_MISSILELAUNCHER_MELTA_CODEX.SPK
     fileSingle: Resources/CODEX/ARMAGEDDON_MISSILELAUNCHER_MELTA_CODEX.png
 
+  - typeSingle: WARPFIRE_MISSILE_LAUNCHER_CODEX.SPK
+    fileSingle: Resources/CODEX/WARPFIRE_MISSILE_LAUNCHER_CODEX.png
+
   - typeSingle: SL_HELLGUN_CODEX.SPK
     fileSingle: Resources/CODEX/SL_HELLGUN_CODEX.png
 
@@ -2929,6 +3180,10 @@ extraSprites:
 
   - typeSingle: CODEX_STR_LIGHT_POWERFIST.SPK  # Powerfist Striped
     fileSingle: Resources/CODEX/HAZARDFIST_CODEX.png
+
+  # phospex weapons generic
+  - typeSingle: PHOSPEX_BOMB_CODEX.SPK
+    fileSingle: Resources/CODEX/PHOSPEX_BOMB_CODEX.png
 
   # SL Sentinel Codex art
   - typeSingle: SL_SENTINEL_OPEN_MISSILE_CODEX.SPK
@@ -2986,11 +3241,23 @@ extraSprites:
   - typeSingle: VALHALLAN_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_CODEX.png
 
+  - typeSingle: VALTRUCK_CODEX.SPK
+    fileSingle: Resources/CODEX/VALTRUCK_CODEX.png
+
   - typeSingle: VALHALLAN_CARAPACE_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_CARAPACE_CODEX.png
 
+  - typeSingle: VALHALLAN_STORMTROOPER2_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STORMTROOPER2_CODEX.png
+
   - typeSingle: VALHALLAN_OFFICER_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_OFFICER_CODEX.png
+
+  - typeSingle: VALHALLAN_CARAPACE_OFFICER_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_CARAPACE_OFFICER_CODEX.png
+
+  - typeSingle: VALHALLAN_STORMTROOPER_OFFICER2_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STORMTROOPER_OFFICER2_CODEX.png
 
   - typeSingle: VALHALLAN_SNIPER_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_SNIPER_CODEX.png
@@ -2998,14 +3265,56 @@ extraSprites:
   - typeSingle: VALHALLAN_VETERAN2_CODEX.SPK
     fileSingle: Resources/CODEX/VALHALLAN_VETERAN2_CODEX.png
 
+  - typeSingle: VALHALLAN_MEDIC_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_MEDIC_CODEX.png
+
+  - typeSingle: VALHALLAN_CARAPACE_MEDIC_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_CARAPACE_MEDIC_CODEX.png
+
+  - typeSingle: VALHALLAN_STORMTROOPER_MEDIC_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STORMTROOPER_MEDIC_CODEX.png
+
+  - typeSingle: VALHALLAN_WOLFHOUND_CODEX.SPK
+    fileSingle: Resources/CODEX/wolfhoundcodex.png
+
+  - typeSingle: VALHALLAN_STUBRIFLE_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_STUBRIFLE_CODEX.png
+
+  - typeSingle: VALHALLAN_AUTOSTUBBER_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_AUTOSTUBBER_CODEX.png
+
+  - typeSingle: VALHALLAN_AUTOGUN_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_AUTOGUN_CODEX.png
+
+  - typeSingle: VALHALLAN_HEAVY_STUBBER_CODEX.SPK
+    fileSingle: Resources/CODEX/VALHALLAN_HEAVY_STUBBER_CODEX.png
+
   - type: VALHALLAN_FLAK_BS.PCK
     width: 512
-    height: 720
+    height: 760
     subX: 32
     subY: 40
     files:
       0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_flak.png
       1000: Resources/UnitSprites/bs_valhalla_flak_sb.png
+
+  - type: VALHALLAN_FLAK_MEDIC_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_flak_medic.png
+      1000: Resources/UnitSprites/bs_valhalla_flak_medic_sb.png
+
+  - type: VALHALLAN_FLAK_OFFICER_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_flak_officer.png
+      1000: Resources/UnitSprites/bs_valhalla_flak_officer_sb.png
 
   - type: VALHALLAN_CARAPACE_BS.PCK
     width: 512
@@ -3015,6 +3324,52 @@ extraSprites:
     files:
       0: Resources/UnitSprites/NOSANDBAGS_BS/valhalla_carapace_bs.png
       1000: Resources/UnitSprites/valhalla_carapace_bs_sb.png
+
+  - type: VALHALLAN_CARAPACE_MEDIC_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_caraprace_medic.png
+      1000: Resources/UnitSprites/bs_valhalla_carapace_medic_sb.png
+
+  - type: VALHALLAN_CARAPACE_OFFICER_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_caraprace_officer.png
+      1000: Resources/UnitSprites/bs_valhalla_carapace_officer_sb.png
+
+  - type: VALHALLAN_STORMTROOPER_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_stormtrooper.png
+      1000: Resources/UnitSprites/bs_valhalla_stormtrooper_sb.png
+
+  - type: VALHALLAN_STORMTROOPER_MEDIC_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_stormtrooper_medic.png
+      1000: Resources/UnitSprites/bs_valhalla_stormtrooper_medic_sb.png
+
+  - type: VALHALLAN_STORMTROOPER_OFFICER_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/bs_valhalla_stormtrooper_officer.png
+      1000: Resources/UnitSprites/bs_valhalla_stormtrooper_officer_sb.png
+
 
   # VALHALLAN ROOKIE Inventory
   - typeSingle: GUARD_VALHALLAN_ROOKIE_33F0.SPK
@@ -3100,6 +3455,90 @@ extraSprites:
   - typeSingle: GUARD_VALHALLAN_FLAK_33M9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAK/man_0m9.png
 
+ # VALHALLAN FLAK MEDIC Inventory
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKMEDIC_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKMEDIC/man_0m9.png
+
+ # VALHALLAN FLAK OFFICER Inventory
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_FLAKOFFICER_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANFLAKOFFICER/man_0m9.png
+
  # VALHALLAN CARAPACE Inventory
   - typeSingle: GUARD_VALHALLAN_CARAPACE_33F0.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0f0.png
@@ -3141,6 +3580,180 @@ extraSprites:
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m8.png
   - typeSingle: GUARD_VALHALLAN_CARAPACE_33M9.SPK
     fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACE/man_0m9.png
+
+ # VALHALLAN CARAPACE MEDIC Inventory
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEMEDIC_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEMEDIC/man_0m9.png
+
+ # VALHALLAN CARAPACE OFFICER Inventory
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_CARAPACEOFFICER_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANCARAPACEOFFICER/man_0m9.png
+
+ # VALHALLAN STORMTROOPER Inventory
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPER_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPER/man_0m9.png
+
+ # VALHALLAN STORMTROOPER MEDIC Inventory
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33F9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0f9.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M1.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m1.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M2.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m2.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M3.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m3.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M4.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m4.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M5.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m5.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M6.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m6.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M7.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m7.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M8.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m8.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPERMEDIC_33M9.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPERMEDIC/man_0m9.png
+
+ # VALHALLAN STORMTROOPER OFFICER Inventory
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPEROFFICER_33F0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPEROFFICER/man_0f0.png
+  - typeSingle: GUARD_VALHALLAN_STORMTROOPEROFFICER_33M0.SPK
+    fileSingle: Resources/UnitSprites/Armors/INVVALHALLANSTORMTROOPEROFFICER/man_0m0.png
 
   # Elite guard armors PCKs
   - type: STORMTROOPER_CARAPACE.PCK
@@ -4057,6 +4670,15 @@ extraSprites:
 
   - typeSingle: INQUISITOR_CODEX.SPK
     fileSingle: Resources/CODEX/INQUISITOR_CODEX.png
+  - typeSingle: INQUISITORIAL_ROSARIUS.SPK
+    fileSingle: Resources/CODEX/INQUISITORIAL_ROSARIUS.png
+  - typeSingle: INQUISITORIAL_RETINUE.SPK
+    fileSingle: Resources/CODEX/INQUISITORIAL_RETINUE.png
+  - typeSingle: MEDICAE_STATION.SPK
+    fileSingle: Resources/CODEX/MEDICAE_STATION.png
+
+  - typeSingle: STR_GK_HB.SPK
+    fileSingle: Resources/CODEX/GREY_KNIGHTS_HANDBOLTER_CODEX.png
 
   # INQ STORMTROOPER Inventory
   - typeSingle: INQ_STORMTROOPER_INV_F0.SPK
@@ -4206,6 +4828,101 @@ extraSprites:
   - typeSingle: MEKBOYINV.SPK  # FOES INV
     fileSingle: Resources/ORK/MEKBOYINV.png  # placeholder
 
+  # ORK PLAYER PAPERDOLL
+  ### GROT
+  # 1: GROT_BODY
+  # 2: GROT_PANTS #not implemented yet
+  # 3: GROT_PANTS_ACCESSORY
+  # 4: GROT_SHOES
+  # 5: GROT_SHIRT
+  # 6: GROT_SHOULDERS
+  # 7: GROT_ARM_ACCESSORY
+  # 8: GROT_FACE
+  # 9: GROT_EARS
+  # 10: GROT_HEAD_INJURY
+  # 11: GROT_HEAD_JAW
+  # 12: GROT_HEAD_HAT
+  # 13: GROT_HEAD_ACCESSORY
+  - typeSingle: GROT_BODY__1__GROT_BODY_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_01.png
+  - typeSingle: GROT_PANTS_ACCESSORY__3__PANTS_ACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_lowerBodyAccessory_01.png
+  - typeSingle: GROT_SHOES__4__SHOES_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_shoes_01.png
+  - typeSingle: GROT_SHOES__4__SHOES_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_shoes_02.png
+  - typeSingle: GROT_SHOES__4__SHOES_03
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_shoes_03.png
+  - typeSingle: GROT_SHIRT__5__SHIRT_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_chestAccessory_01.png
+  - typeSingle: GROT_SHIRT__5__SHIRT_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_chestAccessory_02.png
+  - typeSingle: GROT_SHIRT__5__SHIRT_03
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_chestAccessory_03.png
+  - typeSingle: GROT_SHOULDERS__6__SHOULDERS_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_shoulderAccessory_01.png
+  - typeSingle: GROT_ARM_ACCESSORY__7__ARM_ACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_armAccessory_01.png
+  - typeSingle: GROT_ARM_ACCESSORY__7__ARM_ACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_armAccessory_02.png
+  - typeSingle: GROT_ARM_ACCESSORY__7__ARM_ACCESSORY_03
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_body_armAccessory_03.png
+  - typeSingle: GROT_FACE__8__FACE_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_face_01.png
+  - typeSingle: GROT_EARS__9__EARS_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_face_ears_01.png
+  - typeSingle: GROT_EARS__9__EARS_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_face_ears_02.png
+  - typeSingle: GROT_EARS__9__EARS_03
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_face_ears_03.png
+  - typeSingle: GROT_HEAD_INJURY__10__INJURY_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_injury_01.png
+  - typeSingle: GROT_HEAD_INJURY__10__INJURY_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_injury_02.png
+  - typeSingle: GROT_HEAD_INJURY__10__INJURY_03
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_injury_03.png
+  - typeSingle: GROT_HEAD_JAW__11__JAW_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_jaw_01.png
+  - typeSingle: GROT_HEAD_JAW__11__JAW_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_jaw_02.png
+  - typeSingle: GROT_HEAD_JAW__11__JAW_03
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_jaw_03.png
+  - typeSingle: GROT_HEAD_JAW__11__JAW_04
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_jaw_04.png
+  - typeSingle: GROT_HEAD_JAW__11__JAW_05
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_jaw_05.png
+  - typeSingle: GROT_HEAD_HAT__12__HAT_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_hat_01.png
+  - typeSingle: GROT_HEAD_HAT__12__HAT_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_hat_02.png
+  - typeSingle: GROT_HEAD_HAT__12__HAT_03
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_hat_03.png
+  - typeSingle: GROT_HEAD_HAT__12__HAT_04
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_hat_04.png
+  - typeSingle: GROT_HEAD_ACCESSORY__13__HEAD_ACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_Accessory_01.png
+  - typeSingle: GROT_HEAD_ACCESSORY__13__HEAD_ACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/Gretchin/Gretching_head_Accessory_02.png
+
+  ### ORK
+  ### AUTHOR NOTE: each body will have dedicated layers for everything. base bodies are too different
+  ### all layers except the one with [ARMORTYPE] will be generic and reusable for future paperdolls
+  ### LAYERS ORDER:
+  # 1: ORK_BODY
+  # 2: ORK_PANTS #not implemented yet
+  # 3: ORK_PANTS_[ARMORTYPE]_PANTSACCESSORY # can be empty
+  # 4: ORK_SHOES
+  # 5: SHIRT_SHIRT
+  # 6: ORK_[ARMORTYPE]_ARMOR
+  # 7: ORK_[ARMORTYPE]_ARMOR_ACCESSORY #empty accessory layer for the future if a madman want to give them more drip
+  # 8: ORK_FACE
+  # 9: ORK_EARS
+  # 10: ORK_HEAD_INJURY #empty accessory layer for the future if a madman want to give them more drip
+  # 11: ORK_HEAD_JAW #empty accessory layer for the future if a madman want to give them more drip
+  # 12: ORK_HEAD_[ARMORTYPE]_HELMET
+  # 13: ORK_HEAD_[ARMORTYPE]_ACCESSORY #empty accessory layer for the future if a madman want to give them more drip
+  - typeSingle: ORK_BODY__1__ORK_BODY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01.png
 
   # Deathskulls INV
 
@@ -4525,7 +5242,7 @@ extraSprites:
   - typeSingle: UP015.SPK  # CHRYSSALID Origins
     fileSingle: Resources/FOESPEDIAADEPTAS/UPCORI.png
   - typeSingle: UP038.SPK  # Altar Rituals
-    fileSingle: Resources/FOESPEDIAADEPTAS/UP038.png
+    fileSingle: Resources/CODEX/CHAOS_SACRIFICES_CODEX.png
 
   - typeSingle: SlaaneshPalatine.SPK  # FOES INV
     fileSingle: Resources/FOES/Inventory/SlaanPalatineINV.png
@@ -4877,9 +5594,956 @@ extraSprites:
   - typeSingle: NEVERBORNLING_INV.SPK
     fileSingle: Resources/FOES/Inventory/NEVERBORNLING_INV.png
 
-  # PLAYER ELDAR
+  # INQUISITOR FACTION PLAYER ELDAR / ENEMY ELDAR
   - typeSingle: FARSEER_INV.SPK
     fileSingle: Resources/UnitSprites/Armors/FARSEER_INV.png
+
+    #Eldar Codex Art
+  - typeSingle: ELDAR_STRATEGY_GENERIC.SPK
+    fileSingle: Resources/Eldar/ELDAR_STRATEGY_GENERIC.png
+  - typeSingle: ELDAR_MESSAGE_GENERIC.SPK
+    fileSingle: Resources/Eldar/ELDAR_GENERIC_MESSAGES.png
+  - typeSingle: ELDAR_AUTARCH_BACKGROUND.SPK
+    fileSingle: Resources/Eldar/ELDAR_AUTARCH_BACKGROUND_CODEX.png
+  - typeSingle: ELDAR_PATH_HELPER.SPK
+    fileSingle: Resources/Eldar/ELDAR_PATH_HELPER.png
+  - typeSingle: ELDAR_RUNES_CODEX.SPK
+    fileSingle: Resources/Eldar/ELDAR_RUNE_CODEX.png
+  - typeSingle: STR_RECRUIT_ELDAR_OUTCAST.SPK
+    fileSingle: Resources/Eldar/ELDAR_OUTCAST_RECRUITMENT_CODEX.png
+
+    #Eldar Unit Codex Art
+  - typeSingle: ELDAR_RANGER_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/ranger_autopsy_codex.png
+  - typeSingle: ELDAR_RANGER_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/ranger_armor_codex.png
+  - typeSingle: ELDAR_AVENGER_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/avenger_autopsy_codex.png
+  - typeSingle: ELDAR_AVENGER_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/avenger_armor_codex.png
+  - typeSingle: ELDAR_AVENGEREX_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/avengerex_autopsy_codex.png
+  - typeSingle: ELDAR_AVENGEREX_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/avengerex_armor_codex.png
+  - typeSingle: ELDAR_DRAGON_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/dragon_autopsy_codex.png
+  - typeSingle: ELDAR_DRAGON_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/dragon_armor_codex.png
+  - typeSingle: ELDAR_DRAGONEX_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/dragonex_autopsy_codex.png
+  - typeSingle: ELDAR_DRAGONEX_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/dragonex_armor_codex.png
+  - typeSingle: ELDAR_SPIDER_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/spider_autopsy_codex.png
+  - typeSingle: ELDAR_SPIDER_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/spider_armor_codex.png
+  - typeSingle: ELDAR_SPIDEREX_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/spiderex_autopsy_codex.png
+  - typeSingle: ELDAR_SPIDEREXDS_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/spiderexds_armor_codex.png
+  - typeSingle: ELDAR_SPIDEREXPB_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/spiderexpb_armor_codex.png
+  - typeSingle: ELDAR_REAPEREX_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/reaperex_autopsy_codex.png
+  - typeSingle: ELDAR_REAPEREX_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/reaperex_armor_codex.png
+  - typeSingle: ELDAR_SEER_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/seer_autopsy_codex.png
+  - typeSingle: ELDAR_SEER_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/seer_armor_codex.png
+  - typeSingle: ELDAR_WARLOCK_AUTOPSY_CODEX.SPK
+    fileSingle: Resources/Eldar/warlock_autopsy_codex.png
+  - typeSingle: ELDAR_WARLOCK_ARMOR_CODEX.SPK
+    fileSingle: Resources/Eldar/warlock_armor_codex.png
+  #older weapon codex from 40k mod
+  - typeSingle: UP111.SPK
+    fileSingle: Resources/Eldar/UP111.png
+  - typeSingle: UP112.SPK
+    fileSingle: Resources/Eldar/UP112.png
+  - typeSingle: UP113.SPK
+    fileSingle: Resources/Eldar/UP113.png
+  - typeSingle: UP114.SPK
+    fileSingle: Resources/Eldar/UP114.png
+  - typeSingle: UP115.SPK
+    fileSingle: Resources/Eldar/UP115.png
+  - typeSingle: UP116.SPK
+    fileSingle: Resources/Eldar/UP116.png
+  - typeSingle: UP117.SPK
+    fileSingle: Resources/Eldar/UP117.png
+  - typeSingle: UP118.SPK
+    fileSingle: Resources/Eldar/UP118.png
+  - typeSingle: UP119.SPK
+    fileSingle: Resources/Eldar/UP119.png
+  - typeSingle: UP164.SPK
+    fileSingle: Resources/Eldar/UP164.png
+  - typeSingle: UP165.SPK
+    fileSingle: Resources/Eldar/UP165.png
+  - typeSingle: UP166.SPK
+    fileSingle: Resources/Eldar/UP166.png
+  - typeSingle: UP167.SPK
+    fileSingle: Resources/Eldar/UP167.png
+  - typeSingle: UP168.SPK
+    fileSingle: Resources/Eldar/UP168.png
+  - typeSingle: UP170.SPK
+    fileSingle: Resources/Eldar/UP170.png
+  - typeSingle: UP171.SPK
+    fileSingle: Resources/Eldar/UP171.png
+
+    #Eldar Weapon Codex Art
+  - typeSingle: ELDAR_AVENGER_CATAPULT_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_avengershurikencatapult_codex.png
+  - typeSingle: ELDAR_AVENGER_CATAPULT_SCOPED_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_avengershurikencatapultscoped_codex.png
+  - typeSingle: ELDAR_AVENGER_PISTOL_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_avengershurikenpistol_codex.png
+  - typeSingle: ELDAR_AVENGER_PISTOL_SCOPED_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_avengershurikenpistolscoped_codex.png
+  - typeSingle: ELDAR_DIRESWORD_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_diresword_codex.png
+  - typeSingle: ELDAR_DIRESWORD_VESSEL_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_direswordvessel_codex.png
+  - typeSingle: ELDAR_POWER_GLAIVE_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_powerglaive_codex.png
+  - typeSingle: ELDAR_FUSION_GUN_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_fusiongun_codex.png
+  - typeSingle: ELDAR_DRAGON_FUSION_GUN_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_dragon_fusiongun_codex.png
+  - typeSingle: ELDAR_FUSION_PISTOL_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_fusionpistol_codex.png
+  - typeSingle: ELDAR_DRAGON_FUSION_PISTOL_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_dragonfusionpistol_codex.png
+  - typeSingle: ELDAR_DRAGON_AXE_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_dragonaxe_codex.png
+  - typeSingle: ELDAR_FIREPIKE_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_firepike_codex.png
+  - typeSingle: ELDAR_RANGER_LONG_RIFLE_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_ranger_longrifle_codex.png
+  - typeSingle: ELDAR_RANGER_LONG_RIFLE_SCOPED_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_ranger_longriflescoped_codex.png
+  - typeSingle: ELDAR_SHURIKEN_CANNON_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_shurikencannon_codex.png
+  - typeSingle: ELDAR_DEATH_SPINNER_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_deathspinner_codex.png
+  - typeSingle: ELDAR_POWER_BLADE_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_powerblade_codex.png
+  - typeSingle: ELDAR_TEMPEST_LAUNCHER_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_tempestlauncher_codex.png
+  - typeSingle: ELDAR_SPINNERET_RIFLE_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_spinneretrifle_codex.png
+  - typeSingle: ELDAR_AELDARI_FLAMER_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_aeldariflamer_codex.png
+  - typeSingle: ELDAR_DRAGON_BREATH_FLAMER_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_dragonbreathflamer_codex.png
+  - typeSingle: ELDAR_AELDARI_SWORD_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_aeldarisword_codex.png
+  - typeSingle: ELDAR_AELDARI_CHAINSWORD_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_aeldarichainsword_codex.png
+  - typeSingle: ELDAR_AELDARI_POWERSWORD_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_aeldaripowersword_codex.png
+  - typeSingle: ELDAR_WITCHBLADE_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_witchblade_codex.png
+  - typeSingle: ELDAR_WITCH_STAFF_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_witchstaff_codex.png
+  - typeSingle: ELDAR_SINGING_SPEAR_CODEX.SPK
+    fileSingle: Resources/Eldar/eldar_singingspear_codex.png
+  #older weapon codex from 40k mod
+  - typeSingle: 1EL1.SPK
+    fileSingle: Resources/Eldar/1EL1.png
+  - typeSingle: 1EL2.SPK
+    fileSingle: Resources/Eldar/1EL2.png
+  - typeSingle: 1EL3.SPK
+    fileSingle: Resources/Eldar/1EL3.png
+  - typeSingle: 1EL4.SPK
+    fileSingle: Resources/Eldar/1EL4.png
+  - typeSingle: 1EL5.SPK
+    fileSingle: Resources/Eldar/1EL5.png
+  - typeSingle: 1EL6.SPK
+    fileSingle: Resources/Eldar/1EL6.png
+  - typeSingle: 1EL7.SPK
+    fileSingle: Resources/Eldar/1EL7.png
+  - typeSingle: 1EL8.SPK
+    fileSingle: Resources/Eldar/1EL8.png
+  - typeSingle: 1EL9.SPK
+    fileSingle: Resources/Eldar/1EL9.png
+  - typeSingle: 1EL10.SPK
+    fileSingle: Resources/Eldar/1EL10.png
+
+  # ELDAR FACTION PLAYER ELDAR
+
+  - type: ELDAR_GUARDIAN.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/guardian/eldar_guardian_unitsprite.png
+
+  - type: ELDAR_RANGER.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/ranger/eldar_ranger_unitsprite.png
+
+  - type: ELDAR_AVENGER.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/dire_avenger/eldar_avenger_unitsprite.png
+
+  - type: ELDAR_AVENGER_EXARCH.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_unitsprite.png
+
+  - type: ELDAR_REAPER_SP.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/dark_reaper/eldar_reaper_SP.png
+  - type: ELDAR_REAPER_P.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/dark_reaper/eldar_reaper_P.png
+
+  - type: ELDAR_REAPER_EXARCH_P.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/dark_reaper_exarch/Dark_Reaper_Ex_S.png
+
+  - type: ELDAR_DRAGON.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/fire_dragon/eldar_dragon_unitsprite.png
+
+  - type: ELDAR_DRAGON_EXARCH.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/fire_dragon_exarch/eldar_dragon_ex_unitsprite.png
+
+  - type: ELDAR_SPIDER.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/warp_spider/eldar_spider_unitsprite.png
+
+  - type: ELDAR_SPIDER_EXARCH_DEATH_SPINNERS.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_unitsprite.png
+
+  - type: ELDAR_SPIDER_EXARCH_POWER_BLADES.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_unitsprite.png
+
+  - type: ELDAR_SEER.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/seer/eldar_seer_unitsprite.png
+
+  - type: ELDAR_WARLOCK.SPK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 1440
+    files:
+      0: Resources/Eldar/units/warlock/eldar_warlock_unitsprite.png
+
+  # ELDAR paperdoll images
+
+  # ELDAR GUARDIAN
+
+  - typeSingle: ELDARG__1__ELDAR
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_body.png
+  - typeSingle: ELDARG__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_body_f.png
+
+  - typeSingle: GUARDIAN_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_01.png
+  - typeSingle: GUARDIAN_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_02.png
+  - typeSingle: GUARDIAN_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_03.png
+  - typeSingle: GUARDIAN_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_04.png
+  - typeSingle: GUARDIAN_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_05.png
+  - typeSingle: GUARDIAN_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_06.png
+  - typeSingle: GUARDIAN_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_07.png
+  - typeSingle: GUARDIAN_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_08.png
+  - typeSingle: GUARDIAN_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_head_09.png
+
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_01.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_02.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_03.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_04.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_05.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_06.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_07.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_08.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_09.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_10.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_11.png
+  - typeSingle: ELDARG_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/guardian/eldar_guardian_acc_12.png
+
+  # ELDAR RANGER
+
+  - typeSingle: ELDAR_RGR__1__ELDAR
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_body.png
+  - typeSingle: ELDAR_RGR__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_bodyf.png
+
+  - typeSingle: RANGER_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_01.png
+  - typeSingle: RANGER_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_02.png
+  - typeSingle: RANGER_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_03.png
+  - typeSingle: RANGER_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_04.png
+  - typeSingle: RANGER_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_05.png
+  - typeSingle: RANGER_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_06.png
+  - typeSingle: RANGER_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_07.png
+  - typeSingle: RANGER_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_08.png
+  - typeSingle: RANGER_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_head_09.png
+
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_01.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_02.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_03.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_04.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_05.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_06.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_07.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_08.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_09.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_10.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_11.png
+  - typeSingle: ELDAR_RGR_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/ranger/eldar_ranger_acc_12.png
+
+  # ELDAR AVENGER
+
+  - typeSingle: ELDARAVENGER__1__ELDAR
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_body.png
+  - typeSingle: ELDARAVENGER__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_bodyf.png
+
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_01.png
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_02.png
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_03.png
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_04.png
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_05.png
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET6
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_06.png
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET7
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_07.png
+  - typeSingle: AVENGER_HELMET__2__CLOSEDHELMET8
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_08.png
+  - typeSingle: AVENGER_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_09.png
+  - typeSingle: AVENGER_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_10.png
+  - typeSingle: AVENGER_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_11.png
+  - typeSingle: AVENGER_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_head_12.png
+
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_01.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_02.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_03.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_04.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_05.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_06.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_07.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_08.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_09.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_10.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_11.png
+  - typeSingle: ELDARAVENGER_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/dire_avenger/eldar_avenger_acc_12.png
+
+  # ELDAR AVENGEREX
+
+  - typeSingle: ELDARAVENGEREX__1__ELDAR
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_body.png
+  - typeSingle: ELDARAVENGEREX__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_bodyf.png
+
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_01.png
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_02.png
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_03.png
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_04.png
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_05.png
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET6
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_06.png
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET7
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_07.png
+  - typeSingle: AVENGEREX_HELMET__2__CLOSEDHELMET8
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_08.png
+  - typeSingle: AVENGEREX_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_09.png
+  - typeSingle: AVENGEREX_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_10.png
+  - typeSingle: AVENGEREX_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_11.png
+  - typeSingle: AVENGEREX_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_head_12.png
+
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_01.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_02.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_03.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_04.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_05.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_06.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_07.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_08.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_09.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_10.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_11.png
+  - typeSingle: ELDARAVENGEREX_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_acc_12.png
+
+  # ELDAR REAPER
+
+  - typeSingle: ELDAR__1__ELDARR
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_body.png
+  - typeSingle: ELDAR__1__ELDARR_F
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_body_f.png
+
+  - typeSingle: REAPER_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_01.png
+  - typeSingle: REAPER_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_02.png
+  - typeSingle: REAPER_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_03.png
+  - typeSingle: REAPER_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_04.png
+  - typeSingle: REAPER_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_05.png
+  - typeSingle: REAPER_HELMET__2__CLOSEDHELMET6
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_09.png
+  - typeSingle: REAPER_HELMET__2__OPENHELMET_N1
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_06.png
+  - typeSingle: REAPER_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_07.png
+  - typeSingle: REAPER_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_head_08.png
+
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_01.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_02.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_03.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_04.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_05.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_06.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_07.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_08.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_09.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_10.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_11.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_12.png
+  - typeSingle: ELDAR_ACCESSORY__3__ACCESSORY13
+    fileSingle: Resources/Eldar/units/dark_reaper/eldar_reaper_acc_13.png
+
+  # ELDAR REAPER EXARCH
+
+  - typeSingle: REAPER_EXARCH_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_01.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_02.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_03.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_04.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_05.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_06.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_07.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_08.png
+  - typeSingle: REAPER_EXARCH_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_head_09.png
+
+  - typeSingle: ELDAR_ACCESSORY_EXARCH__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_acc_01.png
+  - typeSingle: ELDAR_ACCESSORY_EXARCH__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_acc_02.png
+  - typeSingle: ELDAR_ACCESSORY_EXARCH__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_acc_03.png
+  - typeSingle: ELDAR_ACCESSORY_EXARCH__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_acc_04.png
+  - typeSingle: ELDAR_ACCESSORY_EXARCH__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/dark_reaper_exarch/eldar_reaperex_acc_05.png
+
+    # ELDAR DRAGON
+
+  - typeSingle: ELDARD__1__ELDAR
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_body.png
+  - typeSingle: ELDARD__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_body_f.png
+
+  - typeSingle: DRAGON_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_01.png
+  - typeSingle: DRAGON_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_02.png
+  - typeSingle: DRAGON_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_03.png
+  - typeSingle: DRAGON_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_04.png
+  - typeSingle: DRAGON_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_05.png
+  - typeSingle: DRAGON_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_06.png
+  - typeSingle: DRAGON_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_07.png
+  - typeSingle: DRAGON_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_08.png
+  - typeSingle: DRAGON_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_head_09.png
+
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_01.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_02.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_03.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_04.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_05.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_06.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_07.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_08.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_09.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_10.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_11.png
+  - typeSingle: ELDARD_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/fire_dragon/eldar_dragon_acc_12.png
+
+        # ELDAR DRAGON EXARCH
+
+  - typeSingle: DRAGON_EXARCH_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_01.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_02.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_03.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_04.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_05.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_06.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_07.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_08.png
+  - typeSingle: DRAGON_EXARCH_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_head_09.png
+
+  - typeSingle: ELDARDEX_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_acc_01.png
+  - typeSingle: ELDARDEX_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_acc_02.png
+  - typeSingle: ELDARDEX_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_acc_03.png
+  - typeSingle: ELDARDEX_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_acc_04.png
+  - typeSingle: ELDARDEX_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/fire_dragon_exarch/eldar_dragonex_acc_05.png
+
+# ELDAR SPIDER
+
+  - typeSingle: ELDARSPIDER__1__ELDAR
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_body.png
+  - typeSingle: ELDARSPIDER__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_bodyf.png
+
+  - typeSingle: SPIDER_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_01.png
+  - typeSingle: SPIDER_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_02.png
+  - typeSingle: SPIDER_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_03.png
+  - typeSingle: SPIDER_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_04.png
+  - typeSingle: SPIDER_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_05.png
+  - typeSingle: SPIDER_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_06.png
+  - typeSingle: SPIDER_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_07.png
+  - typeSingle: SPIDER_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_08.png
+  - typeSingle: SPIDER_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_head_09.png
+
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_01.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_02.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_03.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_04.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_05.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_06.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_07.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_08.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_09.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_10.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_11.png
+  - typeSingle: ELDARSPIDER_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/warp_spider/eldar_spider_acc_12.png
+
+# SPIDER EXARCH DEATH SPINNERS
+
+  - typeSingle: ELDARSPIDEREX__1__ELDAR
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_body.png
+  - typeSingle: ELDARSPIDEREX__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_bodyf.png
+
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_01.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_02.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_03.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_04.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_05.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET6
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_06.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET7
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_07.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET8
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_08.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_09.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_10.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_11.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_12.png
+
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_01.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_02.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_03.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_04.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_05.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_06.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_07.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_08.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_09.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_10.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_11.png
+  - typeSingle: ELDARSPIDEREX_DEATH_SPINNERS_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_acc_12.png
+
+  # SPIDER EXARCH POWER BLADES
+  - typeSingle: ELDARSPIDEREXPB__1__ELDAR
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_body.png
+  - typeSingle: ELDARSPIDEREXPB__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_bodyf.png
+
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_01.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_02.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_03.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_04.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_05.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET6
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_06.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET7
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_07.png
+  - typeSingle: SPIDEREX_HELMET__2__CLOSEDHELMET8
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_08.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_09.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_10.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_11.png
+  - typeSingle: SPIDEREX_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderex_head_12.png
+
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_01.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_02.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_03.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_04.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_05.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_06.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_07.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_08.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_09.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_10.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_11.png
+  - typeSingle: ELDARSPIDEREX_POWER_BLADES_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_acc_12.png
+
+  # ELDAR SEER
+
+  - typeSingle: ELDARSEER__1__ELDAR
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_body.png
+  - typeSingle: ELDARSEER__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_bodyf.png
+
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_01.png
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_02.png
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_03.png
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_04.png
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_05.png
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET6
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_06.png
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET7
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_07.png
+  - typeSingle: SEER_HELMET__2__CLOSEDHELMET8
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_08.png
+  - typeSingle: SEER_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_09.png
+  - typeSingle: SEER_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_10.png
+  - typeSingle: SEER_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_11.png
+  - typeSingle: SEER_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_head_12.png
+
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_01.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_02.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_03.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_04.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_05.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_06.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_07.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_08.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_09.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_10.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_11.png
+  - typeSingle: ELDARSEER_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/seer/eldar_seer_acc_12.png
+
+    # ELDAR WARLOCK
+
+  - typeSingle: ELDARWARLOCK__1__ELDAR
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_body.png
+  - typeSingle: ELDARWARLOCK__1__ELDAR_F
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_bodyf.png
+
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET1
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_01.png
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET2
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_02.png
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET3
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_03.png
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET4
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_04.png
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET5
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_05.png
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET6
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_06.png
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET7
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_07.png
+  - typeSingle: WARLOCK_HELMET__2__CLOSEDHELMET8
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_08.png
+  - typeSingle: WARLOCK_HELMET__2__OPENHELMET_M1
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_09.png
+  - typeSingle: WARLOCK_HELMET__2__OPENHELMET_M2
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_10.png
+  - typeSingle: WARLOCK_HELMET__2__OPENHELMET_F1
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_11.png
+  - typeSingle: WARLOCK_HELMET__2__OPENHELMET_F2
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_head_12.png
+
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY1
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_01.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY2
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_02.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY3
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_03.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY4
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_04.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY5
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_05.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY6
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_06.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY7
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_07.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY8
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_08.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY9
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_09.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY10
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_10.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY11
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_11.png
+  - typeSingle: ELDARWARLOCK_ACCESSORY__3__ACCESSORY12
+    fileSingle: Resources/Eldar/units/warlock/eldar_warlock_acc_12.png
 
   # PLAYER CHAOS
   - typeSingle: ALPHAMARINE_INV.SPK
@@ -4908,6 +6572,9 @@ extraSprites:
     fileSingle: Resources/PLAYERCHAOS/INVENTORY/KHORNE/KSISTERHELMET/KSISTERHELMET_INV.png
   - typeSingle: KVALKIA_INV.SPK  # chosen sister of khorne
     fileSingle: Resources/PLAYERCHAOS/INVENTORY/KHORNE/KVALKIA/KVALKIA_INV.png
+
+  - typeSingle: STR_ASSCTZ.SPK  # soulreaper cannon
+    fileSingle: Resources/CODEX/SOULREAPER_CANNON_CODEX.png
 
   - type: SLAANESHtermi_BS.PCK
     width: 512
@@ -4947,6 +6614,48 @@ extraSprites:
   - typeSingle: CDREAD_LASCAN.SPK
     fileSingle: Resources/UnitSprites/Armors/CDREAD_LASCAN_INV.png
 
+  # Chaos Aspirant Paperdoll
+  - typeSingle: PCASPIRANT__DECO_PAULDRON_MARK_R
+    fileSingle: Resources/LAYER/PCASPIRANT/DECORATIONS/PCASPIRANT_DECO_PAULDRON_MARK_R.png
+  - typeSingle: PCASPIRANT__DECO_PAULDRON_WIDE_MARK_R
+    fileSingle: Resources/LAYER/PCASPIRANT/DECORATIONS/PCASPIRANT_DECO_PAULDRON_WIDE_MARK_R.png
+
+  - typeSingle: PCASPIRANT__TORSO_CARAPACE
+    fileSingle: Resources/LAYER/PCASPIRANT/PCASPIRANT_TORSO_CARAPACE.png
+
+  - typeSingle: PCASPIRANT__HEAD_HELMET
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_HEAD_HELMET.png
+  - typeSingle: PCASPIRANT__MHEAD_BLACK
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_BLACK.png
+  - typeSingle: PCASPIRANT__MHEAD_BLACK2
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_BLACK2.png
+  - typeSingle: PCASPIRANT__MHEAD_PALE
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_PALE.png
+  - typeSingle: PCASPIRANT__MHEAD_TAN
+    fileSingle: Resources/LAYER/PCASPIRANT/HEADS/PCASPIRANT_MHEAD_TAN.png
+
+  - typeSingle: PCASPIRANT__SHOULDERS_PAULDRONS
+    fileSingle: Resources/LAYER/PCASPIRANT/SHOULDERS/PCASPIRANT_SHOULDERS_PAULDRONS.png
+  - typeSingle: PCASPIRANT__SHOULDERS_PAULDRONS_WIDE
+    fileSingle: Resources/LAYER/PCASPIRANT/SHOULDERS/PCASPIRANT_SHOULDERS_PAULDRONS_WIDE.png
+
+  - typeSingle: PCASPIRANT__ARMS_GAUNTLET
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_GAUNTLET.png
+  - typeSingle: PCASPIRANT__ARMS_BLACK
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_BLACK.png
+  - typeSingle: PCASPIRANT__ARMS_BLACK2
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_BLACK2.png
+  - typeSingle: PCASPIRANT__ARMS_PALE
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_PALE.png
+  - typeSingle: PCASPIRANT__ARMS_TAN
+    fileSingle: Resources/LAYER/PCASPIRANT/ARMS/PCASPIRANT_ARMS_TAN.png
+
+  - typeSingle: PCASPIRANT__LEGS_ARMORED
+    fileSingle: Resources/LAYER/PCASPIRANT/LEGS/PCASPIRANT_LEGS_ARMORED.png
+  - typeSingle: PCASPIRANT__LEGS_BOOTS
+    fileSingle: Resources/LAYER/PCASPIRANT/LEGS/PCASPIRANT_LEGS_BOOTS.png
+  - typeSingle: PCASPIRANT__LEGS_UNARMORED
+    fileSingle: Resources/LAYER/PCASPIRANT/LEGS/PCASPIRANT_LEGS_UNARMORED.png
 
   # Khorne Berserker
   - type: KHORNE_BERSERKER_HORNS.PCK
@@ -4960,6 +6669,8 @@ extraSprites:
   - typeSingle: KMARINE_CODEX.SPK
     fileSingle: Resources/PLAYERCHAOS/CODEX/KHORNE_ARMOR_CODEX.png
 
+  - typeSingle: HERETICAL_CHAINAXE.SPK
+    fileSingle: Resources/CODEX/HERETICAL_CHAINAXE.png
   - typeSingle: CHAOS_CHAINAXE_CODEX.SPK
     fileSingle: Resources/CODEX/codex_chaos_cax.png
   - typeSingle: CHAOS_GREAT_CHAINAXE_CODEX.SPK
@@ -6534,6 +8245,12 @@ extraSprites:
   - typeSingle: WHITESCARAI_CODEX.SPK
     fileSingle: Resources/CODEX/whitescarAIcodex.png
 
+  - typeSingle: BLACKTEMPLARPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarintroicon.png
+
+  - typeSingle: BLOODYROSEPLAYER_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseintroicon.png
+
   # Slaangor Ufopedia
   - typeSingle: SlaangorArmorPedia.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/SlaangorArmorPedia.png
@@ -6565,6 +8282,10 @@ extraSprites:
     fileSingle: Resources/FOESPEDIAADEPTAS/SLAANESH_CSM_CHAMPION_ORIGINS.png
   - typeSingle: SLAANESH_CSM_CHAMPION_ARMOR_CODEX.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/SLAANESH_CSM_CHAMPION_ARMOR_CODEX.png
+
+  # Cultist High Priest Codex art Port + Update from 40k mod
+  - typeSingle: UP102.SPK # Cultist High Priest
+    fileSingle: Resources/FOESPEDIAADEPTAS/UP102.png
 
   # Behemoth Codex art porting from 40k due to SPKs not submodding.
   - typeSingle: UP126.SPK  # BEHEMOTH
@@ -7190,8 +8911,18 @@ extraSprites:
     fileSingle: Resources/CODEX/hellgun.png
   - typeSingle: stub_rifle_ufopedia.SPK
     fileSingle: Resources/CODEX/stub_rifle_ufopedia.png
+  - typeSingle: STR_SMG_STUB_GUN.SPK
+    fileSingle: Resources/CODEX/AUTOSTUBBER_CODEX.png
   - typeSingle: deserter_longlas.SPK
     fileSingle: Resources/CODEX/longlas.png
+
+  - typeSingle: STR_CPOWER_DAGGER.SPK
+    fileSingle: Resources/CODEX/CHAOS_POWER_DAGGER_CODEX.png
+  - typeSingle: STR_CPOWER_AXE.SPK
+    fileSingle: Resources/CODEX/CHAOS POWER AXE_CODEX.png
+
+  - typeSingle: EXECUTIONER_AXE_CODEX.SPK
+    fileSingle: Resources/CODEX/EXECUTIONER_AXE_CODEX.png
 
   - typeSingle: UMBRA_CODEX.SPK
     fileSingle: Resources/CODEX/UMBRA_CODEX.png
@@ -7250,6 +8981,39 @@ extraSprites:
 
   - typeSingle: NEEDLERIFLECODEX.SPK
     fileSingle: Resources/CODEX/NEEDLERIFLECODEX.png
+  - typeSingle: STR_PLAGUE_SPEWER.SPK
+    fileSingle: Resources/CODEX/PLAGUE_SPEWER_CODEX.png
+  - typeSingle: STR_PLAGUE_KNIFE.SPK
+    fileSingle: Resources/CODEX/PLAGUE_KNIFE.png
+
+  - typeSingle: REAPER_AUTOCANNON.SPK
+    fileSingle: Resources/CODEX/REAPER_AUTOCANNON.png
+
+  - typeSingle: CHAOS_BOLTER.SPK
+    fileSingle: Resources/CODEX/CHAOS_BOLTER.png
+  - typeSingle: SONIC_GRENADE.SPK
+    fileSingle: Resources/CODEX/SONIC_GRENADE.png
+  - typeSingle: STR_LIGHT_BOLTERSLAAN.SPK
+    fileSingle: Resources/CODEX/SLANEESH_LIGHT_BOLTER_CODEX.png
+  - typeSingle: STR_BOLTPISTOL_SLAAN.SPK
+    fileSingle: Resources/CODEX/SLANEESH_BOLTPISTOL_CODEX.png
+  - typeSingle: STR_SLAAN_LONGBLADE.SPK
+    fileSingle: Resources/CODEX/SLAANESH_LONG_BLADE_CODEX.png
+  - typeSingle: STR_SLAAN_BLADE.SPK
+    fileSingle: Resources/CODEX/SLAANESH_BLADE_CODEX.png
+  - typeSingle: STR_SLAAN_CHAINSWORD.SPK
+    fileSingle: Resources/CODEX/SLAANEESH_CHAINSWORD_CODEX.png
+  - typeSingle: STR_SCREAMER_PISTOL.SPK
+    fileSingle: Resources/CODEX/SCREAMER_PISTOL_CODEX.png
+  - typeSingle: STR_BLASTMASTER.SPK
+    fileSingle: Resources/FOESPEDIAADEPTAS/CODEX_BLASTMASTER.png
+  - typeSingle: STR_BOLTERR.SPK
+    fileSingle: Resources/CODEX/RUBRIC_BOLTER.png
+  - typeSingle: STR_BOLTPISTOL_TZEENTCH.SPK
+    fileSingle: Resources/CODEX/RUBRIC_BOLTPISTOL.png
+
+  - typeSingle: STR_PLASMA_PISTOL_TZEENTCH.SPK
+    fileSingle: Resources/CODEX/ENHANCED_PLASMA_PISTOL.png
 
   - typeSingle: TG_BATTLESERVITORArmorPedia.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/BattleServitorHBArmorCodex.png
@@ -7260,6 +9024,11 @@ extraSprites:
     fileSingle: Resources/FOESPEDIAADEPTAS/ChaosOgrynArmorCodex.png
   - typeSingle: CHAOSOGRYNOrigins.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/ChaosOgrynOriginsCodex.png
+
+  - typeSingle: STR_CONVERT_TO_CHAOS_ADEPTAS.SPK
+    fileSingle: Resources/CODEX/CONVERT_TO_CHAOS_ADEPTAS.png
+  - typeSingle: CHAOS_HE_GRENADE.SPK
+    fileSingle: Resources/CODEX/CHAOS_HE_GRENADE.png
 
   # Nurgle
   - typeSingle: NURGLE_CSM_CODEX.SPK                  # UFOPEDIA
@@ -8019,6 +9788,8 @@ extraSprites:
     fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_helot_armor_codex.png
   - typeSingle: tzeentch_warp_thrall2.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_warp_thrall2.png
+  - typeSingle: tzeentch_warp_thrall.SPK
+    fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_warp_thrall.png
   - typeSingle: tzeentch_warp_thrall_armor.SPK
     fileSingle: Resources/FOESPEDIAADEPTAS/tzeentch_warp_thrall_armor.png
 
@@ -8732,16 +10503,16 @@ extraSprites:
   - typeSingle: WBMISSION09.SCR
     fileSingle: Resources/Backgrounds/wbmission09.png
 
-  - type: INFILTRATOR_MISSION.SPK
+  - typeSingle: INFILTRATOR_MISSION.SPK
     fileSingle: Resources/CODEX/infiltratormission.png
 
-  - type: SPYIMPNET.SPK
+  - typeSingle: SPYIMPNET.SPK
     fileSingle: Resources/CODEX/spyimperialnet.png
 
-  - type: CHAOSRHINOLOC.SPK
+  - typeSingle: CHAOSRHINOLOC.SPK
     fileSingle: Resources/CODEX/chaosrhinoloc.png
 
-  - type: SACREDARTIFACTSECUR.SPK
+  - typeSingle: SACREDARTIFACTSECUR.SPK
     fileSingle: Resources/CODEX/chaosartifactsecur.png
 
   - typeSingle: WBVINDI.SPK
@@ -8761,6 +10532,9 @@ extraSprites:
 
   - typeSingle: WBHELBLADES.SPK
     fileSingle: Resources/CODEX/wbhelblades.png
+
+  - typeSingle: DAEMON_INCURSION_WB_LOGO.SPK
+    fileSingle: Resources/CODEX/DAEMON_INCURSION_WB_LOGO.png
 
 
   - type: CHAOSCULT_LV1Mbattle.PCK
@@ -8846,6 +10620,11 @@ extraSprites:
 
   - typeSingle: CHAOSCULT_PRIESTFLV2invent.SPK
     fileSingle: Resources/UnitSprites/Armors/CULTISTpriestFLV2invent.png
+
+  - typeSingle: STR_PSYKER_STAFFCHAOS.SPK
+    fileSingle: Resources/CODEX/STR_PSYKER_STAFFCHAOS_CODEX.png
+  - typeSingle: STR_CHAOS_CROZIUS_PLAYER.SPK
+    fileSingle: Resources/CODEX/CHAOS_CROZIUM_CODEX.png
 
   - type: CHAOSCULT_GUARDCARAPbattle.PCK
     width: 512
@@ -8982,6 +10761,9 @@ extraSprites:
 
   - typeSingle: CHAOSCULTGENERIC.SPK
     fileSingle: Resources/CODEX/genericchaoscult.png
+
+  - typeSingle: STR_CULTIST_ARMORPILOT.SPK
+    fileSingle: Resources/CODEX/CHAOS_CULTIST_PILOT_SUIT_CODEX.png
 
   - type: CHAOSCULT_OBLITERATORbattle.PCK
     subX: 32
@@ -9630,6 +11412,9 @@ extraSprites:
 
   - typeSingle: WBARMORRAPTORPLAYER_CODEX.SPK
     fileSingle: Resources/CODEX/wbraptorcodex.png
+
+  - typeSingle: WORDBEARERS_STRATEGY_DESCRIPTION.SPK
+    fileSingle: Resources/CODEX/WBCODEX_STRATEGY_DESCR.png
 
   - typeSingle: WORDBEARERS_INTRO1_CODEX.SPK
     fileSingle: Resources/CODEX/WBCODEXINTROCREW.png
@@ -10480,6 +12265,473 @@ extraSprites:
 
   - typeSingle: chaosfuryinvent.SPK
     fileSingle: Resources/FOES/Inventory/chaosfuryinvent.png
+
+   # Player Black Templars
+
+  # Black Templars Codex
+
+  - typeSingle: BTINTRO_CODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarsintro.png
+
+  - typeSingle: BTSUPPORT_CODEX.SPK
+    fileSingle: Resources/CODEX/btimperialsupport.png
+
+  - typeSingle: BTCHAMPIONJOIN.SCR
+    fileSingle: Resources/Backgrounds/BTChampionJoin.png
+
+  - typeSingle: BTSCOUTARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarscout.png
+
+  - typeSingle: BTMARINEARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarmarine.png
+
+  - typeSingle: BTMARINEASSAULTARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarassault.png
+
+  - typeSingle: BTAPOTHARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarapothecary.png
+
+  - typeSingle: BTCHAPLAINARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarchaplain.png
+
+  - typeSingle: BTTECHARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplartechmarine.png
+
+  - typeSingle: BTHONORARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarhonor.png
+
+  - typeSingle: BTTERMINATORARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplartermi.png
+
+  - typeSingle: BTCAPTAINARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarcaptain.png
+
+  - typeSingle: BTRECLUSARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarreclusiarch.png
+
+  - typeSingle: BTCHAMPIONARMORCODEX.SPK
+    fileSingle: Resources/CODEX/blacktemplarchampion.png
+
+  - typeSingle: BTDREAD01ARMORCODEX.SPK
+    fileSingle: Resources/CODEX/btdread01.png
+
+  - typeSingle: BTDREAD02ARMORCODEX.SPK
+    fileSingle: Resources/CODEX/btdread02.png
+
+  - typeSingle: BTDREAD03ARMORCODEX.SPK
+    fileSingle: Resources/CODEX/btdread03.png
+
+  - typeSingle: BTDREAD04ARMORCODEX.SPK
+    fileSingle: Resources/CODEX/btdread04.png
+
+  - typeSingle: BTDREAD05ARMORCODEX.SPK
+    fileSingle: Resources/CODEX/btdread05.png
+
+  # Black Templars troops
+
+  - type: BLACKTEMPLARAPOTHbattle.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/BTapothecaryrbattle.png
+
+  - type: BLACKTEMPLARCHAMPIONbattle.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/BTchampionbattle.png
+
+
+  - typeSingle: BTCATAPHINV.SPK
+    fileSingle: Resources/UnitSprites/Armors/BTsmcataphractplayerINVENT.png
+
+  - type: BLACKTEMPLARCATAPHRACTbattle.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/BTsmcataphractplayerbattle.png
+
+  # BT dreadnoughts
+
+  - typeSingle: BTDREADINV.SPK  # FISTS
+    fileSingle: Resources/UnitSprites/Armors/BTdreadINV1.png
+
+  - typeSingle: BTDREADINV2.SPK  # MISSILES
+    fileSingle: Resources/UnitSprites/Armors/BTdreadINV2.png
+
+  - typeSingle: BTDREADINV3.SPK  # CANNON
+    fileSingle: Resources/UnitSprites/Armors/BTdreadINV3.png
+
+  - typeSingle: BTDREADINV4.SPK  # PLASMA
+    fileSingle: Resources/UnitSprites/Armors/BTdreadINV4.png
+
+  - typeSingle: BTDREADINV5.SPK  # VETERAN
+    fileSingle: Resources/UnitSprites/Armors/BTdreadINV5.png
+
+  - type: BTDREADBS.PCK  # FISTS
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/UnitSprites/BTdreadbattle.png
+
+  - type: BTDREAD2BS.PCK  # MISSILES
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/UnitSprites/BTdread2battle.png
+
+  - type: BTDREAD3BS.PCK  # CANNON
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/UnitSprites/BTdread3battle.png
+
+  - type: BTDREAD4BS.PCK  # PLASMA
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/UnitSprites/BTdread4battle.png
+
+  - type: BTDREAD5BS.PCK  # VETERAN
+    subX: 32
+    subY: 40
+    width: 256
+    height: 840
+    files:
+      0: Resources/UnitSprites/BTdread5battle.png
+
+  # BT layer background armor
+
+  - typeSingle: BT_SCOUTARMOR_BACKGROUND__0__BTSCOUT
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmscoutplayerINVENT.png
+
+  - typeSingle: BT_MARINEARMOR_BACKGROUND__0__BTMARINE
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmtacticalplayerINVENT.png
+
+  - typeSingle: BT_ASSAULTARMOR_BACKGROUND__0__BTASSAULT
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmassaultplayerINVENT.png
+
+  - typeSingle: BT_APOTARMOR_BACKGROUND__0__BTAPOTH
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmapothecaryplayerINVENT.png
+
+  - typeSingle: BT_CHAPLAINARMOR_BACKGROUND__0__BTCHAPLAIN
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmchaplainplayerINVENT.png
+
+  - typeSingle: BT_TECHARMOR_BACKGROUND__0__BTTECH
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmtechmarineplayerINVENT.png
+
+  - typeSingle: BT_HONORARMOR_BACKGROUND__0__BTHONOR
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmhonorplayerINVENT.png
+
+  - typeSingle: BT_TERMIARMOR_BACKGROUND__0__BTTERMI
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmterminatorplayerINVENT.png
+
+  - typeSingle: BT_CAPTAINARMOR_BACKGROUND__0__BTCAPTAIN
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmcaptainplayerINVENT.png
+
+  - typeSingle: BT_RECLUSARMOR_BACKGROUND__0__BTRECLUS
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmreclusiarchplayerINVENT.png
+
+  - typeSingle: BT_CHAMPIONARMOR_BACKGROUND__0__BTCHAMPION
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/BTsmchampionplayerINVENT.png
+
+  # BT layer face
+
+  - typeSingle: BTSCOUT_HEAD__1__BTM0_FACESCOUT
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/facem0_novice.png
+
+  - typeSingle: BTSCOUT_HEAD__1__BTM1_FACESCOUT
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/facem1_novice.png
+
+  - typeSingle: BTSCOUT_HEAD__1__BTM2_FACESCOUT
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/facem2_novice.png
+
+
+  - typeSingle: BTMARINE_HEAD__1__BTM0_FACE
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/facem0_base.png
+
+  - typeSingle: BTMARINE_HEAD__1__BTM1_FACE
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/facem1_base.png
+
+  - typeSingle: BTMARINE_HEAD__1__BTM2_FACE
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/facem2_base.png
+
+  # BT layer hair
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_HAIR1
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/bowlhairblack.png
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_HAIR2
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/bowlhairblonde.png
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_HAIR3
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/bowlhairbrown.png
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_HAIR4
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/bowlhairwhite.png
+
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_UPHAIR1
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/blackhairup.png
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_UPHAIR2
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/blondehairup.png
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_UPHAIR3
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/brownhairup.png
+
+  - typeSingle: BTSCOUT_HAIR__2__BTSCOUT_UPHAIR4
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/whitehairup.png
+
+
+
+  - typeSingle: BTMARINE_HAIR__2__BTTOP_HAIR1
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtopblack.png
+
+  - typeSingle: BTMARINE_HAIR__2__BTTOP_HAIR2
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtopblonde.png
+
+  - typeSingle: BTMARINE_HAIR__2__BTTOP_HAIR3
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtopbrown.png
+
+  - typeSingle: BTMARINE_HAIR__2__BTTOP_HAIR4
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtopwhite.png
+
+
+  - typeSingle: BTMARINE_HAIR__2__BTTONSURE_HAIR1
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtonsureblack.png
+
+  - typeSingle: BTMARINE_HAIR__2__BTTONSURE_HAIR2
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtonsureblonde.png
+
+  - typeSingle: BTMARINE_HAIR__2__BTTONSURE_HAIR3
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtonsurebrown.png
+
+  - typeSingle: BTMARINE_HAIR__2__BTTONSURE_HAIR4
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/hairtonsurewhite.png
+
+
+  - typeSingle: BTMARINE_BEARD__3__BTBIG_BEARD1
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardblack.png
+
+  - typeSingle: BTMARINE_BEARD__3__BTBIG_BEARD2
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardblonde.png
+
+  - typeSingle: BTMARINE_BEARD__3__BTBIG_BEARD3
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardbrown.png
+
+  - typeSingle: BTMARINE_BEARD__3__BTBIG_BEARD4
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardwhite.png
+
+
+  - typeSingle: BTMARINE_BEARD__3__BTLOW_BEARD1
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardlowblack.png
+
+  - typeSingle: BTMARINE_BEARD__3__BTLOW_BEARD2
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardlowblonde.png
+
+  - typeSingle: BTMARINE_BEARD__3__BTLOW_BEARD3
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardlowbrown.png
+
+  - typeSingle: BTMARINE_BEARD__3__BTLOW_BEARD4
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/beardlowwhite.png
+
+
+  - typeSingle: BTHONOR_CIRCLET__4__BTCIRCLET
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/circlet.png
+
+  - typeSingle: BTCHAMP_LAURELS__4__BTLAURELS
+    fileSingle: Resources/LAYER/BLACKTEMPLARS/faces/laurels.png
+
+  - typeSingle: BRINTRO_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyrosesintro.png
+
+  # Bloody Roses Player
+
+  # Bloody Roses Codex
+
+  - typeSingle: BRCANTUS_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseNovice.png
+
+  - typeSingle: BRREPENT_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseRepentia.png
+
+  - typeSingle: BRHOSPIT_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseHospitalier.png
+
+  - typeSingle: BRSISTER_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseSister.png
+
+  - typeSingle: BRSERAPHIM_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseSeraphim.png
+
+  - typeSingle: BRSUPERIOR_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseSuperior.png
+
+  - typeSingle: BRELOHIM_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseElohim.png
+
+  - typeSingle: BRRETRIB_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseRetributor.png
+
+  - typeSingle: BRCELEST_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseCelestian.png
+
+  - typeSingle: BRSACRE_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseSacresant.png
+
+  - typeSingle: BRCANON_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyroseCanoness.png
+
+  - typeSingle: BRPENITENT_CODEX.SPK
+    fileSingle: Resources/CODEX/bloodyrosePenitent.png
+
+
+  # background armor layer
+
+  - typeSingle: STR_BRNOVICEARMOR_BACKGROUND__0__BRNOVICE
+    fileSingle: Resources/LAYER/BLOODYROSES/BRcantusPLAYERinvent.png
+
+  - typeSingle: STR_BRREPENTIAARMOR_BACKGROUND__0__BRREPENT1
+    fileSingle: Resources/LAYER/BLOODYROSES/BRrepentia1PLAYERinvent.png
+
+  - typeSingle: STR_BRREPENTIAARMOR_BACKGROUND__0__BRREPENT2
+    fileSingle: Resources/LAYER/BLOODYROSES/BRrepentia2PLAYERinvent.png
+
+  - typeSingle: STR_BRREPENTIAARMOR_BACKGROUND__0__BRREPENT3
+    fileSingle: Resources/LAYER/BLOODYROSES/BRrepentia3PLAYERinvent.png
+
+  - typeSingle: STR_BRHOSPITALIERARMOR_BACKGROUND__0__BRHOSPITALIER
+    fileSingle: Resources/LAYER/BLOODYROSES/BRhospitalierPLAYERinvent.png
+
+  - typeSingle: STR_BRSISTERARMOR_BACKGROUND__0__BRSISTER
+    fileSingle: Resources/LAYER/BLOODYROSES/BRsisterPLAYERinvent.png
+
+  - typeSingle: STR_BRSERAPHARMOR_BACKGROUND__0__BRSERAPH
+    fileSingle: Resources/LAYER/BLOODYROSES/BRseraphimPLAYERinvent.png
+
+  - typeSingle: STR_BRSUPERIORARMOR_BACKGROUND__0__BRSUPERIOR
+    fileSingle: Resources/LAYER/BLOODYROSES/BRsistersuperiorPLAYERinvent.png
+
+  - typeSingle: STR_BRELOHIMARMOR_BACKGROUND__0__BRELOHIM
+    fileSingle: Resources/LAYER/BLOODYROSES/BRelohimPLAYERinvent.png
+
+  - typeSingle: STR_BRRETRIBUARMOR_BACKGROUND__0__BRRETRIB
+    fileSingle: Resources/LAYER/BLOODYROSES/BRretributorPLAYERinvent.png
+
+  - typeSingle: STR_BRCELESTIANARMOR_BACKGROUND__0__BRCELEST
+    fileSingle: Resources/LAYER/BLOODYROSES/BRcelestianPLAYERinvent.png
+
+  - typeSingle: STR_BRSACRESANTARMOR_BACKGROUND__0__BRSACRE
+    fileSingle: Resources/LAYER/BLOODYROSES/BRsacresantPLAYERinvent.png
+
+  - typeSingle: STR_BRCANONESSARMOR_BACKGROUND__0__BRCANON
+    fileSingle: Resources/LAYER/BLOODYROSES/BRcanonessPLAYERinvent.png
+
+  - typeSingle: STR_BRPENITENTSARMOR_BACKGROUND__0__BRPENITENT1
+    fileSingle: Resources/LAYER/BLOODYROSES/BRpenitentengine1PLAYERinvent.png
+
+  - typeSingle: STR_BRPENITENTSARMOR_BACKGROUND__0__BRPENITENT2
+    fileSingle: Resources/LAYER/BLOODYROSES/BRpenitentengine2PLAYERinvent.png
+
+  - typeSingle: STR_BRPENITENTSARMOR_BACKGROUND__0__BRPENITENT3
+    fileSingle: Resources/LAYER/BLOODYROSES/BRpenitentengine3PLAYERinvent.png
+
+  # BT layer face
+
+  - typeSingle: BRSISTER_HEAD__1__BRF_FACE1
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_head01.png
+
+  - typeSingle: BRSISTER_HEAD__1__BRF_FACE2
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_head02.png
+
+  - typeSingle: BRSISTER_HEAD__1__BRF_FACE3
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_head03.png
+
+
+  - typeSingle: BRHOSPITAL_HEAD__1__BRF_HFACE1
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_hospithead01.png
+
+  - typeSingle: BRHOSPITAL_HEAD__1__BRF_HFACE2
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_hospithead02.png
+
+  - typeSingle: BRHOSPITAL_HEAD__1__BRF_HFACE3
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_hospithead03.png
+
+  # low hair
+
+  - typeSingle: BRSISTER_HAIR__2__BR_COVERHAIR
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_coverhair.png
+
+  - typeSingle: BRSISTER_HAIR__2__BR_LOWHAIR1
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_blackhairlow.png
+
+  - typeSingle: BRSISTER_HAIR__2__BR_LOWHAIR2
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_blondehairlow.png
+
+  - typeSingle: BRSISTER_HAIR__2__BR_LOWHAIR3
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_brownhairlow.png
+
+  - typeSingle: BRSISTER_HAIR__2__BR_LOWHAIR4
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_whitehairlow.png
+
+  # norm hair
+
+  - typeSingle: BRSISTER_HAIR__2__BR_NORMHAIR1
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_blackhair.png
+
+  - typeSingle: BRSISTER_HAIR__2__BR_NORMHAIR2
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_blondehair.png
+
+  - typeSingle: BRSISTER_HAIR__2__BR_NORMHAIR3
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_brownhair.png
+
+  - typeSingle: BRSISTER_HAIR__2__BR_NORMHAIR4
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_whitehair.png
+
+  # high hair
+
+  - typeSingle: BRCELEST_HAIR__2__BR_HIGHHAIR1
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_blackhairhigh.png
+
+  - typeSingle: BRCELEST_HAIR__2__BR_HIGHHAIR2
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_blondehairhigh.png
+
+  - typeSingle: BRCELEST_HAIR__2__BR_HIGHHAIR3
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_brownhairhigh.png
+
+  - typeSingle: BRCELEST_HAIR__2__BR_HIGHHAIR4
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/br_whitehairhigh.png
+
+  # deco
+
+  - typeSingle: BR_NECKPROTECT__3__BRNECK
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/neckprotect0.png
+
+  - typeSingle: BR_NECKPROTECT__3__BRNECK2
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/neckprotect1.png
+
+  - typeSingle: BR_CROWN__4__BRCROWN
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/rosecrown0.png
+
+  - typeSingle: BR_CROWN__4__BRCROWN2
+    fileSingle: Resources/LAYER/BLOODYROSES/faces/rosecrown1.png
+
+
   # unique
 
   - type: SLY_MARBObattle.PCK
@@ -10778,6 +13030,24 @@ extraSprites:
 
   - typeSingle: IGOPFOR_OGRYN_INV.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/ogryn_AI.png
+
+  # ported and edited from 40k to prevent invisible torso possibility
+
+  - type: OGRYN.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/ogryn.png
+
+  - type: OGRYN_CARAPACE.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/NOSANDBAGS_BS/ogryn_carapace.png
 
   # Imperial OPFOR ADEPTAS BLOODY ROSES
 
@@ -11187,6 +13457,14 @@ extraSprites:
     files:
       0: Resources/FOES/Battlesprites/BTterminatorbattle.png
 
+  - type: BLACKTEMPLARASSAULTTERMIbattle.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/FOES/Battlesprites/BTterminatorassaultbattle.png
+
   - typeSingle: BLACKTEMPLARARMOR_CAPTAIN.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/BTcaptainAI.png
 
@@ -11219,6 +13497,14 @@ extraSprites:
     subY: 40
     files:
       0: Resources/FOES/Battlesprites/BTswordbrobattle.png
+
+  - type: BLACKTEMPLARHONORSHIELDbattle.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/FOES/Battlesprites/BTswordbrobattle2.png
 
   - typeSingle: BLACKTEMPLARARMOR_TECH.PCK
     fileSingle: Resources/FOES/Inventory/IMPERIALS/BTtechmarinAI.png
@@ -12300,6 +14586,26 @@ extraSprites:
     files:
       0: Resources/FOES/Battlesprites/gangergoliathbattle.png
 
+  - typeSingle: STR_SHIVGANG.SPK
+    fileSingle: Resources/CODEX/GANGERS_SHIV2_CODEX.png
+
+  - typeSingle: STR_MAKESHIFT_PIPEBOMB.SPK
+    fileSingle: Resources/CODEX/PIPEBOMB_CODEX.png
+
+  - typeSingle: STR_MAKESHIFT_GRENADE.SPK
+    fileSingle: Resources/CODEX/MAKESHIFT_GRENADE_CODEX.png
+
+  - typeSingle: STR_IMPROVISED_PLASMA_GRENADE.SPK
+    fileSingle: Resources/CODEX/IMPROVISED_PLASMA_GRENADE_CODEX.png
+
+
+  - typeSingle: STR_ROCKTOSS.SPK
+    fileSingle: Resources/CODEX/RUBBLE_CHUNK_CODEX.png
+
+  - typeSingle: STR_POWER_PICK.SPK
+    fileSingle: Resources/CODEX/POWER_PICK_CODEX.png
+  - typeSingle: STR_POWER_HAMMER.SPK
+    fileSingle: Resources/CODEX/POWER_HAMMER_CODEX.png
 
   # gangers end
 
@@ -13120,10 +15426,13 @@ extraSprites:
     files:
       900: Resources/Ranks/Ranks_SmallSW.png
       1100: Resources/Ranks/ranks_tiny.png
+      4000: Resources/Eldar/Ranks/eldar_ranks_tiny.png
+      4030: Resources/Eldar/Ranks/eldar_ranks_tiny2.png
+      4060: Resources/Eldar/Ranks/eldar_ranks_tiny3.png
 
   - type: CustomArmorPreviews
     width: 360
-    height: 940
+    height: 960
     subX: 12
     subY: 20
     files:
@@ -13792,6 +16101,13 @@ extraSprites:
   - typeSingle: ALPHALEGIONBG.SCR
     fileSingle: Resources/Backgrounds/AlphaLegionBG.png
 
+  # Eldar campaign events
+  - typeSingle: SLAANESH_PALACE.SCR
+    fileSingle: Resources/Backgrounds/SLAANESH_PALACE.png
+  - typeSingle: ELDAR_GUARDIAN_ASSAULTING.SCR
+    fileSingle: Resources/Backgrounds/ELDAR_GUARDIAN_ASSAULTING.png
+  - typeSingle: ELDAR_ASPECT_WARRIOR_ASSAULTING.SCR
+    fileSingle: Resources/Backgrounds/ELDAR_ASPECT_WARRIOR_ASSAULTING.png
       #GENESTEALER CULT
 
 #zombie
@@ -13866,7 +16182,7 @@ extraSprites:
     files:
       0: Resources/GENE/bs_locus_cloaked.png
 
-  - type: BS_LOCUS_FRENZIED.PCK  # DR4
+  - type: BS_LOCUS_FRENZIED.PCK  # DR0
     width: 512
     height: 720
     subX: 32
@@ -13880,7 +16196,45 @@ extraSprites:
   - typeSingle: ARMOR_LOCUS.SPK
     fileSingle: Resources/GENE/ARMOR_GSC_LOCUS.png
 
+#Primus
+
+  - typeSingle: INV_PRIMUS.SPK
+    fileSingle: Resources/GENE/INV_GSC_PRIMUS.png
+
+  - type: BS_PRIMUS.PCK # DR0
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/GENE/BS_GSC_MAGUS.png #change
+
+  - typeSingle: ORIGINS_PRIMUS.SPK
+    fileSingle: Resources/GENE/ORIGINS_GSC_MAGUS.png #change
+
+  - typeSingle: ARMOR_PRIMUS.SPK
+    fileSingle: Resources/GENE/ARMOR_GSC_MAGUS.png #change
+
 #magus
+
+  - typeSingle: INV_MAGUS.SPK
+    fileSingle: Resources/GENE/INV_GSC_MAGUS_M.png #add female variant #add morph variant
+
+  - type: BS_MAGUS.PCK  # DR0
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/GENE/BS_GSC_MAGUS.png
+
+  - typeSingle: ORIGINS_MAGUS.SPK
+    fileSingle: Resources/GENE/ORIGINS_GSC_MAGUS.png
+
+  - typeSingle: ARMOR_MAGUS.SPK
+    fileSingle: Resources/GENE/ARMOR_GSC_MAGUS.png
+
+#magus metamorph
 
 #aberrant
   - typeSingle: INV_ABERRANT.SPK
@@ -16454,11 +18808,19 @@ extraSprites:
   - typeSingle: MANAGING_SOLDIERS.SPK
     fileSingle: Resources/CODEX/TRAINING_SOLDIERS_CODEX.png
 
+  # Help page - research pips
+
+  - typeSingle: RESEARCH_PIPS.SPK
+    fileSingle: Resources/CODEX/RESEARCH_PIPS_CODEX.png
+
   # Arbites Heavy Stubber
   - typeSingle: ARBITES_HEAVY_STUB_CODEX.SPK
     fileSingle: Resources/CODEX/ARBITES_HEAVY_STUBBER_CODEX.png
 
   # Enginseer
+  - typeSingle: OMNISSIANAXE.SPK
+    fileSingle: Resources/CODEX/omnissian_axe.png
+
   - typeSingle: ENGINSEER.SPK
     fileSingle: Resources/UnitSprites/Armors/ENGINSEER_INV.png
 
@@ -16472,3 +18834,6 @@ extraSprites:
 
   - typeSingle: TECHPRIEST_CODEX.SPK
     fileSingle: Resources/CODEX/TECHPRIEST_CODEX.png
+
+  - typeSingle: STR_PURITY_SEAL.SPK
+    fileSingle: Resources/CODEX/STR_PURITY_SEAL_CODEX.png

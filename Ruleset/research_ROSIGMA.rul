@@ -38,6 +38,8 @@
 # #SM.SCOUT#          Scout Strategy
 # #SM.TAC#            Tactical Strategy
 # #SM.WOLF#           Space Wolf Strategy
+# #SM.BT#             Black Templars Strategy
+# #SOB.BR#            Bloody Rose Strategy
 # #SM.WB#             Word Bearers Strategy
 # #CM#              Chamber Militant
 # #CM.DW#             Deathwatch
@@ -218,8 +220,8 @@ research:
       - STR_CHAOS_ARMORY_EXAM_GRAV
       - STR_CHAOS_ARMORY_EXAM_SONIC
       - STR_CHAOS_ARMORY_EXAM_POWER
-      - STR_UNSANCTIONED_REQUISITIONS
       - STR_CORRUPTED_REQUISITIONS
+      - STR_CHAOS_WEAPON_USE_DEP
     disables:
       - STR_CHAPTER_PURITY
       - STR_PSI_LAB
@@ -230,15 +232,15 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  - name: STR_UNSANCTIONED_REQUISITIONS  # Unsanctioned Requisitions
-    dependencies:
-      - STR_GENERALLOCK
-
+  # Corrupted Requisitions ; dependency the purchase/manufacture of  Chaos weapons.
   - name: STR_CORRUPTED_REQUISITIONS  # Corrupted Requisitions
     dependencies:
       - STR_GENERALLOCK
-    unlocks:
-      - STR_UNSANCTIONED_REQUISITIONS
+
+  # Weaponry of Chaos ; dependency the use of most Chaos weapons
+  - name: STR_CHAOS_WEAPON_USE_DEP
+    dependencies:
+      - STR_ALIENS_ONLY
 
   - name: STR_STRATEGYCOMESFIRST
     refNode: *STR_LOCKED
@@ -984,6 +986,10 @@ research:
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_SPACEWOLVES  # Space Wolves Selected
     refNode: *STR_LOCKED
+  - name: STR_CHOSEN_BLACKTEMPLARS  # Black Templars Selected
+    refNode: *STR_LOCKED
+  - name: STR_CHOSEN_BLOODYROSES  # Bloody Roses Selected
+    refNode: *STR_LOCKED
   - name: STR_CHOSEN_WORDBEARERS  # Word Bearers Selected
     refNode: *STR_LOCKED
   - delete: STR_CHOSEN_IGS
@@ -996,7 +1002,7 @@ research:
   - name: STR_CHOSEN_VALHALLA # Valhallan Selected
     refNode: *STR_LOCKED
   - delete: STR_CHOSEN_ELDAR
-  - name: STR_CHOSEN_ELDAR  # Eldar Path
+  - name: STR_CHOSEN_ELDAR  # Eldar Path - Inquisition xeno path
     refNode: *STR_LOCKED
   - delete: STR_CHOSEN_GREYKNIGHTS
   - name: STR_CHOSEN_GREYKNIGHTS  # Grey Knights Selected
@@ -1018,6 +1024,8 @@ research:
   - name: STR_NOT_TACTICAL  # (Not Tactical Strategy)
   - name: STR_NOT_SPACEWOLVES  # (Not Spacewolf Strategy)
   - name: STR_NOT_WORDBEARERS  # (Not Word Bearers Strategy)
+  - name: STR_NOT_BLACKTEMPLARS  # (Not Black Templar Strategy)
+  - name: STR_NOT_BLOODYROSES  # (Not Bloody Rose Strategy)
 
   - name: STR_NOT_ADEPTUS_TERRA  # (Not Alien or Heretic)
   - delete: STR_NOT_THE_IMPERIAL_LAW
@@ -1308,6 +1316,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1342,6 +1351,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1376,6 +1386,7 @@ research:
       - STR_SPACEWOLVES_STRATEGY
       - STR_CASS_R
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_PRIMARIS_CARE_PACKAGE
@@ -1408,6 +1419,7 @@ research:
       - STR_TATICAL
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1443,6 +1455,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1485,6 +1498,7 @@ research:
       - STR_SCOUT
       - STR_TATICAL
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_SPACEWOLVES_INITIAL_SITREP
@@ -1531,6 +1545,102 @@ research:
       - STR_GENERALLOCK
 
 
+### Black Templars  #STRATEGY.SM.BT#
+
+  - name: STR_BLACKTEMPLAR_STRATEGY  # WIP Black Templar Strategy
+    cost: 5
+    points: 0
+    dependencies:
+      - STR_MARINES_STRATEGY
+    lookup: STR_CHOSEN_BLACKTEMPLARS
+    unlocks:
+      - STR_DEFAULT_CAMPAIGN
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_LASER_WEAPONS
+      - STR_HOLOGRAM_GRENADE_REQUISITION
+      - STR_THUNDERHAWKTYPE1
+      - STR_STORMHAWKR
+      - STR_PERSONAL_ARMOR
+      - STR_MELTABOMB
+      - STR_CRATED_BTDROPPODS
+      - STR_MARINE_BOLTERS
+      - STR_HARDER_MISSIONS
+      - STR_MARINESCHOICEDONE
+    disables:
+      - STR_NOT_TACTICAL
+      - STR_PRIMARIS
+      - STR_TATICAL
+      - STR_ASSAULT
+      - STR_DEVASTATOR
+      - STR_SCOUT
+      - STR_SPACEWOLVES_STRATEGY
+      - STR_WORDBEARERS_STRATEGY
+      - STR_NOT_BLACKTEMPLARS
+      # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
+    spawnedEvent: STR_BLACKTEMPLAR_CARE_PACKAGE
+
+  - name: STR_REQIMPERIAL_SUPPORT  # Request Imperial Support
+    cost: 50
+    points: 0
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+ ### Bloody Roses #STRATEGY.SOB.BR#
+
+  - name: STR_BLOODYROSE_STRATEGY  #  Request Commandery Support
+    points: 0
+    cost: 50
+    requiresBaseFunc: [BLOODYORDER]  # must be done in the Commandery outpost
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+    lookup: STR_CHOSEN_BLOODYROSES
+    getOneFree: #WARNING do not add more than 1 getOneFree tech due to auto-repeatability issues
+      - STR_LIGHT_BOLTERS_LOWTIER_ADEPTAS
+    unlocks:
+      - STR_DEFAULT_CAMPAIGN
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_MEDICAE_RESEARCH  # see research40k.rul
+      - STR_PHOSPHOR_GRENADE
+      - STR_HOLOGRAM_GRENADE_REQUISITION
+      - STR_LASER_WEAPONS
+      - STR_MELTAGUN_TECH
+      - STR_ADEPTAS_NOVICE_RESEARCH
+      - STR_CORVUS_RESEARCH
+      - STR_FAITHFUL_ARMORY
+      - STR_PENITENT_ENGINE_RESEARCH
+      - STR_ALIEN_ALLOYS
+      - STR_ADEPTAS_DROPPOD_RESEARCH
+      - STR_ADEPTAS_ARMOR
+      - STR_ADEPTAS_SOB_MOBILIZATION  # contains adeptas recruitment
+      - STR_TRAINING_BOLTERS_ADEPTAS
+      - STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH  # recruitment
+      - STR_ADEPTAS_SUPERIOR_RESEARCH
+      - STR_CRATED_BRARVUS
+      - STR_NOT_ELITE_STRATEGY_ADEPTAS
+      - STR_NOT_REPENTIA_STRATEGY_ADEPTAS
+      - STR_NOT_NOVICE_STRATEGY_ADEPTAS
+    disables:
+      - STR_NOT_BLOODYROSES
+      - STR_NOT_NORMAL_STRATEGY_ADEPTAS
+      - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_REPENTIA_STRATEGY_ADEPTAS
+      - STR_NOVICE_STRATEGY_ADEPTAS
+      - STR_NORMAL_STRATEGY_ADEPTAS
+    spawnedEvent: STR_RECRUITS_BLOODYROSES
+
+  - name: STR_CRATED_BTDROPPODS  # Drop Pods Requisition
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_CRATED_BRARVUS  # Arvus Requisition
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+      - STR_GENERALLOCK
+
+
 ### Word Bearers #STRATEGY.SM.WB#
   - name: STR_WORDBEARERS_STRATEGY  # Word Bearers Strategy
     cost: 3
@@ -1562,6 +1672,7 @@ research:
       - STR_DEVASTATOR
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
       - STR_HARDER_MISSIONS # they get enabled a bit later
       - STR_ENABLE_EVEN_HARDER_MISSIONS
       - STR_ENABLE_EXTRA_RETALIATIONS  # for now
@@ -1572,6 +1683,15 @@ research:
     getOneFree:
       - STR_SMOKE
     spawnedEvent: STR_WORDBEARERS_BURNTHEM
+
+  - name: STR_WORDBEARERS_HELPER #needed for compatibility with STR_WORDBEARERS_BURNTHEM event
+    cost: 0
+    dependencies:
+      - STR_GENERALLOCK
+    reenables:
+      - STR_PHOSPHOR_GRENADE
+    getOneFree:
+      - STR_PHOSPHOR_GRENADE
 
   - name: STR_BOOK_EREBUS
     cost: 1
@@ -1593,7 +1713,7 @@ research:
       - STR_MARINE_BOLTERS
     reenables:
       - STR_MOTION_SCANNER
-      - STR_PHOSPHOR_GRENADE
+      #- STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_KORPHAERON
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGEMK3
@@ -1618,7 +1738,7 @@ research:
       - STR_MARINE_BOLTERS
     reenables:
       - STR_MOTION_SCANNER
-      - STR_PHOSPHOR_GRENADE
+      #- STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_EREBUS
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGE
@@ -1794,7 +1914,6 @@ research:
       - STR_DEFAULT_CAMPAIGN
       - STR_XIPHON
       - STR_IMPERIUM_RESEARCH
-      # - STR_HARDER_MISSIONS
       - STR_INQ_STORMTROOPER_CODEX_UNLOCKER
       - STR_NORMAL_INQUISITION
     disables:
@@ -1805,6 +1924,7 @@ research:
       - STR_ADEPTAS
       - STR_GUARD_SUPORT
       - STR_DREADNOUGHT_MARINE
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH  # pushed after strategies
 
 ### Deathwatch #STRATEGY.CM.DW#
   - delete: STR_DEATHWATCH
@@ -1820,7 +1940,7 @@ research:
       - STR_LIGHT_BOLTERS_MIDTIER
       - STR_MARINE_BOLTERS
       - STR_INQ_STORMTROOPER_REQUISITION
-      - STR_CORVUS_RESEARCH  # instead of STR_DEATHWATCH_AND_ADEPTAS setup
+      - STR_CORVUS_RESEARCH
       - STR_POWER_ARMOR_SM_CODEX
       - STR_TERMINATOR_ARMOR_SM_CODEX
       - STR_NOT_PRIMARIS
@@ -1845,6 +1965,7 @@ research:
       - STR_ASSASSINORUM
     reenables:
       - STR_DREADNOUGHT_MARINE
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_DEATHWATCH_CARE_PACKAGE
   - delete: STR_CHOSEN_DEATHWATCH
   - name: STR_CHOSEN_DEATHWATCH
@@ -1888,29 +2009,25 @@ research:
       - STR_ASSASSINORUM
     reenables:
       - STR_DREADNOUGHT_MARINE
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_REINFORCEMENTS_GK
 
 ### The Radical Road #STRATEGY.CM.RAD#
   - name: STR_RADICAL_INQUISITOR_STRATEGY  # The Radical Road
     cost: 5
-    points: -200 #was -1000, move that negative scores to later topics/events for more player control
     dependencies:
       - STR_CHAMBERMILITANT
-      - STR_LOSE_200
     unlocks:
       - STR_REEDUCATION_RESEARCH
-      - STR_LASGUN_HOTSHOT
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_ARVUS_DEP
       - STR_LASER_WEAPONS
-      - STR_LIGHT_BOLTERS
-      - STR_LIGHT_BOLTERS_MIDTIER
-      - STR_MARINE_BOLTERS
-      - STR_INQ_STORMTROOPER_REQUISITION
-      - STR_CORVUS_RESEARCH
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_MARINES_AND_INQUISITION
       - STR_ADEPTAS_AND_INQUISITION
       - STR_ADEPTAS_MARINES_AND_INQUISITION
-      - STR_HARDER_MISSIONS
+      - STR_NOT_NORMAL_INQUISITION
+      - STR_CHAMBER_NOT_ARBITES # Unlock used so that it does NOT trigger the normal Inq Reinforce event.
     disables:
       - STR_NOT_RADICAL
       - STR_GREYKNIGHTS
@@ -1918,8 +2035,21 @@ research:
       - STR_ASSASSINORUM
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NORMAL_INQUISITION
-    spawnedEvent: STR_REINFORCEMENTS_RADICAL_EVENT
+      - STR_ELDAR_PATH # RadicalRoad has its own Xenos pathways.
+      - STR_CHAOS_PATH # RadicalRoad has its own Chaos progression, don't allow IntoTheDarkGodsPath entry
+      - STR_ORK_DEAL # Ork Arms Trade; they'll be getting this from the Secure Support tech
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
+    getOneFree:
+      - STR_INQ_RECRUITS_RADICAL_ROAD2 # getOneFree so it will trigger its Event
+    spawnedEvent: STR_INQ_RECRUITS_RADICAL_ROAD
 
+  - name: STR_INQ_RECRUITS_RADICAL_ROAD2
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+    spawnedEvent: STR_INQ_RECRUITS_RADICAL_ROAD2
 
 ### Officio Assassinorum #STRATEGY.CM.OA#
   - name: STR_ASSASSINORUM            # Assassinorum Strat
@@ -1956,9 +2086,10 @@ research:
       - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_CHAOS_PATH
-      - STR_INQUISITION_VALKYRIE
       - STR_INQ_STORMTROOPER_REQUISITION
       - STR_ENABLE_EVEN_HARDER_MISSIONS # starts with extra hard missions enabled, shouldn't see the redundant Salty Spitoon research.
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_ASSASSINORUM_CARE_PACKAGE
 
   - name: STR_OFFICIO_ASSASSINORUM_TIPS # PLEASE READ THE CODEX DEAR PLAYER
@@ -1988,6 +2119,19 @@ research:
     cost: 0
     points: 0
 
+  - name: STR_BASIC_BALLISTICS_DEP # tied to purchase of various basic weapons; Stubbers, some ML's, Grenade Launcher...
+    dependencies:
+      - STR_GUARD_AND_ARBITES # Should be STR_GENERALLOCK, but that will be a savebreaker. This preserves most old use cases.
+    cost: 0
+    points: 0
+
+  - name: STR_40MM_AMMO_DEP
+    # tied to purchase/manufacture of 40mm grenades
+    dependencies:
+      - STR_MIDTIER_PREREQ
+    cost: 0
+    points: 0
+
 ### The Imperial Law Strategy #STRATEGY.AT.LAW#
   - name: STR_THE_IMPERIAL_LAW_STRATEGY  # The Imperial Law Strategy
     cost: 5
@@ -2001,6 +2145,7 @@ research:
       - STR_DEFAULT_CAMPAIGN
       - STR_LASER_WEAPONS
       - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_GUARD_BARRACKS
       - STR_HEAVY_WEAPONS_IG
@@ -2009,12 +2154,14 @@ research:
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_CHAPTER_PURITY
       - STR_AWARD_PERSONAL_SHIELD
+      - STR_ARBITES_BASIC_GEAR_DEP
       - STR_IMPERIUM_RESEARCH
       - STR_NOT_NORMAL_INQUISITION
       - STR_NOT_DEATHWATCH
       - STR_NOT_GK
       - STR_NOT_RADICAL
     disables:
+      - STR_CYDONIA_OR_BUST #arbites have their own ending the warp mission
       - STR_CHAMBER_NOT_ARBITES
       - STR_NOT_THE_IMPERIAL_LAW
       - STR_NORMAL_INQUISITION
@@ -2033,6 +2180,12 @@ research:
       #GG- STR_GREENEST_ORKZ
       #GG- STR_TAU_GUEVESA_STRATEGY_GV
     spawnedEvent: STR_RECRUITS_IMPERIAL_LAW_STRATEGY
+
+  - name: STR_ARBITES_BASIC_GEAR_DEP # Tied to purchase of basic Arbites gear.
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
 
 # must be given with a researchList on an event or as a getOneFree
 # do NOT unlock with the non-Arbites Chamber strategy researches
@@ -2116,6 +2269,7 @@ research:
     unlocks:
       - STR_CHAOS_STRATEGY
       - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       - STR_IMPERIUM_RESEARCH
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2208,6 +2362,7 @@ research:
       - STR_ARBITES
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_MARINES_STRATEGY
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH  # pushed after strategies
     dependencies:
       - STR_GENERALLOCK
 
@@ -2241,6 +2396,8 @@ research:
       - STR_NORMAL_STRATEGY_ADEPTAS
       - STR_ELITE_STRATEGY_ADEPTAS
       - STR_SMOKE
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_REPENTIA_STRATEGY_ADEPTAS
 
 ### Novice Strategy #STRATEGY.SOB.NOV#
@@ -2267,6 +2424,8 @@ research:
       - STR_NOT_ELITE_STRATEGY_ADEPTAS
       - STR_NOT_REPENTIA_STRATEGY_ADEPTAS
       - STR_NOT_NORMAL_STRATEGY_ADEPTAS
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     disables:
       - STR_NOT_NOVICE_STRATEGY_ADEPTAS
       - STR_ELITE_STRATEGY_ADEPTAS
@@ -2311,6 +2470,8 @@ research:
       - STR_ELITE_STRATEGY_ADEPTAS
       - STR_REPENTIA_STRATEGY_ADEPTAS
       - STR_NOVICE_STRATEGY_ADEPTAS
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_NORMAL_STRATEGY_ADEPTAS
 
 ### Dominion Strategy #STRATEGY.SOB.DOM#
@@ -2347,6 +2508,8 @@ research:
       - STR_NOT_NOVICE_STRATEGY_ADEPTAS
       - STR_NOT_NORMAL_STRATEGY_ADEPTAS
       - STR_INQ_STORMTROOPER_REQUISITION  # access to inquisitorial elites/stormtroopers
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     disables:
       - STR_NOT_ELITE_STRATEGY_ADEPTAS
       - STR_REPENTIA_STRATEGY_ADEPTAS
@@ -2366,8 +2529,10 @@ research:
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
-      - STR_RADICAL_RECRUITMENT_IG
+      - STR_VALHALLAN_STRATEGY
+#      - STR_RADICAL_RECRUITMENT_IG  # pushed after strategies
       - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
       # - STR_GUARD_SUPORT
       - STR_AWARD_PERSONAL_SHIELD
       - STR_IMPERIUM_RESEARCH
@@ -2377,6 +2542,7 @@ research:
       - STR_ADEPTAS
       - STR_MARINES_STRATEGY
       - STR_HB_DEP1
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH  # re enable after strategy choice
 
 ### Guardsman Strategy #STRATEGY.IG.GUARD#
   - name: STR_NORMAL_STRATEGY_IG  # Guardsmen Strategy
@@ -2388,7 +2554,6 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_LASER_WEAPONS
-      #      - STR_GUARD_AND_ARBITES
       #      - STR_GUARD_SUPORT
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2408,11 +2573,14 @@ research:
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_NORMAL_STRATEGY
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_NORMAL_STRATEGY_IG
 
 ### Scion Strategy #STRATEGY.IG.SCION#
@@ -2438,8 +2606,7 @@ research:
       - STR_JUMP_CARAPACE_DEP1
       - STR_AIRSTRIKE_REQUISITION
       - STR_JUMP_CARAPACE_REQUISITION
-      #      - STR_GUARD_AND_ARBITES
-      - STR_IMPERIAL_GUARD_MISSIONS
+      # - STR_IMPERIAL_GUARD_MISSIONS  # scion dont have this anymore they are already trained they will unlock the benefit directly instead
       - STR_KRIEG_GUARDSMEN
       - STR_CATACHAN_GUARDSMEN
       - STR_HOLOGRAM_GRENADE_REQUISITION
@@ -2448,11 +2615,15 @@ research:
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
+      - STR_IMPERIAL_GUARD_MISSION_TRAINING_COMPLETE  # elite scion are already trained and this allow to unlock some new missions they were accidentally blocked from
     disables:
       - STR_NOT_ELITE_STRATEGY
       - STR_NORMAL_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_ELITE_STRATEGY_IG
 
 ### Abhuman Strategy #STRATEGY.IG.ABHUMAN#
@@ -2470,7 +2641,6 @@ research:
       - STR_REGIMENT_OFFICERS
       - STR_IMPERIAL_GUARD_MISSIONS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      #      - STR_GUARD_AND_ARBITES
       - STR_SQUAT_GUARDSMEN
       - STR_BEASTMEN_GUARDSMEN
       - STR_FELINID_GUARDSMEN
@@ -2482,11 +2652,14 @@ research:
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NORMAL_STRATEGY_IG
       - STR_ELITE_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_ABHUMAN_STRATEGY_IG
 
 ### Steel Legion Strategy #STRATEGY.IG.STEEL#
@@ -2516,11 +2689,14 @@ research:
       - STR_NOT_ELITE_STRATEGY
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_NORMAL_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_STEELLEGION_STRATEGY_IG
 
 ### Krieg Strategy #STRATEGY.IG.KRIEG#
@@ -2551,12 +2727,15 @@ research:
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_KRIEG_STRATEGY
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_KRIEG_STRATEGY_IG
 
 ### Valhallan Strategy #STRATEGY.IG.VALHALLAN#
@@ -2569,16 +2748,16 @@ research:
     unlocks:
       - STR_DEFAULT_CAMPAIGN
       - STR_VALHALLAN_GUARDSMEN
+      - STR_VALHALLAN_WEAPONS
       - STR_LASER_WEAPONS
       - STR_SMOKE
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
-      # STR_VALHALLAN_WEAPONS #Needs to be created + Midtier version?
       - STR_GUARD_BARRACKS
       - STR_REGIMENT_OFFICERS
+      - STR_GUARD_PRIEST_REQUISITION #Unlock before midtier?
       - STR_PENITENT_GUARD
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_CHIMERASL #REPLACE WITH VALHALLAN BASIC TRANSPORT, TRUCKS? WHITE CAMO CHIMERA?
       - STR_IMPERIAL_GUARD_BASIC_TRAINING
       - STR_PILOT_GUARDSMEN #Replace these later with Valhallan version?
       - STR_NOT_ELITE_STRATEGY
@@ -2586,6 +2765,7 @@ research:
       - STR_NOT_NORMAL_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_NOT_KRIEG_STRATEGY
+      - STR_RADICAL_RECRUITMENT_IG
     disables:
       - STR_NOT_VALHALLAN_STRATEGY
       - STR_KRIEG_STRATEGY
@@ -2593,6 +2773,8 @@ research:
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+    reenables:
+      - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_VALHALLAN_STRATEGY_IG
 
 ####################################
@@ -2783,10 +2965,16 @@ research:
     disables:
       - STR_CHAOS_PATH
       - STR_ADEPTAS_CHAOS_PATH
-      - STR_CHAMBER_CHAOS_PATH
       - STR_MARINE_CHAOS_PATH
     unlocks:
       - STR_ELDAR_ARMORY_EXAM
+      # eldar exclusive research unlocks
+      # TODO: add eldar research locks as soon as they added. if any missing look at research_eldar.rul
+      - STR_RECRUIT_ELDAR_T1
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SHIELD
+      - STR_ELDAR_OUTPOST_BUILDING_RESEARCH
+      - STR_ELDAR_CRAFT_RESEARCH
     getOneFree:
       - STR_ELDAR_WAVESERPENT_UFO_DATA
     lookup: STR_CHOSEN_ELDAR
@@ -2811,11 +2999,6 @@ research:
     # The craft, not the unit
     cost: 1000
     points: 500
-    dependencies:
-      - STR_ELDAR_PATH
-
-  - name: STR_ELDAR_ASPECT_RESEARCH  # Aspect Warrior Promotions
-    cost: 1000
     dependencies:
       - STR_ELDAR_PATH
 
@@ -2887,6 +3070,7 @@ research:
       - STR_NOT_MARINES
       - STR_NOT_ADEPTAS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_NOT_DEATHWATCH
       - STR_NOT_GK
       - STR_NOT_WORDBEARERS
@@ -2944,17 +3128,6 @@ research:
       - STR_CONTACT_CHAOS_SISTERS
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
       - STR_CONVERT_TO_CHAOS_RESEARCH
-    getOneFree:
-      - STR_CHAOS_PATH
-
-  - name: STR_CHAMBER_CHAOS_PATH  # The Ends Justify the Means
-    # Heretical Inquisitior's entry into the generic chaos path.
-    cost: 100
-    points: 0
-    dependencies:
-      - STR_CHAMBERMILITANT
-      - STR_HERETICAL_INQUISITOR_STRATEGY
-      - STR_INQ_ARCHENEMY_ARMAMENTS_RESEARCH
     getOneFree:
       - STR_CHAOS_PATH
 
@@ -3529,6 +3702,9 @@ research:
       - STR_GSC_PENETANTE_FEMALE
       - STR_GSC_PENETANTE_LEEROY
       - STR_GSC_ENFORCER_MEDIC
+      - STR_GSC_MINER
+      - STR_GSC_ABERRANT
+
 
   - name: STR_GSC_DISCOVERY_INFECTION  # Xeno Taint Presence # 1B
     requires:
@@ -3578,6 +3754,7 @@ research:
     points: 20
     dependencies:
       - STR_NOT_PRIMARIS
+      - STR_NOT_RADICAL # Edge case cleanup; RadRoad Chaos gets STR_PERSONAL_ARMOR but doesn't want this.
       - STR_PERSONAL_ARMOR
     unlocks:
       - STR_MEDI_KIT_PREREQ
@@ -3681,6 +3858,17 @@ research:
     unlocks:
       - STR_HIGHTIER_PREREQ
 
+  - name: STR_RESEARCH_SWLANDRAIDER  # Landraider Requisition
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_CYDONIA_OR_BUST
+      - STR_SPACEWOLVES_STRATEGY
+      - STR_NOT_WORDBEARERS
+      - STR_NOT_PRIMARIS
+
 ### Assault Strategy #PROGRESSION.SM.ASS#
 ### Devastator Strategy #PROGRESSION.DEV.ASS#
 ### Primaris Strategy
@@ -3767,6 +3955,7 @@ research:
       - STR_SPACEWOLVES_MIDTIER_RESEARCH
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_CYDONIA_OR_BUST
+      - STR_RESEARCH_SWLANDRAIDER
     unlocks:
       - STR_HIGHTIER_PREREQ
 
@@ -3795,6 +3984,14 @@ research:
   - name: STR_INQ_STORMTROOPER_CODEX_UNLOCKER  # Unlocks Ufopedia entries for Inquis Stormtroopers (various triggers)
     refNode: *STR_LOCKED
 
+  # Radical Road has to start with Interrogators, cannot requisition straight to Inquisitors.
+  - name: STR_INQ_INTERROGATOR_REQUISITION
+    cost: 400
+    points: 100
+    dependencies:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_THREAT_ONE
+
   - name: STR_IMPERIAL_INQUISITOR_REQUISITION  # Requisition Inquisitor
     # To recruit Inquisitors
     cost: 600
@@ -3803,6 +4000,7 @@ research:
       - STR_CHAMBERMILITANT
       - STR_MIDTIER_PREREQ
       - STR_NOT_THE_IMPERIAL_LAW
+      - STR_NOT_RADICAL # RadicalRoad getting Interrogators;  maintaining existing Inquisitor Manuf for others
     getOneFree:
       - STR_IMPERIAL_INQUISITOR
   - name: STR_IMPERIAL_INQUISITOR  # Inquisitor
@@ -3865,8 +4063,8 @@ research:
     points: 10
     dependencies:
       - STR_CHAMBERMILITANT
-      - STR_ELITE_STRATEGY_ADEPTAS
       - STR_NOT_THE_IMPERIAL_LAW
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
     getOneFree:
       - STR_INQ_STORMTROOPER
   - name: STR_INQ_STORMTROOPER  # Inquisition Storm Trooper
@@ -3959,10 +4157,11 @@ research:
       - STR_PSYKER_REQUISITION
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_MIDTIER_PREREQ
       - STR_ALIEN_ORIGINS
 
   - name: STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH  # Summon Agents of the Inquisition
-    cost: 200
+    cost: 150
     dependencies:
       - STR_CHAMBERMILITANT
       - STR_NOT_THE_IMPERIAL_LAW
@@ -3970,7 +4169,7 @@ research:
     spawnedEvent: STR_INQ_REQUISITION_AGENTS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH # Secure Inquisitorial Agents Network
-    cost: 400
+    cost: 300
     dependencies:
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_NOT_THE_IMPERIAL_LAW
@@ -3980,26 +4179,36 @@ research:
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_ARBITES_EVENT
 
-  - name: STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH  # Requisition Arbites Support
-    cost: 600
+  - name: STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH  # Secure Arbites Support
+    cost: 500
     dependencies:
       - STR_INQ_REQUISITION_ARBITES_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
     unlocks:
-      - STR_PHOTON_GRENADE_REQUISITION
+      - STR_LIGHT_BOLTERS
+      - STR_ARBITES_BASIC_GEAR_DEP
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ARBITES_EVENT
 
+  - name: STR_INQ_MIDTIER_SUPPORT_ARBITES_DEP
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH
+    unlocks:
+      - STR_IMPERIAL_WEBBER_DEP1
+      - STR_PHOTON_GRENADE_REQUISITION
+
   - name: STR_INQ_REQUISITION_ARBITES_JUDGES_RESEARCH  # Requisition Judges
-    cost: 600
+    cost: 500
     points: -250
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_ARBITES_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_250
     spawnedEvent: STR_INQ_REQUISITION_ARBITES_JUDGES_EVENT
 
@@ -4007,16 +4216,30 @@ research:
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_GUARD_EVENT
 
-  - name: STR_INQ_SECURE_SUPPORT_GUARD_RESEARCH  # Requisition Guard Veterans
-    cost: 600
+  - name: STR_INQ_SECURE_SUPPORT_GUARD_RESEARCH  # Secure Guard Veterans
+    cost: 500
     dependencies:
       - STR_INQ_REQUISITION_GUARD_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_SECURE_SUPPORT_GUARD_EVENT
+    unlocks:
+      - STR_HEAVY_WEAPONS_IG
+      - STR_GUARD_BARRACKS
+      - STR_LASGUN_HOTSHOT
+
+  - name: STR_INQ_MIDTIER_SUPPORT_GUARD_DEP
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_INQ_SECURE_SUPPORT_GUARD_RESEARCH
+    unlocks:
+      - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_ENGINSEER_REQUISITION
 
   - name: STR_INQ_REQUISITION_HEAVY_GUARD_RESEARCH  # Requisition Heavy Guard
     cost: 800
@@ -4024,7 +4247,6 @@ research:
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_GUARD_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_100
     spawnedEvent: STR_INQ_REQUISITION_HEAVY_GUARD_EVENT
     unlocks:
@@ -4037,7 +4259,6 @@ research:
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_GUARD_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_100
     spawnedEvent: STR_INQ_REQUISITION_KRIEG_GRENADIERS_EVENT
 
@@ -4047,7 +4268,6 @@ research:
     dependencies:
       - STR_UFO_CONSTRUCTION  # ceramite tier
       - STR_INQ_REQUISITION_KRIEG_GRENADIERS_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_LOSE_250
     spawnedEvent: STR_INQ_REQUISITION_KRIEG_PANZERGRENADIERS_EVENT
 
@@ -4055,65 +4275,63 @@ research:
     cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_SORORITAS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_SORORITAS_RESEARCH
-    cost: 700
+    cost: 600
     dependencies:
-      - STR_NOT_RADICAL
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
+      - STR_NOT_RADICAL
     unlocks:
       - STR_SISTERS_TRANSFORMATIONS_DEP
     spawnedEvent: STR_INQ_SECURE_SUPPORT_SORORITAS_EVENT
 
   - name: STR_INQ_REQUISITION_SORORITAS_VETERANS_RESEARCH  # Requisition Further Adeptas Sororitas
-    cost: 700
+    cost: 600
     points: -250
     dependencies:
       - STR_MIDTIER_PREREQ
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
       - STR_LOSE_250
     spawnedEvent: STR_INQ_REQUISITION_SORORITAS_VETERANS_EVENT
 
   - name: STR_INQ_REQUISITION_OGRYNS_RESEARCH  # Request Ogryn Bodyguards
-    cost: 400
+    cost: 350
     dependencies:
       - STR_CHAMBERMILITANT
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_INQ_REQUISITION_GUARD_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_OGRYNS_EVENT
 
   - name: STR_INQ_REQUISITION_OGRYNS_BIGGER_RESEARCH  # Request Bigger Ogryn Bodyguards
-    cost: 600
+    cost: 550
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_OGRYNS_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_OGRYNS_BIGGER_EVENT
 
   - name: STR_INQ_REQUISITION_ASSASSINS_RESEARCH  # Order Imperial Assassins
-    cost: 400
+    cost: 250
     dependencies:
       - STR_CHAMBERMILITANT
-      - STR_NOT_THE_IMPERIAL_LAW
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_REQUISITION_ASSASSINS_EVENT  # Order Imperial Assassins
 
   - name: STR_INQ_SECURE_SUPPORT_ASSASSINS_RESEARCH
-    cost: 600
+    cost: 400
     dependencies:
       - STR_INQ_REQUISITION_ASSASSINS_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
-    spawnedEvent: STR_INQ_SECURE_SUPPORT_ASSASSINS_EVENT
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
+    unlocks:
+      - STR_IMPERIAL_ASSASSINS
 
   - name: STR_INQ_REQUISITION_GUARD_PILOTS_RESEARCH   # Requisition Guard Pilots
     cost: 200
     dependencies:
       - STR_INQ_REQUISITION_GUARD_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_REQUISITION_GUARD_PILOTS_EVENT
 
   - name: STR_INQ_REQUISITION_ADEPTAS_PILOTS_RESEARCH  # Requisition Adeptas Pilots
@@ -4121,7 +4339,6 @@ research:
     dependencies:
       - STR_MIDTIER_PREREQ
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
-      - STR_NOT_THE_IMPERIAL_LAW
     spawnedEvent: STR_INQ_REQUISITION_ADEPTAS_PILOTS_EVENT
 
   - name: STR_INQ_RR_CONTACT_THE_ABHUMANS_RESEARCH  # Contact the Abhuman Community
@@ -4129,11 +4346,12 @@ research:
     points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_LOSE_100
     spawnedEvent: STR_INQ_RR_CONTACT_THE_ABHUMANS_EVENT
 
   - name: STR_INQ_RR_RECRUIT_OGRYN_RESEARCH  # Recruit Local Ogryn
-    cost: 400
+    cost: 350
     points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
@@ -4142,7 +4360,7 @@ research:
     spawnedEvent: STR_INQ_RR_RECRUIT_OGRYN_EVENT
 
   - name: STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_RESEARCH  # A Deal With The Squats
-    cost: 400
+    cost: 350
     points: -100
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
@@ -4151,9 +4369,10 @@ research:
     spawnedEvent: STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_ABHUMANS_RESEARCH  # Secure Abhuman Community Support
-    cost: 600
+    cost: 500
     points: -250
     dependencies:
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
       - STR_INQ_RR_CONTACT_THE_ABHUMANS_RESEARCH
       - STR_INQ_RR_A_DEAL_WITH_THE_SQUATS_RESEARCH
       - STR_INQ_RR_RECRUIT_OGRYN_RESEARCH
@@ -4161,144 +4380,180 @@ research:
     spawnedEvent: STR_INQ_SECURE_SUPPORT_ABHUMANS_EVENT
 
   - name: STR_ENTANGLE_ADEPTAS_RESEARCH  # Entangle the Adeptas
-    cost: 700
+    cost: 500
     disables:
       - STR_INQ_SECURE_SUPPORT_SORORITAS_RESEARCH
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_RR_MIDTIER_CHAOS
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
       - STR_INQ_REQUISITION_SORORITAS_RESEARCH
+    unlocks:
+      - STR_ADEPTAS_STORM_BOLTERS_DEP
+      - STR_LASCAN_MALTHUS
+      - STR_HAND_FLAMETHROWER_REQUISITION
+      # - STR_FAITHFUL_ARMORY #TODO to do this right will require a real rework of the Sisters techs/items
     spawnedEvent: STR_REINFORCEMENTS_ADEPTAS_INQ_ENTANGLED
 
   - name: STR_INQ_RR_ENTICE_BRIBES_RESEARCH  # Deploy Blackmail and Entice Bribes
-    cost: 700
+    cost: 600
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_MIDTIER_PREREQ
     spawnedEvent: STR_INQ_RR_ENTICE_BRIBES_EVENT
 
 
   - name: STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH  # Indulge the Deathcults
-    cost: 700
+    cost: 500
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_1_EVENT
   - name: STR_INQ_RR_DEATHCULT_RITUAL_2_RESEARCH  # Partake in Deathcult Rituals
-    cost: 800
+    cost: 650
     dependencies:
       - STR_INQ_RR_DEATHCULT_RITUAL_1_RESEARCH
       - STR_MIDTIER_PREREQ
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_2_EVENT
   - name: STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH  # Embrace the Deathcults
-    cost: 900
+    cost: 800
     dependencies:
-      - STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH
+      - STR_INQ_RR_DEATHCULT_RITUAL_2_RESEARCH
       - STR_HIGHTIER_PREREQ
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_3_EVENT
 
-  - name: STR_INQ_BLACK_MARKET_XENOTECH_RESEARCH  # Acquire Black Market Xenotech
+
+  - name: STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS # Entry point to RR Xenos Path
+    cost: 200
+    dependencies:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
+      - STR_LASER_WEAPONS
+    getOneFree:
+      - STR_TAU_XENOTECH
+    unlocks:
+      - STR_ELDAR_ONLY # Eldar Weapons Training
+      - STR_ORK_ONLY # Dakka
+      - STR_ELDAR_GRENADE
+
+  - name: STR_INQ_RR_REQUISITION_XENOS
     cost: 250
-    points: -50
     dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_MIDTIER_PREREQ
-      - STR_XENO_ONLY
-      - STR_LOSE_50
-    spawnedEvent: STR_INQ_BLACK_MARKET_XENOTECH_EVENT
-    repeatable: true
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
+      - STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS
+    events:
+      STR_INQ_RR_REQUISITION_XENOS_ORKS_EVENT: 1
+      STR_INQ_RR_REQUISITION_XENOS_ELDAR_EVENT: 1
+      STR_INQ_RR_REQUISITION_XENOS_TAU_EVENT: 1
 
-  - name: STR_INQ_CONSORT_AELDARI_RESEARCH  # Consort with the Aledari
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
     cost: 400
     points: -100
     dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_MIDTIER_PREREQ
+      - STR_INQ_RR_MIDTIER_XENOS
       - STR_LOSE_100
-    unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_ELDAR_LEADER_INTERROGATED
-
-  - name: STR_INQ_CONSORT_TAU_RESEARCH  # Consort with the Tau
-    cost: 400
-    points: -100
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_MIDTIER_PREREQ
-      - STR_LOSE_100
-    unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_TAU_FIREWARRIORCAPTAINAI
-
-
-  # Acquires a new Xeno tech topic. Should include all requirements for STR_NECRONTECH_RESEARCH and STR_TAU_XENOTECH
-  # Orks/Eldar excluded because their item topics don't contribute to their path/weapon usage (their path starts only with a Leader Interrogation)
-  # If new Xenos things in future, add to list.
-  - name: STR_INQ_XENOTECH_ANALYSIS_RESEARCH  # Xenotech Sythetic Analysis
-    cost: 400
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_HIGHTIER_PREREQ
-      - STR_XENO_ONLY
-    spawnedEvent: STR_INQ_XENOTECH_ANALYSIS_EVENT
-    repeatable: true
-    getOneFree:
-      # Tau
-      - STR_TAU_PULSE_MAG
-      - STR_TAU_PULSE_BLASTER_MAG
-      - STR_TAU_RAIL_MAG
-      - STR_TAU_PULSE_RIFLE
-      - STR_TAU_PULSE_CARBINE
-      - STR_TAU_PULSE_BLASTER
-      - STR_TAU_PULSE_PISTOL
-      - STR_TAU_RAIL_RIFLE
-      - STR_TAU_PHOTON_GRENADE
-      - STR_TAU_FUSION_GRENADE
-      - STR_TAU_EMP_GRENADE
-      - STR_TAU_DRONEAI
-      # Necrons
-      - STR_GAUSS_BLASTER
-      - STR_HYPERPHASESWORD
-      - STR_SYNAPTIC_DISINTEGRATOR
-      - STR_GAUSS_FLAYER
-      - STR_GAUSS_REAPER
-      - STR_NECRON_WARSCYTHE
-      - STR_STAFF_OF_LIGHT
-
-
-  - name: STR_HERETICAL_INQUISITOR_STRATEGY  # Heretical Means Path
-    cost: 100
-    points: -500 #was 1000, move that negative scores to later topics/events for more player control
-    unlocks:  # Now gives the prerequisites to enter the generic chaos path immediately which meets the needs of the former method
-      - STR_ALIEN_ORIGINS
-    getOneFree:
-      - STR_UNSANCTIONED_REQUISITIONS
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_LOSE_500
-    reenables:
-      - STR_CHAOS_PATH
     disables:
-      - STR_XENO_ONLY
-      - STR_ELDAR_PATH
-      - STR_GREYKNIGHTS
-      - STR_REINFORCEMENT
-      - STR_REINFORCEMENT_2
-      - STR_REINFORCEMENT_3
-      - STR_REINFORCEMENT_3
-      - STR_REINFORCEMENT_4
-      - STR_REINFORCEMENT_5
-      - STR_REINFORCEMENT_6
-      - STR_REINFORCEMENT_7
-      - STR_REINFORCEMENT_8
-      - STR_REINFORCEMENT_9
+      - STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
+    unlocks:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ELDAR_EVENT
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
+      - STR_LEADER_PLUS
+      - STR_LOSE_100
+    unlocks:
+      # TODO Eldar research tree is in flux; revisit when more stable
+      #- STR_ELDAR_SPIDER_RESEARCH
+      #- STR_ELDAR_FIREDRAGON_RESEARCH
+      #- STR_ELDAR_REAPER_RESEARCH
+      - STR_FUSION_TECH_RESEARCH
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
+    cost: 400
+    points: -100
+    dependencies:
+      - STR_INQ_RR_MIDTIER_XENOS
+      - STR_LOSE_100
+    disables:
+      - STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
+      - STR_ORK_BOY_RECRUITMENT # disable Ork soldier recruitment
+    reenables:
+      - STR_ORK_DEAL # Will be granted by STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT ; getOneFree doesn't work
+    unlocks:
+      # - STR_ORK_MERCENARIES # note: this is only for the normal DefeatOrkBases pathway.
+      - STR_SPOOKUM_KAMP_RECRUITED
+      - STR_DAKKA_GITZ_RECRUITED
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
+      - STR_UFO_POWER_SOURCE
+      - STR_LOSE_100
+    unlocks:
+      - STR_MEK_KLAN_RECRUITED
+      - STR_SPEED_KULT_RECRUITED
+      - STR_ORKZ_MASTER_CRAFTING
+
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH
+    cost: 400
+    points: -100
+    dependencies:
+      - STR_INQ_RR_MIDTIER_XENOS
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
+    unlocks:
+      - STR_TAU_STRIKE_TEAMS_GV
+      - STR_TAU_BREACHERS_GV
+      - STR_TAU_PATHFINDERS_GV
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_TAU_EVENT
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH
+      - STR_NAVY_COMUNICATIONS
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
+    getOneFree:
+      - STR_FORM_KILL_TEAMS_GV
+    unlocks:
+      - STR_DEVILFISH_TRANSPORTS_GV
+      - STR_STEALTH_SUIT_OPERATIONS_GV
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_3_RESEARCH
+    cost: 800
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH
+      - STR_MASTER_CRAFTING
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
+    unlocks:
+      - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
+      - STR_FIREKNIFE_CRISIS_OPERATIONS_GV
+      - STR_SUNFORGE_CRISIS_OPERATIONS_GV
+      - STR_ORCA_DROPSHIPS_GV
+
 
   - name: STR_FALSIFY_INQUISITION_REPORT  # Falsify Inquisition Statement
-    cost: 800
+    cost: 300
     points: 500
     dependencies:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_THREAT_ONE
       - STR_GAIN_500
     spawnedEvent: STR_REWARD_INQUISITION_STORMTROOPERS
   - name: STR_FALSIFY_INQUISITION_REPORT_2  # Falsify Inquisition Report
-    cost: 800
+    cost: 500
     points: 500
     dependencies:
       - STR_FALSIFY_INQUISITION_REPORT
@@ -4306,7 +4561,7 @@ research:
       - STR_GAIN_500
     spawnedEvent: STR_REWARD_INQUISITION_STORMTROOPERS
   - name: STR_FALSIFY_INQUISITION_REPORT_3  # Falsify Inquisition Records
-    cost: 800
+    cost: 700
     points: 500
     dependencies:
       - STR_FALSIFY_INQUISITION_REPORT_2
@@ -4315,47 +4570,91 @@ research:
     spawnedEvent: STR_REWARD_INQUISITION_STORMTROOPERS
 
   - name: STR_INQ_CONTACT_REVISIONISTS_RESEARCH  # Contact Revisionists
-    cost: 300
+    cost: 250
     points: -100
     dependencies:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_INQ_ARCHENEMY_ARMAMENTS_RESEARCH
       - STR_LOSE_100
     spawnedEvent: STR_INQ_CONTACT_REVISIONISTS_EVENT
 
-  - name: STR_INQ_CONTACT_DEFECTOR_SISTERS_RESEARCH  # Contact Heretical Sisters
-    cost: 700
-    points: -250
-    dependencies:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
-      - STR_LOSE_250
-    spawnedEvent: STR_INQ_CONTACT_DEFECTOR_SISTERS_EVENT
-
   - name: STR_INQ_CONTACT_DEFECTOR_MARINES_RESEARCH  # Heretical Marines Contacted
-    cost: 900
+    cost: 800
     points: -500
     dependencies:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_INQ_RR_MIDTIER_CHAOS
+      - STR_LEADER_PLUS
       - STR_LOSE_500
+    unlocks:
+      - STR_MARINE_BOLTERS
+      - STR_BOLTER_AMMO_PREREQ
+    getOneFree:
+      - STR_PERSONAL_ARMOR # Open up pathway into Chaos Marine Armor manufactures
     spawnedEvent: STR_INQ_CONTACT_DEFECTOR_MARINES_EVENT
 
   - name: STR_INQ_SECURE_SUPPORT_REVISIONISTS_RESEARCH  # Secure Revisionists Support
     cost: 600
-    points: -500
+    points: -250
     dependencies:
-      - STR_INQ_CONTACT_REVISIONISTS_RESEARCH
-      - STR_INQ_CONTACT_DEFECTOR_SISTERS_RESEARCH
-      - STR_INQ_CONTACT_DEFECTOR_MARINES_RESEARCH
-      - STR_LOSE_750
+      - STR_INQ_RR_MIDTIER_CHAOS
+      - STR_LOSE_250
     spawnedEvent: STR_INQ_SECURE_SUPPORT_REVISIONISTS_EVENT
 
   - name: STR_INQ_ARCHENEMY_ARMAMENTS_RESEARCH  # Armaments of the Archenemy
     cost: 200
     points: -100
     dependencies:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
+      - STR_LASER_WEAPONS
       - STR_LOSE_100
+    unlocks:
+      - STR_CHAOS_WEAPON_USE_DEP
+
+  # RadicalRoad Chaos path: alternate God Devotions access
+  - name: STR_INQ_RR_LORE_NURGLE
+    cost: 500
+    points: -250
+    dependencies:
+      - STR_SUMMON_DAEMONS_RESEARCH
+      - STR_LOSE_250
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
-      - STR_CORRUPTED_REQUISITIONS
+      - STR_NURGLE_OPTIONS
+    disables:
+      - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
+  - name: STR_INQ_RR_LORE_TZEENTCH
+    cost: 500
+    points: -250
+    dependencies:
+      - STR_SUMMON_DAEMONS_RESEARCH
+      - STR_LOSE_250
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
+    getOneFree:
+      - STR_TZEENTCH_OPTIONS
+  - name: STR_INQ_RR_LORE_KHORNE
+    cost: 500
+    points: -250
+    dependencies:
+      - STR_SUMMON_DAEMONS_RESEARCH
+      - STR_LOSE_250
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
+    getOneFree:
+      - STR_KHORNE_OPTIONS
+    disables:
+      - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
+  - name: STR_INQ_RR_LORE_SLAANESH
+    cost: 500
+    points: -250
+    dependencies:
+      - STR_SUMMON_DAEMONS_RESEARCH
+      - STR_LOSE_250
+    unlocks:
+      - STR_CONVINCE_CHAOS_RESEARCH
+    getOneFree:
+      - STR_SLAANESH_OPTIONS
 
 
 ### Deathwatch #PROGRESSION.CM.DW#
@@ -4564,82 +4863,149 @@ research:
 ### The Radical Road #PROGRESSION.CM.RAD#
   - name: STR_REEDUCATION_RESEARCH  # Reeducate Prisoners
     # Allows splitting some chaos recruitment off from Convince Chaos to hand it out without duplicates.
-    points: -200 #negative score moved from earlier entry research radical road for this path
     dependencies:
       - STR_CONVINCE_CHAOS_RESEARCH
       - STR_LOSE_200
 
+  - name: STR_INQ_RR_CRAFT_ACQUISITIONS
+    cost: 300
+    dependencies:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_LASER_WEAPONS
+      - STR_ALIEN_ALLOYS
+      - STR_ELERIUM_115
+    unlocks:
+      - STR_INQUISITION_VALKYRIE
+
+  - name: STR_INQ_RR_CRAFT_ADVANCED
+    cost: 400
+    dependencies:
+      - STR_INQ_RR_CRAFT_ACQUISITIONS
+      - STR_MIDTIER_PREREQ
+      - STR_UFO_CONSTRUCTION
+
+  - name: STR_INQ_RR_CORVUS_ACCESS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_INQ_RR_CRAFT_ACQUISITIONS
+    unlocks:
+      - STR_CORVUS_RESEARCH
+
+  - name: STR_ARVUS_DEP
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ADEPTAS
+
+  - name: STR_ARVUSSQUADRON_DEP
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ARBITES_MIDTIER
+
+  - name: STR_INQ_RR_ARVUSSQUADRON_ACCESS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_INQ_RR_CRAFT_ACQUISITIONS
+      - STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH
+    unlocks:
+      - STR_ARVUSSQUADRON_DEP
+
+  - name: STR_INQ_RR_VULTURE_ACCESS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_INQ_RR_CRAFT_ACQUISITIONS
+      - STR_INQ_SECURE_SUPPORT_ARBITES_RESEARCH
+    unlocks:
+      - STR_VULTURE_IG_REQUISITION
+
+  - name: STR_INQ_RR_MIDTIER_CHAOS #Midtier Chaos Path
+    cost: 250
+    dependencies:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
+      - STR_INQ_CONTACT_REVISIONISTS_RESEARCH
+      - STR_MELTAGUN_TECH
+      - STR_ALIEN_ALLOYS
+      - STR_MOTION_SCANNER
+    disables:
+      - STR_INQ_RR_MIDTIER_XENOS
+      - STR_CHAOS_SORCERY # Not suited to RR Chaos progression; Tome of the Mind does almost nothing
+      - STR_CORRUPTED_REQUISITIONS # Avoid swapping to Chaos basics;  disruptive to switch basic weapons and ammo for no real gain;  doesn't hinder special chaos weapons from Lores
+                                   # See STR_INQ_RR_MIDTIER_EVENT_CHAOS which
+    unlocks:
+      - STR_MIDTIER_PREREQ
+      - STR_ALIENS_ONLY # Chaos Corruption
+      - STR_ALIEN_ORIGINS # Warp Origins
+      - STR_INQ_INTERROGATOR_REQUISITION # Alternate path; the THREAT_ONE depends allows earlier unlock
+      - STR_LIGHT_BOLTERS
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE
+      - STR_HARDER_MISSIONS
+    getOneFree:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+    spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_CHAOS
+
+  # Workaround to get STR_ALIENS_ONLY , but keep Imperial basic weapons. Combine with the disables in STR_INQ_RR_MIDTIER_CHAOS
+  - name: STR_INQ_RR_MIDTIER_CHAOS_MAINTAIN_IMPERIAL_DEP
+    cost: 0
+    dependencies:
+      - STR_INQ_RR_MIDTIER_CHAOS
+    reenables:
+      - STR_IMPERIAL_WEAPONS
+
   - name: STR_XENO_LEADER_INTERROGATED  # Xeno Leader Interrogation
     refNode: *STR_LOCKED
 
-  - name: STR_XENO_ONLY  # Xeno Embrace
+  - name: STR_INQ_RR_MIDTIER_XENOS #Midtier Xenos Path
     # grant access to Xeno Weapons (not chaos)
     cost: 250
-    points: -200
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_XENO_LEADER_INTERROGATED  # live interrogation
-      - STR_LOSE_200
-    unlocks:
-      - STR_ORK_ONLY
-      - STR_ELDAR_ONLY
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
+      - STR_INQ_RR_REQUISITION_XENOS
+      - STR_MELTAGUN_TECH
+      - STR_ALIEN_ALLOYS
+      - STR_MOTION_SCANNER
     disables:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_INQ_RR_MIDTIER_CHAOS
+    unlocks:
+      - STR_MIDTIER_PREREQ
+      - STR_INQ_INTERROGATOR_REQUISITION # Alternate path; the THREAT_ONE depends allows earlier unlock
+      - STR_LIGHT_BOLTERS
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE
+      - STR_HARDER_MISSIONS
+    spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_XENOS
+
 
   - name: STR_TAU_XENOTECH  # Tau Xenotech
     # grant access to Tau Weapons
     cost: 1000
     points: -250
     dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_TAU_PULSE_MAG
-      - STR_TAU_PULSE_BLASTER_MAG
-      - STR_TAU_RAIL_MAG
-      - STR_TAU_PULSE_RIFLE
-      - STR_TAU_PULSE_RIFLE_EXPORT
-      - STR_TAU_PULSE_CARBINE
-      - STR_TAU_PULSE_BLASTER
-      - STR_TAU_PULSE_PISTOL
-      - STR_TAU_RAIL_RIFLE
-      - STR_TAU_PHOTON_GRENADE
-      - STR_TAU_FUSION_GRENADE
-      - STR_TAU_EMP_GRENADE
-      - STR_TAU_DRONEAI
-      - STR_TAU_FIREWARRIORCAPTAINAI
+      - STR_GENERALLOCK
       - STR_LOSE_250
 
   - name: STR_SUMMON_DAEMONS_RESEARCH  # The Summoning of Daemons
-    cost: 1000
-    points: -500
+    cost: 800
+    points: -250
     dependencies:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
-      - STR_LOSE_500
-
-  - name: STR_MT_RAD  # Inquisition Mid-tier Requisitions
-    # Mid tier Radical Roadists
-    cost: 200
-    points: 200
-    dependencies:
-      - STR_MELTAGUN_TECH
-      - STR_ALIEN_ALLOYS
-      - STR_MOTION_SCANNER
-      - STR_MEDI_KIT_PREREQ
-      - STR_CHAMBERMILITANT
-      - STR_RADICAL_INQUISITOR_STRATEGY
-    unlocks:
-      - STR_MIDTIER_PREREQ
-      - STR_CASS_R
-      - STR_SIDEOPERATIONS
-    cutscene: c2
-    spawnedEvent: ""
+      - STR_INQ_RR_MIDTIER_CHAOS
+      - STR_ALIEN_ORIGINS
+      - STR_LOSE_250
 
   - name: STR_RADICAL_HIGHTIER  # Inquisition High-tier Requisitions
     # Radical Road high tier
     cost: 900
     points: 30
     dependencies:
-      - STR_MIDTIER_PREREQ
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_MIDTIER_PREREQ
       - STR_CYDONIA_OR_BUST
       - STR_CHAMBERMILITANT
     unlocks:
@@ -4664,7 +5030,6 @@ research:
       - STR_CASS_R
       - STR_SIDEOPERATIONS
       - STR_INQUISITION_DROPPODS
-      - STR_XENO_ONLY
       - STR_ELDAR_PATH
     cutscene: c2
 
@@ -5489,6 +5854,8 @@ research:
     # Only unlocked by STR_ADEPTAS_SOB_MOBILIZATION and required to hire Sister of Battle soldiers.
     # Likely redundant if requirements are moved to STR_ADEPTAS_SOB_MOBILIZATION
 
+  # NOTE: Imperial Agents Radical Road can get this Research too. For any options derived from this,
+  # if it's actually SistersOfBattle only, add STR_ADEPTAS alongside this.
   - name: STR_FAITHFUL_ARMORY  # Arsenal of Faith
     cost: 300
     points: 15
@@ -5500,6 +5867,13 @@ research:
       - STR_HAND_FLAMETHROWER_REQUISITION
       - STR_BOLTER_AMMO_PREREQ
       - STR_INQUISITION_DROPPODS
+
+  - name: STR_ADEPTAS_STORM_BOLTERS_DEP
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ADEPTAS
+      - STR_HB_DEP1 # Storm Bolter technology
 
   - name: STR_ADEPTAS_SENTINEL_MELTALANCE_REQ  # Meltalance Sentinel Requisition
     cost: 200
@@ -5550,6 +5924,7 @@ research:
       - STR_HFLAMERR
       - STR_CASS_R
       - STR_HB_DEP1
+      - STR_CORVUS_RESEARCH
       - STR_SIDEOPERATIONS
     cutscene: c2
 
@@ -5937,6 +6312,7 @@ research:
       - STR_NAVY_COMUNICATIONS
       - STR_IMPERIAL_GUARD_MISSION_TRAINING_COMPLETE
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_CHAPTER_PURITY
 
   - delete: STR_IMPERIAL_GUARD_MISSIONS_TANITH0_COMPLETE
@@ -6148,6 +6524,7 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_CHAPTER_PURITY
       - STR_CATACHAN_GEN
 
@@ -6332,6 +6709,42 @@ research:
       #Insert Krieg End Game Craft Research Topic Here
     unlocks:
       - STR_HIGHTIER_PREREQ
+
+### Valhalla Strategy #PROGRESSION.IG.VALHALLA#
+  - name: STR_VALHALLA_MIDTIER
+    cost: 200
+    points: 200
+    cutscene: c2
+    dependencies:
+      - STR_MELTAGUN_TECH
+      - STR_ALIEN_ALLOYS
+      - STR_MOTION_SCANNER
+      - STR_VALHALLAN_STRATEGY
+    unlocks:
+      - STR_MIDTIER_PREREQ
+      - STR_CARAPACE_ARMOR_IG
+      - STR_GUARDSMEN_VETERAN
+      - STR_GUARD_PRIEST_REQUISITION
+      - STR_HOLOGRAM_GRENADE_REQUISITION
+      - STR_HARDER_MISSIONS
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE
+      - STR_AUTOCANNON_TECH
+
+#3 Valhallan Mid-tier+ Craft. One unlocks right away from having STR_VALHALLA_MIDTIER (trucks)
+#The Valhallan Crassus require STR_UFO_CONSTRUCTION and the Executioner Tank Convoy needs Heavy Plasma DEP1 too
+
+  - name: STR_VALHALLA_HIGHTIER  # Valhalla High-tier Requisitions
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_VALHALLA_MIDTIER
+      - STR_CYDONIA_OR_BUST
+      - STR_REGIMENT_OFFICERS
+      - STR_UFO_CONSTRUCTION
+    unlocks:
+      - STR_HIGHTIER_PREREQ
+
+#Valhallans unlock GORGON by having STR_VALHALLA_HIGHTIER
 
 ####################################
 #FLAVOR# Flavor Topics
@@ -6569,8 +6982,7 @@ research:
     cost: 0
     points: 10
     dependencies:
-      - STR_ADEPTAS_AND_INQUISITION
-      - STR_ADEPTAS_MIDTIER
+      - STR_GENERALLOCK
 
   - delete: STR_NEW_FIGHTER_TRANSPORTER
   - name: STR_NEW_FIGHTER_TRANSPORTER  # Assault Transport Requisition
@@ -6709,7 +7121,7 @@ research:
 ## Chamber Militant #CRAFTS.CM#
   - name: STR_INQUISITION_VALKYRIE
     dependencies:
-      - STR_ADEPTAS_AND_INQUISITION
+      - STR_DEATHWATCH_AND_ADEPTAS
     cost: 0
     points: 0
 ### Deathwatch #CRAFTS.CM.DW#
@@ -6792,13 +7204,8 @@ research:
     cost: 900
     points: 30
     dependencies:
-      # - STR_GK_HIGHTIER
-      # - STR_GREYKNIGHTS
-      # - STR_HIGHTIER_PREREQ
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_ELERIUM_115
-      - STR_MIDTIER_PREREQ
-      - STR_CHAMBERMILITANT
+      - STR_HIGHTIER_PREREQ
+      - STR_INQ_RR_CRAFT_ADVANCED
 
 ### Officio Assassinorum #CRAFTS.CM.OA#
   - name: STR_INQUISITION_DROPPODS # Drop pods at mid-tier
@@ -7359,7 +7766,7 @@ research:
       - STR_DEV_ARMOR
       - STR_ALIEN_ORIGINS
       - STR_LEADER_PLUS
-      - STR_CHAOS_MARINE_HIRE_RESEARCH
+      - STR_ALIENS_ONLY
     getOneFree:
       - STR_SARGENT_ARMOR
 
@@ -7565,14 +7972,6 @@ research:
       - STR_WBMISSION9DONE
       - STR_HIGHTIER_PREREQ
       - STR_NEW_FIGHTER_TRANSPORTERLOCK
-
-### Eldar Alliance
-  - delete: STR_ELDAR_SHIELD
-  - name: STR_ELDAR_SHIELD  # Eldar Personal Shield
-    cost: 200
-    points: 50
-    dependencies:
-      - STR_ELDAR_PATH
 
 ## Space Marines #ARMORS.SM#
   - delete: STR_PERSONAL_ARMOR
@@ -7970,7 +8369,7 @@ research:
     points: 20
     dependencies:
       - STR_ALIEN_ALLOYS
-      - STR_THREAT_ONE
+      # - STR_THREAT_ONE
       - STR_THE_IMPERIAL_LAW_STRATEGY
 
 ### Chaos Cult #ARMORS.AT.CULT#
@@ -8100,6 +8499,7 @@ research:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_MIDTIER_PREREQ
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     unlocks:
       - STR_ROTOR_CANNON_RESEARCH
 
@@ -8836,6 +9236,14 @@ research:
 ### Scion Strategy #WEAPONS.IG.SCION#
 ### Abhuman Strategy #WEAPONS.IG.ABHUMAN#
 ### Steel Legion Strategy #WEAPONS.IG.STEEL#
+### Valhallan Strategy #WEAPONS.IG.VALHALLA#
+  - name: STR_VALHALLAN_WEAPONS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_VALHALLAN_STRATEGY
+      - STR_GENERALLOCK
+
 ## Foes #WEAPONS.#WEAPONS.FOE#
 ###  Chaos #WEAPONS.FOE.CHAOS#
  ## Chaos weapons are grouped by type, instead of by subfaction, to facilitate easily adding new weapons to groups that unlock codex categories.
@@ -8893,6 +9301,10 @@ research:
 
   # Shotguns
   - name: STR_CHAOS_RIPPERGUN  # Chaos Ripper Gun
+    refNode: *BASIC_CHAOS_WEAPON
+  - name: STR_SHOTGUN_CHAOS
+    refNode: *BASIC_CHAOS_WEAPON
+  - name: STR_PUMP_SHOTGUN_CHAOS
     refNode: *BASIC_CHAOS_WEAPON
 
   # Autoguns
@@ -9067,7 +9479,12 @@ research:
     refNode: *LASCAN_CHAOS_WEAPON
 
   # Flamers
-
+  - name: STR_FLAMETHROWER_CHAOS # chaos flamer
+    refNode: *BASIC_CHAOS_WEAPON
+  - name: STR_FLAMETHROWERTZ #warpflamer
+    refNode: *BASIC_CHAOS_WEAPON
+    unlocks: !add
+      - STR_CHAOS_ARMORY_EXAM_TZEENTCH
 
   # Meltas
   - delete: STR_CHAOS_MELTAGUN
@@ -13042,6 +13459,18 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
     destroyItem: true
+  - name: STR_GSC_MINER #Brood neophyte
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+  - name: STR_GSC_ABERRANT  # Aberrant
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
   - name: STR_GSC_JUDGEF  # Arbites Judge
     cost: 100
     points: 25
@@ -14228,6 +14657,12 @@ research:
     refNode: *STR_CORPSE_BASIC
   - name: STR_GSC_ENFORCER_MEDIC_CORPSE
     refNode: *STR_CORPSE_BASIC
+#  - name: STR_GSC_MINER_CORPSE # they could be added as-is but they have no functionality attached right now
+#    refNode: *STR_CORPSE_BASIC
+#  - name: STR_GSC_ABERRANT_CORPSE
+#    refNode: *STR_CORPSE_BASIC
+#  - name: STR_LOCUS_CORPSE
+#    refNode: *STR_CORPSE_BASIC
   - name: STR_GSC_JUDGE_CORPSE
     refNode: *STR_CORPSE_BASIC
   - name: STR_GSC_ARBITOR_CORPSE

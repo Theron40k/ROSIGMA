@@ -1,0 +1,35 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+weaponSets:  # these can be re-used for any unit
+  - type: STR_ELDAR_REAPER_LAUNCHER_SET
+    weapons: [STR_ELDAR_LAUNCHER, STR_LARGE_ROCKET_ELDAR, STR_LARGE_ROCKET_ELDAR, STR_LARGE_ROCKET_ELDAR, INV_NULL_3X3]
+
+units:
+#TODO: import eldar soldier here for ENEMIES
+#example: STR_ELDAR_REAPER
+
+  - type: STR_ELDAR_PLAT_P     # STR_ELDAR_ARMOR2                        RANK 7
+    race: STR_ELDAR
+    stats:
+      tu: 60
+      stamina: 30
+      health: 80
+      bravery: 110
+      reactions: 64
+      firing: 80
+      throwing: 0
+      strength: 90
+      psiStrength: 150
+      psiSkill: 0
+      melee: 0
+    energyRecovery: 30
+    livingWeapon: true
+
+  - type: STR_ELDAR_REAPER
+    builtInWeapons: []
+    weightedBuiltInWeaponSets:
+      -
+        STR_ELDAR_REAPER_LAUNCHER_SET: 100
+
+

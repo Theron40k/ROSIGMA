@@ -14,8 +14,8 @@ items:
     hitSound: {mod: 40k, index: 19}
     hitAnimation: {mod: 40k, index: 100}
     explosionSpeed: 10
-    bulletSpeed: 50
-    accuracyAuto: 50
+    bulletSpeed: 30
+    accuracyAuto: 60
     accuracySnap: 70
     autoRange: 12
     snapRange: 16
@@ -32,7 +32,7 @@ items:
       name: TAUDRONEGUN_AUTO
       followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
     # Carbine/rifle/burst cannon fire
-    power: 100
+    power: 95
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -84,7 +84,7 @@ items:
     tuAuto: 50
     tuSnap: 30
     autoShots: 3
-    power: 100
+    power: 95
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -191,7 +191,7 @@ items:
     bulletSpeed: 25 # slow it down some
     battleType: 2
     clipSize: 20
-    power: 100
+    power: 95
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -200,6 +200,8 @@ items:
 
   - type: STR_TAU_PULSE_MAG_EXPORT
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
+    requires:
+      - STR_TAU_TRADING
     requiresBuy:
       - STR_TAU_TRADING
       - STR_NOT_TAU_GUEVESA_TRADING   # stop buying old one when new one arrives
@@ -209,7 +211,7 @@ items:
     handSprite: 3704
     clipSize: 12 #severely limited
     # doesn't hit as hard
-    power: 90
+    power: 85
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -219,6 +221,8 @@ items:
 
   - type: STR_TAU_PULSE_MAG_EXPORT_GUEVESA
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
+    requires:
+      - STR_TAU_GUEVESA_TRADING
     requiresBuy:
       - STR_TAU_GUEVESA_TRADING
     requiresBuyBaseFunc: [TRADE]
@@ -227,7 +231,7 @@ items:
     handSprite: 3704
     clipSize: 16
     # doesn't hit as hard
-    power: 95
+    power: 90
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -237,13 +241,13 @@ items:
 
   - type: STR_TAU_PULSE_BLASTER_MAG
     refNode: *STR_TAU_PULSE_AMMO_TEMPLATE
-    power: 100
+    power: 95
     clipSize: 16
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 7   # random means some pellets will roll high
       ToArmorPre: 0.2 # was 0.2 # was 0.3  # melts some armor on the way in
-      ArmorEffectiveness: 0.85  # the blaster retains armor penetration
+      ArmorEffectiveness: 0.9  # the blaster retains armor penetration
     shotgunBehavior: 1
     shotgunSpread: 10
     shotgunPellets: 5
@@ -267,7 +271,7 @@ items:
     reloadSound: 2451
     costSell: 20000
     explosionSpeed: 10
-    bulletSpeed: 100
+    bulletSpeed: 30
     accuracyAuto: 60
     accuracySnap: 80
     accuracyAimed: 90
@@ -344,7 +348,7 @@ items:
     reloadSound: 2451
     costSell: 20000
     explosionSpeed: 10
-    bulletSpeed: 100
+    bulletSpeed: 30
     accuracyAuto: 55
     accuracySnap: 75
     accuracyAimed: 85
@@ -352,7 +356,7 @@ items:
     tuSnap: 25
     tuAimed: 25
     autoShots: 3
-    power: 100
+    power: 90
     damageType: 1
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -411,7 +415,7 @@ items:
     tuAuto: 50
     tuSnap: 35
     autoShots: 4
-    power: 100
+    power: 95
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -668,18 +672,18 @@ items:
     hitSound: {mod: 40k, index: 19}
     hitAnimation: {mod: 40k, index: 100}
     reloadSound: 2451
-    costSell: 20000
+    costSell: 0
     explosionSpeed: 10
-    bulletSpeed: 50
-    accuracySnap: 90  # Breachers are more accurate
+    bulletSpeed: 30
+    accuracySnap: 80  # Breachers are more accurate
     tuSnap: 25
-    power: 100    # was 120 - too easy to get one shots
+    power: 95    # was 120 - too easy to get one shots
     damageType: 1
     # Pulse blaster
     damageAlter:  # DA PULSE AP BREACHER
-      RandomType: 7   # rerolling wounds
+      RandomType: 6   # rerolling wounds
       ToArmorPre: 0.2
-      ArmorEffectiveness: 0.85  # the blaster retains armor penetration
+      ArmorEffectiveness: 0.9  # the blaster retains armor penetration
     # clipSize: -1  # debugging
     # confSnap:
     #   spendPerShot: 2 #effectively half the normal ammo cap
@@ -689,7 +693,7 @@ items:
     invWidth: 2
     invHeight: 3
     arcingShot: false
-    snapRange: 12   # was 16
+    snapRange: 10   # was 16
     dropoff: 20 #pulse shotgun
     recover: true
     shotgunBehavior: 1
@@ -733,7 +737,7 @@ items:
     accuracyAimed: 100
     tuSnap: 20
     tuAimed: 40
-    power: 100
+    power: 95
     damageType: 1 # was 5
     damageAlter:  # DA PULSE
       RandomType: 6
@@ -793,13 +797,13 @@ items:
     armor: 200
     attraction: 1
     listOrder: 11500
-    dropoff: 4
+    dropoff: 3
     snapRange: 24
     aimRange: 24
-    accuracySnap: 90
-    accuracyAimed: 90
+    accuracySnap: 85
+    accuracyAimed: 85
     tuSnap: 35    # bulky
-    tuAimed: 35
+    tuAimed: 40
     confSnap:
       name: STR_BURST_SNAP_SHOT
       shots: 3
@@ -871,9 +875,9 @@ items:
     powerForAnimation: 24
     reloadSound: 2454
     costSell: 0
-    bulletSpeed: 50
-    accuracySnap: 70
-    accuracyAimed: 90
+    bulletSpeed: 30
+    accuracySnap: 65
+    accuracyAimed: 85
     tuAimed: 70
     tuSnap: 45
     battleType: 1
@@ -898,27 +902,27 @@ items:
     refNode: *STR_RAIL_RIFLES
     weight: 12
     costSell: 0
-    bulletSpeed: 100
-    accuracySnap: 80
-    accuracyAimed: 100
+    bulletSpeed: 30
+    accuracySnap: 75
+    accuracyAimed: 95
     tuAimed: 60
     tuSnap: 40
     battleType: 1
     twoHanded: true
     blockBothHands: true
     arcingShot: false
-    minRange: 6
+    minRange: 4
     snapRange: 32
     aimRange: 40
-    dropoff: 3 #has exceptional range
+    dropoff: 3 #has truly exceptional range
     recover: true
     kneelBonus: 150 # still better if kneeling
-    tuLoad: 5 #quick reload
-    tuUnload: 5
+    tuLoad: 4 #quick reload
+    tuUnload: 4
     tags:
       REACTION_MULTIPLIER: 75
       REACTION_PENALTY_KNEELING_BYPASS: 1
-      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # Battle railgun
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 50  # DMR railgun
 
   - type: STR_TAU_RAIL_MAG
     size: 0.05

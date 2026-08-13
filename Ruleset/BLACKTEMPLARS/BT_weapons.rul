@@ -1,0 +1,1302 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+items:
+
+  - type: STR_PISTOL_BT  # BT BOLTER PISTOL
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 60
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    fixedWeapon: true
+    fixedWeaponShow: true
+    size: 0.2
+    armor: 200
+    dropoff: 6
+    autoRange: 0
+    snapRange: 11
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 21
+    tuAimed: 0
+    weight: 10
+    bigSprite: 4000
+    floorSprite: 4000
+    handSprite: 4128
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_PISTOL_CLIP_MC
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10100
+    inventoryMoveCost:  # quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+      ITEM_FIRING_SPRITE: 4136
+
+  - type: STR_PISTOLS_BT  # BT SCOPED BOLTPISTOL
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 60
+    damageBonus:
+      psiStrength: 0.1
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # weapon attached to armor cant add this in recovery
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    dropoff: 5  # scoped pistol; dropoff reduced from 6 to 5.
+    autoRange: 0
+    snapRange: 11
+    aimRange: 17
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 21
+    tuAimed: 35
+    size: 0.2
+    weight: 20
+    bigSprite: 4007
+    floorSprite: 4008
+    handSprite: 4184
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_PISTOL_CLIP_MC
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 200
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10120
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+      ITEM_FIRING_SPRITE: 4192
+
+  - type: STR_PISTOLH_BT # BT TIGRUS BOLTPISTOL
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 60
+    damageBonus:
+      psiStrength: 0.1
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # weapon attached to armor cant add this in recovery
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    dropoff: 5  # scoped pistol; dropoff reduced from 6 to 5.
+    autoRange: 7
+    snapRange: 11
+    aimRange: 17
+    accuracyAuto: 55
+    accuracySnap: 75
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 21
+    tuAimed: 356
+    autoShots: 2
+    size: 0.2
+    weight: 20
+    bigSprite: 4008
+    floorSprite: 4008
+    handSprite: 4443
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_PISTOL_CLIP_MC
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10130
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # Scoped carbine
+      ITEM_SNAP_ACCURACY_POWER_BONUS_PERCENT: 10  # Scoped carbine
+      REACTION_MULTIPLIER: 200  # multiplies base reaction score by this amount divided by 100
+
+  - type: STR_RIFLE_BT  # BT BOLTER
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 70
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.3
+    armor: 200
+    dropoff: 5
+    autoRange: 9
+    snapRange: 14
+    aimRange: 0
+    accuracyAuto: 66
+    accuracySnap: 80
+    accuracyAimed: 0
+    tuAuto: 40
+    tuSnap: 25
+    tuAimed: 0
+    weight: 20
+    bigSprite: 4001
+    floorSprite: 4001
+    handSprite: 4144
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_RIFLE_CLIP
+      - STR_RIFLE_CLIP_EX
+      - STR_RIFLE_CLIP_AP
+      - STR_RIFLE_CLIP_MC
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    autoShots: 3
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10300
+    tags:
+      ITEM_FIRING_SPRITE: 4152
+
+  - type: STR_FLAMETHROWER_BT  # BT FLAMER
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 55
+    damageBonus:
+      psiStrength: 0.1
+    categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # weapon attached to armor cant add this in recovery
+    size: 0.2
+    weight: 10
+    bigSprite: 4009
+    floorSprite: 4009
+    handSprite: 4451
+    bulletSprite: {mod: 40k, index: 5}
+    fireSound: {mod: 40k, index: 706}
+    compatibleAmmo:
+      - STR_FLAMETHROWER_CLIP
+      - STR_FLAMETHROWER_PROMETHIUM_CLIP
+    dropoff: 5
+    autoRange: 10  # BT special flamer it is 8 on normal flamer
+    snapRange: 0
+    aimRange: 0
+    accuracyAuto: 30  # 40k 20
+    accuracySnap: 0
+    accuracyAimed: 0
+    tuAuto: 35
+    tuSnap: 0
+    tuAimed: 0
+    battleType: 1
+    twoHanded: true
+    experienceTrainingMode: 6
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    maxRange: 11  # BT special flamer it is 9 on normal flamer
+    autoShots: 6
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    attraction: 7
+    listOrder: 10500
+
+  - type: STR_HAND_FLAMETHROWER_BT  # BT HAND FLAMER
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 50
+    damageBonus:
+      psiStrength: 0.1
+    categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    fixedWeapon: true
+    fixedWeaponShow: true
+    dropoff: 6
+    autoRange: 7  # BT special handflamer it is 6 on normal handflamer
+    snapRange: 0
+    aimRange: 0
+    accuracyAuto: 20
+    accuracySnap: 0
+    accuracyAimed: 0
+    tuAuto: 24
+    tuSnap: 0
+    tuAimed: 0
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    maxRange: 7  # BT special handflamer it is 6 on normal handflamer
+    autoShots: 3
+    size: 0.15
+    weight: 9
+    bigSprite: 4015
+    floorSprite: 4015
+    handSprite: 4499
+    fireSound: {mod: 40k, index: 706}
+    bulletSprite: 5
+    compatibleAmmo:
+      - STR_HAND_FLAMETHROWER_CLIP
+    battleType: 1
+    twoHanded: false
+    experienceTrainingMode: 6
+    invWidth: 2
+    invHeight: 2
+    armor: 300
+    attraction: 7
+    listOrder: 10495
+
+  - type: STR_PLASMA_RIFLE_BT  # BT PLASMA RIFLE
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 100
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
+    size: 0.2
+    armor: 200
+    dropoff: 5
+    autoRange: 8
+    snapRange: 14
+    aimRange: 14
+    accuracyAuto: 55
+    accuracySnap: 70
+    accuracyAimed: 70
+    tuAuto: 40
+    tuSnap: 30
+    tuAimed: 30
+    confAimed:
+      spendPerShot: 4
+      name: STR_MAXIMAL_SHOT
+    weight: 20
+    bigSprite: 4002
+    floorSprite: 4002
+    handSprite: 4160
+    bulletSprite: {mod: 40k, index: 11}
+    fireSound: {mod: 40k, index: 18}
+    compatibleAmmo:
+      - STR_PLASMA_RIFLE_CLIP
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    attraction: 1
+    listOrder: 11400
+    tags:
+      ITEM_AIMED_FLAT_POWER_BONUS_PERCENT: 50  # Maximal Shot Bonus
+
+  - type: STR_PLASMA_PISTOL_BT  # BT PLASMA PISTOL
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 90
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_PLASMA, STR_CAT_TACTICAL]
+    size: 0.1
+    armor: 200
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 12
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 60
+    tuAimed: 25
+    tuAuto: 0
+    tuSnap: 25
+    weight: 10
+    bigSprite: 4004
+    floorSprite: 4006
+    handSprite: 4168
+    bulletSprite: {mod: 40k, index: 11}
+    fireSound: {mod: 40k, index: 18}
+    compatibleAmmo:
+      - STR_PLASMA_PISTOL_CLIP
+    confAimed:
+      spendPerShot: 4
+      name: STR_MAXIMAL_SHOT
+    battleType: 1
+    invWidth: 1
+    invHeight: 2
+    attraction: 1
+    listOrder: 11200
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
+
+
+  - type: STR_ASSC_BT  # BT ASSAULT CANNON
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 100
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_TERMINATOR]
+    size: 0.6
+    dropoff: 5
+    minRange: 5
+    weight: 50
+    bigSprite: 4012
+    floorSprite: 4012
+    handSprite: 4475
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 12}
+    compatibleAmmo:
+      - STR_ASSC_CLIP
+      - STR_ASSC_CLIP_AP
+      - STR_ASSC_CLIP_HE
+    accuracySnap: 60
+    tuSnap: 40
+    snapRange: 20
+    confSnap:
+      shots: 5
+      name: STR_BURST_SNAP_SHOT
+    accuracyAuto: 50
+    tuAuto: 45
+    autoRange: 16
+    autoShots: 10
+    sprayWaypoints: 2
+    battleType: 1
+    twoHanded: false # BT Termi chained to one
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    attraction: 8
+    armor: 200
+    listOrder: 13200
+    aimRange: 0
+    accuracyAimed: 0
+    tuAimed: 0
+    tags:
+      REACTION_MULTIPLIER: 100
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_RECOIL: 70
+      ITEM_IS_HEAVY_WEAPON: 1
+
+  - type: STR_HB_BT # BT STORMBOLTER
+    ignoreAmmoPower: true  # necessary for weapon damageBonus to work
+    power: 75
+    damageBonus:
+      psiStrength: 0.1
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_TERMINATOR, STR_CAT_BOLTER]
+    size: 0.6
+    dropoff: 4
+    autoRange: 0
+    snapRange: 15
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 0
+    weight: 40
+    bigSprite: 4017
+    floorSprite: 4017
+    handSprite: 4544
+    bulletSprite: {mod: 40k, index: 15}
+    fireSound: {mod: 40k, index: 12}
+    compatibleAmmo:
+      - STR_HB_CLIP
+      - STR_HB_CLIP_MC
+    battleType: 1
+    twoHanded: false  # will only ever be used by the BT termi
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 50
+    attraction: 8
+    listOrder: 13100
+    tags:
+      ITEM_RECOIL: 50
+      ITEM_FIRING_SPRITE: 4552
+
+  - type: STR_BLASTER_LAUNCHER_BT  # BT MULTIMELTA
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELTA, STR_CAT_DEVASTATOR]
+    dropoff: 5
+    autoRange: 0
+    snapRange: 15  # -3 for snap shot count > 1
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 80
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 50
+    tuAimed: 0
+    maxRange: 40
+    size: 0.3
+    weight: 50
+    bigSprite: 4018
+    floorSprite: 4018
+    handSprite: 4560
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: {mod: 40k, index: 739}
+    compatibleAmmo:
+      - STR_BLASTER_BOMB
+    confSnap:
+      shots: 2
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    listOrder: 12310
+    tags:
+      ITEM_IS_HEAVY_WEAPON: 1
+
+  - type: STR_COMBIMELTA_BT  # BT COMBI MELTA
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    ammo:
+      0:  # Bolter
+        compatibleAmmo: [STR_RIFLE_CLIP, STR_RIFLE_CLIP_MC, STR_RIFLE_CLIP_AP, STR_RIFLE_CLIP_EX]
+      1:  # Melta
+        compatibleAmmo: [STR_MELTA_AMMO]
+    size: 0.3
+    armor: 200
+    dropoff: 5
+    autoRange: 9
+    snapRange: 14
+    accuracyAuto: 66
+    accuracySnap: 80
+    accuracyAimed: 80 # melta
+    tuAuto: 40
+    tuSnap: 25
+    tuAimed: 80 # melta
+    aimRange: 8  # melta
+    confSnap:  # Bolter
+      ammoSlot: 0
+    confAuto:
+      ammoSlot: 0
+      shots: 3
+    confAimed:  # MELTA BEAM
+      name: STR_HEAVY_LASER
+      ammoSlot: 1  # melta ammo
+      shots: 1
+      spendPerShot: 5  # Small Capacity
+    weight: 20
+    bigSprite: 4019
+    floorSprite: 4019
+    handSprite: 4568
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    battleType: 1
+    twoHanded: false  # will only ever be used by the BT Marshal
+    invWidth: 2
+    invHeight: 3
+    autoShots: 3
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10300
+    tags:
+      ITEM_FIRING_SPRITE: 4576
+      REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100
+
+  - type: STR_SMALL_LAUNCHER_TERRAN_BT  # BT GRAVITON GUN
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
+    armor: 200
+    dropoff: 5
+    autoRange: 0
+    snapRange: 15
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 40
+    tuAimed: 0
+    size: 0.2
+    weight: 10
+    bigSprite: 4020
+    floorSprite: 4020
+    handSprite: 4584
+    bulletSprite: {mod: 40k, index: 14}
+    fireSound: {mod: 40k, index: 829}
+    compatibleAmmo:
+      - STR_STUN_BOMB
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    listOrder: 11800
+    tags:
+      ITEM_IS_HEAVY_WEAPON: 1
+
+  # Melee
+
+  - type: STR_CHAINSWORD_BT  # BT CHAINSWORD
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    armor: 200
+    weight: 5
+    bigSprite: 4005
+    floorSprite: 4004
+    handSprite: 4176
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 709}
+    meleeAnimation: {mod: 40k, index: 44}
+    power: 60
+    damageType: 7
+    accuracyMelee: 90
+    tuMelee: 15  # medium melee weapon
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    damageBonus:
+      melee: 0.2
+      strength: 0.2
+    damageAlter:
+      ToArmorPre: 0.3
+      ToHealth: 0.9
+      RandomType: 2  # TFTD [50% - 150%]
+      ToWound: 0.3
+      ToEnergy: 0.5
+      RandomWound: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+
+  - type: STR_MCCHAINSWORD_BT  # BT MASTER CHAINSWORD
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    armor: 200
+    weight: 7
+    bigSprite: 4023
+    floorSprite: 4023
+    handSprite: 4600
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 709}
+    meleeAnimation: {mod: 40k, index: 44}
+    power: 70
+    damageType: 7
+    accuracyMelee: 110
+    tuMelee: 12  # faster to swing
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    damageBonus:
+      melee: 0.3
+      strength: 0.2
+    damageAlter:
+      ToArmorPre: 0.3
+      ToHealth: 0.9
+      RandomType: 2  # TFTD [50% - 150%]
+      ToWound: 0.3
+      ToEnergy: 0.5
+      RandomWound: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+
+  - type: STR_CHAIN_AXE_BT  # BT CHAINAXE
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    weight: 10
+    bigSprite: 4010
+    floorSprite: 4010
+    handSprite: 4459
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 709} #709 chainhit
+    meleeAnimation: {mod: 40k, index: 48}
+    power: 70
+    damageBonus:
+      strength: 0.3
+      melee: 0.2
+    damageType: 7
+    damageAlter:  # DA CHAIN
+      RandomType: 1
+      ToArmorPre: 0.4  # shreds armor
+      ToHealth: 1.1
+      ToMorale: 0.5  # demoralizing and painful
+      ToEnergy: 0.5
+      IgnoreSelfDestruct: false  # default true for HE, fire, smoke, stun, mel
+      ToWound: 0.4  # spills blood
+      RandomWound: false
+    accuracyMelee: 108
+    costMelee:
+      time: 15
+      energy: 2
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    skillApplied: false
+    strengthApplied: false
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    attraction: 8
+    experienceTrainingMode: 13
+    listOrder: 15000
+
+
+  - type: STR_POWERMACE_BT  # BT POWER MACE
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    weight: 10
+    bigSprite: 4014
+    floorSprite: 4014
+    handSprite: 4491
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    power: 80
+    damageBonus:
+      strength: 0.2
+      melee: 0.2
+    damageType: 7
+    damageAlter:
+      ArmorEffectiveness: 0.5
+      FireThreshold: 0
+      ToHealth: 0.7
+      ToStun: 0.7
+      ToTime: 0.1
+      RandomWound: false
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    accuracyMelee: 100
+    costMelee:
+      time: 14
+      energy: 2
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    skillApplied: false
+    strengthApplied: false
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    attraction: 8
+    experienceTrainingMode: 13
+    listOrder: 15000
+
+  - type: STR_ADEPTAS_ZWEIHANDER_BT  # BT ZWEIHANDER
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ADEPTAS]
+    size: 0.3
+    weight: 35
+    bigSprite: 4016
+    floorSprite: 4016
+    handSprite: 4507
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    scripts:
+      selectItemSprite: |
+
+        var int temp;
+        var int numOfFrames;
+        set numOfFrames 4;
+
+        if or eq blit_part blit_item_lefthand eq blit_part blit_item_righthand;
+
+            add temp anim_frame;
+            mod temp numOfFrames;
+            mul temp 8;
+            add sprite_index temp;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+        return sprite_index;
+    power: 120  # melee
+    damageBonus:
+      strength: 0.6
+      melee: 0.2
+    meleeMultiplier:
+      melee: 0.8
+      strength: 0.2
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.4
+      ToHealth: 0.9
+      RandomType: 7  # TFTD [50% - 200%]
+      IgnoreSelfDestruct: false
+    damageType: 5
+    accuracyMelee: 80
+    twoHanded: false  # using trick to block both hands
+    flatRate: true
+    costMelee:
+      time: 20
+      energy: 8  # very heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    attraction: 6
+    armor: 200
+    skillApplied: true
+    strengthApplied: false
+    listOrder: 13400
+
+  - type: STR_ADEPTAS_ZWEIHANDERTRICK_BT  # BT ZWEIHANDER
+    ufopediaType: STR_ADEPTAS_ZWEIHANDER_BT
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    categories: [STR_CAT_MELEE, STR_CAT_ADEPTAS]
+    size: 0.3
+    weight: 35
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powersword miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powersword hit
+    scripts:
+      selectItemSprite: |
+
+        var int temp;
+        var int numOfFrames;
+        set numOfFrames 4;
+
+        if or eq blit_part blit_item_lefthand eq blit_part blit_item_righthand;
+
+            add temp anim_frame;
+            mod temp numOfFrames;
+            mul temp 8;
+            add sprite_index temp;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+        return sprite_index;
+    power: 120  # melee
+    damageBonus:
+      strength: 0.6
+      melee: 0.2
+    meleeMultiplier:
+      melee: 0.8
+      strength: 0.2
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.4
+      ToHealth: 0.9
+      RandomType: 7  # TFTD [50% - 200%]
+      IgnoreSelfDestruct: false
+    damageType: 5
+    accuracyMelee: 80
+    twoHanded: false  # using trick to block both hands
+    flatRate: true
+    costMelee:
+      time: 20
+      energy: 8  # very heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    attraction: 6
+    armor: 200
+    skillApplied: true
+    strengthApplied: false
+    listOrder: 13400
+
+
+  - type: STR_HAMMER_BT  # BT THUNDER HAMMER
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    size: 0.3
+    armor: 200
+    weight: 80
+    bigSprite: 4013
+    floorSprite: 4013
+    handSprite: 4483
+    meleeAnimation: {mod: 40k, index: 28}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 743}
+    power: 120
+    damageAlter:    #DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+    damageType: 3
+    accuracyMelee: 80
+    flatRate: true
+    tuMelee: 15
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    attraction: 6
+    skillApplied: true
+    costMelee:
+      time: 25
+      energy: 8  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    damageBonus:
+      strength: 1.0
+      melee: 0.2
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.6  # armor breaking
+      ToArmorPre: 0.3
+    meleeMultiplier:  # very heavy and cumbersome; strength matters a lot for hitting
+      melee: 0.6
+      strength: 0.4
+    strengthApplied: false
+    listOrder: 13400
+    flatMelee: true
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 80 # was 100
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+
+  - type: STR_BLACKSWORD_BT  # BT BLACK SWORD
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    twoHanded: false  # irrelevant for this case
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    armor: 200
+    weight: 10
+    bigSprite: 4006
+    floorSprite: 4005
+    handSprite: 4406
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    power: 100
+    damageType: 11  # melta
+    accuracyMelee: 90
+    tuMelee: 10
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    accuracyMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    meleeBonus:
+      psi: 0.1
+    meleeMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    damageBonus:
+      psi: 0.2
+      strength: 0.2
+      melee: 0.3
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.5
+      FireThreshold: 0
+      ToHealth: 0.7
+      ToMorale: 1.0
+      ToWound: 0.0
+      RandomWound: false
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 20
+      REACTION_MULTIPLIER: 200
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 150 #1.5x damage vs Daemons
+    scripts:
+      selectItemSprite: |
+
+        var int temp;
+        var int numOfFrames;
+        set numOfFrames 4;
+
+        if or eq blit_part blit_item_lefthand eq blit_part blit_item_righthand;
+
+            add temp anim_frame;
+            mod temp numOfFrames;
+            mul temp 8;
+            add sprite_index temp;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+        return sprite_index;
+
+  - type: STR_BLACKSWORDTRICK_BT  # BT BLACK SWORD BLOCKER # EXIST ONLY TO BLOCK OTHER HAND
+    ufopediaType: STR_BLACKSWORD_BT  # placeholder
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    twoHanded: false  # irrelevant for this case
+    size: 0.2
+    armor: 200
+    weight: 10
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    power: 100
+    damageType: 11  # melta
+    accuracyMelee: 90
+    tuMelee: 10
+    costMelee:
+      energy: 2  # medium melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    skillApplied: true
+    accuracyMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    meleeBonus:
+      psi: 0.1
+    meleeMultiplier:
+      melee: 0.6
+      psiSkill: 0.4
+    damageBonus:
+      psi: 0.2
+      strength: 0.2
+      melee: 0.3
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.5
+      FireThreshold: 0
+      ToHealth: 0.7
+      ToMorale: 1.0
+      ToWound: 0.0
+      RandomWound: false
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    experienceTrainingMode: 13
+    listOrder: 12400
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 20
+      REACTION_MULTIPLIER: 200
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 150 #1.5x damage vs Daemons
+
+  - type: AUX_CROZIUS_BT # BT CROZIUS
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    dropoff: 5
+    aimRange: 20
+    snapRange: 15
+    powerRangeThreshold: 20
+    powerRangeReduction: 5
+    size: 0.2
+    weight: 5
+    bigSprite: {mod: 40k, index: 253}
+    floorSprite: {mod: 40k, index: 134}
+    handSprite: {mod: 40k, index: 24}
+    bulletSprite: {mod: 40k, index: 19}
+    fireSound: [{mod: 40k, index: 758}, {mod: 40k, index: 759}, {mod: 40k, index: 760}, {mod: 40k, index: 761}, {mod: 40k, index: 762}, {mod: 40k, index: 763}]
+    explosionHitSound: {mod: 40k, index: 771}
+    accuracyAimed: 100
+    arcingShot: false
+    costAimed:
+      time: 40
+      energy: 40
+      morale: 20
+    accuracySnap: 50
+    costSnap:
+      time: 20
+      energy: 40
+      morale: 20
+    battleType: 1
+    twoHanded: false
+    power: 10
+    damageType: 2
+    damageAlter:
+      RandomType: 6
+      FireBlastCalc: false
+      IgnoreOverKill: false
+      IgnoreSelfDestruct: false  # default true for HE, fire, smoke, stun, mel
+      ToHealth: 1.0
+      ToTile: 0.3
+      ToItem: 0.3
+      ToMorale: 5.0
+      ArmorEffectiveness: 0.5
+      FixRadius: -1
+    damageBonus:
+      bravery: 0.5
+      psiSkill: 0.5
+    clipSize: -1
+    bulletSpeed: 50
+    explosionSpeed: 10
+    maxRange: 60
+    invWidth: 2
+    invHeight: 3
+    armor: 40
+    flatRate: true
+    #*** Melee
+    skillApplied: true
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 743} #743 T hammer Hit
+    meleeAnimation: {mod: 40k, index: 28} # 28 bolt anitmation
+    meleeType: 5
+    meleePower: 100
+    accuracyMelee: 100
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+      bravery: 0.1
+    costMelee:
+      time: 20
+      energy: 4  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 2  # TFTD [50% - 150%]
+    tuMelee: 25
+    flatMelee:
+      time: true
+
+
+  - type: AUX_CROZIUS_HIGH_BT # BT HOLY CROZIUS
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    dropoff: 5
+    aimRange: 20
+    snapRange: 15
+    powerRangeThreshold: 20
+    powerRangeReduction: 5
+    size: 0.2
+    weight: 5
+    bigSprite: 4011
+    floorSprite: 4011
+    handSprite: 4467
+    bulletSprite: {mod: 40k, index: 19}
+    fireSound: [{mod: 40k, index: 758}, {mod: 40k, index: 759}, {mod: 40k, index: 760}, {mod: 40k, index: 761}, {mod: 40k, index: 762}, {mod: 40k, index: 763}]
+    explosionHitSound: {mod: 40k, index: 771}
+    accuracyAimed: 100
+    arcingShot: false
+    costAimed:
+      time: 40
+      energy: 40
+      morale: 20
+    accuracySnap: 50
+    costSnap:
+      time: 20
+      energy: 40
+      morale: 20
+    battleType: 1
+    twoHanded: false
+    power: 15
+    damageType: 2
+    damageAlter:
+      RandomType: 6
+      FireBlastCalc: false
+      IgnoreOverKill: false
+      IgnoreSelfDestruct: false  # default true for HE, fire, smoke, stun, mel
+      ToHealth: 1.0
+      ToTile: 0.3
+      ToItem: 0.3
+      ToMorale: 5.0
+      ArmorEffectiveness: 0.5
+      FixRadius: -1
+    damageBonus:
+      bravery: 0.6
+      psiSkill: 0.6
+    clipSize: -1
+    bulletSpeed: 50
+    explosionSpeed: 10
+    maxRange: 60
+    invWidth: 2
+    invHeight: 3
+    armor: 40
+    flatRate: true
+    #*** Melee
+    skillApplied: true
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 743} #743 T hammer Hit
+    meleeAnimation: {mod: 40k, index: 28} # 28 bolt anitmation
+    meleeType: 5
+    meleePower: 100
+    accuracyMelee: 100
+    meleeBonus:
+      strength: 0.3
+      melee: 0.3
+      bravery: 0.1
+    costMelee:
+      time: 20
+      energy: 4  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 2  # TFTD [50% - 150%]
+    tuMelee: 25
+    flatMelee:
+      time: true
+
+  - type: AUX_SHIELD_BT  # BT TERMINATOR SHIELD
+    ufopediaType: AUX_SHIELD
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    defaultInventorySlot: STR_LEFT_HAND
+    weight: 5
+    bigSprite: {mod: 40k, index: 232}
+    floorSprite: {mod: 40k, index: 113}
+    hitSound: 0
+    meleeAnimation: 0
+    power: 60
+    damageType: 7
+    accuracyMelee: 110
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    skillApplied: true
+    strengthApplied: false
+    attraction: 0
+    clipSize: 41  # Shield HP + 1
+    tuMelee: 0
+    tags:
+      ITEM_SHIELD_BLOCKING_STRENGTH: 20
+      ITEM_SHIELD_RECHARGES: 1
+
+  - type: AUX_SHIELD2_BT  # BT SWORD BRETHERN SHIELD
+    ufopediaType: AUX_SHIELD
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    defaultInventorySlot: STR_LEFT_HAND
+    weight: 5
+    bigSprite: 4022
+    floorSprite: 4022
+    hitSound: 0
+    meleeAnimation: 0
+    power: 40
+    damageType: 7
+    accuracyMelee: 110
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    skillApplied: true
+    strengthApplied: false
+    attraction: 0
+    clipSize: 41  # Shield HP + 1
+    tuMelee: 0
+    tags:
+      ITEM_SHIELD_BLOCKING_STRENGTH: 10
+      ITEM_SHIELD_RECHARGES: 1
+
+  - type: STR_TECHPRIEST_POWERAXE_BT  # BT OMNISSIAN AXE
+    recover: false # weapon attached to armor cant add this in recovery
+    fixedWeapon: true
+    fixedWeaponShow: true
+    defaultInventorySlot: STR_LEFT_HAND
+    categories: [STR_CAT_MELEE, STR_CAT_TECHPRIEST]
+    size: 0.2
+    weight: 20
+    bigSprite: 4021
+    floorSprite: 4021
+    handSprite: 4592
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    power: 80  # melee
+    damageBonus:
+      strength: 0.3
+      melee: 0.2
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.5  # axe you a question
+      ToHealth: 0.9
+      RandomType: 6
+      IgnoreSelfDestruct: false
+    damageType: 5
+    accuracyMelee: 110
+    costMelee:
+      time: 15
+      energy: 4  # heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    clipSize: -1
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    twoHanded: false
+    armor: 200
+    skillApplied: true
+    meleeMultiplier:
+      melee: 0.9
+      strength: 0.1
+    strengthApplied: false
+    attraction: 8
+    listOrder: 15201

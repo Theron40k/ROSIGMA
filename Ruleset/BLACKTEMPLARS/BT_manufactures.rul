@@ -1,0 +1,145 @@
+manufacture:
+
+
+  # armors
+
+  - name: STR_BTMARINEARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_PERSONAL_ARMOR
+      - STR_MARINES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 800
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+
+  - name: STR_BTAPOTHARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_MEDI_KIT
+      - STR_MEDI_KIT_PREREQ
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 800
+    cost: 100000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_KILLPOINT_TOKEN: 60
+
+  - name: STR_BTMARINEASSAULTARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_ASS_ARMOR
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 800
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 25
+
+  - name: STR_BTCHAPLAINARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_CHAP_ARMOR
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 800
+    cost: 300000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 60
+      STR_ELERIUM_115: 20
+
+  - name: STR_BTTECHARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_TEC_BAYR
+      - STR_MARINES_AND_DEATHWATCH
+      - STR_NOT_WORDBEARERS
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 800
+    cost: 30000
+    requiresBaseFunc: [TEC]
+    requiredItems:
+      STR_ALIEN_ALLOYS: 60
+      STR_KILLPOINT_TOKEN: 60
+
+  - name: STR_BTHONORARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_HONOR_ARMOR
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 800
+    cost: 4000
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 125
+      STR_ALIEN_ALLOYS: 5
+
+  - name: STR_BTTERMINATORARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_POWER_SUIT
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 800
+    cost: 20000
+    requiresBaseFunc: [ARMO]
+    requiredItems:
+      STR_ALIEN_ALLOYS: 75
+      STR_ELERIUM_115: 15
+      STR_KILLPOINT_TOKEN: 60
+
+  - name: STR_BTCAPTAINARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_CAPTAIN_SUIT
+      - STR_MARINES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 5000
+    cost: 200000
+    requiresBaseFunc: [ARMO]
+    requiredItems:
+      STR_ALIEN_ALLOYS: 125
+      STR_ELERIUM_115: 50
+      STR_KILLPOINT_TOKEN: 200
+
+  - name: STR_BTRECLUSARMOR_PLAYER
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_CAPTAIN_SUIT
+      - STR_MARINES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 5000
+    cost: 200000
+    requiresBaseFunc: [ARMO]
+    requiredItems:
+      STR_ALIEN_ALLOYS: 125
+      STR_ELERIUM_115: 125
+      STR_KILLPOINT_TOKEN: 200
+
+  # Vehicles
+
+  - name: STR_CRATED_BTDROPPODS
+    category: STR_CRAFT
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 0
+    time: 100
+    cost: 1000
+    requiredItems:
+      STR_CRATED_BTDROPPODS: 1
+    producedItems:
+      STR_BTDROPPODS: 1

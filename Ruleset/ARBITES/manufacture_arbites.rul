@@ -1,51 +1,87 @@
 manufacture:
   - delete: STR_ENFORCER_SIGNAL_ARMOR
-  - delete: STR_ENFORCER_MEDIC_ARMOR
+  - delete: STR_ENFORCER_MEDIC_ARMOR # this is buyable now instead of craftable
   - delete: STR_ENFORCER_SHIELD_ARMOR
   - delete: STR_HWP_CANNON_SHELLS
+  - delete: STR_ENFORCER_ARMOR # is not default armor for imperial law troopers
+  - delete: STR_ENFORCER_HEAVY_ARMOR # is now buyable, not manufacturable
 
-
-  - name: STR_ENFORCER_ARMOR
-    requiredItems:
-      STR_ALIEN_ALLOYS: 5  # was 10
-
-  - name: STR_ENFORCER_HEAVY_ARMOR
-    requiredItems:
-      STR_ALIEN_ALLOYS: 10  # was 20
-
+  - delete: STR_JUDGE_BIKE_ARMOR
   - name: STR_JUDGE_BIKE_ARMOR
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_JUDGE_BIKE_ARMOR
+    space: 12
+    time: 600
+    cost: 100000
+    requiresBaseFunc: [ARMO]
     requiredItems:
       STR_ALIEN_ALLOYS: 50  # was 100
       STR_ELERIUM_115: 20  # was 40
       STR_KILLPOINT_TOKEN: 60
 
+  - delete: STR_ARBITOR_ARMOR
   - name: STR_ARBITOR_ARMOR
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_ARBITOR_ARMOR
+    space: 12
+    time: 600
+    cost: 100000
+    requiresBaseFunc: [ARMO]
     requiredItems:
       STR_ALIEN_ALLOYS: 50  # was 100
       STR_ELERIUM_115: 20  # was 40
       STR_KILLPOINT_TOKEN: 60
 
+  - delete: STR_MARSHAL_ARMOR
   - name: STR_MARSHAL_ARMOR
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_MARSHAL_ARMOR
+    space: 12
+    time: 800
+    cost: 200000
+    requiresBaseFunc: [ARMO]
     requiredItems:
       STR_ALIEN_ALLOYS: 100  # was 200
       STR_ELERIUM_115: 25  # was 50
       STR_KILLPOINT_TOKEN: 300
 
+  - delete: STR_CHIMERAPDH
   - name: STR_CHIMERAPDH
+    category: STR_CRAFT
+    requires:
+      - STR_MANTICORE_REQUISITION
+    space: 36
+    time: 30000
+    cost: 800000
     requiredItems:
       STR_ALIEN_ALLOYS: 450  # was 900
       STR_UFO_POWER_SOURCE: 2
       STR_UFO_NAVIGATION: 1
-    requires:
-      - STR_MANTICORE_REQUISITION
 
+  - delete: STR_ARMYPD
   - name: STR_ARMYPD
+    category: STR_CRAFT
+    requires:
+      - STR_LANDRAIDER_ARBITES
+    space: 40
+    time: 30000
+    cost: 1000000
     requiredItems:
       STR_ALIEN_ALLOYS: 600  # was 1200
       STR_UFO_POWER_SOURCE: 4  # was 6
       STR_UFO_NAVIGATION: 4  # was 6
 
+  - delete: STR_TAUROXPD
   - name: STR_TAUROXPD
+    category: STR_CRAFT
+    requires:
+      - STR_NEW_TRANSPORT_PD
+    space: 34
+    time: 18000
+    cost: 600000
     requiredItems:
       STR_ALIEN_ALLOYS: 350  # was 750
       STR_UFO_POWER_SOURCE: 1
@@ -71,13 +107,12 @@ manufacture:
       - STR_VULTURE_ARBITES_REQUISITION
 
   - name: STR_MCSHOTGUNPD
+    requires:
+      - STR_ARBITES_BASIC_GEAR_DEP
+      - STR_MASTER_CRAFTING
     requiredItems:
       STR_ALIEN_ALLOYS: 2
       STR_KILLPOINT_TOKEN: 120
-
-  - delete: STR_ENFORCER_ARMOR
-  - delete: STR_ENFORCER_MEDIC_ARMOR
-  - delete: STR_ENFORCER_HEAVY_ARMOR
 
   - name: STR_GSC_HEAVY_WEBBER
     category: STR_WEAPON

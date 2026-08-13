@@ -1,0 +1,44 @@
+soldierTransformation:
+
+  - name: STR_PROMOTE_HONORS
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_POWER_SUIT
+      - STR_CHAPTER_PURITY
+    producedSoldierType: STR_BTHONORED_PLAYER
+    cost: 15000
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_BTMARINE_PLAYER
+    transferTime: 0
+    requiredCommendations:
+      STR_TERMINATOR_CROSS: 0
+
+  - name: STR_RESURRECT_BTMARINE
+    requires:
+      - STR_DREADNOUGHT_MARINE
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_NOT_SPACEWOLVES
+    cost: 850000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30  # halved
+      STR_ELERIUM_115: 30
+      STR_UFO_CONSTRUCTION: 10
+      STR_KILLPOINT_TOKEN: 300
+    producedSoldierType: STR_FALLEN_BT
+    producedSoldierArmor: STR_BTDREAD_ARMOR_PLAYER
+    allowsDeadSoldiers: true
+    allowsLiveSoldiers: false
+    needsCorpseRecovered: true
+    allowedSoldierTypes:
+      - STR_BTHONORED_PLAYER
+      - STR_BTMARINE_PLAYER
+    transferTime: 24
+    recoveryTime: 0
+    lowerBoundAtMinStats: true

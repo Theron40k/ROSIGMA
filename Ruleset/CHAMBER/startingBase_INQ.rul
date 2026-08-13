@@ -1,6 +1,44 @@
 # clear crafts and items from 40k
+# switched with what was previously the arbites base due to arbites moving to chamber
+
 startingBaseExperienced:
+  facilities:
+    - type: STR_ALIEN_CONTAINMENT
+      x: 0
+      y: 3
+    - type: STR_PRISION
+      x: 5
+      y: 3
+    - type: STR_ACCESS_LIFT
+      x: 2
+      y: 2
+    - type: STR_HANGAR
+      x: 2
+      y: 0
+    - type: STR_HANGAR
+      x: 0
+      y: 0
+    - type: STR_HANGAR
+      x: 4
+      y: 0
+    - type: STR_GUARD_BARRACKS
+      x: 3
+      y: 2
+    - type: STR_GENERAL_STORES
+      x: 2
+      y: 3
+    - type: STR_LABORATORY
+      x: 3
+      y: 3
+    - type: STR_WORKSHOP
+      x: 4
+      y: 3
+    - type: STR_SMALL_RADAR_SYSTEM
+      x: 1
+      y: 3
+  randomSoldiers: {}
   crafts: []
-  items: []
-  engineers: 6
+  items:
+    STR_SERVITOR: 1
   scientists: 10
+  engineers: 6

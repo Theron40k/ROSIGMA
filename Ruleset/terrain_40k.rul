@@ -846,6 +846,9 @@
             - [6, 6, 1]
         fuseTimers:
           STR_TARANTULAGK_SPAWNER: [0, 0]
+      - name: XBASE_78
+        width: 40
+        length: 40
 
   - name: XBASE_FILL # copied from 40k to add Ork map blocks to it.
     mapDataSets:
@@ -4516,13 +4519,13 @@
     ambience: {mod: 40k, index: 897}
     ambientVolume: 1.20
 
-  - name: FINALGUARD_SL  # part 2
+  - name: FINALGUARD_SL  # part 1
     mapDataSets:
       - BLANKS
       - BATTLE
       - OUTPOSTCHAOS
       - CHAOSFORT
-      - LEMON
+      - LEMONSL
       - CHAOSROOF
       - SUPORTPIECES
       - DEBRIS
@@ -4619,10 +4622,10 @@
             - [35, 35, 0]
             - [46, 14, 0]
             - [45, 16, 0]
-          STR_LEMONRUSS_SPAWNER_FINAL:
+          STR_LEMONSLRUSS_SPAWNER_FINAL:
             - [62, 31, 2]
             - [60, 6, 2]
-          STR_LEMONRUSS_SPONSON_SPAWNER_FINAL:
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL:
             - [60, 31, 1]
             - [65, 31, 1]
             - [58, 6, 1]
@@ -4675,8 +4678,8 @@
             - [46, 21, 0]
             - [36, 18, 0]
         fuseTimers:
-          STR_LEMONRUSS_SPAWNER_FINAL: [0, 0]
-          STR_LEMONRUSS_SPONSON_SPAWNER_FINAL: [0, 0]
+          STR_LEMONSLRUSS_SPAWNER_FINAL: [0, 0]
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL: [0, 0]
           STR_GATEDOWN_SPAWNER: [0, 0]
           STR_GATEUP_SPAWNER: [0, 0]
           STR_TURRET1_SPAWNER: [0, 0]
@@ -4713,7 +4716,7 @@
       - CHAOSFORT
       - CHAOSROOF
       - CHAOSPIECES
-      - LEMON
+      - LEMONSL
     mapBlocks:
       - name: MARS00
         width: 10
@@ -4950,8 +4953,11 @@
         width: 20
         length: 20
         items:
-          STR_LEMONRUSS_SPAWNER:
+          STR_LEMONSLRUSS_SPAWNER_FINAL:
             - [4, 11, 1]
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL:
+            - [2, 11, 0]
+            - [7, 11, 0]
           STR_ORK3_SPAWNER:
             - [11, 3, 2]
             - [17, 6, 0]
@@ -4968,7 +4974,8 @@
           STR_KILLA_SPAWNER:
             - [15, 16, 0]
         fuseTimers:
-          STR_LEMONRUSS_SPAWNER: [0, 0]
+          STR_LEMONSLRUSS_SPAWNER_FINAL: [0, 0]
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL: [0, 0]
           STR_KILLA_SPAWNER: [0, 0]
           STR_ORK1_SPAWNER: [0, 0]
           STR_ORK2_SPAWNER: [0, 0]
@@ -6750,6 +6757,7 @@
         length: 10
         groups: 2
         revealedFloors: 1
+        craftInventoryTile: [3, 3, 1]
       - name: WUSTART_05
         width: 10
         length: 10
@@ -6821,6 +6829,7 @@
         length: 10
         groups: 2
         revealedFloors: 1
+        craftInventoryTile: [3, 3, 1]
       - name: WUBASE_05  # ID 5
         width: 10
         length: 10
@@ -6965,6 +6974,7 @@
         length: 10
         groups: 2
         revealedFloors: 1
+        craftInventoryTile: [3, 3, 1]
       - name: WSCUBASE_05
         width: 10
         length: 10
@@ -7040,6 +7050,7 @@
         length: 10
         groups: 2
         revealedFloors: 1
+        craftInventoryTile: [0, 0, 1]
       - name: W93UBASE_05  # ID 5
         width: 10
         length: 10
@@ -11566,6 +11577,7 @@
         width: 10
         length: 10
         groups: 2
+        craftInventoryTile: [1, 6, 1]
       - name: MISSXBASE_01
         width: 10
         length: 10
@@ -11687,6 +11699,7 @@
         width: 10
         length: 10
         groups: 2
+        craftInventoryTile: [2, 6, 1]
       - name: LV2MISSXBASE_01
         width: 10
         length: 10
@@ -11901,6 +11914,7 @@
         width: 10
         length: 10
         groups: 2
+        craftInventoryTile: [1, 6, 1]
       - name: MISSXBASE_01
         width: 10
         length: 10
@@ -12258,6 +12272,7 @@
         width: 10
         length: 10
         groups: 2
+        craftInventoryTile: [1, 6, 1]
       - name: ZEROMISSXBASE_01
         width: 10
         length: 10
@@ -12355,6 +12370,7 @@
         width: 10
         length: 10
         groups: 2
+        craftInventoryTile: [1, 6, 1]
       - name: STARTMISSXBASE_01
         width: 10
         length: 10
@@ -15567,3 +15583,27 @@
           STR_GORGON_HEAVY_FLAMER_BACK_RIGHT_SPAWNER: [0, 0]
           STR_GORGON_HEAVY_STUBBER_LEFT_SPAWNER: [0, 0]
           STR_GORGON_HEAVY_STUBBER_RIGHT_SPAWNER: [0, 0]
+
+  # BR arvus to add to commandery  XBASE_78 mapblock as vertical level
+
+  - name: BRAVUS4X4
+    mapDataSets:
+      - BLANKS
+      - BRARVUS
+      - BRARVUS_DOORS
+      - BRARVUSLIFT
+    mapBlocks:
+      - name: BRAVUS4X4
+        width: 40
+        length: 40
+
+# to have some muddy floor in the bottom of the commandery
+
+  - name: COMMANDSOIL
+    mapDataSets:
+      - BLANKS
+      - MOUNTMUD
+    mapBlocks:
+      - name: COMMANDSOIL
+        width: 40
+        length: 40

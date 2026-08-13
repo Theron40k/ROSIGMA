@@ -1,0 +1,312 @@
+crafts:
+
+  - type: STR_BTDROPPODS  # black templars-only drop pods
+    allowedArmorGroups: [1, 2, 3]
+    limitArmorGroups:
+      1: 8
+      2: 4
+      3: 1
+    maxSkinIndex: 0
+    groups: [80]
+    costBuy: 600000
+    costRent: 600000
+    costSell: 100000
+    takeoffSound: {mod: 40k, index: 59}
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    requiresBuyBaseFunc: [HANGAR]
+    sprite: 2205
+    marker: 9
+    fuelMax: 1800
+    damageMax: 200
+    speedMax: 20000
+    repairRate: 5
+    accel: 20
+    weapons: 0
+    soldiers: 8
+    vehicles: 1
+    refuelRate: 600
+    transferTime: 10
+    score: 200
+    listOrder: 120
+    mapVisible: false
+    battlescapeTerrainData:
+      name: BTDROPPODS
+      mapDataSets:
+        - BLANKS
+        - BTDROPPOD
+      mapBlocks:
+        - name: BTDROPPODS
+          width: 10
+          length: 20
+          items:
+            STR_DROPPOD_DEPLOY_CHARGE:
+              - [2, 2, 0]
+              - [5, 8, 0]
+              - [2, 15, 0]
+              - [1, 1, 1]
+              - [5, 8, 1]
+              - [2, 15, 1]
+            STR_ARVUS_SMOKER_SPAWNER:
+              - [4, 7, 1]
+          fuseTimers:
+            STR_DROPPOD_DEPLOY_CHARGE: [1, 1]
+            STR_ARVUS_SMOKER_SPAWNER: [1, 1]
+    deployment:
+      - [1, 15, 0, 0]
+      - [1, 14, 0, 0]
+      - [2, 15, 0, 0]
+      - [2, 14, 0, 0]
+      - [4, 8, 0, 0]
+      - [4, 7, 0, 0]
+      - [5, 8, 0, 0]
+      - [5, 7, 0, 0]
+    spacecraft: true
+
+  - type: STR_BTSPEEDC
+    allowedArmorGroups: [1, 2, 3]
+    limitArmorGroups:
+      1: 12
+      2: 6
+      3: 1
+    costBuy: 600000  # placeholder
+    costRent: 400000
+    costSell: 400000
+    takeoffSound: {mod: 40k, index: 58}
+    selectSound: [{mod: 40k, index: 62}, {mod: 40k, index: 63}, {mod: 40k, index: 64}] #REGULAR SOUND
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    requiresBuyBaseFunc: [HANGAR]
+    sprite: 2209
+    marker: 29
+    fuelMax: 1000
+    refuelRate: 200
+    damageMax: 200
+    speedMax: 2100
+    maxAltitude: 2
+    accel: 10
+    weapons: 0
+    fixedWeapons: ["STR_CANNON_UC"]
+    radarRange: 500
+    soldiers: 16  # 12 marines and 1 2X2 unit that takes 4 slots
+    maxSmallSoldiers: 12  # small = 1x1
+    maxLargeUnits: 1  # large = 2x2
+    vehicles: 999
+    transferTime: 96
+    score: 200
+    listOrder: 200
+    pilots: 2
+    battlescapeTerrainData:
+      name: BTSPEED
+      mapDataSets:
+        - BLANKS
+        - BTSPEED
+        - VULTUREPD
+      mapBlocks:
+        - name: BTSPEED
+          width: 10
+          length: 20
+    deployment:
+      - [2, 4, 1, 4]  # landspeeder north
+      - [3, 4, 1, 4]
+      - [3, 3, 1, 2]
+      - [2, 3, 1, 6]
+
+      - [6, 12, 1, 4]  # landspeeder middle
+      - [7, 12, 1, 4]
+      - [7, 11, 1, 2]
+      - [6, 11, 1, 6]
+
+      - [2, 17, 1, 4]  # landspeeder south
+      - [3, 17, 1, 4]
+      - [3, 16, 1, 2]
+      - [2, 16, 1, 6]
+
+      - [6, 9, 0, 0]  # 2x2 unit
+
+    spacecraft: true
+
+# shared craft BT BR
+
+  - type: STR_BTBR_RHINO_CRAFT  # Rhino Convoy
+    allowedArmorGroups: [1, 2, 3, 4, 5, 6]
+    limitArmorGroups:
+      1: 12
+      2: 6
+      3: 2
+      4: 12
+      5: 6
+      6: 2
+    takeoffSound: {mod: 40k, index: 63}
+    selectSound: [{mod: 40k, index: 65}, {mod: 40k, index: 66}, {mod: 40k, index: 67}, {mod: 40k, index: 68}]   # HEAVY TRANSPORT SOUND
+    marker: 30
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+      - STR_BLOODYROSE_STRATEGY
+    sprite: 2207
+    fuelMax: 12000
+    damageMax: 8000
+    speedMax: 240
+    maxAltitude: 1
+    costBuy: 800000  # temp
+    costRent: 420000  # temp
+    costSell: 400000  # temp
+    accel: 10
+    weapons: 0
+    fixedWeapons: ["STR_CRAFT_AUTOCANNON_UC"]
+    soldiers: 24
+    vehicles: 999
+    maxLargeUnits: 2
+    refuelRate: 100
+    repairRate: 10
+    score: 800
+    listOrder: 700
+    battlescapeTerrainData:
+      name: BTBRRHINOCONVOY
+      mapDataSets:
+        - BLANKS
+        - BTBRRHINOCONVOY
+        - BTRHINO
+      mapBlocks:
+        - name: BTBRRHINOCONVOY
+          width: 10
+          length: 20
+          items:
+            STR_BTRAZORBACK_SPAWNER:
+              - [6, 14, 1]
+              - [2, 3, 1]
+          fuseTimers:
+            STR_BTRAZORBACK_SPAWNER: [0, 0]
+    deployment:
+      - [2, 4, 0, 0]  # BT Rhino NW
+      - [3, 5, 0, 0]
+      - [2, 4, 0, 0]
+      - [3, 4, 0, 0]
+      - [2, 3, 0, 0]
+      - [3, 3, 0, 0]
+
+      - [6, 16, 0, 0]  # BT Rhino NE
+      - [7, 16, 0, 0]
+      - [6, 15, 0, 0]
+      - [7, 15, 0, 0]
+      - [6, 14, 0, 0]
+      - [7, 14, 0, 0]
+
+      - [7, 8, 0, 0]
+      - [8, 8, 0, 0]
+      - [7, 7, 0, 0]
+      - [8, 7, 0, 0]
+      - [7, 6, 0, 0]
+      - [8, 6, 0, 0]
+
+      - [1, 13, 0, 0]
+      - [2, 13, 0, 0]
+      - [1, 12, 0, 0]
+      - [2, 12, 0, 0]
+      - [1, 11, 0, 0]
+      - [2, 11, 0, 0]
+    spacecraft: true
+
+  # final vehicle
+
+  - type: STR_BTBRLANDRAIDER
+    allowedArmorGroups: [1, 2, 3, 4, 5, 6]
+    limitArmorGroups:
+      1: 12
+      2: 10
+      3: 2
+      4: 16
+      5: 10
+      6: 2
+    takeoffSound: {mod: 40k, index: 63}
+    selectSound: [{mod: 40k, index: 65}, {mod: 40k, index: 66}, {mod: 40k, index: 67}, {mod: 40k, index: 68}]
+    marker: 30
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+      - STR_BLOODYROSE_STRATEGY
+    requiresBuyBaseFunc: [HANGAR]
+    sprite: 2208
+    fuelMax: 12000
+    damageMax: 10000
+    refuelRate: 150
+    speedMax: 180  # Zoom goes the Rhinos/Immolator
+    repairRate: 10
+    maxAltitude: 1
+    accel: 10
+    weapons: 3
+    fixedWeapons: ["STR_CRAFT_AUTOCANNON_UC", "STR_CRAFT_AUTOCANNON_UC", "STR_CRAFT_AUTOCANNON_UC"]
+    soldiers: 28
+    vehicles: 999
+    maxLargeUnits: 2
+    refuelItem: STR_ELERIUM_115
+    score: 800
+    listOrder: 700
+    battlescapeTerrainData:
+      name: BTBRLANDRAIDER
+      mapDataSets:
+        - BLANKS
+        - BTBRLANDRAIDER
+        - BTBRLANDRAIDER2
+      mapBlocks:
+        - name: BTBRLANDRAIDER
+          width: 10
+          length: 20
+          items:
+            STR_IMMOLATOR_SPAWNER:
+              - [1, 17, 1]
+            STR_EXORCIST_SPAWNER:
+              - [2, 9, 1]
+            STR_CASTIGATOR_AC_SPAWNER:
+              - [7, 15, 1]
+            STR_BTRAZORBACK_SPAWNER:
+              - [2, 2, 1]
+              - [5, 2, 1]
+            STR_BTBOLTERSPONS_SPAWNER1:
+              - [0, 2, 0]
+            STR_BTBOLTERSPONS_SPAWNER2:
+              - [8, 2, 0]
+          fuseTimers:
+            STR_IMMOLATOR_SPAWNER: [0, 0]
+            STR_CASTIGATOR_AC_SPAWNER: [0, 0]
+            STR_EXORCIST_SPAWNER: [0, 0]
+            STR_BTRAZORBACK_SPAWNER: [0, 0]
+            STR_BTBOLTERSPONS_SPAWNER1: [0, 0]
+            STR_BTBOLTERSPONS_SPAWNER2: [0, 0]
+    deployment:
+      - [3, 1, 0, 4]  # Landraider Crusader BT
+      - [4, 1, 0, 4]
+      - [5, 1, 0, 4]
+      - [6, 1, 0, 4]
+      - [3, 2, 0, 4]
+      - [4, 2, 0, 4]
+      - [5, 2, 0, 4]
+      - [6, 2, 0, 4]
+      - [3, 3, 0, 4]
+      - [4, 3, 0, 4]
+      - [5, 3, 0, 4]
+      - [6, 3, 0, 4]
+
+      - [2, 9, 0, 4]  # Lanraider BR
+      - [3, 9, 0, 4]
+      - [2, 10, 0, 4]
+      - [3, 10, 0, 4]
+      - [2, 11, 0, 4]
+      - [3, 11, 0, 4]
+
+      - [7, 16, 0, 0]  # Rhino BR
+      - [8, 16, 0, 0]
+      - [7, 15, 0, 0]
+      - [8, 15, 0, 0]
+      - [7, 14, 0, 0]
+      - [8, 14, 0, 0]
+
+      - [1, 18, 0, 0]  # Rhino BR
+      - [2, 18, 0, 0]
+      - [1, 17, 0, 0]
+      - [2, 17, 0, 0]
+      - [1, 16, 0, 0]
+      - [2, 16, 0, 0]
+
+    spacecraft: true

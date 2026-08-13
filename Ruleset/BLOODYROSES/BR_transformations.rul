@@ -1,0 +1,20 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+# Transform Requires note:  Use STR_ADEPTAS for a strictly Adeptas-only Transform.
+#                           Use STR_SISTERS_TRANSFORMATIONS_DEP for Transforms other Factions could acquire.
+
+soldierTransformation:
+
+  - name: STR_BRREPENTIA_TO_BRSISTER  # Absolution to Battle Sister Status
+    cost: 0
+    requires:
+      - STR_BLOODYROSE_STRATEGY
+    producedSoldierType: STR_ADEPTAS_PLAYERBLOODYROSE
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    requiredCommendations:
+      STR_PARDON_COMMENDATION: 0  # 5 kills, 2 wins requirement
+    allowedSoldierTypes:
+      - STR_REPENTIA_PLAYERBLOODYROSE

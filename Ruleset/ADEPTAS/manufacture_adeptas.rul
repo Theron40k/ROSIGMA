@@ -4,6 +4,7 @@ manufacture:
     requires:
       - STR_ADEPTAS
       - STR_ADEPTAS_SOB_MOBILIZATION
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 250
     cost: 150000
@@ -19,6 +20,7 @@ manufacture:
     category: STR_ADVANCEMENT
     requires:
       - STR_ADEPTAS_ARMOR_REPSUPERIOR_RESEARCH
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 250
     cost: 150000
@@ -34,6 +36,7 @@ manufacture:
     category: STR_ADVANCEMENT
     requires:
       - STR_ADEPTAS_ARMOR_NOVSUPERIOR_RESEARCH
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 250
     cost: 150000
@@ -49,6 +52,7 @@ manufacture:
     category: STR_PERSONAL_ARMOR
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 500
     cost: 20000
@@ -61,6 +65,7 @@ manufacture:
     requires:
       - STR_ADEPTAS
       - STR_FAITHFUL_ARMORY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 500
     cost: 50000
@@ -73,6 +78,7 @@ manufacture:
     requires:
       - STR_ADEPTAS
       - STR_FAITHFUL_ARMORY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 500
     cost: 75000
@@ -84,6 +90,7 @@ manufacture:
     category: STR_ADVANCEMENT
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 250
     cost: 40000
@@ -94,6 +101,7 @@ manufacture:
     category: STR_ADVANCEMENT
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 5000
@@ -104,6 +112,7 @@ manufacture:
     category: STR_PERSONAL_ARMOR
     requires:
       - STR_ADEPTAS_SENTINEL_MELTALANCE_REQ
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 600
     cost: 250000
@@ -117,6 +126,7 @@ manufacture:
       - STR_NAVY_COMUNICATIONS
       - STR_INQOFF
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 10000
@@ -199,7 +209,6 @@ manufacture:
     category: STR_WEAPON
     requires:
       - STR_LASCAN_MALTHUS
-      - STR_ADEPTAS
     space: 0
     time: 700
     cost: 100000
@@ -209,7 +218,6 @@ manufacture:
     category: STR_AMMUNITION
     requires:
       - STR_LASCAN_MALTHUS
-      - STR_ADEPTAS
     space: 0
     time: 200
     cost: 25000
@@ -312,8 +320,7 @@ manufacture:
   - name: STR_STORMBOLTER_DEAZ
     category: STR_WEAPON
     requires:
-      - STR_HB_DEP1
-      - STR_ADEPTAS
+      - STR_ADEPTAS_STORM_BOLTERS_DEP
     space: 0
     time: 700
     cost: 150000
@@ -398,6 +405,7 @@ manufacture:
       - STR_FAITHFUL_ARMORY
       - STR_HOSPITALLER
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 800
     cost: 100000
@@ -412,6 +420,7 @@ manufacture:
       - STR_MEDI_KIT_PREREQ
       - STR_MEDICAE_RESEARCH
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 300
     cost: 25000
@@ -424,6 +433,7 @@ manufacture:
     requires:
       - STR_ADEPTAS_ARMORB
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 600
     cost: 30000
@@ -461,6 +471,7 @@ manufacture:
       - STR_ADEPTAS_ARMORS
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 800
     cost: 50000
@@ -475,6 +486,7 @@ manufacture:
       - STR_ADEPTAS_ARMORD
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 1000
     cost: 200000
@@ -486,9 +498,11 @@ manufacture:
   - name: STR_ADEPTAS_ARMOR_CELESTIAN_SACRESANT_STOREITEM               # 1 BADGE 5  Shield Close Combat
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_UFO_CONSTRUCTION
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 1280
     cost: 300000
@@ -500,9 +514,11 @@ manufacture:
   - name: STR_ADEPTAS_ARMOR_CELESTIAN_ELITE_STOREITEM              # 1 BADGE 5 Retributor Elite
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_UFO_CONSTRUCTION
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 1280
     cost: 300000
@@ -514,9 +530,11 @@ manufacture:
   - name: STR_ADEPTAS_ARMOR_HONOR  # special white armor for Elites
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_ADEPTAS_ARMOR_HONOR
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 1000
     cost: 300000
@@ -527,10 +545,12 @@ manufacture:
   - name: STR_ADEPTAS_ARMORCEL                 # 1 BADGE 1
     category: STR_PERSONAL_ARMOR
     requires:
+      - STR_ADEPTAS
       - STR_ADEPTAS_ARMOR
       - STR_ADEPTAS_ARMORCEL
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 1500
     cost: 300000
@@ -547,6 +567,7 @@ manufacture:
       - STR_FAITHFUL_ARMORY
       - STR_PSI_AMP
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 1280
     cost: 350000
@@ -562,6 +583,7 @@ manufacture:
       - STR_ADEPTAS_ARMORC
       - STR_FAITHFUL_ARMORY
       - STR_CHAPTER_PURITY
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 800
     cost: 400000
@@ -577,6 +599,7 @@ manufacture:
     category: STR_ADVANCEMENT
     requires:
       - STR_ELITE_STRATEGY_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 500
     cost: 250000
@@ -768,24 +791,39 @@ manufacture:
   #     STR_EXAMINATION_ROOM: 2
   # --------------------------------------------------------------- CRAFT --------------------------------
   - name: STR_ADEPTAS_THUNDERHAWNK  # thunderhawnk Type 1
+    requires:
+      - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_ALIEN_ALLOYS: 450  # was 850
       STR_UFO_POWER_SOURCE: 4
       STR_UFO_NAVIGATION: 1
 
   - name: STR_STORMEAGLE_ADEPTAS
+    requires:
+      - STR_STORMEAGLE_INTERCEPTOR
+      - STR_DEATHWATCH_AND_ADEPTAS
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_ALIEN_ALLOYS: 500  # was 1000
       STR_UFO_POWER_SOURCE: 4
       STR_UFO_NAVIGATION: 2
 
   - name: STR_STORMRAVEN_ADEPTAS
+    requires:
+      - STR_DEATHWATCH_AND_ADEPTAS
+      - STR_NEW_FIGHTER_CRAFT
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_ALIEN_ALLOYS: 350
       STR_UFO_POWER_SOURCE: 2
       STR_UFO_NAVIGATION: 1
 
   - name: STR_LANDRAIDER  # Commandery convoy
+    requires:
+      - STR_LANDRAIDER_ADEPTAS
+      - STR_NOT_BLOODYROSES
     cost: 2000000
     requiredItems:
       STR_ALIEN_ALLOYS: 1200  # was 1500
@@ -797,6 +835,7 @@ manufacture:
     category: STR_CRAFT
     requires:
       - STR_ADEPTAS_CASTIGATOR_AC_RESEARCH
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 30000
     cost: 1250000
@@ -807,6 +846,10 @@ manufacture:
       STR_UFO_NAVIGATION: 4
 
   - name: STR_TTA  # thunderhawnk Transport ASS
+    requires:
+      - STR_HIGHTIER_PREREQ
+      - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     requiredItems:
       STR_ALIEN_ALLOYS: 600  # was 1200
       STR_UFO_POWER_SOURCE: 4
@@ -818,6 +861,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 25000
@@ -832,6 +876,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 25000
@@ -846,6 +891,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 200
     cost: 25000
@@ -860,6 +906,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 25000
@@ -874,6 +921,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 25000
@@ -888,6 +936,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 200
     cost: 25000
@@ -902,6 +951,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 25000
@@ -916,6 +966,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 50
     cost: 500
@@ -929,6 +980,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 50
     cost: 500
@@ -942,6 +994,7 @@ manufacture:
     category: STR_CAT_RADICAL
     requires:
       - STR_ADEPTAS
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 100
     cost: 25000
@@ -956,6 +1009,7 @@ manufacture:
     category: STR_ADVANCEMENT
     requires:
       - STR_CALLIDUS_ASSASSIN_REQUISITION
+      - STR_NOT_BLOODYROSES
     space: 0
     time: 3000  # was 1000
     cost: 2000000  # was 250k

@@ -1,0 +1,837 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+armors:
+
+  - type: STR_NOVICE_ARMOR_BLOODYROSE  # BR NOVICE
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRNOVICEARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+    layersDefinition:
+  # no hair
+      F0: ["BRNOVICE", "BRF_FACE1", ""]
+      F1: ["BRNOVICE", "BRF_FACE2", ""]
+      F2: ["BRNOVICE", "BRF_FACE3", ""]
+  # cover hair
+      F3: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      F4: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      F5: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+  # cover hair
+      F6: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      F7: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      F8: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+  # cover hair
+      F9: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      F10: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      F11: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+  # cover hair
+      F12: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      F13: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      F14: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+
+  # black low hair
+      F15: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR1"]
+      F16: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR1"]
+      F17: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      F18: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR2"]
+      F19: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR2"]
+      F20: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      F21: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR3"]
+      F22: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR3"]
+      F23: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      F24: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR4"]
+      F25: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR4"]
+      F26: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  # no hair
+      M0: ["BRNOVICE", "BRF_FACE1", ""]
+      M1: ["BRNOVICE", "BRF_FACE2", ""]
+      M2: ["BRNOVICE", "BRF_FACE3", ""]
+  # cover hair
+      M3: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      M4: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      M5: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+  # cover hair
+      M6: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      M7: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      M8: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+  # cover hair
+      M9: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      M10: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      M11: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+  # cover hair
+      M12: ["BRNOVICE", "BRF_FACE1", "BR_COVERHAIR"]
+      M13: ["BRNOVICE", "BRF_FACE2", "BR_COVERHAIR"]
+      M14: ["BRNOVICE", "BRF_FACE3", "BR_COVERHAIR"]
+
+  # black low hair
+      M15: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR1"]
+      M16: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR1"]
+      M17: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      M18: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR2"]
+      M19: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR2"]
+      M20: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      M21: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR3"]
+      M22: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR3"]
+      M23: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      M24: ["BRNOVICE", "BRF_FACE1", "BR_LOWHAIR4"]
+      M25: ["BRNOVICE", "BRF_FACE2", "BR_LOWHAIR4"]
+      M26: ["BRNOVICE", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  - type: STR_REPENTIA_ARMOR_BLOODYROSE  # BR REPENTIA
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRREPENTIAARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+    layersDefinition:
+  # no hair
+      F0: ["BRREPENT1", "", ""]
+      F1: ["BRREPENT2", "", ""]
+      F2: ["BRREPENT3", "", ""]
+
+  # no hair
+      M0: ["BRREPENT1", "", ""]
+      M1: ["BRREPENT2", "", ""]
+      M2: ["BRREPENT3", "", ""]
+
+  - type: STR_HOSPITALIER_ARMOR_BLOODYROSE  # BR HOSPITALIER
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRHOSPITALIERARMOR_BACKGROUND
+      1: BRHOSPITAL_HEAD
+    layersDefinition:
+  # no hair
+      F0: ["BRHOSPITALIER", "BRF_HFACE1"]
+      F1: ["BRHOSPITALIER", "BRF_HFACE2"]
+      F2: ["BRHOSPITALIER", "BRF_HFACE3"]
+
+  # no hair
+      M0: ["BRHOSPITALIER", "BRF_HFACE1"]
+      M1: ["BRHOSPITALIER", "BRF_HFACE2"]
+      M2: ["BRHOSPITALIER", "BRF_HFACE3"]
+
+  - type: STR_ADEPTAS_ARMOR_BLOODYROSE  # BR SISTER
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRSISTERARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+    layersDefinition:
+  # no hair
+      F0: ["BRSISTER", "BRF_FACE1", ""]
+      F1: ["BRSISTER", "BRF_FACE2", ""]
+      F2: ["BRSISTER", "BRF_FACE3", ""]
+  # black low hair
+      F3: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR1"]
+      F4: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR1"]
+      F5: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      F6: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR2"]
+      F7: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR2"]
+      F8: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      F9: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR3"]
+      F10: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR3"]
+      F11: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      F12: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR4"]
+      F13: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR4"]
+      F14: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  # black norm hair
+      F15: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR1"]
+      F16: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR1"]
+      F17: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR1"]
+  # blonde norm hair
+      F18: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR2"]
+      F19: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR2"]
+      F20: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR2"]
+  # brown norm hair
+      F21: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR3"]
+      F22: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR3"]
+      F23: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR3"]
+  # white norm hair
+      F24: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR4"]
+      F25: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR4"]
+      F26: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR4"]
+
+  # no hair
+      M0: ["BRSISTER", "BRF_FACE1", ""]
+      M1: ["BRSISTER", "BRF_FACE2", ""]
+      M2: ["BRSISTER", "BRF_FACE3", ""]
+  # black low hair
+      M3: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR1"]
+      M4: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR1"]
+      M5: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      M6: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR2"]
+      M7: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR2"]
+      M8: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      M9: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR3"]
+      M10: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR3"]
+      M11: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      M12: ["BRSISTER", "BRF_FACE1", "BR_LOWHAIR4"]
+      M13: ["BRSISTER", "BRF_FACE2", "BR_LOWHAIR4"]
+      M14: ["BRSISTER", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  # black norm hair
+      M15: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR1"]
+      M16: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR1"]
+      M17: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR1"]
+  # blonde norm hair
+      M18: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR2"]
+      M19: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR2"]
+      M20: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR2"]
+  # brown norm hair
+      M21: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR3"]
+      M22: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR3"]
+      M23: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR3"]
+  # white norm hair
+      M24: ["BRSISTER", "BRF_FACE1", "BR_NORMHAIR4"]
+      M25: ["BRSISTER", "BRF_FACE2", "BR_NORMHAIR4"]
+      M26: ["BRSISTER", "BRF_FACE3", "BR_NORMHAIR4"]
+
+  - type: STR_SERAPHIM_ARMOR_BLOODYROSE  # BR SERAPHIM
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRSERAPHARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+    layersDefinition:
+  # no hair
+      F0: ["BRSERAPH", "BRF_FACE1", ""]
+      F1: ["BRSERAPH", "BRF_FACE2", ""]
+      F2: ["BRSERAPH", "BRF_FACE3", ""]
+  # black low hair
+      F3: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR1"]
+      F4: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR1"]
+      F5: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      F6: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR2"]
+      F7: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR2"]
+      F8: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      F9: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR3"]
+      F10: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR3"]
+      F11: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      F12: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR4"]
+      F13: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR4"]
+      F14: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  # black norm hair
+      F15: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR1"]
+      F16: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR1"]
+      F17: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR1"]
+  # blonde norm hair
+      F18: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR2"]
+      F19: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR2"]
+      F20: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR2"]
+  # brown norm hair
+      F21: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR3"]
+      F22: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR3"]
+      F23: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR3"]
+  # white norm hair
+      F24: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR4"]
+      F25: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR4"]
+      F26: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR4"]
+
+  # no hair
+      M0: ["BRSERAPH", "BRF_FACE1", ""]
+      M1: ["BRSERAPH", "BRF_FACE2", ""]
+      M2: ["BRSERAPH", "BRF_FACE3", ""]
+  # black low hair
+      M3: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR1"]
+      M4: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR1"]
+      M5: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      M6: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR2"]
+      M7: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR2"]
+      M8: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      M9: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR3"]
+      M10: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR3"]
+      M11: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      M12: ["BRSERAPH", "BRF_FACE1", "BR_LOWHAIR4"]
+      M13: ["BRSERAPH", "BRF_FACE2", "BR_LOWHAIR4"]
+      M14: ["BRSERAPH", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  # black norm hair
+      M15: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR1"]
+      M16: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR1"]
+      M17: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR1"]
+  # blonde norm hair
+      M18: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR2"]
+      M19: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR2"]
+      M20: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR2"]
+  # brown norm hair
+      M21: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR3"]
+      M22: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR3"]
+      M23: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR3"]
+  # white norm hair
+      M24: ["BRSERAPH", "BRF_FACE1", "BR_NORMHAIR4"]
+      M25: ["BRSERAPH", "BRF_FACE2", "BR_NORMHAIR4"]
+      M26: ["BRSERAPH", "BRF_FACE3", "BR_NORMHAIR4"]
+
+  - type: STR_SUPERIOR_ARMOR_BLOODYROSE  # BR SUPERIOR
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRSUPERIORARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+    layersDefinition:
+  # no hair
+      F0: ["BRSUPERIOR", "BRF_FACE1", ""]
+      F1: ["BRSUPERIOR", "BRF_FACE2", ""]
+      F2: ["BRSUPERIOR", "BRF_FACE3", ""]
+  # black low hair
+      F3: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR1"]
+      F4: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR1"]
+      F5: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      F6: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR2"]
+      F7: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR2"]
+      F8: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      F9: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR3"]
+      F10: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR3"]
+      F11: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      F12: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR4"]
+      F13: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR4"]
+      F14: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  # black norm hair
+      F15: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR1"]
+      F16: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR1"]
+      F17: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR1"]
+  # blonde norm hair
+      F18: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR2"]
+      F19: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR2"]
+      F20: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR2"]
+  # brown norm hair
+      F21: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR3"]
+      F22: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR3"]
+      F23: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR3"]
+  # white norm hair
+      F24: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR4"]
+      F25: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR4"]
+      F26: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR4"]
+
+  # no hair
+      M0: ["BRSUPERIOR", "BRF_FACE1", ""]
+      M1: ["BRSUPERIOR", "BRF_FACE2", ""]
+      M2: ["BRSUPERIOR", "BRF_FACE3", ""]
+  # black low hair
+      M3: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR1"]
+      M4: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR1"]
+      M5: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR1"]
+  # blonde low hair
+      M6: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR2"]
+      M7: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR2"]
+      M8: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR2"]
+  # brown low hair
+      M9: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR3"]
+      M10: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR3"]
+      M11: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR3"]
+  # white low hair
+      M12: ["BRSUPERIOR", "BRF_FACE1", "BR_LOWHAIR4"]
+      M13: ["BRSUPERIOR", "BRF_FACE2", "BR_LOWHAIR4"]
+      M14: ["BRSUPERIOR", "BRF_FACE3", "BR_LOWHAIR4"]
+
+  # black norm hair
+      M15: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR1"]
+      M16: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR1"]
+      M17: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR1"]
+  # blonde norm hair
+      M18: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR2"]
+      M19: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR2"]
+      M20: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR2"]
+  # brown norm hair
+      M21: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR3"]
+      M22: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR3"]
+      M23: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR3"]
+  # white norm hair
+      M24: ["BRSUPERIOR", "BRF_FACE1", "BR_NORMHAIR4"]
+      M25: ["BRSUPERIOR", "BRF_FACE2", "BR_NORMHAIR4"]
+      M26: ["BRSUPERIOR", "BRF_FACE3", "BR_NORMHAIR4"]
+
+  - type: STR_ELOHIM_ARMOR_BLOODYROSE  # BR ELOHIM
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRELOHIMARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+      3: BR_NECKPROTECT
+      4: BR_CROWN
+    layersDefinition:
+  # no hair
+      F0: ["BRELOHIM", "BRF_FACE1", "", "", ""]
+      F1: ["BRELOHIM", "BRF_FACE2", "", "", ""]
+      F2: ["BRELOHIM", "BRF_FACE3", "", "", ""]
+  # black low hair
+      F3: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR1", "", "BRCROWN"]
+      F4: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR1", "", "BRCROWN"]
+      F5: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR1", "", "BRCROWN"]
+  # blonde low hair
+      F6: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR2", "", "BRCROWN"]
+      F7: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR2", "", "BRCROWN"]
+      F8: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR2", "", "BRCROWN"]
+  # brown low hair
+      F9: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR3", "", "BRCROWN"]
+      F10: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR3", "", "BRCROWN"]
+      F11: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR3", "", "BRCROWN"]
+  # white low hair
+      F12: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR4", "", "BRCROWN"]
+      F13: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR4", "", "BRCROWN"]
+      F14: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR4", "", "BRCROWN"]
+
+  # black norm hair
+      F15: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR1", "", "BRCROWN"]
+      F16: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR1", "", "BRCROWN"]
+      F17: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR1", "", "BRCROWN"]
+  # blonde norm hair
+      F18: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR2", "", "BRCROWN"]
+      F19: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR2", "", "BRCROWN"]
+      F20: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR2", "", "BRCROWN"]
+  # brown norm hair
+      F21: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR3", "", "BRCROWN"]
+      F22: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR3", "", "BRCROWN"]
+      F23: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR3", "", "BRCROWN"]
+  # white norm hair
+      F24: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR4", "", "BRCROWN"]
+      F25: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR4", "", "BRCROWN"]
+      F26: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR4", "", "BRCROWN"]
+
+  # no hair
+      M0: ["BRELOHIM", "BRF_FACE1", "", "", ""]
+      M1: ["BRELOHIM", "BRF_FACE2", "", "", ""]
+      M2: ["BRELOHIM", "BRF_FACE3", "", "", ""]
+  # black low hair
+      M3: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR1", "", "BRCROWN"]
+      M4: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR1", "", "BRCROWN"]
+      M5: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR1", "", "BRCROWN"]
+  # blonde low hair
+      M6: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR2", "", "BRCROWN"]
+      M7: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR2", "", "BRCROWN"]
+      M8: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR2", "", "BRCROWN"]
+  # brown low hair
+      M9: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR3", "", "BRCROWN"]
+      M10: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR3", "", "BRCROWN"]
+      M11: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR3", "", "BRCROWN"]
+  # white low hair
+      M12: ["BRELOHIM", "BRF_FACE1", "BR_LOWHAIR4", "", "BRCROWN"]
+      M13: ["BRELOHIM", "BRF_FACE2", "BR_LOWHAIR4", "", "BRCROWN"]
+      M14: ["BRELOHIM", "BRF_FACE3", "BR_LOWHAIR4", "", "BRCROWN"]
+
+  # black norm hair
+      M15: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR1", "", "BRCROWN"]
+      M16: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR1", "", "BRCROWN"]
+      M17: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR1", "", "BRCROWN"]
+  # blonde norm hair
+      M18: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR2", "", "BRCROWN"]
+      M19: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR2", "", "BRCROWN"]
+      M20: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR2", "", "BRCROWN"]
+  # brown norm hair
+      M21: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR3", "", "BRCROWN"]
+      M22: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR3", "", "BRCROWN"]
+      M23: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR3", "", "BRCROWN"]
+  # white norm hair
+      M24: ["BRELOHIM", "BRF_FACE1", "BR_NORMHAIR4", "", "BRCROWN"]
+      M25: ["BRELOHIM", "BRF_FACE2", "BR_NORMHAIR4", "", "BRCROWN"]
+      M26: ["BRELOHIM", "BRF_FACE3", "BR_NORMHAIR4", "", "BRCROWN"]
+
+  - type: STR_RETRIBUTOR_ARMOR_BLOODYROSE  # BR RETRIBUTOR
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRRETRIBUARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+      3: BR_NECKPROTECT
+      4: BR_CROWN
+    layersDefinition:
+  # no hair
+      F0: ["BRRETRIB", "BRF_FACE1", "", "", ""]
+      F1: ["BRRETRIB", "BRF_FACE2", "", "", ""]
+      F2: ["BRRETRIB", "BRF_FACE3", "", "", ""]
+  # black low hair
+      F3: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR1", "", "BRCROWN"]
+      F4: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR1", "", "BRCROWN"]
+      F5: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR1", "", "BRCROWN"]
+  # blonde low hair
+      F6: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR2", "", "BRCROWN"]
+      F7: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR2", "", "BRCROWN"]
+      F8: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR2", "", "BRCROWN"]
+  # brown low hair
+      F9: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR3", "", "BRCROWN"]
+      F10: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR3", "", "BRCROWN"]
+      F11: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR3", "", "BRCROWN"]
+  # white low hair
+      F12: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR4", "", "BRCROWN"]
+      F13: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR4", "", "BRCROWN"]
+      F14: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR4", "", "BRCROWN"]
+
+  # black norm hair
+      F15: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR1", "", "BRCROWN"]
+      F16: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR1", "", "BRCROWN"]
+      F17: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR1", "", "BRCROWN"]
+  # blonde norm hair
+      F18: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR2", "", "BRCROWN"]
+      F19: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR2", "", "BRCROWN"]
+      F20: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR2", "", "BRCROWN"]
+  # brown norm hair
+      F21: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR3", "", "BRCROWN"]
+      F22: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR3", "", "BRCROWN"]
+      F23: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR3", "", "BRCROWN"]
+  # white norm hair
+      F24: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR4", "", "BRCROWN"]
+      F25: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR4", "", "BRCROWN"]
+      F26: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR4", "", "BRCROWN"]
+
+  # no hair
+      M0: ["BRRETRIB", "BRF_FACE1", "", "", ""]
+      M1: ["BRRETRIB", "BRF_FACE2", "", "", ""]
+      M2: ["BRRETRIB", "BRF_FACE3", "", "", ""]
+  # black low hair
+      M3: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR1", "", "BRCROWN"]
+      M4: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR1", "", "BRCROWN"]
+      M5: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR1", "", "BRCROWN"]
+  # blonde low hair
+      M6: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR2", "", "BRCROWN"]
+      M7: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR2", "", "BRCROWN"]
+      M8: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR2", "", "BRCROWN"]
+  # brown low hair
+      M9: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR3", "", "BRCROWN"]
+      M10: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR3", "", "BRCROWN"]
+      M11: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR3", "", "BRCROWN"]
+  # white low hair
+      M12: ["BRRETRIB", "BRF_FACE1", "BR_LOWHAIR4", "", "BRCROWN"]
+      M13: ["BRRETRIB", "BRF_FACE2", "BR_LOWHAIR4", "", "BRCROWN"]
+      M14: ["BRRETRIB", "BRF_FACE3", "BR_LOWHAIR4", "", "BRCROWN"]
+
+  # black norm hair
+      M15: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR1", "", "BRCROWN"]
+      M16: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR1", "", "BRCROWN"]
+      M17: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR1", "", "BRCROWN"]
+  # blonde norm hair
+      M18: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR2", "", "BRCROWN"]
+      M19: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR2", "", "BRCROWN"]
+      M20: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR2", "", "BRCROWN"]
+  # brown norm hair
+      M21: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR3", "", "BRCROWN"]
+      M22: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR3", "", "BRCROWN"]
+      M23: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR3", "", "BRCROWN"]
+  # white norm hair
+      M24: ["BRRETRIB", "BRF_FACE1", "BR_NORMHAIR4", "", "BRCROWN"]
+      M25: ["BRRETRIB", "BRF_FACE2", "BR_NORMHAIR4", "", "BRCROWN"]
+      M26: ["BRRETRIB", "BRF_FACE3", "BR_NORMHAIR4", "", "BRCROWN"]
+
+
+  - type: STR_CELESTIAN_ARMOR_BLOODYROSE  # BR CELESTIAN
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRCELESTIANARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRCELEST_HAIR
+      3: BR_NECKPROTECT
+      4: BR_CROWN
+    layersDefinition:
+
+  # black low hair
+      F0: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F1: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F2: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      F3: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F4: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F5: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      F6: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F7: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F8: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      F9: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F10: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F11: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+
+  # black low hair
+      F12: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F13: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F14: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      F15: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F16: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F17: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      F18: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F19: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F20: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      F21: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F22: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F23: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+  # white low hair
+      F24: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F25: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F26: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+
+  # black low hair
+      M0: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M1: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M2: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      M3: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M4: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M5: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      M6: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M7: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M8: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      M9: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M10: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M11: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+
+  # black low hair
+      M12: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M13: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M14: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      M15: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M16: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M17: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      M18: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M19: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M20: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      M21: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M22: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M23: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+  # white low hair
+      M24: ["BRCELEST", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M25: ["BRCELEST", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M26: ["BRCELEST", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+
+  - type: STR_SACRESANT_ARMOR_BLOODYROSE  # BR SACRESANT
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRSACRESANTARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRCELEST_HAIR
+      3: BR_NECKPROTECT
+      4: BR_CROWN
+    layersDefinition:
+
+  # black low hair
+      F0: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F1: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F2: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      F3: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F4: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F5: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      F6: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F7: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F8: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      F9: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F10: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F11: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+  # black low hair
+      F12: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F13: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      F14: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      F15: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F16: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      F17: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      F18: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F19: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      F20: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      F21: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F22: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F23: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+  # white low hair
+      F24: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F25: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      F26: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+
+
+  # black low hair
+      M0: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M1: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M2: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      M3: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M4: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M5: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      M6: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M7: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M8: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      M9: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M10: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M11: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+  # black low hair
+      M12: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M13: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+      M14: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK", "BRCROWN2"]
+  # blonde low hair
+      M15: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M16: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+      M17: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK", "BRCROWN2"]
+  # brown low hair
+      M18: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M19: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+      M20: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK", "BRCROWN2"]
+  # white low hair
+      M21: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M22: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M23: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+  # white low hair
+      M24: ["BRSACRE", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M25: ["BRSACRE", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+      M26: ["BRSACRE", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK", "BRCROWN2"]
+
+  - type: STR_CANONESS_ARMOR_BLOODYROSE  # BR CANONESS
+    #spriteFaceGroup: 6
+    #spriteFaceColor: [96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163, 96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRCANONESSARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRCELEST_HAIR
+      3: BR_NECKPROTECT
+      4: BR_CROWN
+    layersDefinition:
+
+  # black low hair
+      F0: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      F1: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      F2: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+  # blonde low hair
+      F3: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      F4: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      F5: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+  # brown low hair
+      F6: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      F7: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      F8: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+  # white low hair
+      F9: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      F10: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      F11: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+  # black low hair
+      F12: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      F13: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      F14: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+  # blonde low hair
+      F15: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      F16: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      F17: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+  # brown low hair
+      F18: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      F19: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      F20: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+  # white low hair
+      F21: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      F22: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      F23: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+  # white low hair
+      F24: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      F25: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      F26: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+
+  # black low hair
+      M0: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      M1: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      M2: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+  # blonde low hair
+      M3: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      M4: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      M5: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+  # brown low hair
+      M6: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      M7: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      M8: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+  # white low hair
+      M9: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      M10: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      M11: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+  # black low hair
+      M12: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      M13: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+      M14: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR1", "BRNECK2", "BRCROWN2"]
+  # blonde low hair
+      M15: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      M16: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+      M17: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR2", "BRNECK2", "BRCROWN2"]
+  # brown low hair
+      M18: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      M19: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+      M20: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR3", "BRNECK2", "BRCROWN2"]
+  # white low hair
+      M21: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      M22: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      M23: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+  # white low hair
+      M24: ["BRCANON", "BRF_FACE1", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      M25: ["BRCANON", "BRF_FACE2", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+      M26: ["BRCANON", "BRF_FACE3", "BR_HIGHHAIR4", "BRNECK2", "BRCROWN2"]
+
+
+  - type: STR_PENITENT_ARMOR_BLOODYROSE  # BR PENITENT MACHINE
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 160, 163] #M0 M1 M2 ...
+    layersDefaultPrefix: "0"
+    layersSpecificPrefix:
+      0: STR_BRPENITENTSARMOR_BACKGROUND
+      1: BRSISTER_HEAD
+      2: BRSISTER_HAIR
+    layersDefinition:
+  # no hair
+      F0: ["BRPENITENT1", "", ""]
+      F1: ["BRPENITENT2", "", ""]
+      F2: ["BRPENITENT3", "", ""]
+
+  # no hair
+      M0: ["BRPENITENT1", "", ""]
+      M1: ["BRPENITENT2", "", ""]
+      M2: ["BRPENITENT3", "", ""]

@@ -1,0 +1,36 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+items:
+  - delete: AUX_ELDAR_KIT
+  - type: AUX_ELDAR_KIT #eldar medikit, fixed weapon for
+    medikitTargetImmune: true
+    medikitBackground: MEDIELDAR
+    weight: 0
+    defaultInventorySlot: STR_LEFT_HAND
+    bigSprite: {mod: 40k, index: 406}
+    battleType: 6
+    invWidth: 2
+    invHeight: 3
+    painKiller: 20
+    heal: 50
+    stimulant: 20
+    woundRecovery: 1
+    healthRecovery: 3
+    stunRecovery: 3
+    energyRecovery: 10
+    tuUse: 10
+    medikitTargetSelf: true
+    flatRate: true
+    recover: false
+    fixedWeapon: true
+
+  - delete: STR_ELDAR_SHIELD
+  - type: STR_ELDAR_SHIELD
+    costBuy: 300000
+    costSell: 100000
+    size: 0.8
+    requiresBuy:
+      - STR_ELDAR_SHIELD
+    listOrder: 5457
+

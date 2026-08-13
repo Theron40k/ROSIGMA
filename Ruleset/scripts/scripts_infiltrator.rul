@@ -35,9 +35,13 @@ extended:
                 sub temp temp2;
                 add temp2 1;
                 unit.setTag Tag.UNIT_STEALTH_CHARGE_TURN_COUNTER temp2;
-                battle_game.flashMessage "STR_SCRIPT_INFILTRATION_RECHARGING" temp;
+                if eq side FACTION_PLAYER;
+                  battle_game.flashMessage "STR_SCRIPT_INFILTRATION_RECHARGING" temp;
+                end;
               else;
-                battle_game.flashMessage "STR_SCRIPT_INFILTRATION_RECHARGED";
+                if eq side FACTION_PLAYER;
+                  battle_game.flashMessage "STR_SCRIPT_INFILTRATION_RECHARGED";
+                end;
               end;
             end;
             return;
@@ -47,7 +51,9 @@ extended:
           unit.setTag Tag.UNIT_STEALTH_IS_ACTIVE temp; # set our stealth counter to the Infiltrator value
 
           if lt temp 1;
-            battle_game.flashMessage "STR_SCRIPT_INFILTRATION_NO_TIME_REMAINING";
+            if eq side FACTION_PLAYER;
+              battle_game.flashMessage "STR_SCRIPT_INFILTRATION_NO_TIME_REMAINING";
+            end;
             unit.getRuleArmor myRuleArmor;
             myRuleArmor.getTag temp Tag.ARMOR_RESTEALTH_TURN_REQUIREMENT; #check to see if we're a camo cloak
             unit.setTag Tag.UNIT_CAMO_CLOAK_MOVE_COST_MULTIPLIER 0;
@@ -60,7 +66,9 @@ extended:
             return;
           end;
 
-          battle_game.flashMessage "STR_SCRIPT_INFILTRATION_TIME_REMAINING" temp;
+          if eq side FACTION_PLAYER;
+            battle_game.flashMessage "STR_SCRIPT_INFILTRATION_TIME_REMAINING" temp;
+          end;
           return;
 
       - new: ROSIGMA_nTU_infiltration_set_stealth

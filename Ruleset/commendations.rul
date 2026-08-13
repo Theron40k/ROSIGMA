@@ -152,3 +152,29 @@ commendations:
       - STR_WBSOLDIER
       - STR_WBSOLDIER_TERMINATOR
       - STR_WBSOLDIER_ACOLYTE
+
+
+  - type: STR_CHAOS_APOTHEOSIS
+    description: STR_CHAOS_APOTHEOSIS_DESCRIPTION
+    sprite: 5
+    criteria:
+      killsWithCriteriaCareer: [100]
+    killCriteria:
+      -
+        - [1, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+    units:
+      - STR_CHAOSCULT_CHAOSLORD
+
+  # Bloody Roses
+
+  - type: STR_PARDON_COMMENDATION
+    description: STR_PARDON_COMMENDATION_DESCRIPTION
+    sprite: 5
+    criteria:
+      killsWithCriteriaCareer: [5]
+      totalWins: [2]
+    killCriteria:
+      -
+        - [1, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+    units:
+      - STR_REPENTIA_PLAYERBLOODYROSE

@@ -12,6 +12,7 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_GUARDSM
       - STR_GUARDSL
+      - STR_GUARD_VALHALLAN
     transferTime: 336  # 2 weeks
     flatOverallStatChange:
       reactions: 10
@@ -24,6 +25,7 @@ soldierTransformation:
       - STR_REGIMENT_OFFICERS
       - STR_GUARDSMEN_VETERAN
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     producedSoldierType: STR_GUARD_OFFICER_VETERAN
     producedSoldierArmor: STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR
     allowsDeadSoldiers: false
@@ -50,6 +52,7 @@ soldierTransformation:
       - STR_REGIMENT_OFFICERS
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     requiredItems:
       # STR_KILLPOINT_TOKEN: 60  # not changed because of officer sword
       STR_OFFICER_COMMISSION: 1
@@ -136,6 +139,42 @@ soldierTransformation:
       #psiSkill: 40
       tu: 1
 
+  - &STR_OFFICER_PROMOTION_VALHALLA
+    name: STR_PROMOTE_VETERAN_OFFICER_VALHALLA
+    requires:
+      - STR_REGIMENT_OFFICERS
+      - STR_GUARDSMEN_VETERAN  # research topic
+      - STR_VALHALLAN_STRATEGY
+    producedSoldierType: STR_GUARD_VALHALLAN_OFFICER_VETERAN
+    producedSoldierArmor: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    includeBonusesForMinStats: true
+    allowedSoldierTypes:
+      - STR_GUARD_VETERAN_VALHALLAN
+    requiredItems:
+      STR_OFFICER_COMMISSION: 1
+    requiredCommendations:
+      STR_BATTLE_TESTED: 0
+    requiredMinStats:
+      bravery: 60
+      tu: 1
+
+  - name: STR_PROMOTE_OFFICER_VETERAN_VALHALLA
+    refNode: *STR_OFFICER_PROMOTION_VALHALLA
+    allowedSoldierTypes:
+      - STR_GUARD_VALHALLAN_OFFICER
+    cost: 50000
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 100
+    requiredCommendations:
+      STR_VETERAN_COMMENDATION: 0
+      STR_BATTLE_TESTED: 0
+    requiredMinStats:
+      bravery: 60
+      tu: 1
+
   - name: STR_VETERAN_PROMOTION
     requiredMinStats:
       tu: 1
@@ -155,6 +194,12 @@ soldierTransformation:
   - name: STR_VETERAN_PROMOTION_SL
     requiredMinStats:
       tu: 1
+      stamina: 1
+      health: 1
+      bravery: 1
+      reactions: 1
+      firing: 1
+      melee: 1
     requiredCommendations:
       STR_VETERAN_COMMENDATION: 0
     requires:
@@ -170,6 +215,29 @@ soldierTransformation:
     allowedSoldierTypes:
       - STR_GUARDSL
 
+  - name: STR_VETERAN_PROMOTION_VALHALLA
+    requiredMinStats:
+      tu: 1
+      stamina: 1
+      health: 1
+      bravery: 1
+      reactions: 1
+      firing: 1
+      melee: 1
+    requiredCommendations:
+      STR_VETERAN_COMMENDATION: 0
+    requires:
+      - STR_GUARDSMEN_VETERAN
+      - STR_VALHALLAN_STRATEGY
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+    producedSoldierType: STR_GUARD_VETERAN_VALHALLAN
+    producedSoldierArmor: STR_VALHALLAN_CARAPACE_ARMOR
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_GUARD_VALHALLAN
 
   - name: STR_FELINID_VETERAN_PROMOTION
     requiredMinStats:
@@ -250,6 +318,23 @@ soldierTransformation:
     requiredCommendations:
       STR_LONG_SERVICE_TIME: 0
 
+  - name: STR_PARDON_PENITENT_VALHALLA
+    requires:
+      - STR_PENITENT_GUARD
+      - STR_VALHALLAN_STRATEGY
+    producedSoldierType: STR_GUARD_VALHALLAN
+    cost: 5000
+    keepSoldierArmor: false
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: false
+    allowedSoldierTypes:
+      - STR_PENITENT_GUARD
+      - STR_PENITENT
+    transferTime: 0
+    requiredCommendations:
+      STR_LONG_SERVICE_TIME: 0
+
   - name: STR_PARDON_PENITENT_BEAST
     requires:
       - STR_PENITENT_GUARD
@@ -302,6 +387,10 @@ soldierTransformation:
       - STR_PSYKER
       - STR_STORMTROOPER
       - STR_STORMTROOPER_OFFICER
+      - STR_GUARD_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER
+      - STR_GUARD_VETERAN_VALHALLAN
+      - STR_GUARD_VALHALLAN_OFFICER_VETERAN
 
 # catachan
 

@@ -145,7 +145,7 @@ extended:
 
     damageUnit:
       - new: ROSIGMA_dU_commissar_execution_mode
-        offset: 2
+        offset: 1.1
         code: |
           var int temp;
 
@@ -214,6 +214,12 @@ extended:
         offset: 30  # change unit color to green so player knows who's infected
         code: |
           var int temp;
+          var int frame;
+          var int frameLength;
+          var int recolorPeriod;
+          var int animFrame;
+          var int color;
+          var int newShade;
 
           # if at least one execution mode is active, check units for high-lighting
           battle_game.getTag temp Tag.COMMISSAR_EXECUTION_MODE_ACTIVE;
@@ -236,6 +242,50 @@ extended:
               # debug_log "Commissar Execution Mode Scripts; ROSIGMA_rUS_commissar_execution_mode, offset 20: Target morale is too high and has no corruption. Aborting, Morale:" temp;
               return new_pixel;
             end;
+          end;
+
+
+          set animFrame anim_frame; #set up frame timer
+          if gt animFrame 60;
+            set temp animFrame;
+            muldiv temp 1 60;
+            mul temp 60;
+            sub animFrame temp;
+            if lt animFrame 0;
+              add animFrame 60;
+            end;
+          end;
+
+          if le animFrame 11;
+            get_shade newShade old_pixel;
+            add newShade animFrame;
+            add newShade 2;
+            set_shade new_pixel newShade;
+          else le animFrame 21;
+            get_shade newShade old_pixel;
+            add newShade animFrame;
+            add newShade 2;
+            set_shade new_pixel newShade;
+          else le animFrame 31;
+            get_shade newShade old_pixel;
+            add newShade animFrame;
+            add newShade 2;
+            set_shade new_pixel newShade;
+          else le animFrame 41;
+            get_shade newShade old_pixel;
+            sub newShade animFrame;
+            sub newShade 2;
+            set_shade new_pixel newShade;
+          else le animFrame 51;
+            get_shade newShade old_pixel;
+            sub newShade animFrame;
+            sub newShade 2;
+            set_shade new_pixel newShade;
+          else;
+            get_shade newShade old_pixel;
+            sub newShade animFrame;
+            sub newShade 2;
+            set_shade new_pixel newShade;
           end;
 
           set_color new_pixel COLOR_X1_RED;

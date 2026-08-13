@@ -1,0 +1,321 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+soldiers:
+
+
+  - type: STR_BTMARINE_PLAYER
+    requiresBuyBaseFunc: [IMPERIUM]
+    costBuy: 110000
+    costSalary: 40000
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_BLACKTEMPLAR_STRATEGY
+    minStats:
+      tu: 50
+      stamina: 60
+      health: 50
+      bravery: 40
+      reactions: 45
+      firing: 45  # BT less
+      throwing: 55
+      strength: 35
+      psiStrength: 40
+      psiSkill: 0
+      melee: 70  # BT more
+
+    maxStats:
+      tu: 70
+      stamina: 80
+      health: 65
+      bravery: 80
+      reactions: 65
+      firing: 65  # BT less
+      throwing: 80
+      strength: 45
+      psiStrength: 100
+      psiSkill: 16
+      melee: 90  # BT more
+
+    statCaps:
+      tu: 100
+      stamina: 120
+      health: 100
+      bravery: 110
+      reactions: 110
+      firing: 120  # BT less
+      throwing: 120
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 140  # BT more
+
+    trainingStatCaps:
+      tu: 80
+      stamina: 100
+      health: 70
+      firing: 100
+      throwing: 80
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 110 # BT more
+
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+
+    allowPiloting: true
+    armor: STR_BTSCOUTARMOR_PLAYER
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 0
+    avatarOffsetX: 67
+    avatarOffsetY: 34
+    rankStrings:
+      - STR_BT_RANK_0
+      - STR_BT_RANK_1
+      - STR_BT_RANK_2
+      - STR_BT_RANK_3
+      - STR_BT_RANK_4
+      - STR_BT_RANK_5
+    rankSprite: {mod: 40k, index: 977}
+    rankBattleSprite: {mod: 40k, index: 313}
+    rankTinySprite: {mod: 40k, index: 223}
+    soldierNames:
+      - delete
+      - Names/sm_blacktemplar.nam
+    deathMale: [{mod: 40k, index: 713}, {mod: 40k, index: 714}, {mod: 40k, index: 715}, {mod: 40k, index: 716}, {mod: 40k, index: 717}, {mod: 40k, index: 718}, {mod: 40k, index: 719}, {mod: 40k, index: 720}, {mod: 40k, index: 721}, {mod: 40k, index: 722}]
+    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}, {mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+    value: 30
+
+
+  - type: STR_BTHONORED_PLAYER
+    requiresBuyBaseFunc: [IMPERIUM]
+    costSalary: 75000
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_BLACKTEMPLAR_STRATEGY
+    minStats:
+      tu: 50
+      stamina: 60
+      health: 50
+      bravery: 40
+      reactions: 35
+      firing: 45  # BT less
+      throwing: 55
+      strength: 55
+      psiStrength: 40
+      psiSkill: 0
+      melee: 70  # BT more
+
+    maxStats:
+      tu: 70
+      stamina: 80
+      health: 65
+      bravery: 80
+      reactions: 55
+      firing: 65  # BT less
+      throwing: 80
+      strength: 65
+      psiStrength: 100
+      psiSkill: 16
+      melee: 90  # BT more
+
+    statCaps:
+      tu: 100
+      stamina: 120
+      health: 100
+      bravery: 110
+      reactions: 80
+      firing: 120  # BT less
+      throwing: 120
+      strength: 100
+      psiStrength: 100
+      psiSkill: 100
+      melee: 140  # BT more
+
+    trainingStatCaps:
+      tu: 80
+      stamina: 100
+      health: 70
+      firing: 100  # BT less
+      reactions: 80
+      throwing: 80
+      strength: 100
+      psiStrength: 100
+      psiSkill: 100
+      melee: 110 # BT more
+
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+
+    allowPiloting: true
+    armor: STR_BTSCOUTARMOR_PLAYER
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 0
+    avatarOffsetX: 67
+    avatarOffsetY: 34
+    rankStrings:
+      - STR_BTH_RANK_0
+      - STR_BTH_RANK_1
+      - STR_BTH_RANK_2
+      - STR_BTH_RANK_3
+      - STR_BTH_RANK_4
+      - STR_BTH_RANK_5
+    rankSprite: {mod: 40k, index: 977}
+    rankBattleSprite: {mod: 40k, index: 313}
+    rankTinySprite: {mod: 40k, index: 223}
+    soldierNames:
+      - delete
+      - Names/sm_blacktemplar.nam
+    deathMale: [{mod: 40k, index: 713}, {mod: 40k, index: 714}, {mod: 40k, index: 715}, {mod: 40k, index: 716}, {mod: 40k, index: 717}, {mod: 40k, index: 718}, {mod: 40k, index: 719}, {mod: 40k, index: 720}, {mod: 40k, index: 721}, {mod: 40k, index: 722}]
+    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}, {mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+    value: 60
+
+
+  - type: STR_BTCHAMPION_PLAYER
+    requiresBuyBaseFunc: [IMPERIUM]
+    costSalary: 100000
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_BLACKTEMPLAR_STRATEGY
+    minStats:
+      tu: 50
+      stamina: 60
+      health: 50
+      bravery: 40
+      reactions: 35
+      firing: 45  # BT less
+      throwing: 55
+      strength: 55
+      psiStrength: 40
+      psiSkill: 0
+      melee: 70  # BT more
+
+    maxStats:
+      tu: 80
+      stamina: 90
+      health: 75
+      bravery: 90
+      reactions: 65
+      firing: 75
+      throwing: 90
+      strength: 75
+      psiStrength: 110
+      psiSkill: 35
+      melee: 100
+
+    statCaps:
+      tu: 110
+      stamina: 130
+      health: 110
+      bravery: 120
+      reactions: 9
+      firing: 130
+      throwing: 130
+      strength: 110
+      psiStrength: 110
+      psiSkill: 110
+      melee: 150
+
+    trainingStatCaps:
+      tu: 90
+      stamina: 110
+      health: 80
+      firing: 110
+      reactions: 90
+      throwing: 90
+      strength: 110
+      psiStrength: 110
+      psiSkill: 110
+      melee: 120
+
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+
+    allowPiloting: true
+    armor: STR_BTCHAMPIONARMOR_PLAYER
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 0
+    avatarOffsetX: 67
+    avatarOffsetY: 34
+    rankStrings:
+      - STR_BTC_RANK_0
+    rankSprite: {mod: 40k, index: 977}
+    rankBattleSprite: {mod: 40k, index: 313}
+    rankTinySprite: {mod: 40k, index: 223}
+    soldierNames:
+      - delete
+      - Names/sm_btchamp.nam
+    deathMale: [{mod: 40k, index: 713}, {mod: 40k, index: 714}, {mod: 40k, index: 715}, {mod: 40k, index: 716}, {mod: 40k, index: 717}, {mod: 40k, index: 718}, {mod: 40k, index: 719}, {mod: 40k, index: 720}, {mod: 40k, index: 721}, {mod: 40k, index: 722}]
+    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}, {mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+    value: 150
+
+
+  - type: STR_FALLEN_BT  # Dreadnought
+    costSalary: 20000
+    minStats:
+      tu: 60
+      stamina: 50
+      health: 100
+      bravery: 40  # was 20
+      reactions: 40
+      firing: 50
+      throwing: 60
+      strength: 30
+      psiStrength: 10
+      psiSkill: 10
+      melee: 60
+    maxStats:
+      tu: 70
+      stamina: 80
+      health: 120
+      bravery: 70
+      reactions: 70
+      firing: 80
+      throwing: 90
+      strength: 50
+      psiStrength: 110
+      psiSkill: 26
+      melee: 90
+    statCaps:
+      tu: 110
+      stamina: 130
+      health: 150
+      bravery: 110
+      reactions: 120
+      firing: 140
+      throwing: 130
+      strength: 110
+      psiStrength: 110
+      psiSkill: 110
+      melee: 140
+    armor: STR_BTDREAD_ARMOR_PLAYER
+    allowPiloting: false
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 0
+    rankSprite: {mod: 40k, index: 977}
+    rankBattleSprite: {mod: 40k, index: 313}
+    rankTinySprite: {mod: 40k, index: 223}
+    avatarOffsetX: 68
+    avatarOffsetY: 54
+    rankStrings:
+      - STR_BTD_RANK_0
+    soldierNames:
+      - delete
+      - Names/sm_dreadnought.nam
+    deathMale: [{mod: 40k, index: 713}, {mod: 40k, index: 714}, {mod: 40k, index: 715}, {mod: 40k, index: 716}, {mod: 40k, index: 717}, {mod: 40k, index: 718}, {mod: 40k, index: 719}, {mod: 40k, index: 720}, {mod: 40k, index: 721}, {mod: 40k, index: 722}]
+    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}, {mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+    value: 60

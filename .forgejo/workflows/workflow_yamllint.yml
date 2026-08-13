@@ -5,13 +5,13 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   lint:
-    runs-on: codeberg-tiny
+    runs-on: codeberg-small
 
     steps:
       # Step 1: Check out the repository
       - name: Check out code
         # https://github.com/marketplace/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
       ## Step 2 - ghcr.io/catthehacker/ubuntu:act-latest should have it already
       #- name: Set up Python
@@ -25,8 +25,9 @@ jobs:
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v47
         with:
+          fetch_missing_history_max_retries: "1"
           separator: ","
           files: |
             **/*.rul

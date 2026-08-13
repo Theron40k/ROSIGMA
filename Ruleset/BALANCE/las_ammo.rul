@@ -22,6 +22,8 @@ items:
     vaporColorSurface: 4  # red laser
     vaporDensitySurface: 2
     vaporProbabilitySurface: 100
+    bulletSpeed: 10
+    explosionSpeed: 3
     scripts:
       vaporParticleAmmo: |
         # noting
@@ -127,33 +129,30 @@ items:
     refNode: *LASCANNON_MAGAZINE_TEMPLATE
     clipSize: 2  # it's 1/3rd the size of the large power pack and has a much easier to fit profile; needed downgrade
 
-  - type: STR_PORTABLE_MULTILASER_BATTERY  # MULTILAS POWER PACK
+  - &PORTABLE_MULTILASER_BATTERY_TEMPLATE
+    type: STR_PORTABLE_MULTILASER_BATTERY  # MULTILAS POWER PACK
     categories: [STR_CAT_LASGUN]
     size: 0.2
     requiresBuy:
       - STR_MULTILAS_HANDHELD_RESEARCH
-    costBuy: 30000
+    costBuy: 10000
     costSell: 5000
     invWidth: 3
     invHeight: 2
-    weight: 20
+    weight: 15
     battleType: 2
     bigSprite: 1008  # battery pack 3x2 wide
     floorSprite: {mod: 40k, index: 1021}
     handSprite: {mod: 40k, index: 1168}
-    armor: 200
-    power: 60  # -5 vs Hotshot volleygun, higher ROF instead
+    power: 50
     damageType: 1  # AP instead of LAS
-    damageAlter:  # Hotshot
-      ToArmorPre: 0.3
-      ArmorEffectiveness: 0.75
+    damageAlter:
+      ToArmorPre: 0.25 # In between Multilas Turret and Multilas Sentinel stats
       ToHealth: 1.0
       ToArmor: 0.1  # 40k 0.0
       ToStun: 0.3  # painful las burns
       ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
-    clipSize: 200
-    powerRangeThreshold: 16
-    powerRangeReduction: 5  # lowers power by 5 by each tile beyond
+    clipSize: 180 # 15 Multilas Auto Bursts before needing to reload; 3 times cap of Hotshot
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3981
@@ -162,11 +161,44 @@ items:
     bulletSpeed: 50
     explosionSpeed: 3 # makes it shoot faster/take less time per shot
     vaporColorSurface: 4  # red laser
-    vaporDensitySurface: 6
+    vaporDensitySurface: 2
     vaporProbabilitySurface: 100
+    listOrder: 10762
     scripts:
       vaporParticleAmmo: |
         # noting
         set particle_lifetime 1;
         set subvoxel_drift 0;
         return;
+
+  - type: STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT  # MULTILAS HOTSHOT POWER PACK
+    refNode: *PORTABLE_MULTILASER_BATTERY_TEMPLATE
+    requiresBuy:
+      - STR_MULTILAS_HANDHELD_RESEARCH
+      - STR_LASGUN_HOTSHOT # Hotshot ammo
+    costBuy: 50000 # Expensive
+    costSell: 10000
+    bigSprite: 1110  # Hotshot battery pack 3x2 wide
+    power: 65
+    damageType: 1  # AP instead of LAS
+    damageAlter:
+      ArmorEffectiveness: 0.75 # Hotshot
+      ToArmorPre: 0.3 # +.05 from Hotshot ammo
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+    clipSize: 60 # 5 Multilas Auto Bursts before needing to reload
+    # lasgun aesthetics
+    fireSound: 3983
+    bulletSpeed: 50
+    vaporDensitySurface: 3 # hotshot, but not lascannon thicc
+    listOrder: 10763
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+    tags:
+      ITEM_AMMO_REPEATED_ACCURACY_FALLOFF_MULTIPLIER: 3  # Hotshot strains the barrel, decreasing accuracy

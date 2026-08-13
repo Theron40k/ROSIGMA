@@ -1323,10 +1323,28 @@ items:
       STR_KILLPOINT_TOKEN: [4]
       STR_GSC_ADEPTAS_CORPSE: [1]
 
-  - type: STR_GSC_MINER_ARMOR
+  - type: STR_GSC_MINER_CORPSE # Brood Neophyte
     costSell: 2500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
+      STR_BW_CORPSE: [1]
+
+  - type: STR_GSC_SNIPER_CORPSE # Brood Sniper Corpse
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_BW_CORPSE: [1]
+
+  - type: STR_GSC_ABERRANT_CORPSE # Aberrant Corpse
+    costSell: 7500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_BW_CORPSE: [1]
+
+  - type: STR_LOCUS_CORPSE # Locus Corpse
+    costSell: 10000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
       STR_BW_CORPSE: [1]
 
   - type: STR_BW_CORPSE
@@ -1374,16 +1392,36 @@ items:
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [6]
       STR_BIOVORE_CORPSE: [1]
-  - type: STR_TYRANID_RIPPERSWARM_CORPSE
+  - type: STR_RIPPERSWARM_CORPSE
     costSell: 250
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [1]
-      STR_TYRANID_RIPPERSWARM_CORPSE: [1]
-  - type: STR_RIP_CORPSE_16_1
-    costSell: 1000
+      STR_RIPPERSWARM_CORPSE: [1]
+  - type: STR_RIP_CORPSE_16 # unused for now
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [16]
+      STR_RIPPERSWARM_CORPSE: [16]
+  - type: STR_RIP_CORPSE_12
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [12]
+      STR_RIPPERSWARM_CORPSE: [12]
+  - type: STR_RIP_CORPSE_8
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_RIPPERSWARM_CORPSE: [8]
+  - type: STR_RIP_CORPSE_4
+    # costSell: 1000 # no sell price it gets transformed
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_RIPPERSWARM_CORPSE: [4]
+  - type: STR_RIP_CORPSE_2
+    # costSell: 1000 # no sell price it gets transformed
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
-      STR_TYRANID_RIPPERSWARM_CORPSE: [4]
+      STR_RIPPERSWARM_CORPSE: [2]
   - type: STR_TYRANID_WARRIOR_CORPSE
     costSell: 10000
     recoveryTransformations:
@@ -1504,17 +1542,20 @@ items:
     costSell: 30000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [4]
       STR_GREYK_CORPSE: [1]
   - type: STR_GREYK_CORPSE_I
     costSell: 40000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [4]
       STR_GREYK_CORPSE_I: [1]
 
   - type: STR_GREYKALP_CORPSE  # GK ALPHA disguise
     costSell: 30000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [3]
       STR_GREYKALP_CORPSE: [1]
 
   - type: STR_XENO_CORPSE
@@ -1719,19 +1760,19 @@ items:
   # Catachan corpse conversions
 
   - type: STR_CATACHAN_TRAITOR_CORPSE_GEO
-    costSell: 1000
+    costSell: 3000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
       STR_CATACHAN_TRAITOR_CORPSE_GEO: [1]
 
   - type: STR_CATACHAN_TRAITORVET_CORPSE_GEO
-    costSell: 2000
+    costSell: 7000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [4]
       STR_CATACHAN_TRAITORVET_CORPSE_GEO: [1]
 
   - type: STR_CATACHAN_TRAITORTOP_CORPSE_GEO
-    costSell: 4000
+    costSell: 9000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [8]
       STR_CATACHAN_TRAITORTOP_CORPSE_GEO: [1]
@@ -1746,61 +1787,61 @@ items:
       STR_GORECHILD_AXE: [1]
 
   - type: STR_CULTISTLV1_CORPSE_GEO
-    costSell: 4000
+    costSell: 2500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
       STR_CULTISTLV1_CORPSE_GEO: [1]
 
   - type: STR_CULTISTLV2_CORPSE_GEO
-    costSell: 4000
+    costSell: 5000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
       STR_CULTISTLV2_CORPSE_GEO: [1]
 
   - type: STR_CULTISTOGRYN_CORPSE_GEO
-    costSell: 4000
+    costSell: 5000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [4]
       STR_CULTISTOGRYN_CORPSE_GEO: [1]
 
   - type: STR_CULTISTPILOT_CORPSE_GEO
-    costSell: 4000
+    costSell: 5000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
       STR_CULTISTPILOT_CORPSE_GEO: [1]
 
   - type: STR_CULTISTPRIEST_CORPSE_GEO
-    costSell: 4000
+    costSell: 6000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [3]
       STR_CULTISTPRIEST_CORPSE_GEO: [1]
 
   - type: STR_CULTISTGUARDFLAK_CORPSE_GEO
-    costSell: 4000
+    costSell: 5000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [2]
       STR_CULTISTGUARDFLAK_CORPSE_GEO: [1]
 
   - type: STR_CULTISTGUARDCARAP_CORPSE_GEO
-    costSell: 4000
+    costSell: 7000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [3]
       STR_CULTISTGUARDCARAP_CORPSE_GEO: [1]
 
   - type: STR_CULTISTOGRYNDEFENSE_CORPSE_GEO
-    costSell: 4000
+    costSell: 6000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [6]
       STR_CULTISTOGRYNDEFENSE_CORPSE_GEO: [1]
 
   - type: STR_CULTISTOGRYNBERSERK_CORPSE_GEO
-    costSell: 4000
+    costSell: 7000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [6]
       STR_CULTISTOGRYNBERSERK_CORPSE_GEO: [1]
 
   - type: STR_CULTISTDEMAGOG_CORPSE_GEO
-    costSell: 4000
+    costSell: 10000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_CULTISTDEMAGOG_CORPSE_GEO: [1]
@@ -1808,43 +1849,43 @@ items:
   # chaoslegion
 
   - type: STR_CULTISTLEGIONSCOUT_CORPSE_GEO
-    costSell: 5000
+    costSell: 7500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [6]
       STR_CULTISTLEGIONSCOUT_CORPSE_GEO: [1]
 
   - type: STR_CULTISTLEGIONARIE_CORPSE_GEO
-    costSell: 8000
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
       STR_CULTISTLEGIONARIE_CORPSE_GEO: [1]
 
   - type: STR_CULTISTRAPTOR_CORPSE_GEO
-    costSell: 8000
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
       STR_CULTISTRAPTOR_CORPSE_GEO: [1]
 
   - type: STR_CULTIST_WARPTALONARMOR
-    costSell: 15000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [14]
       STR_CULTIST_WARPTALONARMOR: [1]
 
   - type: STR_CULTISTSORC_CORPSE_GEO
-    costSell: 8000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
       STR_CULTISTSORC_CORPSE_GEO: [1]
 
   - type: STR_CULTISTTERMINATOR_CORPSE_GEO
-    costSell: 8000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
       STR_CULTISTTERMINATOR_CORPSE_GEO: [1]
 
   - type: STR_CULTISTCHAOSLORD_CORPSE_GEO
-    costSell: 15000
+    costSell: 35000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [30]
       STR_CULTISTCHAOSLORD_CORPSE_GEO: [1]
@@ -1862,75 +1903,87 @@ items:
       STR_GANGERBASE_SOLDIERM_GEO: [1]
 
   - type: STR_GANGEROUS_GEO
-    costSell: 10000
+    costSell: 6000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
       STR_GANGEROUS_GEO: [1]
 
-  - type: STR_WORDBEARER_GALV_CORPSE
+  - type: STR_GANGERGOLIATH_GEO
     costSell: 8000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [20]
+      STR_GANGERGOLIATH_GEO: [1]
+
+  - type: STR_WORDBEARER_GALV_CORPSE
+    costSell: 10000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
       STR_WORDBEARER_GALV_CORPSE: [1]
 
   - type: STR_WORDBEARER_GALV_POSSCORPSE
-    costSell: 8000
+    costSell: 12000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
       STR_WORDBEARER_GALV_POSSCORPSE: [1]
 
   - type: STR_WORDBEARER_GALVELITE_CORPSE
-    costSell: 8000
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
       STR_WORDBEARER_GALVELITE_CORPSE: [1]
 
   - type: STR_WORDBEARER_GALVELITE_POSSCORPSE
-    costSell: 8000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
       STR_WORDBEARER_GALVELITE_POSSCORPSE: [1]
 
   - type: STR_WORDBEARER_DARKAPOSTLE_ARMOR_CORPSE
-    costSell: 8000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [40]
+      STR_ALIEN_ALLOYS: [1]
       STR_WORDBEARER_DARKAPOSTLE_ARMOR_CORPSE: [1]
 
   - type: STR_WORDBEARER_TERMINATOR_CORPSE
-    costSell: 8000
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
       STR_WORDBEARER_TERMINATOR_CORPSE: [1]
 
   - type: STR_WORDBEARER_SCOUT_CORPSE
-    costSell: 8000
+    costSell: 7500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_WORDBEARER_SCOUT_CORPSE: [1]
 
   - type: STR_WORDBEARER_TERMINATORELITE_CORPSE
-    costSell: 8000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [30]
+      STR_ALIEN_ALLOYS: [4]
       STR_WORDBEARER_TERMINATORELITE_CORPSE: [1]
 
   - type: STR_WORDBEARER_DEMONLORD_CORPSE
-    costSell: 8000
+    costSell: 35000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [40]
+      STR_ALIEN_ALLOYS: [4]
       STR_WORDBEARER_DEMONLORD_CORPSE: [1]
 
   - type: STR_WORDBEARER_DIABOLIST_CORPSE
-    costSell: 8000
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [1]
       STR_WORDBEARER_DIABOLIST_CORPSE: [1]
 
   - type: STR_WORDBEARER_DIABOLISTELITE_CORPSE
-    costSell: 8000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_WORDBEARER_DIABOLISTELITE_CORPSE: [1]
 
   - type: STR_CHAOSFURY_CORPSE
@@ -1942,279 +1995,710 @@ items:
   # imperial enemies
 
   - type: STR_GUARD_AICORPSE
-    costSell: 1000
+    costSell: 2500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_GUARD_AICORPSE: [1]
 
   - type: STR_GUARDH_AICORPSE
-    costSell: 2000
+    costSell: 5000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_GUARDH_AICORPSE: [1]
 
   - type: STR_STEELLEGION_FLAK_CORPSEAI
-    costSell: 1000
+    costSell: 2500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_STEELLEGION_FLAK_CORPSEAI: [1]
 
   - type: STR_STEELLEGION_FLAK_OFFICER_CORPSEAI
-    costSell: 1000
+    costSell: 10000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_STEELLEGION_FLAK_OFFICER_CORPSEAI: [1]
 
   - type: STR_STEELLEGION_CARAPACE_CORPSEAI
-    costSell: 1000
+    costSell: 7000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_STEELLEGION_CARAPACE_CORPSEAI: [1]
 
   - type: STR_STEELLEGION_CARAPACE_OFFICER_CORPSEAI
-    costSell: 2000
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_STEELLEGION_CARAPACE_OFFICER_CORPSEAI: [1]
 
+  - type: STR_BEASTGUARD_CORPSE_OPFOR
+    costSell: 1000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [1]
+      STR_BEASTGUARD_CORPSE_OPFOR: [1]
+
+  - type: STR_BEASTGUARD_CORPSE_MEDIC_OPFOR
+    #costSell: 1000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_BEASTGUARD_CORPSE_OPFOR: [1]
+
+  - type: STR_BEASTGUARD_CORPSE_ARMOR_OPFOR
+    #costSell: 1000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_ALIEN_ALLOYS: [1]
+      STR_BEASTGUARD_CORPSE_OPFOR: [1]
+
+  - type: STR_GUARD_SQUAT_CORPSE_OPFOR
+    costSell: 1500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_GUARD_SQUAT_CORPSE_OPFOR: [1]
+
+  - type: STR_GUARD_SQUAT_ARMOR_CORPSE_OPFOR
+    #costSell: 1500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [3]
+      STR_ALIEN_ALLOYS: [1]
+      STR_GUARD_SQUAT_CORPSE_OPFOR: [1]
+
+  - type: STR_TANITH_CAMO_CORPSE_OPFOR
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_TANITH_CAMO_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CORPSE_OPFOR
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CARAPACE_CORPSE_OPFOR
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_ALIEN_ALLOYS: [1]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CORPSE_ARMOR_SHIELD_OPFOR
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_ALIEN_ALLOYS: [2]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
+  - type: STR_OGRYN_CORPSE_ARMOR_BUCKLER_OPFOR
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [4]
+      STR_ALIEN_ALLOYS: [2]
+      STR_OGRYN_CORPSE_OPFOR: [1]
+
   - type: STR_SCOUT_AICORPSE
-    costSell: 2500
+    costSell: 7500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [8]
       STR_SCOUT_AICORPSE: [1]
 
   - type: STR_ADVSCOUT_AICORPSE
-    costSell: 3000
+    costSell: 12500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [9]
       STR_ADVSCOUT_AICORPSE: [1]
 
   - type: STR_MK7_AICORPSE
-    costSell: 3500
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
       STR_MK7_AICORPSE: [1]
 
   - type: STR_SARGENT_AICORPSE
-    costSell: 4500
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [1]
       STR_SARGENT_AICORPSE: [1]
 
   - type: STR_TERMINATOR_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
       STR_TERMINATOR_AICORPSE: [1]
 
   - type: STR_TECH_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [2]
       STR_TECH_AICORPSE: [1]
 
   - type: STR_CHAP_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_CHAP_AICORPSE: [1]
 
   - type: STR_HONOR_AICORPSE
-    costSell: 6000
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_HONOR_AICORPSE: [1]
 
   - type: STR_BLACKTEMPLARSCOUT_AICORPSE
-    costSell: 2500
+    costSell: 7500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [8]
       STR_BLACKTEMPLARSCOUT_AICORPSE: [1]
 
   - type: STR_BLACKTEMPLARMK7_AICORPSE
-    costSell: 3500
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
       STR_BLACKTEMPLARMK7_AICORPSE: [1]
 
   - type: STR_BLACKTEMPLARTERMINATOR_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
       STR_BLACKTEMPLARTERMINATOR_AICORPSE: [1]
 
   - type: STR_BLACKTEMPLARCHAP_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [2]
       STR_BLACKTEMPLARCHAP_AICORPSE: [1]
 
   - type: STR_BLACKTEMPLARTECH_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_BLACKTEMPLARTECH_AICORPSE: [1]
 
   - type: STR_BLACKTEMPLARHONOR_AICORPSE
-    costSell: 6000
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_BLACKTEMPLARHONOR_AICORPSE: [1]
 
   - type: STR_BLACKTEMPLARREC_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [25]
+      STR_ALIEN_ALLOYS: [2]
       STR_BLACKTEMPLARREC_AICORPSE: [1]
 
   - type: STR_SPACEWOLVESSCOUT_AICORPSE
-    costSell: 3500
+    costSell: 7500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [8]
       STR_SPACEWOLVESSCOUT_AICORPSE: [1]
 
   - type: STR_SPACEWOLVESMK7_AICORPSE
-    costSell: 3500
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
       STR_SPACEWOLVESMK7_AICORPSE: [1]
 
   - type: STR_SPACEWOLVESTERMINATOR_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
       STR_SPACEWOLVESTERMINATOR_AICORPSE: [1]
 
   - type: STR_SPACEWOLVESCHAP_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_SPACEWOLVESCHAP_AICORPSE: [1]
 
   - type: STR_SPACEWOLVESTECH_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [2]
       STR_SPACEWOLVESTECH_AICORPSE: [1]
 
   - type: STR_SPACEWOLVESHONOR_AICORPSE
-    costSell: 6000
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_SPACEWOLVESHONOR_AICORPSE: [1]
 
   - type: STR_FENRISWOLFY_CORPSE
-    costSell: 500
+    costSell: 3500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_FENRISWOLFY_CORPSE: [1]
 
   - type: STR_CRIMSONFISTSCOUT_AICORPSE
-    costSell: 2500
+    costSell: 7500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [8]
       STR_CRIMSONFISTSCOUT_AICORPSE: [1]
 
   - type: STR_CRIMSONFISTMK7_AICORPSE
-    costSell: 3500
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
       STR_CRIMSONFISTMK7_AICORPSE: [1]
 
   - type: STR_CRIMSONFISTTERMINATOR_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
       STR_CRIMSONFISTTERMINATOR_AICORPSE: [1]
 
   - type: STR_CRIMSONFISTSARGENT_AICORPSE
-    costSell: 6000
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_CRIMSONFISTSARGENT_AICORPSE: [1]
 
   - type: STR_CRIMSONFISTHONOR_AICORPSE
-    costSell: 6000
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_CRIMSONFISTHONOR_AICORPSE: [1]
 
   - type: STR_WHITESCARSASSAULTMK7_AICORPSE
-    costSell: 3500
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
       STR_WHITESCARSASSAULTMK7_AICORPSE: [1]
 
   - type: STR_WHITESCARSMK7_AICORPSE
-    costSell: 3500
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
       STR_WHITESCARSMK7_AICORPSE: [1]
 
   - type: STR_WHITESCARSSARGENT_AICORPSE
-    costSell: 4500
+    costSell: 20000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
       STR_WHITESCARSSARGENT_AICORPSE: [1]
 
   - type: STR_WHITESCARSTERMINATOR_AICORPSE
-    costSell: 6000
+    costSell: 25000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
       STR_WHITESCARSCAP_AICORPSE: [1]
 
   - type: STR_WHITESCARSCAP_AICORPSE
-    costSell: 6000
+    costSell: 30000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
       STR_WHITESCARSCAP_AICORPSE: [1]
 
+  - type: STR_WSBIKE_CORPSE
+    costSell: 4500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_WSBIKE_CORPSE: [1]
+
+  - type: STR_SALAMANDERSCOUT_AICORPSE
+    costSell: 7500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_SALAMANDERSCOUT_AICORPSE: [1]
+
+  - type: STR_SALAMANDERADVSCOUT_AICORPSE
+    costSell: 12000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [9]
+      STR_SALAMANDERADVSCOUT_AICORPSE: [1]
+
+  - type: STR_SALAMANDERMK7_AICORPSE
+    costSell: 15000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
+      STR_SALAMANDERMK7_AICORPSE: [1]
+
+  - type: STR_SALAMANDERSARGENT_AICORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
+      STR_SALAMANDERSARGENT_AICORPSE: [1]
+
+  - type: STR_SALAMANDERTERMINATOR_AICORPSE
+    costSell: 25000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
+      STR_SALAMANDERTERMINATOR_AICORPSE: [1]
+
+  - type: STR_SALAMANDERTECH_AICORPSE
+    costSell: 25000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [2]
+      STR_SALAMANDERTECH_AICORPSE: [1]
+
+  - type: STR_SALAMANDERCHAP_AICORPSE
+    costSell: 25000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
+      STR_SALAMANDERCHAP_AICORPSE: [1]
+
+  - type: STR_SALAMANDERHONOR_AICORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
+      STR_SALAMANDERHONOR_AICORPSE: [1]
+
+# adeptas soritas
+  - type: STR_REPRISALIA_AI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_REPRISALIA_AI_CORPSE: [1]
+
+  # adeptas bloody roses AI
+
+  - type: STR_BLOODYROSESAI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_BLOODYROSESAI_CORPSE: [1]
+
+  - type: STR_BRNOVICEAI_CORPSE
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [3]
+      STR_BRNOVICEAI_CORPSE: [1]
+
+  - type: STR_BRREPENTIAAI_CORPSE
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [3]
+      STR_BRREPENTIAAI_CORPSE: [1]
+
+  - type: STR_BRHOSPITALAI_CORPSE
+    costSell: 4000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_BRHOSPITALAI_CORPSE: [1]
+
+  - type: STR_BRADEPTASAI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_BRADEPTASAI_CORPSE: [1]
+
+  - type: STR_BRSERAPHAI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_BRSERAPHAI_CORPSE: [1]
+
+  - type: STR_BRSUPERIOAI_CORPSE
+    costSell: 8000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_BRSUPERIOAI_CORPSE: [1]
+
+  - type: STR_BRELOHIM_CORPSE
+    costSell: 8000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_BRELOHIM_CORPSE: [1]
+
+  - type: STR_BRRETRIBAI_CORPSE
+    costSell: 8000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_BRRETRIBAI_CORPSE: [1]
+
+  - type: STR_BRCELESTAI_CORPSE
+    costSell: 10000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_BRCELESTAI_CORPSE: [1]
+
+  - type: STR_BRSACREAI_CORPSE
+    costSell: 10000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_BRSACREAI_CORPSE: [1]
+
+  - type: STR_BRCANONAI_CORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_BRCANONAI_CORPSE: [1]
+
+  # adeptas fiery heart AI
+
+  - type: STR_FIERYHEARTSAI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_FIERYHEARTSAI_CORPSE: [1]
+
+  - type: STR_FHNOVICEAI_CORPSE
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [3]
+      STR_FHNOVICEAI_CORPSE: [1]
+
+  - type: STR_FHREPENTIAAI_CORPSE
+    costSell: 2000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [3]
+      STR_FHREPENTIAAI_CORPSE: [1]
+
+  - type: STR_FHHOSPITALAI_CORPSE
+    costSell: 4000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_FHHOSPITALAI_CORPSE: [1]
+
+  - type: STR_FHADEPTASAI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_FHADEPTASAI_CORPSE: [1]
+
+  - type: STR_FHSERAPHAI_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [5]
+      STR_FHSERAPHAI_CORPSE: [1]
+
+  - type: STR_FHSUPERIOAI_CORPSE
+    costSell: 8000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_FHSUPERIOAI_CORPSE: [1]
+
+  - type: STR_FHELOHIM_CORPSE
+    costSell: 8000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_FHELOHIM_CORPSE: [1]
+
+  - type: STR_FHRETRIBAI_CORPSE
+    costSell: 8000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_FHRETRIBAI_CORPSE: [1]
+
+  - type: STR_FHCELESTAI_CORPSE
+    costSell: 10000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_FHCELESTAI_CORPSE: [1]
+
+  - type: STR_FHSACREAI_CORPSE
+    costSell: 10000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_FHSACREAI_CORPSE: [1]
+
+  - type: STR_FHCANONAI_CORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_FHCANONAI_CORPSE: [1]
+
+ # dark angel
+
+  - type: STR_DARKANGELSCOUT_AICORPSE
+    costSell: 7500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [8]
+      STR_DARKANGELSCOUT_AICORPSE: [1]
+
+  - type: STR_DARKANGELTAC_AICORPSE
+    costSell: 15000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
+      STR_DARKANGELTAC_AICORPSE: [1]
+
+  - type: STR_DARKANGELASS_AICORPSE
+    costSell: 15000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [2]
+      STR_DARKANGELASS_AICORPSE: [1]
+
+  - type: STR_DARKANGELDEV_AICORPSE
+    costSell: 17500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_ALIEN_ALLOYS: [1]
+      STR_DARKANGELDEV_AICORPSE: [1]
+
+  - type: STR_DARKANGELSARGE_AICORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
+      STR_DARKANGELSARGE_AICORPSE: [1]
+
+  - type: STR_DARKANGELTERMINATOR_AICORPSE
+    costSell: 25000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [20]
+      STR_ALIEN_ALLOYS: [3]
+      STR_DARKANGELTERMINATOR_AICORPSE: [1]
+
+  - type: STR_DARKANGELCHAP_AICORPSE
+    costSell: 25000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
+      STR_DARKANGELCHAP_AICORPSE: [1]
+
+  - type: STR_DARKANGELCAP_CORPSE
+    costSell: 35000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [25]
+      STR_ALIEN_ALLOYS: [3]
+      STR_DARKANGELCAP_CORPSE: [1]
+
+  - type: STR_DARKANGELHONOR_AICORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
+      STR_DARKANGELHONOR_AICORPSE: [1]
+# inquisition troopers
+  - type: STR_INQ_SLGUARD_CORPSE
+    costSell: 2500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [2]
+      STR_INQ_SLGUARD_CORPSE: [1]
+  - type: STR_IMPERIAL_INQUISITOR_AI_CORPSE
+    costSell: 20000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_INQ_INQUISITOR_INTERROGATOR_CORPSE: [1]
+  - type: STR_INQ_INQUISITOR_INTERROGATOR_CORPSE
+    costSell: 7500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_INQ_INQUISITOR_INTERROGATOR_CORPSE: [1]
+
+# inquisition stormtroopers
+  - type: STR_INQ_STORMTROOPER_AI_CORPSE
+    costSell: 7500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_INQ_STORMTROOPER_AI_CORPSE: [1]
+
+  - type: STR_INQ_STORMTROOPER_ELITE_AI_CORPSE
+    costSell: 12500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [12]
+      STR_ALIEN_ALLOYS: [1]
+      STR_INQ_STORMTROOPER_ELITE_AI_CORPSE: [1]
+
+  - type: STR_INQ_STORMTROOPER_OFFICER_CORPSE
+    costSell: 9000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [10]
+      STR_INQ_STORMTROOPER_OFFICER_CORPSE: [1]
+
+# redemptionist + redeemed cultist AI
+  - type: STR_REDEMPTIONIST_CORPSE
+    costSell: 2500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [3]
+      STR_REDEMPTIONIST_CORPSE: [1]
+
+  - type: STR_REDEEMED_CORPSE
+    costSell: 5000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [7]
+      STR_REDEEMED_CORPSE: [1]
+
+## ADMECH ADEPTUS MECHANICUS
+  - type: STR_ENGINSEER_OPFOR_CORPSE
+    costSell: 15000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ENGINSEER_OPFOR_CORPSE: [1]
+
+## Arbites enemy
+  - type: STR_CMAS_CORPSE_AI
+    costSell: 1500
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [1]
+      STR_CMAS_CORPSE_AI: [1]
   # tau enemies
 
   - type: STR_TAUFIREWARRIOR_AICORPSE
-    costSell: 2500
+    costSell: 6000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_TAUFIREWARRIOR_AICORPSE: [1]
 
   - type: STR_TAUFIREWARRIORPATHFINDER_AICORPSE
-    costSell: 2500
+    costSell: 6000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [7]
       STR_TAUFIREWARRIORPATHFINDER_AICORPSE: [1]
 
   - type: STR_TAUDRONE_AICORPSE
-    costSell: 2000
+    costSell: 5000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [4]
       STR_TAUDRONE_AICORPSE: [1]
 
   - type: STR_TAUFIREWARRIORLEADER_AICORPSE
-    costSell: 3500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [15]
-      STR_TAUFIREWARRIORLEADER_AICORPSE: [1]
-
-  - type: STR_TAU_CRISIS_PILOT_CORPSE
     costSell: 10000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [15]
       STR_TAUFIREWARRIORLEADER_AICORPSE: [1]
 
+  - type: STR_TAU_CRISIS_PILOT_CORPSE
+    costSell: 15000
+    recoveryTransformations:
+      STR_KILLPOINT_TOKEN: [15]
+      STR_ALIEN_ALLOYS: [2]
+      STR_TAUFIREWARRIORLEADER_AICORPSE: [1]
+
   - type: STR_TAU_CRISISCOMMANDER_PILOT_CORPSE
-    costSell: 20000
+    costSell: 30000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [25]
+      STR_ALIEN_ALLOYS: [3]
       STR_TAUFIREWARRIORCAPTAIN_AICORPSE: [1]
 
   - type: STR_TAUFIREWARRIORCAPTAIN_AICORPSE
-    costSell: 5000
+    costSell: 15000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [25]
       STR_TAUFIREWARRIORCAPTAIN_AICORPSE: [1]
 
   - type: STR_TAUGUEVESA_AICORPSE
-    costSell: 1000
+    costSell: 2500
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_TAUGUEVESA_AICORPSE: [1]
@@ -2252,7 +2736,7 @@ items:
       STR_WORLDEATER_LEADER_CORPSE: [1]
 
   - type: STR_BROODHUNTER_CORPSE
-    costSell: 1000
+    costSell: 2000
     recoveryTransformations:
       STR_KILLPOINT_TOKEN: [5]
       STR_BROODHUNTER_CORPSE: [1]
@@ -2263,149 +2747,3 @@ items:
       STR_KILLPOINT_TOKEN: [25]
       STR_PATRINEW_CORPSE_GEO: [1]
 
-  - type: STR_SALAMANDERSCOUT_AICORPSE
-    costSell: 2500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [8]
-      STR_SALAMANDERSCOUT_AICORPSE: [1]
-
-  - type: STR_SALAMANDERADVSCOUT_AICORPSE
-    costSell: 3000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [9]
-      STR_SALAMANDERADVSCOUT_AICORPSE: [1]
-
-  - type: STR_SALAMANDERMK7_AICORPSE
-    costSell: 3500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [10]
-      STR_SALAMANDERMK7_AICORPSE: [1]
-
-  - type: STR_SALAMANDERSARGENT_AICORPSE
-    costSell: 4500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [15]
-      STR_SALAMANDERSARGENT_AICORPSE: [1]
-
-  - type: STR_SALAMANDERTERMINATOR_AICORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [20]
-      STR_SALAMANDERTERMINATOR_AICORPSE: [1]
-
-  - type: STR_SALAMANDERTECH_AICORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [20]
-      STR_SALAMANDERTECH_AICORPSE: [1]
-
-  - type: STR_SALAMANDERCHAP_AICORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [15]
-      STR_SALAMANDERCHAP_AICORPSE: [1]
-
-  - type: STR_SALAMANDERHONOR_AICORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [15]
-      STR_SALAMANDERHONOR_AICORPSE: [1]
-
-  # adeptas bloody roses AI
-
-  - type: STR_BLOODYROSESAI_CORPSE
-    costSell: 3000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [10]
-      STR_BLOODYROSESAI_CORPSE: [1]
-
-  # adeptas fiery heart AI
-
-  - type: STR_FIERYHEARTSAI_CORPSE
-    costSell: 3000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [10]
-      STR_FIERYHEARTSAI_CORPSE: [1]
-
- # dark angel
-
-  - type: STR_DARKANGELSCOUT_AICORPSE
-    costSell: 2500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [8]
-      STR_DARKANGELSCOUT_AICORPSE: [1]
-
-  - type: STR_DARKANGELTAC_AICORPSE
-    costSell: 3500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [10]
-      STR_DARKANGELTAC_AICORPSE: [1]
-
-  - type: STR_DARKANGELASS_AICORPSE
-    costSell: 3500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [10]
-      STR_DARKANGELASS_AICORPSE: [1]
-
-  - type: STR_DARKANGELDEV_AICORPSE
-    costSell: 3500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [10]
-      STR_DARKANGELDEV_AICORPSE: [1]
-
-  - type: STR_DARKANGELSARGE_AICORPSE
-    costSell: 4500
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [15]
-      STR_DARKANGELSARGE_AICORPSE: [1]
-
-  - type: STR_DARKANGELTERMINATOR_AICORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [20]
-      STR_DARKANGELTERMINATOR_AICORPSE: [1]
-
-  - type: STR_DARKANGELCHAP_AICORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [15]
-      STR_DARKANGELCHAP_AICORPSE: [1]
-
-  - type: STR_DARKANGELCAP_CORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [25]
-      STR_DARKANGELCAP_CORPSE: [1]
-
-  - type: STR_DARKANGELHONOR_AICORPSE
-    costSell: 6000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [15]
-      STR_DARKANGELHONOR_AICORPSE: [1]
-
-# inquisition stormtroopers
-  - type: STR_INQ_STORMTROOPER_AI_CORPSE
-    costSell: 3000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [10]
-      STR_INQ_STORMTROOPER_AI_CORPSE: [1]
-
-  - type: STR_INQ_STORMTROOPER_ELITE_AI_CORPSE
-    costSell: 3000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [12]
-      STR_INQ_STORMTROOPER_ELITE_AI_CORPSE: [1]
-
-
-# redemptionist + redeemed cultist AI
-  - type: STR_REDEMPTIONIST_CORPSE
-    costSell: 1000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [3]
-      STR_REDEMPTIONIST_CORPSE: [1]
-
-  - type: STR_REDEEMED_CORPSE
-    costSell: 5000
-    recoveryTransformations:
-      STR_KILLPOINT_TOKEN: [7]
-      STR_REDEEMED_CORPSE: [1]

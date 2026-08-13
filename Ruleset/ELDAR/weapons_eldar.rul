@@ -1,0 +1,1666 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+items:
+# FILE STRUCTURE
+#--- ELDAR.WEAPONS ---
+#--- ELDAR.GRENADES ---
+#--- ELDAR.MELEE ---
+#---------------------
+
+#--- ELDAR.WEAPONS ---
+  - delete: STR_CATAPULT
+  - &ELDAR_WEAPON_TEMPLATE
+    type: STR_CATAPULT
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    requiresBuyBaseFunc: []
+    weight: 17
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    size: 0.3
+    dropoff: 5
+    costBuy: 6000
+    costSell: 2750
+    bigSprite: {mod: 40k, index: 391}
+    floorSprite: {mod: 40k, index: 243}
+    handSprite: {mod: 40k, index: 832}
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+    accuracySnap: 80
+    accuracyAuto: 66
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 9
+    bulletSpeed: 30
+    attraction: 5
+    snapRange: 12
+    autoRange: 9
+    confSnap:
+      shots: 3
+    experienceTrainingMode: 6
+    tuSnap: 19
+    tuAuto: 32
+    flatRate: true
+    listOrder: 16100
+
+ # %TU COST SHURIKEN CATAPULT
+ #         type: STR_CATAPULT
+ #   requires:
+ #     - STR_ELDAR_ONLY # eldar weapon training
+ #   requiresBuy:
+ #     - STR_ELDAR_WEAPONS_ACQUISITION
+ #   requiresBuyBaseFunc: []
+ #   weight: 17
+ #   categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+ #   size: 0.3
+ #   dropoff: 5
+ #   costBuy: 6000
+ #   costSell: 2750
+ #   bigSprite: {mod: 40k, index: 391}
+ #   floorSprite: {mod: 40k, index: 243}
+ #   handSprite: {mod: 40k, index: 832}
+ #   bulletSprite: {mod: 40k, index: 20}
+ #   fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+ #   compatibleAmmo:
+ #     - STR_SHURIKEN_CLIP
+ #   accuracySnap: 80
+ #   accuracyAuto: 66
+ #   battleType: 1
+ #   twoHanded: true
+ #   invWidth: 2
+ #   invHeight: 3
+ #   armor: 30
+ #   autoShots: 9
+ #   bulletSpeed: 30
+ #   attraction: 5
+ #   snapRange: 16
+ #   autoRange: 12
+ #   confSnap:
+ #     shots: 3
+ #   experienceTrainingMode: 6
+ #   listOrder: 16100
+    #tuSnap: 25
+    #tuAuto: 40
+    # FLAT COST VERSION, FOR TESTING
+  - type: STR_AVENGER_CATAPULT
+    refNode: *ELDAR_WEAPON_TEMPLATE
+    weight: 20
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    # Avenger Research
+    costBuy: 15000
+    costSell: 5000
+    bigSprite: 4884
+    floorSprite: 4884
+    handSprite: 1562
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    invWidth: 2
+    invHeight: 3
+    snapRange: 14
+    autoRange: 10
+    listOrder: 16103
+    tags:
+      REACTION_MULTIPLIER: 150 # +50 Avenger Trait
+
+  - type: STR_AVENGER_CATAPULT_SCOPED
+    refNode: *ELDAR_WEAPON_TEMPLATE
+    weight: 20
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    # Avenger Research
+    costBuy: 15000
+    costSell: 5000
+    bigSprite: 4885
+    floorSprite: 4885
+    handSprite: 1570
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    invWidth: 2
+    invHeight: 3
+    tuSnap: 19
+    snapRange: 14
+    tuAimed: 40
+    aimRange: 19
+    accuracyAimed: 100
+    tuAuto: 0
+    confAimed:
+      shots: 3
+    listOrder: 16103
+    tags:
+      REACTION_MULTIPLIER: 150 # +50 Avenger Trait
+
+  - &ELDAR_PISTOL_TEMPLATE
+    type: STR_CATAPULT_PISTOL #              16000
+    weight: 12
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    size: 0.2
+    dropoff: 5
+    costBuy: 3500
+    costSell: 1000
+    bigSprite: {mod: 40k, index: 390}
+    floorSprite: {mod: 40k, index: 242}
+    handSprite: {mod: 40k, index: 824}
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+    accuracySnap: 75
+    accuracyAuto: 60
+#    accuracyAimed: 100
+    tuSnap: 18 # Slightly less than catapult
+    tuAuto: 30 # Slightly less than catapult
+#    tuAimed: 35
+    flatRate: true
+    snapRange: 10
+    autoRange: 8
+    confSnap:
+      shots: 3
+    experienceTrainingMode: 6
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16000
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200
+
+  - type: STR_AVENGER_PISTOL
+    refNode: *ELDAR_PISTOL_TEMPLATE
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      #Avenger Research
+    costBuy: 12000
+    costSell: 4000
+    bigSprite: 4886
+    floorSprite: 4886
+    handSprite: 1578
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # slightly better accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    tuSnap: 18
+    tuAuto: 30
+    flatRate: true
+    accuracySnap: 75
+    accuracyAuto: 60
+    snapRange: 11
+    autoRange: 9
+    autoShots: 9
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16001
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 250 # +50 Avenger Trait +100 Pistol
+
+  - type: STR_AVENGER_PISTOL_SCOPED
+    refNode: *ELDAR_PISTOL_TEMPLATE
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      #Avenger Research
+    costBuy: 12000
+    costSell: 4000
+    bigSprite: 4887
+    floorSprite: 4887
+    handSprite: 1586
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracyMultiplier:
+      firing: 0.5
+      reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
+    tuSnap: 18
+    tuAimed: 40
+    tuAuto: 0
+    flatRate: true
+    accuracySnap: 75
+    accuracyAimed: 100
+    snapRange: 11
+    aimRange: 16
+    confAimed:
+      shots: 3
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 16002
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 250
+
+  - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_RECRUIT_ELDAR_OUTCAST
+    requiresBuyBaseFunc: []
+    weight: 17
+    categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
+    size: 0.4
+    bigSprite: 4857
+    floorSprite: 4857
+    handSprite: 4858
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: [1875, 1876, 1877]
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 100}
+    reloadSound: 1878
+    costBuy: 40000
+    costSell: 20000
+    explosionSpeed: 10
+    bulletSpeed: 100
+    accuracyAuto: 70
+    accuracySnap: 90
+    accuracyAimed: 110
+    tuAimed: 70
+    tuAuto: 45
+    tuSnap: 30
+    autoShots: 3
+    #power: 95
+    #damageType: 1 # was 5
+    #damageAlter:  # DA PULSE
+    #  RandomType: 6
+    #  ToArmorPre: 0.2 # was 0.1 or 0.3, depending # melts some armor on the way in
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 75
+    invWidth: 2
+    invHeight: 3
+    arcingShot: false
+    minRange: 5
+    aimRange: 25
+    snapRange: 20
+    autoRange: 14
+    dropoff: 3 #tau rifle has exceptional range
+    vaporColorSurface: {mod: 40k, index: 2}
+    vaporDensitySurface: 3
+    vaporProbabilitySurface: 50
+    kneelBonus: 120
+    compatibleAmmo:
+      - STR_RANGER_LONG_RIFLE_MAG
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 20;
+        set subvoxel_drift 3;
+        return;
+    recover: true
+    listOrder: 16600
+
+  - type: STR_RANGER_LONG_RIFLE_SCOPED #TEMPORARY COPY STR_TAU_PULSE_RIFLE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_RECRUIT_ELDAR_OUTCAST
+    requiresBuyBaseFunc: []
+    weight: 20
+    categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
+    size: 0.4
+    bigSprite: 4858
+    floorSprite: 4858
+    handSprite: 4866
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: [1875, 1876, 1877]
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 100}
+    reloadSound: 1878
+    costBuy: 40000
+    costSell: 20000
+    explosionSpeed: 10
+    bulletSpeed: 100
+    accuracyAuto: 70
+    accuracySnap: 90
+    accuracyAimed: 110
+    tuAimed: 85
+    tuAuto: 60
+    tuSnap: 40
+    autoShots: 3
+    # power: 95
+    # damageType: 1 # was 5
+    # damageAlter:  # DA PULSE
+    #   RandomType: 6
+    #   ToArmorPre: 0.2 # was 0.1 or 0.3, depending # melts some armor on the way in
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 75
+    invWidth: 2
+    invHeight: 3
+    arcingShot: false
+    minRange: 5
+    aimRange: 40
+    snapRange: 20
+    autoRange: 14
+    dropoff: 3 #tau rifle has exceptional range
+    vaporColorSurface: {mod: 40k, index: 2}
+    vaporDensitySurface: 3
+    vaporProbabilitySurface: 50
+    kneelBonus: 120
+    compatibleAmmo:
+      - STR_RANGER_LONG_RIFLE_MAG
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 20;
+        set subvoxel_drift 3;
+        return;
+    recover: true
+    listOrder: 16610
+
+  - type: STR_SHURIKEN_CANNON             # tentative start, needs fixing
+    refNode: *ELDAR_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_MIDTIER_PREREQ
+    requiresBuyBaseFunc: []
+    weight: 50
+    categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
+    size: 0.3
+    dropoff: 5
+    costBuy: 50000
+    costSell: 20000
+    bigSprite: 4861
+    floorSprite: 4861
+    handSprite: 4890
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [1884, 1885, 1886]
+    compatibleAmmo:
+      - STR_SHURIKEN_CANNON_MAG
+    accuracySnap: 80
+    accuracyAuto: 66
+    tuSnap: 25
+    tuAuto: 40
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 12
+    bulletSpeed: 30
+    attraction: 1
+    confSnap:
+      shots: 4
+    experienceTrainingMode: 6
+    listOrder: 16930 # either with reaper/heavy weapons or shuriken
+
+  - delete: STR_ELDAR_LAUNCHER
+  - &STR_ELDAR_LAUNCHER_REF
+    type: STR_ELDAR_LAUNCHER
+    categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_REAPER_RESEARCH
+    size: 0.4
+    dropoff: 5
+    weight: 25
+    bigSprite: 4850
+    floorSprite: 4850
+    handSprite: 4850
+    bulletSprite: 0
+    fireSound: {mod: 40k, index: 52}
+    clipSize: 1
+    #power: 100
+    compatibleAmmo:
+      - STR_LARGE_ROCKET_ELDAR
+    #damageType: 3
+    accuracySnap: 70
+    accuracyAimed: 115
+    accuracyAuto: 0
+    tuSnap: 55
+    tuAimed: 85
+    tuAuto: 0
+    snapRange: 20
+    aimRange: 30
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    recover: true
+    listOrder: 16900
+    costBuy: 15000
+    costSell: 4000
+
+  - type: STR_ELDAR_TEMPEST_LAUNCHER              #INITIAL IMPLEMENT FIX ME
+    refNode: *STR_ELDAR_LAUNCHER_REF
+    categories: [STR_CAT_ELDAR, STR_CAT_DEVASTATOR]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_REAPER_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    size: 0.4
+    dropoff: 5
+    weight: 25
+    bigSprite: 4866
+    floorSprite: 4866
+    handSprite: 4954
+    bulletSprite: 0
+    fireSound: {mod: 40k, index: 52}
+    #clipSize: 1
+    #power: 100
+    compatibleAmmo:
+      - STR_SMALL_ROCKET_TEMPEST_ELDAR
+    #damageType: 3
+    #accuracySnap: 70
+    #accuracyAimed: 115
+    accuracyAuto: 60
+    tuSnap: 0
+    tuAimed: 0
+    tuAuto: 75
+    #snapRange: 20
+    #aimRange: 30
+    autoRange: 30
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    recover: true
+    experienceTrainingMode: 6
+    listOrder: 16920
+    costBuy: 50000
+    costSell: 4000
+
+  # DEPRECATED
+  - type: STR_ELDAR_LAUNCHER_FIXED # Fixed weapon version for use on player armor.
+    ufopediaType: STR_ELDAR_LAUNCHER # link to the same ufopedia page as normal STR_ELDAR_LAUNCHER.
+    refNode: *STR_ELDAR_LAUNCHER_REF
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false
+    costBuy: 0
+    costSell: 0
+
+  - type: STR_AELDARI_FLAMER #STR_FLAMETHROWER stats REWORK NEEDED
+    categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL, STR_CAT_ELDAR]
+    listOrder: 16150
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    size: 0.2
+    costBuy: 8000
+    costSell: 6500
+    weight: 10
+    bigSprite: 4872
+    floorSprite: 4872
+    handSprite: 4826
+    bulletSprite: {mod: 40k, index: 5}
+    fireSound: {mod: 40k, index: 706}
+    compatibleAmmo:
+      - STR_AELDARI_FLAMER_FUEL
+    accuracyAuto: 35
+    tuAuto: 35
+    battleType: 1
+    twoHanded: true
+    experienceTrainingMode: 6
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    maxRange: 12
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 3
+    attraction: 7
+
+  - type: STR_DRAGON_BREATH_FLAMER # stats from STR_PURIFIER_FLAMER rework needed (very fun weapon haha)
+    categories: [STR_CAT_ELDAR, STR_CAT_FLAMER]
+    listOrder: 16530
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: []  # Already requires the eldar base service
+    costBuy: 50000
+    costSell: 10000
+    battleType: 1
+    weight: 10
+    bigSprite: 4874
+    floorSprite: 4874
+    handSprite: 4834
+    bulletSprite: {mod: 40k, index: 5}
+    fireSound: {mod: 40k, index: 706}
+    compatibleAmmo:
+      - STR_DRAGON_BREATH_FLAMER_FUEL
+    accuracySnap: 70
+    accuracyAuto: 40
+    tuSnap: 20
+    tuAuto: 30
+    snapRange: 14
+    autoRange: 12
+    aimRange: 0
+    confSnap:  # Double Shot
+      shots: 2
+      arcing: true
+    maxRange: 16
+    dropoff: 5
+    twoHanded: true
+    experienceTrainingMode: 6
+    arcingShot: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    autoShots: 6
+    attraction: 7
+   # tags:
+      #ITEM_DOESNT_HURT_USER: 1 # Temple Assassins are too skilled to shoot themselves. Staying in flames can be bad though.
+
+
+  - type: STR_FUSION_GUN
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
+    listOrder: 16500
+    weight: 15
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 10000
+    costSell: 3000
+    bigSprite: 4951
+    floorSprite: 4951
+    handSprite: 4906
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: [1879, 1880, 1881]
+    compatibleAmmo:
+      - STR_FUSION_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 10 # Range between Light Melta and Meltagun
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 70
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 0
+    flatRate: true
+    maxRange: 18
+    damageBonus:
+      flatHundred: 0.2
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+
+
+  - type: STR_DRAGON_FUSION_GUN                 #STR_HARMONIC_MELTAGUN stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16510
+    weight: 20
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 50000
+    costSell: 25000
+    bigSprite: 4952
+    floorSprite: 4952
+    handSprite: 4914
+    bulletSpeed: 100
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: [1879, 1880, 1881]
+    compatibleAmmo:
+      - STR_DRAGON_FUSION_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 20
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 75
+    maxRange: 20
+    minRange: 5
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+    listOrder: 16510
+
+  - type: STR_FUSION_PISTOL                 #STR_ADEPTAS_MELTAGUN_NECRO stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
+    listOrder: 16490
+    weight: 5
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 10000
+    costSell: 3000
+    bigSprite: 4876
+    floorSprite: 4876
+    handSprite: 1498
+    bulletSprite: {mod: 40k, index: 16}
+    bulletSpeed: 100
+    fireSound: [1879, 1880, 1881]
+    compatibleAmmo:
+      - STR_FUSION_PISTOL_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 8 # -2 range vs fusion gun
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 70
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 0
+    flatRate: true
+    maxRange: 13
+    damageBonus:
+      flatHundred: 0.2
+    battleType: 1
+    invWidth: 1
+    invHeight: 3
+    armor: 300
+
+
+  - type: STR_DRAGON_FUSION_PISTOL                 #STR_HARMONIC_MELTAGUN stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE
+    weight: 10
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    listOrder: 16495
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 50000
+    costSell: 25000
+    bigSprite: 4877
+    floorSprite: 4877
+    handSprite: 1506
+    bulletSpeed: 100
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: [1879, 1880, 1881]
+    compatibleAmmo:
+      - STR_DRAGON_FUSION_PISTOL_AMMO
+    dropoff: 6
+    autoRange: 0
+    snapRange: 12
+    aimRange: 15
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 75
+    maxRange: 15
+    minRange: 0
+    battleType: 1
+    invWidth: 1
+    invHeight: 3
+    armor: 300
+
+  - type: STR_FIREPIKE                #STR_HARMONIC_MELTAGUN stats
+    #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16515
+    weight: 30 # +10 weight
+    categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_FUSION_TECH_RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 100000
+    costSell: 50000
+    bigSprite: 4860
+    floorSprite: 4860
+    handSprite: 4882
+    bulletSpeed: 100
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: 1883
+    compatibleAmmo:
+      - STR_FIREPIKE_AMMO
+    dropoff: 5 # -1 dropoff vs regular fusion guns
+    autoRange: 0
+    snapRange: 17 # +5 range
+    aimRange: 25 # +5 range
+    accuracyAuto: 0
+    accuracySnap: 60
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 75
+    maxRange: 25 # +5 range
+    minRange: 5
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 300
+    listOrder: 16520
+
+  - type: STR_DEATH_SPINNER  # Chaos ripper gun stats temporary
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SPIDER_RESEARCH
+    requiresBuyBaseFunc: []
+    requiresBuy: []
+    size: 0.4
+    dropoff: 5
+    costBuy: 10000
+    costSell: 1000
+    weight: 30
+    bigSprite: 4863
+    floorSprite: 4863
+    handSprite: 4930
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: 1888
+    compatibleAmmo:
+      - STR_SPINNER_SPOOL
+    #accuracyAuto: 50         #Removed auto, damage output nerf and fits in with weapon description
+    #tuAuto: 30
+    accuracySnap: 65
+    tuSnap: 25
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 75
+    invWidth: 2
+    invHeight: 3
+    armor: 100
+    #autoRange: 8
+    snapRange: 12
+    listOrder: 16600
+
+  - type: STR_SPINNERET_RIFLE  # T3 Deathspinner upgrade : Longer range, slightly less damage, TU damage increase, better AP
+    categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SPIDER_EXARCH_RESEARCH
+    requiresBuyBaseFunc: []
+    requiresBuy: []
+    size: 0.4
+    dropoff: 5
+    costBuy: 30000
+    costSell: 3000
+    weight: 30
+    bigSprite: 4868
+    floorSprite: 4868
+    handSprite: 4970
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: 1890
+    compatibleAmmo:
+      - STR_SPINNERET_RIFLE_SPOOL
+    accuracyAimed: 80         #Removed auto, damage output nerf and fits in with weapon description
+    tuAimed: 40
+    accuracySnap: 65
+    tuSnap: 25
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 75
+    invWidth: 2
+    invHeight: 3
+    armor: 100
+    aimRange: 20
+    snapRange: 16
+    listOrder: 16620
+
+#--- ELDAR.GRENADES ---
+
+  - delete: STR_ELDAR_GRENADE
+  - type: STR_ELDAR_GRENADE  # Eldar Plasma Granade          16320
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_MIDTIER_PREREQ
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
+    weight: 2
+    primeSound: 2426
+    throwRange: 18
+    fuseType: -2
+    costThrow:
+      time: 55
+      energy: 5
+    costPrime:
+      time: 5
+    costUnprime:
+      time: 5
+    unprimeActionName: STR_UNPRIME_GRENADE
+    flatThrow:
+      time: false
+      energy: true
+    flatPrime:
+      time: false
+      energy: true
+    damageType: 5
+    power: 90
+    damageAlter: # DA PLASMA
+      RandomType: 6
+      ToArmorPre: 0.2  # melts some armor on the way in
+      ArmorEffectiveness: 0.75  # *** PLASMA rebalance
+      FireThreshold: 70  # can ignite at high damage
+      FixRadius: 5
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    size: 0.1
+    costBuy: 20000
+    costSell: 5000
+    bigSprite: {mod: 40k, index: 397}
+    floorSprite: {mod: 40k, index: 252}
+    handSprite: {mod: 40k, index: 888}
+    battleType: 4
+    invWidth: 1
+    invHeight: 2
+    blastRadius: 5
+    explosionHitSound: {mod: 40k, index: 690}
+    hitAnimation: {mod: 40k, index: 112} #XPLASMA
+    listOrder: 16320
+
+  - delete: STR_ELDAR_MGRENADE
+  - type: STR_ELDAR_MGRENADE  # eldar melta grenade         16310
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_MELTAGUN_TECH
+      - STR_MIDTIER_PREREQ
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL, STR_CAT_ELDAR]
+    throwRange: 15
+    primeSound: 2426
+    weight: 4
+    fuseType: -2
+    costThrow:
+      time: 60
+      energy: 20
+    costPrime:
+      time: 5
+    costUnprime:
+      time: 5
+    unprimeActionName: STR_UNPRIME_GRENADE
+    flatThrow:
+      time: false
+      energy: true
+    flatPrime:
+      time: false
+      energy: true
+    flatUnprime:
+      time: false
+      energy: true
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    power: 140
+    damageType: 11
+    damageAlter:
+      RandomType: 6
+      ToArmorPre: 1.0  # it's a melta grenade; it will melt armor
+      ToTile: 1.0
+      ToItem: 1.0
+      ToArmor: 0.0
+      ToHealth: 0.7
+      ToWound: 0.05
+      RadiusReduction: 15 # melta explosions decay at twice the normal rate; coheres somewhat better than Imperium melta
+      RandomWound: false
+      FireThreshold: 0
+      FixRadius: 5
+    size: 0.1
+    costBuy: 50000
+    costSell: 15000
+    bigSprite: {mod: 40k, index: 398}
+    floorSprite: {mod: 40k, index: 253}
+    handSprite: {mod: 40k, index: 896}
+    battleType: 4
+    invWidth: 2
+    invHeight: 2
+    blastRadius: 4
+    listOrder: 16310
+
+#--- ELDAR.MELEE ---
+
+  - type: STR_AELDARI_SWORD # Basic Melee Weapon for eldar, mostly for roleplaying value
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    costBuy: 1000
+    costSell: 200
+    weight: 8
+    power: 30
+    damageBonus:
+      strength: 0.1
+      melee: 0.2
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    damageType: 7
+    damageAlter:
+      ArmorEffectiveness: 0.8
+      ToArmorPre: 0.05
+      ToHealth: 0.8
+      ToWound: 0.5
+      RandomWound: false
+    costMelee:
+      time: 12  # fast attack
+      energy: 1  # light melee
+    flatMelee:
+      time: true
+      energy: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    bigSprite: 4889
+    floorSprite: 4889
+    handSprite: 1602
+    meleeSound: {mod: 40k, index: 754}
+    meleeHitSound: {mod: 40k, index: 773}
+    meleeAnimation: 4
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    listOrder: 16300
+
+  - type: STR_AELDARI_CHAINSWORD  # Tier0-1 Armor shredding strength based melee
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    size: 0.2
+    costBuy: 10000
+    costSell: 2000
+    weight: 12 # Heavier mechanism
+    bigSprite: 4890
+    floorSprite: 4890
+    handSprite: 1610
+    meleeSound: {mod: 40k, index: 753}  # 753 Powersword miss
+    meleeHitSound: {mod: 40k, index: 709}  # 709 chainhit
+    meleeAnimation: 44
+    power: 40 # Slaanesh 85
+    damageBonus:
+      strength: 0.3 # Strength based weapon
+      melee: 0.1
+    meleeMultiplier:
+      melee: 0.3
+      strength: 0.7 #Strength Based Weapon
+    accuracyMelee: 100
+    costMelee:
+      time: 14  # Heavier grinding slash
+      energy: 2  # medium melee
+    flatMelee:
+      time: true
+      energy: true
+    damageAlter:  # DA CHAIN
+      ToArmorPre: 0.5
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      ToWound: 0.35
+      ToEnergy: 0.8
+      ToMorale: 0.2
+      ToStun: 0.1
+      RandomWound: false
+    damageType: 7
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    listOrder: 16300
+
+  - type: STR_AELDARI_POWERSWORD  # Tier 1 Powerweapon
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy: []
+      #- STR_ELDAR_POWER_WEAPONS_ACQUISITION testing
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.2
+    costBuy: 20000
+    costSell: 5000
+    weight: 10
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    flatRate: true
+    power: 40 # T2 power weapons 80
+    damageBonus:
+      strength: 0.1
+      melee: 0.3
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+    bigSprite: 4891
+    floorSprite: 4891
+    handSprite: 1618
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    invWidth: 2
+    invHeight: 3
+    attraction: 8
+    listOrder: 16300
+
+  - type: STR_EPOWER_SWORD  # eldar mirrorsword
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # BANSHEE RESEARCH
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 80
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+    size: 0.2
+    costBuy: 50000
+    costSell: 15000
+    weight: 10
+    bigSprite: {mod: 40k, index: 392}
+    floorSprite: {mod: 40k, index: 244}
+    handSprite: {mod: 40k, index: 840}
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    listOrder: 16300
+
+  - type: STR_ELDAR_POWER_BLADE  # STR_EPOWER_SWORD stats, REWORK required
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      - STR_ELDAR_SPIDER_RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 80
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+    size: 0.2
+    costBuy: 50000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4865
+    floorSprite: 4865
+    handSprite: 4946
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    tuMelee: 10
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    listOrder: 16630
+
+  - type: STR_DIRESWORD_VESSEL  # EMPTY DIRESWORD VESSEL, Weak
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # AVENGER EXARCH RESEARCH
+      # DIRESWORD RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    listOrder: 16497
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 7
+    damageAlter:     # DA Melee
+      ArmorEffectiveness: 0.8
+      ToArmorPre: 0.05
+      ToHealth: 0.8
+      ToWound: 0.5
+      RandomWound: false
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 4  # heavy melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 30
+    damageBonus:
+      melee: 0.2
+      reactions: 0.2 # AVENGER Stat
+    meleeMultiplier:
+      melee: 0.4
+      reactions: 0.6 # AVENGER Stat
+    accuracyMelee: 100
+    size: 0.2
+    costBuy: 0        # Manufacture only
+    costSell: 0       # Taboo reliclike weapon, not to be traded like a commodity
+    weight: 10
+    bigSprite: 4894
+    floorSprite: 4894
+    handSprite: 1642
+    meleeAnimation: 4
+    meleeSound: {mod: 40k, index: 754}
+    meleeHitSound: {mod: 40k, index: 773}
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100 AVENGER BONUS
+
+  - type: STR_DIRESWORD  # T2 Avenger Nemesis FORCE weapon that depends on soul inside spiritstone not wielder.
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # AVENGER RESEARCH
+      # DIRESWORD RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    listOrder: 16497
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    experienceTrainingMode: 2         # 50% Melee, slower development of skills because user is aided
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 4  # heavy melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 80
+    damageBonus:
+      melee: 0.2
+      reactions: 0.3 # AVENGER Stat
+    meleeMultiplier:  # Helps low melee troops, but worse for high melee. Soul sandbagging the wielder.
+      flatHundred: .5 # Soulstone directing attacks
+      melee: 0.2
+      reactions: 0.3 # AVENGER Stat
+    accuracyMelee: 100
+    size: 0.2
+    costBuy: 0  # Transform only
+    costSell: 0     # Taboo reliclike weapon, not to be traded like a commodity
+    weight: 10
+    bigSprite: 4892
+    floorSprite: 4892
+    handSprite: 1626
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: 1891
+    meleeHitSound: 1892
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    twoHanded: false
+    tags:                                       # Force weapon that relies on soulstone
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      DAMAGE_RESIST_PENETRATION_PERCENT: 35
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 220
+      DAMAGE_BONUS_PERCENT_PSYKER: 170
+      DAMAGE_BONUS_PERCENT_SYNAPSE: 150 # among already vulnerable tyranids, synapse creatures are the most vulnerable; often also psykers
+      DAMAGE_BONUS_PERCENT_TZEENTCH: 120 # higher psychic sensitivity
+      DAMAGE_BONUS_PERCENT_NURGLE: 170 # durable because of warp magic, take away the magic, you have a dead body
+      DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
+      DAMAGE_BONUS_PERCENT_ELDAR: 140
+      REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100 AVENGER BONUS
+
+  - type: STR_ELDAR_POWER_GLAIVE  #  T3 Avenger melee weapon  BASED ON STR_DOMINION_HALBERD
+    categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # AVENGER EXARCH RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 85000
+    costSell: 12000
+    weight: 35
+    bigSprite: 4893
+    floorSprite: 4893
+    handSprite: 1634
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    fireSound: {mod: 40k, index: 753}
+    explosionHitSound: {mod: 40k, index: 101}  # stabhit
+    hitAnimation: 2040  # Bloodgush sprite, X1.pck for ranged attacks, was 1070  # AOEMELEEGENE.png
+    hitAnimFrames: 8
+    powerForAnimation: 10
+    hitSound: {mod: 40k, index: 101}  # stabhit
+    bulletSprite: 5
+    clipSize: -1
+    invWidth: 2
+    invHeight: 3
+    snapRange: 2  # has reach
+    maxRange: 2
+    powerRangeThreshold: 3
+    powerRangeReduction: 99
+    battleType: 1
+    damageType: 5
+    meleeType: 5
+    confSnap:
+      name: STR_HALLEBARD_SNAPSHOT_LUNGE
+      shots: 1
+    costSnap:
+      time: 30
+      energy: 10
+    accuracySnap: 80
+    accuracyMelee: 100
+    accuracyMultiplier:
+      melee: 0.3
+      strength: 0.2
+      reactions: 0.5 # Avenger stat
+    meleeMultiplier:
+      melee: 0.3
+      strength: 0.2
+      reactions: 0.5 # Avenger stat
+    power: 110
+    meleePower: 110
+    damageBonus:
+      strength: 0.2  # strength matters more than skill given weapon size in terms of damage scaling
+      reactions: 0.3 # Avenger Stat
+      melee: 0.1
+    meleeBonus:
+      strength: 0.2  # strength matters more than skill given weapon size in terms of damage scaling
+      reactions: 0.3 # Avenger Stat
+      melee: 0.1
+    costMelee:
+      time: 25
+      energy: 8  # heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    twoHanded: false
+    oneHandedPenalty: 50
+    attraction: 6
+    armor: 200
+    listOrder: 16498
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
+
+  - type: STR_DRAGON_AXE  # eldar mirrorsword stats, REWORK required think fire damage
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    listOrder: 16499
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 80
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+    meleeMultiplier:
+      melee: 0.7
+      reactions: 0.3
+    accuracyMelee: 100
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+    size: 0.2
+    costBuy: 50000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4880
+    floorSprite: 4880
+    handSprite: 1530
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    tuMelee: 10
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+
+  - &STR_WITCHWEAPON_REF
+    type: STR_WITCHBLADE  # NEEDS REWORK (A LOT?)
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      #- STR ELDAR WARLOCK RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    listOrder: 16995
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 3
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    power: 30
+    damageBonus:
+      strength: 0.1
+      melee: 0.4
+      psiStrength: 0.5  # Force weapon
+    meleeMultiplier:
+      melee: 0.7
+      psiSkill: 0.3
+    accuracyMelee: 100
+    size: 0.2
+    costBuy: 50000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4881
+    floorSprite: 4881
+    handSprite: 1538
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: 1891
+    meleeHitSound: 1892
+    invWidth: 2
+    invHeight: 3
+    flatRate: true
+    attraction: 8
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      DAMAGE_RESIST_PENETRATION_PERCENT: 35
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 220
+      DAMAGE_BONUS_PERCENT_PSYKER: 170
+      DAMAGE_BONUS_PERCENT_SYNAPSE: 150 # among already vulnerable tyranids, synapse creatures are the most vulnerable; often also psykers
+      DAMAGE_BONUS_PERCENT_TZEENTCH: 120 # higher psychic sensitivity
+      DAMAGE_BONUS_PERCENT_NURGLE: 170 # durable because of warp magic, take away the magic, you have a dead body
+      DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
+      DAMAGE_BONUS_PERCENT_ELDAR: 140
+
+  - type: STR_WITCH_STAFF # WITCH BLADE UPGRADE, Could add extra functions not just dmg increase
+    refNode: *STR_WITCHWEAPON_REF
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # PSYKER UPGRADE RESEARCH
+    listOrder: 16996
+    damageBonus:
+      strength: 0.1
+      melee: 0.2
+      psiStrength: 1  # Force weapon higher reliance on psychicStrength
+    meleeMultiplier:
+      melee: 0.5
+      psiSkill: 0.5 # more psyker focus over witchBlade
+    costBuy: 100000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4883
+    floorSprite: 4883
+    handSprite: 1554
+    meleeHitSound: 1894
+    experienceTrainingMode: 30 #psiStrength or psiSkill DOES NOT TRAIN MELEEb
+
+  - type: STR_SINGING_SPEAR  #Needs WORK
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # ELDAR FARSEER RESEARCH
+    requiresBuy: []
+    requiresBuyBaseFunc: []
+    listOrder: 16997
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 1
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    power: 30
+    damageBonus:
+      strength: 0.1
+      throwing: 0.4
+      psiStrength: 0.5  # Force weapon
+    clipSize: -1
+    armor: 200
+    flatRate: true
+    #Throwing Profile
+    costAimed:
+      time: 40
+      energy: 20
+    accuracyAimed: 100
+    confAimed:
+      name: STR_SINGING_SPEAR_AIMED_THROW
+      shortName: STR_SINGING_SPEAR_AIMED_THROW
+    aimRange: 12
+    costSnap:
+      time: 30
+      energy: 15
+    accuracySnap: 80
+    confSnap:
+      name: STR_SINGING_SPEAR_SNAP_THROW
+      shortName: STR_SINGING_SPEAR_SNAP_THROW
+    snapRange: 9
+    maxRange: 18
+    accuracyMultiplier:
+      firing: 0.0
+      throwing: 1.0
+    arcingShot: true
+    powerRangeThreshold: 21
+    powerRangeReduction: 99
+    bulletSpeed: -2
+    kneelBonus: 100
+    dropoff: 5
+    # melee profile
+    meleeType: 5
+    meleePower: 30
+    meleeBonus:
+      strength: 0.1
+      melee: 0.4
+      psiStrength: 0.5  # Force weapon
+    meleeAlter:
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    costMelee:
+      time: 12
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    meleeMultiplier:
+      melee: 0.7
+      psiSkill: 0.3
+    accuracyMelee: 100
+    size: 0.2
+    costBuy: 100000
+    costSell: 15000
+    weight: 10
+    bigSprite: 4882
+    floorSprite: 4882
+    handSprite: 1546
+    bulletSprite: 32
+    vaporColor: 10
+    vaporDensity: 3
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: 1893
+    hitSound: 1892
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: 1891
+    meleeHitSound: 1892
+    invWidth: 2
+    invHeight: 3
+    attraction: 8
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+      DAMAGE_RESIST_PENETRATION_PERCENT: 35
+      DAMAGE_BONUS_PERCENT_DAEMONIC: 220
+      DAMAGE_BONUS_PERCENT_PSYKER: 170
+      DAMAGE_BONUS_PERCENT_SYNAPSE: 150 # among already vulnerable tyranids, synapse creatures are the most vulnerable; often also psykers
+      DAMAGE_BONUS_PERCENT_TZEENTCH: 120 # higher psychic sensitivity
+      DAMAGE_BONUS_PERCENT_NURGLE: 170 # durable because of warp magic, take away the magic, you have a dead body
+      DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
+      DAMAGE_BONUS_PERCENT_ELDAR: 140
+
+  - delete: STR_WRAITH_MELEE_WEAPON
+  - type: STR_WRAITH_MELEE_WEAPON
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_AUXILIARY]
+    weight: 3
+    bigSprite: 4950
+    meleeAnimation: 4
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #754 Powerswrod hit
+    power: 140
+    damageAlter:     #DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 2 #TFTD [50% - 150%]
+    damageType: 7
+    clipSize: -1
+    strengthApplied: false
+    accuracyMelee: 100
+    tuMelee: 15
+    battleType: 3
+    fixedWeapon: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    flatRate: true

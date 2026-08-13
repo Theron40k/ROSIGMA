@@ -589,7 +589,12 @@ extended:
             rules.getRuleUnit myRuleUnit "STR_GSC_ZOMBIE"; # only basic zombies
           else eq infectionType 3; # if Slaanesh
             if le infectionDamage INFECTION_LOW_THRESHOLD; # low level infection
-              rules.getRuleUnit myRuleUnit "STR_ZOMBIE";
+              battle_game.randomRange temp 1 100;
+              if lt temp 50;
+                rules.getRuleUnit myRuleUnit "STR_ZOMBIE";
+              else;
+                rules.getRuleUnit myRuleUnit "STR_SLAANESH_LESSER_SPAWN";
+              end;
             else le infectionDamage INFECTION_MID_THRESHOLD; # mid level infection; spawns Lesser Daemonette
               rules.getRuleUnit myRuleUnit "STR_CHRYSSALID_TERRORISTSELENE";
             else le infectionDamage INFECTION_HIGH_THRESHOLD; # high level infection; spawns Daemonette
@@ -839,7 +844,7 @@ extended:
             set wound_recovery 0;
             set health_recovery 0;
             target.setFire 0;
-            battle_game.flashMessage "Target Extinguished.";
+            battle_game.flashMessage "STR_SCRIPT_MEDIKIT_EXTINGUISH";
             return;
           end;
 

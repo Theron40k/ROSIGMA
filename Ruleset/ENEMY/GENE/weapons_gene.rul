@@ -4,11 +4,10 @@ extended:
 items:
   - type: STR_LIBERATOR_AUTOSTUB_KELER  # big iron on his hips
     categories: [STR_CAT_AUTO]
-    # requires:
-    #   - STR_XENO_ONLY  # Is not recovered
     size: 0.1
     recoveryTransformations:
       STR_LIBERATOR_AUTOSTUB: [1]  # keeps the research clutter down
+    ufopediaType: STR_LIBERATOR_AUTOSTUB #send to ufopedia for single stubber
     dropoff: 4  # special ammo
     # costSell: 10000
     weight: 5
@@ -144,7 +143,7 @@ items:
   - type: STR_GSC_NEEDLER_RIFLE
     categories: [STR_CAT_SNIPER]
     requires:
-      - STR_XENO_ONLY
+      - STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS
     size: 0.2
     dropoff: 3  # light sniper rifle; scoped
     costSell: 20000
@@ -315,30 +314,53 @@ items:
 
   - type: STR_ROCKTOSS
     categories: [STR_CAT_GRENADES]
-    size: 0.1
-    weight: 6
-    bigSprite: 2715 #change
-    bulletSprite: 25 #change
-    bulletSpeed: -5
-    accuracyAimed: 50
+    size: 0.0 #rocks occupy no space, they can be put in a pile in a dirty angle
+    weight: 10
+    bigSprite: 3250
+    handSprite: 1366
+    bulletSprite: {mod: 40k, index: 20} # TODO: change, find fitting sprite
+    explosionHitSound: 1873
+    # itemThrow # TODO: needs a chunky throw sound.
+    hitAnimation: {mod: 40k, index: 104}
+    bulletSpeed: -20
+    battleType: 4
+    accuracyThrow: 70
     accuracyMultiplier:
       throwing: 1.0
-    costAimed:
+    costThrow:
       time: 20
       energy: 30
-    flatRate: true
-    power: 0
+    flatThrow:
+      time: false
+      energy: true
+    #flatRate: true
+    #RandomType: 8
+    power: 40
     damageBonus:
-      strength: 1.0
-    damageType: 1
-    battleType: 2
-    invWidth: 1
+      strength: 0.3
+    damageType: 7 #it's a rock
+    invWidth: 2
     invHeight: 2
     listOrder: 17100
     throwRange: 8
+    fuseType: -3
+    fuseTriggerEvents:
+      defaultBehavior: false
+      throwTrigger: true
+      throwExplode: true
+      proximityTrigger: false
+      proximityExplode: false
     damageAlter:
-      FireThreshold: 25
-    costSell: 400
+      FixRadius: 1
+      RadiusReduction: 300 # fragment don't do damage if any damage at all
+      FireThreshold: 10000 #rock not molotov cocktail
+      SmokeThreshold: 10000 #not smoke grenade
+      ToTile: 0 # rock, not power drill
+      IgnoreDirection: true # hits the normal armor
+      TileDamageLimit: 10
+    #explosiveDamageRange: 1
+    powerForAnimation: 1
+    costSell: 0 # rocks should be just thrown away
 
   - type: STR_NEUROTRAUMAL_ROD
 
@@ -550,11 +572,24 @@ items:
     snapRange: 10  # better range
     dropoff: 5
 
+  # Note this definition is split; further details in weapons_chaos.rul
   - type: STR_PUMP_SHOTGUN_CHAOS
     refNode: *STR_PUMP
     bigSprite: 2712
-    requires:
-      - STR_ALIENS_ONLY
+
+  - type: STR_TRENCHGUN_LUCIUS #Krieg Pump shotgun
+    refNode: *STR_PUMP
+    weight: 12 #Heavier build to handle rack fire
+    bigSprite: 1111
+    floorSprite: 302
+    handSprite: 1400
+    accuracyAuto: 30
+    tuAuto: 45
+    autoShots: 3 #rackfire
+    autoRange: 7
+    armor: 200
+    requiresBuy:
+      - STR_KRIEG_STRATEGY
 
   - &STR_SMG_STUB
     type: STR_SMG_STUB_GUN
@@ -598,13 +633,12 @@ items:
     tags:
       REACTION_MULTIPLIER: 200
 
+  # Note this definition is split; further details in weapons_chaos.rul
   - type: STR_SMG_STUB_GUN_CHAOS
     refNode: *STR_SMG_STUB
     bigSprite: 2713
     floorSprite: {mod: 40k, index: 1114}
     handSprite: {mod: 40k, index: 1888}
-    requires:
-      - STR_ALIENS_ONLY
 
   - type: STR_STUB_GUN_AMMO_LONG
     categories: [STR_CAT_AUTO]
@@ -716,20 +750,25 @@ items:
     categories: [STR_CAT_GRENADES]
     size: 0.1
     weight: 6
-    bigSprite: 2715
-    floorSprite: {mod: 40k, index: 304}
-    handSprite: {mod: 40k, index: 904}
+    bigSprite: 204
+    floorSprite: 202
+    handSprite: 1374
     power: 80  # Frag Grenade is 70
-    damageType: 3
+    damageType: 5
     battleType: 4
     invWidth: 1
     invHeight: 2
-    blastRadius: 6
+    blastRadius: 5
     listOrder: 17100
     throwRange: 8
-    damageAlter:
-      FireThreshold: 25
-    costSell: 400
+    fuseType: -2
+    damageAlter: # Da Plasma - nerfed due to being improvised
+      RandomType: 6
+      ToArmorPre: 0.05  # melts some armor on the way in - nerfed due to being improvised
+      ArmorEffectiveness: 0.9  # *** PLASMA rebalance - nerfed due to being improvised
+      FireThreshold: 90  # can ignite at high damage - nerfed due to being improvised
+      ToArmor: 0.07 #- nerfed due to being improvised
+    costSell: 600
 
   - type: STR_GSC_FLAMETHROWER
     categories: [STR_CAT_FLAMER]

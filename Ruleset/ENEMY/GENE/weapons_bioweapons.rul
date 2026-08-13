@@ -280,6 +280,8 @@ items:
     clipSize: -1
     recover: false
 
+    #ripperswarm attack x number of rippers; progressively weaker/diminishing returns but cheaper TU costs
+
   - &STR_RIPPERSWARM_SPAWNER_REF #Template; not used
     type: STR_RIPPERSWARM_SPAWNER_4   #Spawns unit of 4 rippers
     categories: [STR_CAT_GRENADES]
@@ -314,22 +316,30 @@ items:
     hiddenOnMinimap: false
     powerForAnimation: 1
     spawnUnit: STR_RIPPERSWARM_4
-    spawnUnitFaction: -1
-    spawnUnitChance: 50
+    spawnUnitFaction: 1
+    #spawnUnitChance: 50
     tags:
       ITEM_IS_BOMB: 1
       ITEM_IS_BOMB_ON_DEATH: 1  # we blow this bomb up on death
       ITEM_IS_KAMIKAZI_BOMB: 1
 
+  - type: STR_RIPPERSWARM_SPAWNER_8  #Spawns unit of 8 rippers
+    refNode: *STR_RIPPERSWARM_SPAWNER_REF
+    spawnUnit: STR_RIPPERSWARM_8
+
+  - type: STR_RIPPERSWARM_SPAWNER_12  #Spawns unit of 12 rippers
+    refNode: *STR_RIPPERSWARM_SPAWNER_REF
+    spawnUnit: STR_RIPPERSWARM_12
+
   - type: STR_RIPPERSWARM_SPAWNER_2  #Spawns unit of 2 rippers
     refNode: *STR_RIPPERSWARM_SPAWNER_REF
     spawnUnit: STR_RIPPERSWARM_2
-    spawnUnitChance: 50
+    #spawnUnitChance: 50
 
   - type: STR_RIPPERSWARM_SPAWNER_1  #Spawns unit of a single ripper
     refNode: *STR_RIPPERSWARM_SPAWNER_REF
     spawnUnit: STR_RIPPERSWARM_1
-    spawnUnitChance: 50
+    #spawnUnitChance: 50
 
   - type: STR_LEAP_ATTACK #leaping biomorph
     weight: 0

@@ -393,7 +393,7 @@ soldiers:
       - delete
       - Names/commissar.nam
     tags:
-      SOLDIER_IS_OFFICER: 1
+      SOLDIER_IS_SERGEANT: 1
 
 
   - type: STR_STORMTROOPER
@@ -413,6 +413,8 @@ soldiers:
     requires:
       - STR_GUARD_PRIEST_REQUISITION
     value: 25
+    tags:
+      SOLDIER_IS_SERGEANT: 1
 
   - type: STR_GUARD_OFFICER_VETERAN
     requires:
@@ -971,7 +973,7 @@ soldiers:
     rankBattleSprite: {mod: 40k, index: 1005}
     rankTinySprite: {mod: 40k, index: 1005}
     tags:
-      SOLDIER_IS_OFFICER: 1
+      SOLDIER_IS_SERGEANT: 1
 
   - &STR_COMMISSAR_LORD
     type: STR_LORD_COMMISSAR
@@ -2245,31 +2247,31 @@ soldiers:
       randomTransformationBonuses:
         STR_GUARD_BACKGROUND_INFANTRY: 90
         STR_GUARD_BACKGROUND_OFFICER_CANDIDATE: 10
-    minStats:  # Higher min starting stats for a more veteran start, +5 for accuracy/melee, +10 for phys stats
-      tu: 50
-      stamina: 50
-      health: 35
-      bravery: 30
-      reactions: 40
-      firing: 45
-      throwing: 45
-      strength: 20
+    minStats:
+      tu: 40
+      stamina: 50 #+10
+      health: 30 #+5
+      bravery: 20
+      reactions: 25 #-5
+      firing: 35 #-5
+      throwing: 35
+      strength: 18 #+8
       psiStrength: 0
       psiSkill: 0
-      melee: 25
+      melee: 20 #+5
       mana: 0
     maxStats:
       tu: 60
-      stamina: 70
-      health: 40
+      stamina: 80 #+10
+      health: 45 #+5
       bravery: 60
-      reactions: 60
-      firing: 70
+      reactions: 55 #-5
+      firing: 65 #-5
       throwing: 65
-      strength: 25
+      strength: 35 #+10
       psiStrength: 100
       psiSkill: 6
-      melee: 60
+      melee: 65 #+5
       mana: 0
     statCaps:
       tu: 75  # was 65
@@ -2287,7 +2289,7 @@ soldiers:
     trainingStatCaps:
       tu: 60
       stamina: 70
-      health: 30
+      health: 35
       firing: 70
       throwing: 65
       strength: 30
@@ -2312,7 +2314,7 @@ soldiers:
     avatarOffsetY: 42
     soldierNames:
       - delete
-      - Names/slguard.nam
+      - Names/VALGuard.nam
     deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
     rankStrings:
@@ -2320,8 +2322,334 @@ soldiers:
       - STR_GUARD_RANK_1
       - STR_GUARD_RANK_2
       - STR_GUARD_RANK_3
-    value: 5
+    value: 1 #valhallan bonus
     moraleLossWhenKilled: 66  # valhallans even less affected by friendlies
+
+  - type: STR_GUARD_VALHALLAN_OFFICER  # Valhallan Flak Officer
+    requires:
+      - STR_VALHALLAN_STRATEGY
+      - STR_REGIMENT_OFFICERS
+    minStats:
+      tu: 50
+      stamina: 50
+      health: 40
+      bravery: 40
+      reactions: 40
+      firing: 55
+      throwing: 45
+      strength: 25
+      psiStrength: 0
+      psiSkill: 0
+      melee: 40
+      mana: 0
+    maxStats:
+      tu: 60
+      stamina: 70
+      health: 40
+      bravery: 70
+      reactions: 60
+      firing: 70
+      throwing: 65
+      strength: 35
+      psiStrength: 100
+      psiSkill: 16
+      melee: 70
+      mana: 0
+    statCaps:
+      tu: 75
+      stamina: 120
+      health: 60
+      bravery: 110
+      reactions: 80
+      firing: 100  # was 90
+      throwing: 70
+      strength: 65  # was 60
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+      mana: 0
+    trainingStatCaps:
+      tu: 60
+      stamina: 70
+      health: 40
+      firing: 70
+      throwing: 65
+      strength: 35
+      psiStrength: 100
+      psiSkill: 100
+      melee: 70
+      mana: 0
+    armor: STR_VALHALLAN_OFFICER_FLAK_ARMOR
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 42
+    soldierNames:
+      - delete
+      - Names/VALOfficer.nam
+    deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    rankStrings:
+      - STR_OFFICER_RANK_0
+      - STR_OFFICER_RANK_1
+      - STR_OFFICER_RANK_2
+      - STR_OFFICER_RANK_3
+      - STR_OFFICER_RANK_4
+      - STR_OFFICER_RANK_5
+    rankSprite: {mod: 40k, index: 1012}
+    rankBattleSprite: {mod: 40k, index: 1012}
+    rankTinySprite: {mod: 40k, index: 1012}
+    value: 15 #-10 valhallan bonus
+    moraleLossWhenKilled: 90  # valhallans less affected by friendlies
+    tags:
+      SOLDIER_IS_OFFICER: 1
+
+  - type: STR_GUARD_VETERAN_VALHALLAN
+    flagOffset: 42
+    requires:
+      - STR_STORMTROOPER_REQUISITION
+      - STR_VALHALLAN_STRATEGY
+    costSalary: 30000
+    minStats:
+      tu: 60
+      stamina: 60
+      health: 40
+      bravery: 60
+      reactions: 50
+      firing: 65
+      throwing: 50
+      strength: 30
+      psiStrength: 0
+      psiSkill: 0
+      melee: 50
+      mana: 0
+    maxStats:
+      tu: 70
+      stamina: 70
+      health: 50
+      bravery: 100
+      reactions: 60
+      firing: 75
+      throwing: 65
+      strength: 40
+      psiStrength: 100
+      psiSkill: 6
+      melee: 60
+      mana: 0
+    statCaps:
+      tu: 75
+      stamina: 120
+      bravery: 110
+      firing: 130
+      strength: 65
+      health: 55
+      reactions: 80
+      mana: 0
+    trainingStatCaps:
+      tu: 70
+      stamina: 90
+      health: 50
+      firing: 90
+      throwing: 70
+      strength: 50
+      mana: 0
+    armor: STR_VALHALLAN_CARAPACE_ARMOR
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 42
+    soldierNames:
+      - delete
+      - Names/VALGuard_veteran.nam
+    deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    rankStrings:
+      - STR_GUARD_RANK_1
+      - STR_GUARD_RANK_1
+      - STR_GUARD_RANK_2
+      - STR_GUARD_RANK_3
+    rankSprite: {mod: 40k, index: 1006}
+    rankBattleSprite: {mod: 40k, index: 1006}
+    rankTinySprite: {mod: 40k, index: 1006}
+    value: 15 #-10 valhallan bonus
+    moraleLossWhenKilled: 75  # valhallans less affected by friendlies
+
+  - type: STR_GUARD_VALHALLAN_OFFICER_VETERAN  # Valhallan Carapace Veteran Officer
+    requires:
+      - STR_REGIMENT_OFFICERS
+      - STR_STORMTROOPER_REQUISITION
+      - STR_VALHALLAN_STRATEGY
+    costSalary: 50000
+    minStats:  # doesn't matter
+      tu: 50
+      stamina: 40
+      health: 25
+      bravery: 30
+      reactions: 30
+      firing: 50
+      throwing: 35
+      strength: 30
+      psiStrength: 0
+      psiSkill: 0
+      melee: 40
+      mana: 0
+    maxStats:  # doesn't matter
+      tu: 60
+      stamina: 70
+      health: 40
+      bravery: 70
+      reactions: 60
+      firing: 70
+      throwing: 65
+      strength: 40
+      psiStrength: 100
+      psiSkill: 16
+      melee: 70
+      mana: 0
+    statCaps:
+      tu: 75
+      stamina: 120
+      health: 60
+      bravery: 110
+      reactions: 80
+      firing: 130  # was 90  # Scion was highest
+      throwing: 80
+      strength: 65
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+      mana: 0
+    trainingStatCaps:
+      tu: 60
+      stamina: 80  # was 70  # Scion was highest  # doesn't matter
+      health: 40
+      firing: 80  # was 70  # Scion was highest  # doesn't matter
+      throwing: 70  # was 65  # Scion was highest
+      strength: 35
+      psiStrength: 100
+      psiSkill: 100
+      melee: 70
+      mana: 0
+    armor: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 42
+    soldierNames:
+      - delete
+      - Names/VALOfficer_veteran.nam
+    deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    rankStrings:
+      - STR_OFFICER_RANK_0
+      - STR_OFFICER_RANK_1
+      - STR_OFFICER_RANK_2
+      - STR_OFFICER_RANK_3
+      - STR_OFFICER_RANK_4
+      - STR_OFFICER_RANK_5
+    rankSprite: {mod: 40k, index: 1012}
+    rankBattleSprite: {mod: 40k, index: 1012}
+    rankTinySprite: {mod: 40k, index: 1012}
+    value: 20 #-10 valhallan bonus
+    tags:
+      SOLDIER_IS_OFFICER: 1
+
+
+  - type: STR_VALHALLAN_WOLFHOUND  # unit is called STR_VALHALLAN_WOLFHOUND_UNIT
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    costBuy: 45000
+    costSalary: 20000
+    minStats:
+      tu: 90
+      stamina: 80
+      health: 50
+      bravery: 80
+      reactions: 90
+      firing: 0
+      throwing: 0
+      strength: 45
+      psiStrength: 70  # unit has 100
+      psiSkill: 0  # unit has 0
+      melee: 60  # unit has 70
+    maxStats:
+      tu: 110
+      stamina: 90
+      health: 80
+      bravery: 100
+      reactions: 110
+      firing: 0
+      throwing: 0
+      strength: 60
+      psiStrength: 100
+      psiSkill: 0
+      melee: 80
+    statCaps:
+      tu: 130
+      stamina: 110
+      health: 100
+      bravery: 110
+      reactions: 130
+      firing: 0
+      throwing: 0
+      strength: 70
+      psiStrength: 100
+      psiSkill: 0
+      melee: 100
+    trainingStatCaps:
+      tu: 90
+      stamina: 90
+      health: 80
+      firing: 60
+      throwing: 60
+      strength: 65
+      psiStrength: 100
+      psiSkill: 50
+      melee: 85
+    armor: STR_VALHALLAN_WOLFHOUND_ARMOR
+    # dogfightExperience:
+      # bravery: 10
+      # reactions: 30
+      # firing: 25
+    allowPiloting: false
+    allowPromotion: true
+    standHeight: 14
+    kneelHeight: 14
+    femaleFrequency: 50
+    avatarOffsetX: 91
+    avatarOffsetY: 87
+    soldierNames:
+      - delete
+      - Names/arbites_dogs.nam
+    deathMale: [{mod: 40k, index: 50}]
+    deathFemale: [{mod: 40k, index: 50}]
+    rankStrings:
+      - STR_AUXILIARY_RANK
+    rankSprite: {mod: 40k, index: 1005}
+    rankBattleSprite: {mod: 40k, index: 1005}
+    rankTinySprite: {mod: 40k, index: 1005}
+    value: 10
 
 #Enginseers
   - type: STR_ENGINSEER                 # Techpriest Enginseer

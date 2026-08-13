@@ -10,6 +10,14 @@ extended:
         code: |
           var int isMechanical;
           var ptr RuleArmor armorRule;
+          var ptr RuleItem itemRule;
+          var int isFake;
+
+          item.getRuleItem itemRule;
+          itemRule.getTag isFake Tag.ITEM_IS_FAKE_MEDKIT;
+          if ge isFake 1;
+            return;
+          end;
 
           target.getRuleArmor armorRule;
           armorRule.getTag isMechanical Tag.UNIT_TYPE_MECHANICAL;

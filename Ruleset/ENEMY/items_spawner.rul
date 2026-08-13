@@ -186,7 +186,7 @@ items:
     tags:
       ITEM_PRIMED_AT_BATTLE_START: -1
 
-  - type: STR_SLAANESH_DEMIMONDE_SACRIFICE_SPAWNER
+  - type: STR_SLAANESH_DEMIMONDE_SACRIFICE_SPAWNER #this isnt used anywhere
     spawnUnit: STR_SLAANESH_DEMIMONDE_SACRIFICE
     spawnUnitFaction: 2
     recover: false
@@ -276,8 +276,6 @@ items:
 
   - type: STR_NECRON_SCARAB_SPAWNER_GRENADE            # Scarab spawner
     categories: [STR_CAT_NECRON, STR_CAT_GRENADES, STR_CAT_TACTICAL]
-    requires:
-      - STR_XENO_ONLY
     size: 0.1
     costSell: 3000
     weight: 1

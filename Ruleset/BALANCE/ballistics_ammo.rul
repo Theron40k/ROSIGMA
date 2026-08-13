@@ -509,17 +509,28 @@ items:
       - STR_ARBITES
     requiresBuyBaseFunc: [TRADE]
     refNode: *STR_SHOTGUN_AMMO_TEMPLATE
-    shotgunBehavior: 1
-    shotgunSpread: 25
-    shotgunPellets: 6
+    weight: 3
+    #damageType: 2
+    #shotgunBehavior: 1
+    #shotgunSpread: 25
+    #shotgunPellets: 6
     power: 40
-    clipSize: 8
+    #clipSize: 8
     damageAlter:
-      RandomType: 1
+      #RandomType: 1
+      ToArmorPre: 0.02
+      ToTime: 0.2  # shotguns have impact shock
+      ToEnergy: 0.2  # impact shock
+      ToStun: 0.4  # impact shock
+      ResistType: 2  # fire typing
+      FireThreshold: 5 #incendiary, higher treshold than other fire weapons, but capable
+      SmokeThreshold: 10000 #not smoke rounds
       FireBlastCalc: false
       IgnoreSelfDestruct: false
       IgnoreDirection: false
-      FixRadius: 1
+      #FixRadius: 1
+    #explosiveDamageRange: 1 #single tile, not a grenade
+    #powerForAnimation: 1
 
   - type: STR_AC_AP_ADEPTAS_AMMO  # HEAVYBOLTER adeptas ap belt                 12010                           ToStun
     refNode: *STR_BOLTER_AMMO
@@ -931,7 +942,7 @@ items:
     hitAnimation: 1170
     power: 80
     damageAlter:  # DA BLIGHT
-      RandomType: 7 # 50-200%
+      RandomType: 2 # was 50-200%; why? This munition is already very strong
       ToArmorPre: 0.4  # corrodes/melts away
       ToHealth: 0.6
       ToTime: 0.2

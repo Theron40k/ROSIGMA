@@ -2,10 +2,37 @@ extended:
   tagsFile: Ruleset/tags_ROSIGMA.rul
 
 items:
+  # refNode for common dependency on Chaos Weapon use/buy requirement
+  - &CHAOS_WEAPON
+    type: STR_AUTOGUN_CHAOS
+    requires:
+      - STR_CHAOS_WEAPON_USE_DEP
+    requiresBuy:
+      - STR_CORRUPTED_REQUISITIONS
+
+  # refNode for common dependency on Chaos Heavy Weapon use/buy requirement
+  - &CHAOS_LIGHT_BOLTERS
+    type: STR_LIGHT_BOLTER_CHAOS  # Phobos
+    requires:
+      - STR_CHAOS_WEAPON_USE_DEP
+    requiresBuy:
+      - STR_LIGHT_BOLTERS
+      - STR_CORRUPTED_REQUISITIONS
+
+  # refNode for common dependency on Chaos Heavy Weapon use/buy requirement
+  - &CHAOS_ASTARTES_BOLTERS
+    type: STR_BOLTERC
+    requires:
+      - STR_CHAOS_WEAPON_USE_DEP
+    requiresBuy:
+      - STR_MARINE_BOLTERS
+      - STR_CORRUPTED_REQUISITIONS
+
+
+
   - type: STR_SCARE_GRENADE  # Scare Gas Grenade, pink gas
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.1
     costSell: 250
     weight: 3
@@ -33,9 +60,9 @@ items:
 
   - type: STR_ALIEN_GRENADE                # 4010
     categories: [STR_CAT_GRENADES, STR_CAT_TACTICAL]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.1
+    costBuy: 2000
     costSell: 1450
     weight: 5
     power: 90
@@ -57,13 +84,70 @@ items:
     listOrder: 15300
     throwRange: 15
 
+## Light Bolters
+  - type: STR_LIGHT_BOLTERSLAAN
+    refNode: *CHAOS_LIGHT_BOLTERS
+    costBuy: 5500
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS  # Favor of Slaanesh
+  - type: STR_LIGHT_BOLTER_AMMO_SLAAN
+    refNode: *CHAOS_LIGHT_BOLTERS
+    costBuy: 400
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_BOLTPISTOL_SLAAN
+    refNode: *CHAOS_LIGHT_BOLTERS
+    costBuy: 4500
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS  # Favor of Slaanesh
+  - type: STR_BOLTPISTOL_CLIP_S
+    costBuy: 300
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_TZEENTCH_BOLTER_LIGHT_SOLO
+    refNode: *CHAOS_LIGHT_BOLTERS
+    costBuy: 5500
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS  # Favor of Tzeentch
+  - type: STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+    refNode: *CHAOS_LIGHT_BOLTERS
+    costBuy: 6500
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS
+  - type: STR_TZ_LIGHT_BOLTER_AMMO_R
+    refNode: *CHAOS_LIGHT_BOLTERS
+    costBuy: 550
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS
+  - type: STR_BOLTPISTOL_TZEENTCH
+    refNode: *CHAOS_LIGHT_BOLTERS
+    costBuy: 6000
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS
+
   - type: STR_BOLTER_HERETIC_DEAZ
     categories: [STR_CAT_BOLTER]
-    requires:
-      - STR_CORRUPTED_REQUISITIONS
+    refNode: *CHAOS_LIGHT_BOLTERS
     requiresBuyBaseFunc: [TRADE]
     size: 0.2
     dropoff: 5
+    costBuy: 5000
     costSell: 1000
     bigSprite: 2074
     floorSprite: {mod: 40k, index: 1}
@@ -81,6 +165,7 @@ items:
     accuracyAuto: 50
     tuSnap: 26
     tuAuto: 35
+    aimRange: 0
     snapRange: 16
     autoRange: 12
     confSnap:  # Double Shot
@@ -123,10 +208,10 @@ items:
 
   - type: STR_LIGHT_BOLTER_CHAOS  # Chaos Phobos Light Bolter
     categories: [STR_CAT_BOLTER]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_LIGHT_BOLTERS
     size: 0.2
     dropoff: 5
+    costBuy: 3500
     costSell: 1000
     bigSprite: 2961  # LBOLTER phobos
     floorSprite: {mod: 40k, index: 1}
@@ -146,6 +231,7 @@ items:
     tuAuto: 33
     snapRange: 16
     autoRange: 11
+    aimRange: 0
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -161,18 +247,17 @@ items:
 
   - type: STR_LASER_RIFLEC  # LASGUN CHAOS               10920
     categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
+    costBuy: 3500
     compatibleAmmo:
       - STR_LASGUN_CLIP
       - STR_LASGUN_CLIP_HOTSHOT_CHAOS
 
   - type: STR_LONGLAS_CHAOS
     categories: [STR_CAT_LASGUN, STR_CAT_SNIPER, STR_CAT_CHAOS]
+    refNode: *CHAOS_WEAPON
     size: 0.2
     dropoff: 2  # this is a proper sniper weapon
-    requires:
-      - STR_ALIENS_ONLY
     costSell: 500
     weight: 8
     bigSprite: 2815
@@ -209,8 +294,8 @@ items:
   - type: STR_LASGUN_CLIP_HOTSHOT_CHAOS
     categories: [STR_CAT_LASGUN, STR_CAT_SNIPER]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
+    costBuy: 4000
     costSell: 200
     weight: 1
     bigSprite: 3205
@@ -228,6 +313,7 @@ items:
 
   - type: STR_CHAOS_RIPPERGUN
     categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT]
+    refNode: *CHAOS_WEAPON
     size: 0.4
     dropoff: 5
     costSell: 1000
@@ -277,10 +363,10 @@ items:
 
   - type: STR_HEAVY_STUBBER_CHAOS
     categories: [STR_CAT_AUTO]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.3
     dropoff: 4
+    costBuy: 9000
     costSell: 1000
     compatibleAmmo:
       - STR_HEAVY_STUBBER_CLIP
@@ -296,6 +382,12 @@ items:
     sprayWaypoints: 2
     kneelBonus: 150  # heavy weapon
     listOrder: 10762
+
+  - type: STR_GRENADE_LAUNCHER_CHAOS
+    refNode: *CHAOS_WEAPON
+    requiresBuy: !add
+      - STR_HEAVY_WEAPONS_IG
+    costBuy: 10000
 
   - type: STR_CLASCAN  # CHAOS LASCANON
     size: 0.3
@@ -335,40 +427,13 @@ items:
         set subvoxel_drift 0;
         return;
 
-  - type: STR_CHAOS_LASCANNON_HANDHELD
+  - type: STR_CHAOS_LASCANNON_HANDHELD  # chaos light lascannon
+    battleType: 1
     categories: [STR_CAT_LASGUN]
-    requires:
-      - STR_ALIENS_ONLY
-    weight: 50
-    size: 0.4
-    costSell: 5000
+    refNode: *CHAOS_WEAPON
     bigSprite: 2805
     floorSprite: 2809
     handSprite: 2730
-    dropoff: 4  # handheld heavy weapon
-    snapRange: 25
-    aimRange: 30
-    battleType: 1
-    clipSize: -1
-    power: 150
-    damageType: 4
-    damageAlter:  # DA LAS MELTA
-      RandomType: 6
-      ToArmorPre: 0.5
-      ToHealth: 0.8
-      ToArmor: 0.2
-      ToStun: 0.0
-    accuracySnap: 60  # 20
-    accuracyAimed: 80  # 20
-    kneelBonus: 130
-    tuSnap: 40
-    tuAimed: 70
-    twoHanded: true
-    blockBothHands: true
-    invWidth: 2
-    invHeight: 3
-    bulletSpeed: 100
-    armor: 100
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3984
@@ -383,11 +448,69 @@ items:
         set particle_lifetime 1;
         set subvoxel_drift 0;
         return;
+    size: 0.4
+    #costBuy: #no only manufacturing
+    costSell: 5000
+    weight: 40  # same as lascannon
+    dropoff: 3  # heavy weapon platform, but less heavy than lascannoin
+    autoRange: 0
+    snapRange: 20  # more mobile, but less ranged
+    aimRange: 24 # more mobile, but less ranged
+    accuracyAuto: 0
+    accuracySnap: 60  # slightly more accurate by default since AI cannot kneel
+    accuracyAimed: 80
+    kneelBonus: 120  # heavy weapon, but lighter than usual
+    tuAuto: 0
+    tuSnap: 40  # mobile
+    tuAimed: 70 # slighly less than lascannon
+    twoHanded: true
+    blockBothHands: true
+    #minRange: 5 #since will be in player hands, minrange no more
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50 # same as lascannon
+    armor: 60 # twice as durable than normal lascannons, was 200 before
+    compatibleAmmo:
+      - STR_LASCANNON_CHAOS_CELL
+
+  - type: STR_LASCANNON_CHAOS_CELL
+    #refNode: *LASCANNON_MAGAZINE_TEMPLATE
+    size: 0.1
+    weight: 5 # a bit heavier
+    power: 150
+    damageAlter:
+      RandomType: 6 # same as lascannon
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      ToArmor: 0.2
+      ToStun: 0.0
+    costSell: 1000
+    bigSprite: {mod: 40k, index: 1038}
+    floorSprite: {mod: 40k, index: 1038}
+    handSprite: {mod: 40k, index: 1304}
+    bulletSprite: {mod: 40k, index: 22}
+    powerRangeThreshold: 15
+    powerRangeReduction: 7  # lowers power by 7 by each tile beyond 15, at range 20 it has lost 35 power. bit more damage loss than standard lascannon
+    damageType: 4
+
+    invWidth: 2
+    invHeight: 1
+    battleType: 2
+    armor: 70
+    clipSize: 4 # weaker hit, more ammo
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 6  # thick laser
+    vaporProbabilitySurface: 100
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
 
   - type: STR_CHAOS_LASCANNON_BIPOD
     categories: [STR_CAT_LASGUN]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     weight: 50
     size: 0.4
     costSell: 5000
@@ -592,8 +715,7 @@ items:
 
   - type: STR_CSERVITOR_MILAUNCHER  #                12120
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.4
     dropoff: 5
     costSell: 3000
@@ -620,8 +742,7 @@ items:
     listOrder: 12120
   - type: STR_CSERVITOR_MIHE_AMMO  #                          12130
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
     costSell: 300
     weight: 5
@@ -644,8 +765,7 @@ items:
     listOrder: 12130
   - type: STR_CSERVITOR_MIKRAK_AMMO  #                          12130; krak munition
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
     costSell: 300
     weight: 5
@@ -670,8 +790,7 @@ items:
     listOrder: 12130
   - type: STR_CSERVITOR_MIMELTA_AMMO  #                          12130
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
     costSell: 300
     weight: 5
@@ -699,8 +818,7 @@ items:
   - type: STR_CSERVITOR_HB  # Chaos servitor heavybolter               12000
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
     size: 0.3
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     dropoff: 4
     costSell: 5000
     weight: 40
@@ -744,8 +862,7 @@ items:
   - type: STR_CSERVITOR_HB_AMMO  # BATTLE SERVITOR HEAVYBOLTER AMMO                 12010                           ToStun
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 800
     weight: 20
     bigSprite: 2801
@@ -775,8 +892,7 @@ items:
   - type: STR_CSERVITOR_HBAP_AMMO  # HEAVYBOLTER                 12010                           ToStun
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 800
     weight: 20
     bigSprite: 2801
@@ -806,8 +922,7 @@ items:
   - type: STR_CSERVITOR_HBHEAT_AMMO  # HEAVYBOLTER                 12010                           ToStun
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 800
     weight: 20
     bigSprite: 2801
@@ -992,11 +1107,12 @@ items:
 
   - type: STR_BOLTPISTOL_CHAOS  # CHAOS BOLTER PISTOL  10140
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    refNode: *CHAOS_ASTARTES_BOLTERS
     size: 0.2
     dropoff: 5
     requires:
       - STR_CORRUPTED_REQUISITIONS
-    costBuy: 0
+    costBuy: 3500
     costSell: 1000
     weight: 15
     compatibleAmmo:
@@ -1022,10 +1138,10 @@ items:
 
   - type: STR_BOLTERC  # BOLTER CHAOS   10340
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_ASTARTES_BOLTERS
     size: 0.3
     dropoff: 4
+    costBuy: 15000
     costSell: 2750
     weight: 20
     compatibleAmmo:
@@ -1051,10 +1167,48 @@ items:
     attraction: 1
     listOrder: 10340
 
+  - type: STR_BOLTERSLAAN
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    costBuy: 25000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS  # Favor of Slaanesh
+  - type: STR_LARGE_KOMBIBOLTERSLAAN
+    requires:
+      - STR_SLAANESH_OPTIONS
+  - type: STR_BOLTERSLAAN_SCOPED
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    costBuy: 30000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_RIFLE_CLIP_S
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    costBuy: 600
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_RIFLE_CLIP_R
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    costBuy: 500
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS
+
   - type: STR_AUTOGUN_CHAOS_NURGLE
     categories: [STR_CAT_AUTO, STR_CAT_CHAOS, STR_CAT_NURGLE]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS  # Favor of Nurgle
     size: 0.2
     dropoff: 5
+    costBuy: 4500
     costSell: 1000
     weight: 9
     bigSprite: 2626  # nurgle autogun
@@ -1160,9 +1314,14 @@ items:
 
   - type: STR_BOLTPISTOL_NURGLE  # NURGLE BOLTER PISTOL  10140
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.2
     dropoff: 5
-    costBuy: 0
+    costBuy: 6000
     costSell: 1000
     weight: 15
     bigSprite: 2610
@@ -1196,7 +1355,13 @@ items:
 
   - type: STR_PISTOL_CLIP_BLIGHT  #              10210                    ToStun
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.1
+    costBuy: 600
     costSell: 250
     weight: 2
     bigSprite: 2611
@@ -1229,8 +1394,14 @@ items:
 
   - type: STR_BOLTERN_LIGHT  # LIGHT BOLTER NURGLE CHAOS
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
+    refNode: *CHAOS_LIGHT_BOLTERS
+    requires: !add
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS  # Favor of Nurgle
     size: 0.2
     dropoff: 5
+    costBuy: 5500
     costSell: 2000
     bigSprite: 2604
     floorSprite: {mod: 40k, index: 209}
@@ -1248,6 +1419,7 @@ items:
     accuracyAuto: 60  # accurate but slow
     tuSnap: 22
     tuAuto: 35  # slower than other light bolters
+    aimRange: 0 # no aimed shot
     snapRange: 16  # long range, no bayonet
     autoRange: 12  # long range, no bayonet
     battleType: 1
@@ -1267,6 +1439,9 @@ items:
 
   - type: STR_BOLTERN_LIGHT_GRENADELAUNCHER  # LIGHT BOLTER NURGLE CHAOS with grenade launcher
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
     size: 0.3
     dropoff: 5
     costSell: 3000
@@ -1352,6 +1527,8 @@ items:
       STR_BLIGHT_GRENADE40_PLAYER: [1]
   - type: STR_BLIGHT_GRENADE40_PLAYER
     refNode: *STR_BLIGHT_GRENADE40
+    requires:
+      - STR_NURGLE_OPTIONS
     spawnUnitFaction: 2
     ufopediaType: STR_BLIGHT_GRENADE40
 
@@ -1360,7 +1537,7 @@ items:
     categories: [STR_CAT_GRENADES, STR_CAT_NURGLE, STR_CAT_TACTICAL]
     size: 0.1
     weight: 3
-    requiresBuy:
+    requires:
       - STR_NURGLE_OPTIONS
     costSell: 250
     bigSprite: 2608  # BigOB40mmRUSTgrenade.png
@@ -1394,12 +1571,21 @@ items:
       STR_ACIDRUST_GRENADE40_PLAYER: [1]
   - type: STR_ACIDRUST_GRENADE40_PLAYER
     refNode: *STR_ACIDRUST_GRENADE40
+    requiresBuy:
+      - STR_40MM_AMMO_DEP
+      - STR_NURGLE_OPTIONS
     spawnUnitFaction: 2
     ufopediaType: STR_ACIDRUST_GRENADE40
 
   - type: STR_LIGHT_BOLTER_AMMO_NURGLE
     categories: [STR_CAT_BOLTER, STR_CAT_NURGLE]
+    refNode: *CHAOS_LIGHT_BOLTERS
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.1
+    costBuy: 300
     costSell: 100
     bigSprite: 3231
     floorSprite: {mod: 40k, index: 2}
@@ -1434,8 +1620,14 @@ items:
 
   - type: STR_BOLTERN  # BOLTER NURGLE CHAOS   10350
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.2
     dropoff: 4
+    costBuy: 25000
     costSell: 500  # rotted and disgusting; no one wants this
     weight: 20
     compatibleAmmo:
@@ -1465,8 +1657,14 @@ items:
 
   - type: STR_HEAVY_BOLTER_CHAOSNURGLE     # CHAOS NURGLE HBOLTER ROSEMOD
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR, STR_CAT_NURGLE]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS  # Favor of Nurgle
     size: 0.3
     dropoff: 4  # heavy weapon drop off
+    costBuy: 22000
     costSell: 1000  # rotted and disgusting; no one wants this
     weight: 50
     bigSprite: 2601
@@ -1509,7 +1707,13 @@ items:
 
   - type: STR_AC_N_AMMO  # HEAVYBOLTER Nurgle Ammo                 12030
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR, STR_CAT_NURGLE]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_PATH
     size: 0.1
+    costBuy: 2000
     costSell: 100  # rotted and disgusting; no one wants this
     weight: 20
     bigSprite: 2600
@@ -1547,9 +1751,15 @@ items:
 
   - type: STR_NURGLE_ROCKET_LAUNCHER  #                12120
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.4
     dropoff: 5
     armor: 100
+    costBuy: 120000
     costSell: 10000
     bigSprite: 2602
     floorSprite: 2601
@@ -1580,6 +1790,9 @@ items:
 
   - type: STR_PLAGUE_SPEWER
     categories: [STR_CAT_NURGLE, STR_CAT_TACTICAL, STR_CAT_CHAOS]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
     size: 0.2
     # costBuy: 8000
     costSell: 6500
@@ -1679,14 +1892,22 @@ items:
       STR_PLAGUE_SPEWER_TANK_PLAYER: [1]
   - type: STR_PLAGUE_SPEWER_TANK_PLAYER
     refNode: *STR_PLAGUE_SPEWER_TANK
+    requires:
+      - STR_NURGLE_OPTIONS
     zombieUnitFaction: 2
     ufopediaType: STR_PLAGUE_SPEWER_TANK
     clipSize: 25
 
   - type: STR_BOLTERR  # BOLTER RUBRIC CHAOS   10360
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_TZEENTCH, STR_CAT_CHAOS]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS  # Favor of Tzeentch
     size: 0.3
     dropoff: 4
+    costBuy: 25000
     costSell: 2500
     weight: 20
     compatibleAmmo:
@@ -1719,7 +1940,13 @@ items:
 
   - type: STR_RIFLE_CLIP_N  #          10450                      ToStun
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_NURGLE]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.1
+    costBuy: 500
     costSell: 50  # rotted and disgusting; no one wants this
     hitAnimation: 2010  # nurgle green small explosion
     weight: 3
@@ -1750,6 +1977,7 @@ items:
 
   - type: STR_CPOWER_SWORD  #         3009           DA POWER
     categories: [STR_CAT_MELEE, STR_CAT_TERMINATOR]
+    refNode: *CHAOS_WEAPON
     size: 0.2
     costSell: 15000
     weight: 20
@@ -1787,6 +2015,7 @@ items:
 
   - type: STR_CPOWER_AXE  #         3009           DA POWER
     categories: [STR_CAT_MELEE, STR_CAT_TERMINATOR]
+    refNode: *CHAOS_WEAPON
     size: 0.2
     costSell: 20000
     weight: 30
@@ -1823,6 +2052,7 @@ items:
     listOrder: 15200
   - type: STR_CPOWER_DAGGER  #         3010          DA POWER
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    refNode: *CHAOS_WEAPON
     size: 0.1
     costSell: 5000
     weight: 10
@@ -1903,32 +2133,10 @@ items:
     tags:
       DAMAGE_RESIST_PENETRATION_PERCENT: 99
 
-  - type: STR_AXE  #                 3011           DA CHAIN
-    power: 66
-    armor: 100
-    damageAlter:  # DA CHAIN
-      RandomType: 1
-      ToArmorPre: 0.3
-      ToHealth: 0.9
-      ToWound: 0.3
-      ToMorale: 0.4  # demoralizing and painful
-      ToEnergy: 0.5
-      RandomWound: false
-    strengthApplied: false
-    damageBonus:
-      strength: 0.3
-      melee: 0.2
-    meleeMultiplier:
-      melee: 1.0
-      flatHundred: 0.0
-    costMelee:
-      time: 15
-      energy: 2
-    flatMelee: true
-
   - &STR_KHORNE_AXE_TEMPLATE
     type: STR_KHORNE_CHAIN_AXE #                  Unchanged from 40k chainaxe #a more finely crafted chainaxe
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_KHORNE]
+    refNode: *CHAOS_WEAPON
     requires:
       - STR_KHORNE_OPTIONS
     size: 0.2
@@ -1997,6 +2205,8 @@ items:
   - &STR_KHORNE_GREAT_AXE_TEMPLATE
     type: STR_KHORNE_GREAT_CHAIN_AXE               #           Need balancing
     refNode: *STR_KHORNE_AXE_TEMPLATE
+    requires:
+      - STR_KHORNE_OPTIONS
     costSell: 4888
     weight: 25
     bigSprite: 3090
@@ -2034,8 +2244,7 @@ items:
 
   - type: STR_GORECHILD_AXE  # Khaaaarrrrnnn
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 250000
     size: 0.2
     weight: 20
@@ -2187,6 +2396,7 @@ items:
     recover: false
 
   - type: STR_CHAOS_CLAWS2  #                       DA POWER
+    ufopediaType: STR_CHAOS_CLAWS
     weight: 10
     power: 55
     damageType: 5  # these are power weapons
@@ -2305,8 +2515,7 @@ items:
 
   - type: STR_CASSC_DREADNOUGHT                                                             # 13210
     categories: [STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.6
     dropoff: 3  # superior stabilization due to Dreadnought mount
     costSell: 20000
@@ -2349,8 +2558,7 @@ items:
 
   - type: STR_REAPER_AUTOCANNON_DREADNOUGHT                                                             # 13210
     categories: [STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.6
     dropoff: 3  # superior stabilization due to Dreadnought mount
     costSell: 20000
@@ -2393,8 +2601,7 @@ items:
 
   - type: STR_HEAVY_FLAMER_DREADNOUGHT
     categories: [STR_CAT_DEVASTATOR, STR_CAT_FLAMER]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 1.0
     dropoff: 4
     costSell: 35000
@@ -2586,10 +2793,14 @@ items:
 
   - type: STR_IWCOMBIBOLTER
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requiresBuy: !add
+      - STR_CONTACT_IRON_GUARD
+      - STR_CONTACT_CHAOS_MARINES
+    requiresBuyBaseFunc: [TRADE]
     size: 0.3
     dropoff: 4
+    costBuy: 80000
     costSell: 4000
     weight: 30
     bigSprite: 2881
@@ -2626,8 +2837,7 @@ items:
   - type: STR_IWCOMBIMELTA
     categories: [STR_CAT_BOLTER, STR_CAT_MELTA]
     size: 0.3
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 15000
     weight: 30
     bigSprite: 2882
@@ -2670,16 +2880,14 @@ items:
   - type: STR_CHB                                                               # 13110 no amied
     accuracySnap: 65
     costSell: 15000
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
 
 
   - type: STR_SHOTGUN_CHAOS  #                        10605
     categories: [STR_CAT_SHOTGUN, STR_CAT_CHAOS]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
-    # costBuy: 10000
+    costBuy: 10000
     costSell: 2000
     weight: 7
     compatibleAmmo:
@@ -2693,13 +2901,13 @@ items:
     invWidth: 1
     invHeight: 3
     listOrder: 10605
+    ufopediaType: ""
 
   - type: STR_FLAMETHROWER_CHAOS  #                     10505
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL, STR_CAT_CHAOS]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
-    # costBuy: 8000
+    costBuy: 8000
     costSell: 3000
     weight: 10
     compatibleAmmo:
@@ -2721,7 +2929,13 @@ items:
 
   - type: STR_FLAMETHROWERTZ  #                        10510   TZEENTCH
     categories: [STR_CAT_FLAMER, STR_CAT_TACTICAL, STR_CAT_CHAOS, STR_CAT_TZEENTCH]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS
     size: 0.2
+    costBuy: 10000
     costSell: 4000
     weight: 10
     compatibleAmmo:
@@ -2755,8 +2969,14 @@ items:
 
   - type: STR_AUTO_CANNON_CHAOSRETRIBUTOR #Heavy Bolter                     # CHAOS Retributor Pattern ROSEMOD
     categories: [STR_CAT_BOLTER]
+    refNode: *CHAOS_ASTARTES_BOLTERS
+    requiresBuy: !add
+      - STR_CONTACT_CHAOS_SISTERS  # Heretic Sisters Exclusive
+    requires: !add
+      - STR_CONTACT_CHAOS_SISTERS  # chaos sisters are still not sharing with WB
     size: 0.3
     dropoff: 4  # heavy weapon
+    costBuy: 20000
     costSell: 5000
     weight: 33
     bigSprite: 3030
@@ -2798,10 +3018,11 @@ items:
 
   - type: STR_SNIPER_CHAOS  # SNIPER                    11905                         AIMED
     categories: [STR_CAT_SNIPER, STR_CAT_CHAOS]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
+    requiresBuy: !add
+      - STR_UFO_CONSTRUCTION
     size: 0.3
-    # costBuy: 18400
+    costBuy: 18400
     costSell: 5000
     weight: 30
     compatibleAmmo:
@@ -2820,13 +3041,14 @@ items:
       firing: [0.5, 0.005]
     tags:
       ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 50  # Sniper rifle bonus to aimed shots; power of precision
+    ufopediaType: ""
 
   - type: STR_CHAOS_ROCKET_LAUNCHER  #                 12110
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR, STR_CAT_CHAOS]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.4
     dropoff: 5
+    costBuy: 100000
     costSell: 7000
     weight: 40
     fireSound: {mod: 40k, index: 52}
@@ -2849,8 +3071,7 @@ items:
     listOrder: 12110
   - type: AUX_NURGLE_ROCKET_LAUNCHER  #                12120
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.4
     dropoff: 5
     costSell: 3000
@@ -2924,13 +3145,14 @@ items:
       INFECTION_TYPE: 1  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
   - type: STR_BLIGHT_ROCKET_PLAYER
     refNode: *BLIGHT_ROCKET
+    requires:
+      - STR_NURGLE_OPTIONS
     spawnUnitFaction: 2
     ufopediaType: STR_BLIGHT_ROCKET
 
   - type: AUX_LASCAN_CHAOS  # LASCANON                         2017  amied
     categories: [STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.4
     dropoff: 6
     costSell: 61000
@@ -2995,12 +3217,12 @@ items:
     invWidth: 2
     invHeight: 3
     listOrder: 11101
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
 
 
   - type: STR_CHAOS_MELTAGUN  # MELTAGUN                 2019
     categories: [STR_CAT_MELTA, STR_CAT_TACTICAL]
+    refNode: *CHAOS_WEAPON
     size: 0.3
     dropoff: 7
     costSell: 10000
@@ -3021,6 +3243,9 @@ items:
 
   - type: STR_BLASTER_LAUNCHER  # MULTIMELTA            2021
     categories: [STR_CAT_MELTA, STR_CAT_DEVASTATOR]
+    refNode: *CHAOS_WEAPON
+    requires: !add
+      - STR_FUSION_MISSILE
     size: 0.3
     dropoff: 5
     costSell: 20000
@@ -3040,6 +3265,7 @@ items:
 
   - type: STR_SMALL_LAUNCHER  # CHAOS GRAVGUN                          11810
     categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
+    refNode: *CHAOS_WEAPON
     size: 0.2
     dropoff: 5
     costSell: 12000
@@ -3064,8 +3290,7 @@ items:
   - type: STR_GRAVGUN_AOE_CHAOS  # GRAVGUN AOE CHAOS                  11800
     dropoff: 5
     categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
     costSell: 18000
     weight: 30
@@ -3091,6 +3316,9 @@ items:
     listOrder: 11800
 
   - type: STR_NURGLE_GRAVPISTOL  # GRAVPISTOL                          11810
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
     dropoff: 6
     categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL, STR_CAT_NURGLE]
     size: 0.2
@@ -3122,6 +3350,9 @@ items:
 
   - type: STR_NURGLE_KOMBIBOLTER_GRAV  ## Nurge Kombi-Grav
     categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL, STR_CAT_GRAVGUN, STR_CAT_NURGLE]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
     size: 0.3
     dropoff: 5
     costSell: 5000  # only valuable because the technology is esoteric
@@ -3165,6 +3396,8 @@ items:
 
   - type: STR_GRAVGUN_NURGLE  # GRAVGUN BIG SHOTGUN NURGLE                 11800
     categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
+    requires:
+      - STR_NURGLE_OPTIONS
     size: 0.2
     dropoff: 6  # shotgun/scattershot
     costSell: 20000
@@ -3199,6 +3432,9 @@ items:
 
   - type: STR_GRAVCANNON_NURGLE  # GRAVCANNON NURGLE                 11800
     categories: [STR_CAT_GRAVGUN, STR_CAT_DEVASTATOR]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
     size: 0.3
     dropoff: 4  # heavy weapon
     costSell: 30000
@@ -3232,7 +3468,13 @@ items:
 
   - type: STR_PLAGUE_KNIFE  # Plague Knife
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.1
+    costBuy: 1250
     costSell: 1000
     weight: 8
     bigSprite: 2615
@@ -3398,8 +3640,7 @@ items:
   - type: STR_CSERVITOR_HPLASMA  # Chaos servitor heavy plasma              12000
     categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR, STR_CAT_TZEENTCH]
     size: 0.3
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     dropoff: 4
     costSell: 5000
     weight: 40
@@ -3451,8 +3692,7 @@ items:
   - type: STR_CSERVITOR_PLASMA_SPRAY_CELL  # HEAVYBOLTER                 12010                           ToStun
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 800
     weight: 10
     bigSprite: 2801
@@ -3484,8 +3724,7 @@ items:
   - type: STR_CSERVITOR_PLASMA_CELL  # PLASMA              12010                           ToStun
     categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 800
     weight: 10
     bigSprite: 2801
@@ -3518,8 +3757,7 @@ items:
   - type: STR_CSERVITOR_HPLASMA_CELL  # HEAVY PLASMA                12010                           ToStun
     categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 800
     weight: 10
     bigSprite: 2801
@@ -3555,8 +3793,7 @@ items:
   - type: STR_VALKIA_SHIELD  ## Equip to the right hand to reduce damage
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_KHORNE]
     size: 0.2
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     scripts:
       selectItemSprite: |
 
@@ -3635,6 +3872,9 @@ items:
       INTIMIDATION_MORALE_DAMAGE_MULTIPLIER: 100
 
   - type: STR_HEAVY_PLASMA  # CHAOS
+    refNode: *CHAOS_WEAPON
+    requires: !add
+      - STR_HEAVY_PLASMA_DEP1
     costSell: 45000
     accuracySnap: 70
     tuSnap: 30
@@ -3642,6 +3882,7 @@ items:
     snapRange: 18  # *** PLASMA rebalance
 
   - type: STR_BARRAGE_PLASMA  # CHAOS
+    refNode: *CHAOS_WEAPON
     dropoff: 6
     snapRange: 16  # *** PLASMA rebalance
     autoRange: 12
@@ -3653,6 +3894,7 @@ items:
     # tuAimed: 60
 
   - type: STR_PLASMA_SPRAYGUN_CHAOS  # CHAOS
+    refNode: *CHAOS_WEAPON
     dropoff: 9
     accuracySnap: 50
     tuSnap: 30
@@ -3698,8 +3940,7 @@ items:
 
   - type: STR_BLIGHT_HAULER_GRAVCANNON  # High powered Blight Hauler Grav Gun
     categories: [STR_CAT_GRAVGUN, STR_CAT_DEVASTATOR]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     dropoff: 3  #mounted heavy weapon
     weight: 5  # heavier
     bigSprite: 2616
@@ -3748,8 +3989,7 @@ items:
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR, STR_CAT_NURGLE]
     size: 0.3
     dropoff: 3 #mounted heavy weapon
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     weight: 1
     bigSprite: 2601
     bulletSprite: {mod: 40k, index: 6}
@@ -3851,8 +4091,7 @@ items:
 
   - type: STR_BLIGHT_HAULER_MORTAR #long range and indirect but somewhat inaccurate firepower
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR, STR_CAT_NURGLE]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     dropoff: 4
     size: 0.1
     weight: 1
@@ -3912,8 +4151,7 @@ items:
 
   - type: STR_BLIGHT_HAULER_MULTI_MISSILE_LAUNCHER #low powered but numerous missiles
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR, STR_CAT_NURGLE]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     dropoff: 4
     size: 0.1
     weight: 1
@@ -3972,8 +4210,7 @@ items:
 
   - type: STR_BLIGHT_HAULER_MISSILE_LAUNCHER
     categories: [STR_CAT_ROCKETL, STR_CAT_DEVASTATOR, STR_CAT_NURGLE]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     dropoff: 3
     size: 0.1
     weight: 1
@@ -4027,6 +4264,8 @@ items:
       INFECTION_TYPE: 1  # the type of infection. Thus far: 1: Nurgle, 2: GSC, 3: Slaanesh 4: Tzeentch
 
   - type: STR_STUB_RIFLE_CHAOS
+    refNode: *CHAOS_WEAPON
+    costBuy: 1000
     compatibleAmmo:
       - STR_STUB_GUN_AMMO
       - STR_STUB_GUN_AMMO_HP
@@ -4089,8 +4328,7 @@ items:
 
   - type: STR_BLIGHT_HAULER_PLAGUE_SPEWER
     categories: [STR_CAT_TACTICAL, STR_CAT_CHAOS, STR_CAT_NURGLE]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     bigSprite: 2627
     floorSprite: 2622
     handSprite: 2620
@@ -4154,8 +4392,7 @@ items:
   - type: STR_CHAOS_SENTINEL_HB  # Chaos sentinel heavybolter               12000
     categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
     size: 0.1
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     dropoff: 4
     weight: 40
     bigSprite: 2800
@@ -4407,7 +4644,13 @@ items:
 
   - type: STR_NURGLE_GRENADE_DRUM  # debuff rather than damage
     categories: [STR_CAT_ROCKETL, STR_CAT_NURGLE, STR_CAT_GRENADES]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS  # Favor of Nurgle
     size: 0.1
+    costBuy: 12000
     costSell: 200
     weight: 4
     bigSprite: 1037
@@ -4451,8 +4694,7 @@ items:
     categories: [STR_CAT_ROCKETL]
     size: 0.4
     dropoff: 4  # high drop off, inaccurate
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costSell: 5000
     weight: 40  # like heavy bolter
     bigSprite: 1038
@@ -4547,9 +4789,14 @@ items:
 
   - type: STR_AUTOPISTOL_BLIGHT
     categories: [STR_CAT_AUTO, STR_CAT_NURGLE]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.1
     dropoff: 5
-    # costBuy: 1500
+    costBuy: 3000
     costSell: 500
     weight: 5
     bigSprite: 1040
@@ -4585,7 +4832,13 @@ items:
 
   - type: STR_AUTOPISTOL_CLIP_BLIGHT
     categories: [STR_CAT_AUTO, STR_CAT_CHAOS, STR_CAT_NURGLE]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.1
+    costBuy: 400
     costSell: 75
     weight: 3
     bigSprite: 1041
@@ -4615,8 +4868,14 @@ items:
       INFECTION_TYPE: 1
 
   - type: STR_AUTOGUN_CLIP_BLIGHT
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     categories: [STR_CAT_AUTO, STR_CAT_CHAOS, STR_CAT_NURGLE]
     size: 0.1
+    costBuy: 400
     costSell: 100
     weight: 4
     bigSprite: 1042
@@ -4647,7 +4906,13 @@ items:
 
   - type: STR_BLIGHT_GRENADE                # 4010
     categories: [STR_CAT_TACTICAL, STR_CAT_NURGLE, STR_CAT_GRENADES]
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_NURGLE_OPTIONS
+    requiresBuy: !add
+      - STR_NURGLE_OPTIONS
     size: 0.1
+    costBuy: 3000
     costSell: 100
     bigSprite: 1039
     floorSprite: 952
@@ -4701,8 +4966,7 @@ items:
   - &STR_KHORNE_DREADNOUGHT_CHAIN_FIST_TEMPLATE
     type: STR_KHORNE_DREADNOUGHT_CHAIN_FIST_L  # Khorne Dreadnought Chain fist
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_KHORNE]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
     weight: 30
     bigSprite: 2971
@@ -4758,8 +5022,7 @@ items:
     refNode: *STR_KHORNE_DREADNOUGHT_CHAIN_FIST_TEMPLATE
 
   - type: STR_CHAOS_CROZIUS
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     costAimed:
       time: 40
       energy: 40
@@ -4811,8 +5074,7 @@ items:
 
   - &STR_WORDBEARER_CROZIUS_TEMPLATE
     type: STR_WORDBEARER_CHAOS_CROZIUS #Focused on debuffs rather than damage
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
     costSell: 6500
     weight: 5
@@ -4943,7 +5205,7 @@ items:
     refNode: *STR_WORDBEARER_SCEPTRE_TEMPLATE
     bigSprite: 3086
     floorSprite: 3088
-    handSprite: 3560
+    handSprite: 3600
     spawnUnit: STR_DAEMON_PORTAL_LESSER
     spawnUnitFaction: -1
     spawnUnitChance: 100
@@ -4974,6 +5236,7 @@ items:
       ITEM_DOESNT_HURT_USER: 1 #the power of the Crozius knows its own
 
   - type: STR_CHAOS_GRAVPISTOL
+    refNode: *CHAOS_WEAPON
     dropoff: 6
     categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
     size: 0.1
@@ -5003,6 +5266,7 @@ items:
       REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
   - type: STR_CHAOS_MC_GRAVPISTOL                               #Mastercrafted
+    refNode: *CHAOS_WEAPON
     dropoff: 5
     categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
     size: 0.1
@@ -5036,9 +5300,9 @@ items:
 
   - type: STR_AXE #                 from 40k files; a brutal version of the chainaxe
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
+    costBuy: 4000
     costSell: 2050
     weight: 15
     power: 100 #was 90
@@ -5048,6 +5312,8 @@ items:
       RandomType: 2 #TFTD [50% - 150%]
       ToWound: 0.3
       ToEnergy: 0.3 #was 0.5
+      ToMorale: 0.4  # demoralizing and painful
+      RandomWound: false
       IgnoreSelfDestruct: false # default true for HE, fire, smoke, stun, mel
     damageType: 7
     accuracyMelee: 90 #was 110
@@ -5057,36 +5323,45 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 12
+    armor: 200
     recover: true
     skillApplied: true
     strengthApplied: false
     meleeMultiplier:
       melee: 1.0
       flatHundred: 0.0
+    damageBonus:
+      strength: 0.3
+      melee: 0.2
+    costMelee:
+      time: 15
+      energy: 2
+    flatMelee: true
     attraction: 7
     listOrder: 15000
 
-  - type: STR_CHAOS_CHAIN_AXE #                  Unchanged from 40k chainaxe #A more finely crafted chainaxe
+  - type: STR_CHAOS_CHAIN_AXE #                  Unchanged from 40k chainaxe #A scrappier chain axe for heretics
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
-    requires:
-      - STR_ALIENS_ONLY
+    refNode: *CHAOS_WEAPON
     size: 0.2
-    costSell: 2050
-    weight: 15
+    costBuy: 3000
+    costSell: 1500
+    weight: 8
     bigSprite: 3088
     floorSprite: 3037
     handSprite: 3010
     meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
     meleeHitSound: {mod: 40k, index: 709} #709 chainhit
     meleeAnimation: {mod: 40k, index: 48}
-    power: 60
-    damageAlter: #DA CHAIN
-      ToArmorPre: 0.3
+    power: 55
+    damageAlter:
+      ToArmorPre: 0.2 #was 0.3
       ToHealth: 0.9
       RandomType: 2 #TFTD [50% - 150%]
       ToWound: 0.3
-      ToEnergy: 0.5
+      ToEnergy: 0.3 #was 0.5
+      ToMorale: 0.4  # demoralizing and painful
+      RandomWound: false
       IgnoreSelfDestruct: false # default true for HE, fire, smoke, stun, mel
     damageType: 7
     accuracyMelee: 110
@@ -5096,7 +5371,7 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 12
+    armor: 100 # half of a chaos chain axe
     recover: true
     skillApplied: true
     strengthApplied: false
@@ -5104,9 +5379,268 @@ items:
       melee: 1.0
       flatHundred: 0.0
     damageBonus:
-      melee: 0.1
+      melee: 0.2
       strength: 0.3
-    attraction: 7
+    attraction: 5
     listOrder: 15000
-    tags:
-      ITEM_STRENGTH_REQUIREMENT: 35
+    # tags:
+    #   ITEM_STRENGTH_REQUIREMENT: 35
+
+
+  - type: STR_HEAVY_STUBBER_SLAAN
+    refNode: *CHAOS_WEAPON
+    costBuy: 10000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS  # Favor of Slaanesh
+  - type: STR_SLAAN_HEAVY_STUBBER_CLIP
+    refNode: *CHAOS_WEAPON
+    costBuy: 800
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_AUTOGUN_SLAANESH
+    refNode: *CHAOS_WEAPON
+    costBuy: 4000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_AUTOGUN_SLAAN_CLIP
+    refNode: *CHAOS_WEAPON
+    costBuy: 400
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_LASGUN_SLAANESH_ESCHER
+    refNode: *CHAOS_WEAPON
+    costBuy: 4000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_LASGUN_CLIP_SLAAN
+    refNode: *CHAOS_WEAPON
+    costBuy: 500
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_LASER_PISTOLCS
+    refNode: *CHAOS_WEAPON
+    costBuy: 1700
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_LASPISTOL_CLIP_SLAAN
+    refNode: *CHAOS_WEAPON
+    costBuy: 100
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_LASCARBINE_SLAAN
+    refNode: *CHAOS_WEAPON
+    costBuy: 5000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SLAAN_LASGUN
+    refNode: *CHAOS_WEAPON
+    costBuy: 10000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SLAAN_BLADE
+    refNode: *CHAOS_WEAPON
+    costBuy: 800
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SLAAN_LONGBLADE
+    refNode: *CHAOS_WEAPON
+    costBuy: 1500
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SLAAN_CHAINSWORD
+    refNode: *CHAOS_WEAPON
+    costBuy: 10000
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SONIC_GRENADE
+    refNode: *CHAOS_WEAPON
+    costBuy: 2500
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SLAANESH_ROCKET_LAUNCHER
+    refNode: *CHAOS_WEAPON
+    costBuy: 200000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SLAANESH_MISSILE_PACK
+    refNode: *CHAOS_WEAPON
+    costBuy: 50000
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SONIC_MISSILE_PACK
+    refNode: *CHAOS_WEAPON
+    costBuy: 80000
+    requiresBuy: !add
+      - STR_SLAANESH_PATH  # Slaanesh Devotion
+  - type: STR_SLAANESH_GRENADE
+    refNode: *CHAOS_WEAPON
+    costBuy: 5500
+    requires:
+      - STR_SLAANESH_OPTIONS
+    requiresBuy: !add
+      - STR_SLAANESH_PATH
+  - type: STR_TZEENTCH_LASGUN
+    refNode: *CHAOS_WEAPON
+    costBuy: 5000
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS  # Favor of Tzeentch
+  - type: STR_TZEENTCH_LASPISTOL
+    refNode: *CHAOS_WEAPON
+    costBuy: 1000
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS
+  - type: STR_LONGLAS_TZEENTCH
+    refNode: *CHAOS_WEAPON
+    costBuy: 7000
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    requiresBuy: !add
+      - STR_TZEENTCH_OPTIONS
+
+
+  ## Small Arms
+  - type: STR_SMG_STUB_GUN_CHAOS
+    refNode: *CHAOS_WEAPON
+    requiresBuy: !add
+      - STR_LASER_WEAPONS
+    costBuy: 500
+    ufopediaType: ""
+  - type: STR_PUMP_SHOTGUN_CHAOS
+    refNode: *CHAOS_WEAPON
+    costBuy: 2000
+  - type: STR_AUTOGUN_CHAOS
+    costBuy: 3500
+    ufopediaType: ""
+  - type: STR_AUTOPISTOL_CHAOS
+    refNode: *CHAOS_WEAPON
+    costBuy: 1500
+  - type: STR_STUB_GUN_CHAOS
+    refNode: *CHAOS_WEAPON
+    costBuy: 500
+    compatibleAmmo:
+      - STR_STUB_GUN_AMMO
+      - STR_STUB_GUN_AMMO_AP
+      - STR_STUB_GUN_AMMO_WOUND
+      - STR_STUB_GUN_AMMO_HP
+      - STR_STUB_GUN_AMMO_INC
+    ufopediaType: ""
+
+  - type: STR_LASER_PISTOLC
+    refNode: *CHAOS_WEAPON
+    costBuy: 1500
+
+
+  ## Autocannons
+  - type: STR_CHAOS_AUTOCANNON_HANDHELD
+    refNode: *CHAOS_WEAPON
+  - type: STR_AUTOCANNON_KALIBRAX
+    refNode: *CHAOS_WEAPON
+  - type: STR_IW_AUTOCANNON
+    refNode: *CHAOS_WEAPON
+  - type: STR_CASSC
+    refNode: *CHAOS_WEAPON
+
+  ## Assault Cannons
+  - type: STR_ASSCTZ
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_TZEENTCH_OPTIONS
+  - type: STR_ASSC_CLIP_INFERNO
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_TZEENTCH_OPTIONS
+
+  ## Plasma
+  - type: STR_PLASMA_PISTOL
+    refNode: *CHAOS_WEAPON
+  - type: STR_PLASMA_CARBINE_CHAOS
+    refNode: *CHAOS_WEAPON
+  - type: STR_PLASMA_RIFLE
+    refNode: *CHAOS_WEAPON
+  - type: STR_PLASMA_GUN_TWINCORE
+    refNode: *CHAOS_WEAPON
+  - type: STR_PLASMA_PISTOL_SLAAN
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_SLAANESH_OPTIONS
+  - type: STR_PLASMA_PISTOL_CLIP_SLAAN
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_SLAANESH_OPTIONS
+  - type: STR_PLASMA_PISTOL_TZEENTCH
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_TZEENTCH_OPTIONS
+  - type: STR_TZ_PLASMA_GUN_TWINCORE
+    refNode: *CHAOS_WEAPON
+    requires:
+      - STR_TZEENTCH_OPTIONS
+
+
+  ## Grav
+  - type: STR_GRAVPISTOL_AMMO
+    requires:
+      - STR_GRAVITON_TECH
+  - type: STR_GRAVCANNON_AMMO
+    requires:
+      - STR_NURGLE_OPTIONS
+      - STR_GRAVITON_TECH
+  - type: STR_GRAVGUN_AOE_AMMO_SHOTGUN
+    requires:
+      - STR_NURGLE_OPTIONS
+
+
+  ## Sonic
+  - type: STR_SONIC_GUN
+    requires:
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SONIC_CANON
+    requires:
+      - STR_SLAANESH_OPTIONS
+  - type: STR_SCREAMER_PISTOL
+    requires:
+      - STR_SLAANESH_OPTIONS
+  - type: STR_BLASTMASTER
+    requires:
+      - STR_SLAANESH_OPTIONS
+
+
+  ## Munitions/Specialty Ammo
+  - type: STR_FLAMETHROWER_WARPFIRE_CLIP
+    requires:
+      - STR_TZEENTCH_OPTIONS
+  - type: STR_SONICKOMBI_CHARGE
+    requires:
+      - STR_SLAANESH_OPTIONS

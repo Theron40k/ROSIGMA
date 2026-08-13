@@ -139,6 +139,9 @@ events:
       STR_STORMTROOPER_CARAPACE_ARMOR_HELLGUN: 6
     timer: 60
     timerRandom: 60
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+        STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
 
   - name: STR_BASIC_SPAWN_SANCTIONED_PSYKERS
     description: STR_BASIC_SPAWN_PSYKERS_DESC  # A pair of Sanctioned Psykers has arrived after being dispatched to aid you.
@@ -523,6 +526,10 @@ events:
     spawnedPersons: 4
     spawnedPersonType: STR_INQ_STORMTROOPER
     researchList: [STR_INQ_STORMTROOPER_CODEX_UNLOCKER]
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+        STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
+
 
   - name: STR_REWARD_INQUISITION_STORMTROOPERS
     description: STR_REWARD_INQUISITION_STORMTROOPERS_DESCRIPTION  # "The Inquisition have taken note of your great progress and activated an available fireteam of Inquisition Storm Troopers to assist you."
@@ -532,6 +539,9 @@ events:
     spawnedPersons: 4
     spawnedPersonType: STR_INQ_STORMTROOPER
     researchList: [STR_INQ_STORMTROOPER_CODEX_UNLOCKER]
+    spawnedSoldier:
+      previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
+        STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
 
   - name: STR_REINFORCEMENTS_DCA
     description: STR_REINFORCEMENTS_DCA_DESCRIPTION  # "Hearing about your work, Death Cult Assassins have sought you out and decided to assist you."

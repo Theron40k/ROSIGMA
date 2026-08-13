@@ -1,0 +1,658 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+weaponSets:  # these can be re-used for any unit
+
+  # Undivided Chaos Space Marines
+  - type: BASIC_CSM_CHAOS_BOLTER_LOADOUT
+    weapons: [STR_BOLTERC, STR_RIFLE_CLIP, STR_RIFLE_CLIP, STR_KRAK_GRENADE, STR_ALIEN_GRENADE, STR_GRENADE]
+  - type: BASIC_CSM_LIGHT_CHAOS_BOLTER_LOADOUT
+    weapons: [STR_LIGHT_BOLTER_CHAOS, STR_LIGHT_BOLTER_AMMO, STR_LIGHT_BOLTER_AMMO, STR_GRENADE, STR_GRENADE]
+  - type: BASIC_CSM_LIGHT_CHAOS_BOLTER_AP_LOADOUT
+    weapons: [STR_LIGHT_BOLTER_CHAOS, STR_LIGHT_BOLTER_AMMO_PEN, STR_LIGHT_BOLTER_AMMO_PEN, STR_KRAK_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT
+    weapons: [STR_BOLTERC, STR_RIFLE_CLIP_AP, STR_RIFLE_CLIP_AP, STR_KRAK_GRENADE, STR_ALIEN_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT
+    weapons: [STR_BOLTERC, STR_RIFLE_CLIP_EX, STR_RIFLE_CLIP_EX, STR_PHOSPHOR_GRENADE, STR_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_AP_STALKER_BOLTER_LOADOUT
+    weapons: [STR_RIFLEC, STR_RIFLE_CLIP_AP, STR_RIFLE_CLIP_AP, STR_KRAK_GRENADE, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_MELTAGUN_LOADOUT
+    weapons: [STR_CHAOS_MELTAGUN, STR_MELTA_AMMO, STR_MELTA_AMMO, STR_MELTA_AMMO, STR_MELTA_AMMO, STR_MGRENADE, STR_MGRENADE]
+  - type: BASIC_CSM_PLASMA_RIFLE_LOADOUT
+    weapons: [STR_PLASMA_RIFLE, STR_PLASMA_RIFLE_CLIP, STR_PLASMA_RIFLE_CLIP, STR_PLASMA_RIFLE_CLIP, STR_KRAK_GRENADE, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT
+    weapons: [STR_AXE, STR_BOLTPISTOL_CHAOS, STR_PISTOL_CLIP_AP, STR_PISTOL_CLIP_AP, STR_PISTOL_CLIP_AP, STR_PISTOL_CLIP_AP, STR_KRAK_GRENADE, STR_ALIEN_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_CHAOS_PLASMAPISTOL_POWERSWORD_LOADOUT
+    weapons: [STR_CPOWER_SWORD, STR_PLASMA_PISTOL, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_KRAK_GRENADE, STR_ALIEN_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_COMBIBOLTER_POWERSWORD_LOADOUT
+    weapons: [STR_CPOWER_SWORD, STR_CHB, STR_HB_CLIP, STR_HB_CLIP, STR_MGRENADE, STR_KRAK_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_HANDHELD_LASCANNON_LOADOUT
+    weapons: [STR_CHAOS_LASCANNON_HANDHELD, STR_LASCANNON_CHAOS_CELL, STR_LASCANNON_CHAOS_CELL, STR_MGRENADE, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_HEAVY_PLASMA_LOADOUT
+    weapons: [STR_HEAVY_PLASMA, STR_HEAVY_PLASMA_CLIP, STR_HEAVY_PLASMA_CLIP, STR_MGRENADE, STR_MGRENADE]
+  - type: BASIC_CSM_ROCKET_LAUNCHER_LOADOUT
+    weapons: [STR_CHAOS_ROCKET_LAUNCHER, STR_HEAVY_ROCKET_KRAK, STR_HEAVY_ROCKET_KRAK, STR_HEAVY_ROCKET_KRAK, STR_HEAVY_ROCKET_KRAK, STR_HEAVY_ROCKET_KRAK, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_SNIPER_RIFLE_LOADOUT
+    weapons: [STR_SNIPER_CHAOS, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_HC_AP_AMMO, STR_MGRENADE, STR_KRAK_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_GRENADE_LAUNCHER_LOADOUT
+    weapons: [STR_GRENADE_LAUNCHER_CHAOS, STR_KRAK_GRENADE_DRUM, STR_KRAK_GRENADE_DRUM, STR_KRAK_GRENADE_DRUM, STR_KRAK_GRENADE_DRUM, STR_MGRENADE, STR_KRAK_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_MULTIMELTA_LOADOUT
+    weapons: [STR_BLASTER_LAUNCHER, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_MGRENADE, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_PLASMA_GUN_TWINCORE_LOADOUT
+    weapons: [STR_PLASMA_GUN_TWINCORE, STR_PLASMA_TWINCORE_CLIP, STR_PLASMA_TWINCORE_CLIP, STR_PLASMA_TWINCORE_CLIP, STR_MGRENADE, STR_MGRENADE]
+  - type: BASIC_CSM_GRAVGUN_LOADOUT
+    weapons: [STR_SMALL_LAUNCHER, STR_STUN_BOMB, STR_STUN_BOMB, STR_STUN_BOMB, STR_STUN_BOMB, STR_STUN_BOMB, STR_KRAK_GRENADE, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_CSM_GRAVGUN_AOE_LOADOUT
+    weapons: [STR_GRAVGUN_AOE_CHAOS, STR_GRAVGUN_AOE_AMMO, STR_GRAVGUN_AOE_AMMO, STR_GRAVGUN_AOE_AMMO, STR_GRAVGUN_AOE_AMMO, STR_GRAVGUN_AOE_AMMO, STR_MGRENADE, STR_MGRENADE]
+  - type: BASIC_CSM_PLASMA_CARBINE_LOADOUT
+    weapons: [STR_PLASMA_CARBINE_CHAOS, STR_PLASMA_SPRAY_CLIP, STR_PLASMA_SPRAY_CLIP, STR_PLASMA_SPRAY_CLIP, STR_PLASMA_SPRAY_CLIP, STR_MGRENADE, STR_MGRENADE]
+  - type: BASIC_CSM_GRAVPISTOL_POWERSWORD_LOADOUT
+    weapons: [STR_CPOWER_SWORD, STR_CHAOS_GRAVPISTOL, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_MGRENADE, STR_MGRENADE]
+
+  # Terminator Loadouts
+  - type: TERMINATOR_COMBIBOLTER
+    weapons: [STR_CHB, STR_HB_CLIP_MC, STR_HB_CLIP, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_HEAVYPLASMA
+    weapons: [STR_HEAVY_PLASMA, STR_HEAVY_PLASMA_CLIP, STR_HEAVY_PLASMA_CLIP, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_ASSAULTCANNON
+    weapons: [STR_CASSC, STR_AUTOCANNON_BOX_AMMO, STR_AUTOCANNON_BOX_AMMO, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_ASSAULTCANNON_AP
+    weapons: [STR_CASSC, STR_AUTOCANNON_AP_AMMO, STR_AUTOCANNON_AP_AMMO, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_ASSAULTCANNON_HE
+    weapons: [STR_CASSC, STR_AUTOCANNON_HE_AMMO, STR_AUTOCANNON_HE_AMMO, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_LASCANNON
+    weapons: [STR_CHAOS_LASCANNON_HANDHELD, STR_LASCANNON_CHAOS_CELL, STR_LASCANNON_CHAOS_CELL, STR_MGRENADE, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_IW_AUTOCANNON
+    weapons: [STR_IW_AUTOCANNON, STR_AUTOCANNON_AP_AMMO, STR_AUTOCANNON_AP_AMMO, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_HEAVYFLAMER
+    weapons: [STR_HFLAMER, STR_HFLAMER_CLIP, STR_HFLAMER_CLIP, STR_CHAOS_CLAWS, STR_MGRENADE, STR_MGRENADE]
+  - type: TERMINATOR_MULTIMELTA
+    weapons: [STR_BLASTER_LAUNCHER, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_BLASTER_BOMB, STR_MGRENADE, STR_MGRENADE]
+
+  # Word Bearers
+
+  - type: CHAOS_WORDBEARER_DARK_APOSTLE_SET
+    weapons: [STR_DARK_SERMON, STR_WORDBEARER_CHAOS_CROZIUS]
+
+  # Word Bearer Possessed
+  - type: BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT
+    weapons: [STR_CHAOS_CLAWS, STR_INTIMIDATION_WEAPON, STR_ALIEN_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT
+    weapons: [STR_CHAOS_CLAWS, STR_BOLTPISTOL_CHAOS, STR_PISTOL_CLIP_MC, STR_PISTOL_CLIP_AP, STR_ALIEN_GRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT
+    weapons: [STR_CHAOS_CLAWS, STR_WARPFIRE_BREATH, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT
+    weapons: [STR_CHAOS_CLAWS, STR_DOOM_BOLTS, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT
+    weapons: [STR_CHAOS_CLAWS, STR_CHAOS_GRAVPISTOL, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_MGRENADE]
+  - type: BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT
+    weapons: [STR_CHAOS_CLAWS, STR_PLASMA_PISTOL, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_MGRENADE, STR_ALIEN_GRENADE]
+  - type: BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT
+    weapons: [STR_CHAOS_CLAWS, STR_CHB, STR_HB_CLIP_MC, STR_HB_CLIP, STR_MGRENADE, STR_ALIEN_GRENADE]
+
+  # Diabolist Loadouts
+  - type: DIABOLIST_SCEPTRE_BOLTPISTOL
+    weapons: [STR_DIABLOIST_SCEPTRE, STR_BOLTPISTOL_CHAOS, STR_PISTOL_CLIP_AP, STR_PISTOL_CLIP_AP, STR_PISTOL_CLIP_AP, STR_KRAK_GRENADE, STR_ALIEN_GRENADE]
+  - type: DIABOLIST_SCEPTRE_PLASMAPISTOL
+    weapons: [STR_DIABLOIST_SCEPTRE, STR_PLASMA_PISTOL, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_KRAK_GRENADE, STR_MGRENADE]
+  - type: DIABOLIST_SCEPTRE_GRAVPISTOL
+    weapons: [STR_DIABLOIST_SCEPTRE, STR_CHAOS_GRAVPISTOL, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_MGRENADE, STR_MGRENADE]
+  - type: DIABOLIST_SCEPTRE_COMBIBOLTER
+    weapons: [STR_DIABLOIST_SCEPTRE, STR_CHB, STR_HB_CLIP_MC, STR_HB_CLIP, STR_MGRENADE, STR_MGRENADE]
+  # Arch Diabolist Loadouts
+  - type: ARCH_DIABOLIST_SCEPTRE_PLASMAPISTOL
+    weapons: [STR_ARCH_DIABLOIST_SCEPTRE, STR_PLASMA_PISTOL, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_PLASMA_PISTOL_CLIP, STR_MGRENADE, STR_MGRENADE]
+  - type: ARCH_DIABOLIST_SCEPTRE_GRAVPISTOL
+    weapons: [STR_ARCH_DIABLOIST_SCEPTRE, STR_CHAOS_GRAVPISTOL, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_GRAVPISTOL_AMMO, STR_MGRENADE, STR_MGRENADE]
+  - type: ARCH_DIABOLIST_SCEPTRE_COMBIBOLTER
+    weapons: [STR_ARCH_DIABLOIST_SCEPTRE, STR_CHB, STR_HB_CLIP_MC, STR_HB_CLIP, STR_PINKHORRORSPAWNER_GRENADE, STR_BLOODLETTERSPAWNER_GRENADE, STR_PLAGUEBEARERSPAWNER_GRENADE, STR_DAEMONETTESPAWNER_GRENADE]
+
+
+units:
+
+  - type: STR_WORDBEARER_GALVWARRIOR  # PRE POSSESSED CSM
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90
+      stamina: 100
+      health: 70
+      bravery: 150
+      reactions: 50
+      firing: 80
+      throwing: 70
+      strength: 65
+      psiStrength: 90
+      psiSkill: 0
+      melee: 90
+    armor: STR_WORDBEARER_GALVWARRIOR_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 4
+    aggression: 2
+    spotter: 2
+    sniper: 50
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 60
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_MELTAGUN_LOADOUT: 10
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 5
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+      -  # Tier 2
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 40
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 20
+        BASIC_CSM_MELTAGUN_LOADOUT: 10
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 10
+      -  # Tier 3
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_MELTAGUN_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 20
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 20
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 40
+
+  - type: STR_WORDBEARER_GALVWARRIORPOSS  # POSSESSED CSM
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 140
+      stamina: 120
+      health: 150
+      bravery: 150
+      reactions: 90
+      firing: 90
+      throwing: 90
+      strength: 90
+      psiStrength: 80
+      psiSkill: 80
+      melee: 120
+    psiWeapon: STR_NONE
+    armor: STR_WORDBEARER_GALVWARRIOR_POSSARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    aggroSound: [2413, 2414]
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 1
+    aggression: 8
+    spotter: 2
+    energyRecovery: 60
+    livingWeapon: true
+    isLeeroyJenkins: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 1
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 3
+        BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 2
+      -  # Tier 2
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 2
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 10
+      -  # Tier 3
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 2
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 3
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 3
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 25
+        BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 15
+
+  - type: STR_WORDBEARER_GALVWARRIORELITE  # PRE POSSESSED CSM ELITE
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 110
+      stamina: 120
+      health: 90
+      bravery: 150
+      reactions: 70
+      firing: 100
+      throwing: 90
+      strength: 85
+      psiStrength: 90
+      psiSkill: 0
+      melee: 90
+    armor: STR_WORDBEARER_GALVWARRIORELITE_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 4
+    aggression: 2
+    spotter: 2
+    sniper: 75
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 30
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 10
+      -  # Tier 2
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 20
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 20
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 20
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 10
+        BASIC_CSM_MULTIMELTA_LOADOUT: 10
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 10
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 10
+      -  # Tier 3
+        BASIC_CSM_GRENADE_LAUNCHER_LOADOUT: 5
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_SNIPER_RIFLE_LOADOUT: 15
+        BASIC_CSM_HANDHELD_LASCANNON_LOADOUT: 15
+        BASIC_CSM_MULTIMELTA_LOADOUT: 15
+        BASIC_CSM_ROCKET_LAUNCHER_LOADOUT: 20
+        BASIC_CSM_HEAVY_PLASMA_LOADOUT: 20
+
+  - type: STR_WORDBEARER_GALVWARRIORPOSSELITE  # POSSESSED CSM ELITE
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 160
+      stamina: 140
+      health: 120
+      bravery: 150
+      reactions: 110
+      firing: 110
+      throwing: 110
+      strength: 110
+      psiStrength: 90
+      psiSkill: 90
+      melee: 130
+    psiWeapon: STR_NONE
+    armor: STR_WORDBEARER_GALVWARRIORELITE_POSSARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    aggroSound: [2413, 2414]
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 1
+    aggression: 8
+    spotter: 2
+    energyRecovery: 60
+    livingWeapon: true
+    isLeeroyJenkins: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 1
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 3
+        BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 2
+      -  # Tier 2
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 5
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 25
+        BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 2
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 10
+        BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 10
+      -  # Tier 3
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_BOLTPISTOL_LOADOUT: 1
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_PLASMAPISTOL_LOADOUT: 1
+        BASIC_WORDBEARER_POSSESSED_GRAVPISTOL_LOADOUT: 4
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 25
+        BASIC_WORDBEARER_POSSESSED_COMBIBOLTER_LOADOUT: 15
+
+  - type: STR_WORDBEARER_DARKAPOSTLE
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 110
+      stamina: 120
+      health: 90
+      bravery: 150
+      reactions: 70
+      firing: 100
+      throwing: 90
+      strength: 85
+      psiStrength: 90
+      psiSkill: 130 #devout leaders of the church of chaos
+      melee: 90
+    armor: STR_WORDBEARER_DARKAPOSTLE_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 50
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 5
+    aggression: 1
+    spotter: 2
+    sniper: 100
+    energyRecovery: 60
+    canBeMindControlled: false #too zealous
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        CHAOS_WORDBEARER_DARK_APOSTLE_SET: 100
+      -  # Tier 2
+        CHAOS_WORDBEARER_DARK_APOSTLE_SET: 100
+      -  # Tier 3
+        CHAOS_WORDBEARER_DARK_APOSTLE_SET: 100
+
+  - type: STR_WORDBEARER_TERMINATOR
+    race: STR_ETHEREAL
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 100
+      health: 110
+      bravery: 150
+      reactions: 70
+      firing: 90
+      throwing: 90
+      strength: 160
+      psiStrength: 90
+      psiSkill: 0
+      melee: 100
+    armor: STR_WORDBEARER_TERMINATOR_ARMOR
+    # aggroSound: {mod: 40k, index: 404}  # that is for the emperor find another for chaos
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    avoidsFire: false  # doesn't really care
+    intelligence: 4  # elite
+    aggression: 2
+    spotter: 1
+    sniper: 75
+    canPanic: false
+    value: 30
+    canBeMindControlled: false
+    berserkChance: 90
+    energyRecovery: 80
+    livingWeapon: true
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 30
+        TERMINATOR_HEAVYFLAMER: 30
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_LASCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+        TERMINATOR_IW_AUTOCANNON: 5
+
+      -  # Tier 2
+        TERMINATOR_ASSAULTCANNON: 30
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_IW_AUTOCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 10
+
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 30
+        TERMINATOR_IW_AUTOCANNON: 20
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+
+  - type: STR_WORDBEARER_SCOUT
+    race: STR_ETHEREAL
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 70
+      stamina: 90
+      health: 60
+      bravery: 100
+      reactions: 80
+      firing: 80
+      throwing: 70
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 80
+    armor: STR_WORDBEARER_SCOUT_ARMOR
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    energyRecovery: 40
+    sniper: 75
+    value: 10
+    livingWeapon: true
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_CSM_LIGHT_CHAOS_BOLTER_LOADOUT: 35
+        BASIC_CSM_LIGHT_CHAOS_BOLTER_AP_LOADOUT: 20
+        BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT: 10
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_MELTAGUN_LOADOUT: 5
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 5
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+      -  # Tier 2
+        BASIC_CSM_LIGHT_CHAOS_BOLTER_AP_LOADOUT: 15
+        BASIC_CSM_LIGHT_CHAOS_BOLTER_LOADOUT: 15
+        BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT: 10
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_MELTAGUN_LOADOUT: 10
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 10
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 5
+      -  # Tier 3
+        BASIC_CSM_LIGHT_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_LIGHT_CHAOS_BOLTER_AP_LOADOUT: 20
+        BASIC_CSM_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_AP_CHAOS_BOLTER_LOADOUT: 10
+        BASIC_CSM_EX_CHAOS_BOLTER_LOADOUT: 5
+        BASIC_CSM_MELTAGUN_LOADOUT: 5
+        BASIC_CSM_AP_STALKER_BOLTER_LOADOUT: 30
+        BASIC_CSM_PLASMA_RIFLE_LOADOUT: 10
+        BASIC_CSM_CHAOS_BOLTPISTOL_AXE_LOADOUT: 5
+
+  - type: STR_WORDBEARER_TERMINATORELITE
+    race: STR_ETHEREAL
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 100
+      stamina: 110
+      health: 120
+      bravery: 150
+      reactions: 80
+      firing: 100
+      throwing: 100
+      strength: 170
+      psiStrength: 100
+      psiSkill: 0
+      melee: 110
+    armor: STR_WORDBEARER_TERMINATORELITE_ARMOR
+    # aggroSound: {mod: 40k, index: 404}  # that is for the emperor find another for chaos
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    avoidsFire: false  # doesn't really care
+    intelligence: 5  # elite
+    aggression: 2
+    spotter: 1
+    sniper: 90
+    canPanic: false
+    value: 40
+    canBeMindControlled: false
+    berserkChance: 90
+    energyRecovery: 80
+    livingWeapon: true
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        TERMINATOR_COMBIBOLTER: 30
+        TERMINATOR_HEAVYFLAMER: 30
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_LASCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 5
+        TERMINATOR_IW_AUTOCANNON: 5
+      -  # Tier 2
+        TERMINATOR_ASSAULTCANNON: 30
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_COMBIBOLTER: 10
+        TERMINATOR_HEAVYFLAMER: 10
+        TERMINATOR_IW_AUTOCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_HEAVYPLASMA: 10
+      -  # Tier 3
+        TERMINATOR_HEAVYPLASMA: 30
+        TERMINATOR_IW_AUTOCANNON: 20
+        TERMINATOR_LASCANNON: 20
+        TERMINATOR_ASSAULTCANNON: 10
+        TERMINATOR_MULTIMELTA: 10
+        TERMINATOR_COMBIBOLTER: 5
+        TERMINATOR_HEAVYFLAMER: 5
+
+  - type: STR_WORDBEARER_DEMONLORD
+    race: STR_ETHEREAL
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 120
+      stamina: 200
+      health: 500
+      bravery: 180
+      reactions: 120
+      firing: 120
+      throwing: 120
+      strength: 220
+      psiStrength: 120
+      psiSkill: 100
+      melee: 130
+    armor: STR_WORDBEARER_DEMONLORD_ARMOR
+    aggroSound: [2413, 2414]
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    avoidsFire: false  # doesn't really care
+    intelligence: 5  # elite
+    aggression: 8
+    spotter: 2
+    sniper: 95
+    canPanic: false
+    value: 50
+    canBeMindControlled: false
+    berserkChance: 90
+    energyRecovery: 200
+    livingWeapon: true
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 50
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 20
+      -  # Tier 2
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 40
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 30
+      -  # Tier 3
+        BASIC_WORDBEARER_POSSESSED_INTIMIDATE_LOADOUT: 20
+        BASIC_WORDBEARER_POSSESSED_WARPFIRE_BREATH_LOADOUT: 30
+        BASIC_WORDBEARER_POSSESSED_DOOMBOLT_LOADOUT: 50
+
+  - type: STR_WORDBEARER_DIABOLIST
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 90
+      stamina: 100
+      health: 70
+      bravery: 150
+      reactions: 50
+      firing: 80
+      throwing: 70
+      strength: 65
+      psiStrength: 90
+      psiSkill: 90
+      melee: 90
+    psiWeapon: STR_NONE
+    armor: STR_WORDBEARER_DIABOLIST_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 20
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 4
+    aggression: 1
+    spotter: 2
+    sniper: 90
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        DIABOLIST_SCEPTRE_BOLTPISTOL: 70
+        DIABOLIST_SCEPTRE_PLASMAPISTOL: 20
+        DIABOLIST_SCEPTRE_COMBIBOLTER: 10
+      -  # Tier 2
+        DIABOLIST_SCEPTRE_BOLTPISTOL: 30
+        DIABOLIST_SCEPTRE_PLASMAPISTOL: 40
+        DIABOLIST_SCEPTRE_COMBIBOLTER: 30
+      -  # Tier 3
+        DIABOLIST_SCEPTRE_BOLTPISTOL: 5
+        DIABOLIST_SCEPTRE_PLASMAPISTOL: 25
+        DIABOLIST_SCEPTRE_COMBIBOLTER: 70
+
+  - type: STR_WORDBEARER_DIABOLISTELITE
+    race: STR_ETHEREAL  # CHAOS TRAITOR
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 110
+      stamina: 120
+      health: 90
+      bravery: 150
+      reactions: 70
+      firing: 100
+      throwing: 90
+      strength: 85
+      psiStrength: 90
+      psiSkill: 110
+      melee: 90
+    psiWeapon: STR_NONE
+    armor: STR_WORDBEARER_DIABOLISTELITE_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    intelligence: 5
+    aggression: 1
+    spotter: 2
+    sniper: 90
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        ARCH_DIABOLIST_SCEPTRE_PLASMAPISTOL: 75
+        ARCH_DIABOLIST_SCEPTRE_COMBIBOLTER: 25
+      -  # Tier 2
+        ARCH_DIABOLIST_SCEPTRE_PLASMAPISTOL: 50
+        ARCH_DIABOLIST_SCEPTRE_COMBIBOLTER: 50
+      -  # Tier 3
+        ARCH_DIABOLIST_SCEPTRE_PLASMAPISTOL: 25
+        ARCH_DIABOLIST_SCEPTRE_COMBIBOLTER: 75

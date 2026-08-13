@@ -528,35 +528,6 @@ items:
 
 ## PLASMA
 
-  - type: STR_ELDAR_GRENADE  # Eldar Granade          16320
-    weight: 2
-    primeSound: 2426
-    throwRange: 18
-    fuseType: -2
-    costThrow:
-      time: 55
-      energy: 5
-    costPrime:
-      time: 5
-    costUnprime:
-      time: 5
-    unprimeActionName: STR_UNPRIME_GRENADE
-    flatThrow:
-      time: false
-      energy: true
-    flatPrime:
-      time: false
-      energy: true
-    damageType: 5
-    power: 90
-    damageAlter:  # DA PLASMA
-      RandomType: 6
-      ToArmorPre: 0.2  # melts some armor on the way in
-      ArmorEffectiveness: 0.75  # *** PLASMA rebalance
-      FireThreshold: 70  # can ignite at high damage
-      FixRadius: 5
-    noLOSAccuracyPenalty: 75  # indirect fire weapon
-
   - type: STR_TAU_EMP_GRENADE
     weight: 2
     throwRange: 20
@@ -807,44 +778,6 @@ items:
       FixRadius: 1
     tags:
       DAMAGE_RESIST_PENETRATION_PERCENT: 95
-
-  - type: STR_ELDAR_MGRENADE
-    throwRange: 15
-    primeSound: 2426
-    weight: 4
-    fuseType: -2
-    costThrow:
-      time: 60
-      energy: 20
-    costPrime:
-      time: 5
-    costUnprime:
-      time: 5
-    unprimeActionName: STR_UNPRIME_GRENADE
-    flatThrow:
-      time: false
-      energy: true
-    flatPrime:
-      time: false
-      energy: true
-    flatUnprime:
-      time: false
-      energy: true
-    noLOSAccuracyPenalty: 75  # indirect fire weapon
-    power: 140
-    damageType: 11
-    damageAlter:
-      RandomType: 6
-      ToArmorPre: 1.0  # it's a melta grenade; it will melt armor
-      ToTile: 1.0
-      ToItem: 1.0
-      ToArmor: 0.0  # melts armor on the way in
-      ToHealth: 0.7
-      ToWound: 0.05
-      RadiusReduction: 15 # melta explosions decay at twice the normal rate; coheres somewhat better than Imperium melta
-      RandomWound: false
-      FireThreshold: 0
-      FixRadius: 5
 
   - type: STR_MELTA_GRENADE40  # Hellspite underslung grenade  # melta munition
     power: 90
@@ -1267,6 +1200,7 @@ items:
   - type: STR_SKULL_SPAWNER
     primeActionName: STR_PRIME_SKULL
     primeActionMessage: STR_PRIME_SKULL_MESSAGE
+    hidePower: true
     primeSound: 2425
     throwRange: 18
     weight: 2
@@ -1286,3 +1220,8 @@ items:
       time: false
       energy: true
     noLOSAccuracyPenalty: 75  # indirect fire weapon
+    tags:
+      ITEM_PRIMED_AT_BATTLE_START: -1
+    defaultInventorySlot: STR_BELT
+    defaultInvSlotX: 0
+    defaultInvSlotY: 0

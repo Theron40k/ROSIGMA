@@ -181,6 +181,12 @@ soldiers:
   - type: STR_GUARDSL_OFFICER_VETERAN
     refNode: *STR_OFFICER
 
+  - type: STR_GUARD_VALHALLAN_OFFICER
+    refNode: *STR_OFFICER
+
+  - type: STR_GUARD_VALHALLAN_OFFICER_VETERAN
+    refNode: *STR_OFFICER
+
   # COMMISSAR SKILLS
   - &COMMISSAR_SKILLS
     type: STR_COMMISSAR
@@ -215,10 +221,10 @@ soldiers:
   - type: STR_GUARD_TANITH
     skillIconSprite: 221  #
     skills:
-      - STR_SKILL_ACTIVATE_CAMO_CLOAK_CHECK
-      - STR_SKILL_ACTIVATE_CAMO_CLOAK
-      - STR_SKILL_ACTIVATE_CAMO_CLOAK_DEACTIVATE
       - STR_DIG_IN
+      - STR_SKILL_ACTIVATE_CAMO_CLOAK_CHECK
+      - STR_SKILL_ACTIVATE_CAMO_CLOAK_DEACTIVATE
+      - STR_SKILL_ACTIVATE_CAMO_CLOAK
 
   # DIG IN SKILL
   - type: STR_GUARDSM
@@ -238,10 +244,6 @@ soldiers:
     skills:
       - STR_DIG_IN
   - type: STR_GUARD_FELINID
-    skillIconSprite: 995
-    skills:
-      - STR_DIG_IN
-  - type: STR_GUARD_TANITH
     skillIconSprite: 995
     skills:
       - STR_DIG_IN
@@ -269,11 +271,11 @@ soldiers:
     skillIconSprite: 995
     skills:
       - STR_DIG_IN
-  - type: STR_GUARDSL_OFFICER
+  - type: STR_GUARD_VALHALLAN
     skillIconSprite: 995
     skills:
       - STR_DIG_IN
-  - type: STR_GUARDSL_OFFICER_VETERAN
+  - type: STR_GUARD_VETERAN_VALHALLAN
     skillIconSprite: 995
     skills:
       - STR_DIG_IN

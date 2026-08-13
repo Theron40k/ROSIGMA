@@ -736,6 +736,70 @@ items:
     tags:
       TURRET_RELOAD_TURNS: 2
 
+  - type: STR_VALHALLAN_TURRET_MORTAR_WEAPON
+    categories: [STR_CAT_ROCKETL]
+    bigSprite: 984
+    invWidth: 2
+    invHeight: 3
+    bulletSprite: {mod: 40k, index: 0}
+    fireSound: {mod: 40k, index: 4}
+    hitSound: {mod: 40k, index: 704}
+    hitAnimation: 2210
+    reloadSound: 2427
+    weight: 50
+    clipSize: -1
+    costAuto:
+      time: 1
+      energy: 10
+      mana: 20
+    costSnap:
+      time: 1
+      energy: 10
+      mana: 20
+    costAimed:
+      energy: 10
+      time: 1
+      mana: 20
+    dropoff: 8
+    noLOSAccuracyPenalty: 75  # indirect fire weapon
+    autoRange: 35
+    snapRange: 35
+    aimRange: 35 # Equal to Battlecannon
+    accuracyAuto: 30 #reduced for waypoint system
+    accuracySnap: 30 #reduced for waypoint system
+    accuracyAimed: 30 #reduced for waypoint system
+    ammo:
+      0:
+        compatibleAmmo:
+          - STR_MORTAR_AMMO_HE
+      1:
+        compatibleAmmo:
+          - STR_MORTAR_AMMO_KRAK
+      2:
+        compatibleAmmo:
+          - STR_MORTAR_AMMO_ILLUMINATION
+    confAimed:
+      name: STR_MORTAR_SHOT_HE_VALHALLA  # name of attack in action menu.
+      ammoSlot: 0           # with ammo slot is used by this attack. Default 0
+      shots: 1
+    confSnap:
+      name: STR_MORTAR_SHOT_KRAK_VALHALLA  # name of attack in action menu.
+      ammoSlot: 1
+      shots: 1
+    confAuto:
+      name: STR_MORTAR_SHOT_ILLUMINATION_VALHALLA  # name of attack in action menu.
+      ammoSlot: 2
+      shots: 1
+    arcingShot: false
+    waypoints: 2  # 1 waypoint, loitering munitions to mimic mortar indirect fire
+    battleType: 1
+    listOrder: 11871
+    armor: 200
+    minRange: 5
+    tags:
+      TURRET_RELOAD_TURNS: 2
+      ITEM_COLOR_CHANGES_WITH_AMMO: 14
+
   - type: STR_GORGON_HEAVY_FLAMER
     refNode: *STR_TURRET_DEFAULT
     costAuto:
@@ -780,9 +844,18 @@ items:
       TURRET_RELOAD_TURNS: 4
       DAMAGE_RESIST_PENETRATION_PERCENT: 25
 
-  - type: STR_GORGON_HEAVY_STUBBER
+  - type: STR_GORGON_HEAVY_STUBBER_UNMANNED #variant of the heavy stubber emplacement weapon that uses munitions for unmanned turrets
     refNode: *STR_TURRET_DEFAULT
     dropoff: 4
+    weight: 100
+    bigSprite: {mod: 40k, index: 1003}
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: {mod: 40k, index: 4}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: -1
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
     bulletSpeed: 50
     # Snap
     accuracySnap: 75
@@ -827,13 +900,54 @@ items:
       energy: true
       mana: true
     power: 42
+    damageType: 1
     damageAlter:
       ToArmorPre: 0.05
       ArmorEffectiveness: 0.90
+    sprayWaypoints: 2
+    clipSize: -1
+    fixedWeapon: true
+    recover: false
     tags:
       TURRET_RELOAD_TURNS: 2
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
+
+  - type: STR_GORGON_HEAVY_STUBBER #updated stats
+    dropoff: 4
+    bulletSpeed: 50
+    # Snap
+    accuracySnap: 75
+    snapRange: 25
+    confSnap:
+      shots: 5
+      name: STR_BURST_SNAP_SHOT
+    costSnap:
+      time: 25
+    # Auto (Full Auto)
+    accuracyAuto: 50
+    autoRange: 15
+    autoShots: 40
+    confAuto:
+      name: STR_FULL_AUTO
+    costAuto:
+      time: 45
+    # Aimed (Standard Auto)
+    accuracyAimed: 60
+    aimRange: 20
+    confAimed:
+      shots: 15
+      name: STR_AUTOFIRE
+    costAimed:
+      time: 35
+    power: 42
+    damageAlter:
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.90
+    tags:
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+      TURRET_RELOAD_MANNED: 1
 
   # AUX_BOLTER is Razorback Turret
   # Used for Emplacement and Arbites Chimera

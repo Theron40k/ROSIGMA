@@ -1,0 +1,1604 @@
+units:
+
+  - type: STR_TZEENTCH_CHIMERA_TURRET
+    race: STR_TZEENTCH_CHIMERA_TURRET
+    stats:
+      tu: 12
+      stamina: 100
+      health: 75  # -25 slaanesh
+      bravery: 100
+      reactions: 5  # -5 TZ
+      firing: 60  # +20 TZ
+      throwing: 0
+      strength: 100
+      psiStrength: 250
+      psiSkill: 0
+      melee: 0
+    armor: STR_TZEENTCH_CHIMERA_TURRET_ARMOR  # armor entry reference
+    standHeight: 16
+    kneelHeight: 16
+    deathSound: {mod: 40k, index: 23}
+    intelligence: 2
+    specab: 1
+    aggression: 5
+    sniper: 50
+    spotter: 1
+    energyRecovery: 100
+    livingWeapon: true
+    builtInWeaponSets:
+      - - AUX_BOLTERPD  # Bolter instead of Multilas
+      - - STR_TZEENTCH_CHIMERA_WEAPON_FLAMER
+      - - STR_TZEENTCH_CHIMERA_WEAPON_FLAMER
+    capturable: false
+
+  - &FLAMER
+    type: STR_FLAMER_TERRORIST  # Lesser Daemon Flamer
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 70
+      stamina: 80
+      health: 100
+      bravery: 110
+      reactions: 50
+      firing: 69
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 1
+      melee: 80
+    armor: STR_FLAMER_ARMOR
+    intelligence: 1
+    aggression: 8  # aggressive lesser daemon
+    canPanic: false
+    avoidsFire: false
+    value: 15
+    spotter: 1
+    sniper: 50
+    canBeMindControlled: false
+    moraleLossWhenKilled: 75
+    energyRecovery: 40
+    livingWeapon: true
+    psiWeapon: STR_NONE
+    builtInWeaponSets:
+      - - STR_TZEENTCH_FLAMER_WEAPON_PINK_LESSER
+      - - STR_TZEENTCH_FLAMER_WEAPON_PINK_LESSER
+      - - STR_TZEENTCH_FLAMER_WEAPON_PINK_LESSER
+        - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+    standHeight: 21
+    kneelHeight: 16
+
+  - type: STR_FLAMER_TERRORIST_RECOVERABLE
+    refNode: *FLAMER
+    liveAlien: STR_FLAMER_TERRORIST
+    civilianRecoveryType: STR_DAEMON_SOLDIER_FLAMER
+    armor: STR_FLAMER_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - &EXALTED_FLAMER
+    type: STR_EXALTED_FLAMER_TERRORIST
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 80
+      health: 140
+      bravery: 110
+      reactions: 79
+      firing: 69
+      throwing: 0
+      strength: 100
+      psiStrength: 50
+      psiSkill: 1
+      melee: 80
+    armor: STR_EXALTED_FLAMER_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 25
+    deathSound: [{mod: 40k, index: 686}, {mod: 40k, index: 687}]
+    spotter: 1
+    sniper: 50
+    intelligence: 2
+    aggression: 8  # aggressive lesser daemon
+    canBeMindControlled: false
+    canPanic: false
+    avoidsFire: false
+    energyRecovery: 60
+    livingWeapon: true
+    psiWeapon: STR_NONE
+    builtInWeaponSets:
+      - - STR_TZEENTCH_FLAMER_WEAPON_PINK
+        - STR_TZEENTCH_FLAMER_WEAPON_BLUE
+      - - STR_TZEENTCH_FLAMER_WEAPON_PINK
+        - STR_TZEENTCH_FLAMER_WEAPON_BLUE
+      - - STR_TZEENTCH_FLAMER_WEAPON_PINK
+        - STR_TZEENTCH_FLAMER_WEAPON_BLUE
+
+  - type: STR_EXALTED_FLAMER_TERRORIST_RECOVERABLE
+    refNode: *EXALTED_FLAMER
+    liveAlien: STR_EXALTED_FLAMER_TERRORIST
+    civilianRecoveryType: STR_DAEMON_SOLDIER_EXALTED_FLAMER
+    armor: STR_EXALTED_FLAMER_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - &PINK_HORROR
+    type: STR_PINK_HORROR_TERRORIST #Pink Horror
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 99
+      stamina: 99
+      health: 79
+      bravery: 110
+      reactions: 59
+      firing: 89
+      throwing: 85
+      strength: 69
+      psiStrength: 79
+      psiSkill: 59
+      melee: 69
+    armor: STR_PINKHORROR_ARMOR
+    standHeight: 18
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 686}, {mod: 40k, index: 687}]
+    intelligence: 3
+    aggression: 2
+    berserkChance: 99
+    spotter: 1
+    sniper: 50
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 75
+    energyRecovery: 69
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PINK_HORROR_CORUSCATING_FLAMES  # Indigo fire Horror Mutator
+        - STR_PINK_HORROR_DEATH_GRENADE  # spawns Blue Horror on death
+        - STR_PINK_HORROR_DEATH_GRENADE  # spawns Blue Horror on death
+      - - STR_PINK_HORROR_CORUSCATING_FLAMES
+        - STR_RED_FIRE
+        - STR_PINK_HORROR_DEATH_GRENADE  # spawns Blue Horror on death
+        - STR_PINK_HORROR_DEATH_GRENADE  # spawns Blue Horror on death
+      - - STR_PINK_HORROR_CORUSCATING_FLAMES
+        - STR_BLUE_FIRE_WEAPON
+        - STR_PINK_HORROR_DEATH_GRENADE  # spawns Blue Horror on death
+        - STR_PINK_HORROR_DEATH_GRENADE  # spawns Blue Horror on death
+
+  - type: STR_PINK_HORROR_TERRORIST_RECOVERABLE
+    refNode: *PINK_HORROR
+    liveAlien: STR_PINK_HORROR_TERRORIST
+    civilianRecoveryType: STR_DAEMON_SOLDIER_PINK_HORROR
+    armor: STR_PINKHORROR_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - &BLUE_HORROR
+    type: STR_BLUE_HORROR_TERRORIST
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 90
+      stamina: 79
+      health: 39
+      bravery: 110
+      reactions: 59
+      firing: 69
+      throwing: 79
+      strength: 69
+      psiStrength: 59
+      psiSkill: 19
+      melee: 59
+    armor: STR_BLUEHORROR_ARMOR
+    standHeight: 15
+    kneelHeight: 15
+    value: 10
+    deathSound: [{mod: 40k, index: 686}, {mod: 40k, index: 687}]
+    intelligence: 2
+    aggression: 2
+    berserkChance: 75
+    spotter: 1
+    sniper: 50
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50
+    energyRecovery: 69
+    livingWeapon: true
+    psiWeapon: STR_NONE
+    builtInWeaponSets:
+      - - BLUE_HORROR_WEAPON  # Indigo fire Horror Mutator
+        - STR_BLUE_HORROR_DEATH_GRENADE
+        - STR_BLUE_HORROR_DEATH_GRENADE
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - BLUE_HORROR_WEAPON  # Indigo fire Horror Mutator
+        - STR_BLUE_HORROR_DEATH_GRENADE
+        - STR_BLUE_HORROR_DEATH_GRENADE
+      - - STR_BLUE_FIRE_WEAPON  # Blue Fire Magic Missiles
+        - BLUE_HORROR_WEAPON  # Indigo fire Horror Mutator
+        - STR_BLUE_HORROR_DEATH_GRENADE
+        - STR_BLUE_HORROR_DEATH_GRENADE
+
+  - type: STR_BLUE_HORROR_TERRORIST_RECOVERABLE
+    refNode: *BLUE_HORROR
+    liveAlien: STR_BLUE_HORROR_TERRORIST
+    civilianRecoveryType: STR_DAEMON_SOLDIER_BLUE_HORROR
+    armor: STR_BLUEHORROR_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - type: STR_BRIMSTONE_HORROR
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 99  # quick but fragile
+      stamina: 79
+      health: 19
+      bravery: 110
+      reactions: 69
+      firing: 49
+      throwing: 49
+      strength: 29
+      psiStrength: 59
+      psiSkill: 0
+      melee: 59
+    armor: STR_BRIMSTONE_HORROR_ARMOR
+    standHeight: 12
+    kneelHeight: 12
+    value: 1  # suicidal troops
+    deathSound: [{mod: 40k, index: 686}, {mod: 40k, index: 687}]
+    intelligence: 1
+    aggression: 8
+    avoidsFire: false  # immune to fire; it doesn't care
+    isLeeroyJenkins: true  # rushes players
+    berserkChance: 99
+    spotter: 1
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 1  # no one cares; miserable little suicide daemon
+    energyRecovery: 69
+    livingWeapon: true
+    specab: 3
+    builtInWeaponSets:
+      - - STR_BRIMSTONE_HORROR_FIRE  # for reaction fire
+        - STR_BRIMSTONE_HORROR_CLAWS
+        - STR_BRIMSTONE_HORROR_DEATH_GRENADE
+      - - STR_BRIMSTONE_HORROR_FIRE  # for reaction fire
+        - STR_BRIMSTONE_HORROR_CLAWS
+        - STR_BRIMSTONE_HORROR_DEATH_GRENADE
+      - - STR_BRIMSTONE_HORROR_FIRE  # for reaction fire
+        - STR_BRIMSTONE_HORROR_CLAWS
+        - STR_BRIMSTONE_HORROR_DEATH_GRENADE
+
+  - type: STR_SCREAMER_TERRORIST
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 159  # screamers are *fast* asf
+      stamina: 159
+      health: 109  # fragile for its size
+      bravery: 110  # daemons don't care
+      reactions: 109  # fast asf
+      firing: 0
+      throwing: 0
+      strength: 90
+      psiStrength: 79
+      psiSkill: 0
+      melee: 90
+    armor: STR_SCREAMER_ARMOR
+    standHeight: 15
+    kneelHeight: 10
+    value: 25
+    spotter: 2  # scouts for other Tzeentchian units
+    deathSound: [{mod: 40k, index: 686}, {mod: 40k, index: 687}]
+    intelligence: 2  # not particularly smart; have significant animal cunning though
+    aggression: 8
+    isLeeroyJenkins: true
+    avoidsFire: false
+    canBeMindControlled: false
+    energyRecovery: 99
+    livingWeapon: true
+
+  - type: STR_TZAANGOR  # TZEENTCH TZAANGOR
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80  # fast birdies
+      stamina: 80
+      health: 75  # not as healthy as other gors
+      bravery: 90
+      reactions: 50
+      firing: 68
+      throwing: 65
+      strength: 55
+      psiStrength: 50
+      psiSkill: 10
+      melee: 70
+    armor: STR_TZAANGOR_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 8
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]  # might need more birdlike ones
+    intelligence: 2
+    aggression: 4
+    berserkChance: 66
+    energyRecovery: 50
+    spotter: 1
+    sniper: 50
+    moraleLossWhenKilled: 75
+    livingWeapon: true
+    builtInWeaponSets:
+#      - - STR_CHAOS_VOLLEY_GUN  # add a tzeentch chainsword + las or plasmapistol combo
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_TZEENTCH_WARP_THRALL  # TZEENTCH WARP THRALL
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 100
+      health: 50
+      bravery: 90
+      reactions: 30
+      firing: 50
+      throwing: 45
+      strength: 50
+      psiStrength: 35
+      psiSkill: 0
+      melee: 65
+    armor: STR_TZEENTCH_WARP_THRALL_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 1
+    deathSound: [2236, 2237, 2238, 2239]
+    intelligence: 0
+    aggression: 8
+    avoidsFire: false
+    berserkChance: 75
+    energyRecovery: 50
+    spotter: 1
+    sniper: 33
+    moraleLossWhenKilled: 10
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_LASPISTOL
+        - STR_LASPISTOL_CLIP
+        - STR_LASPISTOL_CLIP
+      - - STR_FLAMETHROWERTZ
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+
+  - type: STR_TZEENTCH_MUTANT  # TZEENTCH CHAOS MUTANT
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 100
+      health: 65
+      bravery: 90
+      reactions: 35
+      firing: 60
+      throwing: 50
+      strength: 55
+      psiStrength: 45
+      psiSkill: 0
+      melee: 65
+    armor: STR_TZEENTCH_MUTANT_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 2
+    deathSound: [2236, 2237, 2238, 2239]
+    intelligence: 0
+    aggression: 8
+    avoidsFire: false
+    berserkChance: 75
+    energyRecovery: 50
+    spotter: 1
+    moraleLossWhenKilled: 20
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SHOTGUN_CHAOS
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP
+        - STR_GRENADE
+      - - STR_FLAMETHROWERTZ
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_TZEENTCH_FEM_CULTIST  # TZEENTCH THRALL FEMALE BASIC CULTIST
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 50
+      stamina: 80
+      health: 25
+      bravery: 70
+      reactions: 40
+      firing: 52
+      throwing: 40
+      strength: 25
+      psiStrength: 59
+      psiSkill: 0
+      melee: 40
+    armor: STR_TZCULTIST_FEM_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 5
+    deathSound: [2226, 2227, 2228, 2229, 2230, 2231]
+    intelligence: 1
+    aggression: 1
+    berserkChance: 40
+    energyRecovery: 40
+    spotter: 1
+    sniper: 33
+    moraleLossWhenKilled: 33
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_LASPISTOL
+        - STR_LASPISTOL_CLIP
+        - STR_LASPISTOL_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_LASPISTOL
+        - STR_BLUE_FIRE_WEAPON
+        - STR_LASPISTOL_CLIP_HOTSHOT
+        - STR_LASPISTOL_CLIP_HOTSHOT
+        - STR_BLUEHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_ZEALOT_THRALL   # TZEENTCH THRALL ZEALOT CULTIST
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 54
+      stamina: 90
+      health: 35
+      bravery: 80
+      reactions: 40
+      firing: 55
+      throwing: 47
+      strength: 30
+      psiStrength: 50
+      psiSkill: 0
+      melee: 55
+    armor: STR_TZCULTIST_THRALL_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 5
+    deathSound: [2232, 2233, 2234, 2235]
+    intelligence: 1
+    aggression: 2
+    berserkChance: 50
+    energyRecovery: 40
+    spotter: 1
+    sniper: 50
+    moraleLossWhenKilled: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_FLAMETHROWERTZ
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+        - STR_FLAMETHROWER_WARPFIRE_CLIP
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO
+        - STR_LIGHT_BOLTER_AMMO_SHORT
+        - STR_LIGHT_BOLTER_AMMO_SHORT
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+
+  - type: STR_TZEENTCH_ZEALOT_THRALL_RITUALIST   # TZEENTCH THRALL ZEALOT CULTIST RITUALIST
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 54
+      stamina: 90
+      health: 35
+      bravery: 80
+      reactions: 40
+      firing: 55
+      throwing: 47
+      strength: 30
+      psiStrength: 69
+      psiSkill: 0
+      melee: 55
+    armor: STR_TZCULTIST_THRALL_RITUALIST_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 5
+    deathSound: [2232, 2233, 2234, 2235]
+    intelligence: 1
+    aggression: 2
+    berserkChance: 50
+    energyRecovery: 40
+    spotter: 1
+    sniper: 33
+    moraleLossWhenKilled: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_KNIF
+        - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+      - - STR_KNIF
+        - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+      - - STR_PINK_HORROR_CORUSCATING_FLAMES
+        - STR_BLUE_FIRE_WEAPON
+
+  - type: STR_TZEENTCH_LESSER_DAEMON   # TZEENTCH GLEAMING ONE LESSER DAEMON MR CRABBY
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 50
+      stamina: 90
+      health: 60
+      bravery: 110
+      reactions: 45
+      firing: 55
+      throwing: 55
+      strength: 60
+      psiStrength: 75
+      psiSkill: 0
+      melee: 65
+    armor: STR_TZEENTCH_LESSER_DAEMON_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 5
+    deathSound: [2236, 2237, 2238, 2239]
+    intelligence: 2
+    aggression: 8  # mindless and aggressive lesser daemon
+    berserkChance: 66
+    energyRecovery: 40
+    spotter: 1
+    sniper: 33
+    moraleLossWhenKilled: 33
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+
+  - type: STR_TZEENTCH_ACOLYTE   # TZEENTCH FEMALE CULTIST
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 65
+      stamina: 90
+      health: 50
+      bravery: 90
+      reactions: 42
+      firing: 62
+      throwing: 50
+      strength: 45
+      psiStrength: 69
+      psiSkill: 1
+      melee: 75
+    armor: STR_TZEENTCH_ACOLYTE_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 10
+    deathSound: [2226, 2227, 2228, 2229, 2230, 2231]
+    intelligence: 1
+    aggression: 2
+    berserkChance: 66
+    energyRecovery: 40
+    sniper: 50
+    spotter: 1
+    moraleLossWhenKilled: 75
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO
+        - STR_LIGHT_BOLTER_AMMO_SHORT
+        - STR_LIGHT_BOLTER_AMMO_SHORT
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_BLUEHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_ACOLYTE_FLAMER  # TZEENTCH FEMALE CULTIST INTO FLAMER
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 65
+      stamina: 90
+      health: 50
+      bravery: 90
+      reactions: 42
+      firing: 62
+      throwing: 50
+      strength: 45
+      psiStrength: 69
+      psiSkill: 1
+      melee: 75
+    armor: STR_TZEENTCH_ACOLYTE_FLAMER_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 10
+    deathSound: [2021, 2022]
+    spawnUnit: STR_FLAMER_TERRORIST
+    intelligence: 2
+    aggression: 2
+    berserkChance: 66
+    energyRecovery: 40
+    sniper: 50
+    spotter: 1
+    moraleLossWhenKilled: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CHAOSHARMONIC_MELTAGUN
+        - STR_MELTA_AMMO_HARMONIC
+        - STR_MELTA_AMMO_HARMONIC
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_BLUEHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_CULT_WITCH  # TZEENTCH  WITCH
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_MEDIC
+    civilianRecoveryType: STR_CHAOS_WITCH_PLAYER
+    stats:
+      tu: 60
+      stamina: 75
+      health: 40
+      bravery: 100
+      reactions: 40
+      firing: 60
+      throwing: 50
+      strength: 40
+      psiStrength: 66
+      psiSkill: 25
+      melee: 50
+    armor: STR_TZEENTCH_CULT_WITCH_ARMOR
+    # aggroSound:  # insert female witch line
+    standHeight: 20
+    kneelHeight: 15
+    value: 15
+    berserkSound: 2213  # PlucktheLife from you
+    panicSound: 2224  # A Pox upon you
+    aggroSound: 2205  # laughter
+    deathSound: [2207, 2208, 2209, 2210]
+    intelligence: 3
+    aggression: 2
+    berserkChance: 50
+    sniper: 75
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_CPOWER_DAGGER
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+        - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_BLUE_FIRE_WEAPON
+        - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+        - STR_PINKHORRORSPAWNER_GRENADE
+        - STR_BLUEHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_CULT_WITCH_RITUALIST  # TZEENTCH  WITCH for sacrifice missions
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 60
+      stamina: 75
+      health: 40
+      bravery: 100
+      reactions: 40
+      firing: 60
+      throwing: 50
+      strength: 40
+      psiStrength: 50
+      psiSkill: 25
+      melee: 50
+    armor: STR_TZEENTCH_CULT_WITCH_RITUALIST_ARMOR  # can move after timer
+    standHeight: 21
+    kneelHeight: 14
+    value: 10
+    intelligence: 4
+    aggression: 3
+    energyRecovery: 40
+    sniper: 50
+    spotter: 1
+    deathSound: [2014, 2015, 2016, 2017, 2018]
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER  # blue fire
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_CPOWER_DAGGER
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_CPOWER_DAGGER
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+        - STR_TZEENTCH_FLAMER_WEAPON_BLUE
+        - STR_PINKHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_CULT_LEADER  # TZEENTCH LEADER WITCH
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 60
+      stamina: 75
+      health: 45
+      bravery: 90
+      reactions: 45
+      firing: 65
+      throwing: 50
+      strength: 45
+      psiStrength: 85
+      psiSkill: 50
+      melee: 50
+    armor: STR_TZEENTCH_CULT_LEADER_ARMOR  # CHANGE
+    # aggroSound:  # insert female witch line
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    berserkSound: 2216  # SERVEME
+    panicSound: 2218  # you think you can oppose me
+    aggroSound: 2220  # You will serve me well
+    deathSound: [2200, 2201, 2202, 2203, 2204]
+    intelligence: 4
+    aggression: 2
+    berserkChance: 50
+    sniper: 75
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_TZEENTCH
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_BLUE_FIRE_WEAPON
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_PLASMA_PISTOL_TZEENTCH
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_BLUE_FIRE_WEAPON
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_FLAMERSPAWNER_GRENADE
+      - - STR_TZEENTCH_BOLT_OF_CHANGE
+        - STR_TZEENTCH_FLAMER_WEAPON_PINK
+        - STR_FLAMERSPAWNER_GRENADE
+        - STR_PINKHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_CULT_LEADER_ASSASSIN  # TZEENTCH LEADER INTO ASSASSIN
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 65
+      stamina: 90
+      health: 40
+      bravery: 100
+      reactions: 60
+      firing: 65
+      throwing: 50
+      strength: 50
+      psiStrength: 95
+      psiSkill: 0
+      melee: 80
+    armor: STR_TZEENTCH_CULT_LEADER_ASSASSIN_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 10
+    deathSound: [2200, 2201, 2202, 2203, 2204]
+    spawnUnit: STR_TZEENTCH_SISTERASS
+    intelligence: 4
+    aggression: 4
+    berserkChance: 66
+    spotter: 1
+    sniper: 75
+    energyRecovery: 40
+    moraleLossWhenKilled: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_TZEENTCH
+        - STR_BLUE_FIRE_WEAPON
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - STR_BLUE_FIRE_WEAPON
+        - STR_FLAMERSPAWNER_GRENADE
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_PINK_HORROR_CORUSCATING_FLAMES
+        - STR_BLUE_FIRE_WEAPON
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_FLAMERSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_CULT_LEADER_SPAWN  # TZEENTCH LEADER INTO SPAWN Possessed
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 65
+      stamina: 90
+      health: 40
+      bravery: 100
+      reactions: 45
+      firing: 65
+      throwing: 50
+      strength: 50
+      psiStrength: 75
+      psiSkill: 19
+      melee: 80
+    armor: STR_TZEENTCH_CULT_LEADER_SPAWN_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 10
+    deathSound: [2021, 2022]
+    spawnUnit: STR_TZEENTCH_CULT_POSSESSED
+    intelligence: 4
+    aggression: 4
+    sniper: 50
+    spotter: 1
+    berserkChance: 66
+    energyRecovery: 40
+    moraleLossWhenKilled: 75
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_TZEENTCH
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_BLUE_FIRE_WEAPON
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_PLASMA_PISTOL_TZEENTCH
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_BLUE_FIRE_WEAPON
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_FLAMERSPAWNER_GRENADE
+      - - STR_PINK_HORROR_CORUSCATING_FLAMES
+        - STR_TZEENTCH_GLIMMERING_WEAPON_RAPIDFIRE
+        - STR_FLAMERSPAWNER_GRENADE
+        - STR_PINKHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_CULT_POSSESSED  # TZEENTCH LEADER POSSESSED WITCH
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 65
+      stamina: 90
+      health: 100
+      bravery: 110
+      reactions: 60
+      firing: 60
+      throwing: 50
+      strength: 50
+      psiStrength: 80
+      psiSkill: 40
+      melee: 80
+    armor: STR_TZEENTCH_CULT_POSSESSED_ARMOR  # CHANGE
+    standHeight: 20
+    kneelHeight: 15
+    value: 15
+    aggroSound: 2240  # diedie
+    deathSound: [2236, 2237, 2238, 2239]
+    intelligence: 3
+    aggression: 4
+    spotter: 1
+    berserkChance: 100
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_NEVERBORN_WEAPON
+        - STR_BLUE_FIRE_WEAPON
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_NEVERBORN_WEAPON
+        - STR_TZEENTCH_GLIMMERING_WEAPON_SCATTER
+        - STR_FLAMERSPAWNER_GRENADE
+      - - STR_NEVERBORN_WEAPON
+        - STR_TZEENTCH_FLAMER_WEAPON_BLUE
+        - STR_PINKHORRORSPAWNER_GRENADE
+        - STR_FLAMERSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_CULT_SUMMONER  # TZEENTCH COMMANDER
+    race: STR_TZEENTCH_CULT
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 60
+      stamina: 75
+      health: 60
+      bravery: 100
+      reactions: 50
+      firing: 68
+      throwing: 50
+      strength: 45
+      psiStrength: 99
+      psiSkill: 79
+      melee: 50
+    armor: STR_TZEENTCH_CULT_SUMMONER_ARMOR
+    # aggroSound:  # insert male summoner line
+    standHeight: 20
+    kneelHeight: 15
+    value: 30
+    berserkSound: 2222
+    aggroSound: 2221
+    deathSound: [2241, 2242, 2243, 2244]
+    intelligence: 5
+    aggression: 1
+    sniper: 90
+    spotter: 1
+    berserkChance: 50
+    energyRecovery: 50
+    moraleLossWhenKilled: 120
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      #Tier 1
+      - TZEENTCH_SUMMONER_CONJUREPORTAL_FLAMERBLUE: 35
+        TZEENTCH_SUMMONER_CONJUREPORTAL_CORUSCATINGFLAMES: 35
+        TZEENTCH_SUMMONER_CONJUREPORTAL_PINKFLAME: 10
+        TZEENTCH_SUMMONER_CONJUREPORTAL_BOLTOFCHANGE: 10
+        TZEENTCH_SUMMONER_CONJUREPORTAL_GLIMMERINGRAPIDFIRE: 5
+        TZEENTCH_SUMMONER_CONJUREPORTAL_STORMOFCHANGE: 5
+      #Tier 2
+      - TZEENTCH_SUMMONER_CONJUREPORTAL_FLAMERBLUE: 20
+        TZEENTCH_SUMMONER_CONJUREPORTAL_CORUSCATINGFLAMES: 20
+        TZEENTCH_SUMMONER_CONJUREPORTAL_PINKFLAME: 20
+        TZEENTCH_SUMMONER_CONJUREPORTAL_BOLTOFCHANGE: 20
+        TZEENTCH_SUMMONER_CONJUREPORTAL_GLIMMERINGRAPIDFIRE: 10
+        TZEENTCH_SUMMONER_CONJUREPORTAL_STORMOFCHANGE: 10
+      #Tier 3
+      - TZEENTCH_SUMMONER_CONJUREPORTAL_FLAMERBLUE: 5
+        TZEENTCH_SUMMONER_CONJUREPORTAL_CORUSCATINGFLAMES: 5
+        TZEENTCH_SUMMONER_CONJUREPORTAL_PINKFLAME: 10
+        TZEENTCH_SUMMONER_CONJUREPORTAL_BOLTOFCHANGE: 10
+        TZEENTCH_SUMMONER_CONJUREPORTAL_GLIMMERINGRAPIDFIRE: 35
+        TZEENTCH_SUMMONER_CONJUREPORTAL_STORMOFCHANGE: 35
+
+  - type: STR_TZEENTCH_BATTLE_SERVITOR_PLASMA                                       # RANK 1 weapons done
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 60
+      stamina: 120
+      health: 80  # toughcyboy, +15 from leader.
+      bravery: 110  # unbreakable
+      reactions: 40  # lower than leader, beep bop weakness
+      firing: 75  # Accurate aiming sensors
+      throwing: 30  # No arms to toss with
+      strength: 80  # RobotStrong
+      psiStrength: 75  # Not sure if easy or hard to mind control a Servitor. Hardened at least
+      psiSkill: 0
+      melee: 20  # poor melee
+    armor: STR_TZEENTCH_BATTLE_SERVITOR_PLASMA_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    intelligence: 2
+    startMovingSound: [2255, 2256]  # Proceed Relocate
+    berserkSound: 2257  # FemServitorExterminate
+    aggroSound: 2254  # TargetAcquired
+    deathSound: [2258, 2259, 2260]  # CSERVITORDEATH
+    aggression: 1
+    spotter: 1
+    sniper: 50
+    value: 30
+    energyRecovery: 60
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CSERVITOR_HPLASMA  # Chaos servitor PLASMA SPRAY
+        - STR_CSERVITOR_PLASMA_SPRAY_CELL
+      - - STR_CSERVITOR_HPLASMA  # Chaos servitor PLASMA GUN
+        - STR_CSERVITOR_PLASMA_CELL
+      - - STR_CSERVITOR_HPLASMA  # Chaos servitor HEAVY PLASMA
+        - STR_CSERVITOR_HPLASMA_CELL
+        - STR_CSERVITOR_PLASMA_SPRAY_CELL
+
+  - type: STR_TZEENTCH_COMBAT_SERVITOR                                     # RANK 1 weapons done
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 120
+      health: 80  # toughcyboy
+      bravery: 110  # unbreakable
+      reactions: 35
+      firing: 70
+      throwing: 60
+      strength: 80  # RobotStrong
+      psiStrength: 75  # Not sure if easy or hard to mind control a Servitor. Hardened at least
+      psiSkill: 0
+      melee: 20  # poor melee
+    armor: STR_TZEENTCH_COMBAT_SERVITOR_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    intelligence: 2
+    value: 10
+    startMovingSound: 2253  # servo noises
+    panicSound: 2252  # Is something there
+    berserkSound: 2251  # I´ll rip you up
+    aggroSound: 2247  # I got something for you
+    deathSound: [2258, 2259, 2260]  # CSERVITORDEATH
+    aggression: 2
+    spotter: 1
+    sniper: 50
+    energyRecovery: 60
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_ALIEN_GRENADE
+      - - STR_BOLTERR
+        - STR_RIFLE_CLIP_R
+        - STR_RIFLE_CLIP_R
+        - STR_ALIEN_GRENADE
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_MGRENADE
+
+  - type: STR_TZEENTCHS_SISTERCHAMP                                              # RANK 0 weapons done
+    race: STR_TZEENTCH_LEADER
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 100
+      stamina: 120
+      health: 100
+      bravery: 100
+      reactions: 65
+      firing: 85
+      throwing: 80
+      strength: 70
+      psiStrength: 109
+      psiSkill: 69
+      melee: 90
+    armor: STR_ADEPTAS_TZEENTCHAMP
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 120
+    value: 30
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 4
+    aggression: 1
+    spotter: 1
+    sniper: 50
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_CPOWER_DAGGER
+        - STR_BOLTPISTOL_TZEENTCH
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_ADEPTAS_POWER_AXE
+        - STR_PLASMA_PISTOL_TZEENTCH
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_TZ_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PINKHORRORSPAWNER_GRENADE
+
+  - type: STR_TZEENTCH_SISTER   # CHAOS STR_ADEPTAS_TZEENTCH                    RANK 5 NO weapons
+    race: STR_TZEENTCH
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 80
+      stamina: 96
+      health: 50
+      bravery: 80
+      reactions: 50
+      firing: 85
+      throwing: 80
+      strength: 60
+      psiStrength: 80
+      psiSkill: 20
+      melee: 70
+    armor: STR_ADEPTAS_TZEENTCH
+    intelligence: 3
+    aggression: 1
+    spotter: 1
+    sniper: 25
+    value: 20
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+      - - STR_BOLTERR
+        - STR_RIFLE_CLIP_R
+        - STR_RIFLE_CLIP_R
+        - STR_MGRENADE
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_MGRENADE
+
+  - type: STR_TZEENTCH_TWISTED_SISTER    # CHAOS Tzeentch grunt early Sister                      RANK 5 NO weapons
+    race: STR_TZEENTCH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 80
+      health: 35
+      bravery: 80
+      reactions: 45
+      firing: 60
+      throwing: 45
+      strength: 45
+      psiStrength: 40
+      psiSkill: 0
+      melee: 50
+    armor: STR_ADEPTAS_TZEENTCH_TWISTED_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 50  # disposable puppets
+    value: 15
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    sniper: 50
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_TZEENTCH
+        - STR_CPOWER_DAGGER
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_KRAK_GRENADE
+      - - STR_BOLTERR
+        - STR_RIFLE_CLIP_R
+        - STR_RIFLE_CLIP_R
+        - STR_MGRENADE
+
+  - type: STR_TZEENTCH_SISTERASS     # CHAOS ASSASSIN
+    race: STR_TZEENTCH
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 80
+      stamina: 120
+      health: 40
+      bravery: 80
+      reactions: 80
+      firing: 100  # it's an assassin that specializes in long ranged weapons and a relatively rare spawn
+      throwing: 80
+      strength: 60
+      psiStrength: 90
+      psiSkill: 0
+      melee: 80
+    armor: STR_ADEPTAS_TZEENTCHNASSASSINARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 25
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 4
+    aggression: 1  # longer ranged assassin; less aggression
+    spotter: 1
+    sniper: 90
+    energyRecovery: 70
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_MGRENADE
+      - - STR_TZ_PLASMA_GUN_TWINCORE
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_PLASMA_TWINCORE_CLIP
+        - STR_MGRENADE
+
+  - type: STR_HERETIC_SISTERINQ   # CHAOS Heretic Sister of Battle    RANK 1 NO weapons
+    race: STR_TZEENTCH_LEADER
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 89
+      stamina: 100
+      health: 59
+      bravery: 90
+      reactions: 79
+      firing: 89
+      throwing: 89
+      strength: 49
+      psiStrength: 99  # this is an inquisitor sorcerer; they have great psi strength. This is also a commander unit
+      psiSkill: 89
+      melee: 89
+    armor: STR_TZEENTCH_INQUISITOR_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 120  # leader malus
+    value: 30
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 6  # inquisitor and a sorcerer
+    aggression: 1
+    spotter: 2
+    sniper: 90
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BLUE_FIRE_WEAPON
+        - STR_EPOWER_SWORD
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_PINK_HORROR_CORUSCATING_FLAMES
+        - STR_EPOWER_SWORD
+        - STR_FLAMERSPAWNER_GRENADE
+        - STR_BLUEHORRORSPAWNER_GRENADE
+      - - STR_TZEENTCH_BOLT_OF_CHANGE
+        - STR_PINK_HORROR_CORUSCATING_FLAMES
+        - STR_PINKHORRORSPAWNER_GRENADE
+        - STR_FLAMERSPAWNER_GRENADE
+        - STR_BLUEHORRORSPAWNER_GRENADE
+
+  - type: STR_HERETIC_SISTER_SBLESSED_LIE   # CHAOS Heretic Sister of Battle Blessed by Slannesh   RANK 5 NO weapons
+    race: STR_ADEPTAS
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 60
+      stamina: 75
+      health: 20
+      bravery: 60
+      reactions: 45
+      firing: 55
+      throwing: 40
+      strength: 40
+      psiStrength: 40
+      psiSkill: 0
+      melee: 45
+    armor: STR_ADEPTAS_HERETIC_ARMOR_BLESSED
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 80  # expendable
+    value: 15
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 1
+    aggression: 2
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    spawnUnit: STR_DEMI_DAEMONETTE_FALSE
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_KNIF
+        - STR_PHOSPHOR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_BOLTER_CANTUS
+        - STR_CANTUS_BOLTER_AMMO
+        - STR_CANTUS_BOLTER_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTER_HERETIC_DEAZ
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_LIGHT_BOLTER_AMMO
+        - STR_CPOWER_DAGGER
+        - STR_GRENADE
+
+  - type: STR_TZEENTCH_DREBORN  # CHAOS STR_ADEPTAS_TZEENTCH Reborn Tzeentch playing tricks   RANK 5 NO weapons
+    race: STR_TZEENTCH
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 90
+      health: 50
+      bravery: 80
+      reactions: 50
+      firing: 75
+      throwing: 60
+      strength: 45
+      psiStrength: 75
+      psiSkill: 0
+      melee: 55
+    armor: STR_ADEPTAS_TZEENTCH
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 80  # grunt malus
+    value: 25
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 1
+    spotter: 1
+    sniper: 50
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTERR
+        - STR_RIFLE_CLIP_R
+        - STR_RIFLE_CLIP_R
+        - STR_BLUEHORRORSPAWNER_GRENADE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_FLAMETHROWERTZ
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_FLAMERSPAWNER_GRENADE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_FLAMERSPAWNER_GRENADE
+        - STR_MGRENADE
+
+# Tzeentch Traitor Guard
+  - type: STR_TZEENTCH_TRAITORGUARD_BASIC  # TZEENTCH TRAITOR GUARD MALE
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 45
+      stamina: 80
+      health: 40
+      bravery: 80
+      reactions: 50
+      firing: 55
+      throwing: 55
+      strength: 30
+      psiStrength: 66
+      psiSkill: 0
+      melee: 55
+    armor: STR_TZEENTCH_TRAITORGUARD_BASIC_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 8
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]  # male
+    intelligence: 1
+    aggression: 1
+    berserkChance: 33
+    energyRecovery: 40
+    spotter: 1
+    sniper: 33
+    moraleLossWhenKilled: 75
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_LASPISTOL
+        - STR_LASPISTOL_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_PHOTON_GRENADE
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_TZEENTCH_TRAITORGUARD_HEAVY  # TZEENTCH TRAITOR GUARD MALE
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 45
+      stamina: 80
+      health: 50
+      bravery: 80
+      reactions: 45
+      firing: 55
+      throwing: 60
+      strength: 35
+      psiStrength: 66
+      psiSkill: 0
+      melee: 55
+    armor: STR_TZEENTCH_TRAITORGUARD_HEAVY_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 10
+    deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]  # male
+    intelligence: 2
+    aggression: 1
+    berserkChance: 50
+    energyRecovery: 40
+    spotter: 1
+    sniper: 33
+    moraleLossWhenKilled: 90
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP
+        - STR_GRENADE
+        - STR_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_MGRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_TZEENTCH_TRAITORGUARD_SCOUT  # TZEENTCH TRAITOR GUARD SNIPER
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 52
+      stamina: 80
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 68
+      throwing: 50
+      strength: 30
+      psiStrength: 66
+      psiSkill: 0
+      melee: 55
+    armor: STR_TZEENTCH_TRAITORGUARD_SCOUT_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 15
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 1
+    berserkChance: 33
+    energyRecovery: 40
+    spotter: 1
+    sniper: 90
+    moraleLossWhenKilled: 100
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP
+        - STR_PHOTON_GRENADE
+        - STR_PHOTON_GRENADE
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP
+        - STR_PHOTON_GRENADE
+        - STR_PHOTON_GRENADE
+        - STR_GRENADE
+      - - STR_LONGLAS_TZEENTCH
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_PHOTON_GRENADE
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_TZEENTCH_TRAITORGUARD_COMMANDO  # TZEENTCH TRAITOR GUARD COMANDO
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_NAVIGATOR
+    stats:
+      tu: 65
+      stamina: 100
+      health: 45
+      bravery: 80
+      reactions: 60
+      firing: 65
+      throwing: 60
+      strength: 35
+      psiStrength: 66
+      psiSkill: 0
+      melee: 65
+    armor: STR_TZEENTCH_TRAITORGUARD_COMMANDO_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 12
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 3
+    aggression: 1
+    berserkChance: 60
+    energyRecovery: 40
+    spotter: 1
+    sniper: 66
+    moraleLossWhenKilled: 110
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_LASPISTOL
+        - STR_LASPISTOL_CLIP
+        - STR_LASPISTOL_CLIP
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+        - STR_GRENADE
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_KRAK_GRENADE
+        - STR_GRENADE
+
+  - type: STR_TZEENTCH_TRAITORGUARD_CARAPACE  # TZEENTCH TRAITOR GUARD CARAPACE
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_ENGINEER
+    stats:
+      tu: 55
+      stamina: 90
+      health: 50
+      bravery: 90
+      reactions: 50
+      firing: 60
+      throwing: 65
+      strength: 40
+      psiStrength: 66
+      psiSkill: 0
+      melee: 60
+    armor: STR_TZEENTCH_TRAITORGUARD_CARAPACE_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 12
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 3
+    aggression: 1
+    berserkChance: 60
+    energyRecovery: 50
+    sniper: 33
+    spotter: 1
+    moraleLossWhenKilled: 100
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_BOLTER_LIGHT_SOLO
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_KRAK_GRENADE
+      - - STR_CHAOS_HELLGUN
+        - STR_KRAK_GRENADE
+
+  - type: STR_TZEENTCH_TRAITORGUARD_OFFICER  # TZEENTCH TRAITOR GUARD OFFICER
+    race: STR_TZEENTCH_TRAITOR_GUARD
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 60
+      stamina: 90
+      health: 50
+      bravery: 90
+      reactions: 55
+      firing: 67
+      throwing: 55
+      strength: 36
+      psiStrength: 66
+      psiSkill: 0
+      melee: 65
+    armor: STR_TZEENTCH_TRAITORGUARD_OFFICER_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    value: 15
+    deathSound: [2226, 2227, 2228, 2229, 2230, 2231]
+    intelligence: 3
+    aggression: 1
+    berserkChance: 45
+    energyRecovery: 40
+    sniper: 66
+    spotter: 1
+    moraleLossWhenKilled: 120
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_TZEENTCH
+        - STR_TZ_LIGHT_BOLTER_AMMO_R  # need more of these; low ammo cap
+        - STR_TZ_LIGHT_BOLTER_AMMO_R
+        - STR_KRAK_GRENADE
+      - - STR_TZEENTCH_LASGUN
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT_CHAOS
+        - STR_KRAK_GRENADE
+      - - STR_PLASMA_PISTOL_TZEENTCH
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_KRAK_GRENADE

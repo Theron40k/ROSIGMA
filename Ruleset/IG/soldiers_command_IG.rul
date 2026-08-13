@@ -30,6 +30,10 @@ soldiers:
     tags:
       SOLDIER_COMMAND_POINTS: 2
 
+  - type: STR_GUARD_VALHALLAN # rank 0 - 3  # max 8
+    tags:
+      SOLDIER_COMMAND_POINTS: 2
+
   - type: STR_PILOT_GUARD  # rank 0 - 3  # max 8
     tags:
       SOLDIER_COMMAND_POINTS: 3
@@ -44,11 +48,20 @@ soldiers:
       SOLDIER_COMMAND_POINTS: 20
       SOLDIER_IS_OFFICER: 1
 
+  - type: STR_GUARD_VALHALLAN_OFFICER # rank 0 - 3  # max 8
+    tags:
+      SOLDIER_COMMAND_POINTS: 20
+      SOLDIER_IS_OFFICER: 1
+
   - type: STR_GUARD_VETERAN  # rank 0 - 3  # max 20
     tags:
       SOLDIER_COMMAND_POINTS: 5
 
   - type: STR_GUARDSL_VETERAN  # rank 0 - 3  # max 20
+    tags:
+      SOLDIER_COMMAND_POINTS: 5
+
+  - type: STR_GUARD_VETERAN_VALHALLAN # rank 0 - 3  # max 20
     tags:
       SOLDIER_COMMAND_POINTS: 5
 
@@ -58,6 +71,11 @@ soldiers:
       SOLDIER_IS_OFFICER: 1
 
   - type: STR_GUARDSL_OFFICER_VETERAN  # rank 0 - 5  # max 240
+    tags:
+      SOLDIER_COMMAND_POINTS: 40
+      SOLDIER_IS_OFFICER: 1
+
+  - type: STR_GUARD_VALHALLAN_OFFICER_VETERAN # rank 0 - 5  # max 240
     tags:
       SOLDIER_COMMAND_POINTS: 40
       SOLDIER_IS_OFFICER: 1

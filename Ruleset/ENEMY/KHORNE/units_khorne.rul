@@ -1,0 +1,1645 @@
+
+units:
+
+  - type: STR_WORLDEATER_LEADER #Generic khorne champion in power armor
+    race: STR_KHORNE
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 142
+      stamina: 128
+      health: 130
+      bravery: 120
+      reactions: 98
+      firing: 88
+      throwing: 88
+      strength: 118
+      psiStrength: 90
+      psiSkill: 0
+      melee: 138
+    armor: STR_KHORNE_CHAMPION_ARMOR
+    standHeight: 21
+    kneelHeight: 16
+    intelligence: 4
+    aggression: 8
+    spotter: 3
+    sniper: 50
+    value: 40
+    avoidsFire: false
+    canPanic: false
+    canBeMindControlled: false
+    berserkChance: 99
+    energyRecovery: 88
+    deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
+    aggroSound: [{mod: 40k, index: 808}]
+    weightedBuiltInWeaponSets:
+      -   #Tier 1
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 10
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 10
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 1
+        CHAOS_BOLTPISTOL_AP_AND_BERSERKER_AXE_SET: 25
+        CHAOS_BOLTPISTOL_AP_AND_POWER_AXE_SET: 20
+        CHAOS_BOLTPISTOL_AP_AND_LIGHTNINGCLAW_SET: 10
+        CHAOS_PLASMA_PISTOL_AND_POWER_AXE_SET: 5
+        CHAOS_PLASMA_PISTOL_AND_LIGHTNINGCLAW_SET: 5
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 10
+      -       #Tier 2
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 10
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
+        CHAOS_BOLTPISTOL_AP_AND_BERSERKER_AXE_SET: 5
+        CHAOS_BOLTPISTOL_AP_AND_POWER_AXE_SET: 10
+        CHAOS_BOLTPISTOL_AP_AND_LIGHTNINGCLAW_SET: 15
+        CHAOS_PLASMA_PISTOL_AND_POWER_AXE_SET: 15
+        CHAOS_PLASMA_PISTOL_AND_LIGHTNINGCLAW_SET: 15
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 15
+      -      #Tier 3
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 10
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
+        CHAOS_BOLTPISTOL_AP_AND_POWER_AXE_SET: 5
+        CHAOS_BOLTPISTOL_AP_AND_LIGHTNINGCLAW_SET: 15
+        CHAOS_PLASMA_PISTOL_AND_POWER_AXE_SET: 15
+        CHAOS_PLASMA_PISTOL_AND_LIGHTNINGCLAW_SET: 20
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 20
+
+  - type: STR_KHORNE_CHAMP   #Khorne champion in terminator armor
+    race: STR_KHORNE
+    rank: STR_LIVE_COMMANDER
+    stats:
+      tu: 128
+      stamina: 128
+      health: 148
+      bravery: 120  # stronger intimidate
+      reactions: 98
+      firing: 88
+      throwing: 88
+      strength: 188  # terminator armor
+      psiStrength: 188
+      psiSkill: 0
+      melee: 148
+    armor: STR_KHORNECHAMP_ARMOR
+    intelligence: 4
+    aggression: 8
+    spotter: 1
+    sniper: 50  # will squad sight, but infrequently
+    avoidsFire: false
+    canPanic: false
+    value: 40
+    canBeMindControlled: false
+    berserkChance: 99
+    energyRecovery: 88
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets: #CQC focused
+      -  # Tier 1
+        KHORNE_TERMINATOR_COMBIBOLTER_GREAT_AXE: 30
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 30
+        TERMINATOR_MULTIMELTA: 15
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 10
+      -  # Tier 2
+        KHORNE_TERMINATOR_COMBIBOLTER_GREAT_AXE: 30
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 20
+        TERMINATOR_MULTIMELTA: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 10
+      -  # Tier 3
+        KHORNE_TERMINATOR_COMBIBOLTER_GREAT_AXE: 10
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 10
+        TERMINATOR_MULTIMELTA: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 35
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 30
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 3
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 2
+
+  - type: STR_REAPER_TERRORIST # Juggernaut
+    race: STR_REAPER #Daemon #Khorne
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 128  # these things are Khornate steeds; they move fast asf boy
+      stamina: 258  # tireless daemonic steeds
+      health: 258
+      bravery: 110
+      reactions: 68
+      firing: 8  # for intimidate only
+      throwing: 0
+      strength: 118
+      psiStrength: 88
+      psiSkill: 0
+      melee: 88  # brutish and a little clumsy
+    armor: STR_REAPER_ARMOR
+    aggroSound: 2428  # aggressive growl
+    avoidsFire: false
+    isLeeroyJenkins: true
+    intelligence: 2
+    aggression: 8
+    energyRecovery: 88  # tireless daemonic steeds
+
+# kharn start
+
+  - type: STR_KHARN
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 150
+      stamina: 180
+      health: 200
+      bravery: 100
+      reactions: 70
+      firing: 100
+      throwing: 80
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 180
+    armor: STR_KHARN_ARMOR
+    capturable: false
+    avoidsFire: false  # doesn't really care
+    intelligence: 4
+    aggression: 8
+    spotter: 2
+    sniper: 75
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    isLeeroyJenkins: true
+    builtInWeaponSets:
+      - - STR_GORECHILD_AXE
+        - STR_INTIMIDATION_KHARN
+      - - STR_GORECHILD_AXE
+        - STR_INTIMIDATION_KHARN
+      - - STR_GORECHILD_AXE
+        - STR_INTIMIDATION_KHARN
+
+  - type: STR_KHARN2
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 150
+      stamina: 180
+      health: 200
+      bravery: 100
+      reactions: 70
+      firing: 100
+      throwing: 80
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 180
+    armor: STR_KHARN_ARMOR2
+    capturable: false
+    avoidsFire: false  # doesn't really care
+    intelligence: 4
+    aggression: 8
+    spotter: 2
+    sniper: 75
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_GORECHILD_AXE
+        - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+      - - STR_GORECHILD_AXE
+        - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+      - - STR_GORECHILD_AXE
+        - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+
+  - type: STR_KHARN3
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 150
+      stamina: 180
+      health: 200
+      bravery: 100
+      reactions: 70
+      firing: 100
+      throwing: 80
+      strength: 200
+      psiStrength: 100
+      psiSkill: 0
+      melee: 180
+    armor: STR_KHARN_ARMOR3
+    avoidsFire: false  # doesn't really care
+    intelligence: 4
+    aggression: 8
+    spotter: 2
+    sniper: 75
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets:
+      - - STR_GORECHILD_AXE_CHAINTHROW  # the throwing version
+      - - STR_GORECHILD_AXE_CHAINTHROW  # the throwing version
+      - - STR_GORECHILD_AXE_CHAINTHROW  # the throwing version
+
+# kharn end
+#Gors
+
+  - type: STR_KHORNE_UNGOR      # Khorngors Early                                 # RANK 5 weapons done
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 60
+      stamina: 95
+      health: 80
+      bravery: 80
+      reactions: 55
+      firing: 50
+      throwing: 75
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_KHORNE_UNGOR_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 8
+    aggression: 6
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    aggroSound: 2108
+    berserkChance: 80
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_STUB_GUN_CHAOS
+        - STR_STUB_GUN_AMMO
+        - STR_STUB_GUN_AMMO
+        - STR_AXE
+      - - STR_STUB_GUN_CHAOS
+        - STR_STUB_GUN_AMMO_AP
+        - STR_STUB_GUN_AMMO_AP
+        - STR_AXE
+        - STR_GRENADE
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_AXE
+        - STR_KRAK_GRENADE
+        - STR_GRENADE
+
+  - type: STR_KHORNE_GOR      # Khorngors MID                                 # RANK 5 weapons done
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 95
+      health: 120
+      bravery: 90
+      reactions: 55
+      firing: 50
+      throwing: 75
+      strength: 75
+      psiStrength: 65
+      psiSkill: 0
+      melee: 85
+    armor: STR_KHORNE_GOR_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 15
+    aggression: 6
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    aggroSound: 2108
+    berserkChance: 90
+    energyRecovery: 50
+    livingWeapon: true
+    moveSound: -1  # New Cloppity?
+    builtInWeaponSets:
+      - - STR_SHOTGUN_CHAOS
+        - STR_SHOTGUN_SHELLS
+        - STR_SHOTGUN_SHELLS
+        - STR_AXE
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_INC
+        - STR_RIPPER_GUN_CLIP_INC
+        - STR_GRENADE
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_KRAK_GRENADE
+        - STR_GRENADE
+
+#Khorne Sisters
+
+  - type: STR_KHORNE_SISTER     # CHAOS STR_ADEPTAS_KHORNE                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 85
+      stamina: 100
+      health: 60
+      bravery: 100
+      reactions: 60
+      firing: 50
+      throwing: 80
+      strength: 70
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_ADEPTAS_KHORNE
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 1
+    aggression: 5
+    berserkChance: 85
+    livingWeapon: true
+    spotter: 1
+    energyRecovery: 40
+    builtInWeaponSets:
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_AXE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTER_MEPHISTO
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_FLAMETHROWER_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_PLASMA_CARBINE_CHAOS
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_SISTER_VALKIA     # CHAOS STR_ADEPTAS_KHORNE                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_MEDIC
+    stats:
+      tu: 88
+      stamina: 118
+      health: 88
+      bravery: 110
+      reactions: 88
+      firing: 78
+      throwing: 78
+      strength: 68
+      psiStrength: 88
+      psiSkill: 0
+      melee: 88
+    armor: STR_KHORNE_VALKIA_ARMORBASIC
+    standHeight: 20
+    kneelHeight: 15
+    value: 25
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 3
+    aggression: 8
+    avoidsFire: false
+    berserkChance: 90
+    livingWeapon: true
+    specab: 3
+    energyRecovery: 88
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_SERAPHIM
+        - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
+        - STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO
+        - STR_KHORNE_VALKIA_WEAPON
+        - STR_GRENADE
+      - - STR_BOLTER_MEPHISTO
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_FLAMETHROWER_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_AUTO_CANNON_CHAOSRETRIBUTOR
+        - STR_AC_I_AMMO
+        - STR_AC_I_AMMO
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_ARMSISTER_BLESSED_TRUE   # CHAOS Truly Blessed                    RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 76
+      stamina: 90
+      health: 30
+      bravery: 90
+      reactions: 50
+      firing: 55
+      throwing: 70
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 65
+    armor: STR_ADEPTAS_KHORNEPARMOR_BLESSED
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 1
+    aggression: 5
+    berserkChance: 90
+    livingWeapon: true
+    spotter: 1
+    energyRecovery: 40
+    spawnUnit: STR_KHORNE_DEMIBLOODLETTERIN_SPAWNED  # Change for DemiBloodletterin that spawns Bloodletter on death
+    builtInWeaponSets:
+      - - STR_REDEEMER_SHOTGUN
+        - STR_REDEEMER_SHELLS_INC
+        - STR_REDEEMER_SHELLS_KRAK
+        - STR_REDEEMER_PENITENCE_SHELLS
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_PLASMA_CARBINE_CHAOS
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_ARMSISTER_BLESSED_FALSE   # CHAOS STR_ADEPTAS_SLAANESH Blessed by Lies                    RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 76
+      stamina: 90
+      health: 30
+      bravery: 90
+      reactions: 50
+      firing: 55
+      throwing: 70
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 65
+    armor: STR_ADEPTAS_KHORNEPARMOR_BLESSED
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 5
+    berserkChance: 90
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    spawnUnit: STR_KHORNE_DEMIBLOODLETTERIN_SPAWNED
+    builtInWeaponSets:
+      - - STR_REDEEMER_SHOTGUN
+        - STR_REDEEMER_SHELLS_INC
+        - STR_REDEEMER_SHELLS_KRAK
+        - STR_REDEEMER_PENITENCE_SHELLS
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_PLASMA_RIFLE
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_PLASMA_RIFLE_CLIP
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_RETRIBUTOR_SUPERIOR_BLESSED_FALSE     # CHAOS KHORNE RETRIBUTOR SUPERIOR                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 70
+      stamina: 105
+      health: 70
+      bravery: 110
+      reactions: 75
+      firing: 75
+      throwing: 75
+      strength: 90
+      psiStrength: 80
+      psiSkill: 0
+      melee: 75
+    armor: STR_KHORNE_RETRIBUTOR_ARMOR_SUPERIOR_BLESSED
+    standHeight: 20
+    kneelHeight: 15
+    value: 25
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 5
+    berserkChance: 90
+    livingWeapon: true
+    spotter: 2
+    energyRecovery: 60
+    spawnUnit: STR_KHORNE_DEMIBLOODLETTERIN_SUPERIOR_SPAWNED
+    builtInWeaponSets:
+      - - STR_LASCAN_MALTHUS
+        - STR_LASCANNON_CLIP_MALTHUS
+        - STR_LASCANNON_CLIP_MALTHUS
+        - STR_PHOSPHOR_GRENADE
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_HFLAMER_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+      - - STR_BLASTER_LAUNCHER
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_RETRIBUTOR_SUPERIOR     # CHAOS KHORNE RETRIBUTOR SUPERIOR                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 105
+      health: 80
+      bravery: 110
+      reactions: 75
+      firing: 75
+      throwing: 75
+      strength: 90
+      psiStrength: 80
+      psiSkill: 0
+      melee: 75
+    armor: STR_KHORNE_RETRIBUTOR_ARMOR_SUPERIOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 25
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 5
+    berserkChance: 90
+    livingWeapon: true
+    spotter: 2
+    energyRecovery: 60
+    builtInWeaponSets:
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_HFLAMER_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_LASCAN_MALTHUS
+        - STR_LASCANNON_CLIP_MALTHUS
+        - STR_LASCANNON_CLIP_MALTHUS
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+      - - STR_BLASTER_LAUNCHER
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_RETRIBUTOR_BLESSED_FALSE     # CHAOS KHORNE RETRIBUTOR TROOPER                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 96
+      health: 45
+      bravery: 100
+      reactions: 70
+      firing: 70
+      throwing: 70
+      strength: 70
+      psiStrength: 60
+      psiSkill: 0
+      melee: 60
+    armor: STR_KHORNE_RETRIBUTOR_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 4
+    berserkChance: 90
+    livingWeapon: true
+    sniper: 33
+    energyRecovery: 50
+    spawnUnit: STR_KHORNE_DEMIBLOODLETTERIN_RETRIBUTOR_SPAWNED
+    builtInWeaponSets:
+      - - STR_AUTO_CANNON_CHAOSRETRIBUTOR
+        - STR_AC_I_AMMO
+        - STR_AC_HE_AMMO
+        - STR_AC_HE_AMMO
+        - STR_MGRENADE
+      - - STR_CHERUBIM_GRENADE_LAUNCHER
+        - STR_PHOSPHOR_GRENADE_DRUM
+        - STR_PHOSPHOR_GRENADE_DRUM
+        - STR_PENITENCE_GRENADE_DRUM
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+      - - STR_BLASTER_LAUNCHER
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_RETRIBUTOR     # CHAOS KHORNE RETRIBUTOR TROOPER                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 96
+      health: 60
+      bravery: 100
+      reactions: 70
+      firing: 70
+      throwing: 70
+      strength: 70
+      psiStrength: 60
+      psiSkill: 0
+      melee: 60
+    armor: STR_KHORNE_RETRIBUTOR_ARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 1
+    aggression: 4
+    berserkChance: 80
+    sniper: 33
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AUTO_CANNON_CHAOSRETRIBUTOR
+        - STR_AC_I_AMMO
+        - STR_AC_HE_AMMO
+        - STR_AC_HE_AMMO
+        - STR_MGRENADE
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_HFLAMER_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BLASTER_LAUNCHER
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_HIGH_EXPLOSIVE
+
+  - type: STR_KHORNE_ARMSISTER     # CHAOS STR_ADEPTAS_KHORNE                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 76
+      stamina: 90
+      health: 50
+      bravery: 90
+      reactions: 50
+      firing: 55
+      throwing: 70
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 65
+    armor: STR_ADEPTAS_KHORNEPARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 15
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 1
+    aggression: 5
+    berserkChance: 75
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_AXE
+        - STR_ADEPTAS_HABORYM
+        - STR_PHOSPHOR_GRENADE
+      - - STR_REDEEMER_SHOTGUN
+        - STR_REDEEMER_SHELLS_INC
+        - STR_REDEEMER_SHELLS_KRAK
+        - STR_REDEEMER_PENITENCE_SHELLS
+      - - STR_PLASMA_CARBINE_CHAOS
+        - STR_PLASMA_SPRAY_CLIP
+        - STR_PLASMA_SPRAY_CLIP
+
+  - type: STR_KHORNE_ROOKIESISTER     # CHAOS SRookie Khorne Sister Early Enemy                      RANK 5 NO weapons
+    race: STR_KHRONE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 65
+      stamina: 80
+      health: 40
+      bravery: 90
+      reactions: 45
+      firing: 50
+      throwing: 50
+      strength: 50
+      psiStrength: 30
+      psiSkill: 0
+      melee: 65
+    armor: STR_ADEPTAS_KHORNENOVICEARMOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 12
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 0
+    aggression: 3
+    berserkChance: 65
+    livingWeapon: true
+    energyRecovery: 50
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_AXE
+        - STR_GRENADE
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_LIGHT_BOLTPISTOL_AMMO_AP
+        - STR_AXE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTER_MEPHISTO
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_BOLTER_AMMO_INF
+        - STR_LIGHT_FLAMETHROWER_CLIP
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_KHORNE_SISTERASS     # Khorne Sister of Revengeance/Khorne Assassin
+    race: STR_KHRONE
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 128
+      stamina: 148
+      health: 60
+      bravery: 110
+      reactions: 108
+      firing: 50
+      throwing: 80
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 98
+    armor: STR_KHORNE_REVENGEANCE_SUIT
+    standHeight: 20
+    kneelHeight: 15
+    value: 25
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    aggroSound: 1706
+    intelligence: 1
+    aggression: 8
+    berserkChance: 90
+    avoidsFire: false
+    isLeeroyJenkins: true
+    spotter: 1
+    livingWeapon: true
+    energyRecovery: 68
+    builtInWeaponSets:
+      - - STR_KHORNE_BERSERKER_AXE
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+      - - STR_KHORNE_CHAOS_CLAWS
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+
+  - type: STR_REPENTIA_SUPERIOR     # CHAOS REPENTIA SUPERIOR
+    race: STR_KHORNE
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 80
+      stamina: 120
+      health: 40
+      bravery: 90
+      reactions: 60
+      firing: 70
+      throwing: 60
+      strength: 70
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_ADEPTAS_KHORNEPARMOR_BLESSED2
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    intelligence: 2
+    aggression: 4
+    berserkChance: 95
+    spotter: 1
+    spawnUnit: STR_SILACOID_TERRORIST
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_NEURAL_WHIP
+        - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PISTOL_CLIP_AP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_NEURAL_WHIP
+        - STR_INFERNO_PISTOL
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_PHOSPHOR_GRENADE
+      - - STR_CPOWER_AXE
+        - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_SISTERREPENT     # CHAOS REPENTIA
+    race: STR_STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 100
+      stamina: 120
+      health: 50
+      bravery: 110
+      reactions: 70
+      firing: 40
+      throwing: 60
+      strength: 70
+      psiStrength: 70
+      psiSkill: 0
+      melee: 80
+    armor: STR_ADEPTAS_ARMOR_KHORNE_REPENTIA
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 33  # expected to die
+    value: 12
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    aggroSound: 1708
+    intelligence: 1
+    aggression: 8
+    berserkChance: 95
+    avoidsFire: false
+    isLeeroyJenkins: true
+    spotter: 1
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AXE
+      - - STR_EVISCERATOR
+        - STR_GRENADE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_REDEEMER_SHOTGUN
+        - STR_REDEEMER_PENITENCE_SHELLS
+        - STR_REDEEMER_SHELLS_INC
+        - STR_GRENADE
+        - STR_PHOSPHOR_GRENADE
+
+  - type: STR_KHORNE_SISREPENTINFERIOR     # CHAOS REPENTIA INFERIOR
+    race: STR_STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 90
+      health: 40
+      bravery: 90
+      reactions: 55
+      firing: 35
+      throwing: 45
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 65
+    armor: STR_KHORNE_REPENTIA_LIGHT
+    standHeight: 20
+    kneelHeight: 15
+    moraleLossWhenKilled: 20  # expected to die
+    value: 8
+    deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    aggroSound: 1705
+    intelligence: 0
+    aggression: 8
+    berserkChance: 90
+    energyRecovery: 40
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AXE
+        - STR_GRENADE
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_AXE
+      - - STR_INFERNO_PISTOL
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_INFERNO_PISTOL_AMMO
+        - STR_AXE
+
+#Khorne Sisters End
+
+  - type: STR_KHORNE_TERMINATOR
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 108  # higher TU than normal terminators
+      stamina: 150  # khorne berserking
+      health: 138
+      bravery: 110
+      reactions: 88  # higher reactions than normal terminators
+      firing: 80  # lower firing accuracy than normal terminators
+      throwing: 80
+      strength: 188  # higher strength than normal terminators
+      psiStrength: 108
+      psiSkill: 0
+      melee: 128  # much higher melee than normal terminators
+    armor: STR_KHORNEterminator_ARMOR
+    aggroSound: {mod: 40k, index: 808}
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8
+    spotter: 1
+    sniper: 75
+    canPanic: false
+    value: 30
+    canBeMindControlled: false
+    berserkChance: 90
+    energyRecovery: 80
+    livingWeapon: true
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets: #CQC focused
+      -  # Tier 1
+        KHORNE_TERMINATOR_COMBIBOLTER_AXE: 15
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 15
+        KHORNE_TERMINATOR_HEAVYFLAMER_AXE: 15
+        KHORNE_TERMINATOR_HEAVYFLAMER_INTIMIDATE: 15
+        TERMINATOR_MULTIMELTA: 15
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 10
+      -  # Tier 2
+        KHORNE_TERMINATOR_COMBIBOLTER_AXE: 10
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 20
+        KHORNE_TERMINATOR_HEAVYFLAMER_AXE: 10
+        KHORNE_TERMINATOR_HEAVYFLAMER_INTIMIDATE: 10
+        TERMINATOR_MULTIMELTA: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 10
+      -  # Tier 3
+        KHORNE_TERMINATOR_COMBIBOLTER_AXE: 5
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 5
+        KHORNE_TERMINATOR_HEAVYFLAMER_AXE: 5
+        KHORNE_TERMINATOR_HEAVYFLAMER_INTIMIDATE: 5
+        TERMINATOR_MULTIMELTA: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 30
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 30
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 5
+
+  - type: STR_KHORNE_DREADNOUGHT
+    race: STR_KHORNE
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 128  # Khorne Dreadnought fast and stompy
+      stamina: 200
+      health: 308
+      bravery: 140  # higher so intimidation can affect brave units
+      reactions: 98  # higher reactions than normal terminators
+      firing: 98  # lower firing accuracy than normal terminators
+      throwing: 80
+      strength: 248  # higher strength than normal terminators
+      psiStrength: 108
+      psiSkill: 0
+      melee: 138  # much higher melee than normal terminators
+    armor: STR_KHORNE_DREADNOUGHT_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8
+    isLeeroyJenkins: true
+    spotter: 1
+    canPanic: false
+    value: 30
+    canBeMindControlled: false
+    berserkChance: 99
+    energyRecovery: 200
+    livingWeapon: true
+    standHeight: 21
+    moveSound: 3960
+    aggroSound: [3965, 3966, 3967, 3968]
+    deathSound: [{mod: 40k, index: 23}, {mod: 40k, index: 859}, {mod: 40k, index: 860}, 3969]
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      -  # Tier 1
+        KHORNE_DREADNOUGHT_MELEE_ONLY: 50
+        KHORNE_DREADNOUGHT_INTIMIDATION: 20
+        KHORNE_DREADNOUGHT_HEAVY_FLAMER: 10
+        KHORNE_DREADNOUGHT_LASCANNON: 5
+        KHORNE_DREADNOUGHT_AUTOCANNON: 5
+        KHORNE_DREADNOUGHT_HEAVY_PLASMA: 5
+        KHORNE_DREADNOUGHT_MULTIMELTA: 5
+      -  # Tier 2
+        KHORNE_DREADNOUGHT_MELEE_ONLY: 5
+        KHORNE_DREADNOUGHT_INTIMIDATION: 30
+        KHORNE_DREADNOUGHT_HEAVY_FLAMER: 20
+        KHORNE_DREADNOUGHT_MULTIMELTA: 20
+        KHORNE_DREADNOUGHT_LASCANNON: 10
+        KHORNE_DREADNOUGHT_AUTOCANNON: 10
+        KHORNE_DREADNOUGHT_HEAVY_PLASMA: 5
+      -  # Tier 3
+        KHORNE_DREADNOUGHT_MELEE_ONLY: 2
+        KHORNE_DREADNOUGHT_INTIMIDATION: 25
+        KHORNE_DREADNOUGHT_HEAVY_FLAMER: 3
+        KHORNE_DREADNOUGHT_MULTIMELTA: 25
+        KHORNE_DREADNOUGHT_LASCANNON: 13
+        KHORNE_DREADNOUGHT_AUTOCANNON: 20
+        KHORNE_DREADNOUGHT_HEAVY_PLASMA: 12
+
+  - type: STR_KHORNE_CATAPHRACT_AI
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80
+      stamina: 180
+      health: 180
+      bravery: 110
+      reactions: 70
+      firing: 100
+      throwing: 80
+      strength: 180
+      psiStrength: 100
+      psiSkill: 0
+      melee: 120
+    armor: STR_KHORNEcataphract_ARMOR
+    avoidsFire: false  # doesn't really care
+    intelligence: 2
+    aggression: 8
+    spotter: 2
+    sniper: 40
+    value: 30
+    livingWeapon: true
+    energyRecovery: 60
+    standHeight: 21
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets: #CQC focused
+      -  # Tier 1
+        KHORNE_TERMINATOR_COMBIBOLTER_AXE: 15
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 15
+        KHORNE_TERMINATOR_HEAVYFLAMER_AXE: 15
+        KHORNE_TERMINATOR_HEAVYFLAMER_INTIMIDATE: 15
+        TERMINATOR_MULTIMELTA: 15
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 10
+      -  # Tier 2
+        KHORNE_TERMINATOR_COMBIBOLTER_AXE: 10
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 20
+        KHORNE_TERMINATOR_HEAVYFLAMER_AXE: 10
+        KHORNE_TERMINATOR_HEAVYFLAMER_INTIMIDATE: 10
+        TERMINATOR_MULTIMELTA: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 10
+      -  # Tier 3
+        KHORNE_TERMINATOR_COMBIBOLTER_AXE: 5
+        KHORNE_TERMINATOR_COMBIBOLTER_INTIMIDATE: 5
+        KHORNE_TERMINATOR_HEAVYFLAMER_AXE: 5
+        KHORNE_TERMINATOR_HEAVYFLAMER_INTIMIDATE: 5
+        TERMINATOR_MULTIMELTA: 10
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_GREAT_AXE: 30
+        KHORNE_TERMINATOR_ASSAULTCANNON_AP_INTIMIDATE: 30
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_INTIMIDATE: 5
+        KHORNE_TERMINATOR_ASSAULTCANNON_HE_AXE: 5
+
+  - type: STR_KHRONE_TERRORIST  # KHORNE BERSERKER
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    isLeeroyJenkins: true #change?
+    stats:
+      tu: 128
+      stamina: 118
+      health: 118
+      bravery: 120
+      reactions: 88  # higher reactions so they're not so easy to kill when they rush a firing line
+      firing: 78
+      throwing: 88
+      strength: 98
+      psiStrength: 110  # khorne protects from psykers
+      psiSkill: 0
+      melee: 118  # they're Khorne Berserkers; they're supposed to have great melee
+    armor: STR_MUTON_ARMORB
+    intelligence: 2
+    aggression: 8  # maximum aggro
+    energyRecovery: 88
+    canPanic: false
+    avoidsFire: false
+    value: 25
+    canBeMindControlled: false
+    moraleLossWhenKilled: 75  # expected to die
+    livingWeapon: true
+    builtInWeaponSets: []
+    weightedBuiltInWeaponSets:
+      #Tier 1
+      - KHORNE_BERSERKER_AXE_INTIMIDATE: 40
+        KHORNE_BERSERKER_AXE_BOLTPISTOL: 40
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 5
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 5
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 1
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 5
+      #Tier 2
+      - KHORNE_BERSERKER_AXE_INTIMIDATE: 30
+        KHORNE_BERSERKER_AXE_BOLTPISTOL: 10
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 20
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 10
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 2
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 20
+      #Tier 3
+      - KHORNE_BERSERKER_AXE_INTIMIDATE: 15
+        KHORNE_BERSERKER_GREAT_AXE_INTIMIDATE: 30
+        KHORNE_BERSERKER_AXE_BOLTPISTOL: 1
+        KHORNE_BERSERKER_AXE_PLASMAPISTOL: 15
+        KHORNE_BERSERKER_AXE_COMBIBOLTER: 20
+        KHORNE_BERSERKER_AXE_GRAVPISTOL: 4
+
+  - type: STR_CYBERDISC_TERRORIST #flying bloodletter daemon
+    race: STR_CYBERDISC
+    rank: STR_LIVE_TERRORIST
+    avoidsFire: false
+    isLeeroyJenkins: true
+    stats:
+      tu: 110
+      stamina: 90
+      health: 200
+      bravery: 110
+      reactions: 64
+      firing: 60
+      throwing: 0
+      strength: 90
+      psiStrength: 100
+      psiSkill: 0
+      melee: 80
+    armor: CYBERDISC_ARMOR
+    intelligence: 3
+    aggression: 8
+    canPanic: false
+    value: 30
+    canBeMindControlled: false
+    energyRecovery: 50
+    specab: 2
+    livingWeapon: true
+    builtInWeaponSets:
+      - - CYBERDISC_WEAPON
+        - AUX_DAEMON_FIREBALL
+      - - CYBERDISC_WEAPON
+        - AUX_DAEMON_FIREBALL
+      - - CYBERDISC_WEAPON
+        - AUX_DAEMON_FIREBALL
+
+  - &BLOODLETTER
+    type: STR_SILACOID_TERRORIST  # khorne Deamon; Bloodletter
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 98  # Increased from 80. Why did Bloodletters have less TUs than Plaguebearers? These guys are fast; not quite as fast as Daemonettes though
+      stamina: 128  # tireless
+      health: 100  # decreased from 180 and 128; these should be significantly less fat than Plaguebearers. They have 30% AP resistance.
+      bravery: 110
+      reactions: 88  # Increased from 40; Bloodletters have high reactions. Beyond this it helps them avoid being mowed down before they close ranks.
+      firing: 48
+      throwing: 48
+      strength: 118  # Bloodletters are superhumanly strong.
+      psiStrength: 118  # Bloodletters are protected by Khorne
+      psiSkill: 0
+      melee: 118  # these are Bloodletters; their Melee Skill is very high
+    armor: STR_SILACOID_ARMORT
+    intelligence: 1
+    aggression: 8  # maximum aggression; it's a Bloodletter
+    aggroSound: [2413, 2414]  # bloodlust
+    standHeight: 20
+    kneelHeight: 14
+    berserkChance: 99
+    energyRecovery: 88  # tireless
+    canPanic: false
+    value: 15
+    canBeMindControlled: false
+    moraleLossWhenKilled: 50  # expected to die in droves
+    isLeeroyJenkins: true
+    avoidsFire: false
+    specab: 2
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY  # basic loadouts
+  - type: STR_SILACOID_TERRORIST_RECOVERABLE
+    refNode: *BLOODLETTER
+    liveAlien: STR_SILACOID_TERRORIST
+    civilianRecoveryType: STR_DAEMON_SOLDIER_NEVERBORN
+    armor: STR_BLOODLETTER_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - &BLOODREAPER
+    type: STR_BLOODREAPER  # khorne Deamon; Bloodreaper; exalted Bloodletter
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 118  # Increased from 80. Why did Bloodletters have less TUs than Plaguebearers? These guys are fast; not quite as fast as Daemonettes though
+      stamina: 188  # tireless
+      health: 188
+      bravery: 120  # stronger intimidate
+      reactions: 108  # Increased from 40; Bloodletters have high reactions. Beyond this it helps them avoid being mowed down before they close ranks.
+      firing: 48
+      throwing: 48
+      strength: 148  # Bloodletters are superhumanly strong; especially the greatest among them
+      psiStrength: 188  # Bloodletters are protected by Khorne
+      psiSkill: 0
+      melee: 148  # these are Bloodletters; their Melee Skill is very high; especially the greatest among them
+    standHeight: 22
+    kneelHeight: 15
+    armor: STR_BLOODREAPER_ARMOR
+    intelligence: 2
+    spotter: 1
+    aggression: 8  # maximum aggression; it's a Bloodletter
+    aggroSound: [2413, 2414]  # bloodlust
+    deathSound: {mod: 40k, index: 737}
+    moveSound: -1
+    berserkChance: 99
+    energyRecovery: 88  # tireless
+    canPanic: false
+    value: 28
+    canBeMindControlled: false
+    moraleLossWhenKilled: 188
+    isLeeroyJenkins: true
+    avoidsFire: false
+    specab: 2
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY  # basic loadouts
+      - - STR_SILACOID_WEAPON
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY  # basic loadouts
+  - type: STR_BLOODREAPER_RECOVERABLE
+    refNode: *BLOODREAPER
+    liveAlien: STR_BLOODREAPER
+    civilianRecoveryType: STR_DAEMON_SOLDIER_BLOODREAPER
+    armor: STR_BLOODREAPER_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - &KHORNELING
+    type: STR_KHORNELING
+    race: STR_SILACOID
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 68 #He got lil legs
+      stamina: 48 #He can't have big lungs
+      health: 48 # Little man
+      bravery: 100
+      reactions: 40
+      firing: 70
+      throwing: 70
+      strength: 70
+      psiStrength: 80
+      psiSkill: 0
+      melee: 80
+    armor: STR_KHORNELING_ARMOR
+    capturable: false
+    standHeight: 10
+    kneelHeight: 10
+    value: 5
+    deathSound: 2445
+    moveSound: -1
+    intelligence: 3
+    aggression: 5
+    energyRecovery: 40
+#    specab: 2
+    livingWeapon: false
+  - type: STR_KHORNELING_RECOVERABLE
+    refNode: *KHORNELING
+    civilianRecoveryType: STR_DAEMON_SOLDIER_KHORNELING
+    armor: KHORNELING_ARMOR_PLAYER
+    builtInWeaponSets: []
+
+  - type: STR_KHORNE_DEMIBLOODLETTERIN  # khorne valkyria
+    race: STR_KHORNE_SISTER
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 88
+      stamina: 118
+      health: 88
+      bravery: 110
+      reactions: 78
+      firing: 68
+      throwing: 78
+      strength: 88
+      psiStrength: 88
+      psiSkill: 0
+      melee: 98
+    armor: STR_KHORNE_VALKIA_ARMORBASIC
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    canPanic: false
+    canBeMindControlled: false
+    deathSound: [2005, 2006, 2007, 2008]
+    moveSound: -1
+    intelligence: 2
+    spotter: 1
+    aggression: 8
+    avoidsFire: false
+    berserkChance: 90
+    energyRecovery: 88  # tireless
+    livingWeapon: true
+    specab: 3
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_CHAOS
+        - STR_KHORNE_VALKIA_WEAPON
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+      - - STR_PLASMA_PISTOL
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_KHORNE_VALKIA_WEAPON
+        - STR_PHOSPHOR_GRENADE
+      - - STR_CHAOS_RIPPERGUN
+        - STR_RIPPER_GUN_CLIP_AP
+        - STR_RIPPER_GUN_CLIP_INC
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_DEMIBLOODLETTERIN_SPAWNED  # khorne valkyria
+    race: STR_KHORNE_SISTER
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 88
+      stamina: 118
+      health: 88
+      bravery: 110
+      reactions: 78
+      firing: 68
+      throwing: 78
+      strength: 78
+      psiStrength: 88
+      psiSkill: 0
+      melee: 108
+    armor: STR_KHORNE_VALKIA_ARMORBASIC
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    canPanic: false
+    canBeMindControlled: false
+    deathSound: [2005, 2006, 2007, 2008]
+    moveSound: -1
+    intelligence: 2
+    aggression: 8
+    aggroSound: 1706
+    avoidsFire: false
+    isLeeroyJenkins: true
+    berserkChance: 90
+    energyRecovery: 88
+    livingWeapon: true
+    specab: 3
+    builtInWeaponSets:
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+
+  - type: STR_KHORNE_DEMIBLOODLETTERIN_RETRIBUTOR  # khorne valkyria
+    race: STR_KHORNE_SISTER
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 98
+      stamina: 118
+      health: 88
+      bravery: 110
+      reactions: 88
+      firing: 68
+      throwing: 78
+      strength: 78
+      psiStrength: 88
+      psiSkill: 0
+      melee: 108
+    armor: STR_KHORNE_VALKIA_ARMORRETRIBUTOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [2005, 2006, 2007, 2008]
+    moveSound: -1
+    intelligence: 2
+    aggression: 8
+    avoidsFire: false
+    berserkChance: 90
+    energyRecovery: 88
+    livingWeapon: true
+    specab: 3
+    builtInWeaponSets:
+      - - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_FLAMETHROWER_PROMETHIUM_CLIP
+        - STR_KHORNE_VALKIA_WEAPON
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_HFLAMER_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_CHAOS_MELTAGUN
+        - STR_MELTA_AMMO
+        - STR_MELTA_AMMO
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_DEMIBLOODLETTERIN_RETRIBUTOR_SPAWNED  # khorne valkyria
+    race: STR_KHORNE_SISTER
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 98
+      stamina: 118
+      health: 88
+      bravery: 110
+      reactions: 88
+      firing: 68
+      throwing: 78
+      strength: 78
+      psiStrength: 88
+      psiSkill: 0
+      melee: 108
+    armor: STR_KHORNE_VALKIA_ARMORRETRIBUTOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [2005, 2006, 2007, 2008]
+    aggroSound: 1706
+    moveSound: -1
+    intelligence: 2
+    aggression: 8
+    spotter: 1
+    avoidsFire: false
+    berserkChance: 90
+    energyRecovery: 88
+    livingWeapon: true
+    isLeeroyJenkins: true
+    specab: 3
+    builtInWeaponSets:
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+
+  - type: STR_KHORNE_DEMIBLOODLETTERIN_SUPERIOR  # khorne valkyria
+    race: STR_KHORNE_SISTER
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 108
+      stamina: 118
+      health: 188
+      bravery: 110
+      reactions: 98
+      firing: 88
+      throwing: 88
+      strength: 88
+      psiStrength: 188
+      psiSkill: 0
+      melee: 118
+    armor: STR_KHORNE_VALKIA_ARMORSUPERIOR
+    standHeight: 20
+    kneelHeight: 15
+    value: 20
+    deathSound: [2005, 2006, 2007, 2008]
+    intelligence: 3
+    aggression: 8
+    avoidsFire: false
+    berserkChance: 90
+    energyRecovery: 88
+    specab: 3
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_KHORNE_VALKIA_WEAPON
+        - STR_VALKIA_SHIELD
+      - - STR_HFLAMER
+        - STR_HFLAMER_CLIP
+        - STR_HFLAMER_CLIP
+        - STR_PHOSPHOR_GRENADE
+      - - STR_BLASTER_LAUNCHER
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_BLASTER_BOMB
+        - STR_PHOSPHOR_GRENADE
+        - STR_MGRENADE
+
+  - type: STR_KHORNE_DEMIBLOODLETTERIN_SUPERIOR_SPAWNED  # khorne valkyria
+    race: STR_KHORNE_SISTER
+    rank: STR_LIVE_TERRORIST
+    stats:
+      tu: 108
+      stamina: 118
+      health: 188
+      bravery: 110
+      reactions: 98
+      firing: 88
+      throwing: 88
+      strength: 88
+      psiStrength: 188
+      psiSkill: 0
+      melee: 118
+    armor: STR_KHORNE_VALKIA_ARMORSUPERIOR
+    standHeight: 20
+    kneelHeight: 15
+    canPanic: false
+    canBeMindControlled: false
+    value: 25
+    deathSound: [2005, 2006, 2007, 2008]
+    aggroSound: 1706
+    moveSound: -1
+    intelligence: 3
+    aggression: 8
+    avoidsFire: false
+    isLeeroyJenkins: true
+    berserkChance: 90
+    energyRecovery: 88
+    specab: 3
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+      - - STR_KHORNE_VALKIA_WEAPON_MELEE_ONLY
+        - STR_VALKIA_SHIELD
+
+  - type: STR_WARPTALON_SOLDIER                                         # RANK 5  weapons done                 aggroSound
+    race: STR_KHORNE
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 128
+      stamina: 108
+      health: 108
+      bravery: 100
+      reactions: 88
+      firing: 68
+      throwing: 68
+      strength: 88
+      psiStrength: 88
+      psiSkill: 0
+      melee: 98
+    armor: STR_WARPTALON_ARMOR
+    avoidsFire: false
+    isLeeroyJenkins: true
+    intelligence: 2
+    aggression: 8
+    canPanic: false
+    value: 30
+    canBeMindControlled: false
+    berserkChance: 90
+    energyRecovery: 60
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_KHORNE_CHAOS_CLAWS
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+      - - STR_KHORNE_CHAOS_CLAWS
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+      - - STR_KHORNE_CHAOS_CLAWS
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+
+  - type: STR_WARPTALON_COMMANDER                                       # RANK 1 weapons done
+    race: STR_KHORNE
+    rank: STR_LIVE_LEADER
+    stats:
+      tu: 138
+      stamina: 128
+      health: 128
+      bravery: 110
+      reactions: 108
+      firing: 88
+      throwing: 88
+      strength: 98
+      psiStrength: 108
+      psiSkill: 0
+      melee: 128
+    armor: STR_WARPTALON_ARMOR
+    avoidsFire: false
+    isLeeroyJenkins: true
+    intelligence: 3
+    aggression: 8
+    canPanic: false
+    value: 40
+    canBeMindControlled: false
+    energyRecovery: 88
+    berserkChance: 90
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_KHORNE_CHAOS_CLAWS
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+      - - STR_KHORNE_CHAOS_CLAWS
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY
+      - - STR_KHORNE_CHAOS_CLAWS
+        - STR_INTIMIDATION_WEAPON_REACT_ONLY

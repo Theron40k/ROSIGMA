@@ -8350,6 +8350,8 @@ alienMissions:
         objective: false                # can become a HK/escort
   - type: STR_SLAAN_PATROL
     operationType: 6    # hunt mission
+    operationSpawnZone: 1
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
     points: 0
     raceWeights:  # Doesn't matter, race comes from base. Fallthrough, just in case.
       0:
@@ -8442,6 +8444,8 @@ alienMissions:
         objective: false                # can become a HK/escort
   - type: STR_TZEENTCH_PATROL
     operationType: 6    # hunt mission
+    operationSpawnZone: 1
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
     points: 0
     raceWeights:  # Doesn't matter, race comes from base. Fallthrough, just in case.
       0:
@@ -8534,6 +8538,8 @@ alienMissions:
         objective: false                # can become a HK/escort
   - type: STR_NURGLE_PATROL
     operationType: 6    # hunt mission
+    operationSpawnZone: 1
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
     points: 0
     raceWeights:  # Doesn't matter, race comes from base. Fallthrough, just in case.
       0:
@@ -8804,6 +8810,8 @@ alienMissions:
         trajectory: AIR_PATROL_TRAJECTORY
 
   - type: STR_ORK_AIR_PATROL_LARGE
+    operationSpawnZone: 1
+    operationBaseType: STR_ORKBASE1
     waves:
       - ufo: STR_ORK_MIG_UFO
         count: 2  # was 4
@@ -8811,6 +8819,8 @@ alienMissions:
         trajectory: AIR_PATROL_TRAJECTORY
 
   - type: STR_ORK_AIR_PATROL_RETALIATION
+    operationSpawnZone: 1
+    operationBaseType: STR_ORKBASE1
     waves:
       - ufo: STR_ORK_MIG_UFO
         count: 2  # was 4
@@ -8838,7 +8848,7 @@ alienMissions:
 
 
 # *** Final Mission Bases ***
-  - type: STR_FINAL_MISSION_GUARD_SL
+  - type: STR_FINAL_MISSION_GUARD_SL #Steel Legion
     retaliationOdds: 0
     raceWeights:
       0:
@@ -8849,6 +8859,22 @@ alienMissions:
     objective: 2
     waves:
       - ufo: STR_MARS_CYDONIA_LANDING_GUARD_SL
+        count: 1
+        trajectory: P10
+        timer: 0
+        objective: true
+
+  - type: STR_FINAL_MISSION_GUARD_VL #Valhallans
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    points: 0
+    siteType: STR_MARS_CYDONIA_LANDING_GUARD_SL #PlaceHolder
+    spawnZone: 0
+    objective: 2
+    waves:
+      - ufo: STR_MARS_CYDONIA_LANDING_GUARD_SL #PlaceHolder
         count: 1
         trajectory: P10
         timer: 0
@@ -14518,6 +14544,8 @@ alienMissions:
 
   - type: STR_IMPERIALS_PATROL_IMPOSTER
     operationType: 6    # hunt mission
+    operationSpawnZone: 1
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
     points: 0
     raceWeights: # Doesn't matter, race comes from base. Fallthrough, just in case.
       0:
@@ -14835,6 +14863,8 @@ alienMissions:
 
   - type: STR_IMPERIALS_PATROL
     operationType: 6    # hunt mission
+    operationSpawnZone: 1
+    operationBaseType: STR_IMPERIALBASE_ASSAULTV0
     points: 0
     raceWeights: # Doesn't matter, race comes from base. Fallthrough, just in case.
       0:
@@ -15128,6 +15158,8 @@ alienMissions:
 
   - type: STR_SLMIMPERIALS_PATROL
     operationType: 6    # hunt mission
+    operationSpawnZone: 1
+    operationBaseType: STR_IMPERIALBASE_ASSAULTV0
     points: 0
     raceWeights: # Doesn't matter, race comes from base. Fallthrough, just in case.
       0:
@@ -18391,6 +18423,8 @@ alienMissions:
 
   - type: STR_SISIMPERIALS_PATROL
     operationType: 6    # hunt mission
+    operationSpawnZone: 1
+    operationBaseType: STR_IMPERIALBASE_ASSAULTV0
     points: 0
     raceWeights: # Doesn't matter, race comes from base. Fallthrough, just in case.
       0:
@@ -18527,3 +18561,24 @@ alienMissions:
         hunterKillerPercentage: 100
         huntMode: 0
         huntBehavior: 0
+
+### Safety fallbacks
+  - type: STR_DEFILER_RETALIATION
+    operationSpawnZone: 1
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
+
+  - type: STR_ALIEN_PATROL
+    operationSpawnZone: 1
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
+
+  - type: STR_TRAITOR_GUARD_HK_RETALIATION
+    operationSpawnZone: 1
+    operationBaseType: STR_TRAITOR_GUARD_BASE_LEVEL_1
+
+  - type: STR_ELDAR_AIR_PATROL
+    operationSpawnZone: 1
+    operationBaseType: STR_ELDAR_BASE
+
+  - type: STR_ELDAR_SUP_AIR_PATROL
+    operationSpawnZone: 1
+    operationBaseType: STR_ELDAR_BASE

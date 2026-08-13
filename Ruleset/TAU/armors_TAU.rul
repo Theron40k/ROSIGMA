@@ -1433,8 +1433,10 @@ armors:
     spriteInv: TAUGVCARAPACERANK2
     corpseBattle:
       - STR_TAUGUEVESA_PCCORPSE
-    storeItem: STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV
+    storeItem: STR_AIRSTRIKE_VOX # STR_TAUGUEVESACARAP_VETERAN_FAC_ARMOR_ITEM_GV
     specialWeapon: STR_AIRSTRIKE_VOX_SPECIAL
+    builtInWeapons:
+      - INV_NULL_AIRSTRIKE_VOX_DUMMY
     stats:
       bravery: 20
       tu: 15
@@ -1449,8 +1451,8 @@ armors:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       ARMOR_OVERWATCH_TU_RESTORED: 10
-    builtInWeapons:
-      - INV_NULL_BACK_SIGNAL
+    # builtInWeapons:
+    #   - INV_NULL_BACK_SIGNAL
 
   - type: STR_ENGRAVED_TAUGUEVESACARAP_VETERAN_ARMOR_GV
     refNode: *STR_GUEVESA_CARAPACE_ARMOR_TEMPLATE_GV
@@ -1706,7 +1708,7 @@ armors:
       - STR_MARINVESAVRE_GV
     stats:
       stamina: 15
-      bravery: 15
+      bravery: 10
       strength: 10
       melee: 10
       reactions: 5
@@ -1761,7 +1763,7 @@ armors:
       - STR_MARINVESAVRE_GV
     stats:
       stamina: 15
-      bravery: 15
+      bravery: 10
       strength: 10
       melee: 10
       reactions: 5

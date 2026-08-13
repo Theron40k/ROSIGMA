@@ -202,32 +202,31 @@ items:
 
   - type: STR_ASSCTZ  # TZEENTCH SOULREAPER ASSAULT CANNON
     dropoff: 4
-
     accuracySnap: 60
     tuSnap: 33
     snapRange: 22
     confSnap:
       name: STR_BURST_SNAP_SHOT
       shots: 3
-
     accuracyAuto: 50
     tuAuto: 45
     autoRange: 18
     autoShots: 9
     sprayWaypoints: 2
-
     damageType: 1
-    damageAlter:
-      RandomType: 1  # swingy random damage
-      ResistType: 5  # plasma typing
-      ToArmorPre: 0.5  # melts armor on the way in
-      ToArmor: 0.0  # does damage on the way in
-      ArmorEffectiveness: 0.7  # armor piercing
-      FireThreshold: 19  # can ignite
-      ToHealth: 0.8  # compensates a bit for the extra AP and power
-      ToWound: 0.05  # melta type injuries
-      RandomWound: false
-      ToMorale: 5.0  # incendiary + Tzeentch spook
+### commented since now it uses ammo and all these values are overridden ###
+#    damageAlter:
+#      RandomType: 1  # swingy random damage
+#      ResistType: 5  # plasma typing
+#      ToArmorPre: 0.5  # melts armor on the way in
+#      ToArmor: 0.0  # does damage on the way in
+#      ArmorEffectiveness: 0.7  # armor piercing
+#      FireThreshold: 19  # can ignite
+#      ToHealth: 0.8  # compensates a bit for the extra AP and power
+#      ToWound: 0.05  # melta type injuries
+#      RandomWound: false
+#      ToMorale: 5.0  # incendiary + Tzeentch spook
+### End of comment block ###
 
 #TAU
 ### Rail rifle reworked

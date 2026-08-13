@@ -169,6 +169,7 @@ extended:
       ITEM_DOESNT_HURT_USER: int
       ITEM_DOESNT_HURT_TANKBUSTAS: int
       TURRET_RELOAD_TURNS: int  # number of full turns it takes the weapon to reload
+      TURRET_RELOAD_MANNED: int # this is a manned emplacement that must be manually reloaded by a unit
       ITEM_COLOR_CHANGES_WITH_AMMO_NON_GRAY: int
       ITEM_AMMO_COLOR: int
       ITEM_AMMO_SHADE: int
@@ -191,6 +192,7 @@ extended:
       ITEM_IS_TOOL: int
       ITEM_IS_STR_BONEHEAD_ORDERS: int
       TURRET_RELOAD_CAPACITY: int  # reload capacity of turret
+      ITEM_IS_FAKE_MEDKIT: int
       # *** Perils of the Warp ***
       ITEM_IS_PSYCHIC_POWER: int  # is this item a psychic power/spell?
       ITEM_PSYCHIC_POWER_MODIFIER: int  # increments UNIT_PERILS_MODIFIER or our risk of perils by this much per use
@@ -245,6 +247,8 @@ extended:
       ITEM_FACTION_SETUP_NECRON_SETTING: int
       ITEM_FACTION_SETUP_ORK_SETTING: int
       ITEM_FACTION_SETUP_ELDAR_SETTING: int
+      # *** Stealth Items ***
+      ITEM_STIM_ACTIVATES_STEALTH: int
 
     RuleSkill:
       # *** Misc ***
@@ -275,6 +279,9 @@ extended:
       SKILL_CULEXUS_HORROR_STORM_ID: int
       # Vindicare Skills
       SKILL_VINDICARE_KILLSHOT_ID: int
+      # perils of the warp
+      SKILL_IS_PSYCHIC_POWER: int # is the skill psychic power or interacting with the warp? if yes this is the power
+      SKILL_PSYCHIC_POWER_MODIFIER: int # increments UNIT_PERILS_MODIFIER or our risk of perils by this much per use
 
     BattleUnit:
       # *** Tags for handling energy shields on units ***
@@ -383,8 +390,9 @@ extended:
       TURN_ACTIVE_COMMAND: int
       CHOICE_ACTIVE_COMMAND: int
       COMMAND_POINTS: int
-      NUMBER_SOLDIERS: int
-      NUMBER_OFFICERS: int
+      NUMBER_SOLDIERS: int # total number of soldiers for IG Command Point calculations
+      NUMBER_OFFICERS: int # total number of officers for IG Command Point calculations
+      NUMBER_SERGEANTS: int # total number of sergeants for IG Command Point calculations
       # *** Faction Scripts ***
       GAME_FACTIONS_SET: int # are factions specified for this mission? Specified by ITEM_IS_FACTION_TOKEN on the faction token item for a mission.
       GAME_CHAOS_FACTION_SETTING: int # which factions are considered allies for the AI? Specified by ITEM_FACTION_SETUP_X variables on the faction token item for a mission.

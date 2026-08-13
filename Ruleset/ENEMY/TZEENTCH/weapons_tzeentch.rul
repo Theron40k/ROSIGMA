@@ -251,6 +251,8 @@ items:
     accuracySnap: 70
     tuSnap: 25  # slightly higher
     snapRange: 14
+    aimRange: 0 # this weapons is not aim shot capable
+    autoRange: 0 # this weapons is not auto shot capable
     battleType: 1
     twoHanded: false
     invWidth: 2
@@ -279,6 +281,7 @@ items:
       - STR_LIGHT_BOLTER_AMMO_SHORT  # Short magazines, drawback
       - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
       - STR_TZ_LIGHT_BOLTER_AMMO_R
+    aimRange: 24 # 2 more than the standard light solo bolter
     accuracySnap: 85  # 5 points more accurate vs light ULTRA
     # accuracyAuto: 66  # No autoshot functionality
     accuracyAimed: 105  # battle rifle but no scope
@@ -315,6 +318,7 @@ items:
       - STR_LIGHT_BOLTER_AMMO_SHORT
       - STR_LIGHT_BOLTER_AMMO_SHORT_PEN
       - STR_TZ_LIGHT_BOLTER_AMMO_R
+    aimRange: 33 # 2 more than the light solo bolter scoped
     accuracySnap: 85  # 5 points more accurate vs light ULTRA
     # accuracyAuto: 66  # No autoshot functionality
     accuracyAimed: 115  # battle rifle scoped

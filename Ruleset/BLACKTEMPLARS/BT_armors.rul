@@ -1,0 +1,1001 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+armors:
+
+  - type: STR_BTSCOUTARMOR_PLAYER  # BT NOVICE
+    group: 1
+    isPilotArmor: true
+    customArmorPreviewIndex: 1410
+    visibilityAtDay: 40
+    visibilityAtDark: 40
+    antiCamouflageAtDay: 8
+    antiCamouflageAtDark: 8
+    camouflageAtDay: -7  # you need to be 7 tiles closer than max vision range to see this unit in the light
+    camouflageAtDark: -5  # you need to be 5 tiles closer than max vision range (at night!) to see this unit in the dark
+    heatVision: 25
+    spriteSheet: BLACKTEMPLARSCOUTbattle.PCK
+    drawingRoutine: 0
+    storeItem: STR_BTSCOUTARMOR_PLAYER
+    corpseBattle:
+      - STR_BTSCOUTPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: 30
+      stamina: 0
+      firing: 0
+      health: 0
+      bravery: 0  # always multiples of 10
+      reactions: 30
+      throwing: 10
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+    frontArmor: 80
+    sideArmor: 60
+    rearArmor: 40
+    underArmor: 60
+    damageModifier:  # SCOUT ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.0  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.5  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    units:
+      - STR_BTMARINE_PLAYER
+      - STR_BTHONORED_PLAYER
+    loftempsSet: [2]
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 125 # LARGE but not as large as power armor
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      INTIMIDATION_RESISTANCE: 50 #lwoer than tac marine
+
+  - &STR_BTMARINE_BASEARMOR
+    type: STR_BTMARINEARMOR_PLAYER  # BT MARINE BOLTER
+    group: 1
+    isPilotArmor: true
+    customArmorPreviewIndex: 1411
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARTACbattle.PCK
+    drawingRoutine: 0
+    storeItem: STR_BTMARINEARMOR_PLAYER
+    corpseBattle:
+      - STR_BTMARINEPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: 10
+      stamina: 20
+      health: 5
+      bravery: 10  # always multiples of 10
+      reactions: 10
+      firing: 10
+      throwing: 5
+      strength: 20
+      psiStrength: 0
+      psiSkill: 0
+      melee: 15
+    frontArmor: 125
+    sideArmor: 115
+    rearArmor: 85
+    underArmor: 115
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.8  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    builtInWeapons:
+      - STR_RIFLE_BT
+      - STR_RIFLE_CLIP_AP
+      - INV_NULL_3X1_BACKPACK
+    units:
+      - STR_BTMARINE_PLAYER
+      - STR_BTHONORED_PLAYER
+    loftempsSet: [4]
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
+
+  - type: STR_BTMARINEARMORFLAMER_PLAYER  # BT MARINE FLAMER
+    refNode: *STR_BTMARINE_BASEARMOR
+    storeItem: STR_BTMARINEARMOR_PLAYER
+    ufopediaType: STR_BTMARINEARMOR_PLAYER
+    builtInWeapons:
+      - STR_FLAMETHROWER_BT
+      - STR_FLAMETHROWER_CLIP
+      - INV_NULL_3X1_BACKPACK
+
+  - type: STR_BTMARINEARMORUPD_PLAYER  # BT MARINE PLASMA
+    refNode: *STR_BTMARINE_BASEARMOR
+    storeItem: STR_BTMARINEARMOR_PLAYER
+    ufopediaType: STR_BTMARINEARMOR_PLAYER
+    requires: STR_MIDTIER_PREREQ
+    builtInWeapons:
+      - STR_PLASMA_RIFLE_BT
+      - STR_PLASMA_RIFLE_CLIP
+      - INV_NULL_3X1_BACKPACK
+
+  - type: STR_BTMARINEARMORUPDHIGH_PLAYER  # BT MARINE MULTIMELTA
+    refNode: *STR_BTMARINE_BASEARMOR
+    storeItem: STR_BTMARINEARMOR_PLAYER
+    ufopediaType: STR_BTMARINEARMOR_PLAYER
+    requires: STR_HIGHTIER_PREREQ
+    builtInWeapons:
+      - STR_BLASTER_LAUNCHER_BT
+      - STR_BLASTER_BOMB
+      - INV_NULL_3X1_BACKPACK
+
+  - &STR_BTASSAULT_BASEARMOR
+    type: STR_BTMARINEASSAULTARMOR_PLAYER  # BT MARINE ASSAULT
+    group: 1
+    isPilotArmor: true
+    customArmorPreviewIndex: 1412
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARASSbattle.PCK
+    drawingRoutine: 0
+    storeItem: STR_BTMARINEASSAULTARMOR_PLAYER
+    corpseBattle:
+      - STR_BTMARINEASSAULTPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: 20
+      stamina: 20
+      health: 10
+      bravery: 10  # always multiples of 10
+      reactions: 30
+      firing: 10
+      throwing: 0
+      strength: 20
+      psiStrength: 0
+      psiSkill: 0
+      melee: 25
+    frontArmor: 130
+    sideArmor: 100
+    rearArmor: 80
+    underArmor: 100
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.8  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    specialWeapon: STR_JUMP_GAUNTLET_PLUS
+    builtInWeapons:
+      - STR_PISTOLS_BT
+      - STR_PISTOL_CLIP_AP
+      - STR_CHAINSWORD_BT
+      - INV_NULL_3X1_BACKPACK
+    units:
+      - STR_BTMARINE_PLAYER
+      - STR_BTHONORED_PLAYER
+    loftempsSet: [4]
+    tags:
+      MaxFlight: 1
+      MaxCoolDown: 1
+      DODGE_CHANCE: 0
+      FLIGHT_DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      INTIMIDATION_RESISTANCE: 66
+
+  - type: STR_BTMARINEASSAULTARMORUPD_PLAYER  # BT ASSAULT PLASMA
+    refNode: *STR_BTASSAULT_BASEARMOR
+    storeItem: STR_BTMARINEASSAULTARMOR_PLAYER
+    ufopediaType: STR_BTMARINEASSAULTARMOR_PLAYER
+    requires: STR_MIDTIER_PREREQ
+    builtInWeapons:
+      - STR_PISTOLH_BT
+      - STR_PISTOL_CLIP_MC
+      - STR_CHAIN_AXE_BT
+      - INV_NULL_3X1_BACKPACK
+
+  - type: STR_BTAPOTHARMOR_PLAYER  # BT APOTHECARY
+    group: 1
+    isPilotArmor: true
+    customArmorPreviewIndex: 1415
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARAPOTHbattle.PCK
+    drawingRoutine: 0
+    storeItem: STR_BTAPOTHARMOR_PLAYER
+    corpseBattle:
+      - STR_BTAPOTHPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: -10
+      stamina: 20
+      health: 30
+      bravery: 20  # always multiples of 10
+      reactions: 0
+      firing: 0
+      throwing: -10
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    frontArmor: 130
+    sideArmor: 90
+    rearArmor: 80
+    underArmor: 90
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.8  # FLAMES
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 1.1  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    specialWeapon: STR_UNARMED_GAUNTLET_PLUS
+    builtInWeapons:
+      - STR_PISTOL_BT
+      - STR_PISTOL_CLIP_AP
+      - INV_NULL_3X3
+      - AUX_MEDI_KIT
+    units:
+      - STR_BTMARINE_PLAYER
+      - STR_BTHONORED_PLAYER
+    loftempsSet: [4]
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 66 #theyshallknownofear
+
+  - type: STR_BTCHAPLAINARMOR_PLAYER  # BT CHAPLAIN
+    group: 1
+    isPilotArmor: true
+    customArmorPreviewIndex: 1413
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARCHAPbattle.PCK
+    drawingRoutine: 0
+    storeItem: STR_BTCHAPLAINARMOR_PLAYER
+    corpseBattle:
+      - STR_BTCHAPLAINPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: -10
+      stamina: 10
+      health: 20
+      bravery: 0  # always multiples of 10
+      reactions: -10
+      firing: -10
+      strength: -10
+      psiStrength: 10
+      psiSkill: 10
+    frontArmor: 125
+    sideArmor: 105
+    rearArmor: 80
+    underArmor: 105
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.8  # AP was 1.0
+      - 0.7  # FLAMES was 0.8
+      - 0.6  # HE was 0.7
+      - 0.7  # LASCANON was 0.8
+      - 0.9  # PLASMA was 1.1
+      - 0.8  # STUN was 1.1
+      - 0.9  # MELEE was 1.1
+      - 0.8  # ACID was 1.0
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    zombiImmune: true
+    builtInWeapons:
+      - AUX_CROZIUS_BT
+      - INV_NULL_3X3
+    specialWeapon: STR_UNARMED_GAUNTLET_PLUS
+    units:
+      - STR_BTMARINE_PLAYER
+      - STR_BTHONORED_PLAYER
+    loftempsSet: [4]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INFECTION_RESIST_TYPE: 13
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_CONSECRATED: 1
+      UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
+
+  - &STR_BTTECH_BASEARMOR
+    type: STR_BTTECHARMOR_PLAYER  # BT TECHMARINE PLASMA
+    group: 1
+    isPilotArmor: true
+    customArmorPreviewIndex: 1414
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARTECHbattle.PCK
+    drawingRoutine: 0
+    storeItem: STR_BTTECHARMOR_PLAYER
+    corpseBattle:
+      - STR_BTTECHPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: 10
+      stamina: 20
+      health: 10
+      bravery: 10  # always multiples of 10
+      reactions: 0
+      firing: 0
+      throwing: -10
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    frontArmor: 135
+    sideArmor: 105
+    rearArmor: 80
+    underArmor: 105
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.8  # AP was 1.0
+      - 0.7  # FLAMES was 0.8
+      - 0.6  # HE was 0.7
+      - 0.7  # LASCANON was 0.8
+      - 0.9  # PLASMA was 1.1
+      - 0.8  # STUN was 1.1
+      - 0.9  # MELEE was 1.1
+      - 0.8  # ACID was 1.0
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.0  # MELTA
+    builtInWeapons:
+      - STR_PLASMA_PISTOL_BT
+      - STR_PLASMA_PISTOL_CLIP
+      - STR_TECHPRIEST_POWERAXE_BT
+    specialWeapon: AUX_PROBE
+    units:
+      - STR_BTMARINE_PLAYER
+      - STR_BTHONORED_PLAYER
+    loftempsSet: [4]
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INFECTION_RESIST_TYPE: 13
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_CONSECRATED: 1
+      UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
+
+  - type: STR_BTTECHGRAVARMOR_PLAYER  # BT TECHMARINE GRAVGUN
+    refNode: *STR_BTTECH_BASEARMOR
+    storeItem: STR_BTTECHARMOR_PLAYER
+    requires: STR_HIGHTIER_PREREQ
+    builtInWeapons:
+      - STR_SMALL_LAUNCHER_TERRAN_BT
+      - STR_STUN_BOMB
+
+  - &STR_BTHONOR_BASEARMOR
+    type: STR_BTHONORARMOR_PLAYER  # BT SWORD BRETHREN MACE
+    group: 1
+    isPilotArmor: true
+    customArmorPreviewIndex: 1420
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARHONORbattle.PCK
+    drawingRoutine: 0
+    storeItem: STR_BTHONORARMOR_PLAYER
+    corpseBattle:
+      - STR_BTHONORPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: 20
+      stamina: 20
+      health: 5
+      bravery: 10  # always multiples of 10
+      reactions: 10
+      strength: 10
+      melee: 35
+    specialWeapon: STR_UNARMED_GAUNTLET_PLUS
+    frontArmor: 135
+    sideArmor: 130
+    rearArmor: 100
+    underArmor: 135
+    damageModifier:  # MARINE ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.8  # FLAMES
+      - 0.7  # HE
+      - 1.0  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.8  # MELTA
+    builtInWeapons:
+      - STR_POWERMACE_BT
+      - STR_HAND_FLAMETHROWER_BT
+      - STR_HAND_FLAMETHROWER_CLIP
+      - INV_NULL_3X1_BACKPACK
+    units:
+      - STR_BTHONORED_PLAYER
+    loftempsSet: [4]
+    tags:
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_SIZE: 150 # LARGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+
+  - type: STR_BTHONORARMORALT_PLAYER  # BT SWORD BRETHREN ZWEI
+    refNode: *STR_BTHONOR_BASEARMOR
+    storeItem: STR_BTHONORARMOR_PLAYER
+    ufopediaType: STR_BTHONORARMOR_PLAYER
+    builtInWeapons:
+      - STR_ADEPTAS_ZWEIHANDER_BT
+      - STR_ADEPTAS_ZWEIHANDERTRICK_BT
+
+  - type: STR_BTHONORARMORSHIELD_PLAYER  # BT SWORD BRETHREN SHIELD
+    refNode: *STR_BTHONOR_BASEARMOR
+    storeItem: STR_BTHONORARMOR_PLAYER
+    spriteSheet: BLACKTEMPLARHONORSHIELDbattle.PCK
+    stats:
+      tu: 10  # less due to shield
+      stamina: 20
+      health: 15 # more due to shield
+      bravery: 10  # always multiples of 10
+      reactions: 10
+      strength: 10
+      melee: 35
+    frontArmor: 165
+    sideArmor: 130
+    rearArmor: 90
+    underArmor: 135
+    builtInWeapons:
+      - STR_MCCHAINSWORD_BT
+      - AUX_SHIELD2_BT
+
+  - &STR_BTTERMI_BASEARMOR
+    type: STR_BTTERMINATORARMOR_PLAYER  # BT TERMINATOR AC
+    group: 2
+    customArmorPreviewIndex: 1416
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARTERMIbattle.PCK
+    drawingRoutine: 0
+    corpseBattle:
+      - STR_BTTERMINATORPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    storeItem: STR_BTTERMINATORARMOR_PLAYER
+    stats:
+      tu: 0  # AC heavy
+      stamina: 20
+      firing: 10
+      health: 0
+      bravery: 10
+      reactions: -10
+      throwing: 30
+      strength: 100
+      psiStrength: 5
+      psiSkill: 0
+      melee: 0
+    frontArmor: 150
+    sideArmor: 140
+    rearArmor: 110
+    underArmor: 150
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.6  # AP
+      - 0.3  # FLAMES
+      - 0.4  # HE
+      - 0.9  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 0.9  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA
+    units:
+      - STR_BTHONORED_PLAYER
+    allowsRunning: false
+    allowsKneeling: false
+    loftempsSet: [5]
+    specialWeapon: STR_MFIST
+    builtInWeapons:
+      - STR_ASSC_BT
+      - STR_ASSC_CLIP_AP
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
+
+
+  - type: STR_BTTERMINATORMELEEARMOR_PLAYER  # BT TERMINATOR MELEE
+    refNode: *STR_BTTERMI_BASEARMOR
+    storeItem: STR_BTTERMINATORARMOR_PLAYER
+    customArmorPreviewIndex: 1417
+    spriteSheet: BLACKTEMPLARASSAULTTERMIbattle.PCK
+    stats:
+      tu: 15
+      stamina: 20
+      firing: 0
+      health: 0
+      bravery: 10
+      reactions: -10
+      throwing: 0
+      strength: 100
+      psiStrength: 5
+      psiSkill: 0
+      melee: 15
+    frontArmor: 180  # shield
+    rearArmor: 100
+    builtInWeapons:
+      - STR_HAMMER_BT
+      - AUX_SHIELD_BT
+
+  - type: STR_BTTERMINATORSTORMARMOR_PLAYER  # BT TERMINATOR STORM
+    refNode: *STR_BTTERMI_BASEARMOR
+    storeItem: STR_BTTERMINATORARMOR_PLAYER
+    stats:
+      tu: 5  # SB less heavy than AC
+      stamina: 20
+      firing: 15  # SB less heavy than AC
+      health: 0
+      bravery: 10
+      reactions: -10
+      throwing: 30
+      strength: 100
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+    builtInWeapons:
+      - STR_HB_BT
+      - STR_HB_CLIP
+
+  - type: STR_BTCAPTAINARMOR_PLAYER  # BT CAPTAIN ARMOR
+    group: 2
+    customArmorPreviewIndex: 1419
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARCAPTAINbattle.PCK
+    drawingRoutine: 0
+    corpseBattle:
+      - STR_BTTERMINATORPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    storeItem: STR_BTCAPTAINARMOR_PLAYER
+    stats:
+      tu: 10
+      stamina: 35
+      health: 25
+      bravery: 20  # always multiples of 10
+      reactions: 10
+      firing: 25
+      throwing: 10
+      strength: 100
+      psiStrength: 20
+      psiSkill: 0
+      melee: 30
+    frontArmor: 160
+    sideArmor: 140
+    rearArmor: 100
+    underArmor: 150
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.6  # AP
+      - 0.3  # FLAMES
+      - 0.4  # HE
+      - 0.9  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 0.9  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA
+    units:
+      - STR_BTHONORED_PLAYER
+    builtInWeapons:
+      - STR_COMBIMELTA_BT
+      - STR_RIFLE_CLIP_MC
+      - STR_MELTA_AMMO
+    allowsRunning: false
+    allowsKneeling: false
+    loftempsSet: [5]
+    specialWeapon: STR_MFIST
+    tags:
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 15 #15x100/15=100 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
+
+
+  - type: STR_BTRECLUSARMOR_PLAYER  # BT RECLUSIARCH ARMOR
+    group: 2
+    customArmorPreviewIndex: 1418
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARRECbattle.PCK
+    drawingRoutine: 0
+    corpseBattle:
+      - STR_BTRECLUSPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    storeItem: STR_BTRECLUSARMOR_PLAYER
+    stats:
+      tu: 10
+      stamina: 25
+      health: 25
+      bravery: 20  # always multiples of 10
+      reactions: 10
+      firing: 10
+      strength: 100
+      psiStrength: 30
+      psiSkill: 20
+      melee: 30
+    frontArmor: 150
+    sideArmor: 130
+    rearArmor: 100
+    underArmor: 150
+    damageModifier:  # TERMINATOR ARMOR
+      - 1.0  # none
+      - 0.6  # AP
+      - 0.3  # FLAMES
+      - 0.4  # HE
+      - 0.9  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 0.9  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA
+    units:
+      - STR_BTHONORED_PLAYER
+    allowsRunning: false
+    allowsKneeling: false
+    loftempsSet: [5]
+    specialWeapon: STR_MFIST
+    builtInWeapons:
+      - AUX_CROZIUS_HIGH_BT
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INFECTION_RESIST_TYPE: 13
+      UNIT_TYPE_CONSECRATED: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 200 # HUGE
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20 #20x100/15=133 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear
+
+  - type: STR_BTCHAMPIONARMOR_PLAYER  # BT CHAMPION ARMOR
+    group: 2
+    customArmorPreviewIndex: 1421
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20  # basic heat vision
+    spriteSheet: BLACKTEMPLARCHAMPIONbattle.PCK
+    drawingRoutine: 0
+    corpseBattle:
+      - STR_BTCHAMPIONPLAYER_CORPSE
+    corpseGeo: STR_FALLEN_CORPSE
+    storeItem: STR_BTCHAMPIONARMOR_PLAYER
+    stats:
+      tu: 20
+      stamina: 30
+      firing: 10
+      health: 0
+      bravery: 30
+      throwing: 10
+      strength: 60
+      psiStrength: 0
+      psiSkill: 0
+      melee: 50
+    frontArmor: 140
+    sideArmor: 130
+    rearArmor: 110
+    underArmor: 130
+    damageModifier:
+      - 1.0  # none
+      - 0.5  # AP
+      - 0.3  # FLAMES
+      - 0.4  # HE
+      - 0.9  # LASCANON
+      - 0.8  # PLASMA
+      - 1.0  # STUN
+      - 0.7  # MELEE
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 0.9  # MELTA
+    units:
+      - STR_BTCHAMPION_PLAYER
+    allowsRunning: true
+    allowsKneeling: true
+    moveCost:
+      baseNormalPercent: [80, 80]
+    loftempsSet: [4]
+    specialWeapon: STR_MFIST
+    builtInWeapons:
+      - STR_BLACKSWORD_BT
+      - STR_BLACKSWORDTRICK_BT
+    tags:
+      INFECTION_RESIST: 50  # infection immune
+      INFECTION_RESIST_TYPE: 13
+      UNIT_TYPE_CONSECRATED: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_SIZE: 150
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 12 #12x100/15=80 points of shield
+      ARMOR_ENERGY_SHIELD_DECAY: 15
+      INTIMIDATION_RESISTANCE: 100 #theyshallknownofear
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+    psiDefence:
+      psiStrength: 3.0               # 300% the psiStrength
+
+
+ # dreadnought
+
+  - &STR_BTDREADNODE
+    type: STR_BTDREAD_ARMOR_PLAYER           # BT DREADNOUGHT NORMAL
+    group: 3
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteInv: BTDREADINV.SPK
+    spriteSheet: BTDREADBS.PCK
+    instantWoundRecovery: true
+    allowInv: true
+    customArmorPreviewIndex: [1342, 1343, 1345]
+    storeItem: STR_NONE
+    corpseGeo: STR_BTDREAD_CORPSE
+    corpseBattle:
+      - BTDREAD_CORPSE1
+      - BTDREAD_CORPSE2
+      - BTDREAD_CORPSE3
+      - BTDREAD_CORPSE4
+    frontArmor: 240
+    sideArmor: 230
+    rearArmor: 180
+    underArmor: 240
+    size: 2
+    moveSound: {mod: 40k, index: 700}
+    #deathSound: [{mod: 40k, index: 859}, {mod: 40k, index: 860}]
+    units:
+      - STR_FALLEN_BT
+    stats:
+      strength: 50
+      health: 200
+      melee: 20
+    damageModifier:  # DREAD ARMOR VENERABLE
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES
+      - 0.7  # HE
+      - 1.1  # LASCANON
+      - 0.8  # PLASMA
+      - 0.0  # STUN
+      - 0.8  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    drawingRoutine: 20
+    builtInWeapons:
+      - STR_DREAD_MELEE_WEAPON
+      - AUX_DREAD_FLAMER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 100  # infection
+      INTIMIDATION_RESISTANCE: 100  # intimidation
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_SIZE: 200 # HUGE
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength dread protected
+
+  - type: STR_BTDREAD_ARMOR_PLAYER2           # BT DREADNOUGHT PLASMA
+    refNode: *STR_BTDREADNODE
+    spriteInv: BTDREADINV2.SPK
+    spriteSheet: BTDREAD2BS.PCK
+    customArmorPreviewIndex: [1341, 1343, 1345]
+    stats:
+      melee: 0
+    builtInWeapons:
+      - AUX_HOVERTANK_PLASMA
+      - AUX_DREAD_FLAMER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength dread protected
+
+  - type: STR_BTDREAD_ARMOR_PLAYER3           # BT DREADNOUGHT Launcher
+    refNode: *STR_BTDREADNODE
+    spriteInv: SWDREADINV3.SPK
+    spriteSheet: SWDREAD3BS.PCK
+    customArmorPreviewIndex: [1339, 1343, 1345]
+    stats:
+      melee: 0
+    builtInWeapons:
+      - AUX_HOVERTANK_LAUNCHER
+      - AUX_DREAD_FLAMER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength dread protected
+
+  - type: STR_BTDREAD_ARMOR_PLAYER4           # BT DREADNOUGHT LASCANNON
+    refNode: *STR_BTDREADNODE
+    spriteInv: BTDREADINV4.SPK
+    spriteSheet: BTDREAD4BS.PCK
+    customArmorPreviewIndex: [1340, 1343, 1345]
+    stats:
+      melee: 0
+    builtInWeapons:
+      - AUX_HOVERTANK_LASER
+      - AUX_DREAD_FLAMER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength dread protected
+
+  - type: STR_BTDREAD_ARMOR_PLAYER5          # BT DREADNOUGHT VENERABLE
+    refNode: *STR_BTDREADNODE
+    spriteInv: BTDREADINV5.SPK
+    spriteSheet: BTDREAD5BS.PCK
+    customArmorPreviewIndex: [1340, 1344, 1345]
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    frontArmor: 260
+    sideArmor: 250
+    rearArmor: 180
+    underArmor: 260
+    damageModifier:  # DREAD ARMOR VENERABLE
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.2  # FLAMES
+      - 0.7  # HE
+      - 1.1  # LASCANON
+      - 0.8  # PLASMA
+      - 0.0  # STUN
+      - 0.7  # MELEE
+      - 0.9  # ACID
+      - 0.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    builtInWeapons:
+      - AUX_DREAD_ASSC
+      - AUX_DREAD_FLAMER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    psiDefence:
+      psiStrength: 5.0               # 500% the psiStrength dread protected
+
+  - type: STR_BTCATAPHRACTARMOR_PLAYER  #~BT CATAPHRACT ARMOR
+    group: 2
+    customArmorPreviewIndex: 1012
+    visibilityAtDay: 40  # equivalent to Scion gear
+    visibilityAtDark: 40  # advanced sensors
+    antiCamouflageAtDay: 5  # advanced sensors
+    antiCamouflageAtDark: 5
+    heatVision: 20  # per daemon senses
+    loftempsSet: [5]
+    storeItem: STR_cataphract_ARMOR
+    spriteInv: BTCATAPHINV.SPK
+    spriteSheet: BLACKTEMPLARCATAPHRACTbattle.PCK
+    units:
+      - STR_BTHONORED_PLAYER
+    drawingRoutine: 0
+    stats:
+      tu: 40
+      health: 30
+      stamina: 45
+      strength: 45
+      bravery: 40
+      firing: 25
+      melee: 40
+    frontArmor: 180
+    sideArmor: 170
+    rearArmor: 170
+    underArmor: 180
+    allowsKneeling: false
+    corpseBattle:
+      - STR_BTcataphract_CORPSE_GEO
+    damageModifier:
+      - 1.0  # none
+      - 0.5  # AP; Cataphract reduces by 0.2
+      - 0.3  # FLAMES
+      - 0.5  # HE; Cataphract reduces by 0.2
+      - 1.0  # LASCANON; Cataphract increases by 0.2
+      - 1.0  # PLASMA
+      - 0.8  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.1  # MELTA; Cataphract increases by 0.1
+    specialWeapon: STR_MFIST
+    allowsRunning: false
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 60  # 50% better than standard terminator shielding
+      ARMOR_ENERGY_SHIELD_DECAY: 20
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_SIZE: 200 # HUGE
+      INTIMIDATION_RESISTANCE: 90 #theyshallknownofear

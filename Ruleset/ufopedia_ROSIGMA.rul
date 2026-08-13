@@ -4,6 +4,7 @@
 #
 # Before adding or modifying entries in this file, please review the information in this header.
 # See the header for each chapter for further guidelines specific to entries for those areas.
+# See the header for each chapter for further guidelines specific to entries for those areas.
 #
 # The use of listOrder to order codex entries has been depriciated for now,
 #   entries must appear in this file in the order you want them to be viewed in the codex.
@@ -61,15 +62,19 @@
 # #SM.PRIM#           Primaris Strategy
 # #SM.SCOUT#          Scout Strategy
 # #SM.TAC#            Tactical Strategy
+# #SM.BT#             Black Templars Strategy
+# #SOB.BR#            Bloody Roses Strategy
 # #SM.WB#             Word Bearers Strategy
 # #CM#              Chamber Militant
 # #CM.DW#             Deathwatch
 # #CM.GK#             Grey Knights
 # #CM.RAD#            The Radical Road
-# #AT#              Adeptus Terra
-# #AT.LAW#            The Imperial Law Strategy
+# #CM.LAW#            The Imperial Law Strategy
+# #AT#              The Alien and the Heretic
 # #AT.CULT#           Chaos Cult
 # #AT.ORKZ#           Da Emprah's Greenest
+# #AT.TAU#            The greater good strategy
+# #AT.ELDAR#          Eldar Strategy
 # #SOB#             Adeptas
 # #SOB.REP#           Repentia Strategy
 # #SOB.NOV#           Novice Strategy
@@ -119,8 +124,8 @@
   #FOES.CM.DW#             Deathwatch
   #FOES.CM.GK#             Grey Knights
   #FOES.CM.RAD#            The Radical Road
+  #FOES.CM.LAW#            The Imperial Law Strategy
   #FOES.AT#              Adeptus Terra Units
-  #FOES.AT.LAW#            The Imperial Law Strategy
   #FOES.AT.CULT#           Chaos Cult
   #FOES.SOB#             Adeptas Units
   #FOES.IG#              Imperial Guard Units
@@ -259,20 +264,23 @@ ufopaedia:
     type_id: 10
     section: STR_HELP
     image_id: REGIMENT_ATTENTION.SPK
-    text: STR_COMMANDS_IG_PART1_UFOPEDIA
+    pages:
+      - title: STR_COMMANDS_IG_PART1
+        text: STR_COMMANDS_IG_PART1_UFOPEDIA
+      - title: STR_COMMANDS_IG_PART2
+        text: STR_COMMANDS_IG_PART2_UFOPEDIA
 
-  - id: STR_COMMANDS_IG_PART2
+  - id: STR_COMMANDS_IG_PART3
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
     type_id: 10
     section: STR_HELP
     image_id: REGIMENT_ATTENTION.SPK
-    text: STR_COMMANDS_IG_PART2_UFOPEDIA
     pages:
-      - title: STR_COMMANDS_IG_PART2
-        text: STR_COMMANDS_IG_PART2_UFOPEDIA
-      - title: STR_COMMANDS_IG_PART2
-        text: STR_COMMANDS_IG_PART2_2_UFOPEDIA
+      - title: STR_COMMANDS_IG_PART3
+        text: STR_COMMANDS_IG_PART3_UFOPEDIA
+      - title: STR_COMMANDS_IG_PART3
+        text: STR_COMMANDS_IG_PART3_2_UFOPEDIA
 
   - id: STR_ARMOR_EXTENDED_FRONT
     type_id: 10
@@ -286,14 +294,14 @@ ufopaedia:
     image_id: 1WEB.SPK
     text: STR_DAMAGE_TIME_UNITS_CARRY_OVER_UFOPEDIA
 
-  - delete: STR_EXECUTING_TRAITORS
-  - id: STR_EXECUTING_TRAITORS
-    requires:
-      - STR_IMPERIAL_GUARD_OPERATIONS
-    type_id: 10
-    section: STR_HELP
-    image_id: EXECUTING_TRAITORS.SPK
-    text: STR_EXECUTING_TRAITORS_UFOPEDIA
+  - delete: STR_EXECUTING_TRAITORS #this has outlived its usefulness unless it's repurposed
+  #- id: STR_EXECUTING_TRAITORS
+  #  requires:
+  #    - STR_IMPERIAL_GUARD_OPERATIONS
+  #  type_id: 10
+  #  section: STR_HELP
+  #  image_id: EXECUTING_TRAITORS.SPK
+  #  text: STR_EXECUTING_TRAITORS_UFOPEDIA
 
   - id: STR_GRAV_DAMAGE_BONUS
     type_id: 10
@@ -384,6 +392,18 @@ ufopaedia:
     section: STR_HELP
     image_id: COMMISSAR.SPK
     text: STR_EXECUTION_MODE_MECHANICS_CODEX
+
+  - id: STR_DIG_IN_MECHANICS
+    type_id: 10
+    section: STR_HELP
+    image_id: GUARDSMEN_WEAPONS.SPK
+    text: STR_DIG_IN_MECHANICS_CODEX
+
+  - id: STR_HELP_RESEARCH_PIPS
+    type_id: 10
+    section: STR_HELP
+    image_id: RESEARCH_PIPS.SPK
+    text: STR_HELP_RESEARCH_PIPS_CODEX
 
   - id: STR_HELP_DIFFICULTY_OPTIONS
     type_id: 10
@@ -599,6 +619,19 @@ ufopaedia:
     image_id: COMMENDATION_CHAOS_ATTENTION.SPK
     text: STR_CHAOS_ATTENTION_DESCRIPTION
 
+
+  - id: STR_CHAOS_APOTHEOSIS
+    type_id: 10
+    section: STR_HELP_CAMPAIGN
+    image_id: COMMENDATION_CHAOS_APOTHEOSIS.SPK
+    text: STR_CHAOS_APOTHEOSIS_DESCRIPTION
+
+  - id: STR_PARDON_COMMENDATION
+    type_id: 10
+    section: STR_HELP_CAMPAIGN
+    image_id: COMMENDATION_PARDON_BRREPENTIA.SPK
+    text: STR_PARDON_COMMENDATION_DESCRIPTION
+
 ####################################
 # #STRATEGY#
 ####################################
@@ -613,15 +646,6 @@ ufopaedia:
     requires:
       - STR_PICK_STRATEGY
 
-  # Eldar Path
-  - delete: STR_HELP15
-  - id: STR_HELP15
-    type_id: 10
-    requires:
-      - STR_ELDAR_PATH
-    section: STR_STRATEGY
-    image_id: 3PROMO.SPK
-    text: STR_HELP_PROMO
   - delete: STR_CHOSEN_ELDAR
   - id: STR_CHOSEN_ELDAR
     requires:
@@ -738,6 +762,62 @@ ufopaedia:
     requires:
       - STR_MARINES_STRATEGY
 
+
+## #STRATEGY.SM.BT#
+
+  - id: STR_CHOSEN_BLACKTEMPLARS
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    image_id: BTINTRO_CODEX.SPK
+
+  - id: STR_BLACKTEMPLAR_STRATEGY #equivalent of STR_TATICAL
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: BLACKTEMPLARPLAYER_CODEX.SPK
+    text: STR_BT_STRATEGY_INFO
+    requires:
+      - STR_MARINES_STRATEGY
+
+  - id: STR_REQIMPERIAL_SUPPORT   # Request Imperial Support
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: BTSUPPORT_CODEX.SPK
+    text: STR_REQIMPERIAL_SUPPORT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BLACKTEMPLAR_HELP  # Black Templar Guide
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: BLACKTEMPLARPLAYER_CODEX.SPK
+    text: STR_BT_STRATEGY_INFO
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    pages:
+      - title: STR_BLACKTEMPLAR_HELP
+        text: STR_BLACKTEMPLARHINTS_CODEX_PAGE1
+      - title: STR_BLACKTEMPLAR_HELP
+        text: STR_BLACKTEMPLARHINTS_CODEX_PAGE2
+
+## #STRATEGY.BR#
+
+  - id: STR_CHOSEN_BLOODYROSES
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_BLOODYROSE_STRATEGY
+    image_id: BRINTRO_CODEX.SPK
+
+  - id: STR_BLOODYROSE_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: BLOODYROSEPLAYER_CODEX.SPK
+    text: STR_BR_STRATEGY_INFO
+    requires:
+      - STR_BLOODYROSE_STRATEGY
+
 ## #STRATEGY.WB#
   - id: STR_CHOSEN_WORDBEARERS
     type_id: 10
@@ -745,6 +825,14 @@ ufopaedia:
     requires:
       - STR_WORDBEARERS_STRATEGY
     image_id: WORDBEARERS_INTRO2_CODEX.SPK
+
+  - id: STR_WORDBEARERS_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: WORDBEARERS_STRATEGY_DESCRIPTION.SPK
+    text: STR_WORDBEARER_STRATEGY_CODEX
+    requires:
+      - STR_MARINES_STRATEGY
 
   - id: STR_WORDBEARERS_HELPER
     type_id: 10
@@ -788,7 +876,7 @@ ufopaedia:
     type_id: 10
     section: STR_STRATEGY
     requires:
-      - STR_CHAMBERMILITANT
+      - STR_CHAMBER_NOT_ARBITES
     image_id: INQUISITOR_CODEX.SPK
     text: STR_INQUISITION_FAVOR_CODEX
 
@@ -963,18 +1051,8 @@ ufopaedia:
       - title: STR_OA_MIDTIER_REPORT
         text: STR_OA_MIDTIER_UFOPEDIA_PAGE2
 
-## #STRATEGY.AT#
-  # The topics in this section should be reworked. Need top level adeptus terra articles.
+### #STRATEGY.CM.LAW#
 
-### #STRATEGY.AT.LAW#
-  - delete: STR_STRATEGY_INTROPD
-  - id: STR_STRATEGY_INTROPD
-    type_id: 10
-    section: STR_STRATEGY
-    image_id: 2ARB.SPK
-    text: STR_STRATEGY_TEXT_INTRO
-    requires:
-      - STR_ARBITES
   - delete: STR_CHOSEN_ARBITES
   - id: STR_CHOSEN_ARBITES
     type_id: 10
@@ -983,11 +1061,22 @@ ufopaedia:
       - STR_THE_IMPERIAL_LAW_STRATEGY
     image_id: 4ARR.SPK
   - delete: STR_ARBITES
-  - id: STR_ARBITES
+  - id: STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 10
     section: STR_STRATEGY
     image_id: 4ARB.SPK
     text: STR_ARBITES_TEXT
+    requires:
+      - STR_CHAMBERMILITANT
+
+## #STRATEGY.AT#
+  # The topics in this section should be reworked. Need top level adeptus terra articles.
+  - delete: STR_STRATEGY_INTROPD
+  - id: STR_STRATEGY_INTROPD
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: 2ARB.SPK
+    text: STR_STRATEGY_TEXT_INTRO
     requires:
       - STR_ARBITES
 
@@ -1312,6 +1401,83 @@ ufopaedia:
       - STR_COOPT_ECCLESIARCHY_GV
     text: STR_TAU_ADEPTAS_ARMOR_NOVSUPERIOR_CODEX_DESCRIPTION_GV
 
+### #STRATEGY.AT.ELDAR# # Eldar Strategy
+
+  - id: STR_CHOSEN_ELDAR_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_ELDAR_STRATEGY
+    image_id: ELDAR_STRATEGY_GENERIC.SPK
+
+  - id: STR_ELDAR_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    requires:
+      - STR_ARBITES
+    pages:
+      - title: STR_ELDAR_STRATEGY
+        text: STR_ELDAR_STRATEGY_CODEX
+      - title: STR_ELDAR_STRATEGY_TITLE_PAGE2
+        text: STR_ELDAR_STRATEGY_CODEX_PAGE2
+
+  - id: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    requires:
+      - STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+    pages:
+      - title: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+        text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX
+      - title: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED
+        text: STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX_PAGE2
+
+  - id: STR_SLAANESH_PALACE_ACTIVITY_DETECTED
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    text: STR_SLAANESH_PALACE_ACTIVITY_DETECTED_DESCRIPTION
+    requires:
+      - STR_SLAANESH_PALACE_ACTIVITY_DETECTED
+  - id: STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    text: STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED_DEBRIEFING
+    requires:
+      - STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED
+
+  # Eldar Promotion helper
+  - delete: STR_HELP15
+  - id: STR_HELP15
+    type_id: 10
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    section: STR_STRATEGY
+    image_id: ELDAR_PATH_HELPER.SPK
+    text: STR_HELP_PROMO
+
+  - id: STR_ELDAR_RUNES_TITLE
+    type_id: 10
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    section: STR_STRATEGY
+    image_id: ELDAR_RUNES_CODEX.SPK
+    text: STR_ELDAR_RUNE_CODEX
+
+  - id: STR_ELDAR_EXARCH_AND_AUTARCH
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: ELDAR_AUTARCH_BACKGROUND.SPK
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+    pages:
+      - title: STR_ELDAR_EXARCH_AND_AUTARCH
+        text: STR_ELDAR_EXARCH_AND_AUTARCH_PAGE1
+      - title: STR_ELDAR_EXARCH_AND_AUTARCH
+        text: STR_ELDAR_EXARCH_AND_AUTARCH_PAGE2
 
 ## #STRATEGY.SOB#
   - delete: STR_CHOSEN_ADEPTAS
@@ -1459,6 +1625,14 @@ ufopaedia:
     requires:
       - STR_VALHALLAN_STRATEGY
     image_id: VALHALLAN_INTRO_CODEX.SPK
+
+  - id: STR_VALHALLAN_WEAPONS
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    text: STR_VALHALLAN_WEAPONS_CODEX
+    image_id: VALHALLAN_SNIPER_CODEX.SPK
 
 ####################################
 # #RESEARCH#
@@ -1911,9 +2085,7 @@ ufopaedia:
     section: STR_ALIEN_RESEARCH_UC
     image_id: INQUISITOR_CODEX.SPK
     text: STR_SUMMON_DAEMONS_RESEARCH_DESCRIPTION
-
-## #RESEARCH.AT#
-### #RESEARCH.AT.LAW#
+### #RESEARCH.CM.LAW#
   - delete: STR_ARBITES_BUST
   - id: STR_ARBITES_BUST
     type_id: 10
@@ -1926,6 +2098,8 @@ ufopaedia:
         text: STR_ARBITES_BUST_UFOPEDIA
       - title: STR_ARBITES_BUST
         text: STR_ARBITES_BUST_UFOPEDIA_PAGE2
+
+## #RESEARCH.AT#
 ### #RESEARCH.AT.CULT#
 
   - id: STR_SACRIFICE_TO_CHAOS
@@ -2241,6 +2415,14 @@ ufopaedia:
     text: STR_CHAOSREWARD_REQUISITIONS_CODEX
     requires:
       - STR_CHAOSREWARD_REQUISITIONS
+### #RESEARCH.AT.ELDAR#
+  - id: STR_RECRUIT_ELDAR_OUTCAST
+    type_id: 10
+    section: STR_ALIEN_RESEARCH_UC
+    image_id: STR_RECRUIT_ELDAR_OUTCAST.SPK
+    text: STR_RECRUIT_ELDAR_OUTCAST_CODEX
+    requires:
+      - STR_RECRUIT_ELDAR_OUTCAST
 
 ## #RESEARCH.SOB#
   - id: STR_FAITHFUL_ARMORY  # SoB Weapons Requisition
@@ -2862,6 +3044,15 @@ ufopaedia:
     image_id: 045.SPK
     text: STR_POWERG_UFOPEDIA
 
+  - id: STR_BRCOMMAND_ADEPTAS
+    type_id: 16
+    section: STR_BASE_FACILITIES
+    image_id: 042.SPK
+    text: STR_BRCOMMAND_ADEPTAS_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+
   # Chaos Facilities
   - id: STR_ARMORY_CHAOS
     type_id: 16
@@ -3016,8 +3207,14 @@ ufopaedia:
     requires:
       - STR_DEFENSE_CORRIDORGK
 ### #FACILITIES.CM.RAD#
-## #FACILITIES.AT#
-### #FACILITIES.AT.LAW#
+  - id: STR_INQ_RR_BLACK_MARKET
+    type_id: 16
+    section: STR_BASE_FACILITIES
+    image_id: STR_TAU_GUEVESA_MARKET_CODEX.SPK
+    text: STR_INQ_RR_BLACK_MARKET_CODEX
+    requires:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+### #FACILITIES.CM.LAW#
   - delete: STR_PRISION
   - id: STR_PRISION
     type_id: 16
@@ -3025,7 +3222,7 @@ ufopaedia:
     image_id: 036.SPK
     text: STR_PRISION_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ARMORY_ARBITES
   - id: STR_ARMORY_ARBITES
     type_id: 16
@@ -3034,7 +3231,16 @@ ufopaedia:
     text: STR_ARMORY_ARBITES_UFOPEDIA
     requires:
       - STR_ARBITES_MIDTIER
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
+  - id: STR_OUTPOST_THE_IMPERIAL_LAW_HYPER
+    type_id: 16
+    section: STR_BASE_FACILITIES
+    image_id: 042_HYPER.SPK
+    text: STR_OUTPOST_GUARD_HYPER_UFOPEDIA
+    requires:
+      - STR_THE_IMPERIAL_LAW_STRATEGY
+      - STR_HYPER_WAVE_DECODER
+## #FACILITIES.AT#
   - delete: STR_DEFENSE_HALL
   - id: STR_DEFENSE_HALL
     type_id: 16
@@ -3331,7 +3537,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_AIRCRAFT_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
 ## #CRAFTS.MULT#
   - delete: STR_VALKYRIE  # VALKYRIE
@@ -3414,6 +3620,7 @@ ufopaedia:
       - STR_MARINES_STRATEGY
       - STR_NOT_PRIMARIS
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     text: STR_DROPPOD_UFOPEDIA
 
   - delete: STR_SKYRANGER  # DROPPODS
@@ -3425,6 +3632,7 @@ ufopaedia:
       - STR_MARINES_STRATEGY
       - STR_NOT_PRIMARIS
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     text: STR_DROPPOD_UFOPEDIA
 
   - delete: STR_INTERCEPTOR  # STORMTALON
@@ -3469,6 +3677,7 @@ ufopaedia:
       - STR_NOT_PRIMARIS
       - STR_MARINES_STRATEGY
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     image_id: RHINO_NOTT.SPK
     text: STR_RHINO_NO_TT_UFOPAEDIA
 
@@ -3481,6 +3690,7 @@ ufopaedia:
     requires:
       - STR_STORMEAGLE_INTERCEPTOR
       - STR_MARINES_STRATEGY
+      - STR_NOT_BLACKTEMPLARS
 
   - delete: STR_CHAPTERARMY
   - id: STR_CHAPTERARMY  # 1st COMPANY
@@ -3491,6 +3701,7 @@ ufopaedia:
     requires:
       - STR_NOT_PRIMARIS
       - STR_CHAPTERARMYR
+      - STR_NOT_BLACKTEMPLARS
 
   - delete: STR_SPEEDC
   - id: STR_SPEEDC
@@ -3509,6 +3720,7 @@ ufopaedia:
       - STR_MARINES_STRATEGY
       - STR_NEW_FIGHTER_CRAFT
       - STR_NOT_PRIMARIS
+      - STR_NOT_BLACKTEMPLARS
     image_id: STORMRAVEN.SPK
     text: STR_FIRESTORM_UFOPEDIA
 
@@ -3519,6 +3731,7 @@ ufopaedia:
     requires:
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_THUNDERHAWKTYPE2
+      - STR_NOT_BLACKTEMPLARS
     image_id: THUNDERHAWK.SPK
     text: STR_THUNDERHAWK_UFOPEDIA
     rect_stats:
@@ -3539,6 +3752,7 @@ ufopaedia:
     requires:
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_THUNDERHAWKTYPE1
+      - STR_NOT_BLACKTEMPLARS
     image_id: THUNDERHAWK.SPK
     text: STR_THUNDERHAWK_UFOPEDIA
     rect_stats:
@@ -3560,6 +3774,7 @@ ufopaedia:
     requires:
       - STR_ULTIMATE_CRAFT
       - STR_ASSAULT
+      - STR_NOT_BLACKTEMPLARS
     image_id: RHINO.SPK
     text: STR_AVENGER_UFOPEDIA
 ### #CRAFTS.SM.DEV#
@@ -3570,6 +3785,7 @@ ufopaedia:
     requires:
       - STR_ULTIMATE_CRAFT
       - STR_DEVASTATOR
+      - STR_NOT_BLACKTEMPLARS
     image_id: RHINO.SPK
     text: STR_AVENGER_UFOPEDIA
 ### #CRAFTS.SM.PRIM#
@@ -3631,6 +3847,137 @@ ufopaedia:
       - STR_TATICAL
     image_id: RHINO.SPK
     text: STR_AVENGER_UFOPEDIA
+
+## #CRAFTS.SM.WB#
+
+  - id: STR_WBDROPPODS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+    image_id: WBDROPPODS.SPK
+    text: STR_WBDROPPODS_UFOPEDIA
+
+  - id: STR_WBLIGHTNING
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+    text: STR_LIGHTNING_INTERCEPTOR_UFOPEDIA
+    image_id: 2VOSS.SPK
+
+  - id: STR_WBRHINOS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_CONTACT
+    image_id: WBRHINOS.SPK
+    text: STR_WBRHINOS_UFOPEDIA
+
+  - id: STR_WBDROPPODSUPGRADE
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_SACRIFICE
+    image_id: WBDROPPODS.SPK
+    text: STR_WBDROPPODSUPGRADE_UFOPEDIA
+
+  - id: STR_WBHELLBLADE_INTERCEPTORS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBNEW_FIGHTER_CRAFT
+    image_id: WBHELBLADES.SPK
+    text: STR_WBHELLBLADE_UFOPEDIA
+
+  - id: STR_WBTHUNDERHAWK
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBTHUNDERABILTY
+    image_id: CHAOS_THUNDERHAWK.SPK #placeholder
+    text: STR_WBTHUNDERHAWK_UFOPEDIA
+
+  - id: STR_WBDEMONHOST
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_WORDBEARERS_STRATEGY
+      - STR_DIABO_ARMOR_WB
+    image_id: DAEMON_INCURSION_WB_LOGO.SPK #placeholder
+    text: STR_WBDEMONHOST_CODEX
+
+  - id: STR_WBWARSHIPFINAL
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBHOLYWARSHIPFINALEREBUS
+    image_id: WBWARSHIPCODEX.SPK
+    text: STR_WBWARSHIPFINAL_UFOPEDIA
+
+  - id: STR_WBWARSHIPFINALKR
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBHOLYWARSHIPFINAL
+    image_id: WBWARSHIPCODEX.SPK
+    text: STR_WBWARSHIPFINAL_UFOPEDIA
+
+## #CRAFTS.SM.BT#
+
+  - id: STR_BTDROPPODS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: DROPPOD.SPK
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    text: STR_BTDROPPODS_CODEX
+
+  - id: STR_BTSPEEDC
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+    image_id: RHINO_NOTT.SPK  # placeholder
+    text: STR_BTSPEEDC_CODEX
+
+  - id: STR_BTBR_RHINO_CRAFT
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+      - STR_BLOODYROSE_STRATEGY
+    image_id: RHINO_NOTT.SPK  # placeholder
+    text: STR_BTBR_RHINO_CRAFT_CODEX
+
+  - id: STR_BTBRLANDRAIDER
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_REQIMPERIAL_SUPPORT
+      - STR_BLOODYROSE_STRATEGY
+    image_id: RHINO_NOTT.SPK  # placeholder
+    text: STR_BTBRLANDRAIDER_CODEX
+
+## #CRAFTS.SOB.BR#
+
+  - id: STR_BRARVUS_ADEPTAS
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: 2ARVUS.SPK
+    requires:
+      - STR_BLOODYROSE_STRATEGY
+    text: STR_BRARVUS_ADEPTAS_CODEX
+
 ## #CRAFTS.CM#
   - id: STR_VALKYRIE_INQ
     type_id: 11
@@ -3764,13 +4111,12 @@ ufopaedia:
     image_id: 3CONTA.SPK # need better image
     text: STR_ADVANCED_TELEPORTARIUM_UFOPEDIA
 
-## #CRAFTS.AT#
-### #CRAFTS.AT.LAW#
+### #CRAFTS.CM.LAW#
   - delete: STR_VULTURE
   - id: STR_VULTURE
     type_id: 11
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_VULTURE_UFOPEDIA
     image_id: 2VULTURE.SPK
@@ -3779,7 +4125,7 @@ ufopaedia:
   - id: STR_CHIMERAPD
     type_id: 11
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_CHIMERAPD_UFOPEDIA
     image_id: 2CHIMERAL.SPK
@@ -3789,8 +4135,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
-      - STR_NEW_FIGHTER_PD
+      # - STR_NEW_FIGHTER_PD it's base craft now
       - STR_THE_IMPERIAL_LAW_STRATEGY
     image_id: 2THUNDERBOLT.SPK
     text: STR_THUNDERBOLT_INTERCEPTOR_UFOPEDIA
@@ -3800,7 +4145,7 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_NEW_TRANSPORT_PD
     image_id: 2TAUROX.SPK
     text: STR_TAUROXPD_UFOPEDIA
@@ -3810,8 +4155,8 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
-      - STR_ARBITES_HIGHTIER
+      - STR_THE_IMPERIAL_LAW_STRATEGY
+      - STR_MANTICORE_REQUISITION
     image_id: 2MANTICORE.SPK
     text: STR_CHIMERAPDH_UFOPEDIA
 
@@ -3820,17 +4165,17 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ARBITES_HIGHTIER
     image_id: 2CRASSUS.SPK
-    text: STR_CASSIUMPD_UFOPEDIA
+    text: STR_CASSIUM_UFOPEDIA
 
   - delete: STR_PREATORPD
   - id: STR_PREATORPD
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_PREATOR_PD_R
     image_id: 2PREATOR.SPK
     text: STR_PREATOR_UFOPEDIA
@@ -3840,6 +4185,7 @@ ufopaedia:
     type_id: 11
     requires:
       - STR_ARBITES_MIDTIER
+      - STR_NOT_BLACKTEMPLARS
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_ARVUS_UFOPEDIA
     image_id: 2ARVUS.SPK
@@ -3851,9 +4197,10 @@ ufopaedia:
     text: STR_ARMYPD_UFOPEDIA
     image_id: 2MOBP.SPK
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_LANDRAIDER_ARBITES
 
+## #CRAFTS.AT#
 ### #CRAFTS.AT.CULT#
   - id: STR_VALKYRIE_CHAOS
     section: STR_XCOM_CRAFT_ARMAMENT
@@ -3880,6 +4227,14 @@ ufopaedia:
     type_id: 11
 
   - id: STR_CHAOS_COLUMN
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: THECHAOSPATH.SPK
+    text: STR_CHAOS_COLUMN_CHAOS_CODEX
+    requires:
+      - STR_UNLOCK_CHAOSLEMAN
+    type_id: 11
+
+  - id: STR_PCCHAOS_COLUMN
     section: STR_XCOM_CRAFT_ARMAMENT
     image_id: THECHAOSPATH.SPK
     text: STR_CHAOS_COLUMN_CHAOS_CODEX
@@ -4131,6 +4486,14 @@ ufopaedia:
 ### #CRAFTS.SOB.NOV#
 ### #CRAFTS.SOB.BAT#
 ### #CRAFTS.SOB.DOM#
+  - id: STR_TTA                        #501
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_TTA_RESEARCH
+    image_id: RHINO.SPK
+    text: STR_AVENGER_UFOPEDIA
+    listOrder: 501
 ## #CRAFTS.IG#
   - delete: STR_VALKYRIE_GRAV_DROP
   - id: STR_VALKYRIE_GRAV_DROP
@@ -4344,72 +4707,57 @@ ufopaedia:
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
     text: STR_GORGON_UFOPEDIA
-    image_id: 2GORGON.SPK  # needs porting, submodding no bueno
-
-
-## #CRAFTS.SM.WB#
-
-  - id: STR_WBDROPPODS
+    image_id: 2GORGON.SPK
+### #CRAFTS.IG.VALHALLAN#
+  - id: STR_TRUCKARMOR_VALHALLA_STARTER
+    requires:
+      - STR_VALHALLAN_STRATEGY
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-    image_id: WBDROPPODS.SPK
-    text: STR_WBDROPPODS_UFOPEDIA
+    image_id: VALTRUCK_CODEX.SPK
+    pages:
+      - title: STR_TRUCKARMOR_VALHALLA_STARTER
+        text: STR_TRUCKARMOR_VALHALLA_STARTER_UFOPEDIA
 
-  - id: STR_WBRHINOS
+  - id: STR_TRUCKARMOR_VALHALLA_MIDTIER
+    requires:
+      - STR_VALHALLA_MIDTIER
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_RITUAL_CONTACT
-    image_id: WBRHINOS.SPK
-    text: STR_WBRHINOS_UFOPEDIA
+    image_id: VALTRUCK_CODEX.SPK
+    pages:
+      - title: STR_TRUCKARMOR_VALHALLA_MIDTIER
+        text: STR_TRUCKARMOR_VALHALLA_MIDTIER_UFOPEDIA
 
-  - id: STR_WBDROPPODSUPGRADE
+  - id: STR_CASSIUMVL  # CRASSUS
+    requires:
+      - STR_VALHALLA_MIDTIER
+      - STR_UFO_CONSTRUCTION #delayed intro
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_RITUAL_SACRIFICE
-    image_id: WBDROPPODS.SPK
-    text: STR_WBDROPPODSUPGRADE_UFOPEDIA
+    image_id: 2CRASSUS.SPK
+    text: STR_CASSIUM_UFOPEDIA
 
-  - id: STR_WBHELLBLADE_INTERCEPTORS
+  - id: STR_ARMOR_COLUMNVL    # with tank riders
+    requires:
+      - STR_VALHALLAN_STRATEGY
+      - STR_VALHALLA_MIDTIER
+      - STR_UFO_CONSTRUCTION #ceramite
+      - STR_HEAVY_PLASMA_DEP1
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBNEW_FIGHTER_CRAFT
-    image_id: WBHELBLADES.SPK
-    text: STR_WBHELLBLADE_UFOPEDIA
+    image_id: 2LEMON.SPK
+    pages:
+      - title: STR_ARMOR_COLUMNVL
+        text: STR_ARMOR_COLUMNVL_UFOPEDIA
 
-  - id: STR_WBTHUNDERHAWK
+  - id: STR_GORGONVL
+    requires:
+      - STR_VALHALLA_HIGHTIER
     type_id: 11
     section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBTHUNDERABILTY
-    image_id: CHAOS_THUNDERHAWK.SPK #placeholder
-    text: STR_WBTHUNDERHAWK_UFOPEDIA
-
-  - id: STR_WBWARSHIPFINAL
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBHOLYWARSHIPFINALEREBUS
-    image_id: WBWARSHIPCODEX.SPK
-    text: STR_WBWARSHIPFINAL_UFOPEDIA
-
-  - id: STR_WBWARSHIPFINALKR
-    type_id: 11
-    section: STR_XCOM_CRAFT_ARMAMENT
-    requires:
-      - STR_WORDBEARERS_STRATEGY
-      - STR_WBHOLYWARSHIPFINAL
-    image_id: WBWARSHIPCODEX.SPK
-    text: STR_WBWARSHIPFINAL_UFOPEDIA
+    text: STR_GORGON_UFOPEDIA
+    image_id: 2GORGON.SPK
 
 ####################################
 # #ARM# Craft Armaments
@@ -5045,8 +5393,7 @@ ufopaedia:
       - STR_GREYKNIGHTS
     text: STR_DREAD_ARMOR5_UC_UFOPEDIA
 #HWPS.CM.RAD#          Radical Road Strategy
-#HWPS.AT#            Adeptus Terra HWPs
-#HWPS.AT.LAW#          The Imperial Law Strategy
+#HWPS.CM.LAW#          The Imperial Law Strategy
   - id: AUX_ARBITES_OUTBOLTER  # Double Bolters
     # Arbites Bike
     type_id: 14
@@ -5066,6 +5413,7 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+#HWPS.AT#            Adeptus Terra HWPs
 #HWPS.AT.CULT#         Chaos Cult Strategy
 #HWPS.SOB#           Adeptas HWPs
   - delete: STR_PENITENT_ENGINE
@@ -5396,21 +5744,323 @@ ufopaedia:
 ## #SOLDIERS.SM.SCOUT#     Scout Strategy
 ## #SOLDIERS.SM.TAC#       Tactical Strategy
 # #SOLDIERS.CM#         Chamber Militant Soldiers
+  - id: STR_AWARD_INQ_ROSARIUS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQUISITORIAL_ROSARIUS.SPK
+    text: STR_AWARD_INQ_ROSARIUS_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+  - id: STR_INQ_TRANSFORM_RETINUE_INDUCTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQUISITORIAL_RETINUE.SPK
+    text: STR_INQ_TRANSFORM_RETINUE_INDUCTION_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
+  - id: STR_INQ_TRANSFORM_REJUVENATE
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: MEDICAE_STATION.SPK
+    text: STR_INQ_TRANSFORM_REJUVENATE_CODEX
+    requires:
+      - STR_CHAMBER_NOT_ARBITES
 ## #SOLDIERS.CM.DW#        Deathwatch Strategy
 ## #SOLDIERS.CM.GK#        Grey Knights Strategy
 ## #SOLDIERS.CM.RAD#       Radical Road Strategy
-# #SOLDIERS.AT#         Adeptus Terra Soldiers
-## #SOLDIERS.AT.LAW#       The Imperial Law Strategy
+  - id: STR_IMPERIAL_INTERROGATOR #OPFOR Commander Inquisitor
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: INQ_INTERROGATOR_CODEX.SPK
+    text: STR_IMPERIAL_INTERROGATOR_UFOPEDIA
+## #SOLDIERS.CM.LAW#       The Imperial Law Strategy
   - delete: STR_CMAS
-  - id: STR_CMAS  # Cyber Mastiff
-    type_id: 14
-    section: STR_NOT_AVAILABLE
+  - id: STR_ARBITES_MASTIFF  # Cyber Mastiff
+    type_id: 10
+    section: STR_SOLDIERS_UC
     image_id: C13.SPK
     text: STR_CMAS_UFOPEDIA
     weapon: STR_CMAS
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
+# #SOLDIERS.AT#         Adeptus Terra Soldiers
 ## #SOLDIERS.AT.CULT#      Chaos Cult Strategy
+
+  - id: STR_CONVERT_TO_CHAOS_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: STR_CONVERT_TO_CHAOS_ADEPTAS.SPK
+    text: STR_CONVERT_TO_CHAOS_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+
+  - id: STR_CONVERT_TO_SLAANESH_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: SlaaneshSisterOrigins.SPK
+    text: STR_CONVERT_TO_SLAANESH_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_SLAANESH_OPTIONS
+  - id: STR_CONVERT_TO_KHORNE_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UPKhorneDevotedSisterOrigins.SPK
+    text: STR_CONVERT_TO_KHORNE_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_KHORNE_OPTIONS
+  - id: STR_CONVERT_TO_NURGLE_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: NurgleSisterOrigin2.SPK
+    text: STR_CONVERT_TO_NURGLE_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_NURGLE_OPTIONS
+  - id: STR_CONVERT_TO_TZEENTCH_ADEPTAS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: TzeentchSisterOriginsSaturated2.SPK
+    text: STR_CONVERT_TO_TZEENTCH_ADEPTAS_CODEX
+    requires:
+      - STR_CONVERT_TO_CHAOS_RESEARCH
+      - STR_TZEENTCH_OPTIONS
+
+# #SOLDIERS.AT.ELDAR#
+  #aspect warrior transformations
+  - id: STR_PROMOTE_BEGIN_AUTARCH_PATH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_MESSAGE_GENERIC.SPK
+    text: STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+  - id: STR_PROMOTE_TO_DIREAVENGER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP164.SPK # DIRE AVENGER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_AVENGER
+    requires:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
+  - id: STR_PROMOTE_TO_SCORPION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP165.SPK # SCORPION_ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_SCORPIONS
+    requires:
+      - STR_ELDAR_SCORPION_RESEARCH
+  - id: STR_PROMOTE_TO_BANSHEE
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP113.SPK # BANSHEE ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_BANSHEE
+    requires:
+      - STR_ELDAR_BANSHEE_RESEARCH
+  - id: STR_PROMOTE_TO_REAPER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP167.SPK # REAPER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_REAPER
+    requires:
+      - STR_ELDAR_REAPER_RESEARCH
+  - id: STR_PROMOTE_TO_DRAGON
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_DRAGON_ARMOR_CODEX.SPK # fire dragon ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_DRAGON
+    requires:
+      - STR_ELDAR_FIREDRAGON_RESEARCH
+  - id: STR_PROMOTE_TO_SPIDER
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_SPIDER_ARMOR_CODEX.SPK # SPIDER ARMOR CODEX IMAGE
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER
+    requires:
+      - STR_ELDAR_SPIDER_RESEARCH
+  - id: STR_PROMOTE_TO_AUTARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AUTARCH_BACKGROUND.SPK
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER
+    requires:
+      - STR_PROMOTE_TO_AUTARCH_HELPER
+
+  - id: STR_PROMOTE_TO_AVENGER_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_SCORPION_EXARCH
+    requires:
+      - STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_SCORPION_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK # TODO change
+    text: STR_ELDAR_ASPECT_HELPER_SCORPION_EXARCH
+    requires:
+      - STR_ELDAR_SCORPION_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_BANSHEE_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK # TODO change
+    text: STR_ELDAR_ASPECT_HELPER_BANSHEE_EXARCH
+    requires:
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_REAPER_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_REAPEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_REAPER_EXARCH
+    requires:
+      - STR_ELDAR_REAPER_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_DRAGON_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_DRAGONEX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_DRAGON_EXARCH
+    requires:
+      - STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_SPIDER_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_SPIDEREXDS_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER_EXARCH
+    requires:
+      - STR_ELDAR_SPIDER_EXARCH_RESEARCH
+  # Eldar exarch/autarch
+  # ELDAR psyker transf.
+  #- id: STR_PROMOTE_TO_PSYKER
+  #- id: STR_PROMOTE_TO_ELDAR_WARLOCK
+  # dead eldar
+  #- id: STR_RESURRECT_ELDAR
+# #SOLDIERS.AT.ORKZ#
+  - id: STR_BLOODAXE_ARDBOY_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_BLOODAXE_ARDBOY_PROMOTION_CODEX
+    requires:
+      - STR_ORK_ONLY
+  - id: STR_BLOODAXE_NOB_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_BLOODAXE_NOB_PROMOTION_CODEX
+    requires:
+      - STR_ORK_ONLY
+      - STR_MIDTIER_PREREQ
+  - id: STR_RESURRECT_ORK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_RESURRECT_ORK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_RESURRECT_ORK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP135.SPK
+    text: STR_RESURRECT_ORK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_PLAYER_WARBOSS_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_PLAYER_WARBOSS_PROMOTION_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_REPLACE_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_EVOLUTION_TREE.SPK
+    text: STR_REPLACE_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_REPLACE_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: WARBOSS_WEAKSAUCE.SPK
+    text: STR_REPLACE_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_RECOVER_WARBOSS
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: WarbossOrigins.SPK
+    text: STR_RECOVER_WARBOSS_CODEX
+    requires:
+      - STR_ORK_BASE_LEVEL5_DEFEATED
+      - STR_ORKZ_HIGHTIER
+  - id: STR_PLAYER_BIG_MEK_PROMOTION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: DEATHSKULLS_BIGMEK_SHOKK_CODEX.SPK
+    text: STR_PLAYER_BIG_MEK_PROMOTION_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_REPLACE_BIG_MEK
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: DEATHSKULLS_BIGMEK_SHOKK_CODEX.SPK
+    text: STR_REPLACE_BIG_MEK_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_SPARKY_POWER_FIELD
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_SPARKY_FIELD.SPK
+    text: STR_SPARKY_POWER_FIELD_CODEX
+    requires:
+      - STR_ORKZ_HIGHTIER
+  - id: STR_CYBORK_OPERATION
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: BADMOONS_MEKBOSS_CODEX.SPK
+    text: STR_CYBORK_OPERATION_CODEX
+    requires:
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_ASSIGN_STASIS_TOMB
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_CAPSULE.SPK
+    text: STR_ASSIGN_STASIS_TOMB_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_ALIEN_REPRODUCTION
+  - id: STR_MAD_DOC_RECOVERY
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ORK_CAPSULE.SPK
+    text: STR_MAD_DOC_RECOVERY_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_ALIEN_REPRODUCTION
+  - id: STR_MEGA_CYBORK_RECOVERY
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: BADMOONS_MEKBOSS_CODEX.SPK
+    text: STR_MEGA_CYBORK_RECOVERY_CODEX
+    requires:
+      - STR_ORKZ_MIDTIER
+      - STR_MEK_KLAN_RECRUITED
+  - id: STR_ARMOR_OF_FATE_RECOVERY
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: UP125.SPK
+    text: STR_ARMOR_OF_FATE_RECOVERY_CODEX
+    requires:
+      - STR_ORKZ_HIGHTIER
+
+
 # #SOLDIERS.SOB#        Adeptas Soldiers
   # Promotion Articles
   - id: STR_INDUCT_CANTUS
@@ -5460,8 +6110,7 @@ ufopaedia:
     image_id: IMPERIAL_ASSASSIN_CODEX.SPK
     text: STR_IMPERIAL_ASSASSIN_ORIGINS
 
-  - id: STR_ADEPTAS_FRATERIS_MILITIA_ORIGIN
-    title: STR_ADEPTAS_FRATERIS_MILITIA
+  - id: STR_ADEPTAS_FRATERIS_MILITIA
     type_id: 10
     section: STR_SOLDIERS_UC
     image_id: FraterisMilitiaOrigins.SPK
@@ -5757,7 +6406,7 @@ ufopaedia:
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: KhorneSisterChosenOrigin.SPK
-    text: STR_CHAOS_ADEPTAS_KHORNE_ARMOR_UFOPAEDIA
+    text: STR_KHORNE_SUPERIOR_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
 
@@ -5781,15 +6430,15 @@ ufopaedia:
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: TzeentchSisterChosenOrigin.SPK
-    text: STR_CHAOS_ADEPTAS_TZEENTCH_ARMOR_UFOPAEDIA
+    text: STR_TZEENTCH_SUPERIOR_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_CHAOS_ADEPTAS_HIRE_RESEARCH
 
   - id: STR_CHAOS_SORC_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_SORC_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_SORC_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5797,8 +6446,8 @@ ufopaedia:
   - id: STR_CHAOS_HAVOC_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_HAVOC_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_HAVOC_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5806,8 +6455,8 @@ ufopaedia:
   - id: STR_CHAOS_MARINE_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_MARINE_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_MARINE_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5815,8 +6464,8 @@ ufopaedia:
   - id: STR_CHAOS_SERGEANT_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_SERGEANT_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_SERGEANT_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5833,8 +6482,8 @@ ufopaedia:
   - id: STR_CHAOS_TERMINATOR_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_TERMINATOR_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_TERMINATOR_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5842,8 +6491,8 @@ ufopaedia:
   - id: STR_CHAOS_LORD_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
-    image_id: 1CH.SPK
-    text: STR_CHAOS_LORD_ARMOR
+    image_id: 1CH.SPK # Placeholder Image
+    text: STR_CHAOS_LORD_ARMOR_PLAYER_UFOPEDIA
     requires:
       - STR_ALIENS_ONLY
       - STR_NOT_CHAOSCULT
@@ -5872,7 +6521,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_GUARD_ARMORSM_UFOPEDIA
+    text: STR_KHORNE_FLAK_ARMOR_PLAYER_UFOPEDIA
 
   - id: STR_KHORNE_CARA_PLAYER
     type_id: 15
@@ -5880,7 +6529,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_GUARD_ARMORH_UC_UFOPEDIA
+    text: STR_KHORNE_CARA_ARMOR_PLAYER_UFOPEDIA
 
   - id: STR_KHORNE_CARA_OFF_PLAYER
     type_id: 15
@@ -5888,7 +6537,7 @@ ufopaedia:
     requires:
       - STR_KHORNE_MILITIA
     image_id: UP030.SPK
-    text: STR_GUARD_ARMORH_UC_UFOPEDIA
+    text: STR_KHORNE_CARA_ARMOR_PLAYER_UFOPEDIA
 
   - id: STR_KHORNGOR_ARMOR_PLAYER
     type_id: 15
@@ -6336,7 +6985,7 @@ ufopaedia:
     requires:
       - STR_CONTACT_CHAOS_MARINES
       - STR_PERSONAL_ARMOR
-      - STR_TZEENTCH_PATH
+      - STR_TZEENTCH_OPTIONS
       - STR_CHAOS_SORCERY
 
 # #ARMORS.SM# Space Marines
@@ -6736,6 +7385,330 @@ ufopaedia:
 ### #SM.SCOUT#
 ### #SM.TAC#
 
+### #SM.BT#
+
+### #ARMORS.SM.BT#  Black Templars Armors
+
+  - id: STR_BTSCOUTARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTSCOUTARMORCODEX.SPK
+    text: STR_BTSCOUTARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTMARINEARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTMARINEARMORCODEX.SPK
+    text: STR_BTMARINEARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTMARINEARMORFLAMER_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTMARINEARMORCODEX.SPK
+    text: STR_BTMARINEARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTMARINEARMORUPD_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTMARINEARMORCODEX.SPK
+    text: STR_BTMARINEARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTMARINEARMORUPDHIGH_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTMARINEARMORCODEX.SPK
+    text: STR_BTMARINEARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTMARINEASSAULTARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTMARINEASSAULTARMORCODEX.SPK
+    text: STR_BTMARINEASSAULTARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTMARINEASSAULTARMORUPD_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTMARINEASSAULTARMORCODEX.SPK
+    text: STR_BTMARINEASSAULTARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTAPOTHARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTAPOTHARMORCODEX.SPK
+    text: STR_BTAPOTHARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTCHAPLAINARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTCHAPLAINARMORCODEX.SPK
+    text: STR_BTCHAPLAINARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTTECHARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTTECHARMORCODEX.SPK
+    text: STR_BTTECHARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTTECHGRAVARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTTECHARMORCODEX.SPK
+    text: STR_BTTECHARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTHONORARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTHONORARMORCODEX.SPK
+    text: STR_BTHONORARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTHONORARMORALT_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTHONORARMORCODEX.SPK
+    text: STR_BTHONORARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTHONORARMORSHIELD_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTHONORARMORCODEX.SPK
+    text: STR_BTHONORARMORSHIELD_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTTERMINATORARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTTERMINATORARMORCODEX.SPK
+    text: STR_BTTERMINATORARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTTERMINATORMELEEARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTTERMINATORARMORCODEX.SPK
+    text: STR_BTTERMINATORMELEEARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTTERMINATORSTORMARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTTERMINATORARMORCODEX.SPK
+    text: STR_BTTERMINATORSTORMARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTCAPTAINARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTCAPTAINARMORCODEX.SPK
+    text: STR_BTCAPTAINARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTRECLUSARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTRECLUSARMORCODEX.SPK
+    text: STR_BTRECLUSARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTCHAMPIONARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTCHAMPIONARMORCODEX.SPK
+    text: STR_BTCHAMPIONARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTDREAD_ARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTDREAD01ARMORCODEX.SPK
+    text: STR_BTDREAD01ARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTDREAD_ARMOR_PLAYER2
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTDREAD02ARMORCODEX.SPK
+    text: STR_BTDREAD02ARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTDREAD_ARMOR_PLAYER3
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTDREAD03ARMORCODEX.SPK
+    text: STR_BTDREAD03ARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTDREAD_ARMOR_PLAYER4
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTDREAD04ARMORCODEX.SPK
+    text: STR_BTDREAD04ARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTDREAD_ARMOR_PLAYER5
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: BTDREAD05ARMORCODEX.SPK
+    text: STR_BTDREAD05ARMOR_PLAYER_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BTCATAPHRACTARMOR_PLAYER
+    type_id: 15
+    section: STR_BTARMORPEDIA
+    image_id: WARPLOOTED.SPK
+    text: STR_BTCATAPHRACTARMOR_PLAYER_CODEX
+    requires:
+      - STR_cataphract_ARMOR
+      - STR_MARINES_STRATEGY
+
+
+### #ARMORS.SOB.BR#  Bloody Roses Armors
+
+  - id: STR_NOVICE_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRCANTUS_CODEX.SPK
+    text: STR_NOVICE_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_REPENTIA_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRREPENT_CODEX.SPK
+    text: STR_REPENTIA_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_HOSPITALIER_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRHOSPIT_CODEX.SPK
+    text: STR_HOSPITALIER_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_ADEPTAS_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRSISTER_CODEX.SPK
+    text: STR_ADEPTAS_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_SERAPHIM_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRSERAPHIM_CODEX.SPK
+    text: STR_SERAPHIM_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_SUPERIOR_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRSUPERIOR_CODEX.SPK
+    text: STR_SUPERIOR_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_ELOHIM_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRELOHIM_CODEX.SPK
+    text: STR_ELOHIM_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_RETRIBUTOR_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRRETRIB_CODEX.SPK
+    text: STR_RETRIBUTOR_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_CELESTIAN_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRCELEST_CODEX.SPK
+    text: STR_CELESTIAN_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_SACRESANT_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRSACRE_CODEX.SPK
+    text: STR_SACRESANT_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_CANONESS_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRCANON_CODEX.SPK
+    text: STR_CANONESS_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
+  - id: STR_PENITENT_ARMOR_BLOODYROSE
+    type_id: 15
+    section: STR_BRARMORPEDIA
+    image_id: BRPENITENT_CODEX.SPK
+    text: STR_PENITENT_ARMOR_BLOODYROSE_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_BLOODYROSE_STRATEGY
+
 ### #SM.WB#
 
 ### #ARMORS.SM.WB#  Word Bearers Armors
@@ -6860,6 +7833,18 @@ ufopaedia:
       - STR_DIABO_ARMOR_WB
       - STR_BOOK_EREBUS
 
+  - id: STR_CHAOS_CROZIUS_ARCHDIAB_PLAYER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_SORC_PLAYER_CODEX
+
+  - id: STR_WARPFIRE_IMPLOSION
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
   - id: STR_WBDARKAPOSTLE_ARMORPLAYER
     type_id: 15
     section: STR_WBARMORPEDIA
@@ -6869,6 +7854,24 @@ ufopaedia:
       - STR_WORDBEARERS_STRATEGY
       - STR_DARKAPO_SUIT
       - STR_BOOK_EREBUS
+
+  - id: STR_CHAOS_CROZIUS_APOSTLE_PLAYER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_APOSTLE_PLAYER_CODEX
+
+  - id: STR_CHAOS_CROZIUS_POWER3
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_WARPFIRE_RIFT
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BLOODLETTERSPAWNER_BIGGRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
 
   - id: STR_WBCHAOSLORD_ARMORPLAYER
     type_id: 15
@@ -6956,6 +7959,10 @@ ufopaedia:
       - STR_POWER_ARMOR_WB_CODEX
       - STR_BOOK_EREBUS
 
+  - id: STR_WB_FLYING_TOKEN
+    type_id: 15
+    section: STR_NOT_AVAILABLE
+
   - id: STR_WORDBEARER_TECHMARINE_ARMORPLAYER
     type_id: 15
     section: STR_WBARMORPEDIA
@@ -6985,31 +7992,37 @@ ufopaedia:
     text: STR_WBHELBRUTE_CODEX
     requires:
       - STR_WORDBEARERS_STRATEGY
-      - STR_WORDBEARER_HELBRUTE_ARMORPLAYER
+      - STR_DREADNOUGHT_MARINE
 
   - id: STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
     type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
+    section: STR_WBARMORPEDIA
     image_id: WORDBEARERSPOSSESSED.SPK
     text: STR_WORDBEARERPOSS_ARMOR_UFOPEDIA
     requires:
-      - STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
+      #- STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_CONSECRATE
 
   - id: STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
-    type_id: 10
-    section: STR_ALIEN_LIFE_FORMS
+    type_id: 15
+    section: STR_WBARMORPEDIA
     image_id: WORDBEARERSMARINEELITECODEX.SPK
     text: STR_WORDBEARERMARINEELITE_CODEX
     requires:
-      - STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
+      #- STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
+      - STR_WORDBEARERS_STRATEGY
+      - STR_RITUAL_FAVOURS
 
   - id: STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
     type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
+    section: STR_WBARMORPEDIA
     image_id: WORDBEARERSELITEMARINE.SPK
     text: STR_WORDBEARERELITE_ARMOR_UFOPEDIA
     requires:
-      - STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
+      #- STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
+      - STR_WORDBEARERS_STRATEGY
+      - STR_DARKAPO_SUIT
 
   - id: STR_KHORNEDEMON_ARMORTEMPO
     type_id: 15
@@ -7516,8 +8529,7 @@ ufopaedia:
     image_id: REPRISALIA_ARMOR_CODEX.SPK
     text: STR_REPRISALIA_MEDIC_ARMOR_UFOPEDIA
 
-# #ARMORS.AT#               Adeptus Terra
-# #ARMORS.AT.LAW#             The Imperial Law Strategy
+# #ARMORS.CM.LAW#             The Imperial Law Strategy
   - delete: STR_PD
   - id: STR_PD
     # Intro
@@ -7526,7 +8538,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_A_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
   - delete: STR_PENAL_ARMOR_UC
   - id: STR_PENAL_ARMOR_UC
@@ -7535,11 +8547,11 @@ ufopaedia:
     image_id: PENAL_LEGION.SPK
     text: STR_PENAL_ARMOR_BROWN_UC_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ENFORCER_ARMOR_UC
   - id: STR_ENFORCER_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF.SPK
@@ -7547,8 +8559,6 @@ ufopaedia:
   - delete: STR_ENFORCER_MEDIC_ARMOR_UC
   - id: STR_ENFORCER_MEDIC_ARMOR_UC
     requires:
-      - STR_ARBITES
-      - STR_ENFORCER_ARMOR
       - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
@@ -7557,8 +8567,7 @@ ufopaedia:
   - delete: STR_ENFORCER_SIGNAL_ARMOR_UC
   - id: STR_ENFORCER_SIGNAL_ARMOR_UC
     requires:
-      - STR_ARBITES
-      - STR_ENFORCER_ARMOR
+      - STR_THE_IMPERIAL_LAW_STRATEGY
       - STR_ARBITES_MIDTIER
     type_id: 15
     section: STR_ARMORPEDIA
@@ -7567,7 +8576,7 @@ ufopaedia:
   - delete: STR_ENFORCER_HEAVY_ARMOR_UC
   - id: STR_ENFORCER_HEAVY_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF2.SPK
@@ -7575,7 +8584,7 @@ ufopaedia:
   - delete: STR_ENFORCER_SHIELD_ARMOR_UC
   - id: STR_ENFORCER_SHIELD_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0ENF2.SPK
@@ -7583,7 +8592,7 @@ ufopaedia:
   - delete: STR_JUDGE_ARMOR_UC
   - id: STR_JUDGE_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG.SPK
@@ -7595,11 +8604,11 @@ ufopaedia:
     image_id: C15.SPK
     text: STR_JUDGE_BIKE_ARMOR_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
   - delete: STR_ARBITOR_ARMOR_UC
   - id: STR_ARBITOR_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG2.SPK
@@ -7607,7 +8616,7 @@ ufopaedia:
   - delete: STR_MARSHAL_ARMOR_UC
   - id: STR_MARSHAL_ARMOR_UC
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: 0JDG3.SPK
@@ -7622,6 +8631,7 @@ ufopaedia:
     requires:
       - STR_THE_IMPERIAL_LAW_STRATEGY
 
+# #ARMORS.AT#               Adeptus Terra
 # #ARMORS.AT.CULT#            Chaos Cult
   - id: STR_CULTIST_ARMORLV1PLAYER
     type_id: 15
@@ -7806,6 +8816,10 @@ ufopaedia:
     text: STR_CULTIST_ARMORCHAOSBEASTPLAYER_UFOPEDIA
     requires:
       - STR_CHAOSBEAST_RESEARCH
+
+  - id: STR_CHAOSBEAST_CLAW # built-in weapon for chaos beast, to allow stats to be seen
+    type_id: 14
+    section: STR_NOT_AVAILABLE
 
   - id: STR_CULTIST_HELBRUTE_ARMORPLAYER
     type_id: 15
@@ -8026,6 +9040,7 @@ ufopaedia:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
 
+  - delete: STR_BAYONET
   - id: STR_BAYONET
     # Guard knife special weapon?
     type_id: 14
@@ -8959,11 +9974,28 @@ ufopaedia:
 
 # #ARMORS.IG.VALHALLAN        Valhallan Ice Warriors Strategy
 
+
   - id: STR_VALHALLAN_FLAK_ARMOR
     type_id: 15
     section: STR_ARMORPEDIA
     image_id: VALHALLAN_CODEX.SPK
     text: STR_VALHALLAN_GUARD_FLAK_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+
+  - id: STR_VALHALLAN_FLAK_MEDIC_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_MEDIC_CODEX.SPK
+    text: STR_VALHALLAN_FLAK_MEDIC_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+
+  - id: STR_VALHALLAN_OFFICER_FLAK_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_OFFICER_CODEX.SPK
+    text: STR_VALHALLAN_OFFICER_FLAK_UFOPAEDIA
     requires:
       - STR_VALHALLAN_GUARDSMEN
 
@@ -8976,6 +10008,58 @@ ufopaedia:
       - STR_VALHALLAN_GUARDSMEN
       - STR_CARAPACE_ARMOR_IG
 
+  - id: STR_VALHALLAN_CARAPACE_MEDIC_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CARAPACE_MEDIC_CODEX.SPK
+    text: STR_VALHALLAN_CARAPACE_MEDIC_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_CARAPACE_OFFICER_CODEX.SPK
+    text: STR_VALHALLAN_OFFICER_CARAPACE_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLA_STORMTROOPER_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_STORMTROOPER2_CODEX.SPK
+    text: STR_VALHALLA_STORMTROOPER_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_STORMTROOPER_MEDIC_CODEX.SPK
+    text: STR_VALHALLA_STORMTROOPER_ARMOR_MEDIC_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_STORMTROOPER_OFFICER2_CODEX.SPK
+    text: STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR_UFOPAEDIA
+    requires:
+      - STR_VALHALLAN_GUARDSMEN
+      - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLAN_WOLFHOUND_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_WOLFHOUND_CODEX.SPK
+    text: STR_VALHALLAN_WOLFHOUND_CODEX
+    requires:
+      - STR_VALHALLAN_STRATEGY
 
 ####################################
 # #ARMORSOB# Weapons and Ammo
@@ -9006,12 +10090,6 @@ ufopaedia:
     # Novitiate Superior Armor Ability
     type_id: 14
     section: STR_NOT_AVAILABLE
-
-  - id: STR_ADEPTAS_FRATERIS_MILITIA
-    type_id: 10
-    section: STR_ARMORPEDIA_ADEPTAS
-    image_id: UPFraterisMilitiaArmor.SPK
-    text: STR_ADEPTAS_FRATERIS_ARMORDETAIL
 
   - id: STR_FRATERIS_MILITIA_HEAVY
     type_id: 15
@@ -9323,17 +10401,34 @@ ufopaedia:
     image_id: STUB_GUN.SPK
     text: STR_STUB_GUN_UFOPEDIA
 
-  - delete: STR_STUB_RIFLE  # Stub Rifle ✔
+  - id: STR_STUB_GUN_CHAOS # Chaos Stubber
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUB_GUN.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_STUB_GUN_CHAOS_CODEX
+
+  - delete: STR_STUB_RIFLE # Stub Rifle ✔
   - id: STR_STUB_RIFLE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: STUB_RIFLE.SPK
     text: STR_STUB_RIFLE_UFOPEDIA
 
+  - id: STR_STUB_RIFLE_CHAOS # Chaos stub rifle
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUB_RIFLE.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_STUB_RIFLE_CHAOS_CODEX
+
   - id: STR_SMG_STUB_GUN  # AutoStubber ✔
     type_id: 14
-    section: STR_NOT_AVAILABLE
-    image_id: 1CH.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SMG_STUB_GUN.SPK
+    text: STR_SMG_STUB_GUN_CODEX
 
   - delete: STR_STUB_GUN_AMMO
   - id: STR_STUB_GUN_AMMO
@@ -9352,6 +10447,15 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
   - id: STR_STUB_GUN_AMMO_INC
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM_AP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_STUB_GUN_AMMO_DRUM_AP
     type_id: 14
     section: STR_NOT_AVAILABLE
 
@@ -9387,7 +10491,13 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: HYBRID_STUBBER_CODEX.SPK
     text: STR_HEAVY_STUBBER_HYBRID_CODEX
-
+  - id: STR_SMG_STUB_GUN_CHAOS  # Chaos AutoStubber ✔
+    type_id: 14
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SMG_STUB_GUN.SPK
+    text: STR_SMG_STUB_GUN_CHAOS_CODEX
   - id: STR_HEAVY_STUBBER_CHAOS  # Chaos Heavy Stubber
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -9503,12 +10613,32 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  - id: STR_ROTORATOR
+    requires:
+      - STR_ROTOR_CANNON_RESEARCH
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ROTOR_CANNON_CODEX.SPK
+    text: STR_ROTORATOR_CODEX #brass scorpion rotor annihilator
+
   # Stubcannons
   - id: STR_STUBCANNON_GUARD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: STUBCANNON_CODEX.SPK
     text: STR_STUBCANNON_GUARD_CODEX
+
+  - id: STR_GRENADELAUNCHER_LUCIUS_T1
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUBCANNON_CODEX.SPK
+    text: STR_GRENADELAUNCHER_LUCIUS_T1_CODEX
+
+  - id: STR_GRENADELAUNCHER_LUCIUS_T2
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STUBCANNON_CODEX.SPK
+    text: STR_GRENADELAUNCHER_LUCIUS_T2_CODEX
 
 #WEAPONS.SHOT#    Shotguns
   # Standard Shotguns
@@ -9517,12 +10647,31 @@ ufopaedia:
     image_id: 1LB.SPK
     section: STR_WEAPONS_AND_EQUIPMENT
     text: STR_PUMP_SHOTGUN_CODEX
+  - id: STR_PUMP_SHOTGUN_CHAOS #chaos pump action shotgun
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_PUMP_SHOTGUN_CHAOS_CODEX
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+  - id: STR_TRENCHGUN_LUCIUS
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_TRENCHGUN_LUCIUS_CODEX
   - delete: STR_SHOTGUN
   - id: STR_SHOTGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1LB.SPK
     text: STR_SHOTGUN_UFOPEDIA
+  - id: STR_SHOTGUN_CHAOS
+    type_id: 14
+    image_id: 1LB.SPK
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_SHOTGUN_CHAOS_CODEX
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
   - delete: STR_MCSHOTGUN
   - id: STR_MCSHOTGUN  #   # Master Crafted Shotgun
     type_id: 14
@@ -9722,6 +10871,13 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: AUTOGUN.SPK
     text: STR_AUTOGUN_UFOPEDIA
+  - id: STR_AUTOGUN_CHAOS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: AUTOGUN.SPK
+    requires:
+      - STR_ALIENS_ONLY
+    text: STR_AUTOGUN_CHAOS_CODEX
   - id: STR_AUTOGUN_HIGHGRADE
     requires:
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
@@ -9736,6 +10892,33 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: AUTOGUN_HIGH_GRADE_UNDERSLUNG_CODEX.SPK
     text: STR_AUTOGUN_HIGHGRADE_UNDERSLUNG_CODEX
+
+  - id: STR_VALHALLAN_STUBRIFLE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: VALHALLAN_STUBRIFLE_CODEX.SPK
+    text: STR_VALHALLAN_STUBRIFLE_CODEX
+  - id: STR_VALHALLAN_AUTOGUN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: VALHALLAN_AUTOGUN_CODEX.SPK
+    text: STR_VALHALLAN_AUTOGUN_CODEX
+  - id: STR_VALHALLAN_AUTOSTUBBER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: VALHALLAN_AUTOSTUBBER_CODEX.SPK
+    text: STR_VALHALLAN_AUTOSTUBBER_CODEX
+  - id: STR_VALHALLAN_HEAVYSTUBBER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: VALHALLAN_HEAVY_STUBBER_CODEX.SPK
+    text: STR_VALHALLAN_HEAVYSTUBBER_CODEX
+  - id: STR_VL_HEAVYSTUBBER_DRUM
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_VL_HEAVYSTUBBER_DRUM_KRAKEN
+    type_id: 14
+    section: STR_NOT_AVAILABLE
 
   - id: STR_AUTOGUN_ADEPTAS
     type_id: 14
@@ -9768,6 +10951,9 @@ ufopaedia:
   - id: STR_AUTOGUN_CLIP
     type_id: 14
     section: STR_NOT_AVAILABLE
+  - id: STR_AUTOGUN_CLIP_KRAKEN
+    type_id: 14
+    section: STR_NOT_AVAILABLE
   - id: STR_AUTOGUN_CLIP_DRUM
     type_id: 14
     section: STR_NOT_AVAILABLE
@@ -9783,12 +10969,26 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
     image_id: 1CH.SPK
 
+  - id: STR_AUTOCARBINE_NAVY
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: AUTOGUN.SPK
+    text: STR_AUTOCARBINE_NAVY_CODEX
+
 #WEAPONS.SNIPER#
   - delete: STR_HEAVY_CANNON
   - id: STR_HEAVY_CANNON  # Sniper Rifle
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1SR.SPK
+    text: STR_HEAVY_CANNON_UFOPEDIA
+
+  - id: STR_SNIPER_CHAOS # Chaos sniper rifle
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1SR.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_HEAVY_CANNON_UFOPEDIA
 
   - id: STR_LONG_RIFLE_GUARD  # Long Rifle
@@ -10159,7 +11359,8 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
-    image_id: 1CH.SPK
+    image_id: STR_LIGHT_BOLTERSLAAN.SPK
+    text: STR_LIGHT_BOLTERSLAAN_CODEX
 
   - id: STR_BOLTPISTOL_SLAAN #Slaanesh Boltpistol
     type_id: 14
@@ -10167,7 +11368,8 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
-    image_id: 1CH.SPK
+    image_id: STR_BOLTPISTOL_SLAAN.SPK
+    text: STR_BOLTPISTOL_SLAAN_CODEX
 
   - delete: STR_LIGHT_BOLTER_AMMO
   - id: STR_LIGHT_BOLTER_AMMO  # Light Bolter Clip
@@ -10497,7 +11699,7 @@ ufopaedia:
   - id: STR_BOLTERC  # Chaos Bolter
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: CHAOS_BOLTER.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_BOLTER
     text: STR_BOLTERC_UFOPEDIA
@@ -10717,11 +11919,19 @@ ufopaedia:
   - delete: STR_GK_HB
   - id: STR_GK_HB
     type_id: 14
-    section: STR_NOT_AVAILABLE
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_GK_SOLDIER
+    image_id: STR_GK_HB.SPK
+    text: STR_GK_HB_CODEX
   - delete: STR_GK_HB_MC
   - id: STR_GK_HB_MC
     type_id: 14
-    section: STR_NOT_AVAILABLE
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_GK_SOLDIER
+    image_id: STR_GK_HB.SPK
+    text: STR_GK_HB_CODEX
 
   - delete: STR_CHB
   - id: STR_CHB
@@ -11067,13 +12277,13 @@ ufopaedia:
   - id: STR_CASSC  # Reaper Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: REAPER_AUTOCANNON.SPK
     requires:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_CASSC_UFOPEDIA
 
-  - id: STR_IW_AUTOCANNON
+  - id: STR_IW_AUTOCANNON  # Iron Warrior Autocannon
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CH.SPK
@@ -11081,6 +12291,15 @@ ufopaedia:
       - STR_AUTOCANNON_TECH
       - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
     text: STR_IW_AUTOCANNON_UFOPEDIA
+
+  - id: STR_IW_REAPER_AUTOCANNON  # Iron Warrior Reaper Autocannon
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: REAPER_AUTOCANNON.SPK
+    requires:
+      - STR_AUTOCANNON_TECH
+      - STR_CHAOS_ARMORY_EXAM_AUTOCANNON
+    text: STR_IW_REAPER_AUTOCANNON_CODEX
 
   - delete: STR_AUTOCANNON_CLIP
   - id: STR_AUTOCANNON_CLIP
@@ -11226,6 +12445,30 @@ ufopaedia:
     text: STR_LASGUN_STEEL_LEGION_HIGH_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_LASGUN_STEEL_LEGION_HIGH.SPK
+
+  - id: STR_LASER_RIFLE_KRIEG_TIER2  # High-Quality Lucius Krieg T2 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom lucius art
+    text: STR_LASER_RIFLE_KRIEG_TIER2_UFOPEDIA
+
+  - id: STR_LASER_RIFLE_KRIEG_TIER2_SCOPED  # High-Quality Lucius Krieg T2 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom scoped art
+    text: STR_LASER_RIFLE_KRIEG_TIER2_SCOPED_UFOPEDIA
+
+  - id: STR_LASER_RIFLE_KRIEG_TIER3  # Ceramite Lucius Krieg T3 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom lucius art
+    text: STR_LASER_RIFLE_KRIEG_TIER3_UFOPEDIA
+
+  - id: STR_LASER_RIFLE_KRIEG_TIER3_SCOPED  # Ceramite Lucius Krieg T3 Lasgun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom scoped art
+    text: STR_LASER_RIFLE_KRIEG_TIER3_SCOPED_UFOPEDIA
 
   - delete: STR_MCLASER_RIFLE
   - id: STR_MCLASER_RIFLE
@@ -11392,6 +12635,13 @@ ufopaedia:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
     text: STR_CHAOS_LONGLAS_UFOPEDIA
+  - id: STR_ASSCTZ #soulreaper cannon
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_ASSCTZ.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_TZEENTCH
+    text: STR_ASSCTZ_CODEX
 
   - delete: STR_LASGUN_CLIP
   - id: STR_LASGUN_CLIP
@@ -11420,6 +12670,18 @@ ufopaedia:
   - id: STR_PORTABLE_MULTILASER_BATTERY
     type_id: 14
     section: STR_NOT_AVAILABLE
+  - id: STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_HAND_MC_MULTILASER # Mastercrafted Multilas
+    requires:
+      - STR_MULTILAS_HANDHELD_RESEARCH
+      - STR_MASTER_CRAFTING
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HAND_MULTILASER_CODEX.SPK
+    text: STR_HAND_MC_MULTILASER_CODEX
 
   - delete: STR_HOTSHOT_VOLLEY_GUN
   - id: STR_HOTSHOT_VOLLEY_GUN
@@ -11438,6 +12700,16 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_VOLLEYGUN_STEEL_LEGION.SPK
 
+  - id: STR_VOLLEYGUN_KRIEG
+    requires:
+      - STR_HOTSHOT_VOLLEY_GUN
+      - STR_KRIEG_STRATEGY #mid-tier or even ceramite req
+      - STR_LASER_WEAPONS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HELLGUN.SPK
+    text: STR_VOLLEYGUN_KRIEG_UFOPEDIA
+
   - id: STR_CHAOS_VOLLEYGUN
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -11455,6 +12727,7 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: HELLGUN.SPK
     text: STR_HELLGUN_UFOPEDIA
+
   - id: STR_HELLGUN_STEEL_LEGION  # Armageddon Hellgun
     type_id: 14
     requires:
@@ -11462,6 +12735,15 @@ ufopaedia:
     text: STR_HELLGUN_STEEL_LEGION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_HELLGUN_STEEL_LEGION.SPK
+
+  - id: STR_HELLGUN_KRIEG
+    requires:
+      - STR_HELLGUN
+      - STR_KRIEG_STRATEGY #mid-tier or even ceramite req
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HELLGUN.SPK
+    text: STR_HELLGUN_KRIEG_UFOPEDIA
 
   - id: STR_CHAOS_HELLGUN
     type_id: 14
@@ -11543,6 +12825,10 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1LC.SPK
     text: STR_CHAOS_LASCANNON_HANDHELD_UFOPEDIA
+  - id: STR_LASCANNON_CHAOS_CELL
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
   - id: STR_CHAOS_LASCANNON_BIPOD
     type_id: 14
     requires:
@@ -11585,6 +12871,27 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  # WB obliterator Lascannons
+  - id: STR_WBLASCANONATOR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1LC.SPK
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBOBLITERATOR_SUIT
+      - STR_BOOK_KORPHAERON
+    text: STR_WBLASCANONATOR_CODEX
+
+  - id: STR_LASCANONATOR #Lascannon Destroyer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1LC.SPK
+    requires:
+      - STR_CHAOS_HIGHTIER
+      - STR_CHAOS_STRATEGY
+      - STR_BOONS_OBLITERATE_RESEARCH
+    text: STR_WBLASCANONATOR_CODEX
+
 #WEAPONS.FLAME#  Flamers
   # Flamers
   - delete: STR_FLAMETHROWER
@@ -11593,6 +12900,14 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1MF.SPK
     text: STR_FLAMETHROWER_UFOPEDIA
+
+  - id: STR_FLAMETHROWER_CHAOS #Chaos Flamer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MF.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_FLAMETHROWER_CHAOS_CODEX
 
   - delete: STR_FLAMETHROWER_CLIP
   - id: STR_FLAMETHROWER_CLIP
@@ -11634,6 +12949,44 @@ ufopaedia:
   - id: STR_HFLAMER_CLIP  # Heavy Flamer Fuel
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+  # chaos gods "flamers"
+  - id: STR_FLAMETHROWERTZ # warpflamer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MF.SPK #todo: find a better picture. it's fine as is for now
+    requires:
+      - STR_TZEENTCH_OPTIONS
+    text: STR_FLAMETHROWERTZ_UFOPEDIA
+  - id: STR_FLAMETHROWER_WARPFIRE_CLIP
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_PLAGUE_SPEWER # Plague Spewer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_PLAGUE_SPEWER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_NURGLE
+    text: STR_PLAGUE_SPEWER_UFOPEDIA
+  - id: STR_PLAGUE_SPEWER_TANK
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_PLAGUE_SPEWER_TANK_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  # Phospex weapons
+  - id: STR_PHOSPHEXCANNON
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: PHOSPEX_BOMB_CODEX.SPK
+    text: STR_PHOSPHEX_GENERIC_CODEX
+  - id: STR_PHOSPHEX_ASHENGUN_TOKEN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: PHOSPEX_BOMB_CODEX.SPK
+    text: STR_PHOSPHEX_GENERIC_CODEX
 
 #WEAPONS.MELT#    Meltas
   # Light Melta
@@ -11709,11 +13062,13 @@ ufopaedia:
 
   - delete: STR_BLASTER_BOMB
   - id: STR_BLASTER_BOMB  # Multimelta Charge
-    type_id: 4
-    section: STR_WEAPONS_AND_EQUIPMENT
-    requires:
-      - STR_BLASTER_BOMB
-    text: STR_BLASTER_BOMB_UFOPEDIA
+    # type_id: 4
+    # section: STR_WEAPONS_AND_EQUIPMENT
+    # requires:
+    #   - STR_BLASTER_BOMB
+    # text: STR_BLASTER_BOMB_UFOPEDIA
+    type_id: 14
+    section: STR_NOT_AVAILABLE
 
   # Inferno
   - delete: STR_INFERNO_PISTOL
@@ -11823,11 +13178,12 @@ ufopaedia:
   - id: STR_PLASMA_PISTOL_TZEENTCH
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1PP.SPK
+    image_id: STR_PLASMA_PISTOL_TZEENTCH.SPK
     requires:
       - STR_PLASMA_PISTOL_DEP1
       - STR_CHAOS_ARMORY_EXAM_PLASMA_PISTOL
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
+    text: STR_PLASMA_PISTOL_TZEENTCH_CODEX
 
   - delete: STR_PLASMA_PISTOL_CLIP
   - id: STR_PLASMA_PISTOL_CLIP
@@ -12007,6 +13363,21 @@ ufopaedia:
       - STR_HEAVY_PLASMA_DEP1
 
   # Barrage Plasma
+  - id: STR_BARRAGE_PLASMA_TERRAN  # Barrage Plasma
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_HEAVY_PLASMA_DEP1
+    text: STR_BARRAGE_PLASMA_TERRAN_CODEX
+  - id: STR_BARRAGE_PLASMA  # Chaos Barrage Plasma
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_HEAVY_PLASMA_DEP1
+      - STR_CHAOS_ARMORY_EXAM_PLASMA_ADVANCED
+    text: STR_BARRAGE_PLASMA_CODEX
   - id: STR_BARRAGE_PLASMA_CLIP
     type_id: 14
     section: STR_NOT_AVAILABLE
@@ -12049,6 +13420,36 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  # WB obliterator Plasma cannon
+  - id: STR_WBPLASMANATOR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBOBLITERATOR_SUIT
+      - STR_BOOK_KORPHAERON
+    text: STR_WBPLASMANATOR_CODEX
+
+  - id: STR_PLASMANATOR  # Cult obliterator plasma executor
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_CHAOS_HIGHTIER
+      - STR_CHAOS_STRATEGY
+      - STR_BOONS_OBLITERATE_RESEARCH
+    text: STR_WBPLASMANATOR_CODEX
+
+  - delete: AUX_HOVERTANK_PLASMA # Plasma cannon (for Dreadnaughts & other)
+  - id: AUX_HOVERTANK_PLASMA
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1HP.SPK
+    requires:
+      - STR_HEAVY_PLASMA_DEP1
+    text: AUX_HOVERTANK_PLASMA_CODEX
+
 #WEAPONS.GRAV#    Graviton
   - delete: STR_GRAV_AMMO
   - id: STR_GRAV_AMMO  # Graviton Induction Core
@@ -12060,6 +13461,24 @@ ufopaedia:
     text: STR_GRAV_AMMO_UFOPEDIA
 
   # Grav Pistols
+  - id: STR_CHAOS_GRAVPISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1GG.SPK
+    requires:
+      - STR_GRAVITON_TECH
+      - STR_CORRUPTED_REQUISITIONS
+    text: STR_CHAOS_GRAVPISTOL_CODEX
+  - id: STR_CHAOS_MC_GRAVPISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1GG.SPK
+    requires:
+      - STR_GRAVITON_TECH
+      - STR_MASTER_CRAFTING_AMMO
+      - STR_CORRUPTED_REQUISITIONS
+    text: STR_CHAOS_MC_GRAVPISTOL_CODEX
+
   - id: STR_NURGLE_GRAVPISTOL
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -12195,7 +13614,7 @@ ufopaedia:
   - id: STR_SCREAMER_PISTOL
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: STR_SCREAMER_PISTOL.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_SONIC
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
@@ -12204,7 +13623,7 @@ ufopaedia:
   - id: STR_BLASTMASTER
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: STR_BLASTMASTER.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_SONIC
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
@@ -12332,7 +13751,14 @@ ufopaedia:
     text: STR_GRENADE_LAUNCHER_STEEL_LEGION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CODEX_STR_GRENADE_LAUNCHER_STEEL_LEGION.SPK
-
+  - id: STR_GRENADE_LAUNCHER_CHAOS # chaos grenade launcher
+    requires:
+      - STR_GUARD_AND_ARBITES
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: GRENADE_LAUNCHER_VOSS.SPK
+    text: STR_GRENADE_LAUNCHER_CHAOS_CODEX
   - delete: STR_FRAG_GRENADE_DRUM
   - id: STR_FRAG_GRENADE_DRUM
     type_id: 14
@@ -12357,6 +13783,11 @@ ufopaedia:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_PHOTON_GRENADE_REQUISITION
+  - id: STR_NURGLE_GRENADE_DRUM
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+    requires:
+      - STR_NURGLE_OPTIONS
 
   - id: STR_CHERUBIM_GRENADE_LAUNCHER  # Cherubim Grenade Launcher
     type_id: 14
@@ -12429,8 +13860,7 @@ ufopaedia:
     text: STR_MISSILE_LAUNCHER_GUARD_CODEX
   - id: STR_ACCATRAN_ROCKET_LAUNCHER
     requires:
-      - STR_GUARD_AND_ARBITES
-      - STR_NOT_CHAOSCULT
+      - STR_BASIC_BALLISTICS_DEP
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: ROCKET_ACCATRAN_CODEX.SPK
@@ -12516,8 +13946,7 @@ ufopaedia:
     type_id: 14
     requires:
       - STR_GUARD_AND_ARBITES
-      - STR_NOT_CHAOSCULT
-      - STR_HEAVY_WEAPONS_IG
+      - STR_BASIC_BALLISTICS_DEP
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1ML.SPK
     text: STR_DISPOSABLE_LAUNCHER_KRAK_UFOPEDIA
@@ -12614,6 +14043,26 @@ ufopaedia:
     text: STR_MORTAR_AMMO_FRAG_EXPLOSION_CODEX
     section: STR_WEAPONS_AND_EQUIPMENT
 
+# Obliterator(s) exclusive explosives
+  - id: STR_WBOBLITERATOR_WEAPON
+    type_id: 14
+    image_id: WARPFIRE_MISSILE_LAUNCHER_CODEX.SPK
+    text: STR_WBOBLITERATOR_WEAPON_CODEX
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_WBOBLITERATOR_SUIT
+      - STR_BOOK_KORPHAERON
+  - id: STR_CULTOBLITERATOR_WEAPON
+    type_id: 14
+    image_id: 1CH.SPK
+    text: STR_CULTOBLITERATOR_WEAPON_CODEX
+    section: STR_WEAPONS_AND_EQUIPMENT
+    requires:
+      - STR_CHAOS_HIGHTIER
+      - STR_CHAOS_STRATEGY
+      - STR_BOONS_OBLITERATE_RESEARCH
+
 #WEAPONS.GREN#    Grenades
   # Grenades
   - delete: STR_GRENADE
@@ -12680,7 +14129,7 @@ ufopaedia:
   - id: STR_ALIEN_GRENADE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: CHAOS_HE_GRENADE.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_ALIEN_GRENADE_UFOPEDIA
@@ -12696,7 +14145,7 @@ ufopaedia:
   - id: STR_SONIC_GRENADE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: SONIC_GRENADE.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_SONIC
     text: STR_SONIC_GRENADE
@@ -12717,6 +14166,24 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
     text: STR_SCARE_GRENADE_UFOPEDIA
+
+  - id: STR_MAKESHIFT_GRENADE # Makeshift grenade
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_MAKESHIFT_GRENADE.SPK
+    text: STR_MAKESHIFT_GRENADE_CODEX
+
+  - id: STR_MAKESHIFT_PIPEBOMB # Makeshift pipebomb
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_MAKESHIFT_PIPEBOMB.SPK
+    text: STR_MAKESHIFT_PIPEBOMB_CODEX
+
+  - id: STR_IMPROVISED_PLASMA_GRENADE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_IMPROVISED_PLASMA_GRENADE.SPK
+    text: STR_IMPROVISED_PLASMA_GRENADE_CODEX
 
   # Bombs/Mines
   - delete: STR_HAYWIRE_MINE
@@ -12760,7 +14227,11 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: SATCHEL_CHARGE_HE_CODEX.SPK  # placeholder
     text: STR_SATCHEL_DETONATOR_CODEX
-
+  - id: STR_ROCKTOSS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_ROCKTOSS.SPK
+    text: STR_ROCKTOSS_CODEX
 
 #WEAPONS.MELEE#   Melee
   - id: STR_KRIEG_SHOVEL
@@ -12786,6 +14257,12 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CK.SPK
     text: STR_KNIF_UFOPEDIA
+
+  - id: STR_SHIVGANG
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_SHIVGANG.SPK
+    text: STR_SHIVGANG_CODEX
 
   - delete: STR_CHAINSWORD
   - id: STR_CHAINSWORD
@@ -12863,6 +14340,60 @@ ufopaedia:
     requires:
       - STR_TSARGENT
 
+  - id: STR_CLAW_TYRANT
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_CLAW_TYRANT_CODEX
+    requires:
+      #- STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+
+  - id: STR_CHAOS_CLAWS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX
+    requires:
+      #- STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+  # - id: STR_CHAOS_CLAWS2  #duplicate for compatibility with warptalon 2nd claw
+  #   type_id: 14
+  #   section: STR_WEAPONS_AND_EQUIPMENT
+  #   image_id: 1PC.SPK
+  #   text: STR_GENERIC_POWER_CLAWS_CODEX
+  #   requires:
+  #     - STR_POWER_SUIT
+  #     - STR_CHAOS_ARMORY_EXAM_BASIC
+
+  - id: STR_WARPTALON_CLAW
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX
+    requires:
+      #- STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+  - id: STR_CHAOSMARKED_CLAW_TOKEN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_GENERIC_POWER_CLAWS_CODEX
+    requires:
+      #- STR_POWER_SUIT
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+  - id: STR_WBMUTILATOR_CLAW
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK
+    text: STR_MUTILATOR_CLAW_CODEX
+
+  - id: STR_HELBRUTE_CLAW
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PC.SPK #TODO: find better immage
+    text: STR_HELBRUTE_CLAW_CODEX
+
   - delete: STR_POWER_SWORD
   - id: STR_POWER_SWORD
     type_id: 14
@@ -12879,6 +14410,53 @@ ufopaedia:
       - STR_UFO_CONSTRUCTION # same as manufacture requirements.
       - STR_CHAPTER_PURITY
       - STR_POWER_SWORD
+
+  - id: STR_CPOWER_SWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PS.SPK
+    text: STR_CPOWER_SWORD_CODEX
+    requires:
+      - STR_CORRUPTED_REQUISITIONS
+      - STR_POWER_SWORD
+  - id: STR_CPOWER_DAGGER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CPOWER_DAGGER.SPK
+    text: STR_CPOWER_DAGGER_CODEX
+    requires:
+      - STR_CORRUPTED_REQUISITIONS
+      - STR_HIGHTIER_PREREQ
+  - id: STR_CPOWER_AXE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CPOWER_AXE.SPK
+    text: STR_CPOWER_AXE_CODEX
+    requires:
+      - STR_KHORNE_OPTIONS  # Favor of Khorne
+      - STR_HIGHTIER_PREREQ
+
+  - id: STR_WBEXECUTIONER_AXE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: EXECUTIONER_AXE_CODEX.SPK
+    text: STR_WBEXECUTIONER_AXE_CODEX
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
+
+  - id: STR_WBEXECUTIONER_AXETRICK
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: EXECUTIONER_AXE_CODEX.SPK
+    text: STR_WBEXECUTIONER_AXE_CODEX
+    requires:
+      - STR_WORDBEARERS_STRATEGY
+      - STR_BOOK_KORPHAERON
+      - STR_DIABO_ARMOR_WB
+      - STR_RITUAL_BETRAYAL
 
   - delete: STR_HAMMER
   - id: STR_HAMMER
@@ -12955,6 +14533,18 @@ ufopaedia:
     image_id: 1MCPS.SPK
     text: STR_ADEPTAS_ZWEIHANDER_UFOPEDIA
 
+  - id: STR_POWER_PICK
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_POWER_PICK.SPK
+    text: STR_POWER_PICK_CODEX
+
+  - id: STR_POWER_HAMMER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_POWER_HAMMER.SPK
+    text: STR_POWER_HAMMER_CODEX
+
   - id: STR_SACRESANT_SHIELD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -12966,6 +14556,14 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: Neuralwhip.SPK
     text: STR_NEURAL_WHIP_UFOPEDIA
+
+  - id: STR_CHAOS_CHAIN_AXE  # Heretical chain axe
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HERETICAL_CHAINAXE.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
+    text: STR_CHAOS_CHAIN_AXE_CODEX
 
   - delete: STR_AXE
   - id: STR_AXE  # Chaos Chain Axe
@@ -12980,6 +14578,7 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_KHORNE_CHAINAXE_CODEX.SPK
+    text: STR_KHORNE_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -12987,6 +14586,7 @@ ufopaedia:
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: CHAOS_GREAT_CHAINAXE_CODEX.SPK
+    text: STR_KHORNE_GREAT_CHAIN_AXE_CODEX
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_KHORNE
@@ -12994,7 +14594,7 @@ ufopaedia:
   - id: STR_PLAGUE_KNIFE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CK.SPK
+    image_id: STR_PLAGUE_KNIFE.SPK
     text: STR_PLAGUE_KNIFE_UFOPEDIA
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
@@ -13006,21 +14606,24 @@ ufopaedia:
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
-    image_id: 1CH.SPK
+    image_id: STR_SLAAN_BLADE.SPK
+    text: STR_SLAAN_BLADE_CODEX
   - id: STR_SLAAN_LONGBLADE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
-    image_id: 1CH.SPK
+    image_id: STR_SLAAN_LONGBLADE.SPK
+    text: STR_SLAAN_LONGBLADE_CODEX
   - id: STR_SLAAN_CHAINSWORD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     requires:
       - STR_CHAOS_ARMORY_EXAM_BASIC
       - STR_CHAOS_ARMORY_EXAM_SLAANESH
-    image_id: 1EV.SPK
+    image_id: STR_SLAAN_CHAINSWORD.SPK
+    text: STR_SLAAN_CHAINSWORD_CODEX
 
   - id: STR_VALKIA_SHIELD  # Valkia Daemon Shield
     type_id: 14
@@ -13089,14 +14692,53 @@ ufopaedia:
     requires:
       - STR_PSYKER_RECRUITMENT
 
-  - delete: STR_CHAOS_CROZIUS
-  - id: STR_CHAOS_CROZIUS  # Chaos Sorcerer's Staff
+  - id: STR_PSYKER_STAFFCHAOS  # Chaos Priest staff
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: 1CH.SPK
+    image_id: STR_PSYKER_STAFFCHAOS.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_PSYKER_STAFFCHAOS_CODEX
+
+  - delete: STR_CHAOS_CROZIUS
+  - id: STR_CHAOS_CROZIUS  # Chaos Sorcerer's Staff for OPFOR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
     requires:
       - STR_CHAOS_ARMORY_EXAM_POWER
     text: STR_CHAOS_CROZIUS_UFOPEDIA
+
+  - id: STR_CHAOS_CROZIUS_PLAYER  # Chaos Sorcerer's Staff for PLAYER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_PLAYER_CODEX
+
+  - id: STR_CHAOS_CROZIUS_SORC_PLAYER  # Chaos Sorcerer's Staff
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: STR_CHAOS_CROZIUS_PLAYER.SPK
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_POWER
+    text: STR_CHAOS_CROZIUS_SORC_PLAYER_CODEX
+
+# chaos staff powers, to allow stats to be visible
+  - id: STR_CHAOS_CROZIUS_POWER1
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_CHAOS_CROZIUS_POWER2
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BRIMSTONE_HORROR_SPAWNER_GRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_BLOODLETTERSPAWNER_GRENADE_PLAYER
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
 
 #WEAPONS.OTHER#   Other
   # Inquisition Stormtrooper Fixed Weapons
@@ -13179,6 +14821,15 @@ ufopaedia:
       - STR_INQ_ST_ARMOR_PA_BREACHER_UNLOCKER
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+  # other: guard laser airstrike designator
+  - id: STR_AIRSTRIKE_VOX  # Laser airstrike designator
+    requires:
+      - STR_AIRSTRIKE_REQUISITION
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HEAVY_WEAPON_TOOLS.SPK
+    text: STR_AIRSTRIKE_UFOPEDIA
 
  # Assassinorum built in weapons
 # Vindicare
@@ -13611,16 +15262,6 @@ ufopaedia:
       - STR_MASTER_CRAFTING
       - STR_MIDTIER_PREREQ
 
-  # Plague Spewer
-  - id: STR_PLAGUE_SPEWER
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-    requires:
-      - STR_CHAOS_ARMORY_EXAM_NURGLE
-  - id: STR_PLAGUE_SPEWER_TANK
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-
   # Genestealer
   - id: STR_GSC_NEEDLER_RIFLE
     type_id: 14
@@ -13630,6 +15271,202 @@ ufopaedia:
     image_id: NEEDLERIFLECODEX.SPK
     text: STR_GSC_NEEDLER_RIFLE_UFOPEDIA
     section: STR_WEAPONS_AND_EQUIPMENT
+
+#SM.BT.WEAPONS#
+
+  - id: STR_PISTOL_BT  # Boltpistol Ceres Pattern
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1BP.SPK
+    text: STR_PISTOL_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_PISTOLS_BT  # Boltpistol Spectris Pattern
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1BP2.SPK
+    text: STR_PISTOLS_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_PISTOLH_BT  # Boltpistol Tigrus Pattern
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1BP3.SPK
+    text: STR_PISTOLH_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_RIFLE_BT  # Bolter Godwyn Pattern
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MB.SPK
+    text: STR_RIFLE_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_FLAMETHROWER_BT  # Flamethrower
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MF.SPK
+    text: STR_FLAMETHROWER_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_HAND_FLAMETHROWER_BT  # Hand Flamer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: Handflamer.SPK
+    text: STR_HAND_FLAMETHROWER_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_PLASMA_RIFLE_BT  # Plasma Rifle
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MP.SPK
+    text: STR_PLASMA_RIFLE_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_PLASMA_PISTOL_BT  # Plasma Pistol
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PP.SPK
+    text: STR_PLASMA_PISTOL_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_ASSC_BT  # Assault Cannon
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1AC.SPK
+    text: STR_ASSC_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_HB_BT  # Stormbolter
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_HB_BT_CODEX
+    image_id: 1SB.SPK
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BLASTER_LAUNCHER_BT  # Multimelta
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MM.SPK
+    text: STR_BLASTER_LAUNCHER_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_COMBIMELTA_BT  # Combi Melta
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: IW_COMBIBOLTER_CODEX.SPK  # placeholder
+    text: STR_COMBIMELTA_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_SMALL_LAUNCHER_TERRAN_BT  # Graviton Gun
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1GG.SPK
+    text: STR_SMALL_LAUNCHER_TERRAN_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+ # melee
+
+  - id: STR_CHAINSWORD_BT  # Chainsword
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1CS.SPK
+    text: STR_CHAINSWORD_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_MCCHAINSWORD_BT  # Master Chainsword
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1CS.SPK
+    text: STR_MCCHAINSWORD_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_CHAIN_AXE_BT  # Chainaxe
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: CHAOS_CHAINAXE_CODEX.SPK
+    text: STR_CHAIN_AXE_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_POWERMACE_BT  # Power Mace
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1TH.SPK
+    text: STR_POWERMACE_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_ADEPTAS_ZWEIHANDER_BT  # Zweihander
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MCPS.SPK
+    text: STR_ADEPTAS_ZWEIHANDER_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_HAMMER_BT  # Thunder Hammer
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1TH.SPK
+    text: STR_HAMMER_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_BLACKSWORD_BT  # Black Sword
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PS.SPK
+    text: STR_BLACKSWORD_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: AUX_CROZIUS_BT  # Crozius Arcanum
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PS.SPK
+    text: AUX_CROZIUS_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: AUX_CROZIUS_HIGH_BT  # Sacred Crozius
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1PS.SPK
+    text: AUX_CROZIUS_HIGH_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+  - id: STR_TECHPRIEST_POWERAXE_BT  # Omnissian Axe
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: OMNISSIANAXE.SPK
+    text: STR_TECHPRIEST_POWERAXE_BT_CODEX
+    requires:
+      - STR_BLACKTEMPLAR_STRATEGY
+
+#SOB.BR.WEAPONS#
+
+  - id: STR_EVISCERATOR_BR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1EV.SPK
+    text: STR_EVISCERATOR_BR_CODEX
 
   # Unsorted fixed weapons for Stats For Nerds
   # Need to figure out where these all go, but they don't have articles. Low priority.
@@ -13669,10 +15506,6 @@ ufopaedia:
   - id: AUX_HOVERTANK_LASER
     type_id: 14
     section: STR_NOT_AVAILABLE
-  - delete: AUX_HOVERTANK_PLASMA
-  - id: AUX_HOVERTANK_PLASMA
-    type_id: 14
-    section: STR_NOT_AVAILABLE
   - delete: AUX_MEDI_KIT
   - id: AUX_MEDI_KIT
     type_id: 14
@@ -13705,10 +15538,6 @@ ufopaedia:
     section: STR_NOT_AVAILABLE
   - delete: AUX_ADEPTAS_PROBE
   - id: AUX_ADEPTAS_PROBE
-    type_id: 14
-    section: STR_NOT_AVAILABLE
-  - delete: STR_SKULL_SPAWNER
-  - id: STR_SKULL_SPAWNER
     type_id: 14
     section: STR_NOT_AVAILABLE
   - delete: AUX_RAM
@@ -13779,9 +15608,11 @@ ufopaedia:
   - id: STR_LIBRARIAN_SPECIAL_WEAPON
     type_id: 14
     section: STR_NOT_AVAILABLE
-  - delete: STR_BAYONET
+
 
 #WEAPONS.ELDAR#       Eldar Weapons
+
+
   - delete: STR_CATAPULT_PISTOL
   - id: STR_CATAPULT_PISTOL
     type_id: 14
@@ -13790,6 +15621,21 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_CATAPULT_PISTOL_UFOPEDIA
+  - id: STR_AVENGER_PISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_PISTOL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_PISTOL_CODEX
+  - id: STR_AVENGER_PISTOL_SCOPED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_PISTOL_SCOPED_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_PISTOL_SCOPED_CODEX
+
   - delete: STR_CATAPULT
   - id: STR_CATAPULT
     type_id: 14
@@ -13798,6 +15644,166 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_CATAPULT_UFOPEDIA
+  - id: STR_AVENGER_CATAPULT
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_CATAPULT_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_CATAPULT_CODEX
+  - id: STR_AVENGER_CATAPULT_SCOPED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AVENGER_CATAPULT_SCOPED_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AVENGER_CATAPULT_SCOPED_CODEX
+  - id: STR_AVENGER_SHURIKEN_CLIP
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_RANGER_LONG_RIFLE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_RANGER_LONG_RIFLE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_RANGER_LONG_RIFLE_CODEX
+  - id: STR_RANGER_LONG_RIFLE_SCOPED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_RANGER_LONG_RIFLE_SCOPED_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_RANGER_LONG_RIFLE_SCOPED_CODEX
+  - id: STR_RANGER_LONG_RIFLE_MAG
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_AELDARI_FLAMER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_FLAMER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_FLAMER_CODEX
+  - id: STR_AELDARI_FLAMER_FUEL
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_DRAGON_BREATH_FLAMER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_BREATH_FLAMER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_BREATH_FLAMER_CODEX
+  - id: STR_DRAGON_BREATH_FLAMER_FUEL
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_FUSION_GUN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_FUSION_GUN_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_FUSION_GUN_CODEX
+  - id: STR_FUSION_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+  - id: STR_DRAGON_FUSION_GUN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_FUSION_GUN_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_FUSION_GUN_CODEX
+  - id: STR_DRAGON_FUSION_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_FUSION_PISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_FUSION_PISTOL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_FUSION_PISTOL_CODEX
+  - id: STR_FUSION_PISTOL_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+  - id: STR_DRAGON_FUSION_PISTOL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_FUSION_PISTOL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_FUSION_PISTOL_CODEX
+  - id: STR_DRAGON_FUSION_PISTOL_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_DRAGON_AXE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_AXE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_AXE_CODEX
+
+  - id: STR_FIREPIKE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_FIREPIKE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_FIREPIKE_CODEX
+  - id: STR_FIREPIKE_AMMO
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_DEATH_SPINNER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DEATH_SPINNER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DEATH_SPINNER_CODEX
+  - id: STR_SPINNER_SPOOL
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+  - id: STR_SPINNERET_RIFLE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_SPINNERET_RIFLE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_SPINNERET_RIFLE_CODEX
+  - id: STR_SPINNERET_RIFLE_SPOOL
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_ELDAR_POWER_BLADE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_POWER_BLADE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_ELDAR_POWER_BLADE_CODEX
+
+
+  - id: STR_SHURIKEN_CANNON
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_SHURIKEN_CANNON_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_SHURIKEN_CANNON_CODEX
+  - id: STR_SHURIKEN_CANNON_MAG
+    type_id: 4
+    section: STR_NOT_AVAILABLE
+
   - delete: STR_ELDAR_LAUNCHER
   - id: STR_ELDAR_LAUNCHER
     type_id: 14
@@ -13806,6 +15812,62 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_ELDAR_LAUNCHER_UFOPEDIA
+  - id: STR_LARGE_ROCKET_ELDAR
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+  - id: STR_ELDAR_TEMPEST_LAUNCHER
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_TEMPEST_LAUNCHER_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_ELDAR_TEMPEST_LAUNCHER_CODEX
+  - id: STR_SMALL_ROCKET_TEMPEST_ELDAR
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_AELDARI_SWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_SWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_SWORD_CODEX
+  - id: STR_AELDARI_CHAINSWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_CHAINSWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_CHAINSWORD_CODEX
+  - id: STR_AELDARI_POWERSWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_AELDARI_POWERSWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_AELDARI_POWERSWORD_CODEX
+  - id: STR_DIRESWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DIRESWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DIRESWORD_CODEX
+  - id: STR_DIRESWORD_VESSEL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DIRESWORD_VESSEL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DIRESWORD_VESSEL_CODEX
+  - id: STR_ELDAR_POWER_GLAIVE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_POWER_GLAIVE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_POWER_GLAIVE_CODEX
   - delete: STR_ELDAR_CHAINSWORD
   - id: STR_ELDAR_CHAINSWORD
     type_id: 14
@@ -13822,12 +15884,31 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_EPOWER_SWORD_UFOPEDIA
+  - id: STR_WITCHBLADE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_WITCHBLADE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_WITCHBLADE_CODEX
+  - id: STR_SINGING_SPEAR
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_SINGING_SPEAR_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_SINGING_SPEAR_CODEX
+  - id: STR_WITCH_STAFF
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_WITCH_STAFF_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_WITCH_STAFF_CODEX
   - delete: STR_SHURIKEN_CLIP
   - id: STR_SHURIKEN_CLIP
     type_id: 4
-    section: STR_WEAPONS_AND_EQUIPMENT
-    requires:
-      - STR_DONTSHOWYET
+    section: STR_NOT_AVAILABLE
   - delete: STR_ELDAR_GRENADE
   - id: STR_ELDAR_GRENADE
     type_id: 14
@@ -15316,7 +17397,7 @@ ufopaedia:
     image_id: 2ARB.SPK
     text: STR_BOOKS_UFOPEDIA
     requires:
-      - STR_ARBITES
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
   # Spells
   - delete: STR_MIND_PROBE
@@ -15677,6 +17758,12 @@ ufopaedia:
     text: STR_MARKET_GOODS_UFOPEDIA
     image_id: 2ARVUS.SPK
 
+  - id: STR_PURITY_SEAL
+    type_id: 10
+    section: STR_TOOLS_AND_RESOURCES
+    text: STR_PURITY_SEAL_CODEX
+    image_id: STR_PURITY_SEAL.SPK
+
   # Tools
   - delete: STR_ELECTRO_FLARE
   - id: STR_ELECTRO_FLARE
@@ -15702,6 +17789,14 @@ ufopaedia:
     section: STR_TOOLS_AND_RESOURCES
     image_id: HEAVY_WEAPON_TOOLS.SPK
     text: STR_HEAVY_WEAPON_TOOLS_UFOPEDIA
+
+  # servo skull STR_SKULL
+  - delete: STR_SKULL_SPAWNER
+  - id: STR_SKULL_SPAWNER
+    type_id: 14
+    section: STR_TOOLS_AND_RESOURCES
+    image_id: SERVO_SKULL.SPK
+    text: STR_TECH_SKULL_SPAWNER_CODEX
 
   # Medical
   - id: AUX_MEDI_KIT_ADVANCED  # Advanced Narthecium
@@ -15749,8 +17844,8 @@ ufopaedia:
     requires:
       - STR_DONTSHOWYET
       - STR_NEVERBORN_SPAWNER_GRENADE_PLAYER
+### #ITEMS.CM.LAW#
 ## #ITEMS.AT#
-### #ITEMS.AT.LAW#
 ### #ITEMS.AT.CULT#
 ## #ITEMS.SOB#
 ### #ITEMS.SOB.REP#
@@ -16479,8 +18574,8 @@ ufopaedia:
     image_id: UP131.SPK
     text: STR_NOT_DONE
 #FOES.CM.RAD#            The Radical Road
+#FOES.CM.LAW#            The Imperial Law Strategy
 #FOES.AT#              Adeptus Terra Units
-#FOES.AT.LAW#            The Imperial Law Strategy
 #FOES.AT.CULT#           Chaos Cult
 #FOES.SOB#             Adeptas Units
 
@@ -16839,8 +18934,22 @@ ufopaedia:
       - STR_LIVE_CAPTURE_CHAOSCULT
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
+    image_id: STR_CULTIST_ARMORPILOT.SPK
+    text: STR_CULTIST_ARMORPILOTPLAYER_CODEX
+  - id: STR_CHAOSCULT_PILOT #player chaos cult pilot
+    requires:
+      - STR_CHAOS_BOONS_LV2CULTISTS_RESEARCH # Same requirement to hire chaos cult pilots
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
     image_id: CHAOSCULTGENERIC.SPK
-    text: STR_SECTOID_UFOPEDIA
+    text: STR_CHAOSCULT_PILOTM_AI_CODEX
+  - id: STR_CULTIST_ARMORPILOTPLAYER
+    requires:
+      - STR_CHAOS_BOONS_LV2CULTISTS_RESEARCH # Same requirement to hire chaos cult pilots
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    image_id: STR_CULTIST_ARMORPILOT.SPK
+    text: STR_CULTIST_ARMORPILOTPLAYER_CODEX
 
   - id: STR_CHAOSCULT_PRIESTM_LV1_AI
     requires:
@@ -17339,7 +19448,7 @@ ufopaedia:
   - id: STR_TZEENTCH_WARP_THRALL
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS
-    image_id: tzeentch_warp_thrall_armor.SPK
+    image_id: tzeentch_warp_thrall.SPK
     text: STR_TZEENTCH_WARP_THRALL_UFOPEDIA
   - id: STR_TZEENTCH_WARP_THRALL_AUTOPSY
     type_id: 10
@@ -20028,15 +22137,30 @@ ufopaedia:
     requires:
       - STR_GUARDIAN_CORPSE
     image_id: UP112.SPK
-    text: STR_GUARDIAN_AUTOPSY_UFOPEDIA
+    text: STR_ELDAR_GUARDIAN_AUTOPSY_CODEX
   - delete: STR_ELDAR_ARMOR
-  - id: STR_ELDAR_ARMOR
+  - id: STR_ELDAR_ARMOR_GUARDIAN_PLAYER
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
     requires:
       - STR_ELDAR_GUARDIAN
     image_id: UP111.SPK
-    text: STR_NURGLE_UFOPEDIA
+    text: STR_ELDAR_GUARDIAN_ARMOR_CODEX
+
+  - id: STR_RANGER_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_RANGER_CORPSE
+    image_id: ELDAR_RANGER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_RANGER_AUTOPSY_CODEX
+  - id: STR_ELDAR_RANGER_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_RANGER
+    image_id: ELDAR_RANGER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_RANGER_ARMOR_CODEX
 
   - delete: STR_BANSHEE_AUTOPSY
   - id: STR_BANSHEE_AUTOPSY
@@ -20055,7 +22179,7 @@ ufopaedia:
     image_id: UP113.SPK
     text: STR_NURGLE_UFOPEDIA
 
-  - delete: STR_SEER_AUTOPSY
+  - delete: STR_SEER_AUTOPSY         # FARSEER, rename in future to FARSEER
   - id: STR_SEER_AUTOPSY
     type_id: 10
     section: STR_ALIEN_LIFE_FORMS
@@ -20071,6 +22195,37 @@ ufopaedia:
       - STR_ELDAR_SEER
     image_id: UP115.SPK
     text: STR_NURGLE_UFOPEDIA
+
+  - id: STR_ELDAR_SEER_AUTOPSY    #Lower tier seer healer unit
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SEER_CORPSE
+    image_id: ELDAR_SEER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_SEER_AUTOPSY_CODEX
+  - id: STR_ELDAR_SEER_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SEER
+    image_id: ELDAR_SEER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SEER_ARMOR_CODEX
+
+
+  - id: STR_ELDAR_WARLOCK_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_WARLOCK_CORPSE
+    image_id: ELDAR_WARLOCK_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_WARLOCK_AUTOPSY_CODEX
+  - id: STR_ELDAR_WARLOCK_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_WARLOCK
+    image_id: ELDAR_WARLOCK_ARMOR_CODEX.SPK
+    text: STR_ELDAR_WARLOCK_ARMOR_CODEX
 
   - delete: STR_DAVENGER_AUTOPSY
   - id: STR_DAVENGER_AUTOPSY
@@ -20088,6 +22243,36 @@ ufopaedia:
       - STR_ELDAR_DAVENGER
     image_id: UP164.SPK
     text: STR_NURGLE_UFOPEDIA
+
+  - id: STR_ELDAR_AVENGER_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_AVENGER_CORPSE
+    image_id: ELDAR_AVENGER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_AVENGER_AUTOPSY_CODEX
+  - id: STR_ELDAR_ARMOR4_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_AVENGER
+    image_id: ELDAR_AVENGER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_AVENGER_ARMOR_CODEX
+
+  - id: STR_ELDAR_AVENGEREX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_AVENGEREX_CORPSE
+    image_id: ELDAR_AVENGEREX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_AVENGEREX_AUTOPSY_CODEX
+  - id: STR_ELDAR_AVENGEREX_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_AVENGEREX
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_AVENGEREX_ARMOR_CODEX
 
   - delete: STR_SCORPION_AUTOPSY
   - id: STR_SCORPION_AUTOPSY
@@ -20121,7 +22306,89 @@ ufopaedia:
     requires:
       - STR_ELDAR_REAPER
     image_id: UP167.SPK
-    text: STR_NURGLE_UFOPEDIA
+    text: STR_ELDAR_REAPER_ARMOR_CODEX
+
+  - id: STR_ELDAR_REAPEREX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_REAPER_EXARCH_CORPSE
+    image_id: ELDAR_REAPEREX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_REAPEREX_AUTOPSY_CODEX
+  - id: STR_ELDAR_ARMOR_EXARCH_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_REAPEREX
+    image_id: ELDAR_REAPEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_REAPEREX_ARMOR_CODEX
+
+  - id: STR_ELDAR_DRAGON_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGON_CORPSE
+    image_id: ELDAR_DRAGON_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_DRAGON_AUTOPSY_CODEX
+  - id: STR_ELDAR_DRAGON_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGON
+    image_id: ELDAR_DRAGON_ARMOR_CODEX.SPK
+    text: STR_ELDAR_DRAGON_ARMOR_CODEX
+
+  - id: STR_ELDAR_DRAGONEX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGONEX_CORPSE
+    image_id: ELDAR_DRAGONEX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_DRAGONEX_AUTOPSY_CODEX
+  - id: STR_ELDAR_DRAGONEX_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_DRAGONEX
+    image_id: ELDAR_DRAGONEX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_DRAGONEX_ARMOR_CODEX
+
+  - id: STR_ELDAR_SPIDER_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER_CORPSE
+    image_id: ELDAR_SPIDER_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_SPIDER_AUTOPSY_CODEX
+  - id: STR_ELDAR_SPIDER_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER
+    image_id: ELDAR_SPIDER_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SPIDER_ARMOR_CODEX
+
+  - id: STR_ELDAR_SPIDEREX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDEREXDS_CORPSE # powerblade corpse can also be used
+    image_id: ELDAR_SPIDEREX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_SPIDEREX_AUTOPSY_CODEX
+  - id: STR_ELDAR_SPIDEREXDS_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER
+    image_id: ELDAR_SPIDEREXDS_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SPIDEREXDS_ARMOR_CODEX
+  - id: STR_ELDAR_SPIDEREXPB_ARMOR_P
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_SPIDER
+    image_id: ELDAR_SPIDEREXPB_ARMOR_CODEX.SPK
+    text: STR_ELDAR_SPIDEREXPB_ARMOR_CODEX
 
   - delete: STR_WRAITHGUARD_AUTOPSY
   - id: STR_WRAITHGUARD_AUTOPSY
@@ -20138,7 +22405,7 @@ ufopaedia:
     requires:
       - STR_WRAITHGUARD_CORPSE
     image_id: UP171.SPK
-    text: STR_NURGLE_UFOPEDIA
+    text: STR_WRAITHGUARD_ARMOR_UFOPEDIA
 
   - delete: STR_ELDAR_PLAT_AUTOPSY
   - id: STR_ELDAR_PLAT_AUTOPSY
@@ -20954,7 +23221,7 @@ ufopaedia:
     section: STR_ALIEN_LIFE_FORMS
     requires:
       - STR_DONTSHOWYET
-      - STR_TYRANID_WARRIOR
+      - STR_TYRANID_PRIME
     image_id: TYRANID_PRIME_ORIGINS.SPK
     text: STR_TYRANID_PRIME_UFOPEDIA
   - id: STR_TYRANID_PRIME_AUTOPSY
@@ -21032,7 +23299,7 @@ ufopaedia:
     section: STR_ALIEN_LIFE_FORMS
     requires:
       - STR_DONTSHOWYET
-      - STR_BIVOORE
+      - STR_BIOVORE
     image_id: BIOVORE_ORIGINS.SPK
     text: STR_BIOVORE_UFOPEDIA
   - id: STR_BIOVORE_AUTOPSY
@@ -21634,8 +23901,8 @@ ufopaedia:
   #UFO.CIV#             General Imperial UFOs (Even if other factions use them)
   #UFO.SM#              Space Marines Units
   #UFO.CM#              Chamber Militant Units
+  #UFO.CM.LAW#            The Imperial Law Strategy
   #UFO.AT#              Adeptus Terra Units
-  #UFO.AT.LAW#            The Imperial Law Strategy
   #UFO.AT.CULT#           Chaos Cult
   #UFO.SOB#             Adeptas Units
   #UFO.IG#              Imperial Guard Units
