@@ -738,6 +738,8 @@ items:
 
   - type: STR_VALHALLAN_TURRET_MORTAR_WEAPON
     categories: [STR_CAT_ROCKETL]
+    fixedWeapon: true
+    arcingShot: true
     bigSprite: 984
     invWidth: 2
     invHeight: 3
@@ -747,37 +749,33 @@ items:
     hitAnimation: 2210
     reloadSound: 2427
     weight: 50
-    clipSize: -1
+    dropoff: 8
     costAuto:
       time: 1
-      energy: 10
       mana: 20
     costSnap:
       time: 1
-      energy: 10
       mana: 20
     costAimed:
-      energy: 10
       time: 1
-      mana: 20
-    dropoff: 8
+      mana: 10
     noLOSAccuracyPenalty: 75  # indirect fire weapon
     autoRange: 35
     snapRange: 35
     aimRange: 35 # Equal to Battlecannon
-    accuracyAuto: 30 #reduced for waypoint system
-    accuracySnap: 30 #reduced for waypoint system
-    accuracyAimed: 30 #reduced for waypoint system
+    accuracyAuto: 60
+    accuracySnap: 60
+    accuracyAimed: 60
     ammo:
       0:
         compatibleAmmo:
-          - STR_MORTAR_AMMO_HE
+          - STR_MORTAR_AMMO_HE_VL
       1:
         compatibleAmmo:
-          - STR_MORTAR_AMMO_KRAK
+          - STR_MORTAR_AMMO_KRAK_VL
       2:
         compatibleAmmo:
-          - STR_MORTAR_AMMO_ILLUMINATION
+          - STR_MORTAR_AMMO_ILLUMINATION_VL
     confAimed:
       name: STR_MORTAR_SHOT_HE_VALHALLA  # name of attack in action menu.
       ammoSlot: 0           # with ammo slot is used by this attack. Default 0
@@ -790,8 +788,6 @@ items:
       name: STR_MORTAR_SHOT_ILLUMINATION_VALHALLA  # name of attack in action menu.
       ammoSlot: 2
       shots: 1
-    arcingShot: false
-    waypoints: 2  # 1 waypoint, loitering munitions to mimic mortar indirect fire
     battleType: 1
     listOrder: 11871
     armor: 200
