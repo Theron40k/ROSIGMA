@@ -9,3 +9,19 @@ manufacture:
     spawnedPersonType: STR_ELDAR_RANGER_PLAYER
     points: -50 # loose eldar trust for enlisting outcasts
     producedItems: {}
+
+  - name: STR_DIRESWORD_VESSEL_MANUFACTURE
+    category: STR_ELDAR_SOULTECH_CATEGORY
+    requires:
+      - STR_ELDAR_ONLY
+      #- STR_FORGE_DIRESWORD_VESSEL_RESEARCH
+    # requiresBaseFunc: [ELDAROUT] # could be used for taboo soul manipulation eldar technology
+    space: 0
+    time: 200
+    cost: 50000
+    points: -50 # less taboo than wraithguard creation and warcrime level weaponry
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 10     # Nominal amount
+      STR_ALIEN_ALLOYS: 30        # Adamantium
+    producedItems:
+      STR_DIRESWORD_VESSEL: 1

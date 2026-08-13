@@ -1470,11 +1470,14 @@ crafts:
     sprite: 2300
     fuelMax: 1500
     damageMax: 1200
-    speedMax: 400
+    speedMax: 550 #slightly slower than Valk for interception purposes
+    armor: 1
     repairRate: 10
     refuelRate: 1000
     vehicles: 999
-    accel: 2
+    accel: 4 #to keep UFOs from escaping
+    hitBonus: 15 #AA% bonus
+    powerBonus: 20 #% bonus to help valhallans harder time massing interceptors
     weapons: 3
     weaponTypes:
       - 3
@@ -1560,11 +1563,14 @@ crafts:
     sprite: 2301
     fuelMax: 1500
     damageMax: 1400
-    speedMax: 400
+    speedMax: 550 #slightly slower than Valk for interception purposes
+    armor: 2
     repairRate: 10
     refuelRate: 1000
     vehicles: 999
-    accel: 2
+    accel: 4 #for interception
+    hitBonus: 20 #AA% bonus
+    powerBonus: 30 #% bonus to help valhallans harder time massing interceptors
     weapons: 2
     weaponTypes:
       - 3
@@ -1674,6 +1680,7 @@ crafts:
     vehicles: 999
     maxLargeUnits: 4
     refuelRate: 1000
+    armor: 3
     repairRate: 10  # was 8
     transferTime: 96
     score: 250
@@ -1773,6 +1780,7 @@ crafts:
     costBuy: 1800000 #Executioner turret included
     costRent: 900000 #Executioner plasma variant
     costSell: 800000
+    armor: 3
     repairRate: 10
     refuelRate: 1000
     transferTime: 96

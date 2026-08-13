@@ -5885,13 +5885,50 @@ ufopaedia:
     text: STR_ELDAR_ASPECT_HELPER_SPIDER
     requires:
       - STR_PROMOTE_TO_AUTARCH_HELPER
+
+  - id: STR_PROMOTE_TO_AVENGER_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_SCORPION_EXARCH
+    requires:
+      - STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_SCORPION_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK # TODO change
+    text: STR_ELDAR_ASPECT_HELPER_SCORPION_EXARCH
+    requires:
+      - STR_ELDAR_SCORPION_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_BANSHEE_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_AVENGEREX_ARMOR_CODEX.SPK # TODO change
+    text: STR_ELDAR_ASPECT_HELPER_BANSHEE_EXARCH
+    requires:
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_REAPER_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_REAPEREX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_REAPER_EXARCH
+    requires:
+      - STR_ELDAR_REAPER_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_DRAGON_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_DRAGONEX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_DRAGON_EXARCH
+    requires:
+      - STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH
+  - id: STR_PROMOTE_TO_SPIDER_EXARCH
+    type_id: 10
+    section: STR_SOLDIERS_UC
+    image_id: ELDAR_SPIDEREXDS_ARMOR_CODEX.SPK
+    text: STR_ELDAR_ASPECT_HELPER_SPIDER_EXARCH
+    requires:
+      - STR_ELDAR_SPIDER_EXARCH_RESEARCH
   # Eldar exarch/autarch
-  #- id: #dire avenger ex
-  #- id: #scorpion ex.
-  #- id: STR_PROMOTE_TO_BANSHEE_EXARCH
-  #- id: STR_PROMOTE_TO_REAPER_EXARCH
-  #- id: STR_PROMOTE_TO_DRAGON_EXARCH
-  #- id: STR_PROMOTE_TO_SPIDER_EXARCH
   # ELDAR psyker transf.
   #- id: STR_PROMOTE_TO_PSYKER
   #- id: STR_PROMOTE_TO_ELDAR_WARLOCK
@@ -7959,7 +7996,7 @@ ufopaedia:
 
   - id: STR_WORDBEARER_POSSESSEDLV1_POSSARMORPLAYER
     type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
+    section: STR_WBARMORPEDIA
     image_id: WORDBEARERSPOSSESSED.SPK
     text: STR_WORDBEARERPOSS_ARMOR_UFOPEDIA
     requires:
@@ -7968,8 +8005,8 @@ ufopaedia:
       - STR_RITUAL_CONSECRATE
 
   - id: STR_WORDBEARER_POSSESSEDLV2_POSSARMORPLAYER
-    type_id: 10
-    section: STR_ALIEN_LIFE_FORMS
+    type_id: 15
+    section: STR_WBARMORPEDIA
     image_id: WORDBEARERSMARINEELITECODEX.SPK
     text: STR_WORDBEARERMARINEELITE_CODEX
     requires:
@@ -7979,7 +8016,7 @@ ufopaedia:
 
   - id: STR_WORDBEARER_POSSESSEDLV3_POSSARMORPLAYER
     type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
+    section: STR_WBARMORPEDIA
     image_id: WORDBEARERSELITEMARINE.SPK
     text: STR_WORDBEARERELITE_ARMOR_UFOPEDIA
     requires:
@@ -10015,6 +10052,14 @@ ufopaedia:
     requires:
       - STR_VALHALLAN_GUARDSMEN
       - STR_CARAPACE_ARMOR_IG
+
+  - id: STR_VALHALLAN_WOLFHOUND_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: VALHALLAN_WOLFHOUND_CODEX.SPK
+    text: STR_VALHALLAN_WOLFHOUND_CODEX
+    requires:
+      - STR_VALHALLAN_STRATEGY
 
 ####################################
 # #ARMORSOB# Weapons and Ammo
@@ -14301,7 +14346,7 @@ ufopaedia:
     image_id: 1PC.SPK
     text: STR_CLAW_TYRANT_CODEX
     requires:
-      - STR_POWER_SUIT
+      #- STR_POWER_SUIT
       - STR_CHAOS_ARMORY_EXAM_BASIC
 
   - id: STR_CHAOS_CLAWS
@@ -14310,7 +14355,7 @@ ufopaedia:
     image_id: 1PC.SPK
     text: STR_GENERIC_POWER_CLAWS_CODEX
     requires:
-      - STR_POWER_SUIT
+      #- STR_POWER_SUIT
       - STR_CHAOS_ARMORY_EXAM_BASIC
   # - id: STR_CHAOS_CLAWS2  #duplicate for compatibility with warptalon 2nd claw
   #   type_id: 14
@@ -14327,7 +14372,7 @@ ufopaedia:
     image_id: 1PC.SPK
     text: STR_GENERIC_POWER_CLAWS_CODEX
     requires:
-      - STR_POWER_SUIT
+      #- STR_POWER_SUIT
       - STR_CHAOS_ARMORY_EXAM_BASIC
   - id: STR_CHAOSMARKED_CLAW_TOKEN
     type_id: 14
@@ -14335,7 +14380,7 @@ ufopaedia:
     image_id: 1PC.SPK
     text: STR_GENERIC_POWER_CLAWS_CODEX
     requires:
-      - STR_POWER_SUIT
+      #- STR_POWER_SUIT
       - STR_CHAOS_ARMORY_EXAM_BASIC
   - id: STR_WBMUTILATOR_CLAW
     type_id: 14
@@ -15802,6 +15847,27 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_AELDARI_POWERSWORD_CODEX
+  - id: STR_DIRESWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DIRESWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DIRESWORD_CODEX
+  - id: STR_DIRESWORD_VESSEL
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DIRESWORD_VESSEL_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DIRESWORD_VESSEL_CODEX
+  - id: STR_ELDAR_POWER_GLAIVE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_POWER_GLAIVE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_POWER_GLAIVE_CODEX
   - delete: STR_ELDAR_CHAINSWORD
   - id: STR_ELDAR_CHAINSWORD
     type_id: 14

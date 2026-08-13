@@ -504,7 +504,7 @@ soldierTransformation:
     requires:
       - STR_ELDAR_ASPECT_RESEARCH
       - STR_HIGHTIER_PREREQ
-      #- STR_ELDAR_AVENGER_EXARCH_RESEARCH
+      - STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH
     cost: 50000
     #TESTING minRank: 1
     producedSoldierType: STR_ELDAR_AVENGEREX_P
@@ -514,9 +514,9 @@ soldierTransformation:
     allowsLiveSoldiers: true
     allowedSoldierTypes:
       - STR_ELDAR_AVANGER_MF
-    #TESTING requiredMinStats:
-      #bravery: 85
-      #health: 65
+    # requiredMinStats: # rebalanced, kept commented for testing
+    #   reactions: 85
+    #   firing: 90
     resetRank: true
     percentOverallStatChange:
       tu: 10
@@ -579,7 +579,38 @@ soldierTransformation:
       melee: 5
     soldierBonusType: STR_RUNE_OF_COMMAND_AUTARCH
 
-#  - name: STR_PROMOTE_TO_SCORPION_EXARCH
+#Balanced placeholder for when scorpion exarch are implemented
+  # - name: STR_PROMOTE_TO_SCORPION_EXARCH
+  #   requires:
+  #     - STR_HIGHTIER_PREREQ
+  #     - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+  #   cost: 50000
+  #   minRank: 1
+  #   producedSoldierType: STR_ELDAR_SCORPION_EXARCH_PLAYER #to change once scorpion exarch are here
+  #   keepSoldierArmor: false
+  #   allowsDeadSoldiers: false
+  #   allowsWoundedSoldiers: true
+  #   allowsLiveSoldiers: true
+  #   allowedSoldierTypes:
+  #     - STR_ELDAR_ASPECT_WARRIOR_PLAYER
+  #     - STR_ELDAR_SCORPION_M
+  #   requiredMinStats:
+  #     strength: 60
+  #     melee: 105
+  #   resetRank: true
+  #   percentOverallStatChange:
+  #     tu: 10
+  #     stamina: 10
+  #     health: 10
+  #     bravery: 0
+  #     reactions: 10
+  #     firing: 0
+  #     throwing: 0
+  #     strength: 10
+  #     psiStrength: 0
+  #     psiSkill: 0
+  #     melee: 15
+  #   soldierBonusType: STR_RUNE_OF_WARDING
 
   - name: STR_PROMOTE_TO_BANSHEE_EXARCH
     # requiresBuyBaseFunc: [PSI]
@@ -863,3 +894,39 @@ soldierTransformation:
     transferTime: 24
     recoveryTime: 0
     lowerBoundAtMinStats: true
+
+# DIRESWORD CREATION
+
+  - name: STR_DIRESWORD_VESSEL_TRANSFORM
+    requires:
+      - STR_ELDAR_ASPECT_RESEARCH
+      #- STR_ELDAR_DIRESWORD_FORGING_RESEARCH
+    cost: 0  #Cost is in manufacturing
+    minRank: 0
+    producedItem: STR_DIRESWORD
+    allowsDeadSoldiers: true
+    allowsLiveSoldiers: false
+    needsCorpseRecovered: true
+    # requiredMinStats: # requires a worthy warrior soul
+    # melee: 80
+    # forbiddenPreviousTransformations:
+    #   - STR_RESURRECT_ELDAR #no infinite resurrections
+    requiredItems:
+      STR_DIRESWORD_VESSEL: 1
+    allowedSoldierTypes:
+      - STR_ELDAR_M
+      - STR_ELDAR_F
+      - STR_ELDAR_GUARDIAN_PLAYER
+      - STR_ELDAR_SCORPION_M
+      - STR_ELDAR_SEER_F
+      - STR_ELDAR_BANSHEE_F
+      - STR_ELDAR_AVANGER_MF
+      - STR_ELDAR_REAPER_M
+      - STR_ELDAR_DRAGON_MF
+      - STR_ELDAR_SPIDER_PLAYER
+      - STR_ELDAR_AUTARCH_PLAYER
+      - STR_ELDAR_REAPER_EXARCH_M
+      - STR_ELDAR_DRAGON_EXARCH_SOLDIER
+      - STR_ELDAR_SPIDEREX_PLAYER
+      - STR_ELDAR_BANSHEE_EXARCH_PLAYER
+      - STR_ELDAR_WARLOCK_PLAYER
