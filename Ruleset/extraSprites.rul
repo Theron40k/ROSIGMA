@@ -4912,7 +4912,7 @@ extraSprites:
   # 2: ORK_PANTS #not implemented yet
   # 3: ORK_PANTS_[ARMORTYPE]_PANTSACCESSORY # can be empty
   # 4: ORK_SHOES
-  # 5: SHIRT_SHIRT
+  # 5: ORK_SHIRT
   # 6: ORK_[ARMORTYPE]_ARMOR
   # 7: ORK_[ARMORTYPE]_ARMOR_ACCESSORY #empty accessory layer for the future if a madman want to give them more drip
   # 8: ORK_FACE
@@ -4921,8 +4921,224 @@ extraSprites:
   # 11: ORK_HEAD_JAW #empty accessory layer for the future if a madman want to give them more drip
   # 12: ORK_HEAD_[ARMORTYPE]_HELMET
   # 13: ORK_HEAD_[ARMORTYPE]_ACCESSORY #empty accessory layer for the future if a madman want to give them more drip
+
+  # Player ORK BASES
   - typeSingle: ORK_BODY__1__ORK_BODY_01
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01.png
+  - typeSingle: ORK_BODY__1__ORK_BODY_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02.png
+  - typeSingle: ORK_BODY__1__ORK_BODY_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03.png
+  - typeSingle: ORK_BODY__1__ORK_BODY_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04.png
+
+  - typeSingle: ORK_PANTS__2__ORK_BODY_01_02_PANTS_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_02_PANTS_01.png
+  - typeSingle: ORK_PANTS__2__ORK_BODY_01_02_PANTS_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_02_PANTS_02.png
+  - typeSingle: ORK_PANTS__2__ORK_BODY_01_02_PANTS_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_02_PANTS_03.png
+  - typeSingle: ORK_PANTS__2__ORK_BODY_01_02_PANTS_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_02_PANTS_04.png
+  - typeSingle: ORK_PANTS__2__ORK_BODY_03_04_PANTS_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_04_PANTS_01.png
+  - typeSingle: ORK_PANTS__2__ORK_BODY_03_04_PANTS_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_04_PANTS_02.png
+  - typeSingle: ORK_PANTS__2__ORK_BODY_03_04_PANTS_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_04_PANTS_03.png
+  - typeSingle: ORK_PANTS__2__ORK_BODY_03_04_PANTS_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_04_PANTS_04.png
+
+  - typeSingle: ORK_SHOES__4__ORK_BODY_01_02_SHOES_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_02_SHOES_01.png
+  - typeSingle: ORK_SHOES__4__ORK_BODY_01_02_SHOES_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_02_SHOES_02.png
+  - typeSingle: ORK_SHOES__4__ORK_BODY_01_02_SHOES_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_02_SHOES_03.png
+  - typeSingle: ORK_SHOES__4__ORK_BODY_03_04_SHOES_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_04_SHOES_01.png
+  - typeSingle: ORK_SHOES__4__ORK_BODY_03_04_SHOES_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_04_SHOES_02.png
+  - typeSingle: ORK_SHOES__4__ORK_BODY_03_04_SHOES_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_04_SHOES_03.png
+
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_01_SHIRT_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_SHIRT_01.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_01_SHIRT_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_SHIRT_02.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_01_SHIRT_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_SHIRT_03.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_01_SHIRT_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_SHIRT_04.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_01_SHIRT_05
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_SHIRT_05.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_02_SHIRT_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_SHIRT_01.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_02_SHIRT_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_SHIRT_02.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_02_SHIRT_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_SHIRT_03.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_02_SHIRT_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_SHIRT_04.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_02_SHIRT_05
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_SHIRT_05.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_03_SHIRT_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_SHIRT_01.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_03_SHIRT_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_SHIRT_02.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_03_SHIRT_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_SHIRT_03.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_03_SHIRT_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_SHIRT_04.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_03_SHIRT_05
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_SHIRT_05.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_04_SHIRT_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_SHIRT_01.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_04_SHIRT_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_SHIRT_02.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_04_SHIRT_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_SHIRT_03.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_04_SHIRT_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_SHIRT_04.png
+  - typeSingle: ORK_SHIRT__5__ORK_BODY_04_SHIRT_05
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_SHIRT_05.png
+
+  - typeSingle: ORK_FACE__8__ORK_BODY_01_FACE_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_FACE_01.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_01_FACE_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_FACE_02.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_01_FACE_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_FACE_03.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_01_FACE_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_FACE_04.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_02_FACE_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_FACE_01.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_02_FACE_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_FACE_02.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_02_FACE_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_FACE_03.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_02_FACE_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_FACE_04.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_03_FACE_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_FACE_01.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_03_FACE_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_FACE_02.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_03_FACE_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_FACE_03.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_03_FACE_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_FACE_04.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_04_FACE_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_FACE_01.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_04_FACE_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_FACE_02.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_04_FACE_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_FACE_03.png
+  - typeSingle: ORK_FACE__8__ORK_BODY_04_FACE_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_FACE_04.png
+
+  - typeSingle: ORK_EARS__9__ORK_BODY_01_EARS_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_EARS_01.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_01_EARS_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_EARS_02.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_01_EARS_03.png
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_EARS_03.png
+
+  - typeSingle: ORK_EARS__9__ORK_BODY_02_EARS_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_EARS_01.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_02_EARS_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_EARS_02.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_02_EARS_03.png
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_EARS_03.png
+
+  - typeSingle: ORK_EARS__9__ORK_BODY_03_EARS_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_EARS_01.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_03_EARS_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_EARS_02.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_03_EARS_03.png
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_EARS_03.png
+
+  - typeSingle: ORK_EARS__9__ORK_BODY_04_EARS_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_EARS_01.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_04_EARS_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_EARS_02.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_04_EARS_03.png
+    fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_EARS_03.png
+
+  # Player ORK FLAK
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_01_FLAK_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_ARMOR_01.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_01_FLAK_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_ARMOR_02.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_01_FLAK_ARMOR_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_ARMOR_03.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_02_FLAK_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_ARMOR_01.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_02_FLAK_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_ARMOR_02.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_02_FLAK_ARMOR_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_ARMOR_03.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_03_FLAK_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_ARMOR_01.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_03_FLAK_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_ARMOR_02.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_03_FLAK_ARMOR_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_ARMOR_03.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_04_FLAK_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_ARMOR_01.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_04_FLAK_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_ARMOR_02.png
+  - typeSingle: ORK_FLAK_ARMOR__6__ORK_BODY_04_FLAK_ARMOR_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_ARMOR_03.png
+
+  - typeSingle: ORK_FLAK_ARMOR_ACCESSORY__7__ORK_BODY_01_FLAK_WEARMARKS
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_WEARMARKS.png
+  - typeSingle: ORK_FLAK_ARMOR_ACCESSORY__7__ORK_BODY_02_FLAK_WEARMARKS
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_WEARMARKS.png
+  - typeSingle: ORK_FLAK_ARMOR_ACCESSORY__7__ORK_BODY_03_FLAK_WEARMARKS
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_WEARMARKS.png
+  - typeSingle: ORK_FLAK_ARMOR_ACCESSORY__7__ORK_BODY_04_FLAK_WEARMARKS
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_WEARMARKS.png
+
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_01_FLAK_CAP_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_CAP_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_01_FLAK_CAP_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_CAP_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_02_FLAK_CAP_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_CAP_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_02_FLAK_CAP_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_CAP_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_03_FLAK_CAP_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_CAP_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_03_FLAK_CAP_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_CAP_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_04_FLAK_CAP_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_CAP_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_04_FLAK_CAP_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_CAP_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_01_FLAK_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_HELMET_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_01_FLAK_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_HELMET_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_01_FLAK_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_01_FLAK_HELMET_03.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_02_FLAK_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_HELMET_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_02_FLAK_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_HELMET_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_02_FLAK_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_02_FLAK_HELMET_03.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_03_FLAK_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_HELMET_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_03_FLAK_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_HELMET_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_03_FLAK_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_03_FLAK_HELMET_03.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_04_FLAK_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_HELMET_01.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_04_FLAK_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_HELMET_02.png
+  - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_04_FLAK_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_HELMET_03.png
 
   # Deathskulls INV
 
