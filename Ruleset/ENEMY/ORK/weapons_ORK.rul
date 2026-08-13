@@ -988,14 +988,17 @@ items:
     bigSprite: {mod: 40k, index: 499}
     floorSprite: {mod: 40k, index: 303}
     handSprite: {mod: 40k, index: 880}
-    damageAlter:  # DA BOLTER
-      ToArmorPre: 0.1
-      ToArmor: 0.1
-      ToHealth: 1.0
-      ToStun: 0.2
-    explosionSpeed: 4
-    power: 60
+    power: 85 # 10 more power than Hellgun
     damageType: 1
+    damageAlter:
+      ToArmorPre: 0.3
+      ArmorEffectiveness: 0.75
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+      RandomWound: false
+    explosionSpeed: 4
     clipSize: 20
     battleType: 2
     invWidth: 1
