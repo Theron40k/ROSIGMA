@@ -4909,7 +4909,7 @@ extraSprites:
   ### all layers except the one with [ARMORTYPE] will be generic and reusable for future paperdolls
   ### LAYERS ORDER:
   # 1: ORK_BODY
-  # 2: ORK_PANTS #not implemented yet
+  # 2: ORK_PANTS
   # 3: ORK_PANTS_[ARMORTYPE]_PANTSACCESSORY # can be empty
   # 4: ORK_SHOES
   # 5: ORK_SHIRT
@@ -5040,28 +5040,25 @@ extraSprites:
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_EARS_01.png
   - typeSingle: ORK_EARS__9__ORK_BODY_01_EARS_02
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_EARS_02.png
-  - typeSingle: ORK_EARS__9__ORK_BODY_01_EARS_03.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_01_EARS_03
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_01_EARS_03.png
-
   - typeSingle: ORK_EARS__9__ORK_BODY_02_EARS_01
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_EARS_01.png
   - typeSingle: ORK_EARS__9__ORK_BODY_02_EARS_02
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_EARS_02.png
-  - typeSingle: ORK_EARS__9__ORK_BODY_02_EARS_03.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_02_EARS_03
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_02_EARS_03.png
-
   - typeSingle: ORK_EARS__9__ORK_BODY_03_EARS_01
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_EARS_01.png
   - typeSingle: ORK_EARS__9__ORK_BODY_03_EARS_02
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_EARS_02.png
-  - typeSingle: ORK_EARS__9__ORK_BODY_03_EARS_03.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_03_EARS_03
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_03_EARS_03.png
-
   - typeSingle: ORK_EARS__9__ORK_BODY_04_EARS_01
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_EARS_01.png
   - typeSingle: ORK_EARS__9__ORK_BODY_04_EARS_02
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_EARS_02.png
-  - typeSingle: ORK_EARS__9__ORK_BODY_04_EARS_03.png
+  - typeSingle: ORK_EARS__9__ORK_BODY_04_EARS_03
     fileSingle: Resources/ORK/Paperdolls/ORK_BASE/ORK_BODY_04_EARS_03.png
 
   # Player ORK FLAK
@@ -5139,6 +5136,84 @@ extraSprites:
     fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_HELMET_02.png
   - typeSingle: ORK_HEAD_FLAK_HELMET__12__ORK_BODY_04_FLAK_HELMET_03
     fileSingle: Resources/ORK/Paperdolls/ORK_FLAK/ORK_BODY_04_FLAK_HELMET_03.png
+
+  # Player ORK BURNA
+
+  - typeSingle: ORK_PANTS_BURNA_PANTSACCESSORY__3__ORK_BODY_01_02_ORK_PANTS_BURNA_PANTSACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_02_ORK_PANTS_BURNA_PANTSACCESSORY_01.png
+  - typeSingle: ORK_PANTS_BURNA_PANTSACCESSORY__3__ORK_BODY_01_02_ORK_PANTS_BURNA_PANTSACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_02_ORK_PANTS_BURNA_PANTSACCESSORY_02.png
+  - typeSingle: ORK_PANTS_BURNA_PANTSACCESSORY__3__ORK_BODY_03_04_ORK_PANTS_BURNA_PANTSACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_04_ORK_PANTS_BURNA_PANTSACCESSORY_01.png
+  - typeSingle: ORK_PANTS_BURNA_PANTSACCESSORY__3__ORK_BODY_03_04_ORK_PANTS_BURNA_PANTSACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_04_ORK_PANTS_BURNA_PANTSACCESSORY_02.png
+
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_01_ORK_BURNA_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_ARMOR_01.png
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_01_ORK_BURNA_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_ARMOR_02.png
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_02_ORK_BURNA_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_ARMOR_01.png
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_02_ORK_BURNA_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_ARMOR_02.png
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_03_ORK_BURNA_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_ARMOR_01.png
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_03_ORK_BURNA_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_ARMOR_02.png
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_04_ORK_BURNA_ARMOR_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_ARMOR_01.png
+  - typeSingle: ORK_BURNA_ARMOR__6__ORK_BODY_04_ORK_BURNA_ARMOR_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_ARMOR_02.png
+
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_01_ORK_BURNA_ARMOR_ACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_ARMOR_ACCESSORY_01.png
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_01_ORK_BURNA_ARMOR_ACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_ARMOR_ACCESSORY_02.png
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_02_ORK_BURNA_ARMOR_ACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_ARMOR_ACCESSORY_01.png
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_02_ORK_BURNA_ARMOR_ACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_ARMOR_ACCESSORY_02.png
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_03_ORK_BURNA_ARMOR_ACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_ARMOR_ACCESSORY_01.png
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_03_ORK_BURNA_ARMOR_ACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_ARMOR_ACCESSORY_02.png
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_04_ORK_BURNA_ARMOR_ACCESSORY_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_ARMOR_ACCESSORY_01.png
+  - typeSingle: ORK_BURNA_ARMOR_ACCESSORY__7__ORK_BODY_04_ORK_BURNA_ARMOR_ACCESSORY_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_ARMOR_ACCESSORY_02.png
+
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_01_ORK_BURNA_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_HELMET_01.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_01_ORK_BURNA_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_HELMET_02.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_01_ORK_BURNA_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_HELMET_03.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_01_ORK_BURNA_HELMET_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_01_ORK_BURNA_HELMET_04.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_02_ORK_BURNA_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_HELMET_01.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_02_ORK_BURNA_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_HELMET_02.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_02_ORK_BURNA_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_HELMET_03.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_02_ORK_BURNA_HELMET_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_02_ORK_BURNA_HELMET_04.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_03_ORK_BURNA_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_HELMET_01.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_03_ORK_BURNA_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_HELMET_02.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_03_ORK_BURNA_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_HELMET_03.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_03_ORK_BURNA_HELMET_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_03_ORK_BURNA_HELMET_04.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_04_ORK_BURNA_HELMET_01
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_HELMET_01.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_04_ORK_BURNA_HELMET_02
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_HELMET_02.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_04_ORK_BURNA_HELMET_03
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_HELMET_03.png
+  - typeSingle: ORK_HEAD_BURNA_HELMET__12__ORK_BODY_04_ORK_BURNA_HELMET_04
+    fileSingle: Resources/ORK/Paperdolls/ORK_BURNA/ORK_BODY_04_ORK_BURNA_HELMET_04.png
 
   # Deathskulls INV
 
