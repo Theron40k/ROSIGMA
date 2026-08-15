@@ -600,7 +600,7 @@ items:
 
   - type: STR_FUSION_GUN
     #refNode: *ELDAR_WEAPON_TEMPLATE             #listOrder 16500
-    listOrder: 16500
+    listOrder: 16501
     weight: 15
     categories: [STR_CAT_ELDAR, STR_CAT_MELTA, STR_CAT_TACTICAL]
     requiresBuyBaseFunc: []
@@ -1042,11 +1042,11 @@ items:
     meleeAnimation: 44
     power: 40 # Slaanesh 85
     damageBonus:
-      strength: 0.3 # Strength based weapon
-      melee: 0.1
+      strength: 0.2 # Strength based weapon
+      melee: 0.2
     meleeMultiplier:
-      melee: 0.3
-      strength: 0.7 #Strength Based Weapon
+      melee: 0.5
+      strength: 0.5 #Strength Based Weapon
     accuracyMelee: 100
     costMelee:
       time: 14  # Heavier grinding slash
@@ -1105,9 +1105,6 @@ items:
       melee: 0.7
       reactions: 0.3
     accuracyMelee: 100
-    tags:
-      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
-      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
     bigSprite: 4891
     floorSprite: 4891
     handSprite: 1618
@@ -1118,6 +1115,9 @@ items:
     invHeight: 3
     attraction: 8
     listOrder: 16300
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
 
   - type: STR_EPOWER_SWORD  # eldar mirrorsword
     requires:
@@ -1260,6 +1260,7 @@ items:
     invHeight: 3
     flatRate: true
     attraction: 8
+    experienceTrainingMode: 13 #train reactions and melee
     tags:
       ITEM_STRENGTH_REQUIREMENT: 30
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
@@ -1409,6 +1410,7 @@ items:
     listOrder: 16498
     inventoryMoveCost: #quickdraw
       basePercent: 50
+    experienceTrainingMode: 13 #train reactions and melee
     tags:
       REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
@@ -1459,6 +1461,182 @@ items:
     invHeight: 3
     flatRate: true
     attraction: 8
+
+  - type: STR_SCORPION_CHAINSWORD  # Tier2 Armor shredding strength based melee
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      # Scorpion Research
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    size: 0.2
+    costBuy: 10000
+    costSell: 2000
+    weight: 12 # Heavier mechanism
+    bigSprite: 4895
+    floorSprite: 4895
+    handSprite: 1650
+    meleeSound: {mod: 40k, index: 753}  # 753 Powersword miss
+    meleeHitSound: {mod: 40k, index: 709}  # 709 chainhit
+    meleeAnimation: 44
+    power: 60 # Slaanesh 85
+    damageBonus:
+      strength: 0.4 # Striking Scorpion Stat
+      melee: 0.1
+    meleeMultiplier:
+      melee: 0.3
+      strength: 0.7 # Striking Scorpion Stat
+    accuracyMelee: 100
+    costMelee:
+      time: 14  # Heavier grinding slash
+      energy: 2  # medium melee
+    flatMelee:
+      time: true
+      energy: true
+    damageAlter:  # DA CHAIN
+      ToArmorPre: 0.5
+      ToHealth: 0.8
+      RandomType: 7  # [50% - 200%] DEVASTATING WOUNDS
+      ToWound: 0.35
+      ToEnergy: 0.8
+      ToMorale: 0.2
+      ToStun: 0.1
+      RandomWound: false
+    damageType: 7
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    listOrder: 16500
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 40
+
+  - type: STR_BITING_BLADE  # T3 2 Handed chainsword Based on Eviscerator for BR Repentia
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      # Scorpion research
+      # Scorpion Exarch Reasearch
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    costBuy: 30000
+    costSell: 10000
+    size: 0.2
+    power: 80
+    costMelee:
+      energy: 8
+      time: 18
+    flatMelee:
+     time: true   # 90% of TU
+     energy: true  # 20 energy (flat)
+    damageBonus:
+      strength: 0.8 # +0.3 T3 weapon + Scorpion stat
+      melee: 0.2
+    damageAlter:
+      RandomWound: false
+      ToArmorPre: 0.4  # +10%
+      ToHealth: 0.9
+      RandomType: 7  # Devastating Wounds
+      ToWound: 0.3
+      ToEnergy: 0.5
+    weight: 50  # Heavier weapon meant for Scorpion Exarch
+    bigSprite: 4896
+    floorSprite: 4896
+    handSprite: 1658
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 709} #709 chainhit
+    meleeAnimation: {mod: 40k, index: 44}
+    damageType: 7
+    accuracyMelee: 90 # +10 Eldar Weapons are more accurate
+    clipSize: -1
+    battleType: 3
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    meleeMultiplier:
+      melee: 0.5
+      strength: 0.5 # Scorpion Stat
+    experienceTrainingMode: 13
+    listOrder: 16500
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 70 # Requires a lot of strength to wield with skill
+
+  - type: STR_SCORPIONS_CLAW #              16500
+    refNode: *ELDAR_PISTOL_TEMPLATE
+    weight: 30
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      # Scorpion Research
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    size: 0.2
+    dropoff: 5
+    costBuy: 30000
+    costSell: 10000
+    bigSprite: 4897
+    floorSprite: 4897
+    handSprite: 1666
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    compatibleAmmo:
+      - STR_SHURIKEN_CLIP
+      - STR_AVENGER_SHURIKEN_CLIP
+    accuracySnap: 75
+    accuracyAuto: 60
+#    accuracyAimed: 100
+    tuSnap: 18 # Slightly less than catapult
+    tuAuto: 30 # Slightly less than catapult
+#    tuAimed: 35
+    flatRate: true
+    snapRange: 10
+    autoRange: 8
+    confSnap:
+      shots: 4 # +1 (x2 shots on tabletop vs Shuriken Pistol)
+    autoShots: 12
+        # melee profile
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    meleePower: 40
+    meleeBonus:
+      strength: 1.5
+    meleeAlter: # Power Weapon
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 7 # Devastating Wounds
+    accuracyMelee: 80 # +10 Eldar Bonus over Powerfist
+    meleeMultiplier:
+      strength: 0.5 # Scorpion Stat
+      melee: 0.5
+    costMelee:
+      time: 25
+      energy: 4
+    flatMelee: true
+    confMelee:
+      name: STR_SCORPIONS_CLAW_MELEE
+    experienceTrainingMode: 6
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 30
+    attraction: 6
+    listOrder: 16500
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200
+      ITEM_STRENGTH_REQUIREMENT: 40 # Requires a lot of strength to wield with skill
+
 
   - &STR_WITCHWEAPON_REF
     type: STR_WITCHBLADE  # NEEDS REWORK (A LOT?)
