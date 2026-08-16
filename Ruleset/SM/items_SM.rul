@@ -622,6 +622,9 @@ items:
     specialUseEmptyHandShow: true
   - type: STR_POWERFIST
     # Intentionally separated from anchor
+    requiresBuy:
+      - STR_NOT_ADEPTUS_TERRA # not available to the alien and heretic
+      - STR_NOT_GUARD # not available to the imperial guards
     tags:
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 7

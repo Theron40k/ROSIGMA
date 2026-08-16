@@ -1001,6 +1001,8 @@ research:
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_VALHALLA # Valhallan Selected
     refNode: *STR_LOCKED
+  - name: STR_STRATIG_DONE  # IG Strategy Selected
+    refNode: *STR_LOCKED
   - delete: STR_CHOSEN_ELDAR
   - name: STR_CHOSEN_ELDAR  # Eldar Path - Inquisition xeno path
     refNode: *STR_LOCKED
@@ -2552,6 +2554,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_IGS
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_LASER_WEAPONS
       #      - STR_GUARD_SUPORT
@@ -2594,6 +2597,7 @@ research:
     getOneFree:
       - STR_STORMTROOPER_REQUISITION
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2636,6 +2640,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_IGS
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_GUARD_SUPORT  # added to enable medic armors
       - STR_LASER_WEAPONS
@@ -2673,6 +2678,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_STEELLEGION
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_STEELLEGION_GUARDSMEN
       - STR_SQUAT_GUARDSMEN  # Steel Legion link
@@ -2711,6 +2717,7 @@ research:
       - STR_GENERALLOCK
     # lookup: STR_CHOSEN_KRIEG  # Commented out until there is a 'pedia page, will crash otherwise
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_KRIEG_GUARDSMEN #Already Exists
       - STR_LASER_WEAPONS
@@ -2751,6 +2758,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_VALHALLA
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_VALHALLAN_GUARDSMEN
       - STR_VALHALLAN_WEAPONS
