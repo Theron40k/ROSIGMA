@@ -6,18 +6,6 @@
 # player
 
 events:
-  - name: STR_STANDARD_INQ_GAME_START
-    adhocMissionScriptTags: ["gameStartHard"]
-    description: STR_STANDARD_INQ_GAME_START_DESC
-    background: StormtroopersBG.SCR
-    interruptResearch: STR_NOT_NORMAL_INQUISITION
-    researchList: [STR_CHAMBER_NOT_ARBITES]
-    spawnedCraftType: STR_XIPHON_GK
-    timer: 2880
-    # everyMultiSoldierList:
-    #   STR_INQ_STORMTROOPER: 4  # give extra stormtroops in this default case
-    # everyMultiItemList:
-    #   STR_CRATED_ARVUS_GK: 1
 
   - name: STR_REINFORCEMENTS_GK
     adhocMissionScriptTags: ["gameStartHard"]
@@ -389,6 +377,7 @@ events:
         STR_FLAMETHROWER: 1
         STR_FLAMETHROWER_CLIP: 4
         STR_SATCHEL_CHARGE_HE: 3
+        STR_SATCHEL_DETONATOR: 3
 
   - name: STR_INQ_REQUISITION_OGRYNS_EVENT
     description: STR_INQ_REQUISITION_OGRYNS_EVENT_DESCRIPTION  # "The local Guard regiment have acquiesced to your request and dispatched Ogryn bodyguards."
@@ -462,6 +451,7 @@ events:
       STR_FLAMETHROWER: 1
       STR_FLAMETHROWER_CLIP: 2
       STR_SATCHEL_CHARGE_HE: 2
+      STR_SATCHEL_DETONATOR: 2
     spawnedPersons: 2
     spawnedPersonType: STR_CATACHANVET_FIGHTER
   - name: STR_INQ_SECURE_SUPPORT_GUARD_SLEGION_EVENT
@@ -1721,18 +1711,17 @@ events:
     description: STR_INQ_RECRUITS_RADICAL_ROAD_DESCRIPTION
     spawnedCraftType: STR_ARVUS_ADEPTAS
     timer: 30
-    spawnedPersonType: STR_SCIENTIST
-    spawnedPersons: 15    # extra scientists
     everyMultiSoldierList:
       STR_IMPERIAL_INTERROGATOR: 1
       STR_INQ_STORMTROOPER: 4
     spawnedSoldier:
       previousTransformations:                    # Mark all with RetinueInduct to enable Chamber Transforms.
-        STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct.
+        STR_INQ_TRANSFORM_RETINUE_INDUCTION: 1  # Note this method does not apply stats from RetinueInduct; intended.
     everyMultiItemList:
       STR_SERVITOR: 2
       STR_LASER_RIFLEG: 10
       STR_LASGUN_CLIP: 20
+    adhocMissionScriptTags: ["gameStart"]
 
   - name: STR_INQ_RECRUITS_RADICAL_ROAD2
     description: STR_INQ_RECRUITS_RADICAL_ROAD_DESCRIPTION2
@@ -1834,6 +1823,7 @@ events:
       STR_STINGRAY_LAUNCHER: 1
       STR_STINGRAY_MISSILES: 25
     adhocMissionScriptTags: ["gangerbaseIMPERIAL_LAW"]
+
 
 adhocScripts:
 
