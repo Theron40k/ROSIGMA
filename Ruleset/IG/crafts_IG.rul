@@ -641,6 +641,7 @@ crafts:
     # end of port from other alertsounds_disable
     craftInventoryTile: [4, 10, 0]
     requires:
+      - STR_STRATIG_DONE  # to make sure it is only available AFTER choosing an IG strategy
       - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_NOT_VALHALLAN_STRATEGY
@@ -752,6 +753,7 @@ crafts:
     repairRate: 5  # was 1
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_STRATIG_DONE
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_NOT_VALHALLAN_STRATEGY
 
@@ -1287,6 +1289,7 @@ crafts:
     fuelMax: 1500  # was 1000
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_STRATIG_DONE
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_NOT_VALHALLAN_STRATEGY
 
