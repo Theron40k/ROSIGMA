@@ -8239,6 +8239,61 @@ alienMissions:
         trajectory: P5
         timer: 30
 
+  # Override 40k mod Ork base patrol missions
+  - delete: STR_ORK_WAGGON_PATROL_SMALL
+  - type: STR_ORK_WAGGON_PATROL_SMALL
+    retaliationOdds: 0
+    raceWeights:
+      0:  # Early month patrols use less elite Ork race list
+        STR_ORK_EARLY: 100
+      3:
+        STR_ORK: 100
+    operationType: 1
+    points: 5
+    waves:
+      - ufo: STR_TRUKK_UFO
+        count: 1
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+
+  - delete: STR_ORK_WAGGON_PATROL_MEDIUM
+  - type: STR_ORK_WAGGON_PATROL_MEDIUM
+    retaliationOdds: 0
+    raceWeights:
+      0:  # Early month patrols use less elite Ork race list
+        STR_ORK_EARLY: 100
+      2:
+        STR_ORK: 100
+    operationType: 1
+    points: 5
+    waves:
+      - ufo: STR_TRUKK_UFO
+        count: 2
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+      - ufo: STR_WAGGON_UFO
+        count: 1
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+
+  - delete: STR_ORK_WAGGON_PATROL_LARGE
+  - type: STR_ORK_WAGGON_PATROL_LARGE
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    operationType: 1
+    points: 5
+    waves:
+      - ufo: STR_WAGGON_UFO
+        count: 2
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+      - ufo: STR_WAGGON_CONVOY_UFO
+        count: 2
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+
   - type: STR_ORK_BASE_SPACEHULK_LEVEL3
     raceWeights:
       0:
