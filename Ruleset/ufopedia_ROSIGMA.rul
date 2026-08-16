@@ -3476,7 +3476,7 @@ ufopaedia:
   - delete: STR_GUARD_BARRACKS
   - id: STR_GUARD_BARRACKS  # Barracks
     requires:
-      - STR_GUARD_AND_ARBITES
+      - STR_GUARD_BARRACKS
     type_id: 16
     section: STR_BASE_FACILITIES
     image_id: guardBarracks.SPK
@@ -4777,7 +4777,6 @@ ufopaedia:
     type_id: 12
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_GUARD_AND_ARBITES
       - STR_CRAFT_QUADLASER
     image_id: CRAFT_QUAD_LASCANNON.SPK
     text: STR_CRAFT_QUADLASER_UFOPEDIA
@@ -4787,7 +4786,6 @@ ufopaedia:
     type_id: 12
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_GUARD_AND_ARBITES
       - STR_CRAFT_AUTOCANNON
     image_id: CRAFT_QUAD_AUTOCANNON.SPK
     text: STR_CRAFT_AUTOCANNON_UFOPEDIA
@@ -13741,7 +13739,8 @@ ufopaedia:
   - delete: STR_GRENADE_LAUNCHER
   - id: STR_GRENADE_LAUNCHER
     requires:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: GRENADE_LAUNCHER_VOSS.SPK
@@ -13753,7 +13752,8 @@ ufopaedia:
     image_id: CODEX_STR_GRENADE_LAUNCHER_STEEL_LEGION.SPK
   - id: STR_GRENADE_LAUNCHER_CHAOS # chaos grenade launcher
     requires:
-      - STR_GUARD_AND_ARBITES
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
       - STR_CHAOS_ARMORY_EXAM_BASIC
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -13945,8 +13945,8 @@ ufopaedia:
   - id: STR_DISPOSABLE_LAUNCHER_KRAK  # Disposable Krak Launcher
     type_id: 14
     requires:
-      - STR_GUARD_AND_ARBITES
       - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1ML.SPK
     text: STR_DISPOSABLE_LAUNCHER_KRAK_UFOPEDIA
@@ -17783,8 +17783,8 @@ ufopaedia:
 
   - id: STR_HEAVY_WEAPON_TOOLS  # Heavy Weapon Toolkit
     requires:
-      - STR_GUARD_AND_ARBITES
-      - STR_NOT_CHAOSCULT
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_IMPERIAL_GUARD_OPERATIONS
     type_id: 14
     section: STR_TOOLS_AND_RESOURCES
     image_id: HEAVY_WEAPON_TOOLS.SPK

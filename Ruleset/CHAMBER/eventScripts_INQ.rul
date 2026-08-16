@@ -1,13 +1,4 @@
 eventScripts:
-  - type: INQ_DEFAULT_GAME_START
-    # Fires event that has a delay at game start, event will be interrupted if player chooses a strategy
-    eventWeights:
-      0:
-        STR_STANDARD_INQ_GAME_START: 1
-    firstMonth: 0
-    lastMonth: 0
-    minDifficulty: 1
-    maxDifficulty: 1
 
     ## Secure Support (Agents) Scripts:
     ## Theme: Wide range of possibilities. On a Good Score, better results are added (below)
@@ -443,7 +434,7 @@ eventScripts:
 
   # Radical Road: free Interrogator every month.
   - type: STR_INQ_RR_INTERROGATOR_REPLACEMENT
-    firstMonth: 1
+    firstMonth: 2
     executionOdds: 100
     researchTriggers:
       STR_RADICAL_INQUISITOR_STRATEGY: true
