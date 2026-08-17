@@ -1539,7 +1539,7 @@ items:
     damageAlter:
       RandomWound: false
       ToArmorPre: 0.4  # +10%
-      ToHealth: 0.9
+      ToHealth: 1.5
       RandomType: 7  # Devastating Wounds
       ToWound: 0.3
       ToEnergy: 0.5
@@ -1565,6 +1565,7 @@ items:
     listOrder: 16500
     tags:
       ITEM_STRENGTH_REQUIREMENT: 70 # Requires a lot of strength to wield with skill
+      DAMAGE_RESIST_PENETRATION_PERCENT: 25
 
   - type: STR_SCORPIONS_CLAW #              16500
     refNode: *ELDAR_PISTOL_TEMPLATE
