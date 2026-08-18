@@ -15744,14 +15744,6 @@ ufopaedia:
     type_id: 4
     section: STR_NOT_AVAILABLE
 
-  - id: STR_DRAGON_AXE
-    type_id: 14
-    section: STR_WEAPONS_AND_EQUIPMENT
-    image_id: ELDAR_DRAGON_AXE_CODEX.SPK
-    requires:
-      - STR_ELDAR_ARMORY_EXAM
-    text: STR_DRAGON_AXE_CODEX
-
   - id: STR_FIREPIKE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -15868,7 +15860,40 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_POWER_GLAIVE_CODEX
-  - delete: STR_ELDAR_CHAINSWORD
+
+  - id: STR_DRAGON_AXE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_DRAGON_AXE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_DRAGON_AXE_CODEX
+
+  - id: STR_SCORPION_CHAINSWORD
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_SCORPION_CHAINSWORD_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_SCORPION_CHAINSWORD_CODEX
+
+  - id: STR_BITING_BLADE
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_BITING_BLADE_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_BITING_BLADE_CODEX
+
+  - id: STR_SCORPIONS_CLAW
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: ELDAR_SCORPIONS_CLAW_CODEX.SPK
+    requires:
+      - STR_ELDAR_ARMORY_EXAM
+    text: STR_SCORPIONS_CLAW_CODEX
+
+  - delete: STR_ELDAR_CHAINSWORD # SCORPION CHAINSWORD (ENEMY )
   - id: STR_ELDAR_CHAINSWORD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -15876,7 +15901,8 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_ELDAR_CHAINSWORD_UFOPEDIA
-  - delete: STR_EPOWER_SWORD
+
+  - delete: STR_EPOWER_SWORD # Banshee Blade
   - id: STR_EPOWER_SWORD
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -15884,6 +15910,7 @@ ufopaedia:
     requires:
       - STR_ELDAR_ARMORY_EXAM
     text: STR_EPOWER_SWORD_UFOPEDIA
+
   - id: STR_WITCHBLADE
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
