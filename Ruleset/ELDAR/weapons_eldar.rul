@@ -20,7 +20,7 @@ items:
     weight: 17
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL]
     size: 0.3
-    dropoff: 5
+    dropoff: 6
     costBuy: 6000
     costSell: 2750
     bigSprite: {mod: 40k, index: 391}
@@ -36,7 +36,7 @@ items:
     twoHanded: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 200
     autoShots: 9
     bulletSpeed: 30
     attraction: 5
@@ -112,7 +112,7 @@ items:
     autoRange: 10
     listOrder: 16103
     tags:
-      REACTION_MULTIPLIER: 150 # +50 Avenger Trait
+      REACTION_MULTIPLIER: 120 # 20% Avenger Bonus
 
   - type: STR_AVENGER_CATAPULT_SCOPED
     refNode: *ELDAR_WEAPON_TEMPLATE
@@ -143,7 +143,7 @@ items:
       shots: 3
     listOrder: 16103
     tags:
-      REACTION_MULTIPLIER: 150 # +50 Avenger Trait
+      REACTION_MULTIPLIER: 120 # 20% Avenger Bonus
 
   - &ELDAR_PISTOL_TEMPLATE
     type: STR_CATAPULT_PISTOL #              16000
@@ -155,7 +155,7 @@ items:
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
     size: 0.2
-    dropoff: 5
+    dropoff: 6
     costBuy: 3500
     costSell: 1000
     bigSprite: {mod: 40k, index: 390}
@@ -181,14 +181,14 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 200
     bulletSpeed: 30
     attraction: 1
     listOrder: 16000
     inventoryMoveCost: #quickdraw
       basePercent: 50
     tags:
-      REACTION_MULTIPLIER: 200
+      REACTION_MULTIPLIER: 200 # +100% Pistol
 
   - type: STR_AVENGER_PISTOL
     refNode: *ELDAR_PISTOL_TEMPLATE
@@ -221,14 +221,14 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 200
     bulletSpeed: 30
     attraction: 1
     listOrder: 16001
     inventoryMoveCost: #quickdraw
       basePercent: 50
     tags:
-      REACTION_MULTIPLIER: 250 # +50 Avenger Trait +100 Pistol
+      REACTION_MULTIPLIER: 220 # +20 Avenger +100 Pistol
 
   - type: STR_AVENGER_PISTOL_SCOPED
     refNode: *ELDAR_PISTOL_TEMPLATE
@@ -263,14 +263,14 @@ items:
     twoHanded: false
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 200
     bulletSpeed: 30
     attraction: 1
     listOrder: 16002
     inventoryMoveCost: #quickdraw
       basePercent: 50
     tags:
-      REACTION_MULTIPLIER: 250
+      REACTION_MULTIPLIER: 220 # +100 Pistol +20 Avenger
 
   - type: STR_RANGER_LONG_RIFLE #TEMPORARY COPY STR_TAU_PULSE_RIFLE
     requires:
@@ -422,7 +422,7 @@ items:
     blockBothHands: true
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 200
     autoShots: 12
     bulletSpeed: 30
     attraction: 1
@@ -550,7 +550,7 @@ items:
     maxRange: 12
     invWidth: 2
     invHeight: 3
-    armor: 30
+    armor: 200
     autoShots: 3
     attraction: 7
 
@@ -828,7 +828,7 @@ items:
     oneHandedPenalty: 75
     invWidth: 2
     invHeight: 3
-    armor: 100
+    armor: 300
     #autoRange: 8
     snapRange: 12
     listOrder: 16600
@@ -861,7 +861,7 @@ items:
     oneHandedPenalty: 75
     invWidth: 2
     invHeight: 3
-    armor: 100
+    armor: 300
     aimRange: 20
     snapRange: 16
     listOrder: 16620
@@ -1264,7 +1264,7 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 30
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
-      REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100 AVENGER BONUS
+      REACTION_MULTIPLIER: 120 # 20% AVENGER BONUS
 
   - type: STR_DIRESWORD  # T2 Avenger Nemesis FORCE weapon that depends on soul inside spiritstone not wielder.
     requires:
@@ -1324,7 +1324,7 @@ items:
       DAMAGE_BONUS_PERCENT_NURGLE: 170 # durable because of warp magic, take away the magic, you have a dead body
       DAMAGE_BONUS_PERCENT_TYRANID: 150 # tyranids especially vulneable to psychic interference due to reliance on hive mind
       DAMAGE_BONUS_PERCENT_ELDAR: 140
-      REACTION_MULTIPLIER: 150 # multiplies base reaction score by this amount divided by 100 AVENGER BONUS
+      REACTION_MULTIPLIER: 120 # 20% AVENGER BONUS
 
   - type: STR_ELDAR_POWER_GLAIVE  #  T3 Avenger melee weapon  BASED ON STR_DOMINION_HALBERD
     categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
@@ -1635,7 +1635,7 @@ items:
     inventoryMoveCost: #quickdraw
       basePercent: 50
     tags:
-      REACTION_MULTIPLIER: 200
+      REACTION_MULTIPLIER: 120 # +20 Avenger
       ITEM_STRENGTH_REQUIREMENT: 40 # Requires a lot of strength to wield with skill
 
 
