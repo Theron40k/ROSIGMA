@@ -753,7 +753,8 @@ armors:
     deathMale:            [3153, 3154, 3155]  # yamllint disable-line rule:colons
     deathFemale:          [3153, 3154, 3155]  # yamllint disable-line rule:colons
 
-  - type: STR_ELDAR_RANGER_ARMOR_P
+  - &STR_ELDAR_RANGER_ARMOR_VOICE
+    type: STR_ELDAR_RANGER_ARMOR_P
     selectUnitMale:       [3075, 3076, 3077, 3078, 3079]  # yamllint disable-line rule:colons
     selectUnitFemale:     [3080, 3081, 3082, 3083, 3084]  # yamllint disable-line rule:colons
     startMovingMale:      [3085, 3086, 3087, 3088, 3089]  # yamllint disable-line rule:colons
@@ -764,6 +765,8 @@ armors:
     annoyedFemale:        [3108, 3109, 3110]  # yamllint disable-line rule:colons
     deathMale:            [3111, 3112, 3113]  # yamllint disable-line rule:colons
     deathFemale:          [3114, 3115, 3116]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_RANGER_SNIPER_ARMOR_P
+    refNode: *STR_ELDAR_RANGER_ARMOR_VOICE
 
 # CHAOS PLAYER ARMOR VOICES
   - type: STR_CHAOS_ADEPTAS_UNDIVIDED_ARMOR

@@ -103,9 +103,22 @@ soldiers:
       - Names/eldar_guardian.nam
 
   - type: STR_ELDAR_RANGER_PLAYER # Eldar Ranger
-    refNode: *ELDAR_GUARDIAN
+    requires:
+      - STR_RECRUIT_ELDAR_T1
+    flagOffset: 100
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    femaleFrequency: 50
     armor: STR_ELDAR_RANGER_ARMOR_P
-    costBuy: 0 #eldar ranger are requested via recipie
+    costBuy: 0 #eldar ranger are requested via recipe
     costSalary: 15000
     minStats:
       tu: 55
