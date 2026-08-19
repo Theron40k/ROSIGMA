@@ -176,6 +176,7 @@ items:
     autoRange: 8
     confSnap:
       shots: 3
+    autoShots: 9
     experienceTrainingMode: 6
     battleType: 1
     twoHanded: false
@@ -281,6 +282,11 @@ items:
     requiresBuyBaseFunc: []
     weight: 17
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # Fixed to armor
+    costBuy: 0 # Cannot be bought only comes with Ranger
+    costSell: 0
     size: 0.4
     bigSprite: 4857
     floorSprite: 4857
@@ -290,8 +296,6 @@ items:
     hitSound: {mod: 40k, index: 19}
     hitAnimation: {mod: 40k, index: 100}
     reloadSound: 1878
-    costBuy: 40000
-    costSell: 20000
     explosionSpeed: 10
     bulletSpeed: 100
     accuracyAuto: 70
@@ -329,7 +333,6 @@ items:
         set particle_lifetime 20;
         set subvoxel_drift 3;
         return;
-    recover: true
     listOrder: 16600
 
   - type: STR_RANGER_LONG_RIFLE_SCOPED #TEMPORARY COPY STR_TAU_PULSE_RIFLE
@@ -341,6 +344,11 @@ items:
     requiresBuyBaseFunc: []
     weight: 20
     categories: [STR_CAT_SNIPER, STR_CAT_ELDAR]
+    fixedWeapon: true
+    fixedWeaponShow: true
+    recover: false # Fixed to armor
+    costBuy: 0 # Cannot be bought only comes with Ranger
+    costSell: 0
     size: 0.4
     bigSprite: 4858
     floorSprite: 4858
@@ -350,8 +358,6 @@ items:
     hitSound: {mod: 40k, index: 19}
     hitAnimation: {mod: 40k, index: 100}
     reloadSound: 1878
-    costBuy: 40000
-    costSell: 20000
     explosionSpeed: 10
     bulletSpeed: 100
     accuracyAuto: 70
@@ -389,8 +395,9 @@ items:
         set particle_lifetime 20;
         set subvoxel_drift 3;
         return;
-    recover: true
     listOrder: 16610
+    tags:
+      REACTION_MULTIPLIER: 60 # -40 Sniper Malus
 
   - type: STR_SHURIKEN_CANNON             # tentative start, needs fixing
     refNode: *ELDAR_WEAPON_TEMPLATE
