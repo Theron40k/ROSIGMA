@@ -4,7 +4,7 @@ events:
     description: STR_BLACKTEMPLAR_CARE_PACKAGE_DESCRIPTION
     background: BLOODCLAW.SCR
     interruptResearch: STR_NOT_BLACKTEMPLARS
-    adhocMissionScriptTags: ["gameStartHard"]
+    adhocMissionScriptTags: ["gameStartBTBR1"]
     spawnedPersons: 10
     spawnedCraftType: STR_INTERCEPTOR
     spawnedPersonType: STR_BTMARINE_PLAYER
@@ -28,7 +28,18 @@ events:
 
   - name: STR_SMGIVESECONDINTERCEPTOR
     description: STR_GIVESECONDINTERCEPTOR_DESCRIPTION
+    adhocMissionScriptTags: ["gameStartBTBR2"]
     spawnedCraftType: STR_INTERCEPTOR
+    researchList: [STR_BTBR_WAAGHMORE]
+
+  - name: STR_BTBR_WAAGHMOREEVENT
+    description: STR_BTBR_WAAGHMORE_DESCRIPTION
+    adhocMissionScriptTags: ["gameStartBTBR3"]
+    researchList: [STR_BTBR_WAAGHMORE2]
+
+  - name: STR_BTBR_WAAGHMOREEVENT2
+    description: STR_BTBR_WAAGHMORE2_DESCRIPTION
+    adhocMissionScriptTags: ["gameStartBTBR4"]
 
   - name: STR_CHAMPIONJOIN_EVENT
     description: STR_CHAMPIONJOIN_SCRIPT_DESC

@@ -18637,3 +18637,64 @@ alienMissions:
   - type: STR_ELDAR_SUP_AIR_PATROL
     operationSpawnZone: 1
     operationBaseType: STR_ELDAR_BASE
+
+  # black templar bloody rose orks waagh
+
+  - type: STR_ORK_BASE_STARTBTBR1
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR1
+    points: 0
+
+  - type: STR_ORK_BASE_STARTBTBR2
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR2
+    points: 0
+
+  - type: STR_ORK_BASE_STARTBTBR3
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR3
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR3
+    points: 0
+
+  - type: STR_ORK_BASE_FROM_EXISTINGBTBR
+    raceWeights: {}
+    operationType: 1
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR1
+    points: 0
+    waves:
+      - ufo: STR_WAGGON_UFO
+        count: 2
+        timer: 0
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+      - ufo: STR_WAGGON_UFO
+        count: 1
+        timer: 7200
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
