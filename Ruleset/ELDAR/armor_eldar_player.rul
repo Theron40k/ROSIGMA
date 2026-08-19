@@ -21,7 +21,7 @@ armors:
     type: STR_ELDAR_ARMOR_GUARDIAN_PLAYER
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 15
+    visibilityAtDark: 20
     frontArmor: 60
     sideArmor: 50
     rearArmor: 40
@@ -120,14 +120,15 @@ armors:
       throwing: -3
       melee: 3
 
-  - type: STR_ELDAR_RANGER_ARMOR_P # Eldar Ranger Armor
+  - &RANGER_ARMOR
+    type: STR_ELDAR_RANGER_ARMOR_P # Eldar Ranger Scout Armor
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
-    camouflageAtDay: 25  # you need to be 15 tiles closer than max vision range to see this unit in the light
+    visibilityAtDark: 30
+    camouflageAtDay: 20  # you need to be 20 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: 15  # you need to be 10 tiles closer than max vision range (at night!) to see this unit in the dark
-    antiCamouflageAtDay: 5
-    antiCamouflageAtDark: 8
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
     frontArmor: 60
     sideArmor: 50
     rearArmor: 40
@@ -193,8 +194,22 @@ armors:
       F11: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY1"]
       F12: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY11"]
     stats: #some stat changes for ranger
-      firing: 7
-      melee: -7
+      firing: 5
+    builtInWeapons:
+      - STR_RANGER_LONG_RIFLE
+      - STR_RANGER_LONG_RIFLE_MAG
+
+  - type: STR_ELDAR_RANGER_SNIPER_ARMOR_P
+    refNode: *RANGER_ARMOR
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    units:
+      - STR_ELDAR_RANGER_PLAYER
+    stats: #stats for sniper
+      firing: 10
+    builtInWeapons:
+      - STR_RANGER_LONG_RIFLE_SCOPED
+      - STR_RANGER_LONG_RIFLE_MAG
 
 # DEPRECATED. in future version (3.4 onward) please add - delete: name to keep rosigma clean
 
@@ -370,6 +385,7 @@ armors:
     sideArmor: 75
     rearArmor: 60
     underArmor: 65
+    spriteSheet: ELDAR_SCORPION.SPK
     corpseBattle:
       - STR_ELDAR_SCORPION_CORPSE_P
     layersDefaultPrefix: "1"
