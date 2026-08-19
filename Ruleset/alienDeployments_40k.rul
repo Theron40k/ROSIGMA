@@ -25065,7 +25065,6 @@ alienDeployments:
       STR_ORK_BASE_FROM_EXISTINGBTBR: 5
       STR_ORK_OUTPOST: 5
       STR_ORK_AIR_PATROL: 5
-      STR_ORK_WAAAGH: 5
     genMissionFreq: 6 # average of 1.8/month
     alienBaseUpgrades:
       0:
@@ -25160,7 +25159,6 @@ alienDeployments:
     genMissionFreq: 7 # average of 2/month
     baseDetectionRange: 600            # base radar range, in nautical miles
     baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
-    huntMissionMaxFrequency: 300       # generate hunt mission max every 300 minutes (= 5 hours)
     huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
       0:
         STR_ORK_AIR_PATROL: 100
@@ -25262,7 +25260,6 @@ alienDeployments:
     genMissionFreq: 9 # average of 2.6/month
     baseDetectionRange: 600            # base radar range, in nautical miles
     baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
-    huntMissionMaxFrequency: 300       # generate hunt mission max every 300 minutes (= 5 hours)
     huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
       0:
         STR_ORK_AIR_PATROL: 100
@@ -25374,7 +25371,6 @@ alienDeployments:
     genMissionFreq: 10 # average of 3/month
     baseDetectionRange: 600            # base radar range, in nautical miles
     baseDetectionChance: 50            # base radar chance (once every 10 minutes), in percent
-    huntMissionMaxFrequency: 200       # generate hunt mission max every 300 minutes (= 5 hours)
     huntMissionWeights:               # which hunt mission to generate, based on months passed and weights
       0:
         STR_ORK_AIR_PATROL: 50
@@ -25382,7 +25378,7 @@ alienDeployments:
     width: 60
     length: 60
     height: 9
-    huntMissionMaxFrequency: 600
+    huntMissionMaxFrequency: 400
     unlockedResearch: STR_ORK_BASE_LEVEL5_DEFEATED
     missionBountyItem: STR_ALIEN_ALLOYS
     missionBountyItemCount: 200
