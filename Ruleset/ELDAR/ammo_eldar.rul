@@ -111,7 +111,8 @@ items:
     armor: 15
     attraction: 7
 
-  - type: STR_RANGER_LONG_RIFLE_MAG #TEMPORARY copied STR_TAU_PULSE_MAG
+  - &LONG_RIFLE_MAG_TEMPLATE
+    type: STR_RANGER_LONG_RIFLE_MAG #TEMPORARY copied STR_TAU_PULSE_MAG
     categories: [STR_CAT_ELDAR, STR_CAT_SNIPER]
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
@@ -142,7 +143,7 @@ items:
     explosionSpeed: 10
     bulletSpeed: 25 # slow it down some
     battleType: 2
-    clipSize: 20
+    clipSize: 6
     power: 95
     damageType: 1 # was 5
     damageAlter:
@@ -153,6 +154,12 @@ items:
       ToHealth: 0.8
       IgnoreSelfDestruct: true
     listOrder: 16620
+
+  - type: STR_RANGER_LONG_RIFLE_MAG_FIXED # Comes with weapon
+    refNode: *LONG_RIFLE_MAG_TEMPLATE
+    recover: false
+    costBuy: 0
+    costSell: 0
 
   - type: STR_DRAGON_BREATH_FLAMER_FUEL
     categories: [STR_CAT_ELDAR, STR_CAT_FLAMER]
