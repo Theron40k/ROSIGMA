@@ -130,6 +130,81 @@ adhocScripts:
     startDelay: 4320  # 3 days
     randomDelay: 4320  # additional random 0 to 3 day
 
+  - type: gameStartBTBR1
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR1"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR2
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR2"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR3
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR3"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR4
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR4"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR5
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR5"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
 
 
 missionScripts:
@@ -154,6 +229,7 @@ missionScripts:
     executionOdds: 70
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: true
 
   - type: newTraditionalBasesLater
     missionWeights:
@@ -169,6 +245,7 @@ missionScripts:
     executionOdds: 100
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: true
 
   - type: newTraditionalBasesExtra
     missionWeights:
@@ -185,6 +262,7 @@ missionScripts:
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: true
       STR_NOT_WORDBEARERS: true
+      STR_NOT_BLACKTEMPLARS: true
 
   # chaos version
   - type: newTraditionalBasesEarlyCHAOS
@@ -4569,3 +4647,44 @@ missionScripts:
       STR_BOOK_KORPHAERON: true
       STR_WBMISSION8DONE: true
       STR_WBMISSION9DONE: false
+
+  # black templar bloody rose
+
+  - type: newTraditionalBasesEarlyBTBR
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+        # Low chances of harder races
+    firstMonth: 1
+    lastMonth: 2
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: false
+
+  - type: newTraditionalBasesLaterBTBR
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR2: 100
+    firstMonth: 3
+    lastMonth: 4
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: false
+
+  - type: newTraditionalBasesExtraBTBR
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR3: 100
+    firstMonth: 5
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: false
