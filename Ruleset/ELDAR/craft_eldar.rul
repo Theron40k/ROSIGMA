@@ -1,6 +1,6 @@
 crafts:
   - type: STR_WAVESERPENT
-    #requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: []
     requires:
       - STR_ELDAR_CRAFT_RESEARCH
     allowedSoldierGroups: !remove
@@ -52,19 +52,27 @@ crafts:
       - [4, 5, 0, 0]  # external
       - [5, 5, 0, 0]  # external
     spacecraft: true
-  - type: STR_SCORPION
+  - type: STR_SCORPION #todo: clone a player version?
     allowedSoldierGroups: !remove
       - 4
       - 5
-  - type: STR_HEMLOCK
+  - type: STR_HEMLOCK # late game fighter
     allowedSoldierGroups: !remove
       - 4
       - 5
-  - type: STR_COBRA
+  - type: STR_COBRA #todo: clone a player version ?
     allowedSoldierGroups: !remove
       - 4
       - 5
-  - type: STR_HORNET
+  - type: STR_HORNET # fighter
     allowedSoldierGroups: !remove
       - 4
       - 5
+    requiresBuyBaseFunc: []
+    requires:
+      - STR_ELDAR_CRAFT_RESEARCH
+
+items:
+  - type: STR_CRATED_HORNET
+    size: 0
+    ufopediaType: STR_HORNET
