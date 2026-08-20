@@ -5603,7 +5603,20 @@ items:
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
 
+  - type: STR_PSYKER_LIGHTNING_STRIKE
+    recover: false
+
+  - type: STR_HEALING_TOUCH
+    recover: false
+
+  - type: STR_TELEKINETIC_SHIELD
+    recover: false
+
+  - type: STR_DOUSE_FLAMES
+    recover: false
+
   - type: STR_TELEPATH_STAFF  # Nothing should mind control
+    recover: false
     armor: 200
     costPanic:
       time: 25
@@ -5618,6 +5631,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 5
 
   - type: STR_PSYKER_STAFF
+    recover: false
     armor: 200
     defaultInventorySlot: STR_LEFT_HAND
     tags:
@@ -5625,6 +5639,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 5
 
   - type: STR_TELEKINE_STAFF
+    recover: false
     armor: 200
     maxRange: 15
     accuracySnap: 75  # was 100
@@ -5644,6 +5659,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 5
 
   - type: STR_PSYKER_STUN_STRIKE
+    recover: false
     damageType: 1
     power: 10
     damageBonus:
@@ -5665,6 +5681,7 @@ items:
       DAMAGE_RESIST_PENETRATION_PERCENT: 50
 
   - type: STR_PYROMANCER_STAFF
+    recover: false
     armor: 200
     defaultInventorySlot: STR_LEFT_HAND
     costSnap:
@@ -5682,6 +5699,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 2
 
   - type: STR_PSYKER_FLAME_STRIKE
+    recover: false
     damageAlter:
       ArmorEffectiveness: 1.0
     tags:
@@ -6306,6 +6324,7 @@ items:
     defaultInventorySlot: STR_LEFT_HAND
 
   - type: STR_PSYKER_SPELL
+    recover: false
     weight: 0
     invWidth: 0
     invHeight: 0
