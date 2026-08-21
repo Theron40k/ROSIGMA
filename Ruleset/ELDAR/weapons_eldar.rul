@@ -1257,7 +1257,7 @@ items:
     accuracyMelee: 100
     size: 0.2
     costBuy: 0        # Manufacture only
-    costSell: 0       # Taboo reliclike weapon, not to be traded like a commodity
+    costSell: 0       # Not for trading
     weight: 10
     bigSprite: 4894
     floorSprite: 4894
@@ -1285,7 +1285,7 @@ items:
     listOrder: 16497
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
     battleType: 3
-    experienceTrainingMode: 2         # 50% Melee, slower development of skills because user is aided
+    experienceTrainingMode: 32 # train nothing, powerful weapon but ruins development of soldier (3 train melee 33% chance, alternative)
     damageType: 5
     damageAlter:     # DA POWER
       ArmorEffectiveness: 0.7
