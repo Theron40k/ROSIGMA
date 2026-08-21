@@ -4370,6 +4370,23 @@ ufopaedia:
       - STR_ORKZ_MIDTIER
     type_id: 11
 
+### #CRAFTS.AT.ELDAR#
+  - id: STR_WAVESERPENT
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: ELDAR_WAVE_SERPENT_TRANSPORT.SPK
+    text: STR_WAVESERPENT_CODEX
+    requires:
+      - STR_ELDAR_CRAFT_RESEARCH
+    type_id: 11
+
+  - id: STR_HORNET
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: ELDAR_HORNET_FIGHTER.SPK
+    text: STR_HORNET_CODEX
+    requires:
+      - STR_ELDAR_CRAFT_RESEARCH
+    type_id: 11
+
 ## #CRAFTS.SOB#
   - id: STR_ARVUS_ADEPTAS
     type_id: 11
@@ -10845,6 +10862,13 @@ ufopaedia:
     image_id: AUTOPISTOL_HIGH_GRADE_CODEX.SPK
     text: STR_AUTOPISTOL_HIGHGRADE_CODEX
 
+  - id: STR_AUTOPISTOL_CHAOS
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: AUTOPISTOL.SPK
+    text: STR_AUTOPISTOL_UFOPEDIA
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
   - id: STR_AUTOPISTOL_BLIGHT
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -12379,7 +12403,13 @@ ufopaedia:
     text: STR_HELLPISTOL_UFOPEDIA
     requires:
       - STR_MASTER_CRAFTING_AMMO  # same as manufacture
-
+  - id: STR_LASER_PISTOLC  # Chaos Laspistol
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1LP.SPK
+    text: STR_LASER_PISTOL_UFOPEDIA
+    requires:
+      - STR_CHAOS_ARMORY_EXAM_BASIC
   - id: STR_LASER_PISTOLCS
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
