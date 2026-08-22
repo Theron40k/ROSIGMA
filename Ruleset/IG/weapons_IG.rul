@@ -2206,6 +2206,7 @@ items:
       - STR_MIDTIER_PREREQ
       - STR_KRIEG_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     costBuy: 20000
     costSell: 1500
     weight: 9 #+1 weight
@@ -2256,6 +2257,7 @@ items:
       - STR_MIDTIER_PREREQ
       - STR_KRIEG_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     costBuy: 30000
     costSell: 2500
     weight: 10 #+2 weight, scoped
@@ -2290,6 +2292,7 @@ items:
       - STR_KRIEG_STRATEGY
       - STR_UFO_CONSTRUCTION
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     costBuy: 40000
     costSell: 3500
     weight: 9 #+1 weight
@@ -2341,6 +2344,7 @@ items:
       - STR_KRIEG_STRATEGY
       - STR_UFO_CONSTRUCTION
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     costBuy: 50000
     costSell: 4500
     weight: 10 #+2 weight, scoped
@@ -2373,6 +2377,7 @@ items:
       - STR_LASER_WEAPONS
       - STR_NOT_KRIEG_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     armor: 200  # to avoid item pile destruction
     meleePower: 50
     meleeBonus:
@@ -2400,11 +2405,12 @@ items:
     size: 0.3
     costBuy: 10000
     requiresBuy:
+      - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_BASIC_BALLISTICS_DEP
       - STR_LASER_WEAPONS
       - STR_NOT_KRIEG_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_NOT_VALHALLAN_STRATEGY
     costSell: 2500
     weight: 8
     bigSprite: 205
