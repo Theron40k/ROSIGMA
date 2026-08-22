@@ -810,6 +810,7 @@ items:
     listOrder: 10740
     tags:
       ITEM_RECOIL: 20  # Worse recoil compensation, but slower firing rate
+      REACTION_MULTIPLIER: 150
 
 
   - type: STR_AUTOGUN_HIGHGRADE  # sans underslung but with bayonetta
@@ -2390,7 +2391,72 @@ items:
     flatMelee:
       time: true
       energy: true
+    tags:
+      REACTION_MULTIPLIER: 150 #standard carbine reaction multiplier
 
+  - type: STR_LAS_BATTLERIFLE
+    dropoff: 3
+    categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
+    size: 0.3
+    costBuy: 10000
+    requiresBuy:
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_LASER_WEAPONS
+      - STR_NOT_KRIEG_STRATEGY
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_IMPERIAL_GUARD_OPERATIONS
+    costSell: 2500
+    weight: 8
+    bigSprite: 205
+    floorSprite: {mod: 40k, index: 165} # placeholder
+    handSprite: {mod: 40k, index: 536} # placeholder
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    autoRange: 10
+    snapRange: 18
+    aimRange: 22
+    accuracyAuto: 55  # slightly more accurate
+    accuracySnap: 80  # significantly more accurate
+    accuracyAimed: 90 # aimed shot
+    tuAuto: 40  # 40k 34
+    tuSnap: 33
+    tuAimed: 50
+    autoShots: 2
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    listOrder: 10916
+    armor: 200  # to avoid item pile destruction
+    # bayonet component
+    meleePower: 60 # slightly higher base damage
+    meleeBonus:
+      strength: 0.25 #scales slightly better with strength
+      melee: 0.15
+    meleeAlter:
+      ArmorEffectiveness: 0.9
+      RandomType: 1
+    accuracyMelee: 75 # slightly less
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.4
+      strength: 0.1
+    tuMelee: 14 # slightly heavier and more cumbersome
+    costMelee:
+      energy: 4 # slightly heavier and more cumbersome
+    flatMelee:
+      time: true
+      energy: true
+    tags:
+      REACTION_MULTIPLIER: 75 # battle rifle penalty; multiplies base reaction score by this amount divided by 100
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_SNAP_FLAT_POWER_BONUS_PERCENT: 10
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25
 
   - type: STR_LASGUN_ACCATRAN
     requiresBuyBaseFunc: [TRADE]
