@@ -28,6 +28,22 @@ manufacture:
     producedItems:
       STR_DIRESWORD_VESSEL: 1
 
+  - name: STR_DIRESWORD_ENSOULED_MANUFACTURE
+    category: STR_ELDAR_SOULTECH_CATEGORY
+    requires:
+      - STR_ELDAR_ONLY
+      - STR_FORGE_DIRESWORD_VESSEL_RESEARCH
+    # requiresBaseFunc: [ELDAROUT] # could be used for taboo soul manipulation eldar technology
+    space: 0
+    time: 200
+    cost: 100000
+    points: -200 # Taking a spirit stone from its resting place in the inifinity circuit is an act of desperation
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 200     # Should be expensive and overcosted for players who are doing extremely well and want access to soul weapons
+      STR_DIRESWORD_VESSEL: 1
+    producedItems:
+      STR_DIRESWORD: 1
+
   - name: STR_CRATED_HORNET
     category: STR_CRAFT
     requires:
