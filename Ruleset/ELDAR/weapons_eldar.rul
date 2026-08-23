@@ -10,7 +10,7 @@ items:
 
 #--- ELDAR.WEAPONS ---
   - delete: STR_CATAPULT
-  - &ELDAR_WEAPON_TEMPLATE
+  - &ELDAR_SHURIKEN_WEAPON_TEMPLATE
     type: STR_CATAPULT
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
@@ -44,6 +44,9 @@ items:
     autoRange: 9
     confSnap:
       shots: 3
+      name: STR_SHURIKEN_WEAPON_SNAPSHOT
+    confAuto:
+      name: STR_SHURIKEN_WEAPON_AUTOSHOT
     experienceTrainingMode: 6
     tuSnap: 19
     tuAuto: 32
@@ -90,7 +93,7 @@ items:
     #tuAuto: 40
     # FLAT COST VERSION, FOR TESTING
   - type: STR_AVENGER_CATAPULT
-    refNode: *ELDAR_WEAPON_TEMPLATE
+    refNode: *ELDAR_SHURIKEN_WEAPON_TEMPLATE
     weight: 20
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
@@ -115,7 +118,7 @@ items:
       REACTION_MULTIPLIER: 120 # 20% Avenger Bonus
 
   - type: STR_AVENGER_CATAPULT_SCOPED
-    refNode: *ELDAR_WEAPON_TEMPLATE
+    refNode: *ELDAR_SHURIKEN_WEAPON_TEMPLATE
     weight: 20
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
@@ -402,7 +405,7 @@ items:
       REACTION_MULTIPLIER: 60 # -40 Sniper Malus
 
   - type: STR_SHURIKEN_CANNON             # tentative start, needs fixing
-    refNode: *ELDAR_WEAPON_TEMPLATE
+    refNode: *ELDAR_SHURIKEN_WEAPON_TEMPLATE
     requires:
       - STR_ELDAR_ONLY
     requiresBuy:
@@ -499,12 +502,19 @@ items:
       - STR_SMALL_ROCKET_TEMPEST_ELDAR
     #damageType: 3
     #accuracySnap: 70
+    confSnap:
+      shots: 3
+      name: STR_ELDAR_TEMPEST_LAUNCHER_SNAPSHOT
+    confAuto:
+      shots: 9
+      name: STR_ELDAR_TEMPEST_LAUNCHER_AUTOSHOT
     #accuracyAimed: 115
-    accuracyAuto: 60
-    tuSnap: 0
+    accuracySnap: 60
+    accuracyAuto: 10
+    tuSnap: 70
     tuAimed: 0
-    tuAuto: 75
-    #snapRange: 20
+    tuAuto: 90
+    snapRange: 30
     #aimRange: 30
     autoRange: 30
     arcingShot: true
@@ -519,6 +529,8 @@ items:
     listOrder: 16920
     costBuy: 50000
     costSell: 4000
+    tags:
+      REACTION_MULTIPLIER: 50 # Indirect Long Range Weapon
 
   # DEPRECATED
   - type: STR_ELDAR_LAUNCHER_FIXED # Fixed weapon version for use on player armor.
