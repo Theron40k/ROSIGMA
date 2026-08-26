@@ -649,6 +649,57 @@ soldiers:
       - delete
       - Names/eldar_avenger.nam
 
+  - type: STR_ELDAR_SCORPIONEX_P # Main stat Strength. Important stats: Melee, Health, Stamina
+    refNode: *EXARCH_TEMPLATE
+    flagOffset: 100
+    costSalary: 25000
+    minStats: #higher min stats with changes relevant to the role
+      tu: 90
+      stamina: 80
+      health: 85
+      bravery: 90
+      reactions: 80
+      firing: 85
+      throwing: 65
+      strength: 70
+      psiStrength: 100
+      psiSkill: 40
+      melee: 70
+    maxStats:
+      tu: 100
+      stamina: 95
+      health: 95
+      bravery: 95
+      reactions: 100
+      firing: 100
+      throwing: 75
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 95
+    statCaps: # higher stat caps based on exarch type
+      tu: 140
+      stamina: 135
+      health: 115
+      bravery: 120
+      reactions: 140
+      firing: 140
+      throwing: 100
+      strength: 110
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_ELDAR_SCORPIONEX_ARMOR_P
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    soldierNames:
+      - delete
+      - Names/eldar_scorpion.nam
+
   - type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
     # requires:
     #   - STR_ELDAR_PATH
