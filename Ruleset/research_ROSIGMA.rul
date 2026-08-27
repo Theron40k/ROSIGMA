@@ -1589,6 +1589,14 @@ research:
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_BLACKTEMPLAR_CARE_PACKAGE
 
+  - name: STR_BTGIVEOTHER_INTERCEPTOR
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+    spawnedEvent: STR_BTGIVESECONDINTERCEPTOR
+
   - name: STR_REQIMPERIAL_SUPPORT  # Request Imperial Support
     cost: 50
     points: 0
