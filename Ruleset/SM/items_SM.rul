@@ -539,6 +539,13 @@ items:
 
   # - type: STR_HWP_CANNON_SHELLS
 
+  - type: STR_CANNON_ROUNDS_X50   # twin heavy bolter craft ammo
+    size: 0.1
+    costBuy: 10000
+    costSell: 100
+    transferTime: 48
+    clipSize: 50
+
   - type: AUX_RAM  # AUX BIKE ARMOR AUX
     specialIconSprite: 2778
     bigSprite: {mod: 40k, index: 222}
@@ -1083,6 +1090,7 @@ items:
       - STR_NOT_SPACEWOLVES  # Until Swiftclaw bike armor is added
       - STR_MARINES_STRATEGY
       - STR_NOT_WORDBEARERS  # they have their own stuff
+      - STR_NOT_BLACKTEMPLARS  # they dont have any for now
 
   - type: STR_GRAV_FLAMER
     powerRangeReduction: 15
