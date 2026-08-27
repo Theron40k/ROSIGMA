@@ -200,6 +200,10 @@ research:
     # Access to Imperial Weaponry, disabled by Chaos Path/Unholy Wartools
     # Could also be used for Xeno factions if added.
 
+  - name: STR_BIKEAMMO # Bike Unlock used to allow ammo for the bike bolters to appear in purchase
+    dependencies:
+      - STR_GENERALLOCK
+
   - delete: STR_ALIENS_ONLY
   - name: STR_ALIENS_ONLY  # Chaos Corruption
     # Serves as the lock for use of chaos items
@@ -1310,6 +1314,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_ASSAULT
       - STR_PRIMARIS
@@ -1345,6 +1350,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_DEVASTATOR
       - STR_PRIMARIS
@@ -1413,6 +1419,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_SCOUT
       - STR_PRIMARIS
@@ -1449,6 +1456,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_TACTICAL
       - STR_PRIMARIS
@@ -5759,6 +5767,8 @@ research:
     dependencies:
       - STR_GENERALLOCK
       - STR_AMBUSH_SPACEMARINES_COMPLETE
+    unlocks:
+      - STR_BIKEAMMO
 
   - name: STR_CHAOSREWARD_REQUISITIONS  # Sacred Gift from Chaos
     cost: 300
@@ -8391,6 +8401,7 @@ research:
       - STR_ARBITES_MIDTIER
     unlocks:
       - STR_HWP_CANNON_SHELLS
+      - STR_BIKEAMMO
 
   - delete: STR_ENFORCER_HEAVY_ARMOR
   - name: STR_ENFORCER_HEAVY_ARMOR  # Heavy Enforcer Armor
