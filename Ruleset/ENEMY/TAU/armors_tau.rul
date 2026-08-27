@@ -522,4 +522,223 @@ armors:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
+  - type: STR_GREENKROOT_HUNTERAI_ARMOR
+    visibilityAtDay: 30
+    visibilityAtDark: 25
+    heatVision: 10
+    spriteSheet: GREENKROOTHUNTERAIbattle.PCK
+    spriteInv: GREENKROOTHUNTERARMORAI.PCK
+    allowInv: true
+    corpseBattle:
+      - STR_GREENKROOT_HUNTERAI_CORPSE
+    frontArmor: 35
+    sideArmor: 25
+    rearArmor: 20
+    underArmor: 20
+    drawingRoutine: 0
+    damageModifier:  # BEASTMEN ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 1.3  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 1.1  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1
+
+  - type: STR_GREENKROOT_WARRIORAI_ARMOR
+    visibilityAtDay: 30
+    visibilityAtDark: 25
+    heatVision: 10
+    spriteSheet: GREENKROOTWARRIORAIbattle.PCK
+    spriteInv: GREENKROOTWARRIORARMORAI.PCK
+    allowInv: true
+    corpseBattle:
+      - STR_GREENKROOT_WARRIORAI_CORPSE
+    frontArmor: 40
+    sideArmor: 35
+    rearArmor: 25
+    underArmor: 25
+    drawingRoutine: 0
+    damageModifier:  # BEASTMEN ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 1.2  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_GREENKROOT_BERSERKERAI_ARMOR
+    visibilityAtDay: 30
+    visibilityAtDark: 25
+    heatVision: 10
+    spriteSheet: GREENKROOTBERSERKAIbattle.PCK
+    spriteInv: GREENKROOTBERSERKARMORAI.PCK
+    allowInv: true
+    corpseBattle:
+      - STR_GREENKROOT_BERSERKERAI_CORPSE
+    frontArmor: 40
+    sideArmor: 35
+    rearArmor: 25
+    underArmor: 25
+    drawingRoutine: 0
+    damageModifier:  # BEASTMEN ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 1.1  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+    allowsRunning: true
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_GREENKROOT_SNIPERAI_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    camouflageAtDay: -15
+    camouflageAtDark: -8
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 10
+    spriteSheet: GREENKROOTSNIPERAIbattle.PCK
+    spriteInv: GREENKROOTSNIPERARMORAI.PCK
+    allowInv: true
+    corpseBattle:
+      - STR_GREENKROOT_SNIPERAI_CORPSE
+    frontArmor: 40
+    sideArmor: 35
+    rearArmor: 25
+    underArmor: 25
+    drawingRoutine: 0
+    damageModifier:  # BEASTMEN ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 1.2  # FLAMES
+      - 1.0  # HE
+      - 1.0  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      DODGE_CHANCE: 5
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_GREENKROOT_ELITEAI_ARMOR
+    visibilityAtDay: 30
+    visibilityAtDark: 25
+    heatVision: 10
+    spriteSheet: GREENKROOTELITEAIbattle.PCK
+    spriteInv: GREENKROOTELITEARMORAI.PCK
+    allowInv: true
+    corpseBattle:
+      - STR_GREENKROOT_ELITEAI_CORPSE
+    frontArmor: 60
+    sideArmor: 45
+    rearArmor: 45
+    underArmor: 40
+    drawingRoutine: 0
+    damageModifier:  # BEASTMEN ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 1.0  # FLAMES
+      - 1.0  # HE
+      - 0.9  # LASCANON
+      - 0.9  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+  - type: STR_GREENKROOT_LEADERAI_ARMOR
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    heatVision: 15
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    spriteSheet: GREENKROOTLEADERAIbattle.PCK
+    spriteInv: GREENKROOTLEADERARMORAI.PCK
+    allowInv: true
+    corpseBattle:
+      - STR_GREENKROOT_LEADERAI_CORPSE
+    frontArmor: 75
+    sideArmor: 55
+    rearArmor: 55
+    underArmor: 50
+    drawingRoutine: 0
+    damageModifier:  # BEASTMEN ARMOR
+      - 1.0  # none
+      - 0.8  # AP
+      - 0.9  # FLAMES
+      - 1.0  # HE
+      - 0.9  # LASCANON
+      - 0.9  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+    loftempsSet: [3]
+    allowsRunning: false  # NPC limits for BAI
+    tags:
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      UNIT_TYPE_XENO: 1
+      DODGE_CHANCE: 15
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+
+
+
 
