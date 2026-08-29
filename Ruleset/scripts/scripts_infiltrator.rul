@@ -117,7 +117,7 @@ extended:
     # if you hit or are hit while in stealth mode, you lose your stealth
     hitUnit:
       - new: ROSIGMA_hU_infiltration_stealth_deactivate_on_hit
-        offset: 1  # hide unit
+        offset: 2  # hide unit
         code: |
           var int temp;
           var ptr RuleArmor myRuleArmor;
@@ -147,7 +147,7 @@ extended:
           return power part side;
 
       - new: ROSIGMA_hU_infiltration_stealth_deactivate_on_attack
-        offset: 1  # hide unit
+        offset: 2  # hide unit
         code: |
           var int temp;
           var ptr RuleArmor myRuleArmor;

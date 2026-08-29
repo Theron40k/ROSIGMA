@@ -1,0 +1,131 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+  tags:
+    RuleSkill:
+      SKILL_SPRINT_MOVECOST_TIMEPERCENT: int # what is the new TU % when sprinting
+      SKILL_SPRINT_MOVECOST_ENERGYPERCENT: int # what is the new ENERGY % when sprinting
+      SKILL_SPRINT_COOLDOWN_PERIOD: int # how many turns the unit must wait after sprinting once
+      SKILL_SPRINT_REUSABLE: int #is sprint reusable? 1=YES 0=Limited uses (use SKILL_SPRINT_USES to specify how many)
+      SKILL_SPRINT_USES: int #how many uses of sprint you have
+    BattleUnit:
+      SKILL_SPRINT_COOLDOWN_TURNS: int # how many turns of cooldown it must wait to sprint again
+      SKILL_SPRINT_NOT_REUSABLE: int #
+      SKILL_SPRINT_USES_SPENT: int #how many uses of sprint you have left
+
+  scripts:
+    skillUseUnit: #check if the sprint is already active. if active abort.
+      - new: ROSIGMA_sprint_skillUseUnit
+        offset: 1
+        code: |
+          #var int temp;
+          var int sprintSkill_timepercent;
+          var int sprintSkill_energypercent;
+          var int sprintSkill_cooldown_period;
+          var int sprintStatus;
+          var int sprint_is_reusable;
+          var int sprint_total_uses;
+          var int sprint_uses_spent;
+
+          #get the value of the TU sprint cost %
+          skill.getTag sprintSkill_timepercent Tag.SKILL_SPRINT_MOVECOST_TIMEPERCENT;
+          if le sprintSkill_timepercent 0;
+            # debug_log "newTurnUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | Not using SKILL_SPRINT, [checked for SKILL_SPRINT_MOVECOST_TIMEPERCENT]. Aborting.";
+            return;
+          end;
+          #get the value of the energy sprint cost %
+          skill.getTag sprintSkill_energypercent Tag.SKILL_SPRINT_MOVECOST_ENERGYPERCENT;
+          skill.getTag sprintSkill_cooldown_period Tag.SKILL_SPRINT_COOLDOWN_PERIOD;
+          skill.getTag sprint_is_reusable Tag.SKILL_SPRINT_REUSABLE;
+          skill.getTag sprint_uses_spent Tag.SKILL_SPRINT_USES;
+
+          actor.getTag sprint_uses_spent Tag.SKILL_SPRINT_USES_SPENT;
+          if le sprint_is_reusable 0; #if sprint is not reusable,
+            if ge sprint_uses_spent sprint_total_uses; # checks if all uses spent
+              battle_game.flashMessage "STR_SKILL_SPRINT_NO_USE_LEFT" sprintStatus;
+              set continue_action 0;
+              # debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | all use spent. Aborting.";
+              return;
+            end;
+            #if uses are left the remaining uses should be displayed at the end
+          end;
+
+          actor.getTag sprintStatus Tag.SKILL_SPRINT_COOLDOWN_TURNS;
+          if ge sprintStatus 1;
+            battle_game.flashMessage "STR_SKILL_SPRINT_ON_COOLDOWN" sprintStatus;
+            set continue_action 0;
+            # debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | Unit is already sprinting. Aborting.";
+            return;
+          end;
+
+          #debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | dumping variables. have_tu:" have_tu;
+          if eq have_tu 0;
+            #debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | No Resources. Aborted.";
+            set continue_action 0;
+            return;
+          end;
+
+          actor.MoveCost.setBaseTimePercent sprintSkill_timepercent;
+          actor.MoveCost.setBaseEnergyPercent sprintSkill_energypercent;
+          actor.setTag Tag.SKILL_SPRINT_COOLDOWN_TURNS sprintSkill_cooldown_period;
+          actor.setTag Tag.UNIT_STEALTH_IS_ACTIVE 1; # set our stealth counter to 1
+          if le sprint_is_reusable 0; #if sprint is not reusable
+            add sprint_uses_spent 1;
+            actor.setTag Tag.SKILL_SPRINT_USES_SPENT sprint_uses_spent;
+            sub sprint_total_uses sprint_uses_spent; #use sprint_total_uses as remaining uses here for commodity
+            battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN_REMAINING_USES" sprintStatus sprint_total_uses;
+          end;
+          battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN" sprintStatus;
+          return;
+
+    newTurnUnit:  # reset move speed to normal
+      - new: ROSIGMA_sprint_newTurnUnit
+        offset: 23
+        code: |
+          var int stealthStatus;
+          var int sprintStatus;
+          var int temp;
+          var int temp2;
+          battle_game.getTurn temp;
+          if le temp 0; # we don't care about Turn 0 and prior; abort.
+            return;
+          end;
+
+          #battle_game.getTurnSide temp; # trigger only on the same turn as the unit's faction
+          #unit.getFaction temp2;
+          #if neq temp temp2;
+          #  return;
+          #end;
+
+          unit.getTag sprintStatus Tag.SKILL_SPRINT_COOLDOWN_TURNS;
+          if ge sprintStatus 1; #unit has sprinted
+            add sprintStatus -1;
+            unit.setTag Tag.SKILL_SPRINT_COOLDOWN_TURNS sprintStatus;
+            unit.MoveCost.setBaseTimePercent 100;
+            unit.MoveCost.setBaseEnergyPercent 100;
+            unit.getTag stealthStatus Tag.UNIT_STEALTH_IS_ACTIVE;
+            if lt stealthStatus 1;
+              return;
+            end;
+            unit.setTag Tag.UNIT_STEALTH_IS_ACTIVE 0; # set our stealth counter to 0
+            battle_game.flashMessage "STR_SKILL_SPRINT_ENDTURN";
+          end;
+
+          return;
+    hitUnit:
+      - new: ROSIGMA_sprint_hitUnit_deactivate_on_attack
+        offset: 1  # hide unit
+        code: |
+          var int stealthStatus;
+          var int sprintStatus;
+          attacker.getTag sprintStatus Tag.SKILL_SPRINT_COOLDOWN_TURNS;
+
+          if ge sprintStatus 1; #unit has sprinted
+            attacker.getTag stealthStatus Tag.UNIT_STEALTH_IS_ACTIVE;
+            if lt stealthStatus 1;
+              return power part side;
+            end;
+            attacker.setTag Tag.UNIT_STEALTH_IS_ACTIVE 0; # set our stealth counter to 0
+            battle_game.flashMessage "STR_SKILL_SPRINT_REVEALED";
+          end;
+          return power part side;
