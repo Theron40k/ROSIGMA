@@ -17,6 +17,7 @@ ru:  #  yamllint disable-line rule:empty-values
   ARMO: "ОРУЖЕЙНАЯ"
   MILL: "КУЗНИЦА"
   MANU: "МАНУФАКТОРИУМ"
+  APOC: "АПТЕКАРИУМ"
   STR_XCOM_AGENTS_HAVE_LOCATED_AN_ALIEN_BASE_IN_REGION: "Мы обнаружили присутствие противника на планете"
 
   STR_HWP_CAPACITY: " "  # uncomment to check for HWP: -1  # SpeedC is an exception
@@ -181,10 +182,15 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_CRAFT_WEAPONS: "ВООРУЖЕНИЕ БРОНЕТЕХНИКИ"
 
+  STR_CANNON_ROUNDS_X50: "Б/К Спаренного Тяж.Болтера"
+  STR_HWP_CANNON_SHELLS: "Б/К Штурм.Байка/Болтер"
+
+  STR_BIKEAMMO: "Байк Разблокирован"
+
   STR_CHIMEDON_SPAWNER: "Химедон"
   STR_CHIMEDON_TURRET: "Химедон"
   STR_CHIMEDON_ARMOR: "Химедон"
-  STR_CHIMEDON_CODEX: "{NEWLINE} Химедон - это разновидность БМП Химеры, которая выполняет роль легкого танка оснащенного боевой пушкой для борьбы с укреплениями. Однако его бронирование и системы наведения менее продвинутые, чем у Леман Руса."
+  STR_CHIMEDON_CODEX: "{NEWLINE} Химедон - это разновидность БМП Химеры, которая выполняет роль легкого танка оснащенного боевой пушкой для борьбы с укреплениями. Однако его бронирование и системы наведения менее продвинутые, чем у Леман Русса."
 
   STR_CHIMERA_TWIN_HB_TURRET_SPAWNER: "БМП Химера Грифон IV"
   STR_CHIMERA_TWIN_HB_TURRET: "БМП Химера Грифон IV"
@@ -275,7 +281,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_BASIC_SPAWN_ASSAULT_MARINES_RESEARCH: "Запрос: Штурмовики"
   STR_MCRIFLE_UFOPEDIA: "{NEWLINE} Изысканное и украшенное, улучшенное оружие всем видом показывает свою огневую мощью. Каждый компонент оружия создан, испытан, помазан и откалиброван техножрецами и технодесантниками, а также благословлен Омниссией.{NEWLINE}{NEWLINE}Отдача: {ALT}40"
 
-  STR_SMGIVESECONDINTERCEPTOR: "Коготи Бури Прибыли"
+  STR_SMGIVESECONDINTERCEPTOR: "Когти Бури Прибыли"
   STR_GIVESECONDINTERCEPTOR_DESCRIPTION: "Перехватчики Когти Бури прибыли и уже находятся в ваших ангарах."
 
   # Player Chaos Path
@@ -1290,6 +1296,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SCORPION_CORPSE_P: "Труп Жалящего Скорпиона"
   STR_ELDAR_SCORPIONEX_P: "Скорпион Экзарх"
   STR_ELDAR_SCORPIONEX_ARMOR_P: "Броня Скорпиона Экзарха"
+  STR_ELDAR_SCORPIONEX_CORPSE_P: "Труп Скорпиона Экзарха"
   STR_ELDAR_SPIDER_PLAYER: "Паук Воин"
   STR_ELDAR_SPIDER_ARMOR_P: "Броня Паука"
   STR_ELDAR_SPIDER_CORPSE_P: "Труп Паука Варпа"
@@ -1298,12 +1305,16 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SPIDEREXDS_CORPSE_P: "Труп Паука Ткача Смерти Экзарха"
   STR_ELDAR_SPIDEREXPB_ARMOR_P: "Броня Паука Экзарха/Сил.Клинок"
   STR_ELDAR_SPIDEREXPB_CORPSE_P: "Труп Паука Экзарха/Сил.Клинок"
-  STR_SKILL_WARPSPIDER_STEALTH_TELEPORT: "Варп Прыжок"
   STR_ELDAR_REAPEREX: "Экзарх Жнецов Эльдар"
   STR_ELDAR_ARMOR_EXARCH_P: "Броня Экзарха Жнецов"
   STR_ELDAR_ARMOR_EXARCH: "Эльдар Жнец Экзарх"
   STR_ELDAR_SEER_ARMOR_P: "Броня Провидца"
   STR_ELDAR_SEER_CORPSE_P: "Труп Провидца"
+
+  # eldar skills
+  STR_SKILL_WARPSPIDER_STEALTH_TELEPORT: "Варп Прыжок"
+  STR_SKILL_BANSHEE_EXARCH_DASH: "Спринт Э.Банши"
+  STR_SKILL_BANSHEE_DASH: "Спринт Банши"
 
   # ELDAR SOLDIER TRANSFORMATIONS CODEX (lore fluff plus transformation requirements)
   STR_ELDAR_ASPECT_HELPER_SCORPIONS: "Жалящие Скорпионы - Воины Аспекта, сосредоточенных на ближнем бою, скрытности и убийствах. Они воплощают смертоносные качества своего тотема, способного ужалить и убить существо, во много раз превосходящее их по размеру. {NEWLINE}{NEWLINE}Требования для повышения Дозорного до Скорпиона: Боевой опыт и звание 1го ранга и выше,{ALT}Храбрость: 70, Ближний Бой: 50{ALT}" # The history of the Striking Scorpions is shrouded in infamy from their very beginning from the story of their founder, Phoenix Lord Arhra, Father of the Scorpions, now known as the Fallen Phoenix"
@@ -1442,6 +1453,10 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_DRAGONEX_AUTOPSY: "Дракон Экзарх Эльдар-происхождение"
   STR_ELDAR_DRAGONEX_AUTOPSY_CODEX: "{NEWLINE} Экзарх Огненных Драконов восседает на Пылающем Троне в Храме Аспекта. Меткие стрелки способны с безошибочной точностью поражать цели, и под руководством Экзархов отделение Огненных Драконов становятся превосходными охотниками за танками."
   STR_ELDAR_DRAGONEX_ARMOR_CODEX: "{NEWLINE} Когда Дракон становится Экзархом, он навсегда соединяется с древним комплектом брони, принадлежащим его святилищу. Говорят, что Экзархи Огненных Драконов создают вокруг своего тела ауру мерцающего пламени, когда их охватывает жажда битвы. Вместо Термоядерного Карабина некоторые Экзархи используют Огненная Пика или огнемет Дыхание дракона. Другие предпочитают ближний бой, используя Термоядерный пистолет и Драконий топор."
+  STR_ELDAR_SCORPIONEX_AUTOPSY: "Скорпион Экзарх Эльдар-происхождение"
+  STR_ELDAR_SCORPIONEX_AUTOPSY_CODEX: "{NEWLINE} Экзархи Жалящий Скорпионов - это настоящие воины теней, воплощающие все аспекты их святилища. Они сливаются с тенями и используют их, чтобы защитить свой отряд от приближающегося врага. Их превосходные навыки следопытов позволяют им и их отряду бесшумно и незаметно передвигаться по местности."
+  STR_ELDAR_SCORPIONEX_ARMOR: "Скорпион Экзарх Эльдар-происхождение"
+  STR_ELDAR_SCORPIONEX_ARMOR_CODEX: "{NEWLINE} Экзархи носят более сложную и богато украшенную версию Аспектной Брони, которая включают в себя души прошлых владельцев, даруя Экзарху не только мудрость и знания тысячелетий, но и мощный источник психической энергии, который можно использовать в бою. Аспектные Доспехи Жалящий Скорпионов по конструкции похожи на броню других Аспектных Святилищ, но включают в себя более тяжелые и жесткие броневые пластины для повышения уровня защиты."
   STR_ELDAR_REAPER_ARMOR_CODEX: "{NEWLINE} Темные Жнецы гордятся своей точностью. Для поглощения отдачи гранатомета и поддержания устойчивой позиции для стрельбы, нижнюю часть ног и ботинки, оснащенные стабилизаторами и зажимами для надежной фиксации на земле."
   STR_ELDAR_REAPEREX_AUTOPSY: "Жнец Экзарх Эльдар-происхождение"
   STR_ELDAR_REAPEREX_AUTOPSY_CODEX: "{NEWLINE} Навыки и снаряжение Экзарха Темных Жнецов демонстрируют смертоносную огневую мощь и точность его Аспекта. Нечеловеческие боевые способности Экзарха Темных Жнецов превосходят таланты обычных Темных Жнецов, поскольку он способен обрушить смертоносный град огня быстрее и без потери точности из любого оружия, а также его выстрелы могут обходить укрытия и поражать цели."
@@ -1541,6 +1556,18 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_DRAGONEX_RANK_3: "Буря Огня"
   STR_ELDAR_DRAGONEX_RANK_4: "Вулкан"
   STR_ELDAR_DRAGONEX_RANK_5: "Пекло Ада"
+  STR_ELDAR_SCORPION_RANK_0: "Крепкий"
+  STR_ELDAR_SCORPION_RANK_1: "Насущий"
+  STR_ELDAR_SCORPION_RANK_2: "Бодрый"
+  STR_ELDAR_SCORPION_RANK_3: "Сильный"
+  STR_ELDAR_SCORPION_RANK_4: "Мощный"
+  STR_ELDAR_SCORPION_RANK_5: "Стойкий"
+  STR_ELDAR_SCORPIONEX_RANK_0: "Жалящий"
+  STR_ELDAR_SCORPIONEX_RANK_1: "Пронзающий"
+  STR_ELDAR_SCORPIONEX_RANK_2: "Закалывающий"
+  STR_ELDAR_SCORPIONEX_RANK_3: "Колющий"
+  STR_ELDAR_SCORPIONEX_RANK_4: "Протыкающий"
+  STR_ELDAR_SCORPIONEX_RANK_5: "Прокалывающий"
   STR_ELDAR_SPIDER_RANK_0: "Судорога"
   STR_ELDAR_SPIDER_RANK_1: "Стремительный"
   STR_ELDAR_SPIDER_RANK_2: "Мерцание"
@@ -2067,6 +2094,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_TAUGUEVESA_TESTLIST: "Тау Гуэвеса"
   STR_TAU_PATHFINDER_TESTLIST: "Тау Следопыты"
   STR_TAU_CRISIS_TESTLIST: "Тау Кризисы"
+  STR_MULTIKROOTS_TESTLIST: "Круты"
 
   STR_LEGIONDAMNED_TESTLIST: "Легион Проклятых"
   STR_DEATHCOMPANY_TESTLIST: "Рота Смерти"
@@ -9682,6 +9710,13 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_INFILTRATION_MECHANICS: "Скрытность и проникновение"
   STR_INFILTRATION_CODEX: "Некоторые бойцы обладают способностью проникать на поле боя невидимыми в течение нескольких ходов. Во время проникновения эти бойцы будут иметь темную окраску и не смогут быть обнаружены или использовать ответный огонь. Разведчики, которые получат или нанесут урон другому бойцу, автоматически раскрываются. Более опытные разведчики могут повторно войти в режим скрытности после пополнения счетчика убийств."
 
+  # ** SPRINT SCRIPT **
+  STR_SKILL_SPRINT_NO_USE_LEFT: "Спринт израсходован"
+  STR_SKILL_SPRINT_ON_COOLDOWN: "Спринт будет доступен через {0} Ходов."
+  STR_SKILL_SPRINT_STARTED_COOLDOWN_REMAINING_USES: "Передвижение в невидимости! Спринт отключится через {0} ходов. Осталось использований {1} "
+  STR_SKILL_SPRINT_STARTED_COOLDOWN: "Передвижение в невидимости! Спринт отключится через {0} ходов."
+  STR_SKILL_SPRINT_ENDTURN: "Спринт закончился!"
+  STR_SKILL_SPRINT_REVEALED: "БОЕЦ ТЕПЕРЬ ВИДИМ!"
   # ** ENVIRONMENTAL SCRIPTS
 
   STR_DAEMON_PURGE_STRONG_ENVIRONMENTAL_TOKEN: "Жетон Сильной Демонической Очистки"
@@ -12781,6 +12816,54 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SCRIPT_TARGET_IS_MARKERLIT_NOTICE: "ЦЕЛЬ ПОМЕЧЕНА!"
   STR_SCRIPT_TARGET_TOOK_MARKERLIGHT_DAMAGE_NOTICE: "Цель получила дополнительный УРОН!"
 
+  # Kroot AI
+  STR_GREYKROOT_HUNTERAI: "Хищник Крутов"
+  STR_GREYKROOT_WARRIORAI: "Воин Крутов"
+  STR_GREYKROOT_BERSERKERAI: "Берсеркер Крутов"
+  STR_GREYKROOT_SNIPERAI: "Снайпер Крутов"
+  STR_GREYKROOT_ELITEAI: "Элита Крутов"
+  STR_GREYKROOT_LEADERAI: "Шейпер Крутов"
+
+  STR_GREYKROOT_HUNTERAI_ARMOR: "Броня Хищника Крутов"
+  STR_GREYKROOT_WARRIORAI_ARMOR: "Броня Воина Крутов"
+  STR_GREYKROOT_BERSERKERAI_ARMOR: "Броня Берсеркера Крутов"
+  STR_GREYKROOT_SNIPERAI_ARMOR: "Броня Снайпера Крутов"
+  STR_GREYKROOT_ELITEAI_ARMOR: "Броня Элиты Крутов"
+  STR_GREYKROOT_LEADERAI_ARMOR: "Броня Шейпера Крутов"
+
+  STR_GREYKROOT_HUNTERAI_CORPSE: "Труп Хищника Крутов"
+  STR_GREYKROOT_WARRIORAI_CORPSE: "Труп Воина Крутов"
+  STR_GREYKROOT_BERSERKERAI_CORPSE: "Труп Берсеркера Крутов"
+  STR_GREYKROOT_SNIPERAI_CORPSE: "Труп Снайпера Крутов"
+  STR_GREYKROOT_ELITEAI_CORPSE: "Труп Элиты Крутов"
+  STR_GREYKROOT_LEADERAI_CORPSE: "Труп Шейпера Крутов"
+
+  STR_GREYKROOT_CODEX: "Круты (научное название Krootis Aviana, упоминаемое Империумом как Kroot Carnivore) - гуманоидная раса ксеносов. Встречаются по всей галактике, но чаще всего контактируют с Империей Тау. Серый вариант, по-видимому, более ловок и использует дальнобойное оружие с большей точностью."
+
+  STR_GREENKROOT_HUNTERAI: "Хищник Крутов"
+  STR_GREENKROOT_WARRIORAI: "Воин Крутов"
+  STR_GREENKROOT_BERSERKERAI: "Берсеркер Крутов"
+  STR_GREENKROOT_SNIPERAI: "Снайпер Крутов"
+  STR_GREENKROOT_ELITEAI: "Элита Крутов"
+  STR_GREENKROOT_LEADERAI: "Шейпер Крутов"
+
+  STR_GREENKROOT_HUNTERAI_ARMOR: "Броня Хищника Крутов"
+  STR_GREENKROOT_WARRIORAI_ARMOR: "Броня Воина Крутов"
+  STR_GREENKROOT_BERSERKERAI_ARMOR: "Броня Берсеркера Крутов"
+  STR_GREENKROOT_SNIPERAI_ARMOR: "Броня Снайпера Крутов"
+  STR_GREENKROOT_ELITEAI_ARMOR: "Броня Элиты Крутов"
+  STR_GREENKROOT_LEADERAI_ARMOR: "Броня Шейпера Крутов"
+
+  STR_GREENKROOT_HUNTERAI_CORPSE: "Труп Хищника Крутов"
+  STR_GREENKROOT_WARRIORAI_CORPSE: "Труп Воина Крутов"
+  STR_GREENKROOT_BERSERKERAI_CORPSE: "Труп Берсеркера Крутов"
+  STR_GREENKROOT_SNIPERAI_CORPSE: "Труп Снайпера Крутов"
+  STR_GREENKROOT_ELITEAI_CORPSE: "Труп Элиты Крутов"
+  STR_GREENKROOT_LEADERAI_CORPSE: "Труп Шейпера Крутов"
+
+  STR_GREENKROOT_CODEX: "Круты (научное название Krootis Aviana, упоминаемое Империумом как Kroot Carnivore) - гуманоидная раса ксеносов. Встречаются по всей галактике, но чаще всего контактируют с Империей Тау. Зелёный вариант, по-видимому, сильнее и использует оружие ближнего боя с большей точностью."
+
+
   # chaos cult bases loot artifact
   STR_CHAOS_ARTIFACTS: "Артефакты Культа Хаоса"
   STR_CHAOS_ARTIFACTS_RESEARCH: "Сокрытые Артефакты Культа Хаоса"
@@ -14513,6 +14596,8 @@ ru:  #  yamllint disable-line rule:empty-values
 
   STR_BLACKTEMPLAR_CARE_PACKAGE: "Начальное Снаряжение Храмовнико"
   STR_BLACKTEMPLAR_CARE_PACKAGE_DESCRIPTION: "Соответствующее выбранной вами стратегии снаряжение прибудет в течение нескольких часов. Крестовый поход готовится, группа неофитов уже отправляется в качестве разведывательного подразделения для сбора информации и прибудут через день.{NEWLINE}{NEWLINE} Мы можем использовать истребители с нашей базы, в ваше распоряжение также предоставлен десантный модуль. Как только поступит заявка на поставку, поручите вашим сервиторам выполнить ее. Для доставки модуля потребуется свободный ангар."
+
+  STR_BTGIVESECONDINTERCEPTOR: "Когти Бури Прибыли"
 
   STR_NOT_BLACKTEMPLARS: "(НЕ Черные Храмовники)"
   STR_BLACKTEMPLAR_STRATEGY: "(EARLY WIP) Стратегия Черных Храмовников"
