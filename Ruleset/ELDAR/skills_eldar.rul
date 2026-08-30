@@ -25,7 +25,8 @@ skills:
       SKILL_SPRINT_MOVECOST_TIMEPERCENT: 70 # what is the new TU % when sprinting
       SKILL_SPRINT_MOVECOST_ENERGYPERCENT: 70 # what is the new ENERGY % when sprinting
       SKILL_SPRINT_COOLDOWN_PERIOD: 11 # remember: each "turn" is 1 player, 1 enemy, 1 neutral, 11 turn is either at the start of player turn 4 or at the start of neutral turn 4
-      SKILL_SPRINT_REUSABLE: 1 #is sprint reusable? 1=YES 0=Limited uses (use SKILL_SPRINT_USES to specify how many)
+      SKILL_SPRINT_REUSABLE: 0 #is sprint reusable? 1=YES 0=Limited uses (use SKILL_SPRINT_USES to specify how many)
+      SKILL_SPRINT_USES: 2
     costUse:
       time: 20 #
       energy: 20 # taxing to use
@@ -41,7 +42,8 @@ skills:
       SKILL_SPRINT_MOVECOST_TIMEPERCENT: 49 # what is the new TU % when sprinting
       SKILL_SPRINT_MOVECOST_ENERGYPERCENT: 49 # what is the new ENERGY % when sprinting
       SKILL_SPRINT_COOLDOWN_PERIOD: 8 # remember: each "turn" is 1 player, 1 enemy, 1 neutral, 8 turn is either at the start of player turn 3 or at the start of neutral turn 3
-      SKILL_SPRINT_REUSABLE: 1 #is sprint reusable? 1=YES
+      SKILL_SPRINT_REUSABLE: 0 #is sprint reusable? 1=YES
+      SKILL_SPRINT_USES: 3
     costUse:
       time: 20 #
       energy: 20 #
