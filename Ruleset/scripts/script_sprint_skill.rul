@@ -37,7 +37,7 @@ extended:
           skill.getTag sprintSkill_energypercent Tag.SKILL_SPRINT_MOVECOST_ENERGYPERCENT;
           skill.getTag sprintSkill_cooldown_period Tag.SKILL_SPRINT_COOLDOWN_PERIOD;
           skill.getTag sprint_is_reusable Tag.SKILL_SPRINT_REUSABLE;
-          skill.getTag sprint_uses_spent Tag.SKILL_SPRINT_USES;
+          skill.getTag sprint_total_uses Tag.SKILL_SPRINT_USES;
 
           actor.getTag sprint_uses_spent Tag.SKILL_SPRINT_USES_SPENT;
           if le sprint_is_reusable 0; #if sprint is not reusable,
@@ -74,8 +74,9 @@ extended:
             actor.setTag Tag.SKILL_SPRINT_USES_SPENT sprint_uses_spent;
             sub sprint_total_uses sprint_uses_spent; #use sprint_total_uses as remaining uses here for commodity
             battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN_REMAINING_USES" sprintStatus sprint_total_uses;
+          else;
+            battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN" sprintStatus;
           end;
-          battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN" sprintStatus;
           return;
 
     newTurnUnit:  # reset move speed to normal
