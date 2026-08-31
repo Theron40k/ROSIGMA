@@ -13710,6 +13710,17 @@ research:
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
     destroyItem: true
+  - name: STR_GSC_GUARD_CARAPACE_OFFICER_MALE_ARMED  # Officer Leader
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_GSC_GUARD_CARAPACE_OFFICER_MALE
+    destroyItem: true
   - name: STR_GSC_GUARD_SCION_FEMALE  # Corrupted Scion
     cost: 50
     points: 10
