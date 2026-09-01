@@ -6,9 +6,6 @@ items:
 #  - type: 7_PLAT3P
 #  - type: 7_PLAT4P
 #  - type: STR_HEALER_CORPSE
-#  - type: STR_BANSHEE_CORPSE_P
-#  - type: STR_DAVENGER_CORPSE_P
-#  - type: STR_SCORPION_CORPSE_P
 #  - type: STR_SEER_CORPSE_P
 #  - type: STR_ELDARTURRET2_CORPSE #explod
 #  - type: ELDART_CORPSE1_P
@@ -34,6 +31,7 @@ items:
     battleType: 11
     recover: false
     armor: 60
+  - delete: STR_DAVENGER_CORPSE_P
   - type: STR_ELDAR_AVENGER_CORPSE_P
     weight: 30
     bigSprite: 4961
@@ -66,6 +64,16 @@ items:
     weight: 30
     bigSprite: 4964
     floorSprite: 4964
+    invWidth: 2
+    invHeight: 3
+    battleType: 11
+    recover: false
+    armor: 60
+  - delete: STR_BANSHEE_CORPSE_P
+  - type: STR_ELDAR_BANSHEE_CORPSE_P
+    weight: 30
+    bigSprite: 4965
+    floorSprite: 4965
     invWidth: 2
     invHeight: 3
     battleType: 11
