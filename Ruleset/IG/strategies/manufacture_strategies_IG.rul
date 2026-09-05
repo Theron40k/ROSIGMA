@@ -15,6 +15,7 @@ manufacture:
     requires:
       - STR_CHIMERA_IG
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     requiredItems:
       STR_CHIMERA_TOKEN: 1
 
@@ -23,6 +24,7 @@ manufacture:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     requiredItems:
       STR_VALKYRIE_TOKEN: 1
 
@@ -32,6 +34,7 @@ manufacture:
       - STR_VALKYRIE_GRAV_DROP_IG
       - STR_ELITE_STRATEGY_IG  # only shows up for Scion/Airborne Strategy
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     requiredItems:
       STR_VALKYRIE_GRAV_DROP_TOKEN: 1
 
@@ -41,6 +44,7 @@ manufacture:
       - STR_IMPERIAL_GUARD_MISSION_ELYSIAN_DROP_COMPLETE
       - STR_ELITE_STRATEGY_IG  # only shows up for Scion/Airborne  Strategy
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     requiredItems:
       STR_TAUROS_TOKEN: 1
 
@@ -49,6 +53,7 @@ manufacture:
     requires:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     requiredItems:
       STR_LIGHTNING_TOKEN: 1
 
@@ -71,5 +76,13 @@ manufacture:
     requires:
       - STR_CHIMERA_LIGHT_IG
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     requiredItems:
       STR_CHIMERA_LIGHT_TOKEN: 1
+
+  - name: STR_TRUCKARMOR_VALHALLA_STARTER
+    refNode: *STR_CRAFT_START
+    requires:
+      - STR_VALHALLAN_STRATEGY
+    requiredItems:
+      STR_TRUCKSTARTER_VL_TOKEN: 1

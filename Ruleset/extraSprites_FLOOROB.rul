@@ -1,4 +1,3 @@
-﻿
 # keep the basic indices range reserved in mind
 # https://www.ufopaedia.org/index.php/Ruleset_Vanilla_IDs_(OpenXcom)
 
@@ -14,6 +13,7 @@ extraSprites:
       200: Resources/Floorobs/floorob_handheld_heavy_stubber_ig.png
       201: Resources/Floorobs/floorob_invisible.png
       202: Resources/Floorobs/FLOOROBJ_IMPROVISED_PLASMA_GRENADE.png
+      203: Resources/Floorobs/floorob_Las_Battlerifle.png
       210: Resources/Floorobs/imperial_assassin_floorob.gif  # from XPiratez
       220: Resources/Floorobs/FLOOROB_SHOTPISTOL.png
       221: Resources/Floorobs/FLOOROB_SOLO_COMBIMELTA.png
@@ -55,6 +55,17 @@ extraSprites:
       299: Resources/Floorobs/floorob_lucius_t1.png # STR_LASGUN_LUCIUS
       300: Resources/Floorobs/GUARD_MC_UMBRA_UNDERSLUNG_FLOOROB.png
       301: Resources/Floorobs/FLOOROB_MC_MULTILASER.png
+      302: Resources/Floorobs/floorob_lucius_trenchgun.png
+      303: Resources/Floorobs/floorob_lucius_grenade1.png
+      304: Resources/Floorobs/floorob_lucius_grenade2.png
+      305: Resources/Floorobs/floorob_lucius_t2.png
+      306: Resources/Floorobs/floorob_lucius_t2_scope.png
+      307: Resources/Floorobs/floorob_lucius_t3.png
+      308: Resources/Floorobs/floorob_lucius_t3_scope.png
+      309: Resources/Floorobs/floorob_lucius_MC.png
+      310: Resources/Floorobs/floorob_lucius_MC_scope.png
+      311: Resources/Floorobs/floorob_lucius_volleygun.png
+      312: Resources/Floorobs/floorob_lucius_hellgun.png
       # 500 - 600 reserved for Gibs of Gory (see end of file)
 
 
@@ -410,8 +421,8 @@ extraSprites:
       2763: Resources/Floorobs/floorob_ALPHAcataphractdead.png
       2764: Resources/Floorobs/floorob_KHORNE_DREADNOUGHT_1.png  # STR_KHORNE_DREADNOUGHT
       2765: Resources/Floorobs/floorob_KHORNE_DREADNOUGHT_2.png
-      2766: Resources/Floorobs/floorob_KHORNE_DREADNOUGHT_3.gif
-      2767: Resources/Floorobs/floorob_KHORNE_DREADNOUGHT_4.gif
+      2766: Resources/Floorobs/floorob_KHORNE_DREADNOUGHT_3.png
+      2767: Resources/Floorobs/floorob_KHORNE_DREADNOUGHT_4.png
       2768: Resources/FOES/deadpatriaup.png
       2769: Resources/FOES/deadpatriaright.png
       2770: Resources/FOES/deadpatrialeft.png
@@ -829,6 +840,22 @@ extraSprites:
       3510: Resources/Floorobs/AutogunsExpanded/VALHALLAN_STUBRIFLE_FLOOROB.png
       3511: Resources/Floorobs/AutogunsExpanded/VALHALLAN_AUTOGUN_FLOOROB.png
       3512: Resources/Floorobs/AutogunsExpanded/VALHALLAN_AUTOSTUBBER_FLOOROB.png
+      3513: Resources/Floorobs/HEAVY_STUBBER_VL_FLOOROB.png
+      3514: Resources/Floorobs/floorob_autogun_clip_ap.png
+      3515: Resources/Floorobs/FLOOROB_AUTOSTUBBER_DRUM.png
+      3516: Resources/Floorobs/FLOOROB_AUTOSTUBBER_DRUM_AP.png
+      3517: Resources/Floorobs/FLOOROB_VL_HEAVY_STUBBER_DRUM.png
+      3518: Resources/Floorobs/FLOOROB_VL_HEAVY_STUBBER_DRUM_AP.png
+      3530: Resources/Floorobs/floorob_chimeravl_turret_01.png
+      3531: Resources/Floorobs/floorob_chimeravl_turret_02.png
+      3532: Resources/Floorobs/floorob_chimeravl_turret_02.png
+      3533: Resources/Floorobs/floorob_chimeravl_turret_02.png
+      3534: Resources/Floorobs/floorob_gorgonvl_heavy_flamer_back_left1.png
+      3535: Resources/Floorobs/floorob_gorgonvl_heavy_flamer_back_right1.png
+      3536: Resources/Floorobs/floorob_gorgonvl_heavy_flamer_front_left1.png
+      3537: Resources/Floorobs/floorob_gorgonvl_heavy_flamer_front_right1.png
+      3538: Resources/Floorobs/floorob_gorgonvl_heavy_stubber_left1.png
+      3539: Resources/Floorobs/floorob_gorgonvl_heavy_stubber_right1.png
 
 # Tech Priest
 
@@ -847,6 +874,22 @@ extraSprites:
       3909: Resources/TAU/floorob_tauguevesaflakdeadPLAYER.png
       3910: Resources/TAU/floorob_taumarinvesadeadPLAYER.png
       3911: Resources/Floorobs/floorob_gvtruck_hstubber.png
+
+  # Kroot AI
+
+      3935: Resources/Floorobs/floorob_greykroothunter.png
+      3936: Resources/Floorobs/floorob_greykrootwarrior.png
+      3937: Resources/Floorobs/floorob_greykrootberserker.png
+      3938: Resources/Floorobs/floorob_greykrootsniper.png
+      3939: Resources/Floorobs/floorob_greykrootelite.png
+      3940: Resources/Floorobs/floorob_greykrootleader.png
+
+      3941: Resources/Floorobs/floorob_greenkroothunter.png
+      3942: Resources/Floorobs/floorob_greenkrootwarrior.png
+      3943: Resources/Floorobs/floorob_greenkrootberserker.png
+      3944: Resources/Floorobs/floorob_greenkrootsniper.png
+      3945: Resources/Floorobs/floorob_greenkrootelite.png
+      3946: Resources/Floorobs/floorob_greenkrootleader.png
 
 # Black Templars Weapons
       4000: Resources/Floorobs/floorob_btboltpistol.png
@@ -916,7 +959,40 @@ extraSprites:
       4861: Resources/Eldar/weapons/shurikencannon_floorObj.png
       4862: Resources/Eldar/weapons/shurikencannon_mag_floorObj.png
       4863: Resources/Eldar/weapons/deathspinner/deathspinner_floorObj.png
-      4864: Resources/Eldar/weapons/deathspinner/spinnerspool_floorObj.png
+      4864: Resources/Eldar/weapons/deathspinner/deathspinner_spool_floorObj.png
+      4865: Resources/Eldar/weapons/powerblades/eldar_powerblade_floorObj.png
+      4866: Resources/Eldar/weapons/tempestlauncher/eldar_tempest_launcher_floorObj.png
+      4867: Resources/Eldar/weapons/tempestlauncher/eldar_tempest_pods_floorObj.png
+      4868: Resources/Eldar/weapons/spinneretrifle/spinneretrifle_floorObj.png
+      4869: Resources/Eldar/weapons/spinneretrifle/spinneretrifle_spool_floorObj.png
+      4870: Resources/Eldar/weapons/dragon_fusion_gun_canister_floorObj.png
+      4871: Resources/Eldar/weapons/firepike_canister_floorObj.png
+      4872: Resources/Eldar/weapons/flamers/aeldari_flamer_floorObj.png
+      4873: Resources/Eldar/weapons/flamers/aeldari_flamer_fuel_floorObj.png
+      4874: Resources/Eldar/weapons/flamers/dragon_breath_flamer_floorObj.png
+      4875: Resources/Eldar/weapons/flamers/dragon_breath_flamer_fuel_floorObj.png
+      4876: Resources/Eldar/weapons/fusionpistols/fusion_pistol_floorObj.png
+      4877: Resources/Eldar/weapons/fusionpistols/dragon_fusion_pistol_floorObj.png
+      4878: Resources/Eldar/weapons/fusionpistols/fusion_pistol_canister_floorObj.png
+      4879: Resources/Eldar/weapons/fusionpistols/dragon_fusion_pistol_canister_floorObj.png
+      4880: Resources/Eldar/weapons/dragonaxe_floorObj.png
+      4881: Resources/Eldar/weapons/witchblade_floorObj.png
+      4882: Resources/Eldar/weapons/singingspear_floorObj.png
+      4883: Resources/Eldar/weapons/witchstaff_floorObj.png
+      4884: Resources/Eldar/weapons/avenger_shurikencatapult_floorObj.png
+      4885: Resources/Eldar/weapons/avenger_shurikencatapultscoped_floorObj.png
+      4886: Resources/Eldar/weapons/avenger_shurikenpistol_floorObj.png
+      4887: Resources/Eldar/weapons/avenger_shurikenpistolscoped_floorObj.png
+      4888: Resources/Eldar/weapons/avenger_shurikenclip_floorObj.png
+      4889: Resources/Eldar/weapons/aeldarimelee/aeldarisword_floorObj.png
+      4890: Resources/Eldar/weapons/aeldarimelee/aeldarichainsword_floorObj.png
+      4891: Resources/Eldar/weapons/aeldarimelee/aeldaripowersword_floorObj.png
+      4892: Resources/Eldar/weapons/diresword_floorObj.png
+      4893: Resources/Eldar/weapons/powerglaive_floorObj.png
+      4894: Resources/Eldar/weapons/direswordvessel_floorObj.png
+      4895: Resources/Eldar/weapons/scorpionchainsword_floorObj.png
+      4896: Resources/Eldar/weapons/bitingblade_floorObj.png
+      4897: Resources/Eldar/weapons/scorpionsclaw_floorObj.png
 
       4951: Resources/Eldar/weapons/fusion_gun_floorObj.png
       4952: Resources/Eldar/weapons/dragon_fusion_gun_floorObj.png
@@ -924,11 +1000,19 @@ extraSprites:
       4954: Resources/Eldar/units/guardian/eldar_guardian_corpse_floorObj.png
       4955: Resources/Eldar/units/ranger/eldar_ranger_corpse_floorObj.png
       4956: Resources/Eldar/units/warp_spider/eldar_spider_corpse_floorObj.png
-
+      4957: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_corpse_floorObj.png
+      4958: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_corpse_floorObj.png
+      4959: Resources/Eldar/units/seer/eldar_seer_corpse_floorObj.png
+      4960: Resources/Eldar/units/warlock/eldar_warlock_corpse_floorObj.png
+      4961: Resources/Eldar/units/dire_avenger/eldar_avenger_corpse_floorObj.png
+      4962: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_corpse_floorObj.png
+      4963: Resources/Eldar/units/striking_scorpion/eldar_scorpion_corpse_floorObj.png
+      4964: Resources/Eldar/units/striking_scorpion_exarch/eldar_scorpionex_corpse_floorObj.png
+      4965: Resources/Eldar/units/howling_banshee/eldar_banshee_corpse_floorObj.png
 
 # Free Indexes
 
-# 203 - 209
+# 204 - 209
 # 211 - 219
 # 228
 # 236 - 248

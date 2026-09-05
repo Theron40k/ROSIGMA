@@ -27,7 +27,7 @@ items:
     spawnUnit: STR_GUARD_PILOT
   - type: STR_CMAS_SPAWNER_HOSTILE
     refNode: *HOSTILE_UNIT_SPAWNER
-    spawnUnit: STR_CMAS
+    spawnUnit: STR_CMAS_AI
   - type: STR_GUARD_CARAPACE_OGRYN_AI_SPAWNER_HOSTILE
     refNode: *HOSTILE_UNIT_SPAWNER
     spawnUnit: STR_GUARD_CARAPACE_OGRYN_AI
@@ -38,9 +38,27 @@ items:
     refNode: *HOSTILE_UNIT_SPAWNER
     spawnUnit: STR_GUARD_FLAK_COMMISSAR_AI
 
+  - type: STR_VALHALLAN_AI_ROOKIESPAWNER #friendly
+    spawnUnit: STR_VALHALLAN_GUARD_AI
+    spawnUnitFaction: 2
+    recover: false
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+  - type: STR_VALHALLAN_AI_ROOKIESPAWNER_MIDTIER #friendly
+    spawnUnit: STR_VALHALLAN_GUARD_AI_MIDTIER
+    spawnUnitFaction: 2
+    recover: false
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    armor: 255
+
   - type: STR_ALLIEDWOLFAI_SPAWNER
     spawnUnit: STR_FENRISWOLFYAI
     spawnUnitFaction: 2
+    recover: false
     invWidth: 0
     invHeight: 0
     battleType: 4

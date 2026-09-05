@@ -72,8 +72,18 @@ soldierTransformation:
       #- STR_ADEPTAS_CHAOS # Full SOB excluded, would overshadow like all other options
       - STR_CHAOSCULT_PRIEST_LV1
       - STR_CHAOSCULT_PRIEST_LV2
-      - STR_SECTOID_FEMCULTIST
       - STR_CHAOS_WITCH_PLAYER
+      # Eldar
+      - STR_ELDAR_GUARDIAN_PLAYER
+      - STR_ELDAR_RANGER_PLAYER
+      # Tau
+      - STR_FIREWARRIOR_GV
+      - STR_FIREWARRIOR_SHASUI_GV
+      - STR_FIREWARRIOR_SHASVRE_GV
+      - STR_FIREWARRIOR_SHASEL_GV
+      - STR_FIREWARRIOR_FIREBLADE_GV
+      - STR_GUEVESALA_GV
+      - STR_GUEVESAUI_GV
 
 
     # Add support for bringing weaker Soldiers up to snuff at Token cost.
@@ -99,7 +109,7 @@ soldierTransformation:
       firing: 5
       throwing: 5
       strength: 10
-      psiStrength: 0
+      psiStrength: 10
       psiSkill: 20
       melee: 5
 
@@ -149,6 +159,25 @@ soldierTransformation:
       STR_KILLPOINT_TOKEN: 100
     allowedSoldierTypes:
       - STR_IMPERIAL_INTERROGATOR
+
+
+  - refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST
+    name: STR_INQ_RR_ELDAR_MEDITATION_RITUAL
+    forbiddenPreviousTransformations:
+      - STR_INQ_RR_ELDAR_MEDITATION_RITUAL
+    cost: 0
+    requires:
+      - STR_INQ_RR_SECURE_ELDAR_SUPPORT_2
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    upperBoundType: 1
+    transferTime: 10
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+    flatOverallStatChange:
+      bravery: 10
+      psiStrength: 20
 
 
   # Clean up the unused type from refNode: *STR_INQ_TRANSFORM_SOLDIER_LIST

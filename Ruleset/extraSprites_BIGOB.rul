@@ -58,6 +58,7 @@ extraSprites:
       202: Resources/Bigobs/light_bolter_ultra.png
       203: Resources/Bigobs/light_boltpistol_ultra.png
       204: Resources/Bigobs/BIGOB_IMPROVISED_PLASMA_GRENADE.png
+      205: Resources/Bigobs/Battle_Lasrifle.png # Starting Battlerifle Lasgun
       206: Resources/Bigobs/BIGOB_SHOTPISTOL.png
       207: Resources/Bigobs/LASGAN_LOWTIER_BIGOB.png  # replacement for starting sprite
       208: Resources/Bigobs/hellpistol.png  # offset doesn't matter but I want it to be consistent with handobs
@@ -215,9 +216,15 @@ extraSprites:
       980: Resources/Bigobs/AutogunsExpanded/VALHALLAN_STUBRIFLE_BIGOB.png
       981: Resources/Bigobs/AutogunsExpanded/VALHALLAN_AUTOGUN_BIGOB.png
       982: Resources/Bigobs/AutogunsExpanded/VALHALLAN_AUTOSTUBBER_BIGOB.png
+      983: Resources/Bigobs/HEAVY_STUBBER_VL_BIGOB.png
+      984: Resources/Bigobs/HEAVY_STUBBER_VL_BIGOB_BIPOD.png
       985: Resources/Bigobs/BIGOB_AUTOSTUBBER_DRUM.png
       986: Resources/Bigobs/BIGOB_AUTOSTUBBER_DRUM_AP.png
       987: Resources/Bigobs/bigob_autogun_clip_ap.png
+      988: Resources/Bigobs/VL_MORTAR_CANNON_BIGOB.png
+      989: Resources/Bigobs/BIGOB_VL_HEAVY_STUBBER_DRUM.png
+      990: Resources/Bigobs/BIGOB_VL_HEAVY_STUBBER_DRUM_AP.png
+      991: Resources/Bigobs/VALHALLAN_GL_BIGOB.png
       1000: Resources/Bigobs/bigobs_stub_rifle.png
       1001: Resources/Bigobs/bigobs_stub_pistol.png
       1002: Resources/Bigobs/bigobs_stub_magazine.png
@@ -293,6 +300,20 @@ extraSprites:
       1108: Resources/Bigobs/ASSC_AP_BIGOB.png
       1109: Resources/Bigobs/ASSC_EX_BIGOB.png
       1110: Resources/Bigobs/BIGOB_MULTILASER_BATTERY_XL_HOTSHOT.png
+      1111: Resources/Bigobs/trenchgun.png
+      1112: Resources/Bigobs/grenade_lucius_tier1.png
+      1113: Resources/Bigobs/grenade_lucius_tier2.png
+      1114: Resources/Bigobs/lasgun_lucius_tier2.png
+      1115: Resources/Bigobs/lasgun_lucius_tier2scoped.png
+      1116: Resources/Bigobs/lasgun_lucius_tier3.png
+      1117: Resources/Bigobs/lasgun_lucius_tier3scoped.png
+      1118: Resources/Bigobs/lasgun_lucius_MC.png
+      1119: Resources/Bigobs/lasgun_lucius_MCscoped.png
+      1120: Resources/Bigobs/hellgun_lucius.png
+      1121: Resources/Bigobs/lasgun_lucius_MC.png
+      1122: Resources/Bigobs/lasgun_lucius_MCscoped.png
+      1123: Resources/Bigobs/volleygun_lucius.png
+
       # ROSEMOD
 
       366: Resources/FOES/366.gif
@@ -660,6 +681,7 @@ extraSprites:
       2740: Resources/Bigobs/ARle10corpse.png
       #2741: magus stav
       2746: Resources/Bigobs/INTERITUScorpse.png
+      2747: Resources/GENE/corpse_BW2.png
       2748: Resources/Bigobs/EXPULSUMcorpse.png
       2750: Resources/Bigobs/SATURNINEcorpse.png
       2752: Resources/Bigobs/SATURNINEGKcorpse.png
@@ -798,7 +820,7 @@ extraSprites:
       3030: Resources/Bigobs/CHAOSBOLTERRETRIBUTOR.png
       3032: Resources/TYRANID/bigob_WARRIOR_RENDINGCLAWS.png #for use as secondary weapon
       3033: Resources/TYRANID/bigob_WARRIOR_DEVOURER.png
-      3034: Resources/TYRANID/corpse_warrior.png
+      3034: Resources/TYRANID/corpse_warrior_scythes.png
       3035: Resources/TYRANID/corpse_ripperswarm.png
       3036: Resources/TYRANID/bigob_RIPPERBITE.png
       3037: Resources/TYRANID/BIGOB_SPORE_POISON.png
@@ -808,7 +830,14 @@ extraSprites:
       3041: Resources/TYRANID/bigob_VENOMCANNON.png
       3042: Resources/TYRANID/bigob_BARBEDSTRANGLER.png
       3043: Resources/Bigobs/Null_Transparency.png
-      # all indexes 3035 ----> 3047 RESERVED FOR LIDS!!!!!!!
+      3044: Resources/TYRANID/corpse_warrior_claws.png
+      #3045: Resources/TYRANID/corpse_warrior_swords.png
+      #3046: Resources/TYRANID/corpse_prime_scythes.png
+      #3047: Resources/TYRANID/corpse_prime_claws.png
+      #3048: Resources/TYRANID/corpse_prime_swords.png
+      3049: Resources/TYRANID/corpse_genestealer.png
+
+      # indexes 3050 - 3086 RESERVED FOR NIDS
 
       3087: Resources/Bigobs/BIGOB_BLASTMASTER.png
       3088: Resources/AX/CHAOS_CAX.png
@@ -1239,6 +1268,22 @@ extraSprites:
       3932: Resources/TAU/SENTINEL_LAYERS/Armors/bigobs_sentinelgv_multilaser.png
       3934: Resources/TAU/SENTINEL_LAYERS/Armors/bigobs_sentinelgv_autocannon.png
 
+  # Kroot AI
+
+      3935: Resources/Bigobs/greykroothunter_corpse.png
+      3936: Resources/Bigobs/greykrootwarrior_corpse.png
+      3937: Resources/Bigobs/greykrootberserker_corpse.png
+      3938: Resources/Bigobs/greykrootsniper_corpse.png
+      3939: Resources/Bigobs/greykrootelite_corpse.png
+      3940: Resources/Bigobs/greykrootleader_corpse.png
+
+      3941: Resources/Bigobs/greenkroothunter_corpse.png
+      3942: Resources/Bigobs/greenkrootwarrior_corpse.png
+      3943: Resources/Bigobs/greenkrootberserker_corpse.png
+      3944: Resources/Bigobs/greenkrootsniper_corpse.png
+      3945: Resources/Bigobs/greenkrootelite_corpse.png
+      3946: Resources/Bigobs/greenkrootleader_corpse.png
+
 # Eldars
       4850: Resources/Eldar/weapons/Reaper_launcher_bigObj.png #reaper launcher
       4851: Resources/Eldar/units/dark_reaper/eldar_reaper_corpse_bigObj.png
@@ -1246,7 +1291,7 @@ extraSprites:
       4853: Resources/Eldar/units/fire_dragon/eldar_dragon_corpse_bigObj.png
       4854: Resources/Eldar/units/fire_dragon_exarch/eldar_dragon_ex_corpse_bigObj.png
       4855: Resources/Eldar/weapons/Reaper_rocket_bigObj.png
-      4856: Resources/Eldar/weapons/tempest_rocketPack_bigObj.png
+      #4856: Resources/Eldar/weapons/tempest_rocketPack_bigObj.png
       4857: Resources/Eldar/weapons/ranger_longrifle_bigObj.png
       4858: Resources/Eldar/weapons/ranger_longriflescoped_bigObj.png
       4859: Resources/Eldar/weapons/ranger_longrifle_mag_bigObj.png
@@ -1254,7 +1299,40 @@ extraSprites:
       4861: Resources/Eldar/weapons/shurikencannon_bigObj.png
       4862: Resources/Eldar/weapons/shurikencannon_mag_bigObj.png
       4863: Resources/Eldar/weapons/deathspinner/deathspinner_bigObj.png
-      4864: Resources/Eldar/weapons/deathspinner/spinnerspool_bigObj.png
+      4864: Resources/Eldar/weapons/deathspinner/deathspinner_spool_bigObj.png
+      4865: Resources/Eldar/weapons/powerblades/eldar_powerblade_bigObj.png
+      4866: Resources/Eldar/weapons/tempestlauncher/eldar_tempest_launcher_bigObj.png
+      4867: Resources/Eldar/weapons/tempestlauncher/eldar_tempest_pods_bigObj.png
+      4868: Resources/Eldar/weapons/spinneretrifle/spinneretrifle_bigObj.png
+      4869: Resources/Eldar/weapons/spinneretrifle/spinneretrifle_spool_bigObj.png
+      4870: Resources/Eldar/weapons/dragon_fusion_gun_canister_bigObj.png
+      4871: Resources/Eldar/weapons/firepike_canister_bigObj.png
+      4872: Resources/Eldar/weapons/flamers/aeldari_flamer_bigObj.png
+      4873: Resources/Eldar/weapons/flamers/aeldari_flamer_fuel_bigObj.png
+      4874: Resources/Eldar/weapons/flamers/dragon_breath_flamer_bigObj.png
+      4875: Resources/Eldar/weapons/flamers/dragon_breath_flamer_fuel_bigObj.png
+      4876: Resources/Eldar/weapons/fusionpistols/fusion_pistol_bigObj.png
+      4877: Resources/Eldar/weapons/fusionpistols/dragon_fusion_pistol_bigObj.png
+      4878: Resources/Eldar/weapons/fusionpistols/fusion_pistol_canister_bigObj.png
+      4879: Resources/Eldar/weapons/fusionpistols/dragon_fusion_pistol_canister_bigObj.png
+      4880: Resources/Eldar/weapons/dragonaxe_bigObj.png
+      4881: Resources/Eldar/weapons/witchblade_bigObj.png
+      4882: Resources/Eldar/weapons/singingspear_bigObj.png
+      4883: Resources/Eldar/weapons/witchstaff_bigObj.png
+      4884: Resources/Eldar/weapons/avenger_shurikencatapult_bigObj.png
+      4885: Resources/Eldar/weapons/avenger_shurikencatapultscoped_bigObj.png
+      4886: Resources/Eldar/weapons/avenger_shurikenpistol_bigObj.png
+      4887: Resources/Eldar/weapons/avenger_shurikenpistolscoped_bigObj.png
+      4888: Resources/Eldar/weapons/avenger_shurikenclip_bigObj.png
+      4889: Resources/Eldar/weapons/aeldarimelee/aeldarisword_bigObj.png
+      4890: Resources/Eldar/weapons/aeldarimelee/aeldarichainsword_bigObj.png
+      4891: Resources/Eldar/weapons/aeldarimelee/aeldaripowersword_bigObj.png
+      4892: Resources/Eldar/weapons/diresword_bigObj.png
+      4893: Resources/Eldar/weapons/powerglaive_bigObj.png
+      4894: Resources/Eldar/weapons/direswordvessel_bigObj.png
+      4895: Resources/Eldar/weapons/scorpionchainsword_bigObj.png
+      4896: Resources/Eldar/weapons/bitingblade_bigObj.png
+      4897: Resources/Eldar/weapons/scorpionsclaw_bigObj.png
 
       4950: Resources/Eldar/weapons/Wraithguard_ghostaxe_bigObj.png
       4951: Resources/Eldar/weapons/fusion_gun_bigObj.png
@@ -1263,16 +1341,23 @@ extraSprites:
       4954: Resources/Eldar/units/guardian/eldar_guardian_corpse_bigObj.png
       4955: Resources/Eldar/units/ranger/eldar_ranger_corpse_bigObj.png
       4956: Resources/Eldar/units/warp_spider/eldar_spider_corpse_bigObj.png
+      4957: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexds_corpse_bigObj.png
+      4958: Resources/Eldar/units/warp_spider_exarch/eldar_spiderexpb_corpse_bigObj.png
+      4959: Resources/Eldar/units/seer/eldar_seer_corpse_bigObj.png
+      4960: Resources/Eldar/units/warlock/eldar_warlock_corpse_bigObj.png
+      4961: Resources/Eldar/units/dire_avenger/eldar_avenger_corpse_bigObj.png
+      4962: Resources/Eldar/units/dire_avenger_exarch/eldar_avengerex_corpse_bigObj.png
+      4963: Resources/Eldar/units/striking_scorpion/eldar_scorpion_corpse_bigObj.png
+      4964: Resources/Eldar/units/striking_scorpion_exarch/eldar_scorpionex_corpse_bigObj.png
+      4965: Resources/Eldar/units/howling_banshee/eldar_banshee_corpse_bigObj.png
 
 
 # All Free Indexes
 
-# 205
 # 403 - 899
 # 918 - 919
 # 942 - 969
 # 976 - 979
-# 983 - 984
 # 988 - 999
 # 1061 - 1064
 # 1067 - 1100
@@ -1307,7 +1392,7 @@ extraSprites:
 # 2634 - 2639
 # 2653 - 2699
 # 2741 - 2745
-# 2747
+
 # 2749
 # 2751
 # 2753

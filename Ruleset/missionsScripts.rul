@@ -98,6 +98,120 @@ adhocScripts:
         STR_ALIEN_HARVEST_TZEENTCH_HARD: 33
         STR_ALIEN_ABDUCTION_TZEENTCH_HARD: 33
 
+
+  - type: gameStartOrkSL
+    # Orkz as starting enemy for SL
+    adhocMissionScriptTags: ["gameStartOrkSL"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_START: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+
+  - type: gameStartOrkVL #War for Survival
+    # Orkz as starting enemy for VL
+    adhocMissionScriptTags: ["gameStartOrkVL"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_START: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 50
+        STR_ORK_MIDTIER: 50
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 day
+
+  - type: gameStartBTBR1
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR1"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR2
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR2"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR3
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR3"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR4
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR4"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: gameStartBTBR5
+    # Orkz as enemy for early Black Templar and Bloody Roses
+    adhocMissionScriptTags: ["gameStartBTBR5"]
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+    lastMonth: 0
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+
+
 missionScripts:
 ### Game Start Scripts
   # game start scripts have been depreciated, their function has been moved to adhoc scripts (see above).
@@ -120,6 +234,7 @@ missionScripts:
     executionOdds: 70
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: true
 
   - type: newTraditionalBasesLater
     missionWeights:
@@ -135,6 +250,7 @@ missionScripts:
     executionOdds: 100
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: true
 
   - type: newTraditionalBasesExtra
     missionWeights:
@@ -151,6 +267,7 @@ missionScripts:
     researchTriggers:
       STR_DEFAULT_CAMPAIGN: true
       STR_NOT_WORDBEARERS: true
+      STR_NOT_BLACKTEMPLARS: true
 
   # chaos version
   - type: newTraditionalBasesEarlyCHAOS
@@ -382,6 +499,19 @@ missionScripts:
     randomDelay: 40160 # Up to 4 weeks random delay
     executionOdds: 25
     researchTriggers:
+      STR_ELDAR_ACTIVE: true
+      STR_ELDAR_INACTIVE: false
+
+  - type: EldarBASESValhallan #Scouring of Gnosis
+    missionWeights:
+      0:
+        STR_ELDAR_BASE: 100
+    firstMonth: 4 #earlier, may-june likely
+    startDelay: 120
+    randomDelay: 40160 # Up to 4 weeks random delay
+    executionOdds: 50
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
       STR_ELDAR_ACTIVE: true
       STR_ELDAR_INACTIVE: false
 
@@ -621,7 +751,7 @@ missionScripts:
     useTable: true
 
   # Space Wolves Campaign
-  - &STR_HARD_MISSION_TABLE
+  - &STR_HARD_SW_MISSION_TABLE
     type: warpStormHardSW
     # For space Wolves, weighted towards tzeentch missions
     missionWeights:
@@ -670,18 +800,19 @@ missionScripts:
     firstMonth: 1
     useTable: true
     researchTriggers:
+      STR_SPACEWOLVES_STRATEGY: true
       STR_DEFAULT_CAMPAIGN: true
       STR_HARDER_MISSIONS: true
       STR_EVEN_HARDER_MISSIONS: false
       STR_CHAPTER_PURITY: true
   - type: warpStormBuildingHardSW
-    refNode: *STR_HARD_MISSION_TABLE
+    refNode: *STR_HARD_SW_MISSION_TABLE
     firstMonth: 3
     lastMonth: 5
     executionOdds: 50
     useTable: true
   - type: warpStormRagingHardSW
-    refNode: *STR_HARD_MISSION_TABLE
+    refNode: *STR_HARD_SW_MISSION_TABLE
     firstMonth: 6
     useTable: true
 
@@ -1619,13 +1750,18 @@ missionScripts:
     firstMonth: 1
     lastMonth: 24
 
+
+  # gameStart Scripts: Randomize one Cultist/TraitorGuard/Ork base in home region in early game.
+  # See gameStartTraitorGuard and gameStartOrk. Uses label and conditional to limit to one such base
+  # When making variants, be sure to check interactions with other gameStart(X) scripts.
+
   # Cultists
   - type: gameStartCultist
     missionWeights:
       0:
         STR_CULTIST_BASE_START: 100
-    executionOdds: 75
-    firstMonth: 2
+    executionOdds: 33  # Note: 33% because there are three total variants (Cultist, TraitorGuard, Ork)
+    firstMonth: 2  # Note: the firstMonth/lastMonth should be aligned with gameStartTraitorGuard/gameStartOrk
     lastMonth: 2
     targetBaseOdds: 100
     raceWeights:
@@ -1634,10 +1770,10 @@ missionScripts:
     startDelay: 3000
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_EVEN_HARDER_MISSIONS: false
-      STR_NOT_TAU_EMPIRE_GV: true
-      STR_NOT_WORDBEARERS: true
-    label: 100
+      STR_DEFAULT_CAMPAIGN: true
+    label: 100  # Note: This label is used by conditional [-100] to prevent other options from running.
 
   - type: gameStartCultistExtraHard # Word Bearers instead of cultists. Guaranteed to spawn.
     executionOdds: 100
@@ -1654,15 +1790,17 @@ missionScripts:
     randomDelay: 4320  # additional random 0 to 3 days
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_EVEN_HARDER_MISSIONS: true
-      STR_NOT_WORDBEARERS: true
+      STR_DEFAULT_CAMPAIGN: true
     maxRuns: 1
     varName: WordBearerCult
 
   - type: gameStartCultist_SL
-    executionOdds: 40  # was 75
-    firstMonth: 4  # was 2
-    lastMonth: 4  # was 2
+    # For SL/VL, the Cultist/TraitorGuard base is on top of adhoc gameStartOrkSL, but shows up later.
+    executionOdds: 33
+    firstMonth: 2  # Cultist base could arrive early than gameStartTraitorGuard_SL in month 4
+    lastMonth: 3
     missionWeights:
       0:
         STR_CULTIST_BASE_START: 100
@@ -1683,6 +1821,27 @@ missionScripts:
     label: 100
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: true
+      STR_EVEN_HARDER_MISSIONS: false
+
+  - type: gameStartCultist_VL #Valhallan
+    # For SL/VL, the Cultist/TraitorGuard base is on top of adhoc gameStartOrkSL, but shows up later.
+    executionOdds: 33
+    firstMonth: 2  # Cultist base could arrive early than gameStartTraitorGuard_SL in month 4
+    lastMonth: 3
+    missionWeights:
+      0:
+        STR_CULTIST_BASE_START: 100
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_SLAANESH_CULT_EARLY: 33  #Traitor's Hand
+        STR_SLAANGOR_MIXED: 10
+        STR_CULTIST_SQUATS: 15 #Porretta campaign
+    startDelay: 3000
+    randomDelay: 4320  # additional random 0 to 3 days
+    label: 100
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
       STR_EVEN_HARDER_MISSIONS: false
 
   # Rebels
@@ -1706,6 +1865,47 @@ missionScripts:
       STR_NOT_TAU_EMPIRE_GV: true  # Gue'vesa have missions without Tau - can still fire month 0
       STR_EVEN_HARDER_MISSIONS: false
       STR_NOT_WORDBEARERS: true
+
+  - type: deserterHideoutVL
+    refNode: *STR_DESERTER_HIDEOUT
+    regionWeights: #could be used for arctic only? REGION_VALHALLA_SITES missionzones.rul
+      0:
+        STR_SIBERIA: 34
+        STR_ANTARCTICA: 33
+        STR_ARCTIC: 33
+    missionWeights:
+      # 0 is just for safety
+      0:
+        STR_DESERTER_HIDEOUT: 100
+    raceWeights:
+      0:
+        STR_SLAANESH_TRAITOR_GUARD_EARLY: 33
+        STR_SLAANGOR_EARLY: 10
+        STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+      4:
+        STR_SLAANESH_TRAITOR_GUARD_MID: 33
+        STR_ADEPTAS_DESERTERS: 10
+        STR_SLAANGOR_MIXED: 10
+        STR_SNAKEMAN_DESERTERS_GSC: 10
+        STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+        STR_TRAITOR_SQUATS: 15
+      7:
+        STR_SLAANESH_TRAITOR_GUARD_LATE: 33
+        STR_SLAANGOR_LATE: 10
+        STR_SNAKEMAN_DESERTERS_GSC: 10
+        STR_SNAKEMAN_DESERTERS_WITH_HRUD: 5
+        STR_TRAITOR_SQUATS: 15
+    useTable: false
+    executionOdds: 30
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+    researchTriggers:
+      STR_HARDER_MISSIONS: false
+      STR_VALHALLAN_STRATEGY: true
+      STR_NOT_TAU_EMPIRE_GV: true  # Gue'vesa have missions without Tau - can still fire month 0
+      STR_EVEN_HARDER_MISSIONS: false
+      STR_NOT_WORDBEARERS: true
+
   - type: deserterHideoutHard
     refNode: *STR_DESERTER_HIDEOUT
     missionWeights:
@@ -1735,23 +1935,25 @@ missionScripts:
     raceWeights:
       0:
         STR_SNAKEMAN: 100
-    executionOdds: 75  # either Cultists or Traitor Guard
+    executionOdds: 50  # Note: 50% because there are two remaining variants (TraitorGuard, Ork)
     firstMonth: 2
     lastMonth: 2
     targetBaseOdds: 100
     startDelay: 3000
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_EVEN_HARDER_MISSIONS: false
-      STR_NOT_TAU_EMPIRE_GV: true
-      STR_NOT_WORDBEARERS: true
+      STR_DEFAULT_CAMPAIGN: true
     label: 101
 
+
   - type: gameStartTraitorGuard_SL
-    executionOdds: 75  #
-    firstMonth: 3  # was 2
-    lastMonth: 3  # was 2
-    conditionals: [-100]
+# For SL/VL, the Cultist/TraitorGuard base is on top of gameStartOrkSL, but shows up later, and not in home region.
+    executionOdds: 100  # 100% b/c this is the last option/variant for VL/SL
+    firstMonth: 4  # delayed to month 4, since SL also starts against a guaranteed Ork Base (adhoc gameStartOrkSL)
+    lastMonth: 4
+    conditionals: [-100]  # Note: Exclusive w/ gameStartCultist_SL
     missionWeights:
       0:
         STR_TRAITOR_GUARD_BASE_START: 100
@@ -1767,6 +1969,29 @@ missionScripts:
     label: 101
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: true
+      STR_EVEN_HARDER_MISSIONS: false
+
+  - type: gameStartTraitorGuard_VL #Traitor's Hand slaanesh tilt
+    # For SL/VL, the Cultist/TraitorGuard base is on top of gameStartOrkSL, but shows up later, and not in home region.
+    executionOdds: 100  # 100% b/c this is the last option/variant for VL/SL
+    firstMonth: 4  # delayed to month 4, since VL also starts against a guaranteed Ork Base (adhoc gameStartOrkVL)
+    lastMonth: 4
+    conditionals: [-100]  # Note: Exclusive w/ gameStartCultist_VL
+    missionWeights:
+      0:
+        STR_TRAITOR_GUARD_BASE_START: 100
+    targetBaseOdds: 100
+    raceWeights:
+      0:
+        STR_SNAKEMAN: 5
+        STR_SLAANESH_TRAITOR_GUARD_MID: 50
+        STR_TRAITOR_SQUATS: 40
+        STR_HRUD_WARRIOR_FORCE: 5
+    startDelay: 3000
+    randomDelay: 4320  # additional random 0 to 3 days
+    label: 101
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
       STR_EVEN_HARDER_MISSIONS: false
 
   - type: gameStartTraitorGuardExtraHard # high end traitor guard. Probably easier than the word bearers
@@ -1844,44 +2069,29 @@ missionScripts:
       STR_GSC_ARBITES_SPAWNED: false
 
   # Orks
-  # ported from 40k and disabled for chaos and tau
-
+  # Ported from 40k with adjustments for STR_DEFAULT_CAMPAIGN
   - type: gameStartOrk
+    conditionals: [-100, -101]
     missionWeights:
       0:
         STR_ORK_BASE_START: 100
-    firstMonth: 1
+    firstMonth: 2
     lastMonth: 2
-    targetBaseOdds: 30  # less chances as there are other orks bases that can spawn
-    raceWeights:
-      0:
-        STR_ORK: 100
-    startDelay: 13000  # more delay
-    executionOdds: 100
-    researchTriggers:
-      STR_CHAPTER_PURITY: true
-      STR_DEFAULT_CAMPAIGN: true
-
-  - type: gameStartOrkSL
-    # Orkz as starting enemy for SL
-    missionWeights:
-      0:
-        STR_ORK_BASE_START: 100
-    lastMonth: 0
     targetBaseOdds: 100
     raceWeights:
       0:
-        STR_ORK_MIDTIER_EVILSUNZ: 50
-    startDelay: 4320  # 3 days
-    randomDelay: 4320  # additional random 0 to 3 days
-    executionOdds: 100
+        STR_ORK: 100
+    startDelay: 3000
+    executionOdds: 100  # 100% since this is the last variant in the default gameStart(X) line
     researchTriggers:
-      STR_STEEL_LEGION_STRATEGY: true  # only triggers for steel legion  playthroughs
+      STR_CHAPTER_PURITY: true
+      STR_DEFAULT_CAMPAIGN: true
+      STR_STEEL_LEGION_STRATEGY: false  # Steel Legion guaranteed Orks; see adhoc gameStartOrkSL
+      STR_VALHALLAN_STRATEGY: false # Valhallan guaranteed Orks; see adhoc gameStartOrkVL
     label: 102
 
   # Eldar
   - type: eldarActivity
-    # Orkz as starting enemy for SL
     missionWeights:
       0:
         STR_ELDAR_ARTIFACT: 100
@@ -1927,6 +2137,7 @@ missionScripts:
     startDelay: 3000
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_ALIENS_ONLY: false
       STR_NOT_THE_IMPERIAL_LAW: true
       STR_NOT_CHAOSCULT: true
@@ -1968,6 +2179,7 @@ missionScripts:
       STR_HARDER_MISSIONS: false
       STR_EVEN_HARDER_MISSIONS: false
       STR_STEEL_LEGION_STRATEGY: false  # get their own ork tilted list
+      STR_VALHALLAN_STRATEGY: false # get their own ork/slaanesh/eldar tilted list
       STR_ALIENS_ONLY: false
       STR_NOT_THE_IMPERIAL_LAW: true
       STR_NOT_CHAOSCULT: true
@@ -1994,6 +2206,7 @@ missionScripts:
       STR_NOT_THE_IMPERIAL_LAW: true
       STR_NOT_CHAOSCULT: true
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
       STR_SPACEWOLVES_STRATEGY: false
     useTable: false
     startDelay: 150
@@ -2094,6 +2307,74 @@ missionScripts:
         STR_CIVILIAN_SHRINE_TERROR_ADEPTAS: 15
     researchTriggers:
       STR_STEEL_LEGION_STRATEGY: true
+      STR_HARDER_MISSIONS: true
+      STR_ALIENS_ONLY: false
+    useTable: false
+    startDelay: 150
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  # Valhallan Campaign
+  - type: firstMonthOrkTerrorVL  # for Valhallan
+    missionWeights:
+      0:
+        STR_ORK_TERROR: 100
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
+    executionOdds: 100
+    lastMonth: 0
+    useTable: false
+    startDelay: 4320  # 3 days
+    randomDelay: 4320  # additional random 0 to 3 days
+
+  - type: recurringOrkTerrorVL  # for Valhallan
+    missionWeights:
+      0:
+        STR_ORK_TERROR: 100
+      4:
+        STR_ORK_TERROR: 100
+        STR_ALIEN_TERROR: 16
+        STR_NURGLE_TERROR: 11
+        STR_ALIEN_TERROR_TZEENTCH: 11
+        STR_TERROR_MISSION_SLAAN: 50
+        STR_CIVILIAN_TERROR: 30
+        STR_SHRINE_TERROR: 5
+        STR_CIVILIAN_SHRINE_TERROR_NOVICES: 5
+        STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS: 4
+        STR_CIVILIAN_TERROR_GSC: 30
+      6:
+        STR_ORK_TERROR: 100
+        STR_ALIEN_TERROR: 25
+        STR_NURGLE_TERROR: 11
+        STR_TERROR_MISSION_SLAAN: 50
+        STR_ALIEN_TERROR_TZEENTCH: 11
+        STR_CIVILIAN_TERROR: 30
+        STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS: 25
+        STR_CIVILIAN_SHRINE_TERROR_ADEPTAS: 35
+        STR_CIVILIAN_TERROR_GSC: 25
+    executionOdds: 70
+    firstMonth: 1
+    lastMonth: 99
+    useTable: false
+    startDelay: 150
+    randomDelay: 4320  # additional random 0 to 3 days
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
+
+  - type: recurringOrkTerrorHardVL  # For VL
+    executionOdds: 80
+    firstMonth: 1
+    missionWeights:
+      0:
+        STR_ORK_TERROR: 100
+        STR_ALIEN_TERROR_HARD: 25
+        STR_NURGLE_TERROR: 11
+        STR_ALIEN_TERROR_TZEENTCH: 11
+        STR_TERROR_MISSION_SLAAN: 50
+        STR_SHRINE_TERROR: 10
+        STR_CIVILIAN_SHRINE_TERROR_MIXEDADEPTAS: 25
+        STR_CIVILIAN_SHRINE_TERROR_ADEPTAS: 15
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
       STR_HARDER_MISSIONS: true
       STR_ALIENS_ONLY: false
     useTable: false
@@ -2215,7 +2496,7 @@ missionScripts:
       STR_ADEPTAS: false
       STR_CHAOS_PATH: false
       STR_NOT_CHAOSCULT: true
-      STR_CHAMBERMILITANT: false #CMil uses MMEarlyGK
+      STR_CHAMBERMILITANT: false #CMil uses MMEarlyGK or MMRadicalRoad
       STR_NOT_WORDBEARERS: true
 
   # Arbites
@@ -2267,7 +2548,7 @@ missionScripts:
       STR_CHAOS_PATH: false
       STR_NOT_CHAOSCULT: true
 
-  # Grey Knights
+  # Grey Knights / Deathwatch
   - type: MMEarlyGK
     refNode: *STR_MONTHLY_MISSIONS
     missionWeights:
@@ -2275,9 +2556,13 @@ missionScripts:
       0:
         STR_CATACOMBS: 40
         STR_ALIEN_ARTIFACT: 20
+        STR_CULTIST_SACRIFICES_MM: 10
+        STR_CULTIST_SUMMONING_MM: 10
       3:
         STR_CATACOMBS: 10
         STR_ALIEN_ARTIFACT: 20
+        STR_CULTIST_SACRIFICES_MM: 5
+        STR_CULTIST_SUMMONING_MM: 5
         STR_ALIEN_WAR: 10
         STR_SUPPORT_PDF_ASSAULT: 10  # PDF assaulting chaos base of cult or traitor guard
         STR_SUPPORT_MARINE_ASSAULT: 10  # Marines assaulting chaos base of traitor marines or raptors
@@ -2287,6 +2572,37 @@ missionScripts:
     researchTriggers:
       STR_CHAMBER_NOT_ARBITES: true
       STR_NOT_CHAOSCULT: true
+      STR_RADICAL_INQUISITOR_STRATEGY: false # Radical Road has their own table, MMRadicalRoad
+
+  # Radical Road (presently flip back to MMElse; future tilt towards new Xenos/Chaos missions)
+  - type: MMRadicalRoad
+    refNode: *STR_MONTHLY_MISSIONS
+    missionWeights:
+      0:
+        STR_CATACOMBS: 40
+        STR_RESCUE_PDF_VALKYRIE: 20
+        STR_CULTIST_SACRIFICES_MM: 20
+        STR_CULTIST_SUMMONING_MM: 20
+      4:
+        STR_CATACOMBS: 30
+        STR_ALIEN_ARTIFACT: 10  # Space Hulk recurring mission, after initial script
+        STR_RESCUE_PDF_VALKYRIE: 20
+        STR_CULTIST_SACRIFICES_MM: 20
+        STR_CULTIST_SUMMONING_MM: 20
+        STR_SUPPORT_PDF_ASSAULT: 10  # PDF assaulting chaos base of cult or traitor guard
+      7:
+        STR_CATACOMBS: 10
+        STR_ALIEN_ARTIFACT: 10
+        STR_CULTIST_SACRIFICES_MM: 5
+        STR_CULTIST_SUMMONING_MM: 5
+        STR_ALIEN_WAR: 10
+        STR_SUPPORT_PDF_ASSAULT: 10  # PDF assaulting chaos base of cult or traitor guard
+        STR_SUPPORT_MARINE_ASSAULT: 10  # Marines assaulting chaos base of traitor marines or raptors
+        STR_SUPPORT_CATAMARINE_ASSAULT: 10  # Marines Cataphractii assaulting chaos base of traitor marines or raptors
+    researchTriggers:
+      STR_RADICAL_INQUISITOR_STRATEGY: true
+      STR_CHAMBER_NOT_ARBITES: true
+      # STR_CHAOS_PATH: false  # note: current MidtierChaos path does not modify STR_CHAOS_PATH, so it keeps using this MM Table. possible future review
 
   # Officio Assassinorum
   - type: MMAssassinorum # should be in addition to standard chamber militant missions. Will make adjustments as I go
@@ -3331,6 +3647,7 @@ missionScripts:
       STR_CYDONIA_OR_BUST: true
       STR_IMPERIAL_GUARD_OPERATIONS: true
       STR_STEEL_LEGION_STRATEGY: false
+      STR_VALHALLAN_STRATEGY: false
     useTable: false
     maxRuns: 1
     varName: finalMissionGuard
@@ -3346,6 +3663,21 @@ missionScripts:
     researchTriggers:
       STR_CYDONIA_OR_BUST: true
       STR_STEEL_LEGION_STRATEGY: true
+    useTable: false
+    maxRuns: 1
+    varName: finalMissionGuard
+
+  # Valhallan Ice Warriors
+  - type: finalMissionGuard_VL
+    missionWeights:
+      0:
+        STR_FINAL_MISSION_GUARD_VL: 100
+    regionWeights:
+      0:
+        REGION_FINAL_MISSION: 100
+    researchTriggers:
+      STR_CYDONIA_OR_BUST: true
+      STR_VALHALLAN_STRATEGY: true
     useTable: false
     maxRuns: 1
     varName: finalMissionGuard
@@ -4320,3 +4652,44 @@ missionScripts:
       STR_BOOK_KORPHAERON: true
       STR_WBMISSION8DONE: true
       STR_WBMISSION9DONE: false
+
+  # black templar bloody rose
+
+  - type: newTraditionalBasesEarlyBTBR
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR1: 100
+        # Low chances of harder races
+    firstMonth: 1
+    lastMonth: 2
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: false
+
+  - type: newTraditionalBasesLaterBTBR
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR2: 100
+    firstMonth: 3
+    lastMonth: 4
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 100
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: false
+
+  - type: newTraditionalBasesExtraBTBR
+    missionWeights:
+      0:
+        STR_ORK_BASE_STARTBTBR3: 100
+    firstMonth: 5
+    startDelay: 120
+    randomDelay: 20160 # Up to 2 weeks random delay
+    executionOdds: 70
+    researchTriggers:
+      STR_DEFAULT_CAMPAIGN: true
+      STR_NOT_BLACKTEMPLARS: false

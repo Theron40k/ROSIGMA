@@ -572,11 +572,24 @@ items:
     snapRange: 10  # better range
     dropoff: 5
 
+  # Note this definition is split; further details in weapons_chaos.rul
   - type: STR_PUMP_SHOTGUN_CHAOS
     refNode: *STR_PUMP
     bigSprite: 2712
-    requires:
-      - STR_ALIENS_ONLY
+
+  - type: STR_TRENCHGUN_LUCIUS #Krieg Pump shotgun
+    refNode: *STR_PUMP
+    weight: 12 #Heavier build to handle rack fire
+    bigSprite: 1111
+    floorSprite: 302
+    handSprite: 1400
+    accuracyAuto: 30
+    tuAuto: 45
+    autoShots: 3 #rackfire
+    autoRange: 7
+    armor: 200
+    requiresBuy:
+      - STR_KRIEG_STRATEGY
 
   - &STR_SMG_STUB
     type: STR_SMG_STUB_GUN
@@ -620,13 +633,12 @@ items:
     tags:
       REACTION_MULTIPLIER: 200
 
+  # Note this definition is split; further details in weapons_chaos.rul
   - type: STR_SMG_STUB_GUN_CHAOS
     refNode: *STR_SMG_STUB
     bigSprite: 2713
     floorSprite: {mod: 40k, index: 1114}
     handSprite: {mod: 40k, index: 1888}
-    requires:
-      - STR_ALIENS_ONLY
 
   - type: STR_STUB_GUN_AMMO_LONG
     categories: [STR_CAT_AUTO]

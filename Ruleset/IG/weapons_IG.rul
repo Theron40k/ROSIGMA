@@ -626,6 +626,99 @@ items:
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
 
+  - type: STR_GRENADELAUNCHER_LUCIUS_T1 #KRIEG
+    categories: [STR_CAT_GRENADES]
+    dropoff: 6
+    requiresBuy:
+      - STR_KRIEG_STRATEGY
+      - STR_BASIC_BALLISTICS_DEP
+    size: 0.2
+    costBuy: 20000
+    costSell: 5000
+    weight: 15
+    bigSprite: 1112
+    floorSprite: 303
+    handSprite: 1408
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_INCENDIARY_GRENADE40
+      - STR_KRAK_GRENADE40
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 3
+    armor: 200
+    autoRange: 0
+    snapRange: 15
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 40
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 0
+    autoShots: 1
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 19170
+    tags:
+      ITEM_RECOIL: 35
+      ITEM_COLOR_CHANGES_WITH_AMMO: 14
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
+
+  - type: STR_GRENADELAUNCHER_LUCIUS_T2 #KRIEG tier 2
+    categories: [STR_CAT_GRENADES]
+    dropoff: 5 #-1
+    requiresBuy:
+      - STR_KRIEG_STRATEGY
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_MIDTIER_PREREQ
+    size: 0.2
+    costBuy: 30000
+    costSell: 7500
+    weight: 15
+    bigSprite: 1113
+    floorSprite: 304
+    handSprite: 1416
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_ROTOR_KOMBI_BUCKSHOT40
+      - STR_ROTOR_KOMBI_SLUG40  # clipsize 3
+      - STR_INCENDIARY_GRENADE40
+      - STR_KRAK_GRENADE40
+      - STR_MELTA_GRENADE40
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 3
+    armor: 200
+    autoRange: 0
+    snapRange: 17 #+2
+    aimRange: 20
+    accuracyAuto: 0
+    accuracySnap: 40
+    accuracyAimed: 50
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 40
+    autoShots: 1
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 19170
+    tags:
+      ITEM_RECOIL: 35
+      ITEM_COLOR_CHANGES_WITH_AMMO: 14
+      ITEM_GETS_FACTION_RECOLOR: 1
+      ITEM_BASE_COLOR: 4
+
+      ITEM_GETS_ACCENT_RECOLOR: 1
+      ITEM_ACCENT_COLOR: 1
 
   - type: STR_AUTOPISTOL_HIGHGRADE
     categories: [STR_CAT_AUTO]
@@ -717,6 +810,7 @@ items:
     listOrder: 10740
     tags:
       ITEM_RECOIL: 20  # Worse recoil compensation, but slower firing rate
+      REACTION_MULTIPLIER: 150
 
 
   - type: STR_AUTOGUN_HIGHGRADE  # sans underslung but with bayonetta
@@ -2025,6 +2119,7 @@ items:
   - type: STR_LASER_RIFLEG  # LASGUN GUARD
     requiresBuy:
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_KRIEG_STRATEGY
       - STR_IMPERIAL_WEAPONS
     weight: 8
     bigSprite: 207
@@ -2060,6 +2155,7 @@ items:
       - STR_MIDTIER_PREREQ
       - STR_GUARD_AND_ARBITES
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_KRIEG_STRATEGY
     costBuy: 20000  # 3500 for basic, so more expensive, longlas is still more expensive.
     costSell: 1500
     weight: 8
@@ -2103,11 +2199,185 @@ items:
       time: true
       energy: true
 
+  - type: STR_LASER_RIFLE_KRIEG_TIER2  # mid-tier basic lasgun lucius pattern
+    categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
+    size: 0.2
+    requiresBuy:
+      - STR_MIDTIER_PREREQ
+      - STR_KRIEG_STRATEGY
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
+    costBuy: 20000
+    costSell: 1500
+    weight: 9 #+1 weight
+    bigSprite: 1114
+    floorSprite: 305
+    handSprite: 1424
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+      - STR_LASGUN_CLIP_HOTSHOT
+    clipSize: 0
+    bulletSpeed: 50
+    armor: 200  # to avoid item pile destruction
+    listOrder: 10912
+    # *** Melee bayonet
+    meleeHitSound: {mod: 40k, index: 101}
+    meleeAnimation: 0
+    meleeType: 7
+    meleePower: 50
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+    meleeAlter:
+      ArmorEffectiveness: 0.9
+      RandomType: 1
+    accuracyMelee: 100  # lower due to weight
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.5
+    tuMelee: 12
+    costMelee:
+      energy: 2
+    flatMelee:
+      time: true
+      energy: true
+
+  - type: STR_LASER_RIFLE_KRIEG_TIER2_SCOPED  # mid-tier basic lasgun lucius pattern scoped
+    categories: [STR_CAT_LASGUN, STR_CAT_SNIPER]
+    size: 0.2
+    requiresBuy:
+      - STR_MIDTIER_PREREQ
+      - STR_KRIEG_STRATEGY
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
+    costBuy: 30000
+    costSell: 2500
+    weight: 10 #+2 weight, scoped
+    bigSprite: 1115
+    floorSprite: 306
+    handSprite: 1432
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+      - STR_LASGUN_CLIP_HOTSHOT
+    clipSize: 0
+    bulletSpeed: 50
+    armor: 200  # to avoid item pile destruction
+    listOrder: 10913
+    confAimed:
+      spendPerShot: 2
+    tags:
+      ITEM_AIMED_FLAT_POWER_BONUS: 33
+
+  - type: STR_LASER_RIFLE_KRIEG_TIER3  # ceramite basic lasgun lucius pattern
+    categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
+    size: 0.2
+    requiresBuy:
+      - STR_MIDTIER_PREREQ
+      - STR_KRIEG_STRATEGY
+      - STR_UFO_CONSTRUCTION
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
+    costBuy: 40000
+    costSell: 3500
+    weight: 9 #+1 weight
+    bigSprite: 1116
+    floorSprite: 307
+    handSprite: 1440
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+      - STR_LASGUN_CLIP_HOTSHOT
+    clipSize: 0
+    bulletSpeed: 50
+    armor: 200  # to avoid item pile destruction
+    listOrder: 10914
+    # *** Melee bayonet
+    meleeHitSound: {mod: 40k, index: 101}
+    meleeAnimation: 0
+    meleeType: 7
+    meleePower: 50
+    meleeBonus:
+      strength: 0.2
+      melee: 0.2
+    meleeAlter:
+      ArmorEffectiveness: 0.9
+      RandomType: 1
+    accuracyMelee: 100  # lower due to weight
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.5
+    tuMelee: 12
+    costMelee:
+      energy: 2
+    flatMelee:
+      time: true
+      energy: true
+
+  - type: STR_LASER_RIFLE_KRIEG_TIER3_SCOPED  # ceramite basic lasgun lucius pattern scoped
+    categories: [STR_CAT_LASGUN, STR_CAT_SNIPER]
+    size: 0.2
+    requiresBuy:
+      - STR_MIDTIER_PREREQ
+      - STR_KRIEG_STRATEGY
+      - STR_UFO_CONSTRUCTION
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
+    costBuy: 50000
+    costSell: 4500
+    weight: 10 #+2 weight, scoped
+    bigSprite: 1117
+    floorSprite: 308
+    handSprite: 1448
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+      - STR_LASGUN_CLIP_HOTSHOT
+    clipSize: 0
+    bulletSpeed: 50
+    armor: 200  # to avoid item pile destruction
+    listOrder: 10915
+    confAimed:
+      spendPerShot: 2
+    tags:
+      ITEM_AIMED_FLAT_POWER_BONUS: 50
+
   - type: STR_LASCARBINE
     requiresBuy:
       - STR_BASIC_BALLISTICS_DEP
       - STR_LASER_WEAPONS
+      - STR_NOT_KRIEG_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     armor: 200  # to avoid item pile destruction
     meleePower: 50
     meleeBonus:
@@ -2126,6 +2396,73 @@ items:
     flatMelee:
       time: true
       energy: true
+    tags:
+      REACTION_MULTIPLIER: 150 #standard carbine reaction multiplier
+
+  - type: STR_LAS_BATTLERIFLE
+    dropoff: 3
+    categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
+    size: 0.3
+    costBuy: 10000
+    requiresBuy:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_LASER_WEAPONS
+      - STR_NOT_KRIEG_STRATEGY
+      - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
+    costSell: 2500
+    weight: 8
+    bigSprite: 205
+    floorSprite: 203
+    handSprite: 1698
+    bulletSprite: {mod: 40k, index: 12}
+    fireSound: {mod: 40k, index: 741}
+    hitSound: {mod: 40k, index: 19}
+    hitAnimation: {mod: 40k, index: 36}
+    autoRange: 10
+    snapRange: 18
+    aimRange: 22
+    accuracyAuto: 55  # slightly more accurate
+    accuracySnap: 80  # significantly more accurate
+    accuracyAimed: 90 # aimed shot
+    tuAuto: 40  # 40k 34
+    tuSnap: 33
+    tuAimed: 50
+    autoShots: 2
+    compatibleAmmo:
+      - STR_LASGUN_CLIP
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    listOrder: 10916
+    armor: 200  # to avoid item pile destruction
+    # bayonet component
+    meleePower: 60 # slightly higher base damage
+    meleeBonus:
+      strength: 0.25 #scales slightly better with strength
+      melee: 0.15
+    meleeAlter:
+      ArmorEffectiveness: 0.9
+      RandomType: 1
+    accuracyMelee: 75 # slightly less
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.4
+      strength: 0.1
+    tuMelee: 14 # slightly heavier and more cumbersome
+    costMelee:
+      energy: 4 # slightly heavier and more cumbersome
+    flatMelee:
+      time: true
+      energy: true
+    tags:
+      REACTION_MULTIPLIER: 75 # battle rifle penalty; multiplies base reaction score by this amount divided by 100
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+      ITEM_SNAP_FLAT_POWER_BONUS_PERCENT: 10
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25
 
   - type: STR_LASGUN_ACCATRAN
     requiresBuyBaseFunc: [TRADE]
@@ -2250,6 +2587,111 @@ items:
       time: true
     fixedWeapon: true
     fixedWeaponShow: true
+    # lasgun aesthetics
+    hitSound: 3986
+    fireSound: 3983
+    hitAnimation: 2220
+    bulletSprite: {mod: 40k, index: 22}
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 3
+    vaporProbabilitySurface: 100
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+
+  - type: STR_VOLLEYGUN_KRIEG #Lucius Volleygun
+    categories: [STR_CAT_LASGUN]
+    size: 0.2
+    dropoff: 6  # CQC focused; basically a laser automatic shotgun
+    weight: 15 #+6
+    bigSprite: 1123
+    floorSprite: 311
+    handSprite: 1480
+    power: 75
+    damageType: 1
+    damageAlter:
+      ArmorEffectiveness: 0.75
+      ToArmorPre: 0.2
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+    accuracyAuto: 60
+    accuracySnap: 65
+    snapRange: 13
+    autoRange: 13
+    tuAuto: 35
+    tuSnap: 30
+    confAuto:
+      shots: 10
+    confSnap:
+      shots: 3
+      name: STR_BURST_SNAP_SHOT
+    clipSize: -1
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    recover: false
+    fixedWeapon: true
+    fixedWeaponShow: true
+    # lasgun aesthetics
+    hitSound: 3986
+    fireSound: 3983
+    hitAnimation: 2220
+    bulletSprite: {mod: 40k, index: 22}
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 3
+    vaporProbabilitySurface: 100
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+
+  - type: STR_HELLGUN_KRIEG #Lucius Hellgun
+    categories: [STR_CAT_LASGUN]
+    size: 0.2
+    dropoff: 4  # scoped
+    weight: 15 #+6
+    bigSprite: 1120
+    floorSprite: 312
+    handSprite: 1472
+    power: 80 #+5
+    damageType: 1
+    damageAlter:
+      ArmorEffectiveness: 0.75
+      ToArmorPre: 0.2
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+    accuracyAuto: 70
+    accuracySnap: 75
+    accuracyAimed: 90
+    tuAuto: 35
+    tuSnap: 25
+    tuAimed: 70
+    aimRange: 25
+    snapRange: 14  # inferior snapfire range
+    autoRange: 14  # superior autofire range
+    autoShots: 5  # superior autofire
+    clipSize: -1
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    recover: false
+    fixedWeapon: true
+    fixedWeaponShow: true
+    tags:
+      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # battle rifle bonus
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3983
@@ -3434,6 +3876,88 @@ items:
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
 
+  # Valhallan mortar shells variant
+
+  - type: STR_MORTAR_AMMO_HE_VL  # HE munition VL
+    refNode: *STR_MORTAR_AMMO_TEMPLATE
+    size: 0.1
+    requiresBuy:  # what tech is required for the item to be visible in the Hire/Purchase screen.
+      - STR_BASIC_BALLISTICS_DEP
+      - STR_HEAVY_WEAPONS_IG
+    ufopediaType: STR_MORTAR_AMMO_HE_EXPLOSION
+    costBuy: 7500
+    costSell: 1000
+    weight: 6
+    bigSprite: 911
+    floorSprite: 2062
+    handSprite: {mod: 40k, index: 352}  # Needs new
+    explosionHitSound: {mod: 40k, index: 704}
+    hitSound: {mod: 40k, index: 704}
+    hitAnimation: 2210
+    power: 120
+    damageAlter:  # high explosive
+      ToHealth: 1.0 #dummied out via scripts; meant to trick BAI into firing
+      ToEnergy: 0
+      ToStun: 0
+      ToWound: 0
+      ToArmor: 0
+      ToTile: 0
+      ToItem: 0
+      ToArmorPre: 0
+      FixRadius: 0
+    spawnItem: STR_MORTAR_AMMO_HE_EXPLOSION
+    spawnItemChance: 100
+    clipSize: -1
+    battleType: 2
+    invWidth: 1
+    invHeight: 3
+    armor: 100
+    listOrder: 11872
+    tags:
+      ITEM_IS_DUMMY_MUNITION: 1 #damage dummied via scripts; meant to trick BAI into firing
+
+  - type: STR_MORTAR_AMMO_KRAK_VL  # krak munition VL
+    refNode: *STR_MORTAR_AMMO_TEMPLATE
+    ufopediaType: STR_MORTAR_AMMO_KRAK_EXPLOSION
+    costBuy: 5000
+    costSell: 1000
+    weight: 7
+    bigSprite: 912
+    damageAlter:  # high explosive
+      ToHealth: 0
+      ToEnergy: 0
+      ToStun: 0
+      ToWound: 0
+      ToArmor: 0
+      ToTile: 0
+      ToItem: 0
+      ToArmorPre: 0
+      FixRadius: 0
+    floorSprite: {mod: 40k, index: 70}  # update with new
+    handSprite: {mod: 40k, index: 136}  # update with new
+    spawnItem: STR_MORTAR_AMMO_KRAK_EXPLOSION
+    clipSize: -1
+    tags:
+      ITEM_IS_DUMMY_MUNITION: 1 #damage dummied via scripts; meant to trick BAI into firing
+
+  - type: STR_MORTAR_AMMO_ILLUMINATION_VL
+    refNode: *STR_MORTAR_AMMO_TEMPLATE
+    ufopediaType: STR_MORTAR_AMMO_ILLUMINATION_EXPLOSION
+    requiresBuy:  # what tech is required for the item to be visible in the Hire/Purchase screen.
+      - STR_SMOKE
+      - STR_HEAVY_WEAPONS_IG
+    costBuy: 500
+    costSell: 100
+    weight: 2
+    bigSprite: 915
+    floorSprite: 2060
+    handSprite: {mod: 40k, index: 336}  # Needs new
+    spawnItem: STR_MORTAR_AMMO_ILLUMINATION_EXPLOSION
+    spawnItemChance: 100
+    clipSize: -1
+    tags:
+      ITEM_IS_DUMMY_MUNITION: 1 #damage dummied via scripts; meant to trick BAI into firing
+
   - type: STR_FRAG_GRENADE_DRUM  # frag munition
     costBuy: 5000
     costSell: 4000
@@ -3585,6 +4109,7 @@ items:
       - STR_IMPERIAL_WEAPONS
       - STR_BASIC_BALLISTICS_DEP
       - STR_LASER_WEAPONS
+      - STR_NOT_VALHALLAN_STRATEGY
     autoRange: 24  # was 18
     bigSprite: 212
     handSprite: 328
@@ -3639,6 +4164,7 @@ items:
     categories: [STR_CAT_BOLTER]
     requiresBuy:
       - STR_LIGHT_BOLTERS_MIDTIER
+      - STR_NOT_VALHALLAN_STRATEGY
     size: 0.3
     costBuy: 75000  # more expensive than the Solo light bolters
     costSell: 5000
@@ -4188,6 +4714,7 @@ items:
     categories: [STR_CAT_BOLTER]
     requiresBuy:
       - STR_LIGHT_BOLTERS_LOWTIER
+      - STR_NOT_VALHALLAN_STRATEGY
     size: 0.1
     # requiresBuyBaseFunc: [TRADE]
     costBuy: 10000  # Intention is costly ammo vs lasguns
@@ -4213,6 +4740,7 @@ items:
     requiresBuy:
       - STR_LIGHT_BOLTERS_MIDTIER
       - STR_MIDTIER_PREREQ
+      - STR_NOT_VALHALLAN_STRATEGY
     costBuy: 30000  # costly ammo
     costSell: 3000
     bigSprite: 907
@@ -5147,7 +5675,20 @@ items:
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
 
+  - type: STR_PSYKER_LIGHTNING_STRIKE
+    recover: false
+
+  - type: STR_HEALING_TOUCH
+    recover: false
+
+  - type: STR_TELEKINETIC_SHIELD
+    recover: false
+
+  - type: STR_DOUSE_FLAMES
+    recover: false
+
   - type: STR_TELEPATH_STAFF  # Nothing should mind control
+    recover: false
     armor: 200
     costPanic:
       time: 25
@@ -5162,6 +5703,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 5
 
   - type: STR_PSYKER_STAFF
+    recover: false
     armor: 200
     defaultInventorySlot: STR_LEFT_HAND
     tags:
@@ -5169,6 +5711,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 5
 
   - type: STR_TELEKINE_STAFF
+    recover: false
     armor: 200
     maxRange: 15
     accuracySnap: 75  # was 100
@@ -5188,6 +5731,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 5
 
   - type: STR_PSYKER_STUN_STRIKE
+    recover: false
     damageType: 1
     power: 10
     damageBonus:
@@ -5209,6 +5753,7 @@ items:
       DAMAGE_RESIST_PENETRATION_PERCENT: 50
 
   - type: STR_PYROMANCER_STAFF
+    recover: false
     armor: 200
     defaultInventorySlot: STR_LEFT_HAND
     costSnap:
@@ -5226,6 +5771,7 @@ items:
       ITEM_PSYCHIC_POWER_MODIFIER: 2
 
   - type: STR_PSYKER_FLAME_STRIKE
+    recover: false
     damageAlter:
       ArmorEffectiveness: 1.0
     tags:
@@ -5850,6 +6396,7 @@ items:
     defaultInventorySlot: STR_LEFT_HAND
 
   - type: STR_PSYKER_SPELL
+    recover: false
     weight: 0
     invWidth: 0
     invHeight: 0
@@ -6478,7 +7025,7 @@ items:
   - type: STR_VALHALLAN_STUBRIFLE  # Rifle with Bayonet
     categories: [STR_CAT_SCOUT, STR_CAT_SNIPER]
     dropoff: 3  # bolt action
-    weight: 15
+    weight: 7
     size: 0.3
     requiresBuy:
       - STR_VALHALLAN_WEAPONS
@@ -6546,13 +7093,13 @@ items:
     tags:
       REACTION_MULTIPLIER: 60
       REACTION_PENALTY_KNEELING_BYPASS: 1
-      ITEM_RECOIL: 25
+      ITEM_RECOIL: 22
       ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 10
 
   - type: STR_VALHALLAN_AUTOSTUBBER #SoumiCarlGustavPPsh SMG
     categories: [STR_CAT_AUTO]
     dropoff: 6  # SMG
-    weight: 25
+    weight: 12
     size: 0.3
     requiresBuy:
       - STR_VALHALLAN_WEAPONS
@@ -6588,12 +7135,12 @@ items:
     listOrder: 11898
     attraction: 1
     tags:
-      ITEM_RECOIL: 35
+      ITEM_RECOIL: 33
 
   - type: STR_VALHALLAN_AUTOGUN #SVT DMR style
     categories: [STR_CAT_AUTO]
     dropoff: 4  # DMR
-    weight: 25
+    weight: 10
     size: 0.4
     requiresBuy:
       - STR_VALHALLAN_WEAPONS
@@ -6631,7 +7178,53 @@ items:
     kneelBonus: 115 #DMR
     attraction: 1
     tags:
-      ITEM_RECOIL: 30
+      ITEM_RECOIL: 28
+
+  - type: STR_VALHALLAN_HEAVYSTUBBER
+    categories: [STR_CAT_AUTO]
+    dropoff: 4
+    size: 0.5
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+    costBuy: 25000
+    costSell: 5000
+    weight: 30
+    autoRange: 24
+    bigSprite: 983
+    handSprite: 4784
+    floorSprite: 3513
+    bulletSprite: {mod: 40k, index: 2}
+    bulletSpeed: 25
+    fireSound: {mod: 40k, index: 4}
+    armor: 200  # to avoid item pile destruction
+    compatibleAmmo:
+      - STR_VL_HEAVYSTUBBER_DRUM
+      - STR_VL_HEAVYSTUBBER_DRUM_KRAKEN
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    snapRange: 20
+    aimRange: 0
+    accuracyAuto: 40
+    accuracySnap: 55
+    accuracyAimed: 0
+    tuAuto: 50  # 2x bursts
+    tuSnap: 30
+    tuAimed: 0
+    autoShots: 10  # 2x autoshots per round if static, flexible. Rotor cannon is 25 aimed, but inflexible
+    confSnap:
+      shots: 5  #
+      followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
+    confAuto:
+      followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
+    sprayWaypoints: 2
+    listOrder: 10765 #    listOrder: 10766 and 10767 for its ammo
+    tags:
+      ITEM_RECOIL: 35 #offset by bipod
+      ITEM_HAS_BIPOD: 1
+      ITEM_COLOR_CHANGES_WITH_AMMO_NON_GRAY: 6
 
   - type: STR_STUB_GUN_AMMO_DRUM #Valhallan Autostubber SMG
     categories: [STR_CAT_AUTO]
@@ -6642,7 +7235,7 @@ items:
     costSell: 75
     weight: 5
     bigSprite: 985
-    floorSprite: {mod: 40k, index: 1118}
+    floorSprite: 3515
     handSprite: {mod: 40k, index: 1896}
     hitSound: {mod: 40k, index: 22}
     hitAnimation: {mod: 40k, index: 26}
@@ -6671,7 +7264,7 @@ items:
     costSell: 100
     weight: 5
     bigSprite: 986
-    floorSprite: {mod: 40k, index: 1118}
+    floorSprite: 3516
     handSprite: {mod: 40k, index: 1896}
     hitSound: {mod: 40k, index: 22}
     hitAnimation: {mod: 40k, index: 26}
@@ -6701,7 +7294,7 @@ items:
     costSell: 100
     weight: 6
     bigSprite: 987
-    floorSprite: {mod: 40k, index: 1011}  # needs new
+    floorSprite: 3514
     handSprite: {mod: 40k, index: 1088}
     hitSound: {mod: 40k, index: 22}
     hitAnimation: {mod: 40k, index: 26}
@@ -6715,12 +7308,61 @@ items:
     clipSize: 10
     battleType: 2
     armor: 200
-    listOrder: 11898
+    listOrder: 11897
     tags:
       ITEM_GETS_FACTION_RECOLOR: 1
       ITEM_BASE_COLOR: 4
       ITEM_GETS_ACCENT_RECOLOR: 1
       ITEM_ACCENT_COLOR: 1
+
+  - type: STR_VL_HEAVYSTUBBER_DRUM
+    categories: [STR_CAT_AUTO]
+    size: 0.1
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+    costBuy: 500
+    costSell: 125
+    weight: 10
+    bigSprite: 989
+    floorSprite: 3517
+    handSprite: {mod: 40k, index: 1088}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    power: 50
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.02
+    clipSize: 40
+    battleType: 2
+    armor: 200
+    listOrder: 10766
+
+  - type: STR_VL_HEAVYSTUBBER_DRUM_KRAKEN
+    categories: [STR_CAT_AUTO]
+    size: 0.1
+    requiresBuy:
+      - STR_VALHALLAN_WEAPONS
+      - STR_ALIEN_ALLOYS
+      - STR_MIDTIER_PREREQ
+    costBuy: 750
+    costSell: 200
+    weight: 10
+    bigSprite: 990
+    floorSprite: 3518
+    handSprite: {mod: 40k, index: 1088}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: {mod: 40k, index: 26}
+    explosionSpeed: 5
+    power: 65
+    damageType: 1
+    damageAlter:
+      ToArmorPre: 0.10
+      ArmorEffectiveness: 0.6
+    clipSize: 40
+    battleType: 2
+    armor: 200
+    listOrder: 10767
 
 #Baneblade
   - type: AUX_BOLTERBANE  # STR_BANE_BOLTER_TURRET

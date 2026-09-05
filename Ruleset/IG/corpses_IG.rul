@@ -260,7 +260,7 @@ items:
     invHeight: 0
     recover: false
 
-
+# GORGON SL TURRET CORPSES
   - type: STR_GORGONSL_HEAVY_FLAMER_FRONT_LEFT_CORPSE
     floorSprite: 967
     armor: 255
@@ -298,6 +298,84 @@ items:
     recover: false
   - type: STR_GORGONSL_HEAVY_STUBBER_RIGHT_CORPSE
     floorSprite: 970
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
+
+
+# CHIMERA VALHALLAN TURRET CORPSES
+  - type: STR_CHIMERAVL_TURRET_CORPSE
+    battleType: 11
+    power: 60
+    blastRadius: 2
+
+  - type: STR_CHIMERAVL_TURRET_CORPSE_1
+    floorSprite: 3530
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
+  - type: STR_CHIMERAVL_TURRET_CORPSE_2
+    floorSprite: 3531
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    recover: false
+  - type: STR_CHIMERAVL_TURRET_CORPSE_3
+    floorSprite: 3532
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    recover: false
+  - type: STR_CHIMERAVL_TURRET_CORPSE_4
+    floorSprite: 3533
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    recover: false
+
+
+# GORGON VALHALLAN TURRET CORPSES
+  - type: STR_GORGONVL_HEAVY_FLAMER_FRONT_LEFT_CORPSE
+    floorSprite: 3534
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
+  - type: STR_GORGONVL_HEAVY_FLAMER_BACK_LEFT_CORPSE
+    floorSprite: 3535
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
+  - type: STR_GORGONVL_HEAVY_FLAMER_FRONT_RIGHT_CORPSE
+    floorSprite: 3536
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
+  - type: STR_GORGONVL_HEAVY_FLAMER_BACK_RIGHT_CORPSE
+    floorSprite: 3537
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
+  - type: STR_GORGONVL_HEAVY_STUBBER_LEFT_CORPSE
+    floorSprite: 3538
+    armor: 255
+    invWidth: 0
+    invHeight: 0
+    battleType: 11
+    recover: false
+  - type: STR_GORGONVL_HEAVY_STUBBER_RIGHT_CORPSE
+    floorSprite: 3539
     armor: 255
     invWidth: 0
     invHeight: 0
@@ -540,3 +618,14 @@ items:
     refNode: *STR_CORPSE_VALHALLAN
     bigSprite: 975
     floorSprite: 3505
+
+  - type: STR_VALHALLAN_WOLFHOUND_CORPSE
+    weight: 40
+    bigSprite: 3132
+    floorSprite: 3133
+    invWidth: 2
+    invHeight: 3
+    armor: 80
+    battleType: 11
+    recover: true
+    recoverCorpse: false

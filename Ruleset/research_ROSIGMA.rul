@@ -200,6 +200,14 @@ research:
     # Access to Imperial Weaponry, disabled by Chaos Path/Unholy Wartools
     # Could also be used for Xeno factions if added.
 
+  - name: STR_BIKEAMMO # Bike Unlock used to allow ammo for the bike bolters to appear in purchase
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_NOTDONEBEFORE  # this will be to avoid making more great sacrifice and trigger chaos bowl multiple times - used for Black Templar orks item too
+    dependencies:
+      - STR_GENERALLOCK
+
   - delete: STR_ALIENS_ONLY
   - name: STR_ALIENS_ONLY  # Chaos Corruption
     # Serves as the lock for use of chaos items
@@ -1001,6 +1009,8 @@ research:
     refNode: *STR_LOCKED
   - name: STR_CHOSEN_VALHALLA # Valhallan Selected
     refNode: *STR_LOCKED
+  - name: STR_STRATIG_DONE  # IG Strategy Selected
+    refNode: *STR_LOCKED
   - delete: STR_CHOSEN_ELDAR
   - name: STR_CHOSEN_ELDAR  # Eldar Path - Inquisition xeno path
     refNode: *STR_LOCKED
@@ -1308,6 +1318,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_ASSAULT
       - STR_PRIMARIS
@@ -1316,6 +1327,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1342,6 +1354,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_DEVASTATOR
       - STR_PRIMARIS
@@ -1350,6 +1363,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1384,6 +1398,7 @@ research:
       - STR_SPACEWOLVES_STRATEGY
       - STR_CASS_R
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_PRIMARIS_CARE_PACKAGE
@@ -1408,6 +1423,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_SCOUT
       - STR_PRIMARIS
@@ -1416,6 +1432,7 @@ research:
       - STR_TATICAL
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1443,6 +1460,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_BIKEAMMO
     disables:
       - STR_NOT_TACTICAL
       - STR_PRIMARIS
@@ -1451,6 +1469,7 @@ research:
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
@@ -1493,6 +1512,7 @@ research:
       - STR_SCOUT
       - STR_TATICAL
       - STR_WORDBEARERS_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_SPACEWOLVES_INITIAL_SITREP
@@ -1560,6 +1580,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_NOTDONEBEFORE
     disables:
       - STR_NOT_TACTICAL
       - STR_PRIMARIS
@@ -1573,11 +1594,35 @@ research:
       # - STR_ADV_DROPPODS  # for now i am disabling it as it seems totally useless research in Rosigma due to some change
     spawnedEvent: STR_BLACKTEMPLAR_CARE_PACKAGE
 
+  - name: STR_BTGIVEOTHER_INTERCEPTOR
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+    spawnedEvent: STR_BTGIVESECONDINTERCEPTOR
+
   - name: STR_REQIMPERIAL_SUPPORT  # Request Imperial Support
     cost: 50
     points: 0
     dependencies:
       - STR_BLACKTEMPLAR_STRATEGY
+
+  - name: STR_BTBR_WAAGHMORE
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+    spawnedEvent: STR_BTBR_WAAGHMOREEVENT
+
+  - name: STR_BTBR_WAAGHMORE2
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+    spawnedEvent: STR_BTBR_WAAGHMOREEVENT2
 
  ### Bloody Roses #STRATEGY.SOB.BR#
 
@@ -1635,6 +1680,18 @@ research:
       - STR_GENERALLOCK
 
 
+  - name: STR_ORKSDATAITEM  # The Orks Main Base
+    cost: 100
+    points: 30
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    needItem: true
+    destroyItem: true
+    spawnedEvent: STR_MAIN_ORKSBASE
+    disables:
+      - STR_NOTDONEBEFORE
+
+
 ### Word Bearers #STRATEGY.SM.WB#
   - name: STR_WORDBEARERS_STRATEGY  # Word Bearers Strategy
     cost: 3
@@ -1666,6 +1723,7 @@ research:
       - STR_DEVASTATOR
       - STR_SCOUT
       - STR_SPACEWOLVES_STRATEGY
+      - STR_BLACKTEMPLAR_STRATEGY
       - STR_HARDER_MISSIONS # they get enabled a bit later
       - STR_ENABLE_EVEN_HARDER_MISSIONS
       - STR_ENABLE_EXTRA_RETALIATIONS  # for now
@@ -1676,6 +1734,15 @@ research:
     getOneFree:
       - STR_SMOKE
     spawnedEvent: STR_WORDBEARERS_BURNTHEM
+
+  - name: STR_WORDBEARERS_HELPER #needed for compatibility with STR_WORDBEARERS_BURNTHEM event
+    cost: 0
+    dependencies:
+      - STR_GENERALLOCK
+    reenables:
+      - STR_PHOSPHOR_GRENADE
+    getOneFree:
+      - STR_PHOSPHOR_GRENADE
 
   - name: STR_BOOK_EREBUS
     cost: 1
@@ -1697,7 +1764,7 @@ research:
       - STR_MARINE_BOLTERS
     reenables:
       - STR_MOTION_SCANNER
-      - STR_PHOSPHOR_GRENADE
+      #- STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_KORPHAERON
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGEMK3
@@ -1722,7 +1789,7 @@ research:
       - STR_MARINE_BOLTERS
     reenables:
       - STR_MOTION_SCANNER
-      - STR_PHOSPHOR_GRENADE
+      #- STR_PHOSPHOR_GRENADE
     disables:
       - STR_BOOK_EREBUS
     spawnedEvent: STR_WORDBEARERS_CARE_PACKAGE
@@ -2021,6 +2088,7 @@ research:
       - STR_NORMAL_INQUISITION
       - STR_ELDAR_PATH # RadicalRoad has its own Xenos pathways.
       - STR_CHAOS_PATH # RadicalRoad has its own Chaos progression, don't allow IntoTheDarkGodsPath entry
+      - STR_ORK_DEAL # Ork Arms Trade; they'll be getting this from the Secure Support tech
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     getOneFree:
@@ -2227,9 +2295,6 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  - name: STR_NOTDONEBEFORE  # this will be to avoid making more great sacrifice and trigger chaos bowl multiple times
-    dependencies:
-      - STR_GENERALLOCK
 
   - name: STR_CHAOS_STRATEGY_ARBITES  # Chaos Cult Strategy
     cost: 5
@@ -2512,6 +2577,7 @@ research:
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+      - STR_VALHALLAN_STRATEGY
 #      - STR_RADICAL_RECRUITMENT_IG  # pushed after strategies
       - STR_GUARD_AND_ARBITES
       - STR_BASIC_BALLISTICS_DEP
@@ -2534,6 +2600,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_IGS
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_LASER_WEAPONS
       #      - STR_GUARD_SUPORT
@@ -2561,6 +2628,7 @@ research:
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+      - STR_VALHALLAN_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_NORMAL_STRATEGY_IG
@@ -2575,6 +2643,7 @@ research:
     getOneFree:
       - STR_STORMTROOPER_REQUISITION
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_LASER_WEAPONS
       - STR_LIGHT_BOLTERS_LOWTIER
@@ -2588,7 +2657,7 @@ research:
       - STR_JUMP_CARAPACE_DEP1
       - STR_AIRSTRIKE_REQUISITION
       - STR_JUMP_CARAPACE_REQUISITION
-      - STR_IMPERIAL_GUARD_MISSIONS
+      # - STR_IMPERIAL_GUARD_MISSIONS  # scion dont have this anymore they are already trained they will unlock the benefit directly instead
       - STR_KRIEG_GUARDSMEN
       - STR_CATACHAN_GUARDSMEN
       - STR_HOLOGRAM_GRENADE_REQUISITION
@@ -2598,11 +2667,13 @@ research:
       - STR_NOT_ABHUMAN_STRATEGY
       - STR_NOT_STEEL_LEGION_STRATEGY
       - STR_RADICAL_RECRUITMENT_IG
+      - STR_IMPERIAL_GUARD_MISSION_TRAINING_COMPLETE  # elite scion are already trained and this allow to unlock some new missions they were accidentally blocked from
     disables:
       - STR_NOT_ELITE_STRATEGY
       - STR_NORMAL_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+      - STR_VALHALLAN_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_ELITE_STRATEGY_IG
@@ -2615,6 +2686,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_IGS
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_GUARD_SUPORT  # added to enable medic armors
       - STR_LASER_WEAPONS
@@ -2639,6 +2711,7 @@ research:
       - STR_NORMAL_STRATEGY_IG
       - STR_ELITE_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+      - STR_VALHALLAN_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_ABHUMAN_STRATEGY_IG
@@ -2651,6 +2724,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_STEELLEGION
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_STEELLEGION_GUARDSMEN
       - STR_SQUAT_GUARDSMEN  # Steel Legion link
@@ -2676,6 +2750,7 @@ research:
       - STR_ELITE_STRATEGY_IG
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
+      - STR_VALHALLAN_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_STEELLEGION_STRATEGY_IG
@@ -2688,6 +2763,7 @@ research:
       - STR_GENERALLOCK
     # lookup: STR_CHOSEN_KRIEG  # Commented out until there is a 'pedia page, will crash otherwise
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_KRIEG_GUARDSMEN #Already Exists
       - STR_LASER_WEAPONS
@@ -2715,6 +2791,7 @@ research:
       - STR_ABHUMAN_STRATEGY_IG
       - STR_NORMAL_STRATEGY_IG
       - STR_STEEL_LEGION_STRATEGY
+      - STR_VALHALLAN_STRATEGY
     reenables:
       - STR_THE_EMPEROR_PROTECTS_RESEARCH
     spawnedEvent: STR_RECRUITS_KRIEG_STRATEGY_IG
@@ -2727,6 +2804,7 @@ research:
       - STR_GENERALLOCK
     lookup: STR_CHOSEN_VALHALLA
     unlocks:
+      - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
       - STR_VALHALLAN_GUARDSMEN
       - STR_VALHALLAN_WEAPONS
@@ -2736,9 +2814,9 @@ research:
       - STR_LIGHT_BOLTERS_LOWTIER
       - STR_GUARD_BARRACKS
       - STR_REGIMENT_OFFICERS
+      - STR_GUARD_PRIEST_REQUISITION #Unlock before midtier?
       - STR_PENITENT_GUARD
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-      - STR_CHIMERASL #REPLACE WITH VALHALLAN BASIC TRANSPORT, TRUCKS? WHITE CAMO CHIMERA?
       - STR_IMPERIAL_GUARD_BASIC_TRAINING
       - STR_PILOT_GUARDSMEN #Replace these later with Valhallan version?
       - STR_NOT_ELITE_STRATEGY
@@ -3051,6 +3129,7 @@ research:
       - STR_NOT_MARINES
       - STR_NOT_ADEPTAS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_NOT_DEATHWATCH
       - STR_NOT_GK
       - STR_NOT_WORDBEARERS
@@ -3838,6 +3917,17 @@ research:
     unlocks:
       - STR_HIGHTIER_PREREQ
 
+  - name: STR_RESEARCH_SWLANDRAIDER  # Landraider Requisition
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_CYDONIA_OR_BUST
+      - STR_SPACEWOLVES_STRATEGY
+      - STR_NOT_WORDBEARERS
+      - STR_NOT_PRIMARIS
+
 ### Assault Strategy #PROGRESSION.SM.ASS#
 ### Devastator Strategy #PROGRESSION.DEV.ASS#
 ### Primaris Strategy
@@ -3924,6 +4014,7 @@ research:
       - STR_SPACEWOLVES_MIDTIER_RESEARCH
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_CYDONIA_OR_BUST
+      - STR_RESEARCH_SWLANDRAIDER
     unlocks:
       - STR_HIGHTIER_PREREQ
 
@@ -4386,7 +4477,7 @@ research:
   - name: STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH  # Embrace the Deathcults
     cost: 800
     dependencies:
-      - STR_INQ_RR_DEATHCULT_RITUAL_3_RESEARCH
+      - STR_INQ_RR_DEATHCULT_RITUAL_2_RESEARCH
       - STR_HIGHTIER_PREREQ
     spawnedEvent: STR_INQ_RR_DEATHCULT_RITUAL_3_EVENT
 
@@ -4397,121 +4488,120 @@ research:
       - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
       - STR_LASER_WEAPONS
+    getOneFree:
+      - STR_TAU_XENOTECH
     unlocks:
-      - STR_ELDAR_ONLY
-      - STR_ORK_ONLY
-      - STR_TAU_XENOTECH # unsure, Tau tech usually highend. but not like Eldar is chumps
+      - STR_ELDAR_ONLY # Eldar Weapons Training
+      - STR_ORK_ONLY # Dakka
       - STR_ELDAR_GRENADE
 
   - name: STR_INQ_RR_REQUISITION_XENOS
     cost: 250
     dependencies:
-      - STR_GENERALLOCK #TODO [WIP]: Block off the start of the Xenos path.
-      - STR_RADICAL_INQUISITOR_STRATEGY
       - STR_INQ_SUMMON_IMPERIAL_AGENTS_RESEARCH
-    spawnedEvent: STR_INQ_RR_REQUISITION_XENOS
+      - STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS
+    events:
+      STR_INQ_RR_REQUISITION_XENOS_ORKS_EVENT: 1
+      STR_INQ_RR_REQUISITION_XENOS_ELDAR_EVENT: 1
+      STR_INQ_RR_REQUISITION_XENOS_TAU_EVENT: 1
 
-  - name: STR_INQ_BLACK_MARKET_XENOTECH_RESEARCH  # Acquire Black Market Xenotech
-    cost: 250
-    points: -50
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_INQ_RR_MIDTIER_XENOS
-      - STR_HIGHTIER_PREREQ
-      - STR_LOSE_50
-    spawnedEvent: STR_INQ_BLACK_MARKET_XENOTECH_EVENT
-    repeatable: true
 
-  - name: STR_INQ_CONSORT_AELDARI_RESEARCH  # Consort with the Aledari
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
     cost: 400
     points: -100
     dependencies:
       - STR_INQ_RR_MIDTIER_XENOS
       - STR_LOSE_100
+    disables:
+      - STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
     unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_ELDAR_LEADER_INTERROGATED
-      - STR_INQ_RR_CONSORTED_AELDARI_DEP
-    disables:
-      - STR_INQ_CONSORT_ORKS_RESEARCH
-  - name: STR_INQ_RR_CONSORTED_AELDARI_DEP #use this Dep to allow bypassing the Consort with a traditional interrogate
-    cost: 0
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ELDAR_EVENT
+  - name: STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH
+    cost: 600
+    points: -100
     dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_ELDAR_LEADER_INTERROGATED
-    disables:
-      - STR_INQ_CONSORT_AELDARI_RESEARCH
+      - STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
+      - STR_LEADER_PLUS
+      - STR_LOSE_100
+    unlocks:
+      # TODO Eldar research tree is in flux; revisit when more stable
+      #- STR_ELDAR_SPIDER_RESEARCH
+      #- STR_ELDAR_FIREDRAGON_RESEARCH
+      #- STR_ELDAR_REAPER_RESEARCH
+      - STR_FUSION_TECH_RESEARCH
 
-  - name: STR_INQ_CONSORT_TAU_RESEARCH  # Consort with the Tau
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
     cost: 400
     points: -100
     dependencies:
       - STR_INQ_RR_MIDTIER_XENOS
       - STR_LOSE_100
-    unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_TAU_FIREWARRIORCAPTAINAI
-
-  - name: STR_INQ_RR_CONSORTED_TAU_DEP #use this Dep to allow bypassing the Consort with a traditional interrogate
-    cost: 0
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_TAU_FIREWARRIORCAPTAINAI
     disables:
-      - STR_INQ_CONSORT_TAU_RESEARCH
+      - STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH
+      - STR_ORK_BOY_RECRUITMENT # disable Ork soldier recruitment
+    reenables:
+      - STR_ORK_DEAL # Will be granted by STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT ; getOneFree doesn't work
+    unlocks:
+      # - STR_ORK_MERCENARIES # note: this is only for the normal DefeatOrkBases pathway.
+      - STR_SPOOKUM_KAMP_RECRUITED
+      - STR_DAKKA_GITZ_RECRUITED
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT
 
-  - name: STR_INQ_CONSORT_ORKS_RESEARCH  # Consort with the Orks
+  - name: STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH
+    cost: 600
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH
+      - STR_UFO_POWER_SOURCE
+      - STR_LOSE_100
+    unlocks:
+      - STR_MEK_KLAN_RECRUITED
+      - STR_SPEED_KULT_RECRUITED
+      - STR_ORKZ_MASTER_CRAFTING
+
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH
     cost: 400
     points: -100
     dependencies:
       - STR_INQ_RR_MIDTIER_XENOS
       - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
     unlocks:
-      - STR_XENO_LEADER_INTERROGATED
-      - STR_ORK_LEADER_INTERROGATED
-    disables:
-      - STR_INQ_CONSORT_AELDARI_RESEARCH
-  - name: STR_INQ_RR_CONSORTED_ORKS_DEP #use this Dep to allow bypassing the Consort with a traditional interrogate
-    cost: 0
-    dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_ORK_LEADER_INTERROGATED
-    disables:
-      - STR_INQ_CONSORT_ORKS_RESEARCH
+      - STR_TAU_STRIKE_TEAMS_GV
+      - STR_TAU_BREACHERS_GV
+      - STR_TAU_PATHFINDERS_GV
+    spawnedEvent: STR_INQ_RR_SECURE_SUPPORT_TAU_EVENT
 
-  # Acquires a new Xeno tech topic. Should include all requirements for STR_NECRONTECH_RESEARCH and STR_TAU_XENOTECH
-  # Orks/Eldar excluded because their item topics don't contribute to their path/weapon usage (their path starts only with a Leader Interrogation)
-  # If new Xenos things in future, add to list.
-  - name: STR_INQ_XENOTECH_ANALYSIS_RESEARCH  # Xenotech Sythetic Analysis
-    cost: 400
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH
+    cost: 600
+    points: -100
     dependencies:
-      - STR_RADICAL_INQUISITOR_STRATEGY
-      - STR_HIGHTIER_PREREQ
-      - STR_INQ_RR_MIDTIER_XENOS
-    spawnedEvent: STR_INQ_XENOTECH_ANALYSIS_EVENT
-    repeatable: true
+      - STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH
+      - STR_NAVY_COMUNICATIONS
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
     getOneFree:
-      # Tau
-      - STR_TAU_PULSE_MAG
-      - STR_TAU_PULSE_BLASTER_MAG
-      - STR_TAU_RAIL_MAG
-      - STR_TAU_PULSE_RIFLE
-      - STR_TAU_PULSE_CARBINE
-      - STR_TAU_PULSE_BLASTER
-      - STR_TAU_PULSE_PISTOL
-      - STR_TAU_RAIL_RIFLE
-      - STR_TAU_PHOTON_GRENADE
-      - STR_TAU_FUSION_GRENADE
-      - STR_TAU_EMP_GRENADE
-      - STR_TAU_DRONEAI
-      # Necrons
-      - STR_GAUSS_BLASTER
-      - STR_HYPERPHASESWORD
-      - STR_SYNAPTIC_DISINTEGRATOR
-      - STR_GAUSS_FLAYER
-      - STR_GAUSS_REAPER
-      - STR_NECRON_WARSCYTHE
-      - STR_STAFF_OF_LIGHT
+      - STR_FORM_KILL_TEAMS_GV
+    unlocks:
+      - STR_DEVILFISH_TRANSPORTS_GV
+      - STR_STEALTH_SUIT_OPERATIONS_GV
+
+  - name: STR_INQ_RR_SECURE_SUPPORT_TAU_3_RESEARCH
+    cost: 800
+    points: -100
+    dependencies:
+      - STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH
+      - STR_MASTER_CRAFTING
+      - STR_LOSE_100
+    requiresBaseFunc: [TRADE]
+    unlocks:
+      - STR_STARSCYTHE_CRISIS_OPERATIONS_GV
+      - STR_FIREKNIFE_CRISIS_OPERATIONS_GV
+      - STR_SUNFORGE_CRISIS_OPERATIONS_GV
+      - STR_ORCA_DROPSHIPS_GV
+
 
   - name: STR_FALSIFY_INQUISITION_REPORT  # Falsify Inquisition Statement
     cost: 300
@@ -4582,10 +4672,10 @@ research:
   # RadicalRoad Chaos path: alternate God Devotions access
   - name: STR_INQ_RR_LORE_NURGLE
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
@@ -4594,20 +4684,20 @@ research:
       - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
   - name: STR_INQ_RR_LORE_TZEENTCH
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
       - STR_TZEENTCH_OPTIONS
   - name: STR_INQ_RR_LORE_KHORNE
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
@@ -4616,10 +4706,10 @@ research:
       - STR_CHAOSOGRYN_RESEARCH # Cut off a path to open Recruitment
   - name: STR_INQ_RR_LORE_SLAANESH
     cost: 500
-    points: -500
+    points: -250
     dependencies:
       - STR_SUMMON_DAEMONS_RESEARCH
-      - STR_LOSE_500
+      - STR_LOSE_250
     unlocks:
       - STR_CONVINCE_CHAOS_RESEARCH
     getOneFree:
@@ -4896,26 +4986,37 @@ research:
 
   - name: STR_INQ_RR_MIDTIER_CHAOS #Midtier Chaos Path
     cost: 250
-    points: -200
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
       - STR_INQ_CONTACT_REVISIONISTS_RESEARCH
       - STR_MELTAGUN_TECH
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
-      - STR_LOSE_200
     disables:
       - STR_INQ_RR_MIDTIER_XENOS
       - STR_CHAOS_SORCERY # Not suited to RR Chaos progression; Tome of the Mind does almost nothing
+      - STR_CORRUPTED_REQUISITIONS # Avoid swapping to Chaos basics;  disruptive to switch basic weapons and ammo for no real gain;  doesn't hinder special chaos weapons from Lores
+                                   # See STR_INQ_RR_MIDTIER_EVENT_CHAOS which
     unlocks:
-      - STR_LIGHT_BOLTERS
       - STR_MIDTIER_PREREQ
       - STR_ALIENS_ONLY # Chaos Corruption
-      - STR_ALIEN_ORIGINS
+      - STR_ALIEN_ORIGINS # Warp Origins
+      - STR_INQ_INTERROGATOR_REQUISITION # Alternate path; the THREAT_ONE depends allows earlier unlock
+      - STR_LIGHT_BOLTERS
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
+      - STR_HARDER_MISSIONS
     getOneFree:
       - STR_CONVERT_TO_CHAOS_RESEARCH
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_CHAOS
+
+  # Workaround to get STR_ALIENS_ONLY , but keep Imperial basic weapons. Combine with the disables in STR_INQ_RR_MIDTIER_CHAOS
+  - name: STR_INQ_RR_MIDTIER_CHAOS_MAINTAIN_IMPERIAL_DEP
+    cost: 0
+    dependencies:
+      - STR_INQ_RR_MIDTIER_CHAOS
+    reenables:
+      - STR_IMPERIAL_WEAPONS
 
   - name: STR_XENO_LEADER_INTERROGATED  # Xeno Leader Interrogation
     refNode: *STR_LOCKED
@@ -4923,46 +5024,30 @@ research:
   - name: STR_INQ_RR_MIDTIER_XENOS #Midtier Xenos Path
     # grant access to Xeno Weapons (not chaos)
     cost: 250
-    points: -200
     dependencies:
       - STR_RADICAL_INQUISITOR_STRATEGY
+      - STR_INQ_SECURE_SUPPORT_IMPERIAL_AGENTS_RESEARCH
       - STR_INQ_RR_REQUISITION_XENOS
       - STR_MELTAGUN_TECH
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
-      - STR_LOSE_200
     disables:
       - STR_INQ_RR_MIDTIER_CHAOS
     unlocks:
-      - STR_LIGHT_BOLTERS
-      - STR_ORK_ONLY
-      - STR_ELDAR_ONLY
-      - STR_BALLISTIC_WEAPONS_HIGHGRADE
       - STR_MIDTIER_PREREQ
+      - STR_INQ_INTERROGATOR_REQUISITION # Alternate path; the THREAT_ONE depends allows earlier unlock
+      - STR_LIGHT_BOLTERS
+      - STR_BALLISTIC_WEAPONS_HIGHGRADE
+      - STR_HARDER_MISSIONS
     spawnedEvent: STR_INQ_RR_MIDTIER_EVENT_XENOS
 
 
-  # TODO dependencies might just be "STR_GENERALLOCK" now. will RR use this method?
   - name: STR_TAU_XENOTECH  # Tau Xenotech
     # grant access to Tau Weapons
     cost: 1000
     points: -250
     dependencies:
       - STR_GENERALLOCK
-      - STR_TAU_PULSE_MAG
-      - STR_TAU_PULSE_BLASTER_MAG
-      - STR_TAU_RAIL_MAG
-      - STR_TAU_PULSE_RIFLE
-      - STR_TAU_PULSE_RIFLE_EXPORT
-      - STR_TAU_PULSE_CARBINE
-      - STR_TAU_PULSE_BLASTER
-      - STR_TAU_PULSE_PISTOL
-      - STR_TAU_RAIL_RIFLE
-      - STR_TAU_PHOTON_GRENADE
-      - STR_TAU_FUSION_GRENADE
-      - STR_TAU_EMP_GRENADE
-      - STR_TAU_DRONEAI
-      - STR_TAU_FIREWARRIORCAPTAINAI
       - STR_LOSE_250
 
   - name: STR_SUMMON_DAEMONS_RESEARCH  # The Summoning of Daemons
@@ -5704,6 +5789,8 @@ research:
     dependencies:
       - STR_GENERALLOCK
       - STR_AMBUSH_SPACEMARINES_COMPLETE
+    unlocks:
+      - STR_BIKEAMMO
 
   - name: STR_CHAOSREWARD_REQUISITIONS  # Sacred Gift from Chaos
     cost: 300
@@ -6286,6 +6373,7 @@ research:
       - STR_NAVY_COMUNICATIONS
       - STR_IMPERIAL_GUARD_MISSION_TRAINING_COMPLETE
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_CHAPTER_PURITY
 
   - delete: STR_IMPERIAL_GUARD_MISSIONS_TANITH0_COMPLETE
@@ -6497,6 +6585,7 @@ research:
     dependencies:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
       - STR_CHAPTER_PURITY
       - STR_CATACHAN_GEN
 
@@ -6692,19 +6781,18 @@ research:
       - STR_ALIEN_ALLOYS
       - STR_MOTION_SCANNER
       - STR_VALHALLAN_STRATEGY
-     #Insert Valhalla Mid-tier Craft Research Topic Here
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_CARAPACE_ARMOR_IG
-      - STR_TAUROX_IG  # Placeholder
       - STR_GUARDSMEN_VETERAN
       - STR_GUARD_PRIEST_REQUISITION
-      - STR_AIRSTRIKE_REQUISITION
       - STR_HOLOGRAM_GRENADE_REQUISITION
-      - STR_VULTURE_IG_REQUISITION  # Placeholder?
       - STR_HARDER_MISSIONS
       - STR_BALLISTIC_WEAPONS_HIGHGRADE
       - STR_AUTOCANNON_TECH
+
+#3 Valhallan Mid-tier+ Craft. One unlocks right away from having STR_VALHALLA_MIDTIER (trucks)
+#The Valhallan Crassus require STR_UFO_CONSTRUCTION and the Executioner Tank Convoy needs Heavy Plasma DEP1 too
 
   - name: STR_VALHALLA_HIGHTIER  # Valhalla High-tier Requisitions
     cost: 900
@@ -6713,10 +6801,11 @@ research:
       - STR_VALHALLA_MIDTIER
       - STR_CYDONIA_OR_BUST
       - STR_REGIMENT_OFFICERS
-      - STR_MARAUDER_REQUISITION #?
-      #Insert Valhalla End Game Craft Research Topic Here
+      - STR_UFO_CONSTRUCTION
     unlocks:
       - STR_HIGHTIER_PREREQ
+
+#Valhallans unlock GORGON by having STR_VALHALLA_HIGHTIER
 
 ####################################
 #FLAVOR# Flavor Topics
@@ -8334,6 +8423,7 @@ research:
       - STR_ARBITES_MIDTIER
     unlocks:
       - STR_HWP_CANNON_SHELLS
+      - STR_BIKEAMMO
 
   - delete: STR_ENFORCER_HEAVY_ARMOR
   - name: STR_ENFORCER_HEAVY_ARMOR  # Heavy Enforcer Armor
@@ -8471,6 +8561,7 @@ research:
       - STR_IMPERIAL_GUARD_OPERATIONS
       - STR_MIDTIER_PREREQ
       - STR_NOT_STEEL_LEGION_STRATEGY
+      - STR_NOT_VALHALLAN_STRATEGY
     unlocks:
       - STR_ROTOR_CANNON_RESEARCH
 
@@ -9279,6 +9370,8 @@ research:
     refNode: *BASIC_CHAOS_WEAPON
 
   # Autoguns
+  - name: STR_AUTOPISTOL_CHAOS
+    refNode: *BASIC_CHAOS_WEAPON
   - name: STR_AUTOPISTOL_BLIGHT  # Blighted Autopistol
     refNode: *BASIC_CHAOS_WEAPON
     unlocks: !add
@@ -9411,6 +9504,8 @@ research:
       - STR_CHAOS_ARMORY_EXAM_TZEENTCH
 
   - name: STR_LASER_RIFLEC  # Chaos Lasgun
+    refNode: *BASIC_CHAOS_WEAPON
+  - name: STR_LASER_PISTOLC
     refNode: *BASIC_CHAOS_WEAPON
   - name: STR_LASGUN_SLAANESH_ESCHER  # Slaanesh Lasgun
     refNode: *BASIC_CHAOS_WEAPON
@@ -10118,7 +10213,7 @@ research:
 #ITEMS# Items Section
 ####################################
 ## Multifaction Research #ITEMS.MULT#
-  - name: STR_HWP_CANNON_SHELLS  # Twin Heavy Bolter Ammo
+  - name: STR_HWP_CANNON_SHELLS  # Bike Bolter Ammo
     dependencies:
       - STR_GENERALLOCK
 ### Components (And Ship Parts)
@@ -13629,6 +13724,17 @@ research:
       - STR_INTERROGATION_COMPLETED
       - STR_THREAT_ONE
     destroyItem: true
+  - name: STR_GSC_GUARD_CARAPACE_OFFICER_MALE_ARMED  # Officer Leader
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GSC_INTERROGATION_DEP1
+      - STR_THREAT_ONE
+    getOneFree:
+      - STR_GSC_GUARD_CARAPACE_OFFICER_MALE
+    destroyItem: true
   - name: STR_GSC_GUARD_SCION_FEMALE  # Corrupted Scion
     cost: 50
     points: 10
@@ -14064,6 +14170,316 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
+  # Kroot AI
+
+  - name: STR_GREYKROOT_HUNTERAI # Grey Kroot Hunter
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREYKROOT_HUNTERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREYKROOT_HUNTERAI_ARMOR # Grey Kroot Hunter Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREYKROOT_WARRIORAI # Grey Kroot Warrior
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREYKROOT_WARRIORAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREYKROOT_WARRIORAI_ARMOR # Grey Kroot Warrior Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREYKROOT_BERSERKERAI # Grey Kroot Berserker
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREYKROOT_BERSERKERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREYKROOT_BERSERKERAI_ARMOR # Grey Kroot Berserker Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREYKROOT_SNIPERAI # Grey Kroot Sniper
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREYKROOT_SNIPERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREYKROOT_SNIPERAI_ARMOR # Grey Kroot Sniper Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREYKROOT_ELITEAI # Grey Kroot Elite
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREYKROOT_ELITEAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREYKROOT_ELITEAI_ARMOR # Grey Kroot Elite Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREYKROOT_LEADERAI # Grey Kroot Leader
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREYKROOT_LEADERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREYKROOT_LEADERAI_ARMOR # Grey Kroot Elite Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+
+  - name: STR_GREENKROOT_HUNTERAI # Green Kroot Hunter
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREENKROOT_HUNTERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREENKROOT_HUNTERAI_ARMOR # Green Kroot Hunter Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREENKROOT_WARRIORAI # Green Kroot Warrior
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREENKROOT_WARRIORAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREENKROOT_WARRIORAI_ARMOR # Green Kroot Warrior Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREENKROOT_BERSERKERAI # Green Kroot Berserker
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREENKROOT_BERSERKERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREENKROOT_BERSERKERAI_ARMOR # Green Kroot Berserker Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREENKROOT_SNIPERAI # Green Kroot Sniper
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREENKROOT_SNIPERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREENKROOT_SNIPERAI_ARMOR # Green Kroot Sniper Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREENKROOT_ELITEAI # Green Kroot Elite
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREENKROOT_ELITEAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREENKROOT_ELITEAI_ARMOR # Green Kroot Elite Armor
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GREENKROOT_LEADERAI # Green Kroot Leader
+    cost: 100
+    points: 25
+    needItem: true
+    getOneFree:
+      - STR_TAU_PULSE_MAG
+      - STR_TAU_PULSE_BLASTER_MAG
+      - STR_TAU_PULSE_RIFLE
+      - STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_TAU_PULSE_CARBINE
+      - STR_TAU_PULSE_BLASTER
+      - STR_TAU_PULSE_PISTOL
+      - STR_TAU_RAIL_RIFLE
+      - STR_TAU_RAIL_MAG
+      - STR_TAU_PHOTON_GRENADE
+      - STR_TAU_FUSION_GRENADE
+      - STR_TAU_EMP_GRENADE
+      - STR_TAU_DRONEAI
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_GREENKROOT_LEADERAI_ARMOR
+    destroyItem: true
+
+  - name: STR_GREENKROOT_LEADERAI_ARMOR # Green Kroot Elite Armor
+    dependencies:
+      - STR_GENERALLOCK
 
 ####################################
 #CORPSES# Corpses Section

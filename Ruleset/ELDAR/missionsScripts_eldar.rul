@@ -1,0 +1,14 @@
+missionScripts:
+  - type: STR_SLAANESH_BASE_ELDAR
+    missionWeights:
+      0:
+        STR_SLAANESH_BASE_ELDAR: 100
+    useTable: false
+    firstMonth: 3 # April or later
+    executionOdds: 100
+    startDelay: 300
+    maxRuns: 1
+    varName: Eldar_Slaanesh_Palace_Assault
+    researchTriggers:
+      STR_ELDAR_ASURYANI_CAMPAING_T2: true
+      STR_ELDAR_PSYKER_RESEARCH: true

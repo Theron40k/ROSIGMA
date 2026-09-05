@@ -626,3 +626,505 @@ units:
         TAU_FIREWARRIOR_PULSE_PISTOL_AND_FUSION_GRENADE_SET: 1
         TAU_FIREWARRIOR_FLAMER_AND_FUSION_GRENADE_SET: 4
         TAU_GUEVESA_GRENADE_LAUNCHER_TIER3: 20
+
+  # Kroot AI
+
+  - type: STR_GREYKROOT_HUNTERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 75  # grey kroot +5 TU
+      stamina: 90
+      health: 80
+      bravery: 80
+      reactions: 65
+      firing: 60  # grey kroot +5 TU
+      throwing: 70
+      strength: 50
+      psiStrength: 50
+      psiSkill: 0
+      melee: 70
+    armor: STR_GREYKROOT_HUNTERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 6
+    aggression: 3
+    spotter: 1
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+
+  - type: STR_GREYKROOT_WARRIORAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80  # grey kroot +5 TU
+      stamina: 90
+      health: 80
+      bravery: 80
+      reactions: 70
+      firing: 65  # grey kroot +5 TU
+      throwing: 70
+      strength: 55
+      psiStrength: 50
+      psiSkill: 0
+      melee: 75
+    armor: STR_GREYKROOT_WARRIORAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 8
+    aggression: 4
+    spotter: 1
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+
+  - type: STR_GREYKROOT_BERSERKERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90  # grey kroot +5 TU
+      stamina: 95
+      health: 80
+      bravery: 80
+      reactions: 70
+      firing: 25  # grey kroot +5 TU
+      throwing: 70
+      strength: 55
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80
+    armor: STR_GREYKROOT_BERSERKERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 8
+    aggression: 8
+    spotter: 0
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    berserkChance: 90
+    avoidsFire: true
+    isLeeroyJenkins: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_CHAINSWORD_GUARD
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_CHAINSWORD_GUARD
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_CHAINSWORD_GUARD
+
+  - type: STR_GREYKROOT_SNIPERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 80  # grey kroot +5 TU
+      stamina: 80
+      health: 70
+      bravery: 80
+      reactions: 70
+      firing: 85  # grey kroot +5 TU
+      throwing: 70
+      strength: 55
+      psiStrength: 50
+      psiSkill: 0
+      melee: 65
+    armor: STR_GREYKROOT_SNIPERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 2
+    value: 10
+    aggression: 2
+    sniper: 70
+    spotter: 3
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+
+  - type: STR_GREYKROOT_ELITEAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90  # grey kroot +5 TU
+      stamina: 90
+      health: 90
+      bravery: 90
+      reactions: 75
+      firing: 75  # grey kroot +5 TU
+      throwing: 70
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 85
+    armor: STR_GREYKROOT_ELITEAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 12
+    aggression: 5
+    spotter: 3
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AUTOGUN_HIGHGRADE
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_AUTOGUN_HIGHGRADE
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_AUTOGUN_HIGHGRADE
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+
+  - type: STR_GREYKROOT_LEADERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 95  # grey kroot +5 TU
+      stamina: 95
+      health: 100
+      bravery: 100
+      reactions: 80
+      firing: 85  # grey kroot +5 TU
+      throwing: 70
+      strength: 60
+      psiStrength: 50
+      psiSkill: 0
+      melee: 90
+    armor: STR_GREYKROOT_LEADERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 12
+    aggression: 5
+    spotter: 3
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_LIGHT_POWERFIST
+        - STR_GRENADE
+
+  - type: STR_GREENKROOT_HUNTERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 70
+      stamina: 90
+      health: 80
+      bravery: 80
+      reactions: 65
+      firing: 55
+      throwing: 70
+      strength: 55  # green kroot +5 STR
+      psiStrength: 50
+      psiSkill: 0
+      melee: 75  # green kroot +5 MELEE
+    armor: STR_GREENKROOT_HUNTERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 6
+    aggression: 3
+    spotter: 1
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+
+  - type: STR_GREENKROOT_WARRIORAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 75
+      stamina: 90
+      health: 80
+      bravery: 80
+      reactions: 70
+      firing: 60
+      throwing: 70
+      strength: 60  # green kroot +5 STR
+      psiStrength: 50
+      psiSkill: 0
+      melee: 80  # green kroot +5 MELEE
+    armor: STR_GREENKROOT_WARRIORAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 8
+    aggression: 4
+    spotter: 1
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LASER_RIFLEG
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+
+  - type: STR_GREENKROOT_BERSERKERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 85
+      stamina: 95
+      health: 80
+      bravery: 80
+      reactions: 70
+      firing: 20
+      throwing: 70
+      strength: 60  # green kroot +5 STR
+      psiStrength: 50
+      psiSkill: 0
+      melee: 85  # green kroot +5 MELEE
+    armor: STR_GREENKROOT_BERSERKERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 8
+    aggression: 8
+    spotter: 0
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    berserkChance: 90
+    avoidsFire: true
+    isLeeroyJenkins: true
+    builtInWeaponSets:
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_CHAINSWORD_GUARD
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_CHAINSWORD_GUARD
+      - - STR_BOLTPISTOL_DEAZ
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_LIGHT_BOLTPISTOL_AMMO
+        - STR_CHAINSWORD_GUARD
+
+  - type: STR_GREENKROOT_SNIPERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 75
+      stamina: 80
+      health: 70
+      bravery: 80
+      reactions: 70
+      firing: 80
+      throwing: 70
+      strength: 60  # green kroot +5 STR
+      psiStrength: 50
+      psiSkill: 0
+      melee: 70  # green kroot +5 MELEE
+    armor: STR_GREENKROOT_SNIPERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 2
+    value: 10
+    aggression: 2
+    sniper: 70
+    spotter: 3
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_LONGLAS
+        - STR_LASGUN_CLIP
+        - STR_LASGUN_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+
+  - type: STR_GREENKROOT_ELITEAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 85
+      stamina: 90
+      health: 90
+      bravery: 90
+      reactions: 75
+      firing: 70
+      throwing: 70
+      strength: 65  # green kroot +5 STR
+      psiStrength: 50
+      psiSkill: 0
+      melee: 90  # green kroot +5 MELEE
+    armor: STR_GREENKROOT_ELITEAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 12
+    aggression: 5
+    spotter: 3
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_AUTOGUN_HIGHGRADE
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_AUTOGUN_HIGHGRADE
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_AUTOGUN_HIGHGRADE
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_AUTOGUN_CLIP_DRUM
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+
+  - type: STR_GREENKROOT_LEADERAI
+    race: STR_SECTOID  # trying to avoid setting them as civilians
+    rank: STR_LIVE_SOLDIER
+    stats:
+      tu: 90
+      stamina: 95
+      health: 100
+      bravery: 100
+      reactions: 80
+      firing: 80
+      throwing: 70
+      strength: 65  # green kroot +5 STR
+      psiStrength: 50
+      psiSkill: 0
+      melee: 95  # green kroot +5 MELEE
+    armor: STR_GREENKROOT_LEADERAI_ARMOR
+    standHeight: 21
+    kneelHeight: 15
+    intelligence: 0
+    value: 12
+    aggression: 5
+    spotter: 3
+    deathSound: [2100, 2101, 2102, 2103, 2120, 2121]
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_CHAINSWORD_GUARD
+        - STR_GRENADE
+      - - STR_PLASMA_PISTOL_TERRAN
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_PLASMA_PISTOL_CLIP
+        - STR_LIGHT_POWERFIST
+        - STR_GRENADE

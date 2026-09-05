@@ -637,7 +637,7 @@ armors:
     refNode: *STR_INQUISITOR_VOICE
 
 
-# PLAYER ELDAR
+# PLAYER ELDAR (INQUISITION FACTION)
   - type: STR_ELDAR_FARSEER_ARMOR
     selectUnitMale:     [2851, 2852, 2853, 2854, 2855, 2856, 2857, 2858]  # yamllint disable-line rule:colons
     selectUnitFemale:   [2851, 2852, 2853, 2854, 2855, 2856, 2857, 2858]  # yamllint disable-line rule:colons
@@ -650,6 +650,59 @@ armors:
     deathMale: [{mod: 40k, index: 836}, {mod: 40k, index: 837}, {mod: 40k, index: 838}]  # yamllint disable-line rule:colons
     deathFemale: [{mod: 40k, index: 836}, {mod: 40k, index: 837}, {mod: 40k, index: 838}]  # yamllint disable-line rule:colons
 
+# ELDAR FACTION PLAYER
+# SEER
+  - type: STR_ELDAR_SEER_ARMOR_P
+    selectUnitMale:     [3156, 3157, 3158, 3159, 3160]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [2851, 2852, 2853, 2854, 2855, 2856, 2857, 2858]  # yamllint disable-line rule:colons
+    startMovingMale:    [3161, 3162, 3163, 3164, 3165]  # yamllint disable-line rule:colons
+    startMovingFemale:  [2821, 2822, 2823, 2824, 2825, 2826, 2827, 2828, 2829]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3166, 3167, 3168, 3169, 3170]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [2860, 2861, 2862, 2863, 2864, 2865, 2866, 2867, 2868, 2869]  # yamllint disable-line rule:colons
+    annoyedMale:        [3171, 3172, 3173, 3174, 3175]  # yamllint disable-line rule:colons
+    annoyedFemale:      [2811, 2812, 2813, 2814, 2815, 2816, 2817]  # yamllint disable-line rule:colons
+    deathMale: [3176, 3177, 3178]  # yamllint disable-line rule:colons
+    deathFemale: [{mod: 40k, index: 836}, {mod: 40k, index: 837}, {mod: 40k, index: 838}]  # yamllint disable-line rule:colons
+# WARLOCK
+  - type: STR_ELDAR_WARLOCK_ARMOR_P
+    selectUnitMale:     [3179, 3180, 3181, 3182, 3183]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3184, 3185, 3186, 3187, 3188]  # yamllint disable-line rule:colons
+    startMovingMale:    [3189, 3190, 3191, 3192, 3193]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3194, 3195, 3196, 3197, 3198]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3199, 3200, 3201, 3202, 3203]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3204, 3205, 3206, 3207, 3208]  # yamllint disable-line rule:colons
+    annoyedMale:        [3209, 3210, 3211]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3212, 3213, 3214]  # yamllint disable-line rule:colons
+    deathMale: [3215, 3216, 3217]  # yamllint disable-line rule:colons
+    deathFemale: [3218, 3219, 3220]  # yamllint disable-line rule:colons
+    # GUARDIAN
+  - type: STR_ELDAR_ARMOR_GUARDIAN_PLAYER
+    selectUnitMale:     [3263, 3264, 3265, 3266, 3267]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3268, 3269, 3270, 3271, 3272]  # yamllint disable-line rule:colons
+    startMovingMale:    [3273, 3274, 3275, 3276, 3277]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3278, 3279, 3280, 3281, 3282]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3283, 3284, 3285, 3286, 3287]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3288, 3289, 3290, 3291, 3292]  # yamllint disable-line rule:colons
+    annoyedMale:        [3293, 3294, 3295]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3296, 3297, 3298]  # yamllint disable-line rule:colons
+    deathMale: [3257, 3258, 3259]  # yamllint disable-line rule:colons
+    deathFemale: [3260, 3261, 3262]  # yamllint disable-line rule:colons
+# AVENGER
+  - &STR_ELDAR_GENERIC_ASPECT_ARMOR_VOICE  #GENERIC ASPECT WARRIOR VOICES
+    type: STR_ELDAR_ARMOR4_P
+    selectUnitMale:     [3221, 3222, 3223, 3224, 3225]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3226, 3227, 3228, 3229, 3230]  # yamllint disable-line rule:colons
+    startMovingMale:    [3231, 3232, 3233, 3234, 3235]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3236, 3237, 3238, 3239, 3240]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3241, 3242, 3243, 3244, 3245]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3246, 3247, 3248, 3249, 3250]  # yamllint disable-line rule:colons
+    annoyedMale:        [3251, 3252, 3253]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3254, 3255, 3256]  # yamllint disable-line rule:colons
+    deathMale: [3257, 3258, 3259]  # yamllint disable-line rule:colons
+    deathFemale: [3260, 3261, 3262]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_AVENGEREX_ARMOR_P
+    refNode: *STR_ELDAR_GENERIC_ASPECT_ARMOR_VOICE
+# DRAGON
   - &STR_ELDAR_DRAGON_ARMOR_VOICE
     type: STR_ELDAR_DRAGON_ARMOR_P
     selectUnitMale:       [3031, 3032, 3033, 3034, 3035]  # yamllint disable-line rule:colons
@@ -665,6 +718,7 @@ armors:
   - type: STR_ELDAR_DRAGONEX_ARMOR_P
     refNode: *STR_ELDAR_DRAGON_ARMOR_VOICE
 
+  #- &STR_ELDAR_SPIDER_VOICE          INEXPLICABLY I CANNOT GET THE REFNODES TO WORK HERE DESPITE IT WORKING FOR THE DRAGON EXARCH, TEST TO SEE IF IT WORKS INGAME
   - type: STR_ELDAR_SPIDER_ARMOR_P
     selectUnitMale:       [3117, 3118, 3119, 3120, 3121]  # yamllint disable-line rule:colons
     selectUnitFemale:     [3122, 3123, 3124, 3125, 3126]  # yamllint disable-line rule:colons
@@ -676,8 +730,31 @@ armors:
     annoyedFemale:        [3150, 3151, 3152]  # yamllint disable-line rule:colons
     deathMale:            [3153, 3154, 3155]  # yamllint disable-line rule:colons
     deathFemale:          [3153, 3154, 3155]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_SPIDEREXDS_ARMOR_P
+    selectUnitMale:       [3117, 3118, 3119, 3120, 3121]  # yamllint disable-line rule:colons
+    selectUnitFemale:     [3122, 3123, 3124, 3125, 3126]  # yamllint disable-line rule:colons
+    startMovingMale:      [3127, 3128, 3129, 3130, 3131]  # yamllint disable-line rule:colons
+    startMovingFemale:    [3132, 3133, 3134, 3135, 3136]  # yamllint disable-line rule:colons
+    selectWeaponMale:     [3137, 3138, 3139, 3140, 3141]  # yamllint disable-line rule:colons
+    selectWeaponFemale:   [3142, 3143, 3144, 3145, 3146]  # yamllint disable-line rule:colons
+    annoyedMale:          [3147, 3148, 3149] # yamllint disable-line rule:colons
+    annoyedFemale:        [3150, 3151, 3152]  # yamllint disable-line rule:colons
+    deathMale:            [3153, 3154, 3155]  # yamllint disable-line rule:colons
+    deathFemale:          [3153, 3154, 3155]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_SPIDEREXPB_ARMOR_P
+    selectUnitMale:       [3117, 3118, 3119, 3120, 3121]  # yamllint disable-line rule:colons
+    selectUnitFemale:     [3122, 3123, 3124, 3125, 3126]  # yamllint disable-line rule:colons
+    startMovingMale:      [3127, 3128, 3129, 3130, 3131]  # yamllint disable-line rule:colons
+    startMovingFemale:    [3132, 3133, 3134, 3135, 3136]  # yamllint disable-line rule:colons
+    selectWeaponMale:     [3137, 3138, 3139, 3140, 3141]  # yamllint disable-line rule:colons
+    selectWeaponFemale:   [3142, 3143, 3144, 3145, 3146]  # yamllint disable-line rule:colons
+    annoyedMale:          [3147, 3148, 3149] # yamllint disable-line rule:colons
+    annoyedFemale:        [3150, 3151, 3152]  # yamllint disable-line rule:colons
+    deathMale:            [3153, 3154, 3155]  # yamllint disable-line rule:colons
+    deathFemale:          [3153, 3154, 3155]  # yamllint disable-line rule:colons
 
-  - type: STR_ELDAR_RANGER_ARMOR_P
+  - &STR_ELDAR_RANGER_ARMOR_VOICE
+    type: STR_ELDAR_RANGER_ARMOR_P
     selectUnitMale:       [3075, 3076, 3077, 3078, 3079]  # yamllint disable-line rule:colons
     selectUnitFemale:     [3080, 3081, 3082, 3083, 3084]  # yamllint disable-line rule:colons
     startMovingMale:      [3085, 3086, 3087, 3088, 3089]  # yamllint disable-line rule:colons
@@ -688,6 +765,8 @@ armors:
     annoyedFemale:        [3108, 3109, 3110]  # yamllint disable-line rule:colons
     deathMale:            [3111, 3112, 3113]  # yamllint disable-line rule:colons
     deathFemale:          [3114, 3115, 3116]  # yamllint disable-line rule:colons
+  - type: STR_ELDAR_RANGER_SNIPER_ARMOR_P
+    refNode: *STR_ELDAR_RANGER_ARMOR_VOICE
 
 # CHAOS PLAYER ARMOR VOICES
   - type: STR_CHAOS_ADEPTAS_UNDIVIDED_ARMOR
@@ -2054,28 +2133,28 @@ armors:
 
   - type: STR_BTSCOUTARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 311}, {mod: 40k, index: 312}, {mod: 40k, index: 313}, {mod: 40k, index: 314}, {mod: 40k, index: 315}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 331}, {mod: 40k, index: 332}, {mod: 40k, index: 333}, {mod: 40k, index: 334}, {mod: 40k, index: 335}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 311}, {mod: 40k, index: 312}, {mod: 40k, index: 313}, {mod: 40k, index: 314}, {mod: 40k, index: 315}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 306}, {mod: 40k, index: 307}, {mod: 40k, index: 308}, {mod: 40k, index: 309}, {mod: 40k, index: 310}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 326}, {mod: 40k, index: 327}, {mod: 40k, index: 328}, {mod: 40k, index: 329}, {mod: 40k, index: 330}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 306}, {mod: 40k, index: 307}, {mod: 40k, index: 308}, {mod: 40k, index: 309}, {mod: 40k, index: 310}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 301}, {mod: 40k, index: 302}, {mod: 40k, index: 303}, {mod: 40k, index: 304}, {mod: 40k, index: 305}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 321}, {mod: 40k, index: 322}, {mod: 40k, index: 323}, {mod: 40k, index: 324}, {mod: 40k, index: 325}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 301}, {mod: 40k, index: 302}, {mod: 40k, index: 303}, {mod: 40k, index: 304}, {mod: 40k, index: 305}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 316}, {mod: 40k, index: 317}, {mod: 40k, index: 318}, {mod: 40k, index: 319}, {mod: 40k, index: 320}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 336}, {mod: 40k, index: 337}, {mod: 40k, index: 338}, {mod: 40k, index: 339}, {mod: 40k, index: 340}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 316}, {mod: 40k, index: 317}, {mod: 40k, index: 318}, {mod: 40k, index: 319}, {mod: 40k, index: 320}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 385}, {mod: 40k, index: 386}, {mod: 40k, index: 387}, {mod: 40k, index: 388}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 389}, {mod: 40k, index: 390}, {mod: 40k, index: 392}, {mod: 40k, index: 392}, {mod: 40k, index: 393}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 385}, {mod: 40k, index: 386}, {mod: 40k, index: 387}, {mod: 40k, index: 388}]  # yamllint disable-line rule:colons
 
   - &STR_BTMARINE_BASEARMOR
     type: STR_BTMARINEARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 526}, {mod: 40k, index: 527}, {mod: 40k, index: 528}, {mod: 40k, index: 529}, {mod: 40k, index: 530}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 521}, {mod: 40k, index: 522}, {mod: 40k, index: 523}, {mod: 40k, index: 524}, {mod: 40k, index: 525}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
 
   - type: STR_BTMARINEARMORFLAMER_PLAYER
     refNode: *STR_BTMARINE_BASEARMOR
@@ -2089,55 +2168,55 @@ armors:
   - &STR_BTASSAULT_BASEARMOR
     type: STR_BTMARINEASSAULTARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 526}, {mod: 40k, index: 527}, {mod: 40k, index: 528}, {mod: 40k, index: 529}, {mod: 40k, index: 530}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 521}, {mod: 40k, index: 522}, {mod: 40k, index: 523}, {mod: 40k, index: 524}, {mod: 40k, index: 525}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
 
   - type: STR_BTMARINEASSAULTARMORUPD_PLAYER
     refNode: *STR_BTASSAULT_BASEARMOR
 
   - type: STR_BTAPOTHARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 526}, {mod: 40k, index: 527}, {mod: 40k, index: 528}, {mod: 40k, index: 529}, {mod: 40k, index: 530}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 521}, {mod: 40k, index: 522}, {mod: 40k, index: 523}, {mod: 40k, index: 524}, {mod: 40k, index: 525}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
 
   - type: STR_BTCHAPLAINARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 526}, {mod: 40k, index: 527}, {mod: 40k, index: 528}, {mod: 40k, index: 529}, {mod: 40k, index: 530}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 521}, {mod: 40k, index: 522}, {mod: 40k, index: 523}, {mod: 40k, index: 524}, {mod: 40k, index: 525}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
 
   - &STR_BTTECH_BASEARMOR
     type: STR_BTTECHARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 526}, {mod: 40k, index: 527}, {mod: 40k, index: 528}, {mod: 40k, index: 529}, {mod: 40k, index: 530}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 521}, {mod: 40k, index: 522}, {mod: 40k, index: 523}, {mod: 40k, index: 524}, {mod: 40k, index: 525}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
 
   - type: STR_BTTECHGRAVARMOR_PLAYER
     refNode: *STR_BTTECH_BASEARMOR
@@ -2145,15 +2224,15 @@ armors:
   - &STR_BTHONOR_BASEARMOR
     type: STR_BTHONORARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 526}, {mod: 40k, index: 527}, {mod: 40k, index: 528}, {mod: 40k, index: 529}, {mod: 40k, index: 530}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 521}, {mod: 40k, index: 522}, {mod: 40k, index: 523}, {mod: 40k, index: 524}, {mod: 40k, index: 525}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
 
   - type: STR_BTHONORARMORALT_PLAYER
     refNode: *STR_BTHONOR_BASEARMOR
@@ -2164,13 +2243,13 @@ armors:
   - &STR_BTTERMI_BASEARMOR
     type: STR_BTTERMINATORARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 431}, {mod: 40k, index: 432}, {mod: 40k, index: 433}, {mod: 40k, index: 434}, {mod: 40k, index: 435}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 426}, {mod: 40k, index: 427}, {mod: 40k, index: 428}, {mod: 40k, index: 429}, {mod: 40k, index: 430}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 421}, {mod: 40k, index: 422}, {mod: 40k, index: 423}, {mod: 40k, index: 424}, {mod: 40k, index: 425}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 436}, {mod: 40k, index: 437}, {mod: 40k, index: 438}, {mod: 40k, index: 439}, {mod: 40k, index: 440}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
     deathFemale:        [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
 
@@ -2182,51 +2261,51 @@ armors:
 
   - type: STR_BTCAPTAINARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 431}, {mod: 40k, index: 432}, {mod: 40k, index: 433}, {mod: 40k, index: 434}, {mod: 40k, index: 435}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 426}, {mod: 40k, index: 427}, {mod: 40k, index: 428}, {mod: 40k, index: 429}, {mod: 40k, index: 430}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 421}, {mod: 40k, index: 422}, {mod: 40k, index: 423}, {mod: 40k, index: 424}, {mod: 40k, index: 425}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 436}, {mod: 40k, index: 437}, {mod: 40k, index: 438}, {mod: 40k, index: 439}, {mod: 40k, index: 440}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
     deathFemale:        [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
 
   - type: STR_BTRECLUSARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 431}, {mod: 40k, index: 432}, {mod: 40k, index: 433}, {mod: 40k, index: 434}, {mod: 40k, index: 435}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 426}, {mod: 40k, index: 427}, {mod: 40k, index: 428}, {mod: 40k, index: 429}, {mod: 40k, index: 430}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 421}, {mod: 40k, index: 422}, {mod: 40k, index: 423}, {mod: 40k, index: 424}, {mod: 40k, index: 425}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 436}, {mod: 40k, index: 437}, {mod: 40k, index: 438}, {mod: 40k, index: 439}, {mod: 40k, index: 440}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
     deathFemale:        [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
 
   - type: STR_BTCATAPHRACTARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 431}, {mod: 40k, index: 432}, {mod: 40k, index: 433}, {mod: 40k, index: 434}, {mod: 40k, index: 435}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 411}, {mod: 40k, index: 412}, {mod: 40k, index: 413}, {mod: 40k, index: 414}, {mod: 40k, index: 415}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 426}, {mod: 40k, index: 427}, {mod: 40k, index: 428}, {mod: 40k, index: 429}, {mod: 40k, index: 430}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 406}, {mod: 40k, index: 407}, {mod: 40k, index: 408}, {mod: 40k, index: 409}, {mod: 40k, index: 410}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 421}, {mod: 40k, index: 422}, {mod: 40k, index: 423}, {mod: 40k, index: 424}, {mod: 40k, index: 425}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 401}, {mod: 40k, index: 402}, {mod: 40k, index: 403}, {mod: 40k, index: 404}, {mod: 40k, index: 405}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 436}, {mod: 40k, index: 437}, {mod: 40k, index: 438}, {mod: 40k, index: 439}, {mod: 40k, index: 440}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 416}, {mod: 40k, index: 417}, {mod: 40k, index: 418}, {mod: 40k, index: 419}, {mod: 40k, index: 420}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
     deathFemale:        [{mod: 40k, index: 396}, {mod: 40k, index: 397}, {mod: 40k, index: 398}, {mod: 40k, index: 399}]  # yamllint disable-line rule:colons
 
   - type: STR_BTCHAMPIONARMOR_PLAYER
     selectUnitMale:     [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
-    selectUnitFemale:   [{mod: 40k, index: 531}, {mod: 40k, index: 532}, {mod: 40k, index: 533}, {mod: 40k, index: 534}, {mod: 40k, index: 535}]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [{mod: 40k, index: 511}, {mod: 40k, index: 512}, {mod: 40k, index: 513}, {mod: 40k, index: 514}, {mod: 40k, index: 515}]  # yamllint disable-line rule:colons
     startMovingMale:    [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
-    startMovingFemale:  [{mod: 40k, index: 526}, {mod: 40k, index: 527}, {mod: 40k, index: 528}, {mod: 40k, index: 529}, {mod: 40k, index: 530}]  # yamllint disable-line rule:colons
+    startMovingFemale:  [{mod: 40k, index: 506}, {mod: 40k, index: 507}, {mod: 40k, index: 508}, {mod: 40k, index: 509}, {mod: 40k, index: 510}]  # yamllint disable-line rule:colons
     selectWeaponMale:   [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
-    selectWeaponFemale: [{mod: 40k, index: 521}, {mod: 40k, index: 522}, {mod: 40k, index: 523}, {mod: 40k, index: 524}, {mod: 40k, index: 525}]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [{mod: 40k, index: 501}, {mod: 40k, index: 502}, {mod: 40k, index: 503}, {mod: 40k, index: 504}, {mod: 40k, index: 505}]  # yamllint disable-line rule:colons
     annoyedMale:        [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
-    annoyedFemale:      [{mod: 40k, index: 536}, {mod: 40k, index: 537}, {mod: 40k, index: 538}, {mod: 40k, index: 539}, {mod: 40k, index: 540}]  # yamllint disable-line rule:colons
+    annoyedFemale:      [{mod: 40k, index: 516}, {mod: 40k, index: 517}, {mod: 40k, index: 518}, {mod: 40k, index: 519}, {mod: 40k, index: 520}]  # yamllint disable-line rule:colons
     deathMale:          [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
-    deathFemale:        [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]  # yamllint disable-line rule:colons
+    deathFemale:        [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]  # yamllint disable-line rule:colons
 
   - &STR_BTDREADNODE
     type: STR_BTDREAD_ARMOR_PLAYER

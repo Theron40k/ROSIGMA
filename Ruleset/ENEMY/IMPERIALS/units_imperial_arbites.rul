@@ -1,0 +1,38 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+#weaponSets:
+  # # PLACEHOLDER for future set brought over for arbites
+  # - type: FLAK_GUARDSMEN_SET1
+  #   weapons: [STR_LASER_RIFLEG, STR_LASGUN_CLIP, STR_LASGUN_CLIP, STR_KRAK_GRENADE, STR_GRENADE]
+units:
+  - type: STR_CMAS_AI
+    race: STR_CMAS
+    stats: #slightly weaker than fenris wolfes for AI
+      tu: 100
+      stamina: 90
+      health: 50
+      bravery: 80
+      reactions: 90
+      firing: 0
+      throwing: 0
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 70
+    armor: STR_CMAS_ARMOR_AI
+    standHeight: 14
+    kneelHeight: 14
+    value: 20
+    deathSound: [{mod: 40k, index: 50}]
+    energyRecovery: 50
+    intelligence: 1
+    aggression: 8
+    spotter: 2
+    builtInWeaponSets:
+      - - STR_CMAS
+        - STR_CMAS
+      - - STR_CMAS
+        - STR_CMAS
+      - - STR_CMAS
+        - STR_CMAS

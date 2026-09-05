@@ -562,6 +562,11 @@ manufacture:
     spawnedPersonType: STR_CHAOS_MARINE
     producedItems:
       STR_KILLPOINT_TOKEN: 1
+    spawnedSoldier:
+      transformationBonusesCount: 1
+      randomTransformationBonuses:
+        STR_MARK_OF_CHAOS: 100 # Soldiers via Event don't get their startingTransforms; give these ChaosMarines their big stat boost
+
 
   # Manufacture for RadChaos Chaos Path to get ChaosCult Hellblades
   - name: STR_INQ_RR_HELLBLADE_INTERCEPTORS_CHAOS
@@ -593,3 +598,31 @@ manufacture:
       STR_UFO_NAVIGATION: 1
     producedItems:
       STR_STORMRAVEN_ADEPTAS: 1
+
+  # Xenos Path: Ork Midtier Craft
+  - name: STR_INQ_RR_ORK_SPECHUL_FIGHTA
+    category: STR_CRAFT
+    requires:
+      - STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH
+    space: 20
+    time: 8000
+    cost: 400000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+      STR_UFO_POWER_SOURCE: 1
+      STR_ELERIUM_115: 35
+    producedItems:
+      STR_ORK_SPECHUL_FIGHTA: 1
+
+  # Xenos Path: Eldar Midtier Craft
+  - name: STR_INQ_RR_WAVE_SERPENT
+    category: STR_CRAFT
+    requires:
+      - STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH
+    space: 20
+    time: 8000
+    cost: 500000
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 300
+    producedItems:
+      STR_WAVESERPENT: 1

@@ -1,0 +1,19 @@
+facilities:
+
+
+  - type: STR_INQ_RR_BLACK_MARKET
+    placeSound: {mod: 40k, index: 99}
+    requiresBaseFunc: [BASE]
+    requires:
+      - STR_RADICAL_INQUISITOR_STRATEGY
+    spriteShape: {mod: 40k, index: 336}     # 309 is the orbital comms facility
+    spriteFacility: {mod: 40k, index: 336}  # 309 is the orbital comms facility
+    size: 2
+    buildCost: 1000000
+    buildTime: 40
+    storage: 100
+    monthlyCost: 100000
+    rightClickActionType: 0
+    provideBaseFunc: [TRADE]
+    mapName: XBASE_32
+    listOrder: 800

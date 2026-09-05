@@ -2,9 +2,9 @@ events:
 
   - name: STR_BLACKTEMPLAR_CARE_PACKAGE
     description: STR_BLACKTEMPLAR_CARE_PACKAGE_DESCRIPTION
-    background: BLOODCLAW.SCR
+    background: BTSTARTERS.SCR
     interruptResearch: STR_NOT_BLACKTEMPLARS
-    adhocMissionScriptTags: ["gameStartHard"]
+    adhocMissionScriptTags: ["gameStartBTBR1"]
     spawnedPersons: 10
     spawnedCraftType: STR_INTERCEPTOR
     spawnedPersonType: STR_BTMARINE_PLAYER
@@ -24,11 +24,25 @@ events:
       STR_SMOKE_GRENADE: 5
       STR_FLAMETHROWER: 1
       STR_FLAMETHROWER_CLIP: 4
-    researchList: [STR_SMGIVEOTHER_INTERCEPTOR]
+    researchList: [STR_BTGIVEOTHER_INTERCEPTOR]
 
-  - name: STR_SMGIVESECONDINTERCEPTOR
+  - name: STR_BTGIVESECONDINTERCEPTOR
     description: STR_GIVESECONDINTERCEPTOR_DESCRIPTION
+    background: BTSTARTERS.SCR
+    adhocMissionScriptTags: ["gameStartBTBR2"]
     spawnedCraftType: STR_INTERCEPTOR
+    researchList: [STR_BTBR_WAAGHMORE]
+
+  - name: STR_BTBR_WAAGHMOREEVENT
+    description: STR_BTBR_WAAGHMORE_DESCRIPTION
+    background: BTSTARTERS.SCR
+    adhocMissionScriptTags: ["gameStartBTBR3"]
+    researchList: [STR_BTBR_WAAGHMORE2]
+
+  - name: STR_BTBR_WAAGHMOREEVENT2
+    description: STR_BTBR_WAAGHMORE2_DESCRIPTION
+    background: BTSTARTERS.SCR
+    adhocMissionScriptTags: ["gameStartBTBR4"]
 
   - name: STR_CHAMPIONJOIN_EVENT
     description: STR_CHAMPIONJOIN_SCRIPT_DESC
@@ -37,3 +51,21 @@ events:
     spawnedPersonType: STR_BTCHAMPION_PLAYER
     timer: 60
     timerRandom: 60
+
+
+ # Orks main base reveal
+
+  - name: STR_MAIN_ORKSBASE
+    description: STR_MAIN_ORKSBASE_DESCRIPTION
+    background: ChaosActivityBG.SCR
+    adhocMissionScriptTags: ["revealOrksBASE"]
+
+
+adhocScripts:
+
+  - type: startrevealMainOrksBASE
+    missionWeights:
+      0:
+        STR_MAINORKSBASE: 100
+    startDelay: 10800
+    adhocMissionScriptTags: ["revealOrksBASE"]

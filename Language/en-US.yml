@@ -16,6 +16,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   IMPERIUM: "IMPERIUM"
   ARMO: "ARMORY"
   MILL: "FORGE"
+  MANU: "MANUFACTURING"
+  APOC: "APOTHECARY"
   STR_XCOM_AGENTS_HAVE_LOCATED_AN_ALIEN_BASE_IN_REGION: "We have detected a enemy presence on the planet"
 
   STR_HWP_CAPACITY: " "  # uncomment to check for HWP: -1  # SpeedC is an exception
@@ -26,6 +28,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_40MM_AMMO_DEP: "(40mm Grenade Ammo)"
 
   STR_RADICAL_HIGHTIER: "Inquisition High-tier Requisitions"
+  STR_STRATIG_DONE: "IG Strategy Selected"
 
   # Redefining some ufopaedia categories
   STR_HELP: "UNDERSTANDING THE BATTLESCAPE"
@@ -140,7 +143,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   MAP_CATACOMB: "Catacombs"
   STR_CATACOMBS_MONTHLY_MISSION_TITLE: "Catacombs disturbance"
   STR_CATACOMBS_MONTHLY_MISSION_DESCRIPTION: "There are reported disturbances deep in the local catacombs system, possible cult, mutant or xeno activity. The inquisition have requested that you deal with these reports as you see fit. As the catacombs contain sacred artifacts and most holy brickwork there's an urgent need to investigate, purify and exterminate any befouling presence found. You may encounter inquisition agents to assist you on site. {NEWLINE}{NEWLINE} The mission will end once any and all hostiles have been reduced to ash and cinder."
-  STR_ORK_LEMAN: "Looted Leman Rus"
+  STR_ORK_LEMAN: "Looted Leman Russ"
   STR_CRAFT_DEPLOYMENT_PREVIEW: "Deployment Preview"
   STR_ELDAR_EARLY: "Eldar Scout Force"
   STR_ELDAR_ADV: "Eldar Aspect Warriors"
@@ -179,10 +182,15 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_CRAFT_WEAPONS: "CRAFT WEAPONS"
 
+  STR_CANNON_ROUNDS_X50: "Twin Heavy Bolter Ammo"
+  STR_HWP_CANNON_SHELLS: "Assault Bike Bolter Ammo"
+
+  STR_BIKEAMMO: "Bike Unlock"
+
   STR_CHIMEDON_SPAWNER: "Chimedon"
   STR_CHIMEDON_TURRET: "Chimedon"
   STR_CHIMEDON_ARMOR: "Chimedon"
-  STR_CHIMEDON_CODEX: "{NEWLINE} The Chimedon is a Chimera variant with a battle cannon equipped turret, providing a light tank role for dealing with fortifications. Its armor and optics are not as heavy or advanced as the Leman Rus however."
+  STR_CHIMEDON_CODEX: "{NEWLINE} The Chimedon is a Chimera variant with a battle cannon equipped turret, providing a light tank role for dealing with fortifications. Its armor and optics are not as heavy or advanced as the Leman Russ however."
 
   STR_CHIMERA_TWIN_HB_TURRET_SPAWNER: "Chimera Gryphonne IV"
   STR_CHIMERA_TWIN_HB_TURRET: "Chimera Gryphonne IV"
@@ -473,10 +481,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PROMOTE_CHAOS_SORCERER_TZEENTCH: "Induct Sorcerer of Tzeentch"
 
   STR_CONVERT_TO_CHAOS_ADEPTAS: "Convert Adeptas to Heretic Sister"
+  STR_CONVERT_TO_CHAOS_ADEPTAS_CODEX: "The Imperial truth states that the Adeptas Adepta Sororitas cannot be corrupted to chaos. The Inquisition insist that there has only ever been a single sister that willingly decided to fell to chaos. What they all fail to mention is the extremely important distinction between someone falling and being Corrupted. Becoming a Fallen Adeptas is a conscious choice. Being corrupted is not. {NEWLINE}{NEWLINE}This transformation will grant the fallen sister the Mark of Chaos"
   STR_CONVERT_TO_SLAANESH_ADEPTAS: "Convert Adeptas to Slaanesh Sister"
+  STR_CONVERT_TO_SLAANESH_ADEPTAS_CODEX: "Sibilant secrets seeped through sacred stone, steadfast Sisters slowly softened, smiling as souls slipped, surrendered, and were subsumed intus Slaanesh's scintillating splendor. Saintly vows shattered beneath sinuous songs, as sacred steel succumbed to silken sin. {NEWLINE}{NEWLINE}This transformation will grant the fallen sister the Mark of Slaanesh"
   STR_CONVERT_TO_KHORNE_ADEPTAS: "Convert Adeptas to Khorne Sister"
+  STR_CONVERT_TO_KHORNE_ADEPTAS_CODEX: "All I have to do is kill in his name? {NEWLINE}{NEWLINE}This transformation will grant the fallen sister the Mark of Khorne"
   STR_CONVERT_TO_NURGLE_ADEPTAS: "Convert Adeptas to Nurgle Sister"
+  STR_CONVERT_TO_NURGLE_ADEPTAS_CODEX: "All life... is... a... lie! I'm a boil on the face of reality. And I fester! {NEWLINE}{NEWLINE}This transformation will grant the fallen sister the Mark of Nurgle"
   STR_CONVERT_TO_TZEENTCH_ADEPTAS: "Convert Adeptas to Tzeentch Sister"
+  STR_CONVERT_TO_TZEENTCH_ADEPTAS_CODEX: "Every choice you make is a brick in a tower you did not ask to build. Why accept the path laid for you when you can weave your own? Let your mind unbend. Let your form refashion. Stagnation is death. Change is the only true constant. {NEWLINE}{NEWLINE}This transformation will grant the fallen sister the Mark of Tzeentch"
   STR_CONVERT_TO_IRON_MAIDEN: "Convert Adeptas to Iron Maiden"
   STR_INDUCT_HERETIC_SISTER: "Induct Heretic Sister"
   STR_INDUCT_KHORNE_SISTER: "Induct Sister of Rage"
@@ -687,7 +700,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_NURGLE_TERM_CORPSE_PLAYER: "Plague Terminator Corpse"
   STR_TZEENTCH_CORPSE_PLAYER: "A Pile of Dust"
   STR_TZEENTCH_TERM_CORPSE_PLAYER: "Rubric Terminator Corpse"
-  STR_KHORNE_WARPTALON_CORPSE_PLAYER: "Warptalon Corpse"
+  STR_KHORNE_WARPTALON_CORPSE_PLAYER: "Khorne Warptalon Corpse"
   STR_KHORNECHAMP_CORPSE_PLAYER: "Khorne Marine Corpse"
   STR_KHORNE_TERM_CORPSE_PLAYER: "Khorne Terminator Corpse"
   STR_FLOATER_CORPSE_PLAYER: "Raptor Corpse"
@@ -1107,7 +1120,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ORK_NOB: "Blood Axe Nob"
 
   STR_BLOODAXE_ARDBOY_PROMOTION: "Ork 'ardboy Promotion"
+  STR_BLOODAXE_ARDBOY_PROMOTION_CODEX: "An 'Ardboy (or 'Ard Boy) iz an elite speciualist ork 'oo iz betta armoured an' more skilled 'n kombat due ta his long 'perience kompared ta a runty ork. Dese orkz have zurvived many scraps an equip demselves wit' a karapace, da propa ork version uv 'perial karapace arma. Dey boldly charge forward throo hails uv enemy fire ta kome ta grips wit' 'da foe 'n close kombat. {NEWLINE}{NEWLINE} Ta promote an Ork ta 'Ardboy dey must have 'da follow'n prerequizites: {ALT}strength: 70{ALT}" # An 'Ardboy (or 'Ard Boy) is an elite specialist Ork who is better armoured and more skilled in combat due to his long experience compared to a runty ork. These Ork warriors have survived many battles and equip themselves with a Karapace, the proper Ork version of imperial Carapace armour. They boldly charge forward through hails of enemy fire to come to grips with the foe in close combat. {NEWLINE}{NEWLINE}To promote an Ork to 'Ardboy they must have the following prerequisites: {ALT}strength: 70{ALT}
   STR_BLOODAXE_NOB_PROMOTION: "Ork Nob Promotion"
+  STR_BLOODAXE_NOB_PROMOTION_CODEX: "A Nob iz an even bigga an stronga ork 'oo 'as access ta 'da best armors 'n 'da ork arsenal an 'as kilt way more enemiez dan 'e iz will'n ta kount. neva ask a nob if 'e 'as krumped enough enemiez as yer will become da next, so don't be a git. {NEWLINE}{NEWLINE} ta promote an 'Ardboy ta Nob dey must have 'da follow'n prerequisites: {ALT}strength: 100, commendations: Veteran{ALT}" #A Nob is an even bigger and stronger Ork who has access to the best armors in the ork arsenal and has killed way more enemies than he is willing to count. never ask a nob if he has crumped enough enemies as you will become the next, so don't be an idiot. {NEWLINE}{NEWLINE}To promote an 'Ardboy to Nob they must have the following prerequisites: {ALT}strength: 100, commendations: Veteran{ALT}
 
   STR_BLOODAXE_CAPFLAK_PLAYER_ARMOR: "Ork Flakk Armor"
   STR_BLOODAXE_KARAPACE_PLAYER_ARMOR: "Ork Karapace Armor"
@@ -1165,27 +1180,32 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_ARMOR_FH: "Healer Armor (Deprecated)"
   STR_ELDAR_ARMOR6_P_LAUNCHER: "Reaper Armor (Launcher) (Deprecated)"
   STR_ELDAR_LAUNCHER_FIXED: "Reaper Launcher (Deprecated)"
-  STR_PROMOTE_TO_DRAGON: "Path of the Dragon (Deprecated)"
-  STR_PROMOTE_TO_SCORPION: "Path of the Scorpion (Deprecated)"
-  STR_PROMOTE_TO_REAPER: "Path of the Reaper (Deprecated)"
-  STR_PROMOTE_TO_DIREAVENGER: "Path of the Avenger (Deprecated)"
-  STR_PROMOTE_TO_BANSHEE: "Path of the Banshee (Deprecated)"
-  STR_PROMOTE_TO_SEER: "Path of the Psyker (Deprecated)"
 
 # player Eldar campaign research
   STR_ELDAR_ONLY: "Eldar Weapons Training"
   STR_ELDAR_STRATEGY: "Eldar Strategy (WIP - debug version)"
-  STR_ELDAR_STRATEGY_CODEX: "After an urgent communication you have ben sent to Pelega IV to recover lost eldar technology, but early comunications seems odd, something must be moving in the warp"
+  STR_ELDAR_STRATEGY_CODEX: "After an urgent communication you have been sent to Pelega IV to recover lost eldar technology, but early comunications seems odd, something must be moving in the warp"
   STR_ELDAR_STRATEGY_TITLE_PAGE2: "Welcome and thanks for playing!"
   STR_ELDAR_STRATEGY_CODEX_PAGE2: "{ALT}Thanks for trying out the Eldar strategy!It's a VERY EARLY work in progress so please explore this strategy only to look up new content and leave feedback and suggestion on Discord.{ALT}"
   # {NEWLINE}It's a work in progress so please excuse the construction dust, and leave feedback on Discord.{NEWLINE}{NEWLINE}Broken saves may occasionally happen, although I will try to avoid them. I recommend saving before the end of each month so that you can roll back if a new month introduces a game-breaking bug. If you run into a broken save, please ask for help on Discord - saves can usually be repaired with a few simple text edits to the save file."
   STR_CHOSEN_ELDAR_STRATEGY: "Eldar Strategy Choosen"
   STR_ELDAR_ASURYANI_CAMPAING_START: "Eldar forces arrive on Pelega IV"
-  STR_ELDAR_ASURYANI_CAMPAING_START_SHORT_DESCRIPTION: "A young messager Salutes you and addresses you with respect {NEWLINE}{NEWLINE}Esteemed Autarch,{NEWLINE}Farseer TOBENAMED and Autarch TOBENAMED2 have ben sent us an urgent communication to descend on Pelega IV and initiate the search of lost Aeldari artifact. A word of advice if I may, it's very strange that they sent a joint communication, it might be wise to leave this detail to the guardians. {NEWLINE}{NEWLINE}You will find ther complete letter in the codex under the strategy section"
+  STR_ELDAR_ASURYANI_CAMPAING_START_SHORT_DESCRIPTION: "A young messager Salutes you and addresses you with respect {NEWLINE}{NEWLINE}Esteemed Autarch,{NEWLINE}Farseer Leflaire Mo'Reia and Autarch Filip H'Daei  have ben sent us an urgent communication to descend on Pelega IV and initiate the search of lost Aeldari artifact. A word of advice if I may, it's very strange that they sent a joint communication, it might be wise to leave this detail to the guardians. {NEWLINE}{NEWLINE}You will find ther complete letter in the codex under the strategy section"
   STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED: "A letter to the Autarch"
   STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX: "To the Esteemed Autarch, Keeper of the Warhost, {NEWLINE}{NEWLINE}The skeins of fate have shifted once more. Our Seers have uncovered faint echoes within the Immaterium, Hidden beneath the dust of Pelega IV may rest a cache of spirit stones, lost during one of the countless tragedies that befell our people in the long millennia after the Fall. {NEWLINE}If even a handful remain intact, they must be recovered. {NEWLINE}{NEWLINE}You are therefore charged with leading an expedition to this world. Establish a secure foothold, determine the truth of the Seers' visions, and recover any spirit stones or relics that may yet endure. {ALT}>>{ALT}"
-  STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX_PAGE2: "{NEWLINE}Know that practical arrangements have already been made with a minor settlement of independent mon-keigh for a steady supply of basic provisions, raw materials, fuel, and other mundane necessities. For matters requiring true Aeldari craftsmanship, a neighboring Craftworld has agreed to provide logistical support. {NEWLINE}{NEWLINE}Walk the strands of fate with vigilance, Autarch.{NEWLINE}{NEWLINE}May your blade strike only where destiny demands, and may the dead of our people finally find the peace they were denied. {NEWLINE}{NEWLINE}Signed:{NEWLINE}Farseer TOBENAMED{NEWLINE}Autarch TOBENAMED2"
-
+  STR_ELDAR_ASURYANI_CAMPAING_LETTER_RECEIVED_CODEX_PAGE2: "{NEWLINE}Know that practical arrangements have already been made with a minor settlement of independent mon-keigh for a steady supply of basic provisions, raw materials, fuel, and other mundane necessities. For matters requiring true Aeldari craftsmanship, a neighboring Craftworld has agreed to provide logistical support. {NEWLINE}{NEWLINE}Walk the strands of fate with vigilance, Autarch.{NEWLINE}{NEWLINE}May your blade strike only where destiny demands, and may the dead of our people finally find the peace they were denied. {NEWLINE}{NEWLINE}Signed:{NEWLINE}Farseer Leflaire Mo'Reia{NEWLINE}Autarch Filip H'Daei "
+  STR_HELP15: "Eldar Promotion"
+  STR_HELP_PROMO: "Eldar warriors can choose a number of different paths to archieve mastery over one of the many aspect. {NEWLINE}{NEWLINE}Choosing a path means a lifelong commitment for your warrior so choose carefully. {NEWLINE}{NEWLINE}Choosing the Path of the Aspect Warrior will allow your warriors to master a specific style of combact. {NEWLINE}{NEWLINE}Choosing the Path of the Psyker will allow to unleash the devastating effect of the warp toward your enemy. {NEWLINE}{NEWLINE}Choosing the Path of Command will allow your warrior to experience every form of combact before becoming a true Autarch, a flexible commander with the possibility of choosing his own gear depending on the situation. {NEWLINE}{ALT}Check your codex for more information about each path as soon as you unlock it{ALT}"
+  STR_ELDAR_RUNES_TITLE: "Eldar Psychic Rune"
+  STR_ELDAR_RUNE_CODEX: "While your troops progress from mere guardians to powerfull exarchs they will gain boons in the form of Psychic Runes. These runes, made of psycho-receptive Wraithbone, allow your warriors to draw power from the Warp while being safeguarded from the Perils of the Warp. They also represents the advancements your warriors have made along their path and provide bonuses to their stats and caracteristics. {NEWLINE}{NEWLINE}Aspiring Autarchs in particular can gain a wide set of runes along their dangerous path to becoming true Autarchs."
+  STR_ELDAR_EXARCH_AND_AUTARCH: "Path of Command, Autarch and Exarch"
+  STR_ELDAR_EXARCH_AND_AUTARCH_PAGE1: "Not all eldar are made to lead, but all those who wish can test themself by embarking the path of command to become Autarchs. To become an Autarch the aspirant must experience all the aspect warrior path to understand the true nature of each, without being able to look back. Along the way they will gain experience in the form of Eldar Runes, granting powerfull boons but differently to specialized troops they will gain less powerfull bonuses when embracing an aspect. {NEWLINE}>>> Continued on next page >>>"
+  STR_ELDAR_EXARCH_AND_AUTARCH_PAGE2: "For those who are not willing to embrace the Path of command they can become Exarchs, powerfull specialist in their field with great expertise and experience. The main difference between an Exarch and an Autarch lies in their potential and equipment flexibility. Exarch tend to reach their full potential only in a fiew caracteristics and will only be able to use their aspect armour, while Autarch can reach their full potential in all caracteristics and can freely switch between all the aspect warrior armours"
+  STR_RECRUIT_ELDAR_OUTCAST_CODEX: "Asuryani Outcasts, known as Anhrathe, are those rare members of the Aeldari species who have taken up the Path of the Outcast and left their home craftworld to wander the galaxy. They generally become Rangers, the scouts of their craftworlds, well-trained survivalists and marksmen. {NEWLINE}{NEWLINE}Outcasts are generally not welcomed in any Asuryan Society unless they decide to atone for any crime committed and abandon the Path of the Outcast. {ALT}Recruiting Outcast Rangers will displease All other Eldars (-50 points per recruit){ALT}"
+  STR_SLAANESH_PALACE_ACTIVITY_DETECTED: "An obscure omen presents us"
+  STR_SLAANESH_PALACE_ACTIVITY_DETECTED_DESCRIPTION: "The stars blink with an unnatural light during this night. Your advisor interpret it as an omen that our greatest enemy is coming near. {NEWLINE}{NEWLINE}Farseer Leflaire has sent us an urgent message, it has been revealed that a Corrupt Palace will arrive nearby one of the planet landmass. Further analysis indicates that it will be the Macrage or Orion sector. A Seer has been dispatched for further assistance to our cause."
+  STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED: "Slaanesh Corrupted Palace Destroyed"
+  STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED_DEBRIEFING: "The decadent palace of Slaanesh has been destroyed, Autarch H'Daei will surely be pleased of this victory. We also found several corrupted soulgem in the palace remains, while the spirit within are forever lost this also indicates that there might be more on the planet waiting to be uncovered. {NEWLINE}{NEWLINE}Your messanger will hurry to bring the news to the nearby craftworld, additional requisition and forces will surely be granted to our cause (High tier requisition can now be researched if all other prerequisite are unlocked)"
   STR_ELDAR_ASURYANI_CAMPAING: "Align with the Asuryani"
   STR_ELDAR_ASURYANI_CAMPAING_T2: "Asuryani mid-tier (WIP)"
   STR_ELDAR_ASURYANI_CAMPAING_T3: "Asuryani high-tier (WIP)"
@@ -1205,9 +1225,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_FIREDRAGON_RESEARCH: "Fire Dragon unlock"
   STR_FUSION_TECH_RESEARCH: "Fusion Weaponry Requisition"
   STR_ELDAR_AUTARCH_EXARCH_RESEARCH: "Pinnacle of the Eldar Warrior Paths"
+  STR_ELDAR_AUTARCH_PLAYER: "Eldar Autarch"
   STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH: "Dire Avenger Exarch unlock"
   STR_ELDAR_SCORPION_EXARCH_RESEARCH: "Scorpion Exarch unlock"
   STR_ELDAR_REAPER_EXARCH_RESEARCH: "Reaper Exarch unlock"
+  STR_ELDAR_REAPER_EXARCH_M: "Eldar Reaper"
+  STR_ELDAR_SPIDER_RESEARCH: "Spider Unlock"
+  STR_ELDAR_SPIDER_EXARCH_RESEARCH: "Spider Exarch Unlock"
   STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH: "Fire Dragon Exarch unlock"
   STR_ELDAR_PSYKER_RESEARCH: "Psyker Promotions"
   STR_ELDAR_BANSHEE_RESEARCH: "Banshee unlock"
@@ -1219,6 +1243,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_WARLOCK_PATH_RESEARCH: "Path of the Warlock"
   STR_ELDAR_WARLOCK_RESEARCH: "Warlock unlock"
   STR_ELDAR_KHAINE_SUMMONING_RESEARCH: "Khaine Avatar Rituals"
+  STR_ELDAR_POWER_WEAPONS_ACQUISITION: "Eldar Power Weapon Acquisition"
+  STR_FORGE_DIRESWORD_VESSEL_RESEARCH: "Ease Soulstone Weapon Restrictions"
+  STR_FORGE_DIRESWORD_VESSEL_RESEARCH_CODEX_TITLE: "Diresword Creation Authorized"
+  STR_FORGE_DIRESWORD_VESSEL_RESEARCH_CODEX: " The Seer Council has foreseen the use of Direswords will shift the war into our favor. However be warned, disinterring the souls of Aeldari warriors from their resting place will be unpopular with the warhost.{NEWLINE}{NEWLINE}{ALT} Diresword Vessels must first be manufactured, then ensouled with the Spirit of a fallen Aeldari Warrior (80 melee) through the transformation menu at the bottom left of the soldiers tab.{NEWLINE}{NEWLINE} Alternatively a soul from the Infinity circuit can be used in the manufacturing tab at a high cost.{ALT}"
+  STR_DIRESWORD_VESSEL_MANUFACTURE: "Forge Diresword Vessel"
+  STR_DIRESWORD_ENSOULED_MANUFACTURE: "Ensoul Diresword Vessel (Inf Cir)"
+  STR_DIRESWORD_VESSEL_TRANSFORM: "Ensoul Diresword Vessel"
+
+  STR_ELDAR_SOULTECH_CATEGORY: "Eldar Soul Manipulation"
 
 # Player Eldar Buildings
   STR_ELDAR_ASPECT_PORTAL_UNDERGROUND: "Aspect Portal Underground (WIP)"
@@ -1228,72 +1261,203 @@ en-US:  #  yamllint disable-line rule:empty-values
   AUX_WRAITHCANNON: "Wraithcannon"
   STR_ELDAR_GUARDIAN_PLAYER: "Eldar Guardian"
   STR_ELDAR_ARMOR_GUARDIAN_PLAYER: "Guardian Armor"
+  STR_ELDAR_GUARDIAN_CORPSE_P: "Guardian Corpse"
   STR_ELDAR_RANGER_PLAYER: "Eldar Outcast Ranger"
-  STR_ELDAR_RANGER_ARMOR_P: "Eldar Ranger Armor"
+  STR_ELDAR_RANGER_ARMOR_P: "Ranger Armor"
+  STR_ELDAR_RANGER_SNIPER_ARMOR_P: "Ranger Sniper Armor"
   STR_ELDAR_RANGER_CORPSE_P: "Eldar Ranger Corpse"
   STR_ENLIST_ELDAR_OUTCAST_RANGER: "Enlist Outcast Ranger"
   STR_ELDAR_ARMOR_GUARDIAN_SHIELD_PLAYER: "Force Shield Guardian Armor"
   STR_ELDAR_ARMOR_GUARDIAN_HEALER_PLAYER: "Healer Kit Guardian Armor"
   STR_ELDAR_ASPECT_WARRIOR_PLAYER: "Eldar Aspect Warrior"
-  STR_ELDAR_PSYKER_PLAYER: "Eldar Psyker"
-  STR_PROMOTE_TO_PSYKER: "Path of the Psyker"
-  STR_PROMOTE_TO_ELDAR_WARLOCK: "Path of the Warlock"
-  STR_ELDAR_WARLOCK_PLAYER: "Eldar Warlock"
-  STR_PROMOTE_TO_BANSHEE_EXARCH: "Bewitched by the Banshee Path"
+  STR_ELDAR_PSYKER_PLAYER: "Eldar Seer"
+  STR_ELDAR_WARLOCK_PLAYER: "Warlock"
+  STR_ELDAR_WARLOCK_ARMOR_P: "Warlock Armor"
+  STR_ELDAR_WARLOCK_CORPSE_P: "Warlock Corpse"
+  STR_ELDAR_AVANGER_MF: "Avenger Warrior"
+  STR_ELDAR_AVENGEREX_P: "Avenger Exarch"
+  STR_ELDAR_ARMOR4_P: "Avenger Armor"
+  STR_ELDAR_AVENGEREX_ARMOR_P: "Avenger Exarch Armor"
+  STR_ELDAR_AVENGER_CORPSE_P: "Avenger Corpse"
+  STR_ELDAR_AVENGEREX_CORPSE_P: "Avenger Exarch Corpse"
   STR_ELDAR_BANSHEE_EXARCH_PLAYER: "Eldar Banshee Exarch"
+  STR_ELDAR_BANSHEE_CORPSE_P: "Banshee Corpse"
   STR_ELDAR_DRAGON: "Eldar Dragon"
   STR_ELDAR_DRAGONEX: "Eldar Dragon Exarch"
   STR_ELDAR_DRAGON_MF: "Dragon Warrior"
   STR_ELDAR_DRAGON_EXARCH_SOLDIER: "Dragon Exarch Warrior"
-  STR_PROMOTE_TO_ASPECT_WARRIOR: "Path of the Warrior"
-  STR_PROMOTE_TO_AUTARCH: "Path of Command"
-  STR_PROMOTE_TO_DRAGON_EXARCH: "Engulfed by the Dragon Path"
   STR_ELDAR_DRAGON_ARMOR: "Eldar Dragon Armor"
   STR_ELDAR_DRAGONEX_ARMOR: "Eldar Dragon Exarch Armor"
   STR_ELDAR_DRAGON_ARMOR_P: "Dragon Armor"
   STR_ELDAR_DRAGONEX_ARMOR_P: "Dragon Exarch Armor"
   STR_ELDAR_DRAGON_CORPSE: "Eldar Dragon Corpse"
-  STR_ELDAR_DRAGONEX_CORPSE: "Eldar Dragon Exarch Corpse"
+  STR_ELDAR_DRAGONEX_CORPSE: "Fire Dragon Exarch Corpse"
   STR_ELDAR_DRAGON_CORPSE_P: "Fire Dragon Corpse"
   STR_ELDAR_DRAGON_EXARCH_CORPSE_P: "Dragon Exarch Corpse"
+  STR_ELDAR_SCORPION_CORPSE_P: "Striking Scorpion Corpse"
+  STR_ELDAR_SCORPIONEX_P: "Scorpion Exarch"
+  STR_ELDAR_SCORPIONEX_ARMOR_P: "Scorpion Exarch Armor"
+  STR_ELDAR_SCORPIONEX_CORPSE_P: "Scorpion Exarch Corpse"
   STR_ELDAR_SPIDER_PLAYER: "Spider Warrior"
   STR_ELDAR_SPIDER_ARMOR_P: "Spider Armor"
   STR_ELDAR_SPIDER_CORPSE_P: "Warp Spider Corpse"
+  STR_ELDAR_SPIDEREX_PLAYER: "Spider Exarch"
+  STR_ELDAR_SPIDEREXDS_ARMOR_P: "Spider Exarch Death Spinner Armor"
+  STR_ELDAR_SPIDEREXDS_CORPSE_P: "Spider Exarch Death Spinner Corpse"
+  STR_ELDAR_SPIDEREXPB_ARMOR_P: "Spider Exarch Power Blade Armor"
+  STR_ELDAR_SPIDEREXPB_CORPSE_P: "Spider Exarch Power Blade Corpse"
   STR_ELDAR_REAPEREX: "Eldar Reaper Exarch"
   STR_ELDAR_ARMOR_EXARCH_P: "Reaper Exarch Armor"
   STR_ELDAR_ARMOR_EXARCH: "Eldar Reaper Exarch"
+  STR_ELDAR_SEER_ARMOR_P: "Seer Armor"
+  STR_ELDAR_SEER_CORPSE_P: "Seer Corpse"
+
+  # eldar skills
+  STR_SKILL_WARPSPIDER_STEALTH_TELEPORT: "Warp-jump"
+  STR_SKILL_BANSHEE_EXARCH_DASH: "Banshee Exarch Sprint"
+  STR_SKILL_BANSHEE_DASH: "Banshee Sprint"
+
+  # ELDAR SOLDIER TRANSFORMATIONS CODEX (lore fluff plus transformation requirements)
+  STR_ELDAR_ASPECT_HELPER_SCORPIONS: "The Striking Scorpions are the form of Aspect Warriors focused on close combat, stealth, and assassination. They epitomise the deadly attributes of their namesake, which can sting and kill a creature many times its size. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Scorpion are: Combat experience (rank 1 or higher) and {ALT}bravery: 70, melee: 50{ALT}" # The history of the Striking Scorpions is shrouded in infamy from their very beginning from the story of their founder, Phoenix Lord Arhra, Father of the Scorpions, now known as the Fallen Phoenix"
+  STR_ELDAR_ASPECT_HELPER_BANSHEE: "Howling Banshees are the form of Aspect Warriors that represents the fury of the Murder God as well as his cunning. According to Eldar mythology, Banshees are the harbingers of woe and death whose cry, it is said, heralds ill fate, calling forth dead spirits from the Warp and forewarning certain death. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Banshee are: Combat experience (rank 1 or higher) and{ALT}bravery: 60, reactions: 65{ALT}"
+  STR_ELDAR_ASPECT_HELPER_REAPER: "Dark Reapers are the most sinister types of Eldar Aspect Warrior. They emulate Khaine in his aspect as \"the Destroyer\" and the harvester of souls. They are the most heavily equipped of all Aspect Warriors, they specialize in the use of destructive, long-range weaponry.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Reaper are: Combat experience (rank 1 or higher) and {ALT}firing: 65, strength: 40{ALT}"
+  STR_ELDAR_ASPECT_HELPER_AVENGER: "Dire Avengers, or Fian Dialcaman, are the form of Aspect Warriors representing Khaine's aspect of the noble and merciless warrior, who punishes the unworthy and shows true devotion to his own people. They are the most tactically flexible and numerous of all the Aspect Warriors.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Dire Avenger are: Combat experience (rank 1 or higher) and {ALT}firing: 60{ALT}"
+  STR_ELDAR_ASPECT_HELPER_DRAGON: "The Fire Dragons are the form of Aspect Warriors embodying the writhing, sinewy dragon of Eldar myths as well as the elemental destruction of Khaine. Fire Dragons are aggressive and warlike close combat fighters who utilized heat weapons to destroy enemy vehicles and strongpoints.{NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Fire Dragon are: Combat experience (rank 1 or higher) and {ALT}bravery: 70, health: 40{ALT}"
+  STR_ELDAR_ASPECT_HELPER_SPIDER: "The Warp Spiders epitomise the concept of an aggressive defence. They specialise in the use of a personal teleportation device built into their Aspect Armour to make a series of rapid jumps through the warp making nearly impossible to target them. {NEWLINE}Beware: {ALT}repeated usage of the personal teleportation device risk exposing the user to the dangerous energies of the warp{ALT} {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Warp Spider are: Combat experience (rank 1 or higher) and {ALT}health: 55, strength: 40, bravery: 70{ALT}"
+  STR_PROMOTE_BEGIN_AUTARCH_PATH_HELPER: "Any Eldar who wished to become an Autarch has to start by declaring and adopting its discipline and make their purpose to master the art of warcraft, command, and tactical supremacy. This declaration will move them toward their goal and will allow them to experience every aspect in the path of warrior. {NEWLINE}Walking the path of command will grand severely reduced bonuses when adopting a specific aspect compared to warriors who embrace that aspect for life. {NEWLINE}{NEWLINE}Requirement for a guardian to start the path of command are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}bravery: 70{ALT}"
+  STR_PROMOTE_TO_AUTARCH_HELPER: "When aspiring Autarchs Complete their journey, their knowledge allow them to coordinate disparate Aspect shrines and Guardian forces without losing control of the flow of battle, no matter what atrocities the enemy may commit. {NEWLINE}{NEWLINE}Requirement for an Aspiring Autarch to become a true autarch are: Combat experience (rank 1 or higher) in the current aspect and experience in all other aspect warrior paths{NEWLINE}{ALT}Stinging Scorpion, Howling Banshee, Dark Reaper, Dire Avenger, Fire Dragon, Warp Spider{ALT}"
+  STR_ELDAR_ASPECT_HELPER_SCORPION_EXARCH: "Exarchs are regarded with both awe and revulsion by other Aeldari. Awe, because Exarchs single-mindedly pursue a side of their nature. Revulsion, because the Exarchs have become trapped in the Warrior Aspect and are destined for a life. Striking Scorpion Exarch usually cover the role of strike squad leaders and frontline commanders. {NEWLINE}{NEWLINE}Requirement for a Striking Scorpion to become an Exarch are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}bravery: 70{ALT}"
+  STR_ELDAR_ASPECT_HELPER_AVENGER_EXARCH: "Exarchs are regarded with both awe and revulsion by other Aeldari. Awe, because Exarchs single-mindedly pursue a side of their nature. Revulsion, because the Exarchs have become trapped in the Warrior Aspect and are destined for a life. Dire Avenger Exarch usually cover the role of infantry leaders, diplomats bodyguard and masters of ranged combact. {NEWLINE}{NEWLINE}Requirement for a Dire Avenger to become an Exarch are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}reactions: 85, firing: 90{ALT}"
+  STR_ELDAR_ASPECT_HELPER_DRAGON_EXARCH: "Exarchs are regarded with both awe and revulsion by other Aeldari. Awe, because Exarchs single-mindedly pursue a side of their nature. Revulsion, because the Exarchs have become trapped in the Warrior Aspect and are destined for a life. Fire Dragon Exarch usually cover the role of assault strike group, siege breakers and anti-heavy armor infantry, thanks to their array of long and short range melta weapons {NEWLINE}{NEWLINE}Requirement for a Fire Dragon to become an Exarch are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}bravery: 85, health: 65{ALT}"
+  STR_ELDAR_ASPECT_HELPER_REAPER_EXARCH: "Exarchs are regarded with both awe and revulsion by other Aeldari. Awe, because Exarchs single-mindedly pursue a side of their nature. Revulsion, because the Exarchs have become trapped in the Warrior Aspect and are destined for a life. Dark Reaper Exarch usually cover the role of heavy support leaders, preferring long range engagements where their heavy weapons and strong armour shines {NEWLINE}{NEWLINE}Requirement for a Dark Reaper to become an Exarch are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}firing: 85, strength: 50{ALT}"
+  STR_ELDAR_ASPECT_HELPER_SPIDER_EXARCH: "Exarchs are regarded with both awe and revulsion by other Aeldari. Awe, because Exarchs single-mindedly pursue a side of their nature. Revulsion, because the Exarchs have become trapped in the Warrior Aspect and are destined for a life. Warp Spider exarch usually become leaders of covert operation groups or solo operative in infiltration missions {NEWLINE}{NEWLINE}Requirement for a Warp Spider to become an Exarch are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}health: 55, strength: 40, bravery: 70{ALT}"
+  STR_ELDAR_ASPECT_HELPER_BANSHEE_EXARCH: "Exarchs are regarded with both awe and revulsion by other Aeldari. Awe, because Exarchs single-mindedly pursue a side of their nature. Revulsion, because the Exarchs have become trapped in the Warrior Aspect and are destined for a life. Howling Banshee exarch usually cover the role of leader of specialized melee infantry killteams, where their deadly grace in melee mixed with their psychosonic war shout delivered by their mask alow them to defeat enemy leaders and dangerous enemies. {NEWLINE}{NEWLINE}Requirement for a Howling Banshee to become an Exarch are: Combat experience (rank 1 or higher) and {NEWLINE}{ALT}bravery: 60, reactions: 65{ALT}"
+  # eldar transformations
+  #STR_PROMOTE_TO_ASPECT_WARRIOR: "Path of the Warrior" #(unused)
+  STR_PROMOTE_BEGIN_AUTARCH_PATH: "Walk the path of Command"
+  STR_PROMOTE_TO_DRAGON: "Path of the Dragon"
+  STR_PROMOTE_TO_DRAGON_AUTARCH: "Path of the Dragon (Path of Command)"
+  STR_PROMOTE_TO_SCORPION: "Path of the Scorpion"
+  STR_PROMOTE_TO_SCORPION_AUTARCH: "Path of the Scorpion (Path of Command)"
+  STR_PROMOTE_TO_REAPER: "Path of the Reaper"
+  STR_PROMOTE_TO_REAPER_AUTARCH: "Path of the Reaper (Path of Command)"
+  STR_PROMOTE_TO_DIREAVENGER: "Path of the Avenger"
+  STR_PROMOTE_TO_DIREAVENGER_AUTARCH: "Path of the Avenger (Path of Command)"
+  STR_PROMOTE_TO_BANSHEE: "Path of the Banshee"
+  STR_PROMOTE_TO_BANSHEE_AUTARCH: "Path of the Banshee (Path of Command)"
+  STR_PROMOTE_TO_SPIDER: "Path of the Spider"
+  STR_PROMOTE_TO_SPIDER_AUTARCH: "Path of the Spider (Path of Command)"
+  STR_PROMOTE_TO_AUTARCH: "Path of Command"
+  STR_PROMOTE_TO_SCORPION_EXARCH: "Envenomed by the Scorpion Path"
+  STR_PROMOTE_TO_AVENGER_EXARCH: "Consumed by the Avenger Path"
+  STR_PROMOTE_TO_DRAGON_EXARCH: "Engulfed by the Dragon Path"
   STR_PROMOTE_TO_REAPER_EXARCH: "Shrouded by the Reaper Path"
+  STR_PROMOTE_TO_SPIDER_EXARCH: "Ensnared by the Spider Path"
+  STR_PROMOTE_TO_BANSHEE_EXARCH: "Bewitched by the Banshee Path"
+  #STR_PROMOTE_TO_PSYKER: "Path of the Psyker" #(unused)
+  STR_PROMOTE_TO_SEER: "Path of the Seer"
+  STR_PROMOTE_TO_ELDAR_WARLOCK: "Path of the Warlock"
   STR_RESURRECT_ELDAR: "Wraithguard Spirit Stone Infusion"
 
+#Eldar Boons (bonuses) - lore friendly runes
+  STR_RUNE_OF_BATTLE: "Rune of Battle"
+  # Runes of Deception
+  # Runes of Evasion
+  STR_RUNE_OF_FATE: "Rune of Fate"
+  STR_RUNE_OF_FLEETNESS: "Rune of Fleetness"
+  # Runes of Fortune
+  # Runes of the Harlequin
+  STR_RUNE_OF_REAPING: "Rune of Reaping"
+  STR_RUNE_OF_THE_SPIDER: "Rune of the Spider"
+  STR_RUNE_OF_VIGOR: "Rune of Vigor"
+  STR_RUNE_OF_WAR: "Rune of War"
+  # Runes of the Warp
+  STR_RUNE_OF_WARDING: "Rune of Warding" # Runes of Warding
+  STR_RUNE_OF_WITNESSING: "Rune of Witnessing" # vision
+  # Runes of Wrath
+#Eldar Boons (bonuses) - rule of cool runes
+  STR_RUNE_OF_COMMAND_START: "Rune of the First Command"  # Rune of command
+  STR_RUNE_OF_COMMAND_AUTARCH: "Rune of Sovereign Command" # Rune of command 2 when autarch
+  STR_RUNE_OF_THE_DRAGON: "Rune of the Dragon"
+
   #Eldar Weapons
-  STR_EPOWER_SWORD: "Eldar Mirrorsword"
+  STR_EPOWER_SWORD: "Banshee Blade"
   STR_SHURIKEN_CANNON: "Shuriken Cannon"
   STR_SHURIKEN_CANNON_MAG: "Shuriken Cannon Mag"
+  STR_SHURIKEN_WEAPON_SNAPSHOT: "Burst Fire"
+  STR_SHURIKEN_WEAPON_AUTOSHOT: "Shuriken Storm"
   STR_LARGE_ROCKET_ELDAR: "Eldar Reaper Rocket"
-  STR_SMALL_ROCKET_TEMPEST_ELDAR: "Eldar Tempest Rocket Pack"
+  STR_AVENGER_CATAPULT: "Avenger Shuriken Catapult"
+  STR_AVENGER_CATAPULT_SCOPED: "Avenger Scoped Shuriken Catapult"
+  STR_AVENGER_PISTOL: "Avenger Shuriken Pistol"
+  STR_AVENGER_PISTOL_SCOPED: "Avenger Scoped Shuriken Pistol"
+  STR_AVENGER_SHURIKEN_CLIP: "Avenger Molecular Shuriken"
+  STR_DIRESWORD: "Diresword"
+  STR_DIRESWORD_VESSEL: "Diresword Vessel"
+  STR_ELDAR_POWER_GLAIVE: "Eldar Power Glaive"
+  STR_AELDARI_FLAMER: "Aeldari Flamer"
+  STR_AELDARI_FLAMER_FUEL: "Aeldari Flamer Fuel"
+  STR_DRAGON_BREATH_FLAMER: "Dragon's Breath Flamer"
+  STR_DRAGON_BREATH_FLAMER_FUEL: "Dragon's Breath Flamer Fuel"
   STR_FUSION_GUN: "Fusion Gun"
   STR_DRAGON_FUSION_GUN: "Dragon Fusion Gun"
+  STR_FUSION_PISTOL: "Fusion Pistol"
+  STR_DRAGON_FUSION_PISTOL: "Dragon Fusion Pistol"
+  STR_DRAGON_AXE: "Dragon Axe"
   STR_FIREPIKE: "Firepike"
-  STR_FUSION_AMMO: "Fusion Cannister"
+  STR_FUSION_AMMO: "Fusion Canister"
+  STR_DRAGON_FUSION_AMMO: "Dragon Fusion Canister"
+  STR_FUSION_PISTOL_AMMO: "Fusion Pistol Canister"
+  STR_DRAGON_FUSION_PISTOL_AMMO: "Dragon Fusion Pistol Canister"
+  STR_FIREPIKE_AMMO: "Firepike Canister"
   STR_RANGER_LONG_RIFLE: "Ranger Long Rifle"
   STR_RANGER_LONG_RIFLE_SCOPED: "Scoped Ranger Long Rifle"
   STR_RANGER_LONG_RIFLE_MAG: "Long Rifle Magazine"
+  STR_RANGER_LONG_RIFLE_MAG_FIXED: "Long Rifle Mag (Preloaded)"
   STR_DEATH_SPINNER: "Death Spinner"
   STR_SPINNER_SPOOL: "Spinner Spool Ammo"
+  STR_ELDAR_POWER_BLADE: "Power Blade (LHand)"
+  STR_ELDAR_TEMPEST_LAUNCHER: "Tempest Launcher"
+  STR_SMALL_ROCKET_TEMPEST_ELDAR: "Eldar Tempest Rocket Pods"
+  STR_ELDAR_TEMPEST_LAUNCHER_SNAPSHOT: "Burst Fire"
+  STR_ELDAR_TEMPEST_LAUNCHER_AUTOSHOT: "Full Barrage"
+  STR_SPINNERET_RIFLE: "Spinneret Rifle"
+  STR_SPINNERET_RIFLE_SPOOL: "Spinneret Rifle Spool"
+  STR_WITCHBLADE: "Witchblade"
+  STR_SINGING_SPEAR: "Singing Spear"
+  STR_SINGING_SPEAR_AIMED_THROW: "Aimed Throw"
+  STR_SINGING_SPEAR_SNAP_THROW: "Snap Throw"
+  STR_WITCH_STAFF: "Witch Staff"
+  STR_AELDARI_SWORD: "Aeldari Sword"
+  STR_AELDARI_CHAINSWORD: "Aeldari Chainsword"
+  STR_AELDARI_POWERSWORD: "Aeldari Power Sword"
+  STR_SCORPION_CHAINSWORD: "Scorpion Chainsword"
+  STR_BITING_BLADE: "Biting Blade"
+  STR_SCORPIONS_CLAW: "Scorpion's Claw (Rhand)"
+  STR_SCORPIONS_CLAW_MELEE: "Claw Crush"
 
-
-#Eldar Codex Strings
+#Eldar Units Codex Strings
   STR_ELDAR_GUARDIAN_AUTOPSY_CODEX: "{NEWLINE} Guardians are the militia of the Eldar Craftworlds. In times of peace the Guardians pursue their normal civilian roles, however, all Eldar are trained in warfare and can be called to arms if their Craftworld is threatened. Guardians in battle, form the bulk of the Eldar armies. That these citizen levies are capable of engaging and defeating other races' warriors is a testament to Eldar skill and technology."
   STR_ELDAR_GUARDIAN_ARMOR_CODEX: "{NEWLINE} All Guardians wear Mesh Armor formed of tens of thousands of individual pieces of thermoplas or microscopic wraithbone interwoven to produce a dense material resembling reptile scales or chainmail. It becomes momentarily rigid when hit, spreading force across a larger area, thereby reducing the damage. The thermoplas also disperses heat rapidly, giving reasonable protection against energy weapons. Guardian mesh armor contains additional features, including an independent air supply and heat-sensing lenses."
   STR_RANGER_AUTOPSY: "Eldar Ranger Origin"
   STR_ELDAR_RANGER_AUTOPSY_CODEX: "{NEWLINE} Craftworld Aeldari practice a form of emotional deprivation, narrowing their entire focus onto a single craft, perfecting it and then moving on to another. Those who refuse this are forced on to the Path of the Outcast and become Rangers. These seekers of excitement and adventure in the open galaxy serve informally as vigilant scouts for dangers to their Craftworld. In battle they conduct reconnaissance of enemy forces, wield their expert marksmanship to harry and cripple enemy forces and eliminate select targets like commanding officers."
   STR_ELDAR_RANGER_ARMOR_CODEX: "{NEWLINE} A special mesh suit with Wraithbone carapace plates attached prioritising ease of movement and the ability to move quietly and undetected. Rangers rely on the stealth effect afforded by their Cameleoline cloak for protection to compensate for their armors inherent weakness."
+  STR_ELDAR_AVENGER_AUTOPSY: "Eldar Avenger Origin"
+  STR_ELDAR_AVENGER_AUTOPSY_CODEX: "{NEWLINE} The Dire Avengers were the first amongst the Aspect Warriors of the Aeldari. They represent the Aeldari war god Khaela Mensha Khaine in his aspect as the noblest and yet most merciless of warriors. These warriors are the least specialised and the most tactically flexible of all the Warrior Aspects. The Dire Avengers are also the most common of the Warrior Aspects amongst the Aeldari, and their shrines are the largest to be found on all the craftworlds."
+  STR_ELDAR_AVENGER_ARMOR_CODEX: "{NEWLINE} Dire Avengers wear Aspect Armour, psychically activated bodysuits which stiffen on impact to absorb a blows. The blisters and domes dotting the armour's surface are small compartments containing technical systems, and over each Dire Avenger's shoulder is an advanced targeter. This pan-spectral rangefinder system operates independently of the Dire Avenger and is capable of tracking multiple targets simultaneously, differentiating between friend and foe, and feeding this information directly to the warrior's helm display"
+  STR_ELDAR_AVENGEREX_AUTOPSY: "Eldar Avenger Exarch Origin"
+  STR_ELDAR_AVENGEREX_AUTOPSY_CODEX: "{NEWLINE} Dire Avenger Exarchs are tactically flexible warriors able to conduct their squad in multiple roles. Rather than just one Avenger Catapult, some Exarchs will carry two of these weapons into battle, wielding one in each hand with skillful deadliness. Others will instead focus on their hand-to-hand combat techniques, and carry a combination of either Shuriken Pistol and Diresword or Power Glaive and Shimmershield."
+  STR_ELDAR_AVENGEREX_ARMOR_CODEX: "{NEWLINE} Exarchs wear more elaborate and ornate versions of Aspect Armour which incorporates the spirits of their past wearers, granting an Exarch not only wisdom and knowledge stretching across the millennia but a raw pool of potent psychic energy that can be used in combat."
   STR_ELDAR_DRAGON_AUTOPSY: "Eldar Dragon Origin"
   STR_ELDAR_DRAGON_AUTOPSY_CODEX: "{NEWLINE} Fire Dragons are inspired by the Dragon, that mythical fire-breathing creature of Aeldari myth, and represent the facet of Khaine that is wanton destruction. Those who serve the Fire Dragon Aspect shrines are aggressive and warlike, seeking nothing less than the total and utter obliteration of their enemies."
   STR_ELDAR_DRAGON_ARMOR_CODEX: "{NEWLINE} Primarily armed with short ranged high energy thermal weapons like the Dragon Fusion Gun. This necessitates that Fire Dragon armor is thicker and more resistant to heat compared to that worn by most aspects. Additional spiny protrusions make it stiffer and more resilient, so that the wearer can properly close with the enemy and deliver death and destruction upon them."
   STR_ELDAR_DRAGONEX_AUTOPSY: "Eldar Dragon Exarch Origin"
   STR_ELDAR_DRAGONEX_AUTOPSY_CODEX: "{NEWLINE} The Fire Dragon Exarch sits upon the Flaming Throne within their Aspect Shrine. These crack shots can pinpoint targets with unerring accuracy, and under their guidance Exarchs can train their Fire Dragon squad to become superb tank hunters."
   STR_ELDAR_DRAGONEX_ARMOR_CODEX: "{NEWLINE} When an Eldar Dragon becomes an Exarch, they permanently bond with an ancient, centuries-old suit of Exarch Armor belonging to their shrine. It is said that Exarchs of the Fire Dragon Aspect generate a corona of lambent flame around their bodies when the lust for battle has taken hold. Instead of a Fusion Gun some Exarchs will wield a Fire Pike or Dragon Breath Flamer instead. Some will embrace close combat by wielding a Fusion Pistol and Dragon Axe."
+  STR_ELDAR_SCORPIONEX_AUTOPSY: "Eldar Scorpion Exarch Origin"
+  STR_ELDAR_SCORPIONEX_AUTOPSY_CODEX: "{NEWLINE} Exarchs of the Striking Scorpions are definitive shadow-warriors, embodying all that their Shrine stands for. Becoming one with the shadows and using them to shield their squad from the enemy as they approach. Their excellent abilities as stalkers allows them and their squad to flow silently and without a trace through dense terrain."
+  STR_ELDAR_SCORPIONEX_ARMOR: "Eldar Scorpion Exarch Origin"
+  STR_ELDAR_SCORPIONEX_ARMOR_CODEX: "{NEWLINE} Exarchs wear more elaborate and ornate versions of Aspect Armour which incorporates the souls of their past wearers, granting an Exarch not only wisdom and knowledge stretching across the millennia but a raw pool of potent psychic energy that can be used in combat. The Aspect Armour of the Striking Scorpions is similar in construction to that of other Aspect Shrines, but incorporates heavier, rigid armour plating for increased protection."
   STR_ELDAR_REAPER_ARMOR_CODEX: "{NEWLINE} Dark Reapers pride themselves on their accuracy. To absorb the recoil of firing the Reaper Launcher and maintain a steady firing position, the armour's powered limb supports include lower leg armour and boots fitted with stabilisers and clamps to secure the Dark Reaper to the ground."
   STR_ELDAR_REAPEREX_AUTOPSY: "Eldar Reaper Exarch Origin"
   STR_ELDAR_REAPEREX_AUTOPSY_CODEX: "{NEWLINE} The skills and wargear of a Dark Reaper Exarch exemplify the already deadly firepower and accuracy that defines their Aspect. A Dark Reaper Exarch's inhuman combat abilities surpass even the talents of regular Dark Reapers, as a Dark Reaper Exarch is perfectly capable of laying down a lethal hail of fire more rapidly without loss of accuracy from any weapon they wield, and of landing pinpoint shots so accurate they can bypass cover and hit targets who thought themselves fully protected."
@@ -1301,17 +1465,55 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SPIDER_AUTOPSY: "Eldar Spider Origin"
   STR_ELDAR_SPIDER_AUTOPSY_CODEX: "{NEWLINE} The Warp Spiders are Craftworld Aeldari who specialise in the use of personal teleportation devices built into their Aspect Armor to make a series of rapid jumps through the Immaterium. This makes them nearly impossible to target and allows them to attack their enemies suddenly and disappear before they can strike back."
   STR_ELDAR_SPIDER_ARMOR_CODEX: "{NEWLINE} Warp Spider Aspect Armour is much bulkier compared to that worn by other Aspect Warriors, making the Warp Spiders more heavily armoured than average but also among the slowest of the usually highly mobile Asuryani Aspects. While this would be more constricting for the movements of other Aeldari warriors, the Warp Spiders' unique teleportation abilities negate this disadvantage. Warp Spider Aspect Armour is also further warded to allow for safer travel through the Warp, which provides some protection against psychic powers when in realspace."
-  STR_EPOWER_SWORD_UFOPEDIA: "{NEWLINE} This is an Eldar Power Sword employed by a Howling Banshee Exarch. Two Mirrorswords are commonly employed by Exarchs who have mastered a deadly ambidextrous form of melee combat that uses the matching pair of blades.{NEWLINE}{NEWLINE}Strength required: {ALT}30"
+  STR_ELDAR_SPIDEREX_AUTOPSY: "Eldar Spider Exarch Origin"
+  STR_ELDAR_SPIDEREX_AUTOPSY_CODEX: "{NEWLINE} Taking their name from the arachnoid creatures who protect the Infinity Circuits the Exarchs of the Warp Spider shrines have honed their deadly skills as ambushers to a high degree. Passing on this knowledge to the Warp Spider squads that they personally lead, they are experts in surprise assaults. They teleport onto the battlefield in a storm of crackling psychic lightning, but also know when it is prudent to withdraw from combat and regroup preparing for further guerrilla attacks."
+  STR_ELDAR_SPIDEREXDS_ARMOR_CODEX: "{NEWLINE} Some Exarchs will go into battle with two armor mounted Death Spinners, wielding them as ably as they would a single weapon. These weapons eject a mass of rigid molecular wire strands that slices through armour and mutilates whatever is within."
+  STR_ELDAR_SPIDEREXPB_ARMOR_CODEX: "{NEWLINE} In addition to ranged weaponry, some Warp Spider Exarch armor will also be equipped with Powerblades, a form of Asuryani Power Weapons usually only available to Warp Spider Exarchs. They are also mounted on the forearm or retrofitted to the vambrace of the Warp Spider's Exarch Armour rather than being hand-held."
+  STR_ELDAR_SEER_AUTOPSY: "Eldar Seer Origin"
+  STR_ELDAR_SEER_AUTOPSY_CODEX: "{NEWLINE} Eldar that walk down the Path of the Seer gain proper training and experience in the use of their natural psyker-based abilities. Each Seer explores their potential in their own way, some learning to move objects through kinetic forces , create living symphonies of shape and movement. Others use their empathic powers for healing purposes or to counsel others The range of abilities is vast and largely depends on the paths the Seer has explored previously."
+  STR_ELDAR_SEER_ARMOR_CODEX: "{NEWLINE} Early on the Path of the Psyker, Seers have yet to obtain a full set of Rune Armor. Instead they are protected by Rune infused Mesh armor that provides shielding and much greater protection than what is expected from standard mesh armor."
+  STR_ELDAR_WARLOCK_AUTOPSY: "Eldar Warlock Origin"
+  STR_ELDAR_WARLOCK_AUTOPSY_CODEX: "{NEWLINE} Warlocks are powerful Eldar psykers who combine their psychic abilities with military experience. They are able to focus their energies in destructive as well as creative ways as they can send psychic blasts that are sent from their mind. These are the more bellicose and aggressive of their comrades who learn the runes of battle as well as the use of force weapons. Warlocks are Seers who have walked down the Path of the Warrior and it is their previous experience as warriors that allows them to control their destructive impulses in battle."
+  STR_ELDAR_WARLOCK_ARMOR_CODEX: "{NEWLINE} Warlocks wear Rune Armour that consists of breast-plates, bangles and other ornaments that are made of wraithbone. The runic shapes are interwoven within the spirit stones, which creates an energised psychic field that protects their wearer from harm. The enclosing helmets worn by Warlocks are kept in the shrines of the Warrior Aspects and only don their warrior-self by returning to their old shrine whereupon they receive the helmet from an Exarch."
+# Eldar Weapon Codex
+  STR_EPOWER_SWORD_UFOPEDIA: "{NEWLINE} This is an Eldar Power Sword employed by a Howling Banshee Exarch. Two Banshee Blades are commonly employed by Exarchs who have mastered a deadly ambidextrous form of melee combat that uses the matching pair of blades.{NEWLINE}{NEWLINE}Strength required: {ALT}30"
   STR_WRAITHGUARD_ARMOR_UFOPEDIA: "{NEWLINE} Towering above the battlefield, Wraithguard Armor is constructed entirely from Wraithbone making it one of the most impenetrable armors available to the Aeldari. Over time the armor shapes, grows and hardens itself guided by the psychic energies of the warrior soulstone entombed within."
   STR_WRAITH_MELEE_WEAPON_UFOPEDIA: "{NEWLINE} The Ghostaxe is one form of large power weapon wielded by the Wraithguard. All Ghost weapons hold inside their core a spiritstone, the sentience within guiding strikes towards the most vulnerable areas of their foes."
-  STR_RANGER_LONG_RIFLE_CODEX: "{NEWLINE} The Ranger Long Rifle is the favoured weapon of Aeldari Rangers and Pathfinders. It is a long-barrelled rifle that fires energy bolts capable of piercing most armour when aimed correctly. It works by projecting a minuscule needle from the barrel, suspended in a laser beam. The psychically-grown crystals that project this energy bolt, deadly in its own right, are capable of far greater accuracy than Imperial laser weapons, with a tighter beam that suffers less from diffusion over long ranges."
-  STR_RANGER_LONG_RIFLE_SCOPED_CODEX: "{NEWLINE} Scoped variant of the Ranger Long Rifle. Unlike the mass-produced weapons of the Imperium, these potent Aeldari weapons are hand-grown by Bonesingers with specific attention paid to the eyesight and grip, creating a weapon perfectly adapted to its user. The pan-spectral sights used in conjunction with long rifles are than just a rangefinder, they allow the marksman to view their surroundings and target in multiple spectra, both physical and psychic"
+  STR_RANGER_LONG_RIFLE_CODEX: "{NEWLINE} The Ranger Long Rifle is the favoured weapon of Aeldari Rangers and Pathfinders. It is a long-barrelled rifle that fires energy bolts capable of piercing most armour when aimed correctly. It works by projecting a minuscule needle from the barrel, suspended in a laser beam."
+  STR_RANGER_LONG_RIFLE_SCOPED_CODEX: "{NEWLINE} Scoped variant of the Ranger Long Rifle. Unlike the mass-produced weapons of the Imperium, these potent Aeldari weapons are hand-grown by Bonesingers with specific attention paid to the eyesight and grip, creating a weapon perfectly adapted to its user."
+  STR_AVENGER_CATAPULT_CODEX: "{NEWLINE} The Avenger Shuriken Catapult is a weapon unique to the Dire Avengers Aspect Warriors shrine. This upgraded version of the Shuriken Catapult features an extended barrel, additional power feeds, built-in rangefinders, a greater firing range and faster target acquistion systems."
+  STR_AVENGER_CATAPULT_SCOPED_CODEX: "{NEWLINE} Scoped variation of the Avenger Shuriken Catapult, exchanging automatic fire function for better accuracy in long range engagements."
+  STR_AVENGER_PISTOL_CODEX: "{NEWLINE} The Avenger Shuriken pistol is an Aspect upgrade to the Shuriken Pistol. Similar to the Avenger catapult, the Avenger pistol features longer range and faster target acquisition systems compared to the standard shuriken pistol."
+  STR_AVENGER_PISTOL_SCOPED_CODEX: "{NEWLINE} Scoped variation of the Avenger Shuriken Pistol, exchanging automatic fire function for better accuracy in long range engagements."
+  STR_DIRESWORD_CODEX: "{NEWLINE} A one-handed, single-edged power sword, where a potent Aeldari soul has been incorporated into the blade using a Spirit Stone. The warrior soul within the sword guides the wielders attacks and when a blow is struck will attempt to destroy the enemy's mind, potentially killing them instantly. "
+  STR_DIRESWORD_VESSEL_CODEX: "{NEWLINE} The empty vessel of a Diresword where its Spirit Stone has yet to be set. Without the guidance and psychic fury of an Aeldari Warrior soul this weapon is little better than the standard Eldar Sword."
+  STR_POWER_GLAIVE_CODEX: "{NEWLINE} The Powerglaive is an energy-field-enveloped polearm weapon . It combines the long reach of a polearm with a disruptive molecular-bonding energy edge."
   STR_FUSION_GUN_CODEX: "{NEWLINE} The Fusion Gun is a fusion weapon developed by the Eldar. This powerful weapon has a short range, but is capable of reducing an enemy battle tank to a pile of molten slag or vaporize an enemy soldier in under a second."
   STR_DRAGON_FUSION_GUN_CODEX: "{NEWLINE} Dragon Fusion Guns are a supercharged aspect variant of the standard Fusion Gun. These powerful weapons are used where the densest armors and vehicles are to be found on the battlefield."
+  STR_FUSION_PISTOL_CODEX: "{NEWLINE} Hand-held, heat-based Melta Weapons used exclusively by the Aeldari. Fusion Pistols cause the molecules of the target to hyper-vibrate, generating so much heat that their targets burst into flames before suddenly liquefying, and then evaporating into nothingness. Though incredibly short-ranged, these weapons have high destructive potential."
+  STR_DRAGON_FUSION_PISTOL_CODEX: "{NEWLINE} Mastercrafted eldar fusion pistols utilised by the Fire Dragon Aspect. Taking advantage of Fire Dragon heat resistant armor these weapons throw caution to the wind generating excessive amounts of power and unleash utter devastation out of a small lightweight body."
+  STR_DRAGON_AXE_CODEX: "{NEWLINE} An Aeldari Power Weapon design created as an homage to the Phoenix Lord Fuegan's Fire Axe. Entrapped runes writhe in smoldering flames that dance on its surface leaving enemy corpses a burnt husk. It is typically paired with a Dragon Fusion Pistol."
   STR_FIREPIKE_CODEX: "{NEWLINE} The Firepike is an upgrade to the Dragon Fusion Gun typically reserved for Fire Dragon Exarchs. This weapon utilizes sophisticated Eldar technology, with a distinctive long barrel that projects it's deadly fusion-based melta beam a considerable distance."
-  STR_SHURIKEN_CANNON_CODEX: "{NEWLINE} The Shuriken Cannon works in a similar way to the Shuriken Catapult, but has an ammunition coil to load the weapon more quickly and uses a triple accelerator field for improved rate of fire and power. While the Shuriken weapons above are all hand-held weapons, the Shuriken cannon is very large and needs stabilising gyroscopes to allow any accuracy."
-  STR_DEATH_SPINNER_CODEX: "{NEWLINE}  A Death Spinner is the ritual armament of the Warp Spiders Aspect; a highly advanced ranged weapon that extrudes a thick cloud of razor-sharp monofilament wire. The spinner's magnetic containment field then spools the wire together and hurls it toward the enemy. The wire's own tension causes it to writhe and lash, and where it touches flesh or soft tissue it slices through the victim's body, causing an agonising and exceptionally messy death."
+  STR_SCORPION_CHAINSWORD_CODEX: "{NEWLINE} A deadly one-handed melee weapon whose vicious blade is comprised of diamond-toothed edges that mangle armor and tear flesh. First amongst the ritual weapons used by the Striking Scorpions Shrine, these destructive weapons rely on strength to unleash their full power."
+  STR_BITING_BLADE_CODEX: "{NEWLINE} Large, two-handed, long-bladed Chainswords reminiscent of the massive Eviscerator. Wielded by a strong warrior, the razorsharp teeth can tear through armor, flesh and bone with horrific speed, and a skilled warrior can cleave a man in two without difficulty. "
+  STR_SCORPIONS_CLAW_CODEX: "{NEWLINE} In essence, these are the Aeldari version of a Power Fist, giving the bearer great armour penetration and damage scaling with the wielders strength.{NEWLINE} The Scorpion's Claw also incorporates a unique Shuriken Pistol with improved firerate for ranged engagements, granting a moderate amount of firepower while allowing the use of another weapon or force shield."
+  STR_SHURIKEN_CANNON_CODEX: "{NEWLINE} The Shuriken Cannon works in a similar way to the Shuriken Catapult, but has an ammunition coil to load the weapon more quickly and uses a triple accelerator field for improved rate of fire and power. While most Shuriken weapons are light hand-held weapons, the Shuriken cannon is very large and needs stabilising gyroscopes to allow any accuracy."
+  STR_DEATH_SPINNER_CODEX: "{NEWLINE}  A Death Spinner is the ritual armament of the Warp Spiders Aspect that extrudes a thick cloud of razor-sharp monofilament wire. The spinner's magnetic containment field spools the wire together and hurls it toward the enemy. The wire's own tension causes it to writhe and lash, and where it touches flesh, slices through the victim's body, causing an agonising, messy death."
+  STR_ELDAR_POWER_BLADE_CODEX: "{NEWLINE} Power Blades are Eldar power weapons commonly wielded by Warp Spider Exarchs. A blade is fixed to the forearm and can be skillfully used to slash at the enemy."
+  STR_ELDAR_TEMPEST_LAUNCHER_CODEX: "{NEWLINE} The Tempest Launcher is an advanced Eldar Missile Launcher used by Exarchs of the Dark Reaper Warrior Aspect. These ancient versions of the Dark Reapers' Reaper Launchers fire clusters of small reaper missiles in a much greater arc. They are able to affect a larger target area and be used in an indirect fire role."
+  STR_SPINNERET_RIFLE_CODEX: "{NEWLINE} Spinneret Rifles operate by ejecting a single, rigid strand of monomolecular wire that punches through armour, before recoiling in a tight spiral. Spinneret Rifles have a more consistent armour penetration ability than standard Death Spinners, and a longer range. However, they will usually only affect a single target at a time."
+  STR_AELDARI_FLAMER_CODEX: "{NEWLINE} Aeldari Flamers are a type of Flamethrower used by the Craftworld Eldar which works similar to their Imperial counterparts. These flamers unleash a stream of highly refined and adhesive fuel, which ignites upon leaving the barrel of the weapon."
+  STR_DRAGON_BREATH_FLAMER_CODEX: "{NEWLINE} Aeldari master-crafted Flamer weapons are sometimes used by Fire Dragons if there is a high chance of encountering swarms of enemies during anti armor and tank operations. They unleash a raging inferno upon nearby foes and block enemy movement."
+  STR_AELDARI_SWORD_CODEX: "{NEWLINE} Skillfully crafted with perfect balance and a razor edge, even the least experienced of Eldar Guardians will wield these swords with finesse in close quarters combat. Whether these weapons can penetrate the protection of a heavily armored foe is a different matter."
+  STR_AELDARI_CHAINSWORD_CODEX: "{NEWLINE} Despite the brute strength required to handle these weapons, it is not uncommon to see Eldar Guardians wielding chainswords in melee combat. Their swiftly-cycling rows of mono-edged teeth shred armor causing considerable damage to any creature in their path."
+  STR_AELDARI_POWERSWORD_CODEX: "{NEWLINE} There is perhaps nothing so dangerous as a skilled swordsman wielding one of these deadly alien blades. Impossibly slender yet strong, shimmering with field energies, and studded with mysterious glowing gems, an Aeldari power sword is a premier status symbol for anyone lucky enough to wield one."
+  STR_WITCHBLADE_CODEX: "{NEWLINE} A potent Force Weapon, these swords resonate with their users, enhancing their physical strength to terrifying levels, Farseers have been known to slash through the heaviest of power armour or cleave battle tanks clean in half with devastating blows from these weapons. Witchblades are most effective against psyker targets; humanoid, xenos, beast or Daemon."
+  STR_SINGING_SPEAR_CODEX: "{NEWLINE} A silver spear formed of unknown materials and when held by a psyker emits a constant low hum. This weapon is essentially a Witchblade that can be thrown a short distance, automatically returning to the user's hand after each throw and is thus both a melee and a limited ranged weapon."
+  STR_WITCH_STAFF_CODEX: "{NEWLINE} The Witch Staff is an Eldar Force Weapon, containing a helix-shaped crystalline psychic matrix embedded with runes to channel and focus a wielders psychic energies. Those struck by the psychically imbued weapon risk having their very souls set aflame, even if their bodies are not broken."
 
+  # OLD OR DUPLICATE REQUIRES CONSOLIDATING OR REMOVAL
+  STR_ELDAR_CHAINSWORD: "Eldar Chainsword"
+  STR_ELDAR_CHAINSWORD_UFOPEDIA: "{NEWLINE} A deadly one-handed melee weapon whose vicious blade is comprised of diamond-toothed edges that mangle and tear flesh."
   #Eldar Ranks
   STR_ELDAR_GUARDIAN_RANK_0: Gd Cadet
   STR_ELDAR_GUARDIAN_RANK_1: Gd Citizen
@@ -1319,18 +1521,30 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_GUARDIAN_RANK_3: Gd Recruit
   STR_ELDAR_GUARDIAN_RANK_4: Gd Reservist
   STR_ELDAR_GUARDIAN_RANK_5: Gd Militia
-  STR_ELDAR_RANGER_RANK_0: Rg Exile
-  STR_ELDAR_RANGER_RANK_1: Rg Outsider
-  STR_ELDAR_RANGER_RANK_2: Rg Drifter
-  STR_ELDAR_RANGER_RANK_3: Rg Scout
-  STR_ELDAR_RANGER_RANK_4: Rg Warden
-  STR_ELDAR_RANGER_RANK_5: Rg Sentry
+  STR_ELDAR_RANGER_RANK_0: Rng Exile
+  STR_ELDAR_RANGER_RANK_1: Rng Outsider
+  STR_ELDAR_RANGER_RANK_2: Rng Drifter
+  STR_ELDAR_RANGER_RANK_3: Rng Scout
+  STR_ELDAR_RANGER_RANK_4: Rng Warden
+  STR_ELDAR_RANGER_RANK_5: Rng Sentry
   STR_ELDAR_ASPECT_WARRIOR_RANK_0: Aw Novice
   STR_ELDAR_ASPECT_WARRIOR_RANK_1: Aw Trainee
   STR_ELDAR_ASPECT_WARRIOR_RANK_2: Aw Fighter
   STR_ELDAR_ASPECT_WARRIOR_RANK_3: Aw Gladiator
   STR_ELDAR_ASPECT_WARRIOR_RANK_4: Aw Veteran
   STR_ELDAR_ASPECT_WARRIOR_RANK_5: Aw Elite
+  STR_ELDAR_AVENGER_RANK_0: Av Intent
+  STR_ELDAR_AVENGER_RANK_1: Av Promise
+  STR_ELDAR_AVENGER_RANK_2: Av Pledge
+  STR_ELDAR_AVENGER_RANK_3: Av Oath
+  STR_ELDAR_AVENGER_RANK_4: Av Vow
+  STR_ELDAR_AVENGER_RANK_5: Av Pact
+  STR_ELDAR_AVENGEREX_RANK_0: AvX Bleak
+  STR_ELDAR_AVENGEREX_RANK_1: AvX Grim
+  STR_ELDAR_AVENGEREX_RANK_2: AvX Desolate
+  STR_ELDAR_AVENGEREX_RANK_3: AvX Ominous
+  STR_ELDAR_AVENGEREX_RANK_4: AvX Sinister
+  STR_ELDAR_AVENGEREX_RANK_5: AvX Stygian
   STR_ELDAR_DRAGON_RANK_0: Dg Spark
   STR_ELDAR_DRAGON_RANK_1: Dg Ember
   STR_ELDAR_DRAGON_RANK_2: Dg Flame
@@ -1343,12 +1557,30 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_DRAGONEX_RANK_3: DgX Firestorm
   STR_ELDAR_DRAGONEX_RANK_4: DgX Eruption
   STR_ELDAR_DRAGONEX_RANK_5: DgX Hellfire
-  STR_ELDAR_SPIDEREX_RANK_0: SpdX Twitch
-  STR_ELDAR_SPIDEREX_RANK_1: SpdX Scuttle
-  STR_ELDAR_SPIDEREX_RANK_2: SpdX Flicker
-  STR_ELDAR_SPIDEREX_RANK_3: SpdX Shift
-  STR_ELDAR_SPIDEREX_RANK_4: SpdX Blink
-  STR_ELDAR_SPIDEREX_RANK_5: SpdX Phase
+  STR_ELDAR_SCORPION_RANK_0: Scp Hale
+  STR_ELDAR_SCORPION_RANK_1: Scp Vital
+  STR_ELDAR_SCORPION_RANK_2: Scp Vigor
+  STR_ELDAR_SCORPION_RANK_3: Scp Might
+  STR_ELDAR_SCORPION_RANK_4: Scp Potent
+  STR_ELDAR_SCORPION_RANK_5: Scp Stalwart
+  STR_ELDAR_SCORPIONEX_RANK_0: ScpX Sting
+  STR_ELDAR_SCORPIONEX_RANK_1: ScpX Pierce
+  STR_ELDAR_SCORPIONEX_RANK_2: ScpX Stab
+  STR_ELDAR_SCORPIONEX_RANK_3: ScpX Gouge
+  STR_ELDAR_SCORPIONEX_RANK_4: ScpX Skewer
+  STR_ELDAR_SCORPIONEX_RANK_5: ScpX Impale
+  STR_ELDAR_SPIDER_RANK_0: Spd Twitch
+  STR_ELDAR_SPIDER_RANK_1: Spd Scuttle
+  STR_ELDAR_SPIDER_RANK_2: Spd Flicker
+  STR_ELDAR_SPIDER_RANK_3: Spd Shift
+  STR_ELDAR_SPIDER_RANK_4: Spd Blink
+  STR_ELDAR_SPIDER_RANK_5: Spd Phase
+  STR_ELDAR_SPIDEREX_RANK_0: SpdX Blur
+  STR_ELDAR_SPIDEREX_RANK_1: SpdX Fade
+  STR_ELDAR_SPIDEREX_RANK_2: SpdX Distort
+  STR_ELDAR_SPIDEREX_RANK_3: SpdX Rift
+  STR_ELDAR_SPIDEREX_RANK_4: SpdX Funnel
+  STR_ELDAR_SPIDEREX_RANK_5: SpdX Portal
   STR_ELDAR_REAPER_RANK_O: Rp Barrow
   STR_ELDAR_REAPER_RANK_1: Rp Grave
   STR_ELDAR_REAPER_RANK_2: Rp Tomb
@@ -1361,12 +1593,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_REAPEREX_RANK_3: RpX Execute
   STR_ELDAR_REAPEREX_RANK_4: RpX Murder
   STR_ELDAR_REAPEREX_RANK_5: RpX Massacre
-  STR_ELDAR_WARLOCK_RANK_0: Wlk Initiate
-  STR_ELDAR_WARLOCK_RANK_1: Wlk Apprentice
-  STR_ELDAR_WARLOCK_RANK_2: Wlk Acolyte
-  STR_ELDAR_WARLOCK_RANK_3: Wlk Adept
-  STR_ELDAR_WARLOCK_RANK_4: Wlk Maestro
-  STR_ELDAR_WARLOCK_RANK_5: Wlk Archmage
+  STR_ELDAR_WARLOCK_RANK_0: Wlk Spellsword
+  STR_ELDAR_WARLOCK_RANK_1: Wlk Hexblade
+  STR_ELDAR_WARLOCK_RANK_2: Wlk Mystic Duelyst
+  STR_ELDAR_WARLOCK_RANK_3: Wlk Mageknight
+  STR_ELDAR_WARLOCK_RANK_4: Wlk Witchguard
+  STR_ELDAR_WARLOCK_RANK_5: Wlk Eldritch Aegis
   STR_ELDAR_AUTARCH_RANK_0: Atc Captain
   STR_ELDAR_AUTARCH_RANK_1: Atc Chief
   STR_ELDAR_AUTARCH_RANK_2: Atc Commander
@@ -1379,7 +1611,21 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_BANSHEE_RANK_3: BsX Screech
   STR_ELDAR_BANSHEE_RANK_4: BsX Roar
   STR_ELDAR_BANSHEE_RANK_5: BsX Howl
+  STR_ELDAR_SEER_RANK_0: Sr Novice
+  STR_ELDAR_SEER_RANK_1: Sr Initiate
+  STR_ELDAR_SEER_RANK_2: Sr Apprentice
+  STR_ELDAR_SEER_RANK_3: Sr Disciple
+  STR_ELDAR_SEER_RANK_4: Sr Scholar
+  STR_ELDAR_SEER_RANK_5: Sr Adept
 
+  # ELDAR CRAFTS
+  STR_WAVESERPENT: "WAVE SERPENT TRANSPORT"
+  STR_WAVESERPENT_CODEX: "In Aeldari mythology, the Cosmic Serpent or \"Saim\" is believed to be a cosmic creature that exists simultaneously in the material and psychic universe. Because of this duality, it is belived that it hold all past and present secrets. Because of this belief, the Aeldari word for the Cosmic Serpent is identical to the word for secret knowledge."
+  STR_CRATED_HORNET: "Hornet requisition"
+  STR_HORNET: "HORNET FIGHTER"
+  STR_HORNET_CODEX: "The Hornet is an Eldar single-seat attack craft used on reconnaissance missions and hit-and-run attacks. Operating ahead of the main Eldar forces, Hornets typically help spearhead armoured assaults."
+
+  STR_ALIEN_BASE_ASSAULT_HARD: "ENEMY BASE ASSAULT"
   STR_ALIEN_BASE_ASSAULT2_HARD: "ENEMY BASE PURGE"
   STR_ALIEN_BASE_ASSAULT_HARD_BRIEFING: "The air is thick with corruption, but do not falter Commander! We must find entrance to the foul Chaos base, for that is the Emperor's will, let none stop us in this quest. Service to the Imperium!"
   STR_ALIEN_BASE_ASSAULT2_HARD_BRIEFING: "Your troops have gained entrance to an enemy base. The control center must be destroyed to render the base inoperative. The mission will terminate when all enemies are eliminated, or when your troops have returned to the green exit area (click on the 'abort mission' icon to escape)."
@@ -1451,7 +1697,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_STORMTROOPER_CODEX_UNLOCKER: "(Stormtrooper Intelligence)"
 
   STR_INQ_TRANSFORM_RETINUE_INDUCTION: "Retinue Induction"
+  STR_INQ_TRANSFORM_RETINUE_INDUCTION_CODEX: "Inquisitors have the right to call on the services of any citizen or servant of the Emperor. Often an experienced Inquisitor, or one in need of specific services, will have a retinue of henchmen that he has deemed most useful. These retinues are made up of individuals drawn from citizens with unique and useful talents, and from the ranks of all Imperial institutions. {NEWLINE}{NEWLINE}This promotion will induct one of your soldiers into the inquisitorial retinue, granting them some stat bonus and allowing further transformations"
   STR_INQ_TRANSFORM_REJUVENATE: "Rejuvenat Treatment"
+  STR_INQ_TRANSFORM_REJUVENATE_CODEX: "Being part of an inquisitorial retinue grants access to special medical treatments like the use of rejuvenating drugs and stem cell-derived genetic repair treatments, usually referred to as \"rejuvenat\" treatments. These treatments can slow or even reverse human aging to an extent, and also speed up the recovery of gravous injuries. {NEWLINE}{NEWLINE}This treatment will allow one of your soldiers inducted in your retinue (Retinue Induction transformation) to recover from any injury in 5 days ad the cost of some resources"
 
   STR_RADICAL_INQUISITOR_STRATEGY: "The Radical Road"
   STR_RADICAL_INQUISITOR_STRATEGY_DESCRIPTION: "{NEWLINE} A dire situation requires dire solutions. You understand that the Inquisition must consider the use of any tool, even the Xenos and the Heretic. By means of psycho-indoctrination, captives with potential may once again serve the Emperor.{NEWLINE}{NEWLINE}The Radical Road invariably leads to Heretical Means. To fight the Archenemy, will you accept the aid of the hated Xenos, or even Chaos itself?"
@@ -1602,7 +1850,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_COLLAR_TRAITOR_GUARDSMAN_INQ: "Collar Traitor Guard"
   STR_COLLAR_CULTIST_INQ: "Collar Cultist"
-  STR_COLLAR_PRIMORIDAL_CULTIST_INQ: "Collar Chaos Cultist"
+  STR_COLLAR_PRIMORDIAL_CULTIST_INQ: "Collar Chaos Cultist"
   STR_COLLAR_CULTIST_LEADER_INQ: "Collar Cultist Leader"
   STR_COLLAR_WITCH_INQ: "Collar Witch"
   STR_COLLAR_TRAITOR_VETERAN_INQ: "Collar Traitor Veteran"
@@ -1653,7 +1901,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 # IG version of the recruit manufacturing
   STR_COLLAR_TRAITOR_GUARDSMAN_IG: "Collar Traitor Guard"
   STR_COLLAR_CULTIST_IG: "Collar Heretical Cultist"
-  STR_COLLAR_PRIMORIDAL_CULTIST_IG: "Collar Chaos Cultist"
+  STR_COLLAR_PRIMORDIAL_CULTIST_IG: "Collar Chaos Cultist"
   STR_COLLAR_CULTIST_LEADER_IG: "Collar Cult Leader"
   STR_COLLAR_WITCH_IG: "Collar Witch"
   STR_COLLAR_TRAITOR_VETERAN_IG: "Collar Traitor Guard Vet."
@@ -1847,6 +2095,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TAUGUEVESA_TESTLIST: "Tau Gue'vesa Testlist"
   STR_TAU_PATHFINDER_TESTLIST: "Tau Pathfinder Testlist"
   STR_TAU_CRISIS_TESTLIST: "Tau Crisis Testlist"
+  STR_MULTIKROOTS_TESTLIST: "Kroots Testlist"
 
   STR_LEGIONDAMNED_TESTLIST: "Legion of the Damned Testlist"
   STR_DEATHCOMPANY_TESTLIST: "Death Company Testlist"
@@ -1871,8 +2120,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BOLTERN_UFOPEDIA: "{NEWLINE} Plague Bolter "
   # >   STR_BOLTERN_UFOPEDIA: "{NEWLINE} Warpflamer " ?????
   STR_AC_N_AMMO: "Heavy Plague Bolter Box"
-  STR_BOLTER_HERETIC_DEAZ: "Heretical De'az Bolter"
-  STR_BOLTER_HERETIC_DEAZ_UFOPEDIA: "{NEWLINE} This De'az pattern 0.70 caliber bolter is tainted by filth and blasphemous icons. Physical dirt besmirches the weapon without care for its original holy purpose, and heretical modifications cause it to fire rapidly at the lightest touch. It features a bayonet attachment for close quarters combat.{NEWLINE}{NEWLINE} The work of Hereteks, no doubt."
+  STR_BOLTER_HERETIC_DEAZ: "Heretical De'az Light Bolter"
+  STR_BOLTER_HERETIC_DEAZ_UFOPEDIA: "{NEWLINE} This De'az pattern 0.70 caliber Light bolter is tainted by filth and blasphemous icons. Physical dirt besmirches the weapon without care for its original holy purpose, and heretical modifications cause it to fire rapidly at the lightest touch. It features a bayonet attachment for close quarters combat.{NEWLINE}{NEWLINE} The work of Hereteks, no doubt."
   STR_GRAVGUN_ADEPTAS: "Adeptas Graviton Gun"
   STR_GRAVGUN_AOE_CHAOS: "Corrupted Graviton Field Gun"
 
@@ -1902,14 +2151,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BOLTPISTOL_NURGLE: "Blightpistol"
   STR_PISTOL_CLIP_BLIGHT: "Blightpistol Mag."
   STR_BOLTPISTOL_NURGLE_UFOPEDIA: "{NEWLINE} This blighted Boltpistol bears the markings of Nurgle and has been used by his forces. An average boltpistol, it has been modified to fire blight rounds."
-  STR_BOLTERN_LIGHT: "Light Nurgle Bolter"
-  STR_BOLTERN_LIGHT_GRENADELAUNCHER: "Nurgle Combi-bolter Launcher"
+  STR_BOLTERN_LIGHT: "Nurgle Light Bolter"
+  STR_BOLTERN_LIGHT_GRENADELAUNCHER: "Nurgle Light Combi-bolter Launcher"
   STR_BLIGHT_GRENADE40: "40mm Blight Grenade Ammo"
   STR_BLIGHT_GRENADE40_PLAYER: "40mm Blight Grenade Ammo"
   STR_ACIDRUST_GRENADE40: "40mm Acid Rust Grenade Ammo"
   STR_ACIDRUST_GRENADE40_PLAYER: "40mm Nurgling Acid Rust Grenade Ammo"
   STR_BLIGHT_ROCKET_PLAYER: "Nurgling Blight Rocket"
-  STR_LIGHT_BOLTER_AMMO_NURGLE: "Light Blight Bolter Mag."
+  STR_LIGHT_BOLTER_AMMO_NURGLE: "Blight Light Bolter Mag."
   STR_LIGHT_BOLTER_CHAOSNURGLE_UFOPEDIA: "{NEWLINE} This filthy light bolter bears the mark of Nurgle. A simpler Bolter Pattern with a slow rate of fire, it is accurate at decent ranges."
   STR_LIGHT_BOLTER_CHAOSNURGLE_GRENADELAUNCHER_UFOPEDIA: "{NEWLINE} This filthy light combi-bolter bears the mark of Nurgle. It is equipped with a underslung grenade launcher, used to launch belt-fed blight and acid grenades."
   STR_HEAVY_BOLTER_CHAOSNURGLE: "Blighted Heavy Bolter"
@@ -1971,12 +2220,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_MELTA_AMMO_HARMONIC: "Harmonic Melta Ammo"
   STR_ADEPTAS_MELTAGUN_NECRO: "Mk.V Meltagun"
   STR_ADEPTAS_MELTAGUN_NECRO_UFOPEDIA: "{NEWLINE} The Mark V Necro Pattern Meltagun is the standard issue Meltagun in the Adeptas arsenal. Similar to the Accatran pattern, this variant is designed with assault in mind, sporting a increased output and rate of fire at expense of fuel consumption. Traditionally lacking in heavy anti armor capabilities, the Adeptas requested the Necro variant to handle such threats."
-  STR_BOLTPISTOL_SERAPHIM: "Boltpistol Seraphim Pattern"
+  STR_BOLTPISTOL_SERAPHIM: "Light Boltpistol Seraphim"
   STR_BOLTPISTOL_SERAPHIM_UFOPEDIA: "{NEWLINE} Designed by Adeptas specifications, the Seraphim Pattern SubBolter is made with Akimbo use in mind by flying assault troops that needs both rapid automatic firepower and high ammo capacity, at the expense of accuracy."
-  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO: "Seraphim Boltpistol Mag"
-  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO_UFOPEDIA: "{NEWLINE} Seraphim bolter ammo is designed to maximize ammo capacity and rate of fire, achieved through a smaller calibre bolt with lower recoil, but also less damage per round."
-  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO: "Seraphim Penitence Mag"
-  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO_UFOPEDIA: "{NEWLINE} Penitence ammunition for the Seraphim Boltpistol consist of densely packed filament flechette inside a smaller low recoil boltpistol calibre shell. Used with rapid-firing Seraphim Bolters they can fill a room with anti-personnel flechette, ripping apart flesh and armor alike."
+  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO: "Seraphim Light Boltpistol Mag"
+  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO_UFOPEDIA: "{NEWLINE} Seraphim Light Boltpistol ammo is designed to maximize ammo capacity and rate of fire, achieved through a smaller calibre bolt with lower recoil, but also less damage per round."
+  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO: "Seraphim Light Boltpistol Penitence Mag"
+  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO_UFOPEDIA: "{NEWLINE} Penitence ammunition for the Seraphim Light Boltpistol consist of densely packed filament flechette inside a smaller low recoil boltpistol calibre shell. Used with rapid-firing Seraphim Bolters they can fill a room with anti-personnel flechette, ripping apart flesh and armor alike."
   STR_REDEEMER_SHOTGUN: "Redeemer Shotgun"
   STR_REDEEMER_SHOTGUN_UFOPEDIA: "{NEWLINE} While the Adeptas prefer the holy implement of the Emperors Will that is the Bolter, the Redeemer Shotgun was developed to deliver redemption where Bolter rounds may be unsuitable. Used by special assault units, certain Repentia units and for riot control on Ecclesiarchy controlled worlds."
   STR_REDEEMER_SHELLS: "Redeemer Concussive Shells"
@@ -1996,25 +2245,30 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GALGALIM_ASSC_CLIP: "Galgalim Cannon Ammo"
   STR_ASSC_PEN_CLIP: "Assault Cannon Penetrator Rounds"
   STR_GALGALIM_ASSCANNON_UFOPEDIA: "{NEWLINE} The Galgalim Pattern Assault Cannon was developed on Mars for use by elite Adeptas Retributor and Dominion units, making use of a low weight adamantium alloy, lower calibre low-velocity Galgalim rounds and advanced recoil dampeners to make the design controllable for non-Terminator Power Armor. {NEWLINE}{NEWLINE}Recoil: {ALT}85"
-  STR_BOLTPISTOL_SCOURGE: "Boltpistol Scourge Pattern"
-  STR_BOLTPISTOL_SCOURGE_UFOPEDIA: "{NEWLINE} The Boltpistol Mars Pattern Mark II Scourge is favoured by the Adeptas Ebon Chalice Order, equipped with a Sarissa type bayonet fixture, which allows for enhanced melee capability in the hands of a power-armored Adeptas."
+  STR_BOLTPISTOL_SCOURGE: "Light Boltpistol Scourge"
+  STR_BOLTPISTOL_SCOURGE_UFOPEDIA: "{NEWLINE} The Light Boltpistol Mars Pattern Mark II Scourge is favoured by the Adeptas Ebon Chalice Order, equipped with a Sarissa type bayonet fixture, which allows for enhanced melee capability in the hands of a power-armored Adeptas."
   STR_AUTOGUN_ADEPTAS: "Adeptas Autogun"
   STR_AUTOGUN_ADEPTAS_SCOPED: "Adeptas Scoped Autogun"
   STR_AUTOGUN_ADEPTAS_UFOPEDIA: "{NEWLINE} The Novice pattern Autogun is a high quality, compact carbine. A fully automatic weapon with a high rate of fire for close quarters with minimal recoil. It is a reliable weapon to deal with cultists and other unarmored opponents, and the first ballistic weapon Novices are trained with."
   STR_AUTOGUN_ADEPTAS_SCOPED_UFOPEDIA: "{NEWLINE} The Novitiate pattern Autogun is a Adeptas variant of the Novice Autogun. Scoped, this variant is used for marksmanship and ranged support by experienced Novices, and has a slower rate of fire for increased accuracy."
-  STR_BOLTER_CANTUS: "Bolter Cantus Pattern"  # Sistersmod
+  STR_BOLTER_CANTUS: "Light Bolter Cantus"  # Sistersmod
   STR_BOLTER_CANTUS_UFOPEDIA: "{NEWLINE} Light trainee bolter used by the Novice ranks of the Adeptus Sororitas. This bolter pattern is lightweight, easy to use and most importantly cheap to produce in vast quantities. With less powerful and cheaper Cantus pattern ammo developed for it, this is a good starting bolter.{NEWLINE}{NEWLINE}Recoil: {ALT}20"  # Sistersmod
-  STR_BOLTER_ELOHIM: "Bolter Elohim Pattern"  # Sistersmod
-  STR_BOLTER_ELOHIM_UFOPEDIA: "{NEWLINE} The Elohim Pattern Bolter is a Adeptas Sororitas requested design, filling the role of a battle rifle with enhanced accuracy, range and armor piercing capability at the sacrifice of autofire capability and weight. It is designed to defeat power armor. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sistersmod
-  STR_LIGHT_BOLTER_AMMO_AP: "Bolter Elohim AP Magazine"  # Sistersmod
-  STR_LIGHT_BOLTER_AMMO_INF: "Bolter Inferno Magazine"  # Sistersmod
-  STR_LIGHT_BOLTER_AMMO_INF_UFOPEDIA: "Light Bolter Inferno Magazine"  # Sistersmod
-  STR_BOLTER_MEPHISTO: "Bolter Mephisto Pattern"
+  STR_BOLTER_ELOHIM: "Light Bolter Elohim"  # Sistersmod
+  STR_BOLTER_ELOHIM_UFOPEDIA: "{NEWLINE} The Elohim Pattern Light Bolter is a Adeptas Sororitas requested design, filling the role of a battle rifle with enhanced accuracy, range and armor piercing capability at the sacrifice of autofire capability and weight. It is designed to defeat power armor. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sistersmod
+  STR_LIGHT_BOLTER_AMMO_AP: "Light Bolter Elohim AP Mag"  # Sistersmod
+  STR_LIGHT_BOLTER_AMMO_INF: "Light Bolter Inferno Mag"  # Sistersmod
+  STR_LIGHT_BOLTER_AMMO_INF_UFOPEDIA: "Light Bolter Inferno Mag"  # Sistersmod
+  STR_BOLTER_MEPHISTO: "Light Bolter Mephisto"
   STR_LIGHT_FLAMETHROWER_CLIP: "Light Flamer Fuel Tank"
   STR_FLAMERFIRE: "Fire Flamethrower"
   STR_FLAMERFIRE_SHORT: "Flamer (x{0})"
-  STR_BOLTER_MEPHISTO_UFOPEDIA: "{NEWLINE} The Mephisto Pattern Combi-Bolter features a underslung flamethrower and a light calibre bolter round with reduced recoil for rapid burst fire. The Mephisto addon light flamer doesn't quite match its dedicated counterpart, but allows its user to employ flame barriers and purge less armored targets. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sisters mod
-  STR_BOLTER_HELLSPITE: "Bolter Hellspite Pattern"
+  STR_BOLTER_MEPHISTO_UFOPEDIA: "{NEWLINE} The Mephisto Pattern Light Combi-Bolter features a underslung flamethrower and a light calibre bolter round with reduced recoil for rapid burst fire. The Mephisto addon light flamer doesn't quite match its dedicated counterpart, but allows its user to employ flame barriers and purge less armored targets. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sisters mod
+  STR_BOLTER_HELLSPITE: "Light Bolter Hellspite"
+  STR_BOLTER_LOCKE: "Light Bolter Locke"
+  STR_BOLTER_ENFORCER: "Light Bolter Enforcer"
+  STR_BOLTER_DEAZ: "Light Bolter Godwyn-De'az"
+  STR_BOLTPISTOL_DEAZ: "Light Boltpistol Godwyn-De'az"
+  STR_MC_BOLTPISTOL_DEAZ: "Master Crafted Light Boltpistol Godwyn-De'az"
   STR_AUTOFIRE: "Autofire"
   STR_FULL_AUTO: "Full Auto"
   STR_BURST_SNAP_SHOT: "Burst Fire"
@@ -2165,6 +2419,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ORK_EARLY: "Greenskins"
   STR_ORK_MIDTIER: "Orks"
   STR_ORK_MIDTIER_EVILSUNZ: "Orks"
+  STR_ORK_MIDTIER_DEATHSKULLS: "Orks"
   STR_ORK_SPACEHULK_CREW: "Ork Spacehulk Looters"
   STR_ORK_WARBIKER: "Ork Warbiker"  # ORKMOD
   STR_ORK_BIKE_ARMOR: "Ork Warbike"  # ORKMOD
@@ -2477,6 +2732,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ORK_FIGHTA_BOMMA: "FIGHTA BOMMER"
   STR_ORK_FIGHTA_BOMMA_CODEX: "{NEWLINE} Da flyboyz got to finkin, what is betta dan dakka? Even MORE dakka! so dey went to da meks an' got em ta make da fighta bommers, wif even more dakka per dakka. Dey iz a bit slowa dan da fightas, but dey iz ded ard."
   STR_ORK_SPECHUL_FIGHTA: "SPECHUL FIGHTA"
+  STR_INQ_RR_ORK_SPECHUL_FIGHTA: "SPECHUL FIGHTA" # Radical Road (Xenos) manufacture option
   STR_ORK_SPECHUL_FIGHTA_CODEX: "{NEWLINE} Da mek boys we rekruited iz propa cleva. Dey found a way to make da fightas tougha, fasta, and even got rid of somma da useless bitz like ejektion seats so weze can put spechul gubbins in dere instead."
   STR_ORK_LOOTED_UFO: "FUNKY FLYIN' FING"
   STR_ORK_LOOTED_UFO_CODEX: "{NEWLINE} Dis iz a weird fingy dat flyz gud. It kan get da boyz ta fights real speedy Boss, doh ev'n da mekz dunno 'ow it wurkz. I kant 'member werez we ev'n gotz it frum. Maybe wun o' doze warpy rekkz 'ad it?"
@@ -2623,6 +2879,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_EADBANGER: "Eadbanger"
 
   STR_RESURRECT_ORK: "Make Killa Kan"
+  STR_RESURRECT_ORK_CODEX: "When 'da body uv a gud fight'n' ork iz recovered, 'da Warboss kan decide ta put im 'n a Killa Kan ta give im a second chance ta krump more enemiez. Da procedure requires da Mek Boy an' da Pain Boy work'n togetha ta chop all da 'tra bits an' hardwire da \"volunteer\" brain an' nerves directly into da kontrol panel. All dis while shock'n da ork brain back alive. It's not pretty boss, i liked it when we put grots 'n it.." #When the body of a good fighting ork is recovered, the warboss can decide to put them in a killa kan to give them a second chance to crump more enemies. The procedure requires the Mek boy and the Pain boy working together to chop all the extra bits and hardwire the \"volunteer\" brain and nerves directly into the control panel. All this while shocking the ork brain back alive. It's not pretty boss, i liked it when we put grots in it.
   STR_GUARD_ORK_KAN_BOY: "Killa Kan Boy"
   STR_KILLA_RANK_0: "Kan Boy"
   STR_KILLA_RANK_1: "Killa Kan Boy"
@@ -2636,11 +2893,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WARBOSS_AVAILABLE_DESCRIPTION: "{NEWLINE} Boss, da boyz haz been gettin' stronga. You kan chooze one o' da biggest nobz ta be a new warboss ta lead da boyz ta battle."
   STR_GUARD_ORK_WARBOSS: "Da Emprah's Greenest Warboss"
   STR_PLAYER_WARBOSS_PROMOTION: "Promote to Warboss"
+  STR_PLAYER_WARBOSS_PROMOTION_CODEX: "When a nob 'as 'da size, da' green, an killiness, but also on 'da favor uv Gork an Mork, den it kan become 'da Warboss. 'Der kan be only wun Warboss for a warband, so most only live untill a bigga an' meana ork arrive. {NEWLINE}This promotion allow yer ta promote a Nob ta Warboss if yer have a warboss token. {NEWLINE}{NEWLINE}To promote a Nob ta Warboss dey must have da follow'n prerequisites: {ALT}strength: 120, commendations: Veteran{ALT}"
+  #When a nob has the size, green, and killiness, but also on the favor of gork and mork, then it can become the Warboss. There can be only one warboss for a warband, so Most boss only live untill a bigger and meaner ork arrive. {NEWLINE}This promotion allow you to promote a Nob to Warboss if you have a warboss token {NEWLINE}{NEWLINE}To promote a Nob to Warboss they must have the following prerequisites: {ALT}strength: 120, commendations: Veteran{ALT}
   STR_PLAYER_ORK_MEGAWARBOSS_ARMOR: "Warboss Armor"
   STR_PLAYER_ORK_MEGAWARBOSS_ARMOR_UFOPEDIA: "{NEWLINE} Da biggest, greenest, meanest leadas of Da Emprah's Greenest iz kalled warbosses. Dey is ded-ard, fast, and got bof dakka and choppas."
   STR_WARBOSS_TOKEN: "Warboss Token"
   STR_REPLACE_WARBOSS: "Replace Dead Boss"
+  STR_REPLACE_WARBOSS_CODEX: "'Da Warboss was a weak git! send 'da body ta 'da Pain Boy an ask 'em nicely if 'e kan give me da warboss token back. Br'n 'da biggest shoota wit' yer so yer kan be nice if 'e needs help. If yer kan't find 'da body 'n 'da pile shoot 'da doc an' give me annuver token!{NEWLINE}{NEWLINE}Dis promotion allow ya ta get yer warboss token back from 'da dead warboss" #The Warboss was a weak git! Send the body to the Pain Boy and ask him nicely if he can give me da warboss token back. Bring the biggest shoota with you so you can be nice if he needs help. If you can't find the body in the pile shoot the doc and give me another token! {NEWLINE} {NEWLINE} This promotion allow you to get your warboss token back from the dead warboss
   STR_RECOVER_WARBOSS: "Get da Boss Back"
+  STR_RECOVER_WARBOSS_CODEX: "'Da Warboss was 'da best! send 'da kommando ta find 'em, I'z sure 'e iz jus enjoy'n stomp'n' eldar, humies an all sort uv demon wit' 'da new klaw! {NEWLINE} {NEWLINE}Dis promotion allow yer ta get yer Warboss back once, at 'da kost uv some temporary stats" #The Warboss was the best! Send the kommando to find him, i'm sure he is just enjoying killing eldar humand and all sort of demon with the new klaw! {NEWLINE} {NEWLINE} This promotion allow you to get your warboss back once, at the cost of some temporary stats
   STR_WARBOSS_RANK_0: "Warboss"
   STR_WARBOSS_RANK_1: "Meanest Warboss"
   STR_WARBOSS_RANK_2: "Toughest Warboss"
@@ -2652,7 +2913,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PLAYER_BIG_MEK_ARMOR: "Big Mek Arma"
   STR_PLAYER_BIG_MEK_ARMOR_UFOPEDIA: "{NEWLINE} Da Big Mek is da biggest, Finkiest o' da Mekz. Dey 'az spechul weponz an' arma jus' fer demselves.{NEWLINE}{NEWLINE}One Nob or Offiz-Ork with the Veteran commendation can be promoted to a Big Mek. Dead Big Meks can be replaced via soldier transformations."
   STR_PLAYER_BIG_MEK_PROMOTION: "Promote to Big Mek"
+  STR_PLAYER_BIG_MEK_PROMOTION_CODEX: "Da Big Mek is da biggest, Finkiest o' da Mekz. Dey 'az spechul weponz an' arma jus' fer demselves.{NEWLINE}{NEWLINE}One Nob or Offiz-Ork with the Veteran commendation can be promoted to a Big Mek if ya have da Big Mek Token and dey have da follow'n prerequisites: {ALT}strength: 120, commendations: Veteran{ALT}"
   STR_REPLACE_BIG_MEK: "Replace Dead Big Mek"
+  STR_REPLACE_BIG_MEK_CODEX: "'Da Big Mek was the laziest and weakest git of all Ork-kind! Ask a mek boy ta get da Big Mek Token from 'da dead Big Mek stash. An' if 'da Big Mek somehow showz up again, shot 'em 'n da back, 'e's not green enough! {NEWLINE}{NEWLINE}Dis promotion allow ya ta get yer Big Mek Token back from 'da dead Big Mek"
   STR_BIG_MEK_TOKEN: "Big Mek Token"
   STR_BIG_MEK_RANK_0: "Big Mek"
   STR_BIG_MEK_RANK_1: "Smarta Big Mek"
@@ -2664,16 +2927,22 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ORK_ARDBOY_REQUISITION: "Rekruit Ardboy"
   STR_GUARD_ORK_NOB_REQUISITION: "Rekruit Nob"
   STR_SPARKY_POWER_FIELD: "Giv' Sparky Powa' Field"
+  STR_SPARKY_POWER_FIELD_CODEX: "We kan give da best Orks uv our regiment a kustom sparky field to help im krump enemiez without get'n kruped. Rememba 'dat propa orks fire furst an' worry about gett'n krumped later! We kan't give it ta scared runty orks, it's not propa.{NEWLINE}{NEWLINE}Dis promotion gives a Nob, Offiz-Ork, Warboss, Kan Boy or Vindi-Grot a Powar Field if dey have da follow'n prerequisites: {ALT}commendations: Ded Gud Krumper{ALT}"
   STR_BONUS_SPARKY_POWER_FIELD: "Sparky Powa' Field"
   STR_CYBORK_OPERATION: "Make Cybork"
+  STR_CYBORK_OPERATION_CODEX: "When an Ork iz too injured, or a Pain Boy 'as lost a bet ta 'da Mek Boy, cybernetic modifikations kan be made instead uv wait'n for 'da natural heal'n uv da orks by add'n \"Bioniks\", same 'f ta a 'umie bionics but betta an' greenar. Every Mek Boy insist 'dat Bioniks are betta shootin', stompin', an' smashin'! Don't let da Mek Boy konvince ta take all yer green off or ya kan become git Tin-Boy. {NEWLINE}{NEWLINE}Dis promotion grants Bioniks to yer Ork at da kost uv significant time ta recovery"
   STR_BONUS_CYBORK: "Cybork"
   STR_ASSIGN_STASIS_TOMB: "Make Kustom Deff Stoppa"
+  STR_ASSIGN_STASIS_TOMB_CODEX: "Oi boss! 'Da Pain Boi 'as done it! Da Deff Stoppa 'as worked! 'Da test-grot 'as kome back afta be'n stomped! It was ugly but it was alive! We had ta stomp it again ta be sure it worked propa, but it worked! {NEWLINE}{NEWLINE}Dis promotion grants a single use Kustom Deff Stoppa ta yer greenest ork an' assign some kustom stasis pod them, allow'n it ta revive once by kross'n Da Rew-Bee-Kawn Primorkus an' becom'n a Primork... if 'da body iz still 'der afta 'e diez 'da furst time. Yer need a place for Mana-fakt-or'n for Making and Installing dis Deff Stoppa."
   STR_STASIS_TOMB_BONUS: "'Az Kustom Deff Stoppa"
   STR_MAD_DOC_RECOVERY: "Da Rew-Bee-Kawn Primorkus"
+  STR_MAD_DOC_RECOVERY_CODEX: "Don't ask why da Doc 'as ta open up yer head ta toe, stuff yer inside da pod an fill yer wit' squig dump ta turn on da Deff Stoppa. Koudn't 'e jus put a big red button ta turn 'da damn fing on??? {NEWLINE}{NEWLINE}Dis promotion revives one of your orks once by kross'n Da Rew-Bee-Kawn Primorkus an' become a Primork. Yer need a hozptal for da Doc ta work for dis transformation. {NEWLINE}Jus don't start mumbl'n about \"'da ship uv Da-Seu-s\", ORK IZ ORK! All 'dat iz all 'da Ork fha-lo-sah-fy ya need"
   STR_MAD_DOC_BONUS: "Primorkus'd"
   STR_MEGA_CYBORK_RECOVERY: "Mega Cyborkin'"
+  STR_MEGA_CYBORK_RECOVERY_CODEX: "Big Ork is down. It need big bioniks ta get back right? it must work, it's propa logik! {NEWLINE}{NEWLINE}dis promotion transformation bring back one of yar Big Orkz and grants BIG Bioniks at da kost uv some stats gain. Yer'll have time ta get all 'em bhack stompin' gits! Yer need da sky-antz towa for dis spechul Bioniks."
   STR_MEGA_CYBORK_BONUS: "Mega Cybork"
   STR_ARMOR_OF_FATE_RECOVERY: "Arma o' Fight"
+  STR_ARMOR_OF_FATE_RECOVERY_CODEX: "WAAAGH! 'E IZ BACK! 'E iz even greena dan before! 'Da greenest bestest Ork I've neva seen! {NEWLINE}{NEWLINE}dis transformation bring back one of yar Big Orkz wit' da powa an' protection of Gork and Mork at da kost uv some stats gained. Yer'll kan get all 'em bhack shootin' an' smashin'! Yer also need a lot uv build'n ta make dis, a sky-antz towa, a hospital, an' workshop"
   STR_ARMOR_OF_FATE_BONUS: "Arma'd Fer Fightin'"
 
   STR_RECRUIT_ORK_BOY: "Rekruit Ork Boy"
@@ -2974,6 +3243,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_AUTOCANNON_AP_AMMO: "Autocannon AP Drum Magazine"
   STR_AUTOCANNON_BOX_AMMO: "Autocannon Box Magazine"
   STR_CHAOS_CHAIN_AXE: "Heretic Chain Axe"
+  STR_CHAOS_CHAIN_AXE_CODEX: "{NEWLINE}A low quality Chainaxe used by the Heretical force during brutal hand-to-hand combact, an axe shaped chain weapon with a powered chainsaw edge. These heretical version tend to have a mix of monomolecular teeth and scrappier and lower quality steel teeths, means these weapons tend to rip through flesh and armour instead of cutting clearly. While inferior to a normal chain axe this should not be underestimated"
   STR_PUMP_SHOTGUN_CHAOS: "Chaos Pump-Action Shotgun"
   STR_PUMP_SHOTGUN_CHAOS_CODEX: "Pump-action shotguns corrupted by Chaos become grinding, spiteful mechanisms that resist control. Each cycle drags with a will of its own, as though the weapon feeds on the wielder’s effort. When fired, it disgorges warped shot in savage, uneven spreads that tear through flesh at close range. These tainted arms are favoured by cultists who value their reliability."
   #STR_SHOTGUN_CHAOS is already defined in base 40k mod
@@ -3076,11 +3346,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SUPPLY_SHIP_SLAAN: "Opulence Barge"
   STR_BATTLESHIP_SLAAN: "Floating Palace"
   STR_SLAANESH_BASE: "Slaanesh Palace"
+  STR_SLAANESH_BASE_ELDAR: "Slaanesh Palace"
   ALART_SLAAN: "Hedonistic Realm"
   UBASE_SLAAN: "Palatial Domain"
   MAP_UBASE_SLAAN: "Palatial Domain"
   STR_ALIEN_BASE_ASSAULT_SLAANESH: "SLAANESH PALACE ASSAULT"
   STR_ALIEN_BASE_ASSAULT2_SLAANESH: "SLAANESH PALACE PURGE"
+  STR_ALIEN_BASE_ASSAULT2_SLAANESH_ELDAR: "SLAANESH PALACE PURGE"
   STR_ALIEN_BASE_ASSAULT_SLAANESH_BRIEFING: "The slick soil shivers beneath our sabatons, send the scantily clad Slaves of Slaanesh scurrying, slaughter them as they hide in their shuddering structures and swiftly spearhead a strike against their shameless, smirking, Seneschal-Commander! Secure this place with stiff steel and stern swagger!"
   STR_ALIEN_BASE_ASSAULT2_SLAANESH_BRIEFING: "The very air simmers with soliciting scents and the moaning of the shuddering walls. Summon your strength and slice apart the suckers of Slaanesh, capture their shallow commander and shatter the command centre!"
 
@@ -3088,6 +3360,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SLAANESH_EARLY: "Children of Slaanesh" #First quarter chaos base
   STR_SLAANESH_LATE: "Slaanesh Chosen"  # Month 10-12+
   # The slick soil shivers beneath our sabatons, send the scantily clad servants of Slaanesh scurrying and locate the shimmering entrance inside their scandalous halls!"
+  #slaanesh lists for eldar mid tier assault
+  STR_ALIEN_BASE_ASSAULT_SLAANESH_ELDAR: "SLAANESH PALACE ASSAULT"
+  STR_SLAANESH_PALACE_ELDARS_LV1: "Slaanesh Palace Hedonist"
+  STR_SLAANESH_PALACE_ELDARS_LV2: "Slaanesh Palace Inner Circle"
 
   STR_SLAANESH_TRAITOR_GUARD: "Slaanesh Traitor Guard"
   STR_SLAANESH_TRAITOR_GUARD_EARLY: "Decadent Guard"
@@ -3931,6 +4207,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TTA_TOKEN: "Rhino Airlift ± Requisition"
   STR_TTA_START: "Rhino Airlift ± Starter"
   STR_ARVUS_ADEPTAS: "ARVUS LIGHTER ±"
+  STR_ARVUS: "ARVUS LIGHTER SQUADRON" # 2 Arvus Craft
 
   STR_ADEPTAS_FRATERIS_MILITIA_RESEARCH: "Frateris Militia Recruitment"
   STR_ADEPTAS_NOVICE_RESEARCH: "Novice Sister Recruitment"
@@ -4006,7 +4283,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ADEPTAS_BESIEGED_UFOPEDIA: "{NEWLINE}Reports have reached this Convent of irregular and disturbing activities on this world. With most of the regular Battle Sisters off-world, it falls to the few present Sisters to mobilize Novices and available Militia forces to investigate these reports. Fear not, even a Novice knows well how to dispatch the common mutant and heretic. Prepare the medicae and capture enemy leaders to interrogate them, once the scale of this threat has been established we can request reinforcements, if necessary."
   STR_ADEPTAS_SOB_MOBILIZATION: "Battle Sisters Requisition"
   STR_ADEPTAS_SOB_MOBILIZATION_UFOPEDIA: "{NEWLINE}The situation have been deemed serious enough by the Ecclesiarchy to warrant mobilizing available Sisters of Battle. Armored Battle Sisters are now available for direct requisition, while expensive to recruit they can quickly bolster your forces with trained Sisters."
-
+  STR_ADEPTAS_STORM_BOLTERS_DEP: "Adeptas Storm Bolters Requisition"
 
 # Ecclesiarchy
   STR_SHRINE_TERROR: "Shrine Raid"
@@ -4112,7 +4389,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ADEPTAS_SENTINEL_LANCE_UC: "Adeptas Sentinel Meltalance"
   STR_ADEPTAS_SENTINEL_LANCE_UFOPEDIA: "{NEWLINE}The Adeptas Sentinel Sariel-pattern is designed to provide Sister forces with mobile, ranged, anti-armor capability. Sparing no expense, the Ecclesiarchy added extra armor plating and had it armed with a long range, heavy Thermal Lance type meltagun, courtesy of Mars."
   STR_ADEPTAS_SENTINEL_CORPSE: "Sentinel Wreck"
-  STR_SENTINEL_MELTA\LANCE: "Heavy Thermal Lance"
+  STR_SENTINEL_MELTALANCE: "Heavy Thermal Lance"
   STR_ADEPTAS_SENTINEL_HBOLTER_UC: "Adeptas Bolter Sentinel"
   STR_ADEPTAS_SENTINEL_HBOLTER: "Sentinel/Heavy Bolter"
   STR_SENTINEL_HEAVYBOLTER: "Sentinel Heavy Bolter"
@@ -4421,6 +4698,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_HAND_MULTILASER_CODEX: "The Multilas is an Imperial mainstay heavy weapon that is mounted on all kinds of vehicles. Man portable versions are also available to Imperial forces, which are used to devastate enemy infantry and lightly armored vehicles at close to medium range. This weapon is fed via an separate battery pack, with the heavy weight being the main drawback of the weapon."
   STR_PORTABLE_MULTILASER_BATTERY: "Portable Multilas Battery"
   STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT: "Portable Hotshot Multilas Battery"
+  STR_INFERNO_PISTOL_CODEX: "{NEWLINE} The Inferno pistol are small hand-held Melta Weapon that trade off power and range for their light weight and one-handed capability. They're are incredibly complicated and rare but still capable of cutting through almost any known type of armour like regular size melta weapons. They are usually produced in an extremely limited quantity and for use by well-established warriors such as member of the inquisition, the adeptas soritas or adeptus astartes, or gifted to high ranking officials as a sign of prestige."
 
   STR_GUARD_POWER_ARMOR_MULTILAS: "Power Armor /Multilas"
   STR_KRIEG_POWER_ARMOR_MULTILAS: "Panzergrenadier /Multilas"
@@ -4516,6 +4794,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BONUS_BIONICS: "Bionics"
 
   STR_AWARD_INQ_ROSARIUS: "Award Inquisitorial Rosarius"
+  STR_AWARD_INQ_ROSARIUS_CODEX: "Inquisitorial Rosarius are amulets that incorporates a powerful energy conversion field to defend the wearer from attack, efectively acting as an energy shield. To an untrained eye Inquisitorial Rosarius are easily confused as normal Inquisitorial Rosette, but instead they are a rare and highly prized piece of technology disguised as badges of office of Inquisitors.{NEWLINE}{NEWLINE}This transformation grants the Inquisitiorial Rosarius to Inquisition Stormtroopers, Inquisitor or Interrogator that have already been inducted into the inquisitorial retinue (Retinue Induction transformation) and have the following prerequisites: {ALT}commendations: Veteran{ALT}"
   STR_BONUS_INQ_ROSARIUS: "Inquisitorial Rosarius"
   STR_INQ_INQUISITOR_PROMOTION: "Promote to Inquisitor"
 
@@ -4609,11 +4888,11 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_LIGHT_MELTAGUN_MYNERVA: "Light Meltagun"
   STR_LIGHT_MELTAGUN_MYNERVA_CODEX: "This light-weight meltagun design originates from the Mynerva hive cluster on Necromunda. Lighter and faster firing, it has since become popular among irregular forces across the imperium. While suffering from a greatly reduced power output due to its use of smaller fuel canisters, its defenders are quick to boast that no other meltagun does what it does, providing a cheaper meltagun option."
-  STR_BOLTER_LIGHT_UMBRA: "Light Bolter Umbra Pattern"
-  STR_BOLTER_UMBRA_UFOPEDIA: "{NEWLINE} The Umbra Pattern Bolter is one of the earliest patterns of Bolter and was produced in large quantities early in the Great Crusade. This reliable pattern of Boltgun have seen widespread use and is still manufactured by several forges, making it one of the more available patterns."
-  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG: "Combi-Bolter Umbra /GL"
-  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG_CODEX: "{NEWLINE} The Umbra Pattern Bolter fitted with a underslung 40mm grenade launcher that can use the common guard 40mm grenades and shotgun rounds. Incendiary, Krak and Melta grenades as well as slug and buckshot shells."
-  STR_MC_UMBRA_GL: "Master Crafted Combi-Bolter Umbra /GL"
+  STR_BOLTER_LIGHT_UMBRA: "Light Bolter Umbra"
+  STR_BOLTER_UMBRA_UFOPEDIA: "{NEWLINE} The Umbra Pattern Light Bolter is one of the earliest patterns of Bolter and was produced in large quantities early in the Great Crusade. This reliable pattern of Boltgun have seen widespread use and is still manufactured by several forges, making it one of the more available patterns."
+  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG: "Light Combi-Bolter Umbra /GL"
+  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG_CODEX: "{NEWLINE} The Umbra Pattern Light Bolter fitted with a underslung 40mm grenade launcher that can use the common guard 40mm grenades and shotgun rounds. Incendiary, Krak and Melta grenades as well as slug and buckshot shells."
+  STR_MC_UMBRA_GL: "Master Crafted Light Combi-Bolter Umbra /GL"
 
   STR_BOLTER_LIGHT_SOLO: "Light Bolter Solo Pattern"
   STR_BOLTER_LIGHT_SOLO_DMR: "Light Bolter Scoped Solo Pattern"
@@ -4648,8 +4927,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LIGHT_BOLTPISTOL_AMMO_AP: "Light Boltpistol Kraken Penetrator Mag."
   STR_LIGHT_BOLTPISTOL_AMMO_EX: "Light Boltpistol Metal Storm Frag Mag."
 
-  STR_BOLTER_LIGHT_ULTRA: "Light Bolter Ultra Pattern"
-  STR_BOLTPISTOL_LIGHT_ULTRA: "Light Boltpistol Ultra Pattern"
+  STR_BOLTER_LIGHT_ULTRA: "Light Bolter Ultra"
+  STR_BOLTPISTOL_LIGHT_ULTRA: "Light Boltpistol Ultra"
 
   STR_FRAG_SHOT_TAURUS: "Launch Frag"
   STR_KRAK_SHOT_TAURUS: "Launch Krak"
@@ -4708,9 +4987,27 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ARMORS_MOUNTED_MORTAR: "Mounted Mortar"
   STR_GUARD_ARMORS_MOUNTED_MORTAR_UFOPEDIA: "{NEWLINE} The Mortar is used to bombard enemy emplacements. The Mortar is attached to a wheel-mount."
 
+  STR_TRENCHGUN_LUCIUS: "Lucius Trench Gun"
+  STR_TRENCHGUN_LUCIUS_CODEX: "{NEWLINE} The Lucius pattern Trench Gun is a simple pump-action shotgun designed for close quarters fighting in trenches. Capable of rapid-fire by experienced users for clearing trenches and rooms."
+
+  STR_GRENADELAUNCHER_LUCIUS_T1: "Lucius Grenade Launcher"
+  STR_GRENADELAUNCHER_LUCIUS_T2: "Lucius High-Quality Grenade Launcher"
+  STR_GRENADELAUNCHER_LUCIUS_T1_CODEX: "{NEWLINE} The Lucius pattern Grenade Launcher is a robust and simple design capable of launching 40mm incendiary and krak grenades out to mid-distances."
+  STR_GRENADELAUNCHER_LUCIUS_T2_CODEX: "{NEWLINE} The Lucius pattern High-Quality Grenade Launcher are the best batches singled out from production runs and earmarked for elite units. The higher construction tolerances allow the use of melta grenades as well as slug and bukshot cannisters."
+
   STR_HEAVY_STUBBER_KRIEG: "Lucius Heavy Stubber"
   STR_HEAVY_STUBBER_CLIP_KRIEG: "Lucius Heavy Stubber Mag."
   STR_KRIEG_HEAVY_STUBBER_UFOPEDIA: "{NEWLINE} The Lucius pattern Heavy Stubber of Krieg uses heavy armor piercing 14.5mm calibre rounds meant to penetrate carapace and even power armor, this heavy stubber is close to bolter and autocannon calibre. {NEWLINE}{NEWLINE}Recoil: {ALT}40"
+
+  STR_LASER_RIFLE_KRIEG_TIER2: "Lucius High-Quality Lasgun"
+  STR_LASER_RIFLE_KRIEG_TIER2_SCOPED: "Lucius Scoped HQ. Lasgun"
+  STR_LASER_RIFLE_KRIEG_TIER2_UFOPEDIA: "{NEWLINE} The Lucius Pattern High-Quality Lasgun is the quality selected better lasguns of the batches made by the Lucius Hive World to equip Krieg veteran troops. Its better build provides a few benefits in accuracy over its lower grade version."
+  STR_LASER_RIFLE_KRIEG_TIER2_SCOPED_UFOPEDIA: "{NEWLINE} The Lucius Pattern Scoped High-Quality Lasgun are used by designated marksmen, its aimed shot capable of doing more damage at the expensive of a bayonet."
+
+  STR_LASER_RIFLE_KRIEG_TIER3: "Lucius Ceramite Lasgun"
+  STR_LASER_RIFLE_KRIEG_TIER3_SCOPED: "Lucius Scoped Ceramite Lasgun"
+  STR_LASER_RIFLE_KRIEG_TIER3_UFOPEDIA: "{NEWLINE} The Lucius Pattern Ceramite Lasgun are made according to special specification with ceramite materials for elite Krieg veteran units. Its better build provides a few benefits in accuracy and heat dissipation over its lower grade version."
+  STR_LASER_RIFLE_KRIEG_TIER3_SCOPED_UFOPEDIA: "{NEWLINE} The Lucius Pattern Scoped Ceramite Lasgun are used by designated marksmen, the improved build quality and special material allowing for more accurate fire. Its aimed shot capable of doing more damage at the expensive of a bayonet."
 
   STR_HEAVY_LASGUN_LUCIUS_XIV: "Lucius Heavy Lasgun"
   STR_HEAVY_LASGUN_LUCIUS_XIV_UFOPEDIA: "{NEWLINE} The Lucius Pattern XIV heavy lasgun is a standard issue lasgun variant with reinforced heatsinks, increased maximum power output and powerpack feed at the cost of significantly increased power consumption, degrading accuracy with heat and risk of overheat."
@@ -4719,6 +5016,11 @@ en-US:  #  yamllint disable-line rule:empty-values
     {NEWLINE}> {ALT}Power Shot:{ALT} Increases Power by 20 for one heat level.
     {NEWLINE}> {ALT}Maximal Shot:{ALT} Increases Power by 60 for four heat levels.
     {NEWLINE}> Gets hot and may {ALT}overheat{ALT}!
+
+  STR_HELLGUN_KRIEG: "Lucius Hellgun"
+  STR_HELLGUN_KRIEG_UFOPEDIA: "{NEWLINE} The Lucius Pattern Hellgun is the heavy hellgun variant issued to elite Krieg units. Reinforced heatsinks and a heavy powerpack enables continuous hotshot fire and accurate longer ranged fire at the cost of increased weight."
+  STR_VOLLEYGUN_KRIEG: "Lucius Volleygun"
+  STR_VOLLEYGUN_KRIEG_UFOPEDIA: "{NEWLINE} The Lucius Pattern Volleygun is the heavy volleygun variant issued to elite Krieg units. A fast cycling coolant mechanism, enlarged heatsinks and a heavy powerpack feed allows for rapid firing, providing firepower only matched by even heavier multilas weaponry."
 
   STR_MISSILE_LAUNCHER_GUARD: "Medium Missile Launcher"
   STR_MISSILE_LAUNCHER_GUARD_CODEX: "{NEWLINE} The standard Cadian Pattern Missile Launcher is widely used by the Guard. Lightweight enough to be handled by a single guardsman, it can fire a variety of unguided missiles."
@@ -4834,6 +5136,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LASGUN_VOSTROYA_CODEX: "{NEWLINE}Handcrafted Lasgun with an extended barrel and enhanced optics. Capable of long-range, methodical fire."
   STR_LASGUN_TANITH_CODEX: "{NEWLINE} Rare, accurate Lasgun. Can fire standard shots with increased range and precision, or steadied to hit targets further away."
   STR_LONGLAS_TANITH_CODEX: "{NEWLINE} Longlas variant of the Tanith Lasgun. Highly accurate for long ranged sniping."
+  STR_LAS_BATTLERIFLE: "Las Battle Rifle"
+  STR_LAS_BATTLERIFLE_CODEX: "{NEWLINE} A marksman variant of the tried and true Kantriel pattern Cadian lasgun design, this is an inexpensive mass produced battle rifle that compensates for its bulk, weight and slower firing capacitators with notable accuracy, stability and effective range."
 
   STR_HELP_ROSIGMA: "ASSISTANCE (ROSIGMA)"
   STR_HELP_ARMOR_ABILITIES: "Armor Abilities"
@@ -5102,6 +5406,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 # VALHALLAN
   STR_VALHALLAN_GUARDSMEN: "Valhallan Recruitment"
   STR_VALHALLAN_GUARD_AI: "Valhallan Guard"
+  STR_VALHALLAN_GUARD_AI_MIDTIER: "Valhallan Guard"
   STR_PARDON_PENITENT_VALHALLA: "Pardon Penitent /VAL"
   STR_VETERAN_PROMOTION_VALHALLA: "Promote Veteran"
   STR_PROMOTE_VETERAN_OFFICER_VALHALLA: "Promote Veteran to Veteran Officer"
@@ -5160,18 +5465,34 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_VALHALLAN_STORMTROOPER_OFFICER_CORPSE: "Valhallan Commander Corpse"
   STR_VALHALLAN_STORMTROOPER_OFFICER_ARMOR_UFOPAEDIA: "{NEWLINE} Valhallan Officers are expected to lead from the front, even higher ranking ones like Colonels. As such they spare no expense on their equipment, knowing the inspirational surge in their troops is short-lived following their glorious battlefield death."
 
+  STR_VALHALLAN_WOLFHOUND: "Valhallan Wolfhound"
+  STR_VALHALLAN_WOLFHOUND_ARMOR: "Valhallan Wolfhound"
+  STR_VALHALLAN_WOLFHOUND_CORPSE: "Wolfhound Corpse"
+  STR_VALHALLAN_WOLFHOUND_CODEX: "Valhallan Wolfhound are bred for extreme arctic conditions, endurance and capable of detecting hidden foes in the fiercest snow storms. Their nightvision and keen sense of smell are invaluable for Valhallan ice patrol groups."
+
   STR_VALHALLAN_CODEX_ORIGINS: "THE VALHALLAN ICE WARRIORS"
   STR_VALHALLAN_CODEX_ORIGINS_TEXT: "{NEWLINE} The Valhallan Ice Warriors is the Militarum Regimentum of the Astra Militarum that specialize in arctic and cold climate attritional fighting. Hailing from the frozen and desolate Ice World of Valhalla located in the Segmentum Ultima. Famed as some of the toughest regiments ever deployed by the Imperial Guard, these grim and tenacious troops never retreat and refuse to surrender, scoring many glorious victories against Orks and other enemies. Their preferred tactic is massed artillery barrages with infantry assault waves."
-  STR_VALHALLAN_STRATEGY_IG_UFOPEDIA: "{NEWLINE} Lead the stubborn infantry of the imperium with this Valhallan regiment. Your forces suffer less morale penalties from losses and can call in artillery against entrenched foes that your masses of infantry cannot overcome with fixed bayonets alone. The key to victory is training your troops, keeping your veterans (within reason) alive while using your officers commands to boost your troops. At mid-tier you will gain access to the Leman Russ armored column and even larger transport options. {NEWLINE} You will receive 28 Valhallan troopers, a convoy and two officers within days of game start."
+  STR_VALHALLAN_STRATEGY_IG_UFOPEDIA: "{NEWLINE} Lead the stubborn infantry of the imperium with this motorized Valhallan regiment. Your forces suffer less morale penalties from losses, have higher starting strength and can use heavy mortar turrets against entrenched foes that your masses of infantry cannot overcome with fixed bayonets alone. Train up your troops, keep your veterans alive while using your officers special commands to boost your troops. Lacking air, use your trucks AA firepower to down enemy craft. At mid-tier you will gain access to a dual mortar equipped truck convoy and even larger transport options. {NEWLINE} You will receive 26 Valhallan troopers, a wolfhound, a priest, a truck convoy and two officers within days of game start."
   STR_RECRUITS_VALHALLA_STRATEGY_IG: "Valhalla Strategy Chosen"
-  STR_RECRUITS_VALHALLA_STRATEGY_IG_DESCRIPTION: "We have chosen the Valhallan Ice Warriors as the main force. Our first recruits will arrive soon."
+  STR_RECRUITS_VALHALLA_STRATEGY_IG_DESCRIPTION: "We have chosen the Valhallan Ice Warriors as the main force. Our first recruits and equipment will arrive within days."
   STR_VALHALLA_MIDTIER: "Valhalla Mid Tier"
   STR_VALHALLA_HIGHTIER: "Valhalla High Tier"
+
+  STR_TRUCKARMOR_VALHALLA_STARTER_UFOPEDIA: "{NEWLINE} The Valhallan Ice Warrior regiments make use of many specialized vehicles to support its infantry in extreme cold conditions. Heavy and medium trucks adapted for cold climate and difficult terrain allow infantry platoons to rapidly redeploy and take the fight to the enemy. The larger armored command trucks are equipped with mortar and grenade-launcher turrets to support its compliment of infantry and give officers a forward command post. Supporting any Valhallan motorised force is a compliment of self-propelled anti-aircraft vehicles that deploy to the rear of any battlefield engagement to provide cover against enemy aircraft.{ALT}  >>"
+  STR_TRUCKARMOR_VALHALLA_MIDTIER_UFOPEDIA: "{NEWLINE} When needed, the Valhallan Ice Warrior regiments deploy their heaviest armored command trucks directly to the battlefield to give fire support with their compliment of mortar and grenade-launcher turrets, while their auspex sensors detect enemies most guardsmen cannot. Supporting these vehicles is a compliment of self-propelled anti-aircraft vehicles that deploy to the rear of any battlefield engagement to provide cover against enemy aircraft.{ALT}  >>"
+
+  STR_CASSIUMVL_UFOPEDIA: "{NEWLINE} The Valhallan pattern of the Crassus is adapted for harsh winter and cold climate conditions, and as any Crassus can deploy a platoon of infantry with ease in any terrain. It has a standard compliment of heavy bolter turrets for supportive fire.{ALT}  >>"
+  STR_ARMOR_COLUMNVL_UFOPEDIA: "{NEWLINE} The Leman Russ Executioner MBT is a specialized Plasma Cannon equipped variant used by the Valhallan regiments, outfitted with heavy flamer sponsons to act as an assault vehicle for its supporting compliment of Chimeras and tank riding infantry.{ALT}  >>"
+
+  STR_GORGONVL_UFOPEDIA: "{NEWLINE} The Vallhallan pattern of the mighty Gorgon can deploy a company of infantry to any battlefield, supporting them with heavy flamer sponsons favored by the Valhallan. The two heavy stubber stations are considered a nice bonus.{ALT}  >>"
 
   STR_VALHALLA_OFFICERS_EVENT: "Officers Arrive"
   STR_VALHALLA_OFFICERS_EVENT_DESCRIPTION: "Valhallan Officers have arrived to command your troopers in the field. User their officer swords and COMMANDS to motivate your troopers."
   STR_VALHALLAN_VETERANS_EVENT: "Veterans Join"
   STR_VALHALLAN_VETERANS_EVENT_DESCRIPTION: "With your recent successes in the war effort more Steel Legion veteran troopers have been freed up to join your forces."
+
+  STR_SPACEWOLVES_VALHALLANS_EVENT: "Space Wolves Pack Joins!"
+  STR_SPACEWOLVES_VALHALLANS_EVENT_DESCRIPTION: "A pack of roaming young Space Wolves, seeking to add to their own sagas, have heard of your impressive deeds and decided to join your battles. They've brought their own weapons, although ammunition may prove limited."
 
   STR_VALHALLAN_WEAPONS: "Valhallan Arsenal"
   STR_VALHALLAN_WEAPONS_CODEX: "{NEWLINE} Valhalla produces a few patterns of imperial weaponry modified for extreme cold climate fighting. Rugged, robust and simple to operate and maintain, these weapons will be found in most Valhallan regiments arsenals."
@@ -5181,9 +5502,77 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_VALHALLAN_AUTOGUN_CODEX: "{NEWLINE}The Valhalla pattern autogun is a semi-automatic weapon of more complex design than most Valhallan weapons, nontheless designed with cold weather in mind for its operation."
   STR_VALHALLAN_AUTOSTUBBER: "Valhalla Pattern Autostubber"
   STR_VALHALLAN_AUTOSTUBBER_CODEX: "{NEWLINE} The Valhalla pattern autostubber is a rapid firing close quarters weapon firing small calibre stub rounds usually used for pistols. It is highly effective against unarmored humans and grots in urban or trench fighting, and may take down or at least slow a Ork Boy through volume of fire."
+  STR_VALHALLAN_HEAVYSTUBBER: "Valhalla Pattern Heavy Stubber/Bipod"
+  STR_VALHALLAN_HEAVYSTUBBER_CODEX: "{NEWLINE} The Valhalla pattern heavy stubber is a rugged but lighter design intended for support fire and suppression, using a bipod to deploy and drum magazines for ammunition."
+
   STR_STUB_GUN_AMMO_DRUM: "Stubber Drum Mag."
   STR_STUB_GUN_AMMO_DRUM_AP: "Stubber Drum AP Mag."
   STR_AUTOGUN_CLIP_KRAKEN: "Autogun Penetrator Clip"
+  STR_VL_HEAVYSTUBBER_DRUM: "Heavy Stubber Drum Mag."
+  STR_VL_HEAVYSTUBBER_DRUM_KRAKEN: "Heavy Stubber Drum AP Mag."
+
+  STR_MORTAR_AMMO_HE_VL: "Mortar HE Shell"
+  STR_MORTAR_AMMO_KRAK_VL: "Mortar Krak Shell"
+  STR_MORTAR_AMMO_ILLUMINATION_VL: "Mortar Flare"
+
+  STR_TRUCKARMOR_VALHALLA_STARTER: "Valhallan Truck Convoy"
+  STR_TRUCKARMOR_VALHALLA_MIDTIER: "Valhallan Motorised Convoy"
+  STR_TRUCKSTARTER_VL_TOKEN: "Truck Convoy Token"
+
+  STR_CHIMERAVL_COMMAND_TURRET: "Command Turret"
+  STR_CHIMERAVL_COMMAND_TURRET_ARMOR: "Command Turret"
+  STR_VALHALLAN_MORTAR_TURRET: "Artillery Turret"
+  STR_VALHALLAN_TURRET_MORTAR_WEAPON: "Mortar Launcher"
+  STR_MORTAR_SHOT_HE_VALHALLA: "HE Bomb"
+  STR_MORTAR_SHOT_KRAK_VALHALLA: "KRAK Bomb"
+  STR_MORTAR_SHOT_ILLUMINATION_VALHALLA: "Illumination Shot"
+
+  STR_ARMOR_COLUMNVL: "LEMAN RUSS W/RIDERS"
+  STR_ARMOR_COLUMNVL_NORIDERS: "LEMAN RUSS CONVOY"
+  STR_LEMANVL_MORTAR_TURRET: "Mortar Turret"
+  STR_LEMANVL_MORTAR_TURRET_ARMOR: "Mortar Turret"
+  STR_LEMANVL_BATTLECANNON_TURRET: "Battlecannon"
+  STR_LEMANVL_EXECUTIONER_TURRET: "Plasma Cannon"
+  STR_LEMANVL_HULL: "Front Hull"
+  STR_LEMANVL_HULL_BOLTER: "Hull Bolter"
+  STR_LEMANVL_HULL_LAS: "Hull Lascannon"
+  STR_LEMANVL_SPONSON: "Sponson"
+  STR_SPONSON_VL_ARMOR: "Sponson"
+  STR_VL_FLAMER_SPONSON: "Flamer Sponson"
+  STR_FLAMER_SPONSON_VL_ARMOR: "Flamer Sponson"
+  STR_VL_BOLTER_SPONSON: "Bolter Sponson"
+  STR_SPONSON_VL_BOLTER_ARMOR: "Bolter Sponson"
+  STR_LEMANVL_HULL_ARMOR: "Front Hull"
+  STR_LEMANVL_HULL_BOLTER_ARMOR: "Hull Bolter"
+  STR_LEMANVL_HULL_LAS_ARMOR: "Hull Lascannon"
+
+  STR_CHIMERAVL: "CHIMERA CONVOY /VL"
+  STR_CHIMERAVL_TWINBOLTER_TURRET: "Twin-Linked Heavy Bolters"
+  STR_CHIMERAVL_TWIN_HB_TURRET_ARMOR: "Twin-Linked Heavy Bolters"
+  STR_CHIMERAVL_TWINAC_TURRET: "Twin-Linked Autocannons"
+  STR_CHIMERAVL_TWIN_AC_TURRET_ARMOR: "Twin-Linked Autocannons"
+  STR_CHIMERAVL_HULL: "Front Hull"
+  STR_CHIMERAVL_HULL_BOLTER: "Hull Bolter"
+  STR_CHIMERA_VL_HULL_ARMOR: "Front Hull"
+  STR_CHIMERA_VL_HULL_BOLTER_ARMOR: "Hull Bolter"
+
+  STR_GORGONVL: "GORGON"
+  STR_GORGONVL_HEAVY_FLAMER_FRONT_LEFT: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER_FRONT_LEFT_ARMOR: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER_BACK_LEFT: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER_BACK_LEFT_ARMOR: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER_FRONT_RIGHT: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER_FRONT_RIGHT_ARMOR: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER_BACK_RIGHT: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER_BACK_RIGHT_ARMOR: "Heavy Flamer Mount"
+  STR_GORGONVL_HEAVY_FLAMER: "Heavy Flamer"
+  STR_GORGONVL_HEAVY_STUBBER_LEFT: "Heavy Stubber Emplacement"
+  STR_GORGONVL_HEAVY_STUBBER_LEFT_ARMOR: "Heavy Stubber Emplacement"
+  STR_GORGONVL_HEAVY_STUBBER_RIGHT: "Heavy Stubber Emplacement"
+  STR_GORGONVL_HEAVY_STUBBER_RIGHT_ARMOR: "Heavy Stubber Emplacement"
+  STR_GORGONVL_HEAVY_STUBBER: "Heavy Stubber"
+
+  STR_CASSIUMVL: "CRASSUS"
 
 ### ADVANCED TURRETS  ###
   STR_LEMONRUSS: "Battle Cannon Turret"
@@ -5230,8 +5619,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TWIN_AUTOCANNON_TURRET: "Twin Autocannon Turret"
   STR_TWIN_LASCANNON_TURRET: "Twin Lascannon Turret"
 
-
-
   STR_CHIMERASL: "CHIMERA CONVOY /SL"
   STR_CHIMERASL_TWIN_HB_TURRET: "Chimera Bolter Turret"
   STR_CHIMERASL_TWIN_HB_TURRET_ARMOR: "Chimera Bolter Turret"
@@ -5251,8 +5638,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CHIMERASL_TURRET_CORPSE_3: "Turret Wreck"
   STR_CHIMERASL_TURRET_CORPSE_4: "Turret Wreck"
 
-  STR_ARMOR_COLUMNSL: "LEMAN RUS W/RIDERS"
-  STR_ARMOR_COLUMNSL_NORIDERS: "LEMAN RUS CONVOY"
+  STR_ARMOR_COLUMNSL: "LEMAN RUSS W/RIDERS"
+  STR_ARMOR_COLUMNSL_NORIDERS: "LEMAN RUSS CONVOY"
   STR_LEMANSL_COMMAND_TURRET: "Unarmed Turret"
   STR_LEMANSL_BATTLECANNON_TURRET: "Battlecannon Turret"
   STR_LEMANSL_BATTLECANNON_TURRET_ARMOR: "Battlecannon Turret"
@@ -5586,7 +5973,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_TRAINING_UFOPEDIA: "{NEWLINE} TRAINING EXERCISE:{NEWLINE}A regiment of the Imperial Guard must be a trained and disciplined fighting force! Regular drills are necessary to keep your troops in fighting condition. Once you have completed this firing exercise you will be assigned further missions.{NEWLINE}{NEWLINE} OBJECTIVE:{NEWLINE}Practice firing."
   STR_GUARD_TRAINING_DESCRIPTION: "Get your grunts moving on the double, commander! There's a firing range set up so that sorry crew of yours can learn which end of the Lasgun they're supposed to point at the enemy. Your troops will have some time to practice their marksmanship on stationary targets; remind those guardsmen they won't have it so easy in the field!"
   STR_GUARD_ARMOR_TRAIN: "Quality of Life Training Armor"
-
+  STR_GUARDSL_ARMOR_TRAIN: "Quality of Life Training Armor"
+  STR_GUARDVL_ARMOR_TRAIN: "Quality of Life Training Armor"
 
   STR_BASE_DEFENSE_NEW_BATTLE: "BASE DEFENSE (NB)"
   STR_OUTPOST_DEFENSE_NEW_BATTLE: "OUTPOST DEFENSE (NB)"
@@ -5601,6 +5989,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_STUB_GUN_AMMO_INC: "Stubber Tracer Magazine"
   STR_CMAS_ARMOR: "Cyber Mastiff"
   STR_ARBITES_MASTIFF: "Cyber Mastiff"
+  STR_CMAS_AI: "Cyber Mastiff"
+  STR_CMAS_ARMOR_AI: "Cyber Mastiff"
+  STR_CMAS_CORPSE: "Cyber Mastiff Corpse"
+  STR_CMAS_CORPSE_AI: "Cyber Mastiff Corpse"
   STR_PILOT_ARBITES: "Pilot"
   STR_PILOT_ARBITES_ARMOR_UC: "Pilot Vest"
   STR_PROMOTE_PILOT_ARBITES: "Train Trooper to Pilot"
@@ -5699,6 +6091,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_DREADNOUGHT_MARINE: "Dreadnought Requisition"
   STR_SPEEDR: "Landspeeder Requisition"
 
+  STR_SPEED_UFOPEDIA: "{NEWLINE} The Land Speeder is a light anti-gravity vehicle which serves as the primary reconnaissance, scouting, resupply and fast attack vehicle of the Imperium of Man's Adeptus Astartes.{NEWLINE}{ALT} The Landspeeders can carry up to 14 soldiers along a container with space for 8 servitors and or 2 large troops."
   STR_HALLEBARD_UFOPEDIA: "{NEWLINE} A Nemesis Force Halberd is a two-handed weapon that consists of a long adamantium haft with an iron and silver blade set upon the top. This extra reach often allows a Grey Knight to land a fatal blow, killing the enemy before coming within reach of its weapons.{NEWLINE}{NEWLINE}Weapon gains a power bonus equal to users {ALT}Devotion{ALT}{NEWLINE}Strength required: {ALT}100"
 
   STR_STORMBOLTER_PSI_MAG: "Storm Bolter Psybolt Magazine"
@@ -6106,6 +6499,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_TZEENTCH_LASGUN_UFOPEDIA: "Nihilus Weapon does not refer to one pattern or even type of weapon, but a whole range of archeotech the mechanics has deemed defiled but not in need of immediate need of purification. And as such it has become a locally accepted pattern of item."
   STR_TZEENTCH_LONGLAS: "Nihilus Longlas"
   STR_PLASMA_PISTOL_TZEENTCH: "Enchanted Plasma Pistol"
+  STR_PLASMA_PISTOL_TZEENTCH_CODEX: "Enchanted Plasma Pistol CODEX"
   STR_BOLTPISTOL_TZEENTCH: "Rubric Boltpistol"
   STR_TZEENTCH_BOLTER_LIGHT_SOLO: "Rubric Light Bolter"
   STR_TZEENTCH_BOLTER_LIGHT_SOLO_SCOPED: "Rubric Light Bolter (Scoped)"
@@ -6185,7 +6579,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_IRON_TERMINATOR_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_IRON_TERMINATOR_UFOPEDIA: "Iron Warriors Tyrant Siege Terminators wears ancient Cataphractii Pattern Terminator Armor, armed with mounted Cyclone Missile Launchers and housing shoulder inlaid shield generators."
   STR_IRON_TERMINATOR_AUTOPSY: "Tyrant Terminator Origins"
-  STR_IRON_TERMINATOR_AUTOPSY_UFOPEDIA: "{NEWLINE}Iron Warrior Tyrant Siege Terminators an elite formation, the vanguard vanguard of any Iron Warriors siege breakers formation. Recruited from amongst the most battle-hardened Iron Warriors, expected to brave the most ferocious enemy fire without regard for their own survival to achieve victory."
+  STR_IRON_TERMINATOR_AUTOPSY_UFOPEDIA: "{NEWLINE}Iron Warrior Tyrant Siege Terminators an elite formation, the vanguard of any Iron Warriors siege breakers formation. Recruited from amongst the most battle-hardened Iron Warriors, expected to brave the most ferocious enemy fire without regard for their own survival to achieve victory."
 
   STR_IRON_WARRIOR_WARSMITH: "Warsmith"
   STR_IRON_WARRIOR_WARSMITH_CORPSE: "Warsmith Corpse"
@@ -6357,9 +6751,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_DAEMON_PORTAL_SLAANESH_LESSER: "Lesser Daemonic Portal"
   STR_DAEMON_PORTAL_SLAANESH_MINOR: "Minor Daemonic Portal"
 
-
-
-
   STR_KHORNEDEMON_ARMORTEMPO_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_NURGLEDEMON_ARMORTEMPO_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_SLAANESHDEMON_ARMORTEMPO_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
@@ -6434,6 +6825,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WORDBEARER_POSSESSEDLV3: "Transcendent"
 
   STR_WORDBEARER_CULTISTAI: "WB Cultist"
+  STR_WBHELBRUTE_PLAYER: "WB Helbrute"
   STR_WBHELBRUTE_AI: "WB Helbrute"
 
   STR_WBSOLDIER_QUORVONDAR: "Chaos Sorcerer"
@@ -6619,6 +7011,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WBRHINOS_UFOPEDIA: "{NEWLINE}Chaos Rhinos are Rhino vehicles in the service of Chaos Space Marines. Serving as their most common vehicle, over the ten thousand years since the Long War began, Chaos Marines have continued to use the robust Rhino as their favored main transport."
   STR_WBHELLBLADE_UFOPEDIA: "{NEWLINE}The Hell Blade is an interceptor and air superiority fighter aircraft that is used by the forces of Chaos, including the Word Bearers."
   STR_WBTHUNDERHAWK_UFOPEDIA: "{NEWLINE}The Chaos Thunderhawk gunship is a multi-use aircraft in wide use by Word Bearers that still employ them in great numbers, either dating back to the Great Crusade or aquired since the Horus Heresy."
+  STR_WBDEMONHOST_CODEX: "{NEWLINE}Word Bearer mastery over demon summoning is so advanced that they are capable of building mobile altars, soaked in the blood of their sacrifices, to quickly summon demons in the middle of the battlefield. {NEWLINE}{NEWLINE}In battle the altar will be guarded by 2 cultist who have already finished the daemonic ritual, and will begin summoning chaos daemon starting from minor demons up to chaos undivided demons for a limited amout of time"
 
   STR_WBSSCOUT_ARMORPLAYER_CODEX: "Aspirants are the novices Word Bearers aspiring to become full fledged Chaos Marines for their legion."
   STR_WBMARINE_ARMORPLAYER_CODEX: "Chaos Marines are the warrior monks of the Word Bearers equipped to fight using a variety of ranged weapons across a broad range of combat conditions."
@@ -6808,6 +7201,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ANTIWB_FINAL_SALAMANDER: "ANTI WB SALAMANDER"
 
   STR_WORDBEARERS_HELP: "Word Bearers Guide"
+  STR_WORDBEARERS_HELPER: "Word Bearers Guide"
 
   STR_WORDBEARER_STRATEGY_CODEX: "The Word Bearers, originally known as the Imperial Heralds and the Iconoclasts, is the XVII Legion of the original twenty Space Marine Legions.{NEWLINE}{NEWLINE} They were the first of the nine Legions which betrayed the Emperor, becoming the first known Chaos Space Marines, pledging their allegiance to their Primarch Lorgar and to Chaos Undivided."
 
@@ -6815,7 +7209,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_WORDBEARERSHINTS_CODEX_PAGE2: "Word Bearers Marines will be able to wear most armors the legion will manufacture for them but only Warped Marines that have been in the Transformation menu will be able to wear Raptor or Ashen Circle armors and later the powerful Warptalon ones.{NEWLINE}{NEWLINE}Take notice that Warped Marines will be unable then to wear other type of armors out of the Aspirant basic armor.{NEWLINE}>>> Continued on next page.>>>"
   STR_WORDBEARERSHINTS_CODEX_PAGE3: "Once Word Bearers Marines kill enough to be awarded a Chaos Anointment they will be able to be Annointed in the Transform Menu to wear Terminators armors.{NEWLINE}{NEWLINE}Once Word Bearers Marines or Annointed earn a Veteran commendation: they will be able to become Acolyte in the Transform Menu to wear diabolists armors. But Acolytes can't wear Terminator armors.{NEWLINE}Word Bearers Warped Marines will never be able to become Annointed or Acolyte.>>> Continued on next page.>>>"
   STR_WORDBEARERSHINTS_CODEX_PAGE4: "The Erebus path commander armor is unique: the Dark Apostle.{NEWLINE}The Kor Phaeron path commander armor is unique: the Chaos Lord.{NEWLINE}{NEWLINE}There can always be only 1 of those armors in your playthrough, but if the wearer unfortunately fall in battle, the miracles of the Pantheon will provide you a mean to get another.{NEWLINE}{NEWLINE}Complete the campaign to access your final vehicle and open the path to the Final Mission.{NEWLINE}>>> Continued on next page.>>>"
-  STR_WORDBEARERSHINTS_CODEX_PAGE5: "In the 1st year around March the word bearers main campaign will start, featuring a total of 9 missions: they have a special icon.{NEWLINE}{NEWLINE}Each mission will spawn and wait on the world map for more than 5 years so you don't need to hurry in doing them. Asdditionally they don't disappear if you decide to retreat from one.{NEWLINE}{NEWLINE}When you complete a mission from the campaign, the next one will appear in the month that follow.{NEWLINE}>>> Continued on next page.>>>"
+  STR_WORDBEARERSHINTS_CODEX_PAGE5: "In the 1st year around March the word bearers main campaign will start, featuring a total of 9 missions: they have a special icon.{NEWLINE}{NEWLINE}Each mission will spawn and wait on the world map for more than 5 years so you don't need to hurry in doing them. Additionally they don't disappear if you decide to retreat from one.{NEWLINE}{NEWLINE}When you complete a mission from the campaign, the next one will appear in the month that follow.{NEWLINE}>>> Continued on next page.>>>"
   STR_WORDBEARERSHINTS_CODEX_PAGE6: "The Word Bearers use a lot of cultists as their meat shield. You'll notice that on your many transport vehicles some foolish cultists will join you in battle.{NEWLINE}{NEWLINE}At some point you'll have access to a special transport that is a chaos gate teleporting your troops around the world, while taking a daemon host with you.{NEWLINE}>>> Continued on next page.>>>"
   STR_WORDBEARERSHINTS_CODEX_PAGE7: "After completing the campaign you'll be able to manufacture an upgrade to the final vehicle that will replace the legion of cultist by chaos marines.{NEWLINE}{NEWLINE}The type of allies Chaos Marines will depend on Erebus of Kor Phaeron path.{NEWLINE}>>> Continued on next page.>>>"
   STR_WORDBEARERSHINTS_CODEX_PAGE8: "Word Bearers are connected to the Chaos Pantheon by faith. They offer their bodies as conduit to the Daemons of the Warp.{NEWLINE}{NEWLINE}In gameplay when a Word Bearer fall in battle there is a chance that the body become possessed by an entity of the Warp and go back to fight.{NEWLINE}Chances and the nature the entity depend on the armor.{NEWLINE}They can make use of their their fallen to power up daemon engines, powerful new units. Continued on next page.>>"
@@ -7407,10 +7801,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_NIGHTLORD_RAPTOR_CORPSE: "Night Raptor Corpse"
   STR_NIGHTLORD_RAPTOR_OFFICER_CORPSE: "Night Lords Officer Corpse"
 
-  STR_NIGHTLORDS_WARPTALON_SOLDIER: "Night Warp Talon"
-  STR_NIGHTLORDS_WARPTALON_COMMANDER: "Night Warp Talon Officer"
-  STR_NIGHTLORDS_WARPTALON_ARMOR: "Night Warp Talon"
-  STR_NIGHTLORD_WARPTALON_CORPSE: "Warp Talon Corpse"
+  STR_NIGHTLORDS_WARPTALON_SOLDIER: "Night Warptalon"
+  STR_NIGHTLORDS_WARPTALON_COMMANDER: "Night Warptalon Officer"
+  STR_NIGHTLORDS_WARPTALON_ARMOR: "Night Warptalon"
+  STR_NIGHTLORD_WARPTALON_CORPSE: "Night Warptalon Corpse"
 
   STR_SCARE_GRENADE: "Scare Gas Grenade"
   STR_SCARE_GRENADE_UFOPEDIA: "{NEWLINE}Scare Gas Grenades produce a form of non-persistent nerve gas. The effects generated are the psychological and physical symptoms of anxiety and terror. Scare gas can be absorbed through the skin, rapid-acting and highly dangerous. It dissipates rapidly in ordinary atmospheres."
@@ -7617,11 +8011,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_SPACEHULK_MID: "Voidcrew"
   STR_GSC_SPACEHULK_LATE: "Voidcrew"
 
-  STR_GSC_PRECINCT_START: "Arbites Force"
   STR_GSC_ARRIVAL_BASE_SPAWN: "Arbites Communication Disrupted"
   STR_GSC_ARRIVAL_BASE_SPAWN_DESCRIPTION: "Communications with several local Arbites Precincts have recently been disrupted in conjunction with the arrival of some space hulk debris in orbit. This might be the work of Chaos cults using the warp disturbances for cover."
   STR_GSC_ARBITES_SPAWNED: "Arbites Communication Restored"
   STR_GSC_ARBITES_SPAWNED_DESCRIPTION: "Communication after recent disruptions with the local Arbites and the PDF network is now back in full operation. The Arbites Magistrates assures us that everything is back to normal and that they will redouble their efforts to maintain order."
+
+  # ------ CURRENTLY UNUSED START ---------
+  STR_GSC_PRECINCT_START: "Arbites Force"
   STR_GSC_PRISON_BREAK: "Prison Break"  # Infected Prisoners and Guards (enforcers) + infector (medic of some sort, possibly Infected Adeptas) have taken staff/locals hostages (SACRIFICE) to infect (already infected civilians?) in a prison/outpost.
   STR_GSC_PRISON_BREAK_INFO: "A large scale prison break is under way in this sector. Working under high coordination, the prisoners have organized in secret and with the aid of collaborating guards, armed themselves. While some have scattered, the majority have established a base of operations, taking hostages from the nearby community."
   STR_GSC_PDF_BASE: "PDF Base Defection"
@@ -7632,6 +8028,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_GSC_IMPROVISED_GUN: "Improvised Stub Gun"
   STR_GSC_IMPROVISED_MELEE: "Home made club"
+  # ------ CURRENTLY UNUSED END ---------
 
   STR_ZOMBIE: "Tainted"
   STR_ZOMBIEF: "Tainted"
@@ -7762,6 +8159,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_SCION_CORPSE: "Scion Corpse"
   STR_GSC_PSYKER_CORPSE: "Psyker Corpse"
   STR_GSC_COMMISSAR_CORPSE: "Commissar Corpse"
+  STR_GSC_GUARD_CARAPACE_OFFICER_MALE_ARMED: "Corrupted Command Officer"
 
   STR_GSC_MEDICAE: "Sister Medicae"
   STR_GSC_MEDICAE_ARMOR: "Sister Medicae"
@@ -7781,12 +8179,16 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_AUTOINJECTOR_WEAPON: "Tainted Autoinjector"
 
   # Brood Brothers and GSC proper
-  STR_GENE_CULTIST: "Brood Brother"
+    # Brood Brothers and GSC proper
+  STR_GENE_CULTIST: "Brood Brother Minoris"
   STR_GENE_CULTIST_B: "Brood Brother"
   STR_GENE_CULTIST_S: "Brood Sister"
-  STR_GC_ARMOR: "Brood Brother"
+  STR_GC_ARMOR: "Brood Brother Minoris"
   STR_GC2_ARMOR: "Brood Brother"
   STR_GC3_ARMOR: "Brood Sister"
+  STR_BW_CORPSE: "Brood Brother Minoris Corpse"
+  STR_BW2_CORPSE: "Brood Brother Corpse"
+  #STR_BW3_CORPSE: "Brood Brother Corpse" unused
   STR_GSC_SNIPER_CORPSE: "Brood Sniper Corpse"
   STR_GSC_MINER_CORPSE: "Brood Neophyte Corpse"
   STR_GSC_ABERRANT_CORPSE: "Aberrant Corpse"
@@ -7981,7 +8383,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_DEATHSPITTER_WEAPON: "Deathspitter"
   STR_VENOMCANNON: "Venomcannon"
   STR_BARBEDSTRANGLER: "Barbedstrangler"
-  STR_BARBED_TALONS: "Scythng Talons"
+  STR_BARBED_TALONS: "Scything Talons"
   STR_WARRIOR_TALONS: "Scything Talons"
   STR_WARRIOR_CLAWS: "Rending Claws"
   STR_WARRIOR_CLAWS_ALT: "Rending Claws"
@@ -8159,7 +8561,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 ## Grey Knights Weapons
   #STR_GK_HB is already defined in base 40k mod
   STR_GK_HB_CODEX: "The Bolt Gauntlet family of weapons consists of a Power Fist with built-in Bolter, inspired in form and function by Roboute Guilliman's famed weapon Hand of Dominion. This version used by Grey knighs features a build-in Storm Bolter and it's capable of using bolts infused with psychic energy. Its lethality at close range its undisputed."
-
+  STR_GK_HB_MC: "Master Crafted Storm Bolter Gauntlet"
 ## Gun Specials
 
   STR_MASTER_CRAFTING: "High-tier Master Crafting"
@@ -9162,6 +9564,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GUARD_ARMORS_TAUROS_HEAVY_FLAMER: "Tauros Heavy Flamer"
   STR_GUARD_ARMORS_TAUROS_HEAVY_STUBBER: "Tauros Heavy Stubber"
   STR_GUARD_ARMORS_TAUROS_HEAVY_STUBBER_CODEX: "{NEWLINE} The Tauros is a lightweight multipurpose vehicle capable of being airdropped from a standard Valkyrie using magnetic clamps. Rather than using multifuel engines, the Tauros is equipped with a galvanic drive unit and can fit a number of weapons."
+  STR_TAUROS_HEAVY_STUBBER: "Tauros Heavy Stubber Mount"
   STR_IMMOLATOR_HEAVY_FLAMER: "Heavy Flamer"
   STR_MANTICORE_R: "Missile Launcher"
   STR_MANTICORE_L: "Missile Launcher"
@@ -9199,7 +9602,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PLAGUE_SPRAY: "Plague Spray"
 
 # Script Text
-
+  STR_SCRIPT_MEDIKIT_EXTINGUISH: "Target Extinguished."
   STR_SCRIPT_IG_COMMAND_FIX_BAYONETS: "Remaining Command Points: {0} - Soldiers {1} Current Command: Fix Bayonets"
   STR_SCRIPT_IG_COMMAND_BLITZKRIEG: "Remaining Command Points: {0} - Soldiers {1} Current Command: Blitzkrieg"
   STR_SCRIPT_IG_COMMAND_HUNKER_DOWN: "Remaining Command Points: {0} - Soldiers {1} Current Command: Hunker Down"
@@ -9322,6 +9725,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INFILTRATION_MECHANICS: "Stealth and Infiltration"
   STR_INFILTRATION_CODEX: "Certain units of ours have the ability to infiltrate onto the battlefield unseen for several turns by various means. While infiltrating, these units will have a dark coloration and be unable to be perceived or engage in reaction fire. An infiltration unit that takes or deals any damage to another unit is automatically and instantly revealed. More skilled infiltrators can reenter this state after securing enough kills."
 
+  # ** SPRINT SCRIPT **
+  STR_SKILL_SPRINT_NO_USE_LEFT: "Your unit has expended all his sprint uses"
+  STR_SKILL_SPRINT_ON_COOLDOWN: "Your unit is recovering, Sprint is in cooldown for {0} Turns."
+  STR_SKILL_SPRINT_STARTED_COOLDOWN_REMAINING_USES: "Your unit is sprinting and can't be seen! Sprint will rechange in {0} Turns. Remaining uses {1} left"
+  STR_SKILL_SPRINT_STARTED_COOLDOWN: "Your unit is sprinting and can't be seen! Sprint will rechange in {0} Turns."
+  STR_SKILL_SPRINT_ENDTURN: "Your unit sprint has ended!"
+  STR_SKILL_SPRINT_REVEALED: "Your sprinting unit is now visible!"
   # ** ENVIRONMENTAL SCRIPTS
 
   STR_DAEMON_PURGE_STRONG_ENVIRONMENTAL_TOKEN: "Strong Daemonic Purge Environmental Token"
@@ -9337,6 +9747,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   # intimidation scripts
   STR_SILACOID_WEAPON: "Hellblade"
   STR_INTIMIDATION_WEAPON: "Terrify"
+  STR_INTIMIDATION_WEAPON_REACT_ONLY: "Terrify"
   SILACOID_WEAPON: "Terrify"
   STR_SILACOID: "Khorne Daemon"  # Race name
   STR_SILACOID_TERRORIST: "Bloodletter"  # "Chaos Daemon", used by final mission summoning hordes + spawner grenades
@@ -9360,11 +9771,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_OGRYN_CARAPACE: "Ogryn Reinforced Carapace"
   STR_OGRYN_CARAPACE_UFOPEDIA: "{NEWLINE}Custom-made carapace armor that further increases the already impressive survivability of our Ogryn combatants. This benefits from additional plating and reinforcement (and weight) versus standard issue armoring."
   STR_RIPPER_GUN_CLIP: "Ripper Gun Buckshot Drum"
+  STR_INQ_ABHUMANS_RIPPER_GUN_CLIP: "Ripper Gun Buckshot Drum"
   STR_RIPPER_GUN_CLIP_UFOPEDIA: "{NEWLINE}Standard high impact buckshot for the Ripper Gun. Brutally effective against light to medium armor with incredible stopping power."
   STR_RIPPER_GUN_CLIP_AP: "Ripper Gun Flechette Drum"
+  STR_INQ_ABHUMANS_RIPPER_GUN_CLIP_AP: "Ripper Gun Flechette Drum"
   STR_RIPPER_GUN_CLIP_AP_KHORNE_MANUFACTURE: "Ripper Gun Flechette Drum"
   STR_RIPPER_GUN_CLIP_AP_UFOPEDIA: "{NEWLINE}Specialized armor piercing flechettes for the Ogryn Ripper Gun. Intended to puncture and defeat heavy armor and ceramite, these costly rounds trade the legendary stopping power of Ripper Gun buckshot for better shot grouping and greatly improved armor penetration."
   STR_RIPPER_GUN_CLIP_INC: "Ripper Gun Incendiary Drum"
+  STR_INQ_ABHUMANS_RIPPER_GUN_CLIP_INC: "Ripper Gun Incendiary Drum"
   STR_RIPPER_GUN_CLIP_INC_UFOPEDIA: "{NEWLINE}Specialized incendiary rounds for the Ripper Gun. Each shell contains a potent phosphor and promethium payload meant for target marking and maximal lethality against lightly armored personnel. {NEWLINE}Due to the notable risk of fire and accidental discharge, these rounds are strongly recommended for Bone'ead use only."
   STR_OGRYN_CORPSE_OPFOR: "Ogryn Corpse"
 
@@ -9633,6 +10047,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SPACEWOLVES_OFFICER_PACKAGE_TRIGGER: "Space Wolves Package trigger 2"
   STR_SPACEWOLVES_WOLFPRIEST_PACKAGE_TRIGGER: "Space Wolves Package trigger 3"
 
+  STR_RESEARCH_SWLANDRAIDER: "Landraider Requisition"
+
 # Research Strategies Adeptas
 ##########################################
 # Section: Research
@@ -9657,7 +10073,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ABHUMAN_STRATEGY_IG: "Abhuman Strategy"
   STR_KRIEG_STRATEGY: "[WIP] Krieg Strategy"
   STR_CHOSEN_KRIEG: "Krieg Selected"
-  STR_VALHALLAN_STRATEGY: "[WIP] Valhallan Strategy"
+  STR_VALHALLAN_STRATEGY: "[BETA] Valhallan Strategy"
   STR_CHOSEN_VALHALLA: "Valhallan Strategy Selected"
 
 # Research Strategies CM
@@ -9709,6 +10125,9 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INQ_RECRUITS_RADICAL_ROAD_DESCRIPTION: "You have been tasked with the sacred duty of preventing Pelega IV from falling to the Archenemy. The situation is dire, as warpstorms have cut you off from all offworld support. Your favored Interrogator will lead the investigation for now, in command of an elite retinue of Inquisitorial Acolytes. They must uncover the depths of heresy on this world, while you yourself are away seeking the necessary means to defeat it. So it is, that the Ends Justify the Means."
   STR_INQ_RECRUITS_RADICAL_ROAD2: "Air Support Assets"
   STR_INQ_RECRUITS_RADICAL_ROAD_DESCRIPTION2: "You have delegated your few air support assets to this investigation. Make good use of them."
+
+  STR_INQ_RR_BLACK_MARKET: "Black Market"
+  STR_INQ_RR_BLACK_MARKET_CODEX: "{NEWLINE}  The Inquisition has a natural interest in Black Markets, which facilitate the illicit trade of exotic, unusual, and usually illegal wares. Whereas the Puritan Inquisitor may simply execute those involved, the Radical easily sees the potential of overlooking petty crime, if it might lead to the discovery of greater heresy."
 
   # Inquisition Storm Trooper Armor Research unlocks
   STR_INQ_STORMTROOPER_ARMOR_1_RESEARCH: "Advanced Storm Trooper Armor"
@@ -9837,6 +10256,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 ## Start CM Radical Road (Chaos)
   STR_INQ_RR_MIDTIER_CHAOS: "(Midtier) The Ends Justify the Means [Chaos]"
+  STR_INQ_RR_MIDTIER_CHAOS_MAINTAIN_IMPERIAL_DEP: "(Maintain Imperial Weapons)"
   STR_INQ_RR_MIDTIER_EVENT_CHAOS: "The Ends Justify the Means"
   STR_INQ_RR_MIDTIER_EVENT_CHAOS_DESCRIPTION: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to study it, understand it, and make use of it. No longer can heretical means be shunned; they must be embraced. The Ends Justify the Means."
 
@@ -9861,26 +10281,17 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 ## Start CM Radical Road (Xenos)
   STR_INQ_RR_MIDTIER_XENOS: "(Midtier) Xeno Embrace"
-  STR_INQ_RR_MIDTIER_EVENT_XENOS: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to enlist the aid of Xenos. Some, like the Aeldari, are old foes of Chaos themselves. Others, like the brute Orks, may be wielded like a blunt weapon to your own ends. These resources must not be wasted. The Ends Justify the Means."
+  STR_INQ_RR_MIDTIER_EVENT_XENOS: "Xenos Embrace"
+  STR_INQ_RR_MIDTIER_EVENT_XENOS_DESCRIPTION: "You have arrived to lead to your retinue, having concluded your investigation; this world is in untold peril, beset by many and great foes, and will soon fall to the Archenemy. You judge that the only way to defeat Chaos is to enlist the aid of Xenos. Some, like the Aeldari, are old foes of Chaos themselves. Others, like the brute Orks, may be wielded like a blunt weapon to your own ends. These resources must not be wasted. The Ends Justify the Means."
 
   STR_INQ_RR_XENOTECH_WEAPON_ANALYSIS: "Xenotech Weapon Analysis"
   STR_INQ_RR_REQUISITION_XENOS: "Seek Xenos Allies"
-  STR_INQ_RR_REQUISITION_XENOS_EVENT: "Xenos Allies Arrive"
+  STR_INQ_RR_REQUISITION_XENOS_ELDAR_EVENT: "Xenos Allies Arrive"
+  STR_INQ_RR_REQUISITION_XENOS_ORKS_EVENT: "Xenos Allies Arrive"
+  STR_INQ_RR_REQUISITION_XENOS_TAU_EVENT: "Xenos Allies Arrive"
   STR_INQ_RR_REQUISITION_XENOS_EVENT_DESCRIPTION: "Your discreet inquiries and careful diplomacy has yielded the aid of Xenos mercenaries. Though heretical by nature, it would be foolish not to make use of them in the battle against the Archenemy."
-  STR_INQ_RR_CONSORTED_AELDARI_DEP: "(Consorted with Aeldari)"
-  STR_INQ_RR_CONSORTED_TAU_DEP: "(Consorted with Tau)"
-  STR_INQ_RR_CONSORTED_ORKS_DEP: "(Consorted with Orks)"
 
-  STR_INQ_CONSORT_AELDARI_RESEARCH: "Consort with the Aeldari"
-  STR_INQ_CONSORT_TAU_RESEARCH: "Consort with the Tau"
-  STR_INQ_CONSORT_ORKS_RESEARCH: "Consort with the Orks"
-  STR_INQ_XENOTECH_ANALYSIS_RESEARCH: "Xenotech Synthetic Analysis"
-
-  STR_INQ_BLACK_MARKET_XENOTECH_RESEARCH: "Acquire Black Market Xenotech"
-  STR_INQ_BLACK_MARKET_XENOTECH_EVENT: "Black Market Xenotech Acquired"
-  STR_INQ_BLACK_MARKET_XENOTECH_EVENT_DESCRIPTION: "The Imperium as a whole shuns the Xenos and their foul technologies, but you recognize the need to utilize their own weapons against them. You have acquired Xenos technology from this planet's Black Market, where this is always a supply of such exotic and illegal items."
-
-
+  STR_INQ_RR_WAVE_SERPENT: "WAVE SERPENT TRANSPORT" # Radical Road (Xenos) manufacture option
 
 # Events CM
 ##########################################
@@ -9889,7 +10300,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 ##########################################
 
   STR_INQ_RR_INTERROGATOR_REPLACEMENT_EVENT: "Interrogator Arrives"
-  STR_INQ_RR_INTERROGATOR_REPLACEMENT_EVENT_DESCRIPTION: "The demise of your favored Interrogator was not entirely unexpected; few survive the trials to become a full Inquisitor. You send now your next Interrogator to take up their work."
+  STR_INQ_RR_INTERROGATOR_REPLACEMENT_EVENT_DESCRIPTION: "The works of the heretic on this world are foul and ceaseless. You have delegated another of your Interrogators to investigations in the field."
 
   # STR_INQ_SECURE_SUPPORT_AGENTS_BAD_SCRIPT
   # STR_INQ_SECURE_SUPPORT_AGENTS_GOOD_SCRIPT
@@ -10051,27 +10462,78 @@ en-US:  #  yamllint disable-line rule:empty-values
   # STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_SCRIPT
   # STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_SCRIPT
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_1_EVENT: "Revisionist Activists Arrive"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_1_EVENT_DESCRIPTION: "Your revisionist contacts have sent along only a pair of militant 'activists'. You'll have to overlook their past indiscretions to justify their use. (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_1_EVENT_DESCRIPTION: "Your revisionist contacts have sent along only a pair of militant 'activists'. You'll have to overlook their past indiscretions to justify their use."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_2_EVENT: "Forsaken Sister Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_2_EVENT_DESCRIPTION: "A wayward Sister of Battle has contacted you, seeking haven from the persecution of her Order. She refuses to tell of what heresy led to her exile, but by your grace she may yet be led into penance... or damnation. (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_2_EVENT_DESCRIPTION: "A wayward Sister of Battle has contacted you, seeking haven from the persecution of her Order. She refuses to tell of what heresy led to her exile, but by your grace she may yet be led into penance... or damnation."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_3_EVENT: "Unsanctioned Psyker Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_3_EVENT_DESCRIPTION: "You have received aid from your revisionist allies, ostenibly a local priest, but there is no doubt that they possess the curse of the psyker, however small. (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_3_EVENT_DESCRIPTION: "You have received aid from your revisionist allies, ostenibly a local priest, but there is no doubt that they possess the curse of the psyker, however small."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_4_EVENT: "Radical Priest Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_4_EVENT_DESCRIPTION: "A firebrand priest has joined your retinue, sent by your revisionist contacts. His fervent preaching often borders on heresy, but certainly such conviction and leadership is worth the risk.  (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_4_EVENT_DESCRIPTION: "A firebrand priest has joined your retinue, sent by your revisionist contacts. His fervent preaching often borders on heresy, but certainly such conviction and leadership is worth the risk."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_5_EVENT: "Offerings"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_5_EVENT_DESCRIPTION: "You have received a shipment of unusual reagants from your Revisionist contacts, accompanied by tomes which describe rituals between objectionable and outright heretical.  (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_5_EVENT_DESCRIPTION: "You have received a shipment of unusual reagants from your Revisionist contacts, accompanied by tomes which describe rituals between objectionable and outright heretical."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_6_EVENT: "Revisionist Fanatic Arrives"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_6_EVENT_DESCRIPTION: "Your costly promises of revisionist support have produced only a lone Fanatic, lacking armor and wargear. These groups must lack either competent individuals, or respect for your cause.  (-100 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_BAD_6_EVENT_DESCRIPTION: "Your costly promises of revisionist support have produced only a lone Fanatic, lacking armor and wargear. These groups must lack either competent individuals, or respect for your cause."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT: "Underhive Gangers Swear Fealty"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT_DESCRIPTION: "Your revisionist contact has led to an oath of fealty from an underhive gang, who promise to support you in exchange for overlooking their illicit activities. The needs must, it seems.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_1_EVENT_DESCRIPTION: "Your revisionist contact has led to an oath of fealty from an underhive gang, who promise to support you in exchange for overlooking their illicit activities. The needs must, it seems."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_2_EVENT: "Heretical Sisters Arrive"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_2_EVENT_DESCRIPTION: "Your unusual sympathy towards those accused of heresy has become known in the right circles. A secretive coven of Sisters of Battle, long since exiled from their Order, has emerged from hiding to join your cause.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_2_EVENT_DESCRIPTION: "Your unusual sympathy towards those accused of heresy has become known in the right circles. A secretive coven of Sisters of Battle, long since exiled from their Order, has emerged from hiding to join your cause."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_3_EVENT: "Respect of the Fallen Astartes"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_3_EVENT_DESCRIPTION: "With the help of your revisionist allies, you have been able to contact a group of Space Marines disaffected with the Imperium. They will assist you, so long as you tolerate their heretical ideals and your enemies remain the same.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_3_EVENT_DESCRIPTION: "With the help of your revisionist allies, you have been able to contact a group of Space Marines disaffected with the Imperium. They will assist you, so long as you tolerate their heretical ideals and your enemies remain the same."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT: "The Twin Witches"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT_DESCRIPTION: "The sudden arrival of two Witches comes as a surprise to you. Ostensibly they are allied with your revisionist contacts. Whenever near each other, one whispers of the past, and the other screams of the future. Such rare psychic talent necessitates tolerating their worrying quirks.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_4_EVENT_DESCRIPTION: "The sudden arrival of two Witches comes as a surprise to you. Ostensibly they are allied with your revisionist contacts. Whenever near each other, one whispers of the past, and the other screams of the future. Such rare psychic talent necessitates tolerating their worrying quirks."
   STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_5_EVENT: "Herald of the Lost"
-  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_5_EVENT_DESCRIPTION: "Your revisionist contacts have borne fruit, as one of their charismatic leaders has pledged themselves to you. They promise their flock will fervently follow your example, and they await to be led to either salvation or damnation.  (-200 Monthly Score)"
+  STR_INQ_SECURE_SUPPORT_REVISIONISTS_GOOD_5_EVENT_DESCRIPTION: "Your revisionist contacts have borne fruit, as one of their charismatic leaders has pledged themselves to you. They promise their flock will fervently follow your example, and they await to be led to either salvation or damnation."
+
+
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_RESEARCH: "Secure Ork Mercenary Support"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT: "Ork Mercenaries"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_EVENT_DESCRIPTION: "You have contracted the brutish Ork Mercenaries. These simpleminded creatures are easy to manipulate, promising them the brutal warfare their kind desires. Their kin now flock to your banner, awaiting restlessly for the next fight."
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_2_RESEARCH: "Bargain with Ork Mek Klans"
+
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_1_EVENT: "Ork Boys Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_2_EVENT: "Gaggle of Grots"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_3_EVENT: "'Ard Boys are Here"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_4_EVENT: "Ork Mercenaries"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_5_EVENT: "Ork Weirdboy"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_1_EVENT: "Ork Boys Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_2_EVENT: "Gaggle of Grots"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_3_EVENT: "'Ard Boys are Here"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_4_EVENT: "Ork Mercenaries"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_5_EVENT: "Ork Weirdboys Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_6_EVENT: "Killa Kans Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_7_EVENT: "Ork Nobs Arrive"
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_8_EVENT: "Ork Big Meks Arrive"
+
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_BAD_EVENT_DESCRIPTION: "More Ork Mercenaries arrive to fight for you, seeking the intense battles you have promised them."
+  STR_INQ_RR_SECURE_SUPPORT_ORKS_GOOD_EVENT_DESCRIPTION: "More Ork Mercenaries arrive to fight for you, seeking the intense battles you have promised them. Having proven your might to them, now more and stronger Orks arrive each month."
+
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_RESEARCH: "Secure Aeldari Support"
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_EVENT: "Truce with the Aeldari"
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_EVENT_DESCRIPTION: "You have made a secret pact with the mysterious Aeldari, united against the common enemy; Chaos. They have allowed access to their advanced technology, and their proud warriors will lend their assistance."
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_2_RESEARCH: "Trust of the Aeldari"
+
+  STR_INQ_RR_ELDAR_MEDITATION_RITUAL: "Aeldari Meditation Ritual"
+
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT: "Aid of the Aeldari"
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_BAD_EVENT_DESCRIPTION: "Your Aeldari allies have sent their warriors to join you in the unending fight against Chaos."
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT: "Aid of the Aeldari"
+  STR_INQ_RR_SECURE_SUPPORT_ELDAR_GOOD_EVENT_DESCRIPTION: "Your Aeldari allies have sent their warriors to join you in the unending fight against Chaos. Having earned a small measure of trust, you notice they now send yet more exotic warriors and weapons."
+
+
+  STR_INQ_RR_SECURE_SUPPORT_TAU_RESEARCH: "Secure Tau Empire Support"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_EVENT: "Support of the Tau"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_EVENT_DESCRIPTION: "You have negotiated with the Tau emissaries on this world, securing their assistance by appealing to the naive principles of this Greater Good. Their advanced technology will be an invaluable asset."
+  STR_INQ_RR_SECURE_SUPPORT_TAU_2_RESEARCH: "Trust of the Tau Empire"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_3_RESEARCH: "Embrace the Greater Good"
+
+  STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_1_EVENT: "Tau Assistance Arrives"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_2_EVENT: "Tau Assistance Arrives"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_1_EVENT: "Tau Assistance Arrives"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_2_EVENT: "Tau Assistance Arrives"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_3_EVENT: "Tau Assistance Arrives"
+  STR_INQ_RR_SECURE_SUPPORT_TAU_BAD_EVENT_DESCRIPTION: "Soldiers from the Tau Empire have arrived into your service, unshakeable in their belief that by fighting for you, they serve the Greater Good."
+  STR_INQ_RR_SECURE_SUPPORT_TAU_GOOD_EVENT_DESCRIPTION: "Soldiers from the Tau Empire have arrived into your service, unshakeable in their belief that by fighting for you, they serve the Greater Good. Your alliance with the Tau is stronger than ever, and now they send their best to aid you."
+
 
   STR_FAILURE_REINFORCEMENT_DESCRIPTION: "The monthly sweep has not gone entirely according to plan. Your call for human resources have taken an odd turn, but perhaps this can still be salvaged."
   STR_REINFORCEMENTS_ADEPTAS_WANDERING_MEDICAE: "Wandering Medicae Offer their Services"
@@ -10082,7 +10544,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_FAILURE_REINFORCEMENT_CRAZED_PRIEST_DESCRIPTION: "One of your base patrols bring back a bulged eyed priest, tuffs of hair standing on end. Shouting scriptures and wielding a much too large chainsword, it soon becomes clear he is a survivor of an attacked group of pilgrims that fled towards your base for safety. He intends to get vengeance, or die trying."
   STR_MYSTERIOUS_PSYKER_EVENT: "A Mysterious Psyker Has Arrived"
   STR_LONESOME_VINDICARE_EVENT: "A Lonesome Vindicare Arrives"
-  STR_LONE_SISTER_REPENTIA_EVENT: "A Sister Repentia Approach"
+  STR_LONE_SISTER_REPENTIA_EVENT: "A Sister Repentia Approaches"
   STR_LONE_SISTER_REPENTIA_EVENT_DESCRIPTION: "A lone Sister Repentia approaches your perimeter. Hefting a chainsword the length of herself. She's adorned with barbed wire, holy scripture and with more scars than can be counted. On a quest of repentance, until redemption or death."
   STR_LONE_SISTER_ZWEI_EVENT: "A Lone Sister of Battle Approaches"
   STR_LONE_SISTER_ZWEI_EVENT_DESCRIPTION: "A lone Battle Sister, scarred and stoic, approaches your forces. Hefting a blade over her shoulder too big to be called a sword. Too big, too thick, too heavy, and too rough, it was more like a large hunk of iron. Bluntly, a Sister on a holy crusade."
@@ -11389,6 +11851,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SHARPSHOOTER_MALE_IGOPFOR: "Guard Sharpshooter"
 
   STR_OGRYN_IGOPFOR: "Ogryn"
+  STR_OGRYN_UC_AI: "Ogryn Fatigues"
   STR_BULLGRYN_BUCKLER_EARLY_IGOPFOR: "Buckler Bullgryn"
   STR_BULLGRYN_BUCKLER_IGOPFOR: "Buckler Bullgryn"
   STR_BULLGRYN_SLAB_IGOPFOR: "Slab Bullgryn"
@@ -11798,6 +12261,18 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_BLOODYROSESAI_CORPSE: "Bloody Rose Corpse"
 
+  STR_BRNOVICEAI_CORPSE: "Bloody Rose Cantus Corpse"
+  STR_BRREPENTIAAI_CORPSE: "Bloody Rose Repentia Corpse"
+  STR_BRADEPTASAI_CORPSE: "Bloody Rose Adeptas Corpse"
+  STR_BRHOSPITALAI_CORPSE: "Bloody Rose Hospitalier Corpse"
+  STR_BRSERAPHAI_CORPSE: "Bloody Rose Seraphim Corpse"
+  STR_BRSUPERIOAI_CORPSE: "Bloody Rose Superior Corpse"
+  STR_BRELOHIM_CORPSE: "Bloody Rose Elohim Corpse"
+  STR_BRRETRIBAI_CORPSE: "Bloody Rose Retributor Corpse"
+  STR_BRCELESTAI_CORPSE: "Bloody Rose Celestian Corpse"
+  STR_BRSACREAI_CORPSE: "Bloody Rose Sacresant Corpse"
+  STR_BRCANONAI_CORPSE: "Bloody Rose Canoness Corpse"
+
   STR_BLOODYROSE_ARMOR_CANTUS_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_BLOODYROSE_ARMOR_HOSPITALIER_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_BLOODYROSE_ARMOR_REPENTIA_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
@@ -11842,6 +12317,20 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_FIERYHEART_ARMOR_PENITENTENG: "Fiery Heart Penitent Engine Armor"
 
   STR_FIERYHEARTSAI_CORPSE: "Fiery Heart Corpse"
+
+
+  STR_FHNOVICEAI_CORPSE: "Fiery Heart Cantus Corpse"
+  STR_FHREPENTIAAI_CORPSE: "Fiery Heart Repentia Corpse"
+  STR_FHADEPTASAI_CORPSE: "Fiery Heart Adeptas Corpse"
+  STR_FHHOSPITALAI_CORPSE: "Fiery Heart Hospitalier Corpse"
+  STR_FHSERAPHAI_CORPSE: "Fiery Heart Seraphim Corpse"
+  STR_FHSUPERIOAI_CORPSE: "Fiery Heart Superior Corpse"
+  STR_FHELOHIM_CORPSE: "Fiery Heart Elohim Corpse"
+  STR_FHRETRIBAI_CORPSE: "Fiery Heart Retributor Corpse"
+  STR_FHCELESTAI_CORPSE: "Fiery Heart Celestian Corpse"
+  STR_FHSACREAI_CORPSE: "Fiery Heart Sacresant Corpse"
+  STR_FHCANONAI_CORPSE: "Fiery Heart Canoness Corpse"
+
 
   STR_FIERYHEART_ARMOR_CANTUS_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_FIERYHEART_ARMOR_HOSPITALIER_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
@@ -12111,10 +12600,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   # for chaoscult
 
   STR_GANGER_BASE: "Gangers Hideout"
+  STR_SLAANESH_CORRUPTED_GANGERS: "Slaanesh Corrupted Gangers"
+  STR_GANGER_BASE_CHAOSCORRUPTED: "Gangers Hideout"
   STR_GANGER_BASE_DESTROYED: "Gangers Hideout has been destroyed"
   STR_GANGER_BASE_KILLED: "Gangers Hideout eliminated"
   STR_GANGER_BASE_ASSAULT: "Eliminate the Gangers Hideout"
   STR_GANGER_BASE_ASSAULT_BRIEFING: "We located the hideout of a large Gangers group, the fools refused to join our Chaos Cult, now they must pay the price of their foolishness."
+  STR_GANGER_BASE_CHAOSCORRUPTED_ASSAULT_BRIEFING: "We located the hideout of a large Gangers group. These gangers seems under the strange influence of some other entity, there is no salvation for them. Move to their hideout with caution and expect heavy resistance."
   STR_GANGER_BASE_SITE: "Gangers Hideout"
   STR_GANGER_BASE_SITE_: "Gangers Hideout"
 
@@ -12338,6 +12830,54 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_SCRIPT_TARGET_IS_MARKERLIT_NOTICE: "Unit Has Been Markerlit!"
   STR_SCRIPT_TARGET_TOOK_MARKERLIGHT_DAMAGE_NOTICE: "Unit Took Bonus Damage From Markerlight!"
+
+  # Kroot AI
+  STR_GREYKROOT_HUNTERAI: "Kroot Carnivore"
+  STR_GREYKROOT_WARRIORAI: "Kroot Warrior"
+  STR_GREYKROOT_BERSERKERAI: "Kroot Berserker"
+  STR_GREYKROOT_SNIPERAI: "Kroot Sniper"
+  STR_GREYKROOT_ELITEAI: "Kroot Elite"
+  STR_GREYKROOT_LEADERAI: "Kroot Shaper"
+
+  STR_GREYKROOT_HUNTERAI_ARMOR: "Kroot Carnivore Armor"
+  STR_GREYKROOT_WARRIORAI_ARMOR: "Kroot Warrior Armor"
+  STR_GREYKROOT_BERSERKERAI_ARMOR: "Kroot Berserker Armor"
+  STR_GREYKROOT_SNIPERAI_ARMOR: "Kroot Sniper Armor"
+  STR_GREYKROOT_ELITEAI_ARMOR: "Kroot Elite Armor"
+  STR_GREYKROOT_LEADERAI_ARMOR: "Kroot Shaper Armor"
+
+  STR_GREYKROOT_HUNTERAI_CORPSE: "Kroot Carnivore Corpse"
+  STR_GREYKROOT_WARRIORAI_CORPSE: "Kroot Warrior Corpse"
+  STR_GREYKROOT_BERSERKERAI_CORPSE: "Kroot Berserker Corpse"
+  STR_GREYKROOT_SNIPERAI_CORPSE: "Kroot Sniper Corpse"
+  STR_GREYKROOT_ELITEAI_CORPSE: "Kroot Elite Corpse"
+  STR_GREYKROOT_LEADERAI_CORPSE: "Kroot Shaper Corpse"
+
+  STR_GREYKROOT_CODEX: "The Kroot (scientific name Krootis aviana referenced by the Imperium as Kroot Carnivore) are a humanoid species of xenos. They appear throughout the galaxy, but are most frequently associated with the T'au Empire. The grey variant seems to be more agile and use ranged weapons with better accuracy."
+
+  STR_GREENKROOT_HUNTERAI: "Kroot Carnivore"
+  STR_GREENKROOT_WARRIORAI: "Kroot Warrior"
+  STR_GREENKROOT_BERSERKERAI: "Kroot Berserker"
+  STR_GREENKROOT_SNIPERAI: "Kroot Sniper"
+  STR_GREENKROOT_ELITEAI: "Kroot Elite"
+  STR_GREENKROOT_LEADERAI: "Kroot Shaper"
+
+  STR_GREENKROOT_HUNTERAI_ARMOR: "Kroot Carnivore Armor"
+  STR_GREENKROOT_WARRIORAI_ARMOR: "Kroot Warrior Armor"
+  STR_GREENKROOT_BERSERKERAI_ARMOR: "Kroot Berserker Armor"
+  STR_GREENKROOT_SNIPERAI_ARMOR: "Kroot Sniper Armor"
+  STR_GREENKROOT_ELITEAI_ARMOR: "Kroot Elite Armor"
+  STR_GREENKROOT_LEADERAI_ARMOR: "Kroot Shaper Armor"
+
+  STR_GREENKROOT_HUNTERAI_CORPSE: "Kroot Carnivore Corpse"
+  STR_GREENKROOT_WARRIORAI_CORPSE: "Kroot Warrior Corpse"
+  STR_GREENKROOT_BERSERKERAI_CORPSE: "Kroot Berserker Corpse"
+  STR_GREENKROOT_SNIPERAI_CORPSE: "Kroot Sniper Corpse"
+  STR_GREENKROOT_ELITEAI_CORPSE: "Kroot Elite Corpse"
+  STR_GREENKROOT_LEADERAI_CORPSE: "Kroot Shaper Corpse"
+
+  STR_GREENKROOT_CODEX: "The Kroot (scientific name Krootis aviana referenced by the Imperium as Kroot Carnivore) are a humanoid species of xenos. They appear throughout the galaxy, but are most frequently associated with the T'au Empire. The green variant seems to be stronger and use melee weapons with better accuracy."
+
 
   # chaos cult bases loot artifact
   STR_CHAOS_ARTIFACTS: "Chaos Cult Artifacts"
@@ -13201,6 +13741,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ABSOLVE_MEDICAE_GV: "Absolve Medicae of Xenos Sin"
   STR_ABSOLVE_ADEPTAS_NOVICE_GV: "Absolve Novice of Xenos Sin"
   STR_ABSOLVE_ADEPTAS_SUPERIOR_GV: "Absolve Superior of Xenos Sin"
+  STR_TAU_PROMOTE_NOVICE_GV: "Promote Proven Novice"
   STR_TAU_PROMOTE_SUPERIOR_GV: "Promote Good Sister Superior"
   STR_TAU_PROMOTE_NOVITIATE_SUPERIOR_GV: "Promote Good Novitiate Superior"
   STR_TAU_PROMOTE_TO_CANONESS_GV: "Promote Good Sister Canoness"
@@ -14047,17 +14588,46 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CRATED_BTDROPPODS: "Drop Pods Requisition"
   STR_BTDROPPODS: "BT DROP PODS"
 
+  STR_BTSPEEDC: "BT LANDSPEEDERS"
+
+  # Black Templar Shared Vehicles
+
+  STR_BTBR_RHINO_CRAFT: "BT RHINO CONVOY"
+
+  STR_BTRAZORBACK_SPAWNER: "BT Razorback Spawner"
+  STR_BTBRRAZORBACK_WITH_SMOKE: "BT Razorback Turret"
+  BTBRRAZORBACK_ARMOR: "BT Razorback Wreck"
+
+  STR_BTBRLANDRAIDER: "BT LANDRAIDERS"
+  STR_BTBOLTERSPONS_SPAWNER1: "BT Sponson Spawner N"
+  STR_BTBOLTERSPONS_SPAWNER2: "BT Sponson Spawner S"
+  STR_BTBOLTER_SPONSON1: "BT Sponson N"
+  STR_BTBOLTER_SPONSON2: "BT Sponson N"
+  BTSPONSON_ARMOR_N: "BT Sponson Armor"
+  BTSPONSON_ARMOR_S: "BT Sponson Armor"
+  STR_BTSPONSON_HB: "BT Sponson"
+
   # Black Templar Researches
 
   STR_BLACKTEMPLAR_CARE_PACKAGE: "Black Templar Initial Requisition"
   STR_BLACKTEMPLAR_CARE_PACKAGE_DESCRIPTION: "Wargear appropriate for your chosen strategy will arrive within hours. Our Crusade is preparing with a group of Neophytes being sent as a recon squad to gather information. They will arrive in one day.{NEWLINE}{NEWLINE}While we may employ the interceptor craft of our host base, a Drop Pod have also been placed at your disposal - once the requisition order arrives, have your manufacturing servitors complete the requisition. A spare hangar is required for the delivery of the craft."
+
+  STR_BTGIVESECONDINTERCEPTOR: "Stormtalons have arrived"
 
   STR_NOT_BLACKTEMPLARS: "(Not Black Templars Strategy)"
   STR_BLACKTEMPLAR_STRATEGY: "(EARLY WIP) Black Templars Strategy"
   STR_CHOSEN_BLACKTEMPLARS: "Black Templars Selected"
 
   STR_REQIMPERIAL_SUPPORT: "Request Imperial Support"
-  STR_REQIMPERIAL_SUPPORT_CODEX: "The Black Templar Crusade is starting, but with how ruined the Administratum is on this world we sent a Priority Command to obtain more Imperial support to serve the Emperor's Will.{NEWLINE}{NEWLINE}{ALT}IMPORTANT - You can build the Commandery a new facility allowing you to access the Bloody Rose Order. This is a 4x4 facility so you may need to build a new base for it."
+  STR_REQIMPERIAL_SUPPORT_CODEX: "The Black Templar Crusade is starting, but with how ruined the Administratum is on this world we sent a Priority Command to obtain more Imperial support to serve the Emperor's Will.{NEWLINE}{NEWLINE}{ALT}IMPORTANT - You can build the Commandery facility allowing you to access the Bloody Rose Order. This is a 4x4 facility so you may need to build a new base for it. Be sure to affect some Adepts to the Commandery for they will open unique new researches."
+
+  STR_BTBR_WAAGHMORE: "Situation Report"
+  STR_BTBR_WAAGHMOREEVENT: "Situation Report"
+  STR_BTBR_WAAGHMORE_DESCRIPTION: "{NEWLINE} The planet is being overrun by a massive amount of orks of many kinds.{NEWLINE}{NEWLINE} The Black Templar Crusade has been started to fight back this WAAGH, that is the name given by the Orks themselves to the massive military campaigns they periodically unleash on the galaxy as part of their eternal desire to seek out combat and war."
+
+  STR_BTBR_WAAGHMORE2: "Situation Report Addendum"
+  STR_BTBR_WAAGHMOREEVENT2: "Situation Report Addendum"
+  STR_BTBR_WAAGHMORE2_DESCRIPTION: "{NEWLINE} Despite how monstrous and beastlike the Orks are, we must not underestimate their ability to build in short time.{NEWLINE}{NEWLINE} We are certain they already have several bases on this world. Our Crusade will not be an easy one.{NEWLINE} But have faith brothers, for the God Emperor we will prevail !"
 
 
   # Black Templar Events
@@ -14065,10 +14635,15 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CHAMPIONJOIN_EVENT: "The Emperor's Champion"
   STR_CHAMPIONJOIN_SCRIPT_DESC: "The threat is much larger than we thought, but a miracle happened, a new Emperor's Champion recieved a vision from the God Emperor and arrived to join us ! His holy duty is clear : assisting our fight is his new destiny for it is the Will of the Emperor."
 
+  STR_ORKBASEBTBR1: "Ork Outpost"
+  STR_ORKBASEBTBR2: "Ork Fortification"
+  STR_ORKBASEBTBR3: "Ork Stronghold"
+  STR_ORKBASEBTBR4: "Ork Fortress"
 
   # Black Templar Codex
 
   STR_BTARMORPEDIA: "BLACK TEMPLARS ARMORS"
+  STR_BT_STRATEGY_INFO: "{NEWLINE} The Black Templars have been on the longest Imperial Crusade the Imperium of Man has ever known to prove their loyalty to the Emperor of Mankind. {NEWLINE}{NEWLINE} They are also deeply unusual amongst the forces of the Adeptus Astartes for venerating the Emperor as a literal god, just like the mortal adherents of the Imperial Cult. {NEWLINE}{NEWLINE} The Black Templars swear an Oath to never let go of their weapons, and so use a Devotion Chain to attach it to their armor."
 
   STR_BTSCOUTARMOR_PLAYER_CODEX: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
   STR_BTMARINEARMOR_PLAYER_CODEX: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
@@ -14118,7 +14693,17 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 
   STR_BTDROPPODS_CODEX: "{NEWLINE} Drop Pods are atmospheric assault transports primarily used by the Black Templars for orbital insertion and planetary assaults. Use by non-Astartes units such as Imperial Guardsmen is not recommended."
+  STR_BTSPEEDC_CODEX: "{NEWLINE} The Land Speeder is a light anti-gravity vehicle which serves as the primary reconnaissance, scouting, resupply and fast attack vehicle of the Black Templars."
 
+  STR_BTBR_RHINO_CRAFT_CODEX: "{NEWLINE} The Rhino are armoured personnel carriers widely used by the most elite Imperial forces. Black Templars and Bloody Rose Rhino variants of the chassis takes part of this convoy in order to fight the enemies of the Imperium for the greater glory of the Emperor. The Black Templar Rhino features a top-mounted weapon system."
+  STR_BTBRLANDRAIDER_CODEX: "{NEWLINE} Coming along the Bloody Roses best ground vehicles, the Land Raider Crusader is an assault-based version of the Land Raider used by the Black Templars. It has several modifications to allow it to assist warriors assaulting out of the front hatch. It also has a much greater transport capacity due to the removal of many of the large energy generators."
+
+  ## Black Templar CODEX HINTS
+
+  STR_BLACKTEMPLAR_HELP: "Black Templars Guide"
+
+  STR_BLACKTEMPLARHINTS_CODEX_PAGE1: "{NEWLINE} Each Black Templars armor come with a weapon that is chained to it, for the Brothers have sworn an oath to never drop their weapons in battle.{NEWLINE}{NEWLINE} Most of their armors come with variants featuring different type of weapons chained to it.{NEWLINE} The Neophytes armor can equip freely what they want as they have not yet sworn the oath.{NEWLINE}{NEWLINE}>>> Continued on next page.>>>"
+  STR_BLACKTEMPLARHINTS_CODEX_PAGE2: "{NEWLINE} The player will not have to forge or purchase weapons for most of the armors but will still have to forge or purchase ammos.{NEWLINE}{NEWLINE}Each chained weapon comes with preloaded ammo, but you can unload it by simply pressing the Unload icon on the armor inventory to load another ammo.{NEWLINE} During the campaign progression the Black Templars will unlock more armor variants with stronger loadouts{NEWLINE}>>> Continued on next page.>>>"
 
   ### Black Templar Strategy End
 
@@ -14170,6 +14755,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BRCOMMAND_ADEPTAS: "Commandery"
   BLOODYORDER: "Bloody Roses Order"
 
+  STR_BR_STRATEGY_INFO: "{NEWLINE} Steel your hearts!{NEWLINE}{NEWLINE} Let the Emperor guide your arm and let faith harden your sinews.{NEWLINE} These heretics have abandoned any right to live by turning from His light.{NEWLINE}{NEWLINE} They stain His realm by their continued existence. Tear them down, in the name of Saint Mina!{NEWLINE}{NEWLINE} - Aujula Kaerton, Canoness Preceptor of the Order of the Bloody Rose"
   STR_BRCOMMAND_ADEPTAS_CODEX: "{NEWLINE} This Commandery is the base of operations of the Bloody Rose Order of the Adeptas Sororitas.{NEWLINE}{NEWLINE}{ALT}IMPORTANT to note that some Researches and Manufactures related to the Order can only be made in the Commandery so make sure to have Adepts and Servitors present."
 
 
@@ -14178,16 +14764,16 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_NOT_BLOODYROSES: "(Not Bloody Roses Strategy)"
 
   STR_RECRUITS_BLOODYROSES: "Bloody Rose Sororitas Requisition"
-  STR_RECRUITS_BLOODYROSES_DESCRIPTION: "Priority Commands have been sent, the Imperium is allowing the Bloody Rose Order to send a group of Repentias to secure the Commandery. They will arrive in one day.{NEWLINE}{NEWLINE}The Sisters of Battle will then reinforce the Black Templar Crusade."
+  STR_RECRUITS_BLOODYROSES_DESCRIPTION: "{NEWLINE} Priority Commands have been sent, the Imperium is allowing the Bloody Rose Order to send a group of Repentias to secure the Commandery. They will arrive in one day.{NEWLINE}{NEWLINE}The Sisters of Battle will then reinforce the Black Templar Crusade."
 
-  STR_BLOODYROSE_STRATEGY: "Request Commandery Support"
+  STR_BLOODYROSE_STRATEGY: "Commandery Support"
   STR_CHOSEN_BLOODYROSES: "Bloody Roses Selected"
 
   # Bloody Roses Transformations
 
   STR_BRREPENTIA_TO_BRSISTER: "Absolve Sister of Sin"
   STR_PARDON_COMMENDATION: "Absolution"
-  STR_PARDON_COMMENDATION_DESCRIPTION: "This Repentia fulfilled her Oath of Repentance and can now be absolved for her sins to join her Sisters of Battle to serve the Emperor with devotion."
+  STR_PARDON_COMMENDATION_DESCRIPTION: "{NEWLINE} This Repentia fulfilled her Oath of Repentance and can now be absolved for her sins to join her Sisters of Battle to serve the Emperor with devotion."
 
   # Bloody Roses Vehicles
   STR_CRAFTING_BRARVUS: "Arvus Requisition"
@@ -14214,4 +14800,21 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PENITENT_ARMOR_BLOODYROSE_CODEX: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL"
 
   ### Bloody Rose Strategy End
+
+  # BT BR Orks Main Base
+
+  STR_ORK_MAINBASE_DETECTED: "WAAGH MAIN BASE DETECTED"
+  STR_ORK_MAINBASE_SITE: "Orks WAAGH Base"
+  STR_ORK_MAINBASE_ASSAULT: "Assault the Waagh Base"
+  STR_MAIN_ORKSBASE_DESCRIPTION: "This is the main Orks WAAGH base. Our efforts to discover its location have proved worthy. According to our intel, if we manage to destroy it and their main Warbosses, the Waagh will be ended and the Orks survivors will run away from the sector."
+  STR_ORK_MAINBASE_ASSAULT_BRIEFING: "The source of the WAAGH , several Warbosses have been uniting their strengths and pull over the Orks. Destroy them and this base will cripple the Orks world wide and put an end to this WAAGH in this space sector."
+
+
+  STR_MAINORKSBASE_SITE: "Orks WAAGH Base"
+  STR_MAINORKSBASE_SITE_: "Orks WAAGH Base"
+
+  STR_MAINORKSBASE: "Orks Main Base"
+  STR_ORK_MAINBASER: "Orks Warboss Krew"
+
+  STR_MAINORKSBASE_WIN: "WAAGH ANNIHILATED"
 

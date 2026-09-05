@@ -32,14 +32,14 @@ soldiers:
       tu: 55
       stamina: 35
       health: 25
-      bravery: 50
+      bravery: 40
       reactions: 40
       firing: 55
       throwing: 30
       strength: 20
       psiStrength: 50
       psiSkill: 20
-      melee: 40
+      melee: 30
     maxStats:
       tu: 80
       stamina: 65
@@ -48,10 +48,10 @@ soldiers:
       reactions: 70
       firing: 75
       throwing: 60
-      strength: 30
+      strength: 35
       psiStrength: 100
       psiSkill: 20
-      melee: 50
+      melee: 60
     statCaps:
       tu: 100
       stamina: 100
@@ -103,9 +103,22 @@ soldiers:
       - Names/eldar_guardian.nam
 
   - type: STR_ELDAR_RANGER_PLAYER # Eldar Ranger
-    refNode: *ELDAR_GUARDIAN
+    requires:
+      - STR_RECRUIT_ELDAR_T1
+    flagOffset: 100
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    femaleFrequency: 50
     armor: STR_ELDAR_RANGER_ARMOR_P
-    costBuy: 0 #eldar ranger are requested via recipie
+    costBuy: 0 #eldar ranger are requested via recipe
     costSalary: 15000
     minStats:
       tu: 55
@@ -180,13 +193,14 @@ soldiers:
 
 # ELDAR.TIER2 # ASPECT WARRIORS (path of the warrior)
 
+  # this is to be used only as template for all other aspect warriors.
   - &ASPECT_WARRIOR_TEMPLATE
     type: STR_ELDAR_ASPECT_WARRIOR_PLAYER
     requires:
       - STR_ELDAR_ASPECT_RESEARCH
     flagOffset: 100
     requiresBuyBaseFunc: [ASPECT]
-    costBuy: 50000
+    costBuy: 0
     costSalary: 20000
     minStats:
       tu: 75
@@ -262,18 +276,41 @@ soldiers:
       - delete
       - Names/eldar_aspect.nam
 
+# ELDAR ASPECT WARRIOR(S)
+
   # Dire avenger .
   - type: STR_ELDAR_AVANGER_MF
     refNode: *ASPECT_WARRIOR_TEMPLATE
-    costBuy: 0
+    statCaps:
+      tu: 115
+      stamina: 110
+      health: 85
+      bravery: 105
+      reactions: 110 # +20 over other aspects
+      firing: 120
+      throwing: 80
+      strength: 70
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    rankStrings:
+      - STR_ELDAR_AVENGER_RANK_0
+      - STR_ELDAR_AVENGER_RANK_1
+      - STR_ELDAR_AVENGER_RANK_2
+      - STR_ELDAR_AVENGER_RANK_3
+      - STR_ELDAR_AVENGER_RANK_4
+      - STR_ELDAR_AVENGER_RANK_5
+    rankSprite: 4054
+    rankBattleSprite: 4054
+    rankTinySprite: 4054
     soldierNames:
       - delete
-      - Names/eldar_avanger.nam
+      - Names/eldar_avenger.nam
 
-# Male eldar upgrade paths
+
+# ELDAR SCORPION
   - type: STR_ELDAR_SCORPION_M
     refNode: *ASPECT_WARRIOR_TEMPLATE
-    costBuy: 0
     minStats:
       tu: 75
       stamina: 55
@@ -306,7 +343,7 @@ soldiers:
       reactions: 90
       firing: 120
       throwing: 80
-      strength: 70
+      strength: 75
       psiStrength: 100
       psiSkill: 100
       melee: 120
@@ -316,18 +353,38 @@ soldiers:
       health: 60
       firing: 85
       throwing: 65
-      strength: 50
+      strength: 60
       psiStrength: 100
       psiSkill: 100
-      melee: 85
+      melee: 100
     dogfightExperience:
       bravery: 10
       reactions: 30
       firing: 25
     armor: STR_ELDAR_ARMOR5_P
+    rankStrings:
+      - STR_ELDAR_SCORPION_RANK_0
+      - STR_ELDAR_SCORPION_RANK_1
+      - STR_ELDAR_SCORPION_RANK_2
+      - STR_ELDAR_SCORPION_RANK_3
+      - STR_ELDAR_SCORPION_RANK_4
+      - STR_ELDAR_SCORPION_RANK_5
+    rankSprite: 4066
+    rankBattleSprite: 4066
+    rankTinySprite: 4066
     soldierNames:
       - delete
       - Names/eldar_scorpion.nam
+
+  # Banshee
+
+  - type: STR_ELDAR_BANSHEE_F
+    refNode: *ASPECT_WARRIOR_TEMPLATE
+    costBuy: 0
+    armor: STR_ELDAR_ARMOR2_P
+    soldierNames:
+      - delete
+      - Names/eldar_banshee.nam
 
   - type: STR_ELDAR_REAPER_M
     refNode: *ASPECT_WARRIOR_TEMPLATE
@@ -419,7 +476,7 @@ soldiers:
     maxStats:
       tu: 90
       stamina: 75
-      health: 70 #+15
+      health: 80 #+15
       bravery: 95 #+15
       reactions: 90 #+10
       firing: 85
@@ -443,7 +500,7 @@ soldiers:
     trainingStatCaps:
       tu: 90
       stamina: 80
-      health: 60
+      health: 70
       firing: 85
       throwing: 65
       strength: 50
@@ -526,12 +583,12 @@ soldiers:
       firing: 25
     armor: STR_ELDAR_SPIDER_ARMOR_P
     rankStrings:
-      - STR_ELDAR_ASPECT_WARRIOR_RANK_0
-      - STR_ELDAR_ASPECT_WARRIOR_RANK_1
-      - STR_ELDAR_ASPECT_WARRIOR_RANK_2
-      - STR_ELDAR_ASPECT_WARRIOR_RANK_3
-      - STR_ELDAR_ASPECT_WARRIOR_RANK_4
-      - STR_ELDAR_ASPECT_WARRIOR_RANK_5
+      - STR_ELDAR_SPIDER_RANK_0
+      - STR_ELDAR_SPIDER_RANK_1
+      - STR_ELDAR_SPIDER_RANK_2
+      - STR_ELDAR_SPIDER_RANK_3
+      - STR_ELDAR_SPIDER_RANK_4
+      - STR_ELDAR_SPIDER_RANK_5
     rankSprite: 4030
     rankBattleSprite: 4030
     rankTinySprite: 4030
@@ -542,19 +599,18 @@ soldiers:
 # ELDAR.TIER3 # EXARCH / AUTARCH
 
   - &EXARCH_TEMPLATE
-    type: STR_ELDAR_AUTARCH_PLAYER
+    type: STR_ELDAR_AVENGEREX_P
     flagOffset: 100
-    #requiresBuyBaseFunc: [ELDAROUT]
-    costSalary: 30000
-    minStats:
+    costSalary: 25000
+    minStats: #higher min stats with changes relevant to the role
       tu: 90
       stamina: 80
-      health: 75
-      bravery: 80
-      reactions: 80
+      health: 85
+      bravery: 90
+      reactions: 90
       firing: 85
       throwing: 65
-      strength: 65
+      strength: 70
       psiStrength: 100
       psiSkill: 40
       melee: 70
@@ -570,18 +626,142 @@ soldiers:
       psiStrength: 100
       psiSkill: 100
       melee: 95
+    statCaps: # higher stat caps based on exarch type
+      tu: 140
+      stamina: 135
+      health: 115
+      bravery: 120
+      reactions: 160 # Avenger primary stat ~ +20 over other aspect types
+      firing: 140
+      throwing: 100
+      strength: 110
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_ELDAR_AVENGEREX_ARMOR_P
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    rankStrings:
+      - STR_ELDAR_AVENGEREX_RANK_0
+      - STR_ELDAR_AVENGEREX_RANK_1
+      - STR_ELDAR_AVENGEREX_RANK_2
+      - STR_ELDAR_AVENGEREX_RANK_3
+      - STR_ELDAR_AVENGEREX_RANK_4
+      - STR_ELDAR_AVENGEREX_RANK_5
+    rankSprite: 4060
+    rankBattleSprite: 4060
+    rankTinySprite: 4060
+    soldierNames:
+      - delete
+      - Names/eldar_avenger.nam
+
+  - type: STR_ELDAR_SCORPIONEX_P # Main stat Strength. Important stats: Melee, Health, Stamina
+    refNode: *EXARCH_TEMPLATE
+    flagOffset: 100
+    costSalary: 25000
+    minStats: #higher min stats with changes relevant to the role
+      tu: 90
+      stamina: 80
+      health: 85
+      bravery: 90
+      reactions: 80
+      firing: 85
+      throwing: 65
+      strength: 70
+      psiStrength: 100
+      psiSkill: 40
+      melee: 70
+    maxStats:
+      tu: 100
+      stamina: 95
+      health: 95
+      bravery: 95
+      reactions: 100
+      firing: 100
+      throwing: 75
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 95
+    statCaps: # higher stat caps based on exarch type
+      tu: 140
+      stamina: 135
+      health: 115
+      bravery: 120
+      reactions: 140
+      firing: 140
+      throwing: 100
+      strength: 110
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_ELDAR_SCORPIONEX_ARMOR_P
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    rankStrings:
+      - STR_ELDAR_SCORPIONEX_RANK_0
+      - STR_ELDAR_SCORPIONEX_RANK_1
+      - STR_ELDAR_SCORPIONEX_RANK_2
+      - STR_ELDAR_SCORPIONEX_RANK_3
+      - STR_ELDAR_SCORPIONEX_RANK_4
+      - STR_ELDAR_SCORPIONEX_RANK_5
+    rankSprite: 4072
+    rankBattleSprite: 4072
+    rankTinySprite: 4072
+    soldierNames:
+      - delete
+      - Names/eldar_scorpion.nam
+
+  - type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
+    # requires:
+    #   - STR_ELDAR_PATH
+    #   - STR_HIGHTIER_PREREQ
+    flagOffset: 100
+    costSalary: 30000
+    minStats:
+      tu: 90
+      stamina: 80
+      health: 75
+      bravery: 80
+      reactions: 80
+      firing: 85
+      throwing: 65
+      strength: 65
+      psiStrength: 100
+      psiSkill: 55
+      melee: 70
+    maxStats:
+      tu: 100
+      stamina: 95
+      health: 95
+      bravery: 95
+      reactions: 100
+      firing: 100
+      throwing: 75
+      strength: 80
+      psiStrength: 100
+      psiSkill: 30
+      melee: 95
     statCaps: # very high stat caps for autarch
-      tu: 160
-      stamina: 150
+      tu: 120
+      stamina: 115
       health: 125
       bravery: 125
       reactions: 150
-      firing: 160
+      firing: 140
       throwing: 120
       strength: 110
-      psiStrength: 100
-      psiSkill: 40
-      melee: 150
+      psiStrength: 160
+      psiSkill: 160
+      melee: 140
     trainingStatCaps:
       tu: 100
       stamina: 95
@@ -605,22 +785,22 @@ soldiers:
     avatarOffsetX: 66
     avatarOffsetY: 30
     #femaleFrequency: 50
-    armor: STR_ELDAR_ARMOR4_P # TEMPORARY ARMOR. base armor will be dire avenger exarch
+    armor: STR_ELDAR_ARMOR2_P # TEMPORARY ARMOR. base armor will be banshee or seer exarch
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
     rankStrings: # todo, give proper rank strings
-      - STR_ELDAR_AUTARCH_RANK_0
-      - STR_ELDAR_AUTARCH_RANK_1
-      - STR_ELDAR_AUTARCH_RANK_2
-      - STR_ELDAR_AUTARCH_RANK_3
-      - STR_ELDAR_AUTARCH_RANK_4
-      - STR_ELDAR_AUTARCH_RANK_5
+      - STR_ELDAR_BANSHEE_RANK_0
+      - STR_ELDAR_BANSHEE_RANK_1
+      - STR_ELDAR_BANSHEE_RANK_2
+      - STR_ELDAR_BANSHEE_RANK_3
+      - STR_ELDAR_BANSHEE_RANK_4
+      - STR_ELDAR_BANSHEE_RANK_5
     rankSprite: {mod: 40k, index: 966}
     rankBattleSprite: {mod: 40k, index: 302}
     rankTinySprite: {mod: 40k, index: 217}
     soldierNames:
       - delete
-      - Names/eldar_avanger.nam
+      - Names/eldar_banshee.nam
 
   - type: STR_ELDAR_REAPER_EXARCH_M
     refNode: *EXARCH_TEMPLATE
@@ -714,16 +894,144 @@ soldiers:
       - delete
       - Names/eldar_dragon.nam
 
+  - type: STR_ELDAR_SPIDEREX_PLAYER # Stats from dragon exarch FIX
+    refNode: *EXARCH_TEMPLATE
+    flagOffset: 100
+    costSalary: 25000
+    minStats: #higher min stats with changes relevant to the role
+      tu: 90
+      stamina: 80
+      health: 85
+      bravery: 90
+      reactions: 90
+      firing: 85
+      throwing: 65
+      strength: 70
+      psiStrength: 100
+      psiSkill: 40
+      melee: 70
+    statCaps: # lower stat caps based on exarch type
+      tu: 140
+      stamina: 135
+      health: 115
+      bravery: 160
+      reactions: 140
+      firing: 120
+      throwing: 100
+      strength: 110
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_ELDAR_SPIDEREXDS_ARMOR_P
+    allowPiloting: true
+    allowPromotion: true
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    rankStrings:
+      - STR_ELDAR_SPIDEREX_RANK_0
+      - STR_ELDAR_SPIDEREX_RANK_1
+      - STR_ELDAR_SPIDEREX_RANK_2
+      - STR_ELDAR_SPIDEREX_RANK_3
+      - STR_ELDAR_SPIDEREX_RANK_4
+      - STR_ELDAR_SPIDEREX_RANK_5
+    rankSprite: 4036
+    rankBattleSprite: 4036
+    rankTinySprite: 4036
+    soldierNames:
+      - delete
+      - Names/eldar_spider.nam
+
+  - type: STR_ELDAR_AUTARCH_PLAYER # Statcaps will be overall larger than exarchs, Commander character
+    refNode: *EXARCH_TEMPLATE
+    flagOffset: 100
+    #requiresBuyBaseFunc: [ELDAROUT]
+    costSalary: 30000
+    minStats:
+      tu: 90
+      stamina: 80
+      health: 75
+      bravery: 80
+      reactions: 80
+      firing: 85
+      throwing: 65
+      strength: 65
+      psiStrength: 100
+      psiSkill: 40
+      melee: 70
+    maxStats:
+      tu: 100
+      stamina: 95
+      health: 95
+      bravery: 95
+      reactions: 100
+      firing: 100
+      throwing: 75
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 95
+    statCaps: # very high stat caps for autarch
+      tu: 160
+      stamina: 150
+      health: 125
+      bravery: 125
+      reactions: 150
+      firing: 160
+      throwing: 120
+      strength: 110
+      psiStrength: 100
+      psiSkill: 40
+      melee: 150
+    trainingStatCaps:
+      tu: 100
+      stamina: 95
+      health: 95
+      bravery: 95
+      reactions: 100
+      firing: 100
+      throwing: 75
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 95
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    allowPromotion: true
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 66
+    avatarOffsetY: 30
+    #femaleFrequency: 50
+    armor: STR_ELDAR_ARMOR4_P # TEMPORARY ARMOR. base armor will be dire avenger exarch
+    deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
+    rankStrings: # todo, give proper rank strings
+      - STR_ELDAR_AUTARCH_RANK_0
+      - STR_ELDAR_AUTARCH_RANK_1
+      - STR_ELDAR_AUTARCH_RANK_2
+      - STR_ELDAR_AUTARCH_RANK_3
+      - STR_ELDAR_AUTARCH_RANK_4
+      - STR_ELDAR_AUTARCH_RANK_5
+    rankSprite: {mod: 40k, index: 966}
+    rankBattleSprite: {mod: 40k, index: 302}
+    rankTinySprite: {mod: 40k, index: 217}
+    soldierNames:
+      - delete
+      - Names/eldar_avenger.nam
+
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
 
-  - &PSYKER_TEMPLATE
+  - &PSYKER_TEMPLATE # TEMPLATE ONLY
     type: STR_ELDAR_PSYKER_PLAYER
     requires:
       - STR_ELDAR_PSYKER_RESEARCH
     flagOffset: 100
     requiresBuyBaseFunc: [PSI]
-    costBuy: 60000
-    costSalary: 25000
+    costBuy: 30000
+    costSalary: 15000
     minStats:
       tu: 65
       stamina: 55
@@ -776,128 +1084,37 @@ soldiers:
       firing: 25
     allowPiloting: true
     allowPromotion: true
-    armor: STR_ELDAR_ARMOR3_P
+    armor: STR_ELDAR_SEER_ARMOR_P
     standHeight: 22
     kneelHeight: 14
     avatarOffsetX: 66
-    avatarOffsetY: 42
+    avatarOffsetY: 30
     femaleFrequency: 50
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
     rankStrings:
-      - STR_SEER_RANK_0
-      - STR_SEER_RANK_1
-      - STR_SEER_RANK_2
-      - STR_SEER_RANK_3
-      - STR_SEER_RANK_4
-      - STR_SEER_RANK_5
-    rankSprite: {mod: 40k, index: 960}
-    rankBattleSprite: {mod: 40k, index: 296}
-    rankTinySprite: {mod: 40k, index: 211}
+      - STR_ELDAR_SEER_RANK_0
+      - STR_ELDAR_SEER_RANK_1
+      - STR_ELDAR_SEER_RANK_2
+      - STR_ELDAR_SEER_RANK_3
+      - STR_ELDAR_SEER_RANK_4
+      - STR_ELDAR_SEER_RANK_5
+    rankSprite: 4042
+    rankBattleSprite: 4042
+    rankTinySprite: 4042
     soldierNames:
       - delete
       - Names/eldar_seer.nam
 
-  - type: STR_ELDAR_BANSHEE_F
-    refNode: *PSYKER_TEMPLATE
-    costBuy: 0
-    armor: STR_ELDAR_ARMOR2_P
-    soldierNames:
-      - delete
-      - Names/eldar_banshee.nam
-
   - type: STR_ELDAR_SEER_F
     refNode: *PSYKER_TEMPLATE
     costBuy: 0
-    armor: STR_ELDAR_ARMOR3_P
+    armor: STR_ELDAR_SEER_ARMOR_P
     soldierNames:
       - delete
       - Names/eldar_seer.nam
 
 # ELDAR.TIER3_PSY # PSY WARRIORS (Mastery of psychic power)
-
-  - &EXARCH_PSY_TEMPLATE
-    type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
-    # requires:
-    #   - STR_ELDAR_PATH
-    #   - STR_HIGHTIER_PREREQ
-    flagOffset: 100
-    costSalary: 30000
-    minStats:
-      tu: 90
-      stamina: 80
-      health: 75
-      bravery: 80
-      reactions: 80
-      firing: 85
-      throwing: 65
-      strength: 65
-      psiStrength: 100
-      psiSkill: 55
-      melee: 70
-    maxStats:
-      tu: 100
-      stamina: 95
-      health: 95
-      bravery: 95
-      reactions: 100
-      firing: 100
-      throwing: 75
-      strength: 80
-      psiStrength: 100
-      psiSkill: 30
-      melee: 95
-    statCaps: # very high stat caps for autarch
-      tu: 120
-      stamina: 115
-      health: 125
-      bravery: 125
-      reactions: 150
-      firing: 140
-      throwing: 120
-      strength: 110
-      psiStrength: 160
-      psiSkill: 160
-      melee: 140
-    trainingStatCaps:
-      tu: 100
-      stamina: 95
-      health: 95
-      bravery: 95
-      reactions: 100
-      firing: 100
-      throwing: 75
-      strength: 80
-      psiStrength: 100
-      psiSkill: 100
-      melee: 95
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
-    allowPiloting: true
-    allowPromotion: true
-    standHeight: 22
-    kneelHeight: 14
-    avatarOffsetX: 66
-    avatarOffsetY: 30
-    #femaleFrequency: 50
-    armor: STR_ELDAR_ARMOR2_P # TEMPORARY ARMOR. base armor will be banshee or seer exarch
-    deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
-    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
-    rankStrings: # todo, give proper rank strings
-      - STR_ELDAR_BANSHEE_RANK_0
-      - STR_ELDAR_BANSHEE_RANK_1
-      - STR_ELDAR_BANSHEE_RANK_2
-      - STR_ELDAR_BANSHEE_RANK_3
-      - STR_ELDAR_BANSHEE_RANK_4
-      - STR_ELDAR_BANSHEE_RANK_5
-    rankSprite: {mod: 40k, index: 966}
-    rankBattleSprite: {mod: 40k, index: 302}
-    rankTinySprite: {mod: 40k, index: 217}
-    soldierNames:
-      - delete
-      - Names/eldar_banshee.nam
 
 #  - type: STR_ELDAR_SEER_EXARCH_PLAYER # farseer
 
@@ -905,11 +1122,12 @@ soldiers:
 
 # ELDAR.TIER3_MIXED # Path of the warlock
   - type: STR_ELDAR_WARLOCK_PLAYER
-    # requires:
-    #   - STR_ELDAR_PATH
-    #   - STR_HIGHTIER_PREREQ
+    requires:
+      - STR_ELDAR_PATH
+      - STR_HIGHTIER_PREREQ
     flagOffset: 100
-    #requiresBuyBaseFunc: [ELDAROUT]
+    requiresBuyBaseFunc: [ELDAROUT]
+    costBuy: 60000
     costSalary: 30000
     minStats:
       tu: 90
@@ -970,22 +1188,22 @@ soldiers:
     avatarOffsetX: 66
     avatarOffsetY: 30
     #femaleFrequency: 50
-    armor: STR_ELDAR_ARMOR3_P # TEMPORARY ARMOR. base armor will be banshee or seer exarch
+    armor: STR_ELDAR_WARLOCK_ARMOR_P
     deathMale: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
-    rankStrings: # todo, give proper rank strings. these are borrowed from seer
+    rankStrings:
       - STR_ELDAR_WARLOCK_RANK_0
       - STR_ELDAR_WARLOCK_RANK_1
       - STR_ELDAR_WARLOCK_RANK_2
       - STR_ELDAR_WARLOCK_RANK_3
       - STR_ELDAR_WARLOCK_RANK_4
       - STR_ELDAR_WARLOCK_RANK_5
-    rankSprite: {mod: 40k, index: 966}
-    rankBattleSprite: {mod: 40k, index: 302}
-    rankTinySprite: {mod: 40k, index: 217}
+    rankSprite: 4048
+    rankBattleSprite: 4048
+    rankTinySprite: 4048
     soldierNames:
       - delete
-      - Names/eldar_avanger.nam
+      - Names/eldar_warlock.nam
 
 # ELDAR.WRAITHGUARD # special units (example: avatar of khaine)
 

@@ -1,0 +1,172 @@
+
+units:
+
+  - &STR_DAEMON_PORTAL_TEMPLATE
+    type: STR_DAEMON_PORTAL
+    stats:
+      tu: 100
+      stamina: 0
+      health: 100
+      bravery: 150
+      reactions: 40 #for Dark Sermon
+      firing: 0
+      throwing: 0
+      strength: 0
+      psiStrength: 100 #can attempt to mind control when it doesn't spawn a demon or blaspheme Event Horizon style
+      psiSkill: 100
+      melee: 0
+    armor: STR_DAEMON_PORTAL_ARMOR
+    canPanic: false
+    avoidsFire: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 0  #it's a portal
+    value: 0 #it's a portal
+    standHeight: 21
+    kneelHeight: 21
+    deathSound: {mod: 40k, index: 737}
+    intelligence: 0
+    aggression: 0
+    energyRecovery: 0
+    spotter: 1
+    moveSound: -1
+    capturable: false
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL
+      - - STR_DARK_SERMON_PORTAL
+      - - STR_DARK_SERMON_PORTAL
+
+  - &STR_DAEMON_PORTAL_LESSER_TEMPLATE
+    type: STR_DAEMON_PORTAL_LESSER
+    armor: STR_DAEMON_PORTAL_ARMOR_LESSER
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats:
+      tu: 100
+      stamina: 0
+      health: 100
+      bravery: 130
+      reactions: 30 #for Dark Sermon
+      firing: 0
+      throwing: 0
+      strength: 0
+      psiStrength: 100 #can attempt to mind control when it doesn't spawn a demon or blaspheme Event Horizon style
+      psiSkill: 80
+      melee: 0
+
+  - &STR_DAEMON_PORTAL_MINOR_TEMPLATE
+    type: STR_DAEMON_PORTAL_MINOR
+    armor: STR_DAEMON_PORTAL_ARMOR_MINOR
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    stats:
+      tu: 100
+      stamina: 0
+      health: 100
+      bravery: 110
+      reactions: 20 #for Dark Sermon
+      firing: 0
+      throwing: 0
+      strength: 0
+      psiStrength: 100 #can attempt to mind control when it doesn't spawn a demon or blaspheme Event Horizon style
+      psiSkill: 60
+      melee: 0
+
+# Tzeentch portals
+  - type: STR_DAEMON_PORTAL_TZEENTCH
+    armor: STR_DAEMON_PORTAL_ARMOR_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+
+  - type: STR_DAEMON_PORTAL_TZEENTCH_LESSER
+    armor: STR_DAEMON_PORTAL_ARMOR_LESSER_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_LESSER_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+
+  - type: STR_DAEMON_PORTAL_TZEENTCH_MINOR
+    armor: STR_DAEMON_PORTAL_ARMOR_MINOR_TZEENTCH
+    refNode: *STR_DAEMON_PORTAL_MINOR_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+      - - STR_DARK_SERMON_PORTAL_TZEENTCH
+
+# Nurgle portals
+  - type: STR_DAEMON_PORTAL_NURGLE
+    armor: STR_DAEMON_PORTAL_ARMOR_NURGLE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+
+  - type: STR_DAEMON_PORTAL_NURGLE_LESSER
+    armor: STR_DAEMON_PORTAL_ARMOR_LESSER_NURGLE
+    refNode: *STR_DAEMON_PORTAL_LESSER_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+
+  - type: STR_DAEMON_PORTAL_NURGLE_MINOR
+    armor: STR_DAEMON_PORTAL_ARMOR_MINOR_NURGLE
+    refNode: *STR_DAEMON_PORTAL_MINOR_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+      - - STR_DARK_SERMON_PORTAL_NURGLE
+
+# Slaanesh portals
+  - type: STR_DAEMON_PORTAL_SLAANESH
+    armor: STR_DAEMON_PORTAL_ARMOR_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+
+  - type: STR_DAEMON_PORTAL_SLAANESH_LESSER
+    armor: STR_DAEMON_PORTAL_ARMOR_LESSER_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_LESSER_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+
+  - type: STR_DAEMON_PORTAL_SLAANESH_MINOR
+    armor: STR_DAEMON_PORTAL_ARMOR_MINOR_SLAANESH
+    refNode: *STR_DAEMON_PORTAL_MINOR_TEMPLATE
+    builtInWeaponSets:
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+      - - STR_DARK_SERMON_PORTAL_SLAANESH
+
+# Khorne portals
+  - type: STR_DAEMON_PORTAL_KHORNE
+    armor: STR_DAEMON_PORTAL_ARMOR_KHORNE
+    refNode: *STR_DAEMON_PORTAL_TEMPLATE
+    builtInWeaponSets: #khorne portals intimidate instead of corrupting
+      - - STR_INTIMIDATION_WEAPON
+      - - STR_INTIMIDATION_WEAPON
+      - - STR_INTIMIDATION_WEAPON
+
+  - type: STR_DAEMON_PORTAL_KHORNE_LESSER
+    armor: STR_DAEMON_PORTAL_ARMOR_LESSER_KHORNE
+    refNode: *STR_DAEMON_PORTAL_LESSER_TEMPLATE
+    builtInWeaponSets:
+      - - STR_INTIMIDATION_WEAPON
+      - - STR_INTIMIDATION_WEAPON
+      - - STR_INTIMIDATION_WEAPON
+
+  - type: STR_DAEMON_PORTAL_KHORNE_MINOR
+    armor: STR_DAEMON_PORTAL_ARMOR_MINOR_KHORNE
+    refNode: *STR_DAEMON_PORTAL_MINOR_TEMPLATE
+    builtInWeaponSets:
+      - - STR_INTIMIDATION_WEAPON
+      - - STR_INTIMIDATION_WEAPON
+      - - STR_INTIMIDATION_WEAPON
+
+  # dungeon specific end

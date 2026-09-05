@@ -846,6 +846,9 @@
             - [6, 6, 1]
         fuseTimers:
           STR_TARANTULAGK_SPAWNER: [0, 0]
+      - name: XBASE_78
+        width: 40
+        length: 40
 
   - name: XBASE_FILL # copied from 40k to add Ork map blocks to it.
     mapDataSets:
@@ -4516,13 +4519,13 @@
     ambience: {mod: 40k, index: 897}
     ambientVolume: 1.20
 
-  - name: FINALGUARD_SL  # part 2
+  - name: FINALGUARD_SL  # part 1
     mapDataSets:
       - BLANKS
       - BATTLE
       - OUTPOSTCHAOS
       - CHAOSFORT
-      - LEMON
+      - LEMONSL
       - CHAOSROOF
       - SUPORTPIECES
       - DEBRIS
@@ -4619,10 +4622,10 @@
             - [35, 35, 0]
             - [46, 14, 0]
             - [45, 16, 0]
-          STR_LEMONRUSS_SPAWNER_FINAL:
+          STR_LEMONSLRUSS_SPAWNER_FINAL:
             - [62, 31, 2]
             - [60, 6, 2]
-          STR_LEMONRUSS_SPONSON_SPAWNER_FINAL:
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL:
             - [60, 31, 1]
             - [65, 31, 1]
             - [58, 6, 1]
@@ -4675,8 +4678,8 @@
             - [46, 21, 0]
             - [36, 18, 0]
         fuseTimers:
-          STR_LEMONRUSS_SPAWNER_FINAL: [0, 0]
-          STR_LEMONRUSS_SPONSON_SPAWNER_FINAL: [0, 0]
+          STR_LEMONSLRUSS_SPAWNER_FINAL: [0, 0]
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL: [0, 0]
           STR_GATEDOWN_SPAWNER: [0, 0]
           STR_GATEUP_SPAWNER: [0, 0]
           STR_TURRET1_SPAWNER: [0, 0]
@@ -4713,7 +4716,7 @@
       - CHAOSFORT
       - CHAOSROOF
       - CHAOSPIECES
-      - LEMON
+      - LEMONSL
     mapBlocks:
       - name: MARS00
         width: 10
@@ -4950,8 +4953,11 @@
         width: 20
         length: 20
         items:
-          STR_LEMONRUSS_SPAWNER:
+          STR_LEMONSLRUSS_SPAWNER_FINAL:
             - [4, 11, 1]
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL:
+            - [2, 11, 0]
+            - [7, 11, 0]
           STR_ORK3_SPAWNER:
             - [11, 3, 2]
             - [17, 6, 0]
@@ -4968,7 +4974,8 @@
           STR_KILLA_SPAWNER:
             - [15, 16, 0]
         fuseTimers:
-          STR_LEMONRUSS_SPAWNER: [0, 0]
+          STR_LEMONSLRUSS_SPAWNER_FINAL: [0, 0]
+          STR_LEMONSLRUSS_SPONSON_SPAWNER_FINAL: [0, 0]
           STR_KILLA_SPAWNER: [0, 0]
           STR_ORK1_SPAWNER: [0, 0]
           STR_ORK2_SPAWNER: [0, 0]
@@ -11692,7 +11699,7 @@
         width: 10
         length: 10
         groups: 2
-        craftInventoryTile: [1, 6, 1]
+        craftInventoryTile: [2, 6, 1]
       - name: LV2MISSXBASE_01
         width: 10
         length: 10
@@ -15576,3 +15583,206 @@
           STR_GORGON_HEAVY_FLAMER_BACK_RIGHT_SPAWNER: [0, 0]
           STR_GORGON_HEAVY_STUBBER_LEFT_SPAWNER: [0, 0]
           STR_GORGON_HEAVY_STUBBER_RIGHT_SPAWNER: [0, 0]
+
+  # BR arvus to add to commandery  XBASE_78 mapblock as vertical level
+
+  - name: BRAVUS4X4
+    mapDataSets:
+      - BLANKS
+      - BRARVUS
+      - BRARVUS_DOORS
+      - BRARVUSLIFT
+    mapBlocks:
+      - name: BRAVUS4X4
+        width: 40
+        length: 40
+
+# to have some muddy floor in the bottom of the commandery
+
+  - name: COMMANDSOIL
+    mapDataSets:
+      - BLANKS
+      - MOUNTMUD
+    mapBlocks:
+      - name: COMMANDSOIL
+        width: 40
+        length: 40
+
+  - name: ORK_BASE_MAIN  # BT BR ORKS WAAGH BASE
+    mapDataSets:
+      - BLANKS
+      - BATTLE
+      - DEBRIS
+      - ORK
+      - ORK2
+    mapBlocks:
+      # *** Groups ***
+      # 0-4: Reserved
+      # 5: Tier 1
+      # 6: Tier 2
+      # 7: Tier 3
+      # 8: Tier 4 (Tier 5 is this + airstrip)
+      # 9: 2x2 Airstrips
+      # 10: Blank LZ for placing first of the "UFOs"
+      # 11: Blank LZ for placing second of the "UFOs"
+      - name: WAR_ORK00  #0
+        width: 10
+        length: 10
+        groups: 2
+      - name: WAR_ORK01
+        width: 10
+        length: 10
+        groups: 3
+      - name: WAR_ORK02
+        width: 10
+        length: 10
+        groups: 4
+      - name: WAR_ORK03
+        width: 10
+        length: 10
+        groups: [0, 1]
+      - name: WAR_ORK04
+        width: 10
+        length: 10
+        groups: [0, 1]
+      - name: WAR_ORK05
+        width: 20
+        length: 20
+      - name: WAR_ORK06
+        width: 20
+        length: 20
+      - name: WAR_ORK07
+        width: 20
+        length: 20
+      - name: WAR_ORK08
+        width: 20
+        length: 20
+      - name: WAR_ORK09
+        width: 20
+        length: 20
+      - name: WAR_ORK10 #  Tier 1+4
+        width: 20
+        length: 20
+        groups: [5, 9]
+      - name: WAR_ORK11
+        width: 20
+        length: 20
+        groups: 9
+      - name: WAR_ORK12
+        width: 20
+        length: 20
+        groups: 9
+      - name: WAR_ORK13 #  Tier 1
+        width: 20
+        length: 20
+        groups: 5
+        items:
+          STR_KILLA_SPAWNER:
+            - [13, 5, 1]
+        fuseTimers:
+          STR_KILLA_SPAWNER: [0, 0]
+      - name: WAR_ORK14
+        width: 10
+        length: 10
+      - name: WAR_ORK15
+        width: 10
+        length: 10
+      - name: WAR_ORK16
+        width: 10
+        length: 10
+      - name: WAR_ORK17
+        width: 10
+        length: 10
+      - name: WAR_ORK18
+        width: 10
+        length: 10
+      - name: WAR_ORK19 #  Tier 2
+        width: 30
+        length: 30
+        groups: 6
+        items:
+          STR_KILLA_SPAWNER:
+            - [19, 13, 1]
+        fuseTimers:
+          STR_KILLA_SPAWNER: [0, 0]
+      - name: WAR_ORK20 #  Tier 3
+        width: 30
+        length: 30
+        items:
+          STR_TURRET2_SPAWNER:
+            - [21, 9, 3]
+          STR_KILLA_SPAWNER:
+            - [2, 13, 1]
+            - [25, 12, 1]
+        fuseTimers:
+          STR_TURRET2_SPAWNER: [0, 0]
+          STR_KILLA_SPAWNER: [0, 0]
+        groups: 7
+      - name: WAR_ORK21  #  Tier 4
+        width: 30
+        length: 30
+        groups: 8
+        items:
+          STR_KILLA_SPAWNER:
+            - [19, 13, 1]
+            - [19, 13, 1]
+        fuseTimers:
+          STR_KILLA_SPAWNER: [0, 0]
+      - name: WAR_ORK22BOMB   #22
+        width: 10
+        length: 10
+        items:
+          STR_BOMBARDMENT:
+            - [4, 4, 1]
+        fuseTimers:
+          STR_BOMBARDMENT: [-2, -2]
+      - name: WAR_ORK_BLANKLZ
+        width: 10
+        length: 10
+        height: 1
+        groups: 10
+      - name: WAR_ORK_BLANKLZ
+        width: 10
+        length: 10
+        height: 1
+        groups: 11
+
+      - name: WAR_ORK25
+        width: 30
+        length: 30
+        groups: 6
+        items:
+          STR_KILLA_SPAWNER:
+            - [19, 13, 1]
+        fuseTimers:
+          STR_KILLA_SPAWNER: [0, 0]
+
+      - name: WAR_ORK26
+        width: 30
+        length: 30
+        groups: 6
+        items:
+          STR_KILLA_SPAWNER:
+            - [19, 13, 1]
+        fuseTimers:
+          STR_KILLA_SPAWNER: [0, 0]
+
+      - name: WAR_ORK27
+        width: 30
+        length: 30
+        groups: 6
+        items:
+          STR_KILLA_SPAWNER:
+            - [19, 13, 1]
+        fuseTimers:
+          STR_KILLA_SPAWNER: [0, 0]
+
+      - name: WAR_ORK28
+        width: 30
+        length: 30
+        groups: 6
+        items:
+          STR_KILLA_SPAWNER:
+            - [19, 13, 1]
+        fuseTimers:
+          STR_KILLA_SPAWNER: [0, 0]

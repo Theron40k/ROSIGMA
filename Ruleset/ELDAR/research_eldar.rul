@@ -52,6 +52,7 @@ research:
       # TEMP ADDITIONS for future campaign splitting
       - STR_ELDAR_ASURYANI_CAMPAING # TEMPORARY addition until there are multiple eldar campaigns
       #- STR_CHOSEN_ELDAR_STRATEGY
+      - STR_FUSION_TECH_RESEARCH # Eldar Meltagun equivalent
     disables:
       - STR_NOT_ELDAR_STRATEGY
       - STR_GENESTEALERS_ACTIVE
@@ -118,7 +119,7 @@ research:
       - STR_GENERALLOCK
 
   - name: STR_RECRUIT_ELDAR_OUTCAST # recruit eldar outcast
-    cost: 5
+    cost: 100
     points: 0
     dependencies:
       - STR_ELDAR_STRATEGY
@@ -135,15 +136,18 @@ research:
 # TIER 2
   - name: STR_ELDAR_ASURYANI_CAMPAING_T2
     points: 0
-    cost: 5
+    cost: 200
     dependencies:
       - STR_ELDAR_ASURYANI_CAMPAING
-      # TODO: add prerequisite to go T2
+      #- STR_MELTAGUN_TECH
+      - STR_FUSION_TECH_RESEARCH
+      - STR_ALIEN_ALLOYS
+      - STR_MOTION_SCANNER
     unlocks:
       - STR_MIDTIER_PREREQ
 
   - name: STR_ELDAR_ASPECT_RESEARCH  # Aspect Warrior Promotions
-    cost: 1000
+    cost: 100
     dependencies:
       - STR_RECRUIT_ELDAR_T1
       - STR_MIDTIER_PREREQ
@@ -154,42 +158,55 @@ research:
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
 
+  - name: STR_FORGE_DIRESWORD_VESSEL_RESEARCH
+    cost: 150
+    points: 0
+    dependencies:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH # More researches necessary
+
   - name: STR_ELDAR_SCORPION_RESEARCH
-    cost: 0
+    cost: 150
     points: 0
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
 
   - name: STR_ELDAR_REAPER_RESEARCH
-    cost: 0
+    cost: 200
     points: 0
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
 
   - name: STR_ELDAR_FIREDRAGON_RESEARCH
-    cost: 0
+    cost: 200
     points: 0
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
 
-  - name: STR_FUSION_TECH_RESEARCH
-    cost: 10
+  - name: STR_ELDAR_BANSHEE_RESEARCH
+    cost: 150
     points: 0
     dependencies:
-      - STR_MELTAGUN_TECH
+      - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_ELDAR_SPIDER_RESEARCH
+    cost: 200
+    points: 0
+    dependencies:
+      - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_FUSION_TECH_RESEARCH # Eldar Meltagun Equivalent
+    cost: 150
+    points: 0
+    dependencies:
+      #- STR_MELTAGUN_TECH
       - STR_ELDAR_WEAPONS_ACQUISITION
 
   - name: STR_ELDAR_PSYKER_RESEARCH  # path of the psyker research
-    cost: 1000
+    cost: 500
     dependencies:
       - STR_RECRUIT_ELDAR_T1
       - STR_MIDTIER_PREREQ
-
-  - name: STR_ELDAR_BANSHEE_RESEARCH
-    cost: 0
-    points: 0
-    dependencies:
-      - STR_ELDAR_PSYKER_RESEARCH
+    spawnedEvent: STR_SLAANESH_PALACE_ACTIVITY_DETECTED
 
   - name: STR_ELDAR_SEER_RESEARCH
     cost: 0
@@ -198,7 +215,7 @@ research:
       - STR_ELDAR_PSYKER_RESEARCH
 
   - name: STR_ELDAR_FALLEN_RESURRECTION_RESEARCH  # eldar fallen resurrection
-    cost: 1000
+    cost: 500
     dependencies:
       - STR_RECRUIT_ELDAR_T1
       - STR_MIDTIER_PREREQ
@@ -208,19 +225,34 @@ research:
     points: 0
     dependencies:
       - STR_ELDAR_ASPECT_RESEARCH
+
+  - name: STR_SLAANESH_PALACE_ACTIVITY_DETECTED
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
 #------------------------------------------------------------------
 # TIER 3
   - name: STR_ELDAR_ASURYANI_CAMPAING_T3
     points: 0
-    cost: 5
+    cost: 800
     dependencies:
       - STR_ELDAR_ASURYANI_CAMPAING_T2
-      # TODO: add prerequisite to go T2
+      - STR_ELDAR_ASPECT_RESEARCH
+      - STR_ELDAR_PSYKER_RESEARCH
+      - STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED # event to be completed
     unlocks:
       - STR_HIGHTIER_PREREQ
 
   - name: STR_ELDAR_AUTARCH_EXARCH_RESEARCH  # Promotions to exarch and autarch
-    cost: 1000
+    cost: 666 #slanesh lucky number
     dependencies:
       - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
       - STR_ELDAR_ASPECT_RESEARCH
@@ -254,19 +286,26 @@ research:
       - STR_ELDAR_FIREDRAGON_RESEARCH
       - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
 
-  - name: STR_ELDAR_PSYKER_MASTERY_RESEARCH  # Promotions to exarch psykers
-    cost: 1000
-    dependencies:
-      - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
-      - STR_ELDAR_PSYKER_RESEARCH
-      - STR_HIGHTIER_PREREQ
-
   - name: STR_ELDAR_BANSHEE_EXARCH_RESEARCH
     cost: 0
     points: 0
     dependencies:
       - STR_ELDAR_BANSHEE_RESEARCH
-      - STR_ELDAR_PSYKER_MASTERY_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
+  - name: STR_ELDAR_SPIDER_EXARCH_RESEARCH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_ELDAR_SPIDER_RESEARCH
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
+
+  - name: STR_ELDAR_PSYKER_MASTERY_RESEARCH  # Promotions to exarch psykers
+    cost: 500
+    dependencies:
+      - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
+      - STR_ELDAR_PSYKER_RESEARCH
+      - STR_HIGHTIER_PREREQ
 
   - name: STR_ELDAR_SEER_EXARCH_RESEARCH
     cost: 0
@@ -276,7 +315,7 @@ research:
       - STR_ELDAR_PSYKER_MASTERY_RESEARCH
 
   - name: STR_ELDAR_WARLOCK_PATH_RESEARCH  # Promotions to warlock
-    cost: 1000
+    cost: 333 #slanesh lucky number
     dependencies:
       - STR_ELDAR_ASURYANI_CAMPAING_T3 #locks from eldar alliance paths for inquisition
       - STR_ELDAR_PSYKER_RESEARCH

@@ -8239,6 +8239,61 @@ alienMissions:
         trajectory: P5
         timer: 30
 
+  # Override 40k mod Ork base patrol missions
+  - delete: STR_ORK_WAGGON_PATROL_SMALL
+  - type: STR_ORK_WAGGON_PATROL_SMALL
+    retaliationOdds: 0
+    raceWeights:
+      0:  # Early month patrols use less elite Ork race list
+        STR_ORK_EARLY: 100
+      3:
+        STR_ORK: 100
+    operationType: 1
+    points: 5
+    waves:
+      - ufo: STR_TRUKK_UFO
+        count: 1
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+
+  - delete: STR_ORK_WAGGON_PATROL_MEDIUM
+  - type: STR_ORK_WAGGON_PATROL_MEDIUM
+    retaliationOdds: 0
+    raceWeights:
+      0:  # Early month patrols use less elite Ork race list
+        STR_ORK_EARLY: 100
+      2:
+        STR_ORK: 100
+    operationType: 1
+    points: 5
+    waves:
+      - ufo: STR_TRUKK_UFO
+        count: 2
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+      - ufo: STR_WAGGON_UFO
+        count: 1
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+
+  - delete: STR_ORK_WAGGON_PATROL_LARGE
+  - type: STR_ORK_WAGGON_PATROL_LARGE
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    operationType: 1
+    points: 5
+    waves:
+      - ufo: STR_WAGGON_UFO
+        count: 2
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+      - ufo: STR_WAGGON_CONVOY_UFO
+        count: 2
+        timer: 0
+        trajectory: GROUND_PATROL_TRAJECTORY
+
   - type: STR_ORK_BASE_SPACEHULK_LEVEL3
     raceWeights:
       0:
@@ -8848,7 +8903,7 @@ alienMissions:
 
 
 # *** Final Mission Bases ***
-  - type: STR_FINAL_MISSION_GUARD_SL
+  - type: STR_FINAL_MISSION_GUARD_SL #Steel Legion
     retaliationOdds: 0
     raceWeights:
       0:
@@ -8859,6 +8914,22 @@ alienMissions:
     objective: 2
     waves:
       - ufo: STR_MARS_CYDONIA_LANDING_GUARD_SL
+        count: 1
+        trajectory: P10
+        timer: 0
+        objective: true
+
+  - type: STR_FINAL_MISSION_GUARD_VL #Valhallans
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK: 100
+    points: 0
+    siteType: STR_MARS_CYDONIA_LANDING_GUARD_SL #PlaceHolder
+    spawnZone: 0
+    objective: 2
+    waves:
+      - ufo: STR_MARS_CYDONIA_LANDING_GUARD_SL #PlaceHolder
         count: 1
         trajectory: P10
         timer: 0
@@ -18566,3 +18637,87 @@ alienMissions:
   - type: STR_ELDAR_SUP_AIR_PATROL
     operationSpawnZone: 1
     operationBaseType: STR_ELDAR_BASE
+
+  # black templar bloody rose orks waagh
+
+  - type: STR_ORK_BASE_STARTBTBR1
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR1
+    points: 0
+
+  - type: STR_ORK_BASE_STARTBTBR2
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR2
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR2
+    points: 0
+
+  - type: STR_ORK_BASE_STARTBTBR3
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_ORK_MIDTIER_EVILSUNZ: 35
+        STR_ORK_MIDTIER: 35
+        STR_ORK_MIDTIER_DEATHSKULLS: 30
+    operationType: 3 # Only creates a new base if the region doesn't have one
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR3
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR3
+    points: 0
+
+  - type: STR_ORK_BASE_FROM_EXISTINGBTBR
+    raceWeights: {}
+    operationType: 1
+    operationSpawnZone: 4
+    operationBaseType: STR_ORKBASEBTBR1
+    objective: 2
+    spawnZone: 4
+    siteType: STR_ORKBASEBTBR1
+    points: 0
+    waves:
+      - ufo: STR_WAGGON_UFO
+        count: 2
+        timer: 0
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+      - ufo: STR_WAGGON_UFO
+        count: 1
+        timer: 7200
+        objective: true
+        trajectory: DIRECT_TO_NEW_BASE_TRAJECTORY
+
+  # main orks base
+
+  - type: STR_MAINORKSBASE
+    points: 5
+    objective: 3
+    spawnZone: 3
+    siteType: STR_MAINORKSBASE_SITE
+    raceWeights:
+      0:
+        STR_ORK_MAINBASER: 100
+    waves:
+      - ufo: ORKSTERS  # do not exist so mission spawn immediately
+        count: 1
+        trajectory: P10
+        timer: 0
+        objective: true
