@@ -143,3 +143,18 @@ manufacture:
       STR_CRATED_BTDROPPODS: 1
     producedItems:
       STR_BTDROPPODS: 1
+
+  # campaign progression
+
+  - name: STR_COMPLETORKSDATAITEM
+    category: STR_MISSIONS_MANUFACTURING
+    requires:
+      - STR_NOTDONEBEFORE  # to avoid making more of those items
+      - STR_BLACKTEMPLAR_STRATEGY
+    space: 1
+    time: 500
+    cost: 300000
+    requiredItems:
+      STR_ORKSWAAGH_BASE_DATA: 4
+    producedItems:
+      STR_ORKSDATAITEM: 1

@@ -51,3 +51,21 @@ events:
     spawnedPersonType: STR_BTCHAMPION_PLAYER
     timer: 60
     timerRandom: 60
+
+
+ # Orks main base reveal
+
+  - name: STR_MAIN_ORKSBASE
+    description: STR_MAIN_ORKSBASE_DESCRIPTION
+    background: ChaosActivityBG.SCR
+    adhocMissionScriptTags: ["revealOrksBASE"]
+
+
+adhocScripts:
+
+  - type: startrevealMainOrksBASE
+    missionWeights:
+      0:
+        STR_MAINORKSBASE: 100
+    startDelay: 10800
+    adhocMissionScriptTags: ["revealMainOrksBASE"]
