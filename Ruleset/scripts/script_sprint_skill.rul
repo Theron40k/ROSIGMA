@@ -18,7 +18,7 @@ extended:
       - new: ROSIGMA_sprint_skillUseUnit
         offset: 1
         code: |
-          #var int temp;
+          var int temp;
           var int sprintSkill_timepercent;
           var int sprintSkill_energypercent;
           var int sprintSkill_cooldown_period;
@@ -37,12 +37,13 @@ extended:
           skill.getTag sprintSkill_energypercent Tag.SKILL_SPRINT_MOVECOST_ENERGYPERCENT;
           skill.getTag sprintSkill_cooldown_period Tag.SKILL_SPRINT_COOLDOWN_PERIOD;
           skill.getTag sprint_is_reusable Tag.SKILL_SPRINT_REUSABLE;
-          skill.getTag sprint_uses_spent Tag.SKILL_SPRINT_USES;
+          skill.getTag sprint_total_uses Tag.SKILL_SPRINT_USES;
 
           actor.getTag sprint_uses_spent Tag.SKILL_SPRINT_USES_SPENT;
+
           if le sprint_is_reusable 0; #if sprint is not reusable,
             if ge sprint_uses_spent sprint_total_uses; # checks if all uses spent
-              battle_game.flashMessage "STR_SKILL_SPRINT_NO_USE_LEFT" sprintStatus;
+              battle_game.flashMessage "STR_SKILL_SPRINT_NO_USE_LEFT";
               set continue_action 0;
               # debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | all use spent. Aborting.";
               return;
@@ -51,8 +52,14 @@ extended:
           end;
 
           actor.getTag sprintStatus Tag.SKILL_SPRINT_COOLDOWN_TURNS;
+
+          #debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | if this is the first time using the skill this value will be debbugged to 1. current cooldown turns are:" temp;
           if ge sprintStatus 1;
-            battle_game.flashMessage "STR_SKILL_SPRINT_ON_COOLDOWN" sprintStatus;
+            add temp sprintStatus; #use temp to show the player to hide all the logic behind turn cooldown
+            div temp 3;
+            add temp 1;
+            # debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | if this is the first time using the skill this value will be debbugged to 1. current cooldown turns are:" temp;
+            battle_game.flashMessage "STR_SKILL_SPRINT_ON_COOLDOWN" temp;
             set continue_action 0;
             # debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | Unit is already sprinting. Aborting.";
             return;
@@ -69,13 +76,20 @@ extended:
           actor.MoveCost.setBaseEnergyPercent sprintSkill_energypercent;
           actor.setTag Tag.SKILL_SPRINT_COOLDOWN_TURNS sprintSkill_cooldown_period;
           actor.setTag Tag.UNIT_STEALTH_IS_ACTIVE 1; # set our stealth counter to 1
+
+          #calculate cooldown remaining to show the player
+          add temp sprintSkill_cooldown_period; #use temp to show the player to hide all the logic behind turn cooldown
+          div temp 3;
+          add temp 1;
+          #debug_log "skillUseUnit | ROSIGMA_sprint_skillUseUnit | offset: 2 | skill is activating, calculated player turns cooldown is:" temp;
           if le sprint_is_reusable 0; #if sprint is not reusable
             add sprint_uses_spent 1;
             actor.setTag Tag.SKILL_SPRINT_USES_SPENT sprint_uses_spent;
             sub sprint_total_uses sprint_uses_spent; #use sprint_total_uses as remaining uses here for commodity
-            battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN_REMAINING_USES" sprintStatus sprint_total_uses;
+            battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN_REMAINING_USES" temp sprint_total_uses;
+          else;
+            battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN" temp;
           end;
-          battle_game.flashMessage "STR_SKILL_SPRINT_STARTED_COOLDOWN" sprintStatus;
           return;
 
     newTurnUnit:  # reset move speed to normal

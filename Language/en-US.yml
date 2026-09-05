@@ -17,6 +17,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   ARMO: "ARMORY"
   MILL: "FORGE"
   MANU: "MANUFACTURING"
+  APOC: "APOTHECARY"
   STR_XCOM_AGENTS_HAVE_LOCATED_AN_ALIEN_BASE_IN_REGION: "We have detected a enemy presence on the planet"
 
   STR_HWP_CAPACITY: " "  # uncomment to check for HWP: -1  # SpeedC is an exception
@@ -1280,6 +1281,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_AVENGER_CORPSE_P: "Avenger Corpse"
   STR_ELDAR_AVENGEREX_CORPSE_P: "Avenger Exarch Corpse"
   STR_ELDAR_BANSHEE_EXARCH_PLAYER: "Eldar Banshee Exarch"
+  STR_ELDAR_BANSHEE_CORPSE_P: "Banshee Corpse"
   STR_ELDAR_DRAGON: "Eldar Dragon"
   STR_ELDAR_DRAGONEX: "Eldar Dragon Exarch"
   STR_ELDAR_DRAGON_MF: "Dragon Warrior"
@@ -1295,6 +1297,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SCORPION_CORPSE_P: "Striking Scorpion Corpse"
   STR_ELDAR_SCORPIONEX_P: "Scorpion Exarch"
   STR_ELDAR_SCORPIONEX_ARMOR_P: "Scorpion Exarch Armor"
+  STR_ELDAR_SCORPIONEX_CORPSE_P: "Scorpion Exarch Corpse"
   STR_ELDAR_SPIDER_PLAYER: "Spider Warrior"
   STR_ELDAR_SPIDER_ARMOR_P: "Spider Armor"
   STR_ELDAR_SPIDER_CORPSE_P: "Warp Spider Corpse"
@@ -1303,12 +1306,16 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SPIDEREXDS_CORPSE_P: "Spider Exarch Death Spinner Corpse"
   STR_ELDAR_SPIDEREXPB_ARMOR_P: "Spider Exarch Power Blade Armor"
   STR_ELDAR_SPIDEREXPB_CORPSE_P: "Spider Exarch Power Blade Corpse"
-  STR_SKILL_WARPSPIDER_STEALTH_TELEPORT: "Warp-jump"
   STR_ELDAR_REAPEREX: "Eldar Reaper Exarch"
   STR_ELDAR_ARMOR_EXARCH_P: "Reaper Exarch Armor"
   STR_ELDAR_ARMOR_EXARCH: "Eldar Reaper Exarch"
   STR_ELDAR_SEER_ARMOR_P: "Seer Armor"
   STR_ELDAR_SEER_CORPSE_P: "Seer Corpse"
+
+  # eldar skills
+  STR_SKILL_WARPSPIDER_STEALTH_TELEPORT: "Warp-jump"
+  STR_SKILL_BANSHEE_EXARCH_DASH: "Banshee Exarch Sprint"
+  STR_SKILL_BANSHEE_DASH: "Banshee Sprint"
 
   # ELDAR SOLDIER TRANSFORMATIONS CODEX (lore fluff plus transformation requirements)
   STR_ELDAR_ASPECT_HELPER_SCORPIONS: "The Striking Scorpions are the form of Aspect Warriors focused on close combat, stealth, and assassination. They epitomise the deadly attributes of their namesake, which can sting and kill a creature many times its size. {NEWLINE}{NEWLINE}Requirement for a guardian to be promoted to a Scorpion are: Combat experience (rank 1 or higher) and {ALT}bravery: 70, melee: 50{ALT}" # The history of the Striking Scorpions is shrouded in infamy from their very beginning from the story of their founder, Phoenix Lord Arhra, Father of the Scorpions, now known as the Fallen Phoenix"
@@ -1447,6 +1454,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_DRAGONEX_AUTOPSY: "Eldar Dragon Exarch Origin"
   STR_ELDAR_DRAGONEX_AUTOPSY_CODEX: "{NEWLINE} The Fire Dragon Exarch sits upon the Flaming Throne within their Aspect Shrine. These crack shots can pinpoint targets with unerring accuracy, and under their guidance Exarchs can train their Fire Dragon squad to become superb tank hunters."
   STR_ELDAR_DRAGONEX_ARMOR_CODEX: "{NEWLINE} When an Eldar Dragon becomes an Exarch, they permanently bond with an ancient, centuries-old suit of Exarch Armor belonging to their shrine. It is said that Exarchs of the Fire Dragon Aspect generate a corona of lambent flame around their bodies when the lust for battle has taken hold. Instead of a Fusion Gun some Exarchs will wield a Fire Pike or Dragon Breath Flamer instead. Some will embrace close combat by wielding a Fusion Pistol and Dragon Axe."
+  STR_ELDAR_SCORPIONEX_AUTOPSY: "Eldar Scorpion Exarch Origin"
+  STR_ELDAR_SCORPIONEX_AUTOPSY_CODEX: "{NEWLINE} Exarchs of the Striking Scorpions are definitive shadow-warriors, embodying all that their Shrine stands for. Becoming one with the shadows and using them to shield their squad from the enemy as they approach. Their excellent abilities as stalkers allows them and their squad to flow silently and without a trace through dense terrain."
+  STR_ELDAR_SCORPIONEX_ARMOR: "Eldar Scorpion Exarch Origin"
+  STR_ELDAR_SCORPIONEX_ARMOR_CODEX: "{NEWLINE} Exarchs wear more elaborate and ornate versions of Aspect Armour which incorporates the souls of their past wearers, granting an Exarch not only wisdom and knowledge stretching across the millennia but a raw pool of potent psychic energy that can be used in combat. The Aspect Armour of the Striking Scorpions is similar in construction to that of other Aspect Shrines, but incorporates heavier, rigid armour plating for increased protection."
   STR_ELDAR_REAPER_ARMOR_CODEX: "{NEWLINE} Dark Reapers pride themselves on their accuracy. To absorb the recoil of firing the Reaper Launcher and maintain a steady firing position, the armour's powered limb supports include lower leg armour and boots fitted with stabilisers and clamps to secure the Dark Reaper to the ground."
   STR_ELDAR_REAPEREX_AUTOPSY: "Eldar Reaper Exarch Origin"
   STR_ELDAR_REAPEREX_AUTOPSY_CODEX: "{NEWLINE} The skills and wargear of a Dark Reaper Exarch exemplify the already deadly firepower and accuracy that defines their Aspect. A Dark Reaper Exarch's inhuman combat abilities surpass even the talents of regular Dark Reapers, as a Dark Reaper Exarch is perfectly capable of laying down a lethal hail of fire more rapidly without loss of accuracy from any weapon they wield, and of landing pinpoint shots so accurate they can bypass cover and hit targets who thought themselves fully protected."
@@ -1546,6 +1557,18 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_DRAGONEX_RANK_3: DgX Firestorm
   STR_ELDAR_DRAGONEX_RANK_4: DgX Eruption
   STR_ELDAR_DRAGONEX_RANK_5: DgX Hellfire
+  STR_ELDAR_SCORPION_RANK_0: Scp Hale
+  STR_ELDAR_SCORPION_RANK_1: Scp Vital
+  STR_ELDAR_SCORPION_RANK_2: Scp Vigor
+  STR_ELDAR_SCORPION_RANK_3: Scp Might
+  STR_ELDAR_SCORPION_RANK_4: Scp Potent
+  STR_ELDAR_SCORPION_RANK_5: Scp Stalwart
+  STR_ELDAR_SCORPIONEX_RANK_0: ScpX Sting
+  STR_ELDAR_SCORPIONEX_RANK_1: ScpX Pierce
+  STR_ELDAR_SCORPIONEX_RANK_2: ScpX Stab
+  STR_ELDAR_SCORPIONEX_RANK_3: ScpX Gouge
+  STR_ELDAR_SCORPIONEX_RANK_4: ScpX Skewer
+  STR_ELDAR_SCORPIONEX_RANK_5: ScpX Impale
   STR_ELDAR_SPIDER_RANK_0: Spd Twitch
   STR_ELDAR_SPIDER_RANK_1: Spd Scuttle
   STR_ELDAR_SPIDER_RANK_2: Spd Flicker
@@ -2097,8 +2120,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BOLTERN_UFOPEDIA: "{NEWLINE} Plague Bolter "
   # >   STR_BOLTERN_UFOPEDIA: "{NEWLINE} Warpflamer " ?????
   STR_AC_N_AMMO: "Heavy Plague Bolter Box"
-  STR_BOLTER_HERETIC_DEAZ: "Heretical De'az Bolter"
-  STR_BOLTER_HERETIC_DEAZ_UFOPEDIA: "{NEWLINE} This De'az pattern 0.70 caliber bolter is tainted by filth and blasphemous icons. Physical dirt besmirches the weapon without care for its original holy purpose, and heretical modifications cause it to fire rapidly at the lightest touch. It features a bayonet attachment for close quarters combat.{NEWLINE}{NEWLINE} The work of Hereteks, no doubt."
+  STR_BOLTER_HERETIC_DEAZ: "Heretical De'az Light Bolter"
+  STR_BOLTER_HERETIC_DEAZ_UFOPEDIA: "{NEWLINE} This De'az pattern 0.70 caliber Light bolter is tainted by filth and blasphemous icons. Physical dirt besmirches the weapon without care for its original holy purpose, and heretical modifications cause it to fire rapidly at the lightest touch. It features a bayonet attachment for close quarters combat.{NEWLINE}{NEWLINE} The work of Hereteks, no doubt."
   STR_GRAVGUN_ADEPTAS: "Adeptas Graviton Gun"
   STR_GRAVGUN_AOE_CHAOS: "Corrupted Graviton Field Gun"
 
@@ -2128,14 +2151,14 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BOLTPISTOL_NURGLE: "Blightpistol"
   STR_PISTOL_CLIP_BLIGHT: "Blightpistol Mag."
   STR_BOLTPISTOL_NURGLE_UFOPEDIA: "{NEWLINE} This blighted Boltpistol bears the markings of Nurgle and has been used by his forces. An average boltpistol, it has been modified to fire blight rounds."
-  STR_BOLTERN_LIGHT: "Light Nurgle Bolter"
-  STR_BOLTERN_LIGHT_GRENADELAUNCHER: "Nurgle Combi-bolter Launcher"
+  STR_BOLTERN_LIGHT: "Nurgle Light Bolter"
+  STR_BOLTERN_LIGHT_GRENADELAUNCHER: "Nurgle Light Combi-bolter Launcher"
   STR_BLIGHT_GRENADE40: "40mm Blight Grenade Ammo"
   STR_BLIGHT_GRENADE40_PLAYER: "40mm Blight Grenade Ammo"
   STR_ACIDRUST_GRENADE40: "40mm Acid Rust Grenade Ammo"
   STR_ACIDRUST_GRENADE40_PLAYER: "40mm Nurgling Acid Rust Grenade Ammo"
   STR_BLIGHT_ROCKET_PLAYER: "Nurgling Blight Rocket"
-  STR_LIGHT_BOLTER_AMMO_NURGLE: "Light Blight Bolter Mag."
+  STR_LIGHT_BOLTER_AMMO_NURGLE: "Blight Light Bolter Mag."
   STR_LIGHT_BOLTER_CHAOSNURGLE_UFOPEDIA: "{NEWLINE} This filthy light bolter bears the mark of Nurgle. A simpler Bolter Pattern with a slow rate of fire, it is accurate at decent ranges."
   STR_LIGHT_BOLTER_CHAOSNURGLE_GRENADELAUNCHER_UFOPEDIA: "{NEWLINE} This filthy light combi-bolter bears the mark of Nurgle. It is equipped with a underslung grenade launcher, used to launch belt-fed blight and acid grenades."
   STR_HEAVY_BOLTER_CHAOSNURGLE: "Blighted Heavy Bolter"
@@ -2197,12 +2220,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_MELTA_AMMO_HARMONIC: "Harmonic Melta Ammo"
   STR_ADEPTAS_MELTAGUN_NECRO: "Mk.V Meltagun"
   STR_ADEPTAS_MELTAGUN_NECRO_UFOPEDIA: "{NEWLINE} The Mark V Necro Pattern Meltagun is the standard issue Meltagun in the Adeptas arsenal. Similar to the Accatran pattern, this variant is designed with assault in mind, sporting a increased output and rate of fire at expense of fuel consumption. Traditionally lacking in heavy anti armor capabilities, the Adeptas requested the Necro variant to handle such threats."
-  STR_BOLTPISTOL_SERAPHIM: "Boltpistol Seraphim Pattern"
+  STR_BOLTPISTOL_SERAPHIM: "Light Boltpistol Seraphim"
   STR_BOLTPISTOL_SERAPHIM_UFOPEDIA: "{NEWLINE} Designed by Adeptas specifications, the Seraphim Pattern SubBolter is made with Akimbo use in mind by flying assault troops that needs both rapid automatic firepower and high ammo capacity, at the expense of accuracy."
-  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO: "Seraphim Boltpistol Mag"
-  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO_UFOPEDIA: "{NEWLINE} Seraphim bolter ammo is designed to maximize ammo capacity and rate of fire, achieved through a smaller calibre bolt with lower recoil, but also less damage per round."
-  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO: "Seraphim Penitence Mag"
-  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO_UFOPEDIA: "{NEWLINE} Penitence ammunition for the Seraphim Boltpistol consist of densely packed filament flechette inside a smaller low recoil boltpistol calibre shell. Used with rapid-firing Seraphim Bolters they can fill a room with anti-personnel flechette, ripping apart flesh and armor alike."
+  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO: "Seraphim Light Boltpistol Mag"
+  STR_LIGHT_BOLTPISTOL_SERAPHIM_AMMO_UFOPEDIA: "{NEWLINE} Seraphim Light Boltpistol ammo is designed to maximize ammo capacity and rate of fire, achieved through a smaller calibre bolt with lower recoil, but also less damage per round."
+  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO: "Seraphim Light Boltpistol Penitence Mag"
+  STR_LIGHT_BOLTPISTOL_PENITENCE_AMMO_UFOPEDIA: "{NEWLINE} Penitence ammunition for the Seraphim Light Boltpistol consist of densely packed filament flechette inside a smaller low recoil boltpistol calibre shell. Used with rapid-firing Seraphim Bolters they can fill a room with anti-personnel flechette, ripping apart flesh and armor alike."
   STR_REDEEMER_SHOTGUN: "Redeemer Shotgun"
   STR_REDEEMER_SHOTGUN_UFOPEDIA: "{NEWLINE} While the Adeptas prefer the holy implement of the Emperors Will that is the Bolter, the Redeemer Shotgun was developed to deliver redemption where Bolter rounds may be unsuitable. Used by special assault units, certain Repentia units and for riot control on Ecclesiarchy controlled worlds."
   STR_REDEEMER_SHELLS: "Redeemer Concussive Shells"
@@ -2222,25 +2245,30 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GALGALIM_ASSC_CLIP: "Galgalim Cannon Ammo"
   STR_ASSC_PEN_CLIP: "Assault Cannon Penetrator Rounds"
   STR_GALGALIM_ASSCANNON_UFOPEDIA: "{NEWLINE} The Galgalim Pattern Assault Cannon was developed on Mars for use by elite Adeptas Retributor and Dominion units, making use of a low weight adamantium alloy, lower calibre low-velocity Galgalim rounds and advanced recoil dampeners to make the design controllable for non-Terminator Power Armor. {NEWLINE}{NEWLINE}Recoil: {ALT}85"
-  STR_BOLTPISTOL_SCOURGE: "Boltpistol Scourge Pattern"
-  STR_BOLTPISTOL_SCOURGE_UFOPEDIA: "{NEWLINE} The Boltpistol Mars Pattern Mark II Scourge is favoured by the Adeptas Ebon Chalice Order, equipped with a Sarissa type bayonet fixture, which allows for enhanced melee capability in the hands of a power-armored Adeptas."
+  STR_BOLTPISTOL_SCOURGE: "Light Boltpistol Scourge"
+  STR_BOLTPISTOL_SCOURGE_UFOPEDIA: "{NEWLINE} The Light Boltpistol Mars Pattern Mark II Scourge is favoured by the Adeptas Ebon Chalice Order, equipped with a Sarissa type bayonet fixture, which allows for enhanced melee capability in the hands of a power-armored Adeptas."
   STR_AUTOGUN_ADEPTAS: "Adeptas Autogun"
   STR_AUTOGUN_ADEPTAS_SCOPED: "Adeptas Scoped Autogun"
   STR_AUTOGUN_ADEPTAS_UFOPEDIA: "{NEWLINE} The Novice pattern Autogun is a high quality, compact carbine. A fully automatic weapon with a high rate of fire for close quarters with minimal recoil. It is a reliable weapon to deal with cultists and other unarmored opponents, and the first ballistic weapon Novices are trained with."
   STR_AUTOGUN_ADEPTAS_SCOPED_UFOPEDIA: "{NEWLINE} The Novitiate pattern Autogun is a Adeptas variant of the Novice Autogun. Scoped, this variant is used for marksmanship and ranged support by experienced Novices, and has a slower rate of fire for increased accuracy."
-  STR_BOLTER_CANTUS: "Bolter Cantus Pattern"  # Sistersmod
+  STR_BOLTER_CANTUS: "Light Bolter Cantus"  # Sistersmod
   STR_BOLTER_CANTUS_UFOPEDIA: "{NEWLINE} Light trainee bolter used by the Novice ranks of the Adeptus Sororitas. This bolter pattern is lightweight, easy to use and most importantly cheap to produce in vast quantities. With less powerful and cheaper Cantus pattern ammo developed for it, this is a good starting bolter.{NEWLINE}{NEWLINE}Recoil: {ALT}20"  # Sistersmod
-  STR_BOLTER_ELOHIM: "Bolter Elohim Pattern"  # Sistersmod
-  STR_BOLTER_ELOHIM_UFOPEDIA: "{NEWLINE} The Elohim Pattern Bolter is a Adeptas Sororitas requested design, filling the role of a battle rifle with enhanced accuracy, range and armor piercing capability at the sacrifice of autofire capability and weight. It is designed to defeat power armor. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sistersmod
-  STR_LIGHT_BOLTER_AMMO_AP: "Bolter Elohim AP Magazine"  # Sistersmod
-  STR_LIGHT_BOLTER_AMMO_INF: "Bolter Inferno Magazine"  # Sistersmod
-  STR_LIGHT_BOLTER_AMMO_INF_UFOPEDIA: "Light Bolter Inferno Magazine"  # Sistersmod
-  STR_BOLTER_MEPHISTO: "Bolter Mephisto Pattern"
+  STR_BOLTER_ELOHIM: "Light Bolter Elohim"  # Sistersmod
+  STR_BOLTER_ELOHIM_UFOPEDIA: "{NEWLINE} The Elohim Pattern Light Bolter is a Adeptas Sororitas requested design, filling the role of a battle rifle with enhanced accuracy, range and armor piercing capability at the sacrifice of autofire capability and weight. It is designed to defeat power armor. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sistersmod
+  STR_LIGHT_BOLTER_AMMO_AP: "Light Bolter Elohim AP Mag"  # Sistersmod
+  STR_LIGHT_BOLTER_AMMO_INF: "Light Bolter Inferno Mag"  # Sistersmod
+  STR_LIGHT_BOLTER_AMMO_INF_UFOPEDIA: "Light Bolter Inferno Mag"  # Sistersmod
+  STR_BOLTER_MEPHISTO: "Light Bolter Mephisto"
   STR_LIGHT_FLAMETHROWER_CLIP: "Light Flamer Fuel Tank"
   STR_FLAMERFIRE: "Fire Flamethrower"
   STR_FLAMERFIRE_SHORT: "Flamer (x{0})"
-  STR_BOLTER_MEPHISTO_UFOPEDIA: "{NEWLINE} The Mephisto Pattern Combi-Bolter features a underslung flamethrower and a light calibre bolter round with reduced recoil for rapid burst fire. The Mephisto addon light flamer doesn't quite match its dedicated counterpart, but allows its user to employ flame barriers and purge less armored targets. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sisters mod
-  STR_BOLTER_HELLSPITE: "Bolter Hellspite Pattern"
+  STR_BOLTER_MEPHISTO_UFOPEDIA: "{NEWLINE} The Mephisto Pattern Light Combi-Bolter features a underslung flamethrower and a light calibre bolter round with reduced recoil for rapid burst fire. The Mephisto addon light flamer doesn't quite match its dedicated counterpart, but allows its user to employ flame barriers and purge less armored targets. {NEWLINE}{NEWLINE}Recoil: {ALT}30"  # Sisters mod
+  STR_BOLTER_HELLSPITE: "Light Bolter Hellspite"
+  STR_BOLTER_LOCKE: "Light Bolter Locke"
+  STR_BOLTER_ENFORCER: "Light Bolter Enforcer"
+  STR_BOLTER_DEAZ: "Light Bolter Godwyn-De'az"
+  STR_BOLTPISTOL_DEAZ: "Light Boltpistol Godwyn-De'az"
+  STR_MC_BOLTPISTOL_DEAZ: "Master Crafted Light Boltpistol Godwyn-De'az"
   STR_AUTOFIRE: "Autofire"
   STR_FULL_AUTO: "Full Auto"
   STR_BURST_SNAP_SHOT: "Burst Fire"
@@ -4670,6 +4698,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_HAND_MULTILASER_CODEX: "The Multilas is an Imperial mainstay heavy weapon that is mounted on all kinds of vehicles. Man portable versions are also available to Imperial forces, which are used to devastate enemy infantry and lightly armored vehicles at close to medium range. This weapon is fed via an separate battery pack, with the heavy weight being the main drawback of the weapon."
   STR_PORTABLE_MULTILASER_BATTERY: "Portable Multilas Battery"
   STR_PORTABLE_MULTILASER_BATTERY_HOTSHOT: "Portable Hotshot Multilas Battery"
+  STR_INFERNO_PISTOL_CODEX: "{NEWLINE} The Inferno pistol are small hand-held Melta Weapon that trade off power and range for their light weight and one-handed capability. They're are incredibly complicated and rare but still capable of cutting through almost any known type of armour like regular size melta weapons. They are usually produced in an extremely limited quantity and for use by well-established warriors such as member of the inquisition, the adeptas soritas or adeptus astartes, or gifted to high ranking officials as a sign of prestige."
 
   STR_GUARD_POWER_ARMOR_MULTILAS: "Power Armor /Multilas"
   STR_KRIEG_POWER_ARMOR_MULTILAS: "Panzergrenadier /Multilas"
@@ -4859,11 +4888,11 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_LIGHT_MELTAGUN_MYNERVA: "Light Meltagun"
   STR_LIGHT_MELTAGUN_MYNERVA_CODEX: "This light-weight meltagun design originates from the Mynerva hive cluster on Necromunda. Lighter and faster firing, it has since become popular among irregular forces across the imperium. While suffering from a greatly reduced power output due to its use of smaller fuel canisters, its defenders are quick to boast that no other meltagun does what it does, providing a cheaper meltagun option."
-  STR_BOLTER_LIGHT_UMBRA: "Light Bolter Umbra Pattern"
-  STR_BOLTER_UMBRA_UFOPEDIA: "{NEWLINE} The Umbra Pattern Bolter is one of the earliest patterns of Bolter and was produced in large quantities early in the Great Crusade. This reliable pattern of Boltgun have seen widespread use and is still manufactured by several forges, making it one of the more available patterns."
-  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG: "Combi-Bolter Umbra /GL"
-  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG_CODEX: "{NEWLINE} The Umbra Pattern Bolter fitted with a underslung 40mm grenade launcher that can use the common guard 40mm grenades and shotgun rounds. Incendiary, Krak and Melta grenades as well as slug and buckshot shells."
-  STR_MC_UMBRA_GL: "Master Crafted Combi-Bolter Umbra /GL"
+  STR_BOLTER_LIGHT_UMBRA: "Light Bolter Umbra"
+  STR_BOLTER_UMBRA_UFOPEDIA: "{NEWLINE} The Umbra Pattern Light Bolter is one of the earliest patterns of Bolter and was produced in large quantities early in the Great Crusade. This reliable pattern of Boltgun have seen widespread use and is still manufactured by several forges, making it one of the more available patterns."
+  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG: "Light Combi-Bolter Umbra /GL"
+  STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG_CODEX: "{NEWLINE} The Umbra Pattern Light Bolter fitted with a underslung 40mm grenade launcher that can use the common guard 40mm grenades and shotgun rounds. Incendiary, Krak and Melta grenades as well as slug and buckshot shells."
+  STR_MC_UMBRA_GL: "Master Crafted Light Combi-Bolter Umbra /GL"
 
   STR_BOLTER_LIGHT_SOLO: "Light Bolter Solo Pattern"
   STR_BOLTER_LIGHT_SOLO_DMR: "Light Bolter Scoped Solo Pattern"
@@ -4898,8 +4927,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LIGHT_BOLTPISTOL_AMMO_AP: "Light Boltpistol Kraken Penetrator Mag."
   STR_LIGHT_BOLTPISTOL_AMMO_EX: "Light Boltpistol Metal Storm Frag Mag."
 
-  STR_BOLTER_LIGHT_ULTRA: "Light Bolter Ultra Pattern"
-  STR_BOLTPISTOL_LIGHT_ULTRA: "Light Boltpistol Ultra Pattern"
+  STR_BOLTER_LIGHT_ULTRA: "Light Bolter Ultra"
+  STR_BOLTPISTOL_LIGHT_ULTRA: "Light Boltpistol Ultra"
 
   STR_FRAG_SHOT_TAURUS: "Launch Frag"
   STR_KRAK_SHOT_TAURUS: "Launch Krak"
@@ -7982,11 +8011,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_SPACEHULK_MID: "Voidcrew"
   STR_GSC_SPACEHULK_LATE: "Voidcrew"
 
-  STR_GSC_PRECINCT_START: "Arbites Force"
   STR_GSC_ARRIVAL_BASE_SPAWN: "Arbites Communication Disrupted"
   STR_GSC_ARRIVAL_BASE_SPAWN_DESCRIPTION: "Communications with several local Arbites Precincts have recently been disrupted in conjunction with the arrival of some space hulk debris in orbit. This might be the work of Chaos cults using the warp disturbances for cover."
   STR_GSC_ARBITES_SPAWNED: "Arbites Communication Restored"
   STR_GSC_ARBITES_SPAWNED_DESCRIPTION: "Communication after recent disruptions with the local Arbites and the PDF network is now back in full operation. The Arbites Magistrates assures us that everything is back to normal and that they will redouble their efforts to maintain order."
+
+  # ------ CURRENTLY UNUSED START ---------
+  STR_GSC_PRECINCT_START: "Arbites Force"
   STR_GSC_PRISON_BREAK: "Prison Break"  # Infected Prisoners and Guards (enforcers) + infector (medic of some sort, possibly Infected Adeptas) have taken staff/locals hostages (SACRIFICE) to infect (already infected civilians?) in a prison/outpost.
   STR_GSC_PRISON_BREAK_INFO: "A large scale prison break is under way in this sector. Working under high coordination, the prisoners have organized in secret and with the aid of collaborating guards, armed themselves. While some have scattered, the majority have established a base of operations, taking hostages from the nearby community."
   STR_GSC_PDF_BASE: "PDF Base Defection"
@@ -7997,6 +8028,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_GSC_IMPROVISED_GUN: "Improvised Stub Gun"
   STR_GSC_IMPROVISED_MELEE: "Home made club"
+  # ------ CURRENTLY UNUSED END ---------
 
   STR_ZOMBIE: "Tainted"
   STR_ZOMBIEF: "Tainted"
@@ -8127,6 +8159,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_SCION_CORPSE: "Scion Corpse"
   STR_GSC_PSYKER_CORPSE: "Psyker Corpse"
   STR_GSC_COMMISSAR_CORPSE: "Commissar Corpse"
+  STR_GSC_GUARD_CARAPACE_OFFICER_MALE_ARMED: "Corrupted Command Officer"
 
   STR_GSC_MEDICAE: "Sister Medicae"
   STR_GSC_MEDICAE_ARMOR: "Sister Medicae"
@@ -8146,12 +8179,16 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_AUTOINJECTOR_WEAPON: "Tainted Autoinjector"
 
   # Brood Brothers and GSC proper
-  STR_GENE_CULTIST: "Brood Brother"
+    # Brood Brothers and GSC proper
+  STR_GENE_CULTIST: "Brood Brother Minoris"
   STR_GENE_CULTIST_B: "Brood Brother"
   STR_GENE_CULTIST_S: "Brood Sister"
-  STR_GC_ARMOR: "Brood Brother"
+  STR_GC_ARMOR: "Brood Brother Minoris"
   STR_GC2_ARMOR: "Brood Brother"
   STR_GC3_ARMOR: "Brood Sister"
+  STR_BW_CORPSE: "Brood Brother Minoris Corpse"
+  STR_BW2_CORPSE: "Brood Brother Corpse"
+  #STR_BW3_CORPSE: "Brood Brother Corpse" unused
   STR_GSC_SNIPER_CORPSE: "Brood Sniper Corpse"
   STR_GSC_MINER_CORPSE: "Brood Neophyte Corpse"
   STR_GSC_ABERRANT_CORPSE: "Aberrant Corpse"
