@@ -204,6 +204,10 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
+  - name: STR_NOTDONEBEFORE  # this will be to avoid making more great sacrifice and trigger chaos bowl multiple times - used for Black Templar orks item too
+    dependencies:
+      - STR_GENERALLOCK
+
   - delete: STR_ALIENS_ONLY
   - name: STR_ALIENS_ONLY  # Chaos Corruption
     # Serves as the lock for use of chaos items
@@ -1576,6 +1580,7 @@ research:
       - STR_MARINE_BOLTERS
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
+      - STR_NOTDONEBEFORE
     disables:
       - STR_NOT_TACTICAL
       - STR_PRIMARIS
@@ -1673,6 +1678,18 @@ research:
       - STR_BLACKTEMPLAR_STRATEGY
       - STR_BLOODYROSE_STRATEGY
       - STR_GENERALLOCK
+
+
+  - name: STR_ORKSDATAITEM  # The Orks Main Base
+    cost: 100
+    points: 30
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    needItem: true
+    destroyItem: true
+    spawnedEvent: STR_MAIN_ORKSBASE
+    disables:
+      - STR_NOTDONEBEFORE
 
 
 ### Word Bearers #STRATEGY.SM.WB#
@@ -2278,9 +2295,6 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
-  - name: STR_NOTDONEBEFORE  # this will be to avoid making more great sacrifice and trigger chaos bowl multiple times
-    dependencies:
-      - STR_GENERALLOCK
 
   - name: STR_CHAOS_STRATEGY_ARBITES  # Chaos Cult Strategy
     cost: 5
