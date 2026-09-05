@@ -18,7 +18,6 @@ research:
   - name: STR_NOT_TAU_GUEVESA_GV        # (Not xenophile scum)
   - name: STR_NOT_TAU_AUXILIARY_GV      # (Not xenophile scum with friends)
   - name: STR_NOT_DEBUG_TAU_EMPIRE_GV   # (Not cheating Tau and friends)
-  - name: STR_NOT_TAU_GUEVESA_TRADING   # (Not trading at improved terms)
 
   - name: STR_REDEEMED_DEFEATED_GV        # (Tau campaign mechanics)
     dependencies:
@@ -153,6 +152,12 @@ research:
     points: 0
     dependencies:
       - STR_GENERALLOCK
+
+  - name: STR_NOT_TAU_GUEVESA_TRADING   # (Not trading at improved terms)
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_TAU_TRADING
 
 ### Accept Guevesa cultists first - they check you out
 ### You need to buy an Export Pulse Rifle to get in the system :)
