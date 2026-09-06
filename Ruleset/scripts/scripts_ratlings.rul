@@ -1,0 +1,90 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+  tags:
+    BattleUnit:
+      UNIT_SHOOT_AND_SCOOT_ACTIVE: int # Relevant values: 1 = expended but active, -1 = expended but inactive.
+    RuleArmor:
+      ARMOR_ABILITY_SCOOT_AND_SHOOT: int # What % of our TUs do we get back?
+
+  scripts:
+    hitUnit:
+      - new: ROSIGMA_hU_shoot_and_scoot_effect
+        offset: 99
+        code: |
+          var int temp;
+          var int temp2;
+          var int shootScoot;
+          var ptr RuleArmor myRuleArmor;
+
+          if neq battle_action BA_AIMEDSHOT; #only works for aimed shots
+              # debug_log "ROSIGMA_hU_shoot_and_scoot_effect, offset: 99 | Aborting. Not an aimed shot." battle_action;
+              return power part side;
+          end;
+
+          attacker.getRuleArmor myRuleArmor;
+          myRuleArmor.getTag shootScoot Tag.ARMOR_ABILITY_SCOOT_AND_SHOOT;
+          if lt shootScoot 1;
+            # debug_log "ROSIGMA_hU_shoot_and_scoot_effect, offset: 99 | Aborting. Shoot Scoot already active. shootScoot:" shootScoot;
+            return power part side;
+          end;
+
+          # now halve our standard movement cost in terms of TU and energy:
+          attacker.MoveCost.getBaseNormalTimePercent temp;
+          # debug_log "ROSIGMA_hU_shoot_and_scoot_effect, offset: 99 | Current TU movement percent temp:" temp;
+          div temp 2;
+          attacker.MoveCost.setBaseNormalTimePercent temp; # 50% move cost
+          # debug_log "ROSIGMA_hU_shoot_and_scoot_effect, offset: 99 | Modified TU movement percent temp:" temp;
+          attacker.MoveCost.getBaseNormalEnergyPercent temp;
+          # debug_log "ROSIGMA_hU_shoot_and_scoot_effect, offset: 99 | Current Energy movement percent temp:" temp;
+          div temp 2;
+          attacker.MoveCost.setBaseNormalEnergyPercent temp; # 50% move cost
+          # debug_log "ROSIGMA_hU_shoot_and_scoot_effect, offset: 99 | Modified Energy movement percent temp:" temp;
+
+          # then, if our remaining time units as are lower than our ARMOR_ABILITY_SCOOT_AND_SHOOT as a % of our max, set it to equal that value
+          attacker.getTimeUnits temp;
+          attacker.getTimeUnitsMax temp2;
+          muldiv temp2 shootScoot 100;
+          if lt temp temp2;
+            attacker.setTimeUnits temp2;
+            # debug_log "ROSIGMA_hU_shoot_and_scoot_effect, offset 1: Current TU lower than shootScoot%. TU set to temp2:" temp2;
+          end;
+
+          # Now flag shoot and scoot as having activated for this unit and let the player know
+          attacker.setTag Tag.UNIT_SHOOT_AND_SCOOT_ACTIVE 1;
+          battle_game.flashMessage "STR_RATLING_SHOOT_AND_SCOOT_ACTIVATED";
+
+          return power part side;
+
+
+    newTurnUnit:
+      - new: ROSIGMA_nTU_shoot_and_scoot_refresh
+        offset: 1
+        code: |
+          var int temp;
+          var int temp2;
+
+          unit.getTag temp Tag.UNIT_SHOOT_AND_SCOOT_ACTIVE;
+          if lt temp 1;
+            # debug_log "Ratling Scripts; ROSIGMA_nTU_shoot_and_scoot, offset 1: Aborting. No positive Shoot And Scoot value. temp:" temp;
+            return;
+          end;
+
+          battle_game.getTurnSide temp; # trigger only on the same turn as the unit's faction
+          unit.getFaction temp2;
+          if neq temp temp2;
+            # debug_log "Ratling Scripts; ROSIGMA_nTU_shoot_and_scoot, offset 1: Aborting. Not unit's turn. temp:" temp;
+            return;
+          end;
+
+          unit.MoveCost.getBaseNormalTimePercent temp; # reset move cost
+          mul temp 2;
+          unit.MoveCost.setBaseNormalTimePercent temp;
+          unit.MoveCost.getBaseNormalEnergyPercent temp;
+          mul temp 2;
+          unit.MoveCost.setBaseNormalEnergyPercent temp;
+
+          unit.setTag Tag.UNIT_SHOOT_AND_SCOOT_ACTIVE 0;
+
+          return;
+

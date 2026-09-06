@@ -28,6 +28,22 @@ manufacture:
       STR_KILLPOINT_TOKEN: 20
       STR_ALIEN_ALLOYS: 5
 
+  - name: STR_RATLING_CAMO_CLOAK_ARMOR # Ratlings
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_RATLING_RECRUITMENT
+      - STR_MIDTIER_PREREQ
+      - STR_MOTION_SCANNER
+    space: 0
+    time: 400
+    cost: 100000
+    producedItems:
+      STR_RATLING_CAMO_CLOAK_ARMOR: 1
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 100
+      STR_ALIEN_ALLOYS: 5
+      STR_ELERIUM_115: 5
+
   - name: STR_CARAPACE_FLIGHT
     category: STR_PERSONAL_ARMOR
     requires:

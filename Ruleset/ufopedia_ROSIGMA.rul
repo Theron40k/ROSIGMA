@@ -2484,6 +2484,7 @@ ufopaedia:
     section: STR_ALIEN_RESEARCH_UC
     image_id: CALLIDUS_ARMOR_CODEX.SPK
     text: STR_CALLIDUS_ASSASSIN_REQUISITION_CODEX
+
 ### #RESEARCH.IG.GUARD#
 ### #RESEARCH.IG.SCION#
 ### #RESEARCH.IG.ABHUMAN#
@@ -2777,6 +2778,14 @@ ufopaedia:
     text: STR_NURGLE_CORRUPTION_RESEARCH_CODEX
     requires:
       - STR_NURGLE_CORRUPTION_RESEARCH
+
+  - id: STR_GSC_CORRUPTION_RESEARCH
+    type_id: 10
+    section: STR_ALIEN_RESEARCH_UC
+    image_id: 0ENFM.SPK #Placeholder
+    text: STR_GSC_CORRUPTION_RESEARCH_CODEX
+    requires:
+      - STR_GSC_CORRUPTION_RESEARCH
 
 
 ####################################
@@ -5051,6 +5060,13 @@ ufopaedia:
     section: STR_XCOM_CRAFT_ARMAMENT
     image_id: HULLLASCANNON_CODEX.SPK
     text: STR_LASCANNON_HANDHELD_UFOPEDIA
+
+  - id: STR_MOUNTED_HEAVY_STUBBER  # Heavy Stubber
+    # THIS IS ALSO A HULL-MOUNTED WEAPON
+    type_id: 14
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: HEAVY_STUBBER.SPK
+    text: STR_MOUNTED_HEAVY_STUBBER_CODEX
 
 
 ####################################
@@ -9489,6 +9505,44 @@ ufopaedia:
     type_id: 14
     section: STR_NOT_AVAILABLE
 
+  # Ratlings
+  - id: STR_RATLING_RECRUITMENT # Ratlings
+    requires:
+      - STR_RATLING_RECRUITMENT
+    type_id: 10
+    section: STR_ALIEN_RESEARCH_UC
+    image_id: RATLING_RECRUITMENT_P1.SPK
+    pages:
+      - title: STR_RATLING_RECRUITMENT
+        text: STR_RATLING_RECRUITMENT_CODEX_P1
+      - title: STR_RATLING_RECRUITMENT
+        text: STR_RATLING_RECRUITMENT_CODEX_P2
+
+  - id: STR_RATLING_FATIGUES_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: RATLING_FATIGUES_ARMOR_P1.SPK
+    requires:
+      - STR_RATLING_RECRUITMENT
+    pages:
+      - title: STR_RATLING_FATIGUES_ARMOR
+        text: STR_RATLING_FATIGUES_ARMOR_CODEX_P1
+      - title: STR_RATLING_FATIGUES_ARMOR
+        text: STR_RATLING_FATIGUES_ARMOR_CODEX_P2
+
+  - id: STR_RATLING_CAMO_CLOAK_ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_RATLING_RECRUITMENT
+      #- STR_MIDTIER_PREREQ
+    image_id: RATLING_CAMO_CLOAK_ARMOR_P1.SPK
+    pages:
+      - title: STR_RATLING_CAMO_CLOAK_ARMOR
+        text: STR_RATLING_CAMO_CLOAK_ARMOR_CODEX_P1
+      - title: STR_RATLING_CAMO_CLOAK_ARMOR
+        text: STR_RATLING_CAMO_CLOAK_ARMOR_CODEX_P2
+
   # Squats
   - id: STR_SQUAT_FLAK_ARMOR
     type_id: 15
@@ -10500,6 +10554,11 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: ARBITES_HEAVY_STUB_CODEX.SPK
     text: STR_HEAVY_STUBBER_HANDHELD_UFOPEDIA
+  - id: STR_MOUNTED_HEAVY_STUBBER # Base Hull Heavy Stubber
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: HEAVY_STUBBER.SPK
+    text: STR_MOUNTED_HEAVY_STUBBER_CODEX
   - id: STR_HEAVY_STUBBER_ASSAULT  # Assault Stubber ✔
     requires:
       - STR_MIDTIER_PREREQ
