@@ -119,6 +119,15 @@ items:
     transferTime: 10
     listOrder: 6661
 
+  # Ratlings
+
+  - type: STR_RATLING_CAMO_CLOAK_ARMOR
+    size: 0.1
+    costBuy: 0
+    costSell: 0
+    transferTime: 10
+    listOrder: 6662
+
 
 armors:
   - &STR_GUARD_ARMOR_FLAK_DAMAGE
@@ -133,7 +142,7 @@ armors:
       - 1.0  # none
       - 1.0  # AP
       - 1.2  # FLAMES
-      - 1.0  # HE
+      - 0.8  # HE; especially effective against shrapnel blasts
       - 0.8  # LASCANON
       - 1.0  # PLASMA
       - 1.0  # STUN
@@ -5409,7 +5418,9 @@ armors:
       UNIT_IS_DIEHARD: 1
       DIEHARD_TEMP_MODIFIER_INCREMENT: -100  # Basic Diehard
 
-  - type: STR_LE10_POWER_ARMOR_HULK_SQUAT  # Vault Armor
+
+  - &STR_LE10_SMALL_UNIT_REF
+    type: STR_LE10_POWER_ARMOR_HULK_SQUAT  # Vault Armor
     refNode: *STR_GUARD_POWER_ARMOR_REF
     ufopediaType: STR_LE10_POWER_ARMOR_HULK
     storeItem: STR_LE10_POWER_ARMOR_HULK
@@ -5447,11 +5458,26 @@ armors:
       psiSkill: 5  # was 0
     units:
       - STR_GUARD_SQUAT
+      - STR_GUARD_RATLING
+      - STR_GUARD_RATLING_VETERAN
     tags:
       UNIT_SIZE: 75 # SMALL
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
       UNIT_TYPE_IMPERIUM: 1
+
+  - type: STR_LE10_POWER_ARMOR_HULK_RATLING  # Vault Armor
+    refNode: *STR_LE10_SMALL_UNIT_REF
+    units:
+      - STR_GUARD_RATLING
+      - STR_GUARD_RATLING_VETERAN
+    tags:
+      UNIT_SIZE: 75 # SMALL
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      UNIT_TYPE_IMPERIUM: 1
+      DODGE_CHANCE: 10 # 20 with Ratling Soldier bonuses
+      ARMOR_MAX_SUCCESSFUL_DODGES: 1 # 2 with Ratling Soldier bonuses
 
   - type: STR_LE10_POWER_ARMOR_HULK_ORK  # Vault Armor
     refNode: *STR_GUARD_POWER_ARMOR_REF
@@ -7445,3 +7471,104 @@ armors:
       UNIT_TYPE_IMPERIUM: 1
       UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_IMPERIAL_GUARD: 1
+
+  - &STR_RATLING_ARMOR_TEMPLATE
+    type: STR_RATLING_FATIGUES_ARMOR                # Ratling
+    storeItem: STR_NONE
+    spriteSheet: RATLING_BS.PCK # PLACEHOLDER; TBD
+    spriteInv: RATLING_ROBES_INDEX_ # PLACEHOLDER; TBD
+    customArmorPreviewIndex: 837 # PLACEHOLDER; TBD
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 245, 245, 166, 166, 96, 164, 96, 96, 144, 144, 164, 164, 245, 245, 166, 166]  # M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    corpseBattle:
+      - STR_GUARD_RATLING_CORPSE
+    units:
+      - STR_GUARD_RATLING
+      - STR_GUARD_RATLING_VETERAN
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5 # keen eyed
+    antiCamouflageAtDark: 5
+    camouflageAtDay: -18
+    camouflageAtDark: -12
+    frontArmor: 10
+    sideArmor: 8
+    rearArmor: 5
+    underArmor: 5
+    weight: 1 # light weight
+    drawingRoutine: 0
+    damageModifier: # Cloth
+      - 1.0 #SUPPORT
+      - 1.0 #AP
+      - 1.3 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 1.0 #ACID naturally resistant to contaminants
+      - 1.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [3]
+    tags:
+      UNIT_SIZE: 50 # SMALL
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MUTANT: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2
+      ARMOR_ABILITY_SCOOT_AND_SHOOT: 25
+      DODGE_CHANCE: 30 # 40-50 with Ratling Soldier bonuses
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3 # 4=5 with Ratling Soldier bonuses
+
+  - type: STR_RATLING_CAMO_CLOAK_ARMOR                # Ratling
+    refNode: *STR_RATLING_ARMOR_TEMPLATE
+    storeItem: STR_RATLING_CAMO_CLOAK_ARMOR
+    spriteSheet: RATLING_BS.PCK # PLACEHOLDER; TBD
+    spriteInv: RATLING_ROBES_INDEX_ # PLACEHOLDER; TBD
+    customArmorPreviewIndex: 837 # PLACEHOLDER; TBD
+    corpseBattle:
+      - STR_GUARD_RATLING_CORPSE
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10 # keen eyed + NV/Thermal/sensor suite goggles
+    antiCamouflageAtDark: 10
+    heatVision: 30
+    camouflageAtDay: -20
+    camouflageAtDark: -15
+    weight: 5 # camo cloak, light flak vest + NV/Thermal/sensor suite goggles
+    frontArmor: 20
+    sideArmor: 15
+    rearArmor: 10
+    underArmor: 20
+    damageModifier:  # GUARD ARMOR; FLAK
+      - 1.0  # none
+      - 1.0  # AP
+      - 1.2  # FLAMES
+      - 0.8  # HE; especially effective against shrapnel blasts
+      - 0.8  # LASCANON
+      - 1.0  # PLASMA
+      - 1.0  # STUN
+      - 1.1  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE; Respirator assumed
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    specialWeapon: STR_INTEGRATED_STEALTH_CLOAK
+    units:
+      - STR_GUARD_RATLING_VETERAN
+    tags:
+      UNIT_SIZE: 50 # SMALL
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_MUTANT: 1
+      UNIT_TYPE_IMPERIUM: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      ARMOR_IS_INFILTRATOR: 3  # 3 turns to infiltrate
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2
+      ARMOR_STEALTH_DETECTION_RANGE: 5
+      ARMOR_ABILITY_SCOOT_AND_SHOOT: 30
+      DODGE_CHANCE: 30 # 40-50 with Ratling Soldier bonuses
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3 # 4-5 with Ratling Soldier bonuses

@@ -15,6 +15,9 @@ items:
     medikitType: 3
     medikitActionName: STR_SCRIPT_TELEPORTER_TOGGLE
     medikitTargetSelf: true
+    woundRecovery: 0
+    healthRecovery: 0
+    painKillerRecovery: 0
     painKiller: 999  # unexpected effects possible
     battleType: 6  # not used as medikit
     tuUse: 10
@@ -25,6 +28,7 @@ items:
       ITEM_IS_TELEPORTER: 1
       ITEM_TELEPORTER_COOLDOWN: 1  # code adds +1 => 2
       ITEM_TELEPORTER_ENERGY: 10
+      ITEM_IS_NOT_MEDIKIT: 1
     specialUseEmptyHand: true
     hitSound: {mod: 40k, index: 788}
 

@@ -321,7 +321,7 @@ units:
     refNode: *STR_ADV_TURRET_DEFAULT
     stats:
       health: 75
-      mana: 50  # half the capacity of a turret
+      mana: 60  # half the capacity of a turret
     value: 20
     armor: STR_CHIMERA_HULL_BOLTER_ARMOR
     standHeight: 20
@@ -330,6 +330,21 @@ units:
     ignoredByAI: false
     builtInWeaponSets:
       - - STR_SPONSON_HB
+
+  - type: STR_CHIMERA_HULL_HEAVY_STUBBER
+    race: STR_CHIMERA
+    refNode: *STR_ADV_TURRET_DEFAULT
+    stats:
+      health: 75
+      mana: 120  # half the capacity of a turret
+    value: 20
+    armor: STR_CHIMERA_HULL_BOLTER_ARMOR
+    standHeight: 20
+    kneelHeight: 20
+    spawnUnit: STR_CHIMERA_HULL
+    ignoredByAI: false
+    builtInWeaponSets:
+      - - STR_GORGON_HEAVY_STUBBER_UNMANNED
 
   - type: STR_CHIMERASL_HULL_BOLTER
     race: STR_CHIMERA
@@ -4023,6 +4038,32 @@ items:
     tags:
       TurretItem: 2
 
+  - type: STR_CHIMERA_HULL_HEAVY_STUBBER # Base Hull Heavy Stubber
+    ufopediaType: STR_MOUNTED_HEAVY_STUBBER_ITEM
+    size: 0.1
+    costBuy: 25000
+    costSell: 12500
+    requiresBuy:
+      - STR_CHIMERA_IG
+      - STR_NOT_STEEL_LEGION_STRATEGY
+    weight: 999
+    power: 1
+    damageType: 3
+    battleType: 4
+    recover: true
+    armor: 255
+    fuseType: 0
+    explodeInventory: 2
+    bigSprite: 100
+    floorSprite: -1
+    # hiddenOnMinimap: true
+    supportedInventorySections:
+      - STR_GROUND
+    costPrime:
+      time: 999
+    tags:
+      TurretItem: 2
+
 
   - type: STR_LEMAN_HULL_BOLTER
     ufopediaType: STR_SPONSON_HB
@@ -4403,17 +4444,77 @@ items:
       mana: true
     battleType: 1
     damageType: 1
-    power: 80
+    power: 85
     damageAlter:  # DA BOLTER
-      ToArmorPre: 0.1
+      ToArmorPre: 0.2
       ArmorEffectiveness: 0.9
-      ToArmor: 0.15
-      ToHealth: 1.1
+      ToArmor: 0.2
+      ToHealth: 1.2
       ToStun: 0.5
       ToEnergy: 0.3
-      ToWound: 0.2
+      ToWound: 0.3
       RandomWound: false
+      RandomType: 6
     autoShots: 5
+    sprayWaypoints: 2
+    invWidth: 2
+    invHeight: 3
+    clipSize: -1
+    twoHanded: false
+    fixedWeapon: true
+    recover: false
+    tags:
+      TURRET_RELOAD_TURNS: 2
+
+  - type: STR_SPONSON_STORM_BOLTER
+    dropoff: 4
+    weight: 0
+    size: 0
+    bigSprite: {mod: 40k, index: 640}
+    bulletSprite: 6
+    fireSound: {mod: 40k, index: 707}
+    explosionSpeed: 5
+    bulletSpeed: 50
+    hitSound: {mod: 40k, index: 708}
+    hitAnimation: {mod: 40k, index: 26}
+    accuracyAuto: 60
+    accuracySnap: 80
+    autoRange: 12
+    snapRange: 20
+    confSnap:
+      arcing: false
+      shots: 1
+    confAuto:
+      arcing: false
+      shots: 4
+    costSnap:
+      time: 1
+      energy: 10
+      mana: 2
+    costAuto:
+      time: 1
+      energy: 10
+      mana: 8
+    flatUse:
+      time: true
+      energy: true
+      mana: true
+    battleType: 1
+    damageType: 1
+    power: 70
+    damageAlter:  # DA BOLTER
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 1.2
+      ToStun: 0.5
+      ToEnergy: 0.3
+      ToWound: 0.3
+      RandomWound: false
+      RandomType: 6
+    shotgunPellets: 2
+    shotgunChoke: 1
+    shotgunBehavior: 1
     sprayWaypoints: 2
     invWidth: 2
     invHeight: 3
@@ -5326,6 +5427,31 @@ items:
     tags:
       TurretItem: 102
 
+  - type: STR_CHIMERA_HULL_HEAVY_STUBBER_CHAOS
+    liveAlien: false
+    recover: true
+    ufopediaType: STR_SPONSON_HEAVY_STUBBER
+    size: 0.1
+    costBuy: 25000
+    costSell: 12500
+    requiresBuy:
+      - STR_UNLOCK_CHIMVALK
+    weight: 999
+    power: 1
+    damageType: 3
+    battleType: 4
+    armor: 255
+    fuseType: 0
+    explodeInventory: 2
+    bigSprite: 100
+    floorSprite: -1
+    # hiddenOnMinimap: true
+    supportedInventorySections:
+      - STR_GROUND
+    costPrime:
+      time: 999
+    tags:
+      TurretItem: 102
 
   - type: STR_LEMAN_HULL_BOLTERCHAOS
     liveAlien: false

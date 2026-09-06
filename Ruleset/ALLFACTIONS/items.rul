@@ -723,6 +723,8 @@ items:
     medikitType: 1
     medikitActionName: STR_RELOAD_WEAPONS
     medikitTargetSelf: true
+    woundRecovery: 0
+    healthRecovery: 0
     heal: 999
     battleType: 6  # not used as medikit
     tuUse: 1
@@ -737,11 +739,14 @@ items:
     fixedWeapon: true
     tags:
       TURRET_RELOAD_ITEM: 1
+      ITEM_IS_NOT_MEDIKIT: 1
 
   - type: STR_RELOAD_WEAPONS
     medikitType: 1
     medikitActionName: STR_RELOAD_WEAPONS
     medikitTargetSelf: true
+    woundRecovery: 0
+    healthRecovery: 0
     heal: 999
     battleType: 6  # not used as medikit
     costUse:
@@ -755,6 +760,7 @@ items:
     fixedWeapon: true
     tags:
       TURRET_RELOAD_ITEM: 1
+      ITEM_IS_NOT_MEDIKIT: 1
 
   - type: STR_MARKET_GOODS  # trading goods
     requiresBuyBaseFunc: [TRADE]
