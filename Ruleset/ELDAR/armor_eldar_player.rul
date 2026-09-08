@@ -21,7 +21,7 @@ armors:
     type: STR_ELDAR_ARMOR_GUARDIAN_PLAYER
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 20
+    visibilityAtDark: 30
     frontArmor: 60
     sideArmor: 50
     rearArmor: 40
@@ -91,7 +91,6 @@ armors:
     spriteSheet: ELDARDR21S.PCK
     customArmorPreviewIndex: 250
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     stats: #some stats changes for the shield
       health: 0
@@ -111,7 +110,6 @@ armors:
     refNode: *GUARDIAN_ARMOR
     customArmorPreviewIndex: 262
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_KIT
     stats: #some stat changes for the medikit encumberance
       stamina: 3
@@ -129,6 +127,7 @@ armors:
     camouflageAtDark: 15  # you need to be 10 tiles closer than max vision range (at night!) to see this unit in the dark
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
+    heatVision: 20
     frontArmor: 60
     sideArmor: 50
     rearArmor: 40
@@ -226,7 +225,6 @@ armors:
     units:
       - STR_ELDAR_M
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -248,7 +246,6 @@ armors:
     units:
       - STR_ELDAR_F
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_KIT
   - type: STR_ELDAR_ARMOR_F_SHIELD        # GUARDIAN
     refNode: *GUARDIAN_ARMOR
@@ -258,7 +255,6 @@ armors:
     units:
       - STR_ELDAR_F
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -278,7 +274,7 @@ armors:
     requires: STR_ELDAR_DIRE_AVENGER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     frontArmor: 85
@@ -346,8 +342,7 @@ armors:
     units:
       - STR_ELDAR_AVANGER_MF
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -359,7 +354,6 @@ armors:
     refNode: *AVENGER_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -376,7 +370,7 @@ armors:
     requires: STR_ELDAR_SCORPION_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     camouflageAtDay: 20  # you need to be 20 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: 13  # you need to be 12 tiles closer than max vision range (at night!) to see this unit in the dark
     antiCamouflageAtDay: 5
@@ -437,7 +431,7 @@ armors:
       - STR_ELDAR_SCORPION_M
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
     builtInWeapons:
-      - INV_NULL_3X3
+      - INV_NULL_3X1_BACKPACK
     stats: #Scorpion armor get better bonus to melee
       tu: 12
       stamina: 10
@@ -459,7 +453,7 @@ armors:
     refNode: *SCORPION_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
+      - INV_NULL_3X1_BACKPACK
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -476,7 +470,7 @@ armors:
     requires: STR_ELDAR_BANSHEE_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 5 # banshee bonus
     antiCamouflageAtDark: 5  # banshee bonus
     frontArmor: 85
@@ -535,7 +529,7 @@ armors:
       - STR_ELDAR_BANSHEE_F
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
     builtInWeapons:
-      - INV_NULL_3X3
+      - INV_NULL_3X1_BACKPACK
     stats: #banshe get bonus to PSY, TU, stamina, health and melee, malus for shooting & throwing
       tu: 5
       stamina: 5
@@ -561,7 +555,7 @@ armors:
     refNode: *BANSHEE_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
+      - INV_NULL_3X1_BACKPACK
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
@@ -577,7 +571,7 @@ armors:
     requires: STR_ELDAR_FIREDRAGON_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     frontArmor: 110
@@ -639,8 +633,7 @@ armors:
     units:
       - STR_ELDAR_DRAGON_MF
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     stats: #fire dragon are very brave, but better armor, less bonus stat for them
       tu: 5
       stamina: 5
@@ -663,7 +656,7 @@ armors:
     #requires: STR_ELDAR_SPIDER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     frontArmor: 110
@@ -726,7 +719,7 @@ armors:
       - STR_ELDAR_SPIDER_PLAYER
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
     builtInWeapons:
-      - INV_NULL_3X3
+      - INV_NULL_3X1_BACKPACK
     stats: # Warpspiders slightly better armor slowest foot movement among AW
       tu: 5
       stamina: 5
@@ -754,7 +747,7 @@ armors:
     requires: STR_ELDAR_REAPER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
     frontArmor: 110
@@ -826,8 +819,7 @@ armors:
     units:
       - STR_ELDAR_REAPER_M
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     stats: #reaper have decent bonus to accuracy, but better armor, less bonus stat for them
       tu: 5
       stamina: 5
@@ -852,7 +844,6 @@ armors:
     customArmorPreviewIndex: 252
     builtInWeapons:
       - AUX_ELDAR_SHIELD
-      - INV_NULL_3X3
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
@@ -868,7 +859,6 @@ armors:
     refNode: *REAPER_ARMOR
     builtInWeapons:
       - STR_ELDAR_LAUNCHER_FIXED
-      - INV_NULL_3X3
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -882,7 +872,7 @@ armors:
 #    refNode: *AVENGER_ARMOR
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
     frontArmor: 110           # Avengers have average armor
@@ -917,8 +907,7 @@ armors:
     units:
       - STR_ELDAR_AUTARCH_PLAYER
       - STR_ELDAR_AVENGEREX_P
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     layersDefaultPrefix: "1"
     layersSpecificPrefix:
       1: ELDARAVENGEREX
@@ -964,7 +953,7 @@ armors:
     refNode: *REAPER_ARMOR
     requires: STR_ELDAR_REAPER_EXARCH_RESEARCH
     visibilityAtDay: 44
-    visibilityAtDark: 28
+    visibilityAtDark: 30
     antiCamouflageAtDay: 7
     antiCamouflageAtDark: 6
     frontArmor: 130
@@ -1065,8 +1054,6 @@ armors:
     spriteSheet: ELDAR_DRAGON_EXARCH.SPK
     visibilityAtDay: 42 #+2
     visibilityAtDark: 30 #+5
-    antiCamouflageAtDay: 8 #+3
-    antiCamouflageAtDark: 8 #+3
     frontArmor: 130 #+20
     sideArmor: 110 #+20
     rearArmor: 100 #+20
@@ -1165,7 +1152,7 @@ armors:
     units:
       - STR_ELDAR_SCORPIONEX_P
     builtInWeapons:
-      - INV_NULL_3X3
+      - INV_NULL_3X1_BACKPACK
     stats: #Scorpion armor get better bonus to strength
       tu: 12
       stamina: 10
@@ -1339,7 +1326,7 @@ armors:
     antiCamouflageAtDay: 10 # Farseer bonus
     antiCamouflageAtDark: 10  # Farseer bonus
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     psiVision: 5 # minor PSY vision
     psiCamouflage: 5 # minor PSY camuflage
     frontArmor: 85
@@ -1491,6 +1478,7 @@ armors:
     type: STR_WRAITHGUARD_ARMOR_P
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    psiVision: 5 # minor PSY vision
     visibilityAtDay: 40
     visibilityAtDark: 30
     allowInv: true
