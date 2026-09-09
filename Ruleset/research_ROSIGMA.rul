@@ -2607,6 +2607,7 @@ research:
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
       - STR_OGRYN_REQUISITION
+      - STR_RATLING_RECRUITMENT
       - STR_GUARD_BARRACKS
       - STR_REGIMENT_OFFICERS
       - STR_KRIEG_GUARDSMEN
@@ -2658,6 +2659,7 @@ research:
       - STR_AIRSTRIKE_REQUISITION
       - STR_JUMP_CARAPACE_REQUISITION
       # - STR_IMPERIAL_GUARD_MISSIONS  # scion dont have this anymore they are already trained they will unlock the benefit directly instead
+      - STR_RATLING_RECRUITMENT
       - STR_KRIEG_GUARDSMEN
       - STR_CATACHAN_GUARDSMEN
       - STR_HOLOGRAM_GRENADE_REQUISITION
@@ -2695,6 +2697,7 @@ research:
       - STR_IMPERIAL_GUARD_MISSIONS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_SQUAT_GUARDSMEN
+      - STR_RATLING_RECRUITMENT
       - STR_BEASTMEN_GUARDSMEN
       - STR_FELINID_GUARDSMEN
       - STR_OGRYN_REQUISITION
@@ -6226,6 +6229,13 @@ research:
       - STR_CHAOSOGRYN_RESEARCH
     unlocks:
       - STR_OGRYN_AVAILABLE
+
+  - name: STR_RATLING_RECRUITMENT  # Ratlings
+    cost: 150
+    points: 25
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
 
   - name: STR_BIOMANCER  # Biomancer
     cost: 0
@@ -11919,6 +11929,16 @@ research:
       - STR_APOTHECARY_CORRUPTION_RESEARCH
       - STR_CHAPEL_CORRUPTION_RESEARCH
       - STR_TZEENTCH_LEADER
+
+  - name: STR_GSC_CORRUPTION_RESEARCH  # Commander corruption research
+    cost: 150
+    points: 50
+    requiresBaseFunc: [PSI, APOC]
+    dependencies:
+      - STR_APOTHECARY_CORRUPTION_RESEARCH
+      - STR_CHAPEL_CORRUPTION_RESEARCH
+      - STR_GSC_XENO_INFECTION_TEST_RESULTS
+      - STR_GSC_MEANS_OF_INFECTION
 
   # Iron Warriors
   - name: STR_IRON_MAIDEN_SISTER  # Iron Maiden

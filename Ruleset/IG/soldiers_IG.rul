@@ -872,13 +872,13 @@ soldiers:
       mana: 0
     statCaps:
       tu: 80
-      stamina: 120
+      stamina: 140
       health: 150
       bravery: 80
       reactions: 60
       firing: 50
       throwing: 70
-      strength: 120
+      strength: 150
       psiStrength: 40
       psiSkill: 100
       melee: 110
@@ -934,13 +934,13 @@ soldiers:
       mana: 0
     statCaps:
       tu: 90
-      stamina: 120
+      stamina: 140
       health: 170
       bravery: 110
       reactions: 80
       firing: 90
       throwing: 90
-      strength: 120
+      strength: 150
       psiStrength: 60
       psiSkill: 100
       melee: 120
@@ -1191,8 +1191,8 @@ soldiers:
       stamina: 90
       health: 50  # was 55
       bravery: 110  # was 100
-      reactions: 90  # was 80
-      firing: 100  # was 100
+      reactions: 120  # was 80
+      firing: 90  # was 100
       throwing: 60  # 70
       strength: 65  # was 60
       psiStrength: 100
@@ -1269,8 +1269,8 @@ soldiers:
       stamina: 90
       health: 50  # was 55
       bravery: 110  # was 100
-      reactions: 90  # was 80
-      firing: 120  # was 100
+      reactions: 120  # was 80
+      firing: 90  # was 100
       throwing: 60  # 70
       strength: 65  # was 60
       psiStrength: 100
@@ -2727,3 +2727,173 @@ soldiers:
     flagOffset: 42 # guard kill flags
     tags:
       SOLDIER_WOUND_TIME_MULTIPLIER: 66 # inbuilt bionics
+
+# Ratlings
+
+  - &STR_RATLING_SOLDIER_TEMPLATE
+    type: STR_GUARD_RATLING  # relative to a guardsman low health/strength/bravery/melee, mediocre stamina, everything else is great, especially Firing Accuracy
+    flagOffset: 42
+    requires:
+      - STR_RATLING_RECRUITMENT
+    costBuy: 50000 # good ratlings are hard to find on this frontier world
+    costSalary: 10000 # greedy and gluttonous; plus incidental cost of theft
+    minStats:
+      tu: 60
+      stamina: 40
+      health: 10
+      bravery: 10
+      reactions: 60
+      firing: 70
+      throwing: 60
+      strength: 10
+      psiStrength: 0
+      psiSkill: 0
+      melee: 10
+      mana: 0
+    maxStats:
+      tu: 70
+      stamina: 60
+      health: 20
+      bravery: 50
+      reactions: 80
+      firing: 90
+      throwing: 80
+      strength: 20
+      psiStrength: 100
+      psiSkill: 25
+      melee: 40
+      mana: 0
+    statCaps:
+      tu: 90
+      stamina: 90
+      health: 40
+      bravery: 90
+      reactions: 120
+      firing: 130
+      throwing: 110
+      strength: 40
+      psiStrength: 100
+      psiSkill: 50
+      melee: 70
+      mana: 0
+    trainingStatCaps:
+      tu: 80
+      stamina: 70
+      health: 30
+      firing: 100
+      throwing: 90
+      strength: 30
+      psiStrength: 100
+      psiSkill: 50
+      melee: 50
+      mana: 0
+    value: 15 # skilled, well trained marksmen
+    moraleLossWhenKilled: 90  # Abhuman, but has beloved culinary skills!
+    armor: STR_RATLING_FATIGUES_ARMOR
+    dogfightExperience:
+      bravery: 1
+      reactions: 35
+      firing: 50
+    rankSprite: {mod: 40k, index: 1000}
+    rankBattleSprite: {mod: 40k, index: 1000}
+    rankTinySprite: {mod: 40k, index: 1000}
+    standHeight: 16
+    kneelHeight: 12
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 75
+    soldierNames:
+      - Names/ratling.nam
+    deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    rankStrings:
+      - STR_GUARD_RATLING_RANK_0
+      - STR_GUARD_RATLING_RANK_1
+      - STR_GUARD_RATLING_RANK_2
+      - STR_GUARD_RATLING_RANK_3
+    tags:
+      SOLDIER_DODGE_PERCENT_INCREASE: 10
+      SOLDIER_DODGE_COUNT_INCREASE: 1
+
+  - type: STR_GUARD_RATLING_VETERAN  # relative to a guardsman low health/strength/bravery/melee, mediocre stamina, everything else is great, especially Firing Accuracy
+    flagOffset: 42
+    # costBuy: 50000 # testing only; to be commented out
+    requires:
+      - STR_RATLING_RECRUITMENT
+    minStats:
+      tu: 80
+      stamina: 70
+      health: 30
+      reactions: 90
+      firing: 100
+      throwing: 90
+      strength: 30
+      psiStrength: 0
+      psiSkill: 0
+      melee: 50
+      mana: 0
+    maxStats:
+      tu: 85
+      stamina: 80
+      health: 35
+      reactions: 100
+      firing: 100
+      throwing: 100
+      strength: 35
+      psiStrength: 100
+      psiSkill: 50
+      melee: 60
+      mana: 0
+    trainingStatCaps:
+      tu: 85
+      stamina: 80
+      health: 35
+      reactions: 100
+      firing: 100
+      throwing: 100
+      strength: 35
+      psiStrength: 100
+      psiSkill: 50
+      melee: 60
+      mana: 0
+    statCaps:
+      tu: 90
+      stamina: 90
+      health: 40
+      bravery: 90
+      reactions: 130 # +10
+      firing: 140 # +10
+      throwing: 110
+      strength: 40
+      psiStrength: 100
+      psiSkill: 50
+      melee: 70
+      mana: 0
+    armor: STR_RATLING_FATIGUES_ARMOR
+    dogfightExperience:
+      bravery: 1
+      reactions: 35
+      firing: 50
+    rankSprite: {mod: 40k, index: 1000}
+    rankBattleSprite: {mod: 40k, index: 1000}
+    rankTinySprite: {mod: 40k, index: 1000}
+    standHeight: 16
+    kneelHeight: 12
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 75
+    soldierNames:
+      - Names/ratling_veteran.nam
+    value: 30 # skilled, well trained marksmen
+    costSalary: 40000 # greedy and gluttonous, and now, proveably skilled
+    moraleLossWhenKilled: 110  # Abhuman, but has beloved culinary skills! Now also a proven and capable asset
+    deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    rankStrings:
+      - STR_GUARD_RATLING_VETERAN_RANK_0
+      - STR_GUARD_RATLING_VETERAN_RANK_1
+      - STR_GUARD_RATLING_VETERAN_RANK_2
+      - STR_GUARD_RATLING_VETERAN_RANK_3
+    tags:
+      SOLDIER_DODGE_PERCENT_INCREASE: 20
+      SOLDIER_DODGE_COUNT_INCREASE: 2

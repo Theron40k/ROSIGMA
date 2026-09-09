@@ -438,3 +438,22 @@ items:
     spawnUnitFaction: 2
     tags:
       ITEM_REGENS_AMMO_PER_TURN: 2
+
+  - &SKILL_TOKEN
+    type: STR_PSI_AMP_TOKEN
+    size: 0
+    weight: 0
+    invWidth: 0
+    invHeight: 0
+    hitSound: {mod: 40k, index: 36}
+    armor: 255
+    recover: false
+    hiddenOnMinimap: true
+    fixedWeapon: true
+    defaultInventorySlot: STR_BACK_PACK
+  - type: STR_PSI_AMP_TOKEN
+    requires:
+      - STR_PSI_AMP
+    battleType: 9
+    tuUse: 25
+    flatRate: true

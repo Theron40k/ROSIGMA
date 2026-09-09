@@ -1,4 +1,4 @@
-# todo reference to 40k mod for < 1501
+﻿# todo reference to 40k mod for < 1501
 armors:
   - type: STR_ADEPTAS_NOVICEHABIT
     selectUnitMale:     [1501, 1502, 1503, 1504]  # yamllint disable-line rule:colons
@@ -2331,3 +2331,28 @@ armors:
 
   - type: STR_BTDREAD_ARMOR_PLAYER5
     refNode: *STR_BTDREADNODE
+
+# Ratling
+  - type: STR_RATLING_FATIGUES_ARMOR #Placeholder
+    selectUnitMale:     [{mod: 40k, index: 311}, {mod: 40k, index: 312}, {mod: 40k, index: 313}, {mod: 40k, index: 314}, {mod: 40k, index: 315}]
+    selectUnitFemale:   [{mod: 40k, index: 331}, {mod: 40k, index: 332}, {mod: 40k, index: 333}, {mod: 40k, index: 334}, {mod: 40k, index: 335}]
+    startMovingMale:    [{mod: 40k, index: 306}, {mod: 40k, index: 307}, {mod: 40k, index: 308}, {mod: 40k, index: 309}, {mod: 40k, index: 310}]
+    startMovingFemale:  [{mod: 40k, index: 326}, {mod: 40k, index: 327}, {mod: 40k, index: 328}, {mod: 40k, index: 329}, {mod: 40k, index: 330}]
+    selectWeaponMale:   [{mod: 40k, index: 301}, {mod: 40k, index: 302}, {mod: 40k, index: 303}, {mod: 40k, index: 304}, {mod: 40k, index: 305}]
+    selectWeaponFemale: [{mod: 40k, index: 321}, {mod: 40k, index: 322}, {mod: 40k, index: 323}, {mod: 40k, index: 324}, {mod: 40k, index: 325}]
+    annoyedMale:        [{mod: 40k, index: 316}, {mod: 40k, index: 317}, {mod: 40k, index: 318}, {mod: 40k, index: 319}, {mod: 40k, index: 320}]
+    annoyedFemale:      [{mod: 40k, index: 336}, {mod: 40k, index: 337}, {mod: 40k, index: 338}, {mod: 40k, index: 339}, {mod: 40k, index: 340}]
+    deathMale:     [{mod: 40k, index: 385}, {mod: 40k, index: 386}, {mod: 40k, index: 387}, {mod: 40k, index: 388}]
+    deathFemale:   [{mod: 40k, index: 389}, {mod: 40k, index: 390}, {mod: 40k, index: 392}, {mod: 40k, index: 392}, {mod: 40k, index: 393}]
+
+  - type: STR_RATLING_CAMO_CLOAK_ARMOR #Placeholder
+    selectUnitMale:     [{mod: 40k, index: 311}, {mod: 40k, index: 312}, {mod: 40k, index: 313}, {mod: 40k, index: 314}, {mod: 40k, index: 315}]
+    selectUnitFemale:   [{mod: 40k, index: 331}, {mod: 40k, index: 332}, {mod: 40k, index: 333}, {mod: 40k, index: 334}, {mod: 40k, index: 335}]
+    startMovingMale:    [{mod: 40k, index: 306}, {mod: 40k, index: 307}, {mod: 40k, index: 308}, {mod: 40k, index: 309}, {mod: 40k, index: 310}]
+    startMovingFemale:  [{mod: 40k, index: 326}, {mod: 40k, index: 327}, {mod: 40k, index: 328}, {mod: 40k, index: 329}, {mod: 40k, index: 330}]
+    selectWeaponMale:   [{mod: 40k, index: 301}, {mod: 40k, index: 302}, {mod: 40k, index: 303}, {mod: 40k, index: 304}, {mod: 40k, index: 305}]
+    selectWeaponFemale: [{mod: 40k, index: 321}, {mod: 40k, index: 322}, {mod: 40k, index: 323}, {mod: 40k, index: 324}, {mod: 40k, index: 325}]
+    annoyedMale:        [{mod: 40k, index: 316}, {mod: 40k, index: 317}, {mod: 40k, index: 318}, {mod: 40k, index: 319}, {mod: 40k, index: 320}]
+    annoyedFemale:      [{mod: 40k, index: 336}, {mod: 40k, index: 337}, {mod: 40k, index: 338}, {mod: 40k, index: 339}, {mod: 40k, index: 340}]
+    deathMale:     [{mod: 40k, index: 385}, {mod: 40k, index: 386}, {mod: 40k, index: 387}, {mod: 40k, index: 388}]
+    deathFemale:   [{mod: 40k, index: 389}, {mod: 40k, index: 390}, {mod: 40k, index: 392}, {mod: 40k, index: 392}, {mod: 40k, index: 393}]

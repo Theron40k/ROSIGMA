@@ -130,12 +130,12 @@ soldiers:
   - type: STR_CATACHANVET_FIGHTER
     tags:
       SOLDIER_COMMAND_POINTS: 5
-      SOLDIER_WOUND_TIME_MULTIPLIER: 80  # little more rough and tumble than your typical guardsman
+      SOLDIER_WOUND_TIME_MULTIPLIER: 80  # significantly more rough and tumble than your typical guardsman
 
   - type: STR_CATACHANTOP_FIGHTER
     tags:
       SOLDIER_COMMAND_POINTS: 20
-      SOLDIER_WOUND_TIME_MULTIPLIER: 70  # little more rough and tumble than your typical guardsman
+      SOLDIER_WOUND_TIME_MULTIPLIER: 70  # much more rough and tumble than your typical guardsman
 
   - type: STR_SLY_MARBO
     tags:
@@ -144,5 +144,16 @@ soldiers:
   - type: STR_ENGINSEER
     tags:
       SOLDIER_COMMAND_POINTS: 1  # they do not command and they are rarely subject to direct IG authority
+
+# Ratlings
+  - type: STR_GUARD_RATLING
+    tags:
+      SOLDIER_WOUND_TIME_MULTIPLIER: 120  # if they survive their injuries, they take slightly longer to recover
+      SOLDIER_COMMAND_POINTS: 2
+
+  - type: STR_GUARD_RATLING_VETERAN
+    tags:
+      SOLDIER_WOUND_TIME_MULTIPLIER: 110  # if they survive their injuries, they take slightly longer to recover
+      SOLDIER_COMMAND_POINTS: 5
 
 #  - type: STR_GUARD_IMPERIAL_ASSASSIN
