@@ -268,7 +268,7 @@ armors:
 #
 
 # ELDAR.TIER2 # ASPECT WARRIORS (path of the warrior)
-
+  - delete: STR_ELDAR_ARMOR4_P
   - &AVENGER_ARMOR
     type: STR_ELDAR_ARMOR4_P       # DIRE AVANGER
     requires: STR_ELDAR_DIRE_AVENGER_RESEARCH
@@ -350,6 +350,7 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
+  - delete: STR_ELDAR_ARMOR4_P_SHIELD
   - type: STR_ELDAR_ARMOR4_P_SHIELD        # DIRE AVANGER
     refNode: *AVENGER_ARMOR
     storeItem: STR_ELDAR_SHIELD
@@ -365,6 +366,7 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   # scorpion units will rely on camo and tankiness
+  - delete: STR_ELDAR_ARMOR5_P
   - &SCORPION_ARMOR
     type: STR_ELDAR_ARMOR5_P       # SCORPION PLAYER
     requires: STR_ELDAR_SCORPION_RESEARCH
@@ -430,8 +432,8 @@ armors:
     units:
       - STR_ELDAR_SCORPION_M
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X1_BACKPACK
+    #builtInWeapons:
+    #  - INV_NULL_3X1_BACKPACK
     stats: #Scorpion armor get better bonus to melee
       tu: 12
       stamina: 10
@@ -449,11 +451,12 @@ armors:
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
+  - delete: STR_ELDAR_ARMOR5_P_SHIELD
   - type: STR_ELDAR_ARMOR5_P_SHIELD       # SCORPION PLAYER
     refNode: *SCORPION_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X1_BACKPACK
+      #- INV_NULL_3X1_BACKPACK
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -465,6 +468,7 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   # banshee units will rely on Movement, Scream and dodge
+  - delete: STR_ELDAR_ARMOR2_P
   - &BANSHEE_ARMOR
     type: STR_ELDAR_ARMOR2_P       # BANSHEE PLAYER
     requires: STR_ELDAR_BANSHEE_RESEARCH
@@ -477,6 +481,7 @@ armors:
     sideArmor: 75
     rearArmor: 60
     underArmor: 65
+    spriteSheet: ELDAR_BANSHEE.SPK
     corpseBattle:
       - STR_ELDAR_BANSHEE_CORPSE_P
     layersDefaultPrefix: "1"
@@ -528,8 +533,8 @@ armors:
     units:
       - STR_ELDAR_BANSHEE_F
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X1_BACKPACK
+    #builtInWeapons:
+      #- INV_NULL_3X1_BACKPACK
     stats: #banshe get bonus to PSY, TU, stamina, health and melee, malus for shooting & throwing
       tu: 5
       stamina: 5
@@ -551,11 +556,12 @@ armors:
       DODGE_CHANCE: 40
       ARMOR_MAX_SUCCESSFUL_DODGES: 4
 
+  - delete: STR_ELDAR_ARMOR2_P_SHIELD
   - type: STR_ELDAR_ARMOR2_P_SHIELD       # BANSHEE PLAYER
     refNode: *BANSHEE_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X1_BACKPACK
+      #- INV_NULL_3X1_BACKPACK
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
@@ -718,8 +724,8 @@ armors:
     units:
       - STR_ELDAR_SPIDER_PLAYER
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X1_BACKPACK
+    #builtInWeapons:
+      #- INV_NULL_3X1_BACKPACK
     stats: # Warpspiders slightly better armor slowest foot movement among AW
       tu: 5
       stamina: 5
@@ -1151,8 +1157,8 @@ armors:
     loftempsSet: [3]
     units:
       - STR_ELDAR_SCORPIONEX_P
-    builtInWeapons:
-      - INV_NULL_3X1_BACKPACK
+    #builtInWeapons:
+      #- INV_NULL_3X1_BACKPACK
     stats: #Scorpion armor get better bonus to strength
       tu: 12
       stamina: 10
@@ -1320,7 +1326,7 @@ armors:
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
 
   - &SEER_ARMOR
-    type: STR_ELDAR_SEER_ARMOR_P        # SEER  PLAYER
+    type: STR_ELDAR_SEER_ARMOR_P        # SEER  PLAYER (NOT FARSEER)
     requires: STR_ELDAR_SEER_RESEARCH
     storeItem: STR_NONE
     antiCamouflageAtDay: 10 # Farseer bonus
@@ -1386,8 +1392,8 @@ armors:
       - STR_ELDAR_PSYKER_PLAYER
     corpseBattle:
       - STR_ELDAR_SEER_CORPSE_P
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
+      #- INV_NULL_3X3
     stats: #Seer get bonus to PSY, health malus for melee and throwing
       tu: 0
       stamina: 0
@@ -1416,7 +1422,7 @@ armors:
     spriteSheet: ELDARDR12S.PCK
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
+      #- INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
