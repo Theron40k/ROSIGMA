@@ -1175,9 +1175,9 @@ items:
     costBuy: 50000
     costSell: 15000
     weight: 10
-    bigSprite: {mod: 40k, index: 392}
-    floorSprite: {mod: 40k, index: 244}
-    handSprite: {mod: 40k, index: 840}
+    bigSprite: 4899
+    floorSprite: 4899
+    handSprite: 1682
     meleeAnimation: {mod: 40k, index: 4}
     meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
     meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
@@ -1185,9 +1185,9 @@ items:
     invHeight: 3
     flatRate: true
     attraction: 8
-    listOrder: 16300
+    listOrder: 16301
 
-  - type: STR_TRISKELE
+  - type: STR_TRISKELE # melee and ranged throwing weapon, to pair with hand shield
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
     requiresBuy:
@@ -1205,6 +1205,9 @@ items:
     clipSize: -1
     armor: 200
         #Throwing Profile
+    power: 40 # dagger like weapon lower damage, higher attacks
+    damageBonus:
+      melee: 0.4
     costAimed:
       time: 35
       energy: 15
@@ -1219,7 +1222,7 @@ items:
     accuracySnap: 80
     confSnap:
       name: STR_SINGING_SPEAR_SNAP_THROW
-      shortName: STR_SINGIN_SPEAR_SNAP_THROW
+      shortName: STR_SINGING_SPEAR_SNAP_THROW
     snapRange: 9
     maxRange: 18
     accuracyMultiplier:
@@ -1232,16 +1235,21 @@ items:
     kneelBonus: 100
     dropoff: 5
         #MELEE PROFILE
+    meleeType: 5
+    meleePower: 40
+    meleeBonus:
+      melee: 0.4
+    meleeAlter:
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
     costMelee:
       time: 10
       energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
     flatMelee: true
-    power: 40 # dagger like weapon lower damage, higher attacks
-    damageBonus:
-      melee: 0.4
     meleeMultiplier:
-      melee: 0.7
-      reactions: 0.3
+      melee: 1
     accuracyMelee: 100
     tags:
       ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
@@ -1260,13 +1268,93 @@ items:
     fireSound: 1895
     hitSound: 1892
     meleeAnimation: {mod: 40k, index: 4}
-    meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
-    meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
+    meleeSound: {mod: 40k, index: 753} #753 Powersword miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powersword hit
     invWidth: 2
     invHeight: 2
     flatRate: true
     attraction: 8
-    listOrder: 16300
+    listOrder: 16301
+
+  - type: STR_BANSHEE_EXECUTIONER  #  2 handed and more powerful than Eldar Powerglaive
+    categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      # BANSHEE EXARCH RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 100000
+    costSell: 25000
+    weight: 35
+    bigSprite: 4900
+    floorSprite: 4900
+    handSprite: 1690
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    fireSound: {mod: 40k, index: 753}
+    explosionHitSound: {mod: 40k, index: 101}  # stabhit
+    hitAnimation: 2040  # Bloodgush sprite, X1.pck for ranged attacks, was 1070  # AOEMELEEGENE.png
+    hitAnimFrames: 8
+    powerForAnimation: 10
+    hitSound: {mod: 40k, index: 101}  # stabhit
+    bulletSprite: 5
+    clipSize: -1
+    invWidth: 2
+    invHeight: 3
+    snapRange: 2  # has reach
+    maxRange: 2
+    powerRangeThreshold: 3
+    powerRangeReduction: 99
+    battleType: 1
+    damageType: 5
+    meleeType: 5
+    confSnap:
+      name: STR_HALLEBARD_SNAPSHOT_LUNGE
+      shots: 1
+    costSnap:
+      time: 30
+      energy: 10
+    accuracySnap: 80
+    accuracyMelee: 100
+    accuracyMultiplier:
+      melee: 1 # Banshee stat
+    meleeMultiplier:
+      melee: 1 # Banshee stat
+    power: 110
+    meleePower: 110
+    damageBonus:
+      melee: 1 # Banshee stat
+    meleeBonus:
+      melee: 1 # Banshee stat
+    costMelee:
+      time: 25
+      energy: 8  # heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    twoHanded: true # 2 handed but more powerful than eldar powerglaive
+    oneHandedPenalty: 50
+    attraction: 6
+    armor: 200
+    listOrder: 16301
+    flatRate: true
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
   - type: STR_ELDAR_POWER_BLADE  # STR_EPOWER_SWORD stats, REWORK required
     requires:
@@ -1509,6 +1597,7 @@ items:
     attraction: 6
     armor: 200
     listOrder: 16498
+    flatRate: true
     inventoryMoveCost: #quickdraw
       basePercent: 50
     experienceTrainingMode: 13 #train reactions and melee
@@ -1572,8 +1661,8 @@ items:
     requiresBuyBaseFunc: []
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
     size: 0.2
-    costBuy: 10000
-    costSell: 2000
+    costBuy: 50000
+    costSell: 10000
     weight: 12 # Heavier mechanism
     bigSprite: 4895
     floorSprite: 4895
@@ -1624,8 +1713,8 @@ items:
       # Scorpion Exarch Reasearch
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    costBuy: 30000
-    costSell: 10000
+    costBuy: 100000
+    costSell: 25000
     size: 0.2
     power: 80
     costMelee:
@@ -1641,7 +1730,7 @@ items:
       RandomWound: false
       ToArmorPre: 0.4  # +10%
       ToHealth: 1.5
-      RandomType: 7  # Devastating Wounds
+      RandomType: 2
       ToWound: 0.3
       ToEnergy: 0.5
     weight: 50  # Heavier weapon meant for Scorpion Exarch
@@ -1680,8 +1769,8 @@ items:
       - STR_ELDAR_WEAPONS_ACQUISITION
     size: 0.2
     dropoff: 5
-    costBuy: 30000
-    costSell: 10000
+    costBuy: 100000
+    costSell: 25000
     bigSprite: 4897
     floorSprite: 4897
     handSprite: 1666
