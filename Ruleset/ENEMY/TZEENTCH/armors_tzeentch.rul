@@ -301,12 +301,12 @@ armors:
   - type: MUTON_ARMORTZEENTCH                                     # TZEENTCH REGULAR; Rubric Marine
     visibilityAtDay: 40
     visibilityAtDark: 25
-    heatVision: 30
-    psiVision: 5
+    heatVision: 25  # standard power armor thermals
+    psiVision: 5  # psychic senses
     frontArmor: 145
     sideArmor: 130
     rearArmor: 100
-    underArmor: 145
+    underArmor: 80
     damageModifier:  # CHAOS ARMOR
       - 1.0  # none
       - 1.0  # AP
@@ -327,12 +327,22 @@ armors:
     bleedImmune: true
     zombiImmune: true
     allowsRunning: false  # NPC limits for BAI
+    selectUnitMale:     [3733, 3734]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3733, 3734]  # yamllint disable-line rule:colons
+    startMovingMale:    [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3770]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3770]  # yamllint disable-line rule:colons
+    annoyedMale:        [3735, 3736]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3735, 3736]  # yamllint disable-line rule:colons
+    deathMale:          [3730, 3731, 3732]  # yamllint disable-line rule:colons
+    deathFemale:        [3730, 3731, 3732]  # yamllint disable-line rule:colons
     tags:
-      INFECTION_RESIST: 100  # infection immune
-      INTIMIDATION_RESISTANCE: 100
-      UNIT_SIZE: 150 # Large
-      UNIT_TYPE_LIVING: 1
+      INFECTION_RESIST: 100  # Rubric Marines are dust
+      INTIMIDATION_RESISTANCE: 100  # Rubric Marines are dust
+      UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_TZEENTCH: 1
 
   - type: MUTON_ARMORTZEENTCH_BLESSED                                    # TZEENTCH REGULAR
@@ -486,12 +496,12 @@ armors:
     visibilityAtDark: 25
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
-    heatVision: 33
-    psiVision: 5
+    heatVision: 25  # standard power armor thermals
+    psiVision: 5  # psychic senses
     frontArmor: 150
     sideArmor: 140
     rearArmor: 110
-    underArmor: 150
+    underArmor: 80
     painImmune: true  # Rubric Marines are dust
     fearImmune: true
     instantWoundRecovery: true
@@ -512,13 +522,24 @@ armors:
       - 1.0  # MELTA
     loftempsSet: [4]
     allowsRunning: false  # NPC limits for BAI
+    selectUnitMale:     [3733, 3734]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3733, 3734]  # yamllint disable-line rule:colons
+    startMovingMale:    [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3770]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3770]  # yamllint disable-line rule:colons
+    annoyedMale:        [3735, 3736]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3735, 3736]  # yamllint disable-line rule:colons
+    deathMale:          [3730, 3731, 3732]  # yamllint disable-line rule:colons
+    deathFemale:        [3730, 3731, 3732]  # yamllint disable-line rule:colons
     tags:
-      INFECTION_RESIST: 100  # infection immune
-      INTIMIDATION_RESISTANCE: 100
-      UNIT_SIZE: 150 # Large
-      UNIT_TYPE_LIVING: 1
+      INFECTION_RESIST: 100  # Rubric Marines are dust
+      INTIMIDATION_RESISTANCE: 100  # Rubric Marines are dust
+      UNIT_SIZE: 150 # LARGE
       UNIT_TYPE_CHAOS: 1
+      UNIT_TYPE_MECHANICAL: 1
       UNIT_TYPE_TZEENTCH: 1
+
 
   - type: STR_TZAANGOR_ARMOR                                 # SLAANESH REGULAR
     visibilityAtDay: 40
@@ -1235,6 +1256,16 @@ armors:
       - 0.9  # MELTA
     specialWeapon: DW_SATAUTOCAN
     allowsRunning: false  # NPC limits for BAI
+    selectUnitMale:     [3733, 3734]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3733, 3734]  # yamllint disable-line rule:colons
+    startMovingMale:    [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3770]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3770]  # yamllint disable-line rule:colons
+    annoyedMale:        [3735, 3736]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3735, 3736]  # yamllint disable-line rule:colons
+    deathMale:          [3730, 3731, 3732]  # yamllint disable-line rule:colons
+    deathFemale:        [3730, 3731, 3732]  # yamllint disable-line rule:colons
     tags:
       INFECTION_RESIST: 100  # infection immune
       INTIMIDATION_RESISTANCE: 100
@@ -1281,6 +1312,16 @@ armors:
       - 1.0  # MELTA
     specialWeapon: STR_MFIST
     allowsRunning: false  # NPC limits for BAI
+    selectUnitMale:     [3733, 3734]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3733, 3734]  # yamllint disable-line rule:colons
+    startMovingMale:    [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3770]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3770]  # yamllint disable-line rule:colons
+    annoyedMale:        [3735, 3736]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3735, 3736]  # yamllint disable-line rule:colons
+    deathMale:          [3730, 3731, 3732]  # yamllint disable-line rule:colons
+    deathFemale:        [3730, 3731, 3732]  # yamllint disable-line rule:colons
     tags:
       INFECTION_RESIST: 100  # infection immune
       INTIMIDATION_RESISTANCE: 100
@@ -1326,6 +1367,16 @@ armors:
       - 0.2  # IMPACT
       - 1.1  # MELTA; Cataphract increases by 0.1
     specialWeapon: STR_MFIST
+    selectUnitMale:     [3733, 3734]  # yamllint disable-line rule:colons
+    selectUnitFemale:   [3733, 3734]  # yamllint disable-line rule:colons
+    startMovingMale:    [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    startMovingFemale:  [3737, 3738, 3739]  # yamllint disable-line rule:colons
+    selectWeaponMale:   [3770]  # yamllint disable-line rule:colons
+    selectWeaponFemale: [3770]  # yamllint disable-line rule:colons
+    annoyedMale:        [3735, 3736]  # yamllint disable-line rule:colons
+    annoyedFemale:      [3735, 3736]  # yamllint disable-line rule:colons
+    deathMale:          [3730, 3731, 3732]  # yamllint disable-line rule:colons
+    deathFemale:        [3730, 3731, 3732]  # yamllint disable-line rule:colons
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 80
       ARMOR_ENERGY_SHIELD_DECAY: 20
