@@ -53,6 +53,23 @@ skills:
       energy: true
       stun: true
 
+  # Intimidation
+  - type: STR_SKILL_BANSHEE_MASK_INTIMIDATION
+    costUse:
+      time: 25 # quick use, but I don't think it can work for reactions as a skill.
+    targetMode: 8
+    compatibleWeapons: [ STR_BANSHEE_INTIMIDATION_SCREAM_TOKEN ]
+    checkHandsOnly: false
+    battleType: 1
+
+  - type: STR_SKILL_BANSHEE_MASK_DAMAGE
+    costUse:
+      time: 35 # quick use, but I don't think it can work for reactions as a skill.
+    targetMode: 8
+    compatibleWeapons: [ STR_BANSHEE_WARP_SCREAM_TOKEN ]
+    checkHandsOnly: false
+    battleType: 1
+
 soldiers:
   - type: STR_ELDAR_SPIDER_PLAYER
     skillIconSprite: 221  #
@@ -68,6 +85,8 @@ soldiers:
     skillIconSprite: 250 # TODO: change
     skills:
       - STR_SKILL_BANSHEE_DASH
+      - STR_SKILL_BANSHEE_MASK_INTIMIDATION
+      - STR_SKILL_BANSHEE_MASK_DAMAGE
 
   - type: STR_ELDAR_BANSHEE_EXARCH_PLAYER
     skillIconSprite: 250 # TODO: change
