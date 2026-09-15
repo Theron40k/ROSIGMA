@@ -1552,6 +1552,22 @@ ufopaedia:
     image_id: ELDAR_SCORPIONEX_ARMOR_CODEX.SPK
     text: STR_ELDAR_SCORPIONEX_ARMOR_CODEX
 
+  - delete: STR_ELDAR_ARMOR2_P
+  - id: STR_ELDAR_ARMOR2_P
+    type_id: 15
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_ELDAR_STRATEGY
+    image_id: ELDAR_BANSHEE_ARMOR_CODEX.SPK
+    text: STR_ELDAR_BANSHEE_ARMOR_CODEX
+  - id: STR_ELDAR_BANSHEEEX_ARMOR_P
+    type_id: 15
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_ELDAR_STRATEGY
+    image_id: ELDAR_BANSHEEEX_ARMOR_CODEX.SPK
+    text: STR_ELDAR_BANSHEEEX_ARMOR_CODEX
+
   - id: STR_ELDAR_ARMOR6_P
     type_id: 15
     section: STR_ARMORPEDIA
@@ -22649,24 +22665,6 @@ ufopaedia:
     image_id: ELDAR_RANGER_AUTOPSY_CODEX.SPK
     text: STR_ELDAR_RANGER_AUTOPSY_CODEX
 
-  - delete: STR_BANSHEE_AUTOPSY
-  - id: STR_BANSHEE_AUTOPSY
-    type_id: 10
-    section: STR_ALIEN_LIFE_FORMS
-    requires:
-      - STR_BANSHEE_CORPSE
-    image_id: UP114.SPK
-    text: STR_BANSHEE_AUTOPSY_UFOPEDIA
-  - delete: STR_ELDAR_ARMOR2
-  - id: STR_ELDAR_ARMOR2
-    type_id: 15
-    section: STR_ALIEN_LIFE_FORMS
-    requires:
-      - STR_ELDAR_BANSHEE
-    image_id: UP113.SPK
-    text: STR_NURGLE_UFOPEDIA
-
-
 
   - delete: STR_DAVENGER_AUTOPSY
   - id: STR_DAVENGER_AUTOPSY
@@ -22724,6 +22722,30 @@ ufopaedia:
       - STR_SCORPIONEX_CORPSE
     image_id: ELDAR_SCORPIONEX_AUTOPSY_CODEX.SPK
     text: STR_ELDAR_SCORPIONEX_AUTOPSY_CODEX
+
+  - delete: STR_BANSHEE_AUTOPSY
+  - id: STR_BANSHEE_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_BANSHEE_CORPSE
+    image_id: ELDAR_BANSHEE_AUTOPSY_CODEX.SPK
+    text: STR_BANSHEE_AUTOPSY_UFOPEDIA
+  - delete: STR_ELDAR_ARMOR2
+  - id: STR_ELDAR_ARMOR2   # ENEMY BANSHEE ARMOR
+    type_id: 15
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_ELDAR_BANSHEE
+    image_id: UP113.SPK
+    text: STR_ELDAR_BANSHEE_ARMOR_CODEX
+  - id: STR_ELDAR_BANSHEEEX_AUTOPSY
+    type_id: 10
+    section: STR_ALIEN_LIFE_FORMS
+    requires:
+      - STR_BANSHEEEX_CORPSE
+    image_id: ELDAR_BANSHEEEX_AUTOPSY_CODEX.SPK
+    text: STR_ELDAR_BANSHEEEX_AUTOPSY_CODEX
 
   - delete: STR_ELDAR_REAPER_AUTOPSY
   - id: STR_ELDAR_REAPER_AUTOPSY
