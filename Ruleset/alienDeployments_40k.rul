@@ -25460,3 +25460,79 @@ alienDeployments:
     despawnPenalty: 0
     keepCraftAfterFailedMission: true
     objectiveComplete: [STR_MAINORKSBASE_WIN, 400]
+
+  # Tau AI base test for quick battle
+
+  - type: STR_TAUBASE_LV1
+    shade: 1
+    markerIcon: 123
+    terrains:
+      - TAU_MOUNT
+    script: TAUBASESCRIPT1
+    briefing:
+      cutscene: ORKBASE
+      music: gmstory2
+      title: STR_ORK_MAINBASE_ASSAULT
+      textOffset: -16
+      background: BACK163.SCR
+      showTarget: false
+      desc: STR_ORK_MAINBASE_ASSAULT_BRIEFING
+    data:
+      - alienRank: 0  # Nobs
+        lowQty: 3  # 1
+        highQty: 3  # 3
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 1  # more 'ardBoyz
+        lowQty: 3
+        highQty: 3
+        dQty: 2
+        percentageOutsideUfo: 0
+        itemSets: *emptyItemSets
+      - alienRank: 2  # More Meks
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 3  # Meks
+        lowQty: 4
+        highQty: 4
+        dQty: 3
+        percentageOutsideUfo: 20
+        itemSets: *emptyItemSets
+      - alienRank: 4  # 'ardBoyz
+        lowQty: 4
+        highQty: 4
+        dQty: 2
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+      - alienRank: 5  # Regular Boyz
+        lowQty: 10
+        highQty: 10
+        dQty: 4
+        percentageOutsideUfo: 70
+        itemSets: *emptyItemSets
+      - alienRank: 6  # Gretchin
+        lowQty: 8
+        highQty: 8
+        dQty: 4
+        percentageOutsideUfo: 100
+        itemSets: *emptyItemSets
+      - alienRank: 7  # Nobs
+        lowQty: 3
+        highQty: 3
+        dQty: 2
+        percentageOutsideUfo: 50
+        itemSets: *emptyItemSets
+    width: 90
+    length: 80
+    height: 9
+    alert: STR_ORK_MAINBASE_DETECTED
+    alertBackground: CHAOSBOWLED.SCR
+    alertSound: {mod: 40k, index: 52}
+    markerName: STR_ORK_MAINBASE_SITE
+    duration: [50000, 100000]
+    despawnPenalty: 0
+    keepCraftAfterFailedMission: true
