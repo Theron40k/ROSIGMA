@@ -15786,3 +15786,69 @@
             - [19, 13, 1]
         fuseTimers:
           STR_KILLA_SPAWNER: [0, 0]
+
+# terrain under tau base
+
+  - name: TAU_MOUNT
+    mapDataSets:
+      - BLANKS
+      - TAU_MOUNT
+    mapBlocks:
+      - name: TAU_MOUNT00  # id 0
+        width: 10
+        length: 10
+        groups: 1
+      - name: TAU_MOUNT01  # id 1
+        width: 10
+        length: 10
+        groups: 1
+      - name: TAU_MOUNT02  # id 2
+        width: 10
+        length: 10
+        groups: 1
+      - name: TAU_MOUNT03  # id 3
+        width: 10
+        length: 10
+      - name: TAU_MOUNT04  # id 4
+        width: 10
+        length: 10
+      - name: TAU_MOUNT05  # id 5
+        width: 10
+        length: 10
+      - name: TAU_MOUNT06  # id 6
+        width: 10
+        length: 10
+      - name: TAU_MOUNT07  # id 7
+        width: 10
+        length: 10
+      - name: TAU_MOUNT08  # id 8
+        width: 10
+        length: 10
+      - name: TAU_MOUNT09  # id 9
+        width: 10
+        length: 10
+      - name: TAU_MOUNT10  # id 10
+        width: 10
+        length: 10
+      - name: TAU_MOUNT11  # id 11
+        width: 20
+        length: 20
+      - name: TAU_MOUNT12  # id 12
+        width: 20
+        length: 20
+      - name: TAU_MOUNT13  #   # id 13 terrain to drop the base on
+        width: 30
+        length: 30
+
+  # TAU Base to add the the TAU_MOUNT13 mapblock as vertical level
+
+  - name: TAUBASE_00
+    mapDataSets:
+      - BLANKS
+      - TAU_EXT02
+      - TAU_WALL02
+      - TAU_BITS
+    mapBlocks:
+      - name: TAUBASE_00  # id 0
+        width: 30
+        length: 30
