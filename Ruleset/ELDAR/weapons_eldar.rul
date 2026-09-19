@@ -1093,6 +1093,8 @@ items:
     invHeight: 3
     armor: 200
     listOrder: 16300
+    tags:
+      SUSTAINED_HIT_PERCENTAGE: 16 #(1/6) percentage
 
   - type: STR_AELDARI_POWERSWORD  # Tier 1 Powerweapon
     requires:
@@ -1704,6 +1706,7 @@ items:
     listOrder: 16500
     tags:
       ITEM_STRENGTH_REQUIREMENT: 40
+      SUSTAINED_HIT_PERCENTAGE: 16 #(1/6) percentage
 
   - type: STR_BITING_BLADE  # T3 2 Handed chainsword Based on Eviscerator for BR Repentia
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
@@ -1757,6 +1760,7 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 70 # Requires a lot of strength to wield with skill
       DAMAGE_RESIST_PENETRATION_PERCENT: 25
+      SUSTAINED_HIT_PERCENTAGE: 16 #(1/6) percentage
 
   - type: STR_SCORPIONS_CLAW #              16500
     refNode: *ELDAR_PISTOL_TEMPLATE
@@ -2098,7 +2102,7 @@ items:
       INTIMIDATION_MORALE_DAMAGE_MULTIPLIER: 100
       ITEM_DOESNT_HURT_FRIENDS: 1
 
-  - type: STR_BANSHEE_WARP_SCREAM_TOKEN # todo: to modify completely
+  - type: STR_BANSHEE_WARP_SCREAM_TOKEN # note: this is a placeholder for future development. currently unused.
     refNode: *SKILL_TOKEN
     battleType: 1
     experienceTrainingMode: 30
