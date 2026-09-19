@@ -63,13 +63,13 @@ adhocScripts:
     useTable: false
     startDelay: 20080  # 2-3 weeks
     randomDelay: 10040
-    adhocMissionScriptTags: ["adhocStarterBaseGangers_eldar"]
+    adhocMissionScriptTags: ["adhocStarterBaseGangers_eldar_Tag"]
 
 events:
   - name: STR_ELDAR_ASURYANI_CAMPAING_START
     description: STR_ELDAR_ASURYANI_CAMPAING_START_SHORT_DESCRIPTION
     background: ELDAR_GUARDIAN_ASSAULTING.SCR
-    adhocMissionScriptTags: ["adhocStarterBaseSlaan_eldar", "adhocStarterBaseGangers_eldar"]
+    adhocMissionScriptTags: ["adhocStarterBaseSlaan_eldar", "adhocStarterBaseGangers_eldar_Tag"]
     # adhocMissionScriptTags: ["intro_missions", "tenaxBaseL1", "PRINCEBISHOPBaseL1", "redeemedBaseL1"]
     spawnedPersons: 20
     spawnedPersonType: STR_ELDAR_GUARDIAN_PLAYER
