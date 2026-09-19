@@ -1001,7 +1001,7 @@ ufopaedia:
 
   - id: STR_HERETICAL_INQUISITOR_STRATEGY
     requires:
-      - STR_HERETICAL_INQUISITOR_STRATEGY
+      - STR_RADICAL_INQUISITOR_STRATEGY  # to be changed if needed
     type_id: 14
     section: STR_STRATEGY
     image_id: INQUISITOR_CODEX.SPK
@@ -1382,7 +1382,7 @@ ufopaedia:
     section: STR_STRATEGY
     image_id: STR_TAU_GUEVESA_MARKET_CODEX.SPK
     requires:
-      - STR_PSI_LAB_BACKUP_GV
+      - STR_COOPT_ECCLESIARCHY_GV
     text: STR_PSI_LAB_BACKUP_CODEX_DESCRIPTION_GV
 
   - id: STR_TAU_ADEPTAS_ARMOR_GV
@@ -2000,7 +2000,7 @@ ufopaedia:
     section: STR_ALIEN_RESEARCH_UC
     image_id: STR_TAUG_TEAMWORK.SPK
     requires:
-      - STR_INQ_ALIGN_TAU_RESEARCH
+      - STR_TAU_GUEVESA_TRADING  # to be changed
     text: STR_INQ_ALIGN_TAU_RESEARCH_CODEX
 
   - id: STR_INQ_FOR_THE_GREATER_GOOD_CODEX_TITLE
@@ -2008,7 +2008,7 @@ ufopaedia:
     section: STR_ALIEN_RESEARCH_UC
     image_id: STR_WATERCASTE_OUTPOST_CODEX.SPK
     requires:
-      - STR_INQ_FOR_THE_GREATER_GOOD
+      - STR_TAU_GUEVESA_TRADING  # to be changed
     text: STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV
 
   - id: STR_INQ_FOR_THE_GREATER_GOOD_PT2_CODEX_TITLE
@@ -2016,7 +2016,7 @@ ufopaedia:
     section: STR_ALIEN_RESEARCH_UC
     image_id: STR_WATERCASTE_OUTPOST_CODEX.SPK
     requires:
-      - STR_INQ_FOR_THE_GREATER_GOOD
+      - STR_TAU_GUEVESA_TRADING  # to be changed
     text: STR_INQ_FOR_THE_GREATER_GOOD_PT2_CODEX
 
 ## #RESEARCH.SM#
@@ -5688,7 +5688,7 @@ ufopaedia:
   - delete: STR_GUARD_ARMORS_MOUNTED_AUTOCANNON_UC
   - id: STR_GUARD_ARMORS_MOUNTED_AUTOCANNON_UC
     requires:
-      - STR_AUTOCANNON_GUARD
+      - STR_AUTOCANNON_TECH
       - STR_IMPERIAL_GUARD_MIDTIER
     type_id: 15
     section: STR_HEAVY_WEAPONS_PLATFORMS
@@ -5738,7 +5738,7 @@ ufopaedia:
   - delete: STR_GUARD_ARMORS_SENTINEL_AUTOCANNON_UC
   - id: STR_GUARD_ARMORS_SENTINEL_AUTOCANNON_UC
     requires:
-      - STR_AUTOCANNON_GUARD
+      - STR_AUTOCANNON_TECH
       - STR_HEAVY_SENTINEL
     type_id: 15
     section: STR_HEAVY_WEAPONS_PLATFORMS
@@ -5776,7 +5776,6 @@ ufopaedia:
   - id: STR_GUARD_ARMORS_SENTINEL_MULTIMELTA_UC
     requires:
       - STR_FUSION_MISSILE
-      - STR_BLASTER_BOMB
       - STR_HEAVY_SENTINEL
     type_id: 15
     section: STR_HEAVY_WEAPONS_PLATFORMS
@@ -5810,7 +5809,7 @@ ufopaedia:
 
   - id: STR_STEELLEGION_ARMORS_MOUNTED_AUTOCANNON_UC
     requires:
-      - STR_AUTOCANNON_GUARD
+      - STR_AUTOCANNON_TECH
       - STR_STEEL_LEGION_STRATEGY
     type_id: 15
     section: STR_HEAVY_WEAPONS_PLATFORMS
@@ -6065,7 +6064,7 @@ ufopaedia:
     image_id: ELDAR_AUTARCH_BACKGROUND.SPK
     text: STR_ELDAR_ASPECT_HELPER_SPIDER
     requires:
-      - STR_PROMOTE_TO_AUTARCH_HELPER
+      - STR_ELDAR_AUTARCH_EXARCH_RESEARCH
 
   - id: STR_PROMOTE_TO_AVENGER_EXARCH
     type_id: 10
@@ -9564,7 +9563,7 @@ ufopaedia:
   - id: STR_HAND_MULTILASER_PA  # Multilaser
     # Seems unused, possibly intended for a guard powerarmor with integrated multilaser?
     requires:
-      - STR_HAND_MULTILASER_RESEARCH_GUARD
+      - STR_MULTILAS_HANDHELD_RESEARCH
     type_id: 14
     section: STR_ARMORPEDIA
     image_id: HAND_MULTILASER_CODEX.SPK
@@ -10303,7 +10302,7 @@ ufopaedia:
     image_id: REPENTIACODEX.SPK
     text: STR_ADEPTAS_ARMORR_UC_UFOPEDIA
     requires:
-      - STR_ADEPTAS_REPENTIA
+      - STR_REPENTIA_STRATEGY_ADEPTAS
 
   - id: STR_LEAD_BY_EXAMPLE  # Lead By Example
     # Novitiate Superior Armor Ability
@@ -13538,7 +13537,7 @@ ufopaedia:
     requires:
       - STR_PRIMARIS
       - STR_MIDTIER_PREREQ
-      - STR_PLASMA_DEP1
+      - STR_PLASMA_RIFLE_DEP1
 
   - delete: STR_PLASMA_INC_CLIP
   - id: STR_PLASMA_INC_CLIP
@@ -13547,7 +13546,7 @@ ufopaedia:
     requires:
       - STR_PRIMARIS
       - STR_MIDTIER_PREREQ
-      - STR_PLASMA_DEP1
+      - STR_PLASMA_RIFLE_DEP1
   - id: STR_PRIMARIS_INCINERATOR_POWER_PACK  # Primaris Plasma Incinerator Pack
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -13556,7 +13555,7 @@ ufopaedia:
     requires:
       - STR_PRIMARIS
       - STR_MIDTIER_PREREQ
-      - STR_PLASMA_DEP1
+      - STR_PLASMA_RIFLE_DEP1
 
   # Heavy Plasma/Plasma Cannons
   - delete: STR_HEAVY_PLASMA_TERRAN
@@ -17671,7 +17670,7 @@ ufopaedia:
     section: STR_ARMORPEDIA
     image_id: STR_TAU_XV26_STEALTH_SUIT_CODEX.SPK
     requires:
-      - STR_STEALTH_SUIT_OPERATIONS
+      - STR_STEALTH_SUIT_OPERATIONS_GV
     text: STR_XV26_STEALTH_SUIT_GV_CODEX
 
   - id: STR_XV26_STEALTH_SUIT_FUSION_BLASTER_GV
@@ -17817,7 +17816,7 @@ ufopaedia:
     type_id: 12
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_INFILTRATION_CADRE
+      - STR_INFILTRATION_CADRE_GV
     image_id: STR_TAUCRAFT_BURST_CANNON.SPK
     text: STR_CRAFT_BURST_CANNON_GV_CODEX
 
@@ -17825,7 +17824,7 @@ ufopaedia:
     type_id: 12
     section: STR_XCOM_CRAFT_ARMAMENT
     requires:
-      - STR_INFILTRATION_CADRE
+      - STR_INFILTRATION_CADRE_GV
     image_id: STR_TAUCRAFT_SEEKER_MISSILE.SPK
     text: STR_CRAFT_SEEKER_MISSILE_RACK_GV_CODEX
 
@@ -21200,7 +21199,7 @@ ufopaedia:
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
     requires:
-      - STR_OBLITERATOR
+      - STR_OBLITERATOR_SOLDIER
     image_id: UP094.SPK
     text: STR_OBLITERATOR_UFOPEDIA
 
@@ -23738,7 +23737,7 @@ ufopaedia:
     section: STR_ALIEN_LIFE_FORMS
     requires:
       - STR_DONTSHOWYET
-      - STR_BIVOORE
+      - STR_BIOVORE
     image_id: SPOREMINE_ORIGINS.SPK
     text: STR_SPOREMINE_UFOPEDIA
   - id: STR_SPOREMINE_AUTOPSY
@@ -24719,7 +24718,7 @@ ufopaedia:
     image_id: WARPLOOTED.SPK
     text: STR_BLACKLEGsaturn_ARMORPLAYER_CODEX
     requires:
-      - STR_saturnine_ARMOR
+      - STR_SATURNINE_ARMOR_HULK
       - STR_WORDBEARERS_STRATEGY
 
   - id: STR_WARPEDVAULT_HULK
@@ -24743,7 +24742,10 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_SM
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_MARINES_STRATEGY
+      - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
 
   - id: STR_WARPEDUNLOCK_HULK_IG
     type_id: 10
@@ -24751,7 +24753,8 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_IG
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_IMPERIAL_GUARD_OPERATIONS
 
   - id: STR_WARPEDUNLOCK_HULK_SIS
     type_id: 10
@@ -24759,7 +24762,8 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_SIS
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_ADEPTAS
 
   - id: STR_WARPEDUNLOCK_HULK_JUDGE
     type_id: 10
@@ -24767,7 +24771,8 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_JUDGE
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_THE_IMPERIAL_LAW_STRATEGY
 
   - id: STR_WARPEDUNLOCK_HULK_DEATH
     type_id: 10
@@ -24775,7 +24780,9 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_DEATH
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_CHAMBERMILITANT
+      - STR_DEATHWATCH
 
   - id: STR_WARPEDUNLOCK_HULK_CHAMB
     type_id: 10
@@ -24783,7 +24790,9 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_CHAMB
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_CHAMBERMILITANT
+      - STR_GREYKNIGHTS
 
   - id: STR_WARPEDUNLOCK_HULK_RAD
     type_id: 10
@@ -24791,7 +24800,9 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_RAD
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_CHAMBERMILITANT
+      - STR_NOT_THE_IMPERIAL_LAW
 
   - id: STR_WARPEDUNLOCK_HULK_CHAOSCULT
     type_id: 10
@@ -24799,5 +24810,6 @@ ufopaedia:
     image_id: WARPEDUNLOCK.SPK
     text: STR_WARPEDUNLOCK_HULK_CODEX
     requires:
-      - STR_RES_WARPED_HULK_LOOT_CHAOSCULT
+      - STR_RES_WARPED_HULK_LOOT
+      - STR_CHAOS_STRATEGY_ARBITES
 # dungeon specific end
