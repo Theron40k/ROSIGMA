@@ -45,7 +45,7 @@ extended:
           #1-30 -> 1 additiona wounds
           #31-60 -> 2 additiona wounds
           #61+ -> 3 additiona wounds
-          debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker currend damage is health {0}, armour {1}, and {2} wounds " to_health to_armor to_wound;
+          #debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker currend damage is health {0}, armour {1}, and {2} wounds " to_health to_armor to_wound;
 
           if gt to_health 0;
             if lt to_health 31;
@@ -63,7 +63,7 @@ extended:
           mul to_armor sustainedHits_percentage;
           div to_armor 100;
 
-          debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker now is doing health {0}, armour {1}, and {2} wounds " to_health to_armor to_wound;
+          #debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker now is doing health {0}, armour {1}, and {2} wounds " to_health to_armor to_wound;
 
           battle_game.flashMessage "STR_SCRIPT_SUSTAINED_HIT_NOTICE";
           return;
