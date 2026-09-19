@@ -1757,6 +1757,7 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 70 # Requires a lot of strength to wield with skill
       DAMAGE_RESIST_PENETRATION_PERCENT: 25
+      SUSTAINED_HIT_PERCENTAGE: 16 #(1/6) percentage
 
   - type: STR_SCORPIONS_CLAW #              16500
     refNode: *ELDAR_PISTOL_TEMPLATE
@@ -2098,7 +2099,7 @@ items:
       INTIMIDATION_MORALE_DAMAGE_MULTIPLIER: 100
       ITEM_DOESNT_HURT_FRIENDS: 1
 
-  - type: STR_BANSHEE_WARP_SCREAM_TOKEN # todo: to modify completely
+  - type: STR_BANSHEE_WARP_SCREAM_TOKEN # note: this is a placeholder for future development. currently unused.
     refNode: *SKILL_TOKEN
     battleType: 1
     experienceTrainingMode: 30
