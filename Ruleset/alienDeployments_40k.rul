@@ -164,7 +164,7 @@ alienDeployments:
       STR_GSC_TAUROX_PATROL_LARGE: 30
       STR_GENE_INFILTRATION: 0  # inherited from OXCE_40k objective: 1 doesn't work properly for bases. Might also miss spawnZone
     genMissionFreq: 2
-    markerName: STR_GENE_HIVE_MARKERNAME
+    #markerName: STR_GENE_HIVE_MARKERNAME # commented to not break save compatibility, it will be enabled in 3.4
     points: 1
     missionBountyItem: STR_ALIEN_ALLOYS
     missionBountyItemCount: 50
@@ -371,7 +371,7 @@ alienDeployments:
     missionBountyItemCount: 4
     objectiveType: 14
     objectivesRequired: 1  # only destroy 1 of 8 tiles
-    markerName: STR_TOMB_NECRON_MARKERNAME
+    #markerName: STR_TOMB_NECRON_MARKERNAME # commented to not break save compatibility, it will be enabled in 3.4
     briefing:
       cutscene: NECRONTOMB
       desc: STR_TOMB_DESCRIPTION
@@ -546,7 +546,7 @@ alienDeployments:
             itemSets: *emptyItemSets
     missionBountyItem: STR_REQUISITION_BOUNTY_500K
     missionBountyItemCount: 2
-    markerName: STR_MONOLITH_MARKERNAME
+    #markerName: STR_MONOLITH_MARKERNAME # commented to not break save compatibility, it will be enabled in 3.4
     unlockedResearch: STR_MONOLITH
 
   - type: STR_DOOMSDAY_MONOLITH    # NECRON
@@ -730,7 +730,7 @@ alienDeployments:
             itemSets: *emptyItemSets
     missionBountyItem: STR_REQUISITION_BOUNTY_500K
     missionBountyItemCount: 3
-    markerName: STR_DOOMSDAY_MONOLITH_MARKERNAME
+    #markerName: STR_DOOMSDAY_MONOLITH_MARKERNAME # commented to not break save compatibility, it will be enabled in 3.4
     unlockedResearch: STR_DOOMSDAY_MONOLITH
 
   - type: STR_NECRON_RETALIATION
@@ -1090,7 +1090,7 @@ alienDeployments:
     height: 9
 
   - type: STR_CULTIST_BASE_LEVEL_1
-    markerName: STR_CULT_MARKERNAME
+    # markerName: STR_CULT_MARKERNAME #commented for save compatibility, will be enabled in 3.4
     randomRace: [STR_EARLY_CULTISTS]
     data: &cultistBaseLevel1
       - alienRank: 2
@@ -1137,7 +1137,7 @@ alienDeployments:
     unlockedResearch: STR_CHAOS_ARTIFACTS_RESEARCH
 
   - type: STR_CULTIST_BASE_LEVEL_2
-    markerName: STR_CULT_MARKERNAME
+    # markerName: STR_CULT_MARKERNAME #commented for save compatibility, will be enabled in 3.4
     randomRace: [STR_SECTOID, STR_CULTIST_SQUATS]
     data: &cultBaseLevel2
       - alienRank: 1  # move to mapscript assassin tower?
@@ -1201,7 +1201,7 @@ alienDeployments:
     unlockedResearch: STR_CHAOS_ARTIFACTS_RESEARCH
 
   - type: STR_CULTIST_BASE_LEVEL_3
-    markerName: STR_CULT_MARKERNAME
+    # markerName: STR_CULT_MARKERNAME #commented for save compatibility, will be enabled in 3.4
     randomRace: [STR_SECTOID_ELITE, STR_SECTOID_ELITE, STR_SECTOID_ELITE, STR_NEVERBORN_CULT, STR_ALPHA_CULT]
     data: &cultBaseLevel3
       - alienRank: 0
@@ -1263,7 +1263,7 @@ alienDeployments:
   - type: STR_CULTIST_BASE_START
     randomRace: [STR_SECTOID]
     data: *cultBaseLevel2
-    markerName: STR_CULT_MARKERNAME
+    # markerName: STR_CULT_MARKERNAME #commented for save compatibility, will be enabled in 3.4
     genMissionFreq: 4  # 9
     alienBaseUpgrades:
       0:
