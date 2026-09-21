@@ -167,6 +167,21 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_RETALIATION: "Retaliation"
   STR_ELDAR_RETALIATION_CHAOS: "Retaliation"
 
+  # Map mission markers names with numbers
+  STR_CULT_MARKERNAME: "Chaos Cult Site"
+  STR_CULT_MARKERNAME_: "Chaos Cult Site-{0}"
+  STR_GENE_HIVE_MARKERNAME: "Genestealer Cult"
+  STR_GENE_HIVE_MARKERNAME_: "Genestealer Cult-{0}"
+  STR_TOMB_NECRON_MARKERNAME: "Necron Tomb Node"
+  STR_TOMB_NECRON_MARKERNAME_: "Necron Tomb Node-{0}"
+  STR_MONOLITH_MARKERNAME: "Necron Monolith"
+  STR_MONOLITH_MARKERNAME_: "Necron Monolith-{0}"
+  STR_DOOMSDAY_MONOLITH_MARKERNAME: "Large Necron Monolith"
+  STR_DOOMSDAY_MONOLITH_MARKERNAME_: "Large Necron Monolith-{0}"
+  STR_GANGER_BASE_SITE: "Gangers Hideout"
+  STR_GANGER_BASE_SITE_: "Gangers Hideout-{0}"
+
+  # Mission name changes, other miscelaneus
   STR_WEBWAY_DESCRIPTION: "A small Eldar WebWay Portal has been activated in the area. Several xenos protect this hyper-dimensional construct. Destroy the 2 mechanisms that control the Webway before more reinforcements can arrive and the xenos become an even deadlier threat. Glory to the Emperor!"
 
   STR_TRAITOR_FIREBASE_DESTROYED: "Traitor Guard Firebase Destroyed"
@@ -1233,6 +1248,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SCORPION_EXARCH_RESEARCH: "Scorpion Exarch unlock"
   STR_ELDAR_REAPER_EXARCH_RESEARCH: "Reaper Exarch unlock"
   STR_ELDAR_REAPER_EXARCH_M: "Eldar Reaper"
+  STR_ELDAR_HAWK_RESEARCH: "Hawk Unlock"
   STR_ELDAR_SPIDER_RESEARCH: "Spider Unlock"
   STR_ELDAR_SPIDER_EXARCH_RESEARCH: "Spider Exarch Unlock"
   STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH: "Fire Dragon Exarch unlock"
@@ -1303,6 +1319,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_BANSHEE_EXARCH_PLAYER: "Banshee Exarch"
   STR_ELDAR_BANSHEEEX_ARMOR_P: "Banshee Exarch Armor"
   STR_ELDAR_BANSHEEEX_CORPSE_P: "Banshee Exarch Corpse"
+  STR_ELDAR_HAWK_P: "Hawk Warrior"
+  STR_ELDAR_HAWK_ARMOR_P: "Hawk Armor"
   STR_ELDAR_SPIDER_PLAYER: "Spider Warrior"
   STR_ELDAR_SPIDER_ARMOR_P: "Spider Armor"
   STR_ELDAR_SPIDER_CORPSE_P: "Warp Spider Corpse"
@@ -1314,6 +1332,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_REAPEREX: "Eldar Reaper Exarch"
   STR_ELDAR_ARMOR_EXARCH_P: "Reaper Exarch Armor"
   STR_ELDAR_ARMOR_EXARCH: "Eldar Reaper Exarch"
+  STR_ELDAR_REAPER_EXARCH_CORPSE: "Eldar Reaper Exarch Corpse"
+  STR_ELDAR_REAPER_EXARCH_CORPSE_P: "Reaper Exarch Corpse"
   STR_ELDAR_SEER_ARMOR_P: "Seer Armor"
   STR_ELDAR_SEER_CORPSE_P: "Seer Corpse"
 
@@ -1352,6 +1372,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PROMOTE_TO_DIREAVENGER_AUTARCH: "Path of the Avenger (Path of Command)"
   STR_PROMOTE_TO_BANSHEE: "Path of the Banshee"
   STR_PROMOTE_TO_BANSHEE_AUTARCH: "Path of the Banshee (Path of Command)"
+  STR_PROMOTE_TO_HAWK: "Path of the Hawk"
   STR_PROMOTE_TO_SPIDER: "Path of the Spider"
   STR_PROMOTE_TO_SPIDER_AUTARCH: "Path of the Spider (Path of Command)"
   STR_PROMOTE_TO_AUTARCH: "Path of Command"
@@ -1584,6 +1605,12 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SCORPIONEX_RANK_3: ScpX Gouge
   STR_ELDAR_SCORPIONEX_RANK_4: ScpX Skewer
   STR_ELDAR_SCORPIONEX_RANK_5: ScpX Impale
+  STR_ELDAR_HAWK_RANK_0: Flutter
+  STR_ELDAR_HAWK_RANK_1: Glide
+  STR_ELDAR_HAWK_RANK_2: Swoop
+  STR_ELDAR_HAWK_RANK_3: Dive
+  STR_ELDAR_HAWK_RANK_4: Plunge
+  STR_ELDAR_HAWK_RANK_5: Plummet
   STR_ELDAR_SPIDER_RANK_0: Spd Twitch
   STR_ELDAR_SPIDER_RANK_1: Spd Scuttle
   STR_ELDAR_SPIDER_RANK_2: Spd Flicker
@@ -9791,6 +9818,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_SKILL_SPRINT_STARTED_COOLDOWN: "Your unit is sprinting and can't be seen! Sprint will rechange in {0} Turns."
   STR_SKILL_SPRINT_ENDTURN: "Your unit sprint has ended!"
   STR_SKILL_SPRINT_REVEALED: "Your sprinting unit is now visible!"
+  # ** SUSTAINED HITS SCRIPT **
+  STR_SCRIPT_SUSTAINED_HIT_NOTICE: "Your unit does additional damage due to his melee mastery!"
   # ** ENVIRONMENTAL SCRIPTS
 
   STR_DAEMON_PURGE_STRONG_ENVIRONMENTAL_TOKEN: "Strong Daemonic Purge Environmental Token"
@@ -12667,8 +12696,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GANGER_BASE_ASSAULT: "Eliminate the Gangers Hideout"
   STR_GANGER_BASE_ASSAULT_BRIEFING: "We located the hideout of a large Gangers group, the fools refused to join our Chaos Cult, now they must pay the price of their foolishness."
   STR_GANGER_BASE_CHAOSCORRUPTED_ASSAULT_BRIEFING: "We located the hideout of a large Gangers group. These gangers seems under the strange influence of some other entity, there is no salvation for them. Move to their hideout with caution and expect heavy resistance."
-  STR_GANGER_BASE_SITE: "Gangers Hideout"
-  STR_GANGER_BASE_SITE_: "Gangers Hideout-{0}"
+
 
   STR_ENDGANGERSBASE: "End Gangers base"
 
@@ -14319,8 +14347,6 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_TS_CULTIST_BASE_START_GV: "Chaos Cult"
   STR_TS_CULTIST_BASE_GV: "Chaos Cult"
-  STR_CULT_MARKERNAME: "Chaos Cult Site"
-  STR_CULT_MARKERNAME_: "Chaos Cult Site-{0}"
   STR_KTS_TRAITOR_GUARD_BASE_START_GV: "Traitor Guard Base"
   STR_KTS_TRAITOR_GUARD_BASE_GV: "Traitor Guard Base"
   STR_SLAANESH_ABBEY_SCALING_GV: "Decadent Abbey"
