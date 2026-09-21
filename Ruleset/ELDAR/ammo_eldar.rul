@@ -309,6 +309,93 @@ items:
     handSprite: 4842
     listOrder: 16525
 
+  - &HAWK_LAS_AMMO_TEMPLATE
+    type: STR_LASBLASTER_CHARGE # same profile as imperial las but +1 Str
+    requires:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_HAWK_RESEARCH
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
+    size: 0.2
+    costBuy: 5000
+    costSell: 500
+    weight: 3
+    power: 60 # +10 to Imperial las (Eldar has Str 4 over Str 3 lasguns)
+    damageType: 1  # AP instead of LAS
+    damageAlter:
+      ToArmorPre: 0.2
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+      RandomWound: false
+    clipSize: 30
+    # lasblaster aesthetics
+    hitSound: 3986
+    hitAnimation: 2220
+    bulletSprite: {mod: 40k, index: 22}
+    fireSound: 3981
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 2
+    vaporProbabilitySurface: 100
+    bulletSpeed: 10
+    explosionSpeed: 3
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+    bigSprite: 4902
+    floorSprite: 4902
+    handSprite: 1706
+    listOrder: 16551
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    armor: 300
+
+  - type: STR_HAWKSTALON_CHARGE
+    refNode: *HAWK_LAS_AMMO_TEMPLATE
+    costBuy: 10000
+    costSell: 1000
+    power: 85 # STR 6
+    damageAlter:
+      ToArmorPre: 0.2
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+      ArmorEffectiveness: 0.7 # AP -2
+      RandomWound: false
+    clipSize: 20
+    bigSprite: 4904
+    floorSprite: 4904
+    handSprite: 1722
+    listOrder: 16553
+
+  - type: STR_SUNPISTOL_CHARGE
+    refNode: *HAWK_LAS_AMMO_TEMPLATE
+    clipSize: 20
+    bigSprite: 4907
+    floorSprite: 4907
+    handSprite: 1746
+    listOrder: 16556
+
+  - type: STR_HAWK_SCATTERLASER_CHARGE
+    refNode: *HAWK_LAS_AMMO_TEMPLATE
+    costBuy: 10000
+    costSell: 1000
+    weight: 5
+    power: 75 # STR 5
+    clipSize: 60
+    bigSprite: 4909
+    floorSprite: 4909
+    handSprite: 1762
+    listOrder: 16558
+    invWidth: 2
+    invHeight: 1
+
+
   - type: STR_SPINNER_SPOOL  #STR_RIPPER_GUN_CLIP_AP stats temporary
     costBuy: 6000
     costSell: 1000
