@@ -15836,13 +15836,16 @@
       - name: TAU_MOUNT12  # id 12
         width: 20
         length: 20
-      - name: TAU_MOUNT13  #   # id 13 terrain to drop the base on
+      - name: TAU_MOUNT13  #   # id 13 terrain to drop the walled base on
+        width: 30
+        length: 30
+      - name: TAU_MOUNT14  #   # id 14 terrain to drop the bunker system on
         width: 30
         length: 30
 
   # TAU Base to add the the TAU_MOUNT13 mapblock as vertical level
 
-  - name: TAUBASE_00
+  - name: TAUBASE_SET
     mapDataSets:
       - BLANKS
       - TAU_EXT02

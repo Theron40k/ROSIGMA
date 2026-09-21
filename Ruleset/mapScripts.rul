@@ -4522,8 +4522,8 @@ mapScripts:
             size: [3, 3, 0]
           - type: ceiling
             size: [3, 3, 5] # x and y need to match the size of the map block, and all of the heights should add up to the deployment height
-            terrain: TAUBASE_00 # the base itself
-            blocks: [0] # the id of the base itself
+            terrain: TAUBASE_SET # the base terrain set
+            blocks: [0] # the id of the walled base
       - type: addBlock
         executions: 1
         blocks: [13]  # id 13 the block on which we will verticallevel the tau base
@@ -4532,12 +4532,12 @@ mapScripts:
         verticalLevels:
           - type: ground
             terrain: TAU_MOUNT
-            blocks: [13]
+            blocks: [14]
             size: [3, 3, 0]
           - type: ceiling
             size: [3, 3, 5]
-            terrain: TAUBASE_00
-            blocks: [1]
+            terrain: TAUBASE_SET
+            blocks: [1] # the id of the bunker system
       - type: fillArea
         terrain: TAU_MOUNT
         blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8]
