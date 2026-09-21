@@ -822,6 +822,163 @@ items:
     armor: 300
     listOrder: 16520
 
+  - &ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    type: STR_LASBLASTER
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_RESEARCH
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    requiresBuyBaseFunc: []
+    weight: 10
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
+    size: 0.3
+    dropoff: 5
+    costBuy: 50000
+    costSell: 10000
+    bigSprite: 4901
+    floorSprite: 4901
+    handSprite: 1770
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 30
+    attraction: 5
+    compatibleAmmo:
+      - STR_LASBLASTER_CHARGE
+    accuracyMultiplier:
+      firing: 0.5
+      throwing: 0.5 # Hawk Main Stat
+    accuracySnap: 80
+    snapRange: 14
+    confSnap:
+      shots: 2
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 5
+    tuSnap: 19
+    flatRate: true
+    listOrder: 16550
+
+  - type: STR_HAWKSTALON # Slower rate of fire, better accuracy, uses powerful AP AMMO
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_RESEARCH
+      #- STR_ELDAR_HAWKEX_RESEARCH
+    weight: 20
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
+    size: 0.3
+    costBuy: 100000
+    costSell: 20000
+    bigSprite: 4903
+    floorSprite: 4903
+    handSprite: 1714
+    compatibleAmmo:
+      - STR_HAWKSTALON_CHARGE
+    accuracySnap: 90
+    tuSnap: 25
+    listOrder: 16552
+
+  - type: STR_SUNPISTOL # Slower rate of fire, better accuracy, uses powerful AP AMMO
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_RESEARCH
+    weight: 5
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
+    size: 0.2
+    costBuy: 50000
+    costSell: 10000
+    bigSprite: 4905
+    floorSprite: 4905
+    handSprite: 1730
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 2
+    armor: 200
+    bulletSpeed: 30
+    attraction: 5
+    compatibleAmmo:
+      - STR_SUNPISTOL_CHARGE
+    accuracySnap: 70
+    snapRange: 12
+    confSnap:
+      shots: 2
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 5
+    tuSnap: 17
+    listOrder: 16554
+
+  - type: STR_SUNPISTOL_SCOPED # T3 Hawk Pistol, meant for safe potshots rather than lethalness
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    weight: 7
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
+    size: 0.2
+    costBuy: 50000
+    costSell: 10000
+    bigSprite: 4906
+    floorSprite: 4906
+    handSprite: 1738
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 200
+    bulletSpeed: 30
+    attraction: 5
+    compatibleAmmo:
+      - STR_SUNPISTOL_CHARGE
+    accuracySnap: 70
+    snapRange: 12
+    confSnap:
+      shots: 2
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    tuSnap: 17
+    accuracyAimed: 90
+    aimRange: 16
+    confAimed:
+      shots: 2
+      name: STR_HAWK_WEAPON_AIMEDSHOT
+    tuAimed: 30
+    experienceTrainingMode: 5
+    listOrder: 16555
+
+  - type: STR_HAWK_SCATTERLASER # Long Range, High firerate, zero AP, Easy Training Weapon
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_RESEARCH
+      #- STR_ELDAR_HAWKEX_RESEARCH
+    weight: 30
+    size: 0.3
+    costBuy: 150000
+    costSell: 20000
+    bigSprite: 4908
+    floorSprite: 4908
+    handSprite: 1754
+    compatibleAmmo:
+      - STR_HAWK_SCATTERLASER_CHARGE
+    accuracySnap: 80
+    snapRange: 20 # 36" range
+    dropoff: 4
+    confSnap:
+      shots: 4
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 6
+    tuSnap: 30
+    blockBothHands: true # technically a heavy weapon
+    listOrder: 16557
+
+
   - type: STR_DEATH_SPINNER  # Chaos ripper gun stats temporary
     categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
     requires:
