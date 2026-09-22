@@ -732,16 +732,22 @@ armors:
       reactions: 0
       firing: 0
       throwing: 20
-      strength: 10
+      strength: 10 # Useful for grenades
       melee: 0
     units:
       - STR_ELDAR_HAWK_P
     #builtInWeapons:
+    movementType: 1
+    moveCost:
+      baseFlyPercent: [75, 75]
+      flyUpPercent: [50, 0] #cost of flying up
+      flyDownPercent: [25, 0] #cost of flying down
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
+      FLIGHT_DODGE_CHANCE: 50
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   - &SPIDER_ARMOR
