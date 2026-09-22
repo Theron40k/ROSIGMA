@@ -629,13 +629,14 @@ soldiers:
       - STR_ELDAR_HAWK_RANK_3
       - STR_ELDAR_HAWK_RANK_4
       - STR_ELDAR_HAWK_RANK_5
-    rankSprite: 4054
-    rankBattleSprite: 4054
-    rankTinySprite: 4054
+    rankSprite: 4090
+    rankBattleSprite: 4090
+    rankTinySprite: 4090
     soldierNames:
       - delete
       - Names/eldar.nam
-    prefix: "Hwk. "
+    # prefix: "Hwk. " #UNCOMMENT WHEN RULESET SCHEMA IS UPDATED, NOTE CAUSING LINTER ERRORS
+
 # ELDAR.TIER3 # EXARCH / AUTARCH
 
   - &EXARCH_TEMPLATE
