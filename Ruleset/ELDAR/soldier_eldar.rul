@@ -18,6 +18,11 @@ extended:
 
 soldiers:
 
+### ELDAR don't use penitents
+  - type: STR_PENITENT
+    requires: !add
+      - STR_ELDAR_SELECTED
+
 # ELDAR.TIER1 # GUARDIANS
 
   - &ELDAR_GUARDIAN
@@ -791,7 +796,7 @@ soldiers:
       psiStrength: 100
       psiSkill: 30
       melee: 95
-    statCaps: # very high stat caps for autarch
+    statCaps:
       tu: 120
       stamina: 115
       health: 125
@@ -934,6 +939,36 @@ soldiers:
     soldierNames:
       - delete
       - Names/eldar_dragon.nam
+
+        # Swooping Hawk , flying, mobile, lightly armored grenadier
+  - type: STR_ELDAR_HAWKEX_P
+    refNode: *EXARCH_TEMPLATE
+    statCaps: # higher stat caps based on exarch type
+      tu: 140
+      stamina: 135
+      health: 100 # -15
+      bravery: 120
+      reactions: 120
+      firing: 140
+      throwing: 120 # +20 Hawk main stat
+      strength: 110
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_ELDAR_HAWKEX_ARMOR_P
+    rankStrings:
+      - STR_ELDAR_HAWKEX_RANK_0
+      - STR_ELDAR_HAWKEX_RANK_1
+      - STR_ELDAR_HAWKEX_RANK_2
+      - STR_ELDAR_HAWKEX_RANK_3
+      - STR_ELDAR_HAWKEX_RANK_4
+      - STR_ELDAR_HAWKEX_RANK_5
+    rankSprite: 4090
+    rankBattleSprite: 4090
+    rankTinySprite: 4090
+    soldierNames:
+      - Names/eldar.nam
+    # prefix: "Hwk. " #UNCOMMENT WHEN RULESET SCHEMA IS UPDATED, NOTE CAUSING LINTER ERRORS
 
   - type: STR_ELDAR_SPIDEREX_PLAYER # Stats from dragon exarch FIX
     refNode: *EXARCH_TEMPLATE
