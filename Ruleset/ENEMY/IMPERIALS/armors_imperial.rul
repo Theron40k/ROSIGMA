@@ -172,6 +172,52 @@ armors:
       UNIT_TYPE_LIVING: 1
       UNIT_TYPE_MECHANICAL: 1
 
+  - type: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_AI
+    visibilityAtDay: 40
+    visibilityAtDark: 9
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 5
+    spriteSheet: GUARD_MOUNTED_AUTOCANNON.PCK
+    spriteInv: GUARD_MOUNTED_HBOLTERAI.PCK
+    corpseBattle:
+      - GUARD_MOUNT_CORPSE1
+      - GUARD_MOUNT_CORPSE2
+      - GUARD_MOUNT_CORPSE3
+      - GUARD_MOUNT_CORPSE4
+    frontArmor: 150
+    sideArmor: 120
+    rearArmor: 30
+    underArmor: 30
+    damageModifier:  # VEHICLE ARMOR LARGE
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.8  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN
+      - 1.0  # MELEE
+      - 1.0  # ACID
+      - 1.0  # SMOKE
+      - 0.0  # IMPACT
+      - 1.2  # MELTA
+    size: 2
+    drawingRoutine: 20
+    allowsKneeling: false
+    allowsRunning: false  # NPC limits for BAI
+    loftempsSet: [92, 89, 90, 91]
+    moveSound: {mod: 40k, index: 14}
+    builtInWeapons:
+      - INV_NULL_2X1_RL
+      - INV_NULL_MOUNT_WHEEL
+      - STR_MOUNTED_HEAVY_BOLTER
+    tags:
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_MECHANICAL: 1
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_IMPERIAL_GUARD: 1
+      UNIT_TYPE_IMPERIUM: 1
+
   - type: STR_OGRYN_UC_AI
     visibilityAtDay: 40
     visibilityAtDark: 9
