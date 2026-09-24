@@ -10385,6 +10385,15 @@ research:
       - STR_INTERROGATION_COMPLETED
     destroyItem: true
 
+
+  - name: STR_GUARDS_MOUNTED_BOLTER_AI
+    cost: 15
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
 ## Space Marines #CAPTIVES.SM#
 
   - name: STR_LEGIONDAMNED_MARINE_AI # useless it is only there to avoid a post OXCE 8.7.1 crash
@@ -15239,6 +15248,8 @@ research:
     refNode: *STR_CORPSE_BASIC
   - delete: STR_BANSHEE_CORPSE
   - name: STR_BANSHEE_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_HAWK_CORPSE_P
     refNode: *STR_CORPSE_BASIC
   # Hrud #CORPSES.FOE.XENO.HRUD#
   - name: STR_PLAGUE_MONK_CORPSE
