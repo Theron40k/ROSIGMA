@@ -30,6 +30,9 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_RADICAL_HIGHTIER: "Снаряжение Инквизиции III"
   STR_STRATIG_DONE: "Стратегия Гвардии Выбрана"
 
+  STR_RESEARCHNOT_AVAILABLE: "Исследование НЕ доступно"
+  STR_ITEMNOT_AVAILABLE: "Предмет НЕ доступен"
+
   # Redefining some ufopaedia categories
   STR_HELP: "ОПИСАНИЕ БОЕВОГО РЕЖИМА"
   STR_HELP_CAMPAIGN: "ЗАЩИТА ПЕЛАГЕИ IV"
@@ -164,6 +167,21 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_RETALIATION: "Возмездие"
   STR_ELDAR_RETALIATION_CHAOS: "Возмездие"
 
+  # Map mission markers names with numbers
+  STR_CULT_MARKERNAME: "Культ Хаоса"
+  STR_CULT_MARKERNAME_: "Кльт Хаоса-{0}"
+  STR_GENE_HIVE_MARKERNAME: "Культ Генокрадов"
+  STR_GENE_HIVE_MARKERNAME_: "Культ Генокрадов-{0}"
+  STR_TOMB_NECRON_MARKERNAME: "Гробница Некронов"
+  STR_TOMB_NECRON_MARKERNAME_: "Гробница Некронов-{0}"
+  STR_MONOLITH_MARKERNAME: "Монолит Некронов"
+  STR_MONOLITH_MARKERNAME_: "Монолит Некронов-{0}"
+  STR_DOOMSDAY_MONOLITH_MARKERNAME: "Б.Монолит Некронов"
+  STR_DOOMSDAY_MONOLITH_MARKERNAME_: "Б.Монолит Некронов-{0}"
+  STR_GANGER_BASE_SITE: "Логово Бандитов"
+  STR_GANGER_BASE_SITE_: "Логово Бандитов-{0}"
+
+  # Mission name changes, other miscelaneus
   STR_WEBWAY_DESCRIPTION: "В этом районе активировался малый Эльдарский портал в Паутину. Пока небольшие силы охраняют эту гиперпространственную конструкцию. Уничтожьте 2 механизма, управляющих входом в Паутину, прежде чем прибудет подкрепление и ксеносы станут опасной угрозой. Во Славы Императора!"
 
   STR_TRAITOR_FIREBASE_DESTROYED: "Огневая Позиция Ренегатов Уничтожена"
@@ -1212,11 +1230,15 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SELECTED: "(Эльдары Выбраны)"
   STR_NOT_ELDAR_STRATEGY: "(НЕ Эльдары)"
   STR_ELDAR_OUTPOST_RESEARCH: "Застава Эльдар Разблокирована"
+  STR_MONKEIGH_PACT: "Временный Пакт с Мон-Кей"
+  STR_MONKEIGH_PACT_UNNECESSARY: "Пакт с Мон-Кей не Требуется"
+  STR_MONKEIGH_RETALIATION: "Возмездие Мон-Кей"
   STR_RECRUIT_ELDAR_T1: "Вербовка: Дозорные"
   STR_ELDAR_WEAPONS_ACQUISITION: "Доступ: Оружие Эльдар"
   STR_ELDAR_CRAFT_RESEARCH: "Техника Эльдар Разблокирована"
   STR_ELDAR_OUTPOST_BUILDING_RESEARCH: "Застава Эльдар"
   STR_ELDAR_BASE_BUILDING_RESEARCH: "Подземная База Эльдар"
+  STR_CONSCRIPT_ELDAR_GUARDIAN: "Призыв Дозорного"
   STR_RECRUIT_ELDAR_OUTCAST: "Запрос: Помощь Рейнджеров"
   STR_ELDAR_ASPECT_RESEARCH: "Повышение: Аспектные Воины"
   STR_ELDAR_DIRE_AVENGER_RESEARCH: "Яростный Мститель Открыт"
@@ -1230,6 +1252,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SCORPION_EXARCH_RESEARCH: "Экзарх Скорпионов Открыт"
   STR_ELDAR_REAPER_EXARCH_RESEARCH: "Экзарх Жнецов Открыт"
   STR_ELDAR_REAPER_EXARCH_M: "Эльдар Жнец"
+  STR_ELDAR_HAWK_RESEARCH: "Ястреб Открыт"
   STR_ELDAR_SPIDER_RESEARCH: "Паук Открыт"
   STR_ELDAR_SPIDER_EXARCH_RESEARCH: "Экзарх Пауков Открыт"
   STR_ELDAR_FIREDRAGON_EXARCH_RESEARCH: "Экзарх Драконов Открыт"
@@ -1259,6 +1282,7 @@ ru:  #  yamllint disable-line rule:empty-values
 # Player Eldar
   AUX_ELDAR_KIT: "Медкомплект Эльдар"
   AUX_WRAITHCANNON: "Призрачная Пушка"
+  STR_MONKEIGH_COLLABORATOR: "Коллаборационист Мон-Кей"
   STR_ELDAR_GUARDIAN_PLAYER: "Дозорный Эльдар"
   STR_ELDAR_ARMOR_GUARDIAN_PLAYER: "Броня Дозорного"
   STR_ELDAR_GUARDIAN_CORPSE_P: "Труп Дозорного"
@@ -1300,6 +1324,12 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_BANSHEE_EXARCH_PLAYER: "Банши Экзарх"
   STR_ELDAR_BANSHEEEX_ARMOR_P: "Броня Банши Экзарха"
   STR_ELDAR_BANSHEEEX_CORPSE_P: "Труп Банши Экзарха"
+  STR_ELDAR_HAWK_P: "Ястреб Воин"
+  STR_ELDAR_HAWK_ARMOR_P: "Броня Ястреба"
+  STR_ELDAR_HAWK_CORPSE_P: "Труп Ястреба"
+  STR_ELDAR_HAWKEX_P: "Ястреб Экзарх"
+  STR_ELDAR_HAWKEX_ARMOR_P: "Броня Ястреба Экзарха"
+  STR_ELDAR_HAWKEX_CORPSE_P: "Труп Ястреба Экзарха"
   STR_ELDAR_SPIDER_PLAYER: "Паук Воин"
   STR_ELDAR_SPIDER_ARMOR_P: "Броня Паука"
   STR_ELDAR_SPIDER_CORPSE_P: "Труп Паука Варпа"
@@ -1311,6 +1341,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_REAPEREX: "Экзарх Жнецов Эльдар"
   STR_ELDAR_ARMOR_EXARCH_P: "Броня Экзарха Жнецов"
   STR_ELDAR_ARMOR_EXARCH: "Эльдар Жнец Экзарх"
+  STR_ELDAR_REAPER_EXARCH_CORPSE: "Труп Эльдара Жнеца Экзарха"
+  STR_ELDAR_REAPER_EXARCH_CORPSE_P: "Труп Жнеца Экзарха"
   STR_ELDAR_SEER_ARMOR_P: "Броня Провидца"
   STR_ELDAR_SEER_CORPSE_P: "Труп Провидца"
 
@@ -1349,6 +1381,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_PROMOTE_TO_DIREAVENGER_AUTARCH: "Путь Мстителя/Аутарх"
   STR_PROMOTE_TO_BANSHEE: "Путь Банши"
   STR_PROMOTE_TO_BANSHEE_AUTARCH: "Путь Банши/Аутарх"
+  STR_PROMOTE_TO_HAWK: "Путь Ястреба"
   STR_PROMOTE_TO_SPIDER: "Путь Паука"
   STR_PROMOTE_TO_SPIDER_AUTARCH: "Путь Паука/Аутарх"
   STR_PROMOTE_TO_AUTARCH: "Путь Командования"
@@ -1356,6 +1389,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_PROMOTE_TO_AVENGER_EXARCH: "Специализация: Путь Мстителя"
   STR_PROMOTE_TO_DRAGON_EXARCH: "Специализация: Путь Дракона"
   STR_PROMOTE_TO_REAPER_EXARCH: "Специализация: Путь Жнеца"
+  STR_PROMOTE_TO_HAWK_EXARCH: "Специализация: Путь Ястреба"
   STR_PROMOTE_TO_SPIDER_EXARCH: "Специализация: Путь Паука"
   STR_PROMOTE_TO_BANSHEE_EXARCH: "Специализация: Путь Банши"
   #STR_PROMOTE_TO_PSYKER: "Path of the Psyker" #(unused)
@@ -1417,6 +1451,17 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_RANGER_LONG_RIFLE_SCOPED: "Длинная Винтовка/Оптика"
   STR_RANGER_LONG_RIFLE_MAG: "Маг. Длинной Винтовки"
   STR_RANGER_LONG_RIFLE_MAG_FIXED: "Маг. Длинной Винтовки/Снаряженный"
+  STR_HAWK_WEAPON_SNAPSHOT: "Быстрая Очередь"
+  STR_HAWK_WEAPON_AIMEDSHOT: "Прицельная Очередь"
+  STR_LASBLASTER: "Лазбластер"
+  STR_LASBLASTER_CHARGE: "Батарея Лазбластера"
+  STR_HAWKSTALON: "Когти Ястреба"
+  STR_HAWKSTALON_CHARGE: "Батарея Когтей Ястреба"
+  STR_SUNPISTOL: "Солнечный Пистолет"
+  STR_SUNPISTOL_SCOPED: "Солнечный Пистолет/Оптика"
+  STR_SUNPISTOL_CHARGE: "Батарея С.Пистолета"
+  STR_HAWK_SCATTERLASER: "Лазрезак Ястреб"
+  STR_HAWK_SCATTERLASER_CHARGE: "Батарея Лазрезака Ястреб"
   STR_DEATH_SPINNER: "Смертопряд"
   STR_SPINNER_SPOOL: "Катушка Паутины"
   STR_ELDAR_POWER_BLADE: "Силовой Клинок/Левый"
@@ -1472,6 +1517,12 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_REAPEREX_AUTOPSY: "Жнец Экзарх Эльдар-происхождение"
   STR_ELDAR_REAPEREX_AUTOPSY_CODEX: "{NEWLINE} Навыки и снаряжение Экзарха Темных Жнецов демонстрируют смертоносную огневую мощь и точность его Аспекта. Нечеловеческие боевые способности Экзарха Темных Жнецов превосходят таланты обычных Темных Жнецов, поскольку он способен обрушить смертоносный град огня быстрее и без потери точности из любого оружия, а также его выстрелы могут обходить укрытия и поражать цели."
   STR_ELDAR_REAPEREX_ARMOR_CODEX: "{NEWLINE} Экзархи Темных Жнецов носят более устрашающую брони Аспекта Темных Жнецов, вместо пусковой установки Жнец используют специальное оружие - ракетную установку Буря или сюрикенную пушку."
+  STR_ELDAR_HAWK_AUTOPSY: "Эльдар Ястреб-происхождения"
+  STR_ELDAR_HAWK_AUTOPSY_CODEX: "{NEWLINE} Своим названием Пикирующие Ястребы обязаны хищным птицам из мифологии эльдар, олицетворяющим месть и возмездие. Подобно тому как в этих легендарных птицах таилась душа убитого эльдари, парящая над его убийцами как живое напоминание об их вине, так и Пикирующие Ястребы стремительно проносятся над полем боя, неся врагам азуриан быструю смерть в качестве возмездия."
+  STR_ELDAR_HAWK_ARMOR_CODEX: "{NEWLINE} Пикирующие Ястребы - одни из самых мобильных Воинов Аспекта; благодаря своим крыльям они способны мгновенно взмывать в воздух и перемещаться над полем боя, сбрасывая гранаты на противника. Их броня Аспекта тоньше - это вынужденная мера для снижения веса, они обеспечивают меньшую защиту от вражеского огня."
+  STR_ELDAR_HAWKEX_AUTOPSY: "Эльдар Ястреб Экзарх-происхождения"
+  STR_ELDAR_HAWKEX_AUTOPSY_CODEX: "{NEWLINE} Тайные знания и сверхъестественные способности Экзархов позволяют им усиливать возможности возглавляемых ими отрядов Пикирующих Ястребов. Под началом своего Экзарха отряд Пикирующих Ястребов способен проводить сокрушительные и молниеносные атаки с ходу: стремительно проносясь мимо врага и обрушивая на врага убийственные залпы лазбластеров, а затем осыпают градом гранат."
+  STR_ELDAR_HAWKEX_ARMOR_CODEX: "{NEWLINE} Экзархи носят более сложные и богато украшенные версии брони Аспекта, в которые заключены души их прежних владельцев. Крылья Пикирующих Ястребов - это специализированные прыжковые ранцы эльдар, используемые исключительно воинами Аспекта Пикирующие Ястребы. Крылья, состоящие из вибрирующих пластин в форме перьев, сочетают в себе излучатель антигравитационного поля и реактивные двигатели, обеспечивая Пикирующим Ястребам впечатляющую скорость полета и маневренность. Кроме того, крупные крылья позволяют планировать на большие расстояния и создают дополнительную подъемную силу, увеличивая высоту полета, а вибрирующие перья издают характерный пронзительный свист. Благодаря яркой расцветке крылья также создают эффектный разноцветный узор, когда воин находится в воздухе."
   STR_ELDAR_SPIDER_AUTOPSY: "Паук Эльдар-происхождение"
   STR_ELDAR_SPIDER_AUTOPSY_CODEX: "{NEWLINE} Пауки Варпа - эльдары из миров-кораблей, специализирующиеся на использовании персональных телепортационных устройств для совершения серии быстрых прыжков через Имматериум. Это делает их неуязвимыми для атак и позволяет внезапно атаковать врагов и исчезать, прежде чем те успеют нанести ответный удар."
   STR_ELDAR_SPIDER_ARMOR_CODEX: "{NEWLINE} Броня Пауков Варпа значительно массивнее по сравнению с броней других Воинов Аспекта, что делает Пауков Варпа более тяжелобронированными, но также и одними из самых медленных среди подвижных Аспектов Асуриан. Хотя это могло бы стеснять движения других воинов Аэльдари, уникальные способности Пауков Варпа к телепортации компенсируют этот недостаток. Броня Аспекта Паука Варпа также дополнительно защищена, что обеспечивает более безопасное перемещение по Варпу и некоторую защиту от психических сил в реальном пространстве."
@@ -1508,6 +1559,11 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_BITING_BLADE_CODEX: "{NEWLINE} Большой двуручный Пиломеч напоминающие массивный Потрошитель Сестер Битв. В руках сильного воина острые как бритва зубья с ужасающей скоростью вырывают куски брони, плоть и перемалывают кости, а опытный воин может без труда разрубить не только человека, но и легкую бронетехнику. {NEWLINE}{NEWLINE}Требуемая сила: {ALT}70"
   STR_SCORPIONS_CLAW_CODEX: "{NEWLINE} Это Эльдарская версия Силового Кулака, обеспечивающая владельцу проникающую способность сквозь броню и урон, зависящий от силы владельца.{NEWLINE} Клешня Скорпиона оснащен нестандартным сюрикеновым пистолетом с высокой скорострельностью, обеспечивающим огневую мощь и позволяющим использовать другое оружие или энергитический щит. {NEWLINE}{NEWLINE}Требуемая сила: {ALT}40"
   STR_SHURIKEN_CANNON_CODEX: "{NEWLINE} Сюрикеновая Пушка работает аналогично Сюрекеновой катапульте, но имеет усиленную и более мощную катушку для более быстрой зарядки и повышения скорострельности. В то время как большинство сюрикен-оружий представляют собой легкие виды оружия, Сюрекеновая Пушка очень большая и требует стабилизирующих гироскопов для обеспечения какой-либо точности."
+  STR_LASBLASTER_CODEX: "{NEWLINE} Лаpбластер - лазерное оружие эльдар, используемое воинами Аспекта Пикирующие Ястребы. В лазерах эльдар применяются кристаллы, выращенные с помощью психической энергии; они позволяют довести и без того мощные энергетические импульсы до пиковых показателей эффективности. Это оружие способно вести контролируемый огонь очередями с высокой скорострельностью и превосходит сюрикеновое вооружение по дальности стрельбы, однако уступает ему в эффективности против тяжелой брони. Многие эльдары считают лазерное оружие самым изящным, гордясь тем, что их технологическое мастерство распространяется даже на сам свет."
+  STR_HAWKSTALON_CODEX: "{NEWLINE} Значительно более мощная версия лазбластера эльдар, обладающая повышенным останавливающим действием и более высокой эффективностью против тяжелой брони. За возросшую убойную силу приходится платить сниженным темпом стрельбы."
+  STR_HAWK_SCATTERLASER_CODEX: "{NEWLINE} Ручная версия бортового лазера. Это относительно компактное тяжелое оружие, ведущее огонь точными лазерными очередями на большие дистанции. Его главный недостаток - низкая эффективность против тяжелой брони."
+  STR_SUNPISTOL_CODEX: "{NEWLINE} Пистолетные версии лазбластеров - скорострельное лазерное оружие для стрельбы с одной руки."
+  STR_SUNPISTOL_SCOPED_CODEX: "{NEWLINE} Модификация Солнечного пистолета с оптическим прицелом, позволяющая вести точный огонь с относительно большого расстояния."
   STR_DEATH_SPINNER_CODEX: "{NEWLINE} Смертопряд - ритуальное оружие Аспекта Пауков Варпа, выпускающее густое облако острой мономалекулярной проволоки. Удерживающее магнитное поле прялки скручивает проволоку и выстреливает ее в сторону врага. Натяжение проволоки заставляет ее извиваться и хлестать, а в местах соприкосновения с плотью она рассекает тело жертвы, вызывая мучительную и ужасную смерть."
   STR_ELDAR_POWER_BLADE_CODEX: "{NEWLINE} Силовые клинки - оружие эльдар, обычно используется Экзархами Пауков Варпа. Клинок крепится к предплечью и умело использоваться для нанесения внезапных ударов по врагу. {NEWLINE}{NEWLINE}Требуемая сила: {ALT}30"
   STR_ELDAR_TEMPEST_LAUNCHER_CODEX: "{NEWLINE} Ракетомет Буря - это усовершенствованная ракетная установка эльдар, используемая Экзархами Темных Жнецов. Древние версии ракетных установок Темных Жнецов выпускают облако небольших ракет Жнеца по гораздо большей площади и могут использоваться в качестве орудия непрямого огня."
@@ -1581,6 +1637,18 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SCORPIONEX_RANK_3: "Колющий"
   STR_ELDAR_SCORPIONEX_RANK_4: "Протыкающий"
   STR_ELDAR_SCORPIONEX_RANK_5: "Прокалывающий"
+  STR_ELDAR_HAWK_RANK_0: "Взмах"
+  STR_ELDAR_HAWK_RANK_1: "Полет"
+  STR_ELDAR_HAWK_RANK_2: "Пикирование"
+  STR_ELDAR_HAWK_RANK_3: "Пике"
+  STR_ELDAR_HAWK_RANK_4: "Спуск"
+  STR_ELDAR_HAWK_RANK_5: "Падение"
+  STR_ELDAR_HAWKEX_RANK_0: "Подъем"
+  STR_ELDAR_HAWKEX_RANK_1: "Восхождение"
+  STR_ELDAR_HAWKEX_RANK_2: "Ускорение"
+  STR_ELDAR_HAWKEX_RANK_3: "Взлет"
+  STR_ELDAR_HAWKEX_RANK_4: "Парение"
+  STR_ELDAR_HAWKEX_RANK_5: "Стремление"
   STR_ELDAR_SPIDER_RANK_0: "Судорога"
   STR_ELDAR_SPIDER_RANK_1: "Стремительный"
   STR_ELDAR_SPIDER_RANK_2: "Мерцание"
@@ -8147,6 +8215,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_GSC_ENFORCER_CORPSE: "Труп Миротворца"
   STR_GSC_JUDGE_CORPSE: "Труп Судьи"
   STR_GSC_ARBITOR_CORPSE: "Труп Арбитра"
+  STR_GSC_SENTINELPD_CORPSE: "Обломки Часового Арбитров"
   STR_GSC_WARDEN_CORPSE: "Труп Надзирателя"
   STR_GSC_PRISON_WARDEN: "Надзиратель"
 
@@ -8250,6 +8319,7 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_LOCUS_CORPSE: "Труп Локуса"
   STR_LOCUS_CLOAKED: "Подозрительный Гражданин"
   STR_LOCUS_FRENZIED: "Безумный Локус"
+  STR_LOCUS_PRISIONER: "Локус Выводка"
   STR_GSC_INFECTED_HUMAN_CORPSE: "Труп Инфицированного"
 
   STR_GSC_KELERMORPH: "Келерморф"
@@ -9788,6 +9858,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_SKILL_SPRINT_STARTED_COOLDOWN: "Передвижение в невидимости! Спринт отключится через {0} ходов."
   STR_SKILL_SPRINT_ENDTURN: "Спринт закончился!"
   STR_SKILL_SPRINT_REVEALED: "БОЕЦ ТЕПЕРЬ ВИДИМ!"
+  # ** SUSTAINED HITS SCRIPT **
+  STR_SCRIPT_SUSTAINED_HIT_NOTICE: "Дополнителный урон ББ из-за Мастерства!"
   # ** ENVIRONMENTAL SCRIPTS
 
   STR_DAEMON_PURGE_STRONG_ENVIRONMENTAL_TOKEN: "Жетон Сильной Демонической Очистки"
@@ -11868,6 +11940,9 @@ ru:  #  yamllint disable-line rule:empty-values
   IGCOMM_ARMOR_M_LV3: "Броня Силовая Комиссара"
   IGOFF_ARMOR_M_LV3: "Броня Силовая Офицера"
 
+  STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_AI: "Броня Тяж.Болтера на Лафете"
+  STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_AI_CORPSE: "Обломки Тяж.Болтера на Лафете"
+
   STR_SLGUARDS_M_LV1_AI: "Гвардеец СЛ"
   STR_SLGUARDS_OFF_LV1_AI: "Офицер СЛ"
   STR_SLGUARDS_M_LV2_AI: "Ветеран Гвардии СЛ"
@@ -11896,6 +11971,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_IGOPFOR_SENTINEL_LASCANNON_ARMOR: "Часовой II/Лазпушка"
   STR_IGOPFOR_HEAVY_PLASMA_SENTINEL: "Часовой II/Тяж.Плазма"
   STR_IGOPFOR_SENTINEL_HEAVY_PLASMA_ARMOR: "Часовой II/Тяж.Плазма"
+  STR_IGOPFOR_SENTINEL_LIGHT_CORPSE: "Обломки Часового"
+  STR_IGOPFOR_SENTINEL_HEAVY_CORPSE: "Обломки Часового II"
 
   STR_BEASTGUARD_PENITENT_IGOPFOR: "Заключенный Зверолюд"
   STR_BEASTGUARD_FLAK_IGOPFOR: "Зверолюд Гвардеец"
@@ -12656,20 +12733,19 @@ ru:  #  yamllint disable-line rule:empty-values
   # alien & heretic month 0 base
   # for chaoscult
 
-  STR_GANGER_BASE: "Убежище Бандитов"
+  STR_GANGER_BASE: "Логово Бандитов"
   STR_SLAANESH_CORRUPTED_GANGERS: "Бандиты Слаанешиты"
-  STR_GANGER_BASE_CHAOSCORRUPTED: "Убежище Бандитов"
-  STR_GANGER_BASE_DESTROYED: "Убежище Бандитов было уничтожено"
-  STR_GANGER_BASE_KILLED: "Убежище Бандитов уничтожено"
-  STR_GANGER_BASE_ASSAULT: "Уничтожьте Убежище Бандитов"
+  STR_GANGER_BASE_CHAOSCORRUPTED: "Логово Бандитов"
+  STR_GANGER_BASE_DESTROYED: "Логово Бандитов было уничтожено"
+  STR_GANGER_BASE_KILLED: "Логово Бандитов уничтожено"
+  STR_GANGER_BASE_ASSAULT: "Уничтожьте Логово Бандитов"
   STR_GANGER_BASE_ASSAULT_BRIEFING: "Мы обнаружили убежище большой группы бандитов, глупцы отказались присоединиться к нашему Культу Хаоса, теперь им придется заплатить кровью за свою глупость."
   STR_GANGER_BASE_CHAOSCORRUPTED_ASSAULT_BRIEFING: "Мы обнаружили убежище крупной банды. Эти бандиты, похоже, находятся под странным влиянием какой-то потусторонней сущности. Двигайтесь к их убежищу с осторожностью и ожидайте ожесточенного сопротивления."
-  STR_GANGER_BASE_SITE: "Убежище Бандитов"
-  STR_GANGER_BASE_SITE_: "Убежище Бандитов"
+
 
   STR_ENDGANGERSBASE: "Финал Базы Бандитов"
 
-  STR_GANGER_BASEARBITES: "Убежище Бандитов"
+  STR_GANGER_BASEARBITES: "Логово Бандитов"
   STR_GANGER_BASE_ASSAULT_BRIEFINGARBITES: "Мы обнаружили убежище большой группы бандитов, во имя Имперского закона эти преступники должны понести кару правосудия."
 
   STR_SABOTAGE_MISSIONCHAOSCULT: "Вражеское Проникновение"
@@ -14875,3 +14951,8 @@ ru:  #  yamllint disable-line rule:empty-values
   STR_ORK_MAINBASER: "Боссы Орков"
 
   STR_MAINORKSBASE_WIN: "ВААГХ! УНИЧТОЖЕН"
+
+  # TAU base test
+
+  STR_TAUBASE_LV1: "База Тау"
+  MAP_TAU_MOUNT: "Горы Тау"
