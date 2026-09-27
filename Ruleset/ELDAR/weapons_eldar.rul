@@ -915,6 +915,8 @@ items:
     experienceTrainingMode: 5
     tuSnap: 17
     listOrder: 16554
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
   - type: STR_SUNPISTOL_SCOPED # T3 Hawk Pistol, meant for safe potshots rather than lethalness
     refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
@@ -951,6 +953,8 @@ items:
     tuAimed: 30
     experienceTrainingMode: 5
     listOrder: 16555
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
   - type: STR_HAWK_SCATTERLASER # Long Range, High firerate, zero AP, Easy Training Weapon
     refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
@@ -977,6 +981,8 @@ items:
     tuSnap: 30
     blockBothHands: true # technically a heavy weapon
     listOrder: 16557
+    tags:
+      REACTION_MULTIPLIER: 50 # multiplies base reaction score by this amount divided by 100
 
 
   - type: STR_DEATH_SPINNER  # Chaos ripper gun stats temporary
