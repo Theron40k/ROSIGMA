@@ -1220,6 +1220,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_EXARCH_AND_AUTARCH_PAGE1: "Not all eldar are made to lead, but all those who wish can test themself by embarking the path of command to become Autarchs. To become an Autarch the aspirant must experience all the aspect warrior path to understand the true nature of each, without being able to look back. Along the way they will gain experience in the form of Eldar Runes, granting powerfull boons but differently to specialized troops they will gain less powerfull bonuses when embracing an aspect. {NEWLINE}>>> Continued on next page >>>"
   STR_ELDAR_EXARCH_AND_AUTARCH_PAGE2: "For those who are not willing to embrace the Path of command they can become Exarchs, powerfull specialist in their field with great expertise and experience. The main difference between an Exarch and an Autarch lies in their potential and equipment flexibility. Exarch tend to reach their full potential only in a fiew caracteristics and will only be able to use their aspect armour, while Autarch can reach their full potential in all caracteristics and can freely switch between all the aspect warrior armours"
   STR_RECRUIT_ELDAR_OUTCAST_CODEX: "Asuryani Outcasts, known as Anhrathe, are those rare members of the Aeldari species who have taken up the Path of the Outcast and left their home craftworld to wander the galaxy. They generally become Rangers, the scouts of their craftworlds, well-trained survivalists and marksmen. {NEWLINE}{NEWLINE}Outcasts are generally not welcomed in any Asuryan Society unless they decide to atone for any crime committed and abandon the Path of the Outcast. {ALT}Recruiting Outcast Rangers will displease All other Eldars (-50 points per recruit){ALT}"
+  STR_ELDAR_MIDTIER_REINFORCEMENTS: "Eldar Reinforcements Arriving (MIDTIER)"
+  STR_ELDAR_MIDTIER_REINFORCEMENTS_DESCRIPTION: "The webway has stabilized temporarily, reinforcements are being sent."
+  STR_ELDAR_HIGHTIER_REINFORCEMENTS: "Eldar Reinforcements Arriving (HIGHTIER)"
+  STR_ELDAR_HIGHTIER_REINFORCEMENTS_DESCRIPTION: "The webway has stabilized temporarily, reinforcements are being sent."
   STR_SLAANESH_PALACE_ACTIVITY_DETECTED: "An obscure omen presents us"
   STR_SLAANESH_PALACE_ACTIVITY_DETECTED_DESCRIPTION: "The stars blink with an unnatural light during this night. Your advisor interpret it as an omen that our greatest enemy is coming near. {NEWLINE}{NEWLINE}Farseer Leflaire has sent us an urgent message, it has been revealed that a Corrupt Palace will arrive nearby one of the planet landmass. Further analysis indicates that it will be the Macrage or Orion sector. A Seer has been dispatched for further assistance to our cause."
   STR_ELDAR_ASURYANI_CAMPAING_SLAANESH_PALACE_DEFEATED: "Slaanesh Corrupted Palace Destroyed"
@@ -1230,7 +1234,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SELECTED: "(Eldar Selected)"
   STR_NOT_ELDAR_STRATEGY: "(Not Eldars)"
   STR_ELDAR_OUTPOST_RESEARCH: "Eldar Outpost unlock"
-  STR_MONKEIGH_PACT: "Temporary Mon'keigh Pact"
+  STR_MONKEIGH_PACT: "Forge Mon'keigh Pact"
   STR_MONKEIGH_PACT_UNNECESSARY: "Mon'keigh Pact Unnecessary"
   STR_MONKEIGH_RETALIATION: "Mon'keigh retaliation"
   STR_RECRUIT_ELDAR_T1: "Eldar Guardian Recruitment"
@@ -1270,6 +1274,10 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_FORGE_DIRESWORD_VESSEL_RESEARCH: "Ease Soulstone Weapon Restrictions"
   STR_FORGE_DIRESWORD_VESSEL_RESEARCH_CODEX_TITLE: "Diresword Creation Authorized"
   STR_FORGE_DIRESWORD_VESSEL_RESEARCH_CODEX: " The Seer Council has foreseen the use of Direswords will shift the war into our favor. However be warned, disinterring the souls of Aeldari warriors from their resting place will be unpopular with the warhost.{NEWLINE}{NEWLINE}{ALT} Diresword Vessels must first be manufactured, then ensouled with the Spirit of a fallen Aeldari Warrior (80 melee) through the transformation menu at the bottom left of the soldiers tab.{NEWLINE}{NEWLINE} Alternatively a soul from the Infinity circuit can be used in the manufacturing tab at a high cost.{ALT}"
+
+# Eldar Manufacturing
+  STR_ELDAR_CITIZEN_TO_SCIENTIST: "Citizen to Adept"
+  STR_ELDAR_CITIZEN_TO_ENGINEER: "Citizen to Engineer(Servitor)"
   STR_DIRESWORD_VESSEL_MANUFACTURE: "Forge Diresword Vessel"
   STR_DIRESWORD_ENSOULED_MANUFACTURE: "Ensoul Diresword Vessel (Inf Cir)"
   STR_DIRESWORD_VESSEL_TRANSFORM: "Ensoul Diresword Vessel"
@@ -1277,12 +1285,18 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ELDAR_SOULTECH_CATEGORY: "Eldar Soul Manipulation"
 
 # Player Eldar Buildings
+  STR_ELDAR_LABORATORY: "Eldar Laboratory"
+  STR_ELDAR_WORKSHOP: "Eldar Workshop"
   STR_ELDAR_ASPECT_PORTAL_UNDERGROUND: "Aspect Portal Underground (WIP)"
 
 # Player Eldar
+
+# Player Eldar Items
   AUX_ELDAR_KIT: "Eldar Medkit"
   AUX_WRAITHCANNON: "Wraithcannon"
-  STR_MONKEIGH_COLLABORATOR: "Monkeigh Collaborator"
+  STR_ELDAR_CITIZEN: "Eldar Citizen"
+  STR_ELDAR_CITIZEN_SELL_MESSAGE: "WARNING: Citizens are Finite!"
+  STR_MONKEIGH_COLLABORATOR: "Mon'keigh Collaborator"
   STR_ELDAR_GUARDIAN_PLAYER: "Eldar Guardian"
   STR_ELDAR_ARMOR_GUARDIAN_PLAYER: "Guardian Armor"
   STR_ELDAR_GUARDIAN_CORPSE_P: "Guardian Corpse"
@@ -8215,6 +8229,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_GSC_ENFORCER_CORPSE: "Enforcer Corpse"
   STR_GSC_JUDGE_CORPSE: "Judge Corpse"
   STR_GSC_ARBITOR_CORPSE: "Arbitor Corpse"
+  STR_GSC_SENTINELPD_CORPSE: "Arbites Sentilel Wreck"
   STR_GSC_WARDEN_CORPSE: "Warden Corpse"
   STR_GSC_PRISON_WARDEN: "Warden"
 
@@ -8318,6 +8333,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_LOCUS_CORPSE: "Locus Corpse"
   STR_LOCUS_CLOAKED: "Suspicious Hooded Figure"
   STR_LOCUS_FRENZIED: "Frenzied Locus"
+  STR_LOCUS_PRISIONER: "Brood Locus"
   STR_GSC_INFECTED_HUMAN_CORPSE: "Infected Human Corpse"
 
   STR_GSC_KELERMORPH: "Kelermorph"
@@ -11939,6 +11955,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   IGOFF_ARMOR_M_LV3: "Officer Power Armor"
 
   STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_AI: "Mounted Heavy Bolter Armor"
+  STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_AI_CORPSE: "Mounted Heavy Bolter Wreck"
 
   STR_SLGUARDS_M_LV1_AI: "SL Guardsman"
   STR_SLGUARDS_OFF_LV1_AI: "SL Officer"
@@ -11968,6 +11985,8 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_IGOPFOR_SENTINEL_LASCANNON_ARMOR: "Lascannon Sentinel"
   STR_IGOPFOR_HEAVY_PLASMA_SENTINEL: "Heavy Plasma Sentinel"
   STR_IGOPFOR_SENTINEL_HEAVY_PLASMA_ARMOR: "Heavy Plasma Sentinel"
+  STR_IGOPFOR_SENTINEL_LIGHT_CORPSE: "Open-Top Sentinel Wreck"
+  STR_IGOPFOR_SENTINEL_HEAVY_CORPSE: "Heavy Sentinel Wreck"
 
   STR_BEASTGUARD_PENITENT_IGOPFOR: "Penitent Beastman"
   STR_BEASTGUARD_FLAK_IGOPFOR: "Guard Beastman"
