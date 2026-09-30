@@ -1569,6 +1569,26 @@ research:
 
 ### Black Templars  #STRATEGY.SM.BT#
 
+  - name: STR_BTNOTYET_BTMARINE_MIDTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_BTNOTYET_BTMARINE_HIGHTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_BTNOTYET_BTMARINEASSAULT_MIDTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_BTNOTYET_BTTECH_HIGHTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
   - name: STR_BLACKTEMPLAR_STRATEGY  # WIP Black Templar Strategy
     cost: 5
     points: 0
@@ -1589,6 +1609,10 @@ research:
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
       - STR_NOTDONEBEFORE
+      - STR_BTNOTYET_BTMARINE_MIDTIER_BASE
+      - STR_BTNOTYET_BTMARINE_HIGHTIER_BASE
+      - STR_BTNOTYET_BTMARINEASSAULT_MIDTIER_BASE
+      - STR_BTNOTYET_BTTECH_HIGHTIER_BASE
     disables:
       - STR_NOT_TACTICAL
       - STR_PRIMARIS
@@ -1631,6 +1655,46 @@ research:
       - STR_BLACKTEMPLAR_STRATEGY
       - STR_GENERALLOCK
     spawnedEvent: STR_BTBR_WAAGHMOREEVENT2
+
+  - name: STR_BTMARINE_MIDTIER  # Abhor the Witch, Destroy the Witch
+    cost: 50
+    points: 0
+    neededItem: STR_BTMARINE_MIDTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTMARINE_MIDTIER_BASE
+
+  - name: STR_BTMARINE_HIGHTIER  # Accept any Challenge, no Matter the Odds
+    cost: 50
+    points: 0
+    neededItem: STR_BTMARINE_HIGHTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTMARINE_HIGHTIER_BASE
+
+  - name: STR_BTMARINEASSAULT_MIDTIER  # Suffer not the Unclean to Live
+    cost: 50
+    points: 0
+    neededItem: STR_BTMARINEASSAULT_MIDTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTMARINEASSAULT_MIDTIER_BASE
+
+  - name: STR_BTTECH_HIGHTIER  # Uphold the Honour of the Emperor
+    cost: 50
+    points: 0
+    neededItem: STR_BTTECH_HIGHTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTTECH_HIGHTIER_BASE
 
  ### Bloody Roses #STRATEGY.SOB.BR#
 
