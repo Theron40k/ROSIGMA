@@ -3952,11 +3952,12 @@ items:
   # Valhallan mortar shells variant
 
   - type: STR_MORTAR_AMMO_HE_VL  # HE munition VL
-    refNode: *STR_MORTAR_AMMO_TEMPLATE
+    refNode: *STR_MORTAR_AMMO_TEMPLATE_VL
     size: 0.1
     requiresBuy:  # what tech is required for the item to be visible in the Hire/Purchase screen.
       - STR_BASIC_BALLISTICS_DEP
       - STR_HEAVY_WEAPONS_IG
+      - STR_VALHALLAN_STRATEGY
     ufopediaType: STR_MORTAR_AMMO_HE_EXPLOSION
     costBuy: 7500
     costSell: 1000
@@ -3990,7 +3991,7 @@ items:
       ITEM_IS_DUMMY_MUNITION: 1 #damage dummied via scripts; meant to trick BAI into firing
 
   - type: STR_MORTAR_AMMO_KRAK_VL  # krak munition VL
-    refNode: *STR_MORTAR_AMMO_TEMPLATE
+    refNode: *STR_MORTAR_AMMO_TEMPLATE_VL
     ufopediaType: STR_MORTAR_AMMO_KRAK_EXPLOSION
     costBuy: 5000
     costSell: 1000
@@ -4014,7 +4015,7 @@ items:
       ITEM_IS_DUMMY_MUNITION: 1 #damage dummied via scripts; meant to trick BAI into firing
 
   - type: STR_MORTAR_AMMO_ILLUMINATION_VL
-    refNode: *STR_MORTAR_AMMO_TEMPLATE
+    refNode: *STR_MORTAR_AMMO_TEMPLATE_VL
     ufopediaType: STR_MORTAR_AMMO_ILLUMINATION_EXPLOSION
     requiresBuy:  # what tech is required for the item to be visible in the Hire/Purchase screen.
       - STR_SMOKE
