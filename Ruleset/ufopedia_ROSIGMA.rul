@@ -1791,6 +1791,21 @@ ufopaedia:
     text: STR_VALHALLAN_WEAPONS_CODEX
     image_id: VALHALLAN_SNIPER_CODEX.SPK
 
+# #STRATEGY.IG.KRIEG#            KRIEG STRATEGY
+  - id: STR_KRIEG_STRATEGY
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: 4IG.SPK
+    text: STR_KRIEG_STRATEGY_IG_UFOPEDIA
+    requires:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+  - id: STR_CHOSEN_KRIEG
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_KRIEG_STRATEGY
+    image_id: KRIEG_INTRO_CODEX.SPK
+
 ####################################
 # #RESEARCH#
 ####################################
@@ -12720,6 +12735,18 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom scoped art
     text: STR_LASER_RIFLE_KRIEG_TIER3_SCOPED_UFOPEDIA
+
+  - id: STR_LASER_RIFLE_KRIEG_MC
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom MC lasgun art
+    text: STR_LASER_RIFLE_KRIEG_MC_UFOPEDIA
+
+  - id: STR_LASER_RIFLE_KRIEG_MC_SCOPED
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: LASGUNHIGHGRADE_CODEX.SPK #needs custom scoped art
+    text: STR_LASER_RIFLE_KRIEG_MC_SCOPED_UFOPEDIA
 
   - delete: STR_MCLASER_RIFLE
   - id: STR_MCLASER_RIFLE

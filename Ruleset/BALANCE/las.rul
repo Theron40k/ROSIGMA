@@ -398,6 +398,58 @@ items:
       - STR_LASGUN_CLIP
       - STR_LASGUN_CLIP_HOTSHOT  # the accuracy falloff with this is gonna be intense
 
+
+  - type: STR_LASER_RIFLE_KRIEG_MC  #MC
+    dropoff: 4
+    snapRange: 18
+    autoRange: 0
+    aimRange: 17 # Powershot
+
+    accuracyAuto: 0
+    accuracySnap: 90  # 40k 85
+    accuracyAimed: 75
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 33
+
+    confSnap:
+      shots: 1
+      spendPerShot: 2
+    confAimed:
+      shots: 1
+      spendPerShot: 5 #MC bonus
+      name: STR_POWER_SHOT
+      shortName: STR_POWER_SHOT_COUNT
+
+    tags:
+      ITEM_SNAP_FLAT_POWER_BONUS: 10  # higher yield/higher damage
+      ITEM_AIMED_FLAT_POWER_BONUS: 50  # power shot
+
+  - type: STR_LASER_RIFLE_KRIEG_MC_SCOPED
+    dropoff: 3  # -1
+    autoRange: 0
+    snapRange: 22
+    aimRange: 30  # make it a option vs longlas, slightly worse at the sniping role
+
+    accuracyAuto: 0
+    accuracySnap: 85
+    accuracyAimed: 100
+    tuAuto: 0
+    tuSnap: 30
+    tuAimed: 65
+
+    minRange: 7  # scoped; unwieldy in CQC
+    oneHandedPenalty: 25  # too long and unwieldy to use effectively one-handed
+
+    confSnap:
+      shots: 1
+      spendPerShot: 2
+
+    tags:
+      ITEM_SNAP_FLAT_POWER_BONUS: 10  # higher yield/higher damage
+      REACTION_MULTIPLIER: 75  # awkward long arm
+      REACTION_PENALTY_KNEELING_BYPASS: 1
+
   - type: STR_LASGUN_STEEL_LEGION
     dropoff: 4
     accuracyAuto: 45  # slightly better autofire accuracy
