@@ -1596,7 +1596,8 @@ armors:
   - type: STR_OGRYN_CARAPACE_BASIC
     layersDefaultPrefix: OGRYN
     layersSpecificPrefix:
-      4: OGRYN_CARAPACE
+      1: OGRYN
+      4: OGRYN_CARAPBASIC
     layersDefinition:
       M0: ["", "M0", "", "", "Armor", "", "", "", ""]
       M1: ["", "M1", "", "", "Armor", "", "", "", ""]
@@ -1614,7 +1615,8 @@ armors:
   - type: STR_OGRYN_CARAPACE
     layersDefaultPrefix: OGRYN
     layersSpecificPrefix:
-      4: OGRYN_CARAPACE
+      1: OGRYN
+      4: OGRYN_CARAP
     layersDefinition:
       M0: ["", "M0", "", "", "Armor", "", "", "", ""]
       M1: ["", "M1", "", "", "Armor", "", "", "", ""]
@@ -1632,71 +1634,81 @@ armors:
   - type: STR_BULLGRYN_SLAB
     layersDefaultPrefix: OGRYN
     layersSpecificPrefix:
-      4: OGRYN_CARAPACE
-      5: BULLGRYN_SLAB
-      6: BULLGRYN
+      1: OGRYN
+      4: BULLGRYN_SLAB
     layersDefinition:
-      M0: ["", "M0", "", "", "Armor", "Shield", "Mask", "", ""]
-      M1: ["", "M1", "", "", "Armor", "Shield", "Mask", "", ""]
-      M2: ["", "M2", "", "", "Armor", "Shield", "Mask", "", ""]
-      M3: ["", "M3", "", "", "Armor", "Shield", "Mask", "", ""]
-      M4: ["", "M4", "", "", "Armor", "Shield", "Mask", "", ""]
-      M5: ["", "M5", "", "", "Armor", "Shield", "Mask", "", ""]
-      F0: ["", "M6", "", "", "Armor", "Shield", "Mask", "", ""]
-      F1: ["", "M7", "", "", "Armor", "Shield", "Mask", "", ""]
-      F2: ["", "M8", "", "", "Armor", "Shield", "Mask", "", ""]
-      F3: ["", "M9", "", "", "Armor", "Shield", "Mask", "", ""]
-      F4: ["", "M10", "", "", "Armor", "Shield", "Mask", "", ""]
-      F5: ["", "M11", "", "", "Armor", "Shield", "Mask", "", ""]
+      M0: ["", "M0", "", "", "Armor", "", "", "", ""]
+      M1: ["", "M1", "", "", "Armor", "", "", "", ""]
+      M2: ["", "M2", "", "", "Armor", "", "", "", ""]
+      M3: ["", "M3", "", "", "Armor", "", "", "", ""]
+      M4: ["", "M4", "", "", "Armor", "", "", "", ""]
+      M5: ["", "M5", "", "", "Armor", "", "", "", ""]
+      F0: ["", "M6", "", "", "Armor", "", "", "", ""]
+      F1: ["", "M7", "", "", "Armor", "", "", "", ""]
+      F2: ["", "M8", "", "", "Armor", "", "", "", ""]
+      F3: ["", "M9", "", "", "Armor", "", "", "", ""]
+      F4: ["", "M10", "", "", "Armor", "", "", "", ""]
+      F5: ["", "M11", "", "", "Armor", "", "", "", ""]
 
   - type: STR_BULLGRYN_BUCKLER
     layersDefaultPrefix: OGRYN
     layersSpecificPrefix:
-      4: OGRYN_CARAPACE
-      5: BULLGRYN_BUCKLER
-      6: BULLGRYN
+      1: OGRYN
+      4: BULLGRYN_BUCKLER
     layersDefinition:
-      M0: ["", "M0", "", "", "Armor", "Shield", "Mask", "", ""]
-      M1: ["", "M1", "", "", "Armor", "Shield", "Mask", "", ""]
-      M2: ["", "M2", "", "", "Armor", "Shield", "Mask", "", ""]
-      M3: ["", "M3", "", "", "Armor", "Shield", "Mask", "", ""]
-      M4: ["", "M4", "", "", "Armor", "Shield", "Mask", "", ""]
-      M5: ["", "M5", "", "", "Armor", "Shield", "Mask", "", ""]
-      F0: ["", "M6", "", "", "Armor", "Shield", "Mask", "", ""]
-      F1: ["", "M7", "", "", "Armor", "Shield", "Mask", "", ""]
-      F2: ["", "M8", "", "", "Armor", "Shield", "Mask", "", ""]
-      F3: ["", "M9", "", "", "Armor", "Shield", "Mask", "", ""]
-      F4: ["", "M10", "", "", "Armor", "Shield", "Mask", "", ""]
-      F5: ["", "M11", "", "", "Armor", "Shield", "Mask", "", ""]
+      M0: ["", "M0", "", "", "Armor", "", "", "", ""]
+      M1: ["", "M1", "", "", "Armor", "", "", "", ""]
+      M2: ["", "M2", "", "", "Armor", "", "", "", ""]
+      M3: ["", "M3", "", "", "Armor", "", "", "", ""]
+      M4: ["", "M4", "", "", "Armor", "", "", "", ""]
+      M5: ["", "M5", "", "", "Armor", "", "", "", ""]
+      F0: ["", "M6", "", "", "Armor", "", "", "", ""]
+      F1: ["", "M7", "", "", "Armor", "", "", "", ""]
+      F2: ["", "M8", "", "", "Armor", "", "", "", ""]
+      F3: ["", "M9", "", "", "Armor", "", "", "", ""]
+      F4: ["", "M10", "", "", "Armor", "", "", "", ""]
+      F5: ["", "M11", "", "", "Armor", "", "", "", ""]
 
   - &STR_OGRYN_BONEHEAD_CARAPACE_LAYER
     type: STR_OGRYN_BONEHEAD_CARAPACE_ARMOR
     layersDefaultPrefix: OGRYN_BONEHEAD
+    layersSpecificPrefix:
+      1: OGRYN
+      4: OGRYN_BONEHEAD
     layersDefinition:
-      M0: ["", "M0", "", "", "", "", "", "", ""]
-      M1: ["", "M1", "", "", "", "", "", "", ""]
-      M2: ["", "M2", "", "", "", "", "", "", ""]
-      M3: ["", "M3", "", "", "", "", "", "", ""]
-      F0: ["", "M0", "", "", "", "", "", "", ""]
-      F1: ["", "M1", "", "", "", "", "", "", ""]
-      F2: ["", "M2", "", "", "", "", "", "", ""]
-      F3: ["", "M3", "", "", "", "", "", "", ""]
+      M0: ["", "M0", "", "", "Armor1", "", "", "", ""]
+      M1: ["", "M1", "", "", "Armor2", "", "", "", ""]
+      M2: ["", "M2", "", "", "Armor3", "", "", "", ""]
+      M3: ["", "M3", "", "", "Armor4", "", "", "", ""]
+      M4: ["", "M4", "", "", "Armor1", "", "", "", ""]
+      M5: ["", "M5", "", "", "Armor2", "", "", "", ""]
+      F0: ["", "M6", "", "", "Armor3", "", "", "", ""]
+      F1: ["", "M7", "", "", "Armor4", "", "", "", ""]
+      F2: ["", "M8", "", "", "Armor1", "", "", "", ""]
+      F3: ["", "M9", "", "", "Armor2", "", "", "", ""]
+      F4: ["", "M10", "", "", "Armor3", "", "", "", ""]
+      F5: ["", "M11", "", "", "Armor4", "", "", "", ""]
 
   - type: STR_OGRYN_BONEHEAD_SLAB_SHIELD_ARMOR
     refNode: *STR_OGRYN_BONEHEAD_CARAPACE_LAYER
     layersDefaultPrefix: OGRYN_BONEHEAD
     layersSpecificPrefix:
-      5: BULLGRYN_SLAB
-      6: BULLGRYN
+      1: OGRYN
+      4: OGRYN_BONEHEAD
+      5: OGRYN_BONEHEAD_SLAB
     layersDefinition:
-      M0: ["", "M0", "", "", "", "Shield", "Mask", "", ""]
-      M1: ["", "M1", "", "", "", "Shield", "Mask", "", ""]
-      M2: ["", "M2", "", "", "", "Shield", "Mask", "", ""]
-      M3: ["", "M3", "", "", "", "Shield", "Mask", "", ""]
-      F0: ["", "M0", "", "", "", "Shield", "Mask", "", ""]
-      F1: ["", "M1", "", "", "", "Shield", "Mask", "", ""]
-      F2: ["", "M2", "", "", "", "Shield", "Mask", "", ""]
-      F3: ["", "M3", "", "", "", "Shield", "Mask", "", ""]
+      M0: ["", "M0", "", "", "Armor1", "Slab", "", "", ""]
+      M1: ["", "M1", "", "", "Armor2", "Slab", "", "", ""]
+      M2: ["", "M2", "", "", "Armor3", "Slab", "", "", ""]
+      M3: ["", "M3", "", "", "Armor4", "Slab", "", "", ""]
+      M4: ["", "M4", "", "", "Armor1", "Slab", "", "", ""]
+      M5: ["", "M5", "", "", "Armor2", "Slab", "", "", ""]
+      F0: ["", "M6", "", "", "Armor3", "Slab", "", "", ""]
+      F1: ["", "M7", "", "", "Armor4", "Slab", "", "", ""]
+      F2: ["", "M8", "", "", "Armor1", "Slab", "", "", ""]
+      F3: ["", "M9", "", "", "Armor2", "Slab", "", "", ""]
+      F4: ["", "M10", "", "", "Armor3", "Slab", "", "", ""]
+      F5: ["", "M11", "", "", "Armor4", "Slab", "", "", ""]
 
 # catachan
 
