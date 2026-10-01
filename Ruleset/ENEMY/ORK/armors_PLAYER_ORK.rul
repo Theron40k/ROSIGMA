@@ -1373,7 +1373,7 @@ armors:
       - STR_PLAYER_SQUIG_CORPSE # Needs to be finished
     builtInWeapons:
       - STR_CMAS # needs squig bite
-      - STR_CMAS
+      - STR_CMAS # needs squig bite
       - INV_NULL_2X1_RL
       - INV_NULL_2X1_LL
       - INV_NULL_3X3
@@ -1409,14 +1409,14 @@ armors:
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 95 # substantially less likely to be alpha legion
       INTIMIDATION_RESISTANCE: 50
 
-  - type: STR_SQUIG_ARMOR_BOMB # TODO: CONFIGURE AS BOMB SQUIG
+  - type: STR_SQUIG_ARMOR_BOMB
     visibilityAtDay: 40
     visibilityAtDark: 20
     antiCamouflageAtDay: 5 # Good sniffers
     antiCamouflageAtDark: 5
     heatVision: 20 # Good sniffers
-    spriteSheet: SQUIG_BS.PCK
-    spriteInv: BOMB_SQUIG_INV.SPK
+    spriteSheet: SQUIG_BS.PCK # TODO: needs to be redone
+    #spriteInv: BOMB_SQUIG_INV.SPK
     allowInv: true
     zombiImmune: true
     bleedImmune: false
@@ -1424,17 +1424,23 @@ armors:
     constantAnimation: false
     corpseBattle: # TODO: CONFIGURE AS BOMB SQUIG
       - STR_PLAYER_SQUIG_CORPSE # Needs to be finished
+    stats:
+      tu: -10 # weighted down
+      stamina: -10 # weighted down
+      health: 20 # tougher
+      bravery: 20  # tougher
     builtInWeapons:
       - STR_CMAS # needs squig bite
-      - STR_CMAS
+      - STR_CMAS # needs squig bite
       - INV_NULL_2X1_RL
       - INV_NULL_2X1_LL
       - INV_NULL_3X3
       - INV_NULL_4X2
-    frontArmor: 30  # was 10
-    sideArmor: 25  # was 10
-    rearArmor: 20  # was 10
-    underArmor: 20  # was 10
+    #specialWeapon: #TODO: setup
+    frontArmor: 30  #
+    sideArmor: 25  #
+    rearArmor: 50  # bomb is a bit resistant
+    underArmor: 50  # bomb offers some protection
     damageModifier:  # same as cyber mastiff, seems ok. Tough muscly hide protects against most things, but is weak to flame.
       - 1.0  # none
       - 0.9  # AP
@@ -1449,7 +1455,7 @@ armors:
       - 1.0  # IMPACT
       - 1.0  # MELTA
     loftempsSet: [3]
-    storeItem: STR_NONE # TODO: CONFIGURE AS BOMB SQUIG
+    storeItem: STR_TANKBUSTA_BOMB
     units:
       - STR_SQUIG
     customArmorPreviewIndex: 838  # cyber mastiff. Needs new
@@ -1461,3 +1467,4 @@ armors:
       UNIT_TYPE_ORK: 1
       ARMOR_ALPHA_ATTACKER_BONUS_MODIFIER: 95 # substantially less likely to be alpha legion
       INTIMIDATION_RESISTANCE: 50
+      # TODO: add kamikaze tags
