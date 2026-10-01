@@ -2774,32 +2774,9 @@ items:
   - type: STR_VOLLEYGUN_KRIEG #Lucius Volleygun
     categories: [STR_CAT_LASGUN]
     size: 0.2
-    dropoff: 6  # CQC focused; basically a laser automatic shotgun
-    weight: 15 #+6
     bigSprite: 1123
     floorSprite: 311
     handSprite: 1480
-    power: 75
-    damageType: 1
-    damageAlter:
-      ArmorEffectiveness: 0.75
-      ToArmorPre: 0.2
-      ToHealth: 1.0
-      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
-      ToStun: 0.3  # painful las burns
-      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
-    accuracyAuto: 60
-    accuracySnap: 65
-    snapRange: 13
-    autoRange: 13
-    tuAuto: 35
-    tuSnap: 30
-    confAuto:
-      shots: 10
-    confSnap:
-      shots: 3
-      name: STR_BURST_SNAP_SHOT
-    clipSize: -1
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -2826,31 +2803,9 @@ items:
   - type: STR_HELLGUN_KRIEG #Lucius Hellgun
     categories: [STR_CAT_LASGUN]
     size: 0.2
-    dropoff: 4  # scoped
-    weight: 15 #+6
     bigSprite: 1120
     floorSprite: 312
     handSprite: 1472
-    power: 80 #+5
-    damageType: 1
-    damageAlter:
-      ArmorEffectiveness: 0.75
-      ToArmorPre: 0.2
-      ToHealth: 1.0
-      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
-      ToStun: 0.3  # painful las burns
-      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
-    accuracyAuto: 70
-    accuracySnap: 75
-    accuracyAimed: 90
-    tuAuto: 35
-    tuSnap: 25
-    tuAimed: 70
-    aimRange: 25
-    snapRange: 14  # inferior snapfire range
-    autoRange: 14  # superior autofire range
-    autoShots: 5  # superior autofire
-    clipSize: -1
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -2859,8 +2814,6 @@ items:
     recover: false
     fixedWeapon: true
     fixedWeaponShow: true
-    tags:
-      ITEM_AIMED_ACCURACY_POWER_BONUS_PERCENT: 25  # battle rifle bonus
     # lasgun aesthetics
     hitSound: 3986
     fireSound: 3983
