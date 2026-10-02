@@ -1025,9 +1025,9 @@ soldiers:
       - STR_ELDAR_HAWKEX_RANK_3
       - STR_ELDAR_HAWKEX_RANK_4
       - STR_ELDAR_HAWKEX_RANK_5
-    rankSprite: 4090
-    rankBattleSprite: 4090
-    rankTinySprite: 4090
+    rankSprite: 4096
+    rankBattleSprite: 4096
+    rankTinySprite: 4096
     soldierNames:
       - Names/eldar.nam
     # prefix: "Hwk. " #UNCOMMENT WHEN RULESET SCHEMA IS UPDATED, NOTE CAUSING LINTER ERRORS
@@ -1168,7 +1168,7 @@ soldiers:
       - STR_ELDAR_PSYKER_RESEARCH
     flagOffset: 100
     requiresBuyBaseFunc: [PSI]
-    costBuy: 30000
+    costBuy: 0
     costSalary: 15000
     minStats:
       tu: 65
@@ -1261,11 +1261,12 @@ soldiers:
 # ELDAR.TIER3_MIXED # Path of the warlock
   - type: STR_ELDAR_WARLOCK_PLAYER
     requires:
-      - STR_ELDAR_PATH
+      - STR_ELDAR_PSYKER_RESEARCH
       - STR_HIGHTIER_PREREQ
+      - STR_ELDAR_WARLOCK_RESEARCH
     flagOffset: 100
-    requiresBuyBaseFunc: [ELDAROUT]
-    costBuy: 60000
+    #requiresBuyBaseFunc: [ELDAROUT]
+    costBuy: 0
     costSalary: 30000
     minStats:
       tu: 90
