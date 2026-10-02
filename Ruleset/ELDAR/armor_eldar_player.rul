@@ -1180,12 +1180,11 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
-      DODGE_CHANCE: 20 #+5
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   - type: STR_ELDAR_SCORPIONEX_ARMOR_P       # SCORPION EXARCH PLAYER
-    requires: STR_ELDAR_SCORPION_RESEARCH
-      # Scorpion Exarch Research
+    requires: STR_ELDAR_SCORPION_EXARCH_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 42
     visibilityAtDark: 30
@@ -1270,8 +1269,7 @@ armors:
 
   - type: STR_ELDAR_BANSHEEEX_ARMOR_P       # BANSHEE EXARCH PLAYER
     refNode: *BANSHEE_ARMOR
-    requires: STR_ELDAR_BANSHEE_RESEARCH
-        #BANSHEE EXARCH RESEARCH
+    requires: STR_ELDAR_BANSHEE_EXARCH_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 30
@@ -1360,8 +1358,7 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   - type: STR_ELDAR_HAWKEX_ARMOR_P       # SWOOPING EXARCH HAWK
-    requires: STR_ELDAR_HAWK_RESEARCH
-        # HAWK EXARCH RESEARCH
+    requires: STR_ELDAR_HAWK_EXARCH_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
     visibilityAtDark: 30
@@ -1371,9 +1368,9 @@ armors:
     sideArmor: 80
     rearArmor: 70
     underArmor: 60
-    spriteSheet: ELDAR_HAWK.SPK
+    spriteSheet: ELDAR_HAWK_EXARCH.SPK
     corpseBattle:
-      - STR_ELDAR_HAWK_CORPSE_P
+      - STR_ELDAR_HAWKEX_CORPSE_P
     layersDefaultPrefix: "1"
     layersSpecificPrefix:
       1: ELDARHAWKEX
@@ -1404,7 +1401,7 @@ armors:
       F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
       F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
       F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
-    customArmorPreviewIndex: 1359
+    customArmorPreviewIndex: 1360
     drawingRoutine: 0
     damageModifier:  # ELDAR ARMOR
       - 1.0  # none
