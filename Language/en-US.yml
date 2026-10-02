@@ -5350,7 +5350,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_CORRUPTION_MECHANICS: "Corruption and Infection"
   STR_CORRUPTION_MECHANICS_UFOPEDIA: >
     {NEWLINE}Know that our foes seeks to subsume our very souls. Daemons and certain profaned weapons and sorcery can inflict foul corruption, damning their victims to a fate worse than death. Without aid they will eventually succumb.
-    {NEWLINE}{NEWLINE} If a unit is reduced to 0 health while corrupted or infected, they may mutate into horrid abominations. Fortunately our blessed Medicae are capable of purging these blights via the Heal function, or grant the Emperor's Mercy to prevent turning.
+    {NEWLINE}{NEWLINE} If a unit is reduced to 0 health while corrupted or infected, they may mutate into horrid abominations. Fortunately our blessed Medicae are capable of purging these blights via the Heal function; otherwise grant the Emperor's Mercy to prevent turning.
 
   STR_DISCRETION_NOTICE: "On Discretion and Valour"
   STR_DISCRETION_NOTICE_CODEX: >
@@ -5368,6 +5368,13 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_DIG_IN_MECHANICS: "Dig In"
   STR_DIG_IN_MECHANICS_CODEX: >
     {NEWLINE}Typically found on Imperial Guard infantry, Dig In allows a kneeling unit to fortify their position at the cost of TU, Energy and mobility. {NEWLINE}{NEWLINE}While Dug In and kneeling, there's a 50% chance for non-Melee/AoE hits against a unit's front and side to miss due to their cover, and they gain 25% Damage Reduction against them otherwise (10% DR for Dug In Imperial Guard units benefitting from Hunker Down orders). This miss chance is lowered by 10% each time it triggers.
+
+  STR_AURA_MECHANICS: "Auras And You"
+  STR_AURA_MECHANICS_UFOPEDIA: >
+    {NEWLINE}Be wary Force Commander, for certain foes have weaponized the filth of even their blasphemous presence, blighting those in close proximity; a phenomenon most common among Daemons and pestilent and sorcerous servants of chaos. Fortunately some of our own blessed units may possess a fortuitous counterpart to this vile threat.
+    {NEWLINE}{NEWLINE} You will be notified if our units are affected by hostile auras. Holding {ALT}Shift{ALT} reveals who were affected by them; those subject to hostile auras are highlighted in red, beneficial ones in green.
+  STR_AURA_HOSTILE_NOTIFICATION: "One Or More Of Our Units Is Affected By A Hostile Aura!"
+  STR_AURA_FRIENDLY_NOTIFICATION: "One Or More Of Our Units Is Affected By A Friendly Aura!"
 
   STR_HELP_RESEARCH_PIPS: "Understanding Your Researches"
   STR_HELP_RESEARCH_PIPS_CODEX: "{NEWLINE}Your scientist will do the best they can to give your troops an advantage on the battefield, but each research takes time to perform. If you middle click each research you'll have a summary of its dependencies, unlocks and {ALT}an average estimate{ALT} of the number of days needed for a single scientist to complete the research in the form of {ALT}RESEARCH PIPS{ALT} shown under the research name. Each Pip represent a different number of days {NEWLINE}{NEWLINE} {ALT}∧{ALT} = 100 days {NEWLINE} {ALT}={ALT} = 20 days {NEWLINE} {ALT}-{ALT} = 5 days {NEWLINE}{NEWLINE}Please remember that your scientist give you an estimate, the real number of days needed can be 50-150% of the initial estimate. "
@@ -6058,7 +6065,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
 ## Alpha Legion Infiltration Begins
   STR_ALPHA_LEGION_INFILTRATION_EVENT: "Chaos Infiltration"
-  STR_ALPHA_LEGION_INFILTRATION_EVENT_DESCRIPTION: " The Inquisition reports a considerable probability of chaos infiltrators within Imperial forces. {NEWLINE}{NEWLINE} During incidents of 'friendly fire', these infiltrators may reveal themselves. As such, it is recommended to avoid such unless you wish to capture them. {NEWLINE}{NEWLINE} Tracing and purging this enemy within will require advanced decoding equipment and interrogation of these infiltrators and their leadership."
+  STR_ALPHA_LEGION_INFILTRATION_EVENT_DESCRIPTION: " The Inquisition reports a considerable probability of chaos infiltrators within Imperial forces. {NEWLINE}{NEWLINE} During incidents of 'friendly fire', these infiltrators may reveal themselves. Therefore, it is recommended to avoid such unless you wish to lay a trap to capture them. {NEWLINE}{NEWLINE} Tracing and purging this enemy within will require advanced decoding equipment and interrogation of these infiltrators and their leadership."
 
   STR_ALPHA_LEGION_INFILTRATION_PURGED_EVENT: "Alpha Legion Infiltration Purged"
   STR_ALPHA_LEGION_INFILTRATION_PURGED_EVENT_DESCRIPTION: "We have at last rooted out every trace of the craven Alpha Legion infiltrators skulking among us. Henceforth, our ranks should be safe from their blasphemous treachery... for now."
