@@ -349,6 +349,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
   - delete: STR_ELDAR_ARMOR4_P_SHIELD
   - type: STR_ELDAR_ARMOR4_P_SHIELD        # DIRE AVANGER
@@ -452,6 +453,7 @@ armors:
       UNIT_SUSTAINED_HITS_CAPABLE: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
   - delete: STR_ELDAR_ARMOR5_P_SHIELD
   - type: STR_ELDAR_ARMOR5_P_SHIELD       # SCORPION PLAYER
@@ -562,6 +564,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
   - delete: STR_ELDAR_ARMOR2_P_SHIELD
   - type: STR_ELDAR_ARMOR2_P_SHIELD       # BANSHEE PLAYER
@@ -663,6 +666,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_ELDAR_HAWK_ARMOR_P       # SWOOPING HAWK
     requires: STR_ELDAR_HAWK_RESEARCH
@@ -749,6 +753,7 @@ armors:
       DODGE_CHANCE: 20 # Vulnerable on the ground
       FLIGHT_DODGE_CHANCE: 40
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
   - &SPIDER_ARMOR
     type: STR_ELDAR_SPIDER_ARMOR_P       # DRAGON ARMOR Copy Paste edit later
@@ -838,7 +843,7 @@ armors:
       ARMOR_STEALTH_DETECTION_RANGE: 1  # in the warp, only pulled out in special circumstances
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
-
+      INTIMIDATION_RESISTANCE: 50
 
   - delete: STR_ELDAR_ARMOR6_P
   - &REAPER_ARMOR
@@ -934,6 +939,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_ELDAR_ARMOR6_P_SHIELD
     refNode: *REAPER_ARMOR
@@ -1046,6 +1052,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_ARMOR_EXARCH_P # REAPER EXARCH ARMOR
     refNode: *REAPER_ARMOR
@@ -1114,6 +1121,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 20 #+5
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_DRAGONEX_ARMOR_P
     refNode: *DRAGON_ARMOR
@@ -1182,6 +1190,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_SCORPIONEX_ARMOR_P       # SCORPION EXARCH PLAYER
     requires: STR_ELDAR_SCORPION_EXARCH_RESEARCH
@@ -1266,6 +1275,7 @@ armors:
       UNIT_SUSTAINED_HITS_CAPABLE: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_BANSHEEEX_ARMOR_P       # BANSHEE EXARCH PLAYER
     refNode: *BANSHEE_ARMOR
@@ -1356,6 +1366,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_HAWKEX_ARMOR_P       # SWOOPING EXARCH HAWK
     requires: STR_ELDAR_HAWK_EXARCH_RESEARCH
@@ -1442,6 +1453,7 @@ armors:
       DODGE_CHANCE: 20 # Vulnerable on the ground
       FLIGHT_DODGE_CHANCE: 50
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_SPIDEREXDS_ARMOR_P # FIX LATER Stats from DragonEx
     refNode: *SPIDER_ARMOR
@@ -1515,6 +1527,7 @@ armors:
       ARMOR_STEALTH_DETECTION_RANGE: 1  # in the warp, only pulled out in special circumstances
       DODGE_CHANCE: 20 #+5
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_SPIDEREXPB_ARMOR_P # FIX LATER Stats from DragonEx
     refNode: *SPIDER_ARMOR
@@ -1588,6 +1601,7 @@ armors:
       ARMOR_STEALTH_DETECTION_RANGE: 1  # in the warp, only pulled out in special circumstances
       DODGE_CHANCE: 20 #+5
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      INTIMIDATION_RESISTANCE: 100
 
 
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
@@ -1682,6 +1696,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 50
       ARMOR_MAX_SUCCESSFUL_DODGES: 4
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_ELDAR_ARMOR3_P_SHIELD        # SEER  PLAYER
     refNode: *SEER_ARMOR
@@ -1744,8 +1759,10 @@ armors:
       F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
       F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
     spriteSheet: ELDAR_WARLOCK.SPK
+    tags:
+      INTIMIDATION_RESISTANCE: 75
 
-# ELDAR.WRAITHGUARD # Wraithguards
+# ELDAR.WRAITH
 
   - &WRAITHGUARD_ARMOR
     type: STR_WRAITHGUARD_ARMOR_P
@@ -1778,7 +1795,9 @@ armors:
     loftempsSet: [92, 89, 90, 91]
     drawingRoutine: 5
     allowsRunning: false  # Mechanical
+    instantWoundRecovery: true
     tags:
+      INTIMIDATION_RESISTANCE: 100  # infection immune
       INFECTION_RESIST: 100
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -1796,13 +1815,112 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
       INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_MECHANICAL: 1
 
+  # ELDAR.HWP SUPPORT PLATFORM AND WAR WALKERS
+  - type: STR_ELDAR_HWP_SCATTERLASER_ARMOR_P   # HWP PLAYER
+    storeItem: STR_ELDAR_HWP_SCATTERLASER_ARMOR_ITEM
+    visibilityAtDay: 40
+    visibilityAtDark: 30 # Same vision as guardian
+    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK
+    spriteInv: ELDARHWPSCATTERLASER
+    customArmorPreviewIndex: [258, 259] #TEMP
+    corpseBattle:
+      - 7_PLAT1P
+      - 7_PLAT2P
+      - 7_PLAT3P
+      - 7_PLAT4P
+    bleedImmune: true
+    fearImmune: false
+    recovery:  # Manned turrets recover morale rapidly
+      morale:
+        flatHundred: 0.5
+    frontArmor: 150 # balance these armor values
+    sideArmor: 120  #
+    rearArmor: 60 # Guardian Armor
+    underArmor: 60
+    drawingRoutine: 20
+    constantAnimation: false
+    movementType: 1
+    moveCost:
+      baseNormalPercent: [150, 100] #move cost for ground
+      baseFlyPercent: [200, 100] #move cost for flying
+      flyDownPercent: [25, 0] #cost of flying down
+    moveSound: {mod: 40k, index: 845}
+    standHeight: 23
+    kneelHeight: 16
+    deathMale: [{mod: 40k, index: 842}, {mod: 40k, index: 843}, {mod: 40k, index: 844}]
+    deathFemale: [{mod: 40k, index: 842}, {mod: 40k, index: 843}, {mod: 40k, index: 844}]
+    size: 2
+    stats:
+      tu: 0
+      stamina: 0
+      firing: 0
+      health: 50
+      bravery: 0
+      reactions: 0
+      throwing: 0
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+    units:
+      - STR_ELDAR_GUARDIAN_PLAYER
+    damageModifier:  # VEHICLE ARMOR LARGE
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    allowsRunning: false
+    allowsKneeling: false
+    builtInWeapons:
+      - STR_ELDAR_HWP_SCATTERLASER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 50  # intimidate immune
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_MECHANICAL: 1
+    scripts:
+      selectUnitSprite: |
+        var int temp;
+        var int walking;
+        var int floating;
+        unit.isWalking walking;
+        unit.isFloating floating;
+        if and eq walking 0 eq floating 1;
+          unit.getId temp;
+          offsetmod temp 11 0 8; # desync animation of different units
+          add temp anim_frame;
+          wavegen_saw temp 4 4 4;
+          add sprite_offset 1;
+          add sprite_offset temp;
+          add sprite_index sprite_offset;
+        else;
+          add sprite_index sprite_offset;
+        end;
+        return sprite_index;
+
 # ELDAR.OTHER
 
-  - type: STR_ELDAR_PLAT_ARMOR_P   # FLYING PLATFORM #TODO-import remaining values from 40k mod
+  - type: STR_ELDAR_PLAT_ARMOR_P   # GRAV PLATFORM ITEM#TODO-import remaining values from 40k mod
     visibilityAtDay: 40
     visibilityAtDark: 30
     antiCamouflageAtDay: 3
