@@ -98,7 +98,7 @@ items:
     weight: 20
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    # Avenger Research
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
     costBuy: 15000
     costSell: 5000
     bigSprite: 4884
@@ -123,7 +123,7 @@ items:
     weight: 20
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    # Avenger Research
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
     costBuy: 15000
     costSell: 5000
     bigSprite: 4885
@@ -201,8 +201,8 @@ items:
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
     requiresBuy:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
-      #Avenger Research
     costBuy: 12000
     costSell: 4000
     bigSprite: 4886
@@ -241,6 +241,7 @@ items:
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
     requiresBuy:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
       #Avenger Research
     costBuy: 12000
@@ -840,7 +841,7 @@ items:
     floorSprite: 4901
     handSprite: 1770
     bulletSprite: {mod: 40k, index: 20}
-    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    fireSound: [1899, 1900, 1901]
     battleType: 1
     twoHanded: true
     invWidth: 2
@@ -858,7 +859,7 @@ items:
     confSnap:
       shots: 2
       name: STR_HAWK_WEAPON_SNAPSHOT
-    experienceTrainingMode: 5
+    experienceTrainingMode: 5 #50%
     tuSnap: 19
     flatRate: true
     listOrder: 16550
@@ -867,8 +868,7 @@ items:
     refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
-      - STR_ELDAR_HAWK_RESEARCH
-      #- STR_ELDAR_HAWKEX_RESEARCH
+      - STR_ELDAR_HAWK_EXARCH_RESEARCH
     weight: 20
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
     size: 0.3
@@ -912,7 +912,7 @@ items:
     confSnap:
       shots: 2
       name: STR_HAWK_WEAPON_SNAPSHOT
-    experienceTrainingMode: 5
+    experienceTrainingMode: 5 #50%
     tuSnap: 17
     listOrder: 16554
     tags:
@@ -920,6 +920,9 @@ items:
 
   - type: STR_SUNPISTOL_SCOPED # T3 Hawk Pistol, meant for safe potshots rather than lethalness
     refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_EXARCH_RESEARCH
     weight: 7
     categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
     size: 0.2
@@ -960,8 +963,8 @@ items:
     refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
-      - STR_ELDAR_HAWK_RESEARCH
-      #- STR_ELDAR_HAWKEX_RESEARCH
+      - STR_ELDAR_HAWK_EXARCH_RESEARCH
+
     weight: 30
     size: 0.3
     costBuy: 150000
@@ -977,7 +980,7 @@ items:
     confSnap:
       shots: 4
       name: STR_HAWK_WEAPON_SNAPSHOT
-    experienceTrainingMode: 6
+    experienceTrainingMode: 5
     tuSnap: 30
     blockBothHands: true # technically a heavy weapon
     listOrder: 16557
@@ -1358,7 +1361,7 @@ items:
       - STR_ELDAR_ONLY # eldar weapon training
     requiresBuy:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-      # BANSHEE EXARCH RESEARCH
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
     requiresBuyBaseFunc: []
     categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
     battleType: 1
@@ -1446,7 +1449,7 @@ items:
     categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-      # BANSHEE EXARCH RESEARCH
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
     requiresBuy: []
     size: 0.3
     costBuy: 100000
@@ -1685,7 +1688,7 @@ items:
     categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-      # AVENGER EXARCH RESEARCH
+      - STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH
     requiresBuy: []
     size: 0.3
     costBuy: 85000
@@ -1821,8 +1824,8 @@ items:
   - type: STR_SCORPION_CHAINSWORD  # Tier2 Armor shredding strength based melee
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
-      # Scorpion Research
     requiresBuy:
+      - STR_ELDAR_SCORPION_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
     requiresBuyBaseFunc: []
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
@@ -1880,6 +1883,7 @@ items:
       # Scorpion Exarch Reasearch
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SCORPION_EXARCH_RESEARCH
     costBuy: 100000
     costSell: 25000
     size: 0.2
@@ -1935,6 +1939,7 @@ items:
       # Scorpion Research
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SCORPION_EXARCH_RESEARCH
     size: 0.2
     dropoff: 5
     costBuy: 100000
@@ -2201,6 +2206,53 @@ items:
     invHeight: 3
     recover: false
     flatRate: true
+
+#--- ELDAR.HWP and Support Platform
+
+  - type: STR_ELDAR_HWP_SCATTERLASER
+    categories: [STR_CAT_LASER, STR_CAT_ELDAR]
+    # requires:
+    #   - STR_FAITHFUL_ARMORY  # commented out, unecessary and interferes with normal adeptas start.
+    weight: 0
+    bigSprite: 2219  # TEMPORARY
+    battleType: 1
+    fixedWeapon: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    clipSize: 400  # required for ROSIGMA.zip
+    hitSound: 3986
+    hitAnimation: 2220
+    bulletSprite: {mod: 40k, index: 22}
+    fireSound: [1899, 1900, 1901]
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 2
+    vaporProbabilitySurface: 100
+    bulletSpeed: 10
+    explosionSpeed: 3
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+    accuracySnap: 70
+    snapRange: 20 # 36" range
+    dropoff: 4
+    confSnap:
+      shots: 4 # Can be increased if buff needed
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 5
+    tuSnap: 25 # %TU mounted weapon cannot be wielded with finesse
+    power: 75 # STR 5
+    damageType: 1  # AP instead of LAS
+    damageAlter:
+      ToArmorPre: 0.2
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+      RandomWound: false
 
 #--- ELDAR.ARMOR_BUILTIN
 

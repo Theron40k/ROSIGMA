@@ -49,6 +49,7 @@ items:
       #Avenger Research
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
       # Avenger Research
     weight: 5
     #requiresBuyBaseFunc: [ELDAROUT]
@@ -333,7 +334,7 @@ items:
     hitSound: 3986
     hitAnimation: 2220
     bulletSprite: {mod: 40k, index: 22}
-    fireSound: 3981
+    fireSound: [1899, 1900, 1901]
     vaporColorSurface: 4  # red laser
     vaporDensitySurface: 2
     vaporProbabilitySurface: 100
