@@ -10434,6 +10434,31 @@ research:
     needItem: true
     destroyItem: true
 
+  - name: STR_LIVE_CAPTURE_GANGER
+    cost: 20
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_GANGERLEADER
+    cost: 50
+    points: 65
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_OGRYNOGANG
+    cost: 10
+    points: 1  # ogryn interrogation may not be that useful
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
   - name: STR_LIVE_CAPTURE_OGRYNOPFOR
     cost: 10
     points: 1  # ogryn interrogation may not be that useful
