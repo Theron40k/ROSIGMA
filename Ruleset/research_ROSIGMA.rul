@@ -1569,6 +1569,11 @@ research:
 
 ### Black Templars  #STRATEGY.SM.BT#
 
+  - name: STR_WAAGHISENDED # End of the Waagh
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
   - name: STR_BTNOTYET_BTMARINE_MIDTIER_BASE  # For Manufacture not Yet Done
     dependencies:
       - STR_BLACKTEMPLAR_STRATEGY
@@ -3933,6 +3938,7 @@ research:
       - STR_MARINES_STRATEGY
       - STR_NOT_SPACEWOLVES
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_CASS_R
@@ -3956,6 +3962,27 @@ research:
       - STR_MIDTIER_PREREQ
       - STR_HB_DEP1
       - STR_HFLAMERR
+    cutscene: c2
+
+  - name: STR_MT_BTBR  # Chapter Mid-tier Requisitions Black Templar Bloody Rose
+    cost: 200
+    points: 200
+    dependencies:
+      - STR_MELTAGUN_TECH
+      - STR_ALIEN_ALLOYS
+      - STR_MOTION_SCANNER
+      - STR_MEDI_KIT_PREREQ
+      - STR_MARINES_STRATEGY
+      - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_WAAGHISENDED
+    unlocks:
+      - STR_MIDTIER_PREREQ
+      - STR_CASS_R
+      - STR_HB_DEP1
+      - STR_HFLAMERR
+      # - STR_SIDEOPERATIONS
     cutscene: c2
 
   - delete: STR_CHAPTERARMYR
@@ -5911,6 +5938,7 @@ research:
       - STR_ADEPTAS
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_CYDONIA_OR_BUST
+      - STR_NOT_BLACKTEMPLARS # bloody rose could overlap there
     unlocks:
       - STR_HIGHTIER_PREREQ
 
@@ -6055,6 +6083,7 @@ research:
       - STR_MOTION_SCANNER
       - STR_MEDI_KIT_PREREQ
       - STR_ADEPTAS
+      - STR_NOT_BLACKTEMPLARS # bloody rose could overlap there
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_HARDER_MISSIONS
@@ -10432,6 +10461,31 @@ research:
     cost: 25
     points: 15
     needItem: true
+    destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_GANGER
+    cost: 20
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_GANGERLEADER
+    cost: 50
+    points: 65
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_OGRYNOGANG
+    cost: 10
+    points: 1  # ogryn interrogation may not be that useful
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
     destroyItem: true
 
   - name: STR_LIVE_CAPTURE_OGRYNOPFOR

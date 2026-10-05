@@ -12238,7 +12238,7 @@ ufopaedia:
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CH.SPK
     requires:
-      - STR_CHB
+      # - STR_CHB
       - STR_CHAOS_ARMORY_EXAM_BOLTER_STORM
     text: STR_CHB_UFOPEDIA
 
@@ -22674,12 +22674,16 @@ ufopaedia:
     section: STR_ALIEN_LIFE_FORMS
     image_id: GANGERTROOPER.SPK
     text: STR_GANGERBASE_SOLDIER_AI_CODEX
+    requires:
+      - STR_LIVE_CAPTURE_GANGER
 
   - id: STR_GANGERBASE_ARMORSOLDIERF0
     type_id: 15
     section: STR_ALIEN_LIFE_FORMS
     image_id: GANGERTROOPER.SPK
     text: STR_GANGERBASE_SOLDIER_AI_UFOPEDIA
+    requires:
+      - STR_LIVE_CAPTURE_GANGER
 
 #FOES.RENE.DESERT#       Deserters and Instigators
   - id: STR_DESERTER_SOLDIER_ORIGINS
