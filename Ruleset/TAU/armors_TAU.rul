@@ -43,6 +43,10 @@ items:
   - type: STR_TAUGUEVESACARAP_PC_MEDIC_ARMOR_ITEM_GV
     costSell: 0
 
+  - type: STR_TAUMARINVESACARAP_PC_MEDIC_ARMOR_ITEM_GV
+    costSell: 0
+
+
   - type: STR_SENTINELGV_ARMOR                #6800
     requiresBuy:
       - STR_TANKERS_DELIGHT_GV
@@ -1602,6 +1606,8 @@ armors:
       - 1.0  # MELTA
     units:
       - STR_MARINVESA_GV
+      - STR_MARINVESAUI_GV
+      - STR_MARINVESAVRE_GV
     stats:
       bravery: 10
       stamina: 10
@@ -1669,7 +1675,18 @@ armors:
       DODGE_CHANCE: 5
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
 
-  # TODO: Marinvesavre
+  - type: STR_TAUMARINVESACARAP_PC_MEDIC_ARMOR_GV
+    refNode: *STR_MARINVESA_CARAPACE
+    storeItem: STR_TAUMARINVESACARAP_PC_MEDIC_ARMOR_ITEM_GV
+    requires: STR_INFILTRATION_CADRE_GV
+    specialWeapon: STR_TAU_MEDI_KIT
+    units:
+      - STR_MARINVESA_GV
+      - STR_MARINVESAUI_GV
+      - STR_MARINVESAVRE_GV
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+
   - type: STR_TAUMARINVESACARAP_LEADER_PC_ARMOR_GV
     refNode: *STR_MARINVESA_CARAPACE
     visibilityAtDay: 35  # abhuman squat malus
@@ -1725,7 +1742,61 @@ armors:
       DODGE_CHANCE: 10
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
 
-  # TODO: Marinvesavre
+  - type: STR_TAUMARINVESACARAP_VETERAN_PC_ARMOR_GV
+    refNode: *STR_MARINVESA_CARAPACE
+    visibilityAtDay: 35  # abhuman squat malus
+    visibilityAtDark: 45  # Tau night vision
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    customArmorPreviewIndex: 843  # 543
+    psiCamouflage: 5
+    requires: STR_INFILTRATION_CADRE_GV
+    spriteSheet: TAUBEASTMAN_CARAPACE_BSPLAYER.PCK
+    specialWeapon: STR_GUEVESA_VETERAN_BLADE_GV
+    spriteInv: TBCA_33
+    storeItem: STR_NONE
+    corpseBattle:
+      - STR_TAUMARINVESA_PCCORPSE
+    frontArmor: 90
+    sideArmor: 80
+    rearArmor: 55
+    underArmor: 75   # better against explosions
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 15
+    damageModifier:  # Leader quality damage resist
+      - 1.0  # none
+      - 0.7  # AP
+      - 0.7  # FLAMES; partially environmentally sealed + 20% beastman malus
+      - 0.7  # HE
+      - 0.8  # LASCANON
+      - 0.9  # PLASMA
+      - 0.7  # STUN 10% beastman bonus
+      - 1.0  # MELEE 10% beastman bonus
+      - 0.8  # ACID
+      - 0.0  # SMOKE
+      - 0.6  # IMPACT
+      - 0.8  # MELTA
+    units:
+      - STR_MARINVESAVRE_GV
+    stats:
+      stamina: 15
+      bravery: 10
+      strength: 10
+      melee: 10
+      reactions: 5
+    loftempsSet: [4]  # big targets
+    tags:
+      INFECTION_RESIST: 25  # infection/corruption resistant due to warp acclimatization and physiology
+      UNIT_SIZE: 150 # LARGE
+      UNIT_TYPE_LIVING: 1
+      UNIT_TYPE_TAU: 1
+      ARMOR_OVERWATCH_TU_RESTORED: 10
+      HAS_MARKERLIGHT: 1
+      DODGE_CHANCE: 10
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
+
+
   - type: STR_ENGRAVED_TAUMARINVESACARAP_PC_ARMOR_GV
     refNode: *STR_MARINVESA_CARAPACE
     visibilityAtDay: 35  # abhuman squat malus
