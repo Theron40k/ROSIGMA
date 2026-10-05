@@ -78,6 +78,8 @@ items:
     medikitType: 1
     medikitActionName: STR_RELOAD_WEAPONS
     medikitTargetSelf: true
+    woundRecovery: 0
+    healthRecovery: 0
     heal: 999
     armor: 30
     invWidth: 2
@@ -94,6 +96,7 @@ items:
     fixedWeapon: true
     tags:
       TURRET_RELOAD_ITEM: 1
+      ITEM_IS_NOT_MEDIKIT: 1
 
   - &STR_GENERIC_SERVITOR_WEAPON  # Not necessary to inherit from this, but it's here to make it easy
     type: STR_GENERIC_SERVITOR_HEAVYBOLTER

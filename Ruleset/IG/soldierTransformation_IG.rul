@@ -262,6 +262,28 @@ soldierTransformation:
     requiredItems:
       STR_KILLPOINT_TOKEN: 50
 
+  - name: STR_RATLING_VETERAN_PROMOTION # Ratlings
+    requiredMinStats:
+      tu: 1
+      stamina: 1
+      health: 1
+      bravery: 1
+      reactions: 1
+      firing: 1
+      melee: 1
+    requiredCommendations:
+      STR_VETERAN_COMMENDATION: 0
+    requires:
+      - STR_GUARDSMEN_VETERAN
+    producedSoldierType: STR_GUARD_RATLING_VETERAN
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    allowedSoldierTypes:
+      - STR_GUARD_RATLING
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 50
+
   - name: STR_KRIEG_GRENADIER_PROMOTION
     requiredMinStats:
       tu: 1
@@ -391,6 +413,8 @@ soldierTransformation:
       - STR_GUARD_VALHALLAN_OFFICER
       - STR_GUARD_VETERAN_VALHALLAN
       - STR_GUARD_VALHALLAN_OFFICER_VETERAN
+      - STR_GUARD_RATLING
+      - STR_GUARD_RATLING_VETERAN
 
 # catachan
 

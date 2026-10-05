@@ -1080,6 +1080,8 @@ items:
     medikitType: 1
     medikitActionName: STR_ACTIVATE_FLIGHT
     medikitTargetSelf: true
+    woundRecovery: 0
+    healthRecovery: 0
     heal: 999
     battleType: 6  # not used as medikit
     tuUse: 10
@@ -1088,7 +1090,7 @@ items:
     specialIconSprite: 205
     tags:
       ActivateFlight: 1
-
+      ITEM_IS_NOT_MEDIKIT: 1
 
   - type: STR_WBEXECUTIONER_AXE
     categories: [STR_CAT_MELEE]

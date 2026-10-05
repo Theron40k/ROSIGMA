@@ -26,6 +26,7 @@ units:
     deathSound: {mod: 40k, index: 737}  # change?
     moveSound: -1
     intelligence: 3
+    spotter: 2 # Undivded Daemon
     aggression: 8
     berserkChance: 90
     energyRecovery: 60
@@ -66,7 +67,7 @@ units:
     standHeight: 12
     kneelHeight: 12
     value: 15
-    spotter: 2
+    spotter: 1
     deathSound: [{mod: 40k, index: 686}, {mod: 40k, index: 687}]
     intelligence: 1
     aggression: 8
@@ -102,7 +103,7 @@ units:
     deathSound: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
     intelligence: 4
     aggression: 1
-    spotter: 1
+    spotter: 2 # Heretic Commander Unit
     energyRecovery: 40
     livingWeapon: true
     builtInWeaponSets:
@@ -381,7 +382,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 5
     aggression: 8
-    spotter: 2
+    spotter: 1
     sniper: 90
     value: 30
     livingWeapon: true
@@ -435,7 +436,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 5
     aggression: 8
-    spotter: 2
+    spotter: 1
     sniper: 90
     value: 30
     livingWeapon: true
@@ -726,7 +727,7 @@ units:
     intelligence: 3
     aggression: 2
     berserkChance: 75
-    spotter: 2
+    spotter: 1
     sniper: 75
     value: 28
     energyRecovery: 40
@@ -885,7 +886,7 @@ units:
     aggression: 2
     berserkChance: 90
     sniper: 50
-    spotter: 3
+    spotter: 1
     value: 32
     energyRecovery: 60
     livingWeapon: true
@@ -950,7 +951,7 @@ units:
     canPanic: false
     canBeMindControlled: false
     moraleLossWhenKilled: 125  # leader malus
-    spotter: 4
+    spotter: 2
     sniper: 90
     value: 40
     energyRecovery: 60
@@ -1375,7 +1376,7 @@ units:
     intelligence: 2
     aggression: 2
     value: 16
-    spotter: 2
+    spotter: 1
     sniper: 25
     energyRecovery: 50
     livingWeapon: true
@@ -1416,7 +1417,7 @@ units:
     moveSound: -1
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     value: 20
     sniper: 75  # artillery
     energyRecovery: 50
@@ -1450,7 +1451,7 @@ units:
     intelligence: 3
     aggression: 2
     value: 25
-    spotter: 2
+    spotter: 1
     sniper: 25
     energyRecovery: 50
     livingWeapon: true
@@ -1490,7 +1491,7 @@ units:
     intelligence: 3
     aggression: 2
     value: 25
-    spotter: 2
+    spotter: 1
     sniper: 25
     energyRecovery: 50
     livingWeapon: true
@@ -1532,7 +1533,7 @@ units:
     intelligence: 3
     aggression: 2
     value: 25
-    spotter: 2
+    spotter: 1
     sniper: 50
     energyRecovery: 50
     livingWeapon: true

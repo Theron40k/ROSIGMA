@@ -6,6 +6,7 @@ items:
 #--- ELDAR.WEAPONS ---
 #--- ELDAR.GRENADES ---
 #--- ELDAR.MELEE ---
+#--- ELDAR.ARMOR_BUILTIN
 #---------------------
 
 #--- ELDAR.WEAPONS ---
@@ -48,7 +49,7 @@ items:
     confAuto:
       name: STR_SHURIKEN_WEAPON_AUTOSHOT
     experienceTrainingMode: 6
-    tuSnap: 19
+    tuSnap: 21
     tuAuto: 32
     flatRate: true
     listOrder: 16100
@@ -97,7 +98,7 @@ items:
     weight: 20
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    # Avenger Research
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
     costBuy: 15000
     costSell: 5000
     bigSprite: 4884
@@ -122,7 +123,7 @@ items:
     weight: 20
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    # Avenger Research
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
     costBuy: 15000
     costSell: 5000
     bigSprite: 4885
@@ -136,7 +137,7 @@ items:
       reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
     invWidth: 2
     invHeight: 3
-    tuSnap: 19
+    tuSnap: 21
     snapRange: 14
     tuAimed: 40
     aimRange: 19
@@ -171,7 +172,7 @@ items:
     accuracySnap: 75
     accuracyAuto: 60
 #    accuracyAimed: 100
-    tuSnap: 18 # Slightly less than catapult
+    tuSnap: 19 # Slightly less than catapult
     tuAuto: 30 # Slightly less than catapult
 #    tuAimed: 35
     flatRate: true
@@ -200,8 +201,8 @@ items:
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
     requiresBuy:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
-      #Avenger Research
     costBuy: 12000
     costSell: 4000
     bigSprite: 4886
@@ -213,7 +214,7 @@ items:
     accuracyMultiplier:
       firing: 0.5
       reactions: 0.7 # slightly better accuracy at lowest reactions, gives avengers extra accuracy at max cap
-    tuSnap: 18
+    tuSnap: 19
     tuAuto: 30
     flatRate: true
     accuracySnap: 75
@@ -240,6 +241,7 @@ items:
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
     requiresBuy:
+      - STR_ELDAR_DIRE_AVENGER_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
       #Avenger Research
     costBuy: 12000
@@ -253,7 +255,7 @@ items:
     accuracyMultiplier:
       firing: 0.5
       reactions: 0.7 # makes similar accuracy at lowest reactions, gives avengers extra accuracy at max cap
-    tuSnap: 18
+    tuSnap: 19
     tuAimed: 40
     tuAuto: 0
     flatRate: true
@@ -382,7 +384,7 @@ items:
     invWidth: 2
     invHeight: 3
     arcingShot: false
-    minRange: 5
+    minRange: 10 # Scoped Sniper Rifle
     aimRange: 40
     snapRange: 20
     autoRange: 14
@@ -821,6 +823,171 @@ items:
     armor: 300
     listOrder: 16520
 
+  - &ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    type: STR_LASBLASTER
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_RESEARCH
+    requiresBuy:
+      - STR_ELDAR_WEAPONS_ACQUISITION
+    requiresBuyBaseFunc: []
+    weight: 10
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
+    size: 0.3
+    dropoff: 5
+    costBuy: 50000
+    costSell: 10000
+    bigSprite: 4901
+    floorSprite: 4901
+    handSprite: 1770
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [1899, 1900, 1901]
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    bulletSpeed: 30
+    attraction: 5
+    compatibleAmmo:
+      - STR_LASBLASTER_CHARGE
+    accuracyMultiplier:
+      firing: 0.5
+      throwing: 0.5 # Hawk Main Stat
+    accuracySnap: 80
+    snapRange: 14
+    confSnap:
+      shots: 2
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 5 #50%
+    tuSnap: 19
+    flatRate: true
+    listOrder: 16550
+
+  - type: STR_HAWKSTALON # Slower rate of fire, better accuracy, uses powerful AP AMMO
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_EXARCH_RESEARCH
+    weight: 20
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN, STR_CAT_DEVASTATOR]
+    size: 0.3
+    costBuy: 100000
+    costSell: 20000
+    bigSprite: 4903
+    floorSprite: 4903
+    handSprite: 1714
+    compatibleAmmo:
+      - STR_HAWKSTALON_CHARGE
+    accuracySnap: 90
+    tuSnap: 25
+    listOrder: 16552
+
+  - type: STR_SUNPISTOL # Slower rate of fire, better accuracy, uses powerful AP AMMO
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_RESEARCH
+    weight: 5
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
+    size: 0.2
+    costBuy: 50000
+    costSell: 10000
+    bigSprite: 4905
+    floorSprite: 4905
+    handSprite: 1730
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 2
+    armor: 200
+    bulletSpeed: 30
+    attraction: 5
+    compatibleAmmo:
+      - STR_SUNPISTOL_CHARGE
+    accuracySnap: 70
+    snapRange: 12
+    confSnap:
+      shots: 2
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 5 #50%
+    tuSnap: 17
+    listOrder: 16554
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
+
+  - type: STR_SUNPISTOL_SCOPED # T3 Hawk Pistol, meant for safe potshots rather than lethalness
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_EXARCH_RESEARCH
+    weight: 7
+    categories: [STR_CAT_ELDAR, STR_CAT_TACTICAL, STR_CAT_LASGUN]
+    size: 0.2
+    costBuy: 50000
+    costSell: 10000
+    bigSprite: 4906
+    floorSprite: 4906
+    handSprite: 1738
+    bulletSprite: {mod: 40k, index: 20}
+    fireSound: [{mod: 40k, index: 839}, {mod: 40k, index: 840}, {mod: 40k, index: 841}]
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 200
+    bulletSpeed: 30
+    attraction: 5
+    compatibleAmmo:
+      - STR_SUNPISTOL_CHARGE
+    accuracySnap: 70
+    snapRange: 12
+    confSnap:
+      shots: 2
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    tuSnap: 17
+    accuracyAimed: 90
+    aimRange: 16
+    confAimed:
+      shots: 2
+      name: STR_HAWK_WEAPON_AIMEDSHOT
+    tuAimed: 30
+    experienceTrainingMode: 5
+    listOrder: 16555
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
+
+  - type: STR_HAWK_SCATTERLASER # Long Range, High firerate, zero AP, Easy Training Weapon
+    refNode: *ELDAR_HAWK_LAS_WEAPON_TEMPLATE
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+      - STR_ELDAR_HAWK_EXARCH_RESEARCH
+
+    weight: 30
+    size: 0.3
+    costBuy: 150000
+    costSell: 20000
+    bigSprite: 4908
+    floorSprite: 4908
+    handSprite: 1754
+    compatibleAmmo:
+      - STR_HAWK_SCATTERLASER_CHARGE
+    accuracySnap: 80
+    snapRange: 20 # 36" range
+    dropoff: 4
+    confSnap:
+      shots: 4
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 5
+    tuSnap: 30
+    blockBothHands: true # technically a heavy weapon
+    listOrder: 16557
+    tags:
+      REACTION_MULTIPLIER: 50 # multiplies base reaction score by this amount divided by 100
+
+
   - type: STR_DEATH_SPINNER  # Chaos ripper gun stats temporary
     categories: [STR_CAT_SHOTGUN, STR_CAT_ASSAULT, STR_CAT_ELDAR]
     requires:
@@ -1092,6 +1259,8 @@ items:
     invHeight: 3
     armor: 200
     listOrder: 16300
+    tags:
+      SUSTAINED_HIT_PERCENTAGE: 16 #(1/6) percentage
 
   - type: STR_AELDARI_POWERSWORD  # Tier 1 Powerweapon
     requires:
@@ -1140,7 +1309,7 @@ items:
       ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
       ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
 
-  - type: STR_EPOWER_SWORD  # eldar mirrorsword
+  - type: STR_EPOWER_SWORD  # eldar Banshee Blade
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
     requiresBuy:
@@ -1163,8 +1332,7 @@ items:
     flatMelee: true
     power: 80
     damageBonus:
-      strength: 0.1
-      melee: 0.4
+      melee: 0.5 # Banshee weapons depend on melee skill and finesse
     meleeMultiplier:
       melee: 0.7
       reactions: 0.3
@@ -1176,9 +1344,9 @@ items:
     costBuy: 50000
     costSell: 15000
     weight: 10
-    bigSprite: {mod: 40k, index: 392}
-    floorSprite: {mod: 40k, index: 244}
-    handSprite: {mod: 40k, index: 840}
+    bigSprite: 4899
+    floorSprite: 4899
+    handSprite: 1682
     meleeAnimation: {mod: 40k, index: 4}
     meleeSound: {mod: 40k, index: 753} #753 Powerswrod miss
     meleeHitSound: {mod: 40k, index: 754} #744 Powerswrod hit
@@ -1186,7 +1354,176 @@ items:
     invHeight: 3
     flatRate: true
     attraction: 8
-    listOrder: 16300
+    listOrder: 16301
+
+  - type: STR_TRISKELE # melee and ranged throwing weapon, to pair with hand shield
+    requires:
+      - STR_ELDAR_ONLY # eldar weapon training
+    requiresBuy:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+    requiresBuyBaseFunc: []
+    categories: [STR_CAT_ELDAR, STR_CAT_MELEE, STR_CAT_ASSAULT]
+    battleType: 1
+    damageType: 5
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    clipSize: -1
+    armor: 200
+        #Throwing Profile
+    power: 40 # dagger like weapon lower damage, higher attacks
+    damageBonus:
+      melee: 0.4
+    costAimed:
+      time: 35
+      energy: 15
+    accuracyAimed: 100
+    confAimed:
+      name: STR_SINGING_SPEAR_AIMED_THROW
+      shortName: STR_SINGING_SPEAR_AIMED_THROW
+    aimRange: 12
+    costSnap:
+      time: 25
+      energy: 10
+    accuracySnap: 80
+    confSnap:
+      name: STR_SINGING_SPEAR_SNAP_THROW
+      shortName: STR_SINGING_SPEAR_SNAP_THROW
+    snapRange: 9
+    maxRange: 18
+    accuracyMultiplier:
+      melee: 0.5
+      throwing: 0.5
+    arcingShot: true
+    powerRangeThreshold: 21
+    powerRangeReduction: 99
+    bulletSpeed: -2
+    kneelBonus: 100
+    dropoff: 5
+        #MELEE PROFILE
+    meleeType: 5
+    meleePower: 40
+    meleeBonus:
+      melee: 0.4
+    meleeAlter:
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+      RandomType: 6
+    costMelee:
+      time: 10
+      energy: 2  # light melee weapon; light 1 energy, medium 2, heavy 4, very heavy 8
+    flatMelee: true
+    meleeMultiplier:
+      melee: 1
+    accuracyMelee: 100
+    tags:
+      ITEM_STRENGTH_REQUIREMENT: 30  # was 60 in vanilla
+      ITEM_HAS_OVERWEIGHT_TU_PENALTY: 1
+    size: 0.2
+    costBuy: 100000
+    costSell: 25000
+    weight: 10
+    bigSprite: 4898
+    floorSprite: 4898
+    handSprite: 1674
+    bulletSprite: 34
+    vaporColor: 10
+    vaporDensity: 3
+    hitAnimation: {mod: 40k, index: 110}
+    fireSound: 1895
+    hitSound: 1892
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753} #753 Powersword miss
+    meleeHitSound: {mod: 40k, index: 754} #744 Powersword hit
+    invWidth: 2
+    invHeight: 2
+    flatRate: true
+    attraction: 8
+    listOrder: 16301
+
+  - type: STR_BANSHEE_EXECUTIONER  #  2 handed and more powerful than Eldar Powerglaive
+    categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
+    requires:
+      - STR_ELDAR_POWER_WEAPONS_ACQUISITION
+      - STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+    requiresBuy: []
+    size: 0.3
+    costBuy: 100000
+    costSell: 25000
+    weight: 35
+    bigSprite: 4900
+    floorSprite: 4900
+    handSprite: 1690
+    meleeAnimation: {mod: 40k, index: 4}
+    meleeSound: {mod: 40k, index: 753}  # 753 Powerswrod miss
+    meleeHitSound: {mod: 40k, index: 754}  # 744 Powerswrod hit
+    fireSound: {mod: 40k, index: 753}
+    explosionHitSound: {mod: 40k, index: 101}  # stabhit
+    hitAnimation: 2040  # Bloodgush sprite, X1.pck for ranged attacks, was 1070  # AOEMELEEGENE.png
+    hitAnimFrames: 8
+    powerForAnimation: 10
+    hitSound: {mod: 40k, index: 101}  # stabhit
+    bulletSprite: 5
+    clipSize: -1
+    invWidth: 2
+    invHeight: 3
+    snapRange: 2  # has reach
+    maxRange: 2
+    powerRangeThreshold: 3
+    powerRangeReduction: 99
+    battleType: 1
+    damageType: 5
+    meleeType: 5
+    confSnap:
+      name: STR_HALLEBARD_SNAPSHOT_LUNGE
+      shots: 1
+    costSnap:
+      time: 30
+      energy: 10
+    accuracySnap: 80
+    accuracyMelee: 100
+    accuracyMultiplier:
+      melee: 1 # Banshee stat
+    meleeMultiplier:
+      melee: 1 # Banshee stat
+    power: 110
+    meleePower: 110
+    damageBonus:
+      melee: 1 # Banshee stat
+    meleeBonus:
+      melee: 1 # Banshee stat
+    costMelee:
+      time: 25
+      energy: 8  # heavy melee weapon
+    flatMelee:
+      time: true
+      energy: true
+    damageAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    meleeAlter:     # DA POWER
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.4
+      ToHealth: 0.8
+      RandomType: 2  # TFTD [50% - 150%]
+      IgnoreSelfDestruct: false
+    twoHanded: true # 2 handed but more powerful than eldar powerglaive
+    oneHandedPenalty: 50
+    attraction: 6
+    armor: 200
+    listOrder: 16301
+    flatRate: true
+    inventoryMoveCost: #quickdraw
+      basePercent: 50
+    tags:
+      REACTION_MULTIPLIER: 200 # multiplies base reaction score by this amount divided by 100
 
   - type: STR_ELDAR_POWER_BLADE  # STR_EPOWER_SWORD stats, REWORK required
     requires:
@@ -1351,7 +1688,7 @@ items:
     categories: [STR_CAT_MELEE, STR_CAT_ELDAR, STR_CAT_ASSAULT]
     requires:
       - STR_ELDAR_POWER_WEAPONS_ACQUISITION
-      # AVENGER EXARCH RESEARCH
+      - STR_ELDAR_DIRE_AVENGER_EXARCH_RESEARCH
     requiresBuy: []
     size: 0.3
     costBuy: 85000
@@ -1429,6 +1766,7 @@ items:
     attraction: 6
     armor: 200
     listOrder: 16498
+    flatRate: true
     inventoryMoveCost: #quickdraw
       basePercent: 50
     experienceTrainingMode: 13 #train reactions and melee
@@ -1486,14 +1824,14 @@ items:
   - type: STR_SCORPION_CHAINSWORD  # Tier2 Armor shredding strength based melee
     requires:
       - STR_ELDAR_ONLY # eldar weapon training
-      # Scorpion Research
     requiresBuy:
+      - STR_ELDAR_SCORPION_RESEARCH
       - STR_ELDAR_WEAPONS_ACQUISITION
     requiresBuyBaseFunc: []
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
     size: 0.2
-    costBuy: 10000
-    costSell: 2000
+    costBuy: 50000
+    costSell: 10000
     weight: 12 # Heavier mechanism
     bigSprite: 4895
     floorSprite: 4895
@@ -1534,6 +1872,7 @@ items:
     listOrder: 16500
     tags:
       ITEM_STRENGTH_REQUIREMENT: 40
+      SUSTAINED_HIT_PERCENTAGE: 16 #(1/6) percentage
 
   - type: STR_BITING_BLADE  # T3 2 Handed chainsword Based on Eviscerator for BR Repentia
     categories: [STR_CAT_MELEE, STR_CAT_ASSAULT, STR_CAT_ELDAR]
@@ -1544,8 +1883,9 @@ items:
       # Scorpion Exarch Reasearch
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
-    costBuy: 30000
-    costSell: 10000
+      - STR_ELDAR_SCORPION_EXARCH_RESEARCH
+    costBuy: 100000
+    costSell: 25000
     size: 0.2
     power: 80
     costMelee:
@@ -1561,7 +1901,7 @@ items:
       RandomWound: false
       ToArmorPre: 0.4  # +10%
       ToHealth: 1.5
-      RandomType: 7  # Devastating Wounds
+      RandomType: 2
       ToWound: 0.3
       ToEnergy: 0.5
     weight: 50  # Heavier weapon meant for Scorpion Exarch
@@ -1587,6 +1927,7 @@ items:
     tags:
       ITEM_STRENGTH_REQUIREMENT: 70 # Requires a lot of strength to wield with skill
       DAMAGE_RESIST_PENETRATION_PERCENT: 25
+      SUSTAINED_HIT_PERCENTAGE: 16 #(1/6) percentage
 
   - type: STR_SCORPIONS_CLAW #              16500
     refNode: *ELDAR_PISTOL_TEMPLATE
@@ -1598,10 +1939,11 @@ items:
       # Scorpion Research
     requiresBuy:
       - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_SCORPION_EXARCH_RESEARCH
     size: 0.2
     dropoff: 5
-    costBuy: 30000
-    costSell: 10000
+    costBuy: 100000
+    costSell: 25000
     bigSprite: 4897
     floorSprite: 4897
     handSprite: 1666
@@ -1737,7 +2079,7 @@ items:
     floorSprite: 4883
     handSprite: 1554
     meleeHitSound: 1894
-    experienceTrainingMode: 30 #psiStrength or psiSkill DOES NOT TRAIN MELEEb
+    experienceTrainingMode: 30 #psiStrength or psiSkill DOES NOT TRAIN MELEE
 
   - type: STR_SINGING_SPEAR  #Needs WORK
     requires:
@@ -1864,3 +2206,151 @@ items:
     invHeight: 3
     recover: false
     flatRate: true
+
+#--- ELDAR.HWP and Support Platform
+
+  - type: STR_ELDAR_HWP_SCATTERLASER
+    categories: [STR_CAT_LASER, STR_CAT_ELDAR]
+    # requires:
+    #   - STR_FAITHFUL_ARMORY  # commented out, unecessary and interferes with normal adeptas start.
+    weight: 0
+    bigSprite: 2219  # TEMPORARY
+    battleType: 1
+    fixedWeapon: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+    clipSize: 400  # required for ROSIGMA.zip
+    hitSound: 3986
+    hitAnimation: 2220
+    bulletSprite: {mod: 40k, index: 22}
+    fireSound: [1899, 1900, 1901]
+    vaporColorSurface: 4  # red laser
+    vaporDensitySurface: 2
+    vaporProbabilitySurface: 100
+    bulletSpeed: 10
+    explosionSpeed: 3
+    scripts:
+      vaporParticleAmmo: |
+        # noting
+        set particle_lifetime 1;
+        set subvoxel_drift 0;
+        return;
+    accuracySnap: 70
+    snapRange: 20 # 36" range
+    dropoff: 4
+    confSnap:
+      shots: 4 # Can be increased if buff needed
+      name: STR_HAWK_WEAPON_SNAPSHOT
+    experienceTrainingMode: 5
+    tuSnap: 25 # %TU mounted weapon cannot be wielded with finesse
+    power: 75 # STR 5
+    damageType: 1  # AP instead of LAS
+    damageAlter:
+      ToArmorPre: 0.2
+      ToHealth: 1.0
+      ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
+      ToStun: 0.3  # painful las burns
+      ToWound: 0.05  # cauterizes, but there's still explosive thermal expansion of tissues; melta level wounding
+      RandomWound: false
+
+#--- ELDAR.ARMOR_BUILTIN
+
+  - &SKILL_TOKEN
+    type: STR_PSI_AMP_TOKEN_ELDAR
+    size: 0
+    weight: 0
+    invWidth: 0
+    invHeight: 0
+    hitSound: {mod: 40k, index: 36}
+    armor: 255
+    recover: false
+    hiddenOnMinimap: true
+    fixedWeapon: true
+    defaultInventorySlot: STR_BACK_PACK
+
+  - type: STR_BANSHEE_INTIMIDATE_SPECIALWEAPON
+    recover: false
+    hiddenOnMinimap: true
+    fixedWeapon: true
+    specialUseEmptyHand: true
+    twoHanded: false
+    invWidth: 2 #does not show technically
+    invHeight: 3 #does not show technically
+    bigSprite: 3098 #does not show technically
+    specialIconSprite: 251
+    explosionHitSound: [1896, 1897, 1898]
+    hitAnimation: 1050
+    weight: 0
+    battleType: 1
+    experienceTrainingMode: 30
+    bulletSprite: 0
+    powerForAnimation: 48
+    bulletSpeed: 200
+    accuracySnap: 200
+    tuSnap: 25
+    snapRange: 15
+    confSnap:
+      name: STR_BANSHEE_MASK_INTIMIDATE
+    maxRange: 15
+    power: 5
+    accuracyMultiplier:
+      flatHundred: 1.0
+    damageBonus:
+      psiStrength: 1.0
+    damageType: 0
+    damageAlter:
+      FixRadius: 2
+      RandomType: 6  # Gaussian damage
+      ArmorEffectiveness: 0.05  # armor doesn't help against intimidation, 5% safety blanket; people need to learn strategies to deal with it; or just train bravery
+      RadiusReduction: 0.0
+      ToHealth: 0.0
+      ToArmor: 0.0
+      ToStun: 0.0
+      ToWound: 0.0
+      ToTile: 0.0
+      ToItem: 0.0
+      ToMana: 1.0  # used by scripts
+    clipSize: -1
+    tags:
+      INTIMIDATION_TU_DAMAGE_MULTIPLIER: 100
+      INTIMIDATION_MORALE_DAMAGE_MULTIPLIER: 100
+      ITEM_DOESNT_HURT_FRIENDS: 1
+
+  - type: STR_BANSHEE_WARP_SCREAM_TOKEN # note: this is a placeholder for future development. currently unused.
+    refNode: *SKILL_TOKEN
+    battleType: 1
+    experienceTrainingMode: 30
+    bulletSprite: 0
+    hitAnimation: 1050
+    explosionHitSound: 2423
+    powerForAnimation: 48
+    bulletSpeed: 200
+    accuracySnap: 200
+    tuSnap: 35
+    snapRange: 15
+    maxRange: 15
+    power: 5
+    accuracyMultiplier:
+      flatHundred: 1.0
+    damageBonus:
+      psiStrength: 1.0
+    damageType: 0
+    damageAlter:
+      FixRadius: 2
+      RandomType: 6  # Gaussian damage
+      ArmorEffectiveness: 0.05  # armor doesn't help against intimidation, 5% safety blanket; people need to learn strategies to deal with it; or just train bravery
+      RadiusReduction: 0.0
+      ToHealth: 0.25
+      ToArmor: 0.0
+      ToStun: 0.0
+      ToWound: 0.0
+      ToTile: 0.0
+      ToItem: 0.0
+      ToMana: 1.0  # used by scripts
+    clipSize: -1
+    twoHanded: false
+    tags:
+      INTIMIDATION_TU_DAMAGE_MULTIPLIER: 40
+      INTIMIDATION_MORALE_DAMAGE_MULTIPLIER: 40
+      ITEM_DOESNT_HURT_FRIENDS: 1

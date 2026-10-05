@@ -186,7 +186,15 @@ research:
     dependencies:
       - STR_GENERALLOCK
 
+  - name: STR_RESEARCHNOT_AVAILABLE  # Research Not Available
+    dependencies:
+      - STR_GENERALLOCK
+
   - name: STR_READCODEX_RESEARCH
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_NEVERBORN_SPAWNER_GRENADE_PLAYER
     dependencies:
       - STR_GENERALLOCK
 
@@ -1561,6 +1569,31 @@ research:
 
 ### Black Templars  #STRATEGY.SM.BT#
 
+  - name: STR_WAAGHISENDED # End of the Waagh
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_BTNOTYET_BTMARINE_MIDTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_BTNOTYET_BTMARINE_HIGHTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_BTNOTYET_BTMARINEASSAULT_MIDTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
+  - name: STR_BTNOTYET_BTTECH_HIGHTIER_BASE  # For Manufacture not Yet Done
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_GENERALLOCK
+
   - name: STR_BLACKTEMPLAR_STRATEGY  # WIP Black Templar Strategy
     cost: 5
     points: 0
@@ -1581,6 +1614,10 @@ research:
       - STR_HARDER_MISSIONS
       - STR_MARINESCHOICEDONE
       - STR_NOTDONEBEFORE
+      - STR_BTNOTYET_BTMARINE_MIDTIER_BASE
+      - STR_BTNOTYET_BTMARINE_HIGHTIER_BASE
+      - STR_BTNOTYET_BTMARINEASSAULT_MIDTIER_BASE
+      - STR_BTNOTYET_BTTECH_HIGHTIER_BASE
     disables:
       - STR_NOT_TACTICAL
       - STR_PRIMARIS
@@ -1623,6 +1660,46 @@ research:
       - STR_BLACKTEMPLAR_STRATEGY
       - STR_GENERALLOCK
     spawnedEvent: STR_BTBR_WAAGHMOREEVENT2
+
+  - name: STR_BTMARINE_MIDTIER  # Abhor the Witch, Destroy the Witch
+    cost: 50
+    points: 0
+    neededItem: STR_BTMARINE_MIDTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTMARINE_MIDTIER_BASE
+
+  - name: STR_BTMARINE_HIGHTIER  # Accept any Challenge, no Matter the Odds
+    cost: 50
+    points: 0
+    neededItem: STR_BTMARINE_HIGHTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTMARINE_HIGHTIER_BASE
+
+  - name: STR_BTMARINEASSAULT_MIDTIER  # Suffer not the Unclean to Live
+    cost: 50
+    points: 0
+    neededItem: STR_BTMARINEASSAULT_MIDTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTMARINEASSAULT_MIDTIER_BASE
+
+  - name: STR_BTTECH_HIGHTIER  # Uphold the Honour of the Emperor
+    cost: 50
+    points: 0
+    neededItem: STR_BTTECH_HIGHTIER_BASE
+    destroyItem: false
+    dependencies:
+      - STR_BLACKTEMPLAR_STRATEGY
+    disables:
+      - STR_BTNOTYET_BTTECH_HIGHTIER_BASE
 
  ### Bloody Roses #STRATEGY.SOB.BR#
 
@@ -2607,6 +2684,7 @@ research:
       - STR_HEAVY_WEAPONS_IG
       - STR_LIGHT_BOLTERS_LOWTIER
       - STR_OGRYN_REQUISITION
+      - STR_RATLING_RECRUITMENT
       - STR_GUARD_BARRACKS
       - STR_REGIMENT_OFFICERS
       - STR_KRIEG_GUARDSMEN
@@ -2658,6 +2736,7 @@ research:
       - STR_AIRSTRIKE_REQUISITION
       - STR_JUMP_CARAPACE_REQUISITION
       # - STR_IMPERIAL_GUARD_MISSIONS  # scion dont have this anymore they are already trained they will unlock the benefit directly instead
+      - STR_RATLING_RECRUITMENT
       - STR_KRIEG_GUARDSMEN
       - STR_CATACHAN_GUARDSMEN
       - STR_HOLOGRAM_GRENADE_REQUISITION
@@ -2695,6 +2774,7 @@ research:
       - STR_IMPERIAL_GUARD_MISSIONS
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
       - STR_SQUAT_GUARDSMEN
+      - STR_RATLING_RECRUITMENT
       - STR_BEASTMEN_GUARDSMEN
       - STR_FELINID_GUARDSMEN
       - STR_OGRYN_REQUISITION
@@ -2761,7 +2841,7 @@ research:
     cost: 5
     dependencies:
       - STR_GENERALLOCK
-    # lookup: STR_CHOSEN_KRIEG  # Commented out until there is a 'pedia page, will crash otherwise
+    lookup: STR_CHOSEN_KRIEG
     unlocks:
       - STR_STRATIG_DONE
       - STR_DEFAULT_CAMPAIGN
@@ -3031,6 +3111,7 @@ research:
       # TODO: add eldar research locks as soon as they added. if any missing look at research_eldar.rul
       - STR_RECRUIT_ELDAR_T1
       - STR_ELDAR_WEAPONS_ACQUISITION
+      - STR_ELDAR_ONLY # for strategies that skip previous Eldar Alliance researches
       - STR_ELDAR_SHIELD
       - STR_ELDAR_OUTPOST_BUILDING_RESEARCH
       - STR_ELDAR_CRAFT_RESEARCH
@@ -3857,6 +3938,7 @@ research:
       - STR_MARINES_STRATEGY
       - STR_NOT_SPACEWOLVES
       - STR_NOT_WORDBEARERS
+      - STR_NOT_BLACKTEMPLARS
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_CASS_R
@@ -3880,6 +3962,27 @@ research:
       - STR_MIDTIER_PREREQ
       - STR_HB_DEP1
       - STR_HFLAMERR
+    cutscene: c2
+
+  - name: STR_MT_BTBR  # Chapter Mid-tier Requisitions Black Templar Bloody Rose
+    cost: 200
+    points: 200
+    dependencies:
+      - STR_MELTAGUN_TECH
+      - STR_ALIEN_ALLOYS
+      - STR_MOTION_SCANNER
+      - STR_MEDI_KIT_PREREQ
+      - STR_MARINES_STRATEGY
+      - STR_NOT_SPACEWOLVES
+      - STR_NOT_WORDBEARERS
+      - STR_BLACKTEMPLAR_STRATEGY
+      - STR_WAAGHISENDED
+    unlocks:
+      - STR_MIDTIER_PREREQ
+      - STR_CASS_R
+      - STR_HB_DEP1
+      - STR_HFLAMERR
+      # - STR_SIDEOPERATIONS
     cutscene: c2
 
   - delete: STR_CHAPTERARMYR
@@ -5835,6 +5938,7 @@ research:
       - STR_ADEPTAS
       - STR_NEW_FIGHTER_TRANSPORTER
       - STR_CYDONIA_OR_BUST
+      - STR_NOT_BLACKTEMPLARS # bloody rose could overlap there
     unlocks:
       - STR_HIGHTIER_PREREQ
 
@@ -5979,6 +6083,7 @@ research:
       - STR_MOTION_SCANNER
       - STR_MEDI_KIT_PREREQ
       - STR_ADEPTAS
+      - STR_NOT_BLACKTEMPLARS # bloody rose could overlap there
     unlocks:
       - STR_MIDTIER_PREREQ
       - STR_HARDER_MISSIONS
@@ -6226,6 +6331,13 @@ research:
       - STR_CHAOSOGRYN_RESEARCH
     unlocks:
       - STR_OGRYN_AVAILABLE
+
+  - name: STR_RATLING_RECRUITMENT  # Ratlings
+    cost: 150
+    points: 25
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
 
   - name: STR_BIOMANCER  # Biomancer
     cost: 0
@@ -10351,6 +10463,31 @@ research:
     needItem: true
     destroyItem: true
 
+  - name: STR_LIVE_CAPTURE_GANGER
+    cost: 20
+    points: 15
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_GANGERLEADER
+    cost: 50
+    points: 65
+    needItem: true
+    unlocks:
+      - STR_LEADER_PLUS
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_LIVE_CAPTURE_OGRYNOGANG
+    cost: 10
+    points: 1  # ogryn interrogation may not be that useful
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
   - name: STR_LIVE_CAPTURE_OGRYNOPFOR
     cost: 10
     points: 1  # ogryn interrogation may not be that useful
@@ -10359,7 +10496,41 @@ research:
       - STR_INTERROGATION_COMPLETED
     destroyItem: true
 
+  - name: STR_OGRYN_IGOPFOR
+    cost: 10
+    points: 1  # ogryn interrogation may not be that useful
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+
+  - name: STR_GUARDS_MOUNTED_BOLTER_AI
+    cost: 15
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
 ## Space Marines #CAPTIVES.SM#
+
+  - name: STR_LEGIONDAMNED_MARINE_AI # useless it is only there to avoid a post OXCE 8.7.1 crash
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_DEATHCOMPANY_MARINE_AI # useless it is only there to avoid a post OXCE 8.7.1 crash
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
   - name: STR_SPACEMARINE_SCOUT_AI
     cost: 100
     points: 50
@@ -10446,6 +10617,24 @@ research:
     destroyItem: true
 
   - name: STR_SPACEMARINE_HONOR_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_ULTRA_CATAPHRACT_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_ULTRA_SATURNINE_AI
     cost: 192
     points: 50
     needItem: true
@@ -10608,6 +10797,14 @@ research:
       - STR_INTERROGATION_COMPLETED
       - STR_LEADER_PLUS
       - STR_COMMANDER_PLUS
+    destroyItem: true
+
+  - name: STR_FENRISWOLFYAI
+    cost: 50
+    points: 1
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
     destroyItem: true
 
   - name: STR_CRIMSONFIST_SCOUT_AI
@@ -10807,6 +11004,24 @@ research:
     destroyItem: true
 
   - name: STR_SALAMANDER_HONOR_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_SALAMANDER_CATAPHRACT_AI
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_SALAMANDER_SATURNINE_AI
     cost: 192
     points: 50
     needItem: true
@@ -11068,6 +11283,15 @@ research:
   - name: STR_LIVE_CAPTURE_CHAOSLEGION  # Chaos Legion Data
     refNode: *STR_LOCKED
 
+  - name: STR_TZEENTCH_CULT_SUMMONER
+    cost: 180
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+
 ## Adeptas #CAPTIVES.SOB#
 
   - name: STR_BLOODYROSE_CANTUS_AI
@@ -11313,6 +11537,14 @@ research:
     unlocks:
       - STR_INTERROGATION_COMPLETED
       - STR_LEADER_PLUS
+    destroyItem: true
+
+  - name: STR_IGGUARDS_M_LV3_AI
+    cost: 100
+    points: 25
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
     destroyItem: true
 
   - name: STR_IGGUARDS_OFF_LV3_AI
@@ -11569,6 +11801,15 @@ research:
     # Required as it shares a string with base xcom
   - delete: STR_SNAKEMAN_SOLDIER  # Traitor Guardsman
 
+  - name: STR_BLACKSTONE_STORMTROOPER_ELITE
+    cost: 192
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+
   - name: STR_LIVE_CAPTURE_TG_SCOUT  # Traitor Guard Scout
     cost: 192
     points: 50
@@ -11683,6 +11924,22 @@ research:
     needItem: true
     unlocks:
       - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_CSERVITOR_HB
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_CSERVITOR_MILAUNCHER
+    cost: 100
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
     destroyItem: true
   - name: STR_TRAITORGUARD_BATTLE_SERVITOR_MISSILE  # Chaos Missile Servitor
     cost: 100
@@ -11872,6 +12129,23 @@ research:
       - STR_CHAPEL_CORRUPTION_RESEARCH
       - STR_SLAANESH_CHOSEN
 
+
+  - name: STR_SLAANESH_LESSER_SPAWN
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
+  - name: STR_SLAANESH_MUTANT
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+    destroyItem: true
+
   # Tzeentch
   - name: STR_LIVE_CAPTURE_TZEENTCH_SISTER  # Rubric Sister
     cost: 75
@@ -11920,6 +12194,16 @@ research:
       - STR_CHAPEL_CORRUPTION_RESEARCH
       - STR_TZEENTCH_LEADER
 
+  - name: STR_GSC_CORRUPTION_RESEARCH  # Commander corruption research
+    cost: 150
+    points: 50
+    requiresBaseFunc: [PSI, APOC]
+    dependencies:
+      - STR_APOTHECARY_CORRUPTION_RESEARCH
+      - STR_CHAPEL_CORRUPTION_RESEARCH
+      - STR_GSC_XENO_INFECTION_TEST_RESULTS
+      - STR_GSC_MEANS_OF_INFECTION
+
   # Iron Warriors
   - name: STR_IRON_MAIDEN_SISTER  # Iron Maiden
     cost: 100
@@ -11956,6 +12240,15 @@ research:
       - STR_ALIEN_ORIGINS
     getOneFree:
       - STR_LIVE_CAPTURE_NIGHT_SISTER
+
+
+  - name: STR_HERETIC_SISTERCELEST
+    cost: 150
+    points: 75
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
 
 ### Chaos Marines #CAPTIVES.FOE.CHAOS.CSM#
   # Undivided
@@ -12356,6 +12649,65 @@ research:
   # Nurgle
   - delete: STR_NURGLE_SOLDIER
 
+  - name: STR_BIOVORE
+    cost: 50
+    points: 10
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_SPOREMINE
+    cost: 50
+    points: 10
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_TERMAGANT
+    cost: 50
+    points: 10
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_DEVOURER_TERMAGANT
+    cost: 50
+    points: 10
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_RIPPERSWARM
+    cost: 50
+    points: 10
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+  - name: STR_TYRANID_WARRIOR
+    cost: 192
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ALIEN_ORIGINS
+
+  - name: STR_TYRANID_PRIME
+    cost: 192
+    points: 50
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_ALIEN_ORIGINS
+      - STR_THREAT_ONE
+
   - name: STR_LIVE_CAPTURE_NURGLE_MARINE  # Plauge Marine
     cost: 192
     points: 50
@@ -12498,6 +12850,18 @@ research:
 
   # Alpha Legion
   - name: STR_LIVE_CAPTURE_ALPHA_MARINE  # Alpha Legion Operative
+    cost: 400
+    points: 100
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_CHAOS_PATH
+      - STR_THREAT_ONE
+      - STR_ALIEN_ORIGINS
+      - STR_ALPHA_LEGION_INTERROGATION
+
+  - name: STR_DARK_APOSTLE_ALPHA
     cost: 400
     points: 100
     needItem: true
@@ -12759,6 +13123,26 @@ research:
     needItem: true
     destroyItem: true
   - name: STR_DIRE_DAEMONETTE  # Dire Daemonette
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+    destroyItem: true
+
+  - name: STR_DEMI_DAEMONETTE_FALSE
+    cost: 150
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+      - STR_THREAT_ONE
+      - STR_CHAOS_PATH
+    destroyItem: true
+
+  - name: STR_DEMI_DAEMONETTE
     cost: 150
     points: 50
     needItem: true
@@ -13034,6 +13418,15 @@ research:
     destroyItem: true
 
 ### Orks #CAPTIVES.FOE.XENO.ORK#
+
+  - name: STR_MEKBOYZ
+    cost: 192
+    points: 50
+    needItem: true
+    unlocks:
+      - STR_INTERROGATION_COMPLETED
+
+
   - delete: STR_GRETCHIN
   - name: STR_GRETCHIN  # Grot Gang
     cost: 50
@@ -14895,6 +15288,28 @@ research:
     cost: 100
     points: 50
     needItem: true
+
+  - name: STR_RANGER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+  - name: STR_REPRISALIA_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+  - name: STR_GREATER_PLAGUE_TOAD_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+  - name: STR_LESSER_PLAGUE_TOAD_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+  - name: STR_BASIC_BEHEMOTH_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+  - name: STR_SLAANESH_CSM_CHAMPION_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+  - name: STR_TYRANID_PRIME_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
   # Traitor Guard #CORPSES.FOE.CHAOS.TG#
   - name: STR_TG_BATTLESERVITOR_CORPSE
     refNode: *STR_CORPSE_BASIC
@@ -14952,6 +15367,34 @@ research:
     refNode: *STR_CORPSE_BASIC
   - delete: STR_BANSHEE_CORPSE
   - name: STR_BANSHEE_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+      # ELDAR (Codexes completed, Enemy units not implemented yet)
+  - name: STR_ELDAR_AVENGEREX_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_AVENGER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_BANSHEEEX_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_DRAGONEX_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_DRAGON_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_REAPER_EXARCH_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_SCORPIONEX_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_HAWK_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_HAWKEX_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_SPIDEREXDS_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_SPIDER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_SEER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+  - name: STR_ELDAR_WARLOCK_CORPSE
     refNode: *STR_CORPSE_BASIC
   # Hrud #CORPSES.FOE.XENO.HRUD#
   - name: STR_PLAGUE_MONK_CORPSE
@@ -15146,6 +15589,13 @@ research:
     refNode: *STR_CORPSE_BASIC
   - name: STR_DEATHSKULL_ORK_BOY_CORPSE
     refNode: *STR_CORPSE_BASIC
+
+  - name: STR_GUARD_ORK_BOY_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
+  - name: STR_ENGINSEER_CORPSE
+    refNode: *STR_CORPSE_BASIC
+
   # Tau #CORPSES.FOE.XENO.TAU#
   - name: STR_TAUDRONE_AICORPSE
     refNode: *STR_CORPSE_BASIC

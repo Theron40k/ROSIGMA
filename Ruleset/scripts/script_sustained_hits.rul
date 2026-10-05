@@ -1,0 +1,69 @@
+extended:
+  tagsFile: Ruleset/tags_ROSIGMA.rul
+
+  tags:
+    RuleItem:
+      SUSTAINED_HIT_PERCENTAGE: int # how much of the raw melee damage is applied upon doing a sustained hit?
+      SUSTAINED_HIT_DAMAGETYPE: int # what is the type of damage to use for resistance to the sustained hit?
+    RuleArmor:
+      UNIT_SUSTAINED_HITS_CAPABLE: int # is the unit capable of doing sustained hits in melee? yes = 1
+
+  scripts:
+    damageUnit:
+      - new: ROSIGMA_sustained_hit_on_damageUnit
+        offset: 24
+        code: |
+          var ptr RuleArmor armorRule;
+          var ptr RuleDamageType damageType;
+          var ptr RuleItem damaging_Item_Rules;
+          var int sustainedHits_percentage;
+          var int sustainedHits_damagetype;
+          var int damaging_Item_battletype;
+          var int temp;
+
+          attacker.getRuleArmor armorRule;
+          armorRule.getTag temp Tag.UNIT_SUSTAINED_HITS_CAPABLE;
+          if lt temp 1;
+            # debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker can't use sustained hits. Aborting.";
+            return;
+          end;
+          damaging_item.getRuleItem damaging_Item_Rules;
+          damaging_Item_Rules.getBattleType damaging_Item_battletype;
+          if neq damaging_Item_battletype 3;
+            # debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker is not using melee weapon.";
+            return;
+          end;
+          damaging_Item_Rules.getTag sustainedHits_percentage Tag.SUSTAINED_HIT_PERCENTAGE;
+
+          if lt sustainedHits_percentage 1;
+            # debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker is not using a weapon melee with sustained hits.";
+            return;
+          end;
+
+          #debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker can use sustained hits, increasing damage.";
+          #ranges:
+          #1-30 -> 1 additiona wounds
+          #31-60 -> 2 additiona wounds
+          #61+ -> 3 additiona wounds
+          #debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker currend damage is health {0}, armour {1}, and {2} wounds " to_health to_armor to_wound;
+
+          if gt to_health 0;
+            if lt to_health 31;
+              add to_wound 1;
+            else lt to_health 61;
+              add to_wound 2;
+            else;
+              add to_wound 3;
+            end;
+          end;
+
+          add sustainedHits_percentage 100;
+          mul to_health sustainedHits_percentage;
+          div to_health 100;
+          mul to_armor sustainedHits_percentage;
+          div to_armor 100;
+
+          #debug_log "ROSIGMA_sustained_hit_on_damageUnit | Attacker now is doing health {0}, armour {1}, and {2} wounds " to_health to_armor to_wound;
+
+          battle_game.flashMessage "STR_SCRIPT_SUSTAINED_HIT_NOTICE";
+          return;

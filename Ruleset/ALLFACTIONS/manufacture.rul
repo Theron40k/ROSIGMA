@@ -407,3 +407,16 @@ manufacture:
       STR_ALIEN_FOOD: 15
       STR_KILLPOINT_TOKEN: 60
     points: 200
+
+  # adding the previously missing barrage plasma ammo manufacture
+
+  - name: STR_BARRAGE_PLASMA_CLIP
+    requires:
+      - STR_HEAVY_PLASMA_DEP1
+    space: 0
+    time: 200
+    cost: 20000
+    requiredItems:
+      STR_ELERIUM_115: 35
+    producedItems:
+      STR_BARRAGE_PLASMA_CLIP: 5

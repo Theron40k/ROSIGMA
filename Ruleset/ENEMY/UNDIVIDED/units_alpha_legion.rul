@@ -21,7 +21,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 5  # elite alpha legion
     aggression: 1
-    spotter: 4  # AL has high spotting
+    spotter: 2  # AL has high spotting of 2, Officer units have 3
     sniper: 90  # sniping Cataphract
     value: 30
     livingWeapon: true
@@ -79,7 +79,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 75  # longer range
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
@@ -140,7 +140,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 50
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]
@@ -186,7 +186,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 3 # AL Officer
     sniper: 90  # longer range
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
@@ -243,7 +243,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 4  # elite
     aggression: 8
-    spotter: 4
+    spotter: 2
     sniper: 90
     canPanic: false
     value: 30
@@ -303,7 +303,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 75  # longer range
     energyRecovery: 100
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
@@ -365,7 +365,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 50
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]
@@ -417,7 +417,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 75  # longer range
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 723}, {mod: 40k, index: 724}, {mod: 40k, index: 725}, {mod: 40k, index: 726}, {mod: 40k, index: 727}, {mod: 40k, index: 728}, {mod: 40k, index: 729}, {mod: 40k, index: 730}, {mod: 40k, index: 731}, {mod: 40k, index: 732}]
@@ -455,7 +455,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 50
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 161}, {mod: 40k, index: 162}, {mod: 40k, index: 163}, {mod: 40k, index: 164}, {mod: 40k, index: 165}, {mod: 40k, index: 166}, {mod: 40k, index: 167}, {mod: 40k, index: 168}]
@@ -494,7 +494,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 50
     energyRecovery: 60
     deathSound: {mod: 40k, index: 826}  # need a suitable decloaking noise right now its Feel the Hand of Chaos
@@ -542,7 +542,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 5
+    spotter: 2
     sniper: 90
     energyRecovery: 60
     deathSound: {mod: 40k, index: 540}  # Female Stealth Mode Engaged
@@ -591,7 +591,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 50
     energyRecovery: 60
     deathSound: {mod: 40k, index: 826}  # need a suitable decloaking noise right now its Feel the Hand of Chaos
@@ -638,7 +638,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 90
     energyRecovery: 60
     deathSound: {mod: 40k, index: 826}  # need a suitable decloaking noise right now its Feel the Hand of Chaos
@@ -689,7 +689,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 5
+    spotter: 2
     sniper: 50
     energyRecovery: 60
     specab: 1 #need this for Alpha Legionnaire ninja vanish
@@ -736,7 +736,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     energyRecovery: 60
     specab: 1 #need this for Alpha Legionnaire ninja vanish
     deathSound: {mod: 40k, index: 540}  # Female Stealth Mode Engaged
@@ -773,7 +773,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     energyRecovery: 60
     specab: 1 #need this for Alpha Legionnaire ninja vanish
     deathSound: {mod: 40k, index: 540}  # Female Stealth Mode Engaged
@@ -809,7 +809,7 @@ units:
     berserkChance: 70
     standHeight: 20
     kneelHeight: 15
-    spotter: 4
+    spotter: 2
     sniper: 75
     energyRecovery: 60
     specab: 1 #need this for Alpha Legionnaire ninja vanish

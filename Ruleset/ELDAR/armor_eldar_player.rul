@@ -21,7 +21,7 @@ armors:
     type: STR_ELDAR_ARMOR_GUARDIAN_PLAYER
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 20
+    visibilityAtDark: 30
     frontArmor: 60
     sideArmor: 50
     rearArmor: 40
@@ -50,7 +50,6 @@ armors:
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
     spriteSheet: ELDAR_GUARDIAN.SPK
-    ufopediaType: STR_ELDAR_ARMOR
     customArmorPreviewIndex: 261
     corpseBattle:
       - STR_ELDAR_GUARDIAN_CORPSE_P
@@ -91,7 +90,6 @@ armors:
     spriteSheet: ELDARDR21S.PCK
     customArmorPreviewIndex: 250
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     stats: #some stats changes for the shield
       health: 0
@@ -111,7 +109,6 @@ armors:
     refNode: *GUARDIAN_ARMOR
     customArmorPreviewIndex: 262
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_KIT
     stats: #some stat changes for the medikit encumberance
       stamina: 3
@@ -129,6 +126,7 @@ armors:
     camouflageAtDark: 15  # you need to be 10 tiles closer than max vision range (at night!) to see this unit in the dark
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
+    heatVision: 20
     frontArmor: 60
     sideArmor: 50
     rearArmor: 40
@@ -226,7 +224,6 @@ armors:
     units:
       - STR_ELDAR_M
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -248,7 +245,6 @@ armors:
     units:
       - STR_ELDAR_F
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_KIT
   - type: STR_ELDAR_ARMOR_F_SHIELD        # GUARDIAN
     refNode: *GUARDIAN_ARMOR
@@ -258,7 +254,6 @@ armors:
     units:
       - STR_ELDAR_F
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -272,13 +267,13 @@ armors:
 #
 
 # ELDAR.TIER2 # ASPECT WARRIORS (path of the warrior)
-
+  - delete: STR_ELDAR_ARMOR4_P
   - &AVENGER_ARMOR
     type: STR_ELDAR_ARMOR4_P       # DIRE AVANGER
     requires: STR_ELDAR_DIRE_AVENGER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     frontArmor: 85
@@ -318,6 +313,7 @@ armors:
       F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
       F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
       F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    customArmorPreviewIndex: 265
     drawingRoutine: 0
     damageModifier:  # ELDAR ARMOR
       - 1.0  # none
@@ -346,20 +342,20 @@ armors:
     units:
       - STR_ELDAR_AVANGER_MF
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
+  - delete: STR_ELDAR_ARMOR4_P_SHIELD
   - type: STR_ELDAR_ARMOR4_P_SHIELD        # DIRE AVANGER
     refNode: *AVENGER_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -371,12 +367,13 @@ armors:
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   # scorpion units will rely on camo and tankiness
+  - delete: STR_ELDAR_ARMOR5_P
   - &SCORPION_ARMOR
     type: STR_ELDAR_ARMOR5_P       # SCORPION PLAYER
     requires: STR_ELDAR_SCORPION_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     camouflageAtDay: 20  # you need to be 20 tiles closer than max vision range to see this unit in the light
     camouflageAtDark: 13  # you need to be 12 tiles closer than max vision range (at night!) to see this unit in the dark
     antiCamouflageAtDay: 5
@@ -418,6 +415,7 @@ armors:
       F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
       F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
       F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    customArmorPreviewIndex: 263
     drawingRoutine: 0
     damageModifier:  # ELDAR ARMOR
       - 1.0  # none
@@ -436,8 +434,8 @@ armors:
     units:
       - STR_ELDAR_SCORPION_M
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
+    #  - INV_NULL_3X1_BACKPACK
     stats: #Scorpion armor get better bonus to melee
       tu: 12
       stamina: 10
@@ -452,14 +450,17 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
+      UNIT_SUSTAINED_HITS_CAPABLE: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
+  - delete: STR_ELDAR_ARMOR5_P_SHIELD
   - type: STR_ELDAR_ARMOR5_P_SHIELD       # SCORPION PLAYER
     refNode: *SCORPION_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
+      #- INV_NULL_3X1_BACKPACK
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
@@ -467,22 +468,25 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
+      UNIT_SUSTAINED_HITS_CAPABLE: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
 
   # banshee units will rely on Movement, Scream and dodge
+  - delete: STR_ELDAR_ARMOR2_P
   - &BANSHEE_ARMOR
     type: STR_ELDAR_ARMOR2_P       # BANSHEE PLAYER
     requires: STR_ELDAR_BANSHEE_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 5 # banshee bonus
     antiCamouflageAtDark: 5  # banshee bonus
     frontArmor: 85
     sideArmor: 75
     rearArmor: 60
     underArmor: 65
+    spriteSheet: ELDAR_BANSHEE.SPK
     corpseBattle:
       - STR_ELDAR_BANSHEE_CORPSE_P
     layersDefaultPrefix: "1"
@@ -515,6 +519,7 @@ armors:
       F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
       F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
       F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    customArmorPreviewIndex: 266
     drawingRoutine: 0
     #forcedTorso: 1  # USE MALE
     damageModifier:  # ELDAR ARMOR
@@ -534,34 +539,39 @@ armors:
     units:
       - STR_ELDAR_BANSHEE_F
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
+      #- INV_NULL_3X1_BACKPACK
     stats: #banshe get bonus to PSY, TU, stamina, health and melee, malus for shooting & throwing
       tu: 5
       stamina: 5
-      health: 5
-      bravery: 0 # in the face of danger
+      health: 0
+      bravery: 0
       reactions: 0
       firing: 0
       throwing: 0
       strength: 0
-      melee: 10
-      psiStrength: 7
-      psiSkill: 7
+      melee: 20
+      psiStrength: 5
+      psiSkill: 5
     meleeDodge:
-      reactions: 0.1
+      melee: 0.1
+    specialWeapon: STR_BANSHEE_INTIMIDATE_SPECIALWEAPON
+    # builtInWeapons:
+    #   - STR_BANSHEE_INTIMIDATE_SKILL_TOKEN
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
-      DODGE_CHANCE: 40
-      ARMOR_MAX_SUCCESSFUL_DODGES: 4
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
+  - delete: STR_ELDAR_ARMOR2_P_SHIELD
   - type: STR_ELDAR_ARMOR2_P_SHIELD       # BANSHEE PLAYER
     refNode: *BANSHEE_ARMOR
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
+      #- INV_NULL_3X1_BACKPACK
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
@@ -577,7 +587,7 @@ armors:
     requires: STR_ELDAR_FIREDRAGON_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     frontArmor: 110
@@ -639,8 +649,7 @@ armors:
     units:
       - STR_ELDAR_DRAGON_MF
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     stats: #fire dragon are very brave, but better armor, less bonus stat for them
       tu: 5
       stamina: 5
@@ -657,13 +666,101 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
+
+  - type: STR_ELDAR_HAWK_ARMOR_P       # SWOOPING HAWK
+    requires: STR_ELDAR_HAWK_RESEARCH
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    frontArmor: 85
+    sideArmor: 75
+    rearArmor: 60
+    underArmor: 65
+    spriteSheet: ELDAR_HAWK.SPK
+    corpseBattle:
+      - STR_ELDAR_HAWK_CORPSE_P
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARHAWK
+      2: HAWK_HELMET
+      3: ELDARHAWK_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY12"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY11"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY10"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY9"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY5"]
+      M9: ["", "ELDAR", "CLOSEDHELMET6", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET7", "ACCESSORY6"]
+      M11: ["", "ELDAR", "CLOSEDHELMET8", "ACCESSORY7"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY4"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY10"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY5"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY11"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY12"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY7"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY1"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    customArmorPreviewIndex: 1359
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    stats: # Main stat Throwing Boost
+      tu: 0
+      stamina: 0
+      health: 0
+      bravery: 0
+      reactions: 0
+      firing: 0
+      throwing: 20
+      strength: 10 # Useful for grenades
+      melee: 0
+    units:
+      - STR_ELDAR_HAWK_P
+    #builtInWeapons:
+    movementType: 1
+    moveCost:
+      baseFlyPercent: [75, 75]
+      flyUpPercent: [50, 0] #cost of flying up
+      flyDownPercent: [25, 0] #cost of flying down
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 20 # Vulnerable on the ground
+      FLIGHT_DODGE_CHANCE: 40
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 50
 
   - &SPIDER_ARMOR
     type: STR_ELDAR_SPIDER_ARMOR_P       # DRAGON ARMOR Copy Paste edit later
     #requires: STR_ELDAR_SPIDER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 3
     antiCamouflageAtDark: 3
     frontArmor: 110
@@ -725,8 +822,8 @@ armors:
     units:
       - STR_ELDAR_SPIDER_PLAYER
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
+      #- INV_NULL_3X1_BACKPACK
     stats: # Warpspiders slightly better armor slowest foot movement among AW
       tu: 5
       stamina: 5
@@ -746,7 +843,7 @@ armors:
       ARMOR_STEALTH_DETECTION_RANGE: 1  # in the warp, only pulled out in special circumstances
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
-
+      INTIMIDATION_RESISTANCE: 50
 
   - delete: STR_ELDAR_ARMOR6_P
   - &REAPER_ARMOR
@@ -754,7 +851,7 @@ armors:
     requires: STR_ELDAR_REAPER_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
     frontArmor: 110
@@ -794,7 +891,6 @@ armors:
       F9: ["", "ELDARR_F", "CLOSEDHELMET4", "ACCESSORY4"]
       F10: ["", "ELDARR_F", "CLOSEDHELMET5", "ACCESSORY12"]
       F11: ["", "ELDARR_F", "CLOSEDHELMET6", "ACCESSORY13"]
-    ufopediaType: STR_ELDAR_ARMOR6
     customArmorPreviewIndex: 264
     corpseBattle:
       - STR_ELDAR_REAPER_CORPSE_P
@@ -826,8 +922,7 @@ armors:
     units:
       - STR_ELDAR_REAPER_M
       - STR_ELDAR_ASPECT_WARRIOR_PLAYER
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     stats: #reaper have decent bonus to accuracy, but better armor, less bonus stat for them
       tu: 5
       stamina: 5
@@ -844,6 +939,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 15
       ARMOR_MAX_SUCCESSFUL_DODGES: 1
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_ELDAR_ARMOR6_P_SHIELD
     refNode: *REAPER_ARMOR
@@ -852,7 +948,6 @@ armors:
     customArmorPreviewIndex: 252
     builtInWeapons:
       - AUX_ELDAR_SHIELD
-      - INV_NULL_3X3
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
@@ -868,7 +963,6 @@ armors:
     refNode: *REAPER_ARMOR
     builtInWeapons:
       - STR_ELDAR_LAUNCHER_FIXED
-      - INV_NULL_3X3
     tags:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -882,7 +976,7 @@ armors:
 #    refNode: *AVENGER_ARMOR
     storeItem: STR_NONE
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
     frontArmor: 110           # Avengers have average armor
@@ -917,8 +1011,7 @@ armors:
     units:
       - STR_ELDAR_AUTARCH_PLAYER
       - STR_ELDAR_AVENGEREX_P
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
     layersDefaultPrefix: "1"
     layersSpecificPrefix:
       1: ELDARAVENGEREX
@@ -959,19 +1052,19 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_ARMOR_EXARCH_P # REAPER EXARCH ARMOR
     refNode: *REAPER_ARMOR
     requires: STR_ELDAR_REAPER_EXARCH_RESEARCH
     visibilityAtDay: 44
-    visibilityAtDark: 28
+    visibilityAtDark: 30
     antiCamouflageAtDay: 7
     antiCamouflageAtDark: 6
     frontArmor: 130
     sideArmor: 110
     rearArmor: 100
     underArmor: 95
-    ufopediaType: ""
     layersDefaultPrefix: "1"
     layersSpecificPrefix:
       1: ELDAR
@@ -1028,6 +1121,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 20 #+5
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_DRAGONEX_ARMOR_P
     refNode: *DRAGON_ARMOR
@@ -1065,8 +1159,6 @@ armors:
     spriteSheet: ELDAR_DRAGON_EXARCH.SPK
     visibilityAtDay: 42 #+2
     visibilityAtDark: 30 #+5
-    antiCamouflageAtDay: 8 #+3
-    antiCamouflageAtDark: 8 #+3
     frontArmor: 130 #+20
     sideArmor: 110 #+20
     rearArmor: 100 #+20
@@ -1096,12 +1188,12 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
-      DODGE_CHANCE: 20 #+5
-      ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_SCORPIONEX_ARMOR_P       # SCORPION EXARCH PLAYER
-    requires: STR_ELDAR_SCORPION_RESEARCH
-      # Scorpion Exarch Research
+    requires: STR_ELDAR_SCORPION_EXARCH_RESEARCH
     storeItem: STR_NONE
     visibilityAtDay: 42
     visibilityAtDark: 30
@@ -1164,8 +1256,8 @@ armors:
     loftempsSet: [3]
     units:
       - STR_ELDAR_SCORPIONEX_P
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
+      #- INV_NULL_3X1_BACKPACK
     stats: #Scorpion armor get better bonus to strength
       tu: 12
       stamina: 10
@@ -1180,8 +1272,188 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_LIVING: 1
+      UNIT_SUSTAINED_HITS_CAPABLE: 1
       DODGE_CHANCE: 33
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
+
+  - type: STR_ELDAR_BANSHEEEX_ARMOR_P       # BANSHEE EXARCH PLAYER
+    refNode: *BANSHEE_ARMOR
+    requires: STR_ELDAR_BANSHEE_EXARCH_RESEARCH
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5 # banshee bonus
+    antiCamouflageAtDark: 5  # banshee bonus
+    frontArmor: 100
+    sideArmor: 90
+    rearArmor: 80
+    underArmor: 85
+    spriteSheet: ELDAR_BANSHEEEX.SPK
+    corpseBattle:
+      - STR_ELDAR_BANSHEEEX_CORPSE_P
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARBANSHEEEX
+      2: BANSHEEEX_HELMET
+      3: ELDARBANSHEEEX_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY12"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY11"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY10"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY9"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY5"]
+      M9: ["", "ELDAR", "CLOSEDHELMET6", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET7", "ACCESSORY6"]
+      M11: ["", "ELDAR", "CLOSEDHELMET8", "ACCESSORY7"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY4"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY10"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY5"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY11"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY12"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY7"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY1"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    customArmorPreviewIndex: 1358
+    drawingRoutine: 0
+    #forcedTorso: 1  # USE MALE
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    units:
+      - STR_ELDAR_BANSHEE_EXARCH_PLAYER
+    #builtInWeapons:
+      #- INV_NULL_3X1_BACKPACK
+    stats: #banshee main stat is melee, minor bonuses to PSY, TU, stamina,
+      tu: 5
+      stamina: 5
+      health: 0
+      bravery: 0
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 20
+      psiStrength: 5
+      psiSkill: 5
+    meleeDodge:
+      melee: 0.2
+    specialWeapon: STR_BANSHEE_INTIMIDATE_SPECIALWEAPON
+    # builtInWeapons:
+    #   - STR_BANSHEE_INTIMIDATE_SKILL_TOKEN
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 33
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
+
+  - type: STR_ELDAR_HAWKEX_ARMOR_P       # SWOOPING EXARCH HAWK
+    requires: STR_ELDAR_HAWK_EXARCH_RESEARCH
+    storeItem: STR_NONE
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 3
+    antiCamouflageAtDark: 3
+    frontArmor: 100           # Hawks have the weakest armor
+    sideArmor: 80
+    rearArmor: 70
+    underArmor: 60
+    spriteSheet: ELDAR_HAWK_EXARCH.SPK
+    corpseBattle:
+      - STR_ELDAR_HAWKEX_CORPSE_P
+    layersDefaultPrefix: "1"
+    layersSpecificPrefix:
+      1: ELDARHAWKEX
+      2: HAWKEX_HELMET
+      3: ELDARHAWKEX_ACCESSORY
+    layersDefinition:
+      M0: ["", "ELDAR", "OPENHELMET_M1", "ACCESSORY1"]
+      M1: ["", "ELDAR", "OPENHELMET_M2", "ACCESSORY12"]
+      M2: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY2"]
+      M3: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY11"]
+      M4: ["", "ELDAR", "CLOSEDHELMET1", "ACCESSORY3"]
+      M5: ["", "ELDAR", "CLOSEDHELMET2", "ACCESSORY10"]
+      M6: ["", "ELDAR", "CLOSEDHELMET3", "ACCESSORY4"]
+      M7: ["", "ELDAR", "CLOSEDHELMET4", "ACCESSORY9"]
+      M8: ["", "ELDAR", "CLOSEDHELMET5", "ACCESSORY5"]
+      M9: ["", "ELDAR", "CLOSEDHELMET6", "ACCESSORY8"]
+      M10: ["", "ELDAR", "CLOSEDHELMET7", "ACCESSORY6"]
+      M11: ["", "ELDAR", "CLOSEDHELMET8", "ACCESSORY7"]
+      F0: ["", "ELDAR_F", "OPENHELMET_F1", "ACCESSORY4"]
+      F1: ["", "ELDAR_F", "OPENHELMET_F2", "ACCESSORY10"]
+      F2: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY5"]
+      F3: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY11"]
+      F4: ["", "ELDAR_F", "CLOSEDHELMET1", "ACCESSORY6"]
+      F5: ["", "ELDAR_F", "CLOSEDHELMET2", "ACCESSORY12"]
+      F6: ["", "ELDAR_F", "CLOSEDHELMET3", "ACCESSORY7"]
+      F7: ["", "ELDAR_F", "CLOSEDHELMET4", "ACCESSORY1"]
+      F8: ["", "ELDAR_F", "CLOSEDHELMET5", "ACCESSORY8"]
+      F9: ["", "ELDAR_F", "CLOSEDHELMET6", "ACCESSORY2"]
+      F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
+      F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
+    customArmorPreviewIndex: 1360
+    drawingRoutine: 0
+    damageModifier:  # ELDAR ARMOR
+      - 1.0  # none
+      - 0.9  # AP
+      - 0.5  # FLAMES
+      - 1.0  # HE
+      - 0.7  # LASCANON
+      - 0.7  # PLASMA
+      - 1.0  # STUN
+      - 1.0  # MELEE
+      - 0.5  # ACID
+      - 0.0  # SMOKE
+      - 1.0  # IMPACT
+      - 1.0  # MELTA
+    loftempsSet: [3]
+    stats: # Main stat Throwing Boost
+      tu: 0
+      stamina: 0
+      health: 0
+      bravery: 0
+      reactions: 0
+      firing: 0
+      throwing: 20
+      strength: 10 # Useful for grenades
+      melee: 0
+    units:
+      - STR_ELDAR_HAWKEX_P
+    #builtInWeapons:
+    movementType: 1
+    moveCost:
+      baseFlyPercent: [75, 75]
+      flyUpPercent: [50, 0] #cost of flying up
+      flyDownPercent: [25, 0] #cost of flying down
+    tags:
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_LIVING: 1
+      DODGE_CHANCE: 20 # Vulnerable on the ground
+      FLIGHT_DODGE_CHANCE: 50
+      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_SPIDEREXDS_ARMOR_P # FIX LATER Stats from DragonEx
     refNode: *SPIDER_ARMOR
@@ -1255,6 +1527,7 @@ armors:
       ARMOR_STEALTH_DETECTION_RANGE: 1  # in the warp, only pulled out in special circumstances
       DODGE_CHANCE: 20 #+5
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      INTIMIDATION_RESISTANCE: 100
 
   - type: STR_ELDAR_SPIDEREXPB_ARMOR_P # FIX LATER Stats from DragonEx
     refNode: *SPIDER_ARMOR
@@ -1328,18 +1601,19 @@ armors:
       ARMOR_STEALTH_DETECTION_RANGE: 1  # in the warp, only pulled out in special circumstances
       DODGE_CHANCE: 20 #+5
       ARMOR_MAX_SUCCESSFUL_DODGES: 2 #+1
+      INTIMIDATION_RESISTANCE: 100
 
 
 # ELDAR.TIER2_PSY # PSY WARRIORS (path of the psyker)
 
   - &SEER_ARMOR
-    type: STR_ELDAR_SEER_ARMOR_P        # SEER  PLAYER
+    type: STR_ELDAR_SEER_ARMOR_P        # SEER  PLAYER (NOT FARSEER)
     requires: STR_ELDAR_SEER_RESEARCH
     storeItem: STR_NONE
     antiCamouflageAtDay: 10 # Farseer bonus
     antiCamouflageAtDark: 10  # Farseer bonus
     visibilityAtDay: 40
-    visibilityAtDark: 25
+    visibilityAtDark: 30
     psiVision: 5 # minor PSY vision
     psiCamouflage: 5 # minor PSY camuflage
     frontArmor: 85
@@ -1399,8 +1673,8 @@ armors:
       - STR_ELDAR_PSYKER_PLAYER
     corpseBattle:
       - STR_ELDAR_SEER_CORPSE_P
-    builtInWeapons:
-      - INV_NULL_3X3
+    #builtInWeapons:
+      #- INV_NULL_3X3
     stats: #Seer get bonus to PSY, health malus for melee and throwing
       tu: 0
       stamina: 0
@@ -1422,6 +1696,7 @@ armors:
       UNIT_TYPE_LIVING: 1
       DODGE_CHANCE: 50
       ARMOR_MAX_SUCCESSFUL_DODGES: 4
+      INTIMIDATION_RESISTANCE: 50
 
   - type: STR_ELDAR_ARMOR3_P_SHIELD        # SEER  PLAYER
     refNode: *SEER_ARMOR
@@ -1429,7 +1704,7 @@ armors:
     spriteSheet: ELDARDR12S.PCK
     storeItem: STR_ELDAR_SHIELD
     builtInWeapons:
-      - INV_NULL_3X3
+      #- INV_NULL_3X3
       - AUX_ELDAR_SHIELD
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
@@ -1484,13 +1759,16 @@ armors:
       F10: ["", "ELDAR_F", "CLOSEDHELMET7", "ACCESSORY9"]
       F11: ["", "ELDAR_F", "CLOSEDHELMET8", "ACCESSORY3"]
     spriteSheet: ELDAR_WARLOCK.SPK
+    tags:
+      INTIMIDATION_RESISTANCE: 75
 
-# ELDAR.WRAITHGUARD # Wraithguards
+# ELDAR.WRAITH
 
   - &WRAITHGUARD_ARMOR
     type: STR_WRAITHGUARD_ARMOR_P
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
+    psiVision: 5 # minor PSY vision
     visibilityAtDay: 40
     visibilityAtDark: 30
     allowInv: true
@@ -1517,7 +1795,9 @@ armors:
     loftempsSet: [92, 89, 90, 91]
     drawingRoutine: 5
     allowsRunning: false  # Mechanical
+    instantWoundRecovery: true
     tags:
+      INTIMIDATION_RESISTANCE: 100  # infection immune
       INFECTION_RESIST: 100
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
@@ -1535,13 +1815,112 @@ armors:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 10
       INFECTION_RESIST: 100
+      INTIMIDATION_RESISTANCE: 100
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_MECHANICAL: 1
 
+  # ELDAR.HWP SUPPORT PLATFORM AND WAR WALKERS
+  - type: STR_ELDAR_HWP_SCATTERLASER_ARMOR_P   # HWP PLAYER
+    storeItem: STR_ELDAR_HWP_SCATTERLASER_ARMOR_ITEM
+    visibilityAtDay: 40
+    visibilityAtDark: 30 # Same vision as guardian
+    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK
+    spriteInv: ELDARHWPSCATTERLASER
+    customArmorPreviewIndex: [258, 259] #TEMP
+    corpseBattle:
+      - 7_PLAT1P
+      - 7_PLAT2P
+      - 7_PLAT3P
+      - 7_PLAT4P
+    bleedImmune: true
+    fearImmune: false
+    recovery:  # Manned turrets recover morale rapidly
+      morale:
+        flatHundred: 0.5
+    frontArmor: 150 # balance these armor values
+    sideArmor: 120  #
+    rearArmor: 60 # Guardian Armor
+    underArmor: 60
+    drawingRoutine: 20
+    constantAnimation: false
+    movementType: 1
+    moveCost:
+      baseNormalPercent: [150, 100] #move cost for ground
+      baseFlyPercent: [200, 100] #move cost for flying
+      flyDownPercent: [25, 0] #cost of flying down
+    moveSound: {mod: 40k, index: 845}
+    standHeight: 23
+    kneelHeight: 16
+    deathMale: [{mod: 40k, index: 842}, {mod: 40k, index: 843}, {mod: 40k, index: 844}]
+    deathFemale: [{mod: 40k, index: 842}, {mod: 40k, index: 843}, {mod: 40k, index: 844}]
+    size: 2
+    stats:
+      tu: 0
+      stamina: 0
+      firing: 0
+      health: 50
+      bravery: 0
+      reactions: 0
+      throwing: 0
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+    units:
+      - STR_ELDAR_GUARDIAN_PLAYER
+    damageModifier:  # VEHICLE ARMOR LARGE
+      - 1.0  # none
+      - 1.0  # AP
+      - 0.4  # FLAMES
+      - 1.0  # HE
+      - 1.4  # LASCANON
+      - 1.0  # PLASMA
+      - 0.9  # STUN
+      - 0.8  # MELEE
+      - 1.0  # ACID
+      - 0.0  # SMOKE
+      - 0.2  # IMPACT
+      - 1.2  # MELTA
+    loftempsSet: [92, 89, 90, 91]
+    allowsRunning: false
+    allowsKneeling: false
+    builtInWeapons:
+      - STR_ELDAR_HWP_SCATTERLASER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+    tags:
+      INFECTION_RESIST: 100  # infection immune
+      INTIMIDATION_RESISTANCE: 50  # intimidate immune
+      UNIT_SIZE: 200 # HUGE
+      UNIT_TYPE_XENO: 1
+      UNIT_TYPE_ELDAR: 1
+      UNIT_TYPE_MECHANICAL: 1
+    scripts:
+      selectUnitSprite: |
+        var int temp;
+        var int walking;
+        var int floating;
+        unit.isWalking walking;
+        unit.isFloating floating;
+        if and eq walking 0 eq floating 1;
+          unit.getId temp;
+          offsetmod temp 11 0 8; # desync animation of different units
+          add temp anim_frame;
+          wavegen_saw temp 4 4 4;
+          add sprite_offset 1;
+          add sprite_offset temp;
+          add sprite_index sprite_offset;
+        else;
+          add sprite_index sprite_offset;
+        end;
+        return sprite_index;
+
 # ELDAR.OTHER
 
-  - type: STR_ELDAR_PLAT_ARMOR_P   # FLYING PLATFORM #TODO-import remaining values from 40k mod
+  - type: STR_ELDAR_PLAT_ARMOR_P   # GRAV PLATFORM ITEM#TODO-import remaining values from 40k mod
     visibilityAtDay: 40
     visibilityAtDark: 30
     antiCamouflageAtDay: 3

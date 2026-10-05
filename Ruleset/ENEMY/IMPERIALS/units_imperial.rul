@@ -171,7 +171,7 @@ weaponSets:
   - type: SM_SMPRIMARIS_SET1 #Cawl
     weapons: [STR_RIFLED, STR_RIFLE_CLIP, STR_RIFLE_CLIP, STR_KRAK_GRENADE]
   - type: SM_SMPRIMARIS_SET2
-    weapons: [STR_PRIMARIS_EXECUTOR_RIFLE, STR_RIFLE_CLIP_EX, STR_RIFLE_CLIP_EX, STR_KRAK_GRENADE]
+    weapons: [STR_PRIMARIS_EXECUTOR_RIFLE, STR_PRIMARIS_EXECUTOR_RIFLE_DRUM_MAG, STR_PRIMARIS_EXECUTOR_RIFLE_DRUM_MAG, STR_KRAK_GRENADE]
   - type: SM_SMPRIMARIS_SET3
     weapons: [STR_PRIMARIS_CAWL_UNDERSLUNG, STR_RIFLE_CLIP_EX, STR_RIFLE_CLIP_EX, STR_KRAK_GRENADE40, STR_KRAK_GRENADE40]
   - type: SM_SMPRIMARIS_SET4
@@ -510,7 +510,6 @@ units:
 
   - type: STR_GUARDS_MOUNTED_BOLTER_AI
     race: STR_IMPERIALGUARD_FACTION
-    liveAlien: ""
     stats:
       tu: 60
       stamina: 1
@@ -523,7 +522,7 @@ units:
       psiStrength: 50
       psiSkill: 0
       melee: 60
-    armor: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_UC #TODO: change in a version for opfor
+    armor: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_AI
     standHeight: 21
     kneelHeight: 14
     value: 20
@@ -641,7 +640,7 @@ units:
     intelligence: 2
     aggression: 2
     value: 10
-    spotter: 2
+    spotter: 1
     sniper: 50
     energyRecovery: 50
     livingWeapon: true
@@ -680,7 +679,7 @@ units:
     kneelHeight: 14
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     livingWeapon: true
@@ -893,7 +892,7 @@ units:
     value: 10
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 65
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -970,7 +969,7 @@ units:
     moveSound: -1
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     value: 15
     sniper: 75  # artillery
     energyRecovery: 50
@@ -1011,7 +1010,7 @@ units:
     value: 25
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     sniper: 70
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -1170,7 +1169,7 @@ units:
     value: 20
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     sniper: 70
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -1207,7 +1206,7 @@ units:
     value: 30
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     sniper: 75
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -1240,7 +1239,7 @@ units:
     value: 35
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     sniper: 75
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -1302,7 +1301,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 70
     energyRecovery: 30
     moveSound: -1
@@ -1337,7 +1336,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 80
     energyRecovery: 30
     moveSound: -1
@@ -1375,7 +1374,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -1409,7 +1408,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
-    spotter: 3
+    spotter: 1
     sniper: 80
     energyRecovery: 40
     moveSound: -1
@@ -1445,7 +1444,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -1478,7 +1477,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1514,7 +1513,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1554,7 +1553,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1589,7 +1588,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1632,7 +1631,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1672,7 +1671,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1705,7 +1704,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 3
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 70
     value: 40
     livingWeapon: true
@@ -1739,7 +1738,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 3
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 70
     value: 45
     livingWeapon: true
@@ -1809,7 +1808,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 70
     energyRecovery: 30
     moveSound: -1
@@ -1846,7 +1845,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -1882,7 +1881,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -1918,7 +1917,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1952,7 +1951,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -1987,7 +1986,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2022,7 +2021,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2062,7 +2061,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2105,7 +2104,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2148,7 +2147,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 70
     energyRecovery: 30
     moveSound: -1
@@ -2182,7 +2181,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -2217,7 +2216,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -2251,7 +2250,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
-    spotter: 3
+    spotter: 1
     sniper: 80
     energyRecovery: 40
     moveSound: -1
@@ -2320,7 +2319,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2355,7 +2354,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2398,7 +2397,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2444,7 +2443,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2478,7 +2477,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2515,7 +2514,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 70
     energyRecovery: 30
     moveSound: -1
@@ -2551,7 +2550,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -2585,7 +2584,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
-    spotter: 3
+    spotter: 1
     sniper: 80
     energyRecovery: 40
     moveSound: -1
@@ -2621,7 +2620,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2657,7 +2656,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2689,7 +2688,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2724,7 +2723,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2845,7 +2844,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 100
     energyRecovery: 60
     canBeMindControlled: false
@@ -2887,7 +2886,7 @@ units:
     value: 50
     intelligence: 1
     aggression: 8
-    spotter: 4
+    spotter: 3 # I FOUND HORUS!!! (only seen at final mission)
     isLeeroyJenkins: true  # die horus die
     avoidsFire: false  # die horus die
     energyRecovery: 60
@@ -2924,7 +2923,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -2961,7 +2960,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -2995,7 +2994,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3030,7 +3029,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3098,7 +3097,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -3135,7 +3134,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 70
     energyRecovery: 30
     moveSound: -1
@@ -3169,7 +3168,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 80
     energyRecovery: 30
     moveSound: -1
@@ -3205,7 +3204,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -3241,7 +3240,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
-    spotter: 3
+    spotter: 1
     sniper: 80
     energyRecovery: 40
     moveSound: -1
@@ -3277,7 +3276,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -3310,7 +3309,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3349,7 +3348,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3384,7 +3383,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3419,7 +3418,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3462,7 +3461,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3502,7 +3501,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -3534,7 +3533,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 3
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 70
     value: 45
     livingWeapon: true
@@ -3568,7 +3567,7 @@ units:
     avoidsFire: false  # doesn't really care
     intelligence: 3
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 70
     value: 50
     livingWeapon: true
@@ -3746,7 +3745,7 @@ units:
     value: 10
     intelligence: 1
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3856,7 +3855,7 @@ units:
     value: 15
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3893,7 +3892,7 @@ units:
     value: 20
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3938,7 +3937,7 @@ units:
     value: 25
     intelligence: 3
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -3977,7 +3976,7 @@ units:
     value: 20
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -4015,7 +4014,7 @@ units:
     value: 25
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 70
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
@@ -4094,7 +4093,7 @@ units:
     value: 30
     intelligence: 2
     aggression: 8
-    spotter: 2
+    spotter: 1
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -4130,7 +4129,7 @@ units:
     value: 40
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     sniper: 80
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
@@ -4203,7 +4202,7 @@ units:
     value: 10
     intelligence: 1
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -4312,7 +4311,7 @@ units:
     value: 15
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -4349,7 +4348,7 @@ units:
     value: 20
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -4394,7 +4393,7 @@ units:
     value: 25
     intelligence: 3
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -4431,7 +4430,7 @@ units:
     value: 20
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
@@ -4468,7 +4467,7 @@ units:
     value: 25
     intelligence: 2
     aggression: 2
-    spotter: 2
+    spotter: 1
     sniper: 70
     energyRecovery: 40
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
@@ -4546,7 +4545,7 @@ units:
     intelligence: 2
     aggression: 8
     energyRecovery: 60
-    spotter: 2
+    spotter: 1
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
     builtInWeaponSets:
       - - STR_ADEPTAS_POWER_AXE
@@ -4581,7 +4580,7 @@ units:
     value: 40
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     sniper: 80
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
@@ -4657,7 +4656,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 6
+    spotter: 2
     sniper: 70
     energyRecovery: 30
     moveSound: -1
@@ -4693,7 +4692,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -4727,7 +4726,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 2
     aggression: 8
-    spotter: 2
+    spotter: 1
     energyRecovery: 30
     moveSound: -1
     livingWeapon: true
@@ -4760,7 +4759,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 1
-    spotter: 3
+    spotter: 1
     sniper: 80
     energyRecovery: 40
     moveSound: -1
@@ -4796,7 +4795,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -4832,7 +4831,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -4867,7 +4866,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -4907,7 +4906,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -4942,7 +4941,7 @@ units:
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     energyRecovery: 40
     moveSound: -1
     livingWeapon: true
@@ -5154,7 +5153,7 @@ units:
     value: 15
     intelligence: 2
     aggression: 2
-    spotter: 3
+    spotter: 1
     sniper: 70
     energyRecovery: 50
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -5192,7 +5191,7 @@ units:
     value: 30
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 1
     sniper: 75
     energyRecovery: 50
     deathSound: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
@@ -5227,7 +5226,7 @@ units:
     value: 30
     intelligence: 3
     aggression: 2
-    spotter: 3
+    spotter: 2
     sniper: 75
     energyRecovery: 50
     deathSound: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}]
@@ -5294,7 +5293,7 @@ units:
     berserkChance: 70
     standHeight: 21
     kneelHeight: 14
-    spotter: 4
+    spotter: 1
     sniper: 50
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
@@ -5381,7 +5380,7 @@ units:
     intelligence: 3
     aggression: 1
     sniper: 75
-    spotter: 4
+    spotter: 3 # Inquisitors can scout and relay information much more effectively than most other units
     energyRecovery: 60
     deathSound: [{mod: 40k, index: 111}, {mod: 40k, index: 112}, {mod: 40k, index: 113}, {mod: 40k, index: 114}, {mod: 40k, index: 115}]
     builtInWeaponSets:
@@ -5574,7 +5573,7 @@ units:
     value: 30
     intelligence: 3
     aggression: 8
-    spotter: 2
+    spotter: 2 # Extra scouting training from Interrogators
     sniper: 90
     armor: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_AI_ELITE
     builtInWeaponSets: []
@@ -5633,7 +5632,7 @@ units:
     value: 50
     intelligence: 1
     aggression: 8
-    spotter: 1
+    spotter: 2 # Grey Knight
     sniper: 90
     psiWeapon: STR_NONE
     energyRecovery: 200
@@ -5686,7 +5685,7 @@ units:
     aggression: 8
     sniper: 75
     avoidsFire: false
-    spotter: 1
+    spotter: 2 # Grey Knight
     energyRecovery: 60
     psiWeapon: STR_NONE
     canBeMindControlled: false
@@ -5732,7 +5731,7 @@ units:
     aggression: 8
     sniper: 100
     avoidsFire: false
-    spotter: 4
+    spotter: 3 # Grey Knight Leader
     energyRecovery: 100
     canBeMindControlled: false
     deathSound: [713, 714, 715, 716, 717, 718, 719, 720, 721, 722]
@@ -5782,7 +5781,7 @@ units:
     aggression: 8
     sniper: 100
     avoidsFire: false
-    spotter: 4
+    spotter: 3 # Grey Knight Leader
     energyRecovery: 100
     canBeMindControlled: false
     deathSound: [713, 714, 715, 716, 717, 718, 719, 720, 721, 722]

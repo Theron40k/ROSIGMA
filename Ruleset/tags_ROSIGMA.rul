@@ -107,6 +107,8 @@ extended:
       ARMOR_TENACIOUS_STUN_RECOVERY: int
       # *** Simple Timed Death
       UNIT_TURNS_UNTIL_DEATH: int
+      # *** Ratling Abilities
+      ARMOR_ABILITY_SCOOT_AND_SHOOT: int # What % of our TUs do we get back?
 
     RuleSoldierBonus:
       BONUS_ENERGY_SHIELD_HP_PER_TURN: int
@@ -249,6 +251,11 @@ extended:
       ITEM_FACTION_SETUP_ELDAR_SETTING: int
       # *** Stealth Items ***
       ITEM_STIM_ACTIVATES_STEALTH: int
+      ITEM_IS_STEALTH_CLOAK: int # Does this item toggle camo cloak functionality when used?
+      ITEM_STEALTH_CLOAK_DURATION: int # How long does the camo cloak last when activated?
+      ITEM_STEALTH_CLOAK_MOVEMENT_COST_MULTIPLIER: int # Movement ultiplier for this stealth cloak
+      # *** Medikit Dummy Handling ***
+      ITEM_IS_NOT_MEDIKIT: int # An item that uses the medikit item type for script triggering purposes but is not intended to count as one for putting out fires/purging infection
 
     RuleSkill:
       # *** Misc ***
@@ -346,6 +353,8 @@ extended:
       UNIT_EVERSOR_FRENZY_ACTIVE: int
       # Culexus Scripts
       UNIT_CULEXUS_HORROR_STORM_ACTIVE: int
+      # Ratling Scripts
+      UNIT_SHOOT_AND_SCOOT_ACTIVE: int # Relevant values: 1 = expended but active, -1 = expended but inactive.
 
 
     RuleSoldier:
@@ -369,6 +378,9 @@ extended:
       SOLDIER_COMMAND_POINTS: int
       # *** Per Mission extra stat gain ***
       SOLDIER_GAINS_EXTRA_STRENGTH: int  # Extra amount gained will be from 1 to the value given
+      # *** Innate Dodge Enhancement ***
+      SOLDIER_DODGE_PERCENT_INCREASE: int # Increments the dodge chance % by this amount
+      SOLDIER_DODGE_COUNT_INCREASE: int # Increments the total number of dodges per turn by this amount
 
     GeoscapeSoldier:
       # *** Chaos Favor

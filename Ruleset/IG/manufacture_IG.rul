@@ -28,6 +28,22 @@ manufacture:
       STR_KILLPOINT_TOKEN: 20
       STR_ALIEN_ALLOYS: 5
 
+  - name: STR_RATLING_CAMO_CLOAK_ARMOR # Ratlings
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_RATLING_RECRUITMENT
+      - STR_MIDTIER_PREREQ
+      - STR_MOTION_SCANNER
+    space: 0
+    time: 400
+    cost: 100000
+    producedItems:
+      STR_RATLING_CAMO_CLOAK_ARMOR: 1
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 100
+      STR_ALIEN_ALLOYS: 5
+      STR_ELERIUM_115: 5
+
   - name: STR_CARAPACE_FLIGHT
     category: STR_PERSONAL_ARMOR
     requires:
@@ -1562,6 +1578,32 @@ manufacture:
       STR_KILLPOINT_TOKEN: 200
     producedItems:
       STR_HAND_MC_MULTILASER: 1
+
+  - name: STR_LASER_RIFLE_KRIEG_MC
+    category: STR_WEAPON
+    requires:
+      - STR_KRIEG_STRATEGY
+      - STR_UFO_CONSTRUCTION # Ceramite
+      - STR_MASTER_CRAFTING
+    space: 3
+    time: 400
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_KILLPOINT_TOKEN: 100
+
+  - name: STR_LASER_RIFLE_KRIEG_MC_SCOPED
+    category: STR_WEAPON
+    requires:
+      - STR_KRIEG_STRATEGY
+      - STR_UFO_CONSTRUCTION # Ceramite
+      - STR_MASTER_CRAFTING
+    space: 3
+    time: 400
+    cost: 75000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_KILLPOINT_TOKEN: 120
 
   - name: STR_MC_UMBRA_GL
     category: STR_WEAPON

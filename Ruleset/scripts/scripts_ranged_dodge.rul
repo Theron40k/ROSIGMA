@@ -26,6 +26,7 @@ extended:
           var ptr RuleArmor attackerArmor;
           var ptr RuleItem damagingItem;
           var ptr RuleDamageType damageType;
+          var ptr RuleSoldier targetSoldier;
           var int unitDirection;
           var int attackerDirection;
           var int counterSuccessfulDodges;
@@ -83,6 +84,10 @@ extended:
           unit.getRuleArmor targetArmor;
           targetArmor.getTag dodgeChance Tag.DODGE_CHANCE;
           targetArmor.getTag flightDodgeChance Tag.FLIGHT_DODGE_CHANCE;
+          unit.getRuleSoldier targetSoldier;
+          targetSoldier.getTag temp Tag.SOLDIER_DODGE_PERCENT_INCREASE;
+          add dodgeChance temp;
+          add flightDodgeChance temp;
           # define attacker armor values
           attacker.getRuleArmor attackerArmor;
           attackerArmor.getTag dodgeArmorPercentReduction Tag.ARMOR_DODGE_CHANCE_PERCENT_REDUCTION;
@@ -125,7 +130,7 @@ extended:
             return power part side;
           end;
 
-          # assume that setting it has been forgotten
+          # assume that setting it has been forgotten; default to 1
           if eq maxSuccessfulDodges 0;
             set maxSuccessfulDodges 1;
           end;
@@ -134,6 +139,9 @@ extended:
           if gt dodgeDeclines 0;
             set maxSuccessfulDodges 999; # effectively we ignore max dodges; we're limited by our declining chance of dodge success on subsequent hits instead
           end;
+
+          targetSoldier.getTag temp Tag.SOLDIER_DODGE_COUNT_INCREASE;
+          add maxSuccessfulDodges temp;
 
           if ge counterSuccessfulDodges maxSuccessfulDodges;
             # debug_log "hitUnit | dodge scripts | Max successful dodges exceeded. Aborting:" counterSuccessfulDodges;
