@@ -860,7 +860,6 @@ items:
     confSnap:
       shots: 2
       name: STR_HAWK_WEAPON_SNAPSHOT
-    RandomType: 2 # Consistent damage, lower crits less effective against high armor.
     experienceTrainingMode: 5 #50%
 
     flatRate: true
@@ -1103,6 +1102,7 @@ items:
     power: 75 # STR 5
     damageType: 1  # AP instead of LAS
     damageAlter:
+      RandomType: 2 # Consistent damage, lower crits less effective against high armor.
       ToArmorPre: 0.2
       ToHealth: 1.0
       ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
@@ -1206,7 +1206,7 @@ items:
     accuracyAimed: 90
     confSnap:
       shots: 2
-      name:   STR_HAWK_WEAPON_SNAPSHOT
+      name: STR_HAWK_WEAPON_SNAPSHOT
     confAimed:
       shots: 2
       name: STR_HAWK_WEAPON_AIMEDSHOT

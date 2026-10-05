@@ -349,6 +349,7 @@ items:
     power: 60 # +10 to Imperial las (Eldar has Str 4 over Str 3 lasguns)
     damageType: 1  # AP instead of LAS
     damageAlter:
+      RandomType: 2 # Consistent damage, lower crits less effective against high armor.
       ToArmorPre: 0.2
       ToHealth: 1.0
       ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
@@ -365,6 +366,7 @@ items:
     costSell: 1000
     power: 85 # STR 6
     damageAlter:
+      RandomType: 2 # Consistent damage, lower crits less effective against high armor.
       ToArmorPre: 0.2
       ToHealth: 1.0
       ToArmor: 0.1  # 40k 0.0  # hardly makes a difference
