@@ -168,8 +168,8 @@ research:
     cost: 200
     dependencies:
       - STR_THE_COLD_TRADE_GV
-    needItem: true
-    neededItem: STR_TAU_PULSE_RIFLE_EXPORT
+      - STR_ELERIUM_115             # guevesa supply crawlers need fuel
+      - STR_ALIEN_ALLOYS            # build fortifications and repair things
     spawnedEvent: STR_TAU_PROPAGANDA_EVENT_GV
     # spawnedEvent: STR_CULTURE_CLUB_GV
 
@@ -181,8 +181,8 @@ research:
     cost: 300
     dependencies:
       - STR_CULTURE_CLUB_GV
-      - STR_ELERIUM_115             # guevesa supply crawlers need fuel
-      - STR_ALIEN_ALLOYS            # build fortifications and repair things
+      - STR_BEASTMEN_CULTISTS_GV
+      - STR_CULTURE_CLUB_GV
     unlocks:
       - STR_INQUISITION_ATTENTION_GV      # uh oh!
       - STR_TAU_GUEVESA_TRADING           # unlocks cheaper rifles and carbines + flak
@@ -228,10 +228,11 @@ research:
 
 ### Beastmen arrive, consider gating on mission - consider later launching mission at same time to cover cost
   - name: STR_BEASTMEN_CULTISTS_GV
-    points: 0
+    points: -250
     cost: 100
     dependencies:
       - STR_CULTURE_CLUB_GV
+      - STR_LOSE_250
     spawnedEvent: STR_BEASTMEN_CULTISTS_EVENT_GV
 
 ### Unlock Chimeras and basic Sentinels too?
