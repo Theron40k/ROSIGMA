@@ -85,17 +85,46 @@ manufacture:
     producedItems:
       STR_DIRESWORD: 1
 
-  - name: STR_ELDAR_HWP_SCATTERLASER_ARMOR_ITEM
+  - &ELDAR_HWP_ITEM_MANUFACTURE
+    name: STR_ELDAR_HWP_SHURIKENCANNON_ARMOR_ITEM
     category: STR_PERSONAL_ARMOR
     requires:
-      - STR_ELDAR_HWP_SCATTERLASER_ARMOR_RESEARCH
+      - STR_ELDAR_HWP_SHURIKENCANNON_ARMOR_RESEARCH
     space: 0
     time: 600
-    cost: 650000
-#    requiredItems:
-#      STR_ALIEN_ALLOYS: 80
-#      STR_ELERIUM_115: 30
-#      STR_UFO_CONSTRUCTION: 10
+    cost: 250000
+
+  - name: STR_ELDAR_HWP_AML_ARMOR_ITEM
+    refNode: *ELDAR_HWP_ITEM_MANUFACTURE
+    requires:
+      - STR_ELDAR_HWP_AML_ARMOR_RESEARCH
+    requiredItems:
+       STR_ALIEN_ALLOYS: 80
+       # STR_ELERIUM_115: 30 # Swap if accessibility improved
+
+  - name: STR_ELDAR_HWP_BRIGHTLANCE_ARMOR_ITEM
+    refNode: *ELDAR_HWP_ITEM_MANUFACTURE
+    requires:
+      - STR_ELDAR_HWP_BRIGHTLANCE_ARMOR_RESEARCH
+    requiredItems:
+      STR_ALIEN_ALLOYS: 80
+      STR_ELERIUM_115: 30
+
+  - name: STR_ELDAR_HWP_SCATTERLASER_ARMOR_ITEM
+    refNode: *ELDAR_HWP_ITEM_MANUFACTURE
+    requires:
+      - STR_ELDAR_HWP_SCATTERLASER_ARMOR_RESEARCH
+    requiredItems:
+      STR_ALIEN_ALLOYS: 80
+
+  - name: STR_ELDAR_HWP_STARCANNON_ARMOR_ITEM
+    refNode: *ELDAR_HWP_ITEM_MANUFACTURE
+    requires:
+      - STR_ELDAR_HWP_STARCANNON_ARMOR_RESEARCH
+    requiredItems:
+      STR_ALIEN_ALLOYS: 80
+      STR_ELERIUM_115: 30
+
 
   - name: STR_CRATED_HORNET
     category: STR_CRAFT
