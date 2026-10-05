@@ -729,8 +729,12 @@ armors:
     spriteSheet: TAUSTEALTHbattle.PCK
     spriteInv: TAUSTEALTHinv.PCK
     customArmorPreviewIndex: 217  # placeholder
-    movementType: 0
-    specialWeapon: STR_JUMP_PACK
+    movementType: 1
+    # base flying is very expensive but dropping is free
+    moveCost:
+      baseFlyPercent: [200, 200]
+      flyDownPercent: [0, 0]
+    specialWeapon: STR_INTEGRATED_STEALTH_CLOAK
     size: 1
     corpseBattle:
       - STR_XV26_STEALTH_SUIT_PCCORPSE
@@ -777,14 +781,12 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       ARMOR_OVERWATCH_TU_RESTORED: 10
-      DODGE_CHANCE: 30
-      ARMOR_MAX_SUCCESSFUL_DODGES: 3
+      DODGE_CHANCE: 20
+      ARMOR_MAX_SUCCESSFUL_DODGES: 2
       HAS_MARKERLIGHT: 1
-      ARMOR_IS_INFILTRATOR: 1  # 1 turns to infiltrate
-      ARMOR_RESTEALTH_TURN_REQUIREMENT: 1  # 1 turns to infiltrate
+      ARMOR_IS_INFILTRATOR: 3  # 2 turns to infiltrate
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2
       ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
-      MaxFlight: 1
-      MaxCoolDown: 1
 
   - type: STR_XV26_STEALTH_SUIT_FUSION_BLASTER_GV
     refNode: *STR_STEALTH_SUITS
@@ -809,13 +811,11 @@ armors:
       UNIT_TYPE_TAU: 1
       UNIT_TYPE_XENO: 1
       ARMOR_OVERWATCH_TU_RESTORED: 15
-      DODGE_CHANCE: 10
+      DODGE_CHANCE: 30
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
-      ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
+      ARMOR_IS_INFILTRATOR: 3  # 3 turns to infiltrate
       ARMOR_RESTEALTH_TURN_REQUIREMENT: 2  # 2 turns to infiltrate
       ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
-      MaxFlight: 1
-      MaxCoolDown: 1
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
       INFECTION_RESIST: 75
