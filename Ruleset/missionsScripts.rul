@@ -1823,26 +1823,13 @@ missionScripts:
       STR_STEEL_LEGION_STRATEGY: true
       STR_EVEN_HARDER_MISSIONS: false
 
-  - type: gameStartCultist_VL #Valhallan
-    # For SL/VL, the Cultist/TraitorGuard base is on top of adhoc gameStartOrkSL, but shows up later.
-    executionOdds: 33
-    firstMonth: 2  # Cultist base could arrive early than gameStartTraitorGuard_SL in month 4
-    lastMonth: 3
+  - type: VLcultistbase
     missionWeights:
       0:
-        STR_CULTIST_BASE_START: 100
-    targetBaseOdds: 100
-    raceWeights:
-      0:
-        STR_SLAANESH_CULT_EARLY: 33  #Traitor's Hand
-        STR_SLAANGOR_MIXED: 10
-        STR_CULTIST_SQUATS: 15 #Porretta campaign
+        STR_VLCULTISTBASE: 100
     startDelay: 3000
     randomDelay: 4320  # additional random 0 to 3 days
-    label: 100
-    researchTriggers:
-      STR_VALHALLAN_STRATEGY: true
-      STR_EVEN_HARDER_MISSIONS: false
+    adhocMissionScriptTags: ["gocultbase4VL"]
 
   # Rebels
   - &STR_DESERTER_HIDEOUT
