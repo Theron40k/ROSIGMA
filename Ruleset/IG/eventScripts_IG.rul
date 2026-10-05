@@ -51,6 +51,17 @@ eventScripts:
       STR_VALHALLAN_STRATEGY: true
       STR_EVEN_HARDER_MISSIONS: false
 
+  - type: STR_TRAITORGUARDBASECHANCE_VL
+    firstMonth: 4
+    lastMonth: 4
+    executionOdds: 100
+    eventWeights:
+      0:
+        STR_TRAITORGUARDBASECHANCE_EVENT_VL: 100
+    researchTriggers:
+      STR_VALHALLAN_STRATEGY: true
+      STR_EVEN_HARDER_MISSIONS: false
+
   # catachan
   - type: STR_SPAWN_CATACHANS_GRUNTS_SCRIPT
     oneTimeRandomEvents:
