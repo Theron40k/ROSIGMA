@@ -3874,7 +3874,8 @@ items:
 
   - type: STR_HEAVY_PLASMA  # CHAOS
     refNode: *CHAOS_WEAPON
-    requires: !add
+    requires:
+      - STR_CHAOS_WEAPON_USE_DEP
       - STR_HEAVY_PLASMA_DEP1
     costSell: 45000
     accuracySnap: 70
