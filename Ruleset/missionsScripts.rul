@@ -1844,6 +1844,14 @@ missionScripts:
       STR_VALHALLAN_STRATEGY: true
       STR_EVEN_HARDER_MISSIONS: false
 
+  - type: VLcultistbase
+    missionWeights:
+      0:
+        STR_VLCULTISTBASE: 100
+    startDelay: 3000
+    randomDelay: 4320  # additional random 0 to 3 days
+    adhocMissionScriptTags: ["gocultbase4VL"]
+
   # Rebels
   - &STR_DESERTER_HIDEOUT
     type: deserterHideout
