@@ -29,6 +29,35 @@ items:
       ITEM_STEALTH_CLOAK_MOVEMENT_COST_MULTIPLIER: 500
       ITEM_IS_NOT_MEDIKIT: 1
 
+  - type: STR_STEALTH_SUIT_CLOAK
+    medikitTargetMatrix: 0
+    medikitType: 0
+    medikitActionName: STR_TOGGLE_STEALTH_CLOAK
+    medikitTargetSelf: true
+    medikitBackground: RATLING_CLOAK_INTERFACE
+    painKillerActionName: STR_NULL_STRING
+    stimulantActionName: STR_NULL_STRING
+    healActionName: STR_NULL_STRING
+    woundRecovery: 0
+    healthRecovery: 0
+    stunRecovery: 0
+    energyRecovery: 0
+    painKillerRecovery: 0
+    heal: 999
+    stimulant: 999
+    painKiller: 999
+    battleType: 6  # not used as medikit
+    tuUse: 1
+    flatRate: true
+    fixedWeapon: true
+    specialIconSprite: 221
+    specialUseEmptyHand: true
+    tags:
+      ITEM_IS_STEALTH_CLOAK: 1
+      ITEM_STEALTH_CLOAK_DURATION: 20
+      ITEM_STEALTH_CLOAK_MOVEMENT_COST_MULTIPLIER: 150
+      ITEM_IS_NOT_MEDIKIT: 1
+
 extended:
   tagsFile: Ruleset/tags_ROSIGMA.rul
 
