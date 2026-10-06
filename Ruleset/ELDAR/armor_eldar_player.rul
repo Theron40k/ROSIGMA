@@ -1899,6 +1899,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_MECHANICAL: 1
+      HAS_EXTENDED_FRONT_SHIELD: 1
     scripts:
       selectUnitSprite: |
         var int temp;
@@ -1918,6 +1919,32 @@ armors:
           add sprite_index sprite_offset;
         end;
         return sprite_index;
+
+      hitUnit:          # EXTENDED FRONT SHIELD SCRIPT
+        var int unitDirection;
+        var int attackerDirection;
+
+        if or eq attacker null eq side SIDE_UNDER;
+
+          return power part side;
+
+        end;
+
+        unit.getDirection unitDirection;
+        attacker.getDirection attackerDirection;
+        add attackerDirection 4;
+        mod attackerDirection 8;
+        sub unitDirection attackerDirection;
+        abs unitDirection;
+
+        if lt unitDirection 2;
+
+          set side SIDE_FRONT;
+
+        end;
+
+        return power part side;
+      # 0 las, 1 auto, 2 heavy bolter
 
   - type: STR_ELDAR_HWP_SCATTERLASER_ARMOR_P   # HWP PLAYER
     refNode: *HWP_ARMOR_TEMPLATE
