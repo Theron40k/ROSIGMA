@@ -1152,41 +1152,24 @@ items:
     fireSound: {mod: 40k, index: 52}
   # Weapon Stats
     accuracySnap: 70  # +10 vs marine
-    accuracyAimed: 100  # +10 vs marine
+    accuracyAimed: 70  # +10 vs marine
     tuSnap: 45
-    tuAimed: 90
-    snapRange: 20
+    tuAimed: 45
+    snapRange: 32  #48" range
     aimRange: 32
-  # Damage stats
-    power: 90 # FRAG
-    damageType: 3
-    damageAlter:
-      ToArmorPre: 0.3 # +.1 for AP-1
-      ToArmor: 0.0
-      RandomType: 6
-      ArmorEffectiveness: 0.8  # -.1 for AP-1
-      ToStun: 0.5  # concussive
-      ToEnergy: 0.3  # concussive
-      ToTime: 0.2  # concussive
-      ToTile: 0.75  # high explosive
-      ToItem: 0.75  # high explosive
-      FixRadius: 6
-      #- STR_LARGE_ROCKET KRAK
-    #power: 125  # +15 for +1 Strength
-    #powerForAnimation: 16  # 5 / 5 = 1
-    #damageType: 3
-    #damageAlter:
-    #  ResistType: 1
-    #  RandomType: 6  # gaussian
-    #  ToHealth: 0.8
-    #  ToArmorPre: 0.3
-    #  ToArmor: 0.3
-    #  ToTile: 1.0
-    #  ToItem: 1.0
-    #  ArmorEffectiveness: 0.5
-    #  FixRadius: 1  # 1 for hand grenade version
-    #tags:
-    #  DAMAGE_RESIST_PENETRATION_PERCENT: 50
+    confAimed:
+      name: STR_HWP_STARSWARM_SHOT
+      ammoSlot: 0
+    confSnap:
+      name: STR_HWP_STARSHOT_SHOT
+      ammoSlot: 1
+    ammo:
+      0:
+        compatibleAmmo:
+          - STR_HWP_STARSWARM_AMMO
+      1:
+        compatibleAmmo:
+          - STR_HWP_STARSHOT_AMMO
       #- STR_HEAVY_ROCKET_HE
       #- STR_HEAVY_ROCKET_KRAK
 
