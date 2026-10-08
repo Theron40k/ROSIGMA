@@ -5232,6 +5232,7 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_INTEGRATED_STEALTH_CLOAK: "Stealth Cloak"
   STR_TOGGLE_STEALTH_CLOAK: "Use Camo Cloak Controls"
   STR_NOT_ENOUGH_TU_TO_CLOAK: "Insufficient TU. {0} More Needed To Cloak."
+  STR_NOT_ENOUGH_TU_TO_GHOSTSHROUD: "Insufficient TU. {0} More Needed To Ghostshroud."
   STR_NULL_STRING: " "
 
 
@@ -14023,22 +14024,24 @@ en-US:  #  yamllint disable-line rule:empty-values
   # STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Weeks ago the Guard sent you trucks, small arms, and a vox. Since then, nothing. Heavier weapons never came. Much materiel was lost in the shrine-warrens rout. Most of the rest is now hoarded by deserters and traitors.{NEWLINE}{NEWLINE}As Imperial authority staggers, smuggling flourishes. Shadowy armored caravans crawl the desolate battlefields, dealing arms to those they deem worthy. Perhaps you can find weapons on the black market. The best way to become a regular caravan stop is to provide their supply crawlers with promethium fueling services."
   STR_WHITESHIELD_BLACK_MARKET_CODEX_DESCRIPTION_GV: "Citing battlefield losses and the risk of treason, the Guard has declined to supply your militia with heavy weaponry. You might even believe them, if your troops didn't keep finding brand-new Guard equipment in the hands of traitors. Something's rotten around here. You'd better get ready to fend for yourself.{NEWLINE}{NEWLINE}Luckily, you've dealt professionally with the black market all your life, and you're not about to let a pack of traitorous amateurs outgun you."
 
-  STR_GUN_RUNNERS_GV: "Gun Runners"
+  STR_GUN_RUNNERS_GV: "Gun Runners+"
   STR_GUN_RUNNERS_EVENT_GV: "Gun Runners"
-  STR_GUN_RUNNERS_CODEX_DESCRIPTION_GV: "Placeholder"
+  STR_GUN_RUNNERS_CODEX_DESCRIPTION_GV: "The firearms available on the black market couldn't be more different from the poor and rusty specimens offered by the Guard. Feeds that operate. Actions that work. Cleaned barrels and maintained parts. Sure, they might cost a pretty penny, but they get the job done where the Guard's castoffs don't."
 
+  # Meltagun and Gun Runners event?
   STR_THE_COLD_TRADE_GV: "The Cold Trade+"
   STR_THE_COLD_TRADE_EVENT_GV: "The Cold Trade"
   STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "The Guard's assault on the rebel capital has devolved into a bloody quagmire. Resupply is nonexistent and rumors of mutiny spread. Luckily, you've been able to finance alternative supply arrangements using your black market connections. Lately your contacts have mentioned rumors of new weapons on the market - xenos rifles, long and angular in shape, phenomenally deadly, exorbitantly priced. You're reluctant to deal with xenos, but firepower is firepower."  # Repulsed at every turn by cultists and traitors, confronted by fell sorcery, Guard commanders have increasingly resorted to brutality The warp storm has had a perilous effect on Guard morale, and discipline among the Guard has broken down"
   # STR_THE_COLD_TRADE_CODEX_DESCRIPTION_GV: "Among today's caravan deliveries you find an unfamiliar blue-enameled servo skull. When you approach, it speaks in a melodic northern Ultramar accent. {NEWLINE}{NEWLINE}'Captain. I greet you. I am Por'ui Dal'yth Ha'lea. I am an envoy from the Tau Empire. To you I offer our thanks for supporting the black market, and our appreciation for your fighting spirit. If you will accept it, I would like to offer our friendship. And if you can provide them shelter, I believe I can offer you soldiers.'"
 
-
-  STR_CULTURE_CLUB_GV: "Accept Gue'vesa Pilgrims+"
-  STR_CULTURE_CLUB_EVENT_GV: "Gue'vesa Pilgrims Enlist"
+  # add culture club event back in
+  # add up all these events as prereqs for establish guevesa cluster, and make a secret pact more consequential
+  STR_CULTURE_CLUB_GV: "Seek Xenos Trade Contacts+"
+  STR_CULTURE_CLUB_EVENT_GV: "Xenos Trade Contacts Established"
   STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "Among today's caravan deliveries you find an unfamiliar blue-enameled servo skull. When you approach, it speaks in a melodic northern Ultramar accent. {NEWLINE}{NEWLINE}'Captain. I greet you. I am Por'ui Dal'yth Ha'lea. I am an envoy from the Tau Empire. To you I offer our thanks for your business, and our appreciation for your fighting spirit. If you will accept it, I would like to offer our friendship. And if you can provide them shelter, I believe I can offer you soldiers.'"
   # STR_CULTURE_CLUB_CODEX_DESCRIPTION_GV: "The guevesa pilgrims are strange indeed. Some are artisans able to craft remarkable devices. Others are Ministorum priests fleeing the Ecclesiarchy's corruption, willing to bless your troops in battle. Still others are soldiers, armed with Tau export weapons and willing to join your cause.{NEWLINE}{NEWLINE}Soon, the Tau send you a device called a 'pathfinder beacon'. When activated, Tau military liaison teams will be able to locate your base and make direct contact."
 
-  STR_TAU_PROPAGANDA_EVENT_GV: "Tau Propaganda"
+  STR_TAU_PROPAGANDA_EVENT_GV: "Tau Propaganda Broadcasts"
   STR_TAU_PROPAGANDA_CODEX_DESCRIPTION_GV: "HA'LEA: Hello to all you faithful serfs out there on the morning pilgrimage! Sister Holly from the Order of Living Water is now taking your confessions live on EWVN, go ahead voxer.{NEWLINE}{NEWLINE}VOXER: Hi, the impending apocalypse has really got me down. Where can I find emotional support?{NEWLINE}{NEWLINE}HA'LEA: Have you considered joining an armed cult? I've heard these 'Gue'vesa' combine an uplifting social message with exceptional levels of firepower. Why not give them a try? Next voxer please."
 
   STR_PATHFINDER_BEACON_GV: "Activate Pathfinder Beacon+"
@@ -14056,15 +14059,19 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_GUEVESA_CLUSTER_GV: "Establish Gue'vesa Cluster+"
   STR_GUEVESA_CLUSTER_EVENT_GV: "Establish Gue'vesa Cluster"
-  STR_GUEVESA_CLUSTER_EVENT_DESCRIPTION_GV: "Imperial authority has collapsed completely. The Guard's command structure has fallen apart amidst mutual accusations of treason. Regimental commanders become warlords. The evil influence of the warp storm spreads treason like wildfire. But the gue'vesa cultists and their xenos overlords remain steadfast. More and more pilgrims appear daily. Many of your soldiers have converted. Ha'lea begins to talk regularly of the Greater Good with you."
+  STR_GUEVESA_CLUSTER_EVENT_DESCRIPTION_GV: "Imperial authority has collapsed. The government and church are riven by mutual accusations of treason. Nobles become warlords. The evil influence of the warp storm spreads treason like wildfire. But the gue'vesa cultists remain steadfast. More and more pilgrims appear daily. Many of your soldiers have converted. Ha'lea begins to talk regularly of the Greater Good with you."
 
-  STR_A_SECRET_PACT_GV: "A Secret Pact+"
+  STR_A_SECRET_PACT_GV: "A Secret Pact With Known Alien Forces+"
   STR_A_SECRET_PACT_EVENT_GV: "A Secret Pact With Known Alien Forces"
   STR_A_SECRET_PACT_CODEX_DESCRIPTION_GV: "Convinced of the xenos' good intentions and reliant on their supplies, you have decided to sign a secret pact of cooperation with the Tau. Mai and Ha'lea can barely contain their delight as you renounce the ancient commandment to abhor the xenos. The Tau encourage you to remain strong in your faith in the Emperor, but from this point there is no turning back.{NEWLINE}{NEWLINE}Mai's cadre lurks in deep Pelega orbit. Establish orbital communications to coordinate their arrival planetside."
 
-  STR_FIRE_OF_UNKNOWN_ORIGIN_GV: "Fire of Unknown Origin+"
-  STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV: "Fire of Unknown Origin"
-  STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "PRIORITY - MERCHANT FLEET ASSETS - COREWARD FRONTIER{NEWLINE}PELEGA-EMBASSY [class:GUELA-FRONTIER] REPORTS ANOMALOUS DIMENSIONAL STRESS PRESENTING HAZARD TO NAVIGATION.{NEWLINE}ATTENDANT CIVIL DISORDER PRESENTS OPPORTUNITY FOR PLANETARY INDOCTRINATION.{NEWLINE}CAPABLE MERCHANT FLEET ASSETS DIRECTED TO RESPOND.{NEWLINE}EXPECT BEACON TYPE CIV-IMPROV-126E, COALITION PROTOCOL HOTSPRING-3A."
+  # STR_DALYTH_PATTERN_GV: "Dal'yth Pattern Weaponry+"
+  # STR_DALYTH_PATTERN_EVENT_GV: "Dal'yth Pattern Weaponry"
+  # STR_DALYTH_PATTERN_CODEX_DESCRIPTION_GV: "PLACEHOLDER"
+
+  STR_FIRE_OF_UNKNOWN_ORIGIN_GV: "Signal Tau Merchant Fleet+"
+  STR_FIRE_OF_UNKNOWN_ORIGIN_EVENT_GV: "Signal Tau Merchant Fleet"
+  STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "COMM.0.376.1.GRILOK.blaze - TSUNAMI-GV - PRIORITY  - MERCHANT FLEET ASSETS - COREWARD FRONTIER{NEWLINE}PELEGA-EMBASSY [class:GUELA-FRONTIER] REPORTS ANOMALOUS DIMENSIONAL STRESS PRESENTING HAZARD TO NAVIGATION.{NEWLINE}IMPERIAL CONTROL FALTERS. RIGHTEOUS GUE'VESA BEG ASSISTANCE.{NEWLINE}CAPABLE MERCHANT FLEET ASSETS [class:TSUNAMI-GV] DIRECTED TO RESPOND.{NEWLINE}EXPECT BEACON TYPE CIV-IMPROV-126E, COALITION PROTOCOL HOTSPRING-3A."
   # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "COMM.0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}ANOMALOUS CONDITION REPORT - EMERGENCY ALERT{NEWLINE}{NEWLINE}Gravitic sensors in system: PELEGA [GUELA-FRONTIER] report maximum daily spatial stress transient > 3sig in excess of 30 standard days.{NEWLINE}{NEWLINE}PELEGA-CONSUL advises TSUNAMI-GV conditions. Capable merchant assets directed to respond. Expect beacon type CIV-IMPROV-126E, coalition protocol HOTSPRING-3A."
   # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "You and Mai go back and forth through the battle-vid footage in the privacy of her cramped little office.  's cramped little office is lit by a mixture of drone projections and 'recovered' Imperial candles. She's absorbed in cleaning a pulse carbine.  Sergeant Falx  COMM.0.376.1.GRILOK.blaze [CLGRP.PRI:TSUNAMI-GV]{NEWLINE}{NEWLINE}ANOMALOUS CONDITION REPORT - EMERGENCY ALERT{NEWLINE}{NEWLINE}Gravitic sensors in system: PELEGA [GUELA-FRONTIER] report maximum daily spatial stress transient > 3sig in excess of 30 standard days.{NEWLINE}{NEWLINE}PELEGA-CONSUL advises TSUNAMI-GV conditions. Capable merchant assets directed to respond. Expect beacon type CIV-IMPROV-126E, coalition protocol HOTSPRING-3A."
   # STR_FIRE_OF_UNKNOWN_ORIGIN_CODEX_DESCRIPTION_GV: "Ha'lea calls you and Mai into her cramped little office. You take a seat amidst the flickering drone projections and 'recovered' Imperial candles. 'The communication disturbances. '
@@ -14077,7 +14084,7 @@ en-US:  #  yamllint disable-line rule:empty-values
 
   STR_INFILTRATION_CADRE_GV: "Welcome Infiltration Cadre+"
   STR_INFILTRATION_CADRE_EVENT_GV: "Come Down To Us"
-  STR_INFILTRATION_CADRE_CODEX_DESCRIPTION_GV: "Guided by your beacons, the infiltration cadre's stealthy transports slip through Pelega's ragged orbital defenses and arrive at your base. Your suspicious troops quickly warm to the prospect of xenos infiltration after they get a chance to eat something other than corpse-starch. You discover that Tau rations taste like grass clippings, but they do fill you up.{NEWLINE}{NEWLINE}Heavy Tau forces are on their way. You will need to be able to work with ceramite to maintain their advanced equipment."
+  STR_INFILTRATION_CADRE_CODEX_DESCRIPTION_GV: "The infiltration cadre's stealthy transports slip through Pelega's ragged orbital defenses and arrive at your base. Your suspicious troops quickly warm to the prospect of xenos infiltration after they get a chance to eat something other than corpse-starch. You discover that Tau rations taste like grass clippings, but they do fill you up.{NEWLINE}{NEWLINE}Heavy Tau forces are on their way. You will need to be able to work with ceramite to maintain their advanced equipment."
 
   STR_AUXILIARY_CADRE_GV: "Form Auxiliary Cadre+"
   STR_AUXILIARY_CADRE_EVENT_GV: "Auxiliary Cadre"
@@ -14087,25 +14094,39 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_COALITION_COMMAND_EVENT_GV: "Tau Coalition Pelega"
   STR_COALITION_COMMAND_CODEX_DESCRIPTION_GV: "Guided by your navigational beacons, the Merchant Fleet picks its way through the dangers of the warp storm and enters realspace high above Pelega. The surprised Imperial crusade fleet suffers heavy damage in a sharp engagement and is forced to flee into deep orbit. Tau armored cadres begin to land in force. A full-fledged Tau coalition quickly nucleates around your honored forces."
 
+  STR_STARSCYTHE_CRISIS_OPERATIONS_GV: "Crisis Suit Operations+"
+  STR_STARSCYTHE_CRISIS_OPERATIONS_EVENT_GV: "Crisis Suit Operations"
+  STR_STARSCYTHE_CRISIS_OPERATIONS_CODEX_DESCRIPTION_GV: "The XV8 Crisis battlesuit is the workhorse rapid reaction battlesuit of the Tau Empire. The Fire Caste guard its operation with a semi-religious fervor. Only Fire Warriors of Shas'ui rank and above may pilot the XV8. Combat XV8 experience is a rite of passage for all aspiring Tau commanders. Its heavy weaponry, advanced targeting, and jump jets render it a devastating force on the battlefield."
+  # STR_STARSCYTHE_CRISIS_OPERATIONS_CODEX_DESCRIPTION_GV: "Wreathed in fire, green-clad dwellers in silence descend.{NEWLINE}Without the kingdom, the king remains.{NEWLINE}Without....{NEWLINE}"
+
+  STR_STEALTH_SUIT_OPERATIONS_GV: "Stealth Suit Operations+"
+  STR_STEALTH_SUIT_OPERATIONS_EVENT_GV: "Stealth Suit Operations"
+  STR_STEALTH_SUIT_OPERATIONS_CODEX_DESCRIPTION_GV: "The XV26 Stealth battlesuit is the newest light infantry stealth battlesuit design in the arsenal of the Tau Empire. Its cloaking technology, jump jets, and firepower make it a deadly covert operations asset. Tau infiltration cadres are particularly adept at using stealth battlesuits to carry out daring acts of sabotage and eliminate high-value targets behind enemy lines. Only Fire Warriors of Shas'ui rank and above may pilot the XV26."
+
+  # move emergency protocols sooner
   STR_EMERGENCY_PROTOCOLS_GV: "Emergency Protocols+"
   STR_EMERGENCY_PROTOCOLS_EVENT_GV: "Emergency Protocols"
   STR_EMERGENCY_PROTOCOLS_CODEX_DESCRIPTION_GV: "HEADER: wideband-all::TSUNAMI-GV{NEWLINE}{NEWLINE}The Greater Good is hereby declared sovereign over the Pel'ga system for reasons of public safety. All Imperial forces receiving this message are directed to remain relentless in persecution of the witch and the sorceror, and to prepare to coordinate purgation efforts with Tau military liaison. Failure to comply will result in liquidation."
 
   STR_RALLY_GUARD_GV: "Rally Faithful Guard+"
   STR_RALLY_GUARD_EVENT_GV: "Rally Faithful Guard"
-  STR_RALLY_GUARD_CODEX_DESCRIPTION_GV: "Rally Faithful Guard"
+  STR_RALLY_GUARD_CODEX_DESCRIPTION_GV: "Covered by Tau airpower, the loyal remnants of the Guard break free of their encirclement and retreat towards gue'vesa territory. Newly constructed fortifications and fresh black-market supplies await them. Many perish in the retreat, but the survivors help to stabilize the perilous frontline, and are swiftly reorganized into the Pelegan 1st Volunteers."
 
   STR_FORM_KILL_TEAMS_GV: "Form Kill Teams+"
   STR_FORM_KILL_TEAMS_EVENT_GV: "Form Kill Teams"
-  STR_FORM_KILL_TEAMS_CODEX_DESCRIPTION_GV: "Form Kill Teams"
+  STR_FORM_KILL_TEAMS_CODEX_DESCRIPTION_GV: "Pelegan society is beset on all sides by traitorous officers, blue-blooded occultists, and robber-ecclesiarchs. The Greater Good dictates merciless liquidation of these selfish tyrants, that their plans might be thrown into disarray and their foot-soldiers set to heedless rout. Tau infiltration teams are ordered to render all possible operational assistance to local auxiliary forces in this matter."
 
   STR_RECUSANT_SISTERS_GV: "Accept Recusant Sisters+"
   STR_RECUSANT_SISTERS_EVENT_GV: "Accept Recusant Sisters"
   STR_RECUSANT_SISTERS_CODEX_DESCRIPTION_GV: "The collapse of the Pelegan ecclesiarchate has left many Sisters of Battle disillusioned in their faith. Impressed with your fervent dedication to the fight against Chaos, some of these hardened warriors have renounced the commandment to hate the xenos and have offered to join your forces. These recusant Sisters make for excellent soldiers, well-trained and blessed with the zeal of the convert."
 
+  STR_COOPT_NAVY_PILOTS_GV: "Co-Opt Navy Pilots+"
+  STR_COOPT_NAVY_PILOTS_EVENT_GV: "Co-Opt Navy Pilots"
+  STR_COOPT_NAVY_PILOTS_CODEX_DESCRIPTION_GV: "As safe airbases dwindle, the Imperial Navy pilots that call your base home have gotten easier to deal with. They know that flight operations have been running on black-market Tau fuel and spare parts for weeks. Their transports have fled in the face of the warp storm, and they've got no ticket offworld. So you work out a deal. You keep them flying, but you call the targets. The Guard's growing instability makes it an easy sell."
+
   STR_COOPT_ECCLESIARCHY_GV: "Co-opt Ecclesiarchy+"
   STR_COOPT_ECCLESIARCHY_EVENT_GV: "Co-opt Ecclesiarchy"
-  STR_COOPT_ECCLESIARCHY_CODEX_DESCRIPTION_GV: "Most of the surviving Pelegan bishops have been shepherded into council at gunpoint and encouraged to issue a highly conditional declaration of tolerance for xenos. Dialogus Holly becomes a prolific commentator on the Imperial Creed, pointing out at some length that interference with xenos witch-hunting efforts really does count as harboring the witch."
+  STR_COOPT_ECCLESIARCHY_CODEX_DESCRIPTION_GV: "Most of the surviving Pelegan bishops have been shepherded into council at gunpoint and encouraged to issue a highly conditional declaration of tolerance for xenos. Dialogus Holly becomes a prolific commentator on the Imperial Creed, pointing out at some length that interference with witch-hunting xenos really does count as harboring the witch."
 
   STR_IMPERIAL_CRUSADE_GV: "Excommunicate Traitoris+"
   STR_IMPERIAL_CRUSADE_EVENT_GV: "Excommunicate Traitoris"
@@ -14119,15 +14140,25 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_PSI_LAB_BACKUP_CODEX_DESCRIPTION_GV: "Pelega's newly installed metropolitan archbishop has granted official sanction to the numerous illicit chapels constructed by gue'vesa forces, reasoning that it is better for the Emperor's light to shine amidst the xenos than for it not to shine at all. Armed with slightly updated battle litanies and a thick sheaf of crusade indulgences, you will now be able to train your troops to resist Chaos attacks by faith."
 
   STR_ENGRAVED_ARMORS_EVENT_GV: "Engraved Armors"
-  STR_ENGRAVED_ARMORS_CODEX_DESCRIPTION_GV: "By Fire Caste tradition, blooded warriors on campaign engrave Ethereal meditations and scenes from legend into their armor, and inlay the engravings with fine metals. Your campaign of liberation has grown strong enough that your soldiers have begun to do the same. The armoring skills of the veteran Sisters among your growing ranks have proven of great use in this hobby. You have noticed them praying over the armors as they work. Can't hurt."
+  STR_ENGRAVED_ARMORS_CODEX_DESCRIPTION_GV: "By Fire Caste tradition, blooded warriors on campaign engrave Ethereal meditations and scenes from legend into their armor, and inlay the engravings with fine metals. Your campaign of liberation has grown strong enough that your soldiers have begun to do the same. The armoring skills of the veteran Sisters among your growing ranks have proven of great use in this hobby."
+
+  STR_ENGRAVED_BATTLESUITS_EVENT_GV: "Engraved Battlesuits"
+  STR_ENGRAVED_BATTLESUITS_CODEX_DESCRIPTION_GV: "At significant additional time and material expense, an entire battlesuit may be engraved in the fashion more often seen in engraved armors. Such battlesuits are of necessity rare, for tradition dictates that the battlesuit must be engraved under front-line conditions, and it is rare for artisans of the necessary caliber to abide on the front. Each may be considered a work of art meant to go in harm's way."
 
   STR_TAU_FRONTIER_PSYCH_GV: "Frontier Psychiatrists+"
   STR_TAU_FRONTIER_PSYCH_EVENT_GV: "Frontier Psychiatrists"
   STR_TAU_FRONTIER_PSYCH_CODEX_DESCRIPTION_GV: "The forward research scientists of the Earth Caste have descended upon your base. As front-line soldiers, your troops are valuable test subjects indeed. Researchers work themselves to exhaustion modeling, querying, measuring the curious phenomenon of xenopsychological attack. In order to better protect your troops, these intrepid medical scientists have prescribed combined therapy - intense indoctrination from Tau-approved preachers at the Chapel, and a controlled regimen of combat pharmaceuticals at the Apothecary."
 
+  STR_DEVILFISH_TRANSPORTS_EVENT_GV: "Devilfish Transports"
+  STR_DEVILFISH_TRANSPORTS_CODEX_DESCRIPTION_GV: "'I gave birth to my fourth in the back of one. Field hospital got overrun. You ever have a baby under lascannon fire?' -- Shas'el T'au Kai'xauk'yr, Commander, Dawnlit East Infiltration Cadre"
+
+  STR_ORCA_DROPSHIPS_EVENT_GV: "Orca Dropships"
+  STR_ORCA_DROPSHIPS_CODEX_DESCRIPTION_GV: "This huge air transport can lift an entire Hunter Cadre at once. Its high cruise speed and stealth capabiliities render it a top-line rapid response craft. Many examples serving on the frontline have been refit to the uparmored Orca-V assault configuration, trading top speed and agility for survivability in the landing zone."
+
+
   # STR_BLESSED_NANOMEDICINES_GV: "Blessed Nanomedicines"
   # STR_BLESSED_NANOMEDICINES_EVENT_GV: "Blessed Nanomedicines"
-  # STR_BLESSED_NANOMEDICINES_CODEX_DESCRIPTION_GV: "It's a little awkward that the Sisters of Battle started consistently getting better yields on their nanotherapeutic manufacturing runs once they made a little religious ceremony out of it. Lots of newly discovered scrolls miraculously turning up in the medicae archives these days."
+  # STR_BLESSED_NANOMEDICINES_CODEX_DESCRIPTION_GV: "PLACEHOLDER."
 
   TRADE: "TRADE"
 
@@ -14250,8 +14281,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_ARMORED_TRUCKS_GV_TOKEN: "Armored Trucks Token"
   STR_CHIMERAGV_TOKEN: "Chimera-GV Token"
 
-  STR_COOPT_NAVY_PILOTS_GV: "Co-opt Navy Pilots"
-  STR_DALYTH_PATTERN_GV: "Dal'yth Pattern Weaponry"
   STR_RELOCATION_SUPPORT_GV: "Relocation Support"
   STR_GUEVESA_HEAVY_WEAPONS_GV: "Gue'vesa Heavy Weapons"
 
@@ -14259,8 +14288,6 @@ en-US:  #  yamllint disable-line rule:empty-values
   STR_BARRACUDA_INTERCEPTORS_GV: "Barracuda Interceptors"
 
   STR_APPOINT_FIREBLADE_GV: "Appoint Cadre Fireblade"
-  STR_STEALTH_SUIT_OPERATIONS_GV: "Stealth Suit Operations"
-  STR_STARSCYTHE_CRISIS_OPERATIONS_GV: "Starscythe Crisis Suits"
   STR_FIREKNIFE_CRISIS_OPERATIONS_GV: "Fireknife Crisis Suits"
   STR_SUNFORGE_CRISIS_OPERATIONS_GV: "Sunforge Crisis Suits"
   STR_BROADSIDE_SUITS_GV: "Broadside Suit Operations"

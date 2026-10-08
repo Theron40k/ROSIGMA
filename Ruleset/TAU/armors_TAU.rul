@@ -736,9 +736,9 @@ armors:
     movementType: 1
     # base flying is very expensive but dropping is free
     moveCost:
-      baseFlyPercent: [200, 200]
+      baseFlyPercent: [300, 300]
       flyDownPercent: [0, 0]
-    specialWeapon: STR_INTEGRATED_STEALTH_CLOAK
+    specialWeapon: STR_STEALTH_SUIT_CLOAK_GV
     size: 1
     corpseBattle:
       - STR_XV26_STEALTH_SUIT_PCCORPSE
@@ -788,8 +788,8 @@ armors:
       DODGE_CHANCE: 20
       ARMOR_MAX_SUCCESSFUL_DODGES: 2
       HAS_MARKERLIGHT: 1
-      ARMOR_IS_INFILTRATOR: 3  # 2 turns to infiltrate
-      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2
+      ARMOR_IS_INFILTRATOR: 2  # 2 turns to infiltrate
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2 # controlled by scripting
       ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
 
   - type: STR_XV26_STEALTH_SUIT_FUSION_BLASTER_GV
@@ -818,13 +818,12 @@ armors:
       DODGE_CHANCE: 30
       ARMOR_MAX_SUCCESSFUL_DODGES: 3
       ARMOR_IS_INFILTRATOR: 3  # 3 turns to infiltrate
-      ARMOR_RESTEALTH_TURN_REQUIREMENT: 2  # 2 turns to infiltrate
-      ARMOR_STEALTH_DETECTION_RANGE: 5  # tanith equivalent
+      ARMOR_RESTEALTH_TURN_REQUIREMENT: 1  # controlled by scripting
+      ARMOR_STEALTH_DETECTION_RANGE: 7  # tanith equivalent
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 20
       INFECTION_RESIST: 75
       INTIMIDATION_RESISTANCE: 75
-
 
   - type: STR_XV26_ENGRAVED_STEALTH_SUIT_FUSION_BLASTER_GV
     refNode: *STR_ENGRAVED_STEALTH_SUITS
