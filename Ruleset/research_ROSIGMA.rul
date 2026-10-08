@@ -1664,8 +1664,9 @@ research:
   - name: STR_BTMARINE_MIDTIER  # Abhor the Witch, Destroy the Witch
     cost: 50
     points: 0
+    needItem: true
     neededItem: STR_BTMARINE_MIDTIER_BASE
-    destroyItem: false
+    destroyItem: true
     dependencies:
       - STR_BLACKTEMPLAR_STRATEGY
     disables:
@@ -1674,8 +1675,9 @@ research:
   - name: STR_BTMARINE_HIGHTIER  # Accept any Challenge, no Matter the Odds
     cost: 50
     points: 0
+    needItem: true
     neededItem: STR_BTMARINE_HIGHTIER_BASE
-    destroyItem: false
+    destroyItem: true
     dependencies:
       - STR_BLACKTEMPLAR_STRATEGY
     disables:
@@ -1684,8 +1686,9 @@ research:
   - name: STR_BTMARINEASSAULT_MIDTIER  # Suffer not the Unclean to Live
     cost: 50
     points: 0
+    needItem: true
     neededItem: STR_BTMARINEASSAULT_MIDTIER_BASE
-    destroyItem: false
+    destroyItem: true
     dependencies:
       - STR_BLACKTEMPLAR_STRATEGY
     disables:
@@ -1694,8 +1697,9 @@ research:
   - name: STR_BTTECH_HIGHTIER  # Uphold the Honour of the Emperor
     cost: 50
     points: 0
+    needItem: true
     neededItem: STR_BTTECH_HIGHTIER_BASE
-    destroyItem: false
+    destroyItem: true
     dependencies:
       - STR_BLACKTEMPLAR_STRATEGY
     disables:
@@ -5814,6 +5818,7 @@ research:
     dependencies:
       - STR_CHAOS_STRATEGY
       - STR_LOCKER_VAULT_RESEARCH
+    needItem: true
     neededItem: STR_WARPED_HULK_LOOT
     destroyItem: false
 
@@ -5831,6 +5836,7 @@ research:
     dependencies:
       - STR_CHAOS_STRATEGY
       - STR_TRUCKARMORLOCK
+    needItem: true
     neededItem: STR_CHAOSCRAFTPLAN
     destroyItem: false
 
@@ -5840,6 +5846,7 @@ research:
     dependencies:
       - STR_CHAOS_STRATEGY
       - STR_CHIMVALKLOCK
+    needItem: true
     neededItem: STR_CHAOSCRAFTPLAN
     destroyItem: false
 
@@ -5853,6 +5860,7 @@ research:
     points: 30
     dependencies:
       - STR_CHAOS_ARTIFACTS_RESEARCH
+    needItem: true
     neededItem: STR_CHAOS_ARTIFACTS
     destroyItem: false  # do not destroy item we need it for manufacture
 
@@ -6710,6 +6718,7 @@ research:
     points: 100
     dependencies:
       - STR_MARBO1_LOCK_RESEARCH
+    needItem: true
     neededItem: STR_MARBO_CLUE1
     destroyItem: true
 
@@ -6721,6 +6730,7 @@ research:
     points: 100
     dependencies:
       - STR_MARBO2_LOCK_RESEARCH
+    needItem: true
     neededItem: STR_MARBO_CLUE2
     destroyItem: true
 
@@ -6732,6 +6742,7 @@ research:
     points: 100
     dependencies:
       - STR_MARBO3_LOCK_RESEARCH
+    needItem: true
     neededItem: STR_MARBO_CLUE3
     destroyItem: true
 
@@ -6743,6 +6754,7 @@ research:
     points: 100
     dependencies:
       - STR_MARBO4_LOCK_RESEARCH
+    needItem: true
     neededItem: STR_MARBO_CLUE4
     destroyItem: true
 
@@ -15691,6 +15703,12 @@ research:
     cost: 25
     points: 25
 
+  - name: STR_WORDBEARERsaturnine_ARMORPLAYER
+    needItem: true
+    destroyItem: false
+    cost: 25
+    points: 25
+
   - name: STR_WARPED_VAULT
     dependencies:
       - STR_GENERALLOCK
@@ -15704,6 +15722,7 @@ research:
     points: 100
     dependencies:
       - STR_LOCKER_VAULT_RESEARCH
+    needItem: true
     neededItem: STR_WARPED_HULK_LOOT
     destroyItem: false
 

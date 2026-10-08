@@ -1821,13 +1821,14 @@ armors:
       UNIT_TYPE_MECHANICAL: 1
 
   # ELDAR.HWP SUPPORT PLATFORM AND WAR WALKERS
-  - type: STR_ELDAR_HWP_SCATTERLASER_ARMOR_P   # HWP PLAYER
-    storeItem: STR_ELDAR_HWP_SCATTERLASER_ARMOR_ITEM
+  - &HWP_ARMOR_TEMPLATE
+    type: STR_ELDAR_HWP_SHURIKENCANNON_ARMOR_P   # HWP PLAYER
+    storeItem: STR_ELDAR_HWP_SHURIKENCANNON_ARMOR_ITEM
     visibilityAtDay: 40
     visibilityAtDark: 30 # Same vision as guardian
-    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK
-    spriteInv: ELDARHWPSCATTERLASER
     customArmorPreviewIndex: [258, 259] #TEMP
+    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK #Swap when done
+    spriteInv: ELDARHWPSCATTERLASER #Swap when done
     corpseBattle:
       - 7_PLAT1P
       - 7_PLAT2P
@@ -1886,7 +1887,7 @@ armors:
     allowsRunning: false
     allowsKneeling: false
     builtInWeapons:
-      - STR_ELDAR_HWP_SCATTERLASER
+      - STR_ELDAR_HWP_SHURIKENCANNON
       - INV_NULL_3X3
       - INV_NULL_2X1_RL
       - INV_NULL_2X1_LL
@@ -1898,6 +1899,7 @@ armors:
       UNIT_TYPE_XENO: 1
       UNIT_TYPE_ELDAR: 1
       UNIT_TYPE_MECHANICAL: 1
+      HAS_EXTENDED_FRONT_SHIELD: 1
     scripts:
       selectUnitSprite: |
         var int temp;
@@ -1918,6 +1920,85 @@ armors:
         end;
         return sprite_index;
 
+      hitUnit:          # EXTENDED FRONT SHIELD SCRIPT
+        var int unitDirection;
+        var int attackerDirection;
+
+        if or eq attacker null eq side SIDE_UNDER;
+
+          return power part side;
+
+        end;
+
+        unit.getDirection unitDirection;
+        attacker.getDirection attackerDirection;
+        add attackerDirection 4;
+        mod attackerDirection 8;
+        sub unitDirection attackerDirection;
+        abs unitDirection;
+
+        if lt unitDirection 2;
+
+          set side SIDE_FRONT;
+
+        end;
+
+        return power part side;
+      # 0 las, 1 auto, 2 heavy bolter
+
+  - type: STR_ELDAR_HWP_SCATTERLASER_ARMOR_P   # HWP PLAYER
+    refNode: *HWP_ARMOR_TEMPLATE
+    storeItem: STR_ELDAR_HWP_SCATTERLASER_ARMOR_ITEM
+    customArmorPreviewIndex: [258, 259] #TEMP
+    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK #Swap when done
+    spriteInv: ELDARHWPSCATTERLASER #Swap when done
+    builtInWeapons:
+      - STR_ELDAR_HWP_SCATTERLASER
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+
+  - type: STR_ELDAR_HWP_AML_ARMOR_P   # HWP PLAYER
+    refNode: *HWP_ARMOR_TEMPLATE
+    storeItem: STR_ELDAR_HWP_AML_ARMOR_ITEM
+    customArmorPreviewIndex: [258, 259] #TEMP
+    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK #Swap when done
+    spriteInv: ELDARHWPSCATTERLASER #Swap when done
+    builtInWeapons:
+      - STR_HWP_STARSWARM_AMMO
+      - STR_HWP_STARSHOT_AMMO
+      - STR_ELDAR_HWP_AML
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+
+  - type: STR_ELDAR_HWP_STARCANNON_ARMOR_P   # HWP PLAYER
+    refNode: *HWP_ARMOR_TEMPLATE
+    storeItem: STR_ELDAR_HWP_STARCANNON_ARMOR_ITEM
+    customArmorPreviewIndex: [258, 259] #TEMP
+    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK #Swap when done
+    spriteInv: ELDARHWPSCATTERLASER #Swap when done
+    builtInWeapons:
+      - STR_ELDAR_HWP_STARCANNON
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
+
+  - type: STR_ELDAR_HWP_BRIGHTLANCE_ARMOR_P   # HWP PLAYER
+    refNode: *HWP_ARMOR_TEMPLATE
+    storeItem: STR_ELDAR_HWP_BRIGHTLANCE_ARMOR_ITEM
+    customArmorPreviewIndex: [258, 259] #TEMP
+    spriteSheet: ELDAR_HWP_SCATTERLASER.SPK #Swap when done
+    spriteInv: ELDARHWPSCATTERLASER #Swap when done
+    builtInWeapons:
+      - STR_ELDAR_HWP_BRIGHTLANCE
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+      - INV_NULL_4X2
 # ELDAR.OTHER
 
   - type: STR_ELDAR_PLAT_ARMOR_P   # GRAV PLATFORM ITEM#TODO-import remaining values from 40k mod

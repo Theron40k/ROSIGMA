@@ -18,7 +18,8 @@ research:
     points: 0
     cost: 5
     dependencies:
-      - STR_ARBITES
+      #- STR_ARBITES
+      - STR_GENERALLOCK # Remove after patch 3.3 release
     reenables:
       - STR_CHAPTER_PURITY    # not all who wander are lost
     lookup: STR_CHOSEN_ELDAR_STRATEGY
@@ -124,7 +125,25 @@ research:
     dependencies:
       - STR_ELDAR_STRATEGY
 
-  - name: STR_ELDAR_HWP_SCATTERLASER_ARMOR_RESEARCH # Unlocks eldar Heavy Weapons Platform
+  - name: STR_ELDAR_HWP_SHURIKENCANNON_ARMOR_RESEARCH # 1st Unlocks eldar Heavy Weapons Platform
+    cost: 100
+    points: 0
+    dependencies:
+      - STR_ELDAR_STRATEGY
+  - name: STR_ELDAR_HWP_SCATTERLASER_ARMOR_RESEARCH
+    points: 0
+    dependencies:
+      - STR_ELDAR_STRATEGY
+  - name: STR_ELDAR_HWP_AML_ARMOR_RESEARCH
+    points: 0
+    dependencies:
+      - STR_ELDAR_STRATEGY
+  - name: STR_ELDAR_HWP_STARCANNON_ARMOR_RESEARCH
+    cost: 100
+    points: 0
+    dependencies:
+      - STR_ELDAR_STRATEGY
+  - name: STR_ELDAR_HWP_BRIGHTLANCE_ARMOR_RESEARCH
     cost: 100
     points: 0
     dependencies:
