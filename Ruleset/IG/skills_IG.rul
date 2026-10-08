@@ -157,7 +157,7 @@ skills:
       time: 1
     flatUse: true
 
-  # 25% movement penalty for stealth suits means no need to deactivate
+  # 20% movement penalty for stealth suits means no need to deactivate
   - type: STR_SKILL_ACTIVATE_STEALTH_SUIT_CLOAK  # Allows stealth suits to re-enter stealth mode again for half TU
     tags:
       SKILL_ACTIVATE_STEALTH_SUIT_CLOAK_ID: 2
@@ -165,13 +165,6 @@ skills:
     costUse:
       time: 50
     flatUse: false
-
-  - type: STR_SKILL_ACTIVATE_STEALTH_SUIT_JUMP  # Deactivate camo cloak
-    tags:
-      SKILL_ACTIVATE_CAMO_CLOAK_ID: 3
-    costUse:
-      time: 1
-    flatUse: true
 
 
 # SOLDIER
