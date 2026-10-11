@@ -122,7 +122,7 @@ research:
 ### Gun Runners unlocks high grade ballistics for you
 ### Black Market is required
   - name: STR_GUN_RUNNERS_GV
-    points: 50
+    points: 0
     cost: 150
     dependencies:
       - STR_WHITESHIELD_BLACK_MARKET_GV
@@ -271,7 +271,8 @@ research:
       - STR_A_SECRET_PACT_GV
     unlocks:
       - STR_AIRSTRIKE_REQUISITION
-      - STR_VULTURE_IG_REQUISITION
+      - STR_VULTURE_IG_REQUISITION  # should allow vulture
+      - STR_STRATIG_DONE  # should allow valkyrie
     spawnedEvent: STR_COOPT_NAVY_PILOTS_EVENT_GV
 
   - name: STR_DALYTH_PATTERN_GV
